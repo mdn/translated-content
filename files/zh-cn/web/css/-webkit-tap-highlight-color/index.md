@@ -1,8 +1,8 @@
 ---
 title: '-webkit-tap-highlight-color'
 slug: Web/CSS/-webkit-tap-highlight-color
-translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

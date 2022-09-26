@@ -2,6 +2,7 @@
 title: 使用 W3C DOM Level 1 核心
 slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 ---
+
 W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象模型。它被所有主流浏览器支持着，包括火狐浏览器和微软 IE 浏览器。它是网页脚本编程的强大基础。
 
 ## 什么是内容树？
@@ -77,7 +78,7 @@ W3C 的 DOM Level 1 允许你随意改变内容树。其功能之强大足以从
 
 ## 想学习更多？
 
-现在您已经熟悉了 DOM 的基本概念，有一个文档解释了[ DOM Level 1 的基本方法](/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces)的基本方法。这是本文的补充。
+现在您已经熟悉了 DOM 的基本概念，有一个文档解释了 [DOM Level 1 的基本方法](/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces)的基本方法。这是本文的补充。
 
 也可以查看 W3C 的 [DOM Level 1 核心规范文档](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)。尽管是正式的规范文档，但十分清晰易于理解。其对于网页制作者主要有用的内容是描述不同的 DOM 对象及其所有属性和方法。可以继续阅读我们其它关于[DOM 的文档](/zh-CN/docs/DOM)。
 

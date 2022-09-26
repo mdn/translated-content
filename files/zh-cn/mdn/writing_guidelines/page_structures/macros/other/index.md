@@ -1,11 +1,9 @@
 ---
 title: 其他宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-tags:
-  - Macros
-  - Reference
 original_slug: MDN/Structures/Macros/Other
 ---
+
 {{MDNSidebar}}
 
 与[常用的宏](/zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros)中列出的宏相比，本文中记录的宏很少使用或仅在特定上下文中使用，或者已弃用。

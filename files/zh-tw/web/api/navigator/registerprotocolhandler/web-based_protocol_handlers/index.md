@@ -1,8 +1,8 @@
 ---
 title: Firefox 3 Web-based protocol handler
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ### 摘要
 
 window\.navigator.registerProtocolHandler 讓網站可以將自己註冊為特定通訊協定的處理者。
@@ -29,7 +29,7 @@ navigator.registerProtocolHandler("mailto",
 
 ### 參考資料
 
-1. [DOM:window.navigator.registerProtocolHandler 原始網頁](/en/docs/DOM:window.navigator.registerProtocolHandler)
+1. [DOM:window.navigator.registerProtocolHandler 原始網頁](/zh-TW/docs/DOM:window.navigator.registerProtocolHandler)
 
 ### 延伸閱讀
 

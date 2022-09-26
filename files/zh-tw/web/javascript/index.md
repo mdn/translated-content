@@ -1,13 +1,8 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - 入口
-  - 學習
-  - 所有類別
-translation_of: Web/JavaScript
 ---
+
 {{JsSidebar}}
 
 **JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](http://nodejs.org/)、[Apache CouchDB](http://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。 閱讀[關於 JavaScript](/zh-TW/docs/Web/JavaScript/About_JavaScript) 以取得更多資訊。

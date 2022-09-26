@@ -1,8 +1,8 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
-translation_of: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`max-height`** 设置元素的最大高度。它防止{{cssxref("height")}}属性的使用值（[used value](/zh-CN/docs/Web/CSS/used_value)） 大于 `max-height` 的指定值。
@@ -76,7 +76,7 @@ Ensure that elements set with a `max-height` are not truncated and/or do not obs
 
 ## Browser compatibility
 
-{{Compat("css.properties.max-height")}}
+{{Compat}}
 
 ## See also
 

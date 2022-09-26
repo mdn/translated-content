@@ -1,8 +1,8 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 `BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)

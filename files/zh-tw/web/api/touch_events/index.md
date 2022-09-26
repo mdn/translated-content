@@ -1,8 +1,8 @@
 ---
 title: 觸控事件
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 為了支援基於觸碰的使用者介面，觸控事件提供了解釋手指或觸控筆於觸控螢幕或觸控板上活動的資訊。
@@ -304,4 +304,4 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## 瀏覽器相容性
 
-{{Compat("api.Touch")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: ':enabled'
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - Reference
-  - Web
-  - 伪类
-  - 参考
-  - 布局
-translation_of: Web/CSS/:enabled
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes) **`:enabled`** 表示任何被启用的（enabled）元素。如果一个元素能够被激活（如选择、点击或接受文本输入），或者能够获取焦点，则该元素是启用的。元素也有一个禁用的状态（disabled state），在被禁用时，元素不能被激活或获取焦点。
@@ -65,7 +58,7 @@ input:disabled {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.enabled")}}
+{{Compat}}
 
 ## 参见
 

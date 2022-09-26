@@ -1,8 +1,8 @@
 ---
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
+
 {{JSRef}}
 
 **`Intl.Collator`** 是用于语言敏感字符串比较的 collators 构造函数。

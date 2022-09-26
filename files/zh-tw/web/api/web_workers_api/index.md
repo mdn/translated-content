@@ -1,8 +1,8 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **Web Workers** are a mechanism by which a script operation can be made to run in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
@@ -21,7 +21,7 @@ In addition to dedicated workers, there are other types of worker:
 
 - Shared workers are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port. See {{domxref("SharedWorker")}} for more details.
 - [ServiceWorkers](/zh-TW/docs/Web/API/ServiceWorker_API) essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.
-- Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](/en/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
+- Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](/zh-TW/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
 - [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) provide the ability for direct scripted audio processing to be done inside a web worker context.
 
 > **備註：** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.

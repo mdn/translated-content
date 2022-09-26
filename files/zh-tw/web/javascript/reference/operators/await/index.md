@@ -1,12 +1,8 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - Experimental
-  - JavaScript
-  - 運算子
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}await 運算子可被用來等待 {{jsxref("Promise")}}，只能在 {{jsxref("Statements/async_function", "async function")}}內使用。
 
 ## 語法

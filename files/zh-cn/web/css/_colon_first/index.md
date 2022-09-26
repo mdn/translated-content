@@ -1,8 +1,8 @@
 ---
 title: ':first'
 slug: Web/CSS/:first
-translation_of: Web/CSS/:first
 ---
+
 {{CSSRef}}
 
 ## 简介
@@ -58,7 +58,7 @@ document.querySelector("button").onclick = function(){ window.print() }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.first")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,10 +1,8 @@
 ---
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
-tags:
-  - SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** 访问器属性表示以字节为单位的一个{{jsxref("SharedArrayBuffer")}}的长度。

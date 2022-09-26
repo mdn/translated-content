@@ -1,13 +1,8 @@
 ---
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - HTTP
-  - Link prefetching
-  - Prefetch
-  - 性能
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
+
 ### 什么是链接预取？
 
 链接预取是一种浏览器机制，其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。网页向浏览器提供一组预取提示，并在浏览器完成当前页面的加载后开始静默地拉取指定的文档并将其存储在缓存中。当用户访问其中一个预取文档时，便可以快速的从浏览器缓存中得到。
@@ -81,7 +76,7 @@ Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 是的，预取的请求包含一个 HTTP `Referer:` header，指示从中提取预取提示的文档。
 
-这可能会影响许多站点上常用的引荐来源跟踪。 因此，链接预取可能不适用于所有内容。 但是，可以通过指定`Cache-control: must-revalidate `HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。 此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要`If-Modified-Since`或`If-None-Match`验证请求。
+这可能会影响许多站点上常用的引荐来源跟踪。 因此，链接预取可能不适用于所有内容。 但是，可以通过指定 `Cache-control: must-revalidate` HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。 此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要 `If-Modified-Since` 或 `If-None-Match` 验证请求。
 
 ### 作为服务器管理员，我可以区分预取请求和普通请求吗？
 

@@ -1,12 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `POST` 方法** 发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。

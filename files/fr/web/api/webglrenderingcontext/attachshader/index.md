@@ -6,6 +6,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
@@ -44,14 +45,11 @@ if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.14.9", "attachShader")}}                             | {{Spec2('WebGL')}}             | Définition initiale. |
-| {{SpecName('OpenGL ES 2.0', "glAttachShader.xml", "glAttachShader")}} | {{Spec2('OpenGL ES 2.0')}} | Page man OpenGL.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.attachShader")}}
+{{Compat}}
 
 ## Voir aussi
 

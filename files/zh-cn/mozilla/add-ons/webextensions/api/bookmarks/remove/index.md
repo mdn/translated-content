@@ -1,26 +1,15 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Method
-  - remove
-  - 书签
-  - 参考文档
-  - 扩展
-  - 方法
-  - 移除
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
 > **警告：** 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
 
-`这是一个异步方法，返回Promise对象。`
+这是一个异步方法，返回 `Promise` 对象。
 
 ## 语法
 
@@ -37,15 +26,15 @@ var removingBookmark = browser.bookmarks.remove(
 
 ### 返回值
 
-若方法执行完成，返回一个无参的 `Promise对象。`
+若方法执行完成，返回一个无参的 `Promise` 对象。
 
-若未找到该书签或该空书签文件夹，将返回一个带有错误信息的`Promise对象。`
+若未找到该书签或该空书签文件夹，将返回一个带有错误信息的 `Promise` 对象。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
-## 例子
+## 示例
 
 ```js
 function onRemoved() {
@@ -68,7 +57,8 @@ removingBookmark.then(onRemoved, onRejected);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +85,4 @@ removingBookmark.then(onRemoved, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

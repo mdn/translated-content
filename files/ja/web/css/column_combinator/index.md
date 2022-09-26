@@ -1,14 +1,6 @@
 ---
 title: 列結合子
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - 実験的
-  - リファレンス
-  - セレクター
-  - 表
-browser-compat: css.selectors.column
-translation_of: Web/CSS/Column_combinator
 ---
 {{CSSRef("Selectors")}}{{SeeCompatTable}}
 

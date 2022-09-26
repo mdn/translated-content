@@ -1,16 +1,11 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
-**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
+**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -43,7 +38,7 @@ for (let value of iterable) {
 // 31
 ```
 
-如果你不想修改语句块中的变量 , 也可以使用[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)。
+如果你不想修改语句块中的变量 , 也可以使用[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)。
 
 ```js
 let iterable = [10, 20, 30];
@@ -275,7 +270,7 @@ for (let i in iterable) {
 }
 ```
 
-此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素**`3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
+此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素** `3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
 
 ```js
 for (let i in iterable) {

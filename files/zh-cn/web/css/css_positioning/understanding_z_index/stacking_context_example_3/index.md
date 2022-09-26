@@ -1,14 +1,10 @@
 ---
 title: Stacking context example 3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-tags:
-  - CSS
-  - 层叠上下文
-  - 理解 css 的 z-index 属性
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3
 ---
-« [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
+
+« [CSS](/zh-CN/CSS) « [Understanding CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 层叠上下文示例 3
 
@@ -18,7 +14,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3
 
 如果这个三级菜单有部分区域重叠，管理层叠顺序就会成为一个问题。
 
-{{ EmbedLiveSample('Example_source_code', '320', '330', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3') }}
+{{ EmbedLiveSample('示例源码', '320', '330') }}
 
 一级菜单仅仅是相对定位，所以没有创建层叠上下文。
 
@@ -162,12 +158,12 @@ div.lev3 {
 
 ### 相关文章
 
-- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
 
 ### 原文信息
 

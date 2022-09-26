@@ -7,6 +7,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 Un cookie HTTP (cookie web, cookie de navigateur) est un petit ensemble de données qu'un serveur envoie au navigateur web de l'utilisateur. Le navigateur peut alors le stocker localement, puis le renvoyer à la prochaine requête vers le même serveur. Typiquement, cette méthode est utilisée par le serveur pour déterminer si deux requêtes proviennent du même navigateur.
@@ -22,7 +23,7 @@ Les cookies sont utilisés pour 3 raisons principales :
 - Suivi
   - : Enregistrement et analyse du comportement utilisateur.
 
-Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
+Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
 
 > **Note :** Pour voir les cookies stockés (et d'autres stockages que le navigateur peut conserver), vous ouvrez l'[Inspecteur de stockage](/fr/docs/Outils/Inspecteur_de_stockage) des Outils Développeur et sélectionnez Cookies dans l'onglet stockage (pour Firefox).
 
@@ -170,7 +171,7 @@ Pour en savoir plus, voir [cette section Wikipédia](https://en.wikipedia.org/wi
 
 ### Cookies Zombie et Evercookies
 
-Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
+Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/fr/docs/Web/API/Web_Storage_API), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
 - [Zombie cookies sur Wikipédia](https://en.wikipedia.org/wiki/Zombie_cookie)

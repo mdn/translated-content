@@ -1,8 +1,8 @@
 ---
 title: 'CSP: connect-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-src`** 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下:

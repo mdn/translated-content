@@ -1,11 +1,11 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-translation_of: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
-[CSS](/en-US/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
@@ -354,8 +354,8 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.perspective-origin")}}
+{{Compat}}
 
 ## 相关连接
 
-- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

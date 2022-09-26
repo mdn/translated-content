@@ -1,11 +1,8 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-tags:
-  - JavaScript
-  - 正则表达式
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 **`[@@matchAll]`**方法返回对字符串使用正则表达式的所有匹配项。
@@ -79,7 +76,7 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.RegExp.@@matchAll")}}
+{{Compat}}
 
 ## 相关链接
 

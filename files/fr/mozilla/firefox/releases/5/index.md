@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/5
 original_slug: Mozilla/Firefox/Versions/5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
@@ -130,6 +131,6 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 - Vous pouvez désormais compiler Firefox sans le fichier `mozconfig`, [`l'option --enable-application`](/fr/docs/Configuring_Build_Options#Choose_an_application) paramètre par défaut à "browser". Après avoir extrait ou téléchargé le code, vous pouvez tout simplement faire `configure && make` (ou `make -f client.mk`) pour compiler Firefox.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('4')}}

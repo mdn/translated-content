@@ -1,8 +1,8 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-translation_of: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}
 
 Notifications API 允許網頁控制向終端用戶顯示系統通知 — 它在網頁瀏覽器的視圖之外，因此使用者切換顯示卡或移至不同的應用程式也能顯示。此 API 設計為在相容於不同平台與現有的通知系統相容。
@@ -20,7 +20,7 @@ btn.addEventListener('click', function() {
 
 這不僅是最佳實踐 — 您不應向用戶發送他們不同意的通知，並且在未來瀏覽器將明確禁止沒有響應用戶請求允許通知對話框的通知。Firefox 72 開始已遵循這項約定。使用此方法將產生一個請求對話框，如下所示：
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 用戶可以從此處選擇允許、屏蔽來自此來源的通知，也可以不做選擇。 一旦選定，該設置通常將在當前會話中保持不變。
 
@@ -54,7 +54,7 @@ btn.addEventListener('click', function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS permissions
 

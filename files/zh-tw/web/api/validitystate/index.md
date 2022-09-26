@@ -1,8 +1,8 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-translation_of: Web/API/ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ValidityState`** 介面表示了一個元素目前在其檢核條件下驗證的*正確性狀態（validity states）*。同時，它們也可以協助解釋元素值檢核失敗的原因，如果元素值為不合法的。
@@ -40,9 +40,9 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 
 ## 瀏覽器相容性
 
-{{Compat("api.ValidityState")}}
+{{Compat}}
 
 ## 參見
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation)
+- [Constraint validation](/zh-TW/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/zh-TW/docs/Web/Guide/HTML/Forms/Data_form_validation)

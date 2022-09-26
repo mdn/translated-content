@@ -1,8 +1,8 @@
 ---
 title: 作者清单面页、分类清单页面、与自我挑战
-slug: learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
 
 ## 控制器
@@ -64,7 +64,7 @@ block content
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## 种类列表页面—自我挑战！[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## 种类列表页面—自我挑战！
 
 在这个部分，你应该实作你自己的种类列表页面。该页面应显示数据库中所有种类的列表，每个种类都链接到其关联的详细信息页面。预期结果的屏幕截图如下所示。
 

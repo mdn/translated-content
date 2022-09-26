@@ -2,6 +2,7 @@
 title: 像素操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 到目前为止，我们尚未深入了解 Canvas 画布真实像素的原理，事实上，你可以直接通过 ImageData 对象操纵像素数据，直接读取或将数据数组写入该对象中。稍后我们也将深入了解如何控制图像使其平滑（反锯齿）以及如何从 Canvas 画布中保存图像。
@@ -153,8 +154,6 @@ dx 和 dy 参数表示你希望在场景内左上角绘制的像素数据所得�
 ```js
 ctx.putImageData(myImageData, 0, 0);
 ```
-
-###
 
 ### 图片灰度和反相颜色
 

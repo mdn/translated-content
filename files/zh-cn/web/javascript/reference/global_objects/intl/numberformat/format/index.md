@@ -1,8 +1,8 @@
 ---
 title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat.prototype.format`** 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。

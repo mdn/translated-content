@@ -1,16 +1,8 @@
 ---
 title: Express/Node 入门
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Express
-  - Node
-  - node.js
-  - 初学者
-  - 学习
-  - 服务器端
-  - 脚本
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 本节将回答“什么是 Node”以及“什么是 Express”这两个问题，并通过主要特征和构成要件来简要介绍 Express 框架的与众不同之处。（只是目前尚不能用一个开发环境来测试它）
@@ -85,7 +77,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 5. 返回终端并输入以下命令：
 
     ```bash
-    $ node "hello.js"
+    node "hello.js"
     ```
 
 最后，在浏览器地址栏中输入 `"http://localhost:8000"` 并按回车，可以看到一个大面积空白的网页，左上角有“Hello World" 字样。
@@ -312,7 +304,7 @@ app.use('/wiki', wiki);
 要使用第三方中间件，首先需要使用 NPM 将其安装到当前应用中。比如，要安装 [morgan](https://www.expressjs.com.cn/resources/middleware/morgan.html) HTTP 请求记录器中间件，可以这样做：
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 然后，您可以对 *Express 应用对象*调用 `use()` 将该中间件添加到栈：
@@ -427,7 +419,7 @@ _Express_ 应用可以使用 Node 支持的所有数据库（Express 本身并�
 使用数据库前先要用 NPM 来安装驱动程序。比如，要安装流行的 NoSQL 数据库 MongoDB 的驱动程序，可运行以下命令：
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 数据库可以安装在本地或云端。在 Express 代码中 `require()` 驱动程序，连接，然后就可以执行增加、读取、更新、删除四种操作（CRUD）。以下示例展示了如何查找 MongoDB 表中 '哺乳动物' 的记录：

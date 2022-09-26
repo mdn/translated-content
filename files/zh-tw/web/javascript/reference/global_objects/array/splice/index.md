@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef}}
 
 **`splice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
@@ -116,7 +110,7 @@ var removed = myFish.splice(2);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## 參見
 

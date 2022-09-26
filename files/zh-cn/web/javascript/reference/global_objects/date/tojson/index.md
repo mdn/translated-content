@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
+
 {{JSRef}}
 
 **`toJSON()`** 方法返回 {{jsxref("Date")}} 对象的字符串形式。

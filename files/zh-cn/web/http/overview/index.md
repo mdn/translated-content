@@ -1,22 +1,17 @@
 ---
 title: HTTP 概述
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Web 机制
-  - 概览
-translation_of: Web/HTTP/Overview
 ---
+
 {{HTTPSidebar}}
 
 **HTTP 是一种能够获取如 HTML 这样的网络资源的** {{glossary("protocol")}}(通讯协议)。**它是在 Web 上进行数据交换的基础，是一种 client-server 协议，也就是说，请求通常是由像浏览器这样的接受方发起的。一个完整的 Web 文档通常是由不同的子文档拼接而成的，像是文本、布局描述、图片、视频、脚本等等。**
 
 ![A Web document is the composition of different resources](fetching_a_page.png)
 
-客户端和服务端通过交换各自的消息（与数据流正好相反）进行交互。由像浏览器这样的客户端发出的消息叫做 _requests_，被服务端响应的消息叫做 _responses。_
+客户端和服务端通过交换各自的消息（与数据流正好相反）进行交互。由像浏览器这样的客户端发出的消息叫做 _request_，被服务端响应的消息叫做 _response_。
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.mozillademos.org/files/13673/HTTP%20&%20layers.png)HTTP 被设计于 20 世纪 90 年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的 TCP 连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如 HTML 表单这样的信息。HTTP 还可以根据网页需求，仅获取部分 Web 文档内容更新网页。
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)HTTP 被设计于 20 世纪 90 年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的 TCP 连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如 HTML 表单这样的信息。HTTP 还可以根据网页需求，仅获取部分 Web 文档内容更新网页。
 
 ## 基于 HTTP 的组件系统
 
@@ -101,8 +96,8 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 
 当客户端想要和服务端进行信息交互时（服务端是指最终服务器，或者是一个中间代理），过程表现为下面几步：
 
-1.  打开一个 TCP 连接：TCP 连接被用来发送一条或多条请求，以及接受响应消息。客户端可能打开一条新的连接，或重用一个已经存在的连接，或者也可能开几个新的 TCP 连接连向服务端。
-2.  发送一个 HTTP 报文：HTTP 报文（在 HTTP/2 之前）是语义可读的。在 HTTP/2 中，这些简单的消息被封装在了帧中，这使得报文不能被直接读取，但是原理仍是相同的。
+1. 打开一个 TCP 连接：TCP 连接被用来发送一条或多条请求，以及接受响应消息。客户端可能打开一条新的连接，或重用一个已经存在的连接，或者也可能开几个新的 TCP 连接连向服务端。
+2. 发送一个 HTTP 报文：HTTP 报文（在 HTTP/2 之前）是语义可读的。在 HTTP/2 中，这些简单的消息被封装在了帧中，这使得报文不能被直接读取，但是原理仍是相同的。
 
     ```http
     GET / HTTP/1.1
@@ -110,7 +105,7 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
     Accept-Language: fr
     ```
 
-3.  读取服务端返回的报文信息：
+3. 读取服务端返回的报文信息：
 
     ```http
     HTTP/1.1 200 OK
@@ -125,7 +120,7 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
     <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
     ```
 
-4.  关闭连接或者为后续请求重用连接。
+4. 关闭连接或者为后续请求重用连接。
 
 当 HTTP 流水线启动时，后续请求都可以不用等待第一个请求的成功响应就被发送。然而 HTTP 流水线已被证明很难在现有的网络中实现，因为现有网络中有很多老旧的软件与现代版本的软件共存。因此，HTTP 流水线已被在有多请求下表现得更稳健的 HTTP/2 的帧所取代。
 

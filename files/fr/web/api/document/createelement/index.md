@@ -3,6 +3,7 @@ title: document.createElement
 slug: Web/API/Document/createElement
 translation_of: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElement()`** crée un élément HTML du type spécifié par `tagName` ou un {{domxref("HTMLUnknownElement")}} si `tagName` n’est pas reconnu.
@@ -95,19 +96,13 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 
 > **Note :** Pour la rétrocompatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d’un objet, dont la valeur est la balise de nom de l’élément personnalisé.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createElement")}}
-
-### Notes CSS Quantum
-
-- Dans Gecko, quand vous voulez créer un sous-arbre détaché (par exemple, un {{htmlelement("div")}} créé avec `createElement()` qui n’est pas encore inséré dans le DOM), l’élément racine du sous-arbre est défini comme un élément de niveau bloc. Dans le nouveau moteur CSS parallèle de Firefox (aussi connu comme [Quantum CSS](https://wiki.mozilla.org/Quantum) ou [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour être publié dans Firefox 57), il est défini comme "inline", ({{bug(1374994)}}) selon la spécification.
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/error
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`error`** de l'interface {{domxref("IDBRequest")}} renvoie l'erreur associée lorsque la requête est un échec.
@@ -80,13 +81,11 @@ objectStoreTitleRequest.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.error")}}
+{{Compat}}
 
 ## Voir aussi
 

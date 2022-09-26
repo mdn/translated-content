@@ -1,8 +1,8 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
@@ -137,7 +137,7 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello')
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## 參見
 

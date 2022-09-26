@@ -1,14 +1,8 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - メソッド
-  - リファレンス
-browser-compat: api.Element.getAttributeNodeNS
-translation_of: Web/API/Element/getAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 指定された名前空間と名前を持つ属性の `Attr` ノードを返します。

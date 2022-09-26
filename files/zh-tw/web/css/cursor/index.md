@@ -1,9 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 此 **`cursor`** [CSS](/zh-TW/docs/Web/CSS) 屬性可以指定當滑鼠指標指向哪個物件時，顯示不同的游標.

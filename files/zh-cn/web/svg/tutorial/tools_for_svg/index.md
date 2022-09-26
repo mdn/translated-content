@@ -1,8 +1,8 @@
 ---
 title: SVG 工具
 slug: Web/SVG/Tutorial/Tools_for_SVG
-translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 现在我们已经讲解了 SVG 内部的基础。我们将看一看哪些工具可以制作或呈现 SVG 文件。

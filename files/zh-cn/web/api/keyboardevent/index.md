@@ -2,6 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent`** 对象描述了用户与键盘的交互。 每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
@@ -160,9 +161,9 @@ The following events are based on the `KeyboardEvent` type. They can be delivere
 
 There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
 
-1.  When the key is first pressed, the `keydown` event is sent.
-2.  If the key is not a modifier key, the `keypress` event is sent.
-3.  When the user releases the key, the `keyup` event is sent.
+1. When the key is first pressed, the `keydown` event is sent.
+2. If the key is not a modifier key, the `keypress` event is sent.
+3. When the user releases the key, the `keyup` event is sent.
 
 ### 特殊情况
 
@@ -176,12 +177,12 @@ However, a limitation of the macOS event model causes Caps Lock to dispatch only
 
 When a key is pressed and held down, it begins to auto-repeat. This results in a sequence of events similar to the following being dispatched:
 
-1.  `keydown`
-2.  `keypress`
-3.  `keydown`
-4.  `keypress`
-5.  <\<repeating until the user releases the key>>
-6.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keydown`
+4. `keypress`
+5. <\<repeating until the user releases the key>>
+6. `keyup`
 
 This is what the DOM Level 3 specification says should happen. There are some caveats, however, as described below.
 
@@ -189,14 +190,14 @@ This is what the DOM Level 3 specification says should happen. There are some ca
 
 In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of keypresses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
 
-1.  `keydown`
-2.  `keypress`
-3.  `keyup`
-4.  `keydown`
-5.  `keypress`
-6.  `keyup`
-7.  <\<repeating until the user releases the key>>
-8.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keyup`
+4. `keydown`
+5. `keypress`
+6. `keyup`
+7. <\<repeating until the user releases the key>>
+8. `keyup`
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 
@@ -265,7 +266,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ### 兼容性说明
 

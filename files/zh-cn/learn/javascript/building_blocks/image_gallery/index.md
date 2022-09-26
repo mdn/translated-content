@@ -1,16 +1,9 @@
 ---
 title: 图片库
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - 事件
-  - 事件句柄
-  - 初学者
-  - 学习
-  - 循环
-  - 评估
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 original_slug: learn/JavaScript/Building_blocks/相片走廊
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 我们已经学习了 JavaScript 基础的块结构，下面我们通过编写一个常见的基于 JavaScript 的图片库来测验一下你对于循环、函数、条件和事件的掌握情况。

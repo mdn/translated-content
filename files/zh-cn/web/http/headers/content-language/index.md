@@ -1,11 +1,8 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Language
 ---
+
 **`Content-Language`** 是一个 {{Glossary("entity header")}}（实体消息首部），用来说明访问者希望采用的语言或语言组合，这样的话用户就可以根据自己偏好的语言来定制不同的内容。
 
 举个例子，假如设置了这样一条消息首部（ "`Content-Language: de-DE`" ），那么说明这份文件是为说德语的人提供的（当然这并不意味着文件本身就是用德语写的。比如，它可能是为说德语的人开设的英语教程的一部分，也就是用英语写的）。
@@ -37,7 +34,7 @@ Content-Language: de-DE, en-CA
 
 ### 声明文档的书写语言
 
-全局的 [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达全部的 [HTML](/zh-CN/docs/Web/HTML)文档或者部分的语言。
+全局的 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达全部的 [HTML](/zh-CN/docs/Web/HTML)文档或者部分的语言。
 
 ```html
 <html lang="de">

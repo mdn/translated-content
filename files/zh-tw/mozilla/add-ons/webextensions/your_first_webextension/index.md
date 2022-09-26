@@ -1,8 +1,8 @@
 ---
 title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
@@ -95,7 +95,7 @@ document.body.style.border = "5px solid red";
 
 一旦網址符合 manifest.json 中 content_scripts 所設定的模式，這段 script 就會載入，並且就像該頁自己讀入的程式碼一樣、能夠直接存取該頁上的東西。
 
-- [深入了解 content scripts.](/en-US/Add-ons/WebExtensions/Content_scripts)
+- [深入了解 content scripts.](/zh-TW/Add-ons/WebExtensions/Content_scripts)
 
 ## 測試看看
 

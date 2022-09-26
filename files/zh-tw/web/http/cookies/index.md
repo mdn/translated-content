@@ -1,12 +1,8 @@
 ---
 title: HTTP cookies
 slug: Web/HTTP/Cookies
-tags:
-  - Cookies
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 _HTTP cookie_（web cookie、browser cookie）為伺服器傳送予使用者瀏覽器的一個小片段資料。瀏覽器可能儲存並於下一次請求回傳 cookie 至相同的伺服器。Cookie 通常被用來保持使用者的登入狀態——如果兩次請求都來自相同的瀏覽器。舉例來說，它記住了[無狀態（stateless）](/zh-TW/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)HTTP 協議的有狀態資訊。

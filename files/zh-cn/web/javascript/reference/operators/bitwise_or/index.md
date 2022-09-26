@@ -1,8 +1,8 @@
 ---
 title: Bitwise OR (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise OR operator (`|`) returns a `1` in each bit position for which the corresponding bits of either or both operands are `1`s.
@@ -41,6 +41,7 @@ The truth table for the OR operation is:
 .    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
+
 14 | 9 (base 10) = 00000000000000000000000000001111 (base 2) = 15 (base 10)
 ```
 
@@ -68,5 +69,5 @@ Bitwise ORing any number `x` with `0` yields `x`.
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
-- [Bitwise OR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise OR assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)

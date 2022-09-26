@@ -9,13 +9,14 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onauxclick
 original_slug: Web/API/GlobalEventHandlers/onauxclick
 ---
+
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} pour le traitement des événements {{event("auxclick")}}.
+La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est un gestionnaire d'évènement pour le traitement des événements {{event("auxclick")}}.
 
-L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements {{event("mousedown")}} et {{event("mouseup")}}, dans cet ordre.
+L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), dans cet ordre.
 
-> **Note :** Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que {{Event ("click")}} ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que {{Event ("auxclick")}} se déclenche pour le bouton non principal. Historiquement, {{Event("click")}} s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
+> **Note :** Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que l'évènement [`click`](/fr/docs/Web/API/Element/click_event) ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que l'évènement `auxclick` se déclenche pour le bouton non principal. Historiquement, {{Event("click")}} s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
 
 ## Syntaxe
 
@@ -56,15 +57,13 @@ button.onauxclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events','#event-type-auxclick','onauxclick')}} | {{Spec2('UI Events')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onauxclick")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{event("auxclick")}} event
 - Related event handlers

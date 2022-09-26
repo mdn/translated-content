@@ -1,8 +1,8 @@
 ---
 title: <tt>
 slug: Web/HTML/Element/tt
-translation_of: Web/HTML/Element/tt
 ---
+
 {{deprecated_header}}
 
 ## 概述

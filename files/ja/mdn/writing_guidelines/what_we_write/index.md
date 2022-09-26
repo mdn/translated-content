@@ -1,12 +1,8 @@
 ---
 title: 私たちが書くものは何か
 slug: MDN/Writing_guidelines/What_we_write
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/What_we_write
 ---
+
 {{MDNSidebar}}  
 
 MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。
@@ -96,7 +92,7 @@ MDN Web Docs に不適切なトピックの例としては、以下のような�
 - ウェブに公開されない、あるブラウザーに特化した技術。
 - ウェブに関連しない技術。
 - エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org) に属します。
-- 自己リンクや自己宣伝のための外部リンク。外部リンクを追加する前に、[執筆スタイルガイド ](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#外部リンク)にあるガイドラインを確認してみてください。
+- 自己リンクや自己宣伝のための外部リンク。外部リンクを追加する前に、[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#外部リンク)にあるガイドラインを確認してみてください。
 
 ### 文書を削除する場合
 
@@ -124,7 +120,7 @@ MDN Web Docs からページが削除されるのは、有用な情報が含ま�
 
 一般に、 MDN Web Docs は*プロダクト*のドキュメントであり、*プロジェクト*や*プロセス*のドキュメントではありません。そのため、もしドキュメントが「どのように使うか」や「どのように動作するか」（「どの」とは前述した特定のカテゴリーのことです）なら MDN Web Docs に掲載しましょう。
 
-文書が「誰が開発したか」や「開発プランについて」などは MDN Web Docs にふさわしくありません。 
+文書が「誰が開発したか」や「開発プランについて」などは MDN Web Docs にふさわしくありません。
 
 MDN Web Docs に掲載するのにふさわしく*ない*種類の文書の例をいくつか挙げます。
 

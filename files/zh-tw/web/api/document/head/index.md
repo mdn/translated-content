@@ -1,8 +1,8 @@
 ---
 title: Document.head
 slug: Web/API/Document/head
-translation_of: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 回傳當前文件的 {{HTMLElement("head")}} 元素。如果該文件有超過一個 `<head>` 元素，那只會回傳第一個 `<head>` 元素。
@@ -34,7 +34,7 @@ alert( document.head === document.querySelector("head") ); // true
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## 參見
 

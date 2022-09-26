@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 ---
+
 {{JSRef}}
 
 **`byteOffset`** 属性描述了从 {{jsxref("ArrayBuffer")}} 开始的字节偏移量。

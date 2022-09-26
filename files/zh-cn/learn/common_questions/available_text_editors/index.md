@@ -1,9 +1,9 @@
 ---
 title: 什么文本编辑器比较好用？
 slug: Learn/Common_questions/Available_text_editors
-translation_of: Learn/Common_questions/Available_text_editors
 original_slug: Learn/Common_questions/实用文本编辑器
 ---
+
 在这篇文章中我们强调了关于 web 开发者安装文本编辑器的一些考虑事项。
 
 <table class="learn-box nostripe standard-table">
@@ -11,7 +11,7 @@ original_slug: Learn/Common_questions/实用文本编辑器
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        你应该已经知晓了<a href="/en-US/Learn/What_software_do_I_need">
+        你应该已经知晓了<a href="/zh-CN/Learn/What_software_do_I_need">
           为了建立一个网站所需的各种软件</a
         >。
       </td>
@@ -61,7 +61,7 @@ original_slug: Learn/Common_questions/实用文本编辑器
 
 ## 主动学习
 
-_还没有主动学习。[请考虑投稿贡献。](/en-US/docs/MDN/Getting_started)_
+_还没有主动学习。[请考虑投稿贡献。](/zh-CN/docs/MDN/Getting_started)_
 
 ## 深入挖掘
 
@@ -77,19 +77,19 @@ _还没有主动学习。[请考虑投稿贡献。](/en-US/docs/MDN/Getting_star
 
 #### 我想使用什么样的技术？
 
-一般来说，任何文本编辑器都可以打开任意文本文件。这对于自己写笔记来说是非常有用的，但是当你使用[HTML](/en-US/docs/Glossary/HTML)，[CSS](/en-US/docs/Glossary/CSS)和[JavaScript](/en-US/docs/Glossary/JavaScript)进行 Web 开发和编写时，你将生产出很大的复杂文件。通过选择一个适用你使用的技术的文本编辑器，可以使你更轻松自如。许多文本编辑器可以帮助你实现如下功能
+一般来说，任何文本编辑器都可以打开任意文本文件。这对于自己写笔记来说是非常有用的，但是当你使用[HTML](/zh-CN/docs/Glossary/HTML)，[CSS](/zh-CN/docs/Glossary/CSS)和[JavaScript](/zh-CN/docs/Glossary/JavaScript)进行 Web 开发和编写时，你将生产出很大的复杂文件。通过选择一个适用你使用的技术的文本编辑器，可以使你更轻松自如。许多文本编辑器可以帮助你实现如下功能
 
-- **代码着色。**根据你使用的技术，通过对关键字进行颜色编码，使你的文件更清晰。
-- **代码完成。**通过自动完成循环结构（例如，自动关闭 HTML 标签或为给定的 CSS 属性建议有效值）为你节省时间。
-- **代码段。**正如你在启动一个新的 HTML 文档时看到的，许多技术一遍又一遍地使用相同的文档结构。通过使用代码段预先填写你的文档，可以节省你重新输入所有这些的麻烦。
+- **代码着色** 根据你使用的技术，通过对关键字进行颜色编码，使你的文件更清晰。
+- **代码完成** 通过自动完成循环结构（例如，自动关闭 HTML 标签或为给定的 CSS 属性建议有效值）为你节省时间。
+- **代码段** 正如你在启动一个新的 HTML 文档时看到的，许多技术一遍又一遍地使用相同的文档结构。通过使用代码段预先填写你的文档，可以节省你重新输入所有这些的麻烦。
 
-大多数文本编辑器现在都支持代码着色，但不一定是支持其他两个功能。尤其确保你的文本编辑器会对[HTML](/en-US/docs/Glossary/HTML)，[CSS](/en-US/docs/Glossary/CSS)和[JavaScript](/en-US/docs/Glossary/JavaScript)进行颜色编码。
+大多数文本编辑器现在都支持代码着色，但不一定是支持其他两个功能。尤其确保你的文本编辑器会对[HTML](/zh-CN/docs/Glossary/HTML)，[CSS](/zh-CN/docs/Glossary/CSS)和[JavaScript](/zh-CN/docs/Glossary/JavaScript)进行颜色编码。
 
 #### 我希望我的文本编辑器具备哪些基本功能？
 
 这取决于你的需求和计划。以下功能通常是很有帮助的：
 
-- 根据[正则表达式](/en-US/docs/Glossary/Regular_Expression)或其他模式的需要，在一个或多个文档中搜索和替换
+- 根据[正则表达式](/zh-CN/docs/Glossary/Regular_Expression)或其他模式的需要，在一个或多个文档中搜索和替换
 - 快速跳到指定行
 - 分别查看一个大文件的两个部分
 - 预览 HTML 在浏览器中的显示情况
@@ -132,9 +132,9 @@ _还没有主动学习。[请考虑投稿贡献。](/en-US/docs/MDN/Getting_star
 
 - **Windows** 开发人员会给你一个`.exe`或`.msi`文件。也有时候，软件为自带的压缩归档格式`.zip`，`.7z`或者`.rar`，在这种情况下，你需要安装其他程序来提取压缩文件的内容。Windows 支持默认情况下`.zip`。
 - **Mac** 在编辑器的网站上，您可以下载一个`.dmg`文件。您也可以直接在 Apple Store 找到一些文本编辑器，使安装更简单。
-- **Linux。**在最受欢迎的发行版中，您可以从图形包管理器（Ubuntu Software Center，mintInstall，GNOME Software 等）开始。你通常可以发现一个预先包装软件的`.deb`或`.rpm`文件，但大多数时候你将使用你的发行版系统的存储库服务器，或者在最坏的情况下，从源代码编译编辑器。花时间仔细检查文本编辑器网站上的安装说明。
+- **Linux** 在最受欢迎的发行版中，您可以从图形包管理器（Ubuntu Software Center，mintInstall，GNOME Software 等）开始。你通常可以发现一个预先包装软件的`.deb`或`.rpm`文件，但大多数时候你将使用你的发行版系统的存储库服务器，或者在最坏的情况下，从源代码编译编辑器。花时间仔细检查文本编辑器网站上的安装说明。
 
-当您安装新的文本编辑器时，您的操作系统可能会继续使用其默认编辑器打开文本文件，直到您更改*文件关联。*这些说明将帮助您在指定操作系统中双击打开文件时选定首选编辑器：
+当您安装新的文本编辑器时，您的操作系统可能会继续使用其默认编辑器打开文本文件，直到您更改*文件关联*。这些说明将帮助您在指定操作系统中双击打开文件时选定首选编辑器：
 
 - Windows
 
@@ -151,4 +151,4 @@ _还没有主动学习。[请考虑投稿贡献。](/en-US/docs/MDN/Getting_star
 
 ## 下一步
 
-现在你已经选择了一个合适的文本编辑器，现在你可以花一些时间来搭建[你的基本工作环境](/en-US/Learn/Set_up_a_basic_working_environment)，或者你想立即使用它，你可以写下[你的第一个网页](/en-US/Learn/HTML/Write_a_simple_page_in_HTML)。
+现在你已经选择了一个合适的文本编辑器，现在你可以花一些时间来搭建[你的基本工作环境](/zh-CN/Learn/Set_up_a_basic_working_environment)，或者你想立即使用它，你可以写下[你的第一个网页](/zh-CN/Learn/HTML/Write_a_simple_page_in_HTML)。

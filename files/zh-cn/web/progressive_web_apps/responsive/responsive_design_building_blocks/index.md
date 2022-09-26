@@ -1,8 +1,8 @@
 ---
 title: 响应式设计的基础
 slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
-translation_of: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 ---
+
 在本文中，我们将讨论响应式设计的主要基本组成部分，并在必要时提供一些指向更多信息的链接。
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
@@ -325,7 +325,7 @@ This results in the following layout:
 
 ![](viewport-fail-fixed.png)
 
-> **备注：** Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the [orientation manifest field](https://developer.mozilla.org/en-US/Apps/Build/Manifest#orientation). If you want a solution that works across general web apps, you could use the [Screen orientation API](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#Locking_the_screen_orientation), and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if `window.innerWidth` is larger than `window.innerHeight`, assume the
+> **备注：** Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the [orientation manifest field](/zh-CN/Apps/Build/Manifest#orientation). If you want a solution that works across general web apps, you could use the [Screen orientation API](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#Locking_the_screen_orientation), and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if `window.innerWidth` is larger than `window.innerHeight`, assume the
 > game is landscape mode and show a "please rotate" message.)
 
 ## Viewport

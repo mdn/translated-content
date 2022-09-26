@@ -1,11 +1,8 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/tab-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS 属性** `tab-size`** 用于自定义制表符 (`U+0009`) 的宽度。
@@ -96,7 +93,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.tab-size")}}
+{{Compat}}
 
 ## 参见
 

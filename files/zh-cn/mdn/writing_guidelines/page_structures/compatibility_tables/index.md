@@ -1,125 +1,108 @@
 ---
 title: 兼容性表格和浏览器兼容性数据仓库（BCD）
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
-translation_of: MDN/Structures/Compatibility_tables
 ---
+
 {{MDNSidebar}}
 
-MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。本文将介绍如何使用我们的功能将兼容性数据添加到 MDN 页面。
+MDN 为我们的开放 web 文档提供了兼容性表格的标准格式；它是对比所有浏览器之间，包含 DOM、HTML、CSS、JavaScript、SVG 等技术的文档。本文将介绍如何添加和维护生成兼容性表格的数据库，以及如何将表格添加到文章中。
 
-> **警告：** _数据的生成方式已经发生了变更_。过去，我们的表格直接嵌入在页面中，而且数据是手动填写的。这样效率很低，难以维护，而且使得数据不够灵活，不便更新。所以我们正在把我们的兼容性表格迁移到一个数据 repo 中（<https://github.com/mdn/browser-compat-data>）并且改为使用程序化的方式生成它。
->
-> 本指南中，我们撰写了关于如何向 MDN 添加新的兼容性数据的文档，但是我们仍然保留了旧的方法来保证旧文档的兼容性表格可用：正如你所见，手动输入的表格依然存在于 MDN 上。如果你有必要使用旧方法的话，可以参考这篇文章：[Old compatibility tables](/en-US/docs/MDN/Contribute/Structures/Old_compatibility_tables)。
+有关更高级的文档，以及最新的用于表示数据的流程和 JSON 格式的更改，请参考数据仓库的 [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) 和 [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)。
 
-> **备注：** 如果您需要本指南任何步骤的帮助，欢迎您在[MDN 论坛](https://discourse.mozilla-community.org/c/mdn)上与我们联系。
+如果你有疑问或是发现了问题，欢迎[与我们联系](/zh-CN/docs/MDN/Community/Contributing/Getting_started#第四步：寻求帮助)。
 
-## 如何访问 data repo
+## 如何访问数据仓库
 
-数据存储在一个 GitHub repo 中，到 <https://github.com/mdn/browser-compat-data> 查看。想要访问它，你必须拥有一个 GitHub 账号，fork 浏览器兼容数据仓库到你自己的账户，然后克隆你的 fork 到你的本地机器。
+数据存储在一个 GitHub 仓库中，请查看 <https://github.com/mdn/browser-compat-data>。想要访问它，你必须拥有一个 GitHub 账号，fork 浏览器兼容性数据仓库到你自己的账户，然后克隆你的 fork 到你的本地机器。
 
-## 选择要贡献的数据类型
+## 为添加数据做好准备
 
-首先，确定一下你想为何种 Web 技术贡献兼容性数据。可以是一个 HTML 元素、CSS 属性、JS 语法或者 JS API 接口。我们鼓励您贡献 API 接口的数据，因为已经有人在贡献 HTML、JS 和 CSS 的数据了。你可以在表格 [Browser Compat Data migration](https://docs.google.com/spreadsheets/d/1ivgyPBr9Lj3Wvj5kyndT1rgGbX-pGggrxuMtrgcOmjM/edit#gid=926663640) 中查看各个需要添加兼容性数据的 Web 技术的数据状态。
+在添加新数据之前，你应该保证你的 fork 已与主仓库同步（它们应包含相同的内容），在你的 fork 里创建一个包含你的更改的分支，再将这个分支 pull 到你本地的仓库。现在，这样你就可以开始贡献了：
 
-电子表格的使用步骤如下：
+让我们来看一下一个简单的确保你的 fork 与主仓库同步的方法：
 
-1. 直接挑选一个还未开始或者还未完成数据录入的功能点，在“Who”一栏中填入你的名字，最好能够和你的 MDN 用户名保持一致，以便我们在需要联系你的时候能够查找到你的邮件地址。
-2. 如果该功能点不在表格上，那么你可以参照现有的格式在合适的位置上加一行。注意要使用同等的粒度（例如，HTML 以标签元素为单位、CSS 以选择器或者属性值为单位、JS 以对象为单位、JS API 以特定的接口为单位）
-3. 当你已经开始录入数据的时候，把对应状态栏的下拉选项置于“In progress”（进行中）状态。
-4. 一旦添加完数据，并且向主仓库提交了一个拉取请求（pull request），那么把对应状态栏的下拉选项置于“PR done”状态。
-5. 当你的数据已经成功合并到主分支，或者已经添加到 npm 包里面的时候，请尽量更新对应的状态栏到相应的状态。
-6. 当你更新了你的功能文档页面，并且使用新的脚步命令使其可以在每一个页面都可以动态的生成合适的数据表格的时候，你就需要在电子表格中修改对应功能的状态为“Article updated”（文章已更新）。这意味着你已经完成了这一功能的所有数据录入工作。
+### 将浏览器兼容性数据的主仓库添加到远端服务器列表中
 
-## 准备添加数据
-
-在添加新数据之前，你应该保证您的 fork 是主 repo 的最新版本（它们应包含相同的内容）。在您的 fork 里添加一个包含您的更改的分支，然后把它 pull 到您本地的仓库，这样你就可以开始贡献了：
-
-下面是更新您的分支的一个简单方法：
-
-### 将浏览器兼容信息的主 repo 添加到远端服务器列表中
-
-在您的终端或命令行中进入您的 fork 的本地仓库，用以下命令将（服务器上的）主 repo 添加到远端服务器列表中（您只需执行以下命令一次）：
+通过终端或命令行进入你本地克隆的 fork 仓库，并添加一个连接到主（upstream）仓库的远程，就像这样（你只需要做一次）：
 
 ```bash
 git remote add upstream https://github.com/mdn/browser-compat-data.git
 ```
 
-如果您不确定自己是否做到了这一点，您可以检查您仓库已经在用的远端服务器列表：
+如果你不确定你是否完成了这一步，你可以通过命令确认你的仓库在用的远端服务器列表：
 
 ```bash
 git remote -v
 ```
 
-### 让您的分支与服务器上的内容同步
+### 使用服务器上的内容更新你的 fork
 
-现在，只要您想更新您的分支，您就可以这样做：
+现在，你可以通过以下步骤更新你的 fork：
 
-1. 确定您已切换到在主分支：
+1. 确保你在主分支中：
 
     ```bash
-    git checkout master
+    git checkout main
     ```
 
-2. 使用以下命令来获取服务器上最新的内容：
+2. 使用以下命令拉取最新的仓库内容：
 
     ```bash
     git fetch upstream
     ```
 
-3. 用 rebase 将主仓库的内容合并到您的 master 分支中：
+3. 使用 rebase 将官方仓库的内容合并到你的主分支：
 
     ```bash
-    git rebase upstream/master
+    git rebase upstream/main
     ```
 
-4. 将来自主 repo 的更新 push 回您自己的 repo 中：
+4. 将更新推送回你在服务器上的 fork 仓库：
 
     ```bash
-    git push -f
+    git push
     ```
 
-### 创建您用来工作的分支：
+### 创建你用于工作的分支
 
-接下来，打开您在服务器上的 fork（它的地址可能是`https://github.com/your-username/browser-compat-data`）并且创建一个新分支来存储您的改动。步骤如下：
+接下来，打开你在服务器上的 fork（它的地址可能是 `https://github.com/your-username/browser-compat-data`）并且创建一个新分支来存储你的改动。步骤如下：
 
-1. 点击"Branch: Master"按钮；
-2. 在"Find or create a branch..."文本输入框中输入一个新的分支名；
-3. 点击下方出现的"Create branch _name-of-branch_ from Master"按钮。
+1. 点击“Branch: Main”按钮；
+2. 在“Find or create a branch…”文本输入框中输入一个新的分支名；
+3. 点击下方出现的“Create branch _name-of-branch_ from Main”按钮。
 
-举个例子，如果您想补充 WebVR API 的信息，您可以创建一个名为“webvr”的分支。
+举个例子，如果你想补充 WebVR API 的信息，你可以创建一个名为“webvr”的分支。
 
 ### 切换到新分支
 
-此时，回到您的终端或命令行，用以下命令将您的新分支同步到您本地的 fork 中：
+此时，回到你的终端或命令行，用以下命令将你的新分支同步到你本地的 fork 中：
 
 ```bash
 git pull
 ```
 
-现在用以下命令切换到您的新分支
+现在用以下命令切换到你的新分支：
 
 ```bash
-git checkout -b name-of-branch
+git checkout name-of-branch
 ```
 
-现在您可以开始进行您对浏览器兼容信息的补充和修改了。
+现在你可以开始进行你对浏览器兼容信息的补充和修改了。
 
 ## 添加数据
 
-为添加新的数据，您需要新建文件以存储您的兼容性数据。对于不同技术的数据，您需要创建的文件也有所不同：
+为添加新的数据，你需要新建文件以存储你的兼容性数据。对于不同技术的数据，你需要创建的文件也有所不同：
 
-- [HTML](/zh-CN/docs/Web/HTML/)：被包含在 [browser-compat-data/html/elements](https://github.com/mdn/browser-compat-data/tree/master/html/elements) 中，每个 HTML 元素对应一个文件。文件需要以元素的小写的名称命名，例如`div.json`。
-- [CSS](/zh-CN/docs/CSS)：每个 CSS 属性或选择器对应一个文件。它们被包含在对应的目录中（请参考 [browser-compat-data/css](https://github.com/mdn/browser-compat-data/tree/master/css)）。文件需要以 CSS 特性的小写的名称命名，如`background-color.json`或者`hover.json`。
-- [JS](/zh-CN/docs/JavaScript)：被包含在 [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins) 中，每个 JavaScript 对象对应一个文件。文件要以 JavaScript 对象的准确名称命名，保留其大小写，如 `Date.json` 或 `InternalError.json`。
-- [API](/zh-CN/docs/Web/API)：API 中的每个接口对应一个文件。它们在 [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api) 中。每个文件要以接口的准确名称命名，保留其大小写，例如 WebVR API 的文件为`VRDisplay.json`，`VRDisplayCapabilities.json`，等等。
+- **[HTML](/zh-CN/docs/Web/HTML/)**：被包含在 [browser-compat-data/html/elements](https://github.com/mdn/browser-compat-data/tree/main/html/elements) 中。每个 HTML 元素对应一个文件。文件需要以元素的小写的名称命名，例如 `div.json`。
+- **[CSS](/zh-CN/docs/CSS)**：每个 CSS 属性或选择器对应一个文件。它们被包含在对应的目录中（请参考 [browser-compat-data/css](https://github.com/mdn/browser-compat-data/tree/main/css)）。文件需要以 CSS 特性的小写的名称命名，如 `background-color.json` 或者 `hover.json`。
+- **[JS](/zh-CN/docs/JavaScript)**：被包含在 [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/main/javascript/builtins) 中，每个 JavaScript 对象对应一个文件。文件要以 JavaScript 对象的准确名称命名，保留其大小写，如 `Date.json` 或 `InternalError.json`。
+- **[API](/zh-CN/docs/Web/API)**：API 中的每个接口对应一个文件。它们在 [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/main/api) 中。每个文件要以接口的准确名称命名，保留其大小写，例如 WebVR API 的文件为 `VRDisplay.json`、`VRDisplayCapabilities.json`，等等。
 
-> **备注：** 您会留意到，该仓库还包含了[浏览器拓展](/en-US/Add-ons/WebExtensions)和[HTTP](/en-US/docs/Web/HTTP)**的数据。**These data sets are basically finished as they stand, but more features may need to be added in the future.
-
-你创建的每个文件都需要跟随定义在我们 repo 的 schema 中的这些模板的规定。你可以参考[详细的模板描述](https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md)。
+你创建的每一个文件都必循遵循我们存储库架构中定义的模式；你可以参考[详细的模式描述](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md)。
 
 ### 基本的兼容性数据的结构
 
-让我们来看一下如下例子。一个 CSS 属性 JSON 文件需要以下的结构：
+让我们来看一下如下的例子。一个 CSS 属性 JSON 文件需要以下的基础结构：
 
 ```json
 {
@@ -127,7 +110,7 @@ git checkout -b name-of-branch
     "properties": {
       "border-width": {
         "__compat": {
-          ...
+          // …
         }
       }
     }
@@ -135,46 +118,48 @@ git checkout -b name-of-branch
 }
 ```
 
-首先有一个`css`对象，其中包含了一个`properties`对象。每个您要设定兼容性数据的特性都对应一个`properties`对象中的成员。而每一个这些成员都有一个`__compat`成员，`__compat`成员中则是实际的数据。
+首先有一个 `css` 对象，其中包含了一个 `properties` 对象。每个你要设定兼容性数据的特性都对应一个 `properties` 对象中的成员。而每一个这些成员都有一个 `__compat` 成员，`__compat` 成员中则是实际的数据。
 
-以上的数据能在 [browser-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json) 文件中找到——可将这与 [MDN 上渲染后的浏览器兼容性](/zh-CN/docs/Web/CSS/border-width#Browser_compatibility) 相比较。
+以上的数据能在 [browser-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json) 文件中找到——可将这与 [MDN 上渲染后的浏览器兼容性表格](/zh-CN/docs/Web/CSS/border-width#浏览器兼容性)相比较。
 
-对于其他类型特性，写法是类似的，但对象的名称不同：
+对于其它特性类型，写法是类似的，但对象的名称不同：
 
-- 对于 CSS 选择器，它与 CSS 属性的写法基本相同，不同之处在于顶级对象结构是是 `css.selectors` 而不是`css.properties`. 请以 [cue.json](https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json) 作为参考示例。
-- 对于 HTML 数据，它的写法基本相同，不同之处在于顶级对象结构是`html.elements`。请以`article.json`作为参考示例。
-- JS 内置对象对应的顶级结构是`javascript.builtins`；请以 [Array.json](https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json) 作为参考示例。
+- 对于 CSS 选择器，它与 CSS 属性的写法基本相同，不同之处在于顶级对象结构是是 `css.selectors` 而不是`css.properties`。请以 [cue.json](https://github.com/mdn/browser-compat-data/blob/main/css/selectors/cue.json) 作为参考示例。
+- 对于 HTML 数据，它的写法基本相同，不同之处在于顶级对象结构是 `html.elements`。请以 [article.json](https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json) 作为参考示例。
+- JS 内置对象对应的顶级结构是 `javascript.builtins`；请以 [Array.json](https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json) 作为参考示例。
 
-在一个 HTML、CSS 和 JS 页面中，通常您只需要有一个特性。API 则有些不同——它们总是包含多个子特性（参见下边的 [子特性](#子特性)）。
+在一个 HTML、CSS 和 JS 页面中，通常你只需要有一个特性。API 则有些不同——它们总是包含多个子特性（参见下边的[子特性](#子特性)）。
 
 ### 一个特性中的基础结构
 
-在一个特性的`__compat`成员中，您需要包含以下成员：
+在一个特性的 `__compat` 成员中，你需要包含以下成员：
 
-- `mdn_url`: MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 `/docs/...` 而不是 `/docs/en-US/...` （或者其他）。本地化文件夹名称会在页面加载时被添加。
-- `support`: 所有不同浏览器对这个特性的浏览器支持的信息。
-- `status`: Contains members reporting the standards track status of this feature.
+- `mdn_url`：MDN 上这个特性的页面的 URL。注意，这个 URL 不可以带上本地化文件夹名称，例如：是 `/docs/…` 而不是 `/en-US/docs/…`。本地化文件夹名称会在页面加载时被添加。
+- `spec_url`：指向定义该特性的规范的 URL 或 URL 数组。
+- `support`：所有不同浏览器对这个特性的浏览器支持的信息。
+- `status`：报告了此特性的标准跟踪状态。
 
-浏览器成员名称在架构里被定义（参见 [浏览器标识符](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers)）。你应该使用现有定义的标识符的完整列表。如果你希望添加其他浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑就这么做。
+模式中定义了浏览器成员的名称（参见[浏览器标识符](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers)）。你应该使用现有定义的标识符的完整列表。如果你希望添加其它浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑的情况下就这么做。
 
-在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到[高级场景](#添加数据：高级场景)）。其他你可能使用的值还包括：
+在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员中包含“version_added”（以下我们会说到[高级场景](#添加数据：高级场景)）。其它你可能使用的值还包括：
 
-- 一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如“47”。
-- `true`: 如果一个浏览器支持这个特性，但你不知道准确的版本号，取值用`true`。
-- `false`: 如果一个浏览器支持这个特性，取值用 `false`。
-- `null`: 如果一个浏览器支持这个特性，取值用 `null`。
+- 一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如 `"47"`。
+- `true`：如果一个浏览器支持这个特性，但你不知道准确的版本号，取值用 `true`。
+- `false`：如果一个浏览器不支持这个特性，取值用 `false`。
+- `null`：如果你不知道某个浏览器是否支持这个特性，取值用 `null`。
 
-在 `status` 成员中，包含三个子成员：
+在 `status` 成员中，你需要包含三个子成员：
 
-- `"experimental"`: 如果这个特性是[试验性](/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental)的，取值为 `true` ，否则为 `false` 。
-- `"standard_track"`: 如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其他规范如 Khronos 或 TC39 等），取值为`true` ，否则为 `false` 。
-- `"deprecated"`: 如果这个特性已经[过时](/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete)，取值为`true` ，否则为 `false` 。
+- `experimental`：如果这个特性是[实验性](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental)的，取值为 `true` ，否则为 `false` 。
+- `standard_track`：如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其它规范如 Khronos 或 TC39 等），取值为`true` ，否则为 `false` 。
+- `deprecated`：如果这个特性已经[废弃](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)，取值为 `true`，否则为 `false`。
 
-作为例子，以下是 [border-width](/en-US/docs/Web/CSS/border-width#Browser_compatibility) 特性的数据 (参见 [border-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json)) ：
+作为例子，以下是 [border-width](/zh-CN/docs/Web/CSS/border-width#浏览器兼容性) 特性的数据（参见 [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json)）：
 
 ```json
 "__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
+  "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-width",
   "support": {
     "chrome": {
       "version_added": "1"
@@ -223,26 +208,26 @@ git checkout -b name-of-branch
 
 #### 添加描述说明
 
-There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
+这是第四个、可选的 `__compat` 成员——`description`。可用于包含该特性人类可读的描述。仅当通过浏览数据很难看出该特性是什么时，才应该包含此内容。例如，通过查看数据结构可能不太明白构造函数是什么，因此，你可以像这样包含描述：
 
 ```json
 {
   "api": {
     "AbortController": {
       "__compat": {
-        ...
+        // …
       },
       "AbortController": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
           "description": "<code>AbortController()</code> constructor",
           "support": {
-            ...
+            …
           }
         }
       }
 
-      ... etc.
+      // …
     }
   }
 }
@@ -250,9 +235,9 @@ There is a fourth, optional, member that can go inside the \_\_compat member —
 
 ### 子特性
 
-In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.
+在兼容性表格包含多行内容时，你需要在每个特性中使用多个子特性来定义每一行的内容。例如，当你获得了对存储在一行中的特性的基本支持而这一特性还有在规范快要确定时才添加的、仅被部分浏览器支持的新的属性或值时，可能会发生这种情况。
 
-As an example, see the [compat data](https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json) and [corresponding MDN page](/en-US/docs/Web/CSS/background-color) for the `background-color` property. The basic support exists inside the `__compat` object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own `__compat` object.
+作为例子，参见 `background-color` 属性的[兼容性数据](https://github.com/mdn/browser-compat-data/blob/main/css/properties/background-color.json)和[对应的 MDN 页面](/zh-CN/docs/Web/CSS/background-color)。正如上面解释的，该属性的基本支持存在于 `__compat` 对象内，而其中还有附加的用于浏览器对“alpha 通道对十六进制值”的支持的一行内容。
 
 ```json
 {
@@ -260,11 +245,11 @@ As an example, see the [compat data](https://github.com/mdn/browser-compat-data/
     "properties": {
       "background-color": {
         "__compat": {
-          ...
+          // …
         },
         "alpha_ch_for_hex": {
           "__compat": {
-            ...
+            // …
           },
         }
       }
@@ -273,42 +258,42 @@ As an example, see the [compat data](https://github.com/mdn/browser-compat-data/
 }
 ```
 
-For an API, you've got the top two levels defined as `api.name-of-the-interface`, then a top-level `__compat` section to define the overall browser compatibility of the interface, then a sub-feature for each of the methods, properties, and constructors contained inside the interface. The basic structure looks like this:
+对于一个 API，你需要将顶层的两个层级定义为 `api.name-of-the-interface`，然后是定义该接口的浏览器兼容性的顶层的 `__compat` 部分，然后是接口中包含的每个方法、属性和构造函数这些子特性。基本的结构如下所示：
 
 ```json
 {
   "api": {
     "VRDisplay": {
       "__compat": {
-        ...
+        // …
       },
       "cancelAnimationFrame": {
         "__compat": {
-          ...
+          // …
         }
       },
       "capabilities": {
         "__compat": {
-          ...
+          // …
         }
       },
 
-      ... etc.
+      // …
 
     }
   }
 }
 ```
 
-See [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json) for a full example.
+参见 [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) 以获取完整示例。
 
 ## 添加数据：高级场景
 
-There are some advanced features that you'll want to include in browser compat data. The aim of this section is to list the most common ones, providing an example of each to show how you can implement them in your own compat data.
+本节列出了你可能会在浏览器兼容性数据中使用的一些高级功能。这里列出的是最常见的高级功能，并提供了如何在兼容性数据中实现它们的示例。
 
-### Including a footnote
+### 包含一个脚注
 
-Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json)) (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:
+通常，兼容性表格会包含某些于条目相关的脚注，这些脚注解释了一些有用的信息或者特性的一些奇怪的行为，这对开发人员会非常有用。例如，{{domxref("VRDisplay.capabilities")}} 的 Chrome Android 条目（参见 [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json)）（在撰写本文时）有一个脚注“Currently supported only by Google Daydream.”为了将其包含在兼容性数据中，我们需要在“chrome_android”子成员中添加一个“notes”子成员，就像这样：
 
 ```json
 "chrome_android": {
@@ -319,7 +304,7 @@ Often compat tables will include footnotes related to certain entries that expla
 
 ### 包含浏览器厂商的前缀
 
-If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. 例如您可能有一个特性在 Firefox 浏览器中要用`-moz-`前缀才被支持，要在兼容性数据中指明这一点，您需在对应的"firefox"子成员中增加一个"prefix"子成员。它看起来是这样的：
+如果某个特性需要在添加浏览器厂商的前缀后才被支持，你需要在浏览器兼容性数据中明确说明。例如你可能有一个特性在 Firefox 浏览器中要用 `-moz-` 前缀才被支持，要在兼容性数据中指明这一点，你需在对应的“firefox”子成员中增加一个“prefix”子成员。就像这样：
 
 ```json
 "firefox": {
@@ -328,17 +313,17 @@ If a feature is supported behind a vendor prefix in one or more browsers, you'll
 }
 ```
 
-### Including browser preferences or flags
+### 包含浏览器首选项或实验性标志
 
-Some features may be supported in a browser, but they are experimental and turned off by default. If a user wants to play with this feature they need to turn it on using a preference/flag.
+有些特性虽然被某些浏览器所支持，但其是实验性的且默认处于关闭状态。如果用户想要使用此特性，它们需要使用首选项或实验性标志（flags）来启用它。
 
-To represent this in the compat data, you need to add the "flags" submember inside the relevant browser identifier submember. The value of "flags" is an array of objects each of which contains of three members:
+为了在兼容性数据中表示这一点，需要在相关的浏览器标识子成员中添加“flags”子成员。“flags”的值是一个对象数组，其中的每个对象包含三个成员：
 
-- "type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using `about:config` in Firefox, or `chrome://flags` in Chrome), but you might also sometimes use a value of "compile_flag", which is a preference set when the browser build is compiled.
-- "name": This is a string representing the name of the preference that needs to have a value set on it. For example, "Enable Experimental Web Platform Features" is a preference that exists in Chrome, found in `chrome://flags`.
-- "value_to_set": This is a string representing the value that needs to be set on the preference, for example "true".
+- `type`：标志或首选项的类型。最常见的值是“preference”，表示它是在浏览器内部设置的（例如：Firefox 的 `about:config` 和 Chrome 的 `chrome://flags`），但有时会使用“compile_flag”，这是在编译浏览器时设置的首选项。
+- `name`：一个表示设置的首选项的名称。例如，“Enable Experimental Web Platform Features”是 Chrome 的 `chrome://flags` 中存在的一个首选项。
+- `value_to_set`：一个表示需要在首选项中设置的值的字符串，例如“true”。
 
-So to add a preference/flag to the Chrome support for a feature, you'd do something like this:
+因此，若要为 Chrome 支持的某个特性添加首选项或实验性标志，你可以这样编写：
 
 ```json
 "chrome": {
@@ -353,7 +338,7 @@ So to add a preference/flag to the Chrome support for a feature, you'd do someth
 },
 ```
 
-If a feature is behind two or more flags, you can add additional objects to the "flags" array, like in this case, for example:
+如果某个特性的开启需要设定多个实验性标志，你可以在“flags”数组中添加额外的对象，就像这样：
 
 ```json
 "firefox": {
@@ -375,7 +360,7 @@ If a feature is behind two or more flags, you can add additional objects to the 
 
 ### 包含特性不再被支持的版本
 
-有时一个特性在浏览器的某个版本被加进去，然后又因为该特性过时而被被移除掉。这可以在"version_removed"子成员中体现。该子成员是一个代表特性被移除的版本的字符串。例如：
+有时一个特性在浏览器的某个版本被加进去，然后又因为该特性被弃用而被移除掉。这可以在“version_removed”子成员中体现。该子成员是一个代表特性被移除的版本的字符串。例如：
 
 ```json
 "firefox": {
@@ -384,15 +369,15 @@ If a feature is behind two or more flags, you can add additional objects to the 
 },
 ```
 
-### Including multiple support points for the same browser entry
+### 包含同一浏览器条目的多个支持数据点
 
-Sometimes you'll want to add multiple support data points for the same browser inside the same feature.
+有时，我们需要为同一特性中的一个浏览器条目添加多个支持的数据点。
 
-As an example, the {{cssxref("text-align-last")}} property (see also [text-align-last.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/text-align-last.json)) was added to Chrome in version 35, supported behind a pref.
+以 {{cssxref("text-align-last")}} 属性（参见 [text-align-last.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/text-align-last.json)）为例，其中添加了 Chrome 在 35 版本中添加了需要通过首选项开启的对该特性的支持。
 
-The support mentioned above was then removed in version 47; also in version 47, support was added for `text-align-last` enabled by default.
+而上述支持在 47 版本中被移除，但同时添加了对 `text-align-last` 的默认支持。
 
-To include both of these data points, you can make the value of the "chrome" submember an array containing two support information objects, rather than just a single support information object:
+要包含这两个数据点，你需要将“chrome”子成员的值设置为包含两个支持信息对象的数组，而不是一个单独的支持信息对象：
 
 ```json
 "chrome": [
@@ -413,23 +398,23 @@ To include both of these data points, you can make the value of the "chrome" sub
 ],
 ```
 
-> **备注：** You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.
+> **备注：** 你应该将最新或最重要的支持数据点放在数组的最前面——这将帮助只想要了解最新信息的人更容易地阅读这些数据。
 
-### 包含一个可选的名字
+### 包含一个代替名称
 
-Occasionally browsers will support a feature under a different name to the name defined in its specification. This might be for example because a browser added experimental support for a feature early, and then the name changed before the spec stabilized.
+有时，浏览器会以与规范中不同的名称支持某个特性。例如，浏览器很早就添加了对某个特性的实验性支持，但规范在确定之前使用了一个不同的名称。
 
-To include such a case in the browser compat data, you can include a support information point that specifies the alternative name inside an "alternative_name" member.
+要在浏览器兼容性数据中包含这类特殊的情况，你可以在“alternative_name”成员中添加一个有关代替名称的支持数据点。
 
-> **备注：** The alternative name might not be an exact alias — it might have differing behaviour to the standard version.
+> **备注：** 代替名称不一定是别名——这意味着它的行为可能与标准定义的行为不同。
 
-Let's look at an example. The {{cssxref("border-top-right-radius")}} property (see also [border-top-right-radius.json](https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json)) was supported in Firefox:
+让我们看一个示例。Firefox 支持的 {{cssxref("border-top-right-radius")}} 属性（参见 [border-top-right-radius.json](https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json)）：
 
-- From version 4 onwards with the standard name `border-top-right-radius`.
-- From version 49 onwards with a `-webkit-` prefix, for browser compatibility purposes.
-- From version 1 onwards with the alternative name `-moz-border-radius-topright`. Support for this alias was removed in version 12.
+- 从 4 版本开始，使用标准的名称 `border-top-right-radius`.
+- 从 49 版本开始，使用带有 `-webkit-` 前缀的名称，处于浏览器兼容性目的。
+- 从 1 版本开始，使用代替名称 `-moz-border-radius-topright`。该别名的支持在 12 版本中被移除。
 
-To represent this in the data, we used the following JSON:
+要在数据中表示这些内容，我们需要使用以下的 JSON：
 
 ```json
 "firefox": [
@@ -452,13 +437,12 @@ To represent this in the data, we used the following JSON:
 
 ## 将变更推送回主仓库
 
-在您添加完您的兼容性数据之后，您应该先用以下命令测试一下：
+在你添加完你的兼容性数据之后，你应该先用以下命令测试一下：
 
-- `npm run lint` — 测试所有兼容性数据以确保 JSON 的格式和书写风格正确，例如正确的缩进和没有遗漏逗号等等。该命令会打印出一个很长的文件名和测试结果的列表；if an error is found, the linter will throw an error on the file it is found in, giving you useful debugging info like line number, error message, etc.
-- `npm run show-errors` — validates the JSON against the data schema, and highlights errors such as invalid browser version numbers being used.
-- `npm run render 'dotted.path.to.feature'` — allows you to preview the markup for the compat table for a data file in the repo. As an example, `npm run render 'css.properties.background'` shows the table markup for the {{cssxref("background")}} property.
+- `npm run lint`——测试所有兼容性数据以确保 JSON 的格式和书写风格正确，例如正确的缩进和没有遗漏逗号等等。该命令会打印出一个很长的文件名和测试结果的列表；如果发现了一个错误，代码错误检查工具会抛出文件中的错误，并提供有用的调试信息（如：行号、错误信息，等等）。
+- `npm run show-errors`——根据数据模式验证 JSON 是否正确，并突出显示存在的错误，例如：使用的浏览器版本号无效。
 
-If it is looking OK, you then need to commit it and push it back up to your remote fork on GitHub. You can do this easily with terminal commands like this:
+如果没有发现问题，那么你需要提交它，并将其推送回你在 GitHub 上的远程分支。你可以使用以下终端命令完成这一操作：
 
 ```bash
 git add .
@@ -466,26 +450,44 @@ git commit -m 'adding compat data for name-of-feature'
 git push
 ```
 
-Now go to your remote fork (i.e. `https://github.com/your-username/browser-compat-data`) and you should see information about your push at the top of the files list (under "Your recently pushed branches"). You can create a pull request (starting the process of pushing this to the main repo) by pressing the "Compare & pull request" button, then following the simple prompts on the subsequent screen.
+现在，转到你的远程分支（例如 `https://github.com/your-username/browser-compat-data`），你应该会在文件列表的顶部（在“Your recently pushed branches”下）看到有关你的推送的信息。你可以按下“Compare & pull request”按钮以创建拉取请求（pull request）（开始将其推送到主仓库的流程），然后按照屏幕上的提示进行后续的操作。
 
-At this point, you just need to wait. A reviewer will review your pull request, and merge it with the main repo, OR request that you make changes. If changes are needed, make the changes and submit again until the PR is accepted.
+现在，你只需要等待。审查员会审查你的拉取请求，然后将其合并到主仓库或要求你作出一些修改。如果需要修改，请进行相应的修改并再次提交，直至拉取请求被接受。
 
-## 将数据插入 MDN 页
+## 将数据插入 MDN 页面
 
-Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the \\{{Compat}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.
+一旦你创建的兼容性数据被包含在 [browser-compat-data](https://github.com/mdn/browser-compat-data) 主仓库中，你就可以开始根据 MDN 页面上的数据动态生成浏览器兼容性表格和规范表格。
 
-Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:
+首先，你需要确定你希望包含的相关兼容性数据的查询字符串。可以通过检查其源文件来确定。例如：
 
-```html
-<div class="hidden">
-<p>此页面上的兼容性表格由结构化数据生成。如果你想贡献数据，可以看看 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>并向我们发送 pull request.</p>
-</div>
+- {{domxref("AbortController")}} 的兼容性数据在 [AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) 中定义，可以使用 `api.AbortController` 来引用它。
+- {{HTTPHeader("Content-Type")}} HTTP 标头的兼容性数据在 [content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) 中定义，可以使用 `http.headers.Content-Type` 来引用它。
+- {{domxref("VRDisplay.capabilities")}} 属性的兼容性数据在 [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) 中定义，可以使用 `api.VRDisplay.capabilities` 来引用它。
+
+兼容性数据的查询字符串应在页面的元数据（front-matter）中使用 `browser-compat` 这个键来指定。例如，对于 {{domxref("AbortController")}}，应该这样添加：
+
+```plain
+---
+title: AbortController
+slug: Web/API/AbortController
+
+…
+
+browser-compat: api.AbortController
+---
+
 ```
 
-As an example, on the {{httpheader("Accept-Charset")}} HTTP header page, the macro call looks like this: \\{{Compat("http.headers.Accept-Charset")}}. If you look at the [accept-charset.json](https://github.com/mdn/browser-compat-data/blob/master/http/headers/accept-charset.json) file in the repo, you'll see how this is reflected in the JSON data.
+然后源码中的 `\{{Compat}}` 和 `\{{Specifications}}` 宏将会被自动渲染为与元数据对应的兼容性表格和规范表格。
 
-As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using \\{{Compat("api.VRDisplay.capabilities")}}. The macro call generates the following table (and corresponding set of notes):
+你还可以将宏的第一个参数指定为需要的 API，就像这样：`\{{Compat("api.AbortController")}}`。如果需要在同一页面中插入多个兼容性表格，这会非常有用。
 
-{{Compat("api.VRDisplay.capabilities")}}
+宏的调用会生成以下的表格（以及对应的备注）：
 
-> **备注：** 文件名通常与给予 JSON 结构内的接口的标签相匹配，但事实并非总是如此。当宏调用生成表时，他们遍历所有文件，直到找到相关的 JSON 使用，所以文件名不是关键。说到这一点，你应该始终尽可能直观地命名它们。
+#### 兼容性表格示例
+
+{{Compat}}
+
+#### 规范表格示例
+
+{{Specifications}}

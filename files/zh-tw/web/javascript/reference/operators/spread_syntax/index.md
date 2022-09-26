@@ -1,8 +1,8 @@
 ---
 title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}
 
 **展開運算子**(`...`) 允許可迭代的陣列或字串展開成０到多個參數(如果是 function 的話)或是０到多個元素(如果是 array 或字組的話)，或如果是物件的話則展開成０到多個 key-value pair。
@@ -227,7 +227,7 @@ In the above example, the spread syntax does not work as one might expect: it sp
 
 Objects themselves are not iterable, but they become iterable when used in an Array, or with iterating functions such as `map()`, `reduce()`, and `assign()`. When merging 2 objects together with the spread operator, it is assumed another iterating function is used when the merging occurs.
 
-Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) objects:
+Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) objects:
 
 ```js
 const obj = {'key1': 'value1'};
@@ -244,7 +244,7 @@ When using spread syntax for function calls, be aware of the possibility of exce
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## See also
 

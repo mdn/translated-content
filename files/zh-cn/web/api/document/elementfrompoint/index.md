@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 ---
+
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
 {{domxref("DocumentOrShadowRoot")}} 接口的 **`elementFromPoint()`** 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。
@@ -29,7 +30,7 @@ var element = document.elementFromPoint(x, y);
 
 在给定的坐标点处的顶端 {{domxref("Element")}}（译者注：如果元素层叠的话，返回最上层的元素）。
 
-## Example
+## 示例
 
 ```html
 <!DOCTYPE html>
@@ -55,7 +56,7 @@ function changeColor(newColor) {
 
 ### Demo
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/elementFromPoint') }}
+{{ EmbedLiveSample('示例') }}
 
 ## Specifications
 

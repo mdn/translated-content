@@ -1,8 +1,8 @@
 ---
 title: 入門
 slug: Web/SVG/Tutorial/Getting_Started
-translation_of: Web/SVG/Tutorial/Getting_Started
 ---
+
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### 一個簡單的例子
@@ -33,7 +33,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 
     - 不使用類似(X)HTML 的文檔聲明，因為基於 SVG 的 DTD 會造成很多問題，弊大於利。
     - 為了明確 SVG 版本，`version` 和 baseProfile 兩個屬性必須要寫
-    - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/en/SVG/Namespaces_Crash_Course)
+    - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/SVG/Namespaces_Crash_Course)
 
 2. 畫一個覆蓋整個圖形的矩形 ，將背景設為红色
 3. 在红色矩形中間畫一個綠色的圓形，半徑是80像素（圓心坐標：x軸向左偏移150像素，y軸向上偏移100像素）【坐標系統會在後面章節介紹】

@@ -1,19 +1,8 @@
 ---
 title: 函数 - 可复用代码块
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - API
-  - JavaScript
-  - 函数
-  - 初学者
-  - 匿名
-  - 参数
-  - 学习
-  - 方法
-  - 浏览器
-  - 自定义
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。
@@ -24,7 +13,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
       <th scope="row">前提条件：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >（JS 的入门）。
       </td>
@@ -95,7 +84,7 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ## 自定义函数
 
-您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
 
 ```js
 function draw() {
@@ -109,7 +98,7 @@ function draw() {
 }
 ```
 
-该函数在[元素与 canvas 脚本 API 来绘制图形和动画。">`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能
+该函数在[元素与 canvas 脚本 API 来绘制图形和动画。">`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能
 
 ```js
 draw();
@@ -123,7 +112,7 @@ function random(number) {
 }
 ```
 
-我们需要这个函数，因为浏览器的内置[Math.random（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。
+我们需要这个函数，因为浏览器的内置[Math.random（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。
 
 ## 调用函数
 
@@ -223,13 +212,13 @@ myButton.onclick = function() {
 
 > **备注：** 参数有时称为参数（arguments），属性（properties）或甚至属性（attributes）
 
-例如，浏览器的内置[Math.random（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
+例如，浏览器的内置[Math.random（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
 
 ```js
 var myNumber = Math.random();
 ```
 
-浏览器的内置字符串[replace（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
+浏览器的内置字符串[replace（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
 
 ```js
 var myText = 'I am a string';
@@ -238,7 +227,7 @@ var newString = myText.replace('string', 'sausage');
 
 > **备注：** 当您需要指定多个参数时，它们以逗号分隔。
 
-还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
+还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
 
 ```js
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
@@ -305,93 +294,93 @@ function greeting() {
 2. 在浏览器和文本编辑器中打开示例。
 3. 在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：
 
-```js
-output(x);
-```
+    ```js
+    output(x);
+    ```
 
-您应该看到变量`x`输出到屏幕的值。
+    您应该看到变量`x`输出到屏幕的值。
 
-4.现在尝试在您的控制台中输入以下内容
+4. 现在尝试在您的控制台中输入以下内容
 
-```js
-output(y);
-output(z);
-```
+    ```js
+    output(y);
+    output(z);
+    ```
 
-这两个都应该返回错误沿“ [ReferenceError：y 未定义](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - ` y和``z `被锁定在函数`a()`和`b()`函数中，所以`output()`从全局作用域调用时无法访问它们。
+    这两个都应该返回错误沿“ [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
 
-5.但是，从另一个函数里面调用什么呢？尝试编辑`a()`，`b()`所以他们看起来像这样：
+5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`，`b()`所以他们看起来像这样：
 
-```js
-function a() {
-  var y = 2;
-  output(y);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(y);
+    }
 
-function b() {
-  var z = 3;
-  output(z);
-}
-```
+    function b() {
+      var z = 3;
+      output(z);
+    }
+    ```
 
-保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
+    保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
+    您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
 
-6.现在尝试更新您的代码，如下所示：
+6. 现在尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(x);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(x);
+    }
 
-function b() {
-  var z = 3;
-  output(x);
-}
-```
+    function b() {
+      var z = 3;
+      output(x);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+7. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
+    函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
 
-7.最后，尝试更新您的代码，如下所示：
+8. 最后，尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(z);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(z);
+    }
 
-function b() {
-  var z = 3;
-  output(y);
-}
-```
+    function b() {
+      var z = 3;
+      output(y);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+9. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+    这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 
-> **备注：** ReferenceError：“x”未定义错误是您遇到的最常见的错误。如果您收到此错误，并且确定您已经定义了该问题的变量，请检查它的范围。
+> **备注：** ReferenceError："x"未定义错误是您遇到的最常见的错误。如果您收到此错误，并且确定您已经定义了该问题的变量，请检查它的范围。
 
 ### 函数内部的函数
 
@@ -445,7 +434,7 @@ function subFunction3(value) {
 
 ## **测试你的技能！**
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 总结
 
@@ -453,8 +442,8 @@ function subFunction3(value) {
 
 ## 参见
 
-- [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
+- [Functions detailed guide](/zh-CN/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
+- [Functions reference](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [Default parameters](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

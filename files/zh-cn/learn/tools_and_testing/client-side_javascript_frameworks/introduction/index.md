@@ -1,15 +1,9 @@
 ---
 title: 客户端框架介绍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-tags:
-  - JavaScript
-  - 初学者
-  - 学习
-  - 客户端
-  - 框架
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。

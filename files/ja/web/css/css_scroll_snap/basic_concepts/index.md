@@ -1,11 +1,6 @@
 ---
 title: CSS スクロールスナップの基本概念
 slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - Guide
-  - concepts
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: afterprint
 slug: Web/API/Window/afterprint_event
 ---
+
 在相关联的文档已开始打印或打印预览已关闭之后，触发 `afterprint`事件。
 
 ## 基本信息
@@ -56,4 +57,4 @@ window.onafterprint = (event) => {
 
 ## 相关事件
 
-- [beforeprint](https://developer.mozilla.org/zh-CN/docs/Web/Events/beforeprint)
+- [beforeprint](/zh-CN/docs/Web/Events/beforeprint)

@@ -1,8 +1,8 @@
 ---
 title: Fundamental Layout Comprehension
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
+
 {{LearnSidebar}}
 
 如果您已经完成了这个模块的学习，那么您将已经学习了今天进行 CSS 布局以及使用旧的 CSS 所需的基本知识。

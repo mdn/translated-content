@@ -1,12 +1,9 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/image-rendering
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 `image-rendering` 属性向浏览器提供了一个提示，即在图片处理时，如何进行速度 vs 质量之间的权衡。
 

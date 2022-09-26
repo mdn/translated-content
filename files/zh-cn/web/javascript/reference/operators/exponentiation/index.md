@@ -1,13 +1,8 @@
 ---
 title: 求幂 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - 参考
-  - 语言特征
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 求幂运算符（`**`）返回将第一个操作数加到第二个操作数的幂的结果。它等效于`Math.pow`，不同之处在于它也接受 BigInts 作为操作数。

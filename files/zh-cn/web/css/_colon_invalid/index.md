@@ -1,8 +1,8 @@
 ---
 title: ':invalid'
 slug: Web/CSS/:invalid
-translation_of: Web/CSS/:invalid
 ---
+
 {{CSSRef}}
 
 **`:invalid`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任意内容未通过验证的 {{HTMLElement("input")}} 或其他 {{HTMLElement("form")}} 元素 .

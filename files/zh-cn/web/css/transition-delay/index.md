@@ -1,13 +1,8 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS 属性
-  - CSS 过渡
-  - transition-delay
-  - 动画过渡
-translation_of: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
@@ -318,7 +313,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition-delay")}}
+{{Compat}}
 
 ## 扩展阅读
 

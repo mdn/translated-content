@@ -1,13 +1,8 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
+
 {{JSRef}}
 
 知名的 **`Symbol.species`** 是个函数值属性，其被构造函数用以创建派生对象。

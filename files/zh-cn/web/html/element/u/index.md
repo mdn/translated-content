@@ -1,8 +1,8 @@
 ---
 title: <u>
 slug: Web/HTML/Element/u
-translation_of: Web/HTML/Element/u
 ---
+
 {{HTMLRef}}
 
 **HTML `<u>` 元素（表意不清标注元素）**表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。

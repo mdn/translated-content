@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/openCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie un nouvel objet {{domxref("IDBCursorWithValue")}} qu'on peut utiliser pour parcourir un magasin d'objets avec un curseur.
@@ -66,13 +67,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

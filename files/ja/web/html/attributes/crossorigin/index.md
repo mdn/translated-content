@@ -1,18 +1,6 @@
 ---
 title: 'HTML 属性: crossorigin'
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - 上級者
-  - 属性
-  - CORS
-  - HTML
-  - NeedsContent
-  - リファレンス
-  - セキュリティ
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
-  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 ---
 {{HTMLSidebar}}
 
@@ -84,17 +72,7 @@ translation_of: Web/HTML/Attributes/crossorigin
 
 ## ブラウザーの互換性
 
-### script の crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video の crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link の crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## 関連情報
 

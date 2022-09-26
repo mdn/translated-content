@@ -1,18 +1,9 @@
 ---
 title: 網站表單-與數據合作
 slug: Learn/Forms
-tags:
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - 待翻譯
-translation_of: Learn/Forms
 original_slug: Learn/HTML/Forms
 ---
+
 這篇指南提供了一系列的文章，幫你掌握 HTML 表單的基本知識。對於與使用者互動，網站表單是一項十分有力的工具，最常使用於用戶數據蒐集，或控制使用者介面。但由於一些歷史與技術上的因素，並沒有顯著的方法發揮表單的潛力。在下面的指引中，我們將介紹網站表單所有基本面向，包括標記他們的 HTML 結構、設定控制器樣式、驗證數據及將數距提送至伺服器
 
 ## 參考文章列表

@@ -1,21 +1,8 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - DOM 解釈
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - プロパティ
-  - リファレンス
-  - シリアライズ
-  - Serializing
-  - outerHTML
-browser-compat: api.Element.outerHTML
-translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 **`outerHTML`** は {{ domxref("Element") }} DOM インターフェイスの属性で、要素とその子孫を含む部分の HTML がシリアライズされたものを取得します。設定することで、指定された文字列を解釈したノードの要素に置き換えることができます。

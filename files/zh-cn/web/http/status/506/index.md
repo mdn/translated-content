@@ -1,12 +1,8 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/506
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议的 **`506 Variant Also Negotiates`** 响应状态码 可以在 TCN（透明内容协商，见 RF2295）上下文给出。TCN 协议允许客户端取回给定资源的最佳变量/变元，这里服务器支持多个变量/变元。

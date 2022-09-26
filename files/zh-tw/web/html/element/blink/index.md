@@ -1,8 +1,8 @@
 ---
 title: <blink>：文字閃爍元素（已過時）
 slug: Web/HTML/Element/blink
-translation_of: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}}
 
 非標準元素 **HTML Blink**（`<blink>`）可以讓該元素裡面的文字緩慢閃爍。
@@ -62,7 +62,7 @@ blink {
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 參見
 

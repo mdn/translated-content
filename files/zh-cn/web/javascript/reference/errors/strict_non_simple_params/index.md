@@ -1,14 +1,8 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
 slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-tags:
-  - Errors
-  - JavaScript
-  - SyntaxError
-  - TypeError
-  - use strict
-translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -51,7 +45,7 @@ function sum(a=1, b=2) {
 }
 ```
 
-如果这个函数应该处于 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
+如果这个函数应该处于 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
 
 ```js example-good
 "use strict";

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-outset
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-outset`** indique la distance entre le [masque de la bordure](/fr/docs/Web/CSS/mask-border) et la boîte de la bordure.

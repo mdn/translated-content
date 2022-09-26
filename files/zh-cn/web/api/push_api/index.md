@@ -2,6 +2,7 @@
 title: 开发式平台
 slug: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 **Push API** 给与了 Web 应用程序接收从服务器发出的推送消息的能力，无论 Web 应用程序是否在用户设备前台，甚至刚加载完成。这样，开发人员就可以向用户投放异步通知和更新，从而让用户能更及时地获取新内容。
@@ -16,7 +17,7 @@ slug: Web/API/Push_API
 
 Service worker 会在必要的时候启动并接收接下来的推送消息，传递给 {{domxref("ServiceWorkerGlobalScope.onpush")}} 事件句柄。该方法允许将接收到的推送消息使用在应用上，例如通过显示一条通知（使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}）
 
-每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的[ 功能性 URL](http://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保证隐私，否则其他应用也可以向你的应用发送消息。
+每一个订阅对 service worker 来说都是唯一的。同时订阅的端点也是一个唯一的 [功能性 URL](http://www.w3.org/TR/capability-urls/)：端点的信息是给应用发送信息的全部必要条件。所以端点地址需要保证隐私，否则其他应用也可以向你的应用发送消息。
 
 激活一个 service worker 来提供推送消息会导致资源消耗的增加，尤其是电池。不同的浏览器对此有不同的方案——目前为止还没有标准的机制。Firefox 允许对发送给应用的推送消息做数量限制（配额）。该限制会在站点每一次被访问之后刷新。相比之下，Chrome 选择不做限制，但要求站点在每一次消息到达后都显示通知，这样可以让用户确认他们仍希望接收消息并确保用户可见性。
 
@@ -56,15 +57,9 @@ Mozilla's [ServiceWorker Cookbook](https://serviceworke.rs/) 包含很多关于 
 
 ## 浏览器兼容性
 
-### PushEvent
+{{Compat}}
 
-{{Compat("api.PushEvent")}}
-
-### PushMessageData
-
-{{Compat("api.PushMessageData")}}
-
-## 另见
+## 参见
 
 - [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
 - [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley

@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeIterator/pointerBeforeReferenceNode
 ---
+
 {{APIRef("DOM")}} {{SeeCompatTable}}
 
 La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** renvoie un {{domxref("Boolean")}} (booléen) qui indique si le {{domxref("NodeFilter")}} est ancré avant (si la valeur est `true` (_vrai_)) ou après (`false` (_faux_)) le noeud-ancre indiqué par la propriété {{domxref("NodeIterator.referenceNode")}}.
@@ -34,13 +35,11 @@ flag = nodeIterator.pointerBeforeReferenceNode;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-pointerbeforereferencenode', 'NodeIterator.pointerBeforeReferenceNode')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.pointerBeforeReferenceNode")}}
+{{Compat}}
 
 ## Voir aussi
 

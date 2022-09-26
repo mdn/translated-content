@@ -1,11 +1,8 @@
 ---
 title: 可替换元素
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/Replaced_element
 ---
+
 {{CSSRef()}}
 
 在 [CSS](/zh-CN/docs/Web/CSS) 中，**可替换元素**（**replaced element**）的展现效果不是由 CSS 来控制的。这些元素是一种外部对象，它们外观的渲染，是独立于 CSS 的。

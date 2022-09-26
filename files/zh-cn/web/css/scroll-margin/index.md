@@ -1,8 +1,8 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-translation_of: Web/CSS/scroll-margin
 ---
+
 {{CSSRef}}
 
 **`scroll-margin`** 属性是修改一系列 `scroll-margin` 手写特性的快捷方式，它分配值的方式与 `margin` 属性为各个 `margin-*` 手写特性分配值的方式非常类似。
@@ -41,4 +41,4 @@ scroll-margin: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.scroll-margin")}}
+{{Compat}}

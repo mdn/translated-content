@@ -2,6 +2,7 @@
 title: 编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
+
 **WebSocket 服务器是一个**TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在您选择的平台上实现一个简单的 WebSocket 服务器是很容易的。
 
 WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。 这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
@@ -37,7 +38,7 @@ Sec-WebSocket-Version: 13
 
 如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/HTTP/Response_codes#400)”并立即关闭套接字。 像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。 如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。 下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
 
-> **备注：** 所有浏览器将会发送一个 [`Origin`](https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS#Origin)请求头。 你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/HTTP/Response_codes#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
+> **备注：** 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/HTTP/Access_control_CORS#Origin)请求头。 你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/HTTP/Response_codes#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
 
 > **备注：** 请求 URI（这里的是`/chat`）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如`example.com/chat`会请求一个多方会话应用，而在相同服务器上`example.com/game`则会请求一个多玩家游戏应用。
 
@@ -109,9 +110,9 @@ FIN 位告诉我们这是不是系列的最后一条消息。如果是 0，那�
 
 要读取有效负载数据，您必须知道何时停止读取。这就是为什么有效载荷长度很重要。不幸的是，这有点复杂。要阅读它，请遵循以下步骤：
 
-1.  读取 9-15(包括) 位并将其解析为无符号整型。如果长度小于等于 125，那么就是长度;你就完成了。如果是 126，到第二步。如果是 127，到步骤 3。
-2.  读取下面的 16 位，并将其解释为无符号整型。你就完成了。
-3.  读取接下来的 64 位，并将其解释为无符号整型 (最重要的位必须为 0)。
+1. 读取 9-15(包括) 位并将其解析为无符号整型。如果长度小于等于 125，那么就是长度;你就完成了。如果是 126，到第二步。如果是 127，到步骤 3。
+2. 读取下面的 16 位，并将其解释为无符号整型。你就完成了。
+3. 读取接下来的 64 位，并将其解释为无符号整型 (最重要的位必须为 0)。
 
 ### 读取和解密数据
 

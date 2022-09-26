@@ -1,8 +1,8 @@
 ---
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配
@@ -24,7 +24,7 @@ RegExp(pattern[, flags])
 ### 参数
 
 - `pattern`
-  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个`RegExp`对象或文字 (仅用于两个 RegExp 构造函数符号)。模式可以包含特殊字符[special characters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)来匹配比字面值字符串更广泛的值范围。
+  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个`RegExp`对象或文字 (仅用于两个 RegExp 构造函数符号)。模式可以包含特殊字符[special characters](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)来匹配比字面值字符串更广泛的值范围。
 - `flags`
 
   - : 如果指定，`flags` 是包含要添加的标志的字符串。
@@ -44,7 +44,7 @@ RegExp(pattern[, flags])
     - `s` （点号匹配所有字符）
       - : 允许`.` 去匹配新的行
     - `u` （unicode）
-      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/en-US/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)).
     - `y` （sticky，粘性匹配）
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 

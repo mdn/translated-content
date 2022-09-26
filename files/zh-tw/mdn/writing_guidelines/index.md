@@ -1,14 +1,9 @@
 ---
 title: 關於 MDN
 slug: MDN/Writing_guidelines
-tags:
-  - 指引
-  - 文檔
-  - 版權
-  - 社群
-translation_of: MDN/About
 original_slug: MDN/About
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs 是個針對網路技術和基於網路的軟體，持續發展的學習平台。它包含了：
@@ -49,7 +44,7 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 在 2010 年 8 月 20 日以前新增到這個 wiki 的範例程式碼，是採用 [MIT 授權條款](http://www.opensource.org/licenses/mit-license.php)釋出。你應該在 MIT 模板中增加這些作者資訊：「© <最新的 wiki 更新日期> <寫下這段程式碼的人>」
 
-在 2010 年 8 月 20 日（含）以後新增到這個 wiki 的範例程式碼，是採用 [公有領域](http://creativecommons.org/publicdomain/zero/1.0/)授權。你不需要註明任何授權文字。不過你要的話，可以註明：「Any copyright is dedicated to the Public Domain. http\://creativecommons.org/publicdomain/zero/1.0/」
+在 2010 年 8 月 20 日（含）以後新增到這個 wiki 的範例程式碼，是採用 [公有領域](http://creativecommons.org/publicdomain/zero/1.0/)授權。你不需要註明任何授權文字。不過你要的話，可以註明：「Any copyright is dedicated to the Public Domain. <http://creativecommons.org/publicdomain/zero/1.0/>」
 
 如果你希望貢獻到這個 wiki，你必須讓你的文件採用姓名標示-相同方式分享（或是你正在編輯的頁面上已經指定好的其他替代授權），同時你的程式碼必須採用[Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/)（公有領域）授權。在你編輯這個 wiki 的同時即表示你同意採用這些授權。
 

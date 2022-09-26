@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerRegistration.scope
 slug: Web/API/ServiceWorkerRegistration/scope
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - scope
-browser-compat: api.ServiceWorkerRegistration.scope
-translation_of: Web/API/ServiceWorkerRegistration/scope
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`scope`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、サービスワーカー登録の一意の識別子を返します。 サービスワーカーは、 {{domxref("ServiceWorker")}} を登録する文書と同じオリジンにある必要があります。

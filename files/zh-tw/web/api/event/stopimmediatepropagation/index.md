@@ -1,11 +1,8 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
-tags:
-  - API
-  - Event
-translation_of: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 除了停止事件繼續捕捉或冒泡傳遞外，也阻止事件被傳入同元素中註冊的其它相同事件類型之監聽器。
@@ -26,4 +23,4 @@ event.stopImmediatePropagation();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.stopImmediatePropagation")}}
+{{Compat}}

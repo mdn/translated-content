@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 - 2^32와 같거나 이보다 긴, 혹은 음수의 길이를 가진 {{jsxref("Array")}}나 {{jsxref("ArrayBuffer")}}를 생성했기 때문에, 혹은
 - {{jsxref("Array")}} 속성을 2^32와 같거나 이보다 긴 값으로 설정했기 때문이다.
 
-`Array와 ArrayBuffer의 길이에 제한을 둔 이유는, Array나 ArrayBuffer의 length 속성은 사인되지 않은(unsigned) 32 비트 정수로 반영되기 때문이다.` 즉 `Array나 ArrayBuffer는 오직 0 ~ `2^32-1 사이의 값만을 저장할 수 있다.
+`Array` 와 `ArrayBuffer` 의 길이에 제한을 둔 이유는, `Array` 나 `ArrayBuffer` 의 length 속성은 사인되지 않은(unsigned) 32 비트 정수로 반영되기 때문이다. 즉 `Array`나 `ArrayBuffer` 는 오직 0 ~`2^32-1` 사이의 값만을 저장할 수 있다.
 
 Array의 length로 해석되는 첫번째 argument로서 문자열 표기를 통해 contructor를 사용하여 Array를 생성할 수 있다.
 
@@ -65,7 +65,7 @@ b.length = Math.min(0xffffffff, b.length + 1);
 // which can also be written as (-1 >>> 0)
 ```
 
-##
+## 참조
 
 - {{jsxref("Array")}}
 - {{jsxref("Array.length")}}

@@ -1,16 +1,8 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML sections
-  - Reference
-  - main
-  - 元素
-translation_of: Web/HTML/Element/main
 ---
+
 {{HTMLRef}}
 
 HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。
@@ -63,7 +55,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 <!-- 其他内容 -->
 ```
 
-## 可访问性相关
+## 无障碍相关
 
 ### 界标
 
@@ -101,7 +93,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 
 ## 浏览器兼容性
 
-`<main>` 标签受广泛支持。对于 IE 浏览器 11 版本和低于 11 的版本，推荐向 `<main>` 元素添加 `"main" 这一` {{glossary("ARIA")}} 角色，以保证其可访问性。(屏幕阅读器，如 JAWS，当与较旧版本的 Internet Explorer 一起使用时，需包括此 `role` 属性才能理解 `<main>` 元素的语义含义）
+`<main>` 标签受广泛支持。对于 IE 浏览器 11 版本和低于 11 的版本，推荐向 `<main>` 元素添加 `"main" 这一` {{glossary("ARIA")}} 角色，以保证其无障碍。(屏幕阅读器，如 JAWS，当与较旧版本的 Internet Explorer 一起使用时，需包括此 `role` 属性才能理解 `<main>` 元素的语义含义）
 
 ```html
 <main role="main">
@@ -109,7 +101,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 </main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,8 +1,8 @@
 ---
 title: 預設參數( Default parameters )
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **函式預設參數** 允許沒有值傳入或是傳入值為 `undefined 的情況下，參數能以指定的預設值初始化。`
@@ -176,7 +176,7 @@ f(2); // [2, undefined]
 
 ### Destructured parameter with default value assignment
 
-You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
+You can use default value assignment with the [destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
 
 ```js
 function f([x, y] = [1, 2], {z: z} = {z: 3}) {

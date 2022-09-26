@@ -1,8 +1,8 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-translation_of: Web/API/Event/currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 介面的唯讀屬性 **`currentTarget`** 會標明事件指向（current target）、還有該事件所遍歷的 DOM。屬性總會指向當時處理該事件的事件監聽器所註冊的 DOM 物件，而 {{domxref("event.target")}} 屬性則是永遠指向觸發事件的 DOM 物件。
@@ -32,7 +32,7 @@ for(var i = 0; i < ps.length; i++){
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## 參見
 

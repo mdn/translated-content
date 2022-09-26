@@ -1,11 +1,8 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - JavaScript
-  - 语法错误
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -77,4 +74,4 @@ var foo = 'bar';​<200b>
 
 ## 相关内容
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

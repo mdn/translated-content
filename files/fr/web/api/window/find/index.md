@@ -13,6 +13,7 @@ tags:
   - find
 translation_of: Web/API/Window/find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
 > **Note :** La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir {{Bug("672395")}}.

@@ -1,13 +1,8 @@
 ---
 title: 外边距重叠
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS 盒模型
-  - 参考
-  - 指南
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 块的[上外边距 (margin-top)](/zh-CN/docs/Web/CSS/margin-top)和[下外边距 (margin-bottom)](/zh-CN/docs/Web/CSS/margin-bottom)有时合并 (折叠) 为单个边距，其大小为单个边距的最大值 (或如果它们相等，则仅为其中一个)，这种行为称为**边距折叠**。

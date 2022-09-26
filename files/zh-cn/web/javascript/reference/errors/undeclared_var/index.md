@@ -1,14 +1,8 @@
 ---
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
-tags:
-  - Errors
-  - JavaScript
-  - ReferenceError
-  - 严格模式
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -65,4 +59,4 @@ foo();
 
 ## 相关
 
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)

@@ -1,8 +1,8 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) API 有個相當方便、能用於國際化的模組：[i18n](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n)。我們將在這篇文章內探索本功能，並提供實際做動的範例。專供 extensions 組建所使用的 i18n 系統 API，用法與坊間諸如 [i18n.js](http://i18njs.com/) 的函式庫相似。
@@ -89,7 +89,7 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
 
 This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the [Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) section.
 
-> **備註：** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
+> **備註：** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
 ## Internationalizing manifest.json
 
@@ -120,7 +120,7 @@ To call a message string like this, you need to specify it like this:
 
 ### Specifying a default locale
 
-Another field you should specify in your manifest.json is [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale):
+Another field you should specify in your manifest.json is [default_locale](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale):
 
 ```json
 "default_locale": "en"
@@ -142,7 +142,7 @@ This is useful, although you might be better off handling such a situation using
 
 ## Retrieving message strings from JavaScript
 
-So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual [i18n API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) is pretty simple, containing just four main methods:
+So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual [i18n API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n) is pretty simple, containing just four main methods:
 
 - You'll probably use {{WebExtAPIRef("i18n.getMessage()")}} most often — this is the method you use to retrieve a specific language string, as mentioned above. We'll see specific usage examples of this below.
 - The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
@@ -293,7 +293,7 @@ The following table shows the different available predefined messages:
           {{WebExtAPIRef("runtime.id")}}, and that can be set using
           the
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
+            href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
             >applications</a
           >
           key in manifest.json. It's the generated UUID that appears in the
@@ -389,7 +389,7 @@ padding-left: 1.5em;
 
 ## Testing out your extension
 
-Starting in Firefox 45, you can install extensions temporarily from disk — see [Loading from disk](/en-US/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Go to one of your favourite websites and click a link to see if a notification appears reporting the URL of the clicked link.
+Starting in Firefox 45, you can install extensions temporarily from disk — see [Loading from disk](/zh-TW/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Go to one of your favourite websites and click a link to see if a notification appears reporting the URL of the clicked link.
 
 Next, change Firefox's locale to one supported in the extension that you want to test.
 

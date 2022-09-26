@@ -1,16 +1,8 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
+
 {{ APIRef("DOM") }}
 
 要素の左境界の幅をピクセル数で表します。これは、要素の書字方向が右書きで、オーバーフローがある場合、左の垂直スクロールバーがレンダリングされると垂直スクロールバーの幅を含みます。 `clientLeft` は、左マージンまたは左パディングを含みません。 `clientLeft` は読み取り専用です。

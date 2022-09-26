@@ -1,13 +1,8 @@
 ---
 title: JavaScript 第一步
 slug: Learn/JavaScript/First_steps
-tags:
-  - JavaScript
-  - 入门
-  - 指南
-  - 新手
-translation_of: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 在第一个 JavaScript 板块，带领各位体验编写 JavaScript 程序前，首先回答一些基本问题：「什么是 JavaScript？」，「它看上去是什么样的？」，「它能做什么？」。此后，我们将详细讨论一些关键构件，例如变量、字符串、数值和数组。

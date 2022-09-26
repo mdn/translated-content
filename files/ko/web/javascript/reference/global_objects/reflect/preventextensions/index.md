@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtension
 
 ## 구문
 
-    Reflect.preventExtensions(target)
+```js
+Reflect.preventExtensions(target)
+```
 
 ### 매개변수
 

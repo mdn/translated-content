@@ -3,6 +3,7 @@ title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 translation_of: Web/API/AnalyserNode/AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}{{SeeCompatTable}}
 
 Le constructeur **`AnalyserNode`** crée un nouvel objet {{domxref("AnalyserNode")}}.
@@ -28,10 +29,8 @@ var analyserNode = new AnalyserNode(context, options)
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Web Audio API','#the-analysernode-interface','AnalyserNode')}} | {{Spec2('Web Audio API')}} | Première définition. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.AnalyserNode")}}
+{{Compat}}

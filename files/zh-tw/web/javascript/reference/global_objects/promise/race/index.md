@@ -1,8 +1,8 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
 **`Promise.race(iterable)`** 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。
@@ -96,7 +96,7 @@ setTimeout(function(){
 // Promise { <state>: "fulfilled", <value>: "non-Promise value" }
 ```
 
-### 使用 `Promise.race` – 及 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 的範例
+### 使用 `Promise.race` – 及 [`setTimeout`](/zh-TW/docs/Web/API/setTimeout) 的範例
 
 ```js
 var p1 = new Promise(function(resolve, reject) {
@@ -146,7 +146,7 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## 參見
 

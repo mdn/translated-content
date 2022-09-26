@@ -1,8 +1,8 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 **`DataView`** 視圖提供了一個底層介面來讀寫 {{jsxref("ArrayBuffer")}} 中的二進位資料。`DataView` 能用多種不同的型別對 `ArrayBuffer` 進行修改、解讀，且可自訂資料的位元組順序而不受系統平台限制。`DataView` 物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 `ArrayBuffer` 物件當中。

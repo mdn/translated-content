@@ -1,9 +1,9 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
-translation_of: Web/SVG/Attribute/filterUnits
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 filterUnits 属性定义{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} 和{{ SVGAttr("height") }}使用的坐标系系统。
 

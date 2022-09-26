@@ -1,12 +1,8 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - HTTP
-  - 状态码
-  - 重定向
-translation_of: Web/HTTP/Status/301
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`301 301 Moved Permanently`** 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的 url 上，是固定的不会再改变。搜索引擎会根据该响应修正。

@@ -1,11 +1,8 @@
 ---
 title: CSS animated properties
 slug: Web/CSS/CSS_animated_properties
-tags:
-  - CSS animated properties
-  - CSS 动画属性
-translation_of: Web/CSS/CSS_animated_properties
 ---
+
 {{CSSRef}}
 
 一些 CSS 属性可以是动画的，也就是说，当它的值改变时，或者当 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)或 [CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transitions)使用时，它可以以平滑的方式改变。

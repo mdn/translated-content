@@ -1,8 +1,8 @@
 ---
 title: 指定值
 slug: Web/CSS/specified_value
-translation_of: Web/CSS/specified_value
 ---
+
 {{ CSSRef() }}
 
 ## 概述

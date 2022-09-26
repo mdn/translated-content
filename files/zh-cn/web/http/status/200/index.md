@@ -1,12 +1,8 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - HTTP
-  - 成功
-  - 状态码
-translation_of: Web/HTTP/Status/200
 ---
+
 {{HTTPSidebar}}
 
 状态码 **`200 OK`** 表明请求已经成功。默认情况下状态码为 200 的响应可以被缓存。

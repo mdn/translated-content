@@ -15,7 +15,9 @@ translation_of: Web/API/Window/alert
 
 ## 구문
 
-    window.alert([message]);
+```js
+window.alert([message]);
+```
 
 ### 매개변수
 

@@ -1,12 +1,8 @@
 ---
 title: 記憶體管理
 slug: Web/JavaScript/Memory_Management
-tags:
-  - Garbage collection
-  - JavaScript
-  - 記憶體
-translation_of: Web/JavaScript/Memory_Management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## 介紹
@@ -206,4 +202,4 @@ node --expose-gc --inspect index.js
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance](/en-US/docs/Mozilla/Performance)
+- [Performance](/zh-TW/docs/Mozilla/Performance)

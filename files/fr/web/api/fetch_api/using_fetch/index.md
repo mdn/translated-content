@@ -13,6 +13,7 @@ tags:
   - request
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour l'accès et la manipulation des parties de la pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.
@@ -276,13 +277,11 @@ Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter
 
 ## Spécifications
 
-| Spécification                | Statut                   | Commentaire         |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

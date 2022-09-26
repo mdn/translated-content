@@ -1,11 +1,11 @@
 ---
 title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
+
 {{JsSidebar("Operators")}}
 
-Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+Objects can be initialized using [`new Object()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
 ## 語法
 
@@ -69,7 +69,7 @@ var object = {
 
 ### 存取屬性
 
-Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.
+Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. See [property accessors](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.
 
 ```js
 object.foo; // "bar"
@@ -136,7 +136,7 @@ function haveES2015DuplicatePropertySemantics() {
 
 ### 方法定義
 
-A property of an object can also refer to a [function](/en-US/docs/Web/JavaScript/Reference/Functions) or a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) or [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method.
+A property of an object can also refer to a [function](/zh-TW/docs/Web/JavaScript/Reference/Functions) or a [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) or [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) method.
 
 ```js
 var o = {
@@ -176,11 +176,11 @@ var o = {
 };
 ```
 
-For more information and examples about methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+For more information and examples about methods, see [method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ### Computed property names
 
-Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed as the property name. This is symmetrical to the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:
+Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed as the property name. This is symmetrical to the bracket notation of the [property accessor](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:
 
 ```js
 // Computed property names (ES2015)
@@ -206,7 +206,7 @@ console.log(config); // {size: 12, mobileSize: 4}
 
 ### Spread properties
 
-The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 3) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 3) adds [spread](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding prototype) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
@@ -221,11 +221,11 @@ var mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) whereas the spread operator doesn't.
+Note that {{jsxref("Object.assign()")}} triggers [setters](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) whereas the spread operator doesn't.
 
 ### Prototype mutation
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value. (If the value is not an object or null, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value. (If the value is not an object or null, the object is not changed.)
 
 ```js
 var obj1 = {};
@@ -264,7 +264,7 @@ assert(obj3.__proto__ === 17);
 
 ## Object literal notation vs JSON
 
-Object literal notation 與**J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON))是不一樣的東西. 儘管它們看起來很相似，但還是有以下的不同:
+Object literal notation 與**J**ava**S**cript **O**bject **N**otation ([JSON](/zh-TW/docs/Glossary/JSON))是不一樣的東西. 儘管它們看起來很相似，但還是有以下的不同:
 
 - JSON 只允許屬性透過`"property": value`格式定義. 屬性名稱必須使用雙引號包起來，且不能是速記。
 - JSON 的數值僅能為 string, numbers, arrays, `true`, `false`, `null`, 或另一個 JSON 物件.
@@ -282,7 +282,7 @@ Object literal notation 與**J**ava**S**cript **O**bject **N**otation ([JSON](/e
 
 ## 參見
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Property accessors](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [`get`](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
+- [Method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [Lexical grammar](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)

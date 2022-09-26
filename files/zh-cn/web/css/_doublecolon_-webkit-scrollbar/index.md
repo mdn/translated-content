@@ -1,17 +1,8 @@
 ---
 title: '::-webkit-scrollbar'
 slug: 'Web/CSS/::-webkit-scrollbar'
-tags:
-  - '::-webkit-scrollbar'
-  - CSS
-  - CSS Selectors
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
-translation_of: 'Web/CSS/::-webkit-scrollbar'
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 `::-webkit-scrollbar` CSS 伪类元素会影响设置了 `overflow:scroll;` 的元素的滚动条样式。
@@ -101,33 +92,7 @@ Who thought scrollbars could be made weeeeird?
 
 ## 浏览器兼容性
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,8 +1,8 @@
 ---
 title: string
 slug: Web/SVG/Attribute/string
-translation_of: Web/SVG/Attribute/string
 ---
+
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 
 The **`string`** attribute is a hint to the user agent, and specifies a list of formats that the font referenced by the parent {{SVGElement("font-face-uri")}} element supports.
@@ -11,7 +11,7 @@ Only one element is using this attribute: {{SVGElement("font-face-format")}}
 
 ## Usage notes
 
-| Value         | [`<anything>`](/en-US/docs/Web/SVG/Content_type#Anything) |
+| Value         | [`<anything>`](/zh-CN/docs/Web/SVG/Content_type#Anything) |
 | ------------- | --------------------------------------------------------- |
 | Default value | _None_                                                    |
 | Animatable    | No                                                        |

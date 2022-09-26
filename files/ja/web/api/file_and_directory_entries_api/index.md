@@ -1,16 +1,8 @@
 ---
 title: ファイルとディレクトリー項目 API
 slug: Web/API/File_and_Directory_Entries_API
-page-type: web-api-overview
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - ファイル
-  - 概要
-  - リファレンス
-browser-compat: api.FileSystem
-translation_of: Web/API/File_and_Directory_Entries_API
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 ファイルとディレクトリー項目 API (File and Directory Entries API) は、ウェブアプリケーションが移動してファイルにアクセスできるローカルファイルシステムをシミュレートします。サンドボックス化された仮想的なファイルシステムで、ファイルやディレクトリーの読み書きや作成を行うアプリを開発することができます。

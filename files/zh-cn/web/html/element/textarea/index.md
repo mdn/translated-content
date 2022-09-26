@@ -1,23 +1,15 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - HTML
-  - HTML 表单
-  - textarea
-  - 元素
-  - 参考
-  - 文本区域
-  - 表单
-translation_of: Web/HTML/Element/textarea
 ---
+
 **HTML `<textarea>` 元素**表示一个多行纯文本编辑控件，当你希望用户输入一段相当长的、不限格式的文本，例如评论或反馈表单中的一段意见时，这很有用。
 
 {{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
 
 上述例子展示了 `<textarea>` 的几个特点：
 
-- 为了提高可访问性（accessibility），用于将 `<textarea>`与一个 {{htmlelement("label")}} 关联的 `id` 属性。
+- 为了提高无障碍（accessibility），用于将 `<textarea>`与一个 {{htmlelement("label")}} 关联的 `id` 属性。
 - `name` 属性，用于设置随表单一同提交到服务器的相关数据的名字。
 - `rows` 和 `cols` 属性，用于声明 `<textarea>` 的精确尺寸。这对于一致性非常有帮助，因为不同浏览器的默认值常常不一样。
 - 位于开始标签和闭合标签之间的默认内容。`<textarea>` 不支持 `value` 属性。

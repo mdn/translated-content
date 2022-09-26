@@ -1,8 +1,8 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
-translation_of: Web/Guide/Writing_forward-compatible_websites
 ---
+
 這個頁面將解釋如何撰寫在新的瀏覽器版本發布時不會遭受毀損的網頁。
 
 這對內部網路和其他非公共網站尤其重要，如果我們不能看到你的原始碼，我們將無法看到它是否已遭受毀損。底下所提到的原則可能無法全數做到，但盡可能遵守這些原則，對於你的網站在未來發展維護上有所幫助。

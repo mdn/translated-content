@@ -1,18 +1,8 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS Containment
-  - CSS 属性
-  - Style
-  - Web
-  - 参考
-  - 布局
-  - 样式
-  - 渲染
-translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)** `contain`** 属性允许开发者声明当前元素和它的内容尽可能的*独立*于 DOM 树的其他部分。这使得浏览器在重新计算布局、样式、绘图、大小或这四项的组合时，只影响到有限的 DOM 区域，而不是整个页面，可以有效改善性能。
@@ -21,9 +11,9 @@ translation_of: Web/CSS/contain
 
 > **备注：** If applied (with value: `paint`, `strict` or `content`), this property creates:
 >
-> 1.  A new [containing block](/zh-CN/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2.  A new [stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-> 3.  A new [block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context).
+> 1. A new [containing block](/zh-CN/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
+> 2. A new [stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> 3. A new [block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context).
 
 ## 语法
 
@@ -191,7 +181,7 @@ This also means that the first image no longer floats down to the second article
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## 参见
 

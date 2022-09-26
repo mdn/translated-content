@@ -1,17 +1,11 @@
 ---
 title: use
 slug: Web/SVG/Element/use
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-  - 需要浏览器兼容性
-translation_of: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
-`use`元素在 SVG 文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的 DOM 中，然后将其粘贴到`use`元素的位置，很像 HTML5 中的克隆[模板元素](/zh-CN/docs/Web/HTML/Element/template)。因为克隆的节点是不可见的，所以当使用[CSS](/en/CSS)样式化一个`use`元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的 DOM 不能保证继承 CSS 属性，除非你明文设置使用[CSS 继承](/en/CSS/inheritance)。
+`use`元素在 SVG 文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的 DOM 中，然后将其粘贴到`use`元素的位置，很像 HTML5 中的克隆[模板元素](/zh-CN/docs/Web/HTML/Element/template)。因为克隆的节点是不可见的，所以当使用[CSS](/zh-CN/CSS)样式化一个`use`元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的 DOM 不能保证继承 CSS 属性，除非你明文设置使用[CSS 继承](/zh-CN/CSS/inheritance)。
 
 出于安全原因，一些浏览器可能在 use 元素上应用同源策略，还有可能拒绝载入 xlink:href 属性内的跨源 URI。
 
@@ -45,11 +39,11 @@ translation_of: Web/SVG/Element/use
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -65,8 +59,8 @@ translation_of: Web/SVG/Element/use
 
 ## DOM 接口
 
-该元素实现了[`SVGUseElement`](/en/DOM/SVGUseElement)接口。
+该元素实现了[`SVGUseElement`](/zh-CN/DOM/SVGUseElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

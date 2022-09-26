@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
+
 {{JSRef}}
 
 **`join()`** 方法會將陣列（或一個[類陣列（array-like）物件](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）中所有的元素連接、合併成一個字串，並回傳此字串。
@@ -67,7 +61,7 @@ f(1, 'a', true);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## 參見
 

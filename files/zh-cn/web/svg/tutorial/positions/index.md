@@ -1,8 +1,8 @@
 ---
 title: 坐标定位
 slug: Web/SVG/Tutorial/Positions
-translation_of: Web/SVG/Tutorial/Positions
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 ## 网格

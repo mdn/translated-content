@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/API/IntersectionObserver/disconnect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 La méthode **`disconnect()`**, rattachée à l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver), arrête l'observation des changements de visibilité de l'ensemble des éléments cibles.
@@ -31,13 +32,11 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.disconnect")}}
+{{Compat}}
 
 ## Voir aussi
 

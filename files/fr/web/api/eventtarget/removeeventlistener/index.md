@@ -12,6 +12,7 @@ tags:
   - Écouteurs
 translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("EventTarget")}} (_cible_) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section _Correspondance utilisée pour la suppression d'écouteurs d'événements_ ci-après.
@@ -133,15 +134,11 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.removeEventListener", 3)}}
+{{Compat}}
 
 ## Prothèse (_polyfill_) pour la prise en charge des navigateurs anciens
 

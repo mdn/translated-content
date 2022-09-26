@@ -1,13 +1,8 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-tags:
-  - '@counter-style'
-  - CSS
-  - CSS Decriptor
-  - Reference
-translation_of: Web/CSS/@counter-style/speak-as
 ---
+
 {{CSSRef}}
 
 当已明确定义 {{cssxref('@counter-style')}} 后，可以用 **`speak-as`** 定义在口语场景中如何表述这个 counter 符号。比如作为一篇文章的作者可以指定，当计算机读出这篇文章时，是以数字序号表示 counter，还是仅仅用语音提示。
@@ -99,7 +94,7 @@ speak-as: <counter-style-name>;
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.counter-style.speak-as")}}
+{{Compat}}
 
 ## 参考
 

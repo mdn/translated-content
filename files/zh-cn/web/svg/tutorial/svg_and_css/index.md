@@ -1,9 +1,9 @@
 ---
 title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/SVG) 中。
@@ -14,7 +14,7 @@ original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 前一节：[JavaScript](/zh-CN/docs/Web/JavaScript/Getting_Started)
 下一节：[XML data](/zh-CN/docs/Web/Guide/CSS/Getting_started/XML_data)
 
-### 信息: SVG
+### 信息：SVG
 
 _SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
 
@@ -24,70 +24,229 @@ _SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
 
 在样式表中你可以在任何可以可以指定图片的地方指定一个 SVG 的 URL。比如，在 HTML 的样式表中，你可以为 `background` 属性指定一个 SVG 的 URL。
 
-| 在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 [SVG tables on caniuse.com](http://caniuse.com/#search=SVG) 了解支持情况。 参见 [SVG element reference](/zh-CN/docs/SVG/Element) 了解兼容情况。通过安装 [Adobe](http://www.adobe.com/svg/viewer/install/main.html) 提供的插件，你可以让某些浏览器支持 SVG。欲在 Mozilla 了解更多关于 SVG 的信息，参考 [这里 SVG](/zh-CN/docs/SVG)。 |
+| 在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 [SVG tables on caniuse.com](http://caniuse.com/#search=SVG) 了解支持情况。参见 [SVG element reference](/zh-CN/docs/SVG/Element) 了解兼容情况。通过安装 [Adobe](http://www.adobe.com/svg/viewer/install/main.html) 提供的插件，你可以让某些浏览器支持 SVG。欲在 Mozilla 了解更多关于 SVG 的信息，参考 [这里 SVG](/zh-CN/docs/SVG)。 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-### 实例：一个 SVG 演示
+## 示例
 
-建立一个 SVG 文件`doc8.svg。`复制下面所有内容：
+建立一个 SVG 文件 `doc8.svg`。复制下面所有内容：
 
-```xml
-<?xml version="1.0" standalone="no"?>
-
-<?xml-stylesheet type="text/css" href="style8.css"?>
-
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
+```html
 <svg width="600px" height="600px" viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg" version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<title>SVG demonstration</title>
-<desc>Mozilla CSS Getting Started - SVG demonstration</desc>
+  <link rel="stylesheet"
+    href="style8.css" type="text/css"/>
 
-<defs>
-  <g id="segment" class="segment">
-    <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-    <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-    </g>
-  <g id="quadrant">
-    <use xlink:href="#segment"/>
-    <use xlink:href="#segment" transform="rotate(18)"/>
-    <use xlink:href="#segment" transform="rotate(36)"/>
-    <use xlink:href="#segment" transform="rotate(54)"/>
-    <use xlink:href="#segment" transform="rotate(72)"/>
-    </g>
-  <g id="petals">
-    <use xlink:href="#quadrant"/>
-    <use xlink:href="#quadrant" transform="rotate(90)"/>
-    <use xlink:href="#quadrant" transform="rotate(180)"/>
-    <use xlink:href="#quadrant" transform="rotate(270)"/>
-    </g>
-  <radialGradient id="fade" cx="0" cy="0" r="200"
-      gradientUnits="userSpaceOnUse">
-    <stop id="fade-stop-1" offset="33%"/>
-    <stop id="fade-stop-2" offset="95%"/>
+  <title>SVG demonstration</title>
+  <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
+
+  <defs>
+    <radialGradient id="fade" cx="0" cy="0" r="200"
+        gradientUnits="userSpaceOnUse">
+      <stop id="fade-stop-1" offset="33%"/>
+      <stop id="fade-stop-2" offset="95%"/>
     </radialGradient>
   </defs>
 
-<text id="heading" x="-280" y="-270">
-  SVG demonstration</text>
-<text  id="caption" x="-280" y="-250">
-  Move your mouse pointer over the flower.</text>
+  <text id="heading" x="-280" y="-270">SVG demonstration</text>
+  <text id="caption" x="-280" y="-250">Move your mouse pointer over the flower.</text>
 
-<g id="flower">
-  <circle id="overlay" cx="0" cy="0" r="200"
-    stroke="none" fill="url(#fade)"/>
-  <use id="outer-petals" xlink:href="#petals"/>
-  <use id="inner-petals" xlink:href="#petals"
-    transform="rotate(9) scale(0.33)"/>
+  <g id="flower">
+    <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
+
+    <g id="outer-petals">
+      <g class="quadrant">
+        <g class="segment">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(18)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(36)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(54)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(72)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(90)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(108)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(126)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(144)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(162)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(180)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(198)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(216)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(234)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(252)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(270)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(288)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(306)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(324)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(342)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+    </g>
+
+    <g id="inner-petals" transform="rotate(9) scale(0.33)">
+      <g class="quadrant">
+        <g class="segment">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(18)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(36)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(54)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(72)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(90)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(108)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(126)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(144)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(162)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(180)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(198)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(216)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(234)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(252)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(270)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(288)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(306)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(324)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+        <g class="segment" transform="rotate(342)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+        </g>
+      </g>
+    </g>
   </g>
-
 </svg>
 ```
 
-创建一个 CSS 文件，`style8.css。` 复制下面所有内容：
+创建一个 CSS 文件，`style8.css`。复制下面所有内容：
 
 ```css
 /*** SVG demonstration ***/
@@ -95,86 +254,136 @@ _SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
 /* page */
 svg {
   background-color: beige;
-  }
+}
 
 #heading {
   font-size: 24px;
   font-weight: bold;
-  }
+}
 
 #caption {
   font-size: 12px;
-  }
+}
 
 /* flower */
 #flower:hover {
   cursor: crosshair;
-  }
+}
 
 /* gradient */
 #fade-stop-1 {
   stop-color: blue;
-  }
+}
 
 #fade-stop-2 {
   stop-color: white;
-  }
+}
+
+/* petals */
+.segment-fill {
+  fill: var(--segment-fill-fill);
+  stroke: var(--segment-fill-stroke);
+  stroke-width: var(--segment-fill-stroke-width);
+}
+
+.segment-fill:hover {
+  fill: var(--segment-fill-fill-hover);
+  stroke: var(--segment-fill-stroke-hover);
+}
+
+.segment-edge {
+  fill: var(--segment-edge-fill);
+  stroke: var(--segment-edge-stroke);
+  stroke-width: var(--segment-edge-stroke-width);
+}
+
+.segment-edge:hover {
+  stroke: var(--segment-edge-stroke-hover);
+}
 
 /* outer petals */
 #outer-petals {
   opacity: .75;
-  }
+  --segment-fill-fill: azure;
+  --segment-fill-stroke: lightsteelblue;
+  --segment-fill-stroke-width: 1;
+  --segment-edge-fill: none;
+  --segment-edge-stroke: deepskyblue;
+  --segment-edge-stroke-width: 3;
+  --segment-fill-fill-hover: plum;
+  --segment-fill-stroke-hover: none;
+  --segment-edge-stroke-hover: slateblue;
+}
 
+/*
+ Non-standard way of styling elements referenced via <use> elements,
+ supported by some older browsers
+*/
 #outer-petals .segment-fill {
   fill: azure;
   stroke: lightsteelblue;
   stroke-width: 1;
-  }
+}
 
 #outer-petals .segment-edge {
   fill: none;
   stroke: deepskyblue;
   stroke-width: 3;
-  }
+}
 
 #outer-petals .segment:hover > .segment-fill {
   fill: plum;
   stroke: none;
-  }
+}
 
 #outer-petals .segment:hover > .segment-edge {
   stroke: slateblue;
-  }
+}
 
 /* inner petals */
+#inner-petals {
+  --segment-fill-fill: yellow;
+  --segment-fill-stroke: yellow;
+  --segment-fill-stroke-width: 1;
+  --segment-edge-fill: none;
+  --segment-edge-stroke: yellowgreen;
+  --segment-edge-stroke-width: 9;
+  --segment-fill-fill-hover: darkseagreen;
+  --segment-fill-stroke-hover: none;
+  --segment-edge-stroke-hover: green;
+}
+
+/*
+ Non-standard way of styling elements referenced via <use> elements,
+ supported by some older browsers
+*/
 #inner-petals .segment-fill {
   fill: yellow;
-  stroke: yellowgreen;
+  stroke: yellow;
   stroke-width: 1;
-  }
+}
 
 #inner-petals .segment-edge {
   fill: none;
   stroke: yellowgreen;
   stroke-width: 9;
-  }
+}
 
 #inner-petals .segment:hover > .segment-fill {
   fill: darkseagreen;
   stroke: none;
-  }
+}
 
 #inner-petals .segment:hover > .segment-edge {
   stroke: green;
-  }
+}
 ```
 
 在支持 SVG 的浏览器中打开上面的文档。将鼠标移到图上。
 
-由于这个 wiki 不支持嵌入 SVG，所以下面是一个截图供参考：
+### 结果
 
-| ![SVG demonstration](https://mdn.mozillademos.org/files/719/SVG-flower.png) |
-| --------------------------------------------------------------------------- |
+{{EmbedLiveSample("示例", "660", "660")}}
 
 解释：
 

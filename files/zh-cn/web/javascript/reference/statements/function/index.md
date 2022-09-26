@@ -1,14 +1,8 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - 函数
-  - 函数声明提升
-  - 函数表达式
-  - 提升
-  - 语句
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 **函数声明**定义一个具有指定参数的函数。
@@ -32,13 +26,13 @@ function name([param,[, param,[..., param]]]) {
 
 ## 描述
 
-一个被函数声明创建的函数是一个 Function 对象，具有 Function 对象的所有属性、方法和行为。查看 [Function](/en/JavaScript/Reference/Global_Objects/Function) 以获取 function 的详细信息。
+一个被函数声明创建的函数是一个 Function 对象，具有 Function 对象的所有属性、方法和行为。查看 [Function](/zh-CN/JavaScript/Reference/Global_Objects/Function) 以获取 function 的详细信息。
 
-函数也可以被表达式创建（ [function expression](/en/JavaScript/Reference/Operators/function) ）
+函数也可以被表达式创建（ [function expression](/zh-CN/JavaScript/Reference/Operators/function) ）
 
 函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是 true 还是 false，浏览器都会创建函数。因此，它们不应该被使用。
 
-默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 [return](/en/JavaScript/Reference/Statements/return) 语句指定返回值。
+默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 [return](/zh-CN/JavaScript/Reference/Statements/return) 语句指定返回值。
 
 ### 有条件的创建函数
 

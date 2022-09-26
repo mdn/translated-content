@@ -1,13 +1,8 @@
 ---
 title: 正規表達式
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - JavaScript
-  - RegExp
-  - 正規表達式
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表達式是被用來匹配字串中字元組合的模式。在 JavaScript 中，正規表達式也是物件，這些模式在 {{jsxref("RegExp")}} 的 {{jsxref("RegExp.exec", "exec")}} 和 {{jsxref("RegExp.test", "test")}} 方法中，以及 {{jsxref("String")}} 的 {{jsxref("String.match", "match")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}}、{{jsxref("String.split", "split")}} 等方法中被運用。這一章節將解說 JavaScript 中的正規表達式。

@@ -1,15 +1,9 @@
 ---
 title: 使用编程方法测试媒体查询
 slug: Web/CSS/Media_Queries/Testing_media_queries
-tags:
-  - CSS
-  - DOM
-  - Event
-  - Media Queries
-  - Web
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 original_slug: Web/Guide/CSS/Testing_media_queries
 ---
+
 {{cssref}}
 
 {{Glossary("DOM")}} 提供了通过编程方法来获得[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)结果的特性。这是通过 {{domxref("MediaQueryList")}} 接口和它的方法来实现的。创建了 `MediaQueryList` 对象之后，就可以通过它来检查查询结果，或者设置事件监听器，在查询结果发生变化时自动接收到通知。
@@ -82,7 +76,7 @@ mediaQueryList.removeListener(handleOrientationChange);
 
 ### `MediaQueryList` 接口
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 另见
 

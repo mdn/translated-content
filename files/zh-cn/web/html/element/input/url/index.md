@@ -1,8 +1,8 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/Input/url
-translation_of: Web/HTML/Element/input/url
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 元素有一个 **`url`** 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
@@ -40,8 +40,8 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
-1.  An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2.  A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
+1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
 
 See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 
@@ -51,7 +51,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 | Attribute                     | Description                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | The id of the <datalist> element that contains the optional pre-defined autocomplete options                                        |
+| [`list`](#list)               | The id of the \<datalist> element that contains the optional pre-defined autocomplete options                                        |
 | [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
 | [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
 | [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
@@ -331,6 +331,6 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 
 - [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
 - [Compatibility of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

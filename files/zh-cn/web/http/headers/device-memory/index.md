@@ -1,8 +1,8 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-translation_of: Web/HTTP/Headers/Device-Memory
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`Device-Memory`** 是一个跟 [Device Memory API](/zh-CN/docs/Web/API/Device_Memory_API) 相关的请求头，它跟 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 请求头的作用相似，用来表示客户端设备内存的近似大小。

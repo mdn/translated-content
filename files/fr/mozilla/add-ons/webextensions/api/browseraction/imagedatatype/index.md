@@ -13,6 +13,7 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
 ---
+
 {{AddonSidebar()}}
 
 Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData)  (par exemple, un élément  {{htmlelement("canvas")}}).

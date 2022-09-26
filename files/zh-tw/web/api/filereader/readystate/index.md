@@ -1,8 +1,8 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
-translation_of: Web/API/FileReader/readyState
 ---
+
 {{APIRef("File API")}}
 
 提供目前讀取狀態
@@ -25,7 +25,7 @@ var state = instanceOfFileReader.readyState
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader.readyState")}}
+{{Compat}}
 
 ## 閱讀更多
 

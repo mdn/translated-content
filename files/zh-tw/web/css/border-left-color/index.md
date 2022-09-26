@@ -1,15 +1,8 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.border-left-color
-translation_of: Web/CSS/border-left-color
 ---
+
 {{CSSRef}}
 
 **`border-left-color`** 是一種CSS屬性，用來設定元件左側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-left")}}設定該屬性值。

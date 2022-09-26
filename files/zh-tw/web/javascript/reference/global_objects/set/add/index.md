@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 參考
-  - 方法
-  - 集合
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 **`add()`** 會在一個 `Set` 物件的尾端加上一個指定 `value` 的新元素。
@@ -51,7 +44,7 @@ console.log(mySet);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
 ## 另見
 

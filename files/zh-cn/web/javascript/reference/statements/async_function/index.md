@@ -1,14 +1,8 @@
 ---
 title: async 函数
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - JavaScript
-  - 函数
-  - 声明
-  - 异步函数
-  - 语言特性
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 async 函数是使用`async`关键字声明的函数。 async 函数是{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}构造函数的实例， 并且其中允许使用`await`关键字。`async`和`await`关键字让我们可以用一种更简洁的方式写出基于{{jsxref("Promise")}}的异步行为，而无需刻意地链式调用`promise`。

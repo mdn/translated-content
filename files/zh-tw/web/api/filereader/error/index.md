@@ -1,8 +1,8 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
-translation_of: Web/API/FileReader/error
 ---
+
 {{APIRef("File API")}}
 
 ## 總覽
@@ -25,7 +25,7 @@ A {{domxref("DOMError")}}
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader.error")}}
+{{Compat}}
 
 ## 閱讀更多
 

@@ -1,8 +1,8 @@
 ---
 title: 'Django 教程 10: 测试 Django 网页应用'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 随着网站的增长，他们越来越难以手动测试。不仅要进行更多的测试，而且随着组件之间的交互变得越来越复杂，一个区域的小改变可能会影响到其他区域，所以需要做更多的改变来确保一切正常运行，并且在进行更多更改时不会引入错误。减轻这些问题的一种方法是编写自动化测试，每当您进行更改时，都可以轻松可靠地运行测试。本教程演示如何使用 Django 的测试框架自动化您的网站的*单元测试*。
@@ -47,7 +47,7 @@ LocalLibrary 目前有页面显示所有书本和作者的列表，书本和作�
 
 测试网站是一项复杂的任务，因为它由多层逻辑组成 - 从 HTTP 级请求处理，查询模型，到表单验证和处理，以及模板呈现。
 
-Django 提供了一个测试框架，其中包含基于 Python 标准[`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest)库的小型层次结构。尽管名称如此，但该测试框架适用于单元测试和集成测试。Django 框架添加了 API 方法和工具，以帮助测试 Web 和 Django 特定的行为。这允许您模拟请求，插入测试数据以及检查应用程序的输出。Django 还提供了一个 API（[LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）和[使用不同测试框架](https://docs.djangoproject.com/en/2.0/topics/testing/advanced/#other-testing-frameworks)的工具，例如，您可以与流行的 [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) 框架集成，以模拟用户与实时浏览器交互。
+Django 提供了一个测试框架，其中包含基于 Python 标准[`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest)库的小型层次结构。尽管名称如此，但该测试框架适用于单元测试和集成测试。Django 框架添加了 API 方法和工具，以帮助测试 Web 和 Django 特定的行为。这允许您模拟请求，插入测试数据以及检查应用程序的输出。Django 还提供了一个 API（[LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）和[使用不同测试框架](https://docs.djangoproject.com/en/2.0/topics/testing/advanced/#other-testing-frameworks)的工具，例如，您可以与流行的 [Selenium](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) 框架集成，以模拟用户与实时浏览器交互。
 
 要编写测试，您可以从任何 Django（或 unittest）测试基类（[SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）派生，然后编写单独的方法，来检查特定功能，是否按预期工作（测试使用“assert”方法来测试表达式导致 `True`或 `False`值，或者两个值相等，等等。）当您开始测试运行时，框架将在派生类中执行所选的测试方法。测试方法独立运行，具有在类中定义的常见设置和/或拆卸行为，如下所示。
 
@@ -211,6 +211,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)
@@ -856,7 +857,7 @@ Django 的测试框架，可以帮助您编写有效的单元和集成测试 - �
 虽然您可以使用许多其他测试工具，但我们只重点介绍两个：
 
 - [Coverage](http://coverage.readthedocs.io/en/latest/): 此 Python 工具报告您的测试，实际执行了多少代码。当开始使用时，你正试图找出你应该测试的确切内容，它会特别有用。
-- [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) 是一个在真实浏览器中，自动化测试的框架。它允许您模拟与站点交互的真实用户，并为系统测试您的站点，提供了一个很好的框架（从集成测试开始的下一步）。
+- [Selenium](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) 是一个在真实浏览器中，自动化测试的框架。它允许您模拟与站点交互的真实用户，并为系统测试您的站点，提供了一个很好的框架（从集成测试开始的下一步）。
 
 ## 挑战自己
 
@@ -894,18 +895,18 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
 
 ## 本系列教程
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-CN/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-CN/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

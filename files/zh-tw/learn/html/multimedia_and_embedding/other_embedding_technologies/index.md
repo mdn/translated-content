@@ -1,9 +1,9 @@
 ---
 title: 從物件到iframe - 其他嵌入技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 original_slug: Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 到現在為止，您應該真正掌握了將內容嵌入網頁的方法，包括圖片，影片和聲音。在這一點上，我們想採取一些橫向的措施，尋找一些元素，使您可以將各種內容類型嵌入到網頁中： {{htmlelement("iframe")}}, {{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。`<iframe>`用於嵌入其他網頁，另外兩個用於嵌入 PDF，SVG 甚至是 Flash（這項技術正在淘汰，但您仍會半定期看到）。
@@ -15,13 +15,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術
       <td>
         Basic computer literacy,
         <a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >, basic knowledge of
-        <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >, familiarity with HTML fundamentals (as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >) and the previous articles in this module.
       </td>
@@ -41,7 +41,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術
 
 A long time ago on the Web, it was popular to use **frames** to create websites — small parts of a website stored in individual HTML pages. These were embedded in a master document called a **frameset**, which allowed you to specify the area on the screen that each frame filled, rather like sizing the columns and rows of a table. These were considered the height of coolness in the mid to late 90s, and there was evidence that having a webpage split up into smaller chunks like this was better for download speeds — especially noticeable with network connections being so slow back then. They did however have many problems, which far outweighed any positives as network speeds got faster, so you don't see them being used anymore.
 
-A little while later (late 90s, early 2000s), plugin technologies became very popular, such as [Java Applets](/en-US/docs/Glossary/Java) and [Flash](/en-US/docs/Glossary/Adobe_Flash) — these allowed web developers to embed rich content into webpages such as videos and animations, which just weren't available through HTML alone. Embedding these technologies was achieved through elements like {{htmlelement("object")}}, and the lesser-used {{htmlelement("embed")}}, and they were very useful at the time. They have since fallen out of fashion due to many problems, including accessibility, security, file size, and more; these days most mobile devices don't support such plugins anymore, and desktop support is on the way out.
+A little while later (late 90s, early 2000s), plugin technologies became very popular, such as [Java Applets](/zh-TW/docs/Glossary/Java) and [Flash](/zh-TW/docs/Glossary/Adobe_Flash) — these allowed web developers to embed rich content into webpages such as videos and animations, which just weren't available through HTML alone. Embedding these technologies was achieved through elements like {{htmlelement("object")}}, and the lesser-used {{htmlelement("embed")}}, and they were very useful at the time. They have since fallen out of fashion due to many problems, including accessibility, security, file size, and more; these days most mobile devices don't support such plugins anymore, and desktop support is on the way out.
 
 Finally, the {{htmlelement("iframe")}} element appeared (along with other ways of embedding content, such as {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc.) This provides a way to embed an entire web document inside another one, as if it were an {{htmlelement("img")}} or other such element, and is used regularly today.
 
@@ -209,7 +209,7 @@ There are some serious [Security concerns](#security_concerns) to consider with 
 This example includes the basic essentials needed to use an `<iframe>`:
 
 - {{htmlattrxref('allowfullscreen','iframe')}}
-  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Full Screen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond scope for this article.)
+  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API) (somewhat beyond scope for this article.)
 - {{htmlattrxref('frameborder','iframe')}}
   - : If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behaviour. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}`: none;` in your {{Glossary('CSS')}}.
 - {{htmlattrxref('src','iframe')}}
@@ -231,7 +231,7 @@ Browser makers and Web developers have learned the hard way that iframes are a c
 
 > **備註：** [Clickjacking](https://zh.wikipedia.org/wiki/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
 
-A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) You won't actually see anything displayed on the page, and if you look at the _Console_ in the [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told _Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
+A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) You won't actually see anything displayed on the page, and if you look at the _Console_ in the [browser developer tools](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
 
 #### Only embed when necessary
 
@@ -239,7 +239,7 @@ Sometimes it makes sense to embed third-party content — like youtube videos an
 
 Besides security, you should also be aware of intellectual property issues. Most content is copyrighted, offline and online, even content you might not expect (for example, most images on [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Never display content on your webpage unless you own it or the owners have given you written, unequivocal permission. Penalties for copyright infringement are severe. Again, you can never be too cautious.
 
-If the content is licensed, you must obey the license terms. For example, the content on MDN is [licensed under CC-BY-SA](/en-US/docs/MDN/About#Copyrights_and_licenses). That means, you must [credit us properly](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) when you quote our content, even if you make substantial changes.
+If the content is licensed, you must obey the license terms. For example, the content on MDN is [licensed under CC-BY-SA](/zh-TW/docs/MDN/About#Copyrights_and_licenses). That means, you must [credit us properly](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) when you quote our content, even if you make substantial changes.
 
 #### Use HTTPS
 
@@ -250,7 +250,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 Using HTTPS requires a security certificate, which can be expensive (although [Let's Encrypt](https://letsencrypt.org/) makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, _no matter what the cost, you must never embed third-party content with HTTP._ (In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an `<iframe>` will make it available via HTTPS — look at the URLs inside the `<iframe>` `src` attribute when you are embedding content from Google Maps or Youtube, for example.
 
-> **備註：** [Github pages](/en-US/docs/Learn/Common_questions/Using_Github_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
+> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Using_Github_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
 
 #### Always use the `sandbox` attribute
 
@@ -258,13 +258,13 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/zh-TW/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
 > **備註：** Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
 
 #### Configure CSP directives
 
-{{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/Security/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](https://zh.wikipedia.org/wiki/clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+{{Glossary("CSP")}} stands for **[content security policy](/zh-TW/docs/Web/Security/CSP)** and provides [a set of HTTP Headers](/zh-TW/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/zh-TW/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](https://zh.wikipedia.org/wiki/clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
 > **備註：** You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
 
@@ -324,25 +324,25 @@ Once upon a time, plugins were indispensable on the Web. Remember the days when 
 
 > **備註：** Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.
 
-So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use [HTML5 video](/en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
+So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use [HTML5 video](/zh-TW/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/zh-TW/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/zh-TW/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding).
 
 ## Summary
 
 The topic of embedding other content in web documents can quickly become very complex, so in this article, we've tried to introduce it in a simple, familiar way that will immediately seem relevant, while still hinting at some of the more advanced features of the involved technologies. To start with, you are unlikely to use embedding for much beyond including third-party content like maps and videos on your pages. As you become more experienced, however, you are likely to start finding more uses for them.
 
-There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics. We'll look at [SVG](/en-US/docs/Web/SVG) in the next article of the module.
+There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics. We'll look at [SVG](/zh-TW/docs/Web/SVG) in the next article of the module.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 ## In this module
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Images in HTML](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [From \<object> to \<iframe> — other embedding technologies](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Adding vector graphics to the Web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla splash page](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

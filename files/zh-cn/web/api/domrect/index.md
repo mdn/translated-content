@@ -2,6 +2,7 @@
 title: DOMRect
 slug: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 一个 **`DOMRect`** 代表一个矩形。
@@ -38,10 +39,6 @@ slug: Web/API/DOMRect
 - {{domxref("DOMRectReadOnly.left")}}
   - : 返回 `DOMRect` 的左坐标值（与 `x` 具有相同的值，如果 `width` 为负值，则为 `x + width` 的值）。
 
-## 方法
-
-_`DOMRect` 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。_
-
 ## 静态方法
 
 - {{domxref("DOMRectReadOnly.fromRect()")}}
@@ -53,7 +50,7 @@ _`DOMRect` 从它的父类继承方法，{{domxref("DOMRectReadOnly")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRect")}}
+{{Compat}}
 
 ## 更多
 

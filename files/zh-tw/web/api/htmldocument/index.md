@@ -1,8 +1,8 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
-translation_of: Web/API/HTMLDocument
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDocument`** 是一個關於 {{domxref("Document_Object_Model", "DOM")}} 的抽象介面，提供了 {{domxref("Document")}} 定義之外的 XML 文件屬性及方法，以用來操作 HTML。

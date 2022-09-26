@@ -1,9 +1,9 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
-{{JSRef}}`subarray()` 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的的 _TypedArray_。开始的索引将会被包括，而结束的索引将不会被包括。_TypedArray_ 是指 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 的其中之一。
+
+{{JSRef}}`subarray()` 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的的 _TypedArray_。开始的索引将会被包括，而结束的索引将不会被包括。_TypedArray_ 是指 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 的其中之一。
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 
@@ -58,6 +58,6 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`setMilliseconds()`** 方法会根据本地时间设置一个日期对象的豪秒数。

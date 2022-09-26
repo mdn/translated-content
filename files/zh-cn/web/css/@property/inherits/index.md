@@ -1,16 +1,11 @@
 ---
 title: 继承性
 slug: Web/CSS/@property/inherits
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-**`inherits`** [CSS](/en-US/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 `@property`声明注册的自定义属性默认情况下是否会被继承。
+**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 `@property`声明注册的自定义属性默认情况下是否会被继承。
 
 ## Syntax（类型描述符）
 
@@ -49,7 +44,7 @@ tags:
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [@规则](/en-US/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [@规则](/zh-CN/docs/Web/CSS/At-rule):
 
 ```css
 @property --my-color {
@@ -59,7 +54,7 @@ tags:
 }
 ```
 
-使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
 ```js
 window.CSS.registerProperty({
@@ -76,7 +71,7 @@ window.CSS.registerProperty({
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.property.inherits")}}
+{{Compat}}
 
 ## 另见
 

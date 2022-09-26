@@ -1,8 +1,8 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
-translation_of: Web/CSS/mask-image
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
@@ -74,4 +74,4 @@ mask-image: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mask-image")}}
+{{Compat}}

@@ -1,18 +1,9 @@
 ---
 title: Flexbox 的向下支持
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-tags:
-  - '@supports'
-  - IE
-  - Safari
-  - flexbox
-  - 兼容
-  - 弹性盒子
-  - 旧版本
-  - 浏览器
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 ---
+
 {{CSSRef}}
 
 虽然弹性盒子被各种现代浏览器很好的支持，但是你或许还会遇到一些问题。在这个文档中，我们将会了解到浏览器支持弹性盒子的情况和一些潜在的问题，以及处理它们的资源和方法。
@@ -99,7 +90,7 @@ CSS 中表格相关的系列属性可能是非常有用的向下支持技术，�
 
 ## 特性枚举与弹性盒子
 
-你可以使用特性枚举（[feature queries](/en-US/docs/Web/CSS/%40supports)）来检查弹性盒子的支持情况：
+你可以使用特性枚举（[feature queries](/zh-CN/docs/Web/CSS/%40supports)）来检查弹性盒子的支持情况：
 
 ```css
 @supports (display: flex) {

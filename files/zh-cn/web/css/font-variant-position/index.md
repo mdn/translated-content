@@ -1,8 +1,8 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-translation_of: Web/CSS/font-variant-position
 ---
+
 {{CSSRef}}
 
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
@@ -84,4 +84,4 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-variant-position")}}
+{{Compat}}

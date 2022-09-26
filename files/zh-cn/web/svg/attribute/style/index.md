@@ -1,14 +1,9 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - SVG
-  - SVG Attribute
-  - Style
-  - svg style
-translation_of: Web/SVG/Attribute/style
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 **`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的[style](/zh-CN/docs/Web/HTML/Global_attributes/style)属性相同。
 
@@ -37,12 +32,12 @@ translation_of: Web/SVG/Attribute/style
 
 以下元素可以使用 style 属性
 
-- [Container elements](/en/SVG/Element#Container) »
-- [Filter primitive elements](/en/SVG/Element#FilterPrimitive) »
-- [Gradient elements](/en/SVG/Element#Gradient) »
-- [Graphics elements](/en/SVG/Element#Graphics) »
-- [Structural elements](/en/SVG/Element#Structural) »
-- [Text content elements](/en/SVG/Element#TextContent) »
+- [Container elements](/zh-CN/SVG/Element#Container) »
+- [Filter primitive elements](/zh-CN/SVG/Element#FilterPrimitive) »
+- [Gradient elements](/zh-CN/SVG/Element#Gradient) »
+- [Graphics elements](/zh-CN/SVG/Element#Graphics) »
+- [Structural elements](/zh-CN/SVG/Element#Structural) »
+- [Text content elements](/zh-CN/SVG/Element#TextContent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

@@ -13,6 +13,7 @@ tags:
   - Reference
 translation_of: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}}
 
 > **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une [mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des [interfaces de programmation](https://fr.wikipedia.org/wiki/Interface_de_programmation) définies.
@@ -54,10 +55,8 @@ De plus, {{domxref("Clipboard.read", "read()")}} et {{domxref("Clipboard.write",
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Clipboard API','#clipboard-interface','Clipboard')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard")}}
+{{Compat}}

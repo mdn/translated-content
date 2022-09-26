@@ -1,8 +1,8 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.callee`** property contains the currently executing function.
@@ -11,7 +11,7 @@ The **`arguments.callee`** property contains the currently executing function.
 
 `callee` is a property of the `arguments` object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").
 
-> **警告：** The 5th edition of ECMAScript (ES5) forbids use of `arguments.callee()` in [strict mode](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode). Avoid using `arguments.callee()` by either giving function expressions a name or use a function declaration where a function must call itself.
+> **警告：** The 5th edition of ECMAScript (ES5) forbids use of `arguments.callee()` in [strict mode](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode). Avoid using `arguments.callee()` by either giving function expressions a name or use a function declaration where a function must call itself.
 
 ### Why was `arguments.callee` removed from ES5 strict mode?
 
@@ -88,9 +88,9 @@ If the JavaScript interpreter cannot guarantee that all the provided arguments a
 
 ### Using `arguments.callee` in an anonymous recursive function
 
-A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or the [`Function` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by `arguments.callee`.
+A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a [function expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/function) or the [`Function` constructor](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function)) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by `arguments.callee`.
 
-The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with [named function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function).
+The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with [named function expressions](/zh-TW/docs/Web/JavaScript/Reference/Operators/function).
 
 ```js
 function create() {

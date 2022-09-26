@@ -1,12 +1,8 @@
 ---
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-tags:
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 **`isNaN()`** 函数用来确定一个值是否为{{jsxref("NaN")}} 。注：`isNaN`函数内包含一些非常有趣的[规则](#Description)；你也可以使用 ECMAScript 2015 中定义的 {{jsxref("Number.isNaN()")}} 来判断。

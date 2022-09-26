@@ -3,6 +3,7 @@ title: Gamepad API
 slug: Web/API/Gamepad_API
 translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 L'**API Gamepad** est un moyen pour les développeurs d'accéder aux signaux provenant des manettes des jeu et des autres unités de commande du jeu d'y répondre de manière simple et systématiq. Il contient trois interfaces, deux événements et une fonction spécialisée, pour répondre aux manettes connectées et déconnectées, et pour accéder à d'autres informations sur les manettes elles-mêmes, ainsi que sur les boutons et autres commandes sur lesquels vous appuyez actuellement.
@@ -44,18 +45,15 @@ See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#Expe
 - [Using the Gamepad API](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Implementing controls using the Gamepad API](/fr/docs/Games/Techniques/Controls_Gamepad_API)
 
-## Caractéristiques
+## Spécifications
 
-| Spécification                                                                    | Statut                                   | Commentaire                                                           |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Définit les [extensions de manette du jeu expérimentales](#extensions_de_manette_du_jeu_expérimentales). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Définition initiale                                                    |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
 - [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

@@ -1,8 +1,8 @@
 ---
 title: 原因：CORS 請求未成功
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
@@ -17,6 +17,6 @@ Reason: CORS request did not succeed
 
 ## 參見
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-TW/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-TW/docs/Web/HTTP/CORS)

@@ -1,17 +1,8 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
-browser-compat: api.Screen.availTop
-translation_of: Web/API/Screen/availTop
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの Y 座標を示します。

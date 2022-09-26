@@ -1,17 +1,9 @@
 ---
 title: 定位
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - CSS
-  - 初学者
-  - 定位
-  - 布局
-  - 指南
-  - 相对定位
-  - 绝对定位
-translation_of: Learn/CSS/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/定位
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}

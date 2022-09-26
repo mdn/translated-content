@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/createAttribute
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut et le renvoie. L'objet a créé un noeud implémentant l'interface {{domxref("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
@@ -44,16 +45,11 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires                                        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Comportement précis avec des caractères majuscules. |
-| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | Pas de modification.                                |
-| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | Pas de modification.                                |
-| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createAttribute")}}
+{{Compat}}
 
 ## Voir aussi
 

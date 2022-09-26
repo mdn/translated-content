@@ -1,11 +1,8 @@
 ---
 title: 教程
 slug: Web/Tutorials
-tags:
-  - 教程
-  - 网页设计
-translation_of: Web/Tutorials
 ---
+
 > **警告：** 本页面上的链接通向各式各样的入门指导和培训教材。不管你是仅仅开始入门、学过些基础或者是个网站开发老手，你都能在这里找到有用的资源加以绝佳的练习。这些资源都来自卓有远见的公司和乐于接受开放标准网站开发人员。这是网站开发的绝佳练习而且使用一种开放内容授权，比如[知识共享许可协议](https://www.mozilla.org/foundation/licensing/website-content.html)来提供并允许进行翻译。
 
 ## 对于学习 Web 的新手

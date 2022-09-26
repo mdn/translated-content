@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Event/initEvent
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 La méthode **`Event.initEvent()`** est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.
@@ -52,14 +53,11 @@ elem.dispatchEvent(event);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Depuis {{SpecName('DOM2 Events')}}, dépréciée, remplacée par les constructeurs d'événements. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Définition initiale.                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

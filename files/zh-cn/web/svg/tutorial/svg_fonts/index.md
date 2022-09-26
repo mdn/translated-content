@@ -1,14 +1,14 @@
 ---
 title: SVG 字体
 slug: Web/SVG/Tutorial/SVG_fonts
-translation_of: Web/SVG/Tutorial/SVG_fonts
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 当规定 SVG 时，在浏览器支持 web 字体并不流行。因为访问正确的字体文件对于正确呈现字体是有确定性的，SVG 中添加了一个字体描述技术，以提供这个能力。它并不是为了和别的格式比如说 PostScript 或 OTF 兼容，而是为了将字形信息嵌入 SVG 呈现的一个简单的方法。
 
 > **备注：** **SVG 字体当前只在 Safari 和 Android 浏览器中受支持。**
-> Internet Explorer [还没有考虑实现它](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx)，Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现[WOFF](/en/WOFF)。别的工具比如说[Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/)插件、Batik 和部分 Inkscape 支持 SVG 字体嵌入。
+> Internet Explorer [还没有考虑实现它](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx)，Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现[WOFF](/zh-CN/WOFF)。别的工具比如说[Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/)插件、Batik 和部分 Inkscape 支持 SVG 字体嵌入。
 
 定义一个 SVG 字体的基础是{{ SVGElement("font") }}元素。
 
@@ -35,7 +35,7 @@ translation_of: Web/SVG/Tutorial/SVG_fonts
 
 我们从{{ SVGElement("font") }}元素开始。这个携带了一个 ID 属性，使它能够通过一个`URI`被引用（如下所示）。属性`horiz-adv-x`定义了相比之单一字形的路径定义，一个字符的平均宽度。值`1000`设置了一个起作用的合理值。有一些陪同的属性，帮助进一步定义基本的字形盒布局。
 
-{{ SVGElement("font-face") }}元素在 SVG 中等同于 CSS 的 [`@font-face`](/en/CSS/@font-face) 声明。它定义了最终字体的基本属性，比如说 weight、style，等等。在上面这个示例中，最重要的是定义`font-family`，后面的 CSS 和 SVG `font-family`属性可以引用它的值。属性`font-weight`和`font-style`跟 CSS 中的描述符有同样的目的。所有后面的属性都是字体布局引擎的呈现指令，举个例子，字形的全部高度可以[提升](http://en.wikipedia.org/wiki/Ascender_%28typography%29)多少。
+{{ SVGElement("font-face") }}元素在 SVG 中等同于 CSS 的 [`@font-face`](/zh-CN/CSS/@font-face) 声明。它定义了最终字体的基本属性，比如说 weight、style，等等。在上面这个示例中，最重要的是定义`font-family`，后面的 CSS 和 SVG `font-family`属性可以引用它的值。属性`font-weight`和`font-style`跟 CSS 中的描述符有同样的目的。所有后面的属性都是字体布局引擎的呈现指令，举个例子，字形的全部高度可以[提升](http://en.wikipedia.org/wiki/Ascender_%28typography%29)多少。
 
 它的子元素，{{ SVGElement("font-face-src") }}元素，相对于 CSS 的`@font-face`描述符中的`src`描述符。你可以利用它的子元素 {{ SVGElement("font-face-name") }}和{{ SVGElement("font-face-uri") }}把字体声明指向外源。以上示例表达了如果渲染器有一个名为“Super Sans Bold”的本地字体可用，它将使用这个本地字体。
 

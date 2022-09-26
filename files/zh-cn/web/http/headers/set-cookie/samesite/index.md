@@ -1,8 +1,8 @@
 ---
 title: SameSite cookies
 slug: Web/HTTP/Headers/Set-Cookie/SameSite
-translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
+
 **`SameSite`** 是 HTTP 响应头 {{HTTPHeader("Set-Cookie")}} 的属性之一。它允许您声明该 Cookie 是否仅限于第一方或者同一站点上下文。
 
 ## 值
@@ -91,6 +91,6 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 
 ## 另请参阅
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}

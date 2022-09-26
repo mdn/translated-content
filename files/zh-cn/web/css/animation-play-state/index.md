@@ -1,13 +1,13 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
-translation_of: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
 
-**`animation-play-state`** [CSS](/en-US/docs/CSS) 属性定义一个动画是否运行或者暂停。可以通过查询它来确定动画是否正在运行。另外，它的值可以被设置为暂停和恢复的动画的重放。
+**`animation-play-state`** [CSS](/zh-CN/docs/CSS) 属性定义一个动画是否运行或者暂停。可以通过查询它来确定动画是否正在运行。另外，它的值可以被设置为暂停和恢复的动画的重放。
 
 恢复一个已暂停的动画，将从它开始暂停的时候，而不是从动画序列的起点开始在动画。
 
@@ -44,7 +44,7 @@ animation-play-state: unset;
 
 ## 示例
 
-参见实例[CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+参见实例[CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
 ## 规范
 
@@ -52,9 +52,9 @@ animation-play-state: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-play-state")}}
+{{Compat}}
 
 ## 参见
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

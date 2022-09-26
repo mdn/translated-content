@@ -1,11 +1,11 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
+
 {{JSRef}}
 
-`apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects))為參數的函式。
+`apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 [array-like object](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects))為參數的函式。
 
 > **備註：** 這個函式的語法和{{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 `call()` 接受**`一連串的參數`**，而 `apply() 接受一組陣列形式的參數。`
 
@@ -145,7 +145,7 @@ someobject.foo = function() {
 }
 ```
 
-This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](/en-US/docs/Tools/Page_Inspector#Developer_API)).
+This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](/zh-TW/docs/Tools/Page_Inspector#Developer_API)).
 
 ## 規範
 

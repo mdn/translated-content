@@ -1,12 +1,8 @@
 ---
 title: 类表达式
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Class
-  - Classes
-  - ES6
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
+
 {{jsSidebar("Operators")}}
 
 **类表达式**是用来定义类的一种语法。和[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)相同的一点是，类表达式可以是命名也可以是匿名的。如果是命名类表达式，这个名字只能在类体内部才能访问到。JavaScript 的类也是基于原型继承的。

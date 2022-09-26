@@ -1,14 +1,9 @@
 ---
 title: 編輯以及新增頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - MDN
-  - 初學者
-  - 新頁面
-  - 編輯
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 幾乎每位 MDN 的貢獻者在 MDN 中都會做的兩件基本工作，即為編輯一個已存在的頁面或者是新增一個頁面。這篇文章將介紹如何編輯文件的基本技能。
@@ -37,7 +32,7 @@ original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 
 ## Tags
 
-您可以於文章編輯區塊下增加或移除用以描述文章內容以及用途的 tags。請詳見 [How to properly tag pages](/en-US/docs/MDN/Contribute/Tagging) 以了解 tags 如何來提供資訊。
+您可以於文章編輯區塊下增加或移除用以描述文章內容以及用途的 tags。請詳見 [How to properly tag pages](/zh-TW/docs/MDN/Contribute/Tagging) 以了解 tags 如何來提供資訊。
 
 ## 審核是必要的嗎?
 
@@ -72,7 +67,7 @@ original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 要在頁面新增「缺失頁面」連結：
 
 1. 請先確認您已經登入 MDN（如果您還未登入，點繫「缺失頁」連結會出現 404（找不到頁面）錯誤）。
-2. 點擊「缺失頁面」連結，將開啟[MDN Editor UI](/en-US/docs/MDN/Contribute/Editor)，讓您新增缺失頁面。
+2. 點擊「缺失頁面」連結，將開啟[MDN Editor UI](/zh-TW/docs/MDN/Contribute/Editor)，讓您新增缺失頁面。
 3. 撰寫頁面內容，並且儲存。
 
 ## 非基於連結而建立的新頁面
@@ -120,12 +115,12 @@ MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓您能�
 
 ## 重新整理頁面內容
 
-MDN 支援 KumaScript 巨集和嵌入其他頁面內容插入頁面，有時候因效能因素需要為生成的頁面用快取，而略為延遲內容更新。頁面從原始碼生成，產生的頁面會先產生快取以便未來存取使用。從現在起，所有的巨集（模版）或是嵌入（在該頁使用[`Page`](/en-US/docs/Template:Page)巨集）並不會馬上就會反應更動後的巨集變動，巨集生成頁面，或者嵌入頁面的內容。
+MDN 支援 KumaScript 巨集和嵌入其他頁面內容插入頁面，有時候因效能因素需要為生成的頁面用快取，而略為延遲內容更新。頁面從原始碼生成，產生的頁面會先產生快取以便未來存取使用。從現在起，所有的巨集（模版）或是嵌入（在該頁使用[`Page`](/zh-TW/docs/Template:Page)巨集）並不會馬上就會反應更動後的巨集變動，巨集生成頁面，或者嵌入頁面的內容。
 
 - 要手動更新頁面，您可以在您的瀏覽器強制更新。MDN 偵測到強制更新，將會重新生成頁面，更新的巨集生成頁面，以及嵌入頁面內容。
-- 您可以週期性設定自動重新生成頁面。不過除非該頁面常常更新，不然請不要這麼做。請參考 [Page regeneration](/en-US/docs/MDN/Contribute/Tools/Page_regeneration) 一文獲得更多資訊。
+- 您可以週期性設定自動重新生成頁面。不過除非該頁面常常更新，不然請不要這麼做。請參考 [Page regeneration](/zh-TW/docs/MDN/Contribute/Tools/Page_regeneration) 一文獲得更多資訊。
 
 ## 參見
 
-- [MDN 編輯器指南](/en-US/docs/MDN/Contribute/Editor)
+- [MDN 編輯器指南](/zh-TW/docs/MDN/Contribute/Editor)
 - [MDN 風格指南](/zh-TW/docs/MDN/Contribute/Content/Style_guide)

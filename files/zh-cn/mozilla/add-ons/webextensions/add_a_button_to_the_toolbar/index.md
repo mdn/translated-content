@@ -1,8 +1,8 @@
 ---
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
+
 {{AddonSidebar}}工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
 
 - 如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。
@@ -10,8 +10,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 
 在 WebExtensions 中这种按钮被称为浏览器行为按钮，它们可以像下面这样生成：
 
-- manifest.json 文件中的键 [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 被用来定义按钮。
-- JavaScript 接口 [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 被用来监听单击和更改按钮，或通过代码执行操作。
+- manifest.json 文件中的键 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 被用来定义按钮。
+- JavaScript 接口 [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 被用来监听单击和更改按钮，或通过代码执行操作。
 
 ## 一个简单的按钮
 
@@ -64,7 +64,7 @@ function openPage() {
 browser.browserAction.onClicked.addListener(openPage);
 ```
 
-该文件用来监听浏览器单击事件。当单击事件发生时运行 `openPage()` 函数，这个函数通过使用[`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) 接口加载指定的页面。
+该文件用来监听浏览器单击事件。当单击事件发生时运行 `openPage()` 函数，这个函数通过使用[`tabs`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs) 接口加载指定的页面。
 
 现在完整的附加组件看上去应该像下面这样：
 
@@ -77,7 +77,7 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -194,14 +194,14 @@ button/
 
 ## 页面行为
 
-页面行为[（Page actions）](/en-US/Add-ons/WebExtensions/User_interface_components#Page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
+页面行为[（Page actions）](/zh-CN/Add-ons/WebExtensions/User_interface_components#Page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
 
 由于浏览器行为总是发生，而页面行为只在特定页面显示。所以页面行为按钮在 URL 地址栏中显示，而浏览器行为按钮则在浏览器工具栏中显示。
 
 ## 了解更多
 
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
-- [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
+- [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
 
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
@@ -210,8 +210,8 @@ button/
   - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
   - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
 
-- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
-- [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
+- [`pageAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
 
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

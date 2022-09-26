@@ -1,15 +1,8 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-tags:
-  - 扩展
-  - 标签
-  - 标签页
-  - 类型
-  - 非标准
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
+
 {{AddonSidebar()}}
 
 **`tabs.Tab`** 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。
@@ -25,11 +18,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `autoDiscardable` {{optional_inline}}
   - : `boolean`. 资源不足时浏览器是否可以自动丢弃该标签页。
 - `cookieStoreId` {{optional_inline}}
-  - : `string`. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), 你可以将此作为 `storeId` 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。
+  - : `string`. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), 你可以将此作为 `storeId` 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。
 - `discarded` {{optional_inline}}
   - : `boolean`. 是否丢弃的标签页。被丢弃的标签页是其内容已经从内存中卸载的标签页，但在标签页条中仍可见。它的内容在下一次被激活时被重新加载。
 - `favIconUrl` {{optional_inline}}
-  - : `string`. 该标签的图标的网址。只有在扩展具有“cookies”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
+  - : `string`. 该标签的图标的网址。只有在扩展具有“cookies”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
 - `height` {{optional_inline}}
   - : `integer`. 标签页的像素单位高度。
 - `highlighted`
@@ -41,9 +34,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `index`
   - : `integer`. 窗口中的标签页从零开始的索引。
 - `isArticle`
-  - : `boolean`. 如果标签页可以在 [Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+  - : `boolean`. 如果标签页可以在 [Reader 模式下呈现](/zh-CN/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
 - `isInReaderMode`
-  - : `boolean`. 如果标签页正在 [Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+  - : `boolean`. 如果标签页正在 [Reader 模式下呈现](/zh-CN/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
 - `lastAccessed`
   - : `double`. 上次访问该标签页的时间 , 参考 [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `mutedInfo` {{optional_inline}}
@@ -59,9 +52,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `status` {{optional_inline}}
   - : `string`._加载_ 或 _完成_.
 - `title` {{optional_inline}}
-  - : `string`. 标签页的标题。只有当扩展具有 `"tabs"` [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
+  - : `string`. 标签页的标题。只有当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
 - `url` {{optional_inline}}
-  - : `string`. 该选项卡正在显示的文档的 URL。只有当扩展具有 `"tabs"` [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
+  - : `string`. 该选项卡正在显示的文档的 URL。只有当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
 - `width` {{optional_inline}}
   - : `integer`. 标签页的像素单位宽度。
 - `windowId`
@@ -69,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -77,7 +70,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,4 +98,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

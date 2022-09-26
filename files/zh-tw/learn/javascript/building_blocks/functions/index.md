@@ -1,8 +1,8 @@
 ---
 title: 函數 - 可重複使用的代碼塊
 slug: Learn/JavaScript/Building_blocks/Functions
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 編碼中的另一個基本概念是函數，它允許您存儲一段代碼，該代碼在定義的塊內執行單個任務，然後在需要時使用一個簡短命令調用該代碼 - 而不必輸入相同的代碼 代碼多次。 在本文中，我們將探索函數背後的基本概念，例如基本語法，如何調用和定義它們，範圍和參數。
@@ -13,7 +13,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
@@ -31,7 +31,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
 
 In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while or do...while loop](/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), you are making use of a function.
+Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while or do...while loop](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/zh-TW/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
@@ -72,7 +72,7 @@ var myNumber = Math.random();
 
 The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you **invoke** (a fancy word for run, or execute) a built in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
 
-Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to [this early section of our course](/en-US/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do) for more descriptions). We'll look at using browser APIs in more detail in a later module.
+Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to [this early section of our course](/zh-TW/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do) for more descriptions). We'll look at using browser APIs in more detail in a later module.
 
 ## Functions versus methods
 
@@ -84,7 +84,7 @@ You don't need to learn about the inner workings of structured JavaScript object
 
 ## Custom functions
 
-You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code), we included a custom `draw()` function that looked like this:
+You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code), we included a custom `draw()` function that looked like this:
 
 ```js
 function draw() {
@@ -112,7 +112,7 @@ function random(number) {
 }
 ```
 
-We needed this function because the browser's built-in [Math.random()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.
+We needed this function because the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.
 
 ## Invoking functions
 
@@ -210,13 +210,13 @@ Some functions require **parameters** to be specified when you are invoking them
 
 > **備註：** Parameters are sometimes called arguments, properties, or even attributes.
 
-As an example, the browser's built-in [Math.random()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
+As an example, the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
 
 ```js
 var myNumber = Math.random();
 ```
 
-The browser's built-in string [replace()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:
+The browser's built-in string [replace()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:
 
 ```js
 var myText = 'I am a string';
@@ -225,7 +225,7 @@ var newString = myText.replace('string', 'sausage');
 
 > **備註：** When you need to specify multiple parameters, they are separated by commas.
 
-It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
+It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
 ```js
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
@@ -305,7 +305,7 @@ Let's look at a real example to demonstrate scoping.
     output(z);
     ```
 
-    Both of these should return an error along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
+    Both of these should return an error along the lines of "[ReferenceError: y is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
 5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
@@ -374,11 +374,11 @@ Let's look at a real example to demonstrate scoping.
     b();
     ```
 
-    This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
+    This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
 
 > **備註：** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
-> **備註：** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+> **備註：** The [ReferenceError: "x" is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
 ### Functions inside functions
 
@@ -436,18 +436,18 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 ## See also
 
-- [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
+- [Functions detailed guide](/zh-TW/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
+- [Functions reference](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [Default parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 ## In this module
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

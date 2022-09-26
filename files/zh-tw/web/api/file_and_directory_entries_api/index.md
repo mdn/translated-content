@@ -1,9 +1,9 @@
 ---
 title: FileHandle API
 slug: Web/API/File_and_Directory_Entries_API
-translation_of: Web/API/File_Handle_API
 original_slug: Web/API/File_Handle_API
 ---
+
 FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [File](/zh-TW/docs/DOM/File) API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。
 
 ## API
@@ -67,6 +67,7 @@ interface FileHandle
     }
     }
     ```
+
 - name
   - : 檔案名稱。
 - type
@@ -110,12 +111,12 @@ interface LockedFile
 - location
   - : 檔案中的位置 (Offset)。每次讀/寫作業之後，此數值均將自動變更。讀寫作業均從該 location 開始，而 null 代表檔案末端。
 - getMetadata(parameters)
-  - : 針對後設資料 (Metadata) 而回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `true`。目前僅有 `size` 與 `lastModified` 為可能的參數。
+  - : 針對後設資料 (Metadata) 而回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `true`。目前僅有 `size` 與 `lastModified` 為可能的參數。
 - readAsArrayBuffer(size)
-  - : 針對既有` size `的 [ArrayBuffer](/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer)，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
+  - : 針對既有` size `的 [ArrayBuffer](/zh-TW/docs/JavaScript/Typed_arrays/ArrayBuffer)，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
 - readAsText(size [, encoding])
-  - : 針對既有 `size` 的字串，以既定的` encoding` 回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/en-US/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
-  
+  - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/zh-TW/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
+
     ```js
     var lockedFile = myFile.open();
     var request = lockedFile.readAsText(3);
@@ -124,9 +125,10 @@ interface LockedFile
       // 3 characters have been read.
     }
     ```
+
 - write(value)
-  - : 針對成功/失敗的寫入作業，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。寫入作業將從 `location` 開始，另根據寫入位元組的數目，移動位置。
-  
+  - : 針對成功/失敗的寫入作業，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。寫入作業將從 `location` 開始，另根據寫入位元組的數目，移動位置。
+
     ```js
     var lockedFile = myFile.open("readwrite");
     var request = lockedFile.write("foo");
@@ -134,10 +136,11 @@ interface LockedFile
       // The string "foo" has been written.
     }
     ```
+
 - append(value)
-  - : 針對成功/失敗的附加 (Append) 作業，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。不論 `location` 為何，該數值均附加於檔案末端。在附加資料完畢後，`location` 隨即設定為 `null`。
+  - : 針對成功/失敗的附加 (Append) 作業，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。不論 `location` 為何，該數值均附加於檔案末端。在附加資料完畢後，`location` 隨即設定為 `null`。
 - truncate([size])
-  - : 針對成功/失敗的截斷 (Truncate) 作業，回傳 [FileRequest](/en-US/docs/WebAPI/FileHandle_API#FileRequest_interface)。
+  - : 針對成功/失敗的截斷 (Truncate) 作業，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。
 
     如果是以單一參數呼叫該函式，則截斷成功之後，則**不論** `location` 為何，檔案將剩下第一個 `size` 的位元組。
 
@@ -149,7 +152,7 @@ interface LockedFile
 
 ### FileRequest 介面
 
-此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 [DOMRequest](/zh-TW/docs/DOM/DOMRequest) 並類似 [IDBRequest](/zh-TW/docs/IndexedDB/IDBRequest)，同時還擁有 ` onprogress ``事件。在成功之後，則可透過` ` result ``屬性而取得必要檔案作業的結果。`
+此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 [DOMRequest](/zh-TW/docs/DOM/DOMRequest) 並類似 [IDBRequest](/zh-TW/docs/IndexedDB/IDBRequest)，同時還擁有 `onprogress` 事件。在成功之後，則可透過 `result` 屬性而取得必要檔案作業的結果。
 
 ```plain
 interface FileRequest : DOMRequest

@@ -1,8 +1,8 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-translation_of: Web/API/WebVR_API
 ---
+
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
 
 WebVR 可以讓穿戴的 VR 裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) 與 web 應用程式結合。開發人員可以將 VR 裝置所提供的位置與動作資訊轉移到 3D 的場景中。利用 WebVR 可以創造出很多有趣的應用程式: 包含虛擬導覽、互動訓練軟體等等。
@@ -21,10 +21,10 @@ WebVR 可以讓穿戴的 VR 裝置 (如頭戴裝置 Oculus Rift 或 HTC Vive) �
 
 A typical (simple) WebVR app would work like so:
 
-1.  呼叫 {{domxref("Navigator.getVRDisplays()")}} 來取得 VR 顯示器的 reference。
-2.  呼叫 {{domxref("VRDisplay.requestPresent()")}} 來啟動 VR 顯示器。
-3.  WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
-4.  Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{domxref("VRDisplay.submitFrame()")}}).
+1. 呼叫 {{domxref("Navigator.getVRDisplays()")}} 來取得 VR 顯示器的 reference。
+2. 呼叫 {{domxref("VRDisplay.requestPresent()")}} 來啟動 VR 顯示器。
+3. WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
+4. Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{domxref("VRDisplay.submitFrame()")}}).
 
 In addition, WebVR 1.1 adds a number of events on the {{domxref("Window")}} object to allow JavaScript to respond to changes to the status of the display.
 

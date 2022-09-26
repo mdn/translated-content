@@ -1,14 +1,8 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - ECMAScript2015
-  - Iterator
-  - JavaScript
-  - Method
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 属性的初始值和 {{jsxref("Set.prototype.values()", "values")}} 属性的初始值是同一个函数。

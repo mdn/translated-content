@@ -1,13 +1,8 @@
 ---
 title: 使用 shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - Web Components
-  - 指南
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Web components 的一个重要属性是封装——可以将标记结构、样式和行为隐藏起来，并与页面上的其他代码相隔离，保证不同的部分不会混在一起，可使代码更加干净、整洁。其中，Shadow DOM 接口是关键所在，它可以将一个隐藏的、独立的 DOM 附加到一个元素上。本篇文章将会介绍 Shadow DOM 的基础使用。
@@ -40,7 +35,7 @@ Web components 的一个重要属性是封装——可以将标记结构、样�
 
 _Shadow_ DOM 允许将隐藏的 DOM 树附加到常规的 DOM 树中——它以 shadow root 节点为起始根节点，在这个根节点的下方，可以是任意元素，和普通的 DOM 元素一样。
 
-![](https://mdn.mozillademos.org/files/15788/shadow-dom.png)
+![](shadowdom.svg)
 
 这里，有一些 Shadow DOM 特有的术语需要我们了解：
 
@@ -224,7 +219,7 @@ linkElem.setAttribute('href', 'style.css');
 shadow.appendChild(linkElem);
 ```
 
-请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。
+请注意，因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。
 
 许多现代浏览器都对从公共节点克隆的或具有相同文本的{{htmlelement("style")}} 标签实现了优化，以允许它们共享单个支持样式表，通过这种优化，外部和内部样式的性能表现比较接近。
 

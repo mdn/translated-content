@@ -1,15 +1,9 @@
 ---
 title: 媒体查询
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - 参考
-  - 响应式设计
-  - 媒体查询
-  - 总览
-translation_of: Web/CSS/Media_Queries
 original_slug: Web/CSS/媒体查询
 ---
+
 {{CSSRef}}
 
 通过**媒体查询**（**Media queries**），您可以根据各种设备特征和参数的值或者是否存在来调整您的网站或应用。
@@ -20,7 +14,7 @@ original_slug: Web/CSS/媒体查询
 
 ### 在 HTML 中使用媒体查询
 
-在 [HTML ](/zh-CN/docs/Web/HTML)中，媒体查询可以应用于各种元素：
+在 [HTML](/zh-CN/docs/Web/HTML) 中，媒体查询可以应用于各种元素：
 
 - 在{{HTMLElement("link")}}元素的{{htmlattrxref("media", "link")}}属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。
 - 在{{HTMLElement("source")}}元素的{{htmlattrxref("media", "source")}}属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）
@@ -45,7 +39,7 @@ original_slug: Web/CSS/媒体查询
   - : 介绍媒体查询和媒体查询的的语法以及用于构造媒体查询表达式的运算符和媒体功能。
 - [编程方式使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : 描述如何在 JavaScript 代码中使用媒体查询来确定设备的状态，以及设置在媒体查询结果发生更改时（例如，当用户旋转屏幕或调整浏览器大小时）通知代码的监听器。
-- [使用媒体查询增强网站的可访问性](/zh-CN/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [使用媒体查询增强网站的无障碍](/zh-CN/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
   - : 了解媒体查询如何帮助用户更好地了解您的网站。
 
 ## 规范

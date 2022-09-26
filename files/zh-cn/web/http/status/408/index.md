@@ -1,11 +1,8 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-tags:
-  - 响应状态码
-  - 客户端错误
-translation_of: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 响应状态码 **`408 Request Timeout`** 表示服务器想要将没有在使用的连接关闭。一些服务器会在空闲连接上发送此信息，**即便是在客户端没有发送任何请求的情况下。

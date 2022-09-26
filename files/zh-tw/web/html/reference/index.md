@@ -1,8 +1,8 @@
 ---
 title: HTML 參考
 slug: Web/HTML/Reference
-translation_of: Web/HTML/Reference
 ---
+
 {{HTMLSidebar}}
 
 這裡的 HTML 參考描述了所有 HTML 的**元素**（elements）與**屬性**（attributes），包括為所有元素接受的**全域屬性**（global attributes）。

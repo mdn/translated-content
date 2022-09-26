@@ -1,8 +1,8 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`link()`** 方法创建一个 HTML 元素 {{HTMLElement("a")}} ，用该字符串作为超链接的显示文本，参数作为指向另一个 URL 的超链接。

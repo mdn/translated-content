@@ -1,9 +1,9 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
-translation_of: Web/API/window/requestAnimationFrame
 original_slug: Web/API/Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame()`**方法通知瀏覽器我們想要產生動畫，並且要求瀏覽器在下次重繪畫面前呼叫特定函數更新動畫。這個方法接受一個引數作為下次重繪前調用的回呼函數。
@@ -57,7 +57,7 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.requestAnimationFrame")}}
+{{Compat}}
 
 ## 其他參考
 

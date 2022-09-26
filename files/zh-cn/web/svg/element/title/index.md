@@ -1,16 +1,11 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-tags:
-  - SVG
-  - SVG 描述
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/title
 ---
+
 {{SVGRef}}
 
-SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描述性字符串，该描述只能是纯文本。如果当前的 SVG 文档片段在可视媒体中呈现为 SVG，title 元素不会呈现为绘图的一部分。然而，一些用户代理可能会，举个例子，把`title`显示为一个提示冒泡。替代性提词既可以看到也可以听到，它显示了 title 元素但是不会显示路径元素或者别的图形元素。`title`元素通常提升了 SVG 文档的可访问性。
+SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描述性字符串，该描述只能是纯文本。如果当前的 SVG 文档片段在可视媒体中呈现为 SVG，title 元素不会呈现为绘图的一部分。然而，一些用户代理可能会，举个例子，把`title`显示为一个提示冒泡。替代性提词既可以看到也可以听到，它显示了 title 元素但是不会显示路径元素或者别的图形元素。`title`元素通常提升了 SVG 文档的无障碍。
 
 通常`title`元素必须是它的父元素的第一个子元素。注意，只有当`title`是它的父元素的第一个子元素的时候，那些编译器才会把`title`显示为一个提示冒泡。
 
@@ -36,7 +31,7 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -46,11 +41,11 @@ _没有专有属性_
 
 ## DOM 接口
 
-该元素实现了[`SVGTitleElement`](/en-US/DOM/SVGTitleElement)接口。
+该元素实现了[`SVGTitleElement`](/zh-CN/DOM/SVGTitleElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.title")}}
+{{Compat}}
 
 ## 参见
 

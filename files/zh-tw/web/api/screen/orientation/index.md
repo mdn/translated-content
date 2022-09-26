@@ -1,8 +1,8 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-translation_of: Web/API/Screen/orientation
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 `Screen.orientation` 屬性可以取得螢幕目前的方向。
@@ -37,7 +37,7 @@ if (orientation.type === "landscape-primary") {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Screen.orientation")}}
+{{Compat}}
 
 ## 參見
 

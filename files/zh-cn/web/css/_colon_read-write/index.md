@@ -1,8 +1,8 @@
 ---
 title: ':read-write'
 slug: Web/CSS/:read-write
-translation_of: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 **`:read-write`** [`CSS`](/zh-CN/docs/Web/CSS) [`伪类`](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。
@@ -59,7 +59,7 @@ p[contenteditable="true"] { color: blue; }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## 参见
 

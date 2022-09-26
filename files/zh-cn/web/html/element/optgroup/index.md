@@ -1,14 +1,8 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - HTML
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/optgroup
 ---
+
 {{HTMLRef}}
 
 **HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。

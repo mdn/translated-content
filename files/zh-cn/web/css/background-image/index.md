@@ -1,13 +1,8 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS Background
-  - CSS Property
-  - CSS_参考
-  - Reference
-translation_of: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
@@ -16,7 +11,7 @@ translation_of: Web/CSS/background-image
 
 在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。
 
-然后元素的边框 [border](/cn/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
+然后元素的边框 [border](/zh-CN/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
 
 如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 `none`。
 
@@ -91,7 +86,7 @@ div {
 
 {{EmbedLiveSample('Examples')}}
 
-## 可访问性相关
+## 无障碍相关
 
 浏览器不会向辅助技术提供有关背景图像的任何特殊信息。这对于屏幕阅读器来说非常重要，因为屏幕阅读器不会告知用户它的存在，因而不能向用户传达任何信息。如果图像包含对理解页面总体目的至关重要的信息，则最好在文档中作出语义性地描述（describe it semantically）。
 
@@ -106,7 +101,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-image")}}
+{{Compat}}
 
 \[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
 

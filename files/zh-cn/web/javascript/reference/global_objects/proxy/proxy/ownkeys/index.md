@@ -1,9 +1,9 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 ---
+
 {{JSRef}}
 
 **`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.

@@ -2,6 +2,7 @@
 title: window.parent
 slug: Web/API/Window/parent
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -36,5 +37,5 @@ if (window.parent != window.top) {
 
 ## 参见
 
-- [`window.frameElement`](/zh-cn/DOM/window.frameElement) 返回嵌入当前窗口的 frame 对象。
+- [`window.frameElement`](/zh-CN/DOM/window.frameElement) 返回嵌入当前窗口的 frame 对象。
 - [`window.top`](/zh-CN/docs/Web/API/Window/top) 返回当前窗口最顶层的父窗口。

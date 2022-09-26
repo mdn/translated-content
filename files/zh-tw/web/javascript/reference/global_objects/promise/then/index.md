@@ -1,8 +1,8 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
+
 {{JSRef}}
 
 **`then()` **方法回傳一個 {{domxref("Promise")}} 物件。它接收兩個引數： `Promise` 在成功及失敗情況時的回呼函式。
@@ -248,7 +248,7 @@ p3.then(function(v) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
+{{Compat}}
 
 ## 參見
 

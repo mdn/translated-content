@@ -1,12 +1,8 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - HTTP
-  - 信息型
-  - 状态码
-translation_of: Web/HTTP/Status/100
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`100 Continue`** 信息型状态响应码表示目前为止一切正常，客户端应该继续请求，如果已完成请求则忽略。

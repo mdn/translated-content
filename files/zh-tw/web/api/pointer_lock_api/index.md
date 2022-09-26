@@ -1,8 +1,8 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
-translation_of: Web/API/Pointer_Lock_API
 ---
+
 {{ SeeCompatTable() }}
 
 **Pointer lock** (之前稱為 Mouse lock) 提供「隨時間經過所產生的滑鼠位移資訊 (即 deltas)」的輸入方法，而不只是滑鼠游標的絕對位置而已。此函式可存取基本的滑鼠位移、將滑鼠事件的目標鎖定至單一元素、讓滑鼠單一方向的位移距離不再受限、將游標移除到視點之外。
@@ -15,7 +15,7 @@ translation_of: Web/API/Pointer_Lock_API
 
 ## 基本概念
 
-Pointer lock 與 [mouse capture ](/en/DOM/element.setCapture)相關。在拖曳滑鼠時，Mouse capture 可持續向目標元素傳遞事件，且只要放開滑鼠按鈕隨即跟著停止。Pointer lock 與 mouse capture 不同之處在於：
+Pointer lock 與 [mouse capture](/zh-TW/DOM/element.setCapture) 相關。在拖曳滑鼠時，Mouse capture 可持續向目標元素傳遞事件，且只要放開滑鼠按鈕隨即跟著停止。Pointer lock 與 mouse capture 不同之處在於：
 
 - Pointer lock 屬持久性。除非發生顯式 (Explicit) API 呼叫，或使用者做出特定的釋放手勢，否則 Pointer lock 將不會釋放滑鼠。
 - Pointer lock 不侷限於螢幕或瀏覽器的範圍。
@@ -112,7 +112,7 @@ element.requestPointerLock(); // Standard
 
 目前在建置 [requestPointerLock](/zh-TW/docs/Web/API/Element.requestPointerLock) 時，還是必須緊密結合 [requestFullScreen](/zh-TW/docs/Web/API/Element.requestFullScreen) 與 Fullscreen API。在指標鎖定某一元素之前，必須先進入全螢幕模式。如同上方的 Demo，指標鎖定屬於非同步程序，並透過 [pointerlockchange](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockchange) 與 [pointerlockerror](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockerror) 事件，指出該請求是否成功。此與 Fullscreen API 的運作方式相同 (使用其 [requestFullScreen](/zh-TW/docs/Web/API/Element.requestFullScreen) 函式，另搭配 [fullscreenchange](/zh-TW/docs/Web/API/GlobalEventHandlers.fullscreenchange) 與 [fullscreenerror](/zh-TW/docs/Web/API/GlobalEventHandlers.fullscreenerror) 事件)。
 
-Pointer lock API 另擴充了 [and \<table>) and provides functionality global to the document (suc">Document](/zh-TW/docs/Web/API/Document) 介面，同時添增了新的屬性與函式。如果目前有鎖定的元素，則新的屬性可存取該所訂元素，並命名為 [pointerLockElement](/zh-TW/docs/Web/API/Document.pointerLockElement) (目前尚未標準化)。[ and \<table>) and provides functionality global to the document (suc">Document](/zh-TW/docs/Web/API/Document) 上的新函式則為 [exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock)；顧名思義，此函式可退出 Pointer lock。
+Pointer lock API 另擴充了 [and \<table>) and provides functionality global to the document (suc">Document](/zh-TW/docs/Web/API/Document) 介面，同時添增了新的屬性與函式。如果目前有鎖定的元素，則新的屬性可存取該所訂元素，並命名為 [pointerLockElement](/zh-TW/docs/Web/API/Document.pointerLockElement) (目前尚未標準化)。[and \<table>) and provides functionality global to the document (suc">Document](/zh-TW/docs/Web/API/Document) 上的新函式則為 [exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock)；顧名思義，此函式可退出 Pointer lock。
 
 [pointerLockElement](/zh-TW/docs/Web/API/Document.pointerLockElement) 屬性可確定指標目前是否鎖定了任何元素 (例如進行 Boolean 檢查)。若確實有鎖定的元素，則可取得參考。以下為此二種用法的範例：
 
@@ -210,7 +210,7 @@ Pointer lock 一次僅能鎖定一組 iframe。在鎖定一組 iframe 之後，�
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 另可參閱
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

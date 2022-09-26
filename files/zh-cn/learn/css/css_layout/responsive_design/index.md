@@ -1,8 +1,8 @@
 ---
 title: 响应式设计
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 早年设计 Web 时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在使用比设计者考虑到的更小或者更大的屏幕，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。随着人们使用的屏幕尺寸的种类越来越多，出现了响应式网页设计的概念（_responsive web design，RWD_），RWD 指的是允许 Web 页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践。这是改变我们设计多设备网页的方式的思想，在这篇文章里，我们将会帮你理解掌握它时所需知道的主要技能。
@@ -12,12 +12,12 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），以及对 CSS 工作方式的理解（学习<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
-        >和<a href="/en-US/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
           >CSS building blocks</a
         >）
       </td>
@@ -48,7 +48,7 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 > **备注：** 看下这个简单的固定宽度布局：[示例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)，重新观察一下你调整浏览器窗口大小后的结果。
 
-> **备注：** 上面的截屏是在火狐开发者工具的[响应式设计模式](/en-US/docs/Tools/Responsive_Design_Mode)中截取的。
+> **备注：** 上面的截屏是在火狐开发者工具的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode)中截取的。
 
 随着移动 Web 在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像*m.example.com*或者*example.mobi*这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。
 
@@ -66,7 +66,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 1. 第一个是液态网格，这早先已由 Gillenwater 进行探讨，可以在 Marcotte 的文章《[Fluid Grids](https://alistapart.com/article/fluidgrids/)》（出版于 2009 年的《A List Apart》上）中读到。
 2. 第二个是[液态图像](http://unstoppablerobotninja.com/entry/fluid-images)的理念。通过使用相当简单的将设置`max-width`属性设置为`100%`的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。
-3. 第三个关键的组件是[媒体查询](/en-US/docs/Web/CSS/Media_Queries)。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。
+3. 第三个关键的组件是[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。
 
 需要你理解的很重要的一点是**响应式 Web 设计不是单独的技术**，它是描述 Web 设计的一种方式、或者是一组最佳实践的一个词，它是用来建立可以**响应**查看内容的设备的样式的一个词。在 Marcotte's 原来的探索中，这意味着灵活网格（使用 float）和媒体查询，但是在这篇文章写就的几乎十年以后，Web 的响应式工作已经成为了默认做法。现代的 CSS 布局方式基本上就是响应式的，而且我们在 Web 平台上内置了新的东西，使得设计响应式站点变得容易。
 
@@ -90,7 +90,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 使用媒体查询时的一种通用方式是，为窄屏设备（例如移动设备）创建一个简单的单栏布局，然后检查是否是大些的屏幕，在你知道你有足够容纳的屏幕宽度的时候，开始采用一种多栏的布局。这经常被描述为**移动优先**设计。
 
-在 MDN 文档中的[媒体查询](/en-US/docs/Web/CSS/Media_Queries)中了解更多
+在 MDN 文档中的[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)中了解更多
 
 ## 灵活网格
 
@@ -98,7 +98,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 使用灵活网格，你只需要加进去一个断点，在内容看起来不齐整的时候改变设计。例如如果一行随着屏幕大小增加而增长得不可读的长，或者是一个盒子在变窄时把每行的两个单词挤到一起。
 
-早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用[float](/en-US/docs/Learn/CSS/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
+早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用[float](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
 
 ```plain
 target / context = result
@@ -112,7 +112,7 @@ target / context = result
 }
 ```
 
-这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的[Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
+这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的[Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
 
 下面的例子阐释了一个使用媒体查询和灵活网格的简单响应式设计。在窄屏幕上，布局将盒子堆叠在另一个的上面：
 
@@ -126,7 +126,7 @@ target / context = result
 
 ## 现代布局技术
 
-现代布局方式，例如[多栏布局](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)、[伸缩盒](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)和[网格](/en-US/docs/Learn/CSS/CSS_layout/Grids)默认是响应式的。它们都假设你在尽力创建一个可伸缩网格，而且给了你更容易这样做的方式。
+现代布局方式，例如[多栏布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)、[伸缩盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)和[网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)默认是响应式的。它们都假设你在尽力创建一个可伸缩网格，而且给了你更容易这样做的方式。
 
 ### 多个列
 
@@ -150,7 +150,7 @@ target / context = result
 
 在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改`flex-grow`和 `flex-shrink`的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
 
-在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
+在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
 
 ```css
 .container {
@@ -166,7 +166,7 @@ target / context = result
 
 ### CSS 网格
 
-在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
+在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
 
 ```css
 .container {
@@ -193,7 +193,7 @@ img {
 
 你也可以给用于不同尺寸的图像做“艺术指导”，为不同的屏幕尺寸提供不同的图像裁切或者完全不同的图像。
 
-你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。
+你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。
 
 ## 响应式排版
 
@@ -243,7 +243,7 @@ h1 {
 
 问题在于，当做上面的事情的时候，因为文本总是随着视口的大小改变大小，用户失去了放缩任何使用`vw`单位的文本的能力。**所以你永远都不要只用 viewport 单位设定文本。**
 
-这里有一个解决方法，它使用了[`calc()`](/en-US/docs/Web/CSS/calc)，如果你将`vw`单位加到了使用固定大小（例如`em`或者`rem`）的值组，那么文本仍然是可放缩的。基本来说，是`vw`加在了放缩后的值上。
+这里有一个解决方法，它使用了[`calc()`](/zh-CN/docs/Web/CSS/calc)，如果你将`vw`单位加到了使用固定大小（例如`em`或者`rem`）的值组，那么文本仍然是可放缩的。基本来说，是`vw`加在了放缩后的值上。
 
 ```css
 h1 {
@@ -283,7 +283,7 @@ h1 {
 
 你应该避免使用`minimum-scale`、`maximum-scale`，尤其是将`user-scalable`设为`no`。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
 
-> **备注：** 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](/en-US/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
+> **备注：** 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
 
 ## 小结
 
@@ -295,15 +295,15 @@ h1 {
 
 ## 模块目录
 
-- [介绍 CSS 布局](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统布局方法](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基本布局掌握测验](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
+- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
+- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
+- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
+- [传统布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [基本布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

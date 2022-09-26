@@ -1,8 +1,8 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 回傳目前文件的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 節點，如元素不存在則回傳 `null`。

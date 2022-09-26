@@ -1,14 +1,9 @@
 ---
 title: 調整列表縮排
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - list indent
-  - 列表
-  - 縮排
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
-原文 : [Consistent List Indentation](/en/Consistent_List_Indentation)
+
+原文 : [Consistent List Indentation](/zh-TW/Consistent_List_Indentation)
 
 使用 CSS 來協助縮排列表看來簡單實則卻否，原因很簡單 - 各大瀏覽器其實作方式不盡相同。一個很大的原因來自於對距離的掌握，但這很讓人喪志，因為瀏覽器沒有一致的排版方式。舉例來說，倘若你宣告一個 list 沒有 left margin，在 IE 中他可以被移動，但在 Gecko-based 的瀏覽器中他們將很固執的固定在那。
 
@@ -48,9 +43,9 @@ ul, li {margin-left: 0; padding-left: 0;}
 
 為了避免這種慘劇發生，瀏覽器有三種不同的實作方式來避免：
 
-1.  幫每一個 `<li>` element 設定 left margin
-2.  幫 `<ul>` element 設定 left margin
-3.  幫 `<ul>` element 設定一些 left padding
+1. 幫每一個 `<li>` element 設定 left margin
+2. 幫 `<ul>` element 設定 left margin
+3. 幫 `<ul>` element 設定一些 left padding
 
 事後檢視，沒有瀏覽器採用第一種作法。Windows and Macintosh 上的 Internet Explorer 和 Opera 採用第二種作法。Gecko 相關的瀏覽器則使用第三種設計。
 
@@ -86,7 +81,7 @@ ul {margin-left: 40px; padding-left: 0;}
 ul {margin-left: 0; padding-left: 0;}
 ```
 
-請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body 中這樣寫，很顯然的你的 `bullet 將不會出現在你的視窗內。
+請注意，這樣的寫法將造成 bullet 被扔在整個列表及其 parent element 之外。當你在 `body` 中這樣寫，很顯然的你的 `bullet` 將不會出現在你的視窗內。
 
 ### 結論
 

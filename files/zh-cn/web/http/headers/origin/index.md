@@ -1,14 +1,8 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - origin
-translation_of: Web/HTTP/Headers/Origin
 ---
+
 {{HTTPSidebar}}
 
 请求标头 **`Origin`** 表示了请求的{{glossary("origin", "来源")}}（协议、主机、端口）。例如，如果一个用户代理需要请求一个页面中包含的资源，或者执行脚本中的 HTTP 请求（fetch），那么该页面的来源（origin）就可能被包含在这次请求中。

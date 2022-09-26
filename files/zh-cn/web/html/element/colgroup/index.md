@@ -1,14 +1,8 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 表格
-translation_of: Web/HTML/Element/colgroup
 ---
+
 {{HTMLRef}}
 
 HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义表中的一组列表。
@@ -113,7 +107,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.colgroup")}}
+{{Compat}}
 
 ## 参见
 

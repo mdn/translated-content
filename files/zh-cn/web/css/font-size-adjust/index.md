@@ -1,8 +1,8 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-translation_of: Web/CSS/font-size-adjust
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -67,7 +67,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-size-adjust")}}
+{{Compat}}
 
 ## 参见
 

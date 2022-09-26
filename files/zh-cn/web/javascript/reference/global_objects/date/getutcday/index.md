@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCDay()`** 方法以世界时为标准，返回一个指定的日期对象为一星期中的第几天，其中 0 代表星期天。

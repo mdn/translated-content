@@ -1,14 +1,8 @@
 ---
 title: HTML 元素
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element
 ---
+
 {{HTMLSidebar("Elements")}}
 
 本頁列出了所有 {{Glossary("HTML")}} 元素（{{Glossary("Element")}}），他們可以透過標籤（{{Glossary("Tags", "tags")}}）建立。這些元素會以功能來分組，讓你更容易尋找。在本頁及每一個元素的頁面的側邊欄都提供了以英文字母排序的所有元素清單。

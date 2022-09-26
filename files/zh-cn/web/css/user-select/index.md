@@ -1,12 +1,8 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`user-select`** 控制用户能否选中文本。除了文本框内，它对被载入为 {{Glossary("Chrome", "chrome")}} 的内容没有影响。
@@ -50,7 +46,9 @@ user-select: unset;
 
 - `none`
   - : 元素及其子元素的文本不可选中。请注意这个{{domxref("Selection")}} 对象可以包含这些元素。从 Firefox 21 开始， `none` 表现的像 `-moz-none`，因此可以使用 `-moz-user-select: text` 在子元素上重新启用选择。
+
 - `auto`
+
   - : `auto` 的具体取值取决于一系列条件，具体如下：
 
     - 在 `::before` 和 `::after` 伪元素上，采用的属性值是 `none`
@@ -112,7 +110,7 @@ user-select: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## 参见
 

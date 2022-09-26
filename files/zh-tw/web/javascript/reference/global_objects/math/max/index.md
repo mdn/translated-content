@@ -1,13 +1,8 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
+
 {{JSRef}}
 
 **`Math.max()`** 函式會回傳零或多個數字中的最大值。
@@ -66,14 +61,14 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-The new [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) is a shorter way of writing the `apply` solution to get the maximum of an array:
+The new [spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) is a shorter way of writing the `apply` solution to get the maximum of an array:
 
 ```js
 var arr = [1, 2, 3];
 var max = Math.max(...arr);
 ```
 
-However, both spread (`...`) and `apply` will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See [Using `apply` and built-in functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions) for more details. The `reduce` solution does not have this problem.
+However, both spread (`...`) and `apply` will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See [Using `apply` and built-in functions](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions) for more details. The `reduce` solution does not have this problem.
 
 ## 規範
 
@@ -81,7 +76,7 @@ However, both spread (`...`) and `apply` will either fail or return the wrong re
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.max")}}
+{{Compat}}
 
 ## 參見
 

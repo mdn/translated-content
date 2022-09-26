@@ -1,14 +1,8 @@
 ---
 title: 使用 CSS 计数器
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - CSS
-  - CSS List
-  - Web
-  - counter
-  - 教程
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 **CSS 计数器**可让你根据内容在文档中的位置调整其显示的外观。例如，你可以使用计数器自动为网页中的标题编号，或者更改有序列表的编号。

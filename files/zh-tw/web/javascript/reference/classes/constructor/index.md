@@ -1,8 +1,8 @@
 ---
 title: 建構子
 slug: Web/JavaScript/Reference/Classes/constructor
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 `constructor`（建構子）是個隨著 `class` 一同建立並初始化物件的特殊方法。

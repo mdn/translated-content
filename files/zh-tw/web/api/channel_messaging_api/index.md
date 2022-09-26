@@ -1,8 +1,8 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-translation_of: Web/API/Channel_Messaging_API
 ---
+
 Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。
 
 {{AvailableInWorkers}}
@@ -17,7 +17,7 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 
 如果想關閉訊息 channel，則呼叫 {{domxref("MessagePort.close")}}。
 
-更多 API 使用細節請見 [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
+更多 API 使用細節請見 [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
 
 ## Channel 訊息介面
 
@@ -33,22 +33,16 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 - Github 上有 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
 - 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](http://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
 
-## 標準規範
+## 規範
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## 瀏覽器相容性
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 延伸閱讀
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
+- [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/zh-TW/docs/Web/API/Broadcast_Channel_API)

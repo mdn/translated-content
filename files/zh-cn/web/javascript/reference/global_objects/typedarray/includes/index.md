@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
+
 {{JSRef}}
 
-**`includes()`**方法判断类型化数组中是否含有特定元素，并相应返回`true` 或者`false` ，这个方法的算法和{{jsxref("Array.prototype.includes()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`includes()`**方法判断类型化数组中是否含有特定元素，并相应返回`true` 或者`false` ，这个方法的算法和{{jsxref("Array.prototype.includes()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 

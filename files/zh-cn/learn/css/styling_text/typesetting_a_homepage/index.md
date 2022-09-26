@@ -1,16 +1,9 @@
 ---
 title: 作业：排版社区大学首页
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - CSS
-  - 初学者
-  - 字体
-  - 样式化文本
-  - 网络字体
-  - 链接
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。
@@ -93,8 +86,8 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 
 ## 在本单元中
 
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Fundamental text and font styling](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Styling lists](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Styling links](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)
+- [Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Typesetting a community school homepage](/zh-CN/Learn/CSS/Styling_text/Typesetting_a_homepage)

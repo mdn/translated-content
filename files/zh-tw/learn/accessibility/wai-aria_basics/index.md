@@ -1,8 +1,8 @@
 ---
 title: WAI-ARIA基礎
 slug: Learn/Accessibility/WAI-ARIA_basics
-translation_of: Learn/Accessibility/WAI-ARIA_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
 接續之前的文章，有時在涉及非語意 HTML 與動態 JavaScript 更新的內容製作複雜的 UI 控制措施將是個難題。WAI-ARIA 即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。
@@ -56,7 +56,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是一個由 W3C 編撰的規格，定義一套額外的 HTML 屬性能用於元素上提供額外的語意及改善可及性，當元素缺乏這些條件時可適用。本規格定義三個主要的特點：
 
 - **Roles** — 這些角色用以定義元素是甚麼或做甚麼事。在這些當中許多被稱為地標角色，大部分重複了 HTML5 結構化元素的語意值如`role="navigation"` ({{htmlelement("nav")}}) or `role="complementary"` ({{htmlelement("aside")}}), 但也有其他描述不同的頁面結構者，如`role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`等常見於使用者介面中。
-- **Properties** — 這些用以定義元素的屬性，可用來賦予元素額外的意義或語意。舉例，`aria-required="true"`指定一個表單輸入必須填寫才有效，而`aria-labelledby="label"`讓你可以在一個元素上置放一個 ID，當該頁面上任何內容設定標籤後而引用它，頁面包含多個元素而不可能使用`<label for="input">`。舉例，你可使用`aria-labelledby`指定一個鍵盤鍵描述包含在一個{{htmlelement("div")}}之中是多個表格儲存格的標籤，或者你可使用它做為圖片 alt 文字的替代方案 — 指定頁面上現有的資訊做為圖片的 alt 文字，而非將它重複放在`alt`屬性之內. 範例可參考[Text alternatives](/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives)。
+- **Properties** — 這些用以定義元素的屬性，可用來賦予元素額外的意義或語意。舉例，`aria-required="true"`指定一個表單輸入必須填寫才有效，而`aria-labelledby="label"`讓你可以在一個元素上置放一個 ID，當該頁面上任何內容設定標籤後而引用它，頁面包含多個元素而不可能使用`<label for="input">`。舉例，你可使用`aria-labelledby`指定一個鍵盤鍵描述包含在一個{{htmlelement("div")}}之中是多個表格儲存格的標籤，或者你可使用它做為圖片 alt 文字的替代方案 — 指定頁面上現有的資訊做為圖片的 alt 文字，而非將它重複放在`alt`屬性之內. 範例可參考[Text alternatives](/zh-TW/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives)。
 - **States** — 定義目前元素狀態的特殊屬性，例如 `aria-disabled="true"`，是對螢幕報讀器指定表單輸入目前是停用的狀態。狀態不同於屬性，在於屬性在應用程序整個生命週期中不會改變，而狀態通常會透過 JavaScript 程式化改變。
 
 有關 WAI-ARIA 屬性的重要觀點是他們不會影響網頁的任何內容，除了透過瀏覽器無障礙 API 揭露資訊之外(螢幕報讀器即從中獲得資訊)。儘管 WAI-ARIA 屬性對 CSS 選擇元素很有用，但不會影響網頁結構、DOM 等。
@@ -88,7 +88,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 我們討論了促使 WAI-ARIA 早期建立的一些問題，但基本上 WAI-ARIA 在 4 個主要領域很有用：
 
 1. **路標/地標**：ARIA 的角色屬性值可作為地標，不是複製 HTML5 元素的語意(如{{htmlelement("nav")}})，就是超越 HTML5 語意而對不同的功能區域提供路標，如搜尋、頁籤群組、頁籤、清單框等。
-2. **動態內容更新**：螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用 aria-live 通知螢幕報讀器的使用者，例如透過 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)或[DOM APIs](/en-US/docs/Web/API/Document_Object_Model)。
+2. **動態內容更新**：螢幕報讀器往往難以報讀不斷改變的內容；當某個內容區域更新時，我們可以使用 aria-live 通知螢幕報讀器的使用者，例如透過 [XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest)或[DOM APIs](/zh-TW/docs/Web/API/Document_Object_Model)。
 3. **增強鍵盤無障礙**：內建的 HTML 元素具有原生的鍵盤無障礙；當其他元素伴隨使用 JavaScript 模擬相似的互動時，鍵盤無障礙操作與螢幕報讀器報讀會遭遇問題。如果這是不可避免的，WAI-ARIA 提供讓其他元素獲得焦點的一種方法(使用 `tabindex`)。
 4. **非語意控制措施的無障礙**：當一系列巢狀的`<div>`搭配 CSS/JavaScript 用於創建一個複雜的 UI 特徵，或者一個透過 JavaScript 大幅增強/改變的原生控制措施，無障礙會遭遇到困難—如果沒有語意或其他線索，螢幕報讀器使用者將發覺難以理解該特徵的作用。在這種情況下，ARIA 可以幫助提供缺失的部分使用如按鈕、清單框或頁籤群組等角色組合，以及 aria-required 或 aria-posinset 等屬性對功能性提供進一步的線索。
 
@@ -102,7 +102,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 在下一個章節我們將更仔細地看看這 4 個領域，並附帶實際的範例。在繼續之前，你應該將備妥螢幕報讀器測試設置，以便在過程中你可以測試這些範例。
 
-更多資訊請參見[螢幕報讀器測試](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)章節。
+更多資訊請參見[螢幕報讀器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)章節。
 
 ### 路標/地標
 
@@ -182,7 +182,7 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 
 從文本內容到附著於圖片的替代文字，其內容載入至 DOM 中可方便螢幕報讀器使用。因此，大部分使用文字內容的傳統靜態網站能輕易讓視覺障礙者無障礙使用。
 
-問題在於現代網頁應用程式通常不只是靜態的文字—他們傾向有很多動態更新的內容，例如透過像[XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [Fetch](/en-US/docs/Web/API/Fetch_API), 或[DOM APIs](/en-US/docs/Web/API/Document_Object_Model)等機制更新的內容而不必重新載入全部的頁面。這些有時稱為即時區塊。
+問題在於現代網頁應用程式通常不只是靜態的文字—他們傾向有很多動態更新的內容，例如透過像[XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest), [Fetch](/zh-TW/docs/Web/API/Fetch_API), 或[DOM APIs](/zh-TW/docs/Web/API/Document_Object_Model)等機制更新的內容而不必重新載入全部的頁面。這些有時稱為即時區塊。
 
 我們來看一個簡單的範例—請看 [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) ([看實際頁面](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。本範例中我們有簡單的隨機引言框：
 
@@ -195,7 +195,7 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 </section>
 ```
 
-我們的 JavaScript 透過含有一系列的隨機引言與其作者的 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) `載入一個`JSON 檔案。一旦這些完成，我們就開始 [`setInterval()`](/en-US/docs/Web/API/WindowTimers/setInterval) 迴圈每 10 秒載入新的隨機引言到引言框之中。
+我們的 JavaScript 透過含有一系列的隨機引言與其作者的 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) `載入一個`JSON 檔案。一旦這些完成，我們就開始 [`setInterval()`](/zh-TW/docs/Web/API/WindowTimers/setInterval) 迴圈每 10 秒載入新的隨機引言到引言框之中。
 
 ```js
 var intervalID = window.setInterval(showQuote, 10000);
@@ -220,7 +220,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
-> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/en-US/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新您的 `<section>` 標籤如下所示：
 
@@ -245,7 +245,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 - `tabindex="0"` —如上述，此值允許正常不被 tab 遊走到的元素變得可以 tab 遊走，這是`tabindex`最有用的值。
 - `tabindex="-1"` — 此允許正常不被 tab 遊走到的元素，可以程式化地獲得焦點，如透過 JavaScript 或作為連結的對象。
 
-我們更詳細討論這一點並在我們的 HTML 無障礙文章中展示典型的實作—請參見 [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
+我們更詳細討論這一點並在我們的 HTML 無障礙文章中展示典型的實作—請參見 [Building keyboard accessibility back in](/zh-TW/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
 
 ### 非語意控制措施的無障礙
 
@@ -253,7 +253,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 #### 表單驗證與錯誤警告
 
-首先，讓我們再看一次在我們的 CSS 與 JavaScript 無障礙文章中第一次看的表單範例(請閱讀 [Keeping it unobtrusive](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的 ARIA 屬性。
+首先，讓我們再看一次在我們的 CSS 與 JavaScript 無障礙文章中第一次看的表單範例(請閱讀 [Keeping it unobtrusive](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的 ARIA 屬性。
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -262,7 +262,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 </div>
 ```
 
-- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 [`alert()`](/en-US/docs/Web/API/Window/alert) 具有許多無障礙的問題；請參見 WebAIM 的 [Popup Windows](http://webaim.org/techniques/javascript/other#popups))。
+- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自動地將其應用的該元素轉換為即時區塊，以利讀出它的改變；它也將語意地辨識其為警告訊息(重要時間/內容脈絡敏感資訊)，而呈現以更好、更無障礙的方式向使用者傳遞警告(模態對話框如 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 具有許多無障礙的問題；請參見 WebAIM 的 [Popup Windows](http://webaim.org/techniques/javascript/other#popups))。
 - [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 的 all 值指示螢幕報讀器當它任何改變時讀出錯誤清單的內容—例如當錯誤新增或移除時。這個很有用因為使用者會想知道留著的錯誤是甚麼，而不只有知道清單中甚麼是已經新增或移除。
 
 我們可進一步使用我們的 ARIA，並提供更多的驗證協助。如何指出區塊是否需要在第一個位置，以及年齡的範圍應該多少？
@@ -324,7 +324,7 @@ function toggleMusician(bool) {
 
 #### 描述非語意按鈕為按鈕
 
-本課程我們已經談過幾次按鈕、連結或表單元素(參見 HTML 無障礙文章的 [UI controls](/en-US/docs/Learn/Accessibility/HTML#UI_controls) ，以及前述[增強鍵盤無障礙](#增強鍵盤無障礙)的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 `tabindex` 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。
+本課程我們已經談過幾次按鈕、連結或表單元素(參見 HTML 無障礙文章的 [UI controls](/zh-TW/docs/Learn/Accessibility/HTML#UI_controls) ，以及前述[增強鍵盤無障礙](#增強鍵盤無障礙)的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 `tabindex` 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。
 
 但螢幕報讀器的情況如何呢？他們仍然無法將這些元素視為按鈕。如果我們用螢幕報讀器測試我們的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 範例，我們偽造的按鈕將會用句子如 "Click me!, group"讀出，很顯然地令人困惑。
 
@@ -342,7 +342,7 @@ function toggleMusician(bool) {
 
 除了標準 HTML 可用外，還有一堆其他[角色](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)可以辨識非語意的元素結構作為一般的使用者介面特徵，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree)。你可在 [Deque university code library](https://dequeuniversity.com/library/)中找到很多有用的範例，可給你這些控制措施如何做到無障礙的想法。
 
-我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
+我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
 
 本範例以鍵盤無障礙而言運作正常—你可以開心地在不同的頁籤間跳位，並且選擇他們顯示該頁籤的內容，也相當地容易操作—你可以滾動內容並使用標題來導覽，即使你看不到螢幕上正發生的事情。然而內容是甚麼並非很明顯—螢幕報讀器目前以連結的清單報讀內容，以及有三個標題的內容。這樣無法給你了解內容之間的關係。最好給予使用者更多關於內容結構的線索。
 
@@ -398,10 +398,10 @@ function toggleMusician(bool) {
 
 ## 本模組章節
 
-- [何謂無障礙網頁?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: 無障礙網頁的好開始](/en-US/docs/Learn/Accessibility/HTML)
-- [充分實踐 CSS 與 JavaScript 的無障礙](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基礎](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [無障礙多媒體](/en-US/docs/Learn/Accessibility/Multimedia)
-- [行動無障礙網頁](/en-US/docs/Learn/Accessibility/Mobile)
-- [無障礙問題排除](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [何謂無障礙網頁?](/zh-TW/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: 無障礙網頁的好開始](/zh-TW/docs/Learn/Accessibility/HTML)
+- [充分實踐 CSS 與 JavaScript 的無障礙](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA 基礎](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [無障礙多媒體](/zh-TW/docs/Learn/Accessibility/Multimedia)
+- [行動無障礙網頁](/zh-TW/docs/Learn/Accessibility/Mobile)
+- [無障礙問題排除](/zh-TW/docs/Learn/Accessibility/Accessibility_troubleshooting)

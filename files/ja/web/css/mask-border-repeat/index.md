@@ -1,17 +1,6 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-repeat
-translation_of: Web/CSS/mask-border-repeat
 ---
 {{CSSRef}}
 

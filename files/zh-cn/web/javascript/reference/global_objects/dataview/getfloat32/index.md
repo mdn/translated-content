@@ -1,11 +1,8 @@
 ---
 title: DataView.prototype.getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
-tags:
-  - DataView
-  - getFloat32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 ---
+
 {{JSRef}}
 
 **`getFloat32()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).

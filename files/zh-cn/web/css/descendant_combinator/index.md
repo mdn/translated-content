@@ -1,11 +1,8 @@
 ---
 title: 后代选择器
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 **后代组合器**（通常用单个空格（" "）字符表示）组合了两个选择器，如果第二个选择器匹配的元素具有与第一个选择器匹配的祖先（父母，父母的父母，父母的父母的父母等）元素，则它们将被选择。利用后代组合器的选择器称为*后代选择器*。
@@ -72,8 +69,8 @@ li li {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}
 
 ## 相关
 
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+- [Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)

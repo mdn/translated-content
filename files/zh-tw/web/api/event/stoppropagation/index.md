@@ -1,15 +1,8 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
-tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - NeedsRewrite
-  - Reference
-translation_of: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 介面的 **`stopPropagation()`** 方法可阻止當前事件繼續進行捕捉（capturing）及冒泡（bubbling）階段的傳遞。
@@ -22,7 +15,7 @@ event.stopPropagation();
 
 ## 範例
 
-請參考範例五：[事件傳遞](/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
+請參考範例五：[事件傳遞](/zh-TW/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
 
 ## 規範
 
@@ -30,7 +23,7 @@ event.stopPropagation();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.stopPropagation")}}
+{{Compat}}
 
 ## 參見
 

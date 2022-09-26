@@ -1,10 +1,8 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - String.prototype.sup()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`sup()`**方法创建 一个{{HTMLElement("sup")}}HTML 元素，使字符串显示为上标。

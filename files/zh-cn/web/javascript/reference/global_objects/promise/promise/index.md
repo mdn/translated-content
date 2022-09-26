@@ -1,8 +1,8 @@
 ---
 title: Promise() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 构造器主要用于包装不支持 promise（返回值不是 `Promise`）的函数。
@@ -101,4 +101,4 @@ function myAsyncFunction(url) {
 
 ## See also
 
-- [Using Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)

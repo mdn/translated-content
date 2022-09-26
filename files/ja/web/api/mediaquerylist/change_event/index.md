@@ -1,19 +1,6 @@
 ---
 title: 'MediaQueryList: change イベント'
 slug: Web/API/MediaQueryList/change_event
-tags:
-  - API
-  - CSSOM View
-  - Event Handler
-  - MediaQueryList
-  - Property
-  - Reference
-  - onchange
-  - イベントハンドラー
-  - プロパティ
-  - メディアクエリー
-browser-compat: api.MediaQueryList.change_event
-translation_of: Web/API/MediaQueryList/change_event
 original_slug: Web/API/MediaQueryList/change_event
 ---
 {{APIRef("CSSOM")}}

@@ -1,8 +1,8 @@
 ---
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
-translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议 {{HTTPHeader("Content-Security-Policy")}}头部的 require-sri-for 指令指示客户端在页面上对脚本或样式使用子资源完整性策略。
@@ -51,4 +51,4 @@ Content-Security-Policy: require-sri-for script style
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)

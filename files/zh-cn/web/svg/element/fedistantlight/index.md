@@ -1,16 +1,8 @@
 ---
 title: feDistantLight
 slug: Web/SVG/Element/feDistantLight
-tags:
-  - SVG
-  - SVG 光源
-  - 元素
-  - 参考
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feDistantLight
 ---
+
 {{SVGRef}}
 
 该滤镜定义了一个距离光源，可以用在灯光滤镜{{SVGElement("feDiffuseLighting")}}元素或{{SVGElement("feSpecularLighting")}}元素的内部。
@@ -25,7 +17,7 @@ translation_of: Web/SVG/Element/feDistantLight
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -34,7 +26,7 @@ translation_of: Web/SVG/Element/feDistantLight
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDistantLightElement`](/en/DOM/SVGFEDistantLightElement)接口。
+该元素实现了[`SVGFEDistantLightElement`](/zh-CN/DOM/SVGFEDistantLightElement)接口。
 
 ## 参见
 
@@ -45,4 +37,4 @@ translation_of: Web/SVG/Element/feDistantLight
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("fePointLight") }}
 - {{ SVGElement("feSpotLight") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

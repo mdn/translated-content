@@ -1,15 +1,8 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS 伪元素
-  - getComputedStyle
-  - getPropertyValue
-  - setProperty
-  - 布局
-  - 需要移动端浏览器兼容性
-translation_of: Web/CSS/::after
 ---
+
 {{ CSSRef() }}
 
 CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
@@ -91,7 +84,7 @@ element::after { style properties }  /* CSS3 语法 */
 
 ### 提示用法
 
-接下来的示例展示了用`::after`[伪元素](/en/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/en/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](https://developer.mozilla.org/files/4591/css-only_tooltips.html)看这个例子。
+接下来的示例展示了用`::after`[伪元素](/zh-CN/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/zh-CN/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](/files/4591/css-only_tooltips.html)看这个例子。
 
 ```html
 <p>这是上面代码的实现<br />
@@ -135,7 +128,7 @@ span[data-descr]:hover::after {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## 相关链接
 

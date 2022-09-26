@@ -1,8 +1,8 @@
 ---
 title: 书本实例列表页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
+
 接下来，我们将实作图书馆中所有书本实例 (`BookInstance`) 的列表页面。这个页面需要包含与每个 `BookInstance` (链接到其详细信息页面) 关联的书本 `Book` 标题，以及`BookInstance`模型中的其他信息，包含每个副本的状态，印记和唯一 ID。唯一 ID 的文字，应该链接到 `BookInstance` 详细信息页面。
 
 ## 控制器

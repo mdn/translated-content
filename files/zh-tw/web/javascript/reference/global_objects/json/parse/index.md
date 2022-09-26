@@ -1,8 +1,8 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
+
 {{JSRef}}
 
 **`JSON.parse()`** 方法把會把一個 JSON 字串轉換成 JavaScript 的數值或是物件。另外也可選擇使用 reviver 函數讓這些數值或是物件在被回傳之前做轉換。

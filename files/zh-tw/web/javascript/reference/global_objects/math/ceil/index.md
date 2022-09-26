@@ -1,13 +1,8 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
+
 {{JSRef}}
 
 **`Math.ceil()`** 函式會回傳大於等於所給數字的最小整數。
@@ -127,7 +122,7 @@ Math.ceil10(-59, 1);       // -50
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.ceil")}}
+{{Compat}}
 
 ## 參見
 

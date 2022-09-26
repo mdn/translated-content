@@ -1,8 +1,8 @@
 ---
 title: 'Express 教學 6: 使用表單'
 slug: Learn/Server-side/Express_Nodejs/forms
-translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 在此教程中，我們會教你如何使用 Express ，並且結合 Pug 來實現 HTML 表單，並且如何從數據庫中創建、更新、和刪除文檔。
@@ -193,12 +193,12 @@ router.post('/genre/create', genre_controller.genre_create_post);
 
 以下子文件，將帶我們完成向示例應用程序添加所需表單的過程。在進入下一個文件之前，您需要依次閱讀並解決每個問題。
 
-1. [創建種類表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
-2. [創建作者表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
-3. [創建書本表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
-4. [創建書本實例表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
-5. [刪除作者表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定義要刪除作者對象 `Author`的頁面。
-6. [更新書本表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
+1. [創建種類表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
+2. [創建作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
+3. [創建書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
+4. [創建書本實例表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
+5. [刪除作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定義要刪除作者對象 `Author`的頁面。
+6. [更新書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
 
 ## 挑戰自我
 
@@ -235,12 +235,12 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 
 ## 本教程連結
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

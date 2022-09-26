@@ -1,8 +1,8 @@
 ---
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
@@ -13,10 +13,10 @@ translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>预备知识：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
             >Introduction to CSS</a
           >.)
         </p>
@@ -39,7 +39,7 @@ translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
-> **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
+> **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
 在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件—— [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
@@ -78,7 +78,7 @@ translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 这样我们已经得到了一个{{htmlelement("section")}}元素带有类（`class`）为 `info-box`。此元素又包含一个 {{htmlelement("ul")}} 和一个 {{htmlelement("div")}}。无序列表包含三个列表项，列表项有链接在内，实际上将成为用于点击后显示内容面板的选项卡。 `div` 包含三个{{htmlelement("article")}} 元素，构成对应于每个选项卡的内容面板。每个面板包含一些示例内容。
 
-这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
+这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
 
 ### 一般设置
 
@@ -405,7 +405,7 @@ input[type=checkbox]:checked + aside {
 
 这里的选择器是复杂的——我们选择与 `<input>` 元素邻接的 `<aside>` 元素，但是仅仅在它被选择时（请注意使用 {{cssxref(":checked")}} 伪类来实现此目的），在这种情况下，我们将 `<aside>` 的 {{cssxref("right")}} 属性设置为 0px，会造成面板再次出现在屏幕上（由于过渡属性会平滑的出现）。再一次点击这个标签会取消选中 checkbox，面板将会跟着再一次消失。
 
-所以你有 ——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题 ——这是有点滥用表单元素（它们不是为了这个目的），并且在可访问性方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
+所以你有 ——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题 ——这是有点滥用表单元素（它们不是为了这个目的），并且在无障碍方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
 
 ## 总结
 
@@ -415,9 +415,9 @@ input[type=checkbox]:checked + aside {
 
 ## 在本单元中
 
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
+- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
+- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
+- [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
+- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

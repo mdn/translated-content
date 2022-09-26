@@ -1,55 +1,45 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
-## 概述
+**`Number.parseInt()`** 方法依据指定基数，解析字符串并返回一个整数。
 
-**`Number.parseInt()`** 方法依据指定基数 \[ 参数 **radix** 的值]，把字符串 \[ 参数 **string** 的值] 解析成整数。
+{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
 
 ## 语法
 
-```plain
-Number.parseInt(string[, radix])
+```js-nolint
+Number.parseInt(string)
+Number.parseInt(string, radix)
 ```
 
 ### 参数
 
-{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Parameters")}}
-
-参数 string：要解析的值。 如果此参数不是字符串，则使用 ToString 抽象操作将其转换为字符串。忽略此参数中的前导空格。
-参数 radix：一个介于 2 到 36 之间的整数，代表字符串的基数 (数学数字系统中的基)。小心 - 这并不是默认为 10。
+- `string`
+  - : 要被解析的值。如果参数不是一个字符串，则将其[强制转化为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。字符串开头的空白符将会被忽略。
+- `radix` {{optional_inline}}
+  - : 从 `2` 到 `36` 的整数，表示进制的基数。如果超出这个范围，将返回 `NaN`。假如 `radix` 未指定或者为 `0`，除非数字以 `0x` 或 `0X` 开头（此时假定为十六进制 `16`），否则假定为 `10`（十进制）。
 
 ### 返回值
 
-{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Return value")}}
+从给定的字符串中解析出的一个整数。
 
-从给定字符串中解析的整数。如果基数小于 11，且第一个非空白字符不能转换为数字，则返回 NaN。
+如果基数小于 `2` 或大于 `36`，或第一个非空白字符不能转换为数字，则返回 {{jsxref("NaN")}}。
 
-## 描述
+## 示例
+
+### Number.parseInt 与 parseInt
 
 这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能：
 
-```plain
-Number.parseInt === parseInt; // true
+```js
+Number.parseInt === parseInt // true
 ```
 
-ECMAScript 2015 添加了这部分 (其目的是对全局变量进行模块化). 请另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。
-
-## Polyfill
-
-```plain
-if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt;
-}
-```
+其目的是对全局变量进行模块化，另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。
 
 ## 规范
 
@@ -59,7 +49,8 @@ if (Number.parseInt === undefined) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- `{{jsxref("Global_Objects/Number", "Number()")}}`
-- 全局的 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 函数
+- [`Number.parseInt` 在 `core-js` 中的 Polyfill](https://github.com/zloirock/core-js#ecmascript-number)
+- 所属的 {{jsxref("Number")}} 对象。
+- 全局的 {{jsxref("parseInt", "parseInt()")}} 方法。

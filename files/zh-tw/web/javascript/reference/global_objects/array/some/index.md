@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** 方法會透過給定函式、測試陣列中是否至少有一個元素，通過該函式所實作的測試。這方法回傳的是布林值。
@@ -50,7 +43,7 @@ The `some()` method executes the `callback` function once for each element prese
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `some()` does not mutate the array on which it is called.
 
@@ -71,7 +64,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
-{{ EmbedLiveSample('Testing_value_of_array_elements', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('測試陣列元素的數值') }}
 
 ### 使用箭頭函式測試
 
@@ -82,7 +75,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(x => x > 10); // true
 ```
 
-{{ EmbedLiveSample('Testing_array_elements_using_arrow_functions', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('使用箭頭函式測試') }}
 
 ### 測試陣列元素的數值是否存在
 
@@ -101,7 +94,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Checking_whether_a_value_exists_in_an_array', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('測試陣列元素的數值是否存在') }}
 
 ### Checking whether a value exists using an arrow function
 
@@ -116,7 +109,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}
+{{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function') }}
 
 ### Converting any value to Boolean
 
@@ -141,7 +134,7 @@ getBoolean(1);       // true
 getBoolean('true');  // true
 ```
 
-{{ EmbedLiveSample('Converting_any_value_to_Boolean', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Converting_any_value_to_Boolean') }}
 
 ## Polyfill
 
@@ -176,7 +169,7 @@ if (!Array.prototype.some) {
 }
 ```
 
-{{ EmbedLiveSample('Polyfill', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Polyfill') }}
 
 ## 規範
 
@@ -184,7 +177,7 @@ if (!Array.prototype.some) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## 參見
 

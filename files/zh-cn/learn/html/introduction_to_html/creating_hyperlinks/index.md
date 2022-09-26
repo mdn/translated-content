@@ -1,12 +1,8 @@
 ---
 title: 创建超链接
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - HTML 指南
-  - URL
-  - 超链接
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

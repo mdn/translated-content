@@ -1,8 +1,8 @@
 ---
 title: Source
 slug: Web/HTML/Element/source
-translation_of: Web/HTML/Element/source
 ---
+
 ## 概述
 
 **HTML `<source>` **元素为 {{HTMLElement("picture")}}, {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素指定多个媒体资源。这是一个空元素。它通常用于以[不同浏览器支持的多种格式](/zh-CN/docs/Web/HTML/Supported_media_formats)提供相同的媒体内容。
@@ -60,7 +60,7 @@ If the **type** attribute isn't specified, the media's type is retrieved from th
 
 ## Examples
 
-This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the` audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. See also the list of [media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements) in various browsers.
+This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the `audio` or `video` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. See also the list of [media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements) in various browsers.
 
 ```html
 <video controls>
@@ -79,7 +79,7 @@ For more examples, see [Using audio and video in Firefox](/zh-CN/docs/Using_HTML
 
 ## Browser compatibility
 
-{{Compat("html.elements.source")}}
+{{Compat}}
 
 ## See also
 

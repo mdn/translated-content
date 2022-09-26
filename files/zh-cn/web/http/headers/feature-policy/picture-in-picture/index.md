@@ -1,15 +1,8 @@
 ---
 title: 'Feature-Policy: picture-in-picture'
 slug: Web/HTTP/Headers/Feature-Policy/picture-in-picture
-tags:
-  - Directive
-  - Feature-Policy
-  - HTTP
-  - Picture in picture
-  - Reference
-  - Experimental
-translation_of: Web/HTTP/Headers/Feature-Policy/picture-in-picture
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP 标头 {{HTTPHeader("Feature-Policy")}} 的 `picture-in-picture` 指令表示是否允许当前的文档通过相应的 API 以画中画模式播放视频。

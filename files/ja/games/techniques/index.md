@@ -1,10 +1,6 @@
 ---
 title: ゲーム開発テクニック
 slug: Games/Techniques
-tags:
-  - Games
-  - Guide
-translation_of: Games/Techniques
 ---
 {{GamesSidebar}}
 

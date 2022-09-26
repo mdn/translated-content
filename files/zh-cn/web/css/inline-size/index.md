@@ -1,11 +1,11 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-translation_of: Web/CSS/inline-size
 ---
+
 {{CSSRef}}
 
-**`inline-size`** [CSS](/en-US/docs/Web/CSS) 属性影响一个元素的{{cssxref("width")}} 或 {{cssxref("height")}}，以改变一个元素的盒模型的水平或垂直大小（是 width 还是 height 取决于该元素的{{cssxref("writing-mode")}}）。
+**`inline-size`** [CSS](/zh-CN/docs/Web/CSS) 属性影响一个元素的{{cssxref("width")}} 或 {{cssxref("height")}}，以改变一个元素的盒模型的水平或垂直大小（是 width 还是 height 取决于该元素的{{cssxref("writing-mode")}}）。
 
 {{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
@@ -71,7 +71,7 @@ inline-size: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## 参阅
 

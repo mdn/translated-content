@@ -1,10 +1,8 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - 客户端错误
-translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 HTTP 响应状态码 **`404 Not Found`** 指的是服务器无法找到所请求的资源。返回该响应的链接通常称为坏链（broken link）或死链（dead link），它们会导向链接出错处理（<a href="https://zh.wikipedia.org/wiki/失效連結">link rot</a>）页面。

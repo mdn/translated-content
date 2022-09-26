@@ -1,8 +1,8 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-translation_of: Web/HTTP/Status/413
 ---
+
 {{HTTPSidebar}}
 
 响应状态码 **`413 Payload Too Large`** 表示请求主体的大小超过了服务器愿意或有能力处理的限度，服务器可能会（may）关闭连接以防止客户端继续发送该请求。

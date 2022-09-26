@@ -2,6 +2,7 @@
 title: RTCPeerConnection.ondatachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.ondatachannel`** 属性是一个 {{event("Event_handlers", "event handler")}}，当这个 {{event("datachannel")}} 事件在 {{domxref("RTCPeerConnection")}} 发生时，它指定的那个事件处理函数就会被调用。这个事件继承于 {{domxref("RTCDataChannelEvent")}}，当远方伙伴调用{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}时这个事件被加到这个连接（RTCPeerConnection）中。
@@ -41,4 +42,4 @@ pc.ondatachannel = function(ev) {
 
 - The {{event("datachannel")}} event and its type, {{domxref("RTCDataChannelEvent")}}.
 - {{domxref("RTCPeerConnection.createDataChannel()")}}
-- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- [A simple RTCDataChannel sample](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

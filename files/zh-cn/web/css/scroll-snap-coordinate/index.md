@@ -1,16 +1,13 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
-tags:
-  - CSS
-  - css snap
-translation_of: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要
 
-**`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS)属性结合元素的最近的祖先元素滚动容器的{{cssxref("scroll-snap-destination")}} 定义的轴，定义了元素中 x 和 y 坐标偏移的位置。
+**`scroll-snap-coordinate`** [CSS](/zh-CN/docs/Web/CSS)属性结合元素的最近的祖先元素滚动容器的{{cssxref("scroll-snap-destination")}} 定义的轴，定义了元素中 x 和 y 坐标偏移的位置。
 
 如果元素已经变型，snap 坐标也以相同的方式进行变型，为了使元素的 snap 点向元素一样被显示。
 

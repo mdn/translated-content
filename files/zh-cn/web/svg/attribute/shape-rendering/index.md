@@ -1,12 +1,8 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
-tags:
-  - SVG
-  - SVG 线条渲染
-  - 需要完善
-translation_of: Web/SVG/Attribute/shape-rendering
 ---
+
 « [SVG 属性参考主页](/zh-CN/docs/Web/SVG/Attribute)
 
 指定 SVG 元素{{SVGElement("path")}}的渲染模式。
@@ -50,7 +46,7 @@ translation_of: Web/SVG/Attribute/shape-rendering
 
 下面的元素可以使用这个属性
 
-- [Shape elements](/en/SVG/Element#Shape) »
+- [Shape elements](/zh-CN/SVG/Element#Shape) »
 
 ## 规范
 

@@ -1,12 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-tags:
-  - API
-  - CSSOM View
-  - Reference
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.scrollTop`** 屬性可以設置和獲取元素被向上捲動的高度(pixels). 元素的 `scrollTop` 是元素頂端和能被看見的最頂端之間的距離. 當元素並未產生滾動條, 那麼 `scrollTop` 的值預設為 `0`.

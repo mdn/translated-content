@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/anchor
 ---
+
 {{JSRef}}
 
 La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} qui est utilisé comme cible hypertexte.

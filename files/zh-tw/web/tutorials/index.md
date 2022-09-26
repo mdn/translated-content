@@ -1,15 +1,8 @@
 ---
 title: 教學
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - HTML
-  - JavaScript
-  - Tutorial
-translation_of: Web/Tutorials
 ---
+
 這個頁面提供了許多關於網路相關技術的說明及學習文件。無論你是正在打基礎的新手或有經驗的老手，相信在這個頁面你都能找到許多有用的資源。這些開發資源是由具有前瞻思維的公司及擁抱開放標準的開發者所提供，允許任何人翻譯它並以 Creative Commons 的條款釋出。
 
 ## Web 完全新手

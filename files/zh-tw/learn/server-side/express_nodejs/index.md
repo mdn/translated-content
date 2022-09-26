@@ -1,17 +1,8 @@
 ---
 title: Express web framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Express
-  - Express.js
-  - Node
-  - node.js
-  - 介紹
-  - 伺服器端程式
-  - 初學者
-  - 學習
-translation_of: Learn/Server-side/Express_Nodejs
 ---
+
 {{LearnSidebar}}
 
 Express 是一個流行的 web 框架，使用 JavsScript 實現，執行在 node.js 環境上。本系列解釋 Express 的優點、如何設定開發環境、完成常見的 web 開發和佈署。

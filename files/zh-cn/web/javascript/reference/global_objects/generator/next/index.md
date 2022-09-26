@@ -1,16 +1,8 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - 原型
-  - 参考
-  - 方法
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。该方法也可以通过接受一个参数用以向生成器传值。
@@ -28,7 +20,7 @@ gen.next(value)
 
 ### 返回值
 
-返回的[对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
+返回的[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
 
 - `done` (布尔类型)
 
@@ -87,5 +79,5 @@ g.next(2);
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)

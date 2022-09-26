@@ -1,13 +1,8 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-tags:
-  - 响应状态码
-  - 响应码
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/451
 ---
+
 {{HTTPSidebar}}
 
 **`451 Unavailable For Legal Reasons`**（因法律原因不可用）是一种 HTTP 协议的错误状态代码，表示服务器由于法律原因，无法提供客户端请求的资源，例如可能会导致法律诉讼的页面。

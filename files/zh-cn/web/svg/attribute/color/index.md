@@ -1,12 +1,9 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/color
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `color` 属性用来为 {{ SVGAttr("fill") }} 属性、{{ SVGAttr("stroke") }} 属性、{{ SvgAttr("stop-color") }} 属性、{{ SVGAttr("flood-color") }} 属性和 {{ SVGAttr("lighting-color") }} 属性提供一个潜在的间接值（`currentColor`）。
 
@@ -16,7 +13,7 @@ translation_of: Web/SVG/Attribute/color
 
 | 类别     | 外观属性                                                                     |
 | -------- | ---------------------------------------------------------------------------- |
-| 值       | [\<color>](/en/SVG/Content_type#Color) \| inherit                             |
+| 值       | [\<color>](/zh-CN/SVG/Content_type#Color) \| inherit                             |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/color.html#ColorProperty) |
 
 ## 示例
@@ -36,8 +33,8 @@ translation_of: Web/SVG/Attribute/color
 
 下列元素可以使用`color`属性：
 
-- [文本内容元素](/en/SVG/Element#Text_content_elements) »
-- [形状元素](/en/SVG/Element#Shape_elements) »
+- [文本内容元素](/zh-CN/SVG/Element#Text_content_elements) »
+- [形状元素](/zh-CN/SVG/Element#Shape_elements) »
 - {{ SVGElement("stop") }}
 - {{ SVGElement("feFlood") }}
 - {{ SVGElement("feDiffuseLighting") }}

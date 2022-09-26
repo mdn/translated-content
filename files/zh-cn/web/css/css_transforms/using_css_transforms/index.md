@@ -1,13 +1,8 @@
 ---
 title: 使用 CSS 变形
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - CSS
-  - 变换
-  - 教程
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 通过改变坐标空间，**CSS transforms** 可以在不影响正常文档流的情况下改变作用内容的位置。这篇指南提供了有关使用 CSS 变形（CSS transforms）的介绍。

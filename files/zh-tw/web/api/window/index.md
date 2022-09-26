@@ -1,8 +1,8 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 `window` 物件代表了一個包含 DOM 文件的視窗，其中的 `document` 屬性指向了視窗中載入的 {{domxref("Document")}} 物件。而使用 `document` 的 {{Domxref("Document.defaultView", "defaultView")}} 屬性，則可取得該 Document 物件所在的視窗 `window` 物件。

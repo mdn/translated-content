@@ -1,18 +1,8 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
-translation_of: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} インターフェイスの **`credentials`** 読み取り専用プロパティは、クロスオリジンの場合に、ユーザーエージェントが他のドメインからクッキーを送信すべきかどうかを示します。

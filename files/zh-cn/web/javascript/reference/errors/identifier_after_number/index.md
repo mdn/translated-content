@@ -1,8 +1,8 @@
 ---
 title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message
@@ -45,5 +45,5 @@ var foo = life1;
 
 ## See also
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)

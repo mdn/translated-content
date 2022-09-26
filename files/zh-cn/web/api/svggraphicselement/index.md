@@ -2,9 +2,10 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
-**`SVGGraphicsElement `**接口表示 SVG 元素，其主要目的是将图形直接渲染到组中。
+**`SVGGraphicsElement`** 接口表示 SVG 元素，其主要目的是将图形直接渲染到组中。
 
 {{InheritanceDiagram(600, 120)}}
 
@@ -34,4 +35,4 @@ slug: Web/API/SVGGraphicsElement
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGGraphicsElement")}}
+{{Compat}}

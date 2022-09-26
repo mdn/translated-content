@@ -1,12 +1,8 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-translation_of: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 `z-index` 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。
@@ -36,7 +32,7 @@ z-index: initial;
 z-index: unset;
 ```
 
-`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index$edit#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index$edit#integer)。
+`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index#integer)。
 
 ### 取值
 
@@ -106,9 +102,9 @@ z-index: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.z-index")}}
+{{Compat}}
 
 ## 参阅
 
 - CSS {{Cssxref("position")}} 属性
-- [理解 CSS z-indexes](/en-US/docs/CSS/Understanding_z-index)
+- [理解 CSS z-indexes](/zh-CN/docs/CSS/Understanding_z-index)

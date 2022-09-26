@@ -1,8 +1,8 @@
 ---
 title: 數字與日期
 slug: Web/JavaScript/Guide/Numbers_and_dates
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 這個章節將介紹如何在 JavaScript 中處理數字與日期。
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 ### 二進制數值
 
-二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (`0b` 或 `0B`)。如果 `0b` 後面接著的數字不是 0 或 1，那會丟出 [`SyntaxError(語法錯誤)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError): "Missing binary digits after 0b"。
+二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (`0b` 或 `0B`)。如果 `0b` 後面接著的數字不是 0 或 1，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError): "Missing binary digits after 0b"。
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -60,7 +60,7 @@ var a = 0o10; // ES2015: 8
 
 ### 十六進制數值
 
-十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(`0x` 或 `0X`)。如果 `0b` 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 [`SyntaxError(語法錯誤)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError):"Identifier starts immediately after numeric literal"。
+十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(`0x` 或 `0X`)。如果 `0b` 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError):"Identifier starts immediately after numeric literal"。
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000

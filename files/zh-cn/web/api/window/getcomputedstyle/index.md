@@ -2,6 +2,7 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef}}
 
 ## 摘要
@@ -114,7 +115,7 @@ CSS 规范也允许使用驼峰命名，比如`fontSize`或`paddingTop`。
 
 CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对象，如`cs ['z-index']`或`cs.zIndex`。
 
-`getComputedStyle`的返回值是 {{cssxref("resolved_value", "resolved values")}}, 通常跟 CSS2.1 中的{{cssxref("computed_value","computed values")}}是相同的值。 但对于一些旧的属性，比如`width`, `height`, `padding `它们的值又为 {{cssxref("used_value","used values")}}。 最初，CSS2.0 定义的计算值 Computed values 就是属性的最终值。 但是 CSS2.1 重新定义了 computed values 为布局前的值， used values 布局后的值。 布局前与布局后的区别是， width 或者 height 的 百分比可以代表元素的宽度，在布局后会被像素值替换。
+`getComputedStyle`的返回值是 {{cssxref("resolved_value", "resolved values")}}, 通常跟 CSS2.1 中的{{cssxref("computed_value","computed values")}}是相同的值。 但对于一些旧的属性，比如`width`, `height`, `padding` 它们的值又为 {{cssxref("used_value","used values")}}。 最初，CSS2.0 定义的计算值 Computed values 就是属性的最终值。 但是 CSS2.1 重新定义了 computed values 为布局前的值， used values 布局后的值。 布局前与布局后的区别是， width 或者 height 的 百分比可以代表元素的宽度，在布局后会被像素值替换。
 
 在某些情况下，通过浏览器会特意返回不准确的值。 特别是在避免 CSS 浏览历史泄露的安全问题， 比如，浏览者看过某个网站， 它的链接通常会变成蓝色带下划线的链接，通过判断链接的颜色（getComputedSytle(node, null).color) 是否为蓝色，就会泄露用户的浏览历史， 所以浏览器会特意返回不准确的值，保护用户隐私。可以了解更多关于 css 安全的链接<http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> 和 <http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/>
 
@@ -124,7 +125,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 ## 浏览器兼容
 
-{{Compat("api.Window.getComputedStyle")}}
+{{Compat}}
 
 ## 规范
 

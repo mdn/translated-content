@@ -2,6 +2,7 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`CacheStorage`** 接口表示 {{domxref("Cache")}} 对象的存储。它提供了一个 {{domxref("ServiceWorker")}} 、其它类型 worker 或者 {{domxref("window")}} 范围内可以访问到的所有命名 cache 的主目录（它并不是一定要和 service workers 一起使用，即使它是在 service workers 规范中定义的），并维护一份字符串名称到相应 {{domxref("Cache")}} 对象的映射。
@@ -33,9 +34,9 @@ slug: Web/API/CacheStorage
 
 在第二个代码块，我们等待 {{domxref("FetchEvent")}} 触发。我们构建自定义相应，像这样：
 
-1.  检查 CacheStorage 中是否找到了匹配请求的内容。如果是，使用匹配内容。
-2.  如果没有，从网络获取请求，然后同样打开第一个代码块中创建的 cache，并使用 {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.) 将请求的 clone 副本添加到它。
-3.  如果此操作失败（例如，因为网络关闭），返回备用相应。
+1. 检查 CacheStorage 中是否找到了匹配请求的内容。如果是，使用匹配内容。
+2. 如果没有，从网络获取请求，然后同样打开第一个代码块中创建的 cache，并使用 {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.) 将请求的 clone 副本添加到它。
+3. 如果此操作失败（例如，因为网络关闭），返回备用相应。
 
 最后，使用 {{domxref("FetchEvent.respondWith")}} 返回自定义响应最终等于的内容。
 
@@ -80,7 +81,7 @@ this.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## 参见
 

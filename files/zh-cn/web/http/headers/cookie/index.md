@@ -1,14 +1,8 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cookies
-  - HTTP
-  - 请求
-  - 超文本传输协议
-  - 标头
-translation_of: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Cookie`** 是一个 HTTP 请求标头，其中含有先前由服务器通过 {{HTTPHeader("Set-Cookie")}} 标头投放或通过 JavaScript 的 {{domxref("Document.cookie")}} 方法设置，然后存储到客户端的 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 。

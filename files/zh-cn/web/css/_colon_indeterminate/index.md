@@ -1,8 +1,8 @@
 ---
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
-translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 `:indeterminate` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示状态不确定的表单元素：
@@ -96,4 +96,4 @@ progress:indeterminate {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.indeterminate")}}
+{{Compat}}

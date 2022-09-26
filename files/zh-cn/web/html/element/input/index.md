@@ -1,17 +1,8 @@
 ---
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Element/Input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input
 ---
+
 {{HTMLRef}}
 
 **HTML `<input>` 元素**用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。
@@ -22,7 +13,7 @@ translation_of: Web/HTML/Element/input
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/HTML/Content_categories">内容分类</a>
       </th>
       <td>
         流式元素；短语元素；交互元素（若 type 属性不处于隐藏
@@ -481,13 +472,18 @@ translation_of: Web/HTML/Element/input
 
     > **备注：** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 - {{htmlattrdef("dirname")}}
-  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#attr-name) and [value](#attr-value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.```plain
+  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#attr-name) and [value](#attr-value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
+
+    ```html
     <form action="page.html" method="post">
       <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
       <input type="submit"/>
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
-    ```When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    ```
+
+    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+
 - {{ htmlattrdef("disabled") }}
   - : 这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， `click` 事件 [将不会被分发](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 **type** 属性为 hidden，此属性将被忽略。
 
@@ -616,7 +612,7 @@ See the {{htmlelement('datalist')}} element.
 - {{htmlattrdef('title')}}
   - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#labels) below.
 - {{ htmlattrdef("type") }}
-  - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#<input>_types)，其中包含指向每个类型的更多信息的链接。
+  - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#input_types)，其中包含指向每个类型的更多信息的链接。
 - {{ htmlattrdef("usemap") }} {{Deprecated_Inline}}
   - : 作为图像映射的 {{ HTMLElement("map") }} 元素的名称。
 - {{ htmlattrdef("value") }}
@@ -697,8 +693,8 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 | [`:in-range`](/zh-CN/docs/Web/CSS/:in-range)                   | A non-empty input whose current value is within the range limits specified by the [min](#htmlattrdefmin) and [max](#htmlattrdefmax) attributes and the [step](#htmlattrdefstep) .                                                                                                                                                                                                               |
 | [`:out-of-range`](/zh-CN/docs/Web/CSS/:out-of-range)           | A non-empty input whose current value is NOT within the range limits specified by the [min](#htmlattrdefmin) and [max](#htmlattrdefmax) attributes or does not adher to the [step](#htmlattrdefstep) constraint.                                                                                                                                                                                |
 | [`:placeholder-shown`](/zh-CN/docs/Web/CSS/:placeholder-shown) | An [`<input>`](/zh-CN/docs/Web/HTML/Element/input) or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that is currently displaying placeholder text.                                                                                                                                                                                                                              |
-| [`:required`](/zh-CN/docs/Web/CSS/:required)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that has the [`required`](/en-US/docs/Web/HTML/Element/input#attr-required) attribute set on it. Only matches elements that can be required. The attribute included on a non-requirable element will not make for a match. |
-| [`:optional`](/zh-CN/docs/Web/CSS/:optional)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that does NOT have the [`required`](/en-US/docs/Web/HTML/Element/input#attr-required) attribute set on it. Does not match elements that can't be required.                                                                 |
+| [`:required`](/zh-CN/docs/Web/CSS/:required)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that has the [`required`](/zh-CN/docs/Web/HTML/Element/input#attr-required) attribute set on it. Only matches elements that can be required. The attribute included on a non-requirable element will not make for a match. |
+| [`:optional`](/zh-CN/docs/Web/CSS/:optional)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that does NOT have the [`required`](/zh-CN/docs/Web/HTML/Element/input#attr-required) attribute set on it. Does not match elements that can't be required.                                                                 |
 | [`:blank`](/zh-CN/docs/Web/CSS/:blank)                         | [`<input>`](/zh-CN/docs/Web/HTML/Element/input) and [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) elements that currently have no value.                                                                                                                                                                                                                                                |
 | [`:user-invalid`](/zh-CN/docs/Web/CSS/:user-invalid)           | Similar to `:invalid`, but is activated on blur. Matches invalid input but only after the user interaction, such as by focusing on the control, leaving the control, or attempting to submit the form containing the invalid control.                                                                                                                                                           |
 
@@ -749,7 +745,7 @@ Only the subset of CSS properties that apply to the [`::first-line`](/zh-CN/docs
 
 The [`appearance`](/zh-CN/docs/Web/CSS/appearance) property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
 
-You could make a `<div>` look like a radio button with `div {appearance: radio;} `or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
+You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
 
 Setting `appearance: none` removes platform native borders, but not functionality.
 
@@ -788,7 +784,7 @@ For more information about adding color to elements in HTML, see:
 Also see:
 
 - [Styling HTML forms,](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms) [advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms), and
-- the[ compatibility table of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
+- the [compatibility table of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
 
 ## Additional Features
 
@@ -798,7 +794,7 @@ Labels are needed to associate assistive text with an `<input>`. The [`<label>`]
 
 #### Associated labels
 
-The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/en-US/docs/Web/HTML/Element/label#attr-for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
+The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/zh-CN/docs/Web/HTML/Element/label#attr-for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
 
 It does not suffice to have plain text adjacent to the `<input>` element,. Rather, usability and accessibility requires the inclusion of either implicit or explicit [`<label>`](/zh-CN/docs/Web/HTML/Element/label):
 
@@ -821,9 +817,9 @@ As web developers, it's important that we never assume that people will know all
 
 #### Placeholders are not accessible
 
-The [`placeholder`](/en-US/docs/Web/HTML/Element/input#attr-placeholder) attribute lets you specify a text that appears within the `<input>` element's content area itself when empty. The placeholder should never be required in order to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to show an example input, not an explanation or prompt. Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, there is no placeholder. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
+The [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder) attribute lets you specify a text that appears within the `<input>` element's content area itself when empty. The placeholder should never be required in order to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to show an example input, not an explanation or prompt. Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, there is no placeholder. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
 
-> **备注：** Don't use the [`placeholder`](/en-US/docs/Web/HTML/Element/input#attr-placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the [`<label>`](/zh-CN/docs/Web/HTML/Element/label) element
+> **备注：** Don't use the [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the [`<label>`](/zh-CN/docs/Web/HTML/Element/label) element
 
 ### Client-side validation
 
@@ -841,7 +837,7 @@ Specific attributes and their values can lead to specific error [`ValidityState`
 | [minlength](#htmlattrdefminlength) | [`validityState.tooShort`](/zh-CN/docs/Web/API/ValidityState/tooShort)               | Occurs when the number of characters is less than the number required by the `minlength` property                                                                                      |
 | [pattern](#htmlattrdefpattern)     | [`validityState.patternMismatch`](/zh-CN/docs/Web/API/ValidityState/patternMismatch) | Occurs when a pattern attribute is included with a valid regular expression and the `value` does not match it.                                                                         |
 | [required](#htmlattrdefrequired)   | [`validityState.valueMissing`](/zh-CN/docs/Web/API/ValidityState/valueMissing)       | Occurs when the `required` attribute is present but the value is `null` or radio or checkbox is not checked.                                                                           |
-| [step](#htmlattrdefstep)           | [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)       | The value doesn't match the step increment. Increment default is `1`, so only integers are valid on` type="number"` is step is not included. `step="any"` will never throw this error. |
+| [step](#htmlattrdefstep)           | [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)       | The value doesn't match the step increment. Increment default is `1`, so only integers are valid on `type="number"` is step is not included. `step="any"` will never throw this error. |
 | [type](#htmlattrdeftyoe)           | [`validityState.typeMismatch`](/zh-CN/docs/Web/API/ValidityState/typeMismatch)       | Occurs when the value is not of the correct type, for example a email does not contain an `@` or a url doesn't contain a protocol.                                                     |
 
 If a form control doesn't have the required attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `'required'`, and empty string will not lead to an error.
@@ -946,17 +942,17 @@ Firefox uses the following heuristics to determine the locale to validate the us
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >. If the
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/input#attr-type">type</a></code
         >
         is not <code>hidden</code>, then labelable element, palpable content.
       </td>
@@ -965,7 +961,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted content</th>
       <td>
         None, it is an
-        <a href="/en-US/docs/Glossary/empty_element">empty element</a>.
+        <a href="/zh-CN/docs/Glossary/empty_element">empty element</a>.
       </td>
     </tr>
     <tr>
@@ -976,7 +972,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -1060,7 +1056,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     <tr>
       <th scope="row">DOM interface</th>
       <td>
-        <a href="/en-US/docs/Web/API/HTMLInputElement"
+        <a href="/zh-CN/docs/Web/API/HTMLInputElement"
           ><code>HTMLInputElement</code></a
         >
       </td>

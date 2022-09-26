@@ -1,18 +1,13 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - is
-translation_of: Web/HTML/Global_attributes/is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-is 全局属性 ( [global attribute](/en-US/docs/Web/HTML/Global_attributes) ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) ) 以获取更多详细信息）。
+is 全局属性 ( [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( [Using custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) ) 以获取更多详细信息）。
 
-只有在当前文档中已成功定义 ( [defined](/en-US/docs/Web/API/CustomElementRegistry/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
+只有在当前文档中已成功定义 ( [defined](/zh-CN/docs/Web/API/CustomElementRegistry/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
 
 ## 示例
 
@@ -49,4 +44,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 参见
 
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).

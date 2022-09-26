@@ -1,8 +1,8 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
-translation_of: Web/CSS/border-image-source
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -54,4 +54,4 @@ border-image-source: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-image-source")}}
+{{Compat}}

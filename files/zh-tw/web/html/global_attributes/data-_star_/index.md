@@ -1,8 +1,8 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-translation_of: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **data-\*** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)構成一組稱作**自訂 data 屬性**的屬性。它能令 [HTML](/zh-TW/docs/Web/HTML) 與其 [DOM](/zh-TW/docs/DOM) 擁有給腳本用的交換資訊。這種屬性設置的自訂資料，能透過元素的 {{domxref("HTMLElement")}} 介面而活用。{{domxref("HTMLElement.dataset")}} property 允許訪問它們。`*` 可以是任何遵循以下規則的 [xml 名稱](http://www.w3.org/TR/REC-xml/#NT-Name)：
@@ -32,7 +32,7 @@ translation_of: Web/HTML/Global_attributes/data-*
 
 ## 瀏覽器相容性
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## 參見
 

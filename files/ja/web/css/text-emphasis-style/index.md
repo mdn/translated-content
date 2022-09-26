@@ -1,14 +1,6 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-emphasis-style
-translation_of: Web/CSS/text-emphasis-style
 ---
 {{CSSRef}}
 

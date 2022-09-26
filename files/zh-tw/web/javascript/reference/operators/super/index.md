@@ -1,13 +1,13 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 super 關鍵字被使用於通過函式存取父層
 
-`super.prop` 與 `super[expr]` 表達有效在 [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 與 [classes](/en-US/docs/Web/JavaScript/Reference/Classes) 與 [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+`super.prop` 與 `super[expr]` 表達有效在 [method definition](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions) 與 [classes](/zh-TW/docs/Web/JavaScript/Reference/Classes) 與 [object literals](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## 語法
 
@@ -61,7 +61,7 @@ class Square extends Rectangle {
 
 ### Super-calling 靜態方法
 
-你也可以使用在[靜態](/en-US/docs/Web/JavaScript/Reference/Classes/static)方法.
+你也可以使用在[靜態](/zh-TW/docs/Web/JavaScript/Reference/Classes/static)方法.
 
 ```js
 class Rectangle {
@@ -82,7 +82,7 @@ Square.logDescription(); // 'I have 4 sides which are all equal'
 
 ### 刪除 super 屬性將拋出錯誤
 
-你不能使用 [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 以及 `super.prop` 以及 `super[expr]` 去刪除父層的類別屬性, 不然他會丟出一個錯誤 {{jsxref("ReferenceError")}}.
+你不能使用 [delete operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 以及 `super.prop` 以及 `super[expr]` 去刪除父層的類別屬性, 不然他會丟出一個錯誤 {{jsxref("ReferenceError")}}.
 
 ```js
 class Base {
@@ -130,7 +130,7 @@ console.log(y.prop); // 1
 
 ### 使用 `super.prop` 在對象符號
 
-Super 可以使用在 [object initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符號. 在這個範例, 有兩個對象定義在一個方法. 在第二個對象裡面, `super` 呼叫了第一個對象的方法. 這個動作幫助 {{jsxref("Object.setPrototypeOf()")}} 讓我們可以設定原型 `obj2` to `obj1`, 所以 `super` 可以發現 `method1` 在 `obj1`裡被找到.
+Super 可以使用在 [object initializer / literal](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符號. 在這個範例, 有兩個對象定義在一個方法. 在第二個對象裡面, `super` 呼叫了第一個對象的方法. 這個動作幫助 {{jsxref("Object.setPrototypeOf()")}} 讓我們可以設定原型 `obj2` to `obj1`, 所以 `super` 可以發現 `method1` 在 `obj1`裡被找到.
 
 ```js
 var obj1 = {
@@ -155,9 +155,9 @@ obj2.method2(); // logs "method 1"
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.super")}}
+{{Compat}}
 
 ## 參考
 
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)
 - [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

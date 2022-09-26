@@ -1,9 +1,9 @@
 ---
 title: overflow
 slug: Web/SVG/Attribute/overflow
-translation_of: Web/SVG/Attribute/overflow
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 The `overflow` attribute has the same parameter values as defined for the {{ cssxref("overflow","CSS overflow property") }}. However, the following additional points apply:
 

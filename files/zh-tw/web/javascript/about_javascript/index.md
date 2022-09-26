@@ -1,13 +1,13 @@
 ---
 title: About JavaScript
 slug: Web/JavaScript/About_JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## 什麼是 JavaScript?
 
-JavaScript® 是被用在上百萬的網頁和伺服器應用程式的一種網景開發物件腳本語言。Netscape's JavaScript 是 ECMA-262 Edition 3 ([ECMAScript](/en-US/docs/JavaScript/Language_Resources))的基礎標準腳本語言，兩者之間從公佈的標準只有輕微的差異。
+JavaScript® 是被用在上百萬的網頁和伺服器應用程式的一種網景開發物件腳本語言。Netscape's JavaScript 是 ECMA-262 Edition 3 ([ECMAScript](/zh-TW/docs/JavaScript/Language_Resources))的基礎標準腳本語言，兩者之間從公佈的標準只有輕微的差異。
 
 相對於常見的誤解，JavaScript 不是「解釋型的 Java」。簡言之，JavaScript 是一種動態的腳本語言，支持基於原型的物件結構。基本語法是故意類似 Java 和 C + + 來減少需要學習語言的新概念。語言結構，如 if 語句，for 和 while 迴圈，和 switch，並 try ... catch 塊的功能在這些語言中的相同（或接近）。
 
@@ -41,15 +41,15 @@ SpiderMonkey 的 JavaScript 引擎不時被添加到一些優化，如的 TraceM
 
 ## JavaScript 資源
 
-- [SpiderMonkey](/en-US/docs/SpiderMonkey)
+- [SpiderMonkey](/zh-TW/docs/SpiderMonkey)
   - : 嵌入到 JavaScript 的具體信息在 C 引擎
-- [Rhino](/en-US/docs/Rhino)
+- [Rhino](/zh-TW/docs/Rhino)
   - : 在 Java 編寫的 JavaScript 執行的具體信息。 (aka Rhino).
-- [Language resources](/en-US/docs/JavaScript/Language_Resources)
+- [Language resources](/zh-TW/docs/JavaScript/Language_Resources)
   - : 指針出版的 JavaScript 標準，LiveConnect 文檔和 JavaScript 2.0 的工作。
-- [Tamarin Project](/en-US/docs/Tamarin)
+- [Tamarin Project](/zh-TW/docs/Tamarin)
   - : 信息上的高性能，開放原始碼 JavaScript 2.0 的虛擬機。
-- [A re-introduction to JavaScript](/en-US/docs/JavaScript/A_re-introduction_to_JavaScript)
+- [A re-introduction to JavaScript](/zh-TW/docs/JavaScript/A_re-introduction_to_JavaScript)
   - : 核心 JavaScript1.5 指南和核心 JavaScript1.5 參考
 - [Scripting resources](http://www.mozilla.org/js/scripting/)
   - : JavaScript 腳本資源的指針，包括推薦閱讀，在線參考和教程和示例代碼

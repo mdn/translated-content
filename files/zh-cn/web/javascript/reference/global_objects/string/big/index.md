@@ -1,13 +1,13 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`big()`**方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。
 
-> **备注：** \<big> 元素在[HTML5](/en-US/docs/Web/Guide/HTML/HTML5)中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用[CSS](/en-US/docs/Web/CSS) 属性。
+> **备注：** \<big> 元素在[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用[CSS](/zh-CN/docs/Web/CSS) 属性。
 
 ## 语法
 

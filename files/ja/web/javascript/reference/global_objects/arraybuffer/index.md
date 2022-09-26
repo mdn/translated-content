@@ -1,16 +1,8 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - クラス
-  - JavaScript
-  - リファレンス
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** オブジェクトは、一般的な固定長の生のバイナリーデータバッファーを表現するために使用します。

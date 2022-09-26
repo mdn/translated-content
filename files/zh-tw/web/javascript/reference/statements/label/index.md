@@ -1,12 +1,8 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Statement
-  - 陳述式
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
+
 {{jsSidebar("Statements")}}
 
 **標記陳述式**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。
@@ -172,7 +168,7 @@ L: function* F() {}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.label")}}
+{{Compat}}
 
 ## 相關連結
 

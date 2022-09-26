@@ -2,14 +2,15 @@
 title: 使用图像 Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
 
 canvas 更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如 PNG、GIF 或者 JPEG。你甚至可以将同一个页面中其他 canvas 元素生成的图片作为图片源。
 
 引入图像到 canvas 里需要以下两步基本操作：
 
-1.  获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](http://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
-2.  使用`drawImage()`函数将图片绘制到画布上
+1. 获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](http://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
+2. 使用`drawImage()`函数将图片绘制到画布上
 
 我们来看看具体是怎么做的。
 
@@ -44,7 +45,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 ### 使用其它 canvas 元素
 
-和引用页面内的图片类似地，用 `document.getElementsByTagName `或 `document.getElementById `方法来获取其它 canvas 元素。但你引入的应该是已经准备好的 canvas。
+和引用页面内的图片类似地，用 `document.getElementsByTagName` 或 `document.getElementById` 方法来获取其它 canvas 元素。但你引入的应该是已经准备好的 canvas。
 
 一个常用的应用就是将第二个 canvas 作为另一个大的 canvas 的缩略图。
 

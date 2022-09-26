@@ -1,9 +1,9 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-translation_of: Web/CSS/clamp()
 original_slug: Web/CSS/clamp()
 ---
+
 {{CSSRef}}
 
 **`clamp()`** 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值。 `clamp()` 被用在 {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} 中都是被允许的。
@@ -43,13 +43,13 @@ original_slug: Web/CSS/clamp()
 
 ### min, max, and clamp comparison
 
-这个示例中，我们用 `min()、`[`max()`](/en-US/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
+这个示例中，我们用 `min()、`[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
 
-[`<body>`](/en-US/docs/Web/HTML/Element/body) 元素的 [`width`](/en-US/docs/Web/CSS/width) 设置为 `min(1000px, calc(70% + 100px))`。其含义是宽度设置为 `1000px`，当 `calc(70% + 100px)` 比 `1000px` 小时，宽度为 `calc(70% + 100px)` 。 `min()` 允许你设置一个上限值。
+[`<body>`](/zh-CN/docs/Web/HTML/Element/body) 元素的 [`width`](/zh-CN/docs/Web/CSS/width) 设置为 `min(1000px, calc(70% + 100px))`。其含义是宽度设置为 `1000px`，当 `calc(70% + 100px)` 比 `1000px` 小时，宽度为 `calc(70% + 100px)` 。 `min()` 允许你设置一个上限值。
 
-[`<p>`](/en-US/docs/Web/HTML/Element/p) 元素的 [`font-size`](/en-US/docs/Web/CSS/font-size) 设置为 `max(1.2rem, 1.2vw)`。其含义是 `font-size` 是 `1.2rem`，当计算出 `1.2vw` 比 `1.2rem` 大时，则 `font-size` 为 `1.2vw` 。 `max()` 允许你设置一个下限值。
+[`<p>`](/zh-CN/docs/Web/HTML/Element/p) 元素的 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `max(1.2rem, 1.2vw)`。其含义是 `font-size` 是 `1.2rem`，当计算出 `1.2vw` 比 `1.2rem` 大时，则 `font-size` 为 `1.2vw` 。 `max()` 允许你设置一个下限值。
 
-[`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 元素的 `font-size` 设置为 `clamp(1.8rem, 2.5vw, 2.8rem)`.。其含义是 `font-size` 为 `1.8rem`，当计算出 `2.5vw` 比 `1.8rem` 大时，`font-size` 为 `2.5vw`，同时，当 `2.5vw` 计算出来的值比 `2.8rem` 大时，`font-size` 为 `2.8rem`。`clamp()` 允许你设置一个上限值和下限值。
+[`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素的 `font-size` 设置为 `clamp(1.8rem, 2.5vw, 2.8rem)`.。其含义是 `font-size` 为 `1.8rem`，当计算出 `2.5vw` 比 `1.8rem` 大时，`font-size` 为 `2.5vw`，同时，当 `2.5vw` 计算出来的值比 `2.8rem` 大时，`font-size` 为 `2.8rem`。`clamp()` 允许你设置一个上限值和下限值。
 
 感兴趣可以在 [GitHub](https://mdn.github.io/css-examples/min-max-clamp/) 上查看源码
 
@@ -91,11 +91,11 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.types.clamp")}}
+{{Compat}}
 
 ## 继续阅读
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

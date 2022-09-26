@@ -1,8 +1,8 @@
 ---
 title: 大于或等于
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
-translation_of: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
@@ -17,7 +17,7 @@ The greater than or equal operator (`>=`) returns `true` if the left operand is 
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
+The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
 
 ## Examples
 
@@ -86,6 +86,6 @@ console.log(NaN >= 3);       // false
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Less than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Less than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

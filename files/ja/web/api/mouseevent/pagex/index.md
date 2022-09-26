@@ -1,20 +1,6 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - マウスイベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UI イベント
-  - イベント
-  - pageX
-translation_of: Web/API/MouseEvent/pageX
-browser-compat: api.MouseEvent.pageX
 ---
 {{APIRef("CSSOM View")}}
 

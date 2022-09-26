@@ -1,8 +1,8 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-translation_of: Web/CSS/text-underline-position
 ---
+
 {{CSSRef}}
 
 当 {{cssxref("text-decoration")}}属性的值设置为 `underline` 之后，可以用 **`text-underline-position`** 属性为其设置下划线的位置。
@@ -65,7 +65,7 @@ text-underline-position: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-underline-position")}}
+{{Compat}}
 
 ## 参阅
 

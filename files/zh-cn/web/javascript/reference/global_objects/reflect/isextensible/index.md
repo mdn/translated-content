@@ -1,11 +1,11 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
+
 {{JSRef}}
 
-`静态方法 Reflect`**`.isExtensible()`** 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 [与 Object.isExtensible() 的不同点](<#与_object.isextensible()_的不同点>)。
+`静态方法 Reflect`**`.isExtensible()`** 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 [与 Object.isExtensible() 的不同点](#与_object.isextensible_的不同点)。
 
 ## 语法
 
@@ -54,7 +54,7 @@ var frozen = Object.freeze({});
 Reflect.isExtensible(frozen); // === false
 ```
 
-### 与 `Object.isExtensible() 的不同点`
+### 与 `Object.isExtensible()` 的不同点
 
 如果该方法的第一个参数不是一个对象（原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于 {{jsxref("Object.isExtensible()")}}，非对象的第一个参数会被强制转换为一个对象。
 

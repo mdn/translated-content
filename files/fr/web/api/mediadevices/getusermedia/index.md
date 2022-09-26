@@ -3,6 +3,7 @@ title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("WebRTC")}}
 
 La méthode **`MediaDevices.getUserMedia()`** invite l'utilisateur à autoriser l'utilisation d'une entrée multimédia qui produit un {{domxref("MediaStream")}} avec des pistes contenant les types de médias demandés. Ce flux peut inclure, par exemple, une piste vidéo (produite par une source matérielle ou vidéo virtuelle telle qu'une caméra, un dispositif d'enregistrement vidéo, un service de partage d'écran, etc.), une piste audio (de la même manière, produite par une source physique ou Source audio virtuelle comme un microphone, convertisseur A / D ou similaire) et éventuellement d'autres types de piste.
@@ -245,15 +246,13 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple, un
 
 Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

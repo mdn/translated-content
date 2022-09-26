@@ -1,8 +1,8 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-translation_of: Web/HTML/Element/strike
 ---
+
 {{deprecated_header}}
 
 ## Summary

@@ -1,13 +1,9 @@
 ---
 title: JavaScript のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
+
 {{MDNSidebar}}
 
 以下のガイドラインは、 MDN Web Docs における JavaScript のコード例の書き方について述べています。これは、できるだけ多くの人に理解されるような簡潔な例を書くためのシンプルなリストです。もし、もっと詳しく説明したものが欲しければ、 [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) をお勧めします。これは、私たちのガイドラインと概ね互換性があります。
@@ -477,6 +473,7 @@ let s = d/t;
 ## 関連情報
 
 私たちの [JavaScript 言語リファレンス](/ja/docs/Web/JavaScript/Reference) のページのトップに、簡潔で意味のある良い JavaScript のスニペットがあります。参照していくつか見つけてください。私たちのインタラクティブな例 (およびその他の例) は、おおむね上記のガイドラインに沿って書かれていますが、ほとんどはガイドラインが新しく書かれる前に書かれたものなので、ところどころ違っている可能性があることを認識しておいてください。
+
 - API の例については、以下のものを見てみてください。
   - [`fetch()` の例](/ja/docs/Web/API/fetch#例)
   - [`fillRect()` の例](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect#例) （Canvas 2D の例は、古いスタイルの `var` をまだ使用していますが、概ね良好です）。

@@ -1,8 +1,8 @@
 ---
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 `function.arguments` 属性代表传入函数的实参，它是一个类数组对象。

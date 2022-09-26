@@ -1,8 +1,8 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-translation_of: Web/Manifest
 ---
+
 {{SeeCompatTable}}
 
 Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。

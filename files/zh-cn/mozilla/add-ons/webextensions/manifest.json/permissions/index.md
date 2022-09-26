@@ -1,11 +1,8 @@
 ---
 title: 权限 - permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-tags:
-  - 权限
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -44,14 +41,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 ## 主机权限
 
-主机权限使用 [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 指定，扩展在每一个表达式指定的网址上请求额外权限。
+主机权限使用 [match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 指定，扩展在每一个表达式指定的网址上请求额外权限。
 
 额外权限包括：
 
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) 和 [fetch](/en-US/docs/Web/API/Fetch_API) 用于访问无跨源限制的源文件（包括从 content scripts 发出的访问请求）
-- 以编程方式（使用 [tabs.executeScript](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)）将脚本注入到来自源服务器（origins）提供的页面的功能。
-- 使用 [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 在其主机上获取消息的能力。
-- 使用 [cookies](/en-US/Add-ons/WebExtensions/API/cookies) API 访问主机 cookies 的能力，只要 cookies api 的权限也被请求。
+- [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 和 [fetch](/zh-CN/docs/Web/API/Fetch_API) 用于访问无跨源限制的源文件（包括从 content scripts 发出的访问请求）
+- 以编程方式（使用 [tabs.executeScript](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)）将脚本注入到来自源服务器（origins）提供的页面的功能。
+- 使用 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 在其主机上获取消息的能力。
+- 使用 [cookies](/zh-CN/Add-ons/WebExtensions/API/cookies) API 访问主机 cookies 的能力，只要 cookies api 的权限也被请求。
 - 使用无通配符（\*）的全域名会绕开跟踪保护机制，但不能与 `<all_urls>` 共用。
 
 Firefox 浏览器，自 56 以后的版本，扩展都会自动获取其源的主机权限，如以下形式：
@@ -60,7 +57,7 @@ Firefox 浏览器，自 56 以后的版本，扩展都会自动获取其源的�
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
-`60a20a9b-1ad4-af49-9b6c-c64c98c37920` 是扩展内部 ID。编程时可使用 [extension.getURL()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL) 来返回此 URL 路径：
+`60a20a9b-1ad4-af49-9b6c-c64c98c37920` 是扩展内部 ID。编程时可使用 [extension.getURL()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL) 来返回此 URL 路径：
 
 ```js
 browser.extension.getURL("");
@@ -106,8 +103,8 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 在大部分情况下这种权限仅仅允许你访问 API，除了以下情况：
 
-- `tabs`让你可以访问 [`一部分特权API`](/en-US/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`。在 Firefox 中你也需要`tabs`来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). 剩余的`tabs` API 能在不要求任何权限的情况被使用
-- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/en-US/Add-ons/WebExtensions/API/WebRequest).
+- `tabs` 让你可以访问[一部分特权 API](/zh-CN/Add-ons/WebExtensions/API/tabs)：`Tab.url`、`Tab.title` 和 `Tab.faviconUrl`。在 Firefox 中你也需要 `tabs` 来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。剩余的 `tabs` API 能在不要求任何权限的情况被使用
+- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/zh-CN/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` 让你使用 {{WebExtAPIRef("downloads.open()")}} API.
 
 ## 活动标签权限
@@ -122,7 +119,7 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 额外特权包括：
 
-- 插入 JavaScript 或者 CSS 的能力，使用 [`browser.tabs.executeScript`](/en-US/Add-ons/WebExtensions/API/tabs/executeScript) 和 [`browser.tabs.insertCSS`](/en-US/Add-ons/WebExtensions/API/tabs/insertCSS)
+- 插入 JavaScript 或者 CSS 的能力，使用 [`browser.tabs.executeScript`](/zh-CN/Add-ons/WebExtensions/API/tabs/executeScript) 和 [`browser.tabs.insertCSS`](/zh-CN/Add-ons/WebExtensions/API/tabs/insertCSS)
 - 为当前标签访问 tabs API 权限部分的能力，包括：Tab.url,Tab.title, 和 Tab .faviconUrl。
 
 改权限的目的是为了在不给予扩展太多权限的情况下，使得扩展能够应付大部分情况。很多扩展需要在用户要求时，在当前页面做一些处理，比如，考虑一个扩展想要在用户点击一个浏览器按钮时在当前页面运行一个脚本，如果 activeTab 权限不存在，扩展将需要请求主机权限\<all_urls>，但是这给予了扩展超过其需要的权限：现在它可以在任何任何时间标签页执行脚本任何次，而不是仅仅在活动标签而且仅仅回应用户的行为。
@@ -134,14 +131,14 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 - `clipboardWrite`: 使用`document.execCommand("copy")` 或`document.execCommand("cut")` 向剪贴板写入
 - `clipboardRead`: 使用 `document.execCommand("paste")` 从剪贴板读取
 
-查看 [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) 获取更多
+查看 [Interact with the clipboard](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) 获取更多
 
 ## 无限制存储
 
 `unlimitedStorage` 权限：
 
 - 能使扩展突破{{WebExtAPIRef("storage.local")}} API 设定的 quota 限制
-- Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 ["persistent" IndexedDB database](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics)
+- Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 ["persistent" IndexedDB database](/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics)
 
 ## 示例
 
@@ -167,4 +164,4 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 本页的兼容列表是从结构化数据生成的。如果你想参与修改此数据，请参考 <https://github.com/mdn/browser-compat-data> 并发送 pull 请求。
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

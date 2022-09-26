@@ -1,20 +1,11 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - HTML 表单
-  - 多个文件
-  - 文件
-  - 文件选择器
-  - 目录选择器
-  - 表单输入
-  - 输入类型
-translation_of: Web/HTML/Element/input/file
 ---
+
 {{HTMLRef}}
 
-使用 **`type="file"` **的 {{HTMLElement("input")}} 元素使得用户可以选择一个或多个元素以[提交表单](/zh-CN/docs/Learn/HTML/Forms)的方式上传到服务器上，或者通过 Javascript 的 [File API](/zh-CN/docs/Web/API/File/Using_files_from_web_applications) 对文件进行操作。
+使用 **`type="file"`** 的 {{HTMLElement("input")}} 元素使得用户可以选择一个或多个元素以[提交表单](/zh-CN/docs/Learn/HTML/Forms)的方式上传到服务器上，或者通过 Javascript 的 [File API](/zh-CN/docs/Web/API/File/Using_files_from_web_applications) 对文件进行操作。
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
@@ -84,7 +75,7 @@ translation_of: Web/HTML/Element/input/file
 
 ### {{htmlattrdef("accept")}}
 
-[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的**[唯一文件类型说明符](#唯一文件类型说明符)**列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
+[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
 
 例如，有许多方法可以识别 Microsoft Word 文件，所以接受 Word 文件的站点可以使用一个`<input>`：
 
@@ -238,14 +229,14 @@ div {
 
 ### 注意事项
 
-1.  你不能从脚本中设置文件选取器的值 — You cannot set the value of a file picker from a script — 做下面这样的事情是没有效果的：
+1. 你不能从脚本中设置文件选取器的值 — You cannot set the value of a file picker from a script — 做下面这样的事情是没有效果的：
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  当使用一个 `<input type="file">` 选择一个文件，When a file is chosen using an `<input type="file">`，出于明显的安全原因，源文件的实际路径没有显示在 input 的 `value` 属性中。相反，显示了文件名，并用 `C:\fakepath\` 附加在路径的开头。这种怪癖有一些历史原因，但它在所有现代浏览器中都受到支持，而且实际上[在规范中也有定义](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
+2. 当使用一个 `<input type="file">` 选择一个文件，When a file is chosen using an `<input type="file">`，出于明显的安全原因，源文件的实际路径没有显示在 input 的 `value` 属性中。相反，显示了文件名，并用 `C:\fakepath\` 附加在路径的开头。这种怪癖有一些历史原因，但它在所有现代浏览器中都受到支持，而且实际上[在规范中也有定义](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
 
 ## 示例
 

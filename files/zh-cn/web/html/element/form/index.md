@@ -1,16 +1,8 @@
 ---
 title: form
 slug: Web/HTML/Element/form
-tags:
-  - Forms
-  - HTML
-  - HTML 表单
-  - Web
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/form
 ---
+
 {{HTMLRef}}
 
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。

@@ -1,11 +1,8 @@
 ---
 title: DOM 中的空白字元
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-  - 所有類別
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
+
 #### 問題說明
 
 [DOM](zh_tw/DOM) 裡的空白字元會讓處理節點結構時增加不少麻煩。Mozilla 相關軟體中，原始文件裡所有空白字元都會在 DOM 中出現（不包括標籤內含的空白字元）。這樣的處理方式有其必要，一方面編輯器中可逕行排列文字、二方面 [CSS](zh_tw/CSS) 裡的 `white-space: pre` 也才能發揮作用。 如此一來就表示：
@@ -30,7 +27,7 @@ translation_of: Web/API/Document_Object_Model/Whitespace
 </html>
 ```
 
-![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
+![dom tree equivalent of the above HTML example](dom-string.png)
 
 這麼一來，要使用 DOM 遊走於節點結構間又不想要無用的空白字元時，會有點困難。
 

@@ -1,15 +1,15 @@
 ---
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+
+{{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 
 以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。
 
 ## 两个 API，一个目标
 
-[推送 API](/en-US/docs/Web/API/Push_API)和[通知 API](/en-US/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
+[推送 API](/zh-CN/docs/Web/API/Push_API)和[通知 API](/zh-CN/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
 
 跟 Service Worker 一样，这些工作是在浏览器外部实现的，所以即使应用被隐藏到后台甚至被关闭了，我们仍然能够推送更新或者通知给用户。
 
@@ -67,7 +67,7 @@ function randomNotification() {
 
 这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification)，它能为你的应用提供一层额外的安全防护。你可以看一下 [Service Workers Cookbook 里的一些例子](https://serviceworke.rs/push-payload.html)，尝试用 [Firebase](https://firebase.google.com/) 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
 
-之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](https://developer.mozilla.org/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
+之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
 
 ```js
 registration.pushManager.getSubscription() .then( /* ... */ );
@@ -260,6 +260,6 @@ self.addEventListener('push', function(event) {
 
 如果你想知道它们具体是怎么处理的，请随意探索 [Service Worker Cookbook](https://serviceworke.rs/) 里面剩下的例子。[GitHub 上面提供了完整的源代码](https://github.com/mozilla/serviceworker-cookbook/)，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

@@ -1,8 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

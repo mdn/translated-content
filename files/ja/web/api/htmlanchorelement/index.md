@@ -1,15 +1,8 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLAnchorElement
-translation_of: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement`** インターフェイスはハイパーリンク要素を表し、そのような要素のレイアウトと表示を操作するための特別なプロパティとメソッド（継承元である通常の {{domxref("HTMLElement")}} オブジェクトインターフェイスにないもの）を提供します。 このインターフェイスは [`<a>`](/ja/docs/Web/HTML/Element/a) 要素に対応しています。 [`<link>`](/ja/docs/Web/HTML/Element/link) は [`HTMLLinkElement`](/ja/docs/Web/API/HTMLLinkElement) で表されるものであり、混同しないでください。
@@ -39,7 +32,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLAnchorElement.password")}}
   - : ドメイン名の前に指定されたパスワードを含む文字列を返します。
 - {{domxref("HTMLAnchorElement.pathname")}}
-  - : 最初の `'/'` に続き、クエリー文字列やフラグメントを含まない URL のパスを含む文字列です。。
+  - : 最初の `'/'` に続き、クエリー文字列やフラグメントを含まない URL のパスを含む文字列です。
 - {{domxref("HTMLAnchorElement.port")}}
   - : 文字列で、参照する URL のポート番号部分がある場合は、それを表します。
 - {{domxref("HTMLAnchorElement.protocol")}}

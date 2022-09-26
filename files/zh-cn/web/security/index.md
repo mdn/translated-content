@@ -1,11 +1,8 @@
 ---
 title: Web 安全
 slug: Web/Security
-tags:
-  - Web
-  - 安全
-translation_of: Web/Security
 ---
+
 确保您的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。这些文档提供信息帮助您使代码更安全。此处列出的面向 Web 安全的文章提供的信息可以帮助您保护站点及其代码免受攻击和数据窃取。
 
 - [CSP (内容安全策略)](/zh-CN/docs/Web/Security/CSP)

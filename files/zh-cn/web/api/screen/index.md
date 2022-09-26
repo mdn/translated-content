@@ -2,6 +2,7 @@
 title: Screen
 slug: Web/API/Screen
 ---
+
 {{APIRef("CSSOM View")}}
 
 `Screen` 接口表示一个屏幕窗口，往往指的是当前正在被渲染的 window 对象，可以使用 `window.screen` 获取它。
@@ -44,14 +45,12 @@ slug: Web/API/Screen
 
 ## 方法
 
-- {{domxref("Screen.lockOrientation")}}
-  - : 锁定屏幕转向 (仅在全屏或者已安装的 APP 中生效)
-- {{domxref("Screen.unlockOrientation")}}
-  - : 解锁屏幕转向 (仅在全屏或者已安装的 APP 中生效)
+_方法继承自其父接口 {{domxref("EventTarget")}}。_
 
-方法继承于 {{domxref("EventTarget")}}
-
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
+- {{domxref("Screen.lockOrientation")}} {{Deprecated_Inline}}
+  - : 锁定屏幕转向（仅在全屏或者已安装的 APP 中生效）
+- {{domxref("Screen.unlockOrientation")}} {{Deprecated_Inline}}
+  - : 解锁屏幕转向（仅在全屏或者已安装的 APP 中生效）
 
 ## 示例
 

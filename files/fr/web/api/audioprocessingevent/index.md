@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioProcessingEvent
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.
@@ -28,15 +29,13 @@ _La liste ci-dessous inclut les propriétés héritées de son parent, {{domxref
 | `inputBuffer` {{ReadOnlyInline}}  | {{domxref("AudioBuffer")}} | Tampon contenant les données audio à traiter en entrée. Le nombre de canaux est défini comme paramètre, `numberOfInputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`.         |
 | `outputBuffer` {{ReadOnlyInline}} | {{domxref("AudioBuffer")}} | Tampon dans lequel les données doivent être écrites en sortie. Le nombre de canaux est défini comme paramètre, `numberOfOutputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`. |
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioProcessingEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

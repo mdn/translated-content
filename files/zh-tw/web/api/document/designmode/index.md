@@ -1,14 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsBrowserCompatibility
-  - Property
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 ## 概要
@@ -37,7 +31,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## 參考
 

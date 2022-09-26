@@ -9,6 +9,7 @@ tags:
   - fragment
 translation_of: Web/API/DocumentFragment/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DocumentFragment.querySelector()`** renvoie le premier élément ou `null` si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.
@@ -56,14 +57,11 @@ document.querySelector('#foo\\:bar')   // Correspond au second div
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('Selectors API Level 2', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 2')}} | Pas de changement de {{SpecName('Selectors API Level 1')}} |
-| {{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 1')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 

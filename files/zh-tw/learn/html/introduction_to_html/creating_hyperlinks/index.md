@@ -1,8 +1,8 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。
@@ -13,12 +13,12 @@ translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
       <th scope="row">需求：</th>
       <td>
         我們在
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 入門</a
         >
         中介紹過的 HTML 基礎，以及在
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 的文字基礎知識</a
         >
         中介紹過的文字格式化技巧。
@@ -83,7 +83,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### 區塊級連結(Block-level links)
 
-就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
+就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
@@ -205,7 +205,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 經過之前的說明，你可能會覺得無論如何都應該採用絕對連結，畢竟它們不會像相對連結一樣，因為頁面被搬移而失效。然而，對於相同網站內的連結，你應該盡量使用相對連結 (連到別的網站的連結必須使用絕對連結)，原因如下：
 
 - 首先，由於相對 URL 通常比絕對 URL 來得短，因此使用它可以增進原始碼的可讀性。
-- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
+- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
 
 ### 要連到非 HTML 的資源時請先聲明
 
@@ -291,7 +291,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 </a>
 ```
 
-> **備註：** 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
+> **備註：** 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
 
 以下是 `mailto` URL 的其他例子：
 
@@ -303,7 +303,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 小試身手！
 
-你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
+你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
 
 ## 總結
 
@@ -313,12 +313,12 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 在本主題中的內容
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Testing_media_queries
 original_slug: Web/CSS/Requêtes_média/Tester_les_media_queries
 ---
+
 {{CSSRef}}
 
 Le {{Glossary("DOM")}} fournit un certain nombre de fonctionnalités qui permettent de tester les résultats d'une requête média (_media query_) avec un script. Pour cela, on utilise l'interface {{domxref("MediaQueryList")}} ainsi que ses méthodes et ses propriétés. Une fois qu'on a créé un objet {{domxref("MediaQueryList") }}, on peut vérifier le résultat de la requête ou également recevoir des notifications automatiques lorsque le résultat de la requête change.
@@ -75,7 +76,7 @@ mql.removeListener(handleOrientationChange);
 
 ## Voir aussi
 
-- [Les requêtes média (_media queries_)](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries "CSS/Media queries")
+- [Les requêtes média (_media queries_)](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}

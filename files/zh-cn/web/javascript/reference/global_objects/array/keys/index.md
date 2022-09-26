@@ -1,25 +1,18 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
-**`keys()`** 方法返回一个包含数组中每个索引键的**`Array Iterator`**对象。
+**`keys()`** 方法返回一个包含数组中每个索引键的 **`Array Iterator`** 对象。
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
 ## 语法
 
-```plain
-arr.keys()
+```js
+keys()
 ```
 
 ### 返回值
@@ -46,8 +39,10 @@ console.log(denseKeys);  // [0, 1, 2]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

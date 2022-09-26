@@ -1,14 +1,8 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - HTML
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## 概述

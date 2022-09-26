@@ -1,11 +1,11 @@
 ---
 title: 'Django Tutorial Part 5: Creating our home page'
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-我們現在可以添加代碼，來顯示我們的第一個完整頁面 - [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本 URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。
+我們現在可以添加代碼，來顯示我們的第一個完整頁面 - [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本 URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -74,7 +74,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 ### URL mapping
 
-創建[skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) 時，我們更新了**locallibrary/urls.py**文件，以確保每當收到以 `catalog/` 開頭的 URL 時， _URLConf_ 模組 `catalog.urls` 都將處理其餘的子字符串。
+創建[skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website) 時，我們更新了**locallibrary/urls.py**文件，以確保每當收到以 `catalog/` 開頭的 URL 時， _URLConf_ 模組 `catalog.urls` 都將處理其餘的子字符串。
 
 來自 **locallibrary/urls.py**的以下代碼片段包括`catalog.urls` 模塊：
 
@@ -148,7 +148,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 ```
 
-視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為“ a”（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records))中，您可以找到更多有關如何從模型進行訪問的信息。.
+視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為“ a”（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/zh-TW/docs/Learn/Server-side/Django/Models#Searching_for_records))中，您可以找到更多有關如何從模型進行訪問的信息。.
 
 在函數的最後，我們調用 `render()` 函數來創建並返回 HTML 頁面作為響應（此快捷功能包裝了許多其他函數，從而簡化了這種非常常見的用例）。它以原始 `request` 物件 (一個 `HttpRequest`), 帶有數據佔位符的 HTML 模板以及上下文 `context` 變量包含將插入到這些佔位符中的數據的 Python 字典）為參數。
 
@@ -307,7 +307,7 @@ return render(request, 'index.html', context=context)
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
 ```
 
-> **備註：** 上面的更改指定了文件的位置，但是 Django 默認不提供文件。創建網站框架時 ([created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website))，雖然我們在全局 URL 映射器(**/locallibrary/locallibrary/urls.py**)中啟用了由開發 Web 服務器提供的服務，但您仍需要安排它們在生產中提供。 我們待會再看。
+> **備註：** 上面的更改指定了文件的位置，但是 Django 默認不提供文件。創建網站框架時 ([created the website skeleton](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))，雖然我們在全局 URL 映射器(**/locallibrary/locallibrary/urls.py**)中啟用了由開發 Web 服務器提供的服務，但您仍需要安排它們在生產中提供。 我們待會再看。
 
 有關使用靜態文件的更多信息，請參閱管理靜態文件 [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) (Django docs)。
 
@@ -358,18 +358,18 @@ return render(request, 'index.html', context=context)
 
 ## In this module
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

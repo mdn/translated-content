@@ -2,6 +2,7 @@
 title: Node.nodeName
 slug: Web/API/Node/nodeName
 ---
+
 {{APIRef}}概述
 
 返回当前节点的节点名称
@@ -26,7 +27,7 @@ var str = node.nodeName;
 | [Comment](/zh-CN/docs/DOM/Comment)                             | "#comment"                                                                                     |
 | [Document](/zh-CN/docs/DOM/document)                           | "#document"                                                                                    |
 | [DocumentFragment](/zh-CN/docs/DOM/DocumentFragment)           | "#document-fragment"                                                                           |
-| [DocumentType](/zh-CN/docs/DOM/DocumentType)                   | 等同于 [`DocumentType.name`](/zh-CN/docs/DOM/DocumentType.name)` 属性的值`                     |
+| [DocumentType](/zh-CN/docs/DOM/DocumentType)                   | 等同于 [`DocumentType.name`](/zh-CN/docs/DOM/DocumentType.name) 属性的值                     |
 | [Element](/zh-CN/docs/DOM/element)                             | 等同于 [`Element.tagName`](/zh-CN/docs/DOM/element.tagName) 属性的值                           |
 | [Entity](/zh-CN/docs/DOM/Entity)                               | 实体名称                                                                                       |
 | [EntityReference](/zh-CN/docs/DOM/EntityReference)             | 实体引用名称                                                                                   |

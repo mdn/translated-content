@@ -1,8 +1,8 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
+
 {{JSRef}}
 
 **`Object.freeze()`** 顧名思義是用來「凍結」一個物件的: 也就是防止物件新增屬性; 防止物件既有的屬性被刪除; 防止物件原本的屬性, 還有屬性的可列舉性, 可設定性, 可寫性被改動; 同時它也防止物件的原型被改變。此方法回傳一個凍結狀態的物件。
@@ -164,7 +164,7 @@ TypeError: 1 is not an object // ES5 code
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## 參閱
 

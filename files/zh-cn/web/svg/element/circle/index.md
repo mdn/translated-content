@@ -1,17 +1,11 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-tags:
-  - SVG
-  - SVG 图形
-  - http://svgjs.com
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/circle
 ---
+
 {{SVGRef}}
 
-**`<circle>`** [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
+**`<circle>`** [SVG](/zh-CN/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
 
 ## 用法
 
@@ -19,24 +13,26 @@ translation_of: Web/SVG/Element/circle
 
 ## 示例
 
-```xml
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50"/>
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50"/>
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+{{EmbedLiveSample('示例', 100, 100)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [展现属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [展现属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -54,7 +50,7 @@ translation_of: Web/SVG/Element/circle
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## 相关内容
 

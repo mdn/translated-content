@@ -1,14 +1,8 @@
 ---
 title: '::-moz-range-progress'
 slug: Web/CSS/::-moz-range-progress
-tags:
-  - CSS
-  - CSS:Mozilla 扩展
-  - 伪元素
-  - 选择器
-  - 非标准化
-translation_of: Web/CSS/::-moz-range-progress
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
@@ -50,7 +44,7 @@ input[type=range]::-moz-range-progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-moz-range-progress")}}
+{{Compat}}
 
 ## 相关阅读
 

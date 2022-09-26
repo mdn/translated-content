@@ -1,8 +1,8 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 方法返回 {{jsxref("String")}} 对象的原始值

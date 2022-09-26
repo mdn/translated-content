@@ -1,19 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.sampleRate
 slug: Web/API/MediaTrackSupportedConstraints/sampleRate
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - sampleRate
-translation_of: Web/API/MediaTrackSupportedConstraints/sampleRate
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

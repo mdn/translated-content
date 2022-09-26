@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
+
 {{JSRef}}
 
 **`unicode`** 属性表明正则表达式带有"`u`" 标志。 `unicode` 是正则表达式独立实例的只读属性。

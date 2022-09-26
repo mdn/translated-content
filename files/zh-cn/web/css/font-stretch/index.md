@@ -1,8 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
-translation_of: Web/CSS/font-stretch
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -50,7 +50,7 @@ Font stretch values are interpolated in discrete steps. The interpolation happen
 
 {{csssyntax}}
 
-## Example
+## 示例
 
 ### HTML
 
@@ -74,7 +74,7 @@ Font stretch values are interpolated in discrete steps. The interpolation happen
 
 ### Result
 
-{{ EmbedLiveSample('Example', '500', '', '', 'Web/CSS/font-stretch') }}
+{{ EmbedLiveSample('示例', '500') }}
 
 ## Specifications
 
@@ -84,4 +84,4 @@ The CSS property `font-stretch` was initially defined in CSS 2, but dropped in C
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-stretch")}}
+{{Compat}}

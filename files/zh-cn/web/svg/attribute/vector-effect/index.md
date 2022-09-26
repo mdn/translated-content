@@ -1,15 +1,15 @@
 ---
 title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
-translation_of: Web/SVG/Attribute/vector-effect
 ---
+
 {{SVGRef}}
 
 **`vector-effect`** 属性指明绘制对象时要使用的矢量效果。在任何其他合成操作（如滤镜，蒙版和剪辑等）之前，都要应用矢量效果。
 
 **备注：** 作为显示性属性， `vector-effect` 也可以直接在 CSS 样式表中作为属性使用。
 
-作为显示性属性，它能被应用到任何元素，但只对这 10 个元素有效果: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}} {{SVGElement("tspan")}}, and {{SVGElement("use")}}
+作为显示性属性，它能被应用到任何元素，但只对这 10 个元素有效果：{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}} {{SVGElement("tspan")}}, and {{SVGElement("use")}}
 
 ## 用法说明
 

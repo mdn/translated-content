@@ -1,8 +1,8 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-translation_of: Web/HTML/Element/nobr
 ---
+
 {{non-standard_header}}
 
 ## 概述

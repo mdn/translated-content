@@ -1,8 +1,8 @@
 ---
 title: 'Test your skills: position'
 slug: Learn/CSS/CSS_layout/Position_skills
-translation_of: Learn/CSS/CSS_layout/Position_skills
 ---
+
 {{LearnSidebar}}
 
 此任务的目的是让您使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，您将通过两个小任务来复习刚才课程材料中介绍的不同元素。

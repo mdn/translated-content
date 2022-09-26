@@ -1,14 +1,8 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
-page-type: web-api-instance-method
-tags:
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-browser-compat: api.Event.composedPath
-translation_of: Web/API/Event/composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`composedPath()`** は {{domxref("Event")}} インターフェイスのメソッドで、イベントの経路をリスナーが呼び出されるオブジェクトの配列で返します。シャドウルートが {{domxref("ShadowRoot.mode")}} が closed の状態で作成された場合、シャドウツリーのノードは含まれません。

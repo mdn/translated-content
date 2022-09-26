@@ -1,13 +1,8 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - Entity header
-  - HTTP
-  - Reference
-  - header
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 用來表示資源的 {{Glossary("MIME type","media type")}} 。
@@ -77,7 +72,7 @@ Content-Type: text/plain
 
 ## Browser compatibility
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## See also
 

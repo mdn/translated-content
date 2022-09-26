@@ -46,11 +46,11 @@ translation_of: Web/Guide/HTML/Content_categories
 
 ### 구획 콘텐츠
 
-구획 콘텐츠 모델에 속한 요소는 현재 개요에서 {{HTMLElement("header")}}, {{HTMLElement("footer")}}, [제목 콘텐츠](#제목_콘텐츠)의 범위를 정의하는 [구역을 생성](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽 "Sections and Outlines of an HTML5 document")합니다[.](/ko/docs/Web/HTML/HTML5_%EB%AC%B8%EC%84%9C%EC%9D%98_%EC%84%B9%EC%85%98%EA%B3%BC_%EC%9C%A4%EA%B3%BD "Sections and Outlines of an HTML5 document")
+구획 콘텐츠 모델에 속한 요소는 현재 개요에서 {{HTMLElement("header")}}, {{HTMLElement("footer")}}, [제목 콘텐츠](#제목_콘텐츠)의 범위를 정의하는 [구역을 생성](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽)합니다[.](/ko/docs/Web/HTML/HTML5_%EB%AC%B8%EC%84%9C%EC%9D%98_%EC%84%B9%EC%85%98%EA%B3%BC_%EC%9C%A4%EA%B3%BD)
 
 {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}
 
-> **참고:** 자신의 내용을 일반 개요와 구별하는 [구획 루트](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽 "Sections and Outlines of an HTML5 document#sectioning root") 카테고리와 혼동하지 마세요.
+> **참고:** 자신의 내용을 일반 개요와 구별하는 [구획 루트](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽) 카테고리와 혼동하지 마세요.
 
 ### 제목 콘텐츠
 

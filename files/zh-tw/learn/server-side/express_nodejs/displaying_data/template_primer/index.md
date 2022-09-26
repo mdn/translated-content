@@ -1,8 +1,8 @@
 ---
 title: 模板入門
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
+
 模板是一個文字檔，定義了一個輸出檔的*結構*或者排版，使用定位符號表示，當模板被繪製時，資料將插入到何處（在*Express*，模板被稱為*視圖*）。
 
 ## Express 模板選擇
@@ -15,7 +15,7 @@ Express 可以與許多不同的[模板渲染引擎](https://expressjs.com/zh-tw
 
 ## Template configuration
 
-The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
+The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
 
 ```js
 // View engine setup.
@@ -130,7 +130,7 @@ The syntax also supports comments (that can be rendered in the output—or not�
 
 Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, _Pug_ allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.
 
-For example, the base template **layout.pug** created in our [skeleton project](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) looks like this:
+For example, the base template **layout.pug** created in our [skeleton project](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website) looks like this:
 
 ```html
 doctype html
@@ -156,5 +156,5 @@ block content
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).
+- Return to [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).

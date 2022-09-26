@@ -1,17 +1,11 @@
 ---
 title: 'Express 教程 7: 部署到生产环境'
-slug: learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Express
-  - Learn
-  - Node
-  - 初学者
-  - 部署
-translation_of: Learn/Server-side/Express_Nodejs/deployment
+slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-现在你已经创建（并测试）了一个不错的 [本地图书馆](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
+现在你已经创建（并测试）了一个不错的 [本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -19,7 +13,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">预备知识：</th>
       <td>
         完成前面所有的指南主题，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -85,7 +79,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 - 额外的好处。一些提供商将提供免费域名和 SSL 证书支持，否则您将不得不为此另外支付费用。
 - 您所依赖的“免费”等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着您最好在一开始就使用其他服务！
 
-当你刚开始时，好消息是有很多网站提供“免费”的计算环境，尽管有一些条件。例如， [Heroku](https://www.heroku.com/) “永远”提供免费但资源有限的 PaaS 环境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和开源选项 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入时，提供免费信用额度。
+当你刚开始时，好消息是有很多网站提供“免费”的计算环境，尽管有一些条件。例如， [Heroku](https://www.heroku.com/) “永远”提供免费但资源有限的 PaaS 环境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和开源选项 [PWS/Cloud Foundry](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入时，提供免费信用额度。
 
 许多提供商还拥有“基本”层，可提供更多有用的计算能力，和更少的限制。举例来说， [Digital Ocean](https://www.digitalocean.com/) 是一个流行的托管服务提供商，它提供了一个相对便宜的基本计算层（在本教程写作时，是每月 5 美元的较低范围）。
 
@@ -261,7 +255,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 按 **Create repository**.
 5. 单击新仓库页面上的绿色“克隆或下载”按钮 "**Clone or download**"。
-6. 从显示的对话框的文本字段，复制 URL 值（它应该类似于：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+6. 从显示的对话框的文本字段，复制 URL 值（它应该类似于：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 现在创建了存储库（“repo”），我们将要在本地计算机上克隆它：
 
@@ -504,12 +498,12 @@ heroku ps   #Display dyno status
 
 ## 本教程链接
 
-- [Express/Node 介绍](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 创建骨架网站](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由与控制器](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署到生产环境](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express 教程 4: 路由与控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express 教程 7: 部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

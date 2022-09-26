@@ -1,8 +1,8 @@
 ---
 title: 向严格模式过渡
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 `"use strict";` 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。
@@ -20,8 +20,8 @@ ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在
 如果代码中使用`"use strict"开启了严格模式`,则下面的情况都会在脚本运行之前抛出[SyntaxError](/zh-CN/docs/Core_JavaScript_1.5_Guide/SyntaxError)异常：
 
 - 八进制语法`:var n = 023 和 var s = "\047"`
-- [`with`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with)语句
-- 使用[delete](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
+- [`with`](/zh-CN/docs/JavaScript/Reference/Statements/with)语句
+- 使用[delete](/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
 - 使用`eval`或`arguments`作为变量名或函数名
 - 使用未来保留字 (也许会在 ECMAScript 6 中使用):`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`,和`yield`作为变量名或函数名
 - 在语句块中使用函数声明：`if(a<b){ function f(){} }`
@@ -104,7 +104,7 @@ s.opacity = 1;
 
 #### 函数调用中的`this`
 
-在普通的函数调用`f() 中`,`this`的值会指向全局对象。在严格模式中，`this`的值会指向`undefined`.当函数通过[call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call)和[apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply)调用时，如果传入的`thisvalue`参数是一个`null`和`undefined`除外的原始值 (字符串，数字，布尔值),则`this 的值会成为那个原始值对应的包装对象`,如果`thisvalue`参数的值是`undefined`或`null`,则`this 的值会指向全局对象`.在严格模式中，` this 的值就是``thisvalue `参数的值，没有任何类型转换。
+在普通的函数调用`f() 中`,`this`的值会指向全局对象。在严格模式中，`this`的值会指向`undefined`.当函数通过[call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call)和[apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply)调用时，如果传入的`thisvalue`参数是一个`null`和`undefined`除外的原始值 (字符串，数字，布尔值),则`this 的值会成为那个原始值对应的包装对象`,如果`thisvalue`参数的值是`undefined`或`null`,则`this 的值会指向全局对象`.在严格模式中，`this` 的值就是 `thisvalue` 参数的值，没有任何类型转换。
 
 #### `arguments`对象属性不与对应的形参变量同步更新
 

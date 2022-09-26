@@ -1,8 +1,8 @@
 ---
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
-translation_of: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef()}}
 
 ## 概要
@@ -77,7 +77,7 @@ function dumpComputedStyles(elem,prop) {
 
 ## 說明
 
-The returned object is of the same type that the object returned from the element's {{domxref("HTMLElement.style", "style")}} property; however, the two objects have different purposes. The object returned from` getComputedStyle `is read-only and can be used to inspect the element's style (including those set by a `<style>` element or an external stylesheet). The` elt.style` object should be used to set styles on a specific element.
+The returned object is of the same type that the object returned from the element's {{domxref("HTMLElement.style", "style")}} property; however, the two objects have different purposes. The object returned from `getComputedStyle` is read-only and can be used to inspect the element's style (including those set by a `<style>` element or an external stylesheet). The `elt.style` object should be used to set styles on a specific element.
 
 The first argument must be an Element (passing a non-Element Node, like a #text Node, will throw an error). Starting in Gecko 1.9.2 {{geckoRelease("1.9.2")}}, returned URL values now have quotes around the URL, like this: `url("http://foo.com/bar.jpg")`.
 
@@ -118,7 +118,7 @@ In Firefox, properties with the value `auto` return the used value, not the valu
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.getComputedStyle")}}
+{{Compat}}
 
 ## 規範
 

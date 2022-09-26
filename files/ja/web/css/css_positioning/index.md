@@ -1,13 +1,6 @@
 ---
 title: CSS 位置指定レイアウト
 slug: Web/CSS/CSS_Positioning
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Positioning
 ---
 {{CSSRef}}
 

@@ -1,13 +1,13 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
-translation_of: Web/CSS/padding-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
 
-The** `padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The** `padding-inline-start`** [CSS](/zh-CN/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
 
@@ -71,7 +71,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.padding-inline-start")}}
+{{Compat}}
 
 ## 也可以看看
 

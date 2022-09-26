@@ -1,11 +1,8 @@
 ---
 title: SVG 元素参考
 slug: Web/SVG/Element
-tags:
-  - SVG
-  - SVG 参考
-translation_of: Web/SVG/Element
 ---
+
 « [SVG](/zh-CN/docs/SVG) / [SVG 属性参考](/zh-CN/docs/Web/SVG/Attribute) »
 
 SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图像的结构、绘制与布局。在这里，您可以找到每个 SVG 元素的参考文档。

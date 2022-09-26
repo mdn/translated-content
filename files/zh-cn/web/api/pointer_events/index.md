@@ -2,6 +2,7 @@
 title: Pointer events 指针事件
 slug: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类*[指针事件](#term_pointer_event)*。
@@ -15,7 +16,7 @@ slug: Web/API/Pointer_events
 ## 相关名词
 
 - active buttons state
-  - : The condition when a _[pointer](/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
+  - : The condition when a _[pointer](/zh-CN/docs/Web/API/Pointer_events#term_pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
 - 活跃指针 - active pointer
   - : 任意*[指针](#term_pointer)输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。*
 - 数位设备 - digitizer
@@ -331,7 +332,7 @@ button#tiny {
 
 ## 浏览器兼容性
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
 在 [Pointer Events](https://w3c.github.io/pointerevents/) 规范中，{{cssxref("touch-action", "CSS touch-action")}} 定义了一些新的值，但目前支持这些新值的浏览器实现很有限。
 

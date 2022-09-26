@@ -1,14 +1,8 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - JavaScript
-  - 函式
-  - 實驗
-  - 範例
-  - 陳述
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 **`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。
@@ -122,7 +116,7 @@ async function getProcessedData(url) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## 參見
 

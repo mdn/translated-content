@@ -1,8 +1,8 @@
 ---
 title: <button>
 slug: Web/HTML/Element/button
-translation_of: Web/HTML/Element/button
 ---
+
 **HTML `<button>` 元素代表一個可點擊的按鈕。**
 
 | [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content), [分段內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [互動內容](/zh-TW/docs/HTML/Content_categories#Interactive_content), [條列的](/zh-TW/docs/HTML/Content_categories#Form_listed), [標籤式的](/zh-TW/docs/HTML/Content_categories#Form_labelable), 以及 [可提交式的關係形式](/zh-TW/docs/HTML/Content_categories#Form_submittable)元素, 可觸知的內容. |
@@ -98,7 +98,7 @@ Please note that this button has CSS applied.
 
 ## Browser compatibility
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
 ## See also
 

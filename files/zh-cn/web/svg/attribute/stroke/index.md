@@ -1,13 +1,9 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/stroke
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `stroke`属性定义了给定图形元素的外轮廓的颜色。它的默认值是**none**。
 
@@ -15,7 +11,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 | 类别   | 外观属性                              |
 | ------ | ------------------------------------- |
-| 值     | [\<paint>](/en/SVG/Content_type#Paint) |
+| 值     | [\<paint>](/zh-CN/SVG/Content_type#Paint) |
 | 可变性 | 是                                    |
 
 ## 示例
@@ -44,8 +40,8 @@ translation_of: Web/SVG/Attribute/stroke
 
 下列元素可以使用`stroke`属性：
 
-- [形状元素](https://developer.mozilla.org/en/SVG/Element#Shape) »
-- [文本内容元素](https://developer.mozilla.org/en/SVG/Element#TextContent) »
+- [形状元素](/zh-CN/SVG/Element#Shape) »
+- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
 
 ## 规范
 

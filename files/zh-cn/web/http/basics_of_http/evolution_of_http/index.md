@@ -1,11 +1,8 @@
 ---
 title: HTTP 的发展
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 **HTTP（**HyperText Transfer Protocol）是万维网（World Wide Web）的基础协议。自 Tim Berners-Lee 博士和他的团队在 1989-1991 年间创造出它以来，HTTP 已经发生了太多的变化，在保持协议简单性的同时，不断扩展其灵活性。如今，HTTP 已经从一个只在实验室之间交换文件的早期协议进化到了可以传输图片，高分辨率视频和 3D 效果的现代复杂互联网协议。

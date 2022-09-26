@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
+
 {{JSRef}}
 
-**`sort()`**方法*原地*排序类型化数组的元素，并且返回类型化数组。这个方法的算法和{{jsxref("Array.prototype.sort()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`sort()`**方法*原地*排序类型化数组的元素，并且返回类型化数组。这个方法的算法和{{jsxref("Array.prototype.sort()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 

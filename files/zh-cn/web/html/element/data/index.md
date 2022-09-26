@@ -1,13 +1,8 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/data
 ---
+
 {{HTMLRef}}
 
 **HTML `<data>` 元素**将一个指定内容和机器可读的翻译联系在一起。但是，如果内容是与时间或者日期相关的，则一定要使用 {{HTMLElement("time")}}。
@@ -65,7 +60,7 @@ translation_of: Web/HTML/Element/data
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 参见
 

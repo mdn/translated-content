@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/Filter_Effects
 ---
+
 {{CSSRef}}
 
 **_Filter Effects_** ou « module des effets de filtre » (ou plus communément « filtres CSS ») est un module de la spécification CSS qui définit une façon de traiter le rendu d'un élément avant que celui-ci soit affiché dans le document.

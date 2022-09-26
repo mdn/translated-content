@@ -1,18 +1,8 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
-tags:
-  - API
-  - HTTP
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - open
-browser-compat: api.XMLHttpRequest.open
-translation_of: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`open()`** メソッドは、新しく作成されたリクエストを初期化したり、既存のリクエストを再初期化したりします。

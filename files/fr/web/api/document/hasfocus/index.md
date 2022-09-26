@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/hasFocus
 ---
+
 {{ ApiRef() }}
 
 La méthode **`Document.hasFocus()`** retourne une valeur  {{jsxref("Boolean")}} `true` _(vrai)_ indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.
@@ -66,15 +67,13 @@ function openWindow() {
 </html>
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}
 
 ## Voir aussi
 

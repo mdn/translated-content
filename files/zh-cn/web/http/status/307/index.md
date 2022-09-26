@@ -1,14 +1,8 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - 参考
-  - 响应状态码
-  - 状态码
-  - 重定向
-translation_of: Web/HTTP/Status/307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`**，临时重定向响应状态码，表示请求的资源暂时地被移动到了响应的 {{HTTPHeader("Location")}} 首部所指向的 URL 上。

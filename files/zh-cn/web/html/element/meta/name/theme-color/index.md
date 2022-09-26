@@ -1,14 +1,8 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
-tags:
-  - 属性
-  - HTML
-  - HTML 文档级元数据
-  - 参考
-  - 元数据
-translation_of: Web/HTML/Element/meta/name/theme-color
 ---
+
 {{HTMLRef}}
 
 {{htmlelement("meta")}} 中 {{htmlattrxref("name", "meta")}} 属性的值为 **`theme-color`** 时，用户的浏览器将根据所设定的建议颜色来改变用户界面。倘若设置了该值，则 {{htmlattrxref("content", "meta")}} 属性必须包含有效的 CSS {{cssxref("&lt;color&gt;")}} 值。

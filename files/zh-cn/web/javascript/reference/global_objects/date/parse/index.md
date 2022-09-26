@@ -1,13 +1,8 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`Date.parse()`** 方法解析一个表示某个日期的字符串，并返回从 1970-1-1 00:00:00 UTC 到该日期对象（该日期对象的 UTC 时间）的毫秒数，如果该字符串无法识别，或者一些情况下，包含了不合法的日期数值（如：2015-02-31），则返回值为 NaN。
@@ -142,7 +137,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00");
 Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ```
 
-因为指定了时区 GMT (UTC)，所以不管本地时区如何，总是返回` ``14400000` 。
+因为指定了时区 GMT (UTC)，所以不管本地时区如何，总是返回 `14400000` 。
 
 ## 规范
 

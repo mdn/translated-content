@@ -1,14 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.grid
-translation_of: Web/CSS/@media/grid
 ---
 {{CSSRef}}
 

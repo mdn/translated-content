@@ -2,6 +2,7 @@
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 ## 概述
@@ -25,12 +26,12 @@ element.contentEditable = "true"
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.contentEditable")}}
+{{Compat}}
 
 在 IE 浏览器中，`contenteditable` 不能直接用在 {{htmlelement("table")}}、 {{htmlelement("col")}}、 {{htmlelement("colgroup")}}、 {{htmlelement("tbody")}}、 {{htmlelement("td")}}、 {{htmlelement("tfoot")}}、 {{htmlelement("th")}}、 {{htmlelement("thead")}} 和 {{htmlelement("tr")}} 标签上。一个可编辑的 {{htmlelement("span")}} 或者 {{htmlelement("div")}} 标签可以放在表格单元格内部。
 
 ## 相关链接
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- 全局属性 [contenteditable](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
+- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
 - [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

@@ -1,8 +1,8 @@
 ---
 title: X-Frame-Options 回應標頭
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 `X-Frame-Options` [HTTP](/zh-TW/docs/Web/HTTP) 回應標頭 (header) 用來指示文件是否能夠透過 {{ HTMLElement("frame") }}、{{ HTMLElement("iframe") }} 以及 {{ HTMLElement("object") }} 載入。網站可以利用 `X-Frame-Options` 來確保本身內容不會遭惡意嵌入到其他網站、避免 [clickjacking](/zh-TW/docs/Web/Security/Types_of_attacks#click-jacking) 攻擊。

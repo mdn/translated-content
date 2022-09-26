@@ -1,9 +1,9 @@
 ---
 title: 一个漂亮的盒子
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。

@@ -1,19 +1,11 @@
 ---
 title: Sec-CH-UA-Full-Version-List
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
-tags:
-  - Sec-CH-UA-Full-Version-List
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-**`Sec-CH-UA-Full-Version-List`** [用户代理客户端提示](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理的品牌和完整版本信息。
+**`Sec-CH-UA-Full-Version-List`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理的品牌和完整版本信息。
 
 <table class="properties">
   <tbody>

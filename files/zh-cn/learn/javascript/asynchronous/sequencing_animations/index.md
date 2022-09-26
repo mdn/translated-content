@@ -1,11 +1,8 @@
 ---
 title: 序列动画
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
-tags:
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 在本测验中，你将使用我们在[如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises) 中学习的一些技术来更新页面，使它能够按顺序播放一系列动画。

@@ -1,15 +1,9 @@
 ---
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
-tags:
-  - SVG
-  - SVG 属性
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/edgeMode
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `edgeMode`属性确定了当核心位于输入图像的边缘或贴近输入图像的边缘时，如何取用颜色值用于扩展输入图像，从而可以应用矩阵操作。
 

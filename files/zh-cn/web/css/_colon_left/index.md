@@ -1,12 +1,8 @@
 ---
 title: ':left'
 slug: Web/CSS/:left
-tags:
-  - '@page'
-  - CSS
-  - Pseudo-class
-translation_of: Web/CSS/:left
 ---
+
 {{ CSSRef() }}
 
 **`:left`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes), 需要和[@规则](/zh-CN/docs/Web/CSS/At-rule) {{cssxref("@page")}} 配套使用，对打印文档的左侧页设置 CSS 样式。
@@ -40,7 +36,7 @@ translation_of: Web/CSS/:left
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## 参见
 

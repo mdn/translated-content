@@ -1,8 +1,8 @@
 ---
 title: 作者细节页面
-slug: learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
+
 作者细节页面需要呈现指定作者`Author`的信息，使用 `_id` 字段的值（自动产生）识别，接着是这个作者的所有书本物件`Book`的列表。
 
 ## 控制器

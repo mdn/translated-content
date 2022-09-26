@@ -1,11 +1,8 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - CSS 属性
-translation_of: Web/CSS/margin-right
 ---
+
 {{CSSRef}}
 
 ## 摘要

@@ -1,20 +1,11 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
+
 {{JSRef}}
 
-**`trim()` **方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。
+**`trim()`** 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。
 
 {{EmbedInteractiveExample("pages/js/string-trim.html")}}
 

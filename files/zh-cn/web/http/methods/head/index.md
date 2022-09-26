@@ -1,12 +1,8 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/HEAD
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `HEAD` 方法** 请求资源的头部信息，并且这些头部与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先获取其大小再决定是否要下载，以此可以节约带宽资源。

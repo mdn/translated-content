@@ -1,16 +1,8 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - download
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("downloads")}} API 的 **`download()`** 函数根据给出的 URL 和其他首选项下载一个文件。
@@ -18,7 +10,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 - 如果指定的 `url` 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有 cookie。
 - 如果`filename` 和 `saveAs` 都已经指定，那么将会弹出“保存为”对话框，并且默认名称显示为`filename`.
 
-这是一个异步函数，其返回值为 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个异步函数，其返回值为 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -66,15 +58,15 @@ var downloading = browser.downloads.download(
 
 ### 返回值
 
-一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 `id` 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise). 如果成功开始下载，promise 会被新创建的{{WebExtAPIRef("downloads.DownloadItem")}} 的 `id` 填充。否则 promise 会被拒绝并产生一条{{WebExtAPIRef("downloads.InterruptReason")}}错误信息。
 
-如果你使用 [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
+如果你使用 [URL.createObjectURL()](/zh-CN/docs/Web/API/URL/createObjectURL) 下载由 JavaScript 创建的数据并且之后想要 (使用 [revokeObjectURL](/zh-CN/docs/Web/API/URL/revokeObjectURL)) 撤销对象链接 (并且强烈推荐这么做)，你必须在下载完成后再这么做。监听 [downloads.onChanged](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) 事件来判断是否下载完成。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
-## 例子
+## 示例
 
 下面这段代码尝试下载一个 example 文件，同时指定文件名和保存位置，还有 `uniquify` `conflictAction` 选项。
 
@@ -102,7 +94,8 @@ downloading.then(onStartedDownload, onFailed);
 
 > **备注：** 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,4 +122,4 @@ downloading.then(onStartedDownload, onFailed);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
+
 {{JSRef}}
 
 **`push()`** 方法會添加一個或多個元素至陣列的末端，並且回傳陣列的新長度。
@@ -100,7 +93,7 @@ console.log(obj.length);
 
 ## 瀏覽器支援度
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## 參見
 

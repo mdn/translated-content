@@ -1,8 +1,8 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-translation_of: Web/API/NamedNodeMap
 ---
+
 {{APIRef("DOM")}}
 
 **`NamedNodeMap`** 介面表示了 {{domxref("Attr")}} 物件的集合。雖然 `NamedNodeMap` 與 {{domxref("NodeList")}} 都能如陣列一般透過索引訪問成員，但和 `NodeList` 不同的是，`NamedNodeMap` 中的成員並沒有順序。
@@ -43,7 +43,7 @@ _This interface doesn't inherit any method._
 
 ## 瀏覽器相容性
 
-{{Compat("api.NamedNodeMap")}}
+{{Compat}}
 
 ## 參見
 

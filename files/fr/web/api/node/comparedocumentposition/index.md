@@ -10,6 +10,7 @@ tags:
   - Position
 translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.compareDocumentPosition()`**compare la position du noeud courant par rapport à un autre noeud dans tout autre document.
@@ -49,14 +50,11 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
-| {{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.compareDocumentPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - 原型
-  - 参考
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef}}
 
 **`splice()`** 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
@@ -18,8 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 ## 语法
 
-```plain
-array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```js
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
 ```
 
 ### 参数

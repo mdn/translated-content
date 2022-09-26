@@ -1,8 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject(reason)`** 方法回傳一個以 `reason` 拒絕的 `Promise` 物件。
@@ -44,7 +44,7 @@ Promise.reject(new Error('fail')).then(function(error) {
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## See also
 

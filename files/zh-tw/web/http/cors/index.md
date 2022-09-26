@@ -2,6 +2,7 @@
 title: 跨來源資源共用（CORS）
 slug: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 跨來源資源共用（Cross-Origin Resource Sharing ({{Glossary("CORS")}})）是一種使用額外 {{Glossary("HTTP")}} 標頭令目前瀏覽網站的{{Glossary("user agent","使用者代理")}}取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個**跨來源 HTTP 請求（cross-origin HTTP request）**。
@@ -99,7 +100,7 @@ function callOtherDomain() {
 
 這將會在客戶端與伺服器端之間發起一個簡單的資料交換，並使用 CORS 相關標頭來處理權限：
 
-![](https://mdn.mozillademos.org/files/14293/simple_req.png)
+![](simple-req.png)
 
 我們來看看這個例子中瀏覽器將會送出什麼到伺服器，而伺服器又會如何回應：
 
@@ -336,7 +337,7 @@ function callOtherDomain(){
 
 第 7 行秀出了一個於 {{domxref("XMLHttpRequest")}} 中為了要搭配 Cookies 進行呼叫而必須設置的布林值旗標——`withCredentials`。在預設情況下，請求呼叫是不會有 Cookies 的。由於這是一個簡單 `GET` 請求，並不會進行預檢，但瀏覽器將會**拒絕**任何沒有 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 標頭值的回應，並且**不讓**呼叫的網站內容存取該回應。
 
-![](https://mdn.mozillademos.org/files/14291/cred-req.png)
+![](cred-req-updated.png)
 
 下面是一個簡單的客戶端與伺服器端之間的交換資訊：
 
@@ -402,7 +403,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 `origin` 參數指定了一個可以存取資源的 URI。瀏覽器必定會執行此檢查。對一個**不帶有**身分驗證的請求，伺服器可以指定一個「\*」作為萬用字元（wildcard），從而允許任何來源存取資源。
 
-舉例來說，要允許 http\://mozilla.org 存取資源，你可以指定：
+舉例來說，要允許 `http://mozilla.org` 存取資源，你可以指定：
 
 ```plain
 Access-Control-Allow-Origin: http://mozilla.org
@@ -502,7 +503,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### 相容性備註
 

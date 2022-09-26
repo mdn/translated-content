@@ -1,11 +1,8 @@
 ---
 title: 'Warning: expression closures are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
-tags:
-  - JavaScript
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -20,7 +17,7 @@ Warning: expression closures are deprecated
 
 ## 哪里出错了？
 
-非标准化的[表达式闭包](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 {{bug(1083458)}} 中全部移除，到时候用到该语法的脚本程序会报 SyntaxError 错误。
+非标准化的[表达式闭包](/zh-CN/docs/Web/JavaScript/Reference/Operators/Expression_closures)语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 {{bug(1083458)}} 中全部移除，到时候用到该语法的脚本程序会报 SyntaxError 错误。
 
 ## 示例
 
@@ -67,7 +64,7 @@ var obj = {
 };
 ```
 
-根据 ES2015 中对于[方法定义](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)的规定，上述写法可以转换成如下形式：
+根据 ES2015 中对于[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)的规定，上述写法可以转换成如下形式：
 
 ```js example-good
 var obj = {
@@ -78,6 +75,6 @@ var obj = {
 
 ## 相关内容
 
-- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [Expression closures](/zh-CN/docs/Web/JavaScript/Reference/Operators/Expression_closures)
+- [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)

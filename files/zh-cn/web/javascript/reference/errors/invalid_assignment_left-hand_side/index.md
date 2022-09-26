@@ -1,12 +1,8 @@
 ---
 title: 'ReferenceError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
-tags:
-  - Errors
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

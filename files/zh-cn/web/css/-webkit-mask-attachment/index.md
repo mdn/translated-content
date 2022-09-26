@@ -1,8 +1,8 @@
 ---
 title: '-webkit-mask-attachment'
 slug: Web/CSS/-webkit-mask-attachment
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 如果使用了 {{Cssxref("-webkit-mask-image")}}, `-webkit-mask-attachment` 将指定蒙版在视口的位置是固定的，还是同包含块一起滚动的。
@@ -49,7 +49,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+{{Compat}}
 
 ## 另见
 

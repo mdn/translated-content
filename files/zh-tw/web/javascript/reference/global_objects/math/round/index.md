@@ -1,13 +1,8 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef}}
 
 **`Math.round()`** 函數回傳四捨五入後的近似值.

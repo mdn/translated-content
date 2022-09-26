@@ -1,13 +1,6 @@
 ---
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSMediaRule
-translation_of: Web/API/CSSMediaRule
 ---
 {{ APIRef("CSSOM") }}
 

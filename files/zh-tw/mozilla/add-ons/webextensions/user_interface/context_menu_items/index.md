@@ -1,13 +1,11 @@
 ---
 title: 快捷選單項
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
+
 {{AddonSidebar}}
 
-這個用戶介面添加一個或多個項目到瀏覽器的快捷選單。這是用戶在網頁上點擊右鍵時出現的選單。頁籤也可以透過 [browser.menus API](/en-US/Add-ons/WebExtensions/API/menus) 使用快捷選單。
+這個用戶介面添加一個或多個項目到瀏覽器的快捷選單。這是用戶在網頁上點擊右鍵時出現的選單。頁籤也可以透過 [browser.menus API](/zh-TW/Add-ons/WebExtensions/API/menus) 使用快捷選單。
 
 ![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 

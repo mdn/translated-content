@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 方法會將陣列內的每個元素，皆傳入並執行給定的函式一次。
@@ -251,7 +244,7 @@ if (!Array.prototype.forEach) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## 參見
 

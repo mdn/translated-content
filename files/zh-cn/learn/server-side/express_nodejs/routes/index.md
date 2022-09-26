@@ -1,15 +1,8 @@
 ---
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
-tags:
-  - Express
-  - Node
-  - nodejs
-  - 初学者
-  - 服务器端编程
-  - 路由
-translation_of: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 本节将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。
@@ -20,10 +13,10 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">预备知识：</th>
       <td>
         回顾
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（<a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
         >
         等）。了解服务器端编程，了解正则表达式。
@@ -113,7 +106,7 @@ router.get('/about', (req, res) => {
 
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
-> **备注：** 路由函数就是 [Express 中间件](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
+> **备注：** 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
@@ -123,7 +116,7 @@ router.get('/about', (req, res) => {
 
 上面的示例使用 `Router.get()` 方法来响应特定路径的 HTTP GET 请求。
 
-`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
+`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
 
 比如下方代码与上方 `/about` 路由行为一致，但只响应 HTTP POST 请求。
 
@@ -374,13 +367,13 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
 - 默认方法
 
   ```bash
-  $ DEBUG=express-locallibrary-tutorial:* npm start
+  DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果设置过 [nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
+- 如果设置过 [nodemon](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
 
   ```bash
-  $ DEBUG=express-locallibrary-tutorial:* npm run devstart
+  DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
 > **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）

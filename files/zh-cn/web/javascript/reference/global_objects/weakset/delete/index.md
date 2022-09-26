@@ -1,8 +1,8 @@
 ---
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 方法从 `WeakSet 对象中`移除指定的元素。

@@ -1,8 +1,8 @@
 ---
 title: Firefox 7 技術文件
 slug: Mozilla/Firefox/Releases/7
-translation_of: Mozilla/Firefox/Releases/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
@@ -27,8 +27,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - Calling [`drawImage()`](</en/DOM/CanvasRenderingContext2D#drawImage()>) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
-- [Shadows](/en/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
-- You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en/DOM/CanvasRenderingContext2D#Attributes) on the context.
+- [Shadows](/zh-TW/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
+- You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/zh-TW/DOM/CanvasRenderingContext2D#Attributes) on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been been removed.
 
@@ -57,13 +57,13 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
-- In a effort to conform to the upcoming [DOM4](http://www.w3.org/TR/dom/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en/DOM/Attr#Deprecated_properties_and_methods) as we work toward removing them in a later version.
+- In a effort to conform to the upcoming [DOM4](http://www.w3.org/TR/dom/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/zh-TW/DOM/Attr#Deprecated_properties_and_methods) as we work toward removing them in a later version.
 - Added support for the {{ domxref("window.ondeviceorientation") }} and {{ domxref("window.ondevicemotion") }} properties on {{ domxref("window") }} objects.
 - {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.
 
 ### JavaScript
 
-- The [`Function.arity`](/en/JavaScript/Reference/Global_Objects/Function/arity) property has been removed; use [`Function.length`](/en/JavaScript/Reference/Global_Objects/Function/length) instead.
+- The [`Function.arity`](/zh-TW/JavaScript/Reference/Global_Objects/Function/arity) property has been removed; use [`Function.length`](/zh-TW/JavaScript/Reference/Global_Objects/Function/length) instead.
 
 ### WebSockets
 
@@ -73,11 +73,11 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### console API
 
-- Message logged with `console.log` while the [web console](/en/Tools/Web_Console) isn't open are still logged, although they aren't displayed when the web console is opened.
+- Message logged with `console.log` while the [web console](/zh-TW/Tools/Web_Console) isn't open are still logged, although they aren't displayed when the web console is opened.
 
 ### Web timing
 
-- Initial implementation of the [Navigation Timing](/en/Navigation_timing) specification which provides data that can be used to measure the performance of a website.
+- Initial implementation of the [Navigation Timing](/zh-TW/Navigation_timing) specification which provides data that can be used to measure the performance of a website.
 
 ### XML
 
@@ -85,7 +85,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ## Changes for Mozilla and add-on developers
 
-These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/en/Firefox/Updating_extensions_for_Firefox_7) for additional information.
+These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/zh-TW/Firefox/Updating_extensions_for_Firefox_7) for additional information.
 
 > **備註：** Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces) for details.
 
@@ -101,13 +101,13 @@ These changes affect add-on developers as well as developers working on or with 
 
 ### XUL
 
-- {{ xulelem("tree") }} elements can now persist the state of disclosure triangles if the nodes referenced by {{ XULAttr("datasources") }} all have unique IDs specified by "id" attributes.
-- {{ xulelem("panel") }} elements can now be configured to [let the user drag them by clicking anywhere on their background](/en/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new {{ XULAttr("backdrag") }} attribute.
+- `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
+- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/zh-TW/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
 
 ### XPCOM
 
-- The new [`Components.utils.schedulePreciseGC()`](/en/Components.utils.schedulePreciseGC) method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.
-- The [`Components.utils.unload()`](/en/Components.utils.unload) method lets you unload JavaScript code modules previously loaded by calling [`Components.utils.load()`](/en/Components.utils.load).
+- The new [`Components.utils.schedulePreciseGC()`](/zh-TW/Components.utils.schedulePreciseGC) method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.
+- The [`Components.utils.unload()`](/zh-TW/Components.utils.unload) method lets you unload JavaScript code modules previously loaded by calling [`Components.utils.load()`](/zh-TW/Components.utils.load).
 
 ### Memory reporters
 
@@ -115,8 +115,8 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 
 ### User experience changes
 
-- Extension options can now be [displayed inside the Add-on Manager](/en/Extensions/Inline_Options) for both restartless and traditional extensions.
-- The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using [DownloadLastDir.jsm](/en/JavaScript_code_modules/DownloadLastDir.jsm).
+- Extension options can now be [displayed inside the Add-on Manager](/zh-TW/Extensions/Inline_Options) for both restartless and traditional extensions.
+- The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using [DownloadLastDir.jsm](/zh-TW/JavaScript_code_modules/DownloadLastDir.jsm).
 
 ### Changes to the build system
 

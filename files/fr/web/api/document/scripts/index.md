@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/scripts
 ---
+
 {{ApiRef}}
 
 Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.
@@ -35,10 +36,8 @@ if (scripts.length) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

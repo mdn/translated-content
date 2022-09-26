@@ -1,8 +1,8 @@
 ---
 title: 响应式图片
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
-translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 在这篇文章中我们将学习关于响应式图片——一种可以在不同的屏幕尺寸和分辨率的设备上都能良好工作以及其他特性的图片，并且看看 HTML 提供了什么工具来帮助实现它们。响应式图片仅仅只是响应式 web 设计的一部分（奠定了响应式 web 设计的良好基础），我们会在未来的[CSS topic](/zh-CN/docs/Learn/CSS)模块中学到更多关于这一主题的知识。

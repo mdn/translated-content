@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
@@ -176,13 +177,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.fill")}}
+{{Compat}}
 
 ## Voir aussi
 

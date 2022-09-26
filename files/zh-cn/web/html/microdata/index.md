@@ -1,10 +1,8 @@
 ---
 title: Microdata
 slug: Web/HTML/Microdata
-tags:
-  - 微数据 搜索 搜索引擎优化
-translation_of: Web/HTML/Microdata
 ---
+
 ## 概要
 
 微数据是[WHATWG](/zh-CN/docs/Glossary/WHATWG) HTML 标准的一部分，用于在网页上的现有内容中嵌套元数据。\[1] 搜索引擎，网络抓取工具和浏览器可以从网页中提取和处理微数据，并使用它为用户提供更丰富的浏览体验。搜索引擎从直接访问此结构化数据中受益匪浅，因为它允许搜索引擎了解网页上的信息并向用户提供更相关的结果。微数据使用支持词汇表来描述项目和名称 - 值对，以便为其属性赋值。与使用 RDFa 和微格式的类似方法相比，微数据试图提供一种使用机器可读标签注释 HTML 元素的简单方法。
@@ -45,15 +43,15 @@ translation_of: Web/HTML/Microdata
 
 ## 全局属性
 
-[itemid ](/zh-CN/docs/Web/HTML/Global_attributes/itemid)– 项的唯一全局标识符。
+[itemid](/zh-CN/docs/Web/HTML/Global_attributes/itemid) – 项的唯一全局标识符。
 
-[itemprop ](/zh-CN/docs/Web/HTML/Global_attributes/itemprop)– 用于向项添加属性。每个 HTML 元素都可以指定一个 itemprop 属性，其中 itemprop 由一个名称和值对组成。
+[itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) – 用于向项添加属性。每个 HTML 元素都可以指定一个 itemprop 属性，其中 itemprop 由一个名称和值对组成。
 
-[itemref ](/zh-CN/docs/Web/HTML/Global_attributes/itemref)– 不具有`itemscope`属性的元素的后代的属性可以使用**itemref**与项目相关联。 Itemref 提供了元素 id 列表（而不是`itemids`）以及文档中其他位置的其他属性。
+[itemref](/zh-CN/docs/Web/HTML/Global_attributes/itemref) – 不具有`itemscope`属性的元素的后代的属性可以使用**itemref**与项目相关联。 Itemref 提供了元素 id 列表（而不是`itemids`）以及文档中其他位置的其他属性。
 
-[itemscope ](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)– Itemscope（通常）与[itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)一起使用，以指定块中包含的关于特定项目的 HTML。 itemscope 创建 Item 并定义与之关联的 itemtype 的范围。 itemtype 是描述项及其属性上下文的词汇表（例如[schema.org](http://schema.org/)）的有效 URL。
+[itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) – Itemscope（通常）与[itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)一起使用，以指定块中包含的关于特定项目的 HTML。 itemscope 创建 Item 并定义与之关联的 itemtype 的范围。 itemtype 是描述项及其属性上下文的词汇表（例如[schema.org](http://schema.org/)）的有效 URL。
 
-[itemtype ](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)– 指定将用于在数据结构中定义 itemprop（项属性）的词汇表的 URL。 [Itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) 用于设置数据结构中按 itemtype 设置的词汇表的有效范围。
+[itemtype](/zh-CN/docs/Web/HTML/Global_attributes/itemtype) – 指定将用于在数据结构中定义 itemprop（项属性）的词汇表的 URL。 [Itemscope](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) 用于设置数据结构中按 itemtype 设置的词汇表的有效范围。
 
 ## 示例
 
@@ -140,7 +138,7 @@ translation_of: Web/HTML/Microdata
 
 ### Result
 
-{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}
+{{ EmbedLiveSample('示例', '', '100') }}
 
 > **备注：** 从 HTML 中提取微数据结构的便捷工具是 Google 的[Structured Data Testing Tool](<https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool>)。在上面显示的 HTML 上尝试一下。
 

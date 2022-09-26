@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCDate()`** 方法以世界时为标准，返回一个指定的日期对象为一个月中的第几天

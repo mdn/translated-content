@@ -1,13 +1,8 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
+
 {{JSRef}}
 
 静态方法 **`Atomics.or()`** 用数组中指定位置的值进行一次按位或运算，并返回未计算时数组中指定位置处的值。这个 atomic 操作保证了在修改后的值被写回之前没有其它的写入操作发生。
@@ -56,6 +51,7 @@ Atomics.or(typedArray, index, value)
 5  0101
 1  0001
    ----
+
 5  0101
 ```
 

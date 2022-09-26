@@ -1,13 +1,8 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
+
 {{JSSidebar("Operators")}}**`new.target`**属性允许你检测函数或构造方法是否是通过[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)运算符被调用的。在通过[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)运算符被初始化的函数或构造方法中，`new.target`返回一个指向构造方法或函数的引用。在普通的函数调用中，`new.target` 的值是{{jsxref("undefined")}}。
 
 ## 语法

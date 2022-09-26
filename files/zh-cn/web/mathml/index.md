@@ -1,16 +1,8 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
-  - 参考
-  - 数学
-translation_of: Web/MathML
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** 是一个用于描述数学公式、符号的一种 [XML](/zh-CN/docs/XML) 标记语言。
@@ -54,4 +46,4 @@ translation_of: Web/MathML
 
 ## 浏览器兼容性
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}

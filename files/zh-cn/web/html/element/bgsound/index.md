@@ -1,8 +1,8 @@
 ---
 title: <bgsound>
 slug: Web/HTML/Element/bgsound
-translation_of: Web/HTML/Element/bgsound
 ---
+
 {{non-standard_header}}
 
 ## 概要
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/bgsound
 
 ## 浏览器兼容
 
-{{Compat("html.elements.bgsound")}}
+{{Compat}}
 
 ## 参见
 

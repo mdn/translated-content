@@ -1,16 +1,8 @@
 ---
 title: 學習該如何開發 Web
 slug: Learn
-tags:
-  - Beginner
-  - Index
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 歡迎來到 MDN 的「學習專區（Learning Area）」。本系列文章將提供撰寫程式碼的必要網站，讓剛接觸的新手也能開發 Web。
@@ -197,4 +189,4 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
     4. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
     5. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
 
-6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)[](/zh-TW/docs/Learn/How_to_contribute)
+6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)

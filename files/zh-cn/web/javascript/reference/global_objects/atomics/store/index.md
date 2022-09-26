@@ -1,8 +1,8 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
+
 {{JSRef}}
 
 静态的 Atomics.store() 方法将给定的值存储在数组中的指定位置，并返回该值。

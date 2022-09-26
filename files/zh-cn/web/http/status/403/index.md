@@ -1,13 +1,8 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - 客户端错误
-  - 身份验证
-  - 首部
-  - 验证失败
-translation_of: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 状态码 **`403 Forbidden`** 代表客户端错误，指的是服务器端有能力处理该请求，但是拒绝授权访问。

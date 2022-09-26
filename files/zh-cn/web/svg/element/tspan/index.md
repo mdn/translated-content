@@ -1,14 +1,8 @@
 ---
 title: tspan
 slug: Web/SVG/Element/tspan
-tags:
-  - SVG
-  - SVG 文本子元素
-  - 元素
-  - 参考
-  - 需要兼容性表
-translation_of: Web/SVG/Element/tspan
 ---
+
 {{SVGRef}}
 
 在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
@@ -19,16 +13,16 @@ translation_of: Web/SVG/Element/tspan
 
 ## 示例
 
-» [tspan.svg](https://developer.mozilla.org/files/3338/tspan.svg)
+» [tspan.svg](/files/3338/tspan.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -45,11 +39,11 @@ translation_of: Web/SVG/Element/tspan
 
 ## DOM 接口
 
-该元素实现了[`SVGTSpanElement`](/en/DOM/SVGTSpanElement)接口。
+该元素实现了[`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}
 
 ## 参见
 

@@ -3,6 +3,7 @@ title: Streams API
 slug: Web/API/Streams_API
 translation_of: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 L'API Streams permet à JavaScript d'accèder par programmation aux flux de données reçus sur le réseau et de les traiter selon les souhaits du développeur.
@@ -87,11 +88,9 @@ Examples from other developers:
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## Spécifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Streams')}} | {{Spec2('Streams')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -103,7 +102,7 @@ Examples from other developers:
 
 {{Compat("api.WritableStream")}}
 
-## See also
+## Voir aussi
 
 - [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts)
 - [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams)

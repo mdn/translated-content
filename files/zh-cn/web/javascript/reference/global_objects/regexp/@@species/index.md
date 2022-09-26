@@ -1,8 +1,8 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
+
 {{JSRef}}
 
 **`RegExp[@@species]`** 访问器属性返回`RegExp` 的构造器。

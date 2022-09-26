@@ -1,9 +1,9 @@
 ---
 title: offset
 slug: Web/CSS/offset
-translation_of: Web/CSS/offset
 original_slug: Web/CSS/偏移
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 这个 **`offset`** 是 CSS 属性的快速属性动画元素沿着定义的路径。
@@ -81,4 +81,4 @@ offset: url(arc.svg) 30deg / 50px 100px;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.offset")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
-translation_of: Web/CSS/border-bottom-right-radius
 ---
+
 {{CSSRef}}
 
 The **`border-bottom-right-radius`** CSS property sets the rounding of the bottom-right corner of the element.

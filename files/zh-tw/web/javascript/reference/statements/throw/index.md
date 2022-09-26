@@ -1,11 +1,11 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`throw` statement** throws a user-defined exception. Execution of the current function will stop (the statements after `throw` won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block in the call stack. If no `catch` block exists among caller functions, the program will terminate.
+The **`throw` statement** throws a user-defined exception. Execution of the current function will stop (the statements after `throw` won't be executed), and control will be passed to the first [`catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) block in the call stack. If no `catch` block exists among caller functions, the program will terminate.
 
 ## 語法
 
@@ -26,7 +26,7 @@ throw 42;       // generates an exception with the value 42
 throw true;     // generates an exception with the value true
 ```
 
-Also note that the `throw` statement is affected by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw` keyword and the expression is allowed.
+Also note that the `throw` statement is affected by [automatic semicolon insertion (ASI)](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw` keyword and the expression is allowed.
 
 ## 範例
 
@@ -158,4 +158,4 @@ try {
 
 ## 參見
 
-- [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch)

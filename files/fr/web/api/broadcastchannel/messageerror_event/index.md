@@ -7,6 +7,7 @@ browser-compat: api.BroadcastChannel.messageerror_event
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
+
 {{APIRef}}
 
 L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message qui n'a pas pu être désérialisé arrive dans le canal.

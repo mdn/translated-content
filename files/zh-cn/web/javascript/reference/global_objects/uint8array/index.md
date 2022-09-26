@@ -1,8 +1,8 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
+
 {{JSRef}}
 
 **`Uint8Array`** 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。
@@ -17,7 +17,7 @@ new Uint8Array(object);
 new Uint8Array(buffer [, byteOffset [, length]]);
 ```
 
-构造语法和参数的更多信息请参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+构造语法和参数的更多信息请参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -164,6 +164,6 @@ var dv = new Uint8Array([1, 2, 3]);
 
 ## 相关内容
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

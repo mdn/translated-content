@@ -1,15 +1,8 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyNames()`**方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
@@ -141,7 +134,7 @@ Firefox 28 {{geckoRelease("28")}}之前，`Object.getOwnPropertyNames` 不会获
 
 ## 相关链接
 
-- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-CN/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable")}}
 - {{jsxref("Object.create")}}

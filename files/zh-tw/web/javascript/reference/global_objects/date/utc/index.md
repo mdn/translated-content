@@ -1,13 +1,8 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - 參考
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** 方法接受與建構子相同長度的參數，將參數視為通用時間（UTC）來計算回傳由 1970-01-01 00:00:00 UTC 所經過的毫秒數。

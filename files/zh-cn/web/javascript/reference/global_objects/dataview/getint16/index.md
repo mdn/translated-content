@@ -1,11 +1,8 @@
 ---
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-tags:
-  - 类型化
-  - 类型化数组
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 ---
+
 {{JSRef}}
 
 **`getInt16()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。

@@ -1,17 +1,8 @@
 ---
 title: <div>：内容划分元素
 slug: Web/HTML/Element/div
-tags:
-  - Element
-  - HTML
-  - Layout
-  - Reference
-  - Web
-  - 元素
-  - 参考
-  - 布局
-translation_of: Web/HTML/Element/div
 ---
+
 {{HTMLRef}}
 
 **[HTML](/zh-CN/docs/Web/HTML) `<div>` 元素** (或 _HTML 文档分区元素_) 是一个通用型的流内容容器，在不使用{{glossary("CSS")}}的情况下，其对内容或布局没有任何影响。
@@ -115,7 +106,7 @@ translation_of: Web/HTML/Element/div
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 参见
 

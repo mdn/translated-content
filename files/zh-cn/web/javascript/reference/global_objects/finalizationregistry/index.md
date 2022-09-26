@@ -1,12 +1,8 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-tags:
-  - FinalizationRegistry
-  - GC
-  - 垃圾回收
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry` 对象可以让你在对象被垃圾回收时请求一个回调。**

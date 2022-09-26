@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: repeat count must be non-negative'
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
-tags:
-  - Errors
-  - JavaScript
-  - RangeError
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息

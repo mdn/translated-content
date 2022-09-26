@@ -1,13 +1,13 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest()`** 建構式會建立一個新的 {{domxref("XMLHttpRequest")}} 物件。
 
-關於如何使用 `XMLHttpRequest` 物件的細節，請參照： [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+關於如何使用 `XMLHttpRequest` 物件的細節，請參照： [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 
 ## 語法
 
@@ -44,5 +44,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## 參見
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

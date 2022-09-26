@@ -1,11 +1,11 @@
 ---
 title: 使用 async 进行非同步流控制
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
+
 有些本地图书馆网页的控制器代码，会依赖多重非同步要求的结果，可能会需要以某种特定次序运行，或者以平行方式运行。为了管理流控制，并在我们所有需要用到的信息，都已经可以取用的时候，再绘制网页，我们将使用许多人采用的 node [async](https://www.npmjs.com/package/async) 模组。
 
-> **备注：** 在 JavaScript 中有许多其他方法，可以管理异步行为和流控制，包括相对较新的 JavaScript 语言功能，如 [Promises](/en-US/docs/Mozilla/Add-ons/Techniques/Promises)。
+> **备注：** 在 JavaScript 中有许多其他方法，可以管理异步行为和流控制，包括相对较新的 JavaScript 语言功能，如 [Promises](/zh-CN/docs/Mozilla/Add-ons/Techniques/Promises)。
 
 Async 有很多有用的方法（请查看[文档](http://caolan.github.io/async/docs.html)）。一些最重要的功能是：
 

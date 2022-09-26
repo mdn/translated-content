@@ -1,13 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 **`margin`** 属性为给定元素设置所有四个（上下左右）方向的外边距属性。也就是 {{cssxref("margin-top")}}，{{cssxref("margin-right")}}，{{cssxref("margin-bottom")}}，和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。
@@ -120,7 +115,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ### 水平居中
 
-在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`。
+在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`。
 
 不过，在 IE8-9 这样的不支持弹性盒布局的旧式浏览器中，上述代码并不会生效。此时要实现在父元素中居中，可使用 `margin: 0 auto;`。
 
@@ -136,7 +131,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## 参阅
 

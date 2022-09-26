@@ -1,19 +1,8 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-  - await
-  - for
-  - for await...of
-  - for...in
-  - for...of
-  - 异步
-  - 迭代
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for await...of` 语句**创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: 内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。

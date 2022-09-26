@@ -1,8 +1,8 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-translation_of: Web/CSS/border-spacing
 ---
+
 {{ CSSRef("CSS Tables") }}
 
 ## 概述
@@ -59,4 +59,4 @@ table { border-spacing: 10px 5px; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-spacing")}}
+{{Compat}}

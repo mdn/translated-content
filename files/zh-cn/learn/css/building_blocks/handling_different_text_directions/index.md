@@ -1,9 +1,9 @@
 ---
 title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在上、右、下、左设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
@@ -16,15 +16,15 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
       <th scope="row">先决条件：</th>
       <td>
         计算机基础知识，基本软件（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >），文件管理的基本知识（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >），HTML 基础（HTML 学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >）以及 CSS 基础（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>
@@ -44,7 +44,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/en-US/docs/Web/CSS/writing-mode)的三个值分别是：
+[`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode)的三个值分别是：
 
 - `horizontal-tb`: 块流向从上至下。对应的文本方向是横向的。
 - `vertical-rl`: 块流向从右向左。对应的文本方向是纵向的。
@@ -54,7 +54,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 ## 书写模式、块级布局和内联布局
 
-我们已经讨论了块级布局和内联布局（[block and inline layout](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
+我们已经讨论了块级布局和内联布局（[block and inline layout](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
 
 用一个例子可以更清楚地说明这一点。下一个例子中有两个盒子，分别包含一个标题和一个段落。第一个盒子应用的是`writing-mode: horizontal-tb`，这是一个从上到下的横向的书写模式。第二个盒子应用的是`writing-mode: vertical-rl`，这是一个从右到左的纵向的书写模式。
 
@@ -108,7 +108,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
+对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
 
 ### 逻辑值
 
@@ -155,4 +155,4 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

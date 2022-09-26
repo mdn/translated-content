@@ -1,10 +1,8 @@
 ---
 title: font-face
 slug: Web/SVG/Element/font-face
-tags:
-  - SVG 字体
-translation_of: Web/SVG/Element/font-face
 ---
+
 {{SVGRef}}
 
 font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，font-face 元素定义了一个字体的外部属性 (a font's outer properties)。
@@ -19,7 +17,7 @@ font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，fon
 
 ### 全局属性 Global attributes
 
-- [Core attributes](/en/SVG/Attribute#Core) »
+- [Core attributes](/zh-CN/SVG/Attribute#Core) »
 
 ### 特定属性 Specific attributes
 
@@ -59,10 +57,10 @@ font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，fon
 
 ## DOM 接口
 
-这个元素实现了 [`SVGFontFaceElement`](/en/DOM/SVGFontFaceElement) 接口。
+这个元素实现了 [`SVGFontFaceElement`](/zh-CN/DOM/SVGFontFaceElement) 接口。
 
 ## 另见
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("font-face-src") }}
-- [SVG tutorial: SVG fonts](/en/SVG/Tutorial/SVG_fonts)
+- [SVG tutorial: SVG fonts](/zh-CN/SVG/Tutorial/SVG_fonts)

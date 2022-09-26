@@ -1,8 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。
@@ -41,7 +41,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.CONNECT")}}
+{{Compat}}
 
 ## 參見
 

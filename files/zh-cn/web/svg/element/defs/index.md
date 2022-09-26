@@ -1,15 +1,11 @@
 ---
 title: defs
 slug: Web/SVG/Element/defs
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-translation_of: Web/SVG/Element/defs
 ---
+
 {{SVGRef}}
 
-SVG 允许我们定义以后需要重复使用的图形元素。 建议把所有需要再次使用的引用元素定义在`defs`元素里面。这样做可以增加 SVG 内容的易读性和可访问性。 在`defs`元素中定义的图形元素不会直接呈现。 你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。
+SVG 允许我们定义以后需要重复使用的图形元素。建议把所有需要再次使用的引用元素定义在`defs`元素里面。这样做可以增加 SVG 内容的易读性和无障碍。在`defs`元素中定义的图形元素不会直接呈现。你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。
 
 ## 用法
 
@@ -37,10 +33,10 @@ SVG 允许我们定义以后需要重复使用的图形元素。 建议把所有
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -52,11 +48,11 @@ _没有专有属性_
 
 ## DOM 接口
 
-这个元素实现了[`SVGDefsElement`](/en/DOM/SVGDefsElement) 接口。
+这个元素实现了[`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}
 
 ## 相关内容
 

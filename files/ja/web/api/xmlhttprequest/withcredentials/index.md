@@ -1,19 +1,8 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - AJAX
-  - API
-  - プロパティ
-  - リファレンス
-  - セキュリティ
-  - XHR
-  - XMLHttpRequest
-  - 資格情報
-  - 資格情報付き
-browser-compat: api.XMLHttpRequest.withCredentials
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.withCredentials`** プロパティは論理値で、サイト間の `Access-Control` リクエストが Cookie、認証ヘッダー、 TLS クライアント証明書などの資格情報を使用して行うべきかどうかを示します。 `withCredentials` を設定しても、同じサイトへのリクエストには影響しません。

@@ -1,17 +1,8 @@
 ---
 title: 图像文件类型与格式指南
 slug: Web/Media/Formats/Image_types
-tags:
-  - 图像
-  - 图片
-  - 多媒体
-  - 指南
-  - 文件
-  - 文件格式
-  - 文件类型
-  - 照片
-translation_of: Web/Media/Formats/Image_types
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。
@@ -33,7 +24,7 @@ translation_of: Web/Media/Formats/Image_types
 | [TIFF](#tiff_tagged_image_file_format)               | Tagged Image File Format 标签图像文件格式                  | `image/tiff`    | `.tif`, `.tiff`                            | Safari                                                  |
 | [WebP](#webp_image)                                  | Web Picture format 万维网图像格式                          | `image/webp`    | `.webp`                                    | Chrome, Edge, Firefox, Opera, Safari                    |
 
-每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息， 包括哪个版本引入支持以及以后可能会引入的特殊功能。
+每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息，包括哪个版本引入支持以及以后可能会引入的特殊功能。
 
 ## 图像文件格式详介
 
@@ -842,8 +833,8 @@ SVG files are text files containing source code that, when interpreted, draws th
 
 SVG can be used in web content in two ways:
 
-1.  You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/zh-CN/docs/Web/SVG/Element) to draw the image.
-2.  You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/zh-CN/docs/Web/SVG/Element) to draw the image.
+2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size. It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
 

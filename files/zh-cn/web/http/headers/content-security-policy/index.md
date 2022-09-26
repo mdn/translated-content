@@ -1,8 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}HTTP 响应头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定服务器的源和脚本结束点。这将帮助防止跨站脚本攻击（`Cross-Site Script`）（{{Glossary("XSS")}}）。
 
 如需更多信息，请查阅[Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/CSP)。
@@ -54,7 +54,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : 限制层叠样式表文件源。
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : 指定[WebRTC](https://developer.mozilla.org/docs/Web/API/WebRTC_API)连接的合法源地址。
+  - : 指定[WebRTC](/docs/Web/API/WebRTC_API)连接的合法源地址。
 - {{CSP("worker-src")}}
   - : 限制 {{domxref("Worker")}}、{{domxref("SharedWorker")}} 或 {{domxref("ServiceWorker")}} 脚本源。
 

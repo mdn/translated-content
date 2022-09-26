@@ -1,14 +1,8 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - NeedsTranslation
-  - Number
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef}}
 
 **`Number`** JavaScript 物件是允許你操作數值的包覆物件. `Number` 物件是以 `Number()` 建構子來建立的。

@@ -1,13 +1,13 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-translation_of: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 ## 總覽
 
-Returns a non-live [`NodeList`](/en-US/docs/DOM/NodeList) of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)
+Returns a non-live [`NodeList`](/zh-TW/docs/DOM/NodeList) of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)
 
 ## 表達式
 
@@ -16,11 +16,11 @@ elementList = baseElement.querySelectorAll(selectors);
 ```
 
 - `elementList`
-  - : is a non-live node list `NodeList[elements]` of [element](/en-US/docs/DOM/element) objects.
+  - : is a non-live node list `NodeList[elements]` of [element](/zh-TW/docs/DOM/element) objects.
 - `baseElement`
-  - : is an [element](/en-US/docs/DOM/element) object.
+  - : is an [element](/zh-TW/docs/DOM/element) object.
 - `selectors`
-  - : is a group of [selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors) to match on or elements of the DOM.
+  - : is a group of [selectors](/zh-TW/docs/Web/Guide/CSS/Getting_Started/Selectors) to match on or elements of the DOM.
 
 ## 範例
 
@@ -98,7 +98,7 @@ inner.length; // 1, not 0!
 In this example, when selecting `.outer .inner` in the context of `.select`, .`inner` is still found, even though `.outer` is not a descendant of the baseElement (`.select`).
 `querySelectorAll()` only verifies that the last element in the selector is within the baseElement.
 
-The [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class restores the expected behavior, only matching selectors on descendants of the baseElement:
+The [`:scope`](/zh-TW/docs/Web/CSS/:scope) pseudo-class restores the expected behavior, only matching selectors on descendants of the baseElement:
 
 ```js
 let select = document.querySelector('.select');
@@ -112,12 +112,12 @@ inner.length; // 0
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 \[1] Supported in Opera 15+ by enabling the "**Enable \<style scoped>**" or "**Enable experimental Web Platform features**" flag in `chrome://flags`.
 
 ## 參見
 
-- [`document.querySelectorAll`](/en-US/docs/DOM/Document.querySelectorAll)
-- [`document.querySelector`](/en-US/docs/DOM/Document.querySelector)
-- [Code snippets for `querySelector`](/en-US/docs/Code_snippets/QuerySelector)
+- [`document.querySelectorAll`](/zh-TW/docs/DOM/Document.querySelectorAll)
+- [`document.querySelector`](/zh-TW/docs/DOM/Document.querySelector)
+- [Code snippets for `querySelector`](/zh-TW/docs/Code_snippets/QuerySelector)

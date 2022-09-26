@@ -1,16 +1,16 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
-translation_of: Web/API/Window/DOMContentLoaded_event
 original_slug: Web/Events/DOMContentLoaded
 ---
+
 `DOMContentLoaded事件是當document被完整的讀取跟解析後就會被觸發`,不會等待 stylesheets, 圖片和 subframes 完成讀取 (`load事件可以用來作為判斷頁面已經完整讀取的方法`).
 
 > **備註：** [Stylesheet loads block script execution](http://molily.de/weblog/domcontentloaded), 如果 `<script>` 被放在 `<link rel="stylesheet" ...>後面的話`, 須等到前面的 stylesheet 載入並完成解析，此時 `DOMContentLoaded才會被觸發。`
 
 ## Speeding up
 
-If you want DOM to get parsed as fast as possible after the user had requested the page, some things you could do is turn your [JavaScript asynchronous](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and to [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) which if used as usual, slow down page load due to being loaded in parallel, "stealing" traffic from the main html document.
+If you want DOM to get parsed as fast as possible after the user had requested the page, some things you could do is turn your [JavaScript asynchronous](/zh-TW/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and to [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) which if used as usual, slow down page load due to being loaded in parallel, "stealing" traffic from the main html document.
 
 ## General info
 
@@ -42,7 +42,7 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Related Events
 

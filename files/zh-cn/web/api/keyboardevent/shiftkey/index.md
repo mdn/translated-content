@@ -2,6 +2,7 @@
 title: KeyboardEvent.shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent.shiftKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>shift</kbd> 键是 (`true`) 否 (`false`) 按下。
@@ -51,7 +52,7 @@ You can also use the SHIFT key together with the ALT key.</p>
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.shiftKey")}}
+{{Compat}}
 
 ## 参考
 

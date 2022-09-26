@@ -1,8 +1,8 @@
 ---
 title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
-translation_of: Web/API/MediaSource/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} 介面的 **`MediaSource()`** 建構子建構且回傳一個沒有與任何來源緩衝 (source buffer) 關聯的新 `MediaSource` 物件。

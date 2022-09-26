@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Attributes/min
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`min`** définit la valeur minimale qui est acceptable et valide pour l'entrée contenant l'attribut. Si la [valeur](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément est inférieure à cette valeur, l'élément échoue lors de la [validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`. Si une valeur est spécifiée pour `min` qui n'est pas un nombre valide, l'entrée n'a pas de valeur minimale.
@@ -156,14 +157,11 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## Voir aussi
 

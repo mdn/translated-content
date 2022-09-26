@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a été appelée.
@@ -54,14 +55,10 @@ Si le noeud d'origine a un identifiant et que le clone doit être placé dans le
 
 Pour cloner un noeud à ajouter dans un document différent, utilisez  {{domxref("Document.importNode()")}} à la place.
 
-### Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                     |
-| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                     |
-| {{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM2 Core")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

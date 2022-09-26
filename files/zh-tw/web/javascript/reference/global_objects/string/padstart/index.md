@@ -1,8 +1,8 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 **`padStart()`** 會將用給定用於填充的字串，以重複的方式，插入到目標字串的起頭(左側)，直到目標字串到達指定長度。

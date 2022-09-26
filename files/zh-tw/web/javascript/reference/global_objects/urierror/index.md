@@ -1,8 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
+
 {{JSRef}}
 
 **`URIError`** 物件在全域的 URI 處理函式被錯誤使用時作為一個錯誤被拋出。
@@ -85,7 +85,7 @@ try {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.URIError")}}
+{{Compat}}
 
 ## 另見
 

@@ -1,12 +1,8 @@
 ---
 title: 'RangeError: invalid date'
 slug: Web/JavaScript/Reference/Errors/Invalid_date
-tags:
-  - JavaScript
-  - 范围错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 消息

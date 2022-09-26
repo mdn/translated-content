@@ -1,16 +1,12 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - Literal
-  - Primitive
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
-值 `null` 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是[falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)。
+值 `null` 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是[falsy](/zh-CN/docs/Glossary/Falsy)。
 
 {{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
 
@@ -37,7 +33,7 @@ null
 
 ### `null` 与 `undefined` 的不同点：
 
-当检测 `null` 或 `undefined` 时，注意[相等（==）与全等（===）两个操作符的区别](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) ，前者会执行类型转换：
+当检测 `null` 或 `undefined` 时，注意[相等（==）与全等（===）两个操作符的区别](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) ，前者会执行类型转换：
 
 ```js
 typeof null        // "object" (因为一些以前的原因而不是'null')

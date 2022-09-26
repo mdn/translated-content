@@ -2,6 +2,7 @@
 title: Node
 slug: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 **`Node`** 是一个接口，各种类型的 DOM API 对象会从这个接口继承。它允许我们使用相似的方式对待这些不同类型的对象；比如，继承同一组方法，或者用同样的方式测试。
@@ -19,7 +20,7 @@ slug: Web/API/Node
 从其父类型 _{{DOMxRef("EventTarget")}}_\[1] 继承属性。
 
 - {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
-  - : 返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。 在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
+  - : 返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
 - {{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}
   - : (不适用于网页内容) 只读的 `nsIURI` 对象表示元素的 base URI.
 - {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
@@ -56,11 +57,11 @@ slug: Web/API/Node
 - {{DOMxRef("Node.nodeValue")}}
   - : 返回或设置当前节点的值。
 - {{DOMxRef("Node.ownerDocument")}} {{readonlyInline}}
-  - : 返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有 Document 对象与之关联，返回 null。
+  - : 返回这个元素属于的 {{DOMxRef("Document")}}对象。如果没有 Document 对象与之关联，返回 null。
 - {{DOMxRef("Node.parentNode")}} {{readonlyInline}}
-  - : 返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。
+  - : 返回一个当前节点 {{DOMxRef("Node")}}的父节点。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中，这个属性返回 null。
 - {{DOMxRef("Node.parentElement")}} {{readonlyInline}}
-  - : 返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。
+  - : 返回一个当前节点的父节点 {{DOMxRef("Element")}} 。如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。
 - {{DOMxRef("Node.previousSibling")}} {{readonlyInline}}
   - : 返回一个当前节点同辈的前一个节点 ( {{DOMxRef("Node")}}) ，或者返回 null（如果不存在这样的一个节点的话）。
 - {{DOMxRef("Node.textContent")}}
@@ -78,7 +79,7 @@ slug: Web/API/Node
 
   - : 该节点命名空间的`URL`，如果没有命名空间则为`null`。
 
-    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树 ，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
+    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
 
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Deprecated_Inline}}
   - : 返回节点优先级 `nsIPrincipal` 。
@@ -115,7 +116,7 @@ slug: Web/API/Node
 - {{DOMxRef("Node.lookupPrefix()")}}
   - : 返回包含参数 URI 所对应的命名空间前缀的 {{DOMxRef("DOMString")}}，若不存在则返回 null。如果存在多个可匹配的前缀，则返回结果和浏览器具体实现有关。
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
-  - : 接受一个前缀，并返回前缀所对应节点命名空间 URI 。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。
+  - : 接受一个前缀，并返回前缀所对应节点命名空间 URI。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。
 - {{DOMxRef("Node.normalize()")}}
   - : 对该元素下的所有文本子节点进行整理，合并相邻的文本节点并清除空文本节点。
 - {{DOMxRef("Node.removeChild()")}}
@@ -163,23 +164,23 @@ removeAllChildren(document.body);
 
 ```js
 function eachNode(rootNode, callback){
-	if(!callback){
-		var nodes = [];
-		eachNode(rootNode, function(node){
-			nodes.push(node);
-		});
-		return nodes;
-	}
+  if(!callback){
+    var nodes = [];
+    eachNode(rootNode, function(node){
+      nodes.push(node);
+    });
+    return nodes;
+  }
 
-	if(false === callback(rootNode))
-		return false;
+  if(false === callback(rootNode))
+    return false;
 
-	if(rootNode.hasChildNodes()){
-		var nodes = rootNode.childNodes;
-		for(var i = 0, l = nodes.length; i < l; ++i)
-			if(false === eachNode(nodes[i], callback))
-				return;
-	}
+  if(rootNode.hasChildNodes()){
+    var nodes = rootNode.childNodes;
+    for(var i = 0, l = nodes.length; i < l; ++i)
+      if(false === eachNode(nodes[i], callback))
+        return;
+  }
 }
 ```
 
@@ -210,18 +211,18 @@ eachNode(rootNode, callback);
 
 ```html
 <div id="box">
-	<span>Foo</span>
-	<span>Bar</span>
-	<span>Baz</span>
+  <span>Foo</span>
+  <span>Bar</span>
+  <span>Baz</span>
 </div>
 ```
 
 ```js
 var box = document.getElementById("box");
 eachNode(box, function(node){
-	if(null != node.textContent){
-		console.log(node.textContent);
-	}
+  if(null != node.textContent){
+    console.log(node.textContent);
+  }
 });
 ```
 
@@ -239,31 +240,31 @@ eachNode(box, function(node){
 
 ```js
 function grep(parentNode, pattern){
-	var matches = [];
-	var endScan = false;
+  var matches = [];
+  var endScan = false;
 
-	eachNode(parentNode, function(node){
-		if(endScan)
-			return false;
+  eachNode(parentNode, function(node){
+    if(endScan)
+      return false;
 
-		// Ignore anything which isn't a text node
-		if(node.nodeType !== Node.TEXT_NODE)
-			return;
+    // Ignore anything which isn't a text node
+    if(node.nodeType !== Node.TEXT_NODE)
+      return;
 
-		if("string" === typeof pattern){
-			if(-1 !== node.textContent.indexOf(pattern))
-				matches.push(node);
-		}
-		else if(pattern.test(node.textContent)){
-			if(!pattern.global){
-				endScan = true;
-				matches = node;
-			}
-			else matches.push(node);
-		}
-	});
+    if("string" === typeof pattern){
+      if(-1 !== node.textContent.indexOf(pattern))
+        matches.push(node);
+    }
+    else if(pattern.test(node.textContent)){
+      if(!pattern.global){
+        endScan = true;
+        matches = node;
+      }
+      else matches.push(node);
+    }
+  });
 
-	return matches;
+  return matches;
 }
 ```
 

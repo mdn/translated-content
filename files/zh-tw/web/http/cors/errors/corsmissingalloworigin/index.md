@@ -1,8 +1,8 @@
 ---
 title: 原因：缺少 CORS 標頭 'Access-Control-Allow-Origin'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
@@ -17,7 +17,7 @@ The response to the {{Glossary("CORS")}} request is missing the required {{HTTPH
 
 If the server is under your control, add the origin of the requesting site to the set of domains permitted access by adding it to the `Access-Control-Allow-Origin` header's value.
 
-For example, to allow a site at https\://amazing.site to access the resource using CORS, the header should be:
+For example, to allow a site at `https://amazing.site` to access the resource using CORS, the header should be:
 
 ```plain
 Access-Control-Allow-Origin: https://amazing.site
@@ -45,6 +45,6 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 ## 參見
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-TW/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-TW/docs/Web/HTTP/CORS)

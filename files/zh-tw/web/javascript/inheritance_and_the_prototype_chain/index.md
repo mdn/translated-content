@@ -1,8 +1,8 @@
 ---
 title: 繼承與原型鏈
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript 是個沒有實做 `class` 關鍵字的動態語言，所以會對那些基於類別（class-based）語言（如 Java 或 C++）背景出身的開發者來說會有點困惑。（在 ES2015 有提供 `class` 關鍵字，但那只是個語法糖，JavaScript 仍然是基於原型（prototype-based）的語言）。

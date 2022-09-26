@@ -1,18 +1,8 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
+
 {{AddonSidebar}}
 
 Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
@@ -23,7 +13,7 @@ You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore(
 
 This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.
 
-To use the sessions API you must have the "sessions" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
+To use the sessions API you must have the "sessions" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
 
 ## Types
 
@@ -35,7 +25,7 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/Add
 ## Properties
 
 - {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
+  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
 
 ## Functions
 
@@ -67,7 +57,7 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/Add
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.sessions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -75,7 +65,8 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/Add
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +93,4 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/Add
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

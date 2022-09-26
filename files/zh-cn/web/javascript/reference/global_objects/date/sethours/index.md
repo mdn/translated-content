@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`setHours()`** 方法根据本地时间为一个日期对象设置小时数，返回从 1970-01-01 00:00:00 UTC 到更新后的 {{jsxref("Global_Objects/Date", "日期")}} 对象实例所表示时间的毫秒数。

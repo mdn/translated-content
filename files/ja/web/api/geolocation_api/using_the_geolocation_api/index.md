@@ -1,12 +1,8 @@
 ---
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - 位置情報 API
-  - ガイド
-  - チュートリアル
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 位置情報 API (Geolocation API) により、ユーザーは希望すれば自身の場所をウェブアプリケーションに通知することができるようになります。この記事では、その使い方の基本を説明します。

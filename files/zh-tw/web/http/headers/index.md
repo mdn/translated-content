@@ -1,15 +1,8 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Headers
-  - NeedsTranslation
-  - Networking
-  - Reference
-  - TopicStub
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 HTTP headers allow the client and the server to pass additional information with the request or the response. A request header consists of its case-insensitive name followed by a colon '`:`', then by its value (without line breaks). Leading white space before the value is ignored.

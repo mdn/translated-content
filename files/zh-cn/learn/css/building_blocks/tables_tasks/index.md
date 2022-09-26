@@ -1,12 +1,8 @@
 ---
 title: 测试技能：表格
 slug: Learn/CSS/Building_blocks/Tables_tasks
-tags:
-  - Beginner
-  - CSS
-  - Example
-translation_of: Learn/CSS/Building_blocks/Tables_tasks
 ---
+
 {{LearnSidebar}}
 
 此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)课程中学到的技巧的理解。

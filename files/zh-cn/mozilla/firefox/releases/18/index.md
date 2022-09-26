@@ -1,8 +1,8 @@
 ---
 title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
-translation_of: Mozilla/Firefox/Releases/18
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 18 已于 2013 年 1 月 8 日发布。
@@ -16,20 +16,20 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ### CSS
 
-- {{cssxref("min-width")}}和{{cssxref("min-height")}}属性使用`auto关键字作为初始值`(This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ({{bug("763689")}})
+- {{cssxref("min-width")}} 和 {{cssxref("min-height")}} 属性使用 `auto` 关键字作为初始值 (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ({{bug("763689")}})
 - The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/CSS/Using_CSS_animations). ({{bug("783714")}})
 - {{cssxref("background")}}简写属性可以包含 CSS3 中的{{cssxref("background-size")}}属性了。({{bug("570326")}})
 - 初步实现了 Flexbox.默认禁用状态，可以通过设置`layout.css.flexbox.enabled`选项激活该特性.({{bug('666041')}})
 
 ### DOM
 
-- `实现了navigator.mozPay属性`({{bug("767818")}})
-- `实现了window.devicePixelRatio属性`. ({{bug("564815")}})
-- 在 MacOS 上实现了`window.navigator.battery属性`. ({{bug("696045")}})
-- 删除了{{domxref("BlobBuilder", "MozBlobBuilder")}}.开发者们应该使用{{domxref("Blob")}}构造函数来创建`Blob对象`. ({{bug("744907")}})
+- 实现了 `navigator.mozPay` 属性（{{bug("767818")}}）
+- 实现了 `window.devicePixelRatio` 属性。（{{bug("564815")}}）
+- 在 MacOS 上实现了`window.navigator.battery` 属性。（{{bug("696045")}}）
+- 删除了 {{domxref("BlobBuilder", "MozBlobBuilder")}}。开发者应该使用 {{domxref("Blob")}} 构造函数来创建 `Blob` 对象。（{{bug("744907")}}）
 - {{event("visibilitychange")}}事件和[页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)取消前缀{{bug("812086")}}).
-- `实现了TextDecoder`和`TextEncoder` .({{bug("764234")}})
-- ` HTMLMediaElement``.src `被分成了两个属性：一个是标准的`src属性`,返回普通的字符串{{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回[media streams](/zh-CN/docs/WebRTC/MediaStream_API) ({{bug("792665")}}).
+- 实现了 `TextDecoder` 和 `TextEncoder`。（{{bug("764234")}}）
+- `HTMLMediaElement.src` 被分成了两个属性：一个是标准的 `src` 属性，返回普通的字符串 {{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回 [media streams](/zh-CN/docs/WebRTC/MediaStream_API)（{{bug("792665")}}）。
 
 ### JavaScript
 
@@ -46,7 +46,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ### 网络
 
-- HTTP 请求头`Accept-Language可以使用两位数字的质量因子`("q-values")({{bug("672448")}}).
+- HTTP 请求头`Accept-Language` 可以使用两位数字的质量因子（"q-values"）（{{bug("672448")}}）。
 - HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/The_X-FRAME-OPTIONS_response_header)中的`ALLOW-FROM`语法 ({{bug("690168")}}).
 
 ### 开发者工具
@@ -60,7 +60,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 - `nsIUploadChannel`
   - : `setUploadStream()` 支持了超过 2GB 大小的 content-length ({{bug("790617")}})
 - `nsIEditor`
-  - : `删除了addEditorObserver()`,使用`setEditorObserver()`来替代，`removeEditorObserver()`不再需要一个`nsIEditorObserver`参数 ({{bug("785091")}})
+  - : 删除了 `addEditorObserver()`，使用 `setEditorObserver()` 来替代，`removeEditorObserver()` 不再需要一个 `nsIEditorObserver` 参数（{{bug("785091")}}）
 - `nsIHttpProtocolHandler`
   - : `http-on-modify-request` observers are no longer guaranteed to be called synchronously during
     `nsIChannel.asyncOpen()`. For observers that need to be called during `asyncOpen`(), the new `http-on-opening-request` observer topic has been added. ({{bug("800799")}})

@@ -1,13 +1,9 @@
 ---
 title: 改正内容错误
 slug: MDN/Community/MDN_content
-tags:
-  - Bugs
-  - Contribute
-  - MDN
-translation_of: MDN/Contribute/Fixing_MDN_content_bugs
 original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 ---
+
 {{MDNSidebar}}
 
 MDN 文档的问题被报告在 [content 仓库的 issues](https://github.com/mdn/content/issues)中。本文将帮助你，根据你的专业知识和空闲时间来找到最适合解决的问题，并且讲述解决这些问题的主要步骤。

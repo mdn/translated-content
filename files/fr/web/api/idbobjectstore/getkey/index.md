@@ -11,6 +11,7 @@ tags:
   - Web API
 translation_of: Web/API/IDBObjectStore/getKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getKey()`** de l'interface {{domxref("IDBObjectStore")}} retourne un objet {{domxref("IDBRequest")}}, et, dans un _thread_ séparé, retourne la clé sélectionnée par la requête spécifiée. Cela permet de retrouver un enregistrement spécifique depuis un espace de stockage déterminé.
@@ -65,13 +66,11 @@ openRequest.onsuccess = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbobjectstore-getkey', 'getKey()')}} | {{Spec2('IndexedDB 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.getKey")}}
+{{Compat}}
 
 ## Voir aussi
 

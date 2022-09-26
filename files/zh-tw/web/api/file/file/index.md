@@ -1,8 +1,8 @@
 ---
 title: File.File()
 slug: Web/API/File/File
-translation_of: Web/API/File/File
 ---
+
 {{APIRef("File")}}
 
 **`File()`** 建構子建立一個新的 {{domxref("File")}} 物件實例
@@ -40,7 +40,7 @@ var file = new File(["foo"], "foo.txt", {
 
 ## 瀏覽器相容性
 
-{{Compat("api.File.File")}}
+{{Compat}}
 
 ## 看更多
 

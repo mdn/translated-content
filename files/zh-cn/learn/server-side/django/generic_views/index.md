@@ -1,8 +1,8 @@
 ---
 title: 'Django 教程 6: 通用列表和详细信息视图'
 slug: Learn/Server-side/Django/Generic_views
-translation_of: Learn/Server-side/Django/Generic_views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
 本教程扩充了 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。
@@ -635,18 +635,18 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 
 ## 本教程
 
-- [Django 介绍](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：本地图书馆网站](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: 创建骨架站点](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: 使用模型](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django 管理站点](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: 创建主页](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: 通用列表与详细信息视图](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: 会话框架](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: 用户认证与许可](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: 使用表单](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: 测试 Django 网页应用](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: 部署 Django 到生产环境](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
+- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
+- [Django 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教程 2: 创建骨架站点](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教程 3: 使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
+- [Django 教程 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教程 5: 创建主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
+- [Django 教程 6: 通用列表与详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教程 7: 会话框架](/zh-CN/docs/Learn/Server-side/Django/Sessions)
+- [Django 教程 8: 用户认证与许可](/zh-CN/docs/Learn/Server-side/Django/Authentication)
+- [Django 教程 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
+- [Django 教程 10: 测试 Django 网页应用](/zh-CN/docs/Learn/Server-side/Django/Testing)
+- [Django 教程 11: 部署 Django 到生产环境](/zh-CN/docs/Learn/Server-side/Django/Deployment)
+- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

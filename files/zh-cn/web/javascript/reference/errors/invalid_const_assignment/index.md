@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -23,7 +19,7 @@ TypeError: Redeclaration of const 'x' (IE/Edge)
 
 ## 哪里出错了？
 
-常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) 来声明。
+常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 来声明。
 
 ## 示例
 
@@ -54,7 +50,7 @@ const WIDE_COLUMNS = 120;
 
 #### `const`, `let` or `var`?
 
-如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 关键字来声明一个拥有块作用域的变量，或者使用 `var` 来声明一个全局变量。
+如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 关键字来声明一个拥有块作用域的变量，或者使用 `var` 来声明一个全局变量。
 
 ```js example-good
 let columns = 80;
@@ -94,6 +90,6 @@ obj; // Object { foo: "baz" }
 
 ## 相关内容
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)

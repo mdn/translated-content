@@ -1,8 +1,8 @@
 ---
 title: 方法定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 自 ECMAScript 2015 開始，引入了一種於物件初始器（objects initializers）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
@@ -31,7 +31,7 @@ var obj = {
 
 ## 說明
 
-這個簡短的語法和在 ECMAScript 2015 引入 [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) 類似。
+這個簡短的語法和在 ECMAScript 2015 引入 [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) 類似。
 
 請看以下程式碼：
 
@@ -112,7 +112,7 @@ var obj3 = {
 
 ### Async generator methods
 
-[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[Generator methods](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 var obj4 = {
@@ -183,7 +183,7 @@ console.log(bar.foo2()); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## 參見
 

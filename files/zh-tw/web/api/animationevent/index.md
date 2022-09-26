@@ -1,17 +1,8 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 ## 摘要
@@ -49,7 +40,7 @@ _同時繼承其父{{domxref("事件")}}方法_。
 
 ## 瀏覽器兼容性
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## 另請參見
 

@@ -1,11 +1,11 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
-**`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new) 构造函数 ， 相当于运行 `new target(...args)`.
+**`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造函数 ， 相当于运行 `new target(...args)`.
 
 ## 语法
 
@@ -20,7 +20,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 - `argumentsList`
   - : 类数组，目标构造函数调用时的参数。
 - `newTarget` {{optional_inline}}
-  - : 作为新创建对象的原型对象的`constructor`属性， 参考 [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) 操作符，默认值为`target。`
+  - : 作为新创建对象的原型对象的`constructor`属性， 参考 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 操作符，默认值为`target。`
 
 ### `返回值`
 
@@ -32,7 +32,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 
 ## 描述
 
-`Reflect.construct`允许你使用可变的参数来调用构造函数 ，这和使用[new 操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)搭配[对象展开符](<https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new>)调用一样。
+`Reflect.construct`允许你使用可变的参数来调用构造函数，这和使用[new 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)搭配[对象展开符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)调用一样。
 
 ```js
 var obj = new Foo(...args);
@@ -123,5 +123,5 @@ d.getFullYear(); // 1776
 ## 相关链接
 
 - {{jsxref("Reflect")}}
-- [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+- [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+- [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)

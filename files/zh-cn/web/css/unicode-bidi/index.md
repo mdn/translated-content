@@ -1,11 +1,8 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - BiDi
-  - CSS
-translation_of: Web/CSS/unicode-bidi
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`unicode-bidi`** 属性，和 {{cssxref("direction")}} 属性，决定如何处理文档中的双书写方向文本（bidirectional text）。比如，如果一块内容同时包含有从左到右书写和从右到左书写的文本，那么用户代理（the user-agent）会使用复杂的 Unicode 算法来决定如何显示文本。`unicode-bidi` 属性会覆盖此算法，允许开发人员控制文本嵌入（text embedding）。
@@ -84,7 +81,7 @@ unicode-bidi: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.unicode-bidi")}}
+{{Compat}}
 
 ## 参见
 

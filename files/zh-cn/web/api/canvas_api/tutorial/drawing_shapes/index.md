@@ -2,6 +2,7 @@
 title: 使用 canvas 来绘制图形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 既然我们已经设置了 [canvas 环境](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)，我们可以深入了解如何在 canvas 上绘制。到本文的最后，你将学会如何绘制矩形，三角形，直线，圆弧和曲线，变得熟悉这些基本的形状。绘制物体到 Canvas 前，需掌握路径，我们看看到底怎么做。
@@ -66,10 +67,10 @@ function draw() {
 
 图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。一个路径，甚至一个子路径，都是闭合的。使用路径绘制图形需要一些额外的步骤。
 
-1.  首先，你需要创建路径起始点。
-2.  然后你使用[画图命令](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Paths)去画出路径。
-3.  之后你把路径封闭。
-4.  一旦路径生成，你就能通过描边或填充路径区域来渲染图形。
+1. 首先，你需要创建路径起始点。
+2. 然后你使用[画图命令](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Paths)去画出路径。
+3. 之后你把路径封闭。
+4. 一旦路径生成，你就能通过描边或填充路径区域来渲染图形。
 
 以下是所要用到的函数：
 

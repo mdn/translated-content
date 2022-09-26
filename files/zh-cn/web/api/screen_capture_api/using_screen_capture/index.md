@@ -2,6 +2,7 @@
 title: 使用屏幕捕获 API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 在这篇文章中，我们将研究如何使用屏幕捕获 API 和它的{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}方法来捕获部分或全部屏幕进行流媒体传输，通过[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)录制或分享。
@@ -27,7 +28,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-You can write this code either using an asynchronous function and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.
+You can write this code either using an asynchronous function and the [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.
 
 开始屏幕捕获：使用 `Promise` 风格
 
@@ -229,7 +230,7 @@ The stream is connected to the {{HTMLElement("video")}} element by storing the r
 
 The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
 
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+If any of that fails, the [`catch()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
 
 ##### Stopping display capture
 
@@ -281,10 +282,10 @@ Click the Start Capture button to begin.</p>
 
 The key parts of the HTML are:
 
-1.  A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2.  A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3.  A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4.  A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.
 
 #### CSS
 

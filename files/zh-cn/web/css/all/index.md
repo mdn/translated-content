@@ -1,10 +1,8 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-translation_of: Web/CSS/all
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。
@@ -147,7 +145,7 @@ blockquote { all: inherit; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.all")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,17 +1,17 @@
 ---
 title: '-moz-image-rect'
 slug: Web/CSS/-moz-image-rect
-translation_of: Web/CSS/-moz-image-rect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 ## Summary
 
-The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background. This allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
+The **`-moz-image-rect`** value for [CSS](/zh-CN/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background. This allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
 
 This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.
 
-The syntax for the rectangle is similar to the [`rect()`](/en-US/docs/Web/CSS/shape#Syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
+The syntax for the rectangle is similar to the [`rect()`](/zh-CN/docs/Web/CSS/shape#Syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
 
 ## Syntax
 
@@ -145,4 +145,4 @@ This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each el
 
 ## Browser compatibility
 
-{{Compat("css.types.-moz-image-rect")}}
+{{Compat}}

@@ -1,12 +1,8 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - HTTP
-  - 响应头
-  - 证书透明度
-translation_of: Web/HTTP/Headers/Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 `Expect-CT` 标头允许站点选择性地报告和/或执行[证书透明度（Certificate Transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，来防止错误签发的网站证书的使用不被察觉。

@@ -1,14 +1,11 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-tags:
-  - 类型数组
-  - 缓冲区
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
-**`ArrayBuffer.isView()`** 方法用来判断传入的参数值是否是一种 `ArrayBuffer` 视图（view），比如类型化数组对象（[typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)）或者数据视图（ {{jsxref("DataView")}}）。
+**`ArrayBuffer.isView()`** 方法用来判断传入的参数值是否是一种 `ArrayBuffer` 视图（view），比如类型化数组对象（[typed array objects](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)）或者数据视图（ {{jsxref("DataView")}}）。
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
 
@@ -59,4 +56,4 @@ ArrayBuffer.isView(dv); // true
 
 ## 另见
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)

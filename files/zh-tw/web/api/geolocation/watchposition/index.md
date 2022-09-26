@@ -1,8 +1,8 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.watchPosition()`** 這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。你也可以選擇性的定義錯誤時哪些錯誤回呼函式(error callback function) 需要被呼叫。
@@ -58,7 +58,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 備註
 
-如果你的應用程式是跑在 firefox OS 上，請參考 [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>)，此方法可以讓你的程式在背景或螢幕關上時也能持續收到位置更新。
+如果你的應用程式是跑在 firefox OS 上，請參考 [geolocation wake lock](</zh-TW/docs/Web/API/Geolocation/navigator.requestWakeLock()>)，此方法可以讓你的程式在背景或螢幕關上時也能持續收到位置更新。
 
 ## 規格
 
@@ -66,12 +66,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 瀏覽器的相容性
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## 請參考
 
-- [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>)
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 這個介面屬於{{domxref("Geolocation")}}. 並且存取他的方式為{{domxref("NavigatorGeolocation.geolocation")}}.
 - 相反的操作: {{domxref("Geolocation.clearWatch()")}}
 - 類似的方法: {{domxref("Geolocation.getCurrentPosition()")}}

@@ -1,8 +1,8 @@
 ---
 title: 文檔操作(文件操作)
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 當你在撰寫網頁(web pages)或網路應用程式(web apps)，其中一個最常見的事，你會希望能夠操作(網頁)文件結構。最常看見的方式是基於[**文件物件模型** ( Document Object Model, DOM )](/zh-TW/docs/Web/API/Document_Object_Model) 概念上，透過使用 API ([Web APIs](/zh-TW/docs/Web/API/)) 來控制 HTML 及 樣式；而這種方式也被大量使用在操作 [`Document`](/zh-TW/docs/Web/API/Document) 物件上。接下來的文章中，我們將會詳細的介紹如何操作 DOM，藉著使用有趣的 API 能帶來些新奇的體驗。
@@ -31,7 +31,7 @@ Despite the limitations, Web APIs still give us access to a lot of functionality
 
 ![](document-window-navigator.png)
 
-- The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events) to the current window, and more.
+- The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events) to the current window, and more.
 - The navigator represents the state and identity of the browser (i.e. the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
 - The document (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.
 
@@ -101,7 +101,7 @@ To start learning about DOM manipulation, let's begin with a practical example.
     link.href = 'https://developer.mozilla.org';
     ```
 
-Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a NodeList.
+Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)-like object called a NodeList.
 
 There are older methods available for grabbing element references, such as:
 
@@ -192,7 +192,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
     para.style.textAlign = 'center';
     ```
 
-2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector), you'll see that these lines are indeed adding inline styles to the document:
+2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](/zh-TW/docs/Tools/Page_Inspector), you'll see that these lines are indeed adding inline styles to the document:
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
@@ -286,15 +286,15 @@ To complete the exercise, follow the steps below, and make sure that the list be
 
 1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
-3. Create a [function](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) that will run in response to the button being clicked.
-4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement#Properties) of the input element in a variable.
+3. Create a [function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions) that will run in response to the button being clicked.
+4. Inside the function body, start off by storing the current [value](/zh-TW/docs/Web/API/HTMLInputElement#Properties) of the input element in a variable.
 5. Next, empty the input element by setting its value to an empty string — `''`.
 6. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
 7. Append the span and the button as children of the list item.
 8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
 9. Append the list item as a child of the list.
 10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.
-11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
+11. Finally, use the [`focus()`](/zh-TW/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
 > **備註：** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
@@ -311,16 +311,16 @@ There are lots more features you can use to manipulate your documents. Check out
 - {{domxref("Node")}}
 - {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
 
-(See our [Web API index](/en-US/docs/Web/API) for the full list of Web APIs documented on MDN!)
+(See our [Web API index](/zh-TW/docs/Web/API) for the full list of Web APIs documented on MDN!)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## In this module
 
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Introduction to web APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Fetching data from the server](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Third party APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Video and audio APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [Client-side storage](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

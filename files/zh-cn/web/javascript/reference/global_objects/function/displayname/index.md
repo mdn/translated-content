@@ -1,8 +1,8 @@
 ---
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`function.displayName`** 属性获取函数的显示名称

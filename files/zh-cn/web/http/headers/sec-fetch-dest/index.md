@@ -1,8 +1,8 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
-translation_of: Web/HTTP/Headers/Sec-Fetch-Dest
 ---
+
 {{HTTPSidebar}}
 
 **`Sec-Fetch-Dest`** {{Glossary("Fetch metadata request header", "Fetch 元数据请求标头")}}指示请求的目标，即数据的来源以及如何使用这些获取到的数据。

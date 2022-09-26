@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - 不建议使用
-  - 原型
-  - 对象
-  - 方法
-  - 过时的
-  - 非标准
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
+
 {{JSRef}} {{deprecated_header}}**`__lookupSetter__`** 方法是用来返回一个对象的某个属性上绑定了 setter（设置器）的钩子函数的引用。
 
 ## 语法
@@ -70,4 +63,4 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.prototype.__defineGetter__()")}}
 - {{jsxref("Object.prototype.__defineSetter__()")}}
-- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

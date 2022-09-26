@@ -1,14 +1,10 @@
 ---
 title: Using the button role
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-translation_of: Web/Accessibility/ARIA/Roles/button_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 ---
-**[button](https://www.w3.org/TR/wai-aria/roles#button)** 角色应该用于可单击的元素， 当用户激活时触发响应。 在其本身，`role="button"` 可以使任何元素 (e.g. {{HTMLElement("p")}}, {{HTMLElement("span")}} or {{HTMLElement("div")}}) 作为一个屏幕阅读器的按钮控件出现。此外，该角色还可以与 `aria-pressed` 属性组合使用，以创建切换按钮。
+
+**[button](https://www.w3.org/TR/wai-aria/roles#button)** 角色应该用于可单击的元素，当用户激活时触发响应。在其本身，`role="button"` 可以使任何元素 (e.g. {{HTMLElement("p")}}, {{HTMLElement("span")}} or {{HTMLElement("div")}}) 作为一个屏幕阅读器的按钮控件出现。此外，该角色还可以与 `aria-pressed` 属性组合使用，以创建切换按钮。
 
 > **备注：** 在可能的情况下，建议使用原生 HTML 按钮 (`<button>`, `<input type="button" />`, `<input type="submit" />, <input type="reset" />` and `<input type="image" />`) 而不是按钮角色，因为原生 HTML 按钮得到了较老用户代理和辅助技术的广泛支持。原生 HTML 按钮也支持键盘和焦点需求，不需要额外的定制。
 
@@ -16,9 +12,9 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
 按钮是交互式控件，因此其本身是可聚焦的。如果`button` 角色被添加到一个自身不可聚焦的元素 (such as `<span>`, `<div>` or `<p>`) 那么必须使用`tabindex` 属性来使按钮可聚焦。
 
-按钮可以由鼠标用户和键盘用户操作。 对于原生 HTML `<button>` 元素 ，按钮的 `onclick` 事件会在鼠标单击和按下键盘的 <kbd>Space</kbd> or <kbd>Enter</kbd> 时被触发， 同时这个按钮处于聚焦状态。 但是如果使用其他标签来创建“自定义按钮”，那么`onclick`事件只会在点击鼠标光标时触发，即使使用`role="button"` 。因此，开发人员必须向元素添加一个单独的关键事件处理程序，以便在按下 <kbd>Space</kbd> or <kbd>Enter</kbd> 时触发按钮。
+按钮可以由鼠标用户和键盘用户操作。对于原生 HTML `<button>` 元素，按钮的 `onclick` 事件会在鼠标单击和按下键盘的 <kbd>Space</kbd> or <kbd>Enter</kbd> 时被触发，同时这个按钮处于聚焦状态。但是如果使用其他标签来创建“自定义按钮”，那么`onclick`事件只会在点击鼠标光标时触发，即使使用`role="button"` 。因此，开发人员必须向元素添加一个单独的关键事件处理程序，以便在按下 <kbd>Space</kbd> or <kbd>Enter</kbd> 时触发按钮。
 
-**Warning:** 把给一个链接标记为按钮角色的链接时要谨慎。按钮将使用 <kbd>Space</kbd> or <kbd>Enter</kbd> 键触发，而链接被期望使用 <kbd>Enter</kbd> 键触发。 换句话说，当链接被用来作为按钮的时候，仅仅添加`role="button"`是不够的。还需要添加一个 key 事件处理程序来侦听 <kbd>Space</kbd> 键，以便与原生按钮保持一致。
+**Warning:** 把给一个链接标记为按钮角色的链接时要谨慎。按钮将使用 <kbd>Space</kbd> or <kbd>Enter</kbd> 键触发，而链接被期望使用 <kbd>Enter</kbd> 键触发。换句话说，当链接被用来作为按钮的时候，仅仅添加`role="button"`是不够的。还需要添加一个 key 事件处理程序来侦听 <kbd>Space</kbd> 键，以便与原生按钮保持一致。
 
 ## 可切换的按钮
 
@@ -31,7 +27,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
 ## Labeling buttons
 
-按钮应该总是有一个可访问的名称。对于大多数按钮，这个名称将与按钮中的文本相同。在某些情况下，例如图标按钮，可通过 [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 或 [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性提供可访问的名称。
+按钮应该总是有一个可访问的名称。对于大多数按钮，这个名称将与按钮中的文本相同。在某些情况下，例如图标按钮，可通过 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 或 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性提供可访问的名称。
 
 ## 对用户代理和辅助技术的可能影响
 

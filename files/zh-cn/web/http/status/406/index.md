@@ -1,8 +1,8 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-translation_of: Web/HTTP/Status/406
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指代服务器端无法提供与 {{HTTPHeader("Accept-Charset")}} 以及 {{HTTPHeader("Accept-Language")}} 消息头指定的值相匹配的响应。
@@ -29,4 +29,4 @@ HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指�
 
 - {{HTTPHeader("Accept-Language")}}
 - {{HTTPHeader("Accept-Charset")}}
-- HTTP [内容协商](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)

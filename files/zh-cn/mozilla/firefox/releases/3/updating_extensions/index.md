@@ -1,14 +1,12 @@
 ---
 title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
-英文原文取自于 [http://developer.mozilla.org/en/docs/Extensions](/en/docs/Extensions) 这篇文章将对于那些想把他们的扩展在 Firefox 3 中正常运行的开发者提供一些有用的信息。
+英文原文取自于 [http://developer.mozilla.org/en/docs/Extensions](/zh-CN/docs/Extensions) 这篇文章将对于那些想把他们的扩展在 Firefox 3 中正常运行的开发者提供一些有用的信息。
 
 在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的`maxVersion`信息，并且你的扩展所在的主机是[addons.mozilla.org](https://addons.mozilla.org)，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整`maxVersion`。通过这种方式你可以避免你的扩展被再次审核。
 
@@ -40,11 +38,11 @@ There have been (and will continue to be) a number of API changes that will like
 
 #### Add localizations to the install manifest
 
-Firefox 3 supports new properties in the install manifest to specify localized descriptions. The old methods still work however the new allow Firefox to pick up the localizations even when the add-on is disabled and pending install. See [Localizing extension descriptions](/cn/Localizing_extension_descriptions) for more details.
+Firefox 3 supports new properties in the install manifest to specify localized descriptions. The old methods still work however the new allow Firefox to pick up the localizations even when the add-on is disabled and pending install. See [Localizing extension descriptions](/zh-CN/Localizing_extension_descriptions) for more details.
 
 ### Step 2: 确保提供安全的更新
 
-If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/cn/Extension_Versioning,_Update_and_Compatibility#Securing_Updates) for more information.
+If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/zh-CN/Extension_Versioning,_Update_and_Compatibility#Securing_Updates) for more information.
 
 ### Step 3: Deal with changed APIs
 
@@ -60,29 +58,29 @@ Several APIs have been changed in significant ways. The most significant of thes
 
 #### Bookmarks & History
 
-If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new [Places](/cn/Places) architecture. See the [Places migration guide](/cn/Places_migration_guide) for details on updating your existing extension to use the Places API.
+If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new [Places](/zh-CN/Places) architecture. See the [Places migration guide](/zh-CN/Places_migration_guide) for details on updating your existing extension to use the Places API.
 
 #### Download Manager
 
-The Download Manager API has changed slightly due to the transition from an RDF data store to using the [Storage](/cn/Storage) API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See [`nsIDownloadManager`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager), [`nsIDownloadProgressListener`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener), and [Monitoring downloads](/cn/Monitoring_downloads) for more information.
+The Download Manager API has changed slightly due to the transition from an RDF data store to using the [Storage](/zh-CN/Storage) API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See [`nsIDownloadManager`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager), [`nsIDownloadProgressListener`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener), and [Monitoring downloads](/zh-CN/Monitoring_downloads) for more information.
 
 #### Password Manager
 
 If your extension accesses user login information using the Password Manager, it will need to be updated to use the new Login Manager API.
 
-- The article [Using nsILoginManager](/cn/Using_nsILoginManager) includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions.
-- [`nsILoginInfo`](/cn/NsILoginInfo)
-- [`nsILoginManager`](/cn/NsILoginManager)
+- The article [Using nsILoginManager](/zh-CN/Using_nsILoginManager) includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions.
+- [`nsILoginInfo`](/zh-CN/NsILoginInfo)
+- [`nsILoginManager`](/zh-CN/NsILoginManager)
 
-You can also override the built-in password manager storage if you want to provide your own password storage implementation in your extensions. See [Creating a Login Manager storage module](/cn/Creating_a_Login_Manager_storage_module) for details.
+You can also override the built-in password manager storage if you want to provide your own password storage implementation in your extensions. See [Creating a Login Manager storage module](/zh-CN/Creating_a_Login_Manager_storage_module) for details.
 
 #### Popups (Menus, Context Menus, Tooltips and Panels)
 
-The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to [using Popups](/cn/XUL/PopupGuide) has been created, detailing how the system works. One thing to note is that `popup.showPopup` has been deprecated in favor of new `popup.openPopup` and `popup.openPopupAtScreen`.
+The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to [using Popups](/zh-CN/XUL/PopupGuide) has been created, detailing how the system works. One thing to note is that `popup.showPopup` has been deprecated in favor of new `popup.openPopup` and `popup.openPopupAtScreen`.
 
 #### Autocomplete
 
-The [`nsIAutoCompleteController`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController) interface's [`handleEnter()`](/cn/NsIAutoCompleteController#handleEnter.28.29) method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.
+The [`nsIAutoCompleteController`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController) interface's [`handleEnter()`](/zh-CN/NsIAutoCompleteController#handleEnter.28.29) method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.
 
 #### DOMParser
 
@@ -141,17 +139,17 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
-- [`chrome://browser/base/utilityOverlay.js`]() is no longer supported for security reasons. If you were previously using this, you should switch to [`chrome://browser/content/utilityOverlay.js`]().
+- `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
 - [`nsIAboutModule`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746))
 - The [`tabbrowser`](/zh-CN/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
-- Changes to [nsISupports proxies](/cn/NsISupports_proxies) and possibly to threading-related interfaces need to be documented.
+- Changes to [nsISupports proxies](/zh-CN/NsISupports_proxies) and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654):
 
   1. XML PIs are now added to a XUL document's DOM. This means [`document.firstChild`](/zh-CN/docs/Web/API/Document/firstChild) is no longer guaranteed to be the root element. If you need to get the root document in your script, use [`document.documentElement`](/zh-CN/docs/Web/API/Document/documentElement) instead.
   2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
-- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/cn/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
+- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/zh-CN/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
-- `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/cn/DOM/event.stopPropagation), which works in Firefox 2 as well.
+- `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/zh-CN/DOM/event.stopPropagation), which works in Firefox 2 as well.
 - Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). You may use `nsITimer` instead.
-- If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/cn/Chrome_Registration#contentaccessible).
+- If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/zh-CN/Chrome_Registration#contentaccessible).

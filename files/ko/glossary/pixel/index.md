@@ -1,7 +1,6 @@
 ---
 title: Pixel
 slug: Glossary/Pixel
-translation_of: Glossary/Pixel
 ---
 픽셀(pixel)은 컴퓨터 화면과 같은 그래픽 디스플레이의 가장 작은 구성 단위이다.
 

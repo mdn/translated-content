@@ -1,12 +1,8 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
-tags:
-  - Bug
-  - Number.prototype.toString()
-  - Tips
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回指定 {{jsxref("Number")}} 对象的字符串表示形式。

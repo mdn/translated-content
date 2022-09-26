@@ -1,8 +1,8 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

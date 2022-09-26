@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -21,7 +17,7 @@ SyntaxError: unterminated string literal
 
 ## 哪里出错了？
 
-某处 js 解析字符串出错。字符串必须使用单引号或双引号来正确的关闭。在 Javascript 中使用单引号的字符和双引号的字符串是没有区别的。字符串用[转义字符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)不是单引号就是双引。为解决这个错误，检查一下：
+某处 js 解析字符串出错。字符串必须使用单引号或双引号来正确的关闭。在 Javascript 中使用单引号的字符和双引号的字符串是没有区别的。字符串用[转义字符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)不是单引号就是双引。为解决这个错误，检查一下：
 
 - 你字符串的引号是否成对。
 - 你是否正确使用了转义序列
@@ -40,7 +36,7 @@ var longString = "This is a very long string which needs
 // SyntaxError: unterminated string literal
 ```
 
-可以使用["+"运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)，反斜杠，或[模板字符串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)来代替多行。“+”运算符的使用如下：
+可以使用["+"运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)，反斜杠，或[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来代替多行。“+”运算符的使用如下：
 
 ```js example-good
 var longString = "This is a very long string which needs " +
@@ -67,4 +63,4 @@ var longString = `This is a very long string which needs
 ## 相关
 
 - {{jsxref("String")}}
-- [模板字符串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)

@@ -1,16 +1,8 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
-tags:
-  - API
-  - Element
-  - メソッド
-  - リファレンス
-  - attachShadow
-  - シャドウ DOM
-browser-compat: api.Element.attachShadow
-translation_of: Web/API/Element/attachShadow
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`Element.attachShadow()`** メソッドは、シャドウ DOM ツリーを特定の要素に追加し、そのシャドウルート ({{domxref("ShadowRoot")}}) への参照を返します。

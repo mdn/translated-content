@@ -1,8 +1,8 @@
 ---
 title: 支持旧浏览器
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
@@ -35,7 +35,7 @@ translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 
 每个网站论目标用户都是不同的，在决定采用哪种方式之前，你需要查明使用旧浏览器浏览你的站点的用户的数量。如果你有一个已有的网站，你想要润色或者替换它，这是一件直截了当的事情，因为你很可能有了可用的、可以告诉你人们使用的技术的分析。如果你没有分析，或者这是一个全新的网站，那么例如[Statcounter](http://gs.statcounter.com/)之类的站点可以提供以位置分类的数据。
 
-你应该同样考虑设备的类型和人们使用你的网站的方式。譬如，你可能更想有超出平均数量的移动设备的访问。可访问性和使用辅助性技术的人总应当被考虑，对于一些站点，这问题可能更加重要。以我的经验，开发者经常担心 1% 的使用旧版 IE 的用户的体验，而不去照顾多得多的有可访问性需求的用户。
+你应该同样考虑设备的类型和人们使用你的网站的方式。譬如，你可能更想有超出平均数量的移动设备的访问。无障碍和使用辅助性技术的人总应当被考虑，对于一些站点，这问题可能更加重要。以我的经验，开发者经常担心 1% 的使用旧版 IE 的用户的体验，而不去照顾多得多的有无障碍需求的用户。
 
 ## 对你想使用的特性的支持如何？
 
@@ -53,7 +53,7 @@ translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 
 基本级别的支持来源于良好地组织你的内容，从而让你的页面的正常布局流有意义。一个使用非常局限的功能手机的用户可能不怎么会体验到你的 CSS，但是内容会以让阅读容易的方式流过。因而你应该总是从一个良好组织的 HTML 文档开始。_如果你移除掉你的样式表，你的内容还能被理解吗？_
 
-一个选项是，把站点的这种原始视图作为回滚，用在使用很老旧或者受局限的浏览器的用户身上。如果你没有多少来到站点的人是使用这些浏览器的，将时间花在尝试给予他们和使用现代浏览器类似的体验上可能没有商业价值。将时间花在让站点具备更多可访问性的事情上，以服务远远更多的用户，可能会是更好的做法。这样的做法在纯 HTML 页面和花里胡哨之间是有余地的，CSS 事实上让建立这些回滚变得简明。
+一个选项是，把站点的这种原始视图作为回滚，用在使用很老旧或者受局限的浏览器的用户身上。如果你没有多少来到站点的人是使用这些浏览器的，将时间花在尝试给予他们和使用现代浏览器类似的体验上可能没有商业价值。将时间花在让站点具备更多无障碍的事情上，以服务远远更多的用户，可能会是更好的做法。这样的做法在纯 HTML 页面和花里胡哨之间是有余地的，CSS 事实上让建立这些回滚变得简明。
 
 ## 在 CSS 中构建回滚
 
@@ -101,11 +101,11 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 - display: inline-block
   - : 这种方式能被用来建立列布局，如果一个物件被设为`display: inline-block`，但是之后变成了弹性或者网格物件，inline-block 行为将会被忽略。
 - display: table
-  - : 这种在这几节课的[介绍](/en-US/docs/Learn/CSS/CSS_layout/Introduction)中描述的建立 CSS 表格的方式可以被用作回滚。被设为 CSS 表格布局的物件将会在它们变为弹性或者网格物件的时候不再表现出这种行为。重要的是，被建立起来用于修复表格结构的匿名盒子没有被建立起来。
+  - : 这种在这几节课的[介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)中描述的建立 CSS 表格的方式可以被用作回滚。被设为 CSS 表格布局的物件将会在它们变为弹性或者网格物件的时候不再表现出这种行为。重要的是，被建立起来用于修复表格结构的匿名盒子没有被建立起来。
 - Multiple-column Layout
-  - : 对于某些布局，你能用[multi-col](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)作为回滚。如果你的容器有任何一个`column-*`属性被定义，之后变成了网格容器，那么多列行为不会实现。
+  - : 对于某些布局，你能用[multi-col](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)作为回滚。如果你的容器有任何一个`column-*`属性被定义，之后变成了网格容器，那么多列行为不会实现。
 - 作为网格的回滚的弹性盒
-  - : [弹性盒](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)由于受到了 IE10 和 IE11 的支持，比网格有着更好的浏览器支持。不过，在这节课的稍后部分，你一定要看下旧浏览器对弹性盒相当参差不齐而且令人困惑的支持的相关信息。如果你把弹性容器做成了网格容器，任何应用到子元素的`flex`属性都会被忽略。
+  - : [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)由于受到了 IE10 和 IE11 的支持，比网格有着更好的浏览器支持。不过，在这节课的稍后部分，你一定要看下旧浏览器对弹性盒相当参差不齐而且令人困惑的支持的相关信息。如果你把弹性容器做成了网格容器，任何应用到子元素的`flex`属性都会被忽略。
 
 对于许多在旧浏览器中微调的布局来说，你可能会发现你能用这种方式使用 CSS，给访客亲切的体验。我们加入了一个更简单的基于旧的和受到良好支持技术的布局，然后用新一些的 CSS 建立一个可以由 90% 的用户看到的布局。但是存在这样的情况：回滚代码会需要包含新浏览器也能理解的东西；举例来说就是，我们要往我们的浮动物件中加入百分数宽度，从而让列看起来更像网格，拉伸以充满容器。
 
@@ -212,8 +212,8 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 ## 另见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS 网格布局和渐进优化](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)
 - [我应该尽力使用 IE10 的网格布局实现吗？](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)

@@ -1,16 +1,8 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
+
 {{JSRef}}
 
 **`copyWithin()`** 方法會對陣列的一部分進行淺拷貝至同一陣列的另一位置並回傳此陣列，而不修改其大小。
@@ -116,7 +108,7 @@ if (!Array.prototype.copyWithin) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## 參見
 

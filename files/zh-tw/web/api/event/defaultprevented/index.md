@@ -1,15 +1,15 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{ APIRef("DOM") }}
 
 ## 概述
 
 回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxref("event.preventDefault()", "preventDefault()")}} 方法。
 
-> **備註：** You should use this instead of the non-standard, deprecated` getPreventDefault()` method (see {{ bug(691151) }}).
+> **備註：** You should use this instead of the non-standard, deprecated `getPreventDefault()` method (see {{ bug(691151) }}).
 
 ## 語法
 
@@ -31,4 +31,4 @@ bool = event.defaultPrevented
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}

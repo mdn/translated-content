@@ -1,14 +1,8 @@
 ---
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-tags:
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - 严格模式
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -25,13 +19,13 @@ TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
 
 ## 发生了什么？
 
-在 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。
+在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。
 
 ## 实力
 
 ### 废弃的 `function.caller` or `arguments.callee.caller`
 
-{{jsxref("Function.caller")}} 和 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 都是已废弃的 (详见参考文章)。
+{{jsxref("Function.caller")}} 和 [`arguments.callee.caller`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) 都是已废弃的 (详见参考文章)。
 
 ```js example-bad
 "use strict";
@@ -72,7 +66,7 @@ console.log('returned: ' + g.arguments);
 
 ## 相关
 
-- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Deprecated and obsolete features](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)

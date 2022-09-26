@@ -9,6 +9,7 @@ tags:
   - XML
 translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`DOMParser`** permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}} d'une chaîne de caractères dans le DOM {{domxref("Document")}}.
@@ -62,13 +63,11 @@ console.log(doc3.body.firstChild.textContent);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMParser", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

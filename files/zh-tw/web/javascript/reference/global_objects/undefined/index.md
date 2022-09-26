@@ -1,10 +1,8 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's {{Glossary("Primitive", "primitive types")}}.
@@ -105,4 +103,4 @@ if (y === void 0) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

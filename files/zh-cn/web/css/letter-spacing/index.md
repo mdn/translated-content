@@ -1,12 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - SVG
-  - 参考文档
-translation_of: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 `CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。
@@ -73,13 +69,13 @@ letter-spacing: unset;
 
 最佳的易辨认的字母间距（letter-spacing）必须根据具体情况来确定，因为不同的字体系列具有不同的字符宽度。没有任何一个值可以确保所有字体系列自动保持它们的可读性。
 
-## 可访问性考量
+## 无障碍考量
 
 A large positive or negative `letter-spacing` value will make the word(s) the styling is applied to unreadable. For text styled with a very large positive value, the letters will be so far apart that the word(s) will appear like a series of individual, unconnected letters. For text styled with a very large negative value, the letters will overlap each other to the point where the word(s) may be unrecognizable.
 
 Legible letter-spacing must be determined on a case-by-case basis, as different font families have different character widths. There is no one value that can ensure all font families automatically maintain their legibility.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 规范
@@ -90,7 +86,7 @@ Legible letter-spacing must be determined on a case-by-case basis, as different 
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## 参见
 

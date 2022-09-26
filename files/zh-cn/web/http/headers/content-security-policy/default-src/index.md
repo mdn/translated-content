@@ -1,12 +1,8 @@
 ---
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-tags:
-  - 内容安全策略
-  - 安全
-  - 超文本传输协议
-translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，{{HTTPHeader("Content-Security-Policy")}} (CSP) 首部字段中的 **`default-src`** 指令可以为其他 CSP 拉取指令（{{Glossary("fetch directive", "fetch directives")}}）提供备选项。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 default-src 指令的值。

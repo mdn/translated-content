@@ -2,13 +2,14 @@
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
 ---
+
 {{APIRef("DOM Events")}}
 
-**`WheelEvent.deltaY`** 只读属性是一个 `double` 类型值，声明垂直滚动量以[`WheelEvent.deltaMode`](https://developer.mozilla.org/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。
+**`WheelEvent.deltaY`** 只读属性是一个 `double` 类型值，声明垂直滚动量以 [`WheelEvent.deltaMode`](/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。
 
 ## 语法
 
-```plain
+```js
 var dY = event.deltaY;
 ```
 
@@ -26,7 +27,7 @@ console.log(syntheticEvent.deltaY);
 
 ## 浏览器兼容性
 
-{{Compat("api.WheelEvent.deltaY")}}
+{{Compat}}
 
 ## 另见
 

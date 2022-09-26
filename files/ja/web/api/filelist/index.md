@@ -1,13 +1,8 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - ファイル
-browser-compat: api.FileList
-translation_of: Web/API/FileList
 ---
+
 {{APIRef("File API")}}
 
 この型のオブジェクトは、 HTML の {{HTMLElement("input")}} 要素の `files` プロパティで返されます。これにより、 `<input type="file">` 要素で選択されているファイルのリストにアクセスすることができます。また、ドラッグ＆ドロップ API を使用している場合は、ウェブコンテンツにドロップされたファイルのリストにも使用されます。使用方法の詳細は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトを見てください。

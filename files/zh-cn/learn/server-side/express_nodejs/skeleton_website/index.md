@@ -1,19 +1,8 @@
 ---
 title: Express 教程 2：创建站点框架
-slug: learn/Server-side/Express_Nodejs/skeleton_website
-tags:
-  - Express
-  - Node
-  - node.js
-  - npm
-  - 入门
-  - 初学者
-  - 学习
-  - 开发环境
-  - 服务器端
-  - 服务器端编程
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
+slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -59,7 +48,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 你应该已经安装好了生成器，它是 [设置 Node 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：
 
 ```bash
-$ sudo npm install express-generator -g
+sudo npm install express-generator -g
 ```
 
 生成器有许多选项，可以使用 `--help`（或 `-h`）命令进行查看：
@@ -90,7 +79,7 @@ $ express --help
 可以直接运行 express 命令，将使用 Jade 视图引擎和纯 CSS 在当前目录中创建项目。（如果指定目录名，则在子目录中创建项目）。
 
 ```bash
-$ express
+express
 ```
 
 还可以使用 `--view` 选择视图（模板）引擎，并且/或者使用 `--css` 选择 CSS 生成引擎。
@@ -154,13 +143,13 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 1. 首先，安装依赖项（`install` 命令将获取项目的 **package.json** 文件中列出的所有依赖项包）。
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 2. 然后运行该应用。
 
     ```bash
-    $ DEBUG=express-locallibrary-tutorial:* npm start
+    DEBUG=express-locallibrary-tutorial:* npm start
     ```
 
 3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
@@ -176,13 +165,13 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 [nodemon](https://github.com/remy/nodemon) 是最简便的自动化工具之一。通常将其全局安装（因为它是一个“工具”）：
 
 ```bash
-$ sudo npm install -g nodemon
+sudo npm install -g nodemon
 ```
 
 这里还可以把它作为开发依赖将安装在本地，于是使用这个项目的开发人员只要安装这个应用就能自动获得。通过以下命令将其安装在骨架项目的根目录：
 
 ```bash
-$ npm install --save-dev nodemon
+npm install --save-dev nodemon
 ```
 
 项目的 **package.json** 文件将自动添加一个新的属性：
@@ -205,7 +194,7 @@ $ npm install --save-dev nodemon
 现在可以用新建的 `devstart` 命令启动服务器：
 
 ```bash
-$ DEBUG=express-locallibrary-tutorial:* npm run devstart
+DEBUG=express-locallibrary-tutorial:* npm run devstart
 ```
 
 现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。
@@ -368,7 +357,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 ```
 
-> **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 ` users在``/profile ` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
+> **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 `users` 在 `/profile` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
 
 最后一个中间件为错误和 HTTP 404 响应添加处理方法。
 

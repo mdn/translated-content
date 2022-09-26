@@ -1,11 +1,11 @@
 ---
 title: 评估：DIY Django 微博客
 slug: Learn/Server-side/Django/django_assessment_blog
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-在这个评估中，您将使用您在 [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
+在这个评估中，您将使用您在 [Django Web Framework (Python)](/zh-CN/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -232,7 +232,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 ## 提示和技巧
 
-该项目与 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 教程非常相似。您将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
+该项目与 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 教程非常相似。您将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
 
 一些一般提示：
 
@@ -287,18 +287,18 @@ class SomeView(generic.ListView):
 
 ## 本系列教程
 
-- [Django 介绍](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：本地图书馆网站](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: 创建骨架网站](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: 使用模型](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django 管理站点](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: 创建主页](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: 通用列表与详细视图](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: 会话框架](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: 用户认证与授权](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: 使用表单](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: 测试 Django 网页应用](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: 部署 Django 到生产环境](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
+- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
+- [Django 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教程 3: 使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
+- [Django 教程 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教程 5: 创建主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
+- [Django 教程 6: 通用列表与详细视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教程 7: 会话框架](/zh-CN/docs/Learn/Server-side/Django/Sessions)
+- [Django 教程 8: 用户认证与授权](/zh-CN/docs/Learn/Server-side/Django/Authentication)
+- [Django 教程 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
+- [Django 教程 10: 测试 Django 网页应用](/zh-CN/docs/Learn/Server-side/Django/Testing)
+- [Django 教程 11: 部署 Django 到生产环境](/zh-CN/docs/Learn/Server-side/Django/Deployment)
+- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

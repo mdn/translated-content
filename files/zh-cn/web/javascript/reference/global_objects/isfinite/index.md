@@ -1,11 +1,8 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - JavaScript
-  - isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 该全局 **`isFinite()`** 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。

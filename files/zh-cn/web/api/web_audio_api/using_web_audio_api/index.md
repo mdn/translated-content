@@ -2,6 +2,7 @@
 title: Web Audio API 的运用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 让我们来看看 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 入门。我们将简要介绍一些概念，然后学习一个简单的允许我们加载音轨，播放暂停，改变音量和立体声声像的音箱例子。
 
 Web Audio API 并不会取代\<audio>音频元素，倒不如说它是\<audio>的补充更好，就好比如\<canvas>与\<img>共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，\<audio>或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API 提供了更多的优势以及控制。
@@ -16,7 +17,7 @@ Web Audio API 的一个强大之处在于，它没有任何严格的声音呼叫
 
 注意带有播放按钮的复古磁带卡座，及用于改变音量和立体声声像的平移滑块。我们可以使其更复杂，但这是该阶段进行简单学习的理想选择。
 
-查看最终 demo 代码[ here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/)，或者在 [GitHub 查看源代码 on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics)。
+查看最终 demo 代码 [here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/)，或者在 [GitHub 查看源代码 on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics)。
 
 ## 浏览器支持
 
@@ -53,7 +54,7 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **备注：** 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin `属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> **备注：** 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -73,7 +74,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 通过 JavaScript 代码控制声音会受到浏览器的自动播放策略的影响 (autoplay support policies)，因此在未经用户（或白名单）许可的情况下脚本对声音的控制会被阻止。浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放。
 
-这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致可访问性问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide) 了解更多相关信息。
+这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致无障碍问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide) 了解更多相关信息。
 
 因为我们的脚本正响应用户输入（例如，点击播放按钮）进行播放音频，我们状态良好且应该没有自动播放阻止的问题。所以，让我们看看我们的播放和暂停功能。我们有一个当音频播放时变为暂停按钮的播放按钮：
 
@@ -255,15 +256,15 @@ Web Audio API 包含在音频上下文的处理音频操作，以及已被设计
 
 音频节点通过输入与输出进行连接，形成一个链，从一个或多个源出发，通过一个或更多的节点，最终到输出终端（你也可以不提供输出终端，换句话说，如果只是想使一些音频数据可视化）。一个简单经典的 web Audio 的工作流程如下：
 
-1\. 构建音频上下文 AudioContext 对象；
+1. 构建音频上下文 AudioContext 对象；
 
-2\. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
+2. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
 
-3\. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
+3. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
 
-4\. 选择最终的音频目的地，比如说你的系统扬声器
+4. 选择最终的音频目的地，比如说你的系统扬声器
 
-5\. 连接源到效果，效果到输出终端
+5. 连接源到效果，效果到输出终端
 
 ### 构建 AudioContext 对象
 

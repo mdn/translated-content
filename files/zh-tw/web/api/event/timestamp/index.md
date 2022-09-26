@@ -1,8 +1,8 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
+
 {{ApiRef("DOM")}}
 
 ## 說明

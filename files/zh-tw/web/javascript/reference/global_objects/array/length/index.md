@@ -1,8 +1,8 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
+
 {{JSRef}}
 
 **`length`** 為`Array物件的屬性` ，可供設定或回傳該陣列實體中包含的元素個數。其值必為一大於零、32 位元、且恆大於該陣列最大索引數的正整數。
@@ -50,13 +50,13 @@ arr.forEach(element => console.log(element)); // 空元素無法被迭代
 // 2
 ```
 
-如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
+如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
 
 {{js_property_attributes(1, 0, 0)}}
 
 - `Writable`: 如果此屬性值為`false`，則該屬性的內容值無法被改動。
 - `Configurable`: 如果此屬性值為`false`，任何刪除屬性或更改其屬性的操作(`Writable`, `Configurable`, or `Enumerable`)皆會失敗。
-- `Enumerable`: 如果此屬性值為`true`，該內容值可倍 [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) 或 [for..in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 迴圈迭代處理。
+- `Enumerable`: 如果此屬性值為`true`，該內容值可倍 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 或 [for..in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) 迴圈迭代處理。
 
 ## 範例
 
@@ -94,7 +94,7 @@ console.log(numbers.length); // 3
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## 其他
 

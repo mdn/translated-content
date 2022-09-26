@@ -17,11 +17,11 @@ Existen herramientas, API y mejores prácticas que nos ayudan a medir y mejorar 
 
 Si bien es necesario conocer HTML, CSS y JavaScript para implementar muchas recomendaciones de mejora del rendimiento web, saber cómo crear aplicaciones no es una condición previa necesaria para comprender y medir el rendimiento web.
 
-Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web ](/es/docs/Learn/Performance/What_is_Performance)primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
+Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web](/es/docs/Learn/Performance/What_is_Performance)primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
 
 Los módulos avanzados profundizan en los temas que se resumen en los módulos introductorios y proporcionan una visión general de las API de rendimiento, las herramientas de análisis y prueba y los problemas de cuellos de botella en el rendimiento.
 
-Se recomienda que trabajes a través de [Empezando con la web ](/es/docs/Learn/Getting_started_with_the_web)antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
+Se recomienda que trabajes a través de [Empezando con la web](/es/docs/Learn/Getting_started_with_the_web) antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
 
 ## Modulos de introducción
 
@@ -66,7 +66,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - [Perfilando con el perfilador incorporado](/es/docs/Performance/Profiling_with_the_Built-in_Profiler)
   - : Aprenda cómo perfilar el rendimiento de la aplicación con el generador de perfiles integrado de Firefox.
 - Gráficos de rendimiento de lectura
-  - en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
+  - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas,](/es/docs/Tools/Performance/Call_Tree)Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
 - [Rendimiento de animaciones en CSS y JavaScript](/en-US/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre CSS y animaciones basadas en JavaScript.
 - Analizando paquetes de JavaScript
@@ -79,6 +79,6 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 ## Ver también
 
 - [Mobile performance checklist](/es/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)[](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

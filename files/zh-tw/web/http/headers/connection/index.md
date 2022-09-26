@@ -1,12 +1,8 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - Headers
-  - Reference
-  - Web
 ---
+
 {{HTTPSidebar}}
 
 **`Connection`** 標頭用來控制在本次事務（transaction）後，連線是否要繼續開著。如果設定為 `keep-alive` ，
@@ -46,4 +42,4 @@ Connection: close
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

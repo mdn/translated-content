@@ -1,8 +1,8 @@
 ---
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
-translation_of: Web/CSS/overscroll-behavior-y
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-y`** 这个 CSS 属性用来控制当滚动到区域的垂直边界时的浏览器行为。
@@ -58,7 +58,7 @@ overflow: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.overscroll-behavior-y")}}
+{{Compat}}
 
 ## 参见
 

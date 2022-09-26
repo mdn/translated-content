@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - unshift
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
+
 {{JSRef}}
 
 **`unshift()`** 方法會添加一個或多個元素至陣列的開頭，並且回傳陣列的新長度。
@@ -58,7 +51,7 @@ arr.unshift([-3]);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,9 +1,9 @@
 ---
 title: 创建书本表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
-[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form) 此子文档显示如何定义页面/表单以创建`Book`对象。这比相同的作者`Author`或种类`Genre`页面稍微复杂一点，因为我们需要在我们的书本表单中，获取并显示可用的作者和种类记录。
+
+此子文档显示如何定义页面/表单以创建`Book`对象。这比相同的作者`Author`或种类`Genre`页面稍微复杂一点，因为我们需要在我们的书本表单中，获取并显示可用的作者和种类记录。
 
 ## 导入验证和清理方法
 

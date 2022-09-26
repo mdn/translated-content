@@ -1,12 +1,8 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 **`font-synthesis`** CSS 属性控制浏览器可以合成（synthesize）哪些缺失的字体，粗体或斜体。
@@ -38,7 +34,7 @@ translation_of: Web/CSS/font-synthesis
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -64,7 +60,7 @@ em {
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '', '50', '', 'Web/CSS/font-synthesis') }}
+{{ EmbedLiveSample('示例', '', '50') }}
 
 ## 规范
 
@@ -72,4 +68,4 @@ em {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-synthesis")}}
+{{Compat}}

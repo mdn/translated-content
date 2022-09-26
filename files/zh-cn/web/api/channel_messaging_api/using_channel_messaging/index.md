@@ -2,6 +2,7 @@
 title: 使用 channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 [Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。
@@ -74,9 +75,9 @@ function onMessage(e) {
 
 让我们来了解一下 `iframe.contentWindow.postMessage` 更多的工作细节。它接受三个参数：
 
-1.  被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 `'init'`.
-2.  消息将被发送到的源（origin）。 `*` 意思是 "任何源".
-3.  一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。
+1. 被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 `'init'`.
+2. 消息将被发送到的源（origin）。 `*` 意思是 "任何源".
+3. 一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。
 
 当我们的按钮被点击时，我们阻止了默认的表单提交，然后把输入到输入框里的内容通过 {{domxref("MessageChannel")}} 发送给 IFrame.
 
@@ -128,17 +129,11 @@ function onMessage(e) {
 
 ## 规范
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 参见
 

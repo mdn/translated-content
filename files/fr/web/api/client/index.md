@@ -13,6 +13,7 @@ tags:
   - ServiceWorkers
 translation_of: Web/API/Client
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface `Client` de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) représente la portée d'exécution d'un {{domxref("Worker")}} ou {{domxref("SharedWorker")}}. Les clients {{domxref("Window")}} sont représentés par le plus spécifique {{domxref("WindowClient")}}. Vous pouvez obtenir les objets `Client`/`WindowClient` via les méthodes {{domxref("Clients.matchAll","Clients.matchAll()")}} et {{domxref("Clients.get","Clients.get()")}}.
@@ -58,15 +59,13 @@ self.addEventListener("message", function(e) {
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client', 'Client')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)

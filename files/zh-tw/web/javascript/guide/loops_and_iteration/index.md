@@ -1,13 +1,8 @@
 ---
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - JavaScript
-  - Loop
-  - 教學
-  - 迴圈
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 迴圈提供一個快速又簡潔的方法來重複地做某件事。這個章節的[JavaScript 教學](/zh-TW/docs/Web/JavaScript/Guide)會介紹在 JavaScript 可以使用的幾種不同的迭代陳述式。

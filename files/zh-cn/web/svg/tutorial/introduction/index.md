@@ -1,11 +1,11 @@
 ---
 title: 引言
 slug: Web/SVG/Tutorial/Introduction
-translation_of: Web/SVG/Tutorial/Introduction
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/en/SVG)是一种[XML](/en/XML)语言，类似 XHTML，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
+![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/zh-CN/SVG)是一种[XML](/zh-CN/XML)语言，类似 XHTML，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
 
 SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到[W3C](http://www.w3.org)，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展 (extensions，原文有误，应该是插件 plugins，类似 flash)。当然，是否使用 SVG 还要取决于你要实现什么。
 
@@ -17,7 +17,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 
 ### 开始之前
 
-包括[Inkscape](http://www.inkscape.org/)在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手写一些 SVG 的标记。你需要注意到你的最终目标。各种 SVG 浏览器是有差异的，因此很可能你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如[JavaScript](/en/JavaScript)和[CSS](/en/CSS)），也会出现类似的情况。
+包括[Inkscape](http://www.inkscape.org/)在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手写一些 SVG 的标记。你需要注意到你的最终目标。各种 SVG 浏览器是有差异的，因此很可能你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如[JavaScript](/zh-CN/JavaScript)和[CSS](/zh-CN/CSS)），也会出现类似的情况。
 
 所有的现代浏览器都支持 SVG，在某些情况下甚至几个版本都支持 SVG。[Can I use](https://caniuse.com/#feat=svg)上有一份比较详细的支持 SVG 的浏览器列表，Firefox 1.5 以后的版本支持 SVG 的部分内容，并且支持的程度越来越高。希望通过这份教程，MDN 能帮助开发者理解 Gecko 内核和其他一些主要编译器之间的差异。
 
@@ -26,7 +26,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 - SVG 的元素和属性必须按标准格式书写，因为 XML 是区分大小写的（这一点和 HTML 不同）
 - SVG 里的属性值必须用引号引起来，就算是数值也必须这样做。
 
-SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/en/SVG/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#SVG_%E6%8E%A5%E5%8F%A3)，学习其他你需要知道的内容。
+SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/zh-CN/SVG/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#SVG_%E6%8E%A5%E5%8F%A3)，学习其他你需要知道的内容。
 
 ### SVG 的种类
 

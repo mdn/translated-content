@@ -1,17 +1,17 @@
 ---
 title: 通过 Service workers 让 PWA 离线工作
 slug: Web/Progressive_web_apps/Offline_Service_workers
-translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
-{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 
-我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。 在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。 我们将研究如何添加脱机功能。
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
+
+我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。我们将研究如何添加脱机功能。
 
 ## Service Worker 解释
 
-Service Worker 是浏览器和网络之间的虚拟代理。 它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。
+Service Worker 是浏览器和网络之间的虚拟代理。它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。
 
-Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。您可分配给 Service Worker 一些任务，并通过基于 [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法在任务完成时收到结果。
+Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。您可分配给 Service Worker 一些任务，并通过基于 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法在任务完成时收到结果。
 
 它不仅仅提供离线功能，还可以做包括处理通知、在单独的线程上执行繁重的计算等事务。Service workers 非常强大，因为他们可以控制网络请求、修改网络请求、返回缓存的自定义响应，或者合成响应。
 
@@ -41,7 +41,7 @@ if('serviceWorker' in navigator) {
 };
 ```
 
-如果浏览器支持 Service Workers API，则使用 [`ServiceWorkerContainer.register()`](https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法在该站点注册。其内容在 sw\.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw\.js 文件中。
+如果浏览器支持 Service Workers API，则使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法在该站点注册。其内容在 sw\.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw\.js 文件中。
 
 ### Service Worker 的生命周期
 
@@ -49,7 +49,7 @@ if('serviceWorker' in navigator) {
 
 #### 安装
 
-Serviice Workers API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 `install` 事件：
+Service Workers API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 `install` 事件：
 
 ```js
 self.addEventListener('install', function(e) {
@@ -202,7 +202,7 @@ self.addEventListener('activate', function(e) {
 });
 ```
 
-这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟[浏览器的缓存空间是有限的](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)，手动清理掉这些不需要的缓存是不错的主意。
+这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟[浏览器的缓存空间是有限的](/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)，手动清理掉这些不需要的缓存是不错的主意。
 
 ## 其他用途
 
@@ -210,10 +210,10 @@ self.addEventListener('activate', function(e) {
 
 ## 总结
 
-在这篇文章中我们简单的了解了如何使用 Service Worker 让你的 PWA 实现离线功能。如果你想要学习更多关于 [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) 的概念，以及使用 Service Worker 方面的相关细节，你可以进一步查阅我们的文档。
+在这篇文章中我们简单的了解了如何使用 Service Worker 让你的 PWA 实现离线功能。如果你想要学习更多关于 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的概念，以及使用 Service Worker 方面的相关细节，你可以进一步查阅我们的文档。
 
-Service Worker 在处理[消息推送](/en-US/docs/Web/API/Push_API)的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。
+Service Worker 在处理[消息推送](/zh-CN/docs/Web/API/Push_API)的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。
 
-{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Apps/Progressive/")}}

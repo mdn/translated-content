@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-browser-compat: javascript.builtins.Array.toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法將回傳一個可以表達該陣列及其元素的字串。

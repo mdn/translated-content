@@ -1,14 +1,9 @@
 ---
 title: begin
 slug: Web/SVG/Attribute/begin
-tags:
-  - SVG
-  - SVG 属性
-  - 参考
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/begin
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 这个属性定义了动画何时开始。
 
@@ -25,11 +20,11 @@ translation_of: Web/SVG/Attribute/begin
 `<begin-value-list>`中的每一个值可以是下述之一：
 
 - \<offset-value>
-  - : 一个[时钟值](/en/SVG/Content_type#Clock-value)代表了一个相对于 SVG 文档开头的时间点，SVG 文档开头通常是指 load 事件或者 DOMReady 事件触发的时间点。负值是合法的。
+  - : 一个[时钟值](/zh-CN/SVG/Content_type#Clock-value)代表了一个相对于 SVG 文档开头的时间点，SVG 文档开头通常是指 load 事件或者 DOMReady 事件触发的时间点。负值是合法的。
 - \<syncbase-value>
   - : 描述一个*syncbase*以及一个可选的来自于*syncbase*的时偏移。元素的动画开始时间被定义为相对于另一个动画的开头或者激活结束。一个 ID 及其后面跟着的 .begin 或 .end 构成了一个 syncbase，ID 引用到另一个动画元素，.begin 或 .end 用来确定到底是与引用的动画元素的动画开头同步、还是与引用的动画元素的动画激活结束同步。
 - \<event-value>
-  - : 描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素 ID 及其后面跟着的一个点及其后面跟着事件名构成了一个合法的 event-value 值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、focusout、`activate`、`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`、`DOMSubtreeModified`、`DOMNodeInserted`、`DOMNodeRemoved`、`DOMNodeRemovedFromDocument`、`DOMNodeInsertedIntoDocument`、`DOMAttrModified`、`DOMCharacterDataModified`、`SVGLoad`、`SVGUnload`、`SVGAbort`、`SVGError`、`SVGResize`、`SVGScroll`、`SVGZoom`、`beginEvent`、`endEvent`和`repeatEvent。`
+  - : 描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素 ID 及其后面跟着的一个点及其后面跟着事件名构成了一个合法的 event-value 值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、focusout、`activate`、`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`、`DOMSubtreeModified`、`DOMNodeInserted`、`DOMNodeRemoved`、`DOMNodeRemovedFromDocument`、`DOMNodeInsertedIntoDocument`、`DOMAttrModified`、`DOMCharacterDataModified`、`SVGLoad`、`SVGUnload`、`SVGAbort`、`SVGError`、`SVGResize`、`SVGScroll`、`SVGZoom`、`beginEvent`、`endEvent` 和 `repeatEvent`。
 - \<repeat-value>
   - : 描述了一个符合条件重复事件。repeat 事件发生了指定次数的时间点，被定义为元素动画的开始时间点。
 - \<accessKey-value>
@@ -41,29 +36,29 @@ translation_of: Web/SVG/Attribute/begin
 
 ### Offset 示例
 
-» [begin-1-offset.svg](https://developer.mozilla.org/files/3290/begin-1-offset.svg)
+» [begin-1-offset.svg](/files/3290/begin-1-offset.svg)
 
 ### Syncbase 示例
 
-» [begin-2-syncbase.svg](https://developer.mozilla.org/files/3291/begin-2-syncbase.svg)
+» [begin-2-syncbase.svg](/files/3291/begin-2-syncbase.svg)
 
 ### Event 示例
 
-» [begin-3-event.svg](https://developer.mozilla.org/files/3292/begin-3-event.svg)
+» [begin-3-event.svg](/files/3292/begin-3-event.svg)
 
 ### Repeat 示例
 
-» [begin-4-repeat.svg](https://developer.mozilla.org/files/3293/begin-4-repeat.svg)
+» [begin-4-repeat.svg](/files/3293/begin-4-repeat.svg)
 
 ### Accesskey 示例
 
-» [begin-5-accesskey.svg](https://developer.mozilla.org/files/3294/begin-5-accesskey.svg)
+» [begin-5-accesskey.svg](/files/3294/begin-5-accesskey.svg)
 
 ## 元素
 
 下列元素可以使用`begin`属性：
 
-- [动画元素](/en/SVG/Element#Animation) »
+- [动画元素](/zh-CN/SVG/Element#Animation) »
 
 ## 规范
 

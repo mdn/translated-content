@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** 属性描述了视图从它的 {{jsxref("ArrayBuffer")}} 开始的字节长度。

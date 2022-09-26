@@ -1,15 +1,7 @@
 ---
 title: contrast()
 slug: Web/CSS/filter-function/contrast
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/contrast()
 original_slug: Web/CSS/filter-function/contrast()
-browser-compat: css.types.filter-function.contrast
 ---
 {{CSSRef}}
 

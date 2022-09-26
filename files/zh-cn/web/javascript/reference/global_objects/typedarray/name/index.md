@@ -1,14 +1,8 @@
 ---
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
-  - 构造函数
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
+
 {{JSRef}}
 
 `TypedArray.name` ?属性是描述类型数组构造名的字符串值。
@@ -49,5 +43,5 @@ Float64Array.name;      // "Float64Array"
 
 ## 参见
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

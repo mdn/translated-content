@@ -1,15 +1,8 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - SVG Filter
-  - recipe:css-property
-translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`filter`** 将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。

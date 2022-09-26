@@ -1,8 +1,8 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述

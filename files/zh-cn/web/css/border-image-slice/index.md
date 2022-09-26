@@ -1,15 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-image-slice
 ---
+
 {{CSSRef}}
 
 **`border-image-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将使用 {{cssxref("border-image-source")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-CN/docs/Web/CSS/border-image)。

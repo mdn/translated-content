@@ -2,6 +2,7 @@
 title: 使用 WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 如果您已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
@@ -78,11 +79,11 @@ fetch('simple.wasm')
 
 > **备注：** WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的 (你也可以运行 wasm 代码 在 Firefox 47+ 通过将 _about:config_ 中的 `javascript.options.wasm` flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 _chrome://flags_ 并且将 _Experimental WebAssembly_ flag 设置为 enabling.)
 
-这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的 —— 在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的， WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。
+这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的 —— 在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的，WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能. 为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击 “xxx > wasm” .
+在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm”。
 
 ![](wasm-debug.png)
 
@@ -90,7 +91,7 @@ fetch('simple.wasm')
 
 ## 内存
 
-在 WebAssembly 的底层内存模型中，内存被表示为称为 [线性内存](http://webassembly.org/docs/semantics/#linear-memory) 的无类型字节的连续范围，通过模块中的[加载和存储指令](http://webassembly.org/docs/semantics/#linear-memory-accesses)读取和写入。 在这个内存模型中， 任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C / C ++概念（如指针）所必需的。
+在 WebAssembly 的底层内存模型中，内存被表示为称为 [线性内存](http://webassembly.org/docs/semantics/#linear-memory) 的无类型字节的连续范围，通过模块中的[加载和存储指令](http://webassembly.org/docs/semantics/#linear-memory-accesses)读取和写入。在这个内存模型中，任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C/C++ 概念（如指针）所必需的。
 
 然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。
 
@@ -98,7 +99,7 @@ fetch('simple.wasm')
 
 我们通过一个快速的例子来开始探索。
 
-1. 创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html。`添加一个 `<script></script>` 节点到页面中。
+1. 创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html`。添加一个 `<script></script>` 节点到页面中。
 2. 在脚本的顶部添加下面的一行代码来创建一个内存实例：
 
     ```js

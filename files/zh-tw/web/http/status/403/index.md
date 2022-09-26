@@ -1,8 +1,8 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-translation_of: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`403 Forbidden`** 客戶端錯誤狀態碼表示伺服器理解該請求但拒絕核准。
@@ -28,7 +28,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## [瀏覽器相容性](/zh-TW/docs/Web/HTTP/Status/100$edit#%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9B%B8%E5%AE%B9%E6%80%A7)
 
-{{Compat("http.status.403")}}
+{{Compat}}
 
 ## 參見
 

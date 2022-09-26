@@ -1,8 +1,8 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
-translation_of: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 **font-language-override** CSS 属性控制在指定的语言中使用特定的字形。
@@ -65,9 +65,9 @@ p.para2 {
 }
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('使用丹麦文字形', '600') }}
 
 ## 规范
 
@@ -75,7 +75,7 @@ p.para2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
 ## 另请参阅
 

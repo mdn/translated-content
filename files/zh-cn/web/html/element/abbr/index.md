@@ -1,22 +1,15 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - abbr
-translation_of: Web/HTML/Element/abbr
 ---
+
 {{HTMLRef}}
 
 **HTML 缩写元素**（**`<abbr>`**）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 `title` 属性，则它必须且仅可包含完整的描述内容。
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
-这篇文章： _[How to mark abbreviations and make them understandable](/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
+这篇文章： _[How to mark abbreviations and make them understandable](/zh-CN/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
 
 <table class="properties">
  <tbody>
@@ -156,7 +149,7 @@ accessed.</p>
 
 可以在 _[How to mark abbreviations and make them understandable](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)_ 中浏览更多深层次的实例。
 
-## 可访问性问题
+## 无障碍问题
 
 在缩略词第一次出现在页面的时候，将它书写完整对帮助人们理解很有用处的，特别是内容是技术或者工业术语
 
@@ -174,7 +167,7 @@ accessed.</p>
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## 参见
 

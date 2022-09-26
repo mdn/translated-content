@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D`**接口是 Canvas API 的一部分，可为{{HTMLElement("canvas")}}元素的绘图表面提供 2D 渲染上下文。它用于绘制形状，文本，图像和其他对象。
@@ -274,7 +275,7 @@ ctx.stroke();
 - {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
   - : 删除所有的阴影设置，例如 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和{{domxref("CanvasRenderingContext2D.shadowBlur")}}。
 - {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
-  - : 这是一个和 `drawImage `相等的多余的方法。
+  - : 这是一个和 `drawImage` 相等的多余的方法。
 - {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
   - : 使用{{domxref("CanvasRenderingContext2D.globalAlpha")}} 替代。
 - {{non-standard_inline}} `CanvasRenderingContext2D.setCompositeOperation()`
@@ -366,7 +367,7 @@ ctx.stroke();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
 ## 参见
 

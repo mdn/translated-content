@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 `Element.getAttributeNames()` renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (_tableau_) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.
@@ -50,10 +51,8 @@ if (Element.prototype.getAttributeNames == undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}} | {{Spec2("DOM WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttributeNames")}}
+{{Compat}}

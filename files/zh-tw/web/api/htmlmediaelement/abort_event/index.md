@@ -1,10 +1,9 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
+
 當資源載入被拒絕時將會觸發**`abort`**事件。
 
 ## 一般資訊
@@ -26,11 +25,11 @@ original_slug: Web/Events/abort
 
 | 屬性                                  | 型態                                             | 描述                                                                                            |
 | ------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | 事件的目標對象 (DOM 樹中最頂層的對象)。                                                         |
-| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | 事件的型態。                                                                                    |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | 事件是否向上冒泡。                                                                              |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | 事件是否能夠取消。                                                                              |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (該文檔(Document)的`window`) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) | 事件的目標對象 (DOM 樹中最頂層的對象)。                                                         |
+| `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)     | 事件的型態。                                                                                    |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | 事件是否向上冒泡。                                                                              |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | 事件是否能夠取消。                                                                              |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/zh-TW/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-TW/docs/Web/API/Document/defaultView) (該文檔(Document)的`window`) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                              |
 
 ## 規範

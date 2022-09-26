@@ -1,14 +1,8 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - CSS 参考
-  - CSS 属性
-  - CSS 混合
-  - 布局
-translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef()}}
 
 ## 概述
@@ -85,7 +79,7 @@ isolation: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## 参见
 

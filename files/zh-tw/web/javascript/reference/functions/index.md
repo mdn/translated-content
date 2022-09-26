@@ -1,21 +1,15 @@
 ---
 title: Functions
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - Functions
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code external (or internal in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the _function body_. Values can be _passed_ to a function, and the function can _return_ a value.
 
-In JavaScript, functions are first-class objects, i.e. they are objects and can be manipulated and passed around just like any other object. Specifically, they are [`Function`](/en-US/docs/JavaScript/Reference/Global_Objects/Function) objects.
+In JavaScript, functions are first-class objects, i.e. they are objects and can be manipulated and passed around just like any other object. Specifically, they are [`Function`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function) objects.
 
-For more examples and explanations, see also the [JavaScript guide about functions](/en-US/docs/Web/JavaScript/Guide/Functions).
+For more examples and explanations, see also the [JavaScript guide about functions](/zh-TW/docs/Web/JavaScript/Guide/Functions).
 
 ## Description
 
@@ -23,7 +17,7 @@ Every function in JavaScript is a `Function` object. See {{jsxref("Function")}} 
 
 Functions are not the same as procedures. A function always returns a value, but a procedure may or may not return any value.
 
-To return a specific value other than the default, a function must have a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement that specifies the value to return. A function without a return statement will return a default value. In the case of a [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) called with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) keyword, the default value is the value of its `this` parameter. For all other functions, the default return value is `undefined`.
+To return a specific value other than the default, a function must have a [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) statement that specifies the value to return. A function without a return statement will return a default value. In the case of a [constructor](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) called with the [`new`](/zh-TW/docs/Web/JavaScript/Reference/Operators/new) keyword, the default value is the value of its `this` parameter. For all other functions, the default return value is `undefined`.
 
 The parameters of a function call are the function's _arguments_. Arguments are passed to functions _by value_. If the function changes the value of an argument, this change is not reflected globally or in the calling function. However, object references are values, too, and they are special: if the function changes the referred object's properties, that change is visible outside the function, as shown in the following example:
 
@@ -57,7 +51,7 @@ function myFunc(theObject) {
  console.log(mycar.brand);
 ```
 
-The [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) does not refer to the currently executing function, so you must refer to `Function` objects by name, even within the function body.
+The [`this` keyword](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) does not refer to the currently executing function, so you must refer to `Function` objects by name, even within the function body.
 
 ## 定義函式 Defining functions
 
@@ -65,7 +59,7 @@ The [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) does n
 
 ### The function declaration (`function` statement)
 
-There is a special syntax for declaring functions (see [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) for details):
+There is a special syntax for declaring functions (see [function statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/function) for details):
 
 ```plain
 function name([param[, param[, ... param]]]) {
@@ -82,7 +76,7 @@ function name([param[, param[, ... param]]]) {
 
 ### The function expression (`function` expression)
 
-A function expression is similar to and has the same syntax as a function declaration (see [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) for details):
+A function expression is similar to and has the same syntax as a function declaration (see [function expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/function) for details):
 
 ```plain
 function [name]([param] [, param] [..., param]) {
@@ -139,7 +133,7 @@ function* [name]([param] [, param] [..., param]) {
 
 > **備註：** Arrow function expressions are an _experimental technology,_ part of the ECMAScript 6 proposal, and are not widely supported by browsers yet.
 
-An arrow function expression has a shorter syntax and lexically binds its this value (see [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for details):
+An arrow function expression has a shorter syntax and lexically binds its this value (see [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for details):
 
 ```plain
 ([param] [, param]) => {
@@ -198,20 +192,20 @@ Invoking the `Function` constructor as a function (without using the `new` opera
 
 ### Default parameters
 
-Default function parameters allow formal parameters to be initialized with default values if no value or `undefined` is passed. For more details, see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+Default function parameters allow formal parameters to be initialized with default values if no value or `undefined` is passed. For more details, see [default parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ### Rest parameters
 
-The rest parameter syntax allows to represent an indefinite number of arguments as an array. For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+The rest parameter syntax allows to represent an indefinite number of arguments as an array. For more details, see [rest parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
 ## The `arguments` object
 
-You can refer to a function's arguments within the function by using the `arguments` object. See [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
+You can refer to a function's arguments within the function by using the `arguments` object. See [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): An array-like object containing the arguments passed to the currently executing function.
-- [`arguments.callee`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: The currently executing function.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Deprecated_Inline}} : The function that invoked the currently executing function.
-- [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): The number of arguments passed to the function.
+- [`arguments`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments): An array-like object containing the arguments passed to the currently executing function.
+- [`arguments.callee`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: The currently executing function.
+- [`arguments.caller`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Deprecated_Inline}} : The function that invoked the currently executing function.
+- [`arguments.length`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): The number of arguments passed to the function.
 
 ## Defining method functions
 
@@ -219,16 +213,16 @@ You can refer to a function's arguments within the function by using the `argume
 
 You can define getters (accessor methods) and setters (mutator methods) on any standard built-in object or user-defined object that supports the addition of new properties. The syntax for defining getters and setters uses the object literal syntax.
 
-- [get](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [get](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
   - : Binds an object property to a function that will be called when that property is looked up.
-- [set](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [set](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
   - : Binds an object property to a function to be called when there is an attempt to set that property.
 
 ### Method definition syntax
 
 > **備註：** _Method definitions are experimental technology,_ part of the ECMAScript 6 proposal, and are not widely supported by browsers yet.
 
-Starting with ECMAScript 6, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+Starting with ECMAScript 6, you are able to define own methods in a shorter syntax, similar to the getters and setters. See [method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 var obj = {
@@ -276,13 +270,13 @@ var y = function x() {};
 alert(x); // throws an error
 ```
 
-The function name also appears when the function is serialized via [`Function`'s toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+The function name also appears when the function is serialized via [`Function`'s toString method](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
 On the other hand, the variable the function is assigned to is limited only by its scope, which is guaranteed to include the scope where the function is declared in.
 
 As the 4th example shows, the function name can be different from the variable the function is assigned to. They have no relation to each other.A function declaration also creates a variable with the same name as the function name. Thus, unlike those defined by function expressions, functions defined by function declarations can be accessed by their name in the scope they were defined in:
 
-A function defined by '`new Function'` does not have a function name. However, in the [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) JavaScript engine, the serialized form of the function shows as if it has the name "anonymous". For example, `alert(new Function())` outputs:
+A function defined by '`new Function'` does not have a function name. However, in the [SpiderMonkey](/zh-TW/docs/Mozilla/Projects/SpiderMonkey) JavaScript engine, the serialized form of the function shows as if it has the name "anonymous". For example, `alert(new Function())` outputs:
 
 ```js
 function anonymous() {
@@ -385,7 +379,7 @@ If the script is changed so that the condition becomes '`if (1)`', function `zer
 
 Note: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.
 
-Note: Some JavaScript engines, not including [SpiderMonkey](/en-US/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
+Note: Some JavaScript engines, not including [SpiderMonkey](/zh-TW/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
 
 ```js
 if (0) {
@@ -459,4 +453,4 @@ Note that in the `if` test, a reference to `noFunc` is used—there are no brack
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "Method definitions")}}
-- [Functions and function scope](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Functions and function scope](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope)

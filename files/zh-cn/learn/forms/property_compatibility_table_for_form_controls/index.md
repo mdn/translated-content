@@ -1,8 +1,8 @@
 ---
 title: 表单控件兼容性列表
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 ---
+
 {{learnsidebar}}
 
 下面的兼容性表格尝试总结 HTML 表单的 CSS 支持状况。由于 CSS 和 HTML 表单的复杂性，不能把这些表格当作完善的参考。但是，它们可以让你很好地洞察什么能做什么不能做，这将会对你学习使用有很好地帮助。

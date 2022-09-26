@@ -1,8 +1,8 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 `forms` 屬性會回傳一個包含目前頁面中所有 {{HTMLElement("form")}} 元素的集合物件（型別為 {{domxref("HTMLCollection")}}）。

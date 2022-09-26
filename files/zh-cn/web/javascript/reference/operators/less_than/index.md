@@ -1,8 +1,8 @@
 ---
 title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-translation_of: Web/JavaScript/Reference/Operators/Less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
@@ -19,7 +19,7 @@ The less than operator (`<`) returns `true` if the left operand is less than the
 
 The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarised below:
 
-- First, objects are converted to primitives using [`Symbol.ToPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter be `'number'`.
+- First, objects are converted to primitives using [`Symbol.ToPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter be `'number'`.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
 
@@ -28,7 +28,7 @@ The operands are compared using the [Abstract Relational Comparison](https://tc3
   - `undefined` is converted to `NaN`.
   - Strings are converted based on the values they contain, and are converted as `NaN` if they do not contain numeric values.
 
-- If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
+- If either value is [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
 - Otherwise the values are compared as numeric values.
 
 ## Examples
@@ -99,6 +99,6 @@ console.log(NaN < 3);          // false
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

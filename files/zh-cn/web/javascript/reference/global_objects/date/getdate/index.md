@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）。

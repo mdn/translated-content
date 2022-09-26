@@ -1,8 +1,8 @@
 ---
 title: Firefox 10 技術文件
 slug: Mozilla/Firefox/Releases/10
-translation_of: Mozilla/Firefox/Releases/10
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -22,13 +22,13 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 
 - The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
-- You can no longer use [E4X](/en/E4X) syntax while in [ECMAScript 5 strict mode](/en/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (that is, after `"use strict;"`).
+- You can no longer use [E4X](/zh-TW/E4X) syntax while in [ECMAScript 5 strict mode](/zh-TW/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
 
 #### DOM3 Events
 
-- The DOM Event method [`event.stopImmediatePropagation`](/en/DOM/event.stopImmediatePropagation) has been implemented.
+- The DOM Event method [`event.stopImmediatePropagation`](/zh-TW/DOM/event.stopImmediatePropagation) has been implemented.
 - The mouse events `mouseenter` and `mouseleave` have been implemented.
 
 #### DOM4
@@ -42,7 +42,7 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 
 #### Page Visibility API
 
-- The [Page Visibility API](/en/DOM/Using_the_Page_Visibility_API) has been implemented (prefixed): `document.mozHidden`, `document.mozVisibilityState` are available and the event `mozvisibilitychanged` is sent when the state is modified.
+- The [Page Visibility API](/zh-TW/DOM/Using_the_Page_Visibility_API) has been implemented (prefixed): `document.mozHidden`, `document.mozVisibilityState` are available and the event `mozvisibilitychanged` is sent when the state is modified.
 
 #### Full Screen API
 
@@ -61,41 +61,41 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 #### WebGL
 
 - Firefox 10 now supports the [`OES_standard_derivatives`](http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/) extension.
-- [New preferences have been added](/en/WebGL#WebGL_debugging_and_testing) to help test WebGL code for compatibility with minimally-capable devices on your full development platform.
+- [New preferences have been added](/zh-TW/WebGL#WebGL_debugging_and_testing) to help test WebGL code for compatibility with minimally-capable devices on your full development platform.
 
 #### Web Workers
 
-- The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en/DOM/Worker/Functions_available_to_workers#section_2).
-- The [`Worker()`](</en/DOM/Worker#Worker()>) constructor now accepts [data URIs](/en/data_URIs).
+- The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/zh-TW/DOM/Worker/Functions_available_to_workers#section_2).
+- The [`Worker()`](</en/DOM/Worker#Worker()>) constructor now accepts [data URIs](/zh-TW/data_URIs).
 
 #### IndexedDB
 
 Great progress has been made to update IndexedDB to the latest draft specification. This effort will continue in Firefox 11.
 
-- The [`IDBIndex.count()`](/en/IndexedDB/IDBIndex#count) and [`IDBObjectStore.count()`](/en/IndexedDB/IDBObjectStore#count) methods have been added.
-- The [`IDBCursor.advance()`](/en/IndexedDB/IDBCursor#advance) method has been added.
-- When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en/IndexedDB/IDBObjectStore#createIndex) or [`IDBDatabase.createObjectStore()`](/en/IndexedDB/IDBDatabase#createObjectStore), Gecko will not fire an exception anymore, but simply ignore it.
-- When [`IDBTransaction.abort()`](/en/IndexedDB/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en/IndexedDB/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
-- The methods [`IDBObjectStore.delete()`](</en/IndexedDB/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en/IndexedDB/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en/IndexedDB/IDBRequest) to `undefined`.
-- The method [`IDBDatabase.setVersion()`](</en/IndexedDB/IDBDatabase#setVersion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en/IndexedDB/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en/IndexedDB/IDBOpenDBRequest) interface.
+- The [`IDBIndex.count()`](/zh-TW/IndexedDB/IDBIndex#count) and [`IDBObjectStore.count()`](/zh-TW/IndexedDB/IDBObjectStore#count) methods have been added.
+- The [`IDBCursor.advance()`](/zh-TW/IndexedDB/IDBCursor#advance) method has been added.
+- When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/zh-TW/IndexedDB/IDBObjectStore#createIndex) or [`IDBDatabase.createObjectStore()`](/zh-TW/IndexedDB/IDBDatabase#createObjectStore), Gecko will not fire an exception anymore, but simply ignore it.
+- When [`IDBTransaction.abort()`](/en/IndexedDB/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/zh-TW/IndexedDB/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
+- The methods [`IDBObjectStore.delete()`](</en/IndexedDB/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en/IndexedDB/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/zh-TW/IndexedDB/IDBRequest) to `undefined`.
+- The method [`IDBDatabase.setVersion()`](</en/IndexedDB/IDBDatabase#setVersion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/zh-TW/IndexedDB/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/zh-TW/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/zh-TW/IndexedDB/IDBOpenDBRequest) interface.
 - The method [`IDBFactory.deleteDatabase()`](/en/IndexedDB/IDBFactory#deleteDatabase%28%29) method has been added.
 
 #### Other
 
-- When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/en/DOM/DOMParser#Parsing_a_SVG_document) when given a string with SVG.
+- When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/zh-TW/DOM/DOMParser#Parsing_a_SVG_document) when given a string with SVG.
 - In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.
 - The ESC key no longer incorrectly results in the {{ domxref("window.oninput") }} handler incorrectly getting called.
 - The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/zh-TW/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
 
 ### CSS
 
 - CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See [Using CSS transforms](/En/CSS/Using_CSS_transforms#3D_specific_CSS_properties) for details.
 - Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: `-moz-isolation` and `-moz-plaintext`. The `-moz-isolation` value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with `unicode-bidi:-moz-isolation` behaves like a {{ HTMLElement("bdi") }} element. The `-moz-plaintext` indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.
 - The CSS {{ cssxref("linear-gradient") }} and {{ cssxref("repeating-linear-gradient") }} properties have been updated to support the new `to` syntax and the _magic corner_ algorithm. This allows to give a precise color on the corner of a gradient-filled box.
-- The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one [has been corrected](/en/CSS/text-overflow#Gecko_notes).
-- Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements [has been fixed](/en/CSS/position#Gecko_notes). **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
+- The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one [has been corrected](/zh-TW/CSS/text-overflow#Gecko_notes).
+- Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements [has been fixed](/zh-TW/CSS/position#Gecko_notes). **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 - Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 
 ### SVG
@@ -109,26 +109,26 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 ### Developer tools
 
 - The {{ domxref("console") }} object has two new methods, {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
-- The new [Page Inspector](/en/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
+- The new [Page Inspector](/zh-TW/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers
 
-For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en/Firefox/Updating_add-ons_for_Firefox_10).
+For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/zh-TW/Firefox/Updating_add-ons_for_Firefox_10).
 
-> **備註：** The old [`PRBool`](/en/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
+> **備註：** The old [`PRBool`](/zh-TW/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
 
 ### Manifests
 
-- Support for [`<em:strictCompatibility>`](/en/Install_Manifests#strictCompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
+- Support for [`<em:strictCompatibility>`](/zh-TW/Install_Manifests#strictCompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
 - If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
 ### XUL
 
-- Bootstrapped add-ons using a [chrome.manifest](/en/Chrome_Registration) file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
+- Bootstrapped add-ons using a [chrome.manifest](/zh-TW/Chrome_Registration) file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/zh-TW/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
 
 ### XPConnect
 
-- Several new properties and methods have been added to [`Components.utils`](/en/Components.utils), granting access to assorted debugging-related information.
+- Several new properties and methods have been added to [`Components.utils`](/zh-TW/Components.utils), granting access to assorted debugging-related information.
 
 ### Interface changes
 
@@ -139,7 +139,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Plug-in changes
 
-- The [new variable `NPNVdocumentOrigin`](/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs) has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.
+- The [new variable `NPNVdocumentOrigin`](/zh-TW/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs) has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.
 
 ### Build system changes
 
@@ -148,14 +148,14 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### See also
 
-- [Firefox 9 for developers](/en/Firefox_9_for_developers)
-- [Firefox 8 for developers](/en/Firefox_8_for_developers)
-- [Firefox 7 for developers](/en/Firefox_7_for_developers)
-- [Firefox 6 for developers](/en/Firefox_6_for_developers)
-- [Firefox 5 for developers](/en/Firefox_5_for_developers)
-- [Firefox 4 for developers](/en/Firefox_4_for_developers)
-- [Firefox 3.6 for developers](/en/Firefox_3.6_for_developers)
+- [Firefox 9 for developers](/zh-TW/Firefox_9_for_developers)
+- [Firefox 8 for developers](/zh-TW/Firefox_8_for_developers)
+- [Firefox 7 for developers](/zh-TW/Firefox_7_for_developers)
+- [Firefox 6 for developers](/zh-TW/Firefox_6_for_developers)
+- [Firefox 5 for developers](/zh-TW/Firefox_5_for_developers)
+- [Firefox 4 for developers](/zh-TW/Firefox_4_for_developers)
+- [Firefox 3.6 for developers](/zh-TW/Firefox_3.6_for_developers)
 - [Firefox 3.5 for developers](/En/Firefox_3.5_for_developers)
-- [Firefox 3 for developers](/en/Firefox_3_for_developers)
-- [Firefox 2 for developers](/en/Firefox_2_for_developers)
-- [Firefox 1.5 for developers](/en/Firefox_1.5_for_developers)
+- [Firefox 3 for developers](/zh-TW/Firefox_3_for_developers)
+- [Firefox 2 for developers](/zh-TW/Firefox_2_for_developers)
+- [Firefox 1.5 for developers](/zh-TW/Firefox_1.5_for_developers)

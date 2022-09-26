@@ -1,15 +1,8 @@
 ---
 title: CSS（樣式表）
 slug: Learn/CSS
-tags:
-  - CSS
-  - 入門
-  - 初學者
-  - 撰寫程式
-  - 樣式
-  - 風格
-translation_of: Learn/CSS
 ---
+
 {{LearnSidebar}}
 
 階層式樣式表（{{glossary("CSS")}}）是學習完 {{glossary("HTML")}} 之後，您應該學習的第一項技術。HTML 用於定義內容的架構與語意，CSS 則是用來設定樣式與佈局方式。舉例來說，您可以使用 CSS 來改變內容的字體、顏色、字型大小、間距、拆分成多欄，或是加入動畫和其他裝飾性質的特性。

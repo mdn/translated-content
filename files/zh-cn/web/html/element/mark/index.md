@@ -1,8 +1,8 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-translation_of: Web/HTML/Element/mark
 ---
+
 ## 概要
 
 HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突出显示的文本，这是由于标记的段落在封闭上下文中的相关性或重要性造成的。
@@ -45,7 +45,7 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.mark")}}
+{{Compat}}
 
 ## 参见
 

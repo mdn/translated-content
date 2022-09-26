@@ -1,12 +1,8 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
-tags:
-  - 分块传输
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/411
 ---
+
 {{HTTPSidebar}}
 
 响应状态码 **`411 Length Required`** 属于客户端错误，表示由于缺少确定的{{HTTPHeader("Content-Length")}} 首部字段，服务器拒绝客户端的请求。

@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -22,13 +18,13 @@ SyntaxError: Unexpected token ( [Chrome]
 
 ## 哪里出错了？
 
-[函数声明](/en-US/docs/Web/JavaScript/Reference/Statements/function)需要提供函数名称。你需要检查函数是如何定义的，是否需要为其提供名称，出现问题的函数是否需要声明为函数表达式或立即调用函数表达式（{{Glossary("IIFE")}}），以及函数在上下文环境中出现的位置是否正确。
+[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)需要提供函数名称。你需要检查函数是如何定义的，是否需要为其提供名称，出现问题的函数是否需要声明为函数表达式或立即调用函数表达式（{{Glossary("IIFE")}}），以及函数在上下文环境中出现的位置是否正确。
 
 ## 示例
 
 ### 语句与表达式
 
-[函数语句](/en-US/docs/Web/JavaScript/Reference/Statements/function)（或函数声明）需要命名，以下写法是不正确的：
+[函数语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)（或函数声明）需要命名，以下写法是不正确的：
 
 ```js example-bad
 function () {
@@ -37,7 +33,7 @@ function () {
 // SyntaxError: function statement requires a name
 ```
 
-你可以使用[函数表达式](/en-US/docs/Web/JavaScript/Reference/Operators/function)（赋值）来代替：
+你可以使用[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)（赋值）来代替：
 
 ```js example-good
 var greet = function() {
@@ -55,7 +51,7 @@ var greet = function() {
 
 ### 标号函数 (Labeled functions)
 
-你使用函数标号 ([labels)](/en-US/docs/Web/JavaScript/Reference/Statements/label)的时候，也需要在关键词 `function` 后面提供一个函数名称。这样的代码是不能运行的：
+你使用函数标号 ([labels)](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)的时候，也需要在关键词 `function` 后面提供一个函数名称。这样的代码是不能运行的：
 
 ```js example-bad
 function Greeter() {
@@ -118,8 +114,8 @@ promise.then(
 
 ## 相关内容
 
-- [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [Functions in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Functions)
+- [function statement](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [function expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-- [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [label](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)

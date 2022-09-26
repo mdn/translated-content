@@ -1,15 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - リファレンス
-browser-compat: javascript.builtins.Promise.reject
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject()`** メソッドは、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。

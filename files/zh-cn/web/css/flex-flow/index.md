@@ -1,8 +1,8 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef("CSS Flexible Boxes") }}
 
 ## 概述
@@ -36,7 +36,7 @@ element {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## 另参见
 

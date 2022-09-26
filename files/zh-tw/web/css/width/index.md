@@ -1,8 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area).
@@ -134,7 +134,7 @@ p {
 The `width` property is specified as either:
 
 - one of the following keyword values: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
-- a [`<length>`](#<length>) or a [`<percentage>`](#<percentage>). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
+- a [`<length>`](#length) or a [`<percentage>`](#percentage). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
 
 ### Values
 
@@ -260,7 +260,7 @@ p.minblue {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## 參考
 

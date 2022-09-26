@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/EventLoop
 original_slug: Web/JavaScript/Concurrence_et_boucle_des_événements
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript gère la concurrence grâce à une « boucle d'événements ». Ce modèle est différent de la gestion faite par des langages comme C ou Java.
@@ -94,7 +95,7 @@ while(true) {
 
 ### Zéro délai
 
-Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout "The documentation about this has not yet been written; please consider contributing!") avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
+Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
 
 L'exécution dépend du nombre de taches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
 

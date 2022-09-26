@@ -1,12 +1,8 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - 状态码
-  - 重定向
-translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`302 Found`** 重定向状态码表明请求的资源被暂时的移动到了由该 HTTP 响应的响应头 {{HTTPHeader("Location")}} 指定的 URL 上。浏览器会重定向到这个 URL，但是搜索引擎不会对该资源的链接进行更新 (In SEO-speak, it is said that the link-juice is not sent to the new URL)。

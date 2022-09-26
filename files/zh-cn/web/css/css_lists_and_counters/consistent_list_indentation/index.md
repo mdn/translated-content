@@ -1,16 +1,9 @@
 ---
 title: 调整列表缩进
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
-  - Web
-  - 列表
-  - 缩进
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Web/Guide/CSS/Consistent_list_indentation
 ---
+
 对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为 0，在 IE 浏览器中生效，但是在基于 Gecko 引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。
 
 为了弄明白这是为什么，以及如何避免这些问题发生，有必要研究一下列表结构的具体细节。
@@ -51,9 +44,9 @@ If we dropped this list into a document as-is, there would be no apparent indent
 
 In order to avoid this and get some indentation, there are really only three options available to browser implementors.
 
-1.  Give each `<li>` element a left margin.
-2.  Give the `<ul>` element a left margin.
-3.  Give the `<ul>` element some left padding.
+1. Give each `<li>` element a left margin.
+2. Give the `<ul>` element a left margin.
+3. Give the `<ul>` element some left padding.
 
 As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer for Windows and Macintosh, and Opera. The third was adopted by Gecko, and by extension all the browsers that embed it.
 

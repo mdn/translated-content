@@ -1,15 +1,8 @@
 ---
 title: JavaScript 基礎
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - JavaScript
-  - 初學
-  - 學習
-  - 寫程式
-  - 新手
-  - 網頁
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 JavaScript 是一個可以幫您在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助您踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
@@ -59,7 +52,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 之後，我們將變數 `myHeading` 中 {{domxref("Element.innerHTML", "innerHTML")}} 特性的值設為「Hello world!」。
 
-> **備註：** Both of the features you used above are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
+> **備註：** Both of the features you used above are parts of the [Document Object Model (DOM) API](/zh-TW/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
 
 ## 語言基礎速成
 

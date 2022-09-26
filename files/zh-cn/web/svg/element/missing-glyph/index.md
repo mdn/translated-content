@@ -1,14 +1,8 @@
 ---
 title: missing-glyph
 slug: Web/SVG/Element/missing-glyph
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/missing-glyph
 ---
+
 {{SVGRef}}
 
 如果对于给定的字符，字体没有定义一个合适的 {{ SVGElement("glyph") }}，那么就会呈现`missing-glyph`元素的内容。
@@ -23,8 +17,8 @@ translation_of: Web/SVG/Element/missing-glyph
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -38,10 +32,10 @@ translation_of: Web/SVG/Element/missing-glyph
 
 ## DOM 接口
 
-该元素实现了[`SVGMissingGlyphElement`](/en/DOM/SVGMissingGlyphElement)接口。
+该元素实现了[`SVGMissingGlyphElement`](/zh-CN/DOM/SVGMissingGlyphElement)接口。
 
 ## 相关内容
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)

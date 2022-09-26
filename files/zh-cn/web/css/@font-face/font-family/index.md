@@ -1,9 +1,11 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-translation_of: Web/CSS/@font-face/font-family
 ---
-{{CSSRef}}**`font-family`**`属性允许我们为页面上的字体指定一个由`{{cssxref("@font-face")}} 规则定义的字体族
+
+{{CSSRef}}
+
+**`font-family`** 属性允许我们为页面上的字体指定一个由 {{cssxref("@font-face")}} 规则定义的字体族
 
 The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.
 
@@ -44,4 +46,4 @@ font-family: examplefont;
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.font-face.font-family")}}
+{{Compat}}

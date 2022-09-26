@@ -1,14 +1,11 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - CSS Scroll Anchoring
-translation_of: Web/CSS/overflow-anchor
 ---
+
 {{CSSRef}}
 
-**`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。
+**`overflow-anchor`** [CSS](/zh-CN/docs/Web/CSS) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。
 
 默认情况下，在任何支持滚动锚定行为的浏览器中都将其启用。因此，仅当您在文档或文档的一部分中遇到滚动锚定问题并且需要关闭行为时，才通常需要更改此属性的值。
 
@@ -54,8 +51,8 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## See also
 
-- [Guide to scroll anchoring](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [Guide to scroll anchoring](/zh-CN/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)

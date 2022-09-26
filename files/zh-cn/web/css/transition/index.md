@@ -1,16 +1,11 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - transition
-translation_of: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
-**`transition` **[CSS](https://developer.mozilla.org/en/CSS) 属性是 {{ cssxref("transition-property") }}，{{ cssxref("transition-duration") }}，{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/en-US/docs/CSS/Shorthand_properties)。
+**`transition` **[CSS](/zh-CN/CSS) 属性是 {{ cssxref("transition-property") }}，{{ cssxref("transition-duration") }}，{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/CSS/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -57,7 +52,7 @@ transition: unset;
 - 零或一个 {{cssxref("&lt;single-transition-timing-function&gt;")}} 值表示要使用的过渡函数
 - 零，一或两个 {{cssxref("&lt;time&gt;")}} 值。可以解析为时间的第一个值被分配给 {{cssxref("transition-duration")}}，并且可以解析为时间的第二个值被分配给{{cssxref("transition-delay")}}。
 
-请查看“[如何处理](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
+请查看“[如何处理](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
 
 ### 标准语法
 
@@ -65,7 +60,7 @@ transition: unset;
 
 ## 示例
 
-“[使用 CSS 过渡](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
+“[使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
 
 ## 规范
 
@@ -75,7 +70,7 @@ transition: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## 参见
 

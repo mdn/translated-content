@@ -1,8 +1,8 @@
 ---
 title: 创建种类表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
+
 本章节演示如何定义我们的页面，创建`Genre` 物件（这是一个很好的起点，因为类型只有一个字段，它的名称`name`，没有依赖项）。像任何其他页面一样，我们需要设置路由，控制器和视图。
 
 ## 引入验证与无害化方法

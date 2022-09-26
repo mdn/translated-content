@@ -1,13 +1,8 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - 布局
-  - 未设置
-  - 样式
-translation_of: Web/CSS/unset
 ---
+
 {{CSSRef}}
 
 CSS 关键字 **`unset`** 可以分为两种情况，如果这个属性本来有从父级继承的值（这个属性默认可以继承，且父级有定义），则将该属性重新设置为继承的值，如果没有继承父级样式，则将该属性重新设置为初始值。换句话说，在第一种情况下（继承属性）它的行为类似于{{cssxref("inherit")}} ，在第二种情况下（非继承属性）类似于{{cssxref("initial")}}。它可以应用于任何 CSS 属性，包括 CSS 简写属性 {{cssxref("all")}} 。
@@ -90,7 +85,7 @@ p {
 
 ## 浏览器兼容性
 
-{{ Compat("css.types.global_keywords.unset")}}
+{{ Compat}}
 
 ## 参见
 

@@ -1,8 +1,8 @@
 ---
 title: History
 slug: Web/API/History
-translation_of: Web/API/History
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`History`** 介面允許操控瀏覽器的 _session history_ 紀錄，為當前面頁所在分頁中訪問、或於當前面頁中透過頁面框架（frame）所載入的頁面。
@@ -49,7 +49,7 @@ _The `History`_ _interface doesn't inherit any methods._
 
 ## 瀏覽器相容性
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## 參見
 

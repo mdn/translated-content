@@ -2,6 +2,7 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。
@@ -10,7 +11,7 @@ slug: Web/API/HTMLTextAreaElement
 
 ## 属性
 
-| `form `{{readonlyInline}}                                                  | `object:` 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id", "form")}} 属性或者 `null`。                                                                                                                           |
+| `form` {{readonlyInline}}                                                  | `object:` 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id", "form")}} 属性或者 `null`。                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` {{readonlyInline}}                                                  | `string:` 返回字符串 `textarea`。                                                                                                                                                                                                                                                                                                 |
 | `value`                                                                          | `string:` Returns / Sets the raw value contained in the control.                                                                                                                                                                                                                                                                  |
@@ -58,7 +59,7 @@ The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement
 
 ## 事件
 
-Listen to these events using [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
+Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
 - [`input` event](/zh-CN/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
@@ -168,7 +169,7 @@ function checkRows(oField, oKeyEvent) {
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>
@@ -187,4 +188,4 @@ In the HTML we just need to hook our function to the \`onkeypress\` event and sp
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTextAreaElement")}}
+{{Compat}}

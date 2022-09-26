@@ -1,11 +1,8 @@
 ---
 title: dimension
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS 数据类型
-translation_of: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 **`<dimension>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)是一个带有单位的{{CSSxRef("&lt;number&gt;")}}，例如：`10px`
@@ -42,4 +39,4 @@ CSS 使用度量值来描述距离 ({{CSSxRef("&lt;length&gt;")}})，时间 ({{C
 
 ## 浏览器兼容性
 
-{{Compat("css.types.dimension")}}
+{{Compat}}

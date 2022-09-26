@@ -1,11 +1,8 @@
 ---
 title: <msubsup>
 slug: Web/MathML/Element/msubsup
-tags:
-  - MathML
-  - MathML 参考
-translation_of: Web/MathML/Element/msubsup
 ---
+
 {{MathMLRef}}
 
 MathML `<msubsup>` 元素用于为表达式同时附加上角标和下角标。

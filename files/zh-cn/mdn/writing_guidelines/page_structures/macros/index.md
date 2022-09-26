@@ -1,8 +1,8 @@
 ---
 title: 使用宏
 slug: MDN/Writing_guidelines/Page_structures/Macros
-translation_of: MDN/Writing_guidelines/Page_structures/Macros
 ---
+
 {{MDNSidebar}}
 
 为了自动化执行某些工作，[Yari](/zh-CN/docs/MDN/Yari) 平台提供了一个强大的宏系统——[KumaScript](/zh-CN/docs/MDN/Tools/KumaScript)。本文提供了一些相关信息，方便你在参与编辑 MDN 时使用这些宏。

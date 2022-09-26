@@ -1,26 +1,8 @@
 ---
 title: XRInputSource.targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
-tags:
-  - API
-  - AR
-  - Pointing
-  - Property
-  - Ray
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - direction
-  - pointer
-  - target
-  - targetRayMode
-translation_of: Web/API/XRInputSource/targetRayMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRInputSource")}} の読み取り専用プロパティ **`targetRayMode`** は、入力ソースのターゲット光線を生成する方法と、それをユーザーに提示する方法を示します。

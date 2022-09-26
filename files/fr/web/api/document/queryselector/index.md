@@ -12,6 +12,7 @@ tags:
   - Échappement
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
@@ -89,14 +90,11 @@ var el = document.querySelector("div.panneau-utilisateur.principal input[name='i
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 2")}} |                     |
-| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 1")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 

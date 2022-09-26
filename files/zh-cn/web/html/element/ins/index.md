@@ -1,14 +1,8 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ins
 ---
+
 ## 简介
 
 {{HTMLRef}}

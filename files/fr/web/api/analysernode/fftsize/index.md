@@ -3,6 +3,7 @@ title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
 translation_of: Web/API/AnalyserNode/fftSize
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `fftSize` de l'objet {{ domxref("AnalyserNode") }} est un nombre entier non signé qui représente la taille de la FFT ([transfomation de Fourier rapide](/fr/docs/)) à utiliser pour déterminer le domaine fréquentiel.
@@ -80,13 +81,11 @@ function draw() {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-fftSize', 'fftSize')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.fftSize")}}
+{{Compat}}
 
 ## Voir aussi
 

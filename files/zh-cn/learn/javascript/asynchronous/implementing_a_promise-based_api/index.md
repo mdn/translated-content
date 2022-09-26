@@ -1,11 +1,8 @@
 ---
 title: 如何实现基于 Promise 的 API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

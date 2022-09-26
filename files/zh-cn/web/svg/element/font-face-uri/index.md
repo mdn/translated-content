@@ -1,15 +1,8 @@
 ---
 title: font-face-uri
 slug: Web/SVG/Element/font-face-uri
-tags:
-  - SVG
-  - SVG 字体
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/font-face-uri
 ---
+
 {{SVGRef}}
 
 `font-face-uri`元素指向远程字义的当前字体。
@@ -24,8 +17,8 @@ translation_of: Web/SVG/Element/font-face-uri
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [XLink 属性](/en/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [XLink 属性](/zh-CN/SVG/Attribute#XLink) »
 
 ### 专有属性
 
@@ -33,9 +26,9 @@ translation_of: Web/SVG/Element/font-face-uri
 
 ## DOM 接口
 
-该元素实现了[`SVGFontFaceUriElement`](/en/DOM/SVGFontFaceUriElement)接口。
+该元素实现了[`SVGFontFaceUriElement`](/zh-CN/DOM/SVGFontFaceUriElement)接口。
 
 ## 参见
 
 - {{ SVGElement("font-face-src") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)

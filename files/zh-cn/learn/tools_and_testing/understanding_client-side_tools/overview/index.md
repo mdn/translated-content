@@ -1,8 +1,8 @@
 ---
 title: Client-side tooling overview
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 在本文中，我们提供了现代 web 工具的概述，有哪些工具可用，在 web 应用程序开发的生命周期中您将在哪里遇到它们，以及如何使用各个工具寻求帮助。
@@ -62,13 +62,13 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 #### Linters
 
-**Linters** 是检查您的代码并告诉您存在任何错误的工具，它们是什么类型的错误，以及它们出现在哪些代码行上。通常，linters 不仅可以被配置为报告错误，还可以报告任何违反您的团队可能正在使用的指定样式指南的行为 (例如代码使用了错误的缩进空格数，或者使用了[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) 而不是常规的字符串文本)。
+**Linters** 是检查您的代码并告诉您存在任何错误的工具，它们是什么类型的错误，以及它们出现在哪些代码行上。通常，linters 不仅可以被配置为报告错误，还可以报告任何违反您的团队可能正在使用的指定样式指南的行为 (例如代码使用了错误的缩进空格数，或者使用了[template literals](/zh-CN/docs/Web/JavaScript/Reference/Template_literals) 而不是常规的字符串文本)。
 
 [eslint](https://eslint.org/) 业界标准的 JavaScript linter 是一种高度可配置的工具，用于捕获潜在的语法错误，并在代码中鼓励“最佳实践”。一些公司和项目也是这样 [shared their eslint configs](https://www.npmjs.com/search?q=keywords:eslintconfig)。
 
 您还可以找到用于其他语言的 linting 工具，比如[csslint](http://csslint.net/)。
 
-同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括可访问性，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括无障碍，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
 
 #### 源代码控制
 
@@ -76,7 +76,7 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 [Git](https://git-scm.com/) 是现在大多数人使用的源代码控制系统。它主要通过命令行访问，但也可以通过友好的用户界面访问。使用 git 存储库中的代码，您可以将其推到自己的服务器实例中，或者使用托管的源代码控制网站，如[GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product/features).
 
-我们将在这个模块中使用 GitHub。你可以在网站上找到更多关于它的信息[Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
+我们将在这个模块中使用 GitHub。你可以在网站上找到更多关于它的信息[Git and GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub).
 
 #### 代码格式化
 
@@ -96,7 +96,7 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 web 应用程序生命周期的这个阶段通常允许您编写“未来代码”(比如最新的 CSS 或 JavaScript 特性，这些特性可能还没有得到浏览器的本地支持)，或者完全使用另一种语言编写代码，比如 [TypeScript](https://www.typescriptlang.org/). 转换工具将为您生成与浏览器兼容的代码，以用于生产。
 
-通常 web 开发被认为是三种语言：[HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript), 所有这些语言都有转换工具。转换提供了两个主要好处 (还有其他好处)
+通常 web 开发被认为是三种语言：[HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS), and [JavaScript](/zh-CN/docs/Learn/JavaScript), 所有这些语言都有转换工具。转换提供了两个主要好处 (还有其他好处)
 
 1. 能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，您可能希望使用尖端的新语言特性来编 JavaScript，但是您的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
 
@@ -168,8 +168,8 @@ web 应用程序生命周期的这个阶段通常允许您编写“未来代码�
 
 ## In this module
 
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
+- [Client-side tooling overview](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
+- [Command line crash course](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
+- [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
+- [Introducing a complete toolchain](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
+- [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

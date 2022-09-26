@@ -13,6 +13,7 @@ tags:
   - évènements
 translation_of: Web/API/DeviceOrientationEvent
 ---
+
 {{ApiRef}}{{SeeCompatTable}}
 
 ## Sommaire
@@ -42,18 +43,16 @@ window.addEventListener('deviceorientation', function(event) {
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ event("deviceorientation") }}
-- {{ domxref("DeviceMotionEvent") }}
-- {{ event("devicemotion") }}
-- [Detecting device orientation](/fr/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
+- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
+- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/Events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)

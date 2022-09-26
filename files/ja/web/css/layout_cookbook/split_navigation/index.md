@@ -1,14 +1,6 @@
 ---
 title: ナビゲーションの分割
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - ナビゲーション
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 {{CSSRef}}
 

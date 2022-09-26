@@ -1,13 +1,8 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - Global method
-  - parseInt
-  - 整數
-  - 進位制
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseInt()`** 函式能將輸入的字串轉成整數。
@@ -154,7 +149,7 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## 延伸閱讀
 

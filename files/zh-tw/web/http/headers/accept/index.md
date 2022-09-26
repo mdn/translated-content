@@ -1,8 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-translation_of: Web/HTTP/Headers/Accept
 ---
+
 {{HTTPSidebar}}
 
 **`Accept`** HTTP 請求標頭（以 [MIME type](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 標示）會對伺服器告知用戶端可解讀的內容類型。伺服器可以透過 [content negotiation](/zh-TW/docs/Web/HTTP/Content_negotiation) 來選用可行的協定，並以 {{HTTPHeader("Content-Type")}} 標頭告知用戶端。針對本標頭，瀏覽器可以根據完成請求的脈絡，來決定適合的數值：像是擷取 CSS 時，給予的值就會和圖片、影像、腳本不一樣。
@@ -54,7 +54,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## 參見
 

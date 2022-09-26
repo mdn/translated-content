@@ -1,13 +1,8 @@
 ---
 title: Web media technologies
 slug: Web/Media
-tags:
-  - 媒體技術
-  - 網頁
-  - 視訊
-  - 音效
-translation_of: Web/Media
 ---
+
 這些年來，網頁來表達，創作及運用視訊及音訊以至其他媒介的能力不斷上升。今時今日存在了 大量可供運用的 API 及 HTML 元件，DOM 介面，及其他不止於 發揮傳統效果，還能與其他網頁層面的技術產生協同效應和真實地令人深刻銘記 的特效。本文列出不同的 APIs 和連結其詳細資料的超連結，希望你能認為這些資訊能幫你盡快純熟這些技術。
 
 ## References

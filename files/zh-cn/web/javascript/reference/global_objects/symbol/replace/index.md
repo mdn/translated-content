@@ -1,11 +1,8 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-tags:
-  - JavaScript
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
+
 {{JSRef}}
 
 **`Symbol.replace`** 这个属性指定了当一个字符串替换所匹配字符串时所调用的方法。{{jsxref("String.prototype.replace()")}} 方法会调用此方法。

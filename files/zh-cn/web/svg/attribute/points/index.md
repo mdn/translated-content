@@ -1,14 +1,9 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/points
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `points`属性定义了用来画一个{{ SVGElement("polyline") }}元素或画一个 SVGElement("polygon") }}元素的点的数列。
 

@@ -1,12 +1,8 @@
 ---
 title: HTML 参考
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Web
-  - 参考
-translation_of: Web/HTML/Reference
 ---
+
 {{HTMLSidebar}}
 
 HTML 是一种描述 Web 文档结构和语义的语言；它由**元素**组成，每个元素可以有一些**属性**。网页中的内容通过 HTML 元素标记，如{{HTMLElement("img")}}、{{HTMLElement("title")}}、{{HTMLElement("p")}}、{{HTMLElement("div")}} 等等。

@@ -1,12 +1,8 @@
 ---
 title: 前提条件
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
-tags:
-  - firefox signature config
-  - firefox webextension config
-  - xpi signatures config
-translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
+
 要使用 WebExtension API 进行开发，你需要进行一些最基本的设置。
 
 - 下载、安装和启动 [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) 或者 [Firefox Nightly](https://nightly.mozilla.org/)。如果想要使用最近的更新，请使用 Nightly 版本。

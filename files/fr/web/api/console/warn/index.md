@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/warn
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche un message d'avertissement dans la console web.
@@ -36,15 +37,13 @@ console.warn(msg [, subst1, ..., substN]);
 
 Voir [Outputting text to the console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{ domxref("console") }} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#warn", "console.warn()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.warn")}}
+{{Compat}}
 
 ## Voir aussi
 

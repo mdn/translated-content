@@ -1,8 +1,8 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## 概要
@@ -10,8 +10,8 @@ translation_of: Web/API/CSSStyleDeclaration
 `CSSStyleDeclaration` 表示了一個 CSS 屬性名值對（property-value pairs）的集合。它被用於幾個 API 當中：
 
 - {{domxref("HTMLElement.style")}} - to manipulate the style of a single element (\<elem style="...">);
-- (TODO: reword) is an interface to the [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) returned by the [`style`](/en/DOM/cssRule.style) property of a [`cssRule`](/en/DOM/cssRule) in a [stylesheet](/en/DOM/stylesheet), when the rule is a [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule).
-- `CSSStyleDeclaration` is also a **read-only** interface to the result of [window.getComputedStyle](/en/DOM/window.getComputedStyle)().
+- (TODO: reword) is an interface to the [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) returned by the [`style`](/zh-TW/DOM/cssRule.style) property of a [`cssRule`](/zh-TW/DOM/cssRule) in a [stylesheet](/zh-TW/DOM/stylesheet), when the rule is a [CSSStyleRule](/zh-TW/DOM/cssRule#CSSStyleRule).
+- `CSSStyleDeclaration` is also a **read-only** interface to the result of [window.getComputedStyle](/zh-TW/DOM/window.getComputedStyle)().
 
 ## 屬性
 
@@ -35,7 +35,7 @@ translation_of: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Modifies an existing CSS property or creates a new CSS property in the declaration block/.
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}
-  - : Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or `null` for [shorthand properties](/en/CSS/Shorthand_properties).
+  - : Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or `null` for [shorthand properties](/zh-TW/CSS/Shorthand_properties).
 
 ## 範例
 
@@ -57,7 +57,7 @@ The declaration block is that part of the style rule that appears within the bra
 
 ## 參見
 
-- [DOM CSS Properties](/en-US/docs/Web/CSS/CSS_Properties_Reference)
+- [DOM CSS Properties](/zh-TW/docs/Web/CSS/CSS_Properties_Reference)
 
 ## 規範
 

@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.texParameter[fi]()`**方法用于设置纹理参数。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texParameter[fi]()`** 方法用于设置纹理参数。
 
 ## 语法
 
@@ -135,9 +136,9 @@ void gl.texParameteri(GLenum target, GLenum pname, GLint param);
 
 ### 返回值
 
-`INVALID_ENUM `target 不是合法的值。
+`INVALID_ENUM` target 不是合法的值。
 
-`INVALID_OPRATION `当前目标上没有绑定纹理对象。
+`INVALID_OPRATION` 当前目标上没有绑定纹理对象。
 
 ## 示例
 

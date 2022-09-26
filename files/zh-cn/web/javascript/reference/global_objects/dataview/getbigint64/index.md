@@ -1,14 +1,8 @@
 ---
 title: getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
-tags:
-  - DataView
-  - JavaScript
-  - Prototype
-  - getBigInt64()
-  - 大整型
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 ---
+
 {{JSRef}}
 
 **`getBigInt64()`** 方法从 {{jsxref("DataView")}} 开始获取一个指定偏移量的有符号 64 位整数 (long long) 。

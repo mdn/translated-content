@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - getAll()
-browser-compat: api.StylePropertyMapReadOnly.getAll
-translation_of: Web/API/StylePropertyMapReadOnly/getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`getAll()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの値を含む {{domxref("CSSStyleValue")}} オブジェクトの配列を返します。

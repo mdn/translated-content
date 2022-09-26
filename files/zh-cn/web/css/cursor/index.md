@@ -1,16 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - CSS
-  - CSS Reference
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。

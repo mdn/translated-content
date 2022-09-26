@@ -1,14 +1,8 @@
 ---
 title: 'SyntaxError: JSON.parse: bad parsing'
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
-tags:
-  - Errors
-  - JSON
-  - JavaScript
-  - SyntaxError
-  - 方法
-translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息

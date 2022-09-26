@@ -1,13 +1,8 @@
 ---
 title: ID 选择器
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Selectors
-  - 参考
-  - 选择器
-translation_of: Web/CSS/ID_selectors
 ---
+
 {{CSSRef}}
 
 在一个 HTML 文档中，CSS ID 选择器会根据该元素的 ID 属性中的内容匹配元素，元素 ID 属性名必须与选择器中的 ID 属性名完全匹配，此条样式声明才会生效。
@@ -58,4 +53,4 @@ span#identified {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.id")}}
+{{Compat}}

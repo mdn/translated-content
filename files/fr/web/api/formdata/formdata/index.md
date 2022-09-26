@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
@@ -70,13 +71,11 @@ formData = new FormData(myForm);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## Voir aussi
 

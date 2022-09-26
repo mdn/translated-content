@@ -1,11 +1,8 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript 5
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
+
 {{JSRef}}
 
 **`Object.keys()`** 方法會回傳一個由指定物件所有可列舉之屬性組成的陣列，該陣列中的的排列順序與使用 {{jsxref("Statements/for...in", "for...in")}} 進行迭代的順序相同（兩者的差異在於 `for-in` 迴圈還會迭代出物件自其原型鏈所繼承來的可列舉屬性）。
@@ -130,7 +127,7 @@ if (!Object.keys) {
 
 ## 參見
 
-- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

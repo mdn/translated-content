@@ -1,11 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - JSON
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 > **备注：** 本文描述的是适用于 WebExtensions 的 manifest.json。若您正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App Manifest](/zh-CN/docs/Web/Manifest)。
@@ -46,7 +43,7 @@ The block below shows the basic syntax for some common manifest keys.
 
 > **备注：** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
-For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
+For complete example extensions, see [Example extensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
 ```json
 {
@@ -126,9 +123,9 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## 浏览器兼容性
 
-For a full overview of all manifest keys and their sub-keys, see the [full `manifest.json` browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+For a full overview of all manifest keys and their sub-keys, see the [full `manifest.json` browser compatibility table](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}
 
 ## 参见
 

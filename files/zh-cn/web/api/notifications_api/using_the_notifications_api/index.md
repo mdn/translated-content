@@ -2,6 +2,7 @@
 title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。
@@ -251,8 +252,8 @@ window.addEventListener('load', function () {
 
 当用户点击一个由应用产生的通知时，视情况而定，你将会有两种方式被告知点击事件发生了：
 
-1.  如果你的程序没有被关闭或转入后台，那么在你会收到一个点击事件。
-2.  其他情况下会收到一条系统消息。
+1. 如果你的程序没有被关闭或转入后台，那么在你会收到一个点击事件。
+2. 其他情况下会收到一条系统消息。
 
 参考 [这个代码片段](https://github.com/mozilla/buddyup/commit/829cba7afa576052cf601c3e286b8d1981f93f45#diff-3) 作为例子，展示了如何处理。
 

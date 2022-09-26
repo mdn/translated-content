@@ -1,12 +1,8 @@
 ---
 title: 'RangeError: invalid array length'
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
-tags:
-  - JavaScript
-  - 范围错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息

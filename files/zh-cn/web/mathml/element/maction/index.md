@@ -1,11 +1,11 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-translation_of: Web/MathML/Element/maction
 ---
+
 {{MathMLRef}}
 
-MathML**`<maction>`**元素提供了一种让表达式（或子表达式）具有某种特定行为的可能性。具体行为方式由**`actiontype`**属性的取值来确定。也可以使用**`selection`**属性来手动指定该行为作用在哪个子元素上。
+MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具有某种特定行为的可能性。具体行为方式由 **`actiontype`** 属性的取值来确定。也可以使用 **`selection`** 属性来手动指定该行为作用在哪个子元素上。
 
 ## 属性
 
@@ -18,13 +18,13 @@ MathML**`<maction>`**元素提供了一种让表达式（或子表达式）具�
     - `tooltip`: 当指针指向表达式时触发，会在表达式附近显示一个提示框。语法如下：`<maction actiontype="tooltip"> expression message </maction>`。
 
 - class, id, style
-  - : 供[样式表](/en-US/docs/CSS)使用。
+  - : 供[样式表](/zh-CN/docs/CSS)使用。
 - href
   - : 用来设置标签点击后跳转的链接。
 - mathbackground
-  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - mathcolor
-  - : 用来设置文字和分数的线的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置文字和分数的线的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - selection
   - : 用来设置该行为作用在哪个子元素上，默认为**`1`**，代表第一个子元素。
 
@@ -75,7 +75,7 @@ MathML**`<maction>`**元素提供了一种让表达式（或子表达式）具�
 
 ## Gecko 具体说明
 
-- 在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，**`actiontype`**属性支持的非标准的**`restyle`**值，如今它已经不再支持。
+- 在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，**`actiontype`** 属性支持的非标准的 **`restyle`** 值，如今它已经不再支持。
 - 在 Gecko 14.0 {{ geckoRelease("14.0") }} 之前，**`statusline`** 行为类型使用了如下所示的非标准语法，如今它已按照 MathML 规范被修复了。
 
   ```html
@@ -84,5 +84,5 @@ MathML**`<maction>`**元素提供了一种让表达式（或子表达式）具�
   </maction>
   ```
 
-- 在 Gecko 15.0 {{geckoRelease("15.0")}}中，只有 actiontype 属性的值为**`toggle`**时，**`selection`**属性才会有作用。
-- 从 Gecko 16.0 {{geckoRelease("16.0")}}开始，当**`actiontype`**属性的值无效时，**`selection`**属性仍然起作用。如果未指定**`actiontype`**或者**`selection`**属性的值无效，将抛出一个 MathML 错误（无效的标记）。
+- 在 Gecko 15.0 {{geckoRelease("15.0")}}中，只有 actiontype 属性的值为 **`toggle`** 时，**`selection`** 属性才会有作用。
+- 从 Gecko 16.0 {{geckoRelease("16.0")}}开始，当 **`actiontype`** 属性的值无效时，**`selection`** 属性仍然起作用。如果未指定 **`actiontype`** 或者 **`selection`** 属性的值无效，将抛出一个 MathML 错误（无效的标记）。

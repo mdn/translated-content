@@ -1,8 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。
@@ -61,7 +61,7 @@ console.log(this.y); // undefined
 
 ### Emulating private members
 
-In dealing with [constructors](/en-US/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/en-US/docs/Web/JavaScript/Closures):
+In dealing with [constructors](/zh-TW/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/zh-TW/docs/Web/JavaScript/Closures):
 
 ```js
 var Thing;
@@ -113,7 +113,7 @@ if (x) {
 }
 ```
 
-In ECMAScript 2015, **`let`** bindings are not subject to **Variable Hoisting**, which means that **`let`** declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a [`ReferenceError`](/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError) (contrary to a variable declared with [var](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting), which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.
+In ECMAScript 2015, **`let`** bindings are not subject to **Variable Hoisting**, which means that **`let`** declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a [`ReferenceError`](/zh-TW/docs/JavaScript/Reference/Global_Objects/ReferenceError) (contrary to a variable declared with [var](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting), which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.
 
 ```js
 function do_something() {
@@ -232,7 +232,7 @@ console.log(b); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.let")}}
+{{Compat}}
 
 ## 參見
 

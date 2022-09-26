@@ -1,8 +1,8 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
-translation_of: Web/CSS/list-style-position
 ---
+
 {{CSSRef}}
 
 **`list-style-position`** 属性指定标记框在主体块框中的位置。
@@ -88,7 +88,7 @@ list-style-position: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.list-style-position")}}
+{{Compat}}
 
 ## See also
 

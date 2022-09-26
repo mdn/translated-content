@@ -1,8 +1,8 @@
 ---
 title: <blink>
 slug: Web/HTML/Element/blink
-translation_of: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}}
 
 HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文本闪烁。
@@ -29,13 +29,13 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 ## 浏览器兼容
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 参见
 
 - [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
 - {{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.
 - {{htmlelement("marquee")}}, another similar non-standard element.
-- [CSS animations](/en-US/docs/Web/Guide/CSS/Using_CSS_animations) are the way to go to create such an effect.
+- [CSS animations](/zh-CN/docs/Web/Guide/CSS/Using_CSS_animations) are the way to go to create such an effect.
 
 {{HTMLRef}}

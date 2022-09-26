@@ -1,17 +1,8 @@
 ---
 title: <ol>
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - 元素
-  - 列表
-  - 参考
-translation_of: Web/HTML/Element/ol
 ---
+
 {{HTMLRef}}
 
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
@@ -182,7 +173,7 @@ translation_of: Web/HTML/Element/ol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## 相关
 

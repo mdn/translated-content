@@ -1,15 +1,15 @@
 ---
 title: 修復 KumaScript 錯誤
 slug: MDN/Tools/KumaScript/Troubleshooting
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 ---
+
 {{MDNSidebar}}
 
-網頁上出現一塊又大又醜的 [KumaScript](/en-US/docs/MDN/Kuma/Introduction_to_KumaScript) 錯誤會惹惱讀者，好險任何擁有 MDN 帳號的人，可以編輯文件來修復錯誤。當一個頁面出現錯誤的時候，該面會被列在[有錯誤的文件](/zh-TW/docs/with-errors)裡面。網站編輯者會透過這份清單，找出並修復錯誤。這篇文章列出 KumaScript 錯誤的四種類型，還有解決他們的步驟。
+網頁上出現一塊又大又醜的 [KumaScript](/zh-TW/docs/MDN/Kuma/Introduction_to_KumaScript) 錯誤會惹惱讀者，好險任何擁有 MDN 帳號的人，可以編輯文件來修復錯誤。當一個頁面出現錯誤的時候，該面會被列在[有錯誤的文件](/zh-TW/docs/with-errors)裡面。網站編輯者會透過這份清單，找出並修復錯誤。這篇文章列出 KumaScript 錯誤的四種類型，還有解決他們的步驟。
 
 ## 文件解析錯誤
 
-`DocumentParsingError` errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a [macro](/en-US/docs/MDN/Contribute/Content/Macros).
+`DocumentParsingError` errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a [macro](/zh-TW/docs/MDN/Contribute/Content/Macros).
 
 Check for:
 
@@ -24,12 +24,12 @@ Check for:
 
 ## TemplateLoadingError
 
-`TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/en-US/docs/MDN/Contribute/Content/Macros) to include on a page.
+`TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/zh-TW/docs/MDN/Contribute/Content/Macros) to include on a page.
 
 Check for:
 
 - Misspelling of macro names or renamed macros.
-  - : There is a partial list of [macros for the MDN](/en-US/docs/MDN/Contribute/Content/Custom_macros), which may include the existing macro you are looking at, or its correct/new spelling.
+  - : There is a partial list of [macros for the MDN](/zh-TW/docs/MDN/Contribute/Content/Custom_macros), which may include the existing macro you are looking at, or its correct/new spelling.
 
 > **備註：** You can make it quick and easy to jump to a specific macro by adding a [search keyword](http://kb.mozillazine.org/Using_keyword_searches) to Firefox. <<\<MORE SOON>>
 

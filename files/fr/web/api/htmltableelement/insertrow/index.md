@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans la table et retourne une référence à la nouvelle ligne.
@@ -63,15 +64,11 @@ Remarquez que `insertRow` insère directement la ligne dans la table et renvoie 
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                      |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}} | {{Spec2("HTML WHATWG")}} |                                                  |
-| {{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}                 | {{Spec2("DOM2 HTML")}}     | Spécifie plus en détail où la ligne est insérée. |
-| {{SpecName("DOM1", "level-one-html.html#ID-39872903", "HTMLTableElement.insertRow()")}}         | {{Spec2("DOM1")}}         | Définition initiale.                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTableElement")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: 字体平滑
 slug: Web/CSS/font-smooth
-tags:
-  - CSS
-  - CSS Reference
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/font-smooth
 ---
+
 {{ CSSRef }} {{ Non-standard_header }}
 
 **`font-smooth`** [CSS](/zh-CN/CSS) 属性用来控制字体渲染时的平滑效果。
@@ -70,7 +65,7 @@ font-smooth: 2em;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-smooth")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,11 +1,11 @@
 ---
 title: 使用 async 進行非同步流控制
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
+
 有些*本地圖書館*網頁的控制器代碼，會依賴多重非同步要求的結果，可能會需要以某種特定次序運行，或者以平行方式運行。為了管理流控制，並在我們所有需要用到的信息，都已經可以取用的時候，再繪製網頁，我們將使用許多人採用的 node [async](https://www.npmjs.com/package/async) 模組。
 
-> **備註：** 在 JavaScript 中有許多其他方法，可以管理異步行為和流控制，包括相對較新的 JavaScript 語言功能，如 [Promises](/en-US/docs/Mozilla/Add-ons/Techniques/Promises)。
+> **備註：** 在 JavaScript 中有許多其他方法，可以管理異步行為和流控制，包括相對較新的 JavaScript 語言功能，如 [Promises](/zh-TW/docs/Mozilla/Add-ons/Techniques/Promises)。
 
 Async 有很多有用的方法（請查看[文檔](http://caolan.github.io/async/docs.html)）。一些最重要的功能是：
 
@@ -134,5 +134,5 @@ npm install async
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of Part 5: [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer).
+- Return to [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of Part 5: [Template primer](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer).

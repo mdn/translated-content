@@ -1,17 +1,8 @@
 ---
 title: '@viewport'
 slug: Web/CSS/@viewport
-tags:
-  - Adaptation
-  - At-rule
-  - CSS
-  - Device
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/@viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`@viewport`** 规则让我们可以对文档的大小进行设置 {{glossary("viewport")}} 。这个特性主要被用于移动设备，但是也可以用在支持类似“固定到边缘”等特性的桌面浏览器，如微软的 Edge。
@@ -36,27 +27,27 @@ translation_of: Web/CSS/@viewport
 
 目前，大多数浏览器对 `@viewport` 的支持很差，Internet Explorer 和 Edge 对其支持较好。但即使在这些浏览器中，也只有少量的描述符可用。如果浏览器不支持 `@viewport`，浏览器会忽略 `@viewport` 以及任何和其相关的描述符。
 
-- [`min-width`](/en-US/docs/Web/CSS/@viewport/min-width)
+- [`min-width`](/zh-CN/docs/Web/CSS/@viewport/min-width)
   - : 设置 viewport 的最小宽度
-- [`max-width`](/en-US/docs/Web/CSS/@viewport/max-width)
+- [`max-width`](/zh-CN/docs/Web/CSS/@viewport/max-width)
   - : 设置 viewport 的最大宽度
-- [`width`](/en-US/docs/Web/CSS/@viewport/width)
+- [`width`](/zh-CN/docs/Web/CSS/@viewport/width)
   - : 同时设置 `min-width` 和 `max-width`
-- [`min-height`](/en-US/docs/Web/CSS/@viewport/min-height)
+- [`min-height`](/zh-CN/docs/Web/CSS/@viewport/min-height)
   - : 设置 viewport 的最小高度
-- [`max-height`](/en-US/docs/Web/CSS/@viewport/max-height)
+- [`max-height`](/zh-CN/docs/Web/CSS/@viewport/max-height)
   - : 设置 viewport 的最大高度
-- [`height`](/en-US/docs/Web/CSS/@viewport/height)
+- [`height`](/zh-CN/docs/Web/CSS/@viewport/height)
   - : 同时设置 `min-height` 和 `max-height`
-- [`zoom`](/en-US/docs/Web/CSS/@viewport/zoom)
+- [`zoom`](/zh-CN/docs/Web/CSS/@viewport/zoom)
   - : 设置初始缩放系数
-- [`min-zoom`](/en-US/docs/Web/CSS/@viewport/min-zoom)
+- [`min-zoom`](/zh-CN/docs/Web/CSS/@viewport/min-zoom)
   - : 设置最小缩放系数
-- [`max-zoom`](/en-US/docs/Web/CSS/@viewport/max-zoom)
+- [`max-zoom`](/zh-CN/docs/Web/CSS/@viewport/max-zoom)
   - : 设置最大缩放系数
-- [`user-zoom`](/en-US/docs/Web/CSS/@viewport/user-zoom)
+- [`user-zoom`](/zh-CN/docs/Web/CSS/@viewport/user-zoom)
   - : 设置用户是能更改缩放系数
-- [`orientation`](/en-US/docs/Web/CSS/@viewport/orientation)
+- [`orientation`](/zh-CN/docs/Web/CSS/@viewport/orientation)
   - : 设置文档的方向
 - {{cssxref("@viewport/viewport-fit", "viewport-fit")}}
   - : Controls the display of the document on non-rectangular displays.
@@ -90,9 +81,9 @@ translation_of: Web/CSS/@viewport
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}
 
 ## See also
 
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mobile/Viewport_meta_tag)
+- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Mobile/Viewport_meta_tag)

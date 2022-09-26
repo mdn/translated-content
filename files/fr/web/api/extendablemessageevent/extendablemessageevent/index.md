@@ -9,6 +9,7 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
@@ -47,13 +48,11 @@ var myEME = new ExtendableMessageEvent('message', init);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-interface', 'ExtendableMessageEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.ExtendableMessageEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

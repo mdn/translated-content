@@ -1,16 +1,8 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - 原型
-  - 參見
-  - 填充工具
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
+
 {{JSRef}}
 
 **`filter()`** 方法會建立一個經指定之函式運算後，由原陣列中通過該函式檢驗之元素所構成的新陣列。
@@ -201,7 +193,7 @@ if (!Array.prototype.filter)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## 參見
 

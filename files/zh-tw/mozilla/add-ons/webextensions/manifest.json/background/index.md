@@ -1,10 +1,8 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -34,9 +32,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 後端腳本是用來放置一些需要維護長期狀態或是進行長期操作的程式碼，它麼的生命週期跟任何網頁或瀏覽器視窗是獨立的。
 
-後端腳本會在套件一被讀取就被讀入，一直到套件被禁用或移除才會卸載。只要你有請求對應的[權限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)你可以在這個腳本裡使用任何擴充套件 APIs。
+後端腳本會在套件一被讀取就被讀入，一直到套件被禁用或移除才會卸載。只要你有請求對應的[權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)你可以在這個腳本裡使用任何擴充套件 APIs。
 
-更多細節，查看[套件解析](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)的"後端頁面"章節。
+更多細節，查看[套件解析](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)的"後端頁面"章節。
 
 `background` 鍵是一個物件，可能包含下列二屬性其中之一，兩者都是選擇性的：
 
@@ -112,4 +110,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 ## 瀏覽器兼容
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

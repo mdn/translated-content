@@ -1,15 +1,8 @@
 ---
 title: <h1>–<h6>：HTML 区域标题元素
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Web
-  - 元素
-  - 标题
-translation_of: Web/HTML/Element/Heading_Elements
 ---
+
 **HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
@@ -99,7 +92,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 {{ EmbedLiveSample('Example_page', '280', '480', '') }}
 
-## 可访问性问题
+## 无障碍问题
 
 ### 导航
 
@@ -125,31 +118,31 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 标题可以嵌套其小节，以反映页面的结构。大多数屏幕阅读器可以生成页面上所有标题的列表，从而帮助用户快速确定内容的层次结构：
 
-1.  `h1` Beetles
+1. `h1` Beetles
 
-    1.  `h2` Etymology
-    2.  `h2` Distribution and Diversity
-    3.  `h2` Evolution
+    1. `h2` Etymology
+    2. `h2` Distribution and Diversity
+    3. `h2` Evolution
 
-        1.  `h3` Late Paleozoic
-        2.  `h3` Jurassic
-        3.  `h3` Cretaceous
-        4.  `h3` Cenozoic
+        1. `h3` Late Paleozoic
+        2. `h3` Jurassic
+        3. `h3` Cretaceous
+        4. `h3` Cenozoic
 
-    4.  `h2` External Morphology
+    4. `h2` External Morphology
 
-        1.  `h3` Head
+        1. `h3` Head
 
-            1.  `h4` Mouthparts
+            1. `h4` Mouthparts
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Pterothorax
+            1. `h4` Prothorax
+            2. `h4` Pterothorax
 
-        3.  `h3` Legs
-        4.  `h3` Wings
-        5.  `h3` Abdomen
+        3. `h3` Legs
+        4. `h3` Wings
+        5. `h3` Abdomen
 
 当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。
 
@@ -198,7 +191,7 @@ In this example, screen reading technology would announce that there are two {{H
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 参见
 

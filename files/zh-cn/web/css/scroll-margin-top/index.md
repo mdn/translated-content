@@ -1,15 +1,8 @@
 ---
 title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - scorll-margin
-  - scroll-margin-top
-translation_of: Web/CSS/scroll-margin-top
 ---
+
 {{CSSRef}}
 
 `scroll-margin-top` 属性定义了滚动捕捉区域的顶边距，用于在捕捉视口上捕捉该盒子。滚动捕捉区域是由变换后的边框决定的，找到它的矩形边界框（在滚动容器的坐标空间轴中轴对齐），然后添加指定的起始点。
@@ -48,4 +41,4 @@ scroll-margin-top: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-margin-top")}}
+{{Compat}}

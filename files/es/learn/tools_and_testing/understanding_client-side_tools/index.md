@@ -25,18 +25,20 @@ Las herramientas del lado del cliente (_client-side_ en inglés) pueden ser inti
 
 Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS) y [JavaScript](/es/docs/Learn/JavaScript), antes de intentar usar las herramientas aquí descritas.
 
-### ¿Quieres convertirte en un desarrollador _front-end_?
-
-Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
-
-[Inicia ahora](/es/docs/Learn/Front-end_web_developer)
+> **Observación:**
+>
+> ### ¿Quieres convertirte en un desarrollador _front-end_?
+>
+> Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
+>
+> [Inicia ahora](/docs/Learn/Front-end_web_developer)
 
 ## Guías
 
 - [1. Introducción a las herramientas _client-side_](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
   - : En este artículo damos una introducción a las herramientas modernas de la web, los tipos de herramientas disponibles, donde te las puedes encontrar en el cliclo de desarrollo de aplicaciones web y como buscar ayuda con las herramientas individuales.
 - [2. Introducción a la linea de comandos](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-  - \- CLI en inglés).
+  - : En tu proceso de desarrollo seguramente vas a requeria correr algunos comandos en la terminal (o "línea de comandos"). Este artículo da una introducción a la terminal, los comandos básicos que vas a necesitar para utilizarla, cómo integrar diferentes comandos y cómo agregar tu propia interfaz de línea de comandos (_command line interface_ - CLI en inglés).
 - [3. Introducción al manejo de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
   - : En este artículo exploramos los sistemas de administración de paquetes en detalle para entender cómo los podemos usar en nuestros proyectos, ya sea para instalar dependencias a nuestro proyecto, descargar actualizaciones y mucho más.
 - [4. Introduciendo una cadena de herramientas completa](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)

@@ -1,15 +1,9 @@
 ---
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
-tags:
-  - Lazy-loading
-  - Web Performance
-  - 延迟加载
-  - 性能优化
-  - 懒加载
-translation_of: Web/Performance/Lazy_loading
 ---
-**延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。 这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
+
+**延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
 延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。
 
@@ -29,16 +23,16 @@ translation_of: Web/Performance/Lazy_loading
 可以将 JavaScript、CSS 和 HTML 分割成小块，以发送最少的代码提供关键信息，以优化页面加载时间。其余的部分可以在需要时加载。
 
 - Entry point splitting: separates code by entry point(s) in the app
-- Dynamic splitting: separates code where [dynamic import()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statements are used
+- Dynamic splitting: separates code where [dynamic import()](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) statements are used
 
 ### JavaScript
 
 脚本类型模块
-任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
+任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
 
 ### CSS
 
-默认情况下，CSS 被视为[渲染阻塞](https://developer.mozilla.org/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model) 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。
+默认情况下，CSS 被视为[渲染阻塞](/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model) 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。
 
 ```plain
 <link href="style.css"    rel="stylesheet" media="all">
@@ -52,13 +46,13 @@ translation_of: Web/Performance/Lazy_loading
 
 默认情况下，字体请求会延迟到构造渲染树之前，这可能会导致文本渲染延迟。
 
-It is possible to override the default behaviour and preload web font resources using `<link rel="preload">`, the [CSS font-display property](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API).
+It is possible to override the default behaviour and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/zh-CN/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/zh-CN/docs/Web/API/CSS_Font_Loading_API).
 
-See also: [Element Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
+See also: [Element Link](/zh-CN/docs/Web/HTML/Element/link)
 
 ### Images and iframes
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/zh-CN/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
 
 **Loading** 属性
 The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
@@ -77,7 +71,7 @@ Include this polyfill to provide support for older and currently incompatible br
 [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
 **交叉观察者 API**
-[Intersection Observers](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
+[Intersection Observers](/zh-CN/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
 
 **事件处理程序**
 当浏览器的兼容性至关重要时，有以下几种选择：

@@ -1,17 +1,8 @@
 ---
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsMarkupWork
-  - Screen Orientation
-browser-compat: api.Screen.unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。

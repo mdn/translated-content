@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -22,13 +18,13 @@ TypeError: Cannot use 'in' operator to search for 'x' in y (Chrome)
 
 ## 哪里出错了？
 
-[`in` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/in)只可以用来检测对象中是否存在某个属性，而不能用来在字符串、数字或者其他基本类型的数据中进行检索。
+[`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)只可以用来检测对象中是否存在某个属性，而不能用来在字符串、数字或者其他基本类型的数据中进行检索。
 
 ## 示例
 
 ### 在字符串中进行检索
 
-与其他语言不同（如 Python），不能使用 [`in` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/in)在字符串中进行检索。
+与其他语言不同（如 Python），不能使用 [`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)在字符串中进行检索。
 
 ```js example-bad
 "Hello" in "Hello World";
@@ -74,4 +70,4 @@ var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 
 ## 相关内容
 
-- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)

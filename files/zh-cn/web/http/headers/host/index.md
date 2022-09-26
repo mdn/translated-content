@@ -1,10 +1,8 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - header http 参考 host
-translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 **Host** 请求头指明了请求将要发送到的服务器主机名和端口号。

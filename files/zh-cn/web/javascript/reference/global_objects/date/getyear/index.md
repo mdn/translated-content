@@ -1,44 +1,40 @@
 ---
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
+
 {{JSRef("Global_Objects", "Date")}} {{Deprecated_header("")}}
 
-getYear() 方法返回指定的本地日期的年份。因为 `getYear` 不返回千禧年 \[full years] ("year 2000 problem")，所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}} .
+**`getYear()`** 方法返回指定的本地日期的年份。因为 `getYear()` 不返回千禧年（"year 2000 problem"），所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}}。
 
-## Syntax
+## 语法
 
-```plain
-dateObj.getYear()
+```js-nolint
+getYear()
 ```
 
-### Parameters
+### 返回值
 
-None.
+`getYear` 方法返回一个年份减去 1900 的值；因此：
 
-### Returns
+- 如果年份大于等于 2000，则 `getYear()` 的返回值将大于等于 100。例如，如果年份是 2026，则 `getYear()` 返回 126。
+- 如果年份在 1900 到 1999 之间，`getYear()` 的返回值将在 0 到 99 之间。例如，如果年份是 1976，则 `getYear()` 返回 76。
+- 如果年份小于 1900，则 `getYear()` 的返回值将小于 0。例如，如果年份是 1800，则 `getYear()` 返回 -100。
 
-The `getYear` method returns the year minus 1900; thus:
+如果要同时考虑 2000 年之前和之后的年份，应该使用 {{jsxref("Date.getFullYear", "getFullYear()")}} 而不是 `getYear()`，以便指定完整年份。
 
-- For years greater than or equal to 2000, the value returned by `getYear` is 100 or greater. For example, if the year is 2026, `getYear` returns 126.
-- For years between and including 1900 and 1999, the value returned by `getYear` is between 0 and 99. For example, if the year is 1976, `getYear` returns 76.
-- For years less than 1900, the value returned by `getYear` is less than 0. For example, if the year is 1800, `getYear` returns -100.
+## 向后兼容性
 
-To take into account years before and after 2000, you should use {{jsxref("Date.getFullYear", "getFullYear()")}} instead of `getYear` so that the year is specified in full.
-
-## Backward Compatibility
-
-### Behaviour in JavaScript 1.2 and earlier
+### 在 JavaScript 1.2 及更早版本中的行为
 
 The `getYear` method returns either a 2-digit or 4-digit year:
 
 - For years between and including 1900 and 1999, the value returned by `getYear` is the year minus 1900. For example, if the year is 1976, the value returned is 76.
 - For years less than 1900 or greater than 1999, the value returned by `getYear` is the four-digit year. For example, if the year is 1856, the value returned is 1856. If the year is 2026, the value returned is 2026.
 
-## Examples
+## 示例
 
-### Example: Years between 1900 and 1999
+### 1900 年到 1999 年之间的年份
 
 The second statement assigns the value 95 to the variable `year`.
 
@@ -47,7 +43,7 @@ var Xmas = new Date("December 25, 1995 23:15:00");
 var year = Xmas.getYear(); // returns 95
 ```
 
-### Example: Years above 1999
+### 年份大于 1999
 
 The second statement assigns the value 100 to the variable `year`.
 
@@ -56,7 +52,7 @@ var Xmas = new Date("December 25, 2000 23:15:00");
 var year = Xmas.getYear(); // returns 100
 ```
 
-### Example: Years below 1900
+### 年份小于 1900
 
 The second statement assigns the value -100 to the variable `year`.
 
@@ -65,7 +61,7 @@ var Xmas = new Date("December 25, 1800 23:15:00");
 var year = Xmas.getYear(); // returns -100
 ```
 
-### Example: Setting and getting a year between 1900 and 1999
+### 设置和获取 1900 年到 1999 年之间的年份
 
 The second statement assigns the value 95 to the variable `year`, representing the year 1995.
 
@@ -74,15 +70,15 @@ var Xmas.setYear(95);
 var year = Xmas.getYear(); // returns 95
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}

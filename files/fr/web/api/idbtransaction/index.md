@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBTransaction`** de l'[API IndexedDB](/fr/docs/Web/API/API_IndexedDB) fournit une transaction statique asynchrone vers une base de données grâce à des attributs de gestion d'évènementns. Toutes les opérations de lecture et d'écriture de données sont effectuées au sein de transaction. Il est possible d'utiliser {{domxref("IDBDatabase")}} afin d'initier des transactions puis {{domxref("IDBTransaction")}} afin de paramétrer le mode de la transaction (c'est-à-dire s'il est en lecture seule ou en lecture/écriture) et d'accéder à un objet {{domxref("IDBObjectStore")}} pour réaliser une requête. On peut également utiliser `IDBTransaction` pour interrompre une requête.
@@ -163,13 +164,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires        |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction")}}
+{{Compat}}
 
 ## Voir aussi
 

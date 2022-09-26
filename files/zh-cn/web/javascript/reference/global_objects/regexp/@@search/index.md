@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
+
 {{JSRef}}
 
 **`[@@search]()`** 方法执行了一个在给定字符串中的一个搜索以取得匹配正则模式的项。

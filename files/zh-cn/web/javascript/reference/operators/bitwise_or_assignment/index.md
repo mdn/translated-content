@@ -1,8 +1,8 @@
 ---
 title: Bitwise OR assignment (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise OR assignment operator (`|=`) uses the binary representation of both operands, does a bitwise OR operation on them and assigns the result to the variable.
@@ -26,6 +26,7 @@ a |= 2; // 7
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 // -----------------------------------
+
 // 7: 00000000000000000000000000000111
 ```
 
@@ -39,6 +40,6 @@ a |= 2; // 7
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Bitwise OR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise OR operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [Logical OR assignment (`||=`)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

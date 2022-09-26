@@ -1,8 +1,8 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
-translation_of: Web/API/DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DragEvent`** 介面是一種 {{domxref("Event","DOM event")}}，定義了拖放操作時產生的事件物件。使用者藉由把指標裝置 (例如滑鼠) 放到有效區域並拖移到另一個新的位置 ( 如另外一個 DOM 元素 ) 來開始一個拖動的動作。 而應用程式可以自由地決定互動的方式來達到符合該應用程式的使用情境。
@@ -69,8 +69,12 @@ An Example of each property, constructor, event type and global event handlers i
 
 ## 瀏覽器相容性
 
-{{Compat("api.DragEvent")}}
+{{Compat}}
 
 ## 參見
 
-{{page("/zh-TW/docs/Web/API/DataTransfer", "參見")}}
+- [HTML 拖放 API](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖曳操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推薦拖曳類型](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多個項目](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

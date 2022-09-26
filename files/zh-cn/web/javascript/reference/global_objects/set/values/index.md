@@ -1,44 +1,37 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
-**`values()`** 方法按照元素插入顺序返回一个具有 `Set` 对象每个元素值的全新 `Iterator` 对象。
+**`values()`** 方法返回一个新的[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，该对象按插入顺序包含 `Set` 对象中每个元素的值。
 
-**`keys()`** 方法是这个方法的别名（与 {{jsxref("Map")}} 对象相似）；他们的行为一致，都是返回`Set` 对象中的元素值。
+> **备注：** **`keys()`** 方法是该方法的别名（与 {{jsxref("Map")}} 对象相似）。因此这里重定向 `keys()` 页。它的行为完全相同，并返回 `Set` 元素的**值**。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
 ## 语法
 
-```plain
-mySet.values();
+```js-nolint
+values()
 ```
 
 ### 返回值
 
-按照元素插入顺序返回一个包含给定的 `Set` 对象中每个元素值的全新 **`Iterator`** 对象。
+一个新的迭代器对象，按插入顺序包含给定 `Set` 中每个元素的值。
 
 ## 示例
 
-### 使用 `values()`
+### 使用 values()
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
 
-var setIter = mySet.values();
+const setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
@@ -56,3 +49,4 @@ console.log(setIter.next().value); // "baz"
 ## 参见
 
 - {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}

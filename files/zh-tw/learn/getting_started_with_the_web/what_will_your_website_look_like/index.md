@@ -1,8 +1,8 @@
 ---
 title: 你的網站看起來會是什麼樣子？
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 *你的網站看起來會是什麼樣子？*會說明你該為網站做的規劃與設計，決定自己的「網站該提供哪些資訊？」、「該使用哪些字型與色彩？」，以及「網站又該達到哪些目的？」
@@ -39,7 +39,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 ### 主題色彩
 
-可透過[選色工具](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
+可透過[選色工具](/zh-TW/docs/Web/CSS/CSS_Colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
 
 ![](color-picker.png)
 

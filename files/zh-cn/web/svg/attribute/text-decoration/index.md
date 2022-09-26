@@ -1,9 +1,9 @@
 ---
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
-translation_of: Web/SVG/Attribute/text-decoration
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 `text-decoration` 属性的作用跟{{ cssxref("text-decoration","CSS Text Decoration") }} 特性差不多，当然除了它是一个 CSS 属性。浏览 {{ cssxref("text-decoration","CSS Text Decoration") }} 获取进一步的信息。
 
@@ -20,7 +20,7 @@ translation_of: Web/SVG/Attribute/text-decoration
 后代元素可以继承 text-decoration 这个属性
 ```
 
-- [Text content elements](/en/SVG/Element#TextContent) »
+- [Text content elements](/zh-CN/SVG/Element#TextContent) »
 
 ## 规范
 

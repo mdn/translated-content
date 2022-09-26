@@ -1,14 +1,11 @@
 ---
 title: JavaScript 型別陣列
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
-當 Webapp 有了視頻、[音頻操作](/zh_tw/Introducing_the_Audio_API_Extension)及用 [WebSockets](/zh_tw/WebSockets) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件)並用 [`charCodeAt()`](/en/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
+當 Webapp 有了視頻、[音頻操作](/zh_tw/Introducing_the_Audio_API_Extension)及用 [WebSockets](/zh_tw/WebSockets) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件)並用 [`charCodeAt()`](/zh-TW/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 
 然而，由於需要多次型別轉換（特別是二進制資料並非以位元組計算，如 32 位元整數或浮點數），這個解法既慢又容易發生錯誤。
 
@@ -102,11 +99,11 @@ int16View[0] = 32;
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 ```
 
-輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/en/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
+輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
 
 ### 處理複雜的資料結構
 
-在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 [WebGL](/en/WebGL) 、資料檔案、[js-ctypes](/en/js-ctypes) 時遇到的複雜的資料結構。
+在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 [WebGL](/zh-TW/WebGL) 、資料檔案、[js-ctypes](/zh-TW/js-ctypes) 時遇到的複雜的資料結構。
 
 考慮這個 C 結構：
 

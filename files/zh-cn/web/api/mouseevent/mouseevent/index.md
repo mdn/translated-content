@@ -2,6 +2,7 @@
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** 构造器创建一个 {{domxref("MouseEvent")}}。
@@ -58,7 +59,7 @@ slug: Web/API/MouseEvent/MouseEvent
 
     - `"buttons"`，无符号 `short` 型可选，默认为 `0`，描述了当事件发生时哪些按键被按下：
 
-      | 位域值 （Bit-field value） | 含义                        |
+      | 位域值（Bit-field value） | 含义                        |
       | -------------------------- | --------------------------- |
       | `0`                        | 无按键被按下                |
       | `1`                        | 主按键被按下 (通常为左键)   |
@@ -90,36 +91,36 @@ You can polyfill the `MouseEvent()` constructor functionality in Internet Explor
     new MouseEvent('test');
     return false; // No need to polyfill
   } catch (e) {
-		// Need to polyfill - fall through
+    // Need to polyfill - fall through
   }
 
     // Polyfills DOM4 MouseEvent
-	var MouseEventPolyfill = function (eventType, params) {
-		params = params || { bubbles: false, cancelable: false };
-		var mouseEvent = document.createEvent('MouseEvent');
-		mouseEvent.initMouseEvent(eventType,
-			params.bubbles,
-			params.cancelable,
-			window,
-			0,
-			params.screenX || 0,
-			params.screenY || 0,
-			params.clientX || 0,
-			params.clientY || 0,
-			params.ctrlKey || false,
-			params.altKey || false,
-			params.shiftKey || false,
-			params.metaKey || false,
-			params.button || 0,
-			params.relatedTarget || null
-		);
+  var MouseEventPolyfill = function (eventType, params) {
+    params = params || { bubbles: false, cancelable: false };
+    var mouseEvent = document.createEvent('MouseEvent');
+    mouseEvent.initMouseEvent(eventType,
+      params.bubbles,
+      params.cancelable,
+      window,
+      0,
+      params.screenX || 0,
+      params.screenY || 0,
+      params.clientX || 0,
+      params.clientY || 0,
+      params.ctrlKey || false,
+      params.altKey || false,
+      params.shiftKey || false,
+      params.metaKey || false,
+      params.button || 0,
+      params.relatedTarget || null
+    );
 
-		return mouseEvent;
-	}
+    return mouseEvent;
+  }
 
-	MouseEventPolyfill.prototype = Event.prototype;
+  MouseEventPolyfill.prototype = Event.prototype;
 
-	window.MouseEvent = MouseEventPolyfill;
+  window.MouseEvent = MouseEventPolyfill;
 })(window);
 ```
 

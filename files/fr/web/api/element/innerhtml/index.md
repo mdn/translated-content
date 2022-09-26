@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/Element/innerHTML
 original_slug: Web/API/Element/innertHTML
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
@@ -127,7 +128,7 @@ log("Logging mouse events inside this container...");
 
 La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
 
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :
+Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), {{event ("click")}} et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
 
 ```js
 function logEvent(event) {
@@ -188,11 +189,9 @@ Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le jour
 
 {{EmbedLiveSample("Exemple", 640, 350)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

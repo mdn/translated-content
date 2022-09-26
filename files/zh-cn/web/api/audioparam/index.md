@@ -2,6 +2,7 @@
 title: AudioParam
 slug: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioParam` 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 `AudioParam` 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。
@@ -33,7 +34,7 @@ slug: Web/API/AudioParam
 AudioParam _初始化的方法来自它的父类，_`AudioNode`.
 
 - {{domxref("AudioParam.setValueAtTime()")}}
-  - : 在一个确切的时间，即时更改 `AudioParam `的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
+  - : 在一个确切的时间，即时更改 `AudioParam` 的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
 - {{domxref("AudioParam.linearRampToValueAtTime()")}}
   - : 调整 `AudioParam 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 endTime 参数给定的时间到达新值。`
 - {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
@@ -78,7 +79,7 @@ biquadFilter.gain.value = 25;
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioParam")}}
+{{Compat}}
 
 ## See also
 

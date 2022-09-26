@@ -1,8 +1,8 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-translation_of: Web/CSS/bottom
 ---
+
 {{CSSRef}}
 
 **`bottom`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素下外边距边界与其包含块下边界之间的偏移，非定位元素设置此属性无效。

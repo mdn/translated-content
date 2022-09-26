@@ -7,6 +7,7 @@ tags:
   - Worker API
 translation_of: Web/API/ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`ErrorEvent`** représente un événement donnant des informations relatives aux erreurs dans les scripts ou dans les fichiers.
@@ -37,14 +38,11 @@ _Hérite des méthodes de son parent {{domxref("Event")}}_.
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire                                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }} | {{ Spec2('HTML WHATWG') }} | Ajout de la propriété `error` et du 5ème paramètre du constructeur. |
-| {{ SpecName('HTML5 W3C', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}     | {{ Spec2('HTML5 W3C') }}     | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ErrorEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,20 +1,8 @@
 ---
 title: 继承与原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Advanced
-  - Guide
-  - Inheritance
-  - JavaScript
-  - OOP
-  - 指南
-  - 继承
-  - 进阶
-  - 面向对象
-  - 面向对象编程
-  - 高级
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript 实在是有些令人困惑 —— JavaScript 是动态的，本身不提供一个 `class` 的实现。即便是在 ES2015/ES6 中引入了 `class` 关键字，但那也只是语法糖，JavaScript 仍然是基于原型的。
@@ -210,7 +198,7 @@ console.log( doSomeInstancing );
 
 如果 `doSomeInstancing` 不包含属性信息，那么浏览器会在 `doSomeInstancing` 的 `__proto__` 中进行查找 (同 doSomething.prototype). 如属性在 `doSomeInstancing` 的 `__proto__` 中查找到，则使用 `doSomeInstancing` 中 `__proto__` 的属性。
 
-否则，如果 `doSomeInstancing` 中 `__proto__` 不具有该属性，则检查`doSomeInstancing` 的 `__proto__` 的 `__proto__` 是否具有该属性。默认情况下，任何函数的原型属性 `__proto__` 都是 `window.Object.prototype.` 因此，通过`doSomeInstancing` 的 `__proto__` 的 `__proto__` ( 同 doSomething.prototype 的 `__proto__ `(同 `Object.prototype`)) 来查找要搜索的属性。
+否则，如果 `doSomeInstancing` 中 `__proto__` 不具有该属性，则检查`doSomeInstancing` 的 `__proto__` 的 `__proto__` 是否具有该属性。默认情况下，任何函数的原型属性 `__proto__` 都是 `window.Object.prototype.` 因此，通过 `doSomeInstancing` 的 `__proto__` 的 `__proto__` ( 同 doSomething.prototype 的 `__proto__` (同 `Object.prototype`)) 来查找要搜索的属性。
 
 如果属性不存在 `doSomeInstancing` 的 `__proto__` 的 `__proto__` 中， 那么就会在`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 中查找。然而，这里存在个问题：`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 其实不存在。因此，只有这样，在 `__proto__` 的整个原型链被查看之后，这里没有更多的 `__proto__` ， 浏览器断言该属性不存在，并给出属性值为 `undefined` 的结论。
 

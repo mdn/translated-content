@@ -1,8 +1,8 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-translation_of: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 [Media Source Extensions API](/zh-TW/docs/Web/API/Media_Source_Extensions_API) 的 **`MediaSource`** 介面代表 {{domxref("HTMLMediaElement")}} 物件的媒體資料來源。一個 `MediaSource` 物件可以被附加到一個 {{domxref("HTMLMediaElement")}} 以被用戶代理 (user agent) 播放。
@@ -24,6 +24,7 @@ translation_of: Web/API/MediaSource
   - : 回傳一個列舉類型表示目前 `MediaSource` 的狀態：沒有附加到媒體元件 (`closed`)，已經附加且可以接收 {{domxref("SourceBuffer")}} 物件 (`open`)，已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束 (`ended`)。
 - {{domxref("MediaSource.duration")}}
   - : 取得或設置現在正被表示的媒體的時間長度。
+
 - ### 事件處理函數 (Event handlers)
 
   {{domxref("MediaSource.onsourceclose")}}
@@ -108,7 +109,7 @@ function fetchAB (url, cb) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## 相關資料
 

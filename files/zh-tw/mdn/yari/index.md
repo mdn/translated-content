@@ -1,11 +1,8 @@
 ---
 title: 'Yari: MDN''s rendering platform'
 slug: MDN/Yari
-tags:
-  - Yari
-  - Landing
-  - MDN Meta
 ---
+
 {{MDNSidebar}}
 
 Yari is the code that renders MDN Web Docs. It takes a [JAMStack](https://jamstack.org/) approach, which involves taking the MDN content stored as flat source files in a GitHub repo (which include front matter and macro calls), rendering them out to static HTML files, and serving those as quickly and efficiently as possible.

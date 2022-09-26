@@ -1,15 +1,8 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atmoics
-  - Experimental
-  - JavaScript
-  - Method
-  - 共享内存
-  - 实验性
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`Atomics.exchange()`** 静态方法会用给定的值替换掉数组上的值，然后返回数组的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。

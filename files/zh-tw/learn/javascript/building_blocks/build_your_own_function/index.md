@@ -1,8 +1,8 @@
 ---
 title: 建立自己的功能函數
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 通過前一篇文章中討論的大部分基本理論，本文提供了實踐經驗。 在這裡，您將學習構建自己的自定義功能函數。 在此過程中，我們還將解釋處理函數的一些有用細節。
@@ -13,10 +13,10 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions"
           >Functions — reusable blocks of code</a
         >.
       </td>
@@ -33,7 +33,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 
 ## Active learning: Let's build a function
 
-The custom function we are going to build will be called `displayMessage()`. It will display a custom message box on a web page and will act as a customized replacement for a browser's built-in [alert()](/en-US/docs/Web/API/Window/alert) function. We've seen this before, but let's just refresh our memories. Type the following in your browser's JavaScript console, on any page you like:
+The custom function we are going to build will be called `displayMessage()`. It will display a custom message box on a web page and will act as a customized replacement for a browser's built-in [alert()](/zh-TW/docs/Web/API/Window/alert) function. We've seen this before, but let's just refresh our memories. Type the following in your browser's JavaScript console, on any page you like:
 
 ```js
 alert('This is a message');
@@ -49,7 +49,7 @@ The `alert` function is limited: you can alter the message, but you can't easily
 
 To begin with, let's put together a basic function.
 
-> **備註：** For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
+> **備註：** For function naming conventions, you should follow the same rules as [variable naming conventions](/zh-TW/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
 
 1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
@@ -299,10 +299,10 @@ Congratulations on reaching the end! This article took you through the entire pr
 
 ## In this module
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

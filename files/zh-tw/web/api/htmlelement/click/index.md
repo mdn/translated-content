@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** 方法可以模擬滑鼠點擊一個元素。
@@ -21,4 +21,4 @@ elt.click()
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLElement.click")}}
+{{Compat}}

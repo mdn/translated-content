@@ -1,17 +1,17 @@
 ---
 title: Namespaces Crash Course
 slug: Web/SVG/Namespaces_Crash_Course
-translation_of: Web/SVG/Namespaces_Crash_Course
 ---
-作为 [XML](/zh-CN/docs/Glossary/XML) 的一个方言，[SVG](/zh-CN/docs/Web/SVG) 需要在一个命名空间内（is namespaced）。理解命名空间的概念，以及在你打算编辑 SVG 内容时，命名空间如何使用，是很重要的。SVG 查看器的版本早于 Firefox 1.5 的发布的，都几乎没有注意命名空间的问题， but they are essential to multi-XML dialect supporting user agents such as [Gecko](/zh-CN/docs/Mozilla/Gecko)-based browsers which must be very strict. 现在，花一点时间来理解命名空间，这会让你以后避免各种麻烦。
+
+作为 [XML](/zh-CN/docs/Glossary/XML) 的一个方言，[SVG](/zh-CN/docs/Web/SVG) 需要在一个命名空间内（is namespaced）。理解命名空间的概念，以及在你打算编辑 SVG 内容时，命名空间如何使用，是很重要的。SVG 查看器的版本早于 Firefox 1.5 的发布的，都几乎没有注意命名空间的问题，but they are essential to multi-XML dialect supporting user agents such as [Gecko](/zh-CN/docs/Mozilla/Gecko)-based browsers which must be very strict. 现在，花一点时间来理解命名空间，这会让你以后避免各种麻烦。
 
 ### 背景
 
-W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一个 XML 文件中。例如，SVG 和 [MathML](/zh-CN/docs/Web/MathML) 可以直接并入基于 XHTML 的科学文档中。 能够混合这样的内容类型有很多优点，但也需要解决一个非常实际的问题。
+W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一个 XML 文件中。例如，SVG 和 [MathML](/zh-CN/docs/Web/MathML) 可以直接并入基于 XHTML 的科学文档中。能够混合这样的内容类型有很多优点，但也需要解决一个非常实际的问题。
 
-合理来说，每个 XML 语言定义其规范中描述的标记标签名称的含义。 在单个 XML 文档中混合来自不同 XML 方言的内容的问题是，由一个方言定义的标签可能与另一个方言定义的标签具有相同的名称。例如，XHTML 和 SVG 都有一个\<title>标签。专业使用者如何区分两者？其实当 XML 内容是它所知道的，而不仅仅是一个没有意义的包含任意标签名的 XML 文件时，专业使用者如何告诉它？
+合理来说，每个 XML 语言定义其规范中描述的标记标签名称的含义。在单个 XML 文档中混合来自不同 XML 方言的内容的问题是，由一个方言定义的标签可能与另一个方言定义的标签具有相同的名称。例如，XHTML 和 SVG 都有一个\<title>标签。专业使用者如何区分两者？其实当 XML 内容是它所知道的，而不仅仅是一个没有意义的包含任意标签名的 XML 文件时，专业使用者如何告诉它？
 
-与大众想法相反，这个问题的答案不是 “可以从 DOCTYPE 声明中得知”。DTDs 的设计不考虑混合内容，而过去尝试创建混合内容的 DTDs 现在被认为是失败的。XML 和一些 XML 方言 (包括 SVG), 不要求`DOCTYPE` 声明，SVG 1.2 更不会有。DOCTYPE 声明（通常）与单个内容类型文件中的内容匹配的事实只是巧合的。DTDs 仅用于验证，而不是内容的识别。使用其 DOCTYPE 声明欺骗和标识 XML 内容的使用者会造成危害（User agents that cheat and identify XML content using its DOCTYPE declaration cause harm）。
+与大众想法相反，这个问题的答案不是“可以从 DOCTYPE 声明中得知”。DTDs 的设计不考虑混合内容，而过去尝试创建混合内容的 DTDs 现在被认为是失败的。XML 和一些 XML 方言 (包括 SVG), 不要求`DOCTYPE` 声明，SVG 1.2 更不会有。DOCTYPE 声明（通常）与单个内容类型文件中的内容匹配的事实只是巧合的。DTDs 仅用于验证，而不是内容的识别。使用其 DOCTYPE 声明欺骗和标识 XML 内容的使用者会造成危害（User agents that cheat and identify XML content using its DOCTYPE declaration cause harm）。
 
 问题的真正答案是，XML 内容通过给明确的标签显示“命名空间声明”来告诉使用者哪个方言标签名称属于哪个。
 
@@ -25,9 +25,9 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 </svg>
 ```
 
-命名空间声明是通过 xmlns attribute 提供的。xmlns 属性意味着这个 \<svg> 标签和它的子节点都属于 'http\://www\.w3.org/2000/svg' 这个 SVG 命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的 \<svg> 标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。
+命名空间声明是通过 xmlns attribute 提供的。xmlns 属性意味着这个 \<svg> 标签和它的子节点都属于 `http://www\.w3.org/2000/svg` 这个 SVG 命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的 \<svg> 标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。
 
-请注意，命名空间仅仅只是一些字符串，所以 SVG 上那些看起来像 URI 的命名空间并不重要。因为 URIs 的唯一性从而被广泛使用，它的本意并不是要 “链接” 到某个地址。（实际上 URIs 被如此频繁地使用是 “命名空间 URI"普遍使用而不是” 命名空间的名字“被使用。）
+请注意，命名空间仅仅只是一些字符串，所以 SVG 上那些看起来像 URI 的命名空间并不重要。因为 URIs 的唯一性从而被广泛使用，它的本意并不是要“链接”到某个地址。（实际上 URIs 被如此频繁地使用是“命名空间 URI"普遍使用而不是”命名空间的名字“被使用。）
 
 #### 重新定义默认命名空间
 
@@ -103,7 +103,7 @@ The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was crea
 | [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
 | [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is 'http\://www\.w3.org/2000/svg'. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
 
 ```plain
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -115,7 +115,7 @@ But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you m
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (http\://www\.w3.org/1999/xlink for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
+Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
 
 ```plain
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

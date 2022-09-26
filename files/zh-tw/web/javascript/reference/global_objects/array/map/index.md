@@ -1,18 +1,8 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - ECMAScript 5
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
@@ -294,7 +284,7 @@ if (!Array.prototype.map) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,14 +1,8 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.bubbles
-translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。

@@ -1,14 +1,8 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - CSS Pseudo-class
-  - Experimental
-  - Full-screen
-  - Reference
-translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 总结
@@ -136,7 +130,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## 参见
 

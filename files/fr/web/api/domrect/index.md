@@ -9,6 +9,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 Un **`DOMRect`** représente un rectangle.
@@ -54,13 +55,11 @@ _`DOMRect` hérite des méthodes de son parent {{domxref("DOMRectReadOnly")}}._
 
 ## Spécifications
 
-| Spécification                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRect')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRect")}}
+{{Compat}}
 
 ## Voir aussi
 

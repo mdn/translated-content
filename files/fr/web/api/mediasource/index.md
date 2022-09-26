@@ -16,6 +16,7 @@ tags:
   - Video
 translation_of: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 L'interface **`MediaSource`** de l'[API Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API) représente une source de données multimédia pour un objet {{domxref("HTMLMediaElement")}}. Un objet `MediaSource` peut être attaché à un {{domxref("HTMLMediaElement")}} pour être lu dans l'agent utilisateur.
@@ -116,13 +117,11 @@ function fetchAB (url, cb) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                           | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,19 +1,8 @@
 ---
 title: CSS 和 JavaScript 无障碍最佳实践
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - CSS
-  - hiding
-  - unobtursive
-  - 初学者
-  - 对比
-  - 导航
-  - 文章
-  - 无障碍
-  - 编码脚本
-  - 颜色
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 当 CSS 和 JavaScript 使用得当，很有可能改善 Web 访问体验，相反如果滥用的话，则会在极大程度上损害无障碍。本文概述了一些应该被考虑的 CSS 和 JavaScript 的最佳实践，这些实践保证了即使是复杂的内容也可以尽可能的容易被访问。
@@ -230,7 +219,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 - 良好的语义：为正确的工作使用正确的元素。例如，确保你使用标题和段落，以及 {{htmlelement("button")}} 和 {{htmlelement("a")}} 元素
 - 确保内容以文本形式提供，要么直接作为文本内容、表单元素的良好文本标签，也可以确保[文本替代品](/zh-CN/docs/Learn/Accessibility/HTML#文本替代品)（例如图像的 alt 文本）。
 
-我们还查看了如何使用 JavaScript 在缺少功能的地方构建的示例 , 参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的可访问性)。这不是理想的——实际上，你应该只使用正确的元素为正确的作业——但它表明在情况下它是可能的，由于某种原因，你不能控制使用的标记。提高非语义 JavaScript 支持的小部件的无障碍的另一种方法是使用 WAI-ARIA 为屏幕阅读器用户提供额外的语义。下一篇文章还将详细介绍这一点。
+我们还查看了如何使用 JavaScript 在缺少功能的地方构建的示例 , 参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的无障碍)。这不是理想的——实际上，你应该只使用正确的元素为正确的作业——但它表明在情况下它是可能的，由于某种原因，你不能控制使用的标记。提高非语义 JavaScript 支持的小部件的无障碍的另一种方法是使用 WAI-ARIA 为屏幕阅读器用户提供额外的语义。下一篇文章还将详细介绍这一点。
 
 复杂的功能，如 3D 游戏是不容易提高无障碍的 ––使用 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 创建的复杂 3D 游戏将在 {{htmlelement("canvas")}} 元素上呈现，该元素目前没有提供文本替代或其他信息的功能视障用户使用。可以说，这样的游戏并没有真正有这群人作为它的主要目标观众的一部分，这将是不合理的，期望你使它 100% 访问盲人，但你可以实现键盘控制，所以它可以使用非鼠标用户，并使配色方案的对比度足以让有颜色缺陷的人使用。
 
@@ -350,7 +339,7 @@ imgThumb.onblur = hideImg;
 
 当鼠标指针在缩略图上悬停或者移开，将分别调用前两行代码。此时不允许我们通过键盘访问缩略图——为了允许这一点，我们调用后两行代码，它们在图像聚焦和失焦时 (聚焦停止) 运行函数。这可以在图像加 tab 键实现，因为我们为图像的属性设置 `tabindex="0"`。
 
-[Click](/zh-CN/docs/Web/Events/click) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的可访问性)）。
+[Click](/zh-CN/docs/Web/Events/click) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的无障碍)）。
 
 ## 总结
 

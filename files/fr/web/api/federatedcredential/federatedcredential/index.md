@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential/FederatedCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`FederatedCredential`** permet de créer un nouvel objet {{domxref("FederatedCredential")}}.
@@ -31,10 +32,8 @@ var mesCredentials = new FederatedCredential(init)
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FederatedCredential.FederatedCredential")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: HTTP 狀態碼
 slug: Web/HTTP/Status
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完成。回應分為五種：
@@ -162,7 +162,7 @@ HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完
 
 ## 瀏覽器相容性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 參見
 

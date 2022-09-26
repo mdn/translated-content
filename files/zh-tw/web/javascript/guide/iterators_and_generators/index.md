@@ -1,8 +1,8 @@
 ---
 title: Iterators and generators
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 處理集合中的每個項目是很常見的操作，JavaScript 提供了許多迭代集合的方法，從簡單的 {{jsxref("Statements/for","for")}} 循環到 {{jsxref("Global_Objects/Array/map","map()")}} 和 {{jsxref("Global_Objects/Array/filter","filter()")}}。
@@ -20,7 +20,7 @@ Iterators 和 Generators 將迭代的概念直接帶進核心語言，並提供�
 
 在 JavaScript 中，**iterator** 是一個物件(object)，他定義一個序列，並在終止時回傳一個值。
 
-更精確地說，iterator 是任何一個透過 `next()` 方法實現 [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol) 的物件，該方法回傳具有以下兩個屬性 (property) 的物件：
+更精確地說，iterator 是任何一個透過 `next()` 方法實現 [Iterator protocol](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol) 的物件，該方法回傳具有以下兩個屬性 (property) 的物件：
 
 - `value`
   - : 在 iteration 序列中的下一個值。
@@ -90,7 +90,7 @@ function* makeRangeIterator(start = 0, end = 100, step = 1) {
 
 An object is **iterable** if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.
 
-In order to be **iterable**, an object must implement the **@@iterator** method, meaning that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
+In order to be **iterable**, an object must implement the **@@iterator** method, meaning that the object (or one of the objects up its [prototype chain](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case. Iterables which can iterate only once (e.g. Generators) customarily return **this** from their **@@iterator** method, where those which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
 

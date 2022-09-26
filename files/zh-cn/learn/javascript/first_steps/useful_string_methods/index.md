@@ -1,17 +1,8 @@
 ---
 title: 有用的字符串方法
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - JavaScript
-  - String
-  - 大写
-  - 字符串
-  - 小写
-  - 替换
-  - 格式
-  - 长度
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 现在我们学习基本的字符串语法， 让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。

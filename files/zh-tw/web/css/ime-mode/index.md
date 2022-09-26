@@ -1,10 +1,8 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
-tags:
-  - CSS
-translation_of: Web/CSS/ime-mode
 ---
+
 {{ CSSRef() }}
 
 ### 摘要

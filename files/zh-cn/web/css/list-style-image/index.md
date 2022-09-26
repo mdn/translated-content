@@ -1,12 +1,8 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS 列表
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/list-style-image
 ---
+
 {{ CSSRef}}
 
 ## 概要

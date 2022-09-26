@@ -1,55 +1,57 @@
 ---
-title: Secure contexts
+title: 安全上下文
 slug: Web/Security/Secure_Contexts
-translation_of: Web/Security/Secure_Contexts
 ---
-**安全上下文**是 `Window` 与 `Worker` 中的概念满足了最低标准的身份验证和机密性。许多 Web APIs 的访问仅能在安全上下文中. 安全上下文的主要目标是防止 [MITM attackers](https://zh.wikipedia.org/wiki/man-in-the-middle_attack) 强大的 APIs 被坏人利用。
+
+**安全上下文**是 `Window` 与 `Worker` 中满足了最低标准的身份验证和机密性的概念。许多 Web API 仅能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的接口，从而导致更加严重的破坏。
 
 ## 为什么要限制某些功能？
 
-有些 APIs 是非常强大的，能给攻击者更强的能力以及更多的操作：
+有些 API 是非常强大的，能给攻击者更强的能力以及更多的操作：
 
 - 侵犯用户隐私。
 - 获得对用户计算机的低级访问权限。
 - 获得对数据的访问权限，例如用户凭证。
 
-## When is a context considered secure?
+## 上下文何时是安全的？
 
-A context is considered secure when it meets certain minimum standards of authentication and confidentiality defined in the [Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) specification. A particular document is considered to be in a secure context when it is the [active document](https://html.spec.whatwg.org/multipage/browsers.html#active-document) of a [top-level browsing context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (basically, a containing window or tab) that is a secure context.
+当一个上下文满足[安全上下文](https://w3c.github.io/webappsec-secure-contexts/)规范中定义的某些最低限度的认证和保密标准时，它是安全的。当一个特定的文档是[顶层浏览上下文](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)（基本上是一个包含窗口或标签）的[活动文档](https://html.spec.whatwg.org/multipage/browsers.html#active-document)时，它是在一个安全的上下文中。
 
-For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is **not** considered secure if it has an ancestor that was not also delivered over TLS.
+例如，在 {{HTMLElement("iframe")}} 中的文档即使通过 TLS 进行传输，如果它有一个父节点没有通过 TLS 进行传输，其上下文也**不会**视为安全。
 
-However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open#noopener)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
+然而，需要引起注意的是，如果某个不安全上下文创建了新窗口（无论是否指定 [noopener](/zh-CN/docs/Web/API/Window/open) 参数），那么创建新窗口的文档不安全的事实不会影响新窗口的安全性。这是因为，确定一个特定的文档是否在安全上下文中，仅仅需要考虑与之相关的顶层浏览上下文，而与是否碰巧使用了非安全的上下文来创建它无关。
 
-Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, _http\://localhost_ URLs (under certain conditions), and _file://_ URLs are also considered to have been delivered securely.
+本地传递的资源，如那些带有 `http://127.0.0.1`、`http://localhost` 和 `http://*.localhost` 网址（如 `http://dev.whatever.localhost/`）和 `file://` 网址的资源也是认为经过安全传递的。
 
-Resources that are not local, to be considered secure, must meet the following criteria:
+> **备注：** Firefox 84 及更新的版本支持 `http://localhost` 和 `http://*.localhost` URL 作为信任的源，而早期版本不支持这样做，因为还没有保证 `localhost` 映射到本地或回环地址上。
 
-- must be served over _https\://_ or _wss\://_ URLs
-- the security properties of the network channel used to deliver the resource must not be considered deprecated
+非本地资源要被认为是安全的，必须满足以下标准：
 
-## Feature detection
+- 必须通过 `https://` 或 `wss://` URL 提供服务
+- 用于传送资源的网络信道的安全属性不能是废弃的
 
-Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
+## 特性检测
+
+页面可以通过暴露在全局范围的 {{domxref("isSecureContext")}} 布尔属性值真假来判断它是否处于安全上下文中。
 
 ```js
 if (window.isSecureContext) {
-  // Page is a secure context so service workers are now available
-  navigator.serviceWorker.register("/offline-worker.js").then(function () {
-    ...
+  // 页面在安全上下文中，所以 service worker 可用
+  navigator.serviceWorker.register("/offline-worker.js").then(() => {
+    // …
   });
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
-- [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
-- {{domxref("Window.isSecureContext")}}
-- <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
+- [仅在安全上下文中可用的平台特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)——只在安全上下文中可用的特性列表
+- {{domxref("isSecureContext")}}
+- <https://permission.site>——一个允许你检查你的浏览器在 HTTP 和 HTTPS 上采用何种 API 权限检查的网站
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}

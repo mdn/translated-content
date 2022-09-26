@@ -2,6 +2,7 @@
 title: AudioListener
 slug: Web/API/AudioListener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `AudioListener` 接口代表了人听音乐场景时声音的位置和方向，和用于[音频空间化](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)。 所有{{domxref("PannerNode")}} 相对于 `AudioListener` 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。
@@ -59,17 +60,13 @@ Because of these issues, these properties and methods have been removed.
 
 The `setOrientation()` and `setPosition()` methods have been replaced by setting their property value equivilents. For example `setPosition(x, y, z)` can be achieved by setting `positionX.value`, `positionY.value`, and `positionZ.value` respectively.
 
-## Example
-
-{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}
-
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.AudioListener")}}
+{{Compat}}
 
 ## See also
 

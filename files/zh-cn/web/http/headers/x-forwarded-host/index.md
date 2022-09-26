@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - 代理
-  - 请求首部
-  - 负载均衡
-  - 超文本传输协议
-  - 转发
-  - 首部
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Host`** (XFH) 是一个事实上的标准首部，用来确定客户端发起的请求中使用 {{HTTPHeader("Host")}} 指定的初始域名。

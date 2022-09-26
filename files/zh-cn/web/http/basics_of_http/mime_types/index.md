@@ -1,14 +1,8 @@
 ---
 title: MIME 类型
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - HTTP
-  - MIME Types
-  - MIME 类型
-  - Meta
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **媒体类型**（通常称为 **Multipurpose Internet Mail Extensions** 或 **MIME** 类型）是一种标准，用来表示文档、文件或字节流的性质和格式。它在[IETF RFC 6838](https://tools.ietf.org/html/rfc6838)中进行了定义和标准化。
@@ -138,7 +132,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 ### 音频与视频类型
 
-HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在 web 上使用的只有相对较小的一组类型。[ ](/zh-CN/docs/Web/HTML/Supported_media_formats)文章 [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats) 解释了可以被使用的解码器或视频文件格式。
+HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("video")}}元素所支持的文件类型，所以在 web 上使用的只有相对较小的一组类型。文章 [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats) 解释了可以被使用的解码器或视频文件格式。
 
 在 web 环境最常用的视频文件的格式，是以下这些这些文件类型：
 
@@ -247,7 +241,7 @@ Content-Range: bytes 300-400/1270
 很多 web 服务器使用默认的 `application/octet-stream` 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，导致用户必须存储到本地以使用。常见的导致服务器配置错误的文件类型如下所示：
 
 - RAR 编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这种情况服务器将发送 `application/x-rar-compressed` 作为 MIME 类型，用户不会将其定义为有用的默认操作。
-- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照 [use the correct type for audio and video](https://developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements)。
+- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。 可参照 [use the correct type for audio and video](/En/Media_formats_supported_by_the_audio_and_video_elements)。
 - 专有文件类型。是专有文件时需要特别注意。使用 `application/octet-stream` 作为特殊处理是不被允许的：对于一般的 MIME 类型浏览器不允许定义默认行为（比如“在 Word 中打开”）
 
 ## MIME 嗅探

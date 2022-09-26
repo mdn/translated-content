@@ -1,19 +1,8 @@
 ---
 title: サーバー送信イベントの使用
 slug: Web/API/Server-sent_events/Using_server-sent_events
-page-type: guide
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
-browser-compat: api.EventSource
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events) (Server-Sent Events) を使用するウェブアプリケーションの開発は簡単です。サーバー上でフロントエンドへイベントを流すために必要になるコードはわずかですが、クライアント側のコードは[ウェブソケット](/ja/docs/Web/API/WebSockets_API)で入ってくるイベントを扱う部分とほぼ同じ動作をします。これは単方向の接続ですので、クライアントからサーバーへイベントを送信することはできません。

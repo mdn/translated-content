@@ -12,6 +12,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 ---
+
 {{AddonSidebar()}}
 
 Récupère une valeur précédemment stockée par un appel à  {{WebExtAPIRef("sessions.setTabValue")}}.

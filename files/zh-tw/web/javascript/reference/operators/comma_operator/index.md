@@ -1,8 +1,8 @@
 ---
 title: 逗號運算子
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** evaluates each of its operands (from left to right) and returns the value of the last operand.
@@ -33,7 +33,7 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
   console.log("a[" + i + "][" + j + "] = " + a[i][j]);
 ```
 
-Note that the comma in assignments such as the `var` statement may appear not to have the normal effect of comma operators because they don't exist within an expression. In the following example, `a` is set to the value of `b = 3` (which is 3), but the `c = 4` expression still evaluates and its result returned to console (i.e., 4). This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+Note that the comma in assignments such as the `var` statement may appear not to have the normal effect of comma operators because they don't exist within an expression. In the following example, `a` is set to the value of `b = 3` (which is 3), but the `c = 4` expression still evaluates and its result returned to console (i.e., 4). This is due to [operator precedence and associativity](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ```js
 // Note that the following creates globals and is disallowed in strict mode.
@@ -69,4 +69,4 @@ function myFunc () {
 
 ## 參見
 
-- [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [for loop](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)

@@ -1,12 +1,8 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - DOM
-translation_of: Web/CSS/:host
 ---
+
 {{ CSSRef }}
 
 **`:host`** CSS 伪类选择包含其内部使用的 CSS 的 shadow DOM 的根元素 - 换句话说，这允许你从其 shadow DOM 中选择一个自定义元素。
@@ -26,7 +22,7 @@ translation_of: Web/CSS/:host
 
 ## 示例
 
-以下片段取自我们的 [host-selectors ](https://github.com/mdn/web-components-examples/tree/master/host-selectors)示例（[在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
+以下片段取自我们的 [host-selectors](https://github.com/mdn/web-components-examples/tree/master/host-selectors) 示例（[在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
 在这个例子中，我们有一个简单的自定义元素 — `<context-span>` — 你可以包裹文本：
 
@@ -61,7 +57,7 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 ## 浏览器兼容
 
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage3D()`**方法指定一个 3d（three-dimensional）纹理贴图。
@@ -82,7 +83,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.UNSIGNED_SHORT_5_6_5`: 红色占五个字节，绿色占六个字节，蓝色占五个字节
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 红色占四个字节，绿色占 四 个字节，蓝色占 四 个字节
     - `gl.UNSIGNED_SHORT_5_5_5_1`:红色占五个字节，绿色占五个字节，蓝色占五个字节，alpha 占一个字节
-    - `gl.BYTE `（这些属性的信息原文中均未提到，但是在 webgl1 中出现过，可以适当参考 webgl1 文献）
+    - `gl.BYTE`（这些属性的信息原文中均未提到，但是在 webgl1 中出现过，可以适当参考 webgl1 文献）
     - `gl.UNSIGNED_SHORT`
     - `gl.SHORT`
     - `gl.UNSIGNED_INT`
@@ -134,7 +135,7 @@ gl.texImage3D(gl.TEXTURE_3D,
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.texImage3D")}}
+{{Compat}}
 
 ## 另见
 

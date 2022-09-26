@@ -1,11 +1,8 @@
 ---
 title: 如何设置一个本地测试服务器？
 slug: Learn/Common_questions/set_up_a_local_testing_server
-tags:
-  - 初学者
-  - 服务器
-translation_of: Learn/Common_questions/set_up_a_local_testing_server
 ---
+
 本文将会介绍如何在你的计算机上安装一个简单的本地测试服务器，以及它的基本用法。
 
 <table class="learn-box standard-table">
@@ -87,6 +84,6 @@ translation_of: Learn/Common_questions/set_up_a_local_testing_server
 
 Python 的`SimpleHTTPServer`模块是有用的，但它不知道如何运行用 PHP 或 Python 等语言编写的代码。为了处理这个问题，你需要更多的东西 - 正是你需要的东西取决于你正在运行的服务器端语言。这里有几个例子：
 
-- 要运行 Python 服务器端代码，您需要使用 Python 网络框架。您可以通过阅读[Django Web Framework（Python）](/en-US/docs/Learn/Server-side/Django)来了解如何使用 Django 框架。[Flask](http://flask.pocoo.org/)也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先[安装 Python / PIP](/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask` 来安装 Flask。此时，您应该能够运行 Python Flask 示例`python3 python-example.py`，然后在您的浏览器中打开 `localhost:5000` 查看。
+- 要运行 Python 服务器端代码，您需要使用 Python 网络框架。您可以通过阅读[Django Web Framework（Python）](/zh-CN/docs/Learn/Server-side/Django)来了解如何使用 Django 框架。[Flask](http://flask.pocoo.org/)也是一个不错的选择（稍微轻量一点）。要运行 Flask，你需要先[安装 Python / PIP](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask` 来安装 Flask。此时，您应该能够运行 Python Flask 示例`python3 python-example.py`，然后在您的浏览器中打开 `localhost:5000` 查看。
 - 要运行 Node.js（JavaScript）服务器端代码，您可以直接使用 Node 或选择构建于其上的框架。Express 是一个不错的选择 - 请参阅[Express Web Framework（Node.js / JavaScript）](/zh-CN/docs/Learn/Server-side/Express_Nodejs)。
 - 要运行 PHP 服务器端代码，您需要一个可以解释 PHP 的服务器设置。本地 PHP 测试的好选择是[MAMP](https://www.mamp.info/en/downloads/)（Mac 和 Windows）， [AMPPS](http://ampps.com/download)（Mac，Windows，Linux）和[LAMP](https://www.linux.com/learn/easy-lamp-server-installation)（Linux，Apache，MySQL 和 PHP / Python / Perl）。这些是完整的包，创建本地设置，允许您运行 Apache 服务器，PHP 和 MySQL 数据库。

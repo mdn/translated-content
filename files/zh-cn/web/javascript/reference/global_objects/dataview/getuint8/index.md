@@ -1,14 +1,11 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-tags:
-  - 类型化
-  - 类型化数组
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
+
 {{JSRef}}
 
-**`getUint8()`**` 方法``从 `{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的 8-bit 整数 (一个字节).
+**`getUint8()`** 方法从 {{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的 8-bit 整数 (一个字节).
 
 {{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
 

@@ -1,15 +1,8 @@
 ---
 title: feConvolveMatrix
 slug: Web/SVG/Element/feConvolveMatrix
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 `feConvolveMatrix`元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。
@@ -83,9 +76,9 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -104,7 +97,7 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
 
 ## DOM 接口
 
-该元素实现了[`SVGFEConvolveMatrixElement`](/en/DOM/SVGFEConvolveMatrixElement)接口。
+该元素实现了[`SVGFEConvolveMatrixElement`](/zh-CN/DOM/SVGFEConvolveMatrixElement)接口。
 
 ## 参见
 
@@ -126,4 +119,4 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

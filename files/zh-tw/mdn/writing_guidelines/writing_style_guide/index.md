@@ -1,25 +1,9 @@
 ---
 title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - 文件
-  - 指南
-  - 指導方針
-  - MDN Web 文件
-  - MDN 風格指南
-  - 風格指南
-  - 寫作風格指南
-  - Documentation
-  - Guide
-  - Guidelines
-  - MDN
-  - MDN Meta
-  - MDN Web Docs
-  - MDN style guide
-  - Style guide
-  - Writing style guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。

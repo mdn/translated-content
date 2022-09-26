@@ -1,12 +1,8 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-tags:
-  - HTML
-  - HTML 分组内容
-  - 元素
-translation_of: Web/HTML/Element/pre
 ---
+
 {{HTMLRef}}
 
 **HTML \<pre>** 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 \<pre> 开始标签后的换行符也会被省略)
@@ -72,7 +68,7 @@ body {
 
 {{EmbedLiveSample("Example")}}
 
-## 可访问性
+## 无障碍
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
 
@@ -109,7 +105,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## 参见
 

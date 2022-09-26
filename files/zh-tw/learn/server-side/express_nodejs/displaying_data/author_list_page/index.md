@@ -1,8 +1,8 @@
 ---
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 
 ## Controller 控制器
@@ -56,11 +56,11 @@ Run the application and open your browser to <http://localhost:3000/>. Then sele
 
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
-> **備註：** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. `moment()` returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:
+> **備註：** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. `moment()` returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## Genre list page—challenge\![Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## Genre list page—challenge\![Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
 
 In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 
@@ -79,6 +79,6 @@ The genre list controller function needs to get a list of all `Genre` instances,
 
 ## Next steps
 
-Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+Return to [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
 
-Proceed to the next subarticle of part 5: [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
+Proceed to the next subarticle of part 5: [Genre detail page](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).

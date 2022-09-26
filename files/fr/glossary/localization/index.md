@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Localization
 original_slug: Localization
 ---
+
 La localisation (l10n) est le processus d'adaptation d'une interface utilisateur de logiciel à une culture spécifique.
 
 Les facteurs communs suivants sont à considérer :

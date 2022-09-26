@@ -1,9 +1,9 @@
 ---
 title: attr
 slug: Web/CSS/attr
-translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -85,4 +85,4 @@ p::before {
 
 ## 瀏覽器相容性
 
-{{Compat("css.types.attr")}}
+{{Compat}}

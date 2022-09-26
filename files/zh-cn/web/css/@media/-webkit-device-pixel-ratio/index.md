@@ -1,15 +1,15 @@
 ---
 title: '-webkit-device-pixel-ratio'
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
-translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
 
-**`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/en-US/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。
+**`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。
 
-Its value is the number of device pixels used to represent each [CSS `px`](/en-US/docs/Web/CSS/length#Absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/en-US/docs/Web/CSS/resolution#dppx).
+Its value is the number of device pixels used to represent each [CSS `px`](/zh-CN/docs/Web/CSS/length#Absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/zh-CN/docs/Web/CSS/resolution#dppx).
 
 ### Syntax
 
@@ -32,7 +32,7 @@ Its value is the number of device pixels used to represent each [CSS `px`](/en-U
 
 ### See also
 
-- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
-- [`-webkit-animation`](/en-US/docs/Web/CSS/@media/-webkit-animation)
+- [`-webkit-transform-2d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transform-3d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transition`](/zh-CN/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-animation`](/zh-CN/docs/Web/CSS/@media/-webkit-animation)

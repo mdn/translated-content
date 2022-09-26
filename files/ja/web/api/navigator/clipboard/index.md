@@ -1,21 +1,6 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
-page-type: web-api-instance-property
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Cut
-  - Navigator
-  - Pasteboard
-  - Property
-  - Read-only
-  - Reference
-  - copy
-  - paste
-browser-compat: api.Navigator.clipboard
-translation_of: Web/API/Navigator/clipboard
 ---
 [クリップボード API](/ja/docs/Web/API/Clipboard_API) は **{{domxref("Navigator")}}** インターフェイスに読み取り専用の **`clipboard`** プロパティを追加し、これはクリップボードの内容を読み書きするために使用する {{domxref("Clipboard")}} オブジェクトを返します。
 

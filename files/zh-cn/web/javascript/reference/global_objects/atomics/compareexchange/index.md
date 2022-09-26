@@ -1,13 +1,8 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-tags:
-  - Atomics
-  - JavaScript
-  - 共享内存
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`Atomics.compareExchange()`** 静态方法会在数组的值与期望值相等的时候，将给定的替换值替换掉数组上的值，然后返回旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。

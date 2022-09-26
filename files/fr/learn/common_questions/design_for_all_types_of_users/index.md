@@ -1,15 +1,10 @@
 ---
-title: Concevoir un site pour tous les types d'utilisateurs
+title: Concevoir un site pour toutes les personnes
 slug: Learn/Common_questions/Design_for_all_types_of_users
-tags:
-  - Accessibility
-  - Beginner
-  - Design
-  - Mobile
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/Design_for_all_types_of_users
-original_slug: Apprendre/Concevoir_site_tous_types_utilisateurs
+l10n:
+  sourceCommit: 640cfcb6344a6cac776bae0723041f924d782ece
 ---
+
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
 
 <table class="standard-table">
@@ -17,33 +12,21 @@ Cet article aborde les concepts de bases pour vous aider à construire des sites
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Avoir lu
-        <a href="/fr/Learn/What_is_accessibility"
-          >Qu'est-ce que l'accessibilité&nbsp;?</a
-        >
-        (l'accessibilité n'est pas approfondie en détails ici) et s'être
-        familiarisé-e avec
-        <a href="/fr/Apprendre/Concevoir_page_web">l'anatomie d'une page web</a
-        >.
+        Avoir lu <a href="/fr/docs/Learn/Common_questions/What_is_accessibility">Qu'est-ce que l'accessibilité&nbsp;?</a> (l'accessibilité n'est pas approfondie en détails ici).
       </td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        Être en mesure de concevoir un site pour tous, quelles que soient les
-        contraintes techniques ou celles de handicap. Cet article liste les
-        points les plus importants et facile à mettre en œuvre pour atteindre un
-        tel objectif.
+        Être en mesure de concevoir un site pour tous, quelles que soient les contraintes techniques ou celles liées à un handicap. Cet article liste les points les plus importants et facile à mettre en œuvre pour atteindre un tel objectif.
       </td>
     </tr>
   </tbody>
 </table>
 
+## Résumé
+
 Lors de la construction d'un site, il faut entre autres garder à l'esprit qu'un site doit être accessible à tous, quelles que soient les contraintes de handicap, les contraintes techniques, la culture, le lieu depuis lequel le site est consulté, etc.
-
-## Pédagogie active
-
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
 
 ## Aller plus loin
 
@@ -221,9 +204,6 @@ Les images d'une page web peuvent être décoratives ou informatives mais il n'e
 - Vos lecteurs souffrant d'une déficience visuelle utiliseront un logiciel lecteur d'écran qui ne pourra restituer que du texte.
 - Vos lecteurs peuvent naviguer depuis un intranet très strict qui bloque les images provenant d'un {{Glossary("CDN")}}.
 - Vos lecteurs peuvent avoir désactivé l'affichage des images pour économiser de la bande passante, ceci est notamment valable pour les appareils mobiles (voir ci-après).
-
-<!---->
-
 - Les images décoratives
   - : Ces images servent uniquement à décorer et ne contiennent pas d'informations utiles à la compréhension de la page. Elles pourraient généralement être remplacées par une image d'arrière-plan. Assurez-vous de fournir un texte alternatif vide grâce à l'attribut `alt`&nbsp;: `<img src="deco.gif" alt="">` afin qu'elles n'encombrent pas le texte.
 - Les images informatives

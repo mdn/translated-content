@@ -1,13 +1,13 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontsize()`** method creates a {{HTMLElement("font")}} HTML element that causes a string to be displayed in the specified font size.
 
-> **备注：** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
+> **备注：** The \<font> element has been removed in [HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use [CSS](/zh-CN/docs/Web/CSS) properties.
 
 ## 语法
 

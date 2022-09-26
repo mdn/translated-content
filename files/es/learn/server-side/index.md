@@ -14,7 +14,7 @@ translation_of: Learn/Server-side
 ---
 {{LearnSidebar}}
 
-El tema** _Páginas Dinámicas_ **– **Programación lado servidor** contiene una serie de módulos en los que se enseña como crear sitios web dinámicos, sitios que entregan información personalizada como respuesta a las peticiones HTTP. El modulo ofrece una introducción generica a la programación de lado servidor además de guías para principiantes sobre como usar frameworks como Django (Python) y Express(Node.js/JavaScript) para crear aplicaciones web basicas.
+El tema **_Páginas Dinámicas – Programación lado servidor_** contiene una serie de módulos en los que se enseña como crear sitios web dinámicos, sitios que entregan información personalizada como respuesta a las peticiones HTTP. El modulo ofrece una introducción generica a la programación de lado servidor además de guías para principiantes sobre como usar frameworks como Django (Python) y Express(Node.js/JavaScript) para crear aplicaciones web basicas.
 
 La mayoría de los principales sitios web utilizan alguna forma de tecnología de lado servidor para presentar dinámicamente datos cuando sean requeridos. Por ejemplo, imagina cuántos productos están disponibles en Amazon e imagina cuántas entradas han sido escritas en Facebook. Presentar todo esto usando páginas estáticas completamente diferentes sería completamente ineficiente, por lo que estos sitios en lugar de ello presentan plantillas estáticas (construidas usando [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS), y [JavaScript](/es/docs/Learn/JavaScript)), y actualizan dinámicamente los datos presentados dentro de esas plantillas cuando se necesiten, ej. cuando quieres ver un producto diferente en Amazon.
 

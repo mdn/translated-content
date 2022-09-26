@@ -1,14 +1,8 @@
 ---
 title: 无符号右移运算符（>>>）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **无符号右移运算符（>>>）**（零填充右移）将第一个操作数向右移动指定（二进制）位数。
@@ -30,6 +24,7 @@ a >>> b
 ```js
       9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
+
 9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
 
@@ -38,6 +33,7 @@ a >>> b
 ```js
       -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
+
 -9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 ```
 

@@ -2,6 +2,7 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 {{Glossary("viewport")}} 相交情况变化的方法。
@@ -285,12 +286,12 @@ startup();
 
 The browser computes the final intersection rectangle as follows; this is all done for you, but it can be helpful to understand these steps in order to better grasp exactly when intersections will occur.
 
-1.  The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
-2.  Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
-3.  If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
-4.  When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
-5.  The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#root-intersection-rectangle).
-6.  This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
+1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
+2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
+3. If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
+4. When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
+5. The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#root-intersection-rectangle).
+6. This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
 
 ### Intersection change callbacks
 
@@ -507,10 +508,10 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## 浏览器兼容性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
-## 更多参考
+## 参见
 
-- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver/blob/master/polyfill/intersection-observer.js)
+- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
 - [Timing element visibility with the Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
 - {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}

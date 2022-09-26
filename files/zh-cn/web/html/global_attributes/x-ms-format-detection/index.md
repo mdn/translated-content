@@ -1,14 +1,9 @@
 ---
 title: x-ms-格式 - 检测
 slug: Web/HTML/Global_attributes/x-ms-format-detection
-tags:
-  - HTML
-  - x-ms-format-detection
-  - 参考
-  - 属性
-translation_of: Web/HTML/Global_attributes/x-ms-format-detection
 original_slug: Web/HTML/Global_attributes/x-ms-格式 - 检测
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 这个 **`x-ms-format-detection`** 属性确定元素文本中的数据格式 (如电话号码) 是否自动转换为可跟踪链接。

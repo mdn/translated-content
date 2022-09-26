@@ -1,21 +1,13 @@
 ---
 title: ARIA 状态及属性
 slug: Web/Accessibility/ARIA/Attributes
-tags:
-  - ARIA
-  - ARIA states and properties
-  - ARIA attributes
-  - Accessibility
-  - Reference
-  - States
-  - Properties
-translation_of: Web/Accessibility/ARIA/Attributes
 ---
+
 这个页面列出了 MDN 上讨论的所有 WAI-ARIA 属性的参考页面。
 
-ARIA 属性用于修改可访问性树中定义的元素的状态和属性。
+ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
 
-> **备注：** ARIA 仅用于修改可访问性树，进而改变辅助技术向用户呈现内容的方式。ARIA 不会改变元素的功能或行为。当使用非语义化的 HTML 元素来实现其它功能时，你必须使用 JavaScript 来控制元素的实际行为、焦点以及 ARIA 状态。
+> **备注：** ARIA 仅用于修改无障碍树，进而改变辅助技术向用户呈现内容的方式。ARIA 不会改变元素的功能或行为。当使用非语义化的 HTML 元素来实现其它功能时，你必须使用 JavaScript 来控制元素的实际行为、焦点以及 ARIA 状态。
 
 ## ARIA 特性类别
 

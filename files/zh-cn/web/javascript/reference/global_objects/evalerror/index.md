@@ -1,11 +1,11 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
-本对象代表了一个关于 [eval](/en/Core_JavaScript_1.5_Reference/Global_Functions/eval) 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。
+本对象代表了一个关于 [eval](/zh-CN/Core_JavaScript_1.5_Reference/Global_Functions/eval) 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。
 
 ## 语法
 
@@ -24,7 +24,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 ## 属性
 
-- [prototype](/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
+- [prototype](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
   - : 允许向 EvalError 对象中添加自定义属性。
 
 ## 方法
@@ -71,6 +71,6 @@ try {
 
 ## 相关链接
 
-- [Error](/en/Core_JavaScript_1.5_Reference/Global_Objects/Error)
-- [eval](/en/Core_JavaScript_1.5_Reference/Global_Functions/eval)
-- [EvalError.prototype](/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
+- [Error](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/Error)
+- [eval](/zh-CN/Core_JavaScript_1.5_Reference/Global_Functions/eval)
+- [EvalError.prototype](/zh-CN/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)

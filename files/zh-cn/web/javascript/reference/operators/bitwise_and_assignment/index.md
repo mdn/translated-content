@@ -1,12 +1,8 @@
 ---
 title: 按位与赋值 (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
-tags:
-  - JavaScript
-  - 按位与赋值运算
-  - 操作符运算
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ---
+
 {{jsSidebar("Operators")}}按位与赋值运算符（＆=）表示两个操作数的二进制，对它们进行按位 AND 运算并将结果分配给变量。{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 
 ## 语法
@@ -37,5 +33,5 @@ a &= 2; // 0
 
 ## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise AND operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

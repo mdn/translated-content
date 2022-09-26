@@ -1,8 +1,8 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-translation_of: Web/HTTP/Status/500
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`500 Internal Server Error`** 伺服器錯誤回應表明了伺服器碰上意外情況，令伺服器無法完成請求。不管你的網站是不是採用 WordPress 系統，任何放在伺服器當中的網頁都有可能發生這種錯誤。
@@ -21,7 +21,7 @@ HTTP **`500 Internal Server Error`** 伺服器錯誤回應表明了伺服器碰�
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.500")}}
+{{Compat}}
 
 ## 參考資料
 

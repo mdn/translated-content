@@ -1,15 +1,8 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
+
 {{JSRef}}
 
 **`matchAll()`** 方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器。
@@ -26,7 +19,7 @@ str.matchAll(regexp)
 
 regexp
 
-正则表达式对象。如果所传参数不是一个正则表达式对象，则会隐式地使用 `new RegExp(obj)` 将其转换为一个 [`RegExp`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/RegExp) 。
+正则表达式对象。如果所传参数不是一个正则表达式对象，则会隐式地使用 `new RegExp(obj)` 将其转换为一个 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/RegExp)。
 
 `RegExp`必须是设置了全局模式`g`的形式，否则会抛出异常`TypeError`。
 
@@ -52,7 +45,7 @@ while ((match = regexp.exec(str)) !== null) {
 }
 ```
 
-如果使用 `matchAll` ，就可以不必使用 while 循环加 exec 方式（且正则表达式需使用 `/g` 标志）。使用 `matchAll` 会得到一个迭代器的返回值，配合 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), 或者 {{jsxref("Array.from()")}} 可以更方便实现功能：
+如果使用 `matchAll` ，就可以不必使用 while 循环加 exec 方式（且正则表达式需使用 `/g` 标志）。使用 `matchAll` 会得到一个迭代器的返回值，配合 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax), 或者 {{jsxref("Array.from()")}} 可以更方便实现功能：
 
 ```js
 const regexp = RegExp('foo[a-z]*','g');
@@ -80,7 +73,7 @@ Array.from(str.matchAll(regexp), m => m[0]);
 // TypeError: String.prototype.matchAll called with a non-global RegExp argument
 ```
 
-`matchAll` 内部做了一个 regexp 的复制，所以不像 [regexp.exec](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), `lastIndex` 在字符串扫描时不会改变。
+`matchAll` 内部做了一个 regexp 的复制，所以不像 [regexp.exec](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), `lastIndex` 在字符串扫描时不会改变。
 
 ```js
 const regexp = RegExp('[a-c]','g');
@@ -92,7 +85,7 @@ Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
 
 ### 捕获组的更佳途径
 
-`matchAll` 的另外一个亮点是更好地获取捕获组。因为当使用 [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 `/g` 标志方式获取匹配信息时，捕获组会被忽略：
+`matchAll` 的另外一个亮点是更好地获取捕获组。因为当使用 [`match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 `/g` 标志方式获取匹配信息时，捕获组会被忽略：
 
 ```js
 var regexp = /t(e)(st(\d?))/g;

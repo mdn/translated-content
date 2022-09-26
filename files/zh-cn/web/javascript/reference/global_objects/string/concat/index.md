@@ -1,13 +1,8 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
@@ -35,7 +30,7 @@ str.concat(str2, [, ...strN])
 
 ## 性能
 
-强烈建议使用[赋值操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)（`+`, `+=`）代替 `concat` 方法。
+强烈建议使用[赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)（`+`, `+=`）代替 `concat` 方法。
 
 ## 示例
 

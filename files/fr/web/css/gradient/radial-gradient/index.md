@@ -4,6 +4,7 @@ slug: Web/CSS/gradient/radial-gradient
 translation_of: Web/CSS/gradient/radial-gradient
 browser-compat: css.types.image.gradient.radial-gradient
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type [`<gradient>`](/fr/docs/Web/CSS/gradient), qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).

@@ -2,6 +2,7 @@
 title: Canvas 的基本用法
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 让我们通过了解 {{HTMLElement("canvas")}} {{Glossary("HTML")}} 元素本身开始本教程。在本页结束时，你会了解到如何去设置一个 canvas 2D 上下文以及如何在你的浏览器上创建第一个例子。
@@ -42,7 +43,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 
 与 {{HTMLElement("img")}} 元素不同，{{HTMLElement("canvas")}} 元素**需要**结束标签 (`</canvas>`)。如果结束标签不存在，则文档的其余部分会被认为是替代内容，将不会显示出来。
 
-如果不需要替代内容，一个简单的 `<canvas id="foo" ...></canvas> `在所有支持 canvas 的浏览器中都是完全兼容的。
+如果不需要替代内容，一个简单的 `<canvas id="foo" ...></canvas>` 在所有支持 canvas 的浏览器中都是完全兼容的。
 
 ## 渲染上下文（The rendering context）
 

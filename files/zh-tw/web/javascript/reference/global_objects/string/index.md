@@ -1,13 +1,8 @@
 ---
 title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
@@ -65,9 +60,9 @@ String(thing)
 
 有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。
 
-你可以用 [+](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()>) 運算子附加多個字串在一起，像是這樣：
+你可以用 [+](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#字串運算子) 運算子附加多個字串在一起，像是這樣：
 
-```plain
+```js
 let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
                  "otherwise my code is unreadable.";
@@ -85,7 +80,7 @@ otherwise my code is unreadable.";
 
 ## 說明
 
-字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 [+ 或 += 字串運算元](/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators) 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。
+字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 [+ 或 += 字串運算元](/zh-TW/docs/Web/JavaScript/Reference/Operators/String_Operators) 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。
 
 ### 存取字元
 
@@ -105,7 +100,7 @@ return 'cat'[1]; // 回傳 "a"
 
 ### 比較字串
 
-C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
+C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
 
 ```js
 var a = "a";
@@ -124,7 +119,7 @@ else
 
 請注意，JavaScript 會區別 `String` 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。
 
-String literals (denoted by double or single quotes) and strings returned from `String` calls in a non-constructor context (i.e., without using the [`new` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new)) are primitive strings. JavaScript automatically converts primitives to `String` objects, so that it's possible to use `String` object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.
+String literals (denoted by double or single quotes) and strings returned from `String` calls in a non-constructor context (i.e., without using the [`new` keyword](/zh-TW/docs/Web/JavaScript/Reference/Operators/new)) are primitive strings. JavaScript automatically converts primitives to `String` objects, so that it's possible to use `String` object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.
 
 ```js
 var s_prim = "foo";
@@ -151,7 +146,7 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 console.log(eval(s2.valueOf())); // 回傳數字 4
 ```
 
-> **備註：** 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)。
+> **備註：** 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays/StringView)。
 
 ## 屬性
 
@@ -176,7 +171,7 @@ var num = 15;
 alert(String.replace(num, /5/, '2'));
 ```
 
-[Generics](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
+[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
 
 The following is a shim to provide support to non-supporting browsers:
 
@@ -240,10 +235,10 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.String.String")}}
+{{Compat}}
 
 ## 參見
 
 - {{domxref("DOMString")}}
-- [`StringView` — a C-like representation of strings based on typed arrays](/en-US/Add-ons/Code_snippets/StringView)
-- [Binary strings](/en-US/docs/Web/API/DOMString/Binary)
+- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/Add-ons/Code_snippets/StringView)
+- [Binary strings](/zh-TW/docs/Web/API/DOMString/Binary)

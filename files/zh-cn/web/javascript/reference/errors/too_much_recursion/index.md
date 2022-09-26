@@ -1,12 +1,8 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-tags:
-  - InternalError
-  - recursion
-  - 内部错误
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -54,4 +50,4 @@ loop(0);
 ## 相关页面
 
 - {{Glossary("Recursion","递归")}}
-- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/zh-CN/docs/Web/JavaScript/Guide/Functions#Recursion)

@@ -1,13 +1,8 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`left`**属性定义了定位元素的左外边距边界与其包含块左边界之间的偏移，非定位元素设置此属性无效。
@@ -175,7 +170,7 @@ pre {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## 参见
 

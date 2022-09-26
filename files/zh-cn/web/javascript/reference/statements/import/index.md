@@ -1,14 +1,8 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Modules
-  - Statement
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 静态的 **`import`** 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，`import` 语句只能在声明了 `type="module"` 的 `script` 的标签中使用。

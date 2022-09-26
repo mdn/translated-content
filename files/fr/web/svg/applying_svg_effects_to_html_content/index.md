@@ -4,7 +4,8 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 original_slug: Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML
 ---
-Les navigateurs modernes supportent le format [SVG](/fr-FR/docs/SVG) utilisant du [CSS](/fr-FR/docs/Web/CSS "Cascading Style Sheets") pour appliquer des effets graphiques au contenu HTML.
+
+Les navigateurs modernes supportent le format [SVG](/fr-FR/docs/SVG) utilisant du [CSS](/fr-FR/docs/Web/CSS) pour appliquer des effets graphiques au contenu HTML.
 
 Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr-FR/docs/Web/CSS/mask), [`clip-path`](/fr-FR/docs/Web/CSS/clip-path) et [`filter`](/fr-FR/docs/Web/CSS/filter).
 
@@ -235,6 +236,6 @@ Le SVG est alors importé depuis un fichier nommé `resources.svg`, utilisant `c
 
 ## Voir aussi
 
-- [SVG](/fr-FR/docs/SVG "SVG")
+- [SVG](/fr-FR/docs/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- [\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/ "Web Tech Blog » Blog Archive » SVG External Document References")
+- [\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/)

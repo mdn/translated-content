@@ -1,21 +1,14 @@
 ---
 title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
-tags:
-  - Browser style
-  - WebExtensions
-  - 扩展程序
-  - 指南
-  - 浏览器扩展程序
-  - 浏览器插件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
+
 {{AddonSidebar}}
 
-扩展程序包含的某些 UI 组件，例如： [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/en-US/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
+扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
 
 1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构
-2. 在 manifest.json 中添加字段 ([`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), 或 [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) 以指向其对应的页面
+2. 在 manifest.json 中添加字段 ([`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), 或 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) 以指向其对应的页面
 
 这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 `browser_sytle` ，如果设置了这个字段并且值为 `true` , 那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。
 
@@ -38,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -51,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         <p>
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/select"
+            ><a href="/zh-CN/docs/Web/HTML/Element/select"
               >&#x3C;select></a
             ></code
           >
@@ -70,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea"
+          ><a href="/zh-CN/docs/Web/HTML/Element/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -85,7 +78,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         Parent of an
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input">&#x3C;input></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/input">&#x3C;input></a></code
         >
       </td>
       <td>

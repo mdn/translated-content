@@ -1,14 +1,8 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
+
 {{JSRef}}
 
 **`Number.isInteger()`** 方法用来判断给定的参数是否为整数。

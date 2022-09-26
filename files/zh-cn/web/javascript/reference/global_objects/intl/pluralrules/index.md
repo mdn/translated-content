@@ -1,11 +1,11 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ---
+
 {{JSRef}}
 
-该**`Intl.PluralRules`**对象是用于启用多种敏感格式和多种语言规则的构造函数。
+该 **`Intl.PluralRules`** 对象是用于启用多种敏感格式和多种语言规则的构造函数。
 
 ## 句法
 

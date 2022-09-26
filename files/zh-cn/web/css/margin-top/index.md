@@ -1,8 +1,8 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -58,4 +58,4 @@ margin-top: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.margin-top")}}
+{{Compat}}

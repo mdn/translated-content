@@ -1,15 +1,8 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS Masking
-  - CSS 属性
-  - Web
-  - 引用
-  - recipe:css-property
-translation_of: Web/CSS/clip-path
 ---
+
 {{CSSRef}}
 
 **`clip-path`** [CSS](/zh-CN/docs/Web/CSS) 属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。

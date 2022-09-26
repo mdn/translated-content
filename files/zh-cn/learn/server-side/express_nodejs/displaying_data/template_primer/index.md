@@ -1,8 +1,8 @@
 ---
 title: 模板入门
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
+
 模板是一个文字档，定义了一个输出档的结构或者排版，使用定位符号表示，当模板被绘制时，资料将插入到何处（在 Express，模板被称为视图）。
 
 ## Express 模板选择
@@ -98,7 +98,7 @@ p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'<em> is emphasised</em>'}, an escaped string: #{'<em> is not emphasised</em>'}, and escaped variables: #{title}.
 ```
 
-> **备注：** 您几乎总是希望转义来自用户的数据（通过**`#{}`**语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。
+> **备注：** 您几乎总是希望转义来自用户的数据（通过 **`#{}`** 语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。
 
 您可以在行的开头使用管道（“**|**”）字符来表示“[纯文本](https://pugjs.org/language/plain-text.html)”。例如，下面显示的附加文本，将显示在与前一个锚点相同的行上，但不会链接。
 

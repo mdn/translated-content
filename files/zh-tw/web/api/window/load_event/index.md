@@ -1,9 +1,9 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+
 `load` 事件發生在加載完目標資源、該資源依賴的其他資源時。
 
 ## 一般資訊
@@ -25,11 +25,11 @@ original_slug: Web/Events/load
 
 | Property                              | Type                                             | Description                                                                                   |
 | ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)     | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/zh-TW/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-TW/docs/Web/API/Document/defaultView) (`window` of the document) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
 
 ## 範例

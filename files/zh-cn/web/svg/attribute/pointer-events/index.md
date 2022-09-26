@@ -1,8 +1,8 @@
 ---
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
-translation_of: Web/SVG/Attribute/pointer-events
 ---
+
 {{SVGRef}}
 
 pointer-events 属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。
@@ -52,7 +52,7 @@ window.addEventListener('mouseup', (e) => {
 
 {{EmbedLiveSample('示例', '100%', 150)}}
 
-作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}
+作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}
 
 ## 用法
 

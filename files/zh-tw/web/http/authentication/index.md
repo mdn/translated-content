@@ -1,8 +1,8 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP 提供一個用來存取控制及身分驗證框架. 最普遍的 HTTP 身分驗證是基於"Basic" schema. 本頁將介紹 HTTP framework for authentication 以及如何限制存取你的伺服器 and HTTP "Basic" schema.
@@ -11,7 +11,7 @@ HTTP 提供一個用來存取控制及身分驗證框架. 最普遍的 HTTP 身�
 
 {{RFC("7235")}} 定義了 HTTP 身分驗證框架，它可以被使用於 server to {{glossary("challenge")}} a client request 以及 client 提供身分驗證資訊. The challenge and response flow works like this: The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge. A client that wants to authenticate itself with a server can then do so by including an {{HTTPHeader("Authorization")}} request header field with the credentials. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![](http-auth-sequence-diagram.png)
 
 In the case of a "Basic" authentication like shown in the figure, the exchange **must** happen over an HTTPS (TLS) connection to be secure.
 

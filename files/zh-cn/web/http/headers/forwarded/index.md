@@ -1,14 +1,8 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP 头部
-  - 参考
-  - 头部
-  - 请求头部
-translation_of: Web/HTTP/Headers/Forwarded
 ---
+
 {{HTTPSidebar}}
 
 **`Forwarded`** 首部中包含了代理服务器的客户端的信息，即由于代理服务器在请求路径中的介入而被修改或丢失的信息。

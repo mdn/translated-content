@@ -1,8 +1,8 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-translation_of: Web/HTTP/Status/301
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`301 Moved Permanently`** 重定向回應碼代表所請求的資源已經被明確移動到 {{HTTPHeader("Location")}} 標頭所指示的 URL。瀏覽器會重新導向到此頁面，而搜尋引擎則會更新該資源的連結。用 SEO 的話來說，就是連結養分（link-juice）把你送到了新的 URL 去。
@@ -37,7 +37,7 @@ Location: http://www.example.org/index.asp
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.301")}}
+{{Compat}}
 
 ## 參見
 

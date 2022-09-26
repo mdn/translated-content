@@ -1,16 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-tags:
-  - API
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - 參考
-  - 屬性
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 **`Blob.size`** 屬性回傳以 byte 為單位的 {{domxref("Blob")}} 或一個 {{domxref("File")}} 的大小。
@@ -45,7 +37,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob.size")}}
+{{Compat}}
 
 ## 參見
 

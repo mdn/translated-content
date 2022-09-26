@@ -1,13 +1,9 @@
 ---
 title: 向 MDN Web Docs 发送反馈
 slug: MDN/Community
-tags:
-  - Documentation
-  - Guide
-  - MDN
-  - MDN Meta
 original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 欢迎来到 MDN Web Docs！在使用过程中，如果遇到了问题或者对我们有些建议，那你就来对地方了。只要有兴趣反馈你的意见，Mozilla Community 永远欢迎你的加入。在此，向你提前表达我们的谢意！

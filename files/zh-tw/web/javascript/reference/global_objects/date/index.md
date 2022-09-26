@@ -1,11 +1,8 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Date
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef}}
 
 建立一個 JavaScript **`Date`** 物件來指向某一個時間點。Date 物件是基於世界標準時間（UTC） 1970 年 1 月 1 日開始的毫秒數值來儲存時間。

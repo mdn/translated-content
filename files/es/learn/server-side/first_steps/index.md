@@ -31,7 +31,7 @@ Con este conocimiento básico estarás listo para recorrer el camino a través d
 ## Guías
 
 - [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-  - a través de la codificación lado-servidor.
+  - : ¡Bienvenidos al curso MDN de programación para principiantes de lado servidor! En este primer artículo enfocamos la programación de Lado-Servidor desde un nivel alto, respondiendo a preguntas tales como "¿qué es?", "¿en qué se diferencia de la programación de Lado-Cliente?" y "¿porqué es tan útil?". Después de leer este artículo entenderás el poder adicional para los sitios web disponible a través de la codificación lado-servidor.
 - [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor)
   - : Ahora que conoces el propósito y beneficios potenciales de la programación lado-servidor examinaremos en detalle qué pasa cuando un servidor recibe una "petición dinámica" desde un explorador web. Como el código de lado-servidor de la mayoría de sitios web gestiona las peticiones y las respuestas de forma similar, ésto te ayudará entender qué necesitas hacer cuando escribes tu propio código.
 - [Web frameworks de lado-servidor](/es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks)

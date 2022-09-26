@@ -1,20 +1,15 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 **Proxy** 物件被使用於定義基本操作的自定行為（例如：尋找屬性、賦值、列舉、函式調用等等）。
 
 ## 術語
 
-- [handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+- [handler](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
   - : Placeholder object which contains traps.
 - traps
   - : The methods that provide property access. This is analogous to the concept of traps in operating systems.
@@ -49,7 +44,7 @@ The handler object is a placeholder object which contains traps for `Proxy`.
 
 ### Basic example
 
-In this simple example the number `37` gets returned as the default value when the property name is not in the object. It is using the [`get`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get) handler.
+In this simple example the number `37` gets returned as the default value when the property name is not in the object. It is using the [`get`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get) handler.
 
 ```js
 var handler = {
@@ -83,7 +78,7 @@ console.log(target.a); // 37. The operation has been properly forwarded
 
 ### Validation
 
-With a `Proxy`, you can easily validate the passed value for an object. This example uses the [`set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler.
+With a `Proxy`, you can easily validate the passed value for an object. This example uses the [`set`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler.
 
 ```js
 let validator = {
@@ -115,7 +110,7 @@ person.age = 300; // Throws an exception
 
 ### Extending constructor
 
-A function proxy could easily extend a constructor with a new constructor. This example uses the [`construct`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) and [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply) handlers.
+A function proxy could easily extend a constructor with a new constructor. This example uses the [`construct`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) and [`apply`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply) handlers.
 
 ```js
 function extend(sup, base) {
@@ -158,7 +153,7 @@ console.log(Peter.age);  // 13
 
 ### Manipulating DOM nodes
 
-Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the [`set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler.
+Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the [`set`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler.
 
 ```js
 let view = new Proxy({
@@ -242,7 +237,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### Finding an array item object by its property
 
-This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using [`Object.defineProperties`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). This example can be adapted to find a table row by its cell. In that case, the target will be [`table.rows`](/en-US/docs/DOM/table.rows).
+This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using [`Object.defineProperties`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). This example can be adapted to find a table row by its cell. In that case, the target will be [`table.rows`](/zh-TW/docs/DOM/table.rows).
 
 ```js
 let products = new Proxy([
@@ -304,7 +299,7 @@ console.log(products.number); // 3
 
 ### A complete `traps` list example
 
-Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [the "little framework" published on the `document.cookie` page](/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
+Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [the "little framework" published on the `document.cookie` page](/zh-TW/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
 
 ```js
 /*
@@ -363,7 +358,7 @@ console.log(docCookies.my_cookie1);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Proxy", 2)}}
+{{Compat}}
 
 ## Gecko specific notes
 
@@ -376,7 +371,7 @@ console.log(docCookies.my_cookie1);
 - ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
 - [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) and [ECMAScript Harmony proxy semantics page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
 - [Tutorial on proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
-- [SpiderMonkey specific Old Proxy API](/en-US/docs/JavaScript/Old_Proxy_API)
+- [SpiderMonkey specific Old Proxy API](/zh-TW/docs/JavaScript/Old_Proxy_API)
 - {{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.
 
 ## Licensing note

@@ -11,7 +11,9 @@ translation_of: Web/API/Element/getElementsByClassName
 
 ## Syntax
 
-    var elements = element.getElementsByClassName(names);
+```js
+var elements = element.getElementsByClassName(names);
+```
 
 ### Parameters
 
@@ -78,7 +80,7 @@ while (matches.length > 0) {
 }
 ```
 
-위 코드는 `"colorbox"` 클래스를 가진 모든 자식 요소를 찾고, `item(0)` 을 호출해 `"hueframe"`이라는 클래스를 추가합니다 . 그리고 `"colorbox" `클래스를 제거합니다(배열 표기법을 사용하여). 다른 요소 (만약 남아있다면) 가 `item(0)` 이 될 것입니다.
+위 코드는 `"colorbox"` 클래스를 가진 모든 자식 요소를 찾고, `item(0)` 을 호출해 `"hueframe"`이라는 클래스를 추가합니다 . 그리고 `"colorbox"` 클래스를 제거합니다(배열 표기법을 사용하여). 다른 요소 (만약 남아있다면) 가 `item(0)` 이 될 것입니다.
 
 ### 배열 함수를 이용해 결과값을 필터링하기
 

@@ -2,6 +2,7 @@
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.innerHTML`** 属性设置或获取 HTML 语法表示的元素的后代。
@@ -37,7 +38,7 @@ element.innerHTML = htmlString;
 
 ### 获取元素的 HTML
 
-获取 `innerHTML` 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML 。返回结果字符串。
+获取 `innerHTML` 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML。返回结果字符串。
 
 ```js
 let contents = myElement.innerHTML;
@@ -69,9 +70,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 当给 `innerHTML` 设置一个值的时候到底发生了什么？用户代理按照以下步骤：
 
-1.  给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。
-2.  如果元素内容被替换成 {{HTMLElement("template")}} 元素，`<template>` 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 `DocumentFragment`。
-3.  对于其他所有元素，元素的内容都被替换为新的 `DocumentFragment`节点。
+1. 给定的值被解析为 HTML 或者 XML（取决于文档类型），结果就是 {{domxref("DocumentFragment")}} 对象代表元素新设置的 DOM 节点。
+2. 如果元素内容被替换成 {{HTMLElement("template")}} 元素，`<template>` 元素的 {{domxref("HTMLTemplateElement.content", "content")}} 属性会被替换为步骤 1 中创建的新的 `DocumentFragment`。
+3. 对于其他所有元素，元素的内容都被替换为新的 `DocumentFragment` 节点。
 
 ### 安全问题
 
@@ -99,7 +100,7 @@ el.innerHTML = name; // shows the alert
 
 基于这个原因，当插入纯文本时，建议不要使用 `innerHTML` 。取而代之的是使用 {{domxref("Node.textContent")}} ，它不会把给定的内容解析为 HTML，它仅仅是将原始文本插入给定的位置。
 
-> **警告：** 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation)[ `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
+> **警告：** 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用 `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
 
 ## 示例
 
@@ -119,7 +120,7 @@ function log(msg) {
 log("Logging mouse events inside this container...");
 ```
 
-log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有 “log” 类的框上。
+log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有“log”类的框上。
 
 现在添加第二个方法：记录基于事件 (比如 {{event("mousedown")}}, {{event("click")}}, 和 {{event("mouseenter")}}) 的 {{domxref("MouseEvent")}} 的信息。
 
@@ -154,7 +155,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 </div>
 ```
 
-具有 “box” 类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有 “log” 类的 \<div> 元素是作为消息本身的内容框。
+具有“box”类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有“log”类的 \<div> 元素是作为消息本身的内容框。
 
 ### CSS
 
@@ -188,7 +189,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,9 +1,9 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-translation_of: Web/CSS/transform-function/matrix3d()
 original_slug: Web/CSS/transform-function/matrix3d()
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`matrix3d()`** 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。

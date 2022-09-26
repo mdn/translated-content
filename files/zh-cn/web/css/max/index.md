@@ -1,9 +1,9 @@
 ---
 title: max()
 slug: Web/CSS/max
-translation_of: Web/CSS/max()
 original_slug: Web/CSS/max()
 ---
+
 {{CSSRef}}
 
 **`max()`** 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . `max()` 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。
@@ -82,7 +82,7 @@ Think of the `max()` function as finding the minimum value allowed for a propert
 
 ## 无障碍
 
-When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#Relative_length_units) that is always large enough to read. For example:
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) that is always large enough to read. For example:
 
 ```css
 small {
@@ -98,11 +98,11 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 
 ## 浏览器兼容性
 
-{{Compat("css.types.max")}}
+{{Compat}}
 
 ## 也可以看看
 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

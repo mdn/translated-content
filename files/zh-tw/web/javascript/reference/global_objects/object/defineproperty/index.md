@@ -1,8 +1,8 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
+
 {{JSRef}}
 
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。
@@ -108,7 +108,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 ## 範例
 
-If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
+If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
 ### 建立屬性
 
@@ -309,7 +309,7 @@ console.log(instance.myname); // this is my name string
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## Compatibility notes
 

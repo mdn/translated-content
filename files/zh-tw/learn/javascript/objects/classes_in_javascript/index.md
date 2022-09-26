@@ -1,9 +1,9 @@
 ---
 title: JavaScript 中的「繼承」
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 在解釋過大部分的 OOJS 細節之後，本文將說明該如何建立「子」物件類別 (建構子)，並從其「母」類別繼承功能。此外，也將建議開發者應於何時、於何處使用 OOJS。
@@ -14,12 +14,12 @@ original_slug: Learn/JavaScript/Objects/Inheritance
       <th scope="row">必備條件：</th>
       <td>
         基本的電腦素養、已了解 HTML 與 CSS 基本概念、熟悉 JavaScript 基礎
-        (可參閱〈<a href="/en-US/docs/Learn/JavaScript/First_steps"
+        (可參閱〈<a href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >First steps</a
-        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >〉) 與 OOJS 的基礎 (可參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >〉)。
       </td>
@@ -80,7 +80,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 }
 ```
 
-這看起來和 Person 建構子有許多地方類似，但比較奇怪的就是之前沒看過的 [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 函式。此函式基本上可讓你呼叫在其他地方定義的函數，而非目前內文 (context) 中定義的函式。當執行函式時，第一個參數用來指定你要使用 `this` 值，其他參數則指定應該傳送到該函式的參數。
+這看起來和 Person 建構子有許多地方類似，但比較奇怪的就是之前沒看過的 [`call()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 函式。此函式基本上可讓你呼叫在其他地方定義的函數，而非目前內文 (context) 中定義的函式。當執行函式時，第一個參數用來指定你要使用 `this` 值，其他參數則指定應該傳送到該函式的參數。
 
 > **備註：** 我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數 (在建立物件時，你可能獲得設定為隨意值的屬性)。
 
@@ -115,7 +115,7 @@ function Teacher(first, last, age, gender, interests, subject) {
     Teacher.prototype = Object.create(Person.prototype);
     ```
 
-    這裡再次用好朋友 [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 解救。我們透過 `create()` 並搭配等同於 `Person.prototype` 的原型，建立新的 `prototype` 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 `Teacher.prototype` `的值。也就是說` `Teacher.prototype` 現在會繼承 `Person.prototype` 上的所有可用函式。
+    這裡再次用好朋友 [`create()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 解救。我們透過 `create()` 並搭配等同於 `Person.prototype` 的原型，建立新的 `prototype` 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 `Teacher.prototype` `的值。也就是說` `Teacher.prototype` 現在會繼承 `Person.prototype` 上的所有可用函式。
 
 2. 此外，基於我們的繼承方式，`Teacher()` `prototype` 的建構子屬性目前設定為 `Person()。可參閱` [Stack Overflow post](https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor) 進一步了解原因。可先儲存自己的程式碼、在瀏覽器中載入頁面，再將下列程式碼輸入至 JavaScript 主控台以驗證：
 
@@ -179,13 +179,13 @@ teacher1.greeting();
 
 這裡所提的技巧，當然不是在 JavaScript 建立繼承類別的唯一方法，但足以堪用。並可讓你了解應如何於 JavaScript 實作繼承。
 
-你可能也想看看某些新的 {{glossary("ECMAScript")}} 功能，可更簡潔的在 JavaScript 中繼承 (參閱 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes))。但由於這些功能尚未廣泛支援其他瀏覽器，這裡先略過不提。本系列文章中提到的其他程式碼，均可回溯支援到 IE9 或更早版本。當然還是有辦法支援更舊的版本。
+你可能也想看看某些新的 {{glossary("ECMAScript")}} 功能，可更簡潔的在 JavaScript 中繼承 (參閱 [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes))。但由於這些功能尚未廣泛支援其他瀏覽器，這裡先略過不提。本系列文章中提到的其他程式碼，均可回溯支援到 IE9 或更早版本。當然還是有辦法支援更舊的版本。
 
 一般方法就是使用 JavaScript 函式庫，且最常見的就是簡單集結可用的功能，更快、更輕鬆的完成繼承。例如 [CoffeeScript](http://coffeescript.org/#classes) 即提供了 ` class``、extends ` 等等。
 
 ## 進階習題
 
-在[〈OOP 理論〉段落](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
+在[〈OOP 理論〉段落](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
 
 > **備註：** 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。
 
@@ -194,7 +194,7 @@ teacher1.greeting();
 簡單來說，你基本上需要考量 3 種類型的屬性＼函式：
 
 1. 已於建構子函式中定義，會交給物件實體的屬性＼函式。這應該很容易處理。在你自己的程式碼中，就是透過 `this.x = x` 類別行並在建構子中定義的成員；在瀏覽器程式碼中，就是僅限物件實體可用的成員 (一般是透過 `new` 關鍵字並呼叫建構子所建立，例如 `var myInstance = new myConstructor()`)。
-2. 直接在建構子上定義，並僅能用於該建構子的屬性＼函式。這類屬性＼函式往往只能用於內建瀏覽器物件之上，並直接「鍊接」至建構子 (而非實例) 以利識別，例如 [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)。
+2. 直接在建構子上定義，並僅能用於該建構子的屬性＼函式。這類屬性＼函式往往只能用於內建瀏覽器物件之上，並直接「鍊接」至建構子 (而非實例) 以利識別，例如 [`Object.keys()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)。
 3. 定義於建構子原型上的屬性＼函式，交由所有的實例繼承，亦繼承了物件類別。這類屬性＼函式包含建構子原型屬性之上定義的所有成員，例如 `myConstructor.prototype.x()`。
 
 如果你不確定到底屬於上述的哪一個，也別擔心。現在你還在學習階段，往後定會熟能生巧。

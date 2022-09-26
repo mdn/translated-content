@@ -2,9 +2,10 @@
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
-**`Element.childElementCount `**只读属性返回一个***无符号长整型数字***，表示给定元素的子元素数。
+**`Element.childElementCount`** 只读属性返回一个***无符号长整型数字***，表示给定元素的子元素数。
 
 > **备注：** This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, `childElementCount` moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.
 
@@ -19,7 +20,7 @@ var elCount = elementNodeReference.childElementCount;
 ```
 
 - count
-  - : holds the return value an `unsigned long `(simply an integer) type.
+  - : holds the return value an `unsigned long` (simply an integer) type.
 - node
   - : is an object representing a `Document`, `DocumentFragment` or `Element`.
 
@@ -84,7 +85,7 @@ if (foo.childElementCount > 0) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.childElementCount")}}
+{{Compat}}
 
 ## 规范
 
@@ -92,8 +93,8 @@ if (foo.childElementCount > 0) {
 
 ## 相关链接
 
-- [`children`](/zh-cn/DOM/Element.children)
-- [`firstElementChild`](/zh-cn/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-cn/DOM/Element.lastElementChild)
-- [`nextElementSibling`](/zh-cn/DOM/Element.nextElementSibling)
-- [`previousElementSibling`](/zh-cn/DOM/element.previousElementSibling)
+- [`children`](/zh-CN/DOM/Element.children)
+- [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-CN/DOM/Element.lastElementChild)
+- [`nextElementSibling`](/zh-CN/DOM/Element.nextElementSibling)
+- [`previousElementSibling`](/zh-CN/DOM/element.previousElementSibling)

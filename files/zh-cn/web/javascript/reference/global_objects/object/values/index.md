@@ -1,13 +1,8 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
 **`Object.values()`**方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用{{jsxref("Statements/for...in", "for...in")}}循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
@@ -85,7 +80,7 @@ if (!Object.values) Object.values = function(obj) {
 
 ## 相关链接
 
-- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

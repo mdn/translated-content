@@ -1,8 +1,8 @@
 ---
 title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件會在 cookie 設定或刪除時觸發。
@@ -52,7 +52,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.onChanged")}}
+{{Compat}}
 
 ## 示例
 
@@ -73,7 +73,8 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 >
 > Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +101,4 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

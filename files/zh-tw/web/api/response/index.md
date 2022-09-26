@@ -1,8 +1,8 @@
 ---
 title: Response
 slug: Web/API/Response
-translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 的 **`Response`** 介面代表了一個請求會返回的回應。
@@ -88,7 +88,7 @@ const response = new Response();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## 參考
 

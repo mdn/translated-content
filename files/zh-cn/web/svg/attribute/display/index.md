@@ -1,13 +1,13 @@
 ---
 title: display
 slug: Web/SVG/Attribute/display
-translation_of: Web/SVG/Attribute/display
 ---
+
 {{SVGRef}}
 
 The **`display`** attribute lets you control the rendering of graphical or container elements.
 
-**`display`**属性让你可以控制图形元素或容器元素的渲染。
+**`display`** 属性让你可以控制图形元素或容器元素的渲染。
 
 A value of `display="none"` indicates that the given element and its children will not be rendered. Any value other than `none` or `inherit` indicates that the given element will be rendered by the browser.
 

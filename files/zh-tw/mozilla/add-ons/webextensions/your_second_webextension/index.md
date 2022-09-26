@@ -1,8 +1,8 @@
 ---
 title: 你的第二個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 為了實作這個，我們將需要：
 
-- **定義一個 [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action) 給新增於 Firefox 工具列的按鈕。**
+- **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action) 給新增於 Firefox 工具列的按鈕。**
   這個按鈕，我們將提供以下功能：
 
   - 按鈕的 icon，命名為 "beasts-32.png"
@@ -85,16 +85,16 @@ cd beastify
 ```
 
 - 最前面的三個 key：[`manifest_version`](/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 和 [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 為非必要但建議加上：主要在說明該 extension。
-- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 。
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 定義工具列的按鈕，在這邊我們將會提供三種 key：
+- [`description`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 和 [`homepage_url`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 為非必要但建議加上：主要在說明該 extension。
+- [`icons`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示
+- [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 。
+- [`browser_action`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 定義工具列的按鈕，在這邊我們將會提供三種 key：
 
   - `default_icon` 為必要的：告訴 button 該使用的 icon 為何
   - `default_title`為非必要的：該 value 會顯示在 button 的 tip 裡
   - `default_popup` 如果想要顯示 pop-up，此為必要的 key：此教學中有使用到 pop-up 故為必要的，並將 HTML 檔案指給他。
 
-- [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 列出所有希望讓網頁可以存取的檔案。
+- [`web_accessible_resources`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 列出所有希望讓網頁可以存取的檔案。
 
 所有的路徑都會關連到 manifest.json 。
 
@@ -166,7 +166,7 @@ HTML 內容長得像這樣：
 </html>
 ```
 
-我們在 ID 為 `"popup-content"` 的 [`<div>`](/en-US/docs/Web/HTML/Element/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/en-US/docs/Web/HTML/Element/div) 元件來處理。
+我們在 ID 為 `"popup-content"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件來處理。
 
 值得注意的是我們在這個檔案裡引用了 CSS 與 JS 檔案，就如同一般網頁。
 
@@ -260,9 +260,9 @@ document.addEventListener("click", (e) => {
 
 這邊使用了三個 WebExtensions API 的方法：
 
-- [`browser.tabs.executeScript`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 讀取內容腳本 "content_scripts/beastify.js" 到當前的瀏覽器分頁裡面
-- [`browser.tabs.query`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 取得當前的瀏覽器分頁
-- [`browser.tabs.sendMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 送訊息到當前的瀏覽器分頁中正在執行的內容腳本裡(beastify.js)。訊息包含了所選的動物的 URL
+- [`browser.tabs.executeScript`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 讀取內容腳本 "content_scripts/beastify.js" 到當前的瀏覽器分頁裡面
+- [`browser.tabs.query`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 取得當前的瀏覽器分頁
+- [`browser.tabs.sendMessage`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 送訊息到當前的瀏覽器分頁中正在執行的內容腳本裡(beastify.js)。訊息包含了所選的動物的 URL
 
 ### 內容腳本(The content script)
 
@@ -361,7 +361,7 @@ beastify/
 
 ## 透過命令行佈署
 
-你可以利用[web-ext](/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)自動化暫時載入。
+你可以利用[web-ext](/zh-TW/Add-ons/WebExtensions/Getting_started_with_web-ext)自動化暫時載入。
 試試看:
 
 ```bash

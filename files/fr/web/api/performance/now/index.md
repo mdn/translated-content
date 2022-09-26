@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 La méthode **`Performance.now()`** retourne une valeur de type {{domxref("DOMHighResTimeStamp")}}, mesurée en millisecondes et avec une précision de 5 millièmes de milliseconde (5 microsecondes).
@@ -79,14 +80,11 @@ Ces en-têtes garantissent qu'un document de premier niveau ne partage pas un gr
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                       | Commentaire                                            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2',  '#dom-performance-now', 'performance.now()')}} | {{Spec2('Highres Time Level 2')}} | Définitions plus strictes des interfaces et des types. |
-| {{SpecName('Highres Time',  '#dom-performance-now', 'Performance.now()')}}         | {{Spec2('Highres Time')}}             | Définition initiale                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## Voir aussi
 

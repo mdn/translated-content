@@ -1,8 +1,8 @@
 ---
 title: 书本详细信息页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
+
 书本细节页面需要呈现一本指定书本 (`Book`) 的信息，使用它的 `_id` 字段值 (自动产生) 做为识别，接着是图书馆中书本实例 (`BookInstance`) 的信息。无论我们在哪里呈现一个作者、种类、或书本实例，都应该连结到它的细节页面。
 
 ## 控制器

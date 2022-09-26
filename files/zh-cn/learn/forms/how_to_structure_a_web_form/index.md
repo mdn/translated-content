@@ -3,6 +3,7 @@ title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
 
 有了基础知识，我们现在更详细地了解了用于为表单的不同部分提供结构和意义的元素。
@@ -13,7 +14,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
       <th scope="row">前提条件：</th>
       <td>
         基本的计算机能力，和基本的
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
         >。
       </td>
     </tr>
@@ -26,7 +27,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
   </tbody>
 </table>
 
-HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和可访问性。
+HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和无障碍。
 
 ## \<form> 元素
 
@@ -175,7 +176,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ### 自主学习：构建一个表单结构
 
-让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
+让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
 1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)的本地副本。
 2. 首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。

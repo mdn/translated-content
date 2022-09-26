@@ -1,20 +1,13 @@
 ---
 title: 创建和触发 events
 slug: Web/Events/Creating_and_triggering_events
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - JavaScript
-  - NeedsContent
-  - events
-translation_of: Web/Events/Creating_and_triggering_events
 ---
+
 本文演示了如何创建和分派 DOM 事件。这些事件通常称为**合成事件**，而不是浏览器本身触发的事件。
 
 ## 创建自定义事件
 
-Events 可以使用 [`Event`](/zh/docs/Web/API/Event) 构造函数创建如下：
+Events 可以使用 [`Event`](/zh-CN/docs/Web/API/Event) 构造函数创建如下：
 
 ```js
 var event = new Event('build');
@@ -28,7 +21,7 @@ elem.dispatchEvent(event);
 
 上述代码使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。 要了解更为复杂的方法，可参考下面的 [过时的方式](#The_old-fashioned_way) 一节。
+绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。要了解更为复杂的方法，可参考下面的 [过时的方式](#The_old-fashioned_way) 一节。
 
 ### 添加自定义数据 – CustomEvent()
 
@@ -142,7 +135,7 @@ function simulateClick() {
 
 ## 参见
 
-- [CustomEvent()](/en-US/docs/Web/API/CustomEvent/CustomEvent)
+- [CustomEvent()](/zh-CN/docs/Web/API/CustomEvent/CustomEvent)
 - {{domxref("document.createEvent()")}}
 - {{domxref("Event.initEvent()")}}
 - {{domxref("EventTarget.dispatchEvent()")}}

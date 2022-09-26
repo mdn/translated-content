@@ -1,16 +1,8 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Files
-  - Interface
-  - Reference
-browser-compat: api.FileReader
-translation_of: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 **`FileReader`** オブジェクトを使用すると、ウェブアプリケーションは、ユーザーのコンピュータに保存されているファイル (または生データ バッファ) の内容を非同期に読み取ることができます。{{domxref("File")}} または {{domxref("Blob")}} オブジェクトを使用して、読み込むファイルまたはデータを指定します。

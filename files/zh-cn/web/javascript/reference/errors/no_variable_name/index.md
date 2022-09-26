@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -40,7 +36,7 @@ var ohGodWhy = "foo";
 
 ### 保留字不能作为变量名
 
-有一些名称是作为[保留字](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)而存在的。不好意思，你不能使用！:(
+有一些名称是作为[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)而存在的。不好意思，你不能使用！:(
 
 ```js example-bad
 var debugger = "whoop";
@@ -89,5 +85,5 @@ var arr = [1,2,3,4,5];
 ## 相关内容
 
 - [Good variable names](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
+- [Variable declarations in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)

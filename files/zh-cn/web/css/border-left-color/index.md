@@ -1,8 +1,8 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-translation_of: Web/CSS/border-left-color
 ---
+
 {{CSSRef("CSS Borders")}}
 
 **`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。
@@ -74,7 +74,7 @@ border-left-color: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-left-color")}}
+{{Compat}}
 
 ## See also
 

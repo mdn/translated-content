@@ -1,13 +1,8 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
+
 {{JSRef}}
 
 **`Math.abs()`** 函式會回傳一個數字的絕對值，即為：
@@ -60,7 +55,7 @@ Math.abs();         // NaN
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## 參見
 

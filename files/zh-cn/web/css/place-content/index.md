@@ -1,8 +1,8 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-translation_of: Web/CSS/place-content
 ---
+
 {{CSSRef}}
 
 **`place-content`** 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。
@@ -195,25 +195,17 @@ direction.addEventListener("change", function (evt) {
 
 {{EmbedLiveSample("Example", "370", "300")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
 {{CSSInfo}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("css.properties.place-content")}}
+{{Compat}}
 
-### Support in Flex layout
-
-{{Compat("css.properties.place-content.flex_context")}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.place-content.grid_context")}}
-
-## See also
+## 参见
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_

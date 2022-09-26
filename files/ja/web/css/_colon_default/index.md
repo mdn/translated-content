@@ -1,18 +1,6 @@
 ---
 title: ':default'
 slug: Web/CSS/:default
-tags:
-  - ':default'
-  - CSS
-  - フォーム
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - default
-browser-compat: css.selectors.default
-translation_of: Web/CSS/:default
 ---
 {{CSSRef}}
 

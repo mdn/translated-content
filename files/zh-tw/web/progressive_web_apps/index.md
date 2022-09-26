@@ -1,14 +1,8 @@
 ---
 title: 漸進式網絡應用程式
 slug: Web/Progressive_web_apps
-tags:
-  - Apps
-  - Modern web apps
-  - NeedsTranslation
-  - Progressive web apps
-  - TopicStub
-translation_of: Web/Progressive_web_apps
 ---
+
 漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。
 
 ## PWA 優勢

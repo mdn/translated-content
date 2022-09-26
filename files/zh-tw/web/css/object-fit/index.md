@@ -1,8 +1,8 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-translation_of: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -140,7 +140,7 @@ img {
 
 ## Browser compatibility
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## See also
 

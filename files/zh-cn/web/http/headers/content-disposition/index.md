@@ -1,13 +1,8 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - 上传
-  - 文件下载
-  - 表单
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}在常规的 HTTP 应答中，**`Content-Disposition`** 响应头指示回复的内容该以何种形式展示，是以**内联**的形式（即网页或者页面的一部分），还是以**附件**的形式下载并保存到本地。
 
 在 multipart/form-data 类型的应答消息体中，**`Content-Disposition`** 消息头可以被用在 multipart 消息体的子部分中，用来给出其对应字段的相关信息。各个子部分由在{{HTTPHeader("Content-Type")}} 中定义的**分隔符**分隔。用在消息体自身则无实际意义。

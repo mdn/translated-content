@@ -1,12 +1,8 @@
 ---
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-translation_of: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 `<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。
@@ -58,7 +54,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## DOM 接口
 
-该元素实现了`SVGAnimateMotionElement接口。`
+该元素实现了 `SVGAnimateMotionElement` 接口。
 
 ## 规范
 

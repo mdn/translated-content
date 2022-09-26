@@ -1,17 +1,8 @@
 ---
 title: 设置 Node 开发环境
-slug: learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Express
-  - Node
-  - node.js
-  - npm
-  - 初学者
-  - 学习
-  - 开发环境
-  - 服务器端
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
+slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。
@@ -164,14 +155,14 @@ $ npm -v
 1. 首先为新应用创建一个目录，并进入它：
 
     ```bash
-    $ mkdir myapp
-    $ cd myapp
+    mkdir myapp
+    cd myapp
     ```
 
 2. 然后，使用 NPM 的 init 命令为应用创建一个 **package.json** 文件。这个命令将请求一系列的信息，包括应用的名称和版本，程序初始进入点的文件名（默认为 **index.js**）。现在先接受默认信息即可：
 
     ```bash
-    $ npm init
+    npm init
     ```
 
     **package.json** 文件中保存了所接受的默认信息，最后一条是许可证信息：
@@ -193,7 +184,7 @@ $ npm -v
 3. 接下来在 **myapp** 目录中安装 Express，用下面的命令将 Express 保存在 **package.json** 文件中的依赖表里：
 
     ```bash
-    $ npm install express
+    npm install express
     ```
 
     此时 **package.json** 文件的底部会出现依赖列表（"dependencies"），其中包含 Express：
@@ -248,7 +239,7 @@ $ npm -v
 如果一个依赖只在开发过程中用到，应该将其保存为“开发依赖”（这样，包的用户便无需在生产环境中安装它们）。比如，如果要使用 [eslint](http://eslint.org/)（一款流行的 JavaScript lint 工具）可以这样调用 NPM：
 
 ```bash
-$ npm install eslint --save-dev
+npm install eslint --save-dev
 ```
 
 当前应用的 **package.json** 文件中将自动添加以下项目：
@@ -282,13 +273,13 @@ $ npm install eslint --save-dev
 然后就可以用 NPM 这样运行 eslint 了：
 
 ```bash
-$ npm run-script lint
+npm run-script lint
 ```
 
 或使用别名：
 
 ```bash
-$ npm run lint
+npm run lint
 ```
 
 这个示例看上去并没有让原始命令简洁多少，但在 NPM 脚本中可以加入更长的命令，甚至是多命令链。比如可以让单一的 NPM 脚本来一次运行所有的测试单元。
@@ -298,13 +289,13 @@ $ npm run lint
 [Express 应用生成器](https://expressjs.com/en/starter/generator.html) 工具可以生成一个 Express 应用的“框架”。可以用 NPM 这样安装它（-g 参数可以把该工具全局安装，那样就可以在任意应用中使用了）：
 
 ```bash
-$ npm install express-generator -g
+npm install express-generator -g
 ```
 
 进入应用目录，运行以下命令，即可创建一个名为 "helloworld" 的 Express 应用：
 
 ```bash
-$ express helloworld
+express helloworld
 ```
 
 > **备注：** 也可以指定模板库来使用其它丰富的设置。可通过 help 命令来查看所有选项：
@@ -339,8 +330,8 @@ NPM 将在当前位置的子目录中创建新的 Express 应用，可以在控�
 用下列命令可为 helloworld 应用安装所有依赖：
 
 ```bash
-$ cd helloworld
-$ npm install
+cd helloworld
+npm install
 ```
 
 然后运行这个应用（Windows 环境）：
@@ -352,7 +343,7 @@ $ npm install
 （Linux/macOS 环境）：
 
 ```bash
-$ DEBUG=helloworld:* npm start
+DEBUG=helloworld:* npm start
 ```
 
 DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下所示：

@@ -1,14 +1,8 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
+
 {{JSRef}}
 
 JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高階（high-level）、似列表（list-like）的物件。陣列在 Javascript 裡面並沒有固定的長度與型別。由於陣列的長度可以隨時被改變，所以並不能保證陣列的密度。這取決於開發者如何使用陣列。一般來說，這是個非常方便的特性，但如果這並不適用於你的開發工作，你也許會考慮使用型別陣列。
@@ -416,7 +410,7 @@ console.table(values)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## 參見
 

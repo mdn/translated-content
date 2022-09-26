@@ -1,12 +1,8 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - 响应状态码
-  - 服务器端错误
-  - 状态码
-translation_of: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 **`502 Bad Gateway`** 是一种 HTTP 协议的服务端错误状态代码，它表示作为网关或代理的服务器，从上游服务器中接收到的响应是无效的。

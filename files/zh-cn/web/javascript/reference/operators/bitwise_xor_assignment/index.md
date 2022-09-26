@@ -1,8 +1,8 @@
 ---
 title: 按位异或赋值 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 按位异或赋值操作符 (`^=`) 使用二进制表示操作数，进行一次按位异或操作并赋值。
@@ -44,5 +44,5 @@ console.log(b); // 00000000000000000000000000000101
 
 ## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Bitwise XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise XOR operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

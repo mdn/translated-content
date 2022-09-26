@@ -1,13 +1,8 @@
 ---
 title: <strong>
 slug: Web/HTML/Element/strong
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 文本级语义
-translation_of: Web/HTML/Element/strong
 ---
+
 ## 总结
 
 Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。

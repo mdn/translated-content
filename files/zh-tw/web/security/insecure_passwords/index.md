@@ -1,51 +1,13 @@
 ---
 title: 不安全的密碼
 slug: Web/Security/Insecure_passwords
-tags:
-  - 安全性
-  - 密碼
-  - 網頁
-  - 風險
-translation_of: Web/Security/Insecure_passwords
 ---
+
 提供 HTTP 的登入表單非常危險，因為目前有很多已知的用戶密碼擷取手法。竊聽者可以透過側錄該網路或修改傳輸頁面進行大量的惡意攻擊，並直接竊取用戶憑證或密碼。本頁將詳細說明 Firefox 用以警示用戶與開發者有關不安全的密碼及密碼竊取風險的安全機制。
 
-[HTTPS](https://mdn.mozillademos.org/files/5951/insecure_page2_with_arrows_cropped.jpeg) 通訊協定，旨在保護用戶的資料於傳輸時不會遭到竊聽與竄改，並保護其機密性與原始完整性。負責處理用戶資料的網站應使用 HTTPS 保護其用戶不受惡意駭客攻擊。如果沒有使用 HTTPS，竊取諸如登入憑證之類的用戶資訊是小事一樁。著名的 [Firesheep](https://codebutler.github.io/firesheep/) 附加套件曾示範過此種攻擊方式。
+[HTTPS](/zh-TW/docs/Glossary/https) 通訊協定，旨在保護用戶的資料於傳輸時不會遭到竊聽與竄改，並保護其機密性與原始完整性。負責處理用戶資料的網站應使用 HTTPS 保護其用戶不受惡意駭客攻擊。如果沒有使用 HTTPS，竊取諸如登入憑證之類的用戶資訊是小事一樁。著名的 [Firesheep](https://codebutler.github.io/firesheep/) 附加套件曾示範過此種攻擊方式。
 
 要處理這個問題，請安裝並設定網站伺服器的 SSL/TLS 憑證。目前有許多免費與付費的憑證供應商。如果是使用雲端，雲端服務商可能提供了啟動 HTTPS 的方法。
-
-## Firefox 密碼安全性指標
-
-為提醒上述風險，Firefox 實做了許多警告機制：
-
-1. Firefox 51 以後會在網址列的左方顯示一個紅色劃叉的鎖頭警告標示，如下圖所示。
-
-    ![鎖頭標示](https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png)
-
-2. Firefox 52 以後會在任何不安全表單的 URL 欄位與密碼區域清楚呈現警告：
-
-    ![警告](https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png)
-
-3. Firefox 52 以後還會禁止在不安全表單自動填入密碼。用戶依舊可以藉由下拉列表，填入已存登錄的資訊。
-4. 不安全表單的警告，也能從所有 Firefox 發行的開發者主控台之安全窗格找到。詳請參見下節敘述。
-
-## 網頁主控台訊息
-
-本區塊敘述為了應對不安全的密碼，於 Firefox 開發者工具中顯示在網頁主控台的安全性訊息。
-
-### 透過 HTTP 提供登入表單
-
-即使表單是傳送到 HTTPS 網址，用戶的登入表單仍未受保護，因為攻擊者可以修改用戶接收到的頁面。例如，攻擊者可插入鍵盤側錄腳本，導致用戶輸入的資料外洩，或變更表單目的地為攻擊者控制的伺服器。網路主控台的安全面板會警告開發者及用戶，並標示這項安全性問題。
-
-![不安全的登入欄位，會顯示於網頁主控台及密碼欄位中的對應警告。](https://mdn.mozillademos.org/files/14783/Insecure_Password_Console_Contextual_sm.png)
-
-> **備註：** 在 HTTP 文件中嵌入 HTTPS 登入頁面也不安全 — 攻擊者可以變更頁框超連結以指向惡意網站。
-
-### 在表單行為中使用 HTTP 網址
-
-在這種情況下，任何用戶輸入的資料都以明文傳送。對於任何側錄該網路的人，從資料送出到抵達網頁伺服器，用戶密碼都清楚可見。
-
-![不安全的登入表單行為，會顯示於網頁主控台及密碼欄位中的對應警告。](https://mdn.mozillademos.org/files/14785/Insecure_Action_Password_Console_Contextual_sm.png)
 
 ## 重複使用相同密碼
 

@@ -3,6 +3,7 @@ title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
 translation_of: Web/API/IDBRequest/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`transaction`** de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête.La propriètè peut renvoiyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
@@ -85,13 +86,11 @@ openRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.transaction")}}
+{{Compat}}
 
 ## Voir aussi
 

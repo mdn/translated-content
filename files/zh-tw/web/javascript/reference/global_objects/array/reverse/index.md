@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
+
 {{JSRef}}
 
 **`reverse()`** 方法會*[原地（in place）](https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)*反轉（reverses）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
@@ -48,7 +43,7 @@ console.log(reversed); // ['three', 'two', 'one']
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,20 +1,11 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 文本
-  - CSS 颜色
-  - HTML 样式
-  - HTML 颜色
-  - Web
-  - color
-  - 参考
-  - 布局
-translation_of: Web/CSS/color
 ---
-{{CSSRef}}`color`CSS 属性设置[颜色值](/zh-CN/docs/Web/CSS/color_value)的前景色以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)，并设置{{cssxref("currentcolor")}}值。`currentcolor`可以对其他颜色属性用作不直接的值，比如{{cssxref("border-color")}}。{{EmbedInteractiveExample("pages/css/color.html")}}对于在 HTML 中使用颜色的概述，参考[使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/)。
+
+{{CSSRef}}
+
+`color` CSS 属性设置[颜色值](/zh-CN/docs/Web/CSS/color_value)的前景色以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)，并设置{{cssxref("currentcolor")}}值。`currentcolor`可以对其他颜色属性用作不直接的值，比如{{cssxref("border-color")}}。{{EmbedInteractiveExample("pages/css/color.html")}}对于在 HTML 中使用颜色的概述，参考[使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/)。
 
 ## 语法
 
@@ -72,14 +63,14 @@ It is important to ensure that the contrast ratio between the color of the text 
 Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/zh-CN/docs/Web/CSS/font-weight) or larger, or 24px or larger.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-## 正规定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正规语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -109,9 +100,9 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}}和{{cssxref("color-adjust")}}

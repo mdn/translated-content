@@ -1,16 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - HTML-DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Performance
-translation_of: Web/API/Navigator
 ---
+
 {{ APIRef("DOM4") }}
 
 **`Navigator`** 介面標示了用戶代理（user agent）的狀態與身份。它允許腳本查詢與註冊，以進行一些活動。

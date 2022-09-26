@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML")}}
 
@@ -86,7 +87,7 @@ L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est de
 
 Voici le résultat (le contenu de `title` apparaît dans une info-bulle quand le pointeur de souris passe sur le lien) :
 
-Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/ "Le meilleur endroit pour trouver plus d'informations sur la mission de Mozilla et la manière de contribuer")
+Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/)
 
 > **Note :** le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`. Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière accessible à tout utilisateur, par exemple, en la mettant dans le texte normal.
 

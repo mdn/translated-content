@@ -2,6 +2,7 @@
 title: 页面可见性 API
 slug: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了您可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。
@@ -47,7 +48,7 @@ Some processes are exempt from this throttling behavior. In these cases, you can
 
 ## 示例
 
-看一个 [在线的例子 ](http://daniemon.com/tech/webapps/page-visibility/)（带声音的视频）
+看一个 [在线的例子](http://daniemon.com/tech/webapps/page-visibility/)（带声音的视频）
 
 在此例中，当你切换到另一个标签时视频会暂停，当你返回到当前标签时视频会再次播放，代码如下：
 
@@ -108,7 +109,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
     - `visible` : 页面内容至少是部分可见。 在实际中，这意味着页面是非最小化窗口的前景选项卡。
     - `hidden` : 页面内容对用户不可见。 在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
-    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。>
+    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。
     - 注释：有的浏览器不支持此功能`unloaded` : 页面正在从内存中卸载。
     - 注释：有的浏览器不支持此功能
 
@@ -136,7 +137,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ### `Document.visibilityState`
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## 参考
 

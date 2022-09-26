@@ -1,16 +1,8 @@
 ---
 title: Express 教程：本地图书馆网站
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Express
-  - Node
-  - nodejs
-  - web 框架
-  - 初学者
-  - 后端框架
-  - 学习教程
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 在实战教程第一节中，你将了解要学习哪些内容，对「本地图书馆」示例网站有一个初步的印象 。本章接下来的内容就是逐步完成这个网站。

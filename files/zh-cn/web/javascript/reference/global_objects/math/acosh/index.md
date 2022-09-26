@@ -1,14 +1,9 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-tags:
-  - JavaScript
-  - 双曲函数
-  - 数学
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值
 ---
+
 {{JSRef}}
 
 **`Math.acosh()` **函数返回一个数的反双曲余弦值，即：

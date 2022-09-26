@@ -1,8 +1,8 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 {{cssxref("@font-face")}} 中的 src 描述符指定了包含字体数据的资源。`@font-face` 规则中需要指定这个属性。
@@ -73,4 +73,4 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

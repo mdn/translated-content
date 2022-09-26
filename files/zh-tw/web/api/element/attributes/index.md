@@ -1,13 +1,13 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
-translation_of: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.attributes`** property returns a live collection of all attribute nodes registered to the specified node. It is a {{domxref("NamedNodeMap")}}, not an `Array`, so it has no {{jsxref("Array")}} methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more specific, `attributes` is a key/value pair of strings that represents any information regarding that attribute.
 
-Element.attribute 特性會把特定節點裡所有的屬性變成一個集合,然後回傳出來. 這是一個 [NamedNodeMap](/en-US/docs/Web/API/NamedNodeMap), 而並非一個陣列. 所以它並沒有陣列的方法和在瀏覽器中 [Attr](/en-US/docs/Web/API/Attr)節點裡的索引值也可能不同. 更詳細的來說, attributes 是一個鍵/值的配對, 它包含了所有有關於這個節點屬性的資訊
+Element.attribute 特性會把特定節點裡所有的屬性變成一個集合,然後回傳出來. 這是一個 [NamedNodeMap](/zh-TW/docs/Web/API/NamedNodeMap), 而並非一個陣列. 所以它並沒有陣列的方法和在瀏覽器中 [Attr](/zh-TW/docs/Web/API/Attr)節點裡的索引值也可能不同. 更詳細的來說, attributes 是一個鍵/值的配對, 它包含了所有有關於這個節點屬性的資訊
 
 Syntax
 
@@ -76,7 +76,7 @@ The following example runs through the attribute nodes for the element in the do
 
 ## Browser compatibility
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
 ## See also
 

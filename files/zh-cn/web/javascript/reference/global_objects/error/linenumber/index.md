@@ -1,12 +1,8 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - JavaScript
-  - 属性
-  - 错误
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`lineNumber`** 属性的值为抛出错误的代码在其源文件中所在的行号。
@@ -39,7 +35,7 @@ throw e;
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Error.lineNumber")}}
+{{Compat}}
 
 ## 相关内容
 

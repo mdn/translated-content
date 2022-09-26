@@ -1,8 +1,8 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-translation_of: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 `text-indent` 属性能定义一个块元素首行文本内容之前的缩进量。

@@ -1,21 +1,15 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 manifest.json 是所有採用 WebExtension API 的擴充功能中、唯一一個必須包含的檔案。
 
 你可透過 manifest.json 為擴充功能指定名稱（name）、版本（version）這類的基本元資料（metadata），也可指定擴充功能的一些相關功能，例如像是背景腳本（background scripts）、內容腳本（content scripts）、瀏覽器動作（browser actions）等等。
 
-這是個採用 [JSON](/en-US/docs/Glossary/JSON) 格式的檔案，但有個例外：它可接受含有 "`//`" 這種格式的註解文字。
+這是個採用 [JSON](/zh-TW/docs/Glossary/JSON) 格式的檔案，但有個例外：它可接受含有 "`//`" 這種格式的註解文字。
 
 manifest.json 可採用的鍵值如下所列：
 
@@ -31,7 +25,7 @@ browser.runtime.getManifest().version;
 
 ## 範例
 
-以下程式碼顯示的是一般 manifest 鍵值的基本語法。請注意，這個範例並不是讓你用來直接複製貼上的，你必須根據所開發的擴充功能，填入相應的鍵值、關於擴充功能的完整範例，請參見 [擴充功能範例](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)。
+以下程式碼顯示的是一般 manifest 鍵值的基本語法。請注意，這個範例並不是讓你用來直接複製貼上的，你必須根據所開發的擴充功能，填入相應的鍵值、關於擴充功能的完整範例，請參見 [擴充功能範例](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)。
 
 ```json
 {
@@ -108,6 +102,6 @@ browser.runtime.getManifest().version;
 
 ## 瀏覽器相容性
 
-若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 [完整 manifest.json 瀏覽器相容表](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
+若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 [完整 manifest.json 瀏覽器相容表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}

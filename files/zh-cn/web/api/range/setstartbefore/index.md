@@ -2,6 +2,7 @@
 title: Range.setStartBefore()
 slug: Web/API/Range/setStartBefore
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.setStartBefore()`** 方法相对另一个 {{domxref("Node")}}来设置一个{{domxref("Range")}} 的开始位置。{{domxref("Range")}}的开始节点（focusNode）的父节点，和 `referenceNode`的父节点是同一个。
@@ -36,4 +37,4 @@ range.setStartBefore(referenceNode);
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

@@ -1,21 +1,8 @@
 ---
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HTTP レスポンス
-  - HTTP レスポンス型
-  - プロパティ
-  - リファレンス
-  - レスポンス
-  - XHR
-  - XMLHttpRequest
-  - responseType
-browser-compat: api.XMLHttpRequest.responseType
-translation_of: Web/API/XMLHttpRequest/responseType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} (XHR) の **`responseType`** プロパティは列挙型の文字列値で、レスポンスに含まれているデータの型を示します。

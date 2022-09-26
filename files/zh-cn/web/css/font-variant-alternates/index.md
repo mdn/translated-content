@@ -1,8 +1,8 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-translation_of: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 **`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。
@@ -97,7 +97,7 @@ p {
 
 > **备注：** 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。您可以找到一些免费版本进行测试，例如从 [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -105,4 +105,4 @@ p {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.font-variant-alternates")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptors()`** 方法用来获取一个对象的所有自身属性的描述符。

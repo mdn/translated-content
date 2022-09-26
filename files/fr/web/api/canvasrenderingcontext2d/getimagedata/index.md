@@ -14,6 +14,7 @@ tags:
   - getImageDate
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.getImageData()`** de l'API Canvas 2D retourne un objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions _(sx, sy)_ et qui possède des attributs : *largeur (sw) et hauteur (sh)*. Cette méthode n'est pas affectée par la matrice de transformation du canevas.
@@ -72,13 +73,11 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ## Voir aussi
 

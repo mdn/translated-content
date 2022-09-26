@@ -1,8 +1,8 @@
 ---
 title: 協議升級機制
 slug: Web/HTTP/Protocol_upgrade_mechanism
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
+
 {{HTTPSidebar}}
 
 [HTTP/1.1 協議](/zh-TW/docs/Web/HTTP)提供了一種特殊的機制，這一機制允許將一個已建立的連接升級成新的、不相容的協議。這篇指南涵蓋了其運作原理和使用場景。

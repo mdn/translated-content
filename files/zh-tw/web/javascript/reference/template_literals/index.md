@@ -1,17 +1,8 @@
 ---
 title: 樣板字面值
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
+
 {{JsSidebar("More")}}
 
 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。你可以透過樣板字面值來使用多行字串及字串內插（string interpolation）功能。他們在 ES2015 規範的先行版本中被稱為「樣板字串（template strings）」。
@@ -165,7 +156,7 @@ t2Closure('Hello', {foo: 'World'});  // "Hello World!"
 
 ### 原始字串
 
-標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings)的字串值。
+標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings)的字串值。
 
 ```js
 function tag(strings) {
@@ -235,12 +226,12 @@ let bad = `bad escape sequence: \unicode`;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## 參見
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
 - ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

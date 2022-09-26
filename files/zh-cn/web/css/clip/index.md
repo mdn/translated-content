@@ -1,8 +1,8 @@
 ---
 title: clip
 slug: Web/CSS/clip
-translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 ## 概述

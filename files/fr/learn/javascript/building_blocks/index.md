@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks
 original_slug: Apprendre/JavaScript/Building_blocks
 ---
+
 {{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}
 
 Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités clefs du JavaScript en nous concentrant plus particulièrement sur les structures les plus répandues telles que les conditions, les boucles, les fonctions et les événements. Nous avons déjà vu ces notions dans le cours mais sans nous y attarder, nous allons maintenant les étudier en détails.

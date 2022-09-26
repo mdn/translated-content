@@ -1,15 +1,11 @@
 ---
 title: '::cue (:cue)'
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - WebVTT
-  - cue
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
-::cue CSS [伪元素](/en-US/docs/Web/CSS/Pseudo-elements)匹配所选元素中的[WebVTT](en-US/docs/Web/API/WebVTT_API)提示。这可以用于在 VTT 轨道的媒体中使用字幕和其他线索。
+::cue CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)匹配所选元素中的[WebVTT](en-US/docs/Web/API/WebVTT_API)提示。这可以用于在 VTT 轨道的媒体中使用字幕和其他线索。
 
 只有 CSS 一小部分属性可以与 `::cue` 伪元素一起使用：
 
@@ -51,8 +47,8 @@ translation_of: Web/CSS/::cue
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## 参考
 
-- [网络视频轨道格式（WebVTT）](/en-US/docs/Web/API/WebVTT_API)
+- [网络视频轨道格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)

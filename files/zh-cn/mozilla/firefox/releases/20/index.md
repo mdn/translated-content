@@ -1,8 +1,8 @@
 ---
 title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
-translation_of: Mozilla/Firefox/Releases/20
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 20 正式版发布于 2013 年 4 月 2 日。
@@ -24,18 +24,18 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 ### CSS
 
 - [CSS Flexbox](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)默认开启，不需要设置 about:config.
-- 实现了[CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html)中的`mask-type属性`({{bug("793617")}}).
+- 实现了 [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) 中的 `mask-type` 属性（{{bug("793617")}}）。
 
 ### DOM
 
 - {{domxref("HTMLMediaElement")}}支持可`playbackRate`属性 (both read and write), with pitch correction. Pitch correction can be controlled using the property `mozPreservesPitch` ({{bug('495040')}}).
 - CSSOM: 实现了新的{{domxref("CSSGroupingRule")}}和{{domxref("CSSConditionRule")}} ({{bug("814907")}}).
 - CSSOM:{{domxref("CSSRule")}}上的常量 CSSRule.MOZ_KEYFRAME_RULE 和 CSSRule.MOZ_KEYFRAMES_RULE 去掉前缀成为了 CSSRule.KEYFRAME_RULE 和 CSSRule.KEYFRAMES_RULE.带前缀的版本仍暂时保留让开发者过度他们的代码{{bug("816431")}}).
-- CSSOM: 现在可以设置{{domxref("CSSMediaRule")}}上的`conditionText属性的值` ({{bug("815021")}}).
-- {{domxref("DOMParser")}}上的 ` parseFromStream和``parseFromBuffer `方法在 web 页面上被禁用.({{bug('816410')}}).
+- CSSOM: 现在可以设置 {{domxref("CSSMediaRule")}} 上的 `conditionText` 属性的值（{{bug("815021")}}）。
+- {{domxref("DOMParser")}}上的 `parseFromStream` 和 `parseFromBuffer` 方法在 web 页面上被禁用.({{bug('816410')}}).
 - [`XMLSerializer`](/zh-CN/docs/XMLSerializer)上的`serializeToStream`方法在 web 页面上被禁用.({{bug('816410')}}).
 - `TextDecoder`和`TextEncoder`接口可以在 Worker 中使用 ({{bug('795542')}}).
-- 实现了`CSS.supports()方法`({{bug("779917")}}).
+- 实现了 `CSS.supports()` 方法（{{bug("779917")}}）。
 - 实现了`UndoManager`({{bug("617532")}}).
 
 ## 附加组件和 Mozilla 开发者需要注意的变化

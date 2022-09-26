@@ -1,43 +1,23 @@
 ---
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
-original_slug: Learn/HTML/Forms/HTML_forms_in_legacy_browsers
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms")}}
 
-所有 web 开发者很快就会（有时候是痛苦地）发现网络是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 老版本的 Internet Explorer ……但是，这远远不是全部。只发布一年的 Firefox 比如 [the ESR version](http://www.mozilla.org/en-US/firefox/organizations/) 也是旧式浏览器。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
+{{LearnSidebar}}
 
-可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助您解决旧式浏览器导致的大约 80％的问题。
+所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
+
+可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助你解决旧式浏览器导致的大多数问题。如果浏览器不支持某种 HTML {{htmlelement('input')}} 类型，它不会停止工作，而只是回退为默认的 `type=text` 类型。
 
 ## 了解这些问题
 
-实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。例如，在许多情况下，HTML 表单是否支持 CSS 是最大的问题。这是正确的开始，只需要检查你想用的元素或接口是否支持 CSS 即可。MDN 有一个关于包含 HTML 中可用的元素、属性或 API 的兼容表单可查。 此外，仍有其他一些非常有用的资源：
+实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。如果你在 [MDN](/) 上阅读了本篇文档，这将是个良好的开始，只需要检查你想用的元素或 DOM 接口的支持情况即可。对于大部分 HTML 中可用的元素、属性或 API，MDN 提供了兼容性表格以供查询。
 
-### 浏览器厂商的文档
+由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS 原则](https://zh.wikipedia.org/wiki/KISS原则)”。有很多情况下，我们希望表单“更漂亮”或“具有高级功能”，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
 
-- Mozilla: 直接查看 MDN 即可
-- Microsoft: [Internet Explorer Standards Support Documentation](http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
-- WebKit: 由于有多个版本的引擎，稍微有点棘手。
+### 优雅降级 (Graceful degradation) 是 web 开发者最好的朋友
 
-  - [The WebKit blog](https://www.webkit.org/blog/) 和 [Planet WebKit](http://planet.webkit.org/) 聚合了 Webki 核心开发者的最佳文章。
-  - [Chrome platform status site](https://www.chromestatus.com/features) 也十分重要
-  - 同样重要的是 [the Apple web site.](https://developer.apple.com/technologies/safari/)
-
-### 独立文档
-
-- [Can I Use](http://caniuse.com) 有关于是否支持最新技术的信息。
-- [Quirks Mode](http://www.quirksmode.org) 是关于浏览器兼容性的精彩资源。[mobile 部分](http://www.quirksmode.org/mobile/)是当前最好的内容之一。
-- [Position Is Everything](http://positioniseverything.net/) 关于旧式浏览器渲染 bug 以及解决办法（如果有）的最佳资源。
-- [Mobile HTML5](http://mobilehtml5.org) 有关于大量手机浏览器的兼容性信息，而不仅仅是是前五名（包括诺基亚，亚马逊和黑莓）.
-
-## 让事情变得更简单
-
-由于[HTML forms](/en-US/docs/HTML/Forms) 包含复杂的交互，所以有一条法则：[keep it as simple as possible](http://en.wikipedia.org/wiki/KISS_principle)。很多时候，我们想让表单更美观或想使用更高级的技术，然而，构建高效的 HTML 表单不只是设计和技术问题。记得花时间读一下这篇文章 t [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/).
-
-### 优雅地降级 (Graceful degradation) 是 web 开发者最好的朋友
-
-[Graceful degradation and progressive enhancement](http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/) 是一个开发模式，它允许你通过同时支持多种浏览器来构建优秀内容。当你为现代浏览器构建内容时，你想确保它能在旧式浏览器中以某种方式工作，这就是优雅地降级（graceful degradation）.
+[优雅降级和渐进增强](https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/)是一种开发模式，它允许你通过同时支持多种浏览器来构建优秀内容。当你为现代浏览器构建内容时，你想确保它能在旧式浏览器中以某种方式工作，这就是优雅降级（graceful degradation）。
 
 让我们看一些关于 HTML 表单的例子：
 
@@ -52,94 +32,76 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 </label>
 ```
 
-<table>
+<table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Chrome 24</th>
-      <th scope="col" style="text-align: center">Firefox 18</th>
+      <th>支持</th>
+      <th>不受支持</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th style="text-align: center">
+      <td>
         <img
           alt="Screen shot of the color input on Chrome for Mac OSX"
-          src="/files/4575/color-fallback-chrome.png"
-          style="height: 35px; width: 139px"
+          src="color-fallback-chrome.png"
         />
-      </th>
-      <th style="text-align: center">
+      </td>
+      <td>
         <img
           alt="Screen shot of the color input on Firefox for Mac OSX"
-          src="/files/4577/color-fallback-firefox.png"
-          style="height: 30px; width: 245px"
+          src="color-fallback-firefox.png"
         />
-      </th>
+      </td>
     </tr>
   </tbody>
 </table>
 
-#### CSS 属性选择器
-
-[CSS 属性选择器](/en-US/docs/CSS/Attribute_selectors) 在 [HTML Forms](/en-US/docs/HTML/Forms) 中十分有用，然而旧式浏览器不支持。在那种情形下，一般会习惯性使用等价的 class:
-
-```html
-<input type="number" class="number">
-```
-
-```css
-input[type=number] {
-  /* 这在一些浏览器中是不能执行的 */
-}
-
-input.number {
-  /* 可以在任何浏览器中执行 */
-}
-```
-
-注意下面的写法没有用（由于它是重复的），在某些浏览器中会失败：
-
-```css
-input[type=number],
-input.number {
-  /* 在某些浏览器中，这可能会失败，因为如果他们不理解其中任何一个选择器，则跳过整个规则 */
-}
-```
-
 #### 表单按钮
 
-有两种定义 HTML 表单按钮的方式：
+有两种在 HTML 表单中定义按钮的方式：
 
-- {{HTMLElement("input")}} 元素使用{{htmlattrxref("type","input")}} 属性并设置其值为`button`, `submit`, `reset` or `image`
+- {{htmlattrxref("type","input")}} 属性值为 `button`、`submit`、`reset` 或 `image` 的 {{HTMLElement("input")}} 元素
 - {{HTMLElement("button")}} 元素
 
-如果你想通过元素选择器在按钮上应用 CSS 的话，采用 {{HTMLElement("input")}} 元素的方式会让事情变得稍微有点复杂：
+##### {{HTMLElement("input")}}
+
+{{HTMLElement("input")}} 元素可能使得通过元素选择器应用 CSS 变得有些困难：
 
 ```html
-<input type="button" class="button" value="click me">
+<input type="button" value="click me">
 ```
+
+如果我们把所有 input 的外框移除，我们能否只恢复 input 按钮的默认外观？
 
 ```css
 input {
-  /* 此规则关闭了 input 元素定义的按钮的默认渲染样式 */
+  /* 这条规则关闭了含有外边框的 input 类型的默认渲染效果，包括了使用 input 元素定义的按钮 */
   border: 1px solid #CCC;
 }
-
-input.button {
-  /* 这条规则不会恢复默认渲染*/
+input[type="button"] {
+  /* 这条规则并不能恢复默认渲染行为！ */
   border: none;
 }
-
-input.button {
-  /* 这条也不会 (恢复)! 实际上在浏览器中没有标准方式实现这一目标 */
+input[type="button"] {
+  /* 这条也不行！实际上在任何浏览器上都没有标准的方案 */
   border: auto;
+  border: initial;
+}
+input[type="button"] {
+  /* 这条是恢复默认渲染最接近的答案，只要浏览器支持就可以这么做 */
+  border: revert;
 }
 ```
 
-{{HTMLElement("button")}} 元素有两个问题令人困扰：
+请查看全局的 CSS {{cssxref('revert')}} 值以获得更多信息。
 
-- 在某些旧版本的 IE 浏览器中有 bug。当用户点击按钮时，它不是发送{{htmlattrxref("value","button")}}属性中的内容，而是发送 {{HTMLElement("button")}} 的开闭标签之间的 HTML 内容。如果我们想发送值时，这是一个问题，例如发送的处理数据依赖于用户点击不同的按钮时。
-- 一些旧浏览器不使用`submit` 作为 {{htmlattrxref("type","button")}} 属性的默认值，所以建议总是在{{HTMLElement("button")}} 元素上设置设置 {{htmlattrxref("type","button")}} 属性。
+##### {{HTMLElement("button")}}
+
+{{HTMLElement("button")}} 元素曾经受到两个问题的影响，现在已经得到解决：
+
+- 在旧版本的 Internet Explorer 中，存在一个错误，当点击 {{HTMLElement("button")}} 元素时，会发送该元素开始和结束标签之间的 HTML 内容，而不是 {{htmlattrxref("value", "button")}} 属性中的值。仅在需要发送该值时才会出现问题，例如当数据处理取决于用户点击的按钮时。
+- 某些非常旧的浏览器不使用 `submit` 作为 {{htmlattrxref("type","button")}} 属性的默认值。即使在现代浏览器中得到了解决，也推荐总是设置 {{HTMLElement("button")}} 元素的 {{htmlattrxref("type","button")}} 属性。
 
 ```html
 <!-- 某些情形下，点击按钮将发送 "<em>Do A</em>" 而不是值"A" -->
@@ -148,36 +110,55 @@ input.button {
 </button>
 ```
 
-给予你的工程限制来选择上述任一种解决方案。
+选择哪种解决方案由项目的限制条件决定。
 
-### 让我们过一遍 CSS
+### 摆脱 CSS
 
-HTML 表单和旧式浏览器最大的问题是 CSS 的兼容性。正如你可以从这篇文章 [Property compatibility table for form widgets](/en-US/docs/Property_compatibility_table_for_form_widgets) 中看到的复杂性，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如 [rebuilding widgets with JavaScript](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
+HTML 表单的一个大问题是用 CSS 对表单小部件进行样式化。表单控件的外观是针对浏览器和操作系统的。例如，颜色类型的输入在 Safari、Chrome 和 Firefox 浏览器中看起来是不同的，但颜色选择器小部件在设备上的所有浏览器中都是一样的，因为它打开了操作系统的本地颜色选择器。
 
-## 功能检测和模拟 (polyfills)
+不改变表单控件的默认外观往往是个好主意，因为改变某个 CSS 属性值可以改变一些 input 类型，却不能改变另一些类型。例如，如果你声明了 `input { font-size: 2rem; }`，它会影响到 `number`、`date` 和 `text`，却不会影响 `color` 和 `range`。如果你改变了一个属性，会在不可预知的情况下影响到组件的外观。例如，`[value] { background-color: #ccc; }` 可能会用于改变所有含有 `value` 属性的 {{HTMLElement("input")}} 元素，但改变 {{HTMLElement("meter")}} 的 border radius 值可能会在不同浏览器中引起无法预期的显示。你可以声明 {{cssxref('appearance', 'appearance: none;')}} 来移除浏览器默认样式，但这通常会违背目的：因为你失去了所有的样式，删除了你的访问者所习惯的默认外观和感受。
 
-尽管 JavaScript 在现代浏览中是非常棒的技术，但在旧式浏览器中可能存在很多的问题。
+总而言之，当涉及到表单控件小部件的样式时，用 CSS 为它们设计样式的副作用可能是不可预测的。所以不要这样做。正如从这篇[表单控件的 CSS 属性兼容性表格](/zh-CN/docs/Property_compatibility_table_for_form_widgets)中所看到的复杂性那样，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如[使用 JavaScript 重建组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
 
-### Unobtrusive JavaScript
+## 特性检测和 polyfill
 
-API 的兼容性是最大的问题。由于这个原因，与"不引人注意的（unobtrusive）" JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有/忽略 JS 或 JS 出了问题也能工作）。这个开发模式定义了两个需求：
+CSS 和 JavaScript 是了不起的技术，但重要的是确保不会破坏传统的浏览器。在使用你的目标浏览器不完全支持的特性之前，你应该进行特性检测。
+
+### CSS 特性检测
+
+在设计一个表单控件的样式之前，你可以使用 {{cssxref('@supports')}} 检查一下浏览器是否支持你打算使用的特性：
+
+```css
+@supports (appearance: none) {
+  input[type="search"] {
+    appearance: none;
+    /* 重新为 search input 添加样式 */
+  }
+}
+```
+
+{{cssxref('appearance')}} 属性可用于以平台原生的方式显示元素的样式，如果指定为 `none`，则移除默认基于不同平台的样式。
+
+### 非侵入式 JavaScript
+
+API 的兼容性是最大的问题。由于这个原因，与“非侵入式（unobtrusive）”JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有或忽略 JavaScript 或 JavaScript 出了问题也能工作）。这个开发模式定义了两个需求：
 
 - 结构和行为之间的严格隔离
 - 如果代码出错，内容和基本功能必须保持可访问和可用状态
 
-[The principles of unobtrusive JavaScript](http://docs.webplatform.org/wiki/concepts/programming/the_principles_of_unobtrusive_javascript) (最早是由 Peter-Paul Koch 为 Dev.Opera.com 所撰写，现在已转移到 Docs.WebPlatform.org) 同样阐述了上述观点。
+[The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript)（最早是由 Peter-Paul Koch 为 Dev.Opera.com 所撰写）这篇文章同样阐述了上述观点。
 
 ### Modernizr 库
 
-有很多情形，好的"polyfill"能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些 JavaScript(脚本) 用于填补旧式浏览器中的功能缺失。虽然它们可以用来改进对任何功能的支持，并且使用它们 Nederland 风险小于 CSS 和 HTML，然而，JS 仍然会在很多情况下不工作（网络问题，脚本冲突等）。但是对于 JavaScript，如果你总是记住和 unobetructive 的 Javascript 一起工作，不适用 polyfill 也没什么大不了。
+有很多情形，好的”polyfill“能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非侵入式 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
 
-最好的 polyfill 缺失 API 的方式是使用[Modernizr](http://modernizr.com) 库以及它的子项目 [YepNope](http://yepnopejs.com). Modernizr 库允许您测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
+最好的 polyfill 缺失 API 的方式是使用 [Modernizr](https://modernizr.com) 库以及它的子项目 [YepNope](https://yepnopejs.com)。Modernizr 库允许你测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
 
 下面是一个例子：
 
 ```js
 Modernizr.load({
-  // 这会测试您的浏览器是否支持 HTML5 表单验证 API
+  // 这会测试你的浏览器是否支持 HTML5 表单验证 API
   test : Modernizr.formvalidation,
 
   // 如果浏览器不支持它，则会加载以下 polyfill
@@ -193,32 +174,36 @@ Modernizr.load({
 });
 ```
 
-Modernizr 团队按照惯例维护着[a list of great polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)。仅仅按需使用即可。
+Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)，按需使用即可。
 
-> **备注：** Modernizr 还有其他很棒的功能可以帮助您处理 unobstructive 的 JavaScript 和优雅的降级技术。请阅读 [Modernizr documentation](http://modernizr.com/docs/).
+> **备注：** Modernizr 还有其他很棒的功能可以帮助你处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
 
 ### 注意性能
 
-尽管像 Modernizr 这样的脚本对性能非常敏感，但加载 200 千字节的 polyfill 仍然会影响程序的性能。这对旧式浏览器来说尤其重要，这些浏览器有处理速度非常慢的 JavaScript 引擎，让 polyfills 的执行对于用户来说变得很痛苦。性能本身就是一个主题，但旧式浏览器对它非常敏感：基本上，它们速度慢，需要的 poliyfill 越多，它们需要处理的 JavaScript 越多。与现代浏览器相比，它们承受双重负担。使用旧版浏览器测试你的代码，了解它们的实际表现。有时，放弃某些功能会带来更好的用户体验，而不是在所有浏览器中具有完全相同的功能。作为最后提醒，总是优先考虑用户。
+尽管像 Modernizr 这样的脚本非常注重性能，但加载 200 KB 的 polyfill 仍然会影响你的应用程序的性能。这对旧式浏览器来说尤其重要，这些浏览器的 JavaScript 引擎处理速度很慢，让 polyfills 的执行对于用户来说变得很痛苦。性能本身就是一个主题，但旧式浏览器对它非常敏感：基本上，它们速度慢，需要的 polyfill 越多，它们需要处理的 JavaScript 越多。与现代浏览器相比，它们承受双重负担。使用旧版浏览器测试你的代码，了解它们的实际表现。有时，放弃某些功能会带来更好的用户体验，而不是在所有浏览器中具有完全相同的功能。作为最后提醒，总是优先考虑用户。
 
 ## 总结
 
-正如你所看到的，处理旧式浏览器不仅仅是表单问题。而是一整套技术;但是掌握所有这些技术超出了本文的范围。
+正如你所看到的，处理旧式浏览器不仅仅是表单问题。而是一整套技术；但是掌握所有这些技术超出了本文的范围。基本的前提是，在开始挑战之前，要考虑改变默认的实现方式是否值得做这些工作。
 
-如果你阅读了[HTML Forms guide](/en-US/docs/HTML/Forms)中的所有文章，你应该可以放心的使用表单了。如果你想探索新技术，请帮助[improve the guide](/en-US/docs/Project:How_to_help).
+如果你阅读了 [HTML 表单指南](/zh-CN/docs/Learn/Forms)中的所有文章，你应该可以放心的使用表单了。如果你想探索新技术，请帮助我们提升指南的写作水平。
 
-{{PreviousMenuNext("Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms")}}
+## 本章目录
 
-## In this module
+- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- 旧式浏览器中的 HTML 表单使用
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+### 进阶内容
+
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [旧版浏览器中的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

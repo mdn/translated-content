@@ -1,8 +1,8 @@
 ---
 title: <samp>
 slug: Web/HTML/Element/samp
-translation_of: Web/HTML/Element/samp
 ---
+
 ## 概述
 
 \<samp> 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。
@@ -38,9 +38,9 @@ translation_of: Web/HTML/Element/samp
 
 ## DOM 接口
 
-该元素实现了 [`HTMLElement`](/en/DOM/element) 接口。
+该元素实现了 [`HTMLElement`](/zh-CN/DOM/element) 接口。
 
-> **备注：** 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/en/DOM/span) 接口。
+> **备注：** 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/DOM/span) 接口。
 
 ## 示例
 
@@ -62,6 +62,6 @@ Regular text. `This is sample text.` Regular text.
 
 ## 另请参阅
 
-- [HTML Code Element](/en/HTML/Element/code)
+- [HTML Code Element](/zh-CN/HTML/Element/code)
 
 {{ HTMLRef }}

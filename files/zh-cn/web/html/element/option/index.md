@@ -1,15 +1,8 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-  - 选择
-translation_of: Web/HTML/Element/option
 ---
+
 {{HTMLRef}}
 
 **HTML 元素\_ _`<option>`_ \_**用于定义在 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素中包含的项。`<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
@@ -47,7 +40,7 @@ translation_of: Web/HTML/Element/option
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## 另见
 

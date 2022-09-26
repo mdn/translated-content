@@ -1,14 +1,8 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Regular
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef}}
 
 **`replace()`** 方法返回一个由替换值（`replacement`）替换部分或所有的模式（`pattern`）匹配项后的新字符串。模式可以是一个字符串或者一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/RegExp)，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。**如果`pattern`是字符串，则仅替换第一个匹配项。**
@@ -25,9 +19,9 @@ str.replace(regexp|substr, newSubStr|function)
 
 ### 参数
 
-- `regexp `(pattern)
+- `regexp` (pattern)
   - : 一个{{jsxref("RegExp")}} 对象或者其字面量。该正则所匹配的内容会被第二个参数的返回值替换掉。
-- `substr `(pattern)
+- `substr` (pattern)
   - : 一个将被 `newSubStr` 替换的 {{jsxref("String","字符串")}}。其被视为一整个字符串，而不是一个正则表达式。仅第一个匹配项会被替换。
 - `newSubStr` (replacement)
   - : 用于替换掉第一个参数在原字符串中的匹配部分的{{jsxref("String", "字符串")}}。该字符串中可以内插一些特殊的变量名。参考下面的[使用字符串作为参数](#使用字符串作为参数)。

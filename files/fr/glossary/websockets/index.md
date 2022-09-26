@@ -12,11 +12,12 @@ tags:
 translation_of: Glossary/WebSockets
 original_slug: Glossaire/WebSockets
 ---
+
 _WebSocket_ est un {{Glossary("Protocol","protocole")}} servant à établir des connexions {{Glossary("TCP")}} persistantes entre des {{Glossary("Server", "serveurs")}} et des clients afin qu'ils puissent échanger des données à tout moment.
 
 Toute application cliente ou serveur peut utiliser WebSocket, mais plus particulièrement les {{Glossary("Browser", "navigateurs")}} et serveurs web. Grâce à WebSocket, les serveurs peuvent passer des données à un client sans qu'il n'y ait de requête cliente préalable, autorisant des mises à jour de contenu dynamiques.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

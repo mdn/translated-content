@@ -1,8 +1,8 @@
 ---
 title: 物件的使用
 slug: Web/JavaScript/Guide/Working_with_Objects
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.
@@ -38,7 +38,7 @@ Unassigned properties of an object are {{jsxref("undefined")}} (and not {{jsxref
 myCar.color; // undefined
 ```
 
-Properties of JavaScript objects can also be accessed or set using a bracket notation (for more details see [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Objects are sometimes called _associative arrays_, since each property is associated with a string value that can be used to access it. So, for example, you could access the properties of the `myCar` object as follows:
+Properties of JavaScript objects can also be accessed or set using a bracket notation (for more details see [property accessors](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Objects are sometimes called _associative arrays_, since each property is associated with a string value that can be used to access it. So, for example, you could access the properties of the `myCar` object as follows:
 
 ```js
 myCar['make'] = 'Ford';
@@ -78,7 +78,7 @@ propertyName = 'model';
 myCar[propertyName] = 'Mustang';
 ```
 
-You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
+You can use the bracket notation with [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
 
 ```js
 function showProps(obj, objName) {
@@ -103,9 +103,9 @@ myCar.year = 1969
 
 ## Enumerate the properties of an object
 
-Starting with [ECMAScript 5](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla), there are three native ways to list/traverse object properties:
+Starting with [ECMAScript 5](/zh-TW/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla), there are three native ways to list/traverse object properties:
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops
+- [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops
   This method traverses all enumerable properties of an object and its prototype chain
 - {{jsxref("Object.keys", "Object.keys(o)")}}
   This method returns an array with all the own (not in the prototype chain) enumerable properties' names ("keys") of an object `o`.
@@ -131,11 +131,11 @@ This can be useful to reveal "hidden" properties (properties in the prototype ch
 
 ## Creating new objects
 
-JavaScript has a number of predefined objects. In addition, you can create your own objects. You can create an object using an [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). Alternatively, you can first create a constructor function and then instantiate an object invoking that function in conjunction with the `new` operator.
+JavaScript has a number of predefined objects. In addition, you can create your own objects. You can create an object using an [object initializer](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer). Alternatively, you can first create a constructor function and then instantiate an object invoking that function in conjunction with the `new` operator.
 
 ### Using object initializers
 
-In addition to creating objects using a constructor function, you can create objects using an [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). Using object initializers is sometimes referred to as creating objects with literal notation. "Object initializer" is consistent with the terminology used by C++.
+In addition to creating objects using a constructor function, you can create objects using an [object initializer](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer). Using object initializers is sometimes referred to as creating objects with literal notation. "Object initializer" is consistent with the terminology used by C++.
 
 The syntax for an object using an object initializer is:
 
@@ -162,7 +162,7 @@ The following example creates `myHonda` with three properties. Note that the `en
 var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 ```
 
-You can also use object initializers to create arrays. See [array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
+You can also use object initializers to create arrays. See [array literals](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
 
 ### Using a constructor function
 
@@ -272,7 +272,7 @@ fish.displayType(); // Output:Fishes
 
 ## Inheritance
 
-All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more information.
+All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more information.
 
 ## Indexing object properties
 
@@ -291,11 +291,11 @@ Car.prototype.color = null;
 car1.color = 'black';
 ```
 
-See the [`prototype` property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) of the `Function` object in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference) for more information.
+See the [`prototype` property](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) of the `Function` object in the [JavaScript reference](/zh-TW/docs/Web/JavaScript/Reference) for more information.
 
 ## Defining methods
 
-A _method_ is a function associated with an object, or, simply put, a method is a property of an object that is a function. Methods are defined the way normal functions are defined, except that they have to be assigned as the property of an object. See also [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more details. An example is:
+A _method_ is a function associated with an object, or, simply put, a method is a property of an object that is a function. Methods are defined the way normal functions are defined, except that they have to be assigned as the property of an object. See also [method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more details. An example is:
 
 ```js
 objectName.methodname = function_name;
@@ -360,7 +360,7 @@ car2.displayCar();
 
 ## Using `this` for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have a function called `validate` that validates an object's `value` property, given the object and the high and low values:
+JavaScript has a special keyword, [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have a function called `validate` that validates an object's `value` property, given the object and the high and low values:
 
 ```js
 function validate(obj, lowval, hival) {
@@ -392,7 +392,7 @@ When combined with the `form` property, `this` can refer to the current object's
 
 ## Defining getters and setters
 
-A [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is a method that gets the value of a specific property. A [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is a method that sets the value of a specific property. You can define getters and setters on any predefined core object or user-defined object that supports the addition of new properties. The syntax for defining getters and setters uses the object literal syntax.
+A [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) is a method that gets the value of a specific property. A [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) is a method that sets the value of a specific property. You can define getters and setters on any predefined core object or user-defined object that supports the addition of new properties. The syntax for defining getters and setters uses the object literal syntax.
 
 The following illustrates how getters and setters could work for a user-defined object `o`.
 
@@ -419,7 +419,7 @@ The `o` object's properties are:
 - `o.b` — a getter that returns `o.a` plus 1
 - `o.c` — a setter that sets the value of `o.a` to half of the value `o.c` is being set to
 
-Please note that function names of getters and setters defined in an object literal using "\[gs]et _property_()" (as opposed to `__define[GS]etter__` ) are not the names of the getters themselves, even though the `[gs]et propertyName(){ }` syntax may mislead you to think otherwise. To name a function in a getter or setter using the "\[gs]et _property_()" syntax, define an explicitly named function programmatically using [`Object.defineProperty`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty) (or the [`Object.prototype.__defineGetter__`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter) legacy fallback).
+Please note that function names of getters and setters defined in an object literal using "\[gs]et _property_()" (as opposed to `__define[GS]etter__` ) are not the names of the getters themselves, even though the `[gs]et propertyName(){ }` syntax may mislead you to think otherwise. To name a function in a getter or setter using the "\[gs]et _property_()" syntax, define an explicitly named function programmatically using [`Object.defineProperty`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/defineProperty) (or the [`Object.prototype.__defineGetter__`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/defineGetter) legacy fallback).
 
 The following code illustrates how getters and setters can extend the {{jsxref("Date")}} prototype to add a `year` property to all instances of the predefined `Date` class. It uses the `Date` class's existing `getFullYear` and `setFullYear` methods to support the `year` property's getter and setter.
 
@@ -476,7 +476,7 @@ Which of the two forms to choose depends on your programming style and task at h
 
 ## Deleting properties
 
-You can remove a non-inherited property by using the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator. The following code shows how to remove a property.
+You can remove a non-inherited property by using the [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) operator. The following code shows how to remove a property.
 
 ```js
 // Creates a new object, myobj, with two properties, a and b.
@@ -524,11 +524,11 @@ fruit.name = 'grape';
 console.log(fruitbear);    // yields { name: "grape" } instead of { name: "apple" }
 ```
 
-For more information about comparison operators, see [Comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+For more information about comparison operators, see [Comparison operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
 
 ## See also
 
-- To dive deeper, read about the [details of javaScript's objects model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
-- To learn about ECMAScript 2015 classes (a new way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) chapter.
+- To dive deeper, read about the [details of javaScript's objects model](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- To learn about ECMAScript 2015 classes (a new way to create objects), read the [JavaScript classes](/zh-TW/docs/Web/JavaScript/Reference/Classes) chapter.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

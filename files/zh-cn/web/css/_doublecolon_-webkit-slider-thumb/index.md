@@ -1,11 +1,8 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - Input
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
+
 ## 总结
 
 **`::-webkit-slider-thumb`**

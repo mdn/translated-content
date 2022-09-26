@@ -1,8 +1,8 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 **`Server`** 標頭描述處理請求的伺服器軟體資訊：也就是產生回應的伺服器資訊。
@@ -38,7 +38,7 @@ Server: Apache/2.4.1 (Unix)
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## 參見
 

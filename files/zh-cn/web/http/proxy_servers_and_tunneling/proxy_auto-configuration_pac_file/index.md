@@ -1,9 +1,9 @@
 ---
 title: 代理自动配置文件（PAC）文件
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-translation_of: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
+
 {{HTTPSidebar}}
 
 **代理自动配置（PAC）**文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
@@ -112,7 +112,7 @@ application/x-ns-proxy-autoconfig
 
 - 基于 URL 或主机名的判断函数
 
-  - [`shExpMatch()`](<#shExpMatch(str, shexp)>)
+  - [`shExpMatch()`](#shExpMatchstr_shexp)
 
 - 基于时间的判断函数
 
@@ -122,13 +122,13 @@ application/x-ns-proxy-autoconfig
 
 - 日志记录功能函数
 
-  - [`alert()`](/en-US/docs/Web/API/Window/alert)
+  - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
 
-  - `ProxyConfig.bindings `{{Deprecated_Inline}}
+  - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
-> **备注：** pactester ( [pacparser ](https://github.com/pacparser/pacparser)的一部分) 可以用来检测语法是否符合要求，使用方法如下：
+> **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
 > - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
@@ -390,11 +390,12 @@ weekdayRange(wd1, wd2, [gmt])
 
 - wd1 和 wd2
   - : One of the ordered weekday strings:
-- ```plain
+
+  ```plain
   "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"
   ```
 
-  gmt
+- gmt
 
   - : 可以指定为字符串 "`GMT`"，或留白不指定。
 

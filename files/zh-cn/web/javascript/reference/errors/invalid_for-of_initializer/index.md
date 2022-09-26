@@ -3,12 +3,8 @@ title: >-
   SyntaxError: a declaration in the head of a for-of loop can't have an
   initializer
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -25,7 +21,7 @@ SyntaxError: for-of loop variable declaration may not have an initializer. (Chro
 
 ## 哪里出错了？
 
-[for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环的头部包含有初始化表达式。也就是对一个变量进行声明并赋值 |`for (var i = 0 of iterable)`|。这在 for-of 循环中是被禁止的。你想要的可能是允许包含初始化器的 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 循环形式。
+[for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环的头部包含有初始化表达式。也就是对一个变量进行声明并赋值 |`for (var i = 0 of iterable)`|。这在 for-of 循环中是被禁止的。你想要的可能是允许包含初始化器的 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环形式。
 
 ## 示例
 
@@ -60,6 +56,6 @@ for (let value of iterable) {
 
 ## 相关内容
 
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – 在严格模式下也同样禁止使用初始化器 ([SyntaxError: for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – 在迭代时允许定义初始化器
+- [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) – 在严格模式下也同样禁止使用初始化器 ([SyntaxError: for-in loop head declarations may not have initializers](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
+- [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) – 在迭代时允许定义初始化器

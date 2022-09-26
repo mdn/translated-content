@@ -3,6 +3,7 @@ title: Crypto.subtle
 slug: Web/API/Crypto/subtle
 translation_of: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 {{APIRef("Web Crypto API")}}
@@ -17,13 +18,11 @@ var crypto = crypto.subtle;
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## Voir aussi
 

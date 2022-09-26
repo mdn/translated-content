@@ -1,8 +1,8 @@
 ---
 title: HTTP 請求方法
 slug: Web/HTTP/Methods
-translation_of: Web/HTTP/Methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP 定義了一組能令給定資源，執行特定操作的**請求方法**（request methods）。他們儘管屬於名詞，但也能稱為 _HTTP 動詞_。每個方法都有不同的語意，不過也有些共享的相通功能，像是{{glossary("safe")}}、{{glossary("idempotent")}}、{{glossary("cacheable")}}。

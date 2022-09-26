@@ -7,6 +7,7 @@ tags:
   - Session HTTP
 translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :
@@ -23,7 +24,7 @@ Dans les protocoles client-serveur, c'est le client qui établit la connexion. L
 
 Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [Identifying resources on the Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) pour plus de details.
 
-> **Note :** Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets "en/WebSockets"), ou des protocoles similaires.
+> **Note :** Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets), ou des protocoles similaires.
 
 ## Envoi d'une demande client
 

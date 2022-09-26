@@ -1,17 +1,8 @@
 ---
 title: 使用 CSS 添加文档内容
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Graphics
-  - Guide
-  - NeedsUpdate
-  - Web
-translation_of: Learn/CSS/Howto/Generated_content
 ---
+
 {{LearnSidebar}}
 
 本文介绍了一些通过 CSS 改变文档内容的方法。这样，仅修改样式表你就能把文本内容及图片添加到文档。

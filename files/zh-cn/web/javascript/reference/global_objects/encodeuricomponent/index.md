@@ -1,12 +1,8 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-tags:
-  - JavaScript
-  - URI
-  - 统一资源标识符
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 **`encodeURIComponent()`** 函数通过将一个，两个，三个或四个表示字符的 UTF-8 编码的转义序列替换某些字符的每个实例来编码 {{glossary("URI")}}（对于由两个“代理”字符组成的字符而言，将仅是四个转义序列）。

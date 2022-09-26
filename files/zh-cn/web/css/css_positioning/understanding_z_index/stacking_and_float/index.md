@@ -1,33 +1,33 @@
 ---
 title: 层叠与浮动
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_and_float
 ---
+
 « [CSS](/zh-CN/CSS) « [理解 CSS 中的 z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 层叠与浮动
 
 对于浮动的块元素来说，层叠顺序变得有些不同。浮动块元素被放置于非定位块元素与定位块元素之间：
 
-1.  根元素的背景与边框
-2.  位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
-3.  浮动块元素
-4.  后代中的定位元素按照它们在 HTML 中出现的顺序层叠
+1. 根元素的背景与边框
+2. 位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
+3. 浮动块元素
+4. 后代中的定位元素按照它们在 HTML 中出现的顺序层叠
 
 实际上，在接下来的例子中你会看到，非定位块元素 (DIV #4) 的背景与边框丝毫不会受到浮动块元素的影响，但内容却恰恰相反。出现这种情况是由于 CSS 的标准浮动行为引起的。
 
 这种行为可以通过前一章列表的改进版本来解释：
 
-1.  根元素的背景与边框
-2.  位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
-3.  浮动块元素
-4.  常规流中的后代行内元素
-5.  后代中的定位元素按照它们在 HTML 中出现的顺序层叠
+1. 根元素的背景与边框
+2. 位于普通流中的后代块元素按照它们在 HTML 中出现的顺序层叠
+3. 浮动块元素
+4. 常规流中的后代行内元素
+5. 后代中的定位元素按照它们在 HTML 中出现的顺序层叠
 
 > **备注：** 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)
 
-{{ EmbedLiveSample('该示例的源码', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}
+{{ EmbedLiveSample('该示例的源码', '563', '255') }}
 
 ### 该示例的源码
 

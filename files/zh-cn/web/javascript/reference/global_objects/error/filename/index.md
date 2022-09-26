@@ -1,8 +1,8 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`fileName`** 属性包含引发此错误的文件的路径。

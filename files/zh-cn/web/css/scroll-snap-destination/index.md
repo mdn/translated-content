@@ -1,13 +1,13 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-translation_of: Web/CSS/scroll-snap-destination
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要
 
-**`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素 snap 点的 x 和 y 坐标位置。
+**`scroll-snap-destination`** [CSS](/zh-CN/docs/Web/CSS)属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素 snap 点的 x 和 y 坐标位置。
 
 {{cssinfo}}
 

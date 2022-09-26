@@ -1,13 +1,8 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - HTTP method
-  - Request method
-  - put
-translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP PUT 请求方法**使用请求中的负载创建或者替换目标资源。

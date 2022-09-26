@@ -10,9 +10,10 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onreset
 original_slug: Web/API/GlobalEventHandlers/onreset
 ---
+
 {{ ApiRef() }}
 
-La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) déclenché quand un évènement {{event("reset")}} est reçu.
+La propriété **`GlobalEventHandlers.onreset`** contient Un gestionnaire d'évènement déclenché quand un évènement {{event("reset")}} est reçu.
 
 ## Syntaxe
 
@@ -52,12 +53,10 @@ function hit() {
 
 L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (`<input type="reset"/>`).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onreset")}}
+{{Compat}}

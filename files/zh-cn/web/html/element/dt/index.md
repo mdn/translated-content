@@ -1,13 +1,8 @@
 ---
 title: <dt>
 slug: Web/HTML/Element/dt
-tags:
-  - HTML
-  - HTML 分组内容
-  - 元素
-  - 引用
-translation_of: Web/HTML/Element/dt
 ---
+
 ## 简介
 
 **HTML `<dt>` 元素** （或 _HTML 术语定义元素_）用于在一个定义列表中声明一个术语。该元素仅能作为 {{HTMLElement("dl")}} 的子元素出现。通常在该元素后面会跟着 {{HTMLElement("dd")}} 元素， 然而，多个连续出现的 `<dt>` 元素都将由出现在它们后面的第一个 {{HTMLElement("dd")}} 元素定义。
@@ -32,7 +27,7 @@ translation_of: Web/HTML/Element/dt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## 相关内容
 

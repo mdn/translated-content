@@ -1,12 +1,8 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-translation_of: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}
 
 动画元素放在形状元素的内部，用来定义一个元素的某个属性如何踩着时点改变。在指定持续时间里，属性从开始值变成结束值。
@@ -47,7 +43,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 - [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
 - 事件属性
-  - : [全局事件属性](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## 用法
 
@@ -62,7 +58,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.2\_%e2%80%94\_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 规范

@@ -1,8 +1,8 @@
 ---
 title: Node.nodeName
 slug: Web/API/Node/nodeName
-translation_of: Web/API/Node/nodeName
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.nodeName`** 唯讀屬性會回傳目前節點名稱的字串。
@@ -50,7 +50,7 @@ text_field.value = div1.nodeName;
 
 In XHTML (or any other XML format), `text_field`'s value would read "div". However, in HTML, `text_field`'s value would read "DIV", because `nodeName` and `tagName` return in upper case on HTML elements in DOMs flagged as HTML documents. Read more [details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/).
 
-Note that [`tagName`](/en-US/docs/DOM/element.tagName) property could have been used instead, since `nodeName` has the same value as `tagName` for an element. Bear in mind, however, that `nodeName` will return `#text` for text nodes while `tagName` will return `undefined`.
+Note that [`tagName`](/zh-TW/docs/DOM/element.tagName) property could have been used instead, since `nodeName` has the same value as `tagName` for an element. Bear in mind, however, that `nodeName` will return `#text` for text nodes while `tagName` will return `undefined`.
 
 ## 規範
 

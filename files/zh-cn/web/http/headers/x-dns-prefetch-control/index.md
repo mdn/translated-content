@@ -1,14 +1,9 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-tags:
-  - DNS
-  - DNS prefetch
-  - HTTP
-  - 预解析
-translation_of: Web/HTTP/Headers/X-DNS-Prefetch-Control
 original_slug: Controlling_DNS_prefetching
 ---
+
 {{HTTPSidebar}}
 
 **`X-DNS-Prefetch-Control`** 头控制着浏览器的 DNS 预读取功能。 DNS 预读取是一项使浏览器主动去执行域名解析的功能，其范围包括文档的所有链接，无论是图片的，CSS 的，还是 JavaScript 等其他用户能够点击的 URL。
@@ -79,7 +74,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.X-DNS-Prefetch-Control")}}
+{{Compat}}
 
 ## 参考
 

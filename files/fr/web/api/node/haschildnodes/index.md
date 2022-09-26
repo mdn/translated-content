@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Node/hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.hasChildNodes()`** renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des [nœuds enfants](/fr/docs/Web/API/Node/childNodes) ou non.
@@ -50,15 +51,13 @@ Il y a différentes façons de déterminer si le noeud a un noeud enfant :
 - `node.firstChild != null` (ou simplement `node.firstChild`)
 - `node.childNodes && node.childNodes.length` (ou `node.childNodes.length > 0`)
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("DOM WHATWG", "#dom-node-haschildnodes", "Node: hasChildNodes")}} | {{Spec2("DOM WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.hasChildNodes")}}
+{{Compat}}
 
 ## Voir aussi
 

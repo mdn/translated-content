@@ -1,8 +1,8 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述

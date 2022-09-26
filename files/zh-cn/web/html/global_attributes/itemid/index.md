@@ -1,14 +1,8 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是元素的唯一的全局标识符。`itemid` 属性只能为同时拥有 **`itemscope` **和 **`itemtype`** 的元素指定。同时，`itemid` 只能为拥有 `itemscope` 的元素指定，它的相应 `itemtype` 引用或定义了支持全局标识符的词汇。

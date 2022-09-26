@@ -1,14 +1,8 @@
 ---
 title: 流程控制與例外處理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - 初學者
-  - 指南
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以用這些陳述式來增加程式的互動性。這個章節將會概要介紹陳述式。
@@ -384,7 +378,7 @@ try {
 
 ### 使用 `Error` 物件
 
-根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
+根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
 
 假如您要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
 
@@ -416,8 +410,6 @@ catch (e) {
 - _fulfilled_：已實現，表示操作成功完成。
 - _rejected_：已拒絕，表示操作失敗。
 - _settled_：已完成，表示 Promise 狀態為已實現或已拒絕，但不是等待中。
-
-![promises](https://mdn.mozillademos.org/files/8633/promises.png)
 
 ### 使用 XHR 載入圖檔
 

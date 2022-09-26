@@ -1,14 +1,8 @@
 ---
 title: cursor
 slug: Web/SVG/Element/cursor
-tags:
-  - SVG
-  - 元素
-  - 参考
-  - 废弃
-  - 需要示例
-translation_of: Web/SVG/Element/cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 > **备注：** 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
@@ -38,7 +32,7 @@ translation_of: Web/SVG/Element/cursor
 
 ## DOM 接口
 
-该元素实现了[`SVGCursorElement`](/en-US/docs/DOM/SVGCursorElement)接口。
+该元素实现了[`SVGCursorElement`](/zh-CN/docs/DOM/SVGCursorElement)接口。
 
 ## 规范
 

@@ -1,10 +1,8 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-tags:
-  - 日期
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 ---
+
 {{JSRef}}
 
 `此 setUTCSeconds()` 方法为一个依据国际通用时间的特定日期设置秒数。

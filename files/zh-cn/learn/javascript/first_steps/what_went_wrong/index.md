@@ -1,16 +1,8 @@
 ---
 title: 查找并解决 JavaScript 代码的错误
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - JavaScript
-  - 初学者
-  - 开发者工具
-  - 指导教程
-  - 文章
-  - 调试
-  - 错误
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 上一节中你创建了“猜数字”游戏，但它可能没有正常工作。别担心，本节将为你提供一些简单的提示，来帮助你查找并修复 JavaScript 程序中的错误，从而让你远离困扰。
@@ -266,12 +258,12 @@ function checkGuess( {
 
 ## 本章目录
 
-- [JavaScript 是什么？](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
+- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
+- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
+- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
+- [课程评估：笑话机](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

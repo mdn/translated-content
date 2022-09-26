@@ -1,18 +1,8 @@
 ---
 title: 'Element: cut イベント'
 slug: Web/API/Element/cut_event
-page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
-browser-compat: api.Element.cut_event
-translation_of: Web/API/Element/cut_event
 ---
+
 {{APIRef}}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから「切り取り」操作を実行したときに発生します。

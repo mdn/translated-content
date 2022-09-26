@@ -1,16 +1,10 @@
 ---
 title: 为 HTML 5 视频提供的 DASH 自适应串流
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - DASH
-  - HTML
-  - HTML5
-  - 指南
-  - 视频流
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 original_slug: Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
-经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。 这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。
+
+经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。
 
 ## 浏览器支持
 
@@ -83,7 +77,7 @@ ffmpeg \
 
 `-map` 参数对应输入文件的顺序（每个文件只对应一个参数）。`-adaptation_sets` 参数将它们分配给适配集；例如，以上命令创建一个包含 0,1,2,3 的视频集（0），而另一个（1）仅仅包含视频流 4 和音频流。
 
-将清单和相关的视频文件放在 Web 服务器或 CDN 上。 DASH 通过 HTTP 来完成，因此只要您的 HTTP 服务器支持字节范围请求，并且 DASH 设置为使用 mimetype="application/dash+xml" 来支持 .mpd 文件即可。
+将清单和相关的视频文件放在 Web 服务器或 CDN 上。DASH 通过 HTTP 来完成，因此只要您的 HTTP 服务器支持字节范围请求，并且 DASH 设置为使用 mimetype="application/dash+xml" 来支持 .mpd 文件即可。
 
 ## 使用 DASH-客户端
 

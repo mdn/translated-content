@@ -10,6 +10,7 @@ tags:
   - WebAuthn
 translation_of: Web/API/CredentialsContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 L'interface **`CredentialsContainer`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), expose des méthodes pour demander l'accès aux informations d'authentification et informer l'agent utilisateur lorsque des évènements pertinents se produisent (connexion et déconnexion réussies par exemple). On peut accéder à cette interface via {{domxref('Navigator.credentials')}}.
@@ -45,11 +46,8 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                 | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer")}}
+{{Compat}}

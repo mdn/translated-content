@@ -1,8 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
-translation_of: Web/SVG/Attribute/letter-spacing
 ---
+
 {{SVGRef}}
 
 The **`letter-spacing`** attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.

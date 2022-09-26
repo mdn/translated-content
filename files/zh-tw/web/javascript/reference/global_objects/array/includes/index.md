@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** 方法會判斷陣列是否包含特定的元素，並以此來回傳 `true` 或 `false`。
@@ -72,7 +65,7 @@ arr.includes('c', -100); // true
 
 ### `includes()` used as a generic method
 
-`includes()` method is intentionally generic. It does not require `this` value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates `includes()` method called on the function's [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
+`includes()` method is intentionally generic. It does not require `this` value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates `includes()` method called on the function's [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
 ```js
 (function() {
@@ -137,7 +130,7 @@ if (!Array.prototype.includes) {
 }
 ```
 
-If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
+If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
 
 ## 規範
 
@@ -145,7 +138,7 @@ If you need to support truly obsolete JavaScript engines that don't support [`Ob
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## 參見
 

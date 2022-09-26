@@ -1,8 +1,8 @@
 ---
 title: 组织 CSS
 slug: Learn/CSS/Building_blocks/Organizing
-translation_of: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 在开始在更大的样式表和大项目上作业的时候，你会发现维护一个大型的 CSS 文件很有挑战性。在本文中，我们将会简要看一下在编写你的 CSS 时，让它更加易于维护的一些最佳实践，以及你会在其他人那里看到的，用来增强可维护性的解决方案。
@@ -16,7 +16,7 @@ translation_of: Learn/CSS/Building_blocks/Organizing
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了必要的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -216,7 +216,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 
 #### OOCSS
 
-你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因[Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki)而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在[The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
+你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因[Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki)而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在[The Media Object](/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects)中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
 
 如果你没有使用一种 OOCSS 的方法，你或许会创建一个用在这种排布所应用的不同地方的自定义 CSS，例如创建一个叫做`comment`的类，用于组件部分的一组规则，然后是叫做`list-item`的类，除了一些细小的区别外，它几乎和`comment`类完全相同。这两个组件之间的不同是列表项有一个底边，在评论里的图像有边框而列表项里面的图像没有。
 

@@ -9,6 +9,7 @@ tags:
   - required
 translation_of: Web/HTML/Attributes/required
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`required`**, s'il est présent, indique que l'utilisateur doit spécifier une valeur pour l'entrée avant que le formulaire propriétaire puisse être soumis. L'attribut `required` est pris en charge pour les éléments [`text`](/fr/docs/Web/HTML/Element/Input/text), [`search`](/fr/docs/Web/HTML/Element/Input/search), [`url`](/fr/docs/Web/HTML/Element/Input/url), [`tel`](/fr/docs/Web/HTML/Element/Input/tel), [`email`](/fr/docs/Web/HTML/Element/Input/email), [`password`](/fr/docs/Web/HTML/Element/Input/password), [`date`](/fr/docs/Web/HTML/Element/Input/date), [`month`](< /fr/docs/Web/HTML/Element/Input/month>), [`week`](/fr/docs/Web/HTML/Element/Input/week), [`time`](/fr/docs/Web/HTML/Element/Input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/Input/number), [`checkbox`](/fr/docs/Web/HTML/Element/Input/checkbox), [`radio`](/fr/docs/Web/HTML/Element/Input/radio), les éléments [`file`](/fr/docs/Web/HTML/Element/Input/file), [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) de contrôle de formulaire. Si elle est présente sur l'un de ces types de saisie et éléments, la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required) s'appliquera. Si l'attribut n'est pas inclus, la pseudo-classe [`:optional`](/fr/docs/Web/CSS/:optional) s'appliquera.
@@ -63,15 +64,11 @@ Fournissez une indication aux utilisateurs pour les informer que le contrôle de
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'l\'attribut required')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'l\'attribut required')}}     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'l\'attribut required')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## Voir aussi
 

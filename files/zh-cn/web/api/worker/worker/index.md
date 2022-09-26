@@ -2,11 +2,12 @@
 title: Worker()
 slug: Web/API/Worker/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/en/Same_origin_policy_for_JavaScript) 。
+**`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/zh-CN/Same_origin_policy_for_JavaScript) 。
 
-如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR `类型的{{domxref("DOMException")}}被抛出。
+如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR` 类型的{{domxref("DOMException")}}被抛出。
 
 > **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 {{ geckoRelease("10.0") }} 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
 
@@ -63,11 +64,11 @@ first.onchange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.Worker")}}
+{{Compat}}
 
 > **备注：** 浏览器可以被标记为对`Worker()`的完全支持尽管他并不支持一个以 modules 类型编写的脚本。截至 2019 年 8 月 1 日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds 类型的脚本必须使用编译器翻译成无 module 代码才能在浏览器上运行。
 
 另请参阅
 
 - {{domxref("Worker")}} 它所属的接口。
-- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)

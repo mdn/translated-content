@@ -1,14 +1,8 @@
 ---
 title: feFlood
 slug: Web/SVG/Element/feFlood
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feFlood
 ---
+
 {{SVGRef}}
 
 该滤镜用{{ SVGAttr("flood-color") }}元素定义的颜色和{{ SVGAttr("flood-opacity") }}元素定义的不透明度填充了滤镜子区域。
@@ -23,9 +17,9 @@ translation_of: Web/SVG/Element/feFlood
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -36,7 +30,7 @@ translation_of: Web/SVG/Element/feFlood
 
 ## DOM 接口
 
-该元素实现了`SVGFEFloodElement接口。`
+该元素实现了 `SVGFEFloodElement` 接口。
 
 ## 参见
 
@@ -59,4 +53,4 @@ translation_of: Web/SVG/Element/feFlood
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

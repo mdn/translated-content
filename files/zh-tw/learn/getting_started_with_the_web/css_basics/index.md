@@ -1,8 +1,8 @@
 ---
 title: CSS 基本
 slug: Learn/Getting_started_with_the_web/CSS_basics
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 **階層樣式表** (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈[CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)〉帶你入門。
@@ -217,7 +217,7 @@ html {
 }
 ```
 
-這條規則將會套用到整個頁面的背景顏色。根據你在[規劃網站時選擇的顏色](/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color)修改其中的顏色代碼。
+這條規則將會套用到整個頁面的背景顏色。根據你在[規劃網站時選擇的顏色](/zh-TW/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color)修改其中的顏色代碼。
 
 ### 設定 body 的風格（styling）
 
@@ -234,7 +234,7 @@ body {
 接下來修改 `body` 元素。以下依序介紹一些常見的宣告：
 
 - `width: 600px;` — 將 body 寬度固定為 600 像素
-- `margin: 0 auto;` — When you set two values on a property like `margin` or `padding`, the first value affects the element's top **and** bottom side (make it `0` in this case), and the second value the left **and** right side (here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented [here](/en-US/docs/Web/CSS/margin#Values).
+- `margin: 0 auto;` — When you set two values on a property like `margin` or `padding`, the first value affects the element's top **and** bottom side (make it `0` in this case), and the second value the left **and** right side (here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented [here](/zh-TW/docs/Web/CSS/margin#Values).
 - `background-color: #FF9500;` — as before, this sets the element's background color. I used a sort of reddish orange for the body as opposed to dark blue for the `html` element. Go ahead and experiment. Feel free to use `white` or whatever you like.
 - `padding: 0 20px 20px 20px;` — we have four values set on the padding, to make a bit of space around our content. This time we are setting no padding on the top of the body, and 20 pixels on the left, bottom and right. The values set top, right, bottom, left, in that order.
 - `border: 5px solid black;` — this simply sets a 5 pixel wide solid black border on all sides of the body.
@@ -274,7 +274,7 @@ img {
 
 Finally, we'll center the image to make it look better. We could use the `margin: 0 auto` trick again as we did earlier for the body, but we also need to do something else. The body element is **block level**, meaning it takes up space on the page and can have margin and other spacing values applied to it. Images, on the other hand, are **inline** elements, meaning they can't. So to apply margins to the image, we have to give the image block-level behavior using `display: block;`.
 
-> **備註：** Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/en-US/docs/Web/CSS/display).
+> **備註：** Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/zh-TW/docs/Web/CSS/display).
 
 ## 結論
 
@@ -284,6 +284,6 @@ Finally, we'll center the image to make it look better. We could use the `margin
 
 如果哪裡卡關了，你可以隨時造訪 Github 上的 [finished example code](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css) ，看看裡面的 code 和你寫的哪裡不同。
 
-這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 [CSS Learning topic](/en-US/Learn/CSS)。
+這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 [CSS Learning topic](/zh-TW/Learn/CSS)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

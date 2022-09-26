@@ -1,14 +1,9 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
+
 {{JSRef}}
 
 **`handler.apply()`** 方法用于拦截函数的调用。

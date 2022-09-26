@@ -1,21 +1,8 @@
 ---
 title: CSS 是什麼？
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
-  - CSS 入門
-  - 初學者
-  - 單元
-  - 學習
-  - 技術指引
-  - 語法
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** （階層式樣式表）可以讓您建立出好看的網頁，但是它背後是怎麼運作的？在這個主題裡，藉由簡單的語法範例來說明 CSS 是什麼，以及含蓋這個語言的一些關鍵項目。
@@ -126,7 +113,7 @@ CSS 並沒有什麼不同，它由 W3C 一個被稱為 [CSS 工作組](https://w
 
 以下是 CSS [`font-family`](/zh-TW/docs/Web/CSS/font-family) 屬性的支援狀態表。
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 下一步…
 

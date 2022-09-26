@@ -1,8 +1,8 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回一个表示指定 {{jsxref("Error")}} 对象的字符串。

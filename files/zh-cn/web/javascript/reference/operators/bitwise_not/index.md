@@ -1,12 +1,8 @@
 ---
 title: 按位非 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - JavaScript
-  - 位操作符
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
+
 {{jsSidebar("Operators")}}
 
 按位非运算符（\~），反转操作数的位。
@@ -42,6 +38,7 @@ After:              10100000000000000110000000000001
 ```js
  9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
+
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
@@ -71,4 +68,4 @@ Note that due to using 32-bit representation for numbers both `~-1` and `~429496
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)

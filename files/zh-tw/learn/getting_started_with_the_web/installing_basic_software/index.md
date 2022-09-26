@@ -1,8 +1,8 @@
 ---
 title: 安裝基本軟體
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 在本文中，你會知道有哪些 Web 開發的簡易工具，以及正確的安裝方式。

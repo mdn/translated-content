@@ -1,13 +1,8 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 **`Object.preventExtensions()`**方法让一个对象变的不可扩展，也就是永远不能再添加新的属性。

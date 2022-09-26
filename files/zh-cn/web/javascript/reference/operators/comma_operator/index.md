@@ -1,11 +1,8 @@
 ---
 title: 逗号操作符
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - comma operator
-  - 逗号操作符
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
 **逗号操作符** 对它的每个操作数求值（从左到右），并返回最后一个操作数的值。
@@ -58,4 +55,4 @@ function myFunc () {
 
 ## 参见
 
-- [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [for loop](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)

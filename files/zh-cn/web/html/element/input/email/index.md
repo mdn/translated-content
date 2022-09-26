@@ -1,15 +1,8 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/Input/email
-tags:
-  - HTML
-  - HTML forms
-  - Input Type
-  - 参考
-  - 电子邮件
-  - 表单
-translation_of: Web/HTML/Element/input/email
 ---
+
 {{HTMLRef}}
 
 带有 **`"email"`** (电子邮箱) 类型标记的输入框元素 ({{HTMLElement("input")}}) 能够让用户输入或编辑一个电子邮箱地址，此外，如果指定了{{htmlattrxref("multiple", "input")}}属性，用户还可以输入多个电子邮箱地址。在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址 (非空值且符合电子邮箱地址格式). CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用。
@@ -31,7 +24,6 @@ translation_of: Web/HTML/Element/input/email
   <tr>
    <td>
     <p><strong>支持的属性</strong></p>
-
     <p><strong>通用的属性</strong></p>
    </td>
    <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("multiple", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("size", "input")}}</td>
@@ -51,9 +43,9 @@ translation_of: Web/HTML/Element/input/email
 
 {{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 属性包含一个会自动验证是否符合电子邮件语法的 {{domxref("DOMString")}}。具体来说，此处有三个格式可以通过验证：
 
-1.  一个空字符串（“”），表示用户未输入值或该值已被删除。
-2.  单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `"username@domain"` 或者 `"username@domain.tld"`，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 [Validation](#validation)。
-3.  当且仅当明确 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
+1. 一个空字符串（“”），表示用户未输入值或该值已被删除。
+2. 单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `"username@domain"` 或者 `"username@domain.tld"`，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 [Validation](#validation)。
+3. 当且仅当明确 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
 
 关于如何验证电子邮件地址以保证其格式正确的细节，参见 [Validation](#validation)。
 
@@ -293,7 +285,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## Browser compatibility
 
-{{Compat("html.elements.input.input-email")}}
+{{Compat}}
 
 ## See also
 

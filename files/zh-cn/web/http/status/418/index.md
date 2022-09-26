@@ -1,8 +1,8 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
-translation_of: Web/HTTP/Status/418
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`418 I'm a teapot`** 客户端错误响应代码表示服务器拒绝冲泡咖啡，因为它是个茶壶。

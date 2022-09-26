@@ -3,6 +3,7 @@ title: 'Document: DOMContentLoaded event'
 slug: Web/API/Document/DOMContentLoaded_event
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initial est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.
@@ -149,14 +150,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                                                | Status                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}}                                 | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Voir aussi
 

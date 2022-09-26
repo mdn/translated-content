@@ -2,6 +2,7 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`SubtleCrypto.encrypt()`** 方法以算法、密钥、明文为参数返回一个包含加密数据的 {{jsxref("Promise")}} 对象。
@@ -22,7 +23,7 @@ var result = crypto.encrypt(algo, key, cleartext);
   - `{"name": "RSA-OAEP", label}` (`label` 是可选的)
 
 - `key` 是一个包含签名密钥的 {{domxref("CryptoKey")}}。
-- _`cleartext `_`是一个包含需要加密的明文` {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。
+- _`cleartext`_ 是一个包含需要加密的明文 {{jsxref("ArrayBuffer")}} 或者 {{jsxref("ArrayBufferView")}} 对象。
 
 ### 返回值
 
@@ -207,7 +208,7 @@ function encryptMessage(key) {
 
 ## 浏览器兼容性
 
-{{Compat("api.SubtleCrypto.encrypt")}}
+{{Compat}}
 
 ## 另见
 

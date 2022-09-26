@@ -1,15 +1,8 @@
 ---
 title: Vue 入門
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - Installation
-  - JavaScript
-  - Learn
-  - client-side
-  - vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。
@@ -46,7 +39,7 @@ tags:
 
 ## 更了解 Vue
 
-Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 [JQuery](/zh-TW/docs/Glossary/jQuery) 一樣。
+Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 [JQuery](https://jquery.com/) 一樣。
 
 除此之外，你也可以使用 Vue 來寫一個單頁式應用程式。這讓你可以完全使用 Vue 來建構網頁，當處理較複雜的應用時有較好的開發效率及體驗。 Vue 也有提供函式庫來做客戶端路由及狀態管理。 Vue 對客戶端路由及狀態管理這些工具採取中間立場的態度，雖然 Vue 的核心團隊推薦使用這些函式庫，但是這些函式庫沒有直接打包進 Vue，而是讓你可以自由選擇使用其他更適合你的應用的路由庫或狀態管理庫。
 

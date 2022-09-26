@@ -1,13 +1,13 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-translation_of: Web/CSS/box-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 了解现行标准。
+这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 了解现行标准。
 
-**`box-orient`** [CSS](/en-US/docs/Web/CSS) 属性用来设置一个元素是水平还是垂直布局其内容。
+**`box-orient`** [CSS](/zh-CN/docs/Web/CSS) 属性用来设置一个元素是水平还是垂直布局其内容。
 
 ```css
 /* Keyword values */
@@ -79,7 +79,7 @@ div.example {
 
 #### 结果
 
-{{ EmbedLiveSample('Examples', 600, 50, '', 'Web/CSS/box-orient') }}
+{{ EmbedLiveSample('设置盒子水平布局', 600, 50) }}
 
 ## 规范
 
@@ -87,7 +87,7 @@ div.example {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-orient")}}
+{{Compat}}
 
 ## 参见
 

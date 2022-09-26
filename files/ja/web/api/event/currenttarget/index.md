@@ -1,14 +1,8 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.currentTarget
-translation_of: Web/API/Event/currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 **`currentTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM を走査する際の、イベントの現在のターゲットを特定します。これは常にイベントハンドラーが装着されている要素を指し、 {{domxref("Event.target")}} とは対照的に、イベントが発生した要素やその子孫である可能性のある要素を特定します。

@@ -1,9 +1,9 @@
 ---
 title: '多媒體: 圖像跟影片'
 slug: Learn/Performance/Multimedia
-translation_of: Learn/Performance/Multimedia
 original_slug: Learn/Performance/多媒體
 ---
+
 媒體，換句話說就是圖像跟影片，平均占了網站超過 70%的下載流量。以下載的效能來考慮的話，減少媒體數量和檔案大小是一個簡單可以實現的目標。 這篇文章聚焦在優化圖像跟影片來改善網站的效能。
 
 > **備註：** 這是一篇進階的在 web 上優化多媒體的介紹，包含基本的原則還有技巧，想了更多的話，可以看 <https://images.guide>。
@@ -18,7 +18,7 @@ original_slug: Learn/Performance/多媒體
 
 ## 優化圖像傳送
 
-儘管是頻寬的最大消耗者，但因為圖像是非同步載入的，所以訪問者可以在下載的同時看到頁面。因此，它們對[感知性能的影響](/en-US/docs/Learn/Performance/perceived_performance)遠低於許多人的預期。 然而，圖像在內容中很常被使用，因此，重要的應該是讓訪問者盡快地看到它們，以獲得良好的體驗。
+儘管是頻寬的最大消耗者，但因為圖像是非同步載入的，所以訪問者可以在下載的同時看到頁面。因此，它們對[感知性能的影響](/zh-TW/docs/Learn/Performance/perceived_performance)遠低於許多人的預期。 然而，圖像在內容中很常被使用，因此，重要的應該是讓訪問者盡快地看到它們，以獲得良好的體驗。
 
 ### 載入策略
 
@@ -57,7 +57,7 @@ original_slug: Learn/Performance/多媒體
 
 ## 優化影像傳送
 
-為了確保您不會將不必要的大文件發送給用戶，最好 [壓縮所有你要傳輸的影像](#compress)，[優化`<source>` 順序](#omptimize), 設定 [autoplay](/en-US/docs/Learn/Performance/Multimedia#Video_autoplay), [移除靜音影像的聲音](#muted), [優化影像預載](/en-US/docs/Learn/Performance/Multimedia#Video_preload), 還有 [考慮串流](/en-US/docs/Learn/Performance/Multimedia#Consider_streaming) 這部影像。
+為了確保您不會將不必要的大文件發送給用戶，最好 [壓縮所有你要傳輸的影像](#compress)，[優化`<source>` 順序](#omptimize), 設定 [autoplay](/zh-TW/docs/Learn/Performance/Multimedia#Video_autoplay), [移除靜音影像的聲音](#muted), [優化影像預載](/zh-TW/docs/Learn/Performance/Multimedia#Video_preload), 還有 [考慮串流](/zh-TW/docs/Learn/Performance/Multimedia#Consider_streaming) 這部影像。
 
 ### 壓縮所有影像
 

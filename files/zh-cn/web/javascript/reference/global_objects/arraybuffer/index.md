@@ -1,20 +1,15 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - 构造函数
-  - 类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 对象用来表示通用的、固定长度的原始二进制数据缓冲区。
 
 它是一个字节数组，通常在其他语言中称为“byte array”。
 
-你不能直接操作 `ArrayBuffer` 的内容，而是要通过[类型数组对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。
+你不能直接操作 `ArrayBuffer` 的内容，而是要通过[类型数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
 
@@ -43,8 +38,8 @@ new ArrayBuffer(length)
 
 ### 以现有数据获取 ArrayBuffer
 
-- [从 Base64 字符串](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
-- [从本地文件](<https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader#readAsArrayBuffer()>)
+- [从 Base64 字符串](/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [从本地文件](</zh-CN/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## 属性
 
@@ -60,7 +55,7 @@ new ArrayBuffer(length)
 ## 方法
 
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : 如果参数是 ArrayBuffer 的视图实例则返回 `true`，例如 [类型数组对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 或 {{jsxref("DataView")}} 对象；否则返回 `false`。
+  - : 如果参数是 ArrayBuffer 的视图实例则返回 `true`，例如 [类型数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 或 {{jsxref("DataView")}} 对象；否则返回 `false`。
 - {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
   - : 返回一个新的 ArrayBuffer 对象，其内容取自 `oldBuffer` 中的数据，并且根据 `newByteLength` 的大小对数据进行截取或补 0。
 
@@ -112,5 +107,5 @@ var dv = new ArrayBuffer(10);
 
 ## 相关链接
 
-- [JavaScript 类型数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - [{{jsxref("SharedArrayBuffer")}}](zh-CN/docs/Web/JavaScript/Typed_arrays)

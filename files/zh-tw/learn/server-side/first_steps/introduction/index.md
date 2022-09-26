@@ -1,9 +1,9 @@
 ---
 title: 伺服器端的介紹
 slug: Learn/Server-side/First_steps/Introduction
-translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/介紹
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 歡迎來到 MDN 伺服器端程式設計的初學者課程 ！在第一篇文章中，我們會用較為抽象的角度來探討 server-side programming，並且為你解答「這是什麼？」「這個和用戶端的程式有什麼不同？」以及「這個有什麼用？」 。在讀完這篇文章後，你將能明白如何透過 server-side coding 來為你的網站增添力量。
@@ -188,7 +188,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 ## In this module
 
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Introduction to the server side](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
+- [Client-Server overview](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [Server-side web frameworks](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
+- [Website security](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)

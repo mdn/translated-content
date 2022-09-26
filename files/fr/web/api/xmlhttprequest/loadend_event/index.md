@@ -10,9 +10,10 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onloadend
 original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
+
 {{ApiRef}}
 
-La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'évènement {{event("loadend")}} est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
+La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement {{event("loadend")}} est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
 
 ## Syntaxe
 
@@ -52,10 +53,8 @@ image.addEventListener('loadend', function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onloadend")}}
+{{Compat}}

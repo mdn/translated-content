@@ -1,13 +1,8 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - 原型
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
+
 {{JSRef}}
 
 **`getTime()`** 方法返回一个时间的格林威治时间数值。

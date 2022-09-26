@@ -9,6 +9,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **AudioBufferSourceNode** est un {{domxref("AudioScheduledSourceNode")}} qui représente une source audio constituée de données audio en mémoire, stockées dans un {{domxref ("AudioBuffer")}}. Elle est particulièrement utile pour lire des sons qui requierrent des conditions de lecture particulières, comme la synchronisation sur un certain rythme, et peuvent être stockés en mémoire. Si ce type de son doit être lu depuis le disque ou le réseau, il conviendra d'utiliser un {{domxref("AudioWorkletNode")}}.
@@ -123,13 +124,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## Voir aussi
 

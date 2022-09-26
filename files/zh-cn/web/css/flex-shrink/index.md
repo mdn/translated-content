@@ -1,15 +1,8 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS Property
-  - CSS 属性
-  - Reference
-  - 参考
-  - 弹性盒
-translation_of: Web/CSS/flex-shrink
 ---
+
 {{ CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`flex-shrink`** 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。
@@ -82,7 +75,7 @@ flex-shrink: unset
 
 ### 结果
 
-{{EmbedLiveSample('示例', '500px', '300px', '', 'Web/CSS/flex-shrink')}}
+{{EmbedLiveSample('示例', '500px', '300px')}}
 
 ## 规范
 
@@ -90,7 +83,7 @@ flex-shrink: unset
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## 参考
 

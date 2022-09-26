@@ -1,12 +1,8 @@
 ---
 title: 'URIError: malformed URI sequence'
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
-tags:
-  - JavaScript
-  - URLError
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

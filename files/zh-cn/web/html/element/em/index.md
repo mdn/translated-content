@@ -1,15 +1,8 @@
 ---
 title: <em>
 slug: Web/HTML/Element/em
-tags:
-  - VS
-  - em
-  - i
-  - web 语义化
-  - webgeeker
-  - xgqfrms
-translation_of: Web/HTML/Element/em
 ---
+
 ## 简介
 
 **HTML 着重元素** (**`<em>`**) 标记出需要用户着重阅读的内容， `<em>` 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。
@@ -59,7 +52,7 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## 了解更多
 

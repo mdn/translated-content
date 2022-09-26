@@ -1,18 +1,8 @@
 ---
 title: CSS 选择器
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - CSS Selector
-  - CSS 优先级
-  - Overview
-  - Reference
-  - Selectors
-  - 参考
-  - 直接子代组合器
-  - 选择器
-translation_of: Web/CSS/CSS_Selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上。
@@ -52,7 +42,7 @@ translation_of: Web/CSS/CSS_Selectors
 ## 组合器（Combinators）
 
 - [后代组合器](/zh-CN/docs/Web/CSS/Descendant_selectors)（[Descendant combinator](/zh-CN/docs/Web/CSS/Descendant_combinator)）
-  - : ``（空格）组合器选择前一个元素的后代节点。 **语法：**`A B` **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
+  - : “ ”（空格）组合器选择前一个元素的后代节点。 **语法：**`A B` **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
 - [直接子代组合器](/zh-CN/docs/Web/CSS/Child_selectors)（[Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)）
   - : `>` 组合器选择前一个元素的直接子代的节点。
     **语法**：`A > B`

@@ -1,15 +1,15 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 **import** 宣告用於引入由另一個模塊所導出的綁定。被引入的模塊，無論是否宣告{{jsxref("Strict_mode","strict mode","嚴謹模式")}}，都會處於該模式。`import` 宣告無法用於嵌入式腳本（embedded scripts）。
 
 There is also a function-like dynamic **`import()`**, which does not require scripts of `type="module"`.
 
-Dynamic import is useful in situations where you wish to load a module conditionally, or on demand. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
+Dynamic import is useful in situations where you wish to load a module conditionally, or on demand. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/zh-TW/docs/Glossary/Tree_shaking).
 
 ## 語法
 
@@ -196,7 +196,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## 參見
 

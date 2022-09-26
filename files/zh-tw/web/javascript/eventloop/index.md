@@ -1,12 +1,8 @@
 ---
 title: 並行模型和事件循環
 slug: Web/JavaScript/EventLoop
-tags:
-  - Event Loop
-  - JavaScript
-  - 進階
-translation_of: Web/JavaScript/EventLoop
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript 的並行模型（concurrency model）是基於「事件循環（event loop）」，其在運作上跟 C 或是 Java 有很大的不同。
@@ -69,7 +65,7 @@ while (queue.waitForMessage()) {
 
 瀏覽器中，會添加訊息是由於事件的觸動，以及伴隨著事件的監聽者。若是沒有事件監聽者，則該事件的觸動就不會形成訊息，例如說一個點擊的動作伴隨著點擊事件監聽者就會形成一個新的訊息，其他類事件亦然。
 
-呼叫 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為`0`）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，`setTimeout` 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。
+呼叫 [`setTimeout`](/zh-TW/docs/Web/API/setTimeout) 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為`0`）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，`setTimeout` 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。
 
 這裡有個示範此概念的例子（`setTimeout`在其計時器到期後不會立刻執行）：
 
@@ -91,7 +87,7 @@ while (queue.waitForMessage()) {
 
 ### 零延遲（Zero delays）
 
-「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。
+「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 [`setTimeout`](/zh-TW/docs/Web/API/setTimeout) 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。
 在下面範例中，「this is just a message」會寫在 setTimeout 的回呼訊息被執行之前，因為該時間段參數是要求執行環境處理所需的最少等待時間，而非一個保證時間。
 
 ```js
@@ -122,7 +118,7 @@ while (queue.waitForMessage()) {
 
 ### 多個執行環境的互相溝通（Several Runtime communicating together）
 
-Web worker 或是跨來源網域（cross-origin）的 `iframe` 都會有各自的堆疊、堆積及訊息佇列。兩個特定的執行環境只能透過 [`postMessage`](/en-US/docs/Web/API/Window/postMessage) 這個方法來溝通。如果一個執行環境有監聽 `message` 事件時，另一個執行環境便可透過這個方法來新增一個訊息到該執行環境中。
+Web worker 或是跨來源網域（cross-origin）的 `iframe` 都會有各自的堆疊、堆積及訊息佇列。兩個特定的執行環境只能透過 [`postMessage`](/zh-TW/docs/Web/API/Window/postMessage) 這個方法來溝通。如果一個執行環境有監聽 `message` 事件時，另一個執行環境便可透過這個方法來新增一個訊息到該執行環境中。
 
 ## 絕不阻塞（Never blocking）
 

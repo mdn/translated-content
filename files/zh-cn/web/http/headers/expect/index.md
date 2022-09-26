@@ -1,8 +1,8 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-translation_of: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 **`Expect`** 是一个请求消息头，包含一个期望条件，表示服务器只有在满足此期望条件的情况下才能妥善地处理请求。
@@ -59,5 +59,5 @@ Expect: 100-continue
 
 ## 参见
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

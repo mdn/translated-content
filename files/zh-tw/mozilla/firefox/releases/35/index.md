@@ -1,8 +1,8 @@
 ---
 title: Firefox 35 技術文件
 slug: Mozilla/Firefox/Releases/35
-translation_of: Mozilla/Firefox/Releases/35
 ---
+
 {{FirefoxSidebar}}{{ ReleaseChannelInfo("35", "35", "January 2015", "Aurora") }}
 
 Want to help document Firefox 35? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=35.0) and pitch in!
@@ -13,9 +13,9 @@ Want to help document Firefox 35? See the [list of bugs that need to be written 
 
 Highlights:
 
-- [See ::before and ::after pseudo elements in the Page Inspector](/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)
-- [CSS source maps are now enabled by default](/en-US/docs/Tools/Style_Editor#Source_map_support)
-- ["Show DOM Properties" from the Page Inspector](/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2)
+- [See ::before and ::after pseudo elements in the Page Inspector](/zh-TW/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)
+- [CSS source maps are now enabled by default](/zh-TW/docs/Tools/Style_Editor#Source_map_support)
+- ["Show DOM Properties" from the Page Inspector](/zh-TW/docs/Tools/Page_Inspector#Element_popup_menu_2)
 
 [All devtools bugs fixed between Firefox 34 and Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
 
@@ -31,7 +31,7 @@ Highlights:
 
 ### JavaScript
 
-- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES6 `let` semantics, the following situations
+- The "[temporal dead zone](/zh-TW/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" for [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES6 `let` semantics, the following situations
   now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
 
   - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
@@ -41,8 +41,8 @@ Highlights:
 
   - `String(Symbol("1"))` now no longer throws a [`TypeError`](/zh-TW/docs/Web/JavaScript/Reference/TypeError); instead a string (`"Symbol(1)"`) gets returned ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
 
-- The various [_TypedArray_ constructors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES6 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) and [`Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) and [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) for more information.
-- ES6 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) have been implemented ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
+- The various [_TypedArray_ constructors](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES6 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) and [`Object.prototype`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) and [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) for more information.
+- ES6 semantics for [prototype mutations using object literals](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) have been implemented ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
 
   - Now only a single member notated as `__proto__:value` will mutate the `[[Prototype]]` in the object literal syntax.
   - Method members like `__proto__() {}` will not overwrite the `[[Prototype]]` anymore.
@@ -66,7 +66,7 @@ _No change._
 
 ## Security
 
-- The [Public Key Pinning](/en-US/docs/Web/Security/Public_Key_Pinning) Extension for HTTP (HPKP) has been implemented. ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))
+- The [Public Key Pinning](/zh-TW/docs/Web/Security/Public_Key_Pinning) Extension for HTTP (HPKP) has been implemented. ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))
 
 ## Changes for add-on and Mozilla developers
 

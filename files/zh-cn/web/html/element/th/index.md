@@ -1,12 +1,8 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-tags:
-  - HTML
-  - 标签
-  - 表格
-translation_of: Web/HTML/Element/th
 ---
+
 **HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} 属性准确定义的。
 
 <table class="properties">
@@ -63,6 +59,7 @@ translation_of: Web/HTML/Element/th
     >
     > - `left`, `center`, `right` 或 `justify` 这些对齐效果，应该使用 CSS 的{{cssxref("text-align")}} 来实现。
     > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， {{htmlattrxref("char", "th")}}亦同. {{unimplemented_inline}} in CSS3.
+
 - {{htmlattrdef("axis")}} {{Deprecated_Inline}}
   - : 这个属性包含了一个空间分隔的字符串的列表。每个字符串是一组单元格的 ID，而该表头适用于这个 ID。
 

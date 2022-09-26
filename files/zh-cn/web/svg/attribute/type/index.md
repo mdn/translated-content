@@ -1,8 +1,8 @@
 ---
 title: type
 slug: Web/SVG/Attribute/type
-translation_of: Web/SVG/Attribute/type
 ---
+
 {{SVGRef}}
 
 type 属性是一个类属性，他在不同的使用语境下有不同的意思。

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`permission`** de l'interface {{domxref ("Notification")}} indique l'autorisation actuelle accordée par l'utilisateur à l'origine actuelle pour afficher des notifications.
@@ -65,15 +66,13 @@ function notifyMe() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaire     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName("Web Notifications","#dom-notification-permission","permission")}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.permission")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [API de notifications](/docs/Web/API/Notifications_API)
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

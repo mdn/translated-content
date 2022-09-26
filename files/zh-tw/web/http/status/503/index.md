@@ -1,13 +1,8 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - 503 error
-  - HTTP
-  - Service Unavailable Error
-  - Status code
-translation_of: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 超文本傳輸協定(英文：HyperText Transfer Protocol (HTTP) ) **`503 Service Unavailable`** 表示目前伺服器暫時不能處理連線的請求。
@@ -32,7 +27,7 @@ translation_of: Web/HTTP/Status/503
 
 以下資訊是從 MDN 的 GitHub 取得 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## 請參閱
 

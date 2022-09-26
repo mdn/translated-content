@@ -14,6 +14,7 @@ translation_of: Web/API/DeviceMotionEventRotationRate/alpha
 translation_of_original: Web/API/DeviceRotationRate/alpha
 original_slug: Web/API/DeviceRotationRate/alpha
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
@@ -33,10 +34,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.alpha")}}
+{{Compat}}

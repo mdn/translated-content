@@ -1,8 +1,8 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
-translation_of: Web/API/PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 **`PaymentRequest`** 介面是 [Payment Request API](/zh-TW/docs/Web/API/Payment_Request_API) 的主要切入點，它能讓網頁或 app 接受終端用戶的付款。
@@ -49,4 +49,4 @@ translation_of: Web/API/PaymentRequest
 
 ## 瀏覽器相容性
 
-{{Compat("api.PaymentRequest")}}
+{{Compat}}

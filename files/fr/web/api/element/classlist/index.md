@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
@@ -245,15 +246,11 @@ Une note mineure est que dans IE6-7, cette prothèse utilise la propriété `win
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Note dans la spécification HTML relative à l'attribut {{htmlattrxref("class")}}. |
-| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Définition initiale.                                                                    |
-| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
 ## Voir aussi
 

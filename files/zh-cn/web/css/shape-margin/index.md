@@ -1,19 +1,11 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
-tags:
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Reference
-  - float
-  - margin
-  - shape-margin
-translation_of: Web/CSS/shape-margin
 ---
+
 {{CSSRef}}
 
-[CSS](/en-US/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。
 
 {{EmbedInteractiveExample("pages/css/shape-margin.html")}}
 
@@ -96,8 +88,8 @@ section {
 
 ## 参见
 
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
 - {{cssxref("&lt;basic-shape&gt;")}}

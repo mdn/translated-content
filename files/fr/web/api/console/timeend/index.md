@@ -10,6 +10,7 @@ tags:
   - Méthode
 translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Arrête un chronomètre (_timer_) précédemment démarré par {{domxref("console.time()")}}.
@@ -27,15 +28,13 @@ console.timeEnd(label);
 - `label`
   - : Le nom du _timer_ à stopper. Une fois arrêté, le temps écoulé est automatiquement affiché dans la [Console Web](/fr/docs/Outils/Console_Web).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.timeEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,28 +1,20 @@
 ---
 title: 使用 aria-hidden 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - HTML
-  - Rôle
-  - 代码脚本
-  - 可访问性
-  - 可访问的富网络应用
-  - 客户端
-  - 警告
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
+
 本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。
 
 ## 描述
 
-把 `aria-hidden="true"` 加到元素上会把该元素和它的所有子元素从可访问性树上移除。这样做可以通过隐藏下列内容来提升使用辅助技术的用户体验：
+把 `aria-hidden="true"` 加到元素上会把该元素和它的所有子元素从无障碍树上移除。这样做可以通过隐藏下列内容来提升使用辅助技术的用户体验：
 
 - 纯装饰性的内容，如图标、图片
 - 重复的内容，如重复的文本
 - 屏幕外或被折叠的内容，如菜单
 
-根据[可访问性的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。 而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
+根据[无障碍的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
 
 如果父元素带有 `aria-hidden="true"` ，那么即使使用 `aria-hidden="false"` 也无法将该元素显示出来。
 
@@ -38,17 +30,17 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 尽管有上面这些相同点，但是各个属性的意图是不同的。
 
-- `aria-hidden="true"` 会把整个元素从可访问性 API 中移除
+- `aria-hidden="true"` 会把整个元素从无障碍 API 中移除
 - `role="presentation"` 和`role="none"` 会将元素从语义上移除，仍然会将元素暴露给辅助技术。
 
 ### 可选值
 
 - `false`
-  - : （默认）元素会暴露给可访问性 API。
+  - : （默认）元素会暴露给无障碍 API。
 - `true`
-  - : 元素不会暴露给可访问性 API。
+  - : 元素不会暴露给无障碍 API。
 - `undefined`
-  - : （默认）客户端决定元素是否暴露给可访问性 API。
+  - : （默认）客户端决定元素是否暴露给无障碍 API。
 
 ## 示例
 
@@ -75,5 +67,5 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 ## 另见
 
-- [使用展示角色](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- [role="none"](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)
+- [使用展示角色](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
+- [role="none"](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)

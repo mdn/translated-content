@@ -3,9 +3,10 @@ title: 高级设计 HTML 表单
 slug: Learn/Forms/Advanced_form_styling
 original_slug: Learn/HTML/Forms/Advanced_styling_for_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms/Property_compatibility_table_for_form_widgets", "Learn/HTML/Forms")}}
 
-在本文中，我们将看到[HTML](/en-US/docs/HTML)表单怎样使用[CSS](/en-US/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/en-US/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
+在本文中，我们将看到[HTML](/zh-CN/docs/HTML)表单怎样使用[CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
 
 在继续之前，让我们回忆一下两种表单小部件：
 
@@ -55,14 +56,14 @@ HTML 和 CSS 最新的发展扩展了 CSS 的表现力：
 
 > **警告：** 尽管 这些尝试很有趣，但**它们是非标准的，也就是不可靠的。**. 如果你使用它们 (也许你并不常用)，你要自己承担风险，使用非标准的属性[对于 Web 并不是好事](http://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/) 。
 
-- [Mozilla CSS 扩展](/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions)
+- [Mozilla CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Mozilla_Extensions)
 
   - {{cssxref(":-moz-placeholder")}}
   - {{cssxref(":-moz-submit-invalid")}}
   - {{cssxref(":-moz-ui-invalid")}}
   - {{cssxref(":-moz-ui-valid")}}
 
-- [WebKit CSS 扩展](/en-US/docs/CSS/CSS_Reference/Webkit_Extensions)
+- [WebKit CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions)
 
   - {{cssxref("::-webkit-input-placeholder")}}
   - [其他](http://trac.webkit.org/wiki/Styling%20Form%20Controls)
@@ -215,7 +216,7 @@ p+p {
 }
 ```
 
-现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/en-US/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/en-US/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
+现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
 
 ```css
 :root input[type=checkbox] + label:before {
@@ -516,13 +517,13 @@ select, option {
 
 在我们的例子中，只使用了三个 CSS 属性，在考虑使用更多 CSS 属性时，可以想象是很混乱的。正如我们看到的，CSS 始终不适合用来修改这些小部件的外观，但是仍然可以用来稍微做一些事情。如果愿意的话，可以演示一下在不同操作系统和浏览器之间的区别。
 
-我们也可以帮助了解在下一章节中哪个属性更合适：[Properties compatibility table for form widgets](/en-US/docs/Properties_compatibility_table_for_forms_widgets)
+我们也可以帮助了解在下一章节中哪个属性更合适：[Properties compatibility table for form widgets](/zh-CN/docs/Properties_compatibility_table_for_forms_widgets)
 
 ## 走向更完美表单之路：有用的库和 polyfills（腻子）
 
 虽然对于复选框和单选按钮而言，CSS 的表示方式足够丰富，但是对更高级的小部件来说差距仍然很大。即使可以用{{HTMLElement("select")}}元素作一些事情，但是对 file 小部件的样式完全没用。对于日期选择器也同样如此。
 
-要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
+要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
 
 - [Uni-form](http://sprawsm.com/uni-form/)是一个对采用 CSS 样式的表单标记实现标准化的框架，在使用 jQuery 时，还提供一些附加特性，但这是可选的。
 - [Formalize](http://formalize.me/)是对公共 JavaScript 框架的扩展（如 jQuery, Dojo, YUI 等），有助于规范和定制表单。
@@ -530,7 +531,7 @@ select, option {
 
 下面的库不止应用于表单，他们在处理 HTML 表单时是非常有趣的：
 
-- [jQuery UI](http://jqueryui.com/)做了一些有趣的改进，可以定制象日期选择器（特别关注可访问性）这样的小部件。
+- [jQuery UI](http://jqueryui.com/)做了一些有趣的改进，可以定制象日期选择器（特别关注无障碍）这样的小部件。
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/base-css.html#forms)在规范表单时是非常有用的。
 - [WebShim](http://afarkas.github.com/webshim/demos/demos/webforms.html)是一个大型工具，可以用来处理浏览器对 HTML5 的支持。对 web 表单部分确实有用。
 
@@ -540,7 +541,7 @@ select, option {
 
 虽然 HTML 表单使用 CSS 仍有一些黑洞，但通常也有方法绕过它们。即使没有清楚的，通用的解决方案，但新式的浏览器也提供了新的可能性。目前最好的方法是更多的学习不同浏览器支持 CSS 的方式，并应用于 HTML 表单小部件。
 
-在本指南的下一章节中，我们将探讨不同的 HTML 表单小部件怎样很好的支持更重要的 CSS 属性：[Properties compatibility table for form widgets](/en-US/docs/Properties_compatibility_table_for_forms_widgets).
+在本指南的下一章节中，我们将探讨不同的 HTML 表单小部件怎样很好的支持更重要的 CSS 属性：[Properties compatibility table for form widgets](/zh-CN/docs/Properties_compatibility_table_for_forms_widgets).
 
 ## 相关链接
 
@@ -551,14 +552,14 @@ select, option {
 
 ## 在本单元中
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
+- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
+- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

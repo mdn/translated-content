@@ -11,6 +11,7 @@ tags:
   - évènements
 translation_of: Web/API/KeyboardEvent/charCode
 ---
+
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
 La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.
@@ -70,10 +71,8 @@ Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'ex
 
 ## Spécifications
 
-| Spécification (en anglais)                                                                                       | Statut                           | Commentaire                   |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------- |
-| {{SpecName('DOM3 Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}} | {{Spec2('DOM3 Events')}} | Définition initiale; Déprécié |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-translation_of: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary negation operator (`-`) precedes its operand and negates it.
@@ -48,12 +48,12 @@ const y = -x;
 
 ## See also
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

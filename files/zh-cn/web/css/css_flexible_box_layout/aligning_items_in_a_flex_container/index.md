@@ -1,13 +1,8 @@
 ---
 title: 对齐弹性容器中的弹性项目
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - Flex
-  - 对齐
-  - 布局
-  - 弹性盒子
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它首次为网页样式居中提供了合适的方案。得益于它提供的合适的垂直居中能力，我们可以很轻松地把一个盒子居中。在这份指南里，我们将详细地介绍 flexbox 的垂直和水平居中的工作原理。
@@ -61,7 +56,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 `align-items` 属性是给所有 flex 项目统一设置 `align-self` 的对齐属性。这意味着你能给单个 flex 项目明确地声明 `align-self` 属性。`align-self` 拥有 `align-items` 的所有属性值，另外还有一个 `auto` 能重置自身的值为 `align-items` 定义的值。
 
-在下面的一个例子中，flex 容器为 `align-items: flex-start`，这意思是所有的 flex 项目都在交叉轴方向的开始端对齐。我用 `first-child` 选择器给第一个 flex 项目设置了 `align-self: stretch` ；另外一个 flex 项目用 selected 的类设置成 ` align-self: ``center ` 。你能试着改变 `align-items` 或者在单个 `align-self` 的值，可以发现这些值是怎么影响对齐的。
+在下面的一个例子中，flex 容器为 `align-items: flex-start`，这意思是所有的 flex 项目都在交叉轴方向的开始端对齐。我用 `first-child` 选择器给第一个 flex 项目设置了 `align-self: stretch` ；另外一个 flex 项目用 selected 的类设置成 `align-self: center` 。你能试着改变 `align-items` 或者在单个 `align-self` 的值，可以发现这些值是怎么影响对齐的。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 

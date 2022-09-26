@@ -1,8 +1,8 @@
 ---
 title: <big>
 slug: Web/HTML/Element/big
-translation_of: Web/HTML/Element/big
 ---
+
 {{deprecated_header}}
 
 ## 概要
@@ -45,7 +45,7 @@ This is the first sentence. This whole sentence is in bigger letters.
 
 ## 浏览器兼容
 
-{{Compat("html.elements.big")}}
+{{Compat}}
 
 ## 参见
 

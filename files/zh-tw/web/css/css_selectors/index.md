@@ -1,8 +1,8 @@
 ---
 title: CSS Selectors
 slug: Web/CSS/CSS_Selectors
-translation_of: Web/CSS/CSS_Selectors
 ---
+
 {{CSSRef}}
 
 **選擇器**可以定義某組 CSS 樣式要套用到哪些元素上。
@@ -41,12 +41,12 @@ translation_of: Web/CSS/CSS_Selectors
 
 - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator)（[Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_combinator)）
 
-  - : ``(空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:**`div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/en-US/docs/Web/HTML/Element/span) 元素。
+  - : " " (空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:** `div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/zh-TW/docs/Web/HTML/Element/span) 元素。
 
 - [子代選擇器](/zh-TW/docs/Web/CSS/Child_combinator)（[Child combinator](/zh-TW/docs/Web/CSS/Child_combinator)）
   - : `>` 用以選擇某個元素後代的元素。
     **語法:** `A > B`（B 元素不可在 A 元素的其他元素裡）
-    **範例:** `ul > li` 套用所有 [`<li>`](/en-US/docs/Web/HTML/Element/li) 元素內部的 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 子元素。
+    **範例:** `ul > li` 套用所有 [`<li>`](/zh-TW/docs/Web/HTML/Element/li) 元素內部的 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 子元素。
 - [一般兄弟選擇器](/zh-TW/docs/Web/CSS/General_sibling_combinator)（[General sibling combinator](/zh-TW/docs/Web/CSS/General_sibling_combinator)）
   - : `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
     **語法:** `A ~ B`

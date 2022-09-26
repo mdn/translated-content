@@ -1,15 +1,9 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-browser-compat: javascript.builtins.Map.@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** 访问器属性会返回一个 `Map` 构造函数。

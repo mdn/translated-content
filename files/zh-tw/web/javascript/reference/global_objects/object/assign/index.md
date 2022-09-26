@@ -1,8 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}**`Object.assign()`**被用來複製一個或多個物件自身所有可數的屬性到另一個目標物件。回傳的值為該目標物件。
 
 ## 語法
@@ -229,9 +229,9 @@ if (typeof Object.assign != 'function') {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## 參閱
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

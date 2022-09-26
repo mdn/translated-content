@@ -2,6 +2,7 @@
 title: Selection.extend()
 slug: Web/API/Selection/extend
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`Selection.extend()`** 方法移动选中区的焦点到指定的点。选中区的锚点不会移动。选中区将从锚点开始到新的焦点，不管方向。
@@ -25,7 +26,7 @@ sel.extend(node, offset)
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.extend")}}
+{{Compat}}
 
 ## 相关链接
 

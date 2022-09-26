@@ -1,11 +1,8 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
-tags:
-  - Deprecated
-  - HTML forms
-translation_of: Web/HTML/Element/keygen
 ---
+
 {{deprecated_header}}
 
 HTML `<keygen>` 元素是为了方便生成密钥材料和提交作为 [HTML form](/zh-CN/docs/Web/Guide/HTML/Forms) 的一部分的公钥。这种机制被用于设计基于 Web 的证书管理系统。按照预想，`<keygen>` 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。
@@ -48,7 +45,7 @@ This element includes the [global attributes](/zh-CN/docs/HTML/Global_attributes
 - {{htmlattrdef("disabled")}}
   - : This Boolean attribute indicates that the form control is not available for interaction.
 - {{htmlattrdef("form")}}
-  - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen> `elements anywhere within a document, not just as descendants of their form elements.
+  - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen>` elements anywhere within a document, not just as descendants of their form elements.
 - {{htmlattrdef("keytype")}}
   - : The type of key generated. The default value is `RSA`.
 - {{htmlattrdef("name")}}
@@ -107,4 +104,4 @@ Here is an example form submission as it would be delivered to a CGI program by 
 
 ## Browser compatibility
 
-{{Compat("html.elements.keygen")}}
+{{Compat}}

@@ -1,13 +1,8 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 已废弃
-translation_of: Web/HTML/Element/xmp
 ---
+
 {{HTMLRef}} {{deprecated_header}}
 
 ## 概述
@@ -32,7 +27,7 @@ translation_of: Web/HTML/Element/xmp
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.xmp")}}
+{{Compat}}
 
 ## 参阅
 

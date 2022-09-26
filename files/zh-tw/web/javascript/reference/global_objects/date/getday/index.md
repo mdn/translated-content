@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
+
 {{JSRef}}
 
 **`getDay()`** 方法會根據當地時間將指定日期返回一星期中的第幾天，其中 0 代表星期日。 在當月的某天可以參考{{jsxref("Date.prototype.getDate()")}}。
@@ -48,7 +48,7 @@ console.log(weekday); // 1
 
 ## 瀏覽器兼容性
 
-{{Compat("javascript.builtins.Date.getDay")}}
+{{Compat}}
 
 ## See also
 

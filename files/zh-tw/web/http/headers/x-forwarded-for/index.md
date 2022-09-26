@@ -1,8 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-For`** (XFF) 標頭是辨識用戶端透過 HTTP 代理或負載平衡 IP 位置來源的，事實上的標準。如果流量是在伺服器與用戶端中間擷取，伺服器日誌就只會代理或負載平衡的 IP 位置。如果要檢查用戶端的 IP 的原始來源，就會去檢查 `X-Forwarded-For` 請求標頭。
@@ -53,7 +53,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.X-Forwarded-For")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,14 +1,8 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - JavaScript
-  - Promise
-  - await
-  - 实验性
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 `await` 操作符用于等待一个{{jsxref("Promise")}} 对象。它只能在异步函数 {{jsxref("Statements/async_function", "async function")}} 中使用。

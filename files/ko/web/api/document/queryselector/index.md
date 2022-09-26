@@ -21,7 +21,9 @@ translation_of: Web/API/Document/querySelector
 
 ## 구문
 
-    document.querySelector(selectors);
+```js
+document.querySelector(selectors);
+```
 
 ### 매개변수
 

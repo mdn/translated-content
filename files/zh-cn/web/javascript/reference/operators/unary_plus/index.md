@@ -1,8 +1,8 @@
 ---
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary plus operator (`+`) precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't already.
@@ -53,12 +53,12 @@ console.log(+y);
 
 ## See also
 
-- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)

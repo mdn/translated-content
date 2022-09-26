@@ -8,6 +8,7 @@ tags:
   - Stockage Web
 translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 La méthode **`removeItem()`** de l'interface {{domxref("Storage")}} , lorsque vous lui passez une clé en argument, va supprimer la ressource avec le nom de clé correspondant du storage. L'interface **`Storage`** de l'API [Web Storage API](/fr/docs/Web/API/Web_Storage_API) fournit des accès particuliers dans les domaines des stockages locaux et de sessions.
@@ -59,13 +60,11 @@ function populateStorage() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Voir aussi
 

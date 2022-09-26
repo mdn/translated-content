@@ -2,6 +2,7 @@
 title: Attr
 slug: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 该类型使用对象来表示一个 DOM 元素的属性。在大多数 DOM 方法中，你可能会直接通过字符串的方式获取属性值（例如{{domxref("Element.getAttribute()")}}），但是一些函数（例如{{domxref("Element.getAttributeNode()")}}）或通过迭代器访问时则返回`Attr`类型。
@@ -89,7 +90,7 @@ slug: Web/API/Attr
   - : 使用{{domxref("Element.getAttribute()")}}来代替
 - `getAttributeNodeNS()`
   - : 使用{{domxref("Element.getAttributeNS()")}}来代替
-- `hasAttributes() `{{Deprecated_Inline}}
+- `hasAttributes()` {{Deprecated_Inline}}
   - : `当前该方法总是返回`false.
 - `hasChildNodes()`
   - : `当前该方法总是返回`false.

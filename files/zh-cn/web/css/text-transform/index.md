@@ -1,12 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS3
-  - text-transform
-  - uppercase
-translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 ## **概要**
@@ -27,7 +23,7 @@ text-transform 属性考虑特定于语言的案例映射规则，如：
 
 语言由 lang HTML 属性或 `xml:lang` XML 属性定义。
 
-对于这些特定情况的支持因浏览器而异，因此请检查[浏览器兼容性表](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform$edit#Browser_compatibility)。
+对于这些特定情况的支持因浏览器而异，因此请检查[浏览器兼容性表](#浏览器兼容性)。
 
 {{cssinfo}}
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Caching
 original_slug: Web/HTTP/Cache
 ---
+
 {{HTTPSidebar}}
 
 Les performances des sites et applications web peuvent être significativement améliorées en réutilisant les ressources déjà collectées précédemment. Les caches web réduisent la latence et le trafic du réseau, et ainsi diminuent le temps nécessaire à l'affichage de la représentation d'une ressource. En utilisant la mise en cache HTTP, les sites web deviennent plus réactifs.
@@ -22,7 +23,7 @@ Il y a différents types de caches, qui peuvent être groupés en deux principal
 
 ### Caches de navigateur privés
 
-Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP "en/HTTP") par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
+Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP) par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
 
 ### Caches de proxy partagés
 

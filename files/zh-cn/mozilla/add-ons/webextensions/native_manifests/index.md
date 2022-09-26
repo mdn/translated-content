@@ -1,8 +1,8 @@
 ---
 title: 原生应用清单
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
+
 {{AddonSidebar}}
 
 原生应用清单是一个符合特定规则的 JSON 文件，它应该使用与 extension 不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。
@@ -284,7 +284,7 @@ PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：
     <tr>
       <td><code>type</code></td>
       <td>String</td>
-      <td>该值只能是<code>pkcs11</code>。 This must be "pkcs11".</td>
+      <td>该值只能是<code>pkcs11</code>。This must be "pkcs11".</td>
     </tr>
     <tr>
       <td><code>allowed_extensions</code></td>

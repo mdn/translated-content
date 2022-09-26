@@ -1,9 +1,9 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
-translation_of: Web/SVG/Attribute/dominant-baseline
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 The `dominant-baseline` attribute is used to determine or re-determine a scaled-baseline-table. A scaled-baseline-table is a compound value with three components: a baseline-identifier for the dominant-baseline, a baseline-table and a baseline-table font-size. Some values of the property re-determine all three values; other only re-establish the baseline-table font-size. When the initial value, auto, would give an undesired result, this property can be used to explicitly set the desire scaled-baseline-table.
 
@@ -50,7 +50,7 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `dominant-baseline-shift` attribute
 
-- [Text content elements](/en/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
 
 ## 规范
 

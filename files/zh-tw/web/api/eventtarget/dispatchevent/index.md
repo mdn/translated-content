@@ -1,8 +1,8 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 於此 {{domxref("EventTarget")}} 物件上觸發特定的 {{domxref("Event")}} 物件實體，相當於依照註冊的順序呼叫它的 {{domxref("EventListener")}}。一般事件處理規則（包含捕捉（capturing）和可選的冒泡（bubbling）階段）也適用於用 `dispatchEvent()` 手動觸發事件。
@@ -35,7 +35,7 @@ cancelled = !target.dispatchEvent(event)
 
 ## 注意
 
-`dispatchEvent` 是「建立 → 初始化 → 觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 [initEvent](/en-US/docs/DOM/event.initEvent) 或其他特殊 methods ，像是 [initMouseEvent](/en-US/docs/DOM/event.initMouseEvent) 或 [initUIEvent](/en-US/docs/DOM/event.initUIEvent) 來初始化。
+`dispatchEvent` 是「建立 → 初始化 → 觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 [initEvent](/zh-TW/docs/DOM/event.initEvent) 或其他特殊 methods ，像是 [initMouseEvent](/zh-TW/docs/DOM/event.initMouseEvent) 或 [initUIEvent](/zh-TW/docs/DOM/event.initUIEvent) 來初始化。
 
 詳請可參考《{{domxref("Event")}}》。
 
@@ -49,4 +49,4 @@ cancelled = !target.dispatchEvent(event)
 
 ## 瀏覽器支援度
 
-{{Compat("api.EventTarget.dispatchEvent")}}
+{{Compat}}

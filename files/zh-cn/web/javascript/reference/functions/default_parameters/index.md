@@ -1,12 +1,8 @@
 ---
 title: 默认参数值
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **函数默认参数**允许在没有值或`undefined`被传入时使用默认形参。

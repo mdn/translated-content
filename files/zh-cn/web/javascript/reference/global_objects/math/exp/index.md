@@ -1,8 +1,8 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

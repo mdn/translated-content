@@ -1,17 +1,8 @@
 ---
 title: 浮动
 slug: Learn/CSS/CSS_layout/Floats
-tags:
-  - CSS
-  - Guide
-  - 列
-  - 初学者
-  - 布局
-  - 教程
-  - 浮动
-  - 清除
-translation_of: Learn/CSS/CSS_layout/Floats
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
 {{cssxref("float")}} 属性最初只用于在成块的文本内浮动图像，但是现在它已成为在网页上创建多列布局的最常用工具之一。本文将阐述它的有关知识。

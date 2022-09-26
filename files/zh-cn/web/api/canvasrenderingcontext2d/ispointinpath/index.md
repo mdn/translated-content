@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.isPointInPath()`** 是 Canvas 2D API 用于判断在当前路径中是否包含检测点的方法。
@@ -27,8 +28,8 @@ boolean ctx.isPointInPath(path, x, y, fillRule);
   - : 用来决定点在路径内还是在路径外的算法。
     允许的值：
 
-    - **`"nonzero`**": [非零环绕规则 ](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
-    - **`"evenodd"`**: [奇偶环绕原则 ](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+    - **`"nonzero`**": [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
+    - **`"evenodd"`**: [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
   - : {{domxref("Path2D")}}应用的路径。
@@ -109,7 +110,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.isPointInPath")}}
+{{Compat}}
 
 ## 参见
 

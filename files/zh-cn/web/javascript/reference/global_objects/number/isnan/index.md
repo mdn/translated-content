@@ -1,16 +1,8 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - NaN
-  - Number
-  - 数字
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef}}
 
 **`Number.isNaN()`** 方法确定传递的值是否为 {{jsxref("NaN")}}，并且检查其类型是否为 {{jsxref("Number")}}。它是原来的全局 {{jsxref("isNaN", "isNaN()")}} 的更稳妥的版本。

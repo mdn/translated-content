@@ -1,15 +1,8 @@
 ---
 title: feMorphology
 slug: Web/SVG/Element/feMorphology
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feMorphology
 ---
+
 {{SVGRef}}
 
 该滤镜用来侵蚀或扩张输入的图像。它在增肥或瘦身效果方面特别有用。
@@ -24,9 +17,9 @@ translation_of: Web/SVG/Element/feMorphology
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -38,7 +31,7 @@ translation_of: Web/SVG/Element/feMorphology
 
 ## DOM 接口
 
-该元素实现了[`SVGFEMorphologyElement`](/en/DOM/SVGFEMorphologyElement)接口。
+该元素实现了[`SVGFEMorphologyElement`](/zh-CN/DOM/SVGFEMorphologyElement)接口。
 
 ## 参见
 
@@ -60,4 +53,4 @@ translation_of: Web/SVG/Element/feMorphology
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

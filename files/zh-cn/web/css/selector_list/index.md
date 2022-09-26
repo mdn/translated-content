@@ -1,12 +1,8 @@
 ---
 title: 选择器列表
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - 层叠样式表
-  - 选择器
-translation_of: Web/CSS/Selector_list
 ---
+
 {{CSSRef}}
 
 CSS **选择器列表**（`,`），常被称为并集选择器或并集组合器，选择所有能被列表中的任意一个选择器选中的节点。
@@ -82,7 +78,7 @@ h3 { font-family: sans-serif }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.list")}}
+{{Compat}}
 
 ## 参见
 

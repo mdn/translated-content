@@ -2,14 +2,14 @@
 title: Beacon API
 slug: Web/API/Beacon_API
 ---
+
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}
 
 **`Beacon`** 接口用于将异步和非阻塞请求发送到服务器。信标（Beacon）请求使用 HTTP 协议中的 POST 方法，请求通常不需要响应。这个请求被保证在，页面的**unload**状态从发起到完成之前，被发送。而并不需要一个阻塞请求，例如 {{domxref("XMLHttpRequest")}} 。
 
 Beacon API 的示例用例是记录活动并向服务器发送分析数据。
 
-本文档中描述的接口的示例代码包含在[使用信标 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API
-)中。
+本文档中描述的接口的示例代码包含在[使用信标 API](/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API) 中。
 
 ## 为什么是信标？
 

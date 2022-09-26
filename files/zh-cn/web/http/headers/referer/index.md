@@ -1,12 +1,8 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - 引用
-  - 消息头
-  - 请求头
-translation_of: Web/HTTP/Headers/Referer
 ---
+
 {{HTTPSidebar}}
 
 **`Referer`** 请求头包含了当前请求页面的来源页面的地址，即表示当前页面是通过此来源页面里的链接进入的。服务端一般使用 `Referer` 请求头识别访问来源，可能会以此进行统计分析、日志记录以及缓存优化等。

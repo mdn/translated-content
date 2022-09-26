@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Écrit une chaine de caractères suivie d'un retour de ligne.
@@ -34,27 +35,8 @@ document.writeln("<p>Entrez votre mot de passe :</p>");
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-      <td><strong>État</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}}
-      </td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}
-      </td>
-      <td>{{Spec2("DOM2 HTML")}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.writeln")}}
+{{Compat}}

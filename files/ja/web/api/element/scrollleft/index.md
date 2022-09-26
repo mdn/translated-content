@@ -1,14 +1,8 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - CSSOM View
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.scrollLeft
-translation_of: Web/API/Element/scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollLeft`** プロパティは、要素の内容が左端からスクロールするピクセル数を取得または設定します。

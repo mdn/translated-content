@@ -1,14 +1,9 @@
 ---
 title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-tags:
-  - CSS
-  - 参考
-  - 宏
-  - 结构
-translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
 本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Structures/Macros)这篇文章。

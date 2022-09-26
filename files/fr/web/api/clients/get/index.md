@@ -10,6 +10,7 @@ tags:
   - get
 translation_of: Web/API/Clients/get
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
 
 ## Syntaxe
@@ -39,10 +40,8 @@ self.clients.get(options).then(function(client) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaires        |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#clients-get-method', 'get()')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients.get")}}
+{{Compat}}

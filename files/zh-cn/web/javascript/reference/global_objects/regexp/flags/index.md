@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
+
 {{JSRef}}
 
 **`flags`**属性返回一个字符串，由当前正则表达式对象的标志组成。

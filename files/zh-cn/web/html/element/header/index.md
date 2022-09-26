@@ -1,12 +1,8 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - HTML
-  - HTML sections
-  - 元素
-translation_of: Web/HTML/Element/header
 ---
+
 {{HTMLRef}}
 
 **HTML `<header>` 元素**用于展示介绍性内容，通常包含一组介绍性的或是辅助导航的实用元素。它可能包含一些标题元素，但也可能包含其他元素，比如 Logo、搜索框、作者名称，等等。

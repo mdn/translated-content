@@ -1,8 +1,8 @@
 ---
 title: 函數回傳值
 slug: Learn/JavaScript/Building_blocks/Return_values
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 我們將在本課程中討論最後一個基本概念，即關閉函數 - 回傳值。 有些函數在完成後沒有回傳重要值，但其他函數會，並且了解它們的值是什麼，如何在代碼中使用它們以及如何使自己的自定義函數返回有用值非常重要。 我們將在下面介紹所有這些內容。
@@ -14,10 +14,10 @@ translation_of: Learn/JavaScript/Building_blocks/Return_values
       <td>
         <p>
           Basic computer literacy, a basic understanding of HTML and CSS,
-          <a href="/en-US/docs/Learn/JavaScript/First_steps"
+          <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
             >JavaScript first steps</a
           >,
-          <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+          <a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions"
             >Functions — reusable blocks of code</a
           >.
         </p>
@@ -45,9 +45,9 @@ console.log(newString);
 // a new string with the replacement made
 ```
 
-We saw exactly this block of code in our first function article. We are invoking the [replace()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function on the `myText` string, and passing it two parameters — the substring to find, and the substring to replace it with. When this function completes (finishes running), it returns a value, which is a new string with the replacement made. In the code above, we are saving this return value as the value of the `newString` variable.
+We saw exactly this block of code in our first function article. We are invoking the [replace()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function on the `myText` string, and passing it two parameters — the substring to find, and the substring to replace it with. When this function completes (finishes running), it returns a value, which is a new string with the replacement made. In the code above, we are saving this return value as the value of the `newString` variable.
 
-If you look at the replace function MDN reference page, you'll see a section called [Return value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value). It is very useful to know and understand what values are returned by functions, so we try to include this information wherever possible.
+If you look at the replace function MDN reference page, you'll see a section called [Return value](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value). It is very useful to know and understand what values are returned by functions, so we try to include this information wherever possible.
 
 Some functions don't return a return value as such (in our reference pages, the return value is listed as `void` or `undefined` in such cases). For example, in the [displayMessage() function](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) we built in the previous article, no specific value is returned as a result of the function being invoked. It just makes a box appear somewhere on the screen — that's it!
 
@@ -55,7 +55,7 @@ Generally, a return value is used where the function is an intermediate step in 
 
 ### Using return values in your own functions
 
-To return a value from a custom function, you need to use ... wait for it ... the [return](/en-US/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
+To return a value from a custom function, you need to use ... wait for it ... the [return](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
 
 ```js
 function draw() {
@@ -147,7 +147,7 @@ Let's have a go at writing our own functions featuring return values.
 
     Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.
 
-    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.
+    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.
 
     If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
@@ -166,21 +166,21 @@ This exercise has brought up a couple of important points besides being a study 
 
 So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/Learn#Contact_us) to ask for help.
 
 ## See also
 
-- [Functions in-depth](/en-US/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
+- [Functions in-depth](/zh-TW/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 ## In this module
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

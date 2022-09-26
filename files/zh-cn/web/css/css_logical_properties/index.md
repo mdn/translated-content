@@ -1,15 +1,8 @@
 ---
 title: CSS 逻辑属性与值
 slug: Web/CSS/CSS_Logical_Properties
-tags:
-  - CSS
-  - CSS Logical Properies
-  - CSS 逻辑属性
-  - Reference
-  - 参考
-  - 概览
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
+
 {{CSSRef}}
 
 **CSS 逻辑属性与值**是 [CSS](/zh-CN/docs/Web/CSS) 的一个模块，其引入的属性与值能做从逻辑角度控制布局，而不是从物理、方向或维度来控制。

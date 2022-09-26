@@ -1,13 +1,8 @@
 ---
 title: 服务端网站编程的第一步
 slug: Learn/Server-side/First_steps
-tags:
-  - 初学者
-  - 学习
-  - 服务端编程
-  - 脚本编程
-translation_of: Learn/Server-side/First_steps
 ---
+
 {{LearnSidebar}}在我们的服务端编程板块中，我们回答了服务端编程的一系列基础问题—“它是什么？”，“它和客户端编程的区别是什么？”，还有“为什么它是有价值的？”。然后我们提供了对几个最受欢迎的服务端 Web 框架的概览，同时还有对如何选择最适合的框架来创建你第一个网站的指导。最后我们提供了一篇从高层次介绍 Web 服务器安全的文章。
 
 ## 先决条件
@@ -17,7 +12,7 @@ translation_of: Learn/Server-side/First_steps
 你需要先知道“Web 如何工作”，我们推荐你首先阅读下面几个话题：
 
 - [什么是一个 Web 服务器？](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
-- [建立一个网站需要什么软件？](/en-US/docs/Learn/Common_questions/What_software_do_I_need)
+- [建立一个网站需要什么软件？](/zh-CN/docs/Learn/Common_questions/What_software_do_I_need)
 - [如何向 Web 服务器上传文件？](/zh-CN/docs/Learn/Common_questions/Upload_files_to_a_web_server)
 
 有了这些基础知识，你已经准备好开始这些模块的学习了。

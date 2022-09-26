@@ -11,6 +11,7 @@ tags:
   - Web Performance
 translation_of: Web/API/Navigator
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`Navigator`** représente l'état et l'identité de l'agent utilisateur courant. Elle permet aux scripts de consulter ces informations et de s'enregistrer en vue de certaines activités.
@@ -146,10 +147,8 @@ _Cette interface n'hérite d'aucune méthode mais implémente celles définies p
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#the-navigator-object', 'the Navigator object')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator")}}
+{{Compat}}

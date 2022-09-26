@@ -1,11 +1,11 @@
 ---
 title: <progress>：进度指示元素
 slug: Web/HTML/Element/progress
-translation_of: Web/HTML/Element/progress
 ---
+
 ## 概述
 
-**HTML**中的**`<progress>`**元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
+**HTML**中的 **`<progress>`** 元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
 
 {{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
@@ -34,7 +34,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 ## 属性
 
-和其他的 HTML 元素一样，该元素具有[全局属性](/zh-cn/HTML/Global_attributes).
+和其他的 HTML 元素一样，该元素具有[全局属性](/zh-CN/HTML/Global_attributes).
 
 - {{ htmlattrdef("max") }}
   - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
@@ -45,7 +45,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 ## DOM 接口
 
-该元素实现了[`HTMLProgressElement`](/zh-cn/DOM/HTMLProgressElement)接口。
+该元素实现了[`HTMLProgressElement`](/zh-CN/DOM/HTMLProgressElement)接口。
 
 ## 例子
 

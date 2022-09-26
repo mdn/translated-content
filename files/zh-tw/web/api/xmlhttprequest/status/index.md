@@ -1,13 +1,13 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.status** 屬性根據 XMLHttpRequest 的回應傳回數值化的狀況編碼。狀況編碼為一正短整數（`unsigned short）。`Before the request is complete, the value of `status` will be `0`. It is worth noting that browsers report a status of 0 in case of XMLHttpRequest errors too.
 
-The status codes returned are the standard [HTTP status codes](/en-US/docs/Web/HTTP/Response_codes). For example, `status` `200` denotes a successful request. If the server response doesn't explicitly specify a status code, `XMLHttpRequest.status` will assume the default value of `200`.
+The status codes returned are the standard [HTTP status codes](/zh-TW/docs/Web/HTTP/Response_codes). For example, `status` `200` denotes a successful request. If the server response doesn't explicitly specify a status code, `XMLHttpRequest.status` will assume the default value of `200`.
 
 ## Example
 
@@ -44,8 +44,8 @@ xhr.send(null);
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.status")}}
+{{Compat}}
 
 ## See also
 
-- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- List of [HTTP response codes](/zh-TW/docs/Web/HTTP/Response_codes)

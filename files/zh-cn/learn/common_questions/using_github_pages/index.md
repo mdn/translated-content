@@ -1,14 +1,8 @@
 ---
 title: 应该如何使用 Github Pages?
 slug: Learn/Common_questions/Using_Github_pages
-tags:
-  - GitHub
-  - Web
-  - git
-  - 初学者
-  - 指导
-translation_of: Learn/Common_questions/Using_Github_pages
 ---
+
 [GitHub](https://github.com/)是一个“公共编码”网站。它允许您上传代码存储库并存储在 [Git](http://git-scm.com/) 版本控制系统上。然后，您可以在代码项目上进行协作，默认情况下系统是开源的，这意味着世界上任何人都可以找到您的 GitHub 代码，使用它，从中学习，并改进它。同样的，对于其他人的代码您也可以这么做！本文提供了一个基本的指南，即使用 Github 的 gh-pages 功能发布内容。
 
 ## 发布内容
@@ -85,7 +79,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
     git push -u origin master
     ```
 
-4. 现在你需要为你的仓库创建一个 gh-pages 分支;刷新当前页面，您将看到一个类似下面的存储库页面。您需要点击**Branch：master**按钮，在文本输入框中输入 gh-pages，然后按蓝色按钮，即创建分支**_Create branch: gh-pages_**。这将创建一个特殊的代码分支，称为 gh-pages，该分支会在特殊位置发布。它的 URL 采用 username.github.io/my-repository-name 的格式，所以在我的例子中，URL 是 https\://chrisdavidmills.github.io/my-repository。显示的页面是 index.html 页面。
+4. 现在你需要为你的仓库创建一个 gh-pages 分支;刷新当前页面，您将看到一个类似下面的存储库页面。您需要点击**Branch：master**按钮，在文本输入框中输入 gh-pages，然后按蓝色按钮，即创建分支**_Create branch: gh-pages_**。这将创建一个特殊的代码分支，称为 gh-pages，该分支会在特殊位置发布。它的 URL 采用 `https://username.github.io/my-repository-name` 的格式，所以在我的例子中，URL 是 `https://chrisdavidmills.github.io/my-repository`。显示的页面是 index.html 页面。
     ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
 5. 在新的浏览器标签中浏览您的 GitHub Pages 的网址，您将能够在线访问您的网站！通过电子邮件把地址发送给你的朋友，炫耀你的掌握的成果吧。
 

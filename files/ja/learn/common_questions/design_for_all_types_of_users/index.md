@@ -1,15 +1,6 @@
 ---
 title: どうすればすべての種類のユーザーのためにデザインすることができるか？
 slug: Learn/Common_questions/Design_for_all_types_of_users
-tags:
-  - Accessibility
-  - Beginner
-  - Design
-  - Example
-  - Intro
-  - Mobile
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/Design_for_all_types_of_users
 ---
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
@@ -144,7 +135,7 @@ span.subheading { font-size:1rem; } /* 元のサイズ */
 - フォントを `rem` 単位で記述すると、ほとんどのブラウザーはとても満足するはずです。
 - 古いブラウザーには、自身の内部エンジンでフォントを表示させましょう。ブラウザーのエンジンは、CSS のプロパティや 値に対応できない場合は無視するので、デザイナーのビジョンに忠実でなくても、ウェブサイトが使用できるようになります。古いブラウザーは、いずれは消えていくものです。
 
-> **Note:** ご使用のブラウザによって異なるかもしれません。古いブラウザーに合わせなければならない場合は、 `em` を使用し、もう少し計算する必要があります。
+> **Note:** ご使用のブラウザーによって異なるかもしれません。古いブラウザーに合わせなければならない場合は、 `em` を使用し、もう少し計算する必要があります。
 
 ### 行の長さ
 

@@ -1,15 +1,11 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
-tags:
-  - SVG
-  - SVG 属性
-  - 需要实例
-translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
 
-有时候，通常我们使用 {{ SVGAttr("viewBox") }} 属性时，希望图形拉伸占据整个视口。 在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例。
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+
+有时候，通常我们使用 {{ SVGAttr("viewBox") }} 属性时，希望图形拉伸占据整个视口。在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例。
 
 `preserveAspectRatio`属性表示是否强制进行统一缩放。
 
@@ -38,7 +34,7 @@ translation_of: Web/SVG/Attribute/preserveAspectRatio
     - **xMidYMax** - 强制统一缩放。将 SVG 元素的 viewbox 属性的 X 的中点值与视图的 X 的中点值对齐。将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。
     - **xMaxYMax** - 强制统一缩放。将 SVG 元素的 viewbox 属性的 X 的最小值 + 元素的宽度与视图的 X 的最大值对齐。将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。
 - \<meetOrSlice>
-  - : `<meetOrSlice>` 是可选的，如果提供的话， 与 `<align>` 间隔一个或多个的空格 ，参数所选值必须是以下值之一：
+  - : `<meetOrSlice>` 是可选的，如果提供的话，与 `<align>` 间隔一个或多个的空格，参数所选值必须是以下值之一：
 
     - **meet** (默认值) - 图形将缩放到：
 

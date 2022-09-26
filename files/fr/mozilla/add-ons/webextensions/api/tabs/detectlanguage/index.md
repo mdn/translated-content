@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
+
 {{AddonSidebar()}}
 
 Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
@@ -58,7 +59,7 @@ browser.browserAction.onClicked.addListener(function() {
 });
 ```
 
-Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs") :
+Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions)) :
 
 ```js
 function onLanguageDetected(url, lang) {

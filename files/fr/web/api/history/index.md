@@ -6,6 +6,7 @@ tags:
   - HTML-DOM
 translation_of: Web/API/History
 ---
+
 {{APIRef}}
 
 L'interface **`History`** permet de manipuler l'historique de navigation du navigateur, soit la liste des pages visitées au sein de l'onglet ou fenêtre ou cadre dans lequelle la page actuelle est ouverte.
@@ -57,14 +58,11 @@ _L‘interface `History`_ _n‘hérite d‘aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                        | Etat                             | Commentaire                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#history-0", "History")}}                 | {{Spec2('HTML WHATWG')}} | Conforme à {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Voir aussi
 

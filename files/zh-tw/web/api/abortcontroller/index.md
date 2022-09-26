@@ -1,8 +1,8 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
-translation_of: Web/API/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortController`** 介面代表一個控制器物件，讓你可以在需要時中斷一個或多個 DOM 請求。
@@ -66,7 +66,7 @@ function fetchVideo() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.AbortController")}}
+{{Compat}}
 
 ## 參見
 

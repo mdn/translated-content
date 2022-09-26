@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-timing-function`** définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.
@@ -246,6 +247,6 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - L'API JavaScript {{domxref("AnimationEvent")}}

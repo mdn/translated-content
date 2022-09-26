@@ -1,13 +1,13 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{CSSRef}} {{ SeeCompatTable() }}
 
 ## 概要
 
-**`animation-iteration-count`** [CSS](/en/CSS) 属性 定义动画在结束前运行的次数 可以是 1 次 无限循环。
+**`animation-iteration-count`** [CSS](/zh-CN/CSS) 属性 定义动画在结束前运行的次数 可以是 1 次 无限循环。
 
 如果指定了多个值，每次播放动画时，将使用列表中的下一个值，在使用最后一个值后循环回第一个值。
 
@@ -44,7 +44,7 @@ animation-iteration-count: 2, 0, infinite;
 
 ## 示例
 
-去看 [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
+去看 [CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
 
 ## 规范
 
@@ -56,5 +56,5 @@ animation-iteration-count: 2, 0, infinite;
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

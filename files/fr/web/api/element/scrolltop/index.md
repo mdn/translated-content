@@ -3,6 +3,7 @@ title: Element.scrollTop
 slug: Web/API/Element/scrollTop
 translation_of: Web/API/Element/scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.scrollTop`** permet d'obtenir ou de définir le nombre de pixels sur lesquels le contenu a défilé verticalement.
@@ -75,13 +76,11 @@ button.onclick = function () {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollTop")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,11 @@
 ---
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
+
 {{AddonSidebar}}
 
-有两种方式可以让浏览器扩展与系统剪贴板交互：{{domxref("Document.execCommand()")}} 方法以及现代的异步的 [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
+有两种方式可以让浏览器扩展与系统剪贴板交互：{{domxref("Document.execCommand()")}} 方法以及现代的异步的 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API).
 
 {{domxref("Document.execCommand()")}} 方法常通过以下指令使用：
 
@@ -74,7 +74,7 @@ browser.alarms.onAlarm.addListener(copy);
 "document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
 ```
 
-为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。
+为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。
 
 ### 使用 Clipboard API
 
@@ -117,7 +117,7 @@ function updateClipboard(newClip) {
 
 - 除了背景网页外，你可以在所有执行上下文中使用 execCommand 写入粘贴板。在 Firefox 中，你无法选择文本或将输入字段聚焦在后台页面中，因此无法使用 execCommand 从后台页面写入剪贴板。
 - 只有 version 51 以上才支持"clipboardWrite" 权限。
-- 从 version 57 开始，可以使用 [`clipboard.setImageData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) API 将图像复制到剪贴板。
+- 从 version 57 开始，可以使用 [`clipboard.setImageData()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) API 将图像复制到剪贴板。
 - 在 Firefox 633 中添加了对 Clipboard API {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} 方法的支持。
 - 当使用一个内容脚本，Clipboard API 只可用于 HTTPS 页。解决方法是，在内容脚本和后台脚本之间使用消息传递。
 
@@ -127,7 +127,7 @@ function updateClipboard(newClip) {
 
 ### 使用 execCommand()
 
-首先，你需要为扩展申请 `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。
+首先，你需要为扩展申请 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。
 
 假设你的 HTML 页面内容如下：
 
@@ -153,7 +153,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 剪贴板 API 的 {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} 和 {{domxref("Clipboard.read", "navigator.clipboard.read()")}} 方法让你从剪贴板读取任意文本或二进制数据。这让你从剪贴板访问数据无需将它们粘贴至一个可编辑的元素中。
 
-一旦你通过 [Permissions API](/en-US/docs/Web/API/Permissions_API) 获取了 `"clipboard-read"` 权限，你就可以轻松读取剪贴板：
+一旦你通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取了 `"clipboard-read"` 权限，你就可以轻松读取剪贴板：
 
 ```js
 navigator.clipboard.readText().then(clipText =>
@@ -164,4 +164,4 @@ navigator.clipboard.readText().then(clipText =>
 
 ### 特定浏览器注意事项
 
-Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/en-US/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
+Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。

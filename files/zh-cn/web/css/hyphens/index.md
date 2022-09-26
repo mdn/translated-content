@@ -1,8 +1,8 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -100,7 +100,7 @@ p.auto {
 
 ## Browser compatibility
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## See also
 

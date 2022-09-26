@@ -1,17 +1,11 @@
 ---
 title: 隐私与:visited 选择器
 slug: Web/CSS/Privacy_and_the_:visited_selector
-tags:
-  - CSS
-  - 伪类
-  - 安全
-  - 教程
-  - 选择器
-translation_of: Web/CSS/Privacy_and_the_:visited_selector
 ---
+
 {{cssref}}
 
-在大概 2010 年时，[CSS](/en-US/docs/Web/CSS) 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。
+在大概 2010 年时，[CSS](/zh-CN/docs/Web/CSS) 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。
 
 为了解决这个问题，{{ Gecko("2") }} 实现了一项隐私方面的更新，限制网站可以从访问过的链接中获得的信息。其他的浏览器也已经做了相同的改变。
 
@@ -33,11 +27,11 @@ translation_of: Web/CSS/Privacy_and_the_:visited_selector
 - {{ cssxref("outline-color") }}
 - `fill` 和 `stroke` 属性的颜色部分
 
-此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](</en-US/docs/Web/CSS/color_value#rgba()>)、[`hsla()`](</en-US/docs/Web/CSS/color_value#hsla()>)或是 [`transparent`](/en-US/docs/Web/CSS/color_value#transparent) 关键词。
+此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](/zh-CN/docs/Web/CSS/color_value/rgba)、[`hsla()`](/zh-CN/docs/Web/CSS/color_value/hsla)或是 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 关键词。
 
 这是一个使用被限样式的例子：
 
-```plain
+```css
 :link {
    outline: 1px dotted blue;
    background-color: white;

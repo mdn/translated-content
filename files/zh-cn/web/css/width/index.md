@@ -1,16 +1,11 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - 参考
-  - 大小
-  - 宽度
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
-**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/en-US/docs/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)的宽度。
+**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-CN/docs/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)的宽度。
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -40,8 +35,8 @@ width: unset;
 
 `width` 属性也指定为：
 
-- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width$edit#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width$edit#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width$edit#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width$edit#auto)。
-- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width$edit#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width$edit#%3Cpercentage%3E)。
+- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width#auto)。
+- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width#%3Cpercentage%3E)。
 
 ### 值
 

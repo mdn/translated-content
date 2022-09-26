@@ -1,8 +1,8 @@
 ---
 title: 為彈跳彩球添增其他功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
@@ -77,8 +77,8 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 此函式的功能與 `Ball()` 的 `draw()` 函式相同，就是在 canvas 上繪製物件實體；且運作的方式也類似，所以你可以複製 `Ball.prototype.draw` 定義來開始。接著要完成下列改變：
 
-- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) 與 [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) 更新成 [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 與 [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke) 即可辦到。
-- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼叫之後的某個地方設定 [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) 的值 (「3」就可以) 即可。
+- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fillStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fillStyle) 與 [`fill()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fill) 更新成 [`strokeStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 與 [`stroke()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/stroke) 即可辦到。
+- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginPath()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼叫之後的某個地方設定 [`lineWidth`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/lineWidth) 的值 (「3」就可以) 即可。
 
 #### `checkBounds()`
 
@@ -106,7 +106,7 @@ window.onkeydown = function(e) {
   }
 ```
 
-So when a key is pressed, the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
+So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
 
 - For a bonus point, let us know which keys the specified keycodes map to.
 - For another bonus point, can you tell us why we've had to set `var _this = this;` in the position it is in? It is something to do with function scope.

@@ -3,6 +3,7 @@ title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
 translation_of: Web/API/IDBDatabase/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`transaction`** de l'interface {{domxref("IDBDatabase")}} renvoie une {{domxref("IDBTransaction","transaction")}} sur laquelle on peut appeler la méthode {{domxref("IDBTransaction.objectStore")}} pour accéder aux magasins d'objets de la base de donnée.
@@ -172,15 +173,13 @@ var objectStore = transaction.objectStore("toDoList");
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                                                                    | Statut                       | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.transaction")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 背景
-  - 参考
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}
 
 **`background`** 是一种 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。
@@ -40,15 +35,15 @@ background: no-repeat center/80% url("../img/image.png");
 
 - 在每一层中，下列的值可以出现 0 次或 1 次：
 
-  - [`<attachment>`](#<attachment>)
-  - [`<bg-image>`](#<bg-image>)
-  - [`<position>`](#<position>)
-  - [`<bg-size>`](#<bg-size>)
-  - [`<repeat-style>`](#<repeat-style>)
+  - [`<attachment>`](#attachment)
+  - [`<bg-image>`](#bg-image)
+  - [`<position>`](#position)
+  - [`<bg-size>`](#bg-size)
+  - [`<repeat-style>`](#repeat-style)
 
-- [`<bg-size>`](#<bg-size>) 只能紧接着 [`<position>`](#<position>) 出现，以"/"分割，如： "`center/80%`".
-- [`<box>`](#<box>) 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxref("background-origin")}} 和 {{cssxref("background-clip")}}。如果出现 2 次，第一次的出现设置 {{cssxref("background-origin")}}，第二次的出现设置 {{cssxref("background-clip")}}。
-- [`<background-color>`](#<background-color>) 只能被包含在最后一层。
+- [`<bg-size>`](#bg-size) 只能紧接着 [`<position>`](#position) 出现，以"/"分割，如： "`center/80%`".
+- [`<box>`](#box) 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxref("background-origin")}} 和 {{cssxref("background-clip")}}。如果出现 2 次，第一次的出现设置 {{cssxref("background-origin")}}，第二次的出现设置 {{cssxref("background-clip")}}。
+- [`<background-color>`](#background-color) 只能被包含在最后一层。
 
 > **备注：** {{cssxref("background-color")}} 只能在 background 的最后一个属性上定义，因为整个元素只有一种背景颜色。
 
@@ -110,7 +105,7 @@ background: no-repeat center/80% url("../img/image.png");
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background")}}
+{{Compat}}
 
 ## 参见
 

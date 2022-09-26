@@ -1,12 +1,8 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - 参考
-  - 头部
-translation_of: Web/HTTP/Headers/TE
 ---
+
 {{HTTPSidebar}}
 
 **`TE`** 请求型头部用来指定用户代理希望使用的传输编码类型。(可以将其非正式称为 _`Accept-Transfer-Encoding`_， 这个名称显得更直观一些)。

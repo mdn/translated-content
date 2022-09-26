@@ -1,8 +1,8 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
-translation_of: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **CSSStyleSheet.insertRule()** 方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些[限制](#Restrictions).
@@ -22,7 +22,7 @@ stylesheet.insertRule(rule[, index])
 ### Parameters
 
 - **rule**
-  - : **一個 {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（ [selector](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors) ）和样式聲明，或 at 標識符 (at-identifier ) 和規則內容。**
+  - : **一個 {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（ [selector](/zh-TW/docs/Web/Guide/CSS/Getting_Started/Selectors) ）和样式聲明，或 at 標識符 (at-identifier ) 和規則內容。**
 - **index {{optional_inline}}**
   - : **無符號整數，代表在 **{{domxref("CSSStyleSheet")}}.cssRules中插入的位置，其中 index-0 是第一個規則，而 index-max 就是最後一個規則，並且與 CSSStyleSheet 的長度相同。cssRules 在舊的實現中是必需的。查詢「瀏覽器兼容」取得詳細信息。 默認值為 0。
 
@@ -108,7 +108,7 @@ function addStylesheetRules (rules) {
 
 ## Browser compatibility
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ## See also
 

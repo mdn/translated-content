@@ -1,14 +1,11 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
+
 {{jsSidebar("Statements")}}
 
-**`throw`语句**用来抛出一个用户自定义的异常。当前函数的执行将被停止（`throw`之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个[`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)块。如果调用者函数中没有`catch`块，程序将会终止。
+**`throw`** **语句**用来抛出一个用户自定义的异常。当前函数的执行将被停止（`throw` 之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用者函数中没有 `catch` 块，程序将会终止。
 
 {{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
@@ -31,7 +28,7 @@ throw 42;       // 抛出了一个值为整数 42 的异常
 throw true;     // 抛出了一个值为 true 的异常
 ```
 
-注意`throw`语句同样受到[自动分号插入（ASI](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
+注意`throw`语句同样受到[自动分号插入（ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
 
 ## 示例
 
@@ -161,4 +158,4 @@ try {
 
 ## 相关链接
 
-- [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)

@@ -1,12 +1,8 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/507
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议的 **`507 Insufficient Storage`** 响应状态码 可以在 WebDAV 协议（基于 web 的分布式创作和版本控制，参见 [RFC 4918](https://tools.ietf.org/html/rfc4918)）中给出。

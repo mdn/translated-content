@@ -1,21 +1,15 @@
 ---
 title: 使用 templates and slots
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - HTML slot
-  - HTML template
-  - HTML5
-  - Web Components
-  - shadow dom
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web 组件的 shadow DOM 的模板。
 
 ## 关于模板 (Templates)
 
-当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。 此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。
+当您必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。
 
 让我们看一个简单的示例：
 
@@ -25,7 +19,7 @@ translation_of: Web/Web_Components/Using_templates_and_slots
 </template>
 ```
 
-上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中， 如下面的代码：
+上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中，如下面的代码：
 
 ```js
 let template = document.getElementById('my-paragraph');
@@ -37,7 +31,7 @@ document.body.appendChild(templateContent);
 
 ## 在 Web Components 中使用模板
 
-模板 (Templates) 本身就是有用的， 而与 web 组件 (web component) 一起使用效果更好。我们定义一个 web 组件使用模板作为阴影 (shadow) DOM 的内容，叫它 `<my-paragraph>`：
+模板 (Templates) 本身就是有用的，而与 web 组件 (web component) 一起使用效果更好。我们定义一个 web 组件使用模板作为阴影 (shadow) DOM 的内容，叫它 `<my-paragraph>`：
 
 ```js
 customElements.define('my-paragraph',
@@ -55,7 +49,7 @@ customElements.define('my-paragraph',
 
 要注意的关键是我们使用{{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。
 
-因为我们添加了模板的内容到 shadow DOM， 所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的 DOM 中是不起作用的。
+因为我们添加了模板的内容到 shadow DOM，所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的 DOM 中是不起作用的。
 
 比如：
 
@@ -78,7 +72,7 @@ customElements.define('my-paragraph',
 <my-paragraph></my-paragraph>
 ```
 
-> **备注：** 模板在浏览器中的支持情况很好， Firefox（版本 63 及以上），Chrome，Opera ,Edge（版本 79 及以上）和 Safari 支持 Shadow DOM
+> **备注：** 模板在浏览器中的支持情况很好，Firefox（版本 63 及以上），Chrome，Opera ,Edge（版本 79 及以上）和 Safari 支持 Shadow DOM
 
 ## 使用槽 (slots) 添加灵活度
 
@@ -94,7 +88,7 @@ customElements.define('my-paragraph',
 
 如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则`<my-paragraph>`仅包含后备内容"My default text"。(译者注：此处的意思是使用\<my-paragraph>时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)
 
-要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。 和以前一样，它可以是您喜欢的任何东西，例如：
+要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是您喜欢的任何东西，例如：
 
 ```html
 <my-paragraph>
@@ -119,9 +113,9 @@ customElements.define('my-paragraph',
 
 这就我们普通的例子，你想更深入了解你可以 [在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template) (也可以看 [在线运行](https://mdn.github.io/web-components-examples/simple-template/))。
 
-## 更深入的例子
+## 更深入的示例
 
-为了更好的结束这篇文章，我们来个看一些不寻常的例子。
+为了更好的结束这篇文章，我们来个看一些不寻常的示例。
 
 下面的一组代码段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 去完成：
 
@@ -223,9 +217,9 @@ customElements.define('element-details',
 
 关于以上代码片段，请注意以下几点：
 
-- 该代码片段有 2 个 **`<element-details>` **标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
+- 该代码片段有 2 个 **`<element-details>`** 标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
 - 只有第一个 **`<element-details>`** 元素 引用了名为 `"attributes"` 的槽，而第二个 `<element-details>` 标签没有引用名为`"attributes"`的槽。
-- 只有第一个 **`<element-details>` **标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
+- 只有第一个 **`<element-details>`** 标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
 
 ### 添加一些最终的样式
 
@@ -246,15 +240,15 @@ body { margin-top: 47px }
 
 最后，让我们所有的代码片段结合在一起，看看渲染的结果是什么样的。
 
-{{ EmbedLiveSample('结果', '300','400','https://mdn.mozillademos.org/files/14553/element-details.png','') }}
+{{ EmbedLiveSample('更深入的示例', '300','400','element-details.png','') }}
 
 关于结果请注意以下几点：
 
-- 即使 **`<element-details>` **标签并没有直接使用`"details"`标签元素，但是在渲染的时候使用了`"details"`标签，是因为 shadow root 使得他们被填充。
+- 即使 **`<element-details>`** 标签并没有直接使用`"details"`标签元素，但是在渲染的时候使用了`"details"`标签，是因为 shadow root 使得他们被填充。
 - 在渲染出来的`"details"`标签，**`<element-details>`** 标签从根开始填充了相应的命名的槽。换言之，**`<element-details>`** 的 DOM 树和 shadow root 的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，属性标题会自动的从 shadow root 中添加到名为`"attribute"`的插槽的前面。
 - 因为第一个 **`<element-details>`** 标签的`"dl"`元素就明确的引用了名为`"attributes"`的插槽，所以该`"dl"`元素的内容将会替换该标签中名为`"attributes"`的插槽。
-- 因为第二个 **`<element-details>`**标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
+- 因为第二个 **`<element-details>`** 标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
 
 ```html hidden
 <!DOCTYPE html>

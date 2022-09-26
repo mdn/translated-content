@@ -1,13 +1,9 @@
 ---
 title: stdDeviation
 slug: Web/SVG/Attribute/stdDeviation
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stdDeviation
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `stdDeviation` 属性定义了模糊操作的标准差。如果列出两个 [\<number>](/zh-CN/docs/SVG/Content_type#Number)，第一个数字表示沿着 x 轴的标准差值，第二个值表示沿着 y 轴的标准差值。如果只出现一个数字，那个值就表示在 x 轴和 y 轴上有着相同的标准差。
 

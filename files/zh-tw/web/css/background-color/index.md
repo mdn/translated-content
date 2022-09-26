@@ -1,11 +1,11 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
-**`background-color`** [CSS](/en/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
+**`background-color`** [CSS](/zh-TW/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
 
 ## 語法
 
@@ -78,8 +78,8 @@ background-color: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## 延伸閱讀
 
-- [複數背景](/en/CSS/Multiple_backgrounds)
+- [複數背景](/zh-TW/CSS/Multiple_backgrounds)

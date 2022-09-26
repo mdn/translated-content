@@ -2,6 +2,7 @@
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `ChannelMergerNode` 接口，经常与其对应的 {{domxref("ChannelSplitterNode")}} 接口一起使用，将不同的单声道输入重新组合成单个输出。每个输入用于填充输出的一个通道。这对于分别访问每个通道非常有用，例如，执行通道混合时，必须在每个信道上单独控制增益。
@@ -44,15 +45,15 @@ slug: Web/API/ChannelMergerNode
 
 ## 属性
 
-_没有具体属性；从其父级继承属性，_ _{{domxref("AudioNode")}}。_
+_没有具体属性；从其父级继承属性，{{domxref("AudioNode")}}。_
 
 ## 方法
 
-_没具体方法; 从其父级继承方法,_ _{{domxref("AudioNode")}}。_
+_没有具体方法；从其父级继承方法，{{domxref("AudioNode")}}。_
 
 ## 例子
 
-{{page("/zh-CN/docs/Web/API/AudioContext/createChannelMerger","（举个）栗（例）子")}}
+参见 [`BaseAudioContext.createChannelMerger()`](/zh-CN/docs/Web/API/BaseAudioContext/createChannelMerger#示例) 以获取示例代码。
 
 ## 规格
 
@@ -60,7 +61,7 @@ _没具体方法; 从其父级继承方法,_ _{{domxref("AudioNode")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.ChannelMergerNode")}}
+{{Compat}}
 
 ## 参见
 

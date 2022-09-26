@@ -1,8 +1,8 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-translation_of: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`409 Conflict`** 表示請求與伺服器目前狀態衝突

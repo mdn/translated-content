@@ -2,6 +2,7 @@
 title: transform-function
 slug: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 **`<transform-function>`** CSS 数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。
@@ -538,7 +539,7 @@ rotateY(a)
 
 旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。
 
-`rotateZ(a) `是 `rotate3D(0, 0, 1, a)` 的简写形式。
+`rotateZ(a)` 是 `rotate3D(0, 0, 1, a)` 的简写形式。
 
 > **备注：** 与平面上的旋转相反，3D 旋转的组成通常也是不可交换顺序的；这意味着旋转的应用顺序至关重要。
 
@@ -1359,7 +1360,7 @@ translate3d(tx, ty, tz)
 
 ![](/@api/deki/files/5972/=transform-functions-translateX_2.png) `translateX()` 这个 CSS 函数用于在平面上水平移动元素。这个转换的特点是 {{cssxref("&lt;length&gt;")}} 定义了它的水平移动量。
 
-`translateX(tx)` 是 `translate(tx, 0) `的简写形式。
+`translateX(tx)` 是 `translate(tx, 0)` 的简写形式。
 
 #### 语法
 
@@ -1515,11 +1516,11 @@ translateY(t)
 
 `translateZ()` 这个 CSS 函数用于 3D 空间的 z 轴方向移动元素，这个转换的特点是通过 {{cssxref("&lt;length&gt;")}} 定义了它的 z 轴方向移动量。
 
-`translateZ(tz)` 是 `translate3d(0, 0, tz) `的简写形式。
+`translateZ(tz)` 是 `translate3d(0, 0, tz)` 的简写形式。
 
 #### 语法
 
-```
+```js
 translateZ(t)
 ```
 

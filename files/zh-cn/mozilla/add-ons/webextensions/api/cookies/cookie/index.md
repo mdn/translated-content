@@ -1,8 +1,8 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
+
 {{AddonSidebar()}}
 
 The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
@@ -16,7 +16,7 @@ The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information 
 - `expirationDate`{{optional_inline}}
   - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
 - `firstPartyDomain`
-  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation).
+  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/zh-CN/Add-ons/WebExtensions/API/cookies#First-party_isolation).
 - `hostOnly`
   - : A `boolean`, `true` if the cookie is a host-only cookie (i.e. the request's host must exactly match the domain of the cookie), or `false` otherwise.
 - `httpOnly`
@@ -38,7 +38,7 @@ The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## 举例
 
@@ -66,7 +66,8 @@ gettingAll.then(logCookies);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +94,4 @@ gettingAll.then(logCookies);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

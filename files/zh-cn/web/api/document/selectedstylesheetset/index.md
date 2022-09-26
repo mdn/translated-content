@@ -2,6 +2,7 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 ---
+
 {{ APIRef("DOM") }}
 
 表示当前使用的样式表集合的名称

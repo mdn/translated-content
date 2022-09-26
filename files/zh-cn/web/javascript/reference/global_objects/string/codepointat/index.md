@@ -1,8 +1,8 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
+
 {{JSRef}}
 
 **`codePointAt()`** 方法返回 一个 Unicode 编码点值的非负整数。

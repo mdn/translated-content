@@ -9,6 +9,7 @@ tags:
   - Performance Web
 translation_of: Web/API/Performance_API/Using_the_Performance_API
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 Une exigence fondamentale de la performance web est une définition précise et cohérente du _temps._ Le type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (un `double`) est utilisé par toutes les interfaces de performance pour contenir de telles valeurs de temps.
@@ -70,12 +71,7 @@ function print_json() {
 
 ## Spécifications
 
-Les interfaces décrites dans ce document sont définies dans la norme `High Resolution Time` qui comporte deux niveaux :
-
-| Spécification                                    | Statut                                       | Commentaire                                                            |
-| ------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('Highres Time Level 2')}} | {{Spec2('Highres Time Level 2')}} | Ajout de l'attribut `performance` sur `Window` et `WorkerGlobalScope`. |
-| {{SpecName('Highres Time')}}             | {{Spec2('Highres Time')}}             | Définition initiale.                                                   |
+{{Specifications}}
 
 ## Interopérabilité
 

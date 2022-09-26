@@ -1,13 +1,8 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
+
 {{JSRef}}
 
 **Symbol.iterator** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环使用。
@@ -26,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-更多信息请参见[迭代协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+更多信息请参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
 ## 示例
 

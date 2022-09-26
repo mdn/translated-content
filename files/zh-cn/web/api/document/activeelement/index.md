@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 **`activeElement`** 只读属性，用来返回当前在 DOM 或者 shadow DOM 树中处于聚焦状态的{{domxref("Element")}}。

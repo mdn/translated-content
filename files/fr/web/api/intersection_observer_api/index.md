@@ -3,6 +3,7 @@ title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
 
 L'API _Intersection Observer_ permet d'observer de manière asynchrone l'évolution de l'intersection d'un élément cible avec un élément ancêtre ou avec la zone d'affichage d'un document de niveau supérieur.
@@ -364,7 +365,7 @@ Les constantes et variables que nous préparons sont :
 - `decreasingColor`
   - : De même, il s'agit d'une chaîne de caractères qui définit une couleur que nous appliquerons lorsque le ratio de visibilité diminue.
 
-On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement {{event("load")}} ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
+On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr//docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
 
 #### Création de l'observateur d'intersection
 
@@ -520,13 +521,11 @@ Vous pouvez consulter un exemple encore plus détaillé sur l'article _[Timing e
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

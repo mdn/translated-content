@@ -1,8 +1,8 @@
 ---
 title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical NOT (`!`) operator (logical complement, negation) takes truth to falsity and vice versa. It is typically used with {{jsxref("Boolean")}} (logical) values. When used with non-Boolean values, it returns `false` if its single operand can be converted to `true`; otherwise, returns `true`.
@@ -29,7 +29,7 @@ Examples of expressions that can be converted to false are:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-Even though the `!` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+Even though the `!` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 
 ## Examples
 
@@ -46,7 +46,7 @@ n4 = !'Cat'              // !t returns false
 
 ### Double NOT (`!!`)
 
-It is possible to use a couple of NOT operators in series to explicitly force the conversion of any value to the corresponding [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type). The conversion is based on the "truthyness" or "falsyness" of the value (see {{Glossary("truthy")}} and {{Glossary("falsy")}}).
+It is possible to use a couple of NOT operators in series to explicitly force the conversion of any value to the corresponding [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). The conversion is based on the "truthyness" or "falsyness" of the value (see {{Glossary("truthy")}} and {{Glossary("falsy")}}).
 
 The same conversion can be done through the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} function.
 

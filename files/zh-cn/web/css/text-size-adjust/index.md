@@ -1,12 +1,8 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - 参考
-  - 移动平台
-translation_of: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`text-size-adjust`** [CSS](/zh-CN/docs/Web/API/CSS) 控制将一些手机或平板设备上使用的文本溢出算法（text inflation algorithm）。其他类型的设备上的浏览器会忽略此属性。
@@ -40,7 +36,7 @@ text-size-adjust: unset;
 
 ## 语法
 
-`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#<percentage>)
+`text-size-adjust` 属性的值为 [`none`](#none), [`auto`](#auto)，或 [`<percentage>`](#percentage)
 
 ### 属性值
 
@@ -61,7 +57,7 @@ text-size-adjust: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-size-adjust")}}
+{{Compat}}
 
 \[1] There is a bug in older WebKit-based desktop browsers. If `-webkit-text-size-adjust` is explicitly set to `none`, older Webkit-based desktop browsers, instead of ignoring the property, will prevent the user from zooming in or out of the web page. See [Bug 56543](https://bugs.webkit.org/show_bug.cgi?id=56543) (affected Safari≤5 & Chrome≤26), [Bug 163359](https://code.google.com/p/chromium/issues/detail?id=163359), and [Bug 84186](https://bugs.webkit.org/show_bug.cgi?id=84186).
 

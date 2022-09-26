@@ -1,15 +1,12 @@
 ---
 title: 渐进式加载
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - PWA
-  - 渐进式加载
-translation_of: Web/Progressive_web_apps/Loading
 original_slug: Web/Progressive_web_apps/加载
 ---
-{{PreviousMenu("Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
-在前面的文章我们介绍了很多 API，例如：[Service Workers](en-US/docs/Web/Apps/Progressive/Offline_Service_workers),、[Web Manifests](/en-US/docs/Web/Apps/Progressive/Installable_PWAs)、[Notifications and Push](/en-US/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)，它们让我们的示例应用 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。
+{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+
+在前面的文章我们介绍了很多 API，例如：[Service Workers](en-US/docs/Web/Apps/Progressive/Offline_Service_workers),、[Web Manifests](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)、[Notifications and Push](/zh-CN/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)，它们让我们的示例应用 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。
 
 ## 首次有效渲染
 
@@ -107,11 +104,11 @@ article img {
 
 上面讨论的图片加载机制还不错：在 HTML 文档加载完成之后再开始加载图片，在加载过程中还提供了一个很漂亮的过渡效果。问题是，即使用户有可能只看前两张或者三张图片，它仍然会一次性加载所有的图片。
 
-这个问题可以用新的 [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) 来解决。通过这个 API，我们可以确保只有当图片出现在可见区域时，它才会被加载。
+这个问题可以用新的 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 来解决。通过这个 API，我们可以确保只有当图片出现在可见区域时，它才会被加载。
 
 ### Intersection Observer
 
-这是为上述可用示例提供的一个渐进增强功能：[Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) 只有在用户向下滚动页面，并且图片显示在屏幕上时，才会开始加载目标图片。
+这是为上述可用示例提供的一个渐进增强功能：[Intersection Observer](/zh-CN/docs/Web/API/Intersection_Observer_API) 只有在用户向下滚动页面，并且图片显示在屏幕上时，才会开始加载目标图片。
 
 这里有相关的代码示例：
 
@@ -155,10 +152,10 @@ if('IntersectionObserver' in window) {
 
 ## 结语
 
-这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) 学习了渐进式 Web 应用的的用法，包括 [PWA 介绍](/en-US/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/en-US/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/en-US/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://serviceworke.rs/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) 的有趣示例。
+这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) 学习了渐进式 Web 应用的的用法，包括 [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://serviceworke.rs/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的有趣示例。
 
 请随意试验这些代码，使用 PWA 的特性来让你现有的应用更加健壮，或者创作出一点新东西。相对于常规的 Web 应用，PWA 存在巨大的优势。
 
-{{PreviousMenu("Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

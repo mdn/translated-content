@@ -1,16 +1,8 @@
 ---
 title: Console.assert()
 slug: Web/API/console/assert
-tags:
-  - API
-  - DOM
-  - Debugging
-  - 函式
-  - 控制台
-  - 網頁控制台
-  - 網頁開發
-translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 如果斷言（assertion）為非（false），主控台會顯示錯誤訊息；如果斷言為是（true），則不發生任何事。

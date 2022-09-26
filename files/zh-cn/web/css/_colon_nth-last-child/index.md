@@ -1,12 +1,8 @@
 ---
 title: ':nth-last-child'
 slug: Web/CSS/:nth-last-child
-tags:
-  - ':nth-child'
-  - ':nth-last-child'
-  - 伪类
-translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 **`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素

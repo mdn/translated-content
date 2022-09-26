@@ -1,13 +1,8 @@
 ---
 title: altGlyph
 slug: Web/SVG/Element/altGlyph
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/altGlyph
 ---
+
 {{SVGRef}}
 
 `altGlyph`元素允许符号的复杂选区，用来呈现它的子字符数据。
@@ -22,11 +17,11 @@ translation_of: Web/SVG/Element/altGlyph
 
 ### 全局属性
 
-- [条件处理属性](/en-US/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en-US/SVG/Attribute#Core) »
-- [图形事件属性](/en-US/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en-US/SVG/Attribute#Presentation) »
-- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [XLink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -44,11 +39,11 @@ translation_of: Web/SVG/Element/altGlyph
 
 ## DOM 接口
 
-该元素实现了[`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement) 接口。
+该元素实现了[`SVGAltGlyphElement`](/zh-CN/docs/Web/API/SVGAltGlyphElement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.altGlyph")}}
+{{Compat}}
 
 ## 参见
 

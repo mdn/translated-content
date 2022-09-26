@@ -3,6 +3,7 @@ title: Crypto
 slug: Web/API/Crypto
 translation_of: Web/API/Crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 L'interface **`Crypto`** représente les fonctions cryptographiques de base dans notre contexte actuel. Elle permet d'accéder à de solides générateur de nombres aléatoires dédiés à la cryptographie ainsi qu'aux principales primitives cryptographiques.
@@ -25,9 +26,7 @@ _Cette interface implémente les méthodes définies dans {{domxref("RandomSourc
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definition initiale |
+{{Specifications}}
 
 ## Voir aussi
 

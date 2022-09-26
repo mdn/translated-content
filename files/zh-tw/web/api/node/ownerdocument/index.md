@@ -1,8 +1,8 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.ownerDocument`** 唯讀屬性會回傳一個此節點所屬的的頂層 `document` 物件。
@@ -35,4 +35,4 @@ The `document` object returned by this property is the main object with which al
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.ownerDocument")}}
+{{Compat}}

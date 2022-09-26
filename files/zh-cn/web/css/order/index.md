@@ -1,8 +1,8 @@
 ---
 title: order
 slug: Web/CSS/order
-translation_of: Web/CSS/order
 ---
+
 {{ CSSRef("CSS Flexible Boxes") }}
 
 ## 概述
@@ -67,7 +67,7 @@ order: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## 参考
 

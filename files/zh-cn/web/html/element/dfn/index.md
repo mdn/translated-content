@@ -1,8 +1,8 @@
 ---
 title: <dfn>
 slug: Web/HTML/Element/dfn
-translation_of: Web/HTML/Element/dfn
 ---
+
 ## 摘要
 
 _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
@@ -11,9 +11,9 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 >
 > - 被定义术语的值由下列规则确定：
 >
->   1.  如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
->   2.  否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 {{htmlattrxref("title", "abbr")}} 属性，那么该术语的值就是该属性的值。
->   3.  否则，`<dfn>` 元素的文本内容就是该术语的值。
+>   1. 如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
+>   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 {{htmlattrxref("title", "abbr")}} 属性，那么该术语的值就是该属性的值。
+>   3. 否则，`<dfn>` 元素的文本内容就是该术语的值。
 
 <table class="properties">
  <tbody>
@@ -71,7 +71,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '600', '150', '', 'Web/HTML/Element/dfn') }}
+{{ EmbedLiveSample('示例', '600', '150') }}
 
 ## 规范
 
@@ -79,7 +79,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dfn")}}
+{{Compat}}
 
 ## 相关链接
 

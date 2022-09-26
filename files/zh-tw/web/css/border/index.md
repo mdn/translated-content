@@ -1,27 +1,21 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Layout
-  - Reference
-translation_of: Web/CSS/border
 ---
+
 {{CSSRef("CSS Borders")}}
 
-**`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/CSS) 屬性可用來設定元素的邊框。它可以設定以下的值 {{Cssxref("border-width")}}、{{Cssxref("border-style")}} 以及 {{Cssxref("border-color")}}。
+**`border`** [shorthand](/zh-TW/docs/Web/CSS/Shorthand_properties) [CSS](/zh-TW/docs/CSS) 屬性可用來設定元素的邊框。它可以設定以下的值 {{Cssxref("border-width")}}、{{Cssxref("border-style")}} 以及 {{Cssxref("border-color")}}。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
-As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
+As with all shorthand properties, any omitted sub-values will be set to their [initial value](/zh-TW/docs/Web/CSS/initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
 
 The `border` shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.
 
 ### Borders vs. outlines
 
-Borders and [outlines](/en-US/docs/Web/CSS/outline) are very similar. However, outlines differ from borders in the following ways:
+Borders and [outlines](/zh-TW/docs/Web/CSS/outline) are very similar. However, outlines differ from borders in the following ways:
 
 - Outlines never take up space, as they are drawn outside of an element's content.
 - According to the spec, outlines don't have to be rectangular, although they usually are.
@@ -101,4 +95,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border")}}
+{{Compat}}

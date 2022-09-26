@@ -1,12 +1,8 @@
 ---
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
+
 {{JSRef}}
 
 **`add()`** 方法在 `WeakSet` 对象的最后一个元素后添加新的对象。

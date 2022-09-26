@@ -1,12 +1,8 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Landing
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly 是一種新的低階程式語言，可在今日的網頁瀏覽器中被執行 —— 它是低階的類組合語言，具有嚴謹的二進位格式，能以接近原生應用程式的效能執行，並提供如 C/C++ 等語言一個構建目標，使它們能在 Web 上被執行。他也被設計為可與 JavaScript 共存，允許兩者一同工作。

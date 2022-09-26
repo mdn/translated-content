@@ -1,8 +1,8 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef}}
 
 The **`Number.isNaN()`** method determines whether the passed value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust version of the original, global {{jsxref("isNaN", "isNaN()")}}.
@@ -69,7 +69,7 @@ Number.isNaN = Number.isNaN || function(value) {
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## See also
 

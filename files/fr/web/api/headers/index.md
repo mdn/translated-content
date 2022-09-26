@@ -12,6 +12,7 @@ tags:
   - Reference
 translation_of: Web/API/Headers
 ---
+
 {{APIRef("Fetch API")}}
 
 L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
@@ -89,15 +90,13 @@ mesHeaders = new Headers([
 mesHeaders.get('Content-Type') // doit retourner 'text/xml'
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristiques                                                 | Statut                   | Commentaires |
-| ---------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('Fetch','#headers-class','Headers')}} | {{Spec2('Fetch')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Headers")}}
+{{Compat}}
 
 ## Voir aussi
 

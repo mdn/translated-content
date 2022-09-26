@@ -1,8 +1,8 @@
 ---
 title: 索引集合
 slug: Web/JavaScript/Guide/Indexed_collections
-translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
@@ -25,7 +25,7 @@ var arr = [element0, element1, ..., elementN];
 
 `element0, element1, ..., elementN` is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's `length` property is set to the number of arguments.
 
-The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) for details.
+The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See [Array literals](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) for details.
 
 To create an array with non-zero length, but without any items, either of the following can be used:
 
@@ -154,7 +154,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-If you know that none of the elements in your array evaluate to `false` in a boolean context — if your array consists only of [DOM](/en-US/docs/DOM) nodes, for example, you can use a more efficient idiom:
+If you know that none of the elements in your array evaluate to `false` in a boolean context — if your array consists only of [DOM](/zh-TW/docs/DOM) nodes, for example, you can use a more efficient idiom:
 
 ```js
 var divs = document.getElementsByTagName('div');
@@ -436,7 +436,7 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 ### Arrays and regular expressions
 
-When an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, and {{jsxref("Global_Objects/String/split","String.split()")}}. For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+When an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, and {{jsxref("Global_Objects/String/split","String.split()")}}. For information on using arrays with regular expressions, see [Regular Expressions](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ### Working with array-like objects
 
@@ -462,7 +462,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 ## Typed Arrays
 
-[JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/en-US/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
+[JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/zh-TW/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
 
 ### Buffers and views: typed array architecture
 
@@ -476,10 +476,10 @@ The {{jsxref("ArrayBuffer")}} is a data type that is used to represent a generic
 
 ### Typed array views
 
-Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, the `Uint8ClampedArray`. It clamps the values between 0 and 255. This is useful for [Canvas data processing](/en-US/docs/Web/API/ImageData), for example.
+Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, the `Uint8ClampedArray`. It clamps the values between 0 and 255. This is useful for [Canvas data processing](/zh-TW/docs/Web/API/ImageData), for example.
 
 {{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
 
-For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
+For more information, see [JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

@@ -1,8 +1,8 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-translation_of: Web/HTML/Global_attributes/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`id` [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)**定义了一个全文档唯一的标识符 (ID)。它用于在链接（使用[片段](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#片段)）、脚本和样式（通过 {{glossary("CSS")}}）中辨识元素。

@@ -1,18 +1,8 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Property
-  - Read-only
-  - Screen Orientation
-  - screen
-browser-compat: api.Screen.orientation
-translation_of: Web/API/Screen/orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 **`orientation`** は {{DOMxRef("Screen")}} インターフェイスの読み取り専用プロパティで、現在の画面の向きを返します。

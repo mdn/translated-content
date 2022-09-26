@@ -1,13 +1,8 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Global attributes
-  - HTML
-  - 全局属性
-  - 参考
-translation_of: Web/HTML/Global_attributes/contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **警告：** [contextmenu](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) 属性已经过时，将从所有浏览器中删除。

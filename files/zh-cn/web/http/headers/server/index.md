@@ -1,13 +1,8 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - 安全
-  - 服务器
-  - 软件
-  - 首部
-translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 **`Server`** 首部包含了处理请求的源头服务器所用到的软件相关信息。

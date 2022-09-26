@@ -1,12 +1,12 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-translation_of: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`btoa()`** method creates a {{glossary("Base64")}}-encoded ASCII string from a [binary string](/en-US/docs/Web/API/DOMString/Binary) (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).
+The **`btoa()`** method creates a {{glossary("Base64")}}-encoded ASCII string from a [binary string](/zh-TW/docs/Web/API/DOMString/Binary) (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).
 
 You can use this method to encode data which may otherwise cause communication problems, transmit it, then use the {{domxref("atob()")}} method to decode the data again. For example, you can encode control characters such as ASCII values 0 through 31.
 
@@ -19,7 +19,7 @@ var encodedData = scope.btoa(stringToEncode);
 ### Parameters
 
 - `stringToEncode`
-  - : The [binary string](/en-US/docs/Web/API/DOMString/Binary) to encode.
+  - : The [binary string](/zh-TW/docs/Web/API/DOMString/Binary) to encode.
 
 ### Return value
 
@@ -105,5 +105,5 @@ You can use a polyfill from <https://github.com/MaxArt2501/base64-js/blob/master
 
 ## See also
 
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URIs](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - {{domxref("atob()")}}

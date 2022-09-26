@@ -1,11 +1,11 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
-**`match()` **方法检索返回一个字符串匹配正则表达式的结果。
+**`match()`** 方法检索返回一个字符串匹配正则表达式的结果。
 
 {{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 

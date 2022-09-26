@@ -2,6 +2,7 @@
 title: FileSystemEntry
 slug: Web/API/FileSystemEntry
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 The **`FileSystemEntry`** interface of the File and Directory Entries API represents a single in a file system. The entry can be a file or a directory (directories are represented by the {{domxref("DirectoryEntry")}} interface). It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about a file it points to—including the file name and its path from the root to the entry.
@@ -14,7 +15,7 @@ You don't create `FileSystemEntry` objects directly. Instead, you will receive a
 
 The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](#toURL). It also introduces a new URL scheme: `filesystem:`.
 
-You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.html5rocks.com`](http://www.html5rocks.com), open` filesystem:http://www.html5rocks.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
+You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.html5rocks.com`](http://www.html5rocks.com), open `filesystem:http://www.html5rocks.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
 ### Example
 
@@ -78,7 +79,7 @@ This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
-{{Compat("api.FileSystemEntry")}}
+{{Compat}}
 
 ## See also
 

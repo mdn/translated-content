@@ -1,13 +1,8 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
+
 {{JSRef}}
 
 **`RangeError`**物件在一個給定的值不在允許的集合或範圍內時被作為一個錯誤拋出
@@ -106,7 +101,7 @@ catch(error)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.RangeError")}}
+{{Compat}}
 
 ## 另見
 

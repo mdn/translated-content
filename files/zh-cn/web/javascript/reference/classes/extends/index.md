@@ -1,12 +1,8 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 **`extends`**关键字用于[类声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)或者[类表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)中，以创建一个类，该类是另一个类的子类。

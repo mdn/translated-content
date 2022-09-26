@@ -1,8 +1,8 @@
 ---
 title: 'Express 教程 5: 呈现图书馆数据'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其它资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
@@ -32,7 +32,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概览
 
-在我们先前的教程中，定义了可以用来跟资料库互动的 [Mongoose models](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose) ，并创建了一些初始的图书馆记录。我们接着[创建本地图书馆网站需要的所有路由](/en-US/docs/Learn/Server-side/Express_Nodejs/routes) ，但仅使用"空壳控制器" 函数（这些是骨架控制器函数，当一个网页被存取时，只回传一个"未实现" 信息）。
+在我们先前的教程中，定义了可以用来跟资料库互动的 [Mongoose models](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose) ，并创建了一些初始的图书馆记录。我们接着[创建本地图书馆网站需要的所有路由](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) ，但仅使用"空壳控制器" 函数（这些是骨架控制器函数，当一个网页被存取时，只回传一个"未实现" 信息）。
 
 下一步，是为这些显示图书馆信息的网页，提供适当的实现（我们将在后面的文章，聚焦网页表单的实现，像是创建、更新、删除信息）。这包含了更新控制器函数，以利用我们的模型获取记录，并定义模板，为用户显示这些信息。
 

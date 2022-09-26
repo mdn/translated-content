@@ -1,18 +1,16 @@
 ---
 title: 路徑
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - SVG
-translation_of: Web/SVG/Tutorial/Paths
 original_slug: Web/SVG/Tutorial/路径
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-[`<path>`](/en-US/Web/SVG/Element/path) 元件可說是 SVG 程式庫中最強大的[基本形狀](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
+[`<path>`](/zh-TW/Web/SVG/Element/path) 元件可說是 SVG 程式庫中最強大的[基本形狀](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
 
-路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用 XML 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。
+路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用 XML 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。
 
-path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考[基本形狀](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
+path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考[基本形狀](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
 
 Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (10, 10). The "Move to" command is called with the letter M. When the parser runs into this letter, it knows you want to move to a point. So, to move to (10,10) you would use the command "M 10 10". After that, the parser begins reading for the next command.
 
@@ -116,7 +114,7 @@ C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
 
 The last set of coordinates here (x,y) are where you want the line to end. The other two are control points. (x1,y1) is the control point for the start of your curve, and (x2,y2) is the control point for the end. The control points essentially describe the slope of your line starting at each point. The Bezier function then creates a smooth curve that transfers you from the slope you established at the beginning of your line, to the slope at the other end.
 
-![Cubic Bézier Curves with grid](https://mdn.mozillademos.org/files/10401/Cubic_Bezier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_b%C3%A9zier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +142,7 @@ S x2 y2, x y (or s dx2 dy2, dx dy)
 
 `S` produces the same type of curve as earlier, but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
-![ShortCut_Cubic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png)
+![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -158,7 +156,7 @@ The other type of Bezier curve, the quadratic curve called with Q, is actually a
 Q x1 y1, x y (or q dx1 dy1, dx dy)
 ```
 
-![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png)
+![Quadratic Bézier with grid](quadratic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +174,7 @@ This shortcut looks at the previous control point you used and infers a new one 
 
 > **備註：** This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
 
-![Shortcut_Quadratic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bezier_with_grid.png)
+![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_b%C3%A9zier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +193,7 @@ A rx ry x-axis-rotation large-arc-flag sweep-flag x y
 a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```
 
-At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/en-US/Web/SVG/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
+At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/zh-TW/Web/SVG/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
 
 The third parameter describes the rotation of the arc. This is best explained with an example:
 
@@ -260,6 +258,6 @@ The four different paths mentioned above are determined by the next two argument
 
 Arcs are an easy way to create pieces of circles or ellipses in your drawings. For instance, a pie chart would require a different arc for each piece.
 
-If you're transitioning to SVG from [Canvas](/en/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <http://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
+If you're transitioning to SVG from [Canvas](/zh-TW/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <http://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

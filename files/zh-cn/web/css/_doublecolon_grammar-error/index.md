@@ -1,8 +1,8 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
-translation_of: Web/CSS/::grammar-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 `::grammar-error 伪元素应用于浏览器标识为语法错误的文本段`
@@ -23,7 +23,7 @@ translation_of: Web/CSS/::grammar-error
 
 ## Browser compatibility
 
-{{Compat("css.selectors.grammar-error")}}
+{{Compat}}
 
 ## See also
 

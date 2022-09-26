@@ -1,12 +1,8 @@
 ---
 title: <base>：文档根 URL 元素
 slug: Web/HTML/Element/base
-tags:
-  - HTML
-  - 元素
-  - 文档
-translation_of: Web/HTML/Element/base
 ---
+
 {{HTMLRef}}
 
 **HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
@@ -62,7 +58,7 @@ translation_of: Web/HTML/Element/base
 
 ### 多个 `<base>` 元素
 
-如果指定了多个 `<base>` 元素，只会使用第一个 `href `和 `target `值，其余都会被忽略。
+如果指定了多个 `<base>` 元素，只会使用第一个 `href` 和 `target` 值，其余都会被忽略。
 
 ### 页内锚
 
@@ -96,4 +92,4 @@ translation_of: Web/HTML/Element/base
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.base")}}
+{{Compat}}

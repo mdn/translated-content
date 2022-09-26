@@ -1,13 +1,8 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - Error
-  - Exception
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`try...catch`**语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。

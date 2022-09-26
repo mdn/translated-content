@@ -1,8 +1,8 @@
 ---
 title: 种类细节页面
-slug: learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
+
 种类细节页面，需要利用`_id` 字段值 (自动生成) ，以呈现特定种类实例的信息。此页面应该呈现种类名称，各个种类的所有书本列表 (每本书都连结到书本的细节页面)。
 
 ## 控制器
@@ -14,7 +14,7 @@ var Book = require('../models/book');
 var async = require('async');
 ```
 
-找到导出的` genre_detail``() `控制器方法，并将其替换为以下代码。
+找到导出的 `genre_detail()` 控制器方法，并将其替换为以下代码。
 
 ```js
 // Display detail page for a specific Genre.

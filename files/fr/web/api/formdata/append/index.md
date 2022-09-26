@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou rajoute cette clé et cette valeur quand elle n'existe pas.
@@ -69,13 +70,11 @@ Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## Voir aussi
 

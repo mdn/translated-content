@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
@@ -194,7 +188,7 @@ Although host objects (such as DOM objects) are not required by spec to follow t
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,12 +1,8 @@
 ---
 title: 文本渲染
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - SVG
-  - zh-CN
-translation_of: Web/CSS/text-rendering
 ---
+
 {{ CSSRef() }}
 
 ## 概述

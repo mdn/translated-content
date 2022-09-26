@@ -1,15 +1,8 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - Ruby
-  - Web
-  - zh-Hans
-  - 汉字
-translation_of: Web/HTML/Element/ruby
 ---
+
 {{HTMLRef}}
 
 **HTML `<ruby>` 元素** 被用来展示东亚文字注音或字符注释。

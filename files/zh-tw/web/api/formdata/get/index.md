@@ -1,13 +1,13 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
-translation_of: Web/API/FormData/get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 的 **`get()`** 方法會返回 `FormData 物件中，`指定 key 值所對應之第一組物件中的 value 值 。然而，如果您想要獲得多組以及全部的 value ，那應該使用 {{domxref("FormData.getAll()","getAll()")}} 方法。
 
-**注意**: 這個方法已可以在 [Web Workers](/en-US/docs/Web/API/Web_Workers_API) 中使用。
+**注意**: 這個方法已可以在 [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API) 中使用。
 
 ## 語法
 
@@ -51,11 +51,11 @@ formData.get('username'); // Returns "Chris"
 
 ## 瀏覽器相容性
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## 延伸閱讀
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

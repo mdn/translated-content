@@ -1,13 +1,9 @@
 ---
 title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
-tags:
-  - API
-  - OpenPractices
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
-假如你的页面有[options page](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise对象`
+
+假如你的页面有[options page](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise` 对象。
 
 ## 语法
 
@@ -25,9 +21,9 @@ var openingPage = browser.runtime.openOptionsPage()
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.openOptionsPage")}}
+{{Compat}}
 
-## 例子
+## 示例
 
 当用户点击浏览器行为图标时，打开一个设置页面。
 
@@ -50,7 +46,8 @@ opening.then(onOpened, onError);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,4 +74,4 @@ opening.then(onOpened, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

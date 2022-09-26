@@ -1,13 +1,9 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/x
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性在用户坐标系统中标识了一个 x 轴坐标。本坐标的确切效果依赖于每个元素。大多数时候，它体现了引用元素的矩形区域的左上角的 x 轴坐标（请阅读每个元素的文档以了解例外情况）。
 
@@ -17,7 +13,7 @@ translation_of: Web/SVG/Attribute/x
 
 | 类别   | 无                                              |
 | ------ | ----------------------------------------------- |
-| 值     | [\<coordinate>](/en/SVG/Content_type#Coordinate) |
+| 值     | [\<coordinate>](/zh-CN/SVG/Content_type#Coordinate) |
 | 可变性 | Yes                                             |
 
 {{ page("/en/SVG/Content_type","coordinate") }}
@@ -26,7 +22,7 @@ translation_of: Web/SVG/Attribute/x
 
 下列元素可以使用`x`属性：
 
-- [滤镜元素](/en/SVG/Element#FilterPrimitive) »
+- [滤镜元素](/zh-CN/SVG/Element#FilterPrimitive) »
 - {{ SVGElement("altGlyph") }}
 - {{ SVGElement("fePointLight") }}
 - {{ SVGElement("feSpotLight") }}

@@ -35,9 +35,9 @@ Es por eso que generalmente es bueno leer primero un material introductorio para
 
 También es la razón por la que, a veces, puedes quedar realmente atrapado en un problema, pero luego averiguar la respuesta cuando vas a tomar un café (o a caminar). Podrías:
 
-1.  Saber cómo solucionar el problema A con la herramienta A.
-2.  Saber cómo solucionar el problema B con la herramienta B.
-3.  No saber cómo solucionar el problema C.
+1. Saber cómo solucionar el problema A con la herramienta A.
+2. Saber cómo solucionar el problema B con la herramienta B.
+3. No saber cómo solucionar el problema C.
 
 Supongamos que te enfocas en el problema C por un tiempo y te frustras porque no puedes encontrar la solución para resolverlo. Pero luego, después de caminar para tomar un poco de aire fresco, es posible que descubras que, mientras tu mente divaga, de repente estableces una conexión entre la herramienta A y la herramienta B, ¡y te das cuenta de que las puedes usar juntas para solucionar el problema C! No siempre es así de simple, pero también es sorprendente cuántas veces sucede. Esto también resalta la importancia de tomar descansos regulares cuando estás estudiando frente a la computadora.
 
@@ -230,7 +230,7 @@ Una habilidad importante para aprender es el arte de las búsquedas web efectiva
 A menudo es bastante obvio qué buscar. Por ejemplo:
 
 - Si deseas obtener más información sobre el diseño web receptivo, puedes buscar "diseño web receptivo".
-- Si deseas obtener más información sobre una característica tecnológica específica, como el elemento HTML `\<video>`, el `background-color` o las propiedades `opacity` de CSS, o el método `Date.setTime()` de JavaScript, debes buscar el nombre de la característica.
+- Si deseas obtener más información sobre una característica tecnológica específica, como el elemento HTML `<video>`, el `background-color` o las propiedades `opacity` de CSS, o el método `Date.setTime()` de JavaScript, debes buscar el nombre de la característica.
 - Si estás buscando información más específica, puedes agregar otras palabras clave como modificadores, por ejemplo, "atributo de reproducción automática de elementos \<video>" o "Parámetros Date.setTime".
 
 Si deseas buscar algo que tenga palabras de moda menos obvias, debes pensar en qué es más probable que te devuelva lo que deseas.

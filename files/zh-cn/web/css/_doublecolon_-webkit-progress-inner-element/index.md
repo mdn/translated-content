@@ -1,12 +1,8 @@
 ---
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
-tags:
-  - CSS
-  - 伪元素
-  - 非标准
-translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-progress-inner-element`** [CSS](/zh-CN/docs/Web/CSS) 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。
@@ -47,7 +43,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-inner-element")}}
+{{Compat}}
 
 ## 参考
 

@@ -1,13 +1,8 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
+
 {{JSRef}}**`Object.seal()`**方法封闭一个对象，阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要原来是可写的就可以改变。{{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
 ## 语法

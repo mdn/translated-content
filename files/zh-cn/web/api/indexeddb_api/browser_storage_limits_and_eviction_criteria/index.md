@@ -2,6 +2,7 @@
 title: IndexedDB 浏览器存储限制和清理标准
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 有许多 Web 技术可以在客户端（即本地磁盘上）存储这种或那种数据。浏览器计算分配给 Web 数据存储的空间大小以及达到该限制时要删除的内容的过程并不简单，并且浏览器之间有所不同。本文介绍了浏览器如何确定要清除的本地内容以及何时释放所需的本地存储空间。
@@ -89,5 +90,5 @@ slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 
 ## 参见
 
-- [在移动浏览器上使用配额](http://www.html5rocks.com/en/tutorials/offline/quota-research/)（[ Eiji Kitamura](http://blog.agektmr.com)著）：详细分析了移动浏览器上的客户端存储。
+- [在移动浏览器上使用配额](http://www.html5rocks.com/en/tutorials/offline/quota-research/)（[Eiji Kitamura](http://blog.agektmr.com)著）：详细分析了移动浏览器上的客户端存储。
 - [配额管理 API：快速实践](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts) （[Eiji Kitamura](http://blog.agektmr.com)著）：查看 Chrome / Blink 中的配额管理 API（也应包括 Opera）。

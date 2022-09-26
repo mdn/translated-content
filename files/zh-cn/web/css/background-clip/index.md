@@ -1,14 +1,8 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Clip
-  - Reference
-translation_of: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 `background-clip` 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
@@ -94,10 +88,10 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## 参见
 
 - The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an _entire element_ should be displayed.
 - Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/box_model)
+- [Introduction to the CSS box model](/zh-CN/docs/Web/CSS/box_model)

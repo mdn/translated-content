@@ -1,8 +1,8 @@
 ---
 title: <table>（表格元素）
 slug: Web/HTML/Element/table
-translation_of: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 **HTML `<table>` 元件**代表表格數據 ── 換句話說，就是透過二維資料表來呈現資訊。
@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/table
 </table>
 ```
 
-{{EmbedLiveSample('簡單的表格', '100%', '100', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('簡單的表格', '100%', '100')}}
 
 ### 更多範例
 
@@ -217,7 +217,7 @@ border: 1px solid black;
 }
 ```
 
-{{EmbedLiveSample('更多範例', '100%', '700', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('更多範例', '100%', '700')}}
 
 ## 無障礙議題
 
@@ -287,7 +287,7 @@ border: 1px solid black;
 
 ## `瀏覽器相容性`
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 參見
 

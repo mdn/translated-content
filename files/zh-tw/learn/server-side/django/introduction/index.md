@@ -1,8 +1,8 @@
 ---
 title: Django 介紹
 slug: Learn/Server-side/Django/Introduction
-translation_of: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 在這第一篇 Django 文章中，我們將回答“什麼是 Django”這個問題，並概述這個網絡框架有什麼特性。我們將描述主要功能，包括一些高級功能，但我們並不會在本單元中詳細介紹。我們還會展示一些 Django 應用程序的主要構建模塊（儘管此時你還沒有要測試的開發環境）。
@@ -12,11 +12,11 @@ translation_of: Learn/Server-side/Django/Introduction
     <tr>
       <th scope="row">先備知識:</th>
       <td>
-        基本的電腦知識.對<a href="/en-US/docs/Learn/Server-side/First_steps"
+        基本的電腦知識.對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
           >服務器端網站編程的一般了解</a
         >
         ,特別是<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >網站中客戶端-服務器交互的機制</a
         >
         .
@@ -58,7 +58,7 @@ Django 可以使你的應用具有以下優點:
 - 可擴展
   - : Django 使用基於組件的 “無共享” 架構 (架構的每一部分獨立於其他架構，因此可以根據需要進行替換或更改)。在不同部分之間，有明確的分隔，意味著它可以通過在任何級別添加硬件，來擴展服務：緩存服務器，數據庫服務器，或應用程序服務器。一些最繁忙的網站，已經在 Django 架構下成功地縮放了網站的規模大小，以滿足他們的需求（例如 Instagram 和 Disqus，僅舉兩個例子，可自行添加）。
 - 可維護
-  - : Django 代碼編寫，是遵照設計原則和模式，鼓勵創建可維護和可重複使用的代碼。特別是，它使用了不要重複自己（DRY）原則，所以沒有不必要的重複，減少了代碼的數量。 Django 還將相關功能，分組到可重用的 “應用程序” 中，並且在較低級別，將相關代碼分組或模塊（ 模型視圖控制器 [Model View Controller (MVC)](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式）。
+  - : Django 代碼編寫，是遵照設計原則和模式，鼓勵創建可維護和可重複使用的代碼。特別是，它使用了不要重複自己（DRY）原則，所以沒有不必要的重複，減少了代碼的數量。 Django 還將相關功能，分組到可重用的 “應用程序” 中，並且在較低級別，將相關代碼分組或模塊（ 模型視圖控制器 [Model View Controller (MVC)](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式）。
 - 可移植
   - : Django 是用 Python 編寫的，它在許多平台上運行。這意味著，你不受任務特定的服務器平台的限制，並且可以在許多種類的 Linux，Windows 和 Mac OS X 上運行應用程序。此外，Django 得到許多網路託管提供商的好評，他們經常提供特定的基礎設施，和託管 Django 網站的文檔。
 
@@ -106,7 +106,7 @@ Django 網絡應用程序通常將處理每個步驟的代碼分組到單獨的�
 
 - **Templates:** 模板是定義文件（例如 HTML 頁面）的結構或佈局的文本文件，用於表示實際內容的佔位符。一個視圖可以使用 HTML 模板，從數據填充它動態地創建一個 HTML 頁面模型。可以使用模板來定義任何類型的文件的結構;它不一定是 HTML！
 
-> **備註：** Django 將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的[Model View Controller](/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)架構有許多相似之處.
+> **備註：** Django 將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的[Model View Controller](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)架構有許多相似之處.
 
 以下部分將為您提供 Django 應用程序的這些主要部分的想法（稍後我們將在進一步詳細介紹後，我們將在開發環境中進行更詳細的介紹）。
 
@@ -251,18 +251,18 @@ def index(request):
 
 ## 本教學連結
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,13 +1,8 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/ellipse
 ---
+
 {{SVGRef}}
 
 `ellipse`元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。
@@ -20,16 +15,16 @@ translation_of: Web/SVG/Element/ellipse
 
 ## 示例
 
-» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
+» [ellipse.svg](/files/3253/ellipse.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en-US/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en-US/SVG/Attribute#Core) »
-- [图形事件属性](/en-US/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en-US/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -44,11 +39,11 @@ translation_of: Web/SVG/Element/ellipse
 
 ## DOM 接口
 
-该元素实现了[`SVGEllipseElement`](/en-US/DOM/SVGEllipseElement)接口。
+该元素实现了[`SVGEllipseElement`](/zh-CN/DOM/SVGEllipseElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## 参见
 

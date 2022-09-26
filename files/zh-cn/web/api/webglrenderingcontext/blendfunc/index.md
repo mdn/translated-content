@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.blendFunc()`** 方法定义了一个用于混合像素算法的函数。
@@ -25,7 +26,7 @@ None.
 
 ### 异常
 
-- 如果 `sfactor 或` `dfactor `不是列出的可能值一直，则抛出 `gl.INVALID_ENUM` 错误。
+- 如果 `sfactor` 或 `dfactor` 不是列出的可能值一直，则抛出 `gl.INVALID_ENUM` 错误。
 - 如果使用恒定的颜色和恒定的 alpha 值作为源和目标因子，则抛出`gl.INVALID_ENUM` 错误。
 
 ## 常量

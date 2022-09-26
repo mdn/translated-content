@@ -1,17 +1,8 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Interface
-  - Navigation Timing
-  - NeedsTranslation
-  - Performance
-  - Reference
-  - TopicStub
-  - Web Performance
-translation_of: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/zh-TW/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/zh-TW/docs/Web/API/Navigation_timing_API), the [User Timing API](/zh-TW/docs/Web/API/User_Timing_API), and the [Resource Timing API](/zh-TW/docs/Web/API/Resource_Timing_API).
@@ -72,4 +63,4 @@ _The `Performance` interface doesn't inherit any methods_.
 
 ## Browser compatibility
 
-{{Compat("api.Performance")}}
+{{Compat}}

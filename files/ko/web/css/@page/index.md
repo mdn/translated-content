@@ -44,7 +44,7 @@ translation_of: Web/CSS/@page
 
 ## 예제
 
-예제를 위한 `@page`의 다양한 [가상 클래스](/ko/docs/Web/CSS/Pseudo-classes "Pseudo-classes") 참조해 주세요.
+예제를 위한 `@page`의 다양한 [가상 클래스](/ko/docs/Web/CSS/Pseudo-classes) 참조해 주세요.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

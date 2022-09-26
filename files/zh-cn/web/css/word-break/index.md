@@ -1,11 +1,8 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - CSS 属性
-translation_of: Web/CSS/word-break
 ---
+
 {{CSSRef}}
 
 CSS 属性 `word-break` 指定了怎样在单词内断行。
@@ -112,7 +109,7 @@ word-break: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.word-break")}}
+{{Compat}}
 
 ## 相关链接
 

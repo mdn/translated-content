@@ -1,24 +1,18 @@
 ---
-title: 赋值运算符 (=)
+title: 赋值（=）
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - JavaScript
-  - 参考
-  - 操作者
-  - 语言特性
-  - 赋值运算符
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-简单赋值操作符 (=) 用于为变量赋值。赋值表达式本身的值为要赋值的值。为了给多个变量赋一个值，可以链式使用赋值操作符。
+简单赋值操作符（=）用于为变量赋值。赋值表达式本身的值为要赋值的值。为了给多个变量赋一个值，可以链式使用赋值操作符。
 
 {{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x = y
+```js-nolint
+x = y
 ```
 
 ## 示例
@@ -43,6 +37,6 @@ x = y = z // x, y 都为 25
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)

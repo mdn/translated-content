@@ -2,6 +2,7 @@
 title: DOM 概述
 slug: Web/API/Document_Object_Model/Introduction
 ---
+
 {{APIRef}}本节提供了一个简单的概念性的 DOM 介绍：DOM 是什么，它是如何组织 [HTML](/zh-CN/docs/HTML) 及 [XML](/zh-CN/docs/XML) 文档，你要如何访问它，这个 API 提供了哪些参考信息和实例。
 
 ## 什么是 DOM?
@@ -21,7 +22,7 @@ paragraphs = document.getElementsByTagName("P");
 alert(paragraphs[0].nodeName);
 ```
 
-所有操作和创建 web 页面的属性，方法和事件都会被组织成对象的形式（例如， `document `对象表示文档本身， `table` 对象实现了特定的 `HTMLTableElement` DOM 接口来访问 HTML 表格等）。本文会介绍基于 Gecko 浏览器的 DOM 面向对象引用。
+所有操作和创建 web 页面的属性，方法和事件都会被组织成对象的形式（例如， `document` 对象表示文档本身， `table` 对象实现了特定的 `HTMLTableElement` DOM 接口来访问 HTML 表格等）。本文会介绍基于 Gecko 浏览器的 DOM 面向对象引用。
 
 ## DOM 和 JavaScript
 
@@ -47,9 +48,9 @@ p_list = doc.getElementsByTagName("para");
 
 在使用 DOM 时，您不需要做任何其他特殊的操作。不同的浏览器都有对 DOM 不同的实现， 这些实现对当前的 DOM 标准而言，都会呈现出不同程度的一致性，每个 web 浏览器都会使用一些文档对象模型，从而使页面可以被脚本语言访问。
 
-当您在创建一个脚本时 - 无论是使用内嵌 `<script>`元素或者使用在 web 页面脚本加载的方法— 您都可以使用 [`document`](/en-US/docs/DOM/document)或 [`window`](/en-US/docs/DOM/window) 元素的 API 来操作文档本身或获取文档的子类（web 页面中的各种元素）。
+当您在创建一个脚本时 - 无论是使用内嵌 `<script>`元素或者使用在 web 页面脚本加载的方法— 您都可以使用 [`document`](/zh-CN/docs/DOM/document)或 [`window`](/zh-CN/docs/DOM/window) 元素的 API 来操作文档本身或获取文档的子类（web 页面中的各种元素）。
 
-您的 DOM 编程代码可能会像下面例子一样非常简单，如使用 [`window`](/en-US/docs/DOM/window)对象的[`alert()`](/en-US/docs/DOM/window.alert)函数显示一个警告信息，或者使用比较复杂的方法来创建一个新的内容，如下面内容较长的实例所示。
+您的 DOM 编程代码可能会像下面例子一样非常简单，如使用 [`window`](/zh-CN/docs/DOM/window)对象的[`alert()`](/zh-CN/docs/DOM/window.alert)函数显示一个警告信息，或者使用比较复杂的方法来创建一个新的内容，如下面内容较长的实例所示。
 
 ```
 <body onload="window.alert('welcome to my home page!');">
@@ -79,7 +80,7 @@ p_list = doc.getElementsByTagName("para");
 
 ## 重要的数据类型
 
-本参考文档会试图以尽可能简单的方式描述各种对象和类型。但在 API 中传入的不同的数据类型需要我们去注意。为简单起见，在 API 参考文档中的语法实例通常会使用 element(s) 指代节点，使用 nodeList（s）或` element(s)`来指代节点数组，使用` attribute(s)`来指代属性节点。
+本参考文档会试图以尽可能简单的方式描述各种对象和类型。但在 API 中传入的不同的数据类型需要我们去注意。为简单起见，在 API 参考文档中的语法实例通常会使用 element(s) 指代节点，使用 nodeList（s）或 `element(s)` 来指代节点数组，使用 `attribute(s)` 来指代属性节点。
 
 下面的表格简单则描述了这些数据类型。
 
@@ -92,7 +93,7 @@ p_list = doc.getElementsByTagName("para");
         <code><strong>ownerDocument</strong></code> 属性返回它所属于
         <code>document</code> ) ，这个对象就是 root
         <code>document</code> 对象本身。
-        <a href="/en-US/docs/DOM/document"
+        <a href="/zh-CN/docs/DOM/document"
           >DOM <code>document</code> Reference</a
         >
         一章对 <code>document</code> 对象进行了描述。
@@ -192,8 +193,8 @@ table.summary = "note: increased border";
 - `element.setAttribute()`
 - `element.getAttribute()`
 - `element.addEventListener()`
-- [`window.content`](/en-US/docs/DOM/window.content)
-- [`window.onload`](/en-US/docs/DOM/window.onload)
+- [`window.content`](/zh-CN/docs/DOM/window.content)
+- [`window.onload`](/zh-CN/docs/DOM/window.onload)
 - `window.dump()`
 - `window.scrollTo()`
 

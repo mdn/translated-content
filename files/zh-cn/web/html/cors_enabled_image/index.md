@@ -1,15 +1,8 @@
 ---
 title: 启用了 CORS 的图片
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - CORS
-  - Canvas
-  - HTML
-  - 参考
-  - 安全
-  - 高级
-translation_of: Web/HTML/CORS_enabled_image
 ---
+
 HTML 规范中图片有一个 `{{ htmlattrxref("crossorigin", "img") }}` 属性，结合合适的 `{{Glossary("CORS")}}` 响应头，就可以实现在画布中使用跨域 `{{ HTMLElement("img") }}` 元素的图像，就像在原生 `{{ HTMLElement("canvas") }}` 中使用一样。
 
 查看 [CORS settings attributes](/zh-CN/docs/Web/HTML/CORS_settings_attributes) 来了解更多 `crossorigin` 属性的用法。

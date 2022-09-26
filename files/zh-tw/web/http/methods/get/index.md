@@ -1,8 +1,8 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-translation_of: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `GET` method** 方法請求展示指定資源。 使用 `GET` 的請求只應用於取得資料。
@@ -27,7 +27,7 @@ GET /index.html
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.GET")}}
+{{Compat}}
 
 ## 參見
 

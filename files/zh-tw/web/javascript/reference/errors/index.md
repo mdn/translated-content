@@ -1,8 +1,8 @@
 ---
 title: JavaScript 錯誤參考資料
 slug: Web/JavaScript/Reference/Errors
-translation_of: Web/JavaScript/Reference/Errors
 ---
+
 {{jsSidebar("Errors")}}
 
 在這裡，你可以看到一些由 JavaScript 拋出的錯誤一覽。這些錯誤訊息對你的除錯很有幫助，但拋出的錯誤也不是每次都能講清楚。本頁回提供這些錯誤的詳細資訊。所有的錯誤都是由 {{jsxref("Error")}} 物件所建立的物件，有著 `name` 與 `message`。

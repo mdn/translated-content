@@ -1,12 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - 请求首部
-  - 转发
-  - 首部
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-For`** (XFF) 在客户端访问服务器的过程中如果需要经过 HTTP 代理或者负载均衡服务器，可以被用来获取最初发起请求的客户端的 IP 地址，这个消息首部成为事实上的标准。在消息流从客户端流向服务器的过程中被拦截的情况下，服务器端的访问日志只能记录代理服务器或者负载均衡服务器的 IP 地址。如果想要获得最初发起请求的客户端的 IP 地址的话，那么 X-Forwarded-For 就派上了用场。
@@ -15,7 +11,7 @@ translation_of: Web/HTTP/Headers/X-Forwarded-For
 
 HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-`X-Forwarded-For `也是一个电子邮件相关协议中用到的首部，用来表示一封电子邮件是从其他账户转发过来的。
+`X-Forwarded-For` 也是一个电子邮件相关协议中用到的首部，用来表示一封电子邮件是从其他账户转发过来的。
 
 | Header type                                      | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

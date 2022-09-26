@@ -1,11 +1,9 @@
 ---
 title: Properly Configuring Server MIME Types
 slug: Learn/Server-side/Configuring_server_MIME_types
-tags:
-  - HTTP
-translation_of: Learn/Server-side/Configuring_server_MIME_types
 original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 ---
+
 ## Background
 
 默认情况下，许多 web 服务器会为那些未知内容类型的文件配置一个默认 MIME 类型`text/plain` 或者`application/octet-stream` 。当一种新的内容类型被创造或者被添加到 web 服务器上，web 管理者在添加它到 web 服务器配置中可能会失败。主要原因是用户使用 Gecko-based 的浏览器，而这种浏览器只相信由 web 服务器和 web 应用所发布的 MIME 类型
@@ -86,7 +84,7 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 
 ### Related Links
 
-- [Incorrect MIME Type for CSS Files](/en/Incorrect_MIME_Type_for_CSS_Files)
+- [Incorrect MIME Type for CSS Files](/zh-CN/Incorrect_MIME_Type_for_CSS_Files)
 - [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html)
 - [Hypertext Transfer Protocol — HTTP/1.1](http://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)

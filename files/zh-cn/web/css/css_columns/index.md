@@ -1,15 +1,8 @@
 ---
 title: CSS 多列布局
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS 参考
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-  - 概述
-translation_of: Web/CSS/CSS_Columns
 ---
+
 {{CSSRef("CSS3 Multicol")}}
 
 **CSS 多列布局（CSS Multi-column Layout）**是一种定义了多栏布局的模块，可支持在布局中建立列（column）的数量，以及内容如何在列之间流动（flow）、列之间的间距（gap）大小，以及列的分隔线（column rules）。

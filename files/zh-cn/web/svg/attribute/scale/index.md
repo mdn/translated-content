@@ -1,15 +1,9 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
-tags:
-  - SVG
-  - SVG 属性
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Attribute/scale
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 属性`scale`定义了用在{{SVGElement("feDisplacementMap")}}滤镜上的置换缩放因子。它的总值表达在{{SVGElement("filter")}}元素的属性{{SVGAttr("primitiveUnits")}}确定的坐标系统中。
 
@@ -21,7 +15,7 @@ translation_of: Web/SVG/Attribute/scale
 
 | 类别   | _无_                                    |
 | ------ | --------------------------------------- |
-| 值     | [\<number>](/en/SVG/Content_type#Number) |
+| 值     | [\<number>](/zh-CN/SVG/Content_type#Number) |
 | 可变性 | Yes                                     |
 
 ## 示例

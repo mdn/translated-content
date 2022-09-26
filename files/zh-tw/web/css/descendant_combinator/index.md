@@ -1,19 +1,13 @@
 ---
 title: 後裔選擇器
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - CSS參考
-  - Selectors
-  - 初學者
-  - 選擇器
-translation_of: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## 簡介
 
-`␣` 組合符號 (代表空白, 或更精準地說，代表一或多個空白字元) 結合了兩種選擇器，選擇了只有當第二個選擇器的目標為第一個選擇器目標的後裔時的元素，後裔選擇器跟[子選擇器](/en/CSS/Child_selectors)相似，但是不要求披對的元素要是嚴格是父子關係。
+`␣` 組合符號 (代表空白, 或更精準地說，代表一或多個空白字元) 結合了兩種選擇器，選擇了只有當第二個選擇器的目標為第一個選擇器目標的後裔時的元素，後裔選擇器跟[子選擇器](/zh-TW/CSS/Child_selectors)相似，但是不要求披對的元素要是嚴格是父子關係。
 
 ## 語法
 
@@ -45,4 +39,4 @@ div span { background-color: DodgerBlue; }
 
 ## Browser compatibility
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}

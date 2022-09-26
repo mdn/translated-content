@@ -1,21 +1,9 @@
 ---
 title: 异步 JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - JavaScript
-  - Promises
-  - requestAnimationFrame
-  - 初学者
-  - 回调函数
-  - 异步
-  - 指南
-  - 等待
-  - 脚本编程
-  - 设置定时器
-  - 设置间隔
-translation_of: Learn/JavaScript/Asynchronous
 original_slug: learn/JavaScript/异步
 ---
+
 {{LearnSidebar}}
 
 在这个模块，我们将查看{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。

@@ -2,6 +2,7 @@
 title: Selection
 slug: Web/API/Selection
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 `Selection` 对象表示用户选择的文本范围或插入符号的当前位置。它代表页面中的文本选区，可能横跨多个元素。文本选区由用户拖拽鼠标经过文字而产生。要获取用于检查或修改的 Selection 对象，请调用 {{domxref("window.getSelection()")}}。
@@ -48,8 +49,8 @@ window.alert(selObj);
 
   - : 返回一个数字，其表示的是选区起点在 {{domxref("Selection/anchorNode","anchorNode")}} 中的位置偏移量。
 
-    1.  如果 `anchorNode` 是文本节点，那么返回的就是从该文字节点的第一个字开始，直到被选中的第一个字之间的字数（如果第一个字就被选中，那么偏移量为零）。
-    2.  如果 `anchorNode` 是一个元素，那么返回的就是在选区第一个节点之前的同级节点总数。(这些节点都是 `anchorNode` 的子节点)
+    1. 如果 `anchorNode` 是文本节点，那么返回的就是从该文字节点的第一个字开始，直到被选中的第一个字之间的字数（如果第一个字就被选中，那么偏移量为零）。
+    2. 如果 `anchorNode` 是一个元素，那么返回的就是在选区第一个节点之前的同级节点总数。(这些节点都是 `anchorNode` 的子节点)
 
 - {{domxref("Selection/focusNode","focusNode")}}{{ReadOnlyInline}}
   - : 返回该选区终点所在的节点。
@@ -57,8 +58,8 @@ window.alert(selObj);
 
   - : 返回一个数字，其表示的是选区终点在 {{domxref("Selection/focusNode","focusNode")}} 中的位置偏移量。
 
-    1.  如果 `focusNode` 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从 0 开始计），就返回它。
-    2.  如果 `focusNode` 是一个元素，那么返回的就是在选区末尾之后第一个节点之前的同级节点总数。
+    1. 如果 `focusNode` 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从 0 开始计），就返回它。
+    2. 如果 `focusNode` 是一个元素，那么返回的就是在选区末尾之后第一个节点之前的同级节点总数。
 
 - {{domxref("Selection/isCollapsed","isCollapsed")}}{{ReadOnlyInline}}
   - : 返回一个布尔值，用于判断选区的起始点和终点是否在同一个位置。
@@ -139,9 +140,9 @@ Selection API 有一个共同的行为（即在浏览器之间共通），该行
 
 其行为如下：
 
-1.  如果先前的选区不在可编辑元素内，则可编辑元素将获得焦点。
-2.  调用一个 Selection API 方法，从而在可编辑元素内产生一个新选区，来创造一个新的 `Selection` 区域（{{domxref("Range")}}）。
-3.  然后焦点（此处应指显示的，译者注）移到可编辑元素。
+1. 如果先前的选区不在可编辑元素内，则可编辑元素将获得焦点。
+2. 调用一个 Selection API 方法，从而在可编辑元素内产生一个新选区，来创造一个新的 `Selection` 区域（{{domxref("Range")}}）。
+3. 然后焦点（此处应指显示的，译者注）移到可编辑元素。
 
 **注意：Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如{{HTMLElement("a")}}）。**
 

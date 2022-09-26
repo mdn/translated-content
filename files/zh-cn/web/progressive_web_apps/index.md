@@ -1,16 +1,8 @@
 ---
 title: 渐进式 Web 应用（PWA）
 slug: Web/Progressive_web_apps
-tags:
-  - Apps
-  - Modern web apps
-  - PWA
-  - Progressive web apps
-  - web app manifest
-  - 渐进式增强
-  - 渐进式增强的 Web 应用程序
-translation_of: Web/Progressive_web_apps
 ---
+
 PWA（Progressive Web Apps，渐进式 Web 应用）运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。这组文档和指南告诉您有关 PWA 的所有信息。
 
 ## PWA 的优势

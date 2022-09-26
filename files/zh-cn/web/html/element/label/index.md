@@ -1,20 +1,8 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML 表单
-  - Reference
-  - Web
-  - label
-  - 参考
-  - 标签
-  - 表单
-translation_of: Web/HTML/Element/label
 ---
+
 {{HTMLRef}}
 
 **HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
@@ -75,7 +63,7 @@ translation_of: Web/HTML/Element/label
 
 {{EmbedLiveSample('使用_for_属性', '200', '50', '')}}
 
-## 可访问性问题
+## 无障碍问题
 
 ### 交互内容
 
@@ -171,7 +159,7 @@ translation_of: Web/HTML/Element/label
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## 参见
 

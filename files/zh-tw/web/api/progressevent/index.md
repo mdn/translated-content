@@ -1,8 +1,8 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
-translation_of: Web/API/ProgressEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`ProgressEvent`** interface represents events measuring progress of an underlying process, like an HTTP request (for an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).
@@ -56,7 +56,7 @@ The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest"
 
 ## 瀏覽器相容性
 
-{{Compat("api.ProgressEvent")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,16 +1,6 @@
 ---
 title: ':right'
 slug: Web/CSS/:right
-tags:
-  - '@page'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - Reference
-  - セレクター
-  - Web
-browser-compat: css.selectors.right
-translation_of: Web/CSS/:right
 ---
 {{ CSSRef() }}
 

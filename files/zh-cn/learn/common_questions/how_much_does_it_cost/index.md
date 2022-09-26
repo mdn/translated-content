@@ -1,8 +1,8 @@
 ---
 title: 在互联网上做一件事要花费多少？
 slug: Learn/Common_questions/How_much_does_it_cost
-translation_of: Learn/Common_questions/How_much_does_it_cost
 ---
+
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
 <table class="learn-box standard-table">
@@ -11,14 +11,13 @@ translation_of: Learn/Common_questions/How_much_does_it_cost
       <th scope="row">准备工作：</th>
       <td>
         <p>
-          你已经了解<a href="/en-US/Learn/What_software_do_I_need"
+          你已经了解<a href="/zh-CN/Learn/What_software_do_I_need"
             >你需要什么软件</a
-          >，以及<a href="/en-US/Learn/page_vs_site_vs_server_vs_search_engine"
+          >，以及<a href="/zh-CN/Learn/page_vs_site_vs_server_vs_search_engine"
             >网页、网站等术语</a
-          >之间的差异，以及<a href="/en-US/Learn/Understanding_domain_names"
+          >之间的差异，以及<a href="/zh-CN/Learn/Understanding_domain_names"
             >域名是什么</a
-          >
-          。
+          >。
         </p>
       </td>
     </tr>

@@ -1,8 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-translation_of: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 **`DNT`**（**D**o **N**ot **T**rack，**請勿追蹤**）請求標頭表明用戶針對追蹤程式的設定。它能讓用戶表達自己相較於個人化設定，更在乎個人隱私。
@@ -41,7 +41,7 @@ navigator.doNotTrack; // "0" or "1"
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.DNT")}}
+{{Compat}}
 
 ## 參見
 

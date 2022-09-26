@@ -1,20 +1,20 @@
 ---
 title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 ---
+
 {{AddonSidebar}}
 
 设置页面可以让用户查看，修改扩展的一些设置。
 
-对于 WebExtensions，设置通常使用 [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 保存。实现一个设置页面通常包含以下三步：
+对于 WebExtensions，设置通常使用 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 保存。实现一个设置页面通常包含以下三步：
 
 - 制作一个 HTML 文件用以显示并修改设置
 - 写一个包含于该 HTML 文件的脚本，其可以使设置页面存储与存储设备中并在用户修改后更新他。
-- 在 manifest.json 文件 [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字中 设置 HTML 文件的路径。通过这种方式，该 HTML 将会被显示浏览器管理器里该插件名字和描述的旁边。
+- 在 manifest.json 文件 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字中 设置 HTML 文件的路径。通过这种方式，该 HTML 将会被显示浏览器管理器里该插件名字和描述的旁边。
 
-> **备注：** 你也可以使用 [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 打开该页面。
+> **备注：** 你也可以使用 [`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 打开该页面。
 
 ## 简单的 WebExtension
 
@@ -49,7 +49,7 @@ document.body.style.border = "10px solid blue";
 
 这只是向网页加入了一一个蓝色边框
 
-现在 [安装该扩展](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
+现在 [安装该扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -84,8 +84,8 @@ document.body.style.border = "10px solid blue";
 
 我们加入了两个 manifest 关键字：
 
-- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): 设置了一个 HTML 来作为设置页面。
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): 我们使用 [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 来保存设置，所以我们需要请求权限来使用该 API。
+- [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): 设置了一个 HTML 来作为设置页面。
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): 我们使用 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 来保存设置，所以我们需要请求权限来使用该 API。
 
 接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容：
 
@@ -143,12 +143,12 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 它做了两件事：
 
-- 当网页被加载它使用[`storage.local.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
-- 当用户点击提交按钮，使用[`storage.local.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
+- 当网页被加载它使用[`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
+- 当用户点击提交按钮，使用[`storage.local.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
 
 最后，更新"borderify.js" 来读取边框颜色：
 
-> **警告：** 因为 [browser.storage.local.get()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()中的 item.color 必须改为 item[0].color。`
+> **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
 
 ```js
  function onError(error) {
@@ -179,7 +179,7 @@ settings/
 
 现在：
 
-- [重新载入扩展](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [重新载入扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
 - 加载一个网页
 - 打开设置页面并修改边框颜色
 - 重载网页查看变化。
@@ -190,9 +190,9 @@ settings/
 
 ## 进一步了解
 
-- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字文档
-- [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 文档
-- 使用[`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
+- [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 关键字文档
+- [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 文档
+- 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
 
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

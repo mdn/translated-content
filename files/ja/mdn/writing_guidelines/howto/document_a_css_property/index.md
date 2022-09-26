@@ -1,13 +1,9 @@
 ---
 title: CSS プロパティの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
-tags:
-  - CSS
-  - ガイド
-  - Howto
-  - MDN Meta
 original_slug: MDN/Contribute/Howto/Document_a_CSS_property
 ---
+
 {{MDNSidebar}}
 
 [CSS](/ja/docs/Web/CSS) 標準が進化するにつれて、新しいプロパティが常に追加されています。MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、これらの開発に合わせて最新の状態に維持する必要があります。この文書では、CSS プロパティのリファレンスページを作成するためのステップごとの手順を説明します。

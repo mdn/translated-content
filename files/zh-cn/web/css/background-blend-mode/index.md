@@ -1,8 +1,8 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-translation_of: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef()}}
 
 ## 概述
@@ -81,7 +81,7 @@ console.log(document.getElementById('div'));
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ## 参见
 

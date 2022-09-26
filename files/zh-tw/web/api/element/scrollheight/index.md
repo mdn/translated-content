@@ -1,11 +1,8 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - Reference
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollHeight`** 是衡量元素包含因為 overflow 而沒顯示在螢幕上的內容高度的唯讀屬性. `scrollHeight` 的值相等於元素要求 `clientHeight` 在視域中沒有使用滾動條顯示所有內容的最小高度值 . 這當中只包含 padding, 並不包含 margin.
@@ -38,7 +35,7 @@ padding-bottom
 
 ### 了解元素是否被滾輪完全滾過
 
-下面的等式代表`如果元素被完全滾過將會`回傳 `true `, 否則回傳 `false`.
+下面的等式代表`如果元素被完全滾過將會`回傳 `true`, 否則回傳 `false`.
 
 ```js
 element.scrollHeight - element.scrollTop === element.clientHeight
@@ -46,7 +43,7 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## scrollHeight 範例
 
-藉由 [`onscroll`](/en-US/docs/DOM/element.onscroll) 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop), [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight) 屬性). 範例:
+藉由 [`onscroll`](/zh-TW/docs/DOM/element.onscroll) 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 [`element.scrollTop`](/zh-TW/docs/DOM/element.scrollTop), [`element.clientHeight`](/zh-TW/docs/DOM/element.clientHeight) 屬性). 範例:
 
 ### HTML
 

@@ -1,17 +1,11 @@
 ---
 title: tref
 slug: Web/SVG/Element/tref
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-  - 需要兼容性表
-translation_of: Web/SVG/Element/tref
 ---
+
 {{SVGRef}}
 
-{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据 ，也可以是引用元素的字符数据内容，`tref`元素用来指定的包含文本内容的引用元素。
+{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据，也可以是引用元素的字符数据内容，`tref`元素用来指定的包含文本内容的引用元素。
 
 ## 用法
 
@@ -47,11 +41,11 @@ translation_of: Web/SVG/Element/tref
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -62,11 +56,11 @@ translation_of: Web/SVG/Element/tref
 
 ## DOM 接口
 
-该元素实现了[`SVGTRefElement`](/en/DOM/SVGTRefElement)接口。
+该元素实现了[`SVGTRefElement`](/zh-CN/DOM/SVGTRefElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tref")}}
+{{Compat}}
 
 ## 参见
 

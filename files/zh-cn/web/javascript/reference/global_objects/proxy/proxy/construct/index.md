@@ -1,9 +1,9 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 ---
+
 {{JSRef}}
 
 **`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[Construct]] 内部方法（即 `new target` 必须是有效的）。

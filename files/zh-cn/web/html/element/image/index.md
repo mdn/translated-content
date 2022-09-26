@@ -1,8 +1,8 @@
 ---
 title: <image>
 slug: Web/HTML/Element/image
-translation_of: Web/HTML/Element/image
 ---
+
 {{non-standard_header}}
 
 ## 概要

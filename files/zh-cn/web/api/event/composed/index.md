@@ -2,6 +2,7 @@
 title: Event.composed
 slug: Web/API/Event/composed
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Event")}} 接口的只读属性 **`composed`** 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。
@@ -60,8 +61,8 @@ document.querySelector('html').addEventListener('click',function(e) {
 
 当我们点击 `<open-shadow>` 和 `<closed-shadow>` 元素时候我们会注意到：
 
-1.  `composed` 属性返回 `true` 因为`click` 事件总是能总是能够跨越`Shadow DOM`的边界传播。
-2.  你应该会注意到，两个元素返回`composedPath`的值不同。
+1. `composed` 属性返回 `true` 因为`click` 事件总是能总是能够跨越`Shadow DOM`的边界传播。
+2. 你应该会注意到，两个元素返回`composedPath`的值不同。
 
 `<open-shadow>` 元素的组合路径是：
 
@@ -83,4 +84,4 @@ Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-compon
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.composed")}}
+{{Compat}}

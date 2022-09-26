@@ -1,9 +1,9 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
-[Edi](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form)本章節演示，如何為創建作者對象 `Author`定義一個頁面。
+
+[Edi](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form)本章節演示，如何為創建作者對象 `Author`定義一個頁面。
 
 ## 導入驗證和清理方法
 
@@ -151,5 +151,5 @@ Run the application, open your browser to <http://localhost:3000/>, then select 
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Create Book form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form).
+- Return to [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the next subarticle of part 6: [Create Book form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form).

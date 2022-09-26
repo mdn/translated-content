@@ -1,13 +1,8 @@
 ---
 title: 表达式与运算符
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - JavaScript
-  - 入门
-  - 指南
-  - 表达式
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 本章描述了 JavaScript 的表达式和运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等。
@@ -100,7 +95,7 @@ var var2 = 4;
 
 | 运算符                                                                                                                                      | 描述                                                                                                                                                            | 返回 true 的示例                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                                 | ` 3 == var1``"3" == var1``3 == '3' ` |
+| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                                 | `3 == var1` `"3" == var1` `3 == '3'` |
 | [不等于 Not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                                   | 如果两边操作数不相等时返回 true                                                                                                                                 | `var1 != 4 var2 != "3"`              |
 | [全等 Strict equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                                   | 两边操作数相等且类型相同时返回 true。 参见 {{jsxref("Object.is")}} and [sameness in JS](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
 | [不全等 Strict not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                          | 两边操作数不相等或类型不同时返回 true。                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
@@ -125,10 +120,10 @@ var var2 = 4;
 | Operator          | Description                                                                                                                                    | Example                                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | 求余 (`%`)        | 二元运算符。返回相除之后的余数。                                                                                                               | 12 % 5 返回 2。                                                                                                |
-| 自增 (`++`)       | 一元运算符。将操作数的值加一. 如果放在操作数前面 (`++x`), 则返回加一后的值; 如果放在操作数后面 (`x++`), 则返回操作数原值，然后再将操作数加一。 | ` var x=3;``console.log(++x); //4``console.log(x); //4``var y=3;``console.log(y++); //3``console.log(y); //4 ` |
+| 自增 (`++`)       | 一元运算符。将操作数的值加一. 如果放在操作数前面 (`++x`), 则返回加一后的值; 如果放在操作数后面 (`x++`), 则返回操作数原值，然后再将操作数加一。 | `var x=3;` `console.log(++x); //4` `console.log(x); //4` `var y=3;` `console.log(y++); //3` `console.log(y); //4` |
 | 自减 (`--`)       | 一元运算符。将操作数的值减一. 前后缀两种用法的返回值类似自增运算符。                                                                           | var x=3; console.log(--x); //输入 2,x=2var y=3;console.log(y--);//输出 3,x=2;                                  |
 | 一元负值符 (`-`)  | 一元运算符，返回操作数的负值。                                                                                                                 | var x=3; console.log(-x); //输入-3                                                                             |
-| 一元正值符 (+)    | 一元运算符，如果操作数在之前不是 number，试图将其转换为 number                                                                                 | ` console.log( +'3' ); // 3``console.log( '3' ); // '3' `console.log(+true); // 1                              |
+| 一元正值符 (+)    | 一元运算符，如果操作数在之前不是 number，试图将其转换为 number                                                                                 | `console.log( +'3' ); // 3` `console.log( '3' ); // '3'` `console.log(+true); // 1`                              |
 | 指数运算符 (\*\*) | 计算 `base(底数)` 的 `exponent(`指数`) 次方`, 表示为`base^exponent`                                                                            | `2 ** 3` returns `8`. `10 ** -1` returns `0.1`.                                                                |
 |                   |                                                                                                                                                |                                                                                                                |
 
@@ -140,11 +135,11 @@ var var2 = 4;
 
 | Operator                                                                                     | Usage     | Description                                                                                                        |
 | -------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| 按位与[ AND](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.                                                     |
-| 按位或[ OR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.                                           |
-| 按位异或[ XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
-| 按位非[ NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)   | `~ a`     | 反转被操作数的位。                                                                                                 |
-| 左移[ shift](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
+| 按位与 [AND](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.                                                     |
+| 按位或 [OR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.                                           |
+| 按位异或 [XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
+| 按位非 [NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)   | `~ a`     | 反转被操作数的位。                                                                                                 |
+| 左移 [shift](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
 | 算术右移                                                                                     | `a >> b`  | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位。(译注：算术右移左边空出的位是根据最高位是 0 和 1 来进行填充的) |
 | 无符号右移(左边空出位用 0 填充)                                                              | `a >>> b` | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位，并把左边空出的位都填充为 0                                     |
 
@@ -169,8 +164,8 @@ var var2 = 4;
 | `15 & 9`  | `9`   | `1111 & 1001 = 1001`                                              |
 | `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                                             |
 | `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                                              |
-| `~15`     | `-16` | ` ~``00000000...`` 00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10` | ` ~``00000000``...``0000`` 1001 = ``1111``1111``...``1111``0110 ` |
+| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 注意位运算符“非”将所有的 32 位取反，而值的最高位 (最左边的一位) 为 1 则表示负数 (2-补码表示法)。
 
@@ -198,9 +193,9 @@ var var2 = 4;
 
 | 运算符                                                                                         | 范例               | 描述                                                                                                                                                                      |
 | ---------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND)` (&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
-| [逻辑或 ](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR)(`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
-| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT)` (!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
+| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) `(&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
+| [逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) (`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
+| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) `(!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
 
 能被转换为`false`的值有`null`, `0`, `NaN`, 空字符串 ("") 和`undefined`。（译者注：也可以称作”falsy“）
 
@@ -279,7 +274,7 @@ myString += "bet"; // 返回 "alphabet"
 var status = (age >= 18) ? "adult" : "minor";
 ```
 
-当 `age` 大于等于 18 的时候，将“adult”赋值给` status`；否则将“minor”赋值给 `status`。
+当 `age` 大于等于 18 的时候，将“adult”赋值给 `status`；否则将“minor”赋值给 `status`。
 
 ### 逗号操作符
 
@@ -331,9 +326,9 @@ delete myobj;   // returns true (can delete if declared implicitly)
 
 ##### 删除数组元素
 
-删除数组中的元素时，数组的长度是不变的，例如删除`a[3]`, `a[4]`，` a[4]``和 a[3] ` 仍然存在变成了`undefined`。
+删除数组中的元素时，数组的长度是不变的，例如删除 `a[3]`, `a[4]`，`a[4]` 和 `a[3]` 仍然存在变成了 `undefined`。
 
-`delete` 删除数组中的一个元素，这个元素就不在数组中了。例如，`trees[3]`被删除，`trees[3]` 仍然可寻址并返回`undefined`。
+`delete` 删除数组中的一个元素，这个元素就不在数组中了。例如，`trees[3]`被删除，`trees[3]` 仍然可寻址并返回 `undefined`。
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -390,7 +385,7 @@ typeof true; // returns "boolean"
 typeof null; // returns "object"
 ```
 
-对于一个数值或字符串``， `typeof` 操作符将会返回如下结果：
+对于一个数值或字符串， `typeof` 操作符将会返回如下结果：
 
 ```js
 typeof 62;            // returns "number"
@@ -637,7 +632,7 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 
 super
 
-[super ](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)关键字可以用来调用一个对象父类的函数，它在用来调用一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的父类的构造函数时非常有用，比如：
+[super](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 关键字可以用来调用一个对象父类的函数，它在用来调用一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的父类的构造函数时非常有用，比如：
 
 ```plain
 super([arguments]); // calls the parent constructor. super.functionOnParent([arguments]);

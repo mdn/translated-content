@@ -1,20 +1,16 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-tags:
-  - axial symmetry
-  - scaleX()
-  - scaleX(-1)
-translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
 ---
+
 {{CSSRef}}
 
 **`scaleX()`** CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。
 
 ![](https://mdn.mozillademos.org/files/12117/scaleX.png)
 
-`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1) `的一个速记/缩写。
+`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1)` 的一个速记/缩写。
 
 > **备注：** Note:
 >

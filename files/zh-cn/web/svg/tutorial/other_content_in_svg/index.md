@@ -1,11 +1,8 @@
 ---
 title: 其它 SVG 内容
 slug: Web/SVG/Tutorial/Other_content_in_SVG
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 除了图形化原件，如矩形和圆形之外，SVG 还提供了一些元素用来在图片中嵌入别的类型的内容。

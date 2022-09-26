@@ -1,8 +1,8 @@
 ---
 title: JavaScript 概觀
 slug: Web/JavaScript/Guide/Introduction
-translation_of: Web/JavaScript/Guide/Introduction
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 這個章節的內容主要是介紹 JavaScript 和討論一些 JavaScript 的基本概念。

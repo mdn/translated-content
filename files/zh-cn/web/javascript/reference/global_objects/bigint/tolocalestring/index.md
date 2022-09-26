@@ -1,8 +1,8 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** 方法返回一个字符串，该字符串具有此 `BigInt` 的 language-sensitive 表达形式。

@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getSeconds()`** 方法根据本地时间，返回一个指定的日期对象的秒数。

@@ -1,8 +1,8 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-translation_of: Web/CSS/font-variant-numeric
 ---
+
 {{CSSRef}}
 
 **`font-variant-numeric`** CSS 属性控制数字，分数和序号标记的替代字形的使用。
@@ -111,4 +111,4 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-variant-numeric")}}
+{{Compat}}

@@ -1,11 +1,8 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-tags:
-  - 文档
-  - 样式表
-translation_of: Web/HTML/Element/style
 ---
+
 {{HTMLRef}}
 
 ## 概要
@@ -132,7 +129,7 @@ translation_of: Web/HTML/Element/style
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## 查看更多
 

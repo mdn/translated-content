@@ -1,8 +1,8 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
-translation_of: Web/API/TouchList
 ---
+
 {{ APIRef("Touch Events") }}
 
 `TouchList` 介面表示了一個觸控平面上所有觸碰點的列表；舉例來說，假如使用者有三隻手指於觸控平面（如觸控螢幕或是觸控板）上，則其相對應的 `TouchList` 物件中就會分別有三個 {{domxref("Touch")}} 物件各代表一個手指的觸碰。
@@ -21,7 +21,7 @@ translation_of: Web/API/TouchList
 
 ## 範例
 
-See the [example on the main Touch events article](/en-US/docs/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/zh-TW/docs/DOM/Touch_events#Example).
 
 ## 規範
 
@@ -29,9 +29,9 @@ See the [example on the main Touch events article](/en-US/docs/DOM/Touch_events#
 
 ## 瀏覽器相容性
 
-{{Compat("api.TouchList")}}
+{{Compat}}
 
 ## 參見
 
-- [Touch events](/en-US/docs/DOM/Touch_events)
+- [Touch events](/zh-TW/docs/DOM/Touch_events)
 - {{domxref("Document.createTouchList()")}}

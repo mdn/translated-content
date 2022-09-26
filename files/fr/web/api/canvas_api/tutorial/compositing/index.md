@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Dans tous nos [exemples précédents](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.

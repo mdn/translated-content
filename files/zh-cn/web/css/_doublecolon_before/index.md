@@ -1,8 +1,8 @@
 ---
 title: '::before (:before)'
 slug: Web/CSS/::before
-translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认为行内元素。
@@ -29,13 +29,13 @@ element:before  { 样式 }
 p::before { content: "Hello world!"; }
 ```
 
-CSS3 引入 `::before` 是为了将[伪类](/zh-CN/docs/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/CSS/Pseudo-elements)区别开来。浏览器也接受由 CSS 2 引入的` :before` 写法。
+CSS3 引入 `::before` 是为了将[伪类](/zh-CN/docs/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/CSS/Pseudo-elements)区别开来。浏览器也接受由 CSS 2 引入的 `:before` 写法。
 
 ## 示例
 
 ### 加入引用标记
 
-使用 `::before `伪元素的一个简单示例就是用于加入引号。此处同时使用了 `::before` 和 `{{Cssxref("::after")}}`来插入引用性文本。
+使用 `::before` 伪元素的一个简单示例就是用于加入引号。此处同时使用了 `::before` 和 `{{Cssxref("::after")}}`来插入引用性文本。
 
 #### HTML 内容
 
@@ -203,7 +203,7 @@ line to flow under it.</span>
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## 参见
 

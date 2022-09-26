@@ -1,11 +1,9 @@
 ---
 title: 基本表單應用
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - 待翻譯
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
+
 ## 表單的 label
 
 當使用傳統的 HTML 表單元素建立表單時，提供控制用的標籤（label）以及將標籤與對應表單元素建立關聯是非常重要的。當  screen reader （例如瀏覽器、電子郵件……等等）瀏覽一個頁面時，screen reader 會顯示  form controls ，但若沒有標示 control 和  label 之間的關聯，  screen reader 沒法知道哪個 label 是對應哪個 control。
@@ -119,7 +117,7 @@ var validate = function () {
 
 ## 提供有幫助的錯誤訊息
 
-繼續閱讀了解如何使用  [ARIA alerts to enhance forms](/en-US/docs/aria/forms/alerts).
+繼續閱讀了解如何使用  [ARIA alerts to enhance forms](/zh-TW/docs/aria/forms/alerts).
 
 > **備註：** TBD: we should either combine into one article or separate into techniques, or both. Also, is ARIA markup appropriate for error messages in a page loaded after server side validation?
 

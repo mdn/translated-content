@@ -1,10 +1,8 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - String.prototype.substring()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef}}
 
 **`substring()`** 方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。

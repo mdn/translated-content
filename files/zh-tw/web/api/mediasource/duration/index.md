@@ -1,8 +1,8 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
-translation_of: Web/API/MediaSource/duration
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} 介面的 **`duration`** 屬性用來取得以及設置正被表示的媒體時間長度。
@@ -57,7 +57,7 @@ function sourceOpen (_) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource.duration")}}
+{{Compat}}
 
 ## 相關資料
 

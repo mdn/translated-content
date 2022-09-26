@@ -12,6 +12,7 @@ tags:
   - Search
 translation_of: Web/HTML/microformats
 ---
+
 Les [_microformats_](https://microformats.org/) (parfois abrégés **μF**) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.
 
 Les microformats sont pris en charge par tous les principaux moteurs de recherche. Les moteurs de recherche bénéficient grandement d'un accès direct à ces données structurées, car elles leur permettent de comprendre les informations contenues dans les pages Web et de fournir des résultats plus pertinents aux utilisateurs. En plus d'être lisible par les machines, leur format est conçu pour être facilement lu par les humains.
@@ -58,7 +59,7 @@ Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des
 
 - **"dt-\*" pour les propriétés temporelles (date/heure)** (ex. "dt-start", "dt-end", "dt-bday")
 
-  - Analyse syntaxique spéciale : attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) de l'élément [`<time>`](/fr/docs/Web/HTML/Element/time), [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") et analyse séparée de la valeur date-heure pour plus de lisibilité.
+  - Analyse syntaxique spéciale : attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) de l'élément [`<time>`](/fr/docs/Web/HTML/Element/time), [value-class-pattern](https://microformats.org/wiki/value-class-pattern) et analyse séparée de la valeur date-heure pour plus de lisibilité.
 
 - **"e-\*" pour les arborescences** où l'intégralité de la hiérarchie de l'élément est la valeur à récupérer (ex. "e-content"). Le préfixe "e-" peut être retenu en anglais comme "**e**lement tree", "**e**mbedded markup" ou "**e**ncapsulated markup".
 
@@ -214,7 +215,7 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
 
 ### h-feed
 
-Le microformat [h-feed](http://microformats.org/wiki/h-feed) est un flux de billets [h-entry](http://microformats.org/wiki/h-entry "h-entry").
+Le microformat [h-feed](http://microformats.org/wiki/h-feed) est un flux de billets [h-entry](http://microformats.org/wiki/h-entry).
 
 #### Example h-feed
 

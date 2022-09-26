@@ -2,6 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMParser`** 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。
@@ -106,36 +107,36 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 /*global document, DOMParser*/
 
 (function(DOMParser) {
-	"use strict";
+    "use strict";
 
-	var proto = DOMParser.prototype,
+    var proto = DOMParser.prototype,
         nativeParse = proto.parseFromString;
 
-	// Firefox/Opera/IE throw errors on unsupported types
-	try {
-		// WebKit returns null on unsupported types
-		if ((new DOMParser()).parseFromString("", "text/html")) {
-			// text/html parsing is natively supported
-			return;
-		}
-	} catch (ex) {}
+    // Firefox/Opera/IE throw errors on unsupported types
+    try {
+        // WebKit returns null on unsupported types
+        if ((new DOMParser()).parseFromString("", "text/html")) {
+            // text/html parsing is natively supported
+            return;
+        }
+    } catch (ex) {}
 
-	proto.parseFromString = function(markup, type) {
-		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-			var
-			  doc = document.implementation.createHTMLDocument("")
-			;
-	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-        			doc.documentElement.innerHTML = markup;
-      			}
-      			else {
-        			doc.body.innerHTML = markup;
-      			}
-			return doc;
-		} else {
-			return nativeParse.apply(this, arguments);
-		}
-	};
+    proto.parseFromString = function(markup, type) {
+        if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+            var
+              doc = document.implementation.createHTMLDocument("")
+            ;
+                  if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+                    doc.documentElement.innerHTML = markup;
+                  }
+                  else {
+                    doc.body.innerHTML = markup;
+                  }
+            return doc;
+        } else {
+            return nativeParse.apply(this, arguments);
+        }
+    };
 }(DOMParser));
 ```
 
@@ -145,7 +146,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMParser", 3)}}
+{{Compat}}
 
 ## 参见
 

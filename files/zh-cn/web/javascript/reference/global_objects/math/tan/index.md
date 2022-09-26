@@ -1,8 +1,8 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

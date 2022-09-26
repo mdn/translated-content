@@ -1,16 +1,8 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - インターフェイス
-  - リファレンス
-  - Video
-browser-compat: api.HTMLVideoElement
-translation_of: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** インターフェイスは、動画ブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。

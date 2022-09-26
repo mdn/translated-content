@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDe
 
 ## 구문
 
-    Reflect.getOwnPropertyDescriptor(target, propertyKey)
+```js
+Reflect.getOwnPropertyDescriptor(target, propertyKey)
+```
 
 ### 매개변수
 

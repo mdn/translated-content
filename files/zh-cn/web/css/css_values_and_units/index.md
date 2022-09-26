@@ -1,8 +1,8 @@
 ---
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
-translation_of: Web/CSS/CSS_Values_and_Units
 ---
+
 {{CSSRef}}
 
 所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
@@ -259,5 +259,5 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## See also
 
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Basic Data Types](/zh-CN/docs/Web/CSS/CSS_Types)
+- [Introduction to CSS: Values and Units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

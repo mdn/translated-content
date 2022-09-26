@@ -1,11 +1,9 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - Proxy 代理 拦截
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions
 ---
+
 {{JSRef}}
 
 **`handler.preventExtensions()`** 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截

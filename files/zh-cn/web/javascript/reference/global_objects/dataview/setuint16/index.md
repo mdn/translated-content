@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 ---
+
 {{JSRef}}
 
 **`setUint16()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 16-bit 数 (无符号短整型)。

@@ -1,8 +1,8 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-translation_of: Web/API/Node/nodeType
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.nodeType`** 唯讀屬性表示了節點物件的類型。

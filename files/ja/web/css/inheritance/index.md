@@ -1,13 +1,6 @@
 ---
 title: 継承
 slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - Guide
-  - Inheritance
-  - Layout
-  - Web
-translation_of: Web/CSS/inheritance
 ---
 {{CSSRef}}
 

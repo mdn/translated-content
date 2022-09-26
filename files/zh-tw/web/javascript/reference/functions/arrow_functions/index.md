@@ -1,8 +1,8 @@
 ---
 title: 箭頭函式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 **箭頭函式運算式**（arrow function expression）擁有比[函式運算式](/zh-TW/docs/Web/JavaScript/Reference/Operators/function)還簡短的語法。它沒有自己的 [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)、[arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)、[super](/zh-TW/docs/Web/JavaScript/Reference/Operators/super)、[new.target](/zh-TW/docs/Web/JavaScript/Reference/Operators/new.target) 等語法。本函式運算式適用於非方法的函式，但不能被用作建構式（constructor）。
@@ -343,7 +343,7 @@ var double = arr.map(v => v * 2);       // [10, 12, 26, 0, 2, 36, 46]
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.arrow_functions")}}
+{{Compat}}
 
 ## 參閱
 

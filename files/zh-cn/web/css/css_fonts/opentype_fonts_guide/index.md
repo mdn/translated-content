@@ -1,8 +1,8 @@
 ---
 title: OpenType 字体特性指南
 slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
-translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 ---
+
 {{CSSRef}}
 
 字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字母风格。 它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ），字偶距（kerning，调整特定字母组合的间距），分数形式，数字风格，和一票其他内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。

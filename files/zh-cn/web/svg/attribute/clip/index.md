@@ -1,11 +1,8 @@
 ---
 title: clip
 slug: Web/SVG/Attribute/clip
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/clip
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 **`clip`** 属性是定义元素可见区域的属性。

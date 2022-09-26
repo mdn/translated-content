@@ -1,16 +1,12 @@
 ---
-title: Document structures
+title: Structures des documents
 slug: MDN/Writing_guidelines/Page_structures
-tags:
-  - Landing
-  - MDN Meta
-  - Structures
-  - TopicStub
-translation_of: MDN/Structures
-original_slug: MDN/Structures
+l10n:
+  sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---
+
 {{MDNSidebar}}
 
-Tout au long de MDN, il existe diverses structures de document qui sont utilisées à plusieurs reprises, pour fournir une présentation cohérente des informations dans les articles MDN. Voici des articles décrivant ces structures, afin que, en tant qu'auteur MDN, vous puissiez les reconnaître, les appliquer et les modifier selon les besoins pour les documents que vous écrivez, modifiez ou traduisez.
+Sur MDN, nous utilisons certaines structures de document pour différentes pages afin de présenter l'information de façon cohérente. Dans les articles suivants, nous décrivons ces différentes structures afin que lorsque vous écriviez pour MDN, vous puissiez les reconnaître, les appliquer, voire les modifier de façon appropriée pour l'écriture, l'édition ou la traduction.
 
 {{LandingPageListSubPages()}}

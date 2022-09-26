@@ -1,12 +1,8 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 表格
-translation_of: Web/CSS/empty-cells
 ---
+
 {{CSSRef}}
 
 CSS 中 **`empty-cells`** 属性定义了用户端 {{glossary("user agent")}} 应该怎么来渲染表格 {{htmlelement("table")}} 中没有可见内容的单元格的边框和背景。
@@ -97,4 +93,4 @@ th {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.empty-cells")}}
+{{Compat}}

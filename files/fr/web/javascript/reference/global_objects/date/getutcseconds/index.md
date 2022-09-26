@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCSeconds
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d'après UTC.

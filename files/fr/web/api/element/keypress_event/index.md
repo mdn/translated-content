@@ -4,6 +4,7 @@ slug: Web/API/Element/keypress_event
 translation_of: Web/API/Document/keypress_event
 original_slug: Web/API/Document/keypress_event
 ---
+
 {{APIRef}} {{deprecated_header}}
 
 L'évènement **`keypress`** est déclenché lorsqu'une touche produisant un caractère est pressée. Cela concerne les touches qui produisent des caractères alphabétiques, des caractères numériques et des signes de ponctuations. Les touches <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd> ou <kbd>Meta</kbd> ne sont pas concernées.
@@ -75,13 +76,11 @@ document.onkeypress = logKey;
 
 ## Spécifications
 
-| Spécification                                                    | État                         |
-| ---------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-keypress')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.keypress_event")}}
+{{Compat}}
 
 ## Voir aussi
 

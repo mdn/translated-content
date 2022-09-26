@@ -1,13 +1,8 @@
 ---
 title: グローバル間フェッチの使用
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-tags:
-  - Cross global
-  - Fetch
-  - edge case
-  - relative URL
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 この記事では、フェッチ（および潜在的に同種のリソース取得の振る舞いを示す他の API）で発生するエッジケースについて説明します。 相対 URL を含む オリジン間フェッチ（cross-origin fetch）が {{htmlelement("iframe")}} から開始される場合、相対 URL は iframe の位置ではなく現在のグローバルな位置に対して解決していました。

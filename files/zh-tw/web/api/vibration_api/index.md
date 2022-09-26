@@ -1,15 +1,15 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-translation_of: Web/API/Vibration_API
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 目前大多數的行動裝置均具備振動硬體以搖晃裝置，讓軟體程式碼能對使用者產生實際反饋。**Vibration API** 即可讓 Web Apps 存取振動硬體。當然，若裝置並未支援振動硬體，就不會產生任何效果。
 
 ## 振動說明
 
-振動即如「on-off」脈衝的形式，且持續時間亦有不同的變化。可透過單一整數讓振動持續數個毫秒 (ms)；或可由多個整數組成陣列，達到振動與暫停交錯的振動形式。只要單一 [`window.navigator.vibrate()`](/en-US/docs/Web/API/window.navigator.vibrate) 函式即可控制振動。
+振動即如「on-off」脈衝的形式，且持續時間亦有不同的變化。可透過單一整數讓振動持續數個毫秒 (ms)；或可由多個整數組成陣列，達到振動與暫停交錯的振動形式。只要單一 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/window.navigator.vibrate) 函式即可控制振動。
 
 ### 單次振動
 
@@ -36,7 +36,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 取消目前振動
 
-在 [`window.navigator.vibrate()`](/en-US/docs/Web/API/window.navigator.vibrate) 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
+在 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/window.navigator.vibrate) 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
 
 ## 規格
 
@@ -44,7 +44,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 另可參閱
 

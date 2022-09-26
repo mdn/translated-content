@@ -1,19 +1,8 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interface
-  - Reference
-  - Web
-  - 介面
-  - 參考
-  - 檔案 API
-  - 檔案API
-  - 網路
-translation_of: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** 介面提供了檔案的資訊並且允許網頁中的 JavaScript 存取檔案的內容。
@@ -66,11 +55,11 @@ _`File` 介面沒有定義任何方法，但繼承了 {{domxref("Blob")}} 介面
 
 ## 瀏覽器相容性
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### 實作備註
 
-- In Gecko, you can use this API from within chrome code. See [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using `Cu.importGlobalProperties(['File']);`
+- In Gecko, you can use this API from within chrome code. See [Using the DOM File API in chrome code](/zh-TW/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using `Cu.importGlobalProperties(['File']);`
 - Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an `nsIFile` object to the DOM `File` constructor to specify the file to reference.
 - Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use `new File` to create `File` objects from XPCOM component code instead of having to instantiate the `nsIDOMFile` object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
 

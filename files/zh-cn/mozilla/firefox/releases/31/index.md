@@ -1,8 +1,8 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
-translation_of: Mozilla/Firefox/Releases/31
 ---
+
 {{FirefoxSidebar}}
 
 Web 开发者需要关注的变化
@@ -58,7 +58,7 @@ _No change._
 
 ## See also
 
-- [Site Compatibility for Firefox 31](/en-US/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
+- [Site Compatibility for Firefox 31](/zh-CN/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
 
 ### Older versions
 

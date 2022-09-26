@@ -1,8 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
@@ -74,7 +74,7 @@ value2
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## 參見
 

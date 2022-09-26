@@ -3,9 +3,10 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}} et {{event("mousedown")}}.
+L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent {{event("click")}}, {{event("dblclick")}}, [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event).
 
 `MouseEvent` dérive de {{domxref("UIEvent")}}, qui lui-même est issu d'{{domxref("Event")}}. Bien que la méthode {{domxref ("MouseEvent.initMouseEvent()")}} soit conservée à des fins de compatibilité descendante, la création d'un objet `MouseEvent` doit être effectuée à l'aide du constructeur {{domxref ("MouseEvent.MouseEvent","MouseEvent()")}}.
 
@@ -53,9 +54,9 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
     est pressée alors que l'événement est lancé.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : La coordonnée en X du pointeur de la souris relative à la position de la souris lors du dernier événement {{event("mousemove")}} lancé.
+  - : La coordonnée en X du pointeur de la souris relative à la position de la souris lors du dernier événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) lancé.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : La coordonnée en Y du pointeur de la souris relative à la position de la souris lors du dernier événement {{event("mousemove")}} lancé.
+  - : La coordonnée en Y du pointeur de la souris relative à la position de la souris lors du dernier événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) lancé.
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : La coordonnée en X du pointeur de la souris relative à la postion du bord de remplissage du noeud cible.
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
@@ -144,18 +145,11 @@ Cliquez sur le bouton pour voir comment l'exemple fonctionne :
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}}     | {{Spec2('CSSOM View')}} | Redéfinit `MouseEvent` de long à double. C'est-à-dire qu'un `PointerEvent` dont le `pointerType` est "souris" est un double.                                                                                                                                |
-| {{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}             | {{Spec2('HTML WHATWG')}} | Ajout de la propriété  `region`  à partir de {{SpecName('DOM3 Events')}}.                                                                                                                                                                          |
-| {{SpecName('Pointer Lock','#extensions-to-the-mouseevent-interface','MouseEvent')}} | {{Spec2('Pointer Lock')}} | À partir de {{SpecName('DOM3 Events')}}, ajout des propriétés `movementX` et `movementY`.                                                                                                                                                          |
-| {{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | À partir de {{SpecName('DOM3 Events')}}, ajout des propriétés `offsetX` et `offsetY`, `pageX` et `pageY`, `x` et `y`. Redéfinition de l'écran, de la page, du client et des propriétés des coordonnées (x et y) comme `double` et non plus `long`. |
-| {{SpecName('DOM3 Events','#events-mouseevents','MouseEvent')}}                             | {{Spec2('DOM3 Events')}} | À partir de {{SpecName('DOM2 Events')}}, ajout du constructeur `MouseEvent()`, de la méthode `getModifierState()` et de la propriété `buttons`.                                                                                                    |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent')}}                                 | {{Spec2('DOM2 Events')}} | Définition initiale.                                                                                                                                                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

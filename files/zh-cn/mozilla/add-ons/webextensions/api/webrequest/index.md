@@ -1,19 +1,8 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。
 
 ## 概况
@@ -22,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。
 
-所有的事件，接受`onErrorOccurred事件`, `addListener()`有三个参数 :
+所有的事件，接受 `onErrorOccurred` 事件，`addListener()` 有三个参数：
 
 - 监听本身
 - 一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒
@@ -30,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 这个监听函数接收一个`details`对象，这个对象包含这个请求的信息。他包含一个请求 ID, 在插件中这个 ID 可以关联唯一个请求事件。这个 ID 是浏览器会话和插件上下文中唯一的。他始终在同一个请求中，贯穿着转发和授权等事件中。
 
-在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
+在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
 
 这个 webRequest API 不能让你进入一些安全敏感的请求，比如[update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
 
@@ -63,7 +52,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 为了完成这些操作，你需要在`extraInfoSpec`参数中添加"blocking"的值到事件的`addListener()`。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。
 
-从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
+从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
 
 ## Types
 
@@ -81,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ## Properties
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : The maximum number of times that [`handlerBehaviorChanged()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
+  - : The maximum number of times that [`handlerBehaviorChanged()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
 
 ## Functions
 
@@ -109,21 +98,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
-### Edge incompatibilities
-
-Promises are not supported in Edge. Use callbacks instead.
-
-{{Compat("webextensions.api.webRequest")}} {{WebExtExamples("h2")}}
-
-> **备注：** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
-
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -150,4 +130,4 @@ Promises are not supported in Edge. Use callbacks instead.
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

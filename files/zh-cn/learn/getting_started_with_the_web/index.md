@@ -1,17 +1,8 @@
 ---
 title: web 入门
 slug: Learn/Getting_started_with_the_web
-tags:
-  - 初学者
-  - CSS
-  - 设计
-  - 指南
-  - HTML
-  - Index
-  - 发布
-  - 理论
-translation_of: Learn/Getting_started_with_the_web
 ---
+
 {{LearnSidebar}}
 
 *web 入门*是一个简要的系列，向你介绍 web 开发的实用性。你将配置你需要的工具来构建一个简单的网页，并发布一份属于你自己的代码。

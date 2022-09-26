@@ -1,11 +1,8 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - Layou
-translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 **`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个唯一的页面元素 (目标元素)，其{{htmlattrxref("id")}} 与当前 URL 片段匹配。
@@ -188,7 +185,7 @@ p:target i {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## 参见
 

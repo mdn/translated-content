@@ -1,8 +1,8 @@
 ---
 title: background_color
 slug: Web/Manifest/background_color
-translation_of: Web/Manifest/background_color
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

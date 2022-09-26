@@ -1,11 +1,8 @@
 ---
 title: Express Web Framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Express
-  - Node
-translation_of: Learn/Server-side/Express_Nodejs
 ---
+
 {{LearnSidebar}}
 
 Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，可以在 node.js 环境运行。本系列文章介绍了该框架的优点，如何搭建开发环境以及部署 web 开发环境并进行开发任务。

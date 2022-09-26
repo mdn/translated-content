@@ -1,15 +1,6 @@
 ---
 title: background-position-y
 slug: Web/CSS/background-position-y
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-position-y
-translation_of: Web/CSS/background-position-y
 ---
 {{CSSRef}}
 

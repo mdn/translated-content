@@ -1,14 +1,8 @@
 ---
 title: <td>：表格数据单元格元素
 slug: Web/HTML/Element/td
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 参考
-  - 表格
-translation_of: Web/HTML/Element/td
 ---
+
 {{HTMLRef}}
 
 **HTML `<td>` 元素** 定义了一个包含数据的表格单元格。It participates in the _table model_.
@@ -62,10 +56,11 @@ translation_of: Web/HTML/Element/td
     - `justify` (with text only): The content is stretched out inside the cell so that it covers its entire width.
     - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes {{unimplemented_inline(2212)}}.The default value when this attribute is not specified is `left`.
 
-    > **备注：** Do not use this attribute as it is obsolete in the latest standard. 
+    > **备注：** Do not use this attribute as it is obsolete in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, apply the CSS {{cssxref("text-align")}} property to the element.
     > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "td")}}. {{unimplemented_inline}} in CSS3.
+
 - {{htmlattrdef("axis")}} {{Deprecated_Inline}}
   - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
 
@@ -121,7 +116,7 @@ translation_of: Web/HTML/Element/td
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.td")}}
+{{Compat}}
 
 ## 参见
 

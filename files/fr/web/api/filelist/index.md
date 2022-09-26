@@ -7,6 +7,7 @@ tags:
   - Files
 translation_of: Web/API/FileList
 ---
+
 {{APIRef("File API")}}
 
 Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément `<input type="file">`. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'[API Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop) (voir l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails).
@@ -123,14 +124,11 @@ document.querySelector("#myFiles").onchange = recupererFichiers;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('File API', '#filelist-section', 'FileList')}}                                 | {{Spec2('File API')}}     |              |
-| {{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileList")}}
+{{Compat}}
 
 ## Voir aussi
 

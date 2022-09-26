@@ -1,8 +1,8 @@
 ---
 title: 出了什麼問題？JavaScript 疑難排解
 slug: Learn/JavaScript/First_steps/What_went_wrong
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 當你在練習撰寫上一節的「猜數字」遊戲時，你可能會發現它無法運作。不用擔心，本文將會把你從快被拔光的頭髮中拯救出來，並且給你一些小提示，讓你知道怎麼找出及修正 Javascript 的程式運行錯誤。
@@ -42,7 +42,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修復語法錯誤
 
-在前篇文章中我們讓你在[開發者工具 JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
+在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
@@ -59,10 +59,10 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4. 主控台提示的錯誤訊息寫著「guessSubmit.addeventListener is not a function（guessSubmit.addeventListener 並不是一個函式）」，所以我們大概是哪裡拼錯字了。如果你並不確定一個函式的正確名稱如何拼寫，打開 MDN 確認看看是個不錯的選擇。最佳做法是在你喜歡的搜尋引擎搜尋「mdn*關鍵字*」。為了節省時間，這裡提供你一個捷徑：[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)。
+4. 主控台提示的錯誤訊息寫著「guessSubmit.addeventListener is not a function（guessSubmit.addeventListener 並不是一個函式）」，所以我們大概是哪裡拼錯字了。如果你並不確定一個函式的正確名稱如何拼寫，打開 MDN 確認看看是個不錯的選擇。最佳做法是在你喜歡的搜尋引擎搜尋「mdn*關鍵字*」。為了節省時間，這裡提供你一個捷徑：[`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener)。
 5. 回來看看這個頁面，我們明顯是把函式名稱給拼錯了！記住，JavaScript 是會區分大小寫的，所以任何些微的拼寫錯誤甚至是大小寫錯誤都會造成錯誤發生。把`addeventListener`改成`addEventListener`問題就解決了。現在將你的程式碼修正吧。
 
-> **備註：** 看看這個[TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)連結來了解更多有關這類錯誤的資訊。
+> **備註：** 看看這個[TypeError: "x" is not a function](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_a_function)連結來了解更多有關這類錯誤的資訊。
 
 ### 語法錯誤：第二回合
 
@@ -92,7 +92,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     console.log(lowOrHi);
     ```
 
-    > **備註：** [`console.log()`](/en-US/docs/Web/API/console/log)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
+    > **備註：** [`console.log()`](/zh-TW/docs/Web/API/console/log)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
 
 7. 存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
 8. 讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
@@ -137,13 +137,13 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 ### 修正小錯誤
 
-為了修正這個錯誤，我們得先了解它是怎麼運作的。首先，我們呼叫[`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)以產生一個介於 0 到 1 的隨機小數，例如：0.5675493843
+為了修正這個錯誤，我們得先了解它是怎麼運作的。首先，我們呼叫[`Math.random()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random)以產生一個介於 0 到 1 的隨機小數，例如：0.5675493843
 
 ```js
 Math.random()
 ```
 
-接著，我們將`Math.random()`產生的隨機小數傳進[`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)，函式會回傳小於等於所給數字的最大整數，然後為這個整數值加 1：
+接著，我們將`Math.random()`產生的隨機小數傳進[`Math.floor()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)，函式會回傳小於等於所給數字的最大整數，然後為這個整數值加 1：
 
 ```plain
 Math.floor(Math.random()) + 1
@@ -183,7 +183,7 @@ var userGuess === Number(guessField.value);
 
 此時程式碼會回報錯誤，因為瀏覽器會認為你想設定不同的東西；我們需要確保自己沒有誤用、混用指派運算子(`=`)：用於賦予變數值跟嚴格比較運算子(`===`)：用於比較兩個值是否完全相等，並回覆`true`/`false`布林值。
 
-> **備註：** 更多細節請參考右方關於*缺少分號的語法錯誤*文章頁面： [SyntaxError: missing ; before statement](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 。
+> **備註：** 更多細節請參考右方關於*缺少分號的語法錯誤*文章頁面： [SyntaxError: missing ; before statement](/zh-TW/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 。
 
 ### 無論輸入什麼，程式總是顯示「你贏了」
 
@@ -205,7 +205,7 @@ if (userGuess = randomNumber) {
 
 給完函式或方法參數時別忘了放上`)`右括號（請注意不要打成中文輸入法）。
 
-> **備註：** 更多細節請參考右方關於*缺少右括號的語法錯誤*文章頁面：[SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list)。
+> **備註：** 更多細節請參考右方關於*缺少右括號的語法錯誤*文章頁面：[SyntaxError: missing ) after argument list](/zh-TW/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list)。
 
 ### 語法錯誤：屬性 ID 後缺少「:」<br>SyntaxError: missing : after property id
 
@@ -237,7 +237,7 @@ function checkGuess( {
 
 對於這些錯誤，先思考我們在範例中是如何逐項解決的。當出現錯誤資訊時，先查看該行程式碼行號，按照行號到該行程式碼察看，你可以觀察哪裡出錯了。請記住，錯誤不一定出現在該行程式碼上，而且錯誤原因也可能和我們文章上描述的問題不同！
 
-> **備註：** 有關這些錯誤的詳細資訊，可參閱[SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token)與[SyntaxError: unterminated string literal](/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal)
+> **備註：** 有關這些錯誤的詳細資訊，可參閱[SyntaxError: Unexpected token](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_token)與[SyntaxError: unterminated string literal](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal)
 
 ## 小結
 
@@ -245,7 +245,7 @@ function checkGuess( {
 
 ## 另可參閱
 
-- 還有許多類型的錯誤未列在此頁，我們正在編輯一份參考資料好詳細解釋了它們的含義——可參閱[JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors)。
+- 還有許多類型的錯誤未列在此頁，我們正在編輯一份參考資料好詳細解釋了它們的含義——可參閱[JavaScript error reference](/zh-TW/docs/Web/JavaScript/Reference/Errors)。
 - 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！可以至[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)發問，或者到[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn)頻道提問。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

@@ -1,8 +1,8 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-translation_of: Web/API/Event/eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 表示事件物件目前於事件流（Event Flow）中傳遞的進度為哪一個階段。
@@ -129,7 +129,7 @@ function Clear() {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
+{{ EmbedLiveSample('範例', '', '700') }}
 
 ## 規範
 

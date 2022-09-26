@@ -1,8 +1,8 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
+
 **[入門篇](/zh-TW/docs/Web/Guide/AJAX/Getting_Started)**
 Ajax 簡介。
 
@@ -24,7 +24,7 @@ Ajax 簡介。
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
   - : Fetch API 提供了取得資源（fetching resources）的介面（interface）。這似乎對於曾使用過 {{domxref("XMLHTTPRequest")}} 的人而言並不陌生，然而這個 API 提供一個更強大且彈性的功能集。
 - [Server-sent events](/zh-TW/docs/Server-sent_events)
-  - : 傳統上來說，一個網頁必須送出 request 到伺服器來得到新的資料，也就是說，網頁藉由 server-sent 事件從伺服器請求 (request) 資料，伺服器在任何時候都能送新的資料給網頁，藉由推送訊息到網頁。這些傳入的訊息可以被視為網頁中的 _[事件](/zh-TW/docs/DOM/event)_ + 資料，請參見 [使用 server-sent event ](/zh-TW/docs/Server-sent_events/Using_server-sent_events)。
+  - : 傳統上來說，一個網頁必須送出 request 到伺服器來得到新的資料，也就是說，網頁藉由 server-sent 事件從伺服器請求 (request) 資料，伺服器在任何時候都能送新的資料給網頁，藉由推送訊息到網頁。這些傳入的訊息可以被視為網頁中的 _[事件](/zh-TW/docs/DOM/event)_ + 資料，請參見 [使用 server-sent event](/zh-TW/docs/Server-sent_events/Using_server-sent_events)。
 - [_Pure-Ajax_ navigation example](/zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
   - : This article provides a working (minimalist) example of a _pure-Ajax_ website composed only of three pages.
 - [Sending and Receiving Binary Data](/zh-TW/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
@@ -38,9 +38,9 @@ Ajax 簡介。
 - [XPath](/zh-TW/docs/XPath)
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/zh-TW/docs/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 - [The `FileReader` API](/zh-TW/docs/DOM/FileReader)
-  - : The `FileReader` API lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using [`File`](/zh-TW/docs/DOM/File) or [`Blob`](/zh-TW/docs/DOM/Blob) objects to specify the file or data to read. File objects may be obtained from a [`FileList`](/zh-TW/docs/DOM/FileList) object returned as a result of a user selecting files using the [`"><input>`](/en-US/docs/HTML/Element/input) element, from a drag and drop operation's [`DataTransfer`](/En/DragDrop/DataTransfer) object, or from the `mozGetAsFile()` API on an [`HTMLCanvasElement`](/zh-TW/docs/DOM/HTMLCanvasElement).
+  - : The `FileReader` API lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using [`File`](/zh-TW/docs/DOM/File) or [`Blob`](/zh-TW/docs/DOM/Blob) objects to specify the file or data to read. File objects may be obtained from a [`FileList`](/zh-TW/docs/DOM/FileList) object returned as a result of a user selecting files using the [`"><input>`](/zh-TW/docs/HTML/Element/input) element, from a drag and drop operation's [`DataTransfer`](/En/DragDrop/DataTransfer) object, or from the `mozGetAsFile()` API on an [`HTMLCanvasElement`](/zh-TW/docs/DOM/HTMLCanvasElement).
 - [HTML in XMLHttpRequest](/zh-TW/docs/HTML_in_XMLHttpRequest)
-  - : The W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) specification adds HTML parsing support to [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), which originally supported only XML parsing. This feature allows Web apps to obtain an HTML resource as a parsed DOM using `XMLHttpRequest`.
+  - : The W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) specification adds HTML parsing support to [`XMLHttpRequest`](/zh-TW/DOM/XMLHttpRequest), which originally supported only XML parsing. This feature allows Web apps to obtain an HTML resource as a parsed DOM using `XMLHttpRequest`.
 - [Other resources](/zh-TW/docs/AJAX/Other_Resources)
   - : Other Ajax resources you may find useful.
 
@@ -82,6 +82,6 @@ Ajax 簡介。
 
 ## 相關主題
 
-[HTML](/zh-TW/docs/HTML), [XHTML](/zh-TW/docs/XHTML), [CSS](/zh-TW/docs/CSS), [DOM](/zh-TW/docs/DOM), [JavaScript](/zh-TW/docs/JavaScript), [XML](/zh-TW/docs/XML), [XMLHttpRequest](/zh-TW/docs/nsIXMLHttpRequest), [XSLT](/zh-TW/docs/XSLT), [DHTML](/zh-TW/docs/DHTML), [Same Origin Policy](/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript)
+[HTML](/zh-TW/docs/HTML), [XHTML](/zh-TW/docs/XHTML), [CSS](/zh-TW/docs/CSS), [DOM](/zh-TW/docs/DOM), [JavaScript](/zh-TW/docs/JavaScript), [XML](/zh-TW/docs/XML), [XMLHttpRequest](/zh-TW/docs/nsIXMLHttpRequest), [XSLT](/zh-TW/docs/XSLT), [Same Origin Policy](/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript)
 
 {{ListSubpages}}

@@ -1,8 +1,8 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** 方法把键值对列表转换为一个对象。
@@ -18,7 +18,7 @@ Object.fromEntries(iterable);
 ### 参数
 
 - `iterable`
-  - : 类似 {{jsxref("Array")}} 、 {{jsxref("Map")}} 或者其它实现了[可迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)的可迭代对象。
+  - : 类似 {{jsxref("Array")}} 、 {{jsxref("Map")}} 或者其它实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)的可迭代对象。
 
 ### 返回值
 
@@ -54,7 +54,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### 对象转换
 
-`Object.fromEntries` 是与 {{jsxref("Object.entries()")}} 相反的方法，用 [数组处理函数](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2) 可以像下面这样转换对象：
+`Object.fromEntries` 是与 {{jsxref("Object.entries()")}} 相反的方法，用 [数组处理函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2) 可以像下面这样转换对象：
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

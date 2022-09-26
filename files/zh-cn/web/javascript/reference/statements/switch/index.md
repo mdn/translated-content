@@ -1,15 +1,8 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-  - Web
-  - 参考
-  - 声明
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
@@ -197,7 +190,7 @@ switch (foo) {
 
 ### `switch` 语句内的块级作用域
 
-随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
+随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
 
 以这段代码为例：
 

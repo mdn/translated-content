@@ -1,17 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - get()
-browser-compat: api.StylePropertyMapReadOnly.get
-translation_of: Web/API/StylePropertyMapReadOnly/get
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`get()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの最初の値を {{domxref("CSSStyleValue")}} で返します。

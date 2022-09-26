@@ -1,8 +1,8 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.clearWatch()`** 這個函式是用來取消 {{domxref("Geolocation.watchPosition()")}} 註冊的函式。
@@ -56,11 +56,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 瀏覽器的相容性
 
-{{Compat("api.Geolocation.clearWatch")}}
+{{Compat}}
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}

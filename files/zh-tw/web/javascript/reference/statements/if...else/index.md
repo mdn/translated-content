@@ -1,8 +1,8 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。
@@ -19,7 +19,7 @@ if (條件式)
 ```
 
 - `條件式`
-  - : 一個成立或不成立的[運算式](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)。
+  - : 一個成立或不成立的[運算式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)。
 - `第一個陳述式(statement1)`
   - : 如果 if 中的條件(conditions)為真時執行陳述式(statements)。陳述式可以為任何內容，包含巢狀式(nested)的 if 陳述。當要執行多行的陳述式(statements)時，使用區塊(block)將所要執行的陳述式包覆。如果不需要執行任何動作時，則不撰寫任何陳述式(empty statement)。
 - `第二個陳述式(statement2)`
@@ -64,7 +64,7 @@ if (condition) {
 }
 ```
 
-不要被[Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)物件中，布林值的 `true` 和 `false` 給混淆了。任何值只要不是 `false`、 `undefined`、 `null`、 `0`、 `NaN`，或者空字串 (`""`)，並且任何物件，包括其值是 `false`的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：
+不要被[Boolean](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean)物件中，布林值的 `true` 和 `false` 給混淆了。任何值只要不是 `false`、 `undefined`、 `null`、 `0`、 `NaN`，或者空字串 (`""`)，並且任何物件，包括其值是 `false`的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：
 
 ```js
 var b = new Boolean(false);
@@ -122,7 +122,7 @@ if ((x = y)) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.if_else")}}
+{{Compat}}
 
 ## 參見
 

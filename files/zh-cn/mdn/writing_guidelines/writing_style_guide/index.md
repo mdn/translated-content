@@ -1,8 +1,8 @@
 ---
 title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 为了提供更加组织化、标准化且易于阅读的文档，MDN Web 文档写作规范明确了文本的组织方式、拼写规则、固定格式等内容，不过这些内容只是指导性的而不是严格的规定，因为比起格式我们对内容更感兴趣，所以没有必要在参与贡献之前强迫自己学习本规范。但是如果有一位勤劳的志愿者在之后编辑了你的文档使它更加符合本规范，也请不要感到惊讶或难过。
@@ -87,9 +87,9 @@ translation_of: MDN/Writing_guidelines/Writing_style_guide
 
 下面这个简介比前两个要好很多。
 
-> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 多提供一些示例
 

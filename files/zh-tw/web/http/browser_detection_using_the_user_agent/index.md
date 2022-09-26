@@ -1,8 +1,8 @@
 ---
 title: 透過用戶代理偵測瀏覽器
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 ---
+
 {{HTTPSidebar}}
 
 針對不同的瀏覽器給予不同的網頁或服務，通常不是好主意：網路的原意，是要讓所有人都能訪問，無論他們使用何種瀏覽器或何種設備。你的網站可以透過基於（瀏覽器）功能可用性的漸進增強法開發，而不是特別指定某種瀏覽器。

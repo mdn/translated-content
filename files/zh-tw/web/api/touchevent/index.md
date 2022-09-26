@@ -1,8 +1,8 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-translation_of: Web/API/TouchEvent
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`TouchEvent`** 介面表示了一個由觸控平面因觸碰而改變狀態所發出的事件。平面可以是觸控螢幕或是觸控板，`TouchEvent` 能描述一或多個觸碰點，並且支援偵測其移動、增加或減少觸碰點等等功能。
@@ -86,7 +86,7 @@ The exception to this is Chrome, starting with version 56 (desktop, Chrome for a
 
 ## 範例
 
-See the [example on the main Touch events article](/en/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/zh-TW/DOM/Touch_events#Example).
 
 ## 規範
 
@@ -94,7 +94,7 @@ See the [example on the main Touch events article](/en/DOM/Touch_events#Example)
 
 ## 瀏覽器相容性
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## 參見
 

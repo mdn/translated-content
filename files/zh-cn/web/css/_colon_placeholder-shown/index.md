@@ -1,8 +1,8 @@
 ---
 title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
-translation_of: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 在 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素显示 [placeholder text](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder) 时生效。
@@ -75,7 +75,7 @@ input:placeholder-shown {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## 参见
 

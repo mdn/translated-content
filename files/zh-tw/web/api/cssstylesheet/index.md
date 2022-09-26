@@ -1,17 +1,11 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-tags:
-  - API
-  - CSSOM
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
+The **`CSSStyleSheet`** interface represents a single [CSS](/zh-TW/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
 
 A style sheet consists of _{{domxref("CSSRule", "rules", "", 1)}}_, such as _{{domxref("CSSStyleRule", "style rules", "", 1)}} _("`h1,h2 { font-size: 16pt }"`), various _at-rules_ (`@import`, `@media`, ...), etc. This interface lets you inspect and modify the list of rules in the stylesheet.
 
@@ -62,8 +56,8 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 
 ## Browser compatibility
 
-{{Compat("api.CSSStyleSheet")}}
+{{Compat}}
 
 ## See also
 
-- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-TW/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

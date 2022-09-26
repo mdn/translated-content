@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: listbox role'
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - 可访问性
-  - 无障碍
-translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
+
 `listbox` 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。
 
 ## 描述
@@ -17,7 +13,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 具有 `listbox` 角色的元素含有隐式的 `aria-orientation` 和 `vertical` 值。
 
-当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单， Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 [`checkbox`](https://www.w3.org/TR/wai-aria-practices/#checkbox) role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键 移动而不选择， Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
+当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单，Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 [`checkbox`](https://www.w3.org/TR/wai-aria-practices/#checkbox) role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键 移动而不选择，Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
 
 当 listbox 角色被添加到元素中，或含有它的元素变得可见时，屏幕阅读器会在 listbox 获得焦点时读出它的 label 和 role。如果列表中的 option 或选项获得焦点，则接下来会读出它，如果屏幕阅读器支持，则会在列表中指示选项的位置。当焦点在列表中移动时，屏幕阅读器会读出相关选项。
 
@@ -26,7 +22,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 #### 相关角色
 
 - [option](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-  - : 需要一个或多个嵌套的 `option`。 所有被选择的选项都含有 `aria-selected` 且值为 `true`。所有未选中的选项都含有 `aria-selected` 且值为 `false`。 如果某个选项不可选择，`aria-selected` 会被忽略。
+  - : 需要一个或多个嵌套的 `option`。所有被选择的选项都含有 `aria-selected` 且值为 `true`。所有未选中的选项都含有 `aria-selected` 且值为 `false`。如果某个选项不可选择，`aria-selected` 会被忽略。
 - [list](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
   - : 包含 `listitem` 元素的部分
 
@@ -47,7 +43,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 - aria-labelledby
   - : 标识以空格分隔的元素 ID 列表中的一个或多个可见元素，这些元素标识 listbox。如果没有可见标签，则应该使用 `aria-label` 来包含标签。（注意：带有两个 L 的 "labelled" 是基于辅助功能 API 约定的正确拼写。）
 - aria-roledescription
-  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说 “listbox”。
+  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说“listbox”。
 
 （有关更多详细信息以及 ARIA 状态和属性的完整列表，请参阅 [ARIA `listbox` (role)](https://www.w3.org/TR/wai-aria-1.1/#listbox) 文档。 )
 

@@ -1,14 +1,8 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - CSS3 动画
-  - Reference
-translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **animation** 属性是 {{cssxref("animation-name")}}，{{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}，{{cssxref("animation-delay")}}，{{cssxref("animation-iteration-count")}}，{{cssxref("animation-direction")}}，{{cssxref("animation-fill-mode")}} 和 {{cssxref("animation-play-state")}} 属性的一个简写属性形式。
@@ -233,13 +227,13 @@ window.addEventListener('load', function () {
 
 ### Values
 
-- [`<single-animation-iteration-count>`]()
+- `<single-animation-iteration-count>`
   - : 动画播放的次数。该值必须是{{cssxref("animation-iteration-count")}}可用的值之一。
 - `<single-animation-direction>`
   - : 动画播放的方向。该值必须是{{cssxref("animation-direction")}}可用的值之一。
 - `<single-animation-fill-mode>`
   - : 确定动画在执行之前和之后这两个阶段应用的样式。该值必须是{{cssxref("animation-fill-mode")}}可用的值之一。
-- [`<single-animation-play-state>`]()
+- `<single-animation-play-state>`
   - : 确定动画是否正在播放。该值必须是{{cssxref("animation-play-state")}}中可用的值之一。
 
 ### 语法
@@ -313,7 +307,7 @@ window.addEventListener('load', function () {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ### Quantum CSS notes
 

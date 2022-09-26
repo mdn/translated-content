@@ -1,22 +1,8 @@
 ---
 title: 'Element: dblclick イベント'
 slug: Web/API/Element/dblclick_event
-tags:
-  - API
-  - DOM
-  - Double Click
-  - ダブルクリック
-  - Element
-  - イベント
-  - Input
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - ボタン
-  - dblclick
-  - mouse
-translation_of: Web/API/Element/dblclick_event
 ---
+
 {{APIRef}}
 
 **`dblclick`** イベントは、ポインティングデバイスのボタン (マウスの第一ボタンなど) がダブルクリックされたとき、つまり、単一の要素上でとても短い時間内に素早く 2 回クリックされたときに発行されます。

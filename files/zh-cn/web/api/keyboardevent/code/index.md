@@ -2,6 +2,7 @@
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("DOM Events")}}
 
 `KeyboardEvent.code`属性表示键盘上的物理键（与按键生成的字符相对）。换句话说，此属性返回一个值，该值不会被键盘布局或修饰键的状态改变。
@@ -196,7 +197,7 @@ There are several ways this code can be made better. Most real games would watch
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}
 
 ## Code values
 
@@ -2112,7 +2113,7 @@ On Mac OS X, it's hard to get scancode or something which can distinguish a phys
         <div class="note">
           <p>
             Prior to
-            <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
+            <a href="/zh-CN/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
             this key incorrectly generated the key code
             <code>"RomanCharacters"</code>.
           </p>

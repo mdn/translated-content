@@ -1,15 +1,8 @@
 ---
 title: CSS 入門
 slug: Learn/CSS/First_steps
-tags:
-  - CSS
-  - 入門
-  - 單元
-  - 學習
-  - 新手
-  - 新手教學
-translation_of: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS（階層式樣式表）被用來設定網頁的樣式及佈局。舉例來說，改變字體、顏色、尺寸以及擺放您的內容、拆分為多欄，或是添加動畫效果和其它裝飾的特性。這個單元提供一個平緩的學習路徑，透過介紹 CSS 的工作原理、語法的樣式，以及如何在 HTML 中添加樣式設定。

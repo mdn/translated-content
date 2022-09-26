@@ -1,14 +1,8 @@
 ---
 title: SharedArrayBuffer() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-tags:
-  - コストラクター
-  - JavaScript
-  - リファレンス
-  - SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` は、 2018 年 1 月 5 日に [Spectre](https://meltdownattack.com/) への対策として、すべての主要ブラウザーで既定で無効化されました。 Chrome は、 Spectre スタイルの脆弱性から保護するためにサイトアイソレーション機能が有効になっているプラットフォームでは、 [v67 で再有効化しました](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)。

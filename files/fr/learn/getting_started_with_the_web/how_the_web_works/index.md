@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web
 ---
+
 {{LearnSidebar}}
 {{PreviousMenu("Apprendre/Commencer_avec_le_web/Publier_votre_site_web","Apprendre/Commencer_avec_le_web")}}
 

@@ -1,15 +1,8 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Primary Expressions
-  - Reference
-  - this
-  - 参考
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 与其他语言相比，**函数的 `this` 关键字**在 JavaScript 中的表现略有不同，此外，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式之间也会有一些差别。
@@ -78,7 +71,7 @@ f2() === undefined; // true
 
 > **备注：** 在第二个例子中，`this` 应是 [undefined](/zh-CN/docs/Glossary/undefined)，因为 `f2` 是被直接调用的，而不是作为对象的属性或方法调用的（如 `window.f2()`）。有一些浏览器最初在支持[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)时没有正确实现这个功能，于是它们错误地返回了`window`对象。
 
-如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
+如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
 
 ### 类上下文
 

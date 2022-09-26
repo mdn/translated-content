@@ -1,22 +1,8 @@
 ---
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
-page-type: web-api-instance-property
-tags:
-  - API
-  - Align
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - alignment
-  - float
-  - img
-  - 非推奨
-browser-compat: api.HTMLImageElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`align`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、コンテナーに対して画像をどのように配置するかを示す文字列です。
@@ -50,7 +36,7 @@ browser-compat: api.HTMLImageElement.align
 - `left`
   - : 画像の左端が現在のマージンと同じ位置になるように、画像を浮動させます。その後に続くテキストは、画像の右端に流れるようになります。
 - `right`
-  - : 画像の右端が右マージンと同じ位置になるように浮動させます。。その後に続くテキストは、画像の左端に沿って流れます。
+  - : 画像の右端が右マージンと同じ位置になるように浮動させます。その後に続くテキストは、画像の左端に沿って流れます。
 
 ## 仕様書
 

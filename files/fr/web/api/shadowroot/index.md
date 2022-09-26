@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 L'interface **`ShadowRoot`**, relative à l'API _Shadow DOM_, représente la racine d'un sous-arbre du DOM dont le rendu est effectué séparément de celui du DOM de l'arbre principal.
@@ -87,10 +88,8 @@ function updateStyle(elem) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#interface-shadowroot','Interface ShadowRoot')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot")}}
+{{Compat}}

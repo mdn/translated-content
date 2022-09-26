@@ -1,8 +1,8 @@
 ---
 title: 处理常见的 JavaScript 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 现在我们看看如何跟踪一些常见的浏览器 JavaScript 问题并且如何修复它们。这个包括如何使用浏览器开发工具跟踪和修复问题、使用 Polyfill 或第三方库解决问题、如果让一些现代 JavaScript 的特性也能在旧的浏览器下面工作等。
@@ -12,10 +12,10 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
     <tr>
       <th scope="row">先决条件：</th>
       <td>
-        熟练使用 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 以及一些<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练使用 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 以及一些<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的高级概念</a
         >.
       </td>
@@ -34,32 +34,32 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavours (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.
 
-Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](http://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/en-US/docs/AJAX/Getting_Started#Step_1_%E2%80%93_How_to_make_an_HTTP_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](http://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
+Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](http://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#step_1_–_怎样发送_http_请求)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
 
 Things have got much better since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).
 
 These days, most cross-browser JavaScript problems are seen:
 
 - When bad quality browser sniffing code, feature detection code, and vendor prefix usage blocks browsers from running code they could otherwise use just fine.
-- When developers make use of new/nascent JavaScript features (for example [ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) features, modern Web APIs...) in their code, and find that such features don't work in older browsers.
+- When developers make use of new/nascent JavaScript features (for example [ECMAScript 6](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) features, modern Web APIs...) in their code, and find that such features don't work in older browsers.
 
 We'll explore all these problems and more below.
 
 ## 修复一般的 JavaScript 问题
 
-As we said in the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#First_things_first_fixing_general_problems) on HTML/CSS, you should make sure your code is working generally, before going on to concentrate on the cross-browser issues. If you are not already familiar with the basics of [Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong), you should study that article before moving on. There are a number of common JavaScript problems that you will want to be mindful of, such as:
+As we said in the [previous article](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#First_things_first_fixing_general_problems) on HTML/CSS, you should make sure your code is working generally, before going on to concentrate on the cross-browser issues. If you are not already familiar with the basics of [Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong), you should study that article before moving on. There are a number of common JavaScript problems that you will want to be mindful of, such as:
 
-- Basic syntax and logic problems (again, check out [Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)).
-- Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)).
-- Confusion about [this](/en-US/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/en-US/docs/Learn/JavaScript/Objects/Basics#What_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
-- Incorrectly using functions inside loops — for example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations, each time creating a paragraph and adding an [onclick](/en-US/docs/Web/API/GlobalEventHandlers/onclick) event handler to it. When clicked, each one should alert a message containing its number (the value of `i` at the time it was created), however each one reports `i` as 11, because for loops do all their iterating before nested functions are invoked. If you want this to work correctly, you need to define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
-- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/en-US/docs/AJAX/Getting_Started#Step_3_%E2%80%93_A_Simple_Example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction to [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
+- Basic syntax and logic problems (again, check out [Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)).
+- Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)).
+- Confusion about [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/zh-CN/docs/Learn/JavaScript/Objects/Basics#What_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
+- Incorrectly using functions inside loops — for example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations, each time creating a paragraph and adding an [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) event handler to it. When clicked, each one should alert a message containing its number (the value of `i` at the time it was created), however each one reports `i` as 11, because for loops do all their iterating before nested functions are invoked. If you want this to work correctly, you need to define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
+- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#step_3_–_一个简单的例子) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction to [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
 
 > **备注：** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
 ### Linters
 
-As with [HTML and CSS](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Linters), you can ensure better quality, less error-prone JavaScript code using a linter, which points out errors and can also flag up warnings about bad practices, etc., and be customized to be stricter or more relaxed in their error/warning reporting. The JavaScript/ECMAScript linters we'd recommend are [JSHint](http://jshint.com/) and [ESLint](http://eslint.org/); these can be used in a variety of ways, some of which we'll detail below.
+As with [HTML and CSS](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Linters), you can ensure better quality, less error-prone JavaScript code using a linter, which points out errors and can also flag up warnings about bad practices, etc., and be customized to be stricter or more relaxed in their error/warning reporting. The JavaScript/ECMAScript linters we'd recommend are [JSHint](http://jshint.com/) and [ESLint](http://eslint.org/); these can be used in a variety of ways, some of which we'll detail below.
 
 #### Online
 
@@ -93,7 +93,7 @@ npm install -g jshint
 
 You can then point these tools at JavaScript files you want to lint, for example:
 
-![](js-hint-commandline.png)You can also use these tools with a task runner/build tool such as [Gulp](http://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](http://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack/jshint-loader).
+![](js-hint-commandline.png)You can also use these tools with a task runner/build tool such as [Gulp](http://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](http://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack/jshint-loader).
 
 > **备注：** ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.
 
@@ -114,7 +114,7 @@ function populateHeader(jsonObj) {
   ...
 ```
 
-So the code falls over as soon as we try to access `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
+So the code falls over as soon as we try to access `jsonObj` (which as you might expect, is supposed to be a [JSON object](/zh-CN/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
 
 ```js
 var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -131,7 +131,7 @@ But this fails.
 
 #### Console 相关 API
 
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/Console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/Console/log), which prints a custom message to the console.
+You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/zh-CN/docs/Web/API/Console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/zh-CN/docs/Web/API/Console/log), which prints a custom message to the console.
 
 Try inserting the following line just below line 31 (bolded above):
 
@@ -165,7 +165,7 @@ So to summarize, anytime something is not working and a value does not appear to
 
 #### Using the JavaScript debugger
 
-We have solved one problem, but we are still stuck with the error message "TypeError: heroes is undefined", reported on line 51. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](/en-US/docs/Tools/Debugger) as it is called in Firefox.
+We have solved one problem, but we are still stuck with the error message "TypeError: heroes is undefined", reported on line 51. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](/zh-CN/docs/Tools/Debugger) as it is called in Firefox.
 
 > **备注：** Similar tools are available in other browsers; the [Sources tab](https://developers.google.com/web/tools/chrome-devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
@@ -192,11 +192,11 @@ We can find out some very useful information in here.
 1. Expand the `showHeroes` scope — you can see from this that the heroes variable is undefined, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
 2. You can also see that the `jsonObj` variable is storing a text string, not a JSON object.
 3. Exploring further down the call stack, click `request.onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
-4. Now if you expand the `request.onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
+4. Now if you expand the `request.onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
 
-> **备注：** We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/en-US/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/en-US/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
+> **备注：** We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/zh-CN/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/zh-CN/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
 
-> **备注：** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](/en-US/docs/Tools/Debugger) page.
+> **备注：** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](/zh-CN/docs/Tools/Debugger) page.
 
 ### Performance issues
 
@@ -205,7 +205,7 @@ As your apps get more complex and you start to use more JavaScript, you may star
 - To avoid loading more JavaScript than you need, bundle your scripts into a single file using a solution like [Browserify](http://browserify.org/). In general, reducing the number of HTTP requests is very good for performance.
 - Make your files even smaller by minifying them before you load them onto your production server. Minifying squashes all the code together onto a huge single line, making it take up far less file size. It is ugly, but you don't need to read it when it is finished! This is best done using a minification tool like [Uglify](https://github.com/mishoo/UglifyJS2) (there's also an online version — see [JSCompress.com](https://jscompress.com/))
 - When using APIs, make sure you turn off the API features when they are not being used; some API calls can be really expensive on processing power. For example, when showing a video stream, make sure it is turned off when you can't see it. When tracking a device's location using repeated Geolocation calls, make sure you turn it off when the user stops using it.
-- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
+- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/zh-CN/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
 
 > **备注：** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
 
@@ -220,25 +220,25 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 ### Using modern JavaScript/API features
 
-In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
+In the [previous article](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
 
-There are a number of modern JavaScript language features defined in recent versions of the specs ([ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)) that simply won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
+There are a number of modern JavaScript language features defined in recent versions of the specs ([ECMAScript 6](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)) that simply won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
 
 For example:
 
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the [Fetch API](/en-US/docs/Web/API/GlobalFetch/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.
-- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)). For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also). Arrow functions are supported across all modern browsers, except for IE and Safari.
-- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#Strict_mode_in_browsers)).
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.
+- [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the [Fetch API](/zh-CN/docs/Web/API/GlobalFetch/fetch) (a modern equivalent to [XMLHTTPRequest](/zh-CN/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.
+- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions), which also has other advantages (see [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)). For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also). Arrow functions are supported across all modern browsers, except for IE and Safari.
+- Declaring [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#Strict_mode_in_browsers)).
+- [Typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.
 
 There are also many new APIs appearing in recent browsers, which don't work in older browsers, for example:
 
-- [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), and others for storing website data on the client-side.
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) for running JavaScript in a separate thread, helping to improve performance.
-- [WebGL API](/en-US/docs/Learn/WebGL) for real 3D graphics.
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for advanced audio manipulation.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API) for multi-person, real-time video/audio connectivity (e.g. video conferencing).
-- [WebVR API](/en-US/docs/Web/API/WebVR_API) for engineering virtual reality experiences in the browser (e.g. controlling a 3D view with data input from VR Hardware)
+- [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API), [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), and others for storing website data on the client-side.
+- [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) for running JavaScript in a separate thread, helping to improve performance.
+- [WebGL API](/zh-CN/docs/Learn/WebGL) for real 3D graphics.
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) for advanced audio manipulation.
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) for multi-person, real-time video/audio connectivity (e.g. video conferencing).
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API) for engineering virtual reality experiences in the browser (e.g. controlling a 3D view with data input from VR Hardware)
 
 There are a few strategies for handling incompatibilities between browsers relating to feature support; let's explore the most common ones.
 
@@ -246,7 +246,7 @@ There are a few strategies for handling incompatibilities between browsers relat
 
 #### Feature detection
 
-The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the [Geolocation API](/en-US/docs/Web/API/Geolocation/Using_geolocation) (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a `geolocation` property available on the global [Navigator](/zh-CN/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
 
 ```js
 if("geolocation" in navigator) {
@@ -258,7 +258,7 @@ if("geolocation" in navigator) {
 }
 ```
 
-You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
+You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
 
 As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
 
@@ -273,10 +273,10 @@ JavaScript libraries are essentially third party units of code that you can atta
 JavaScript libraries tend to come in a few main varieties (some libraries will serve more than one of these purposes):
 
 - Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. [jQuery](http://jquery.com/) for example provides its own fully-featured selectors and DOM manipuation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.
-- Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/en-US/docs/Learn/WebGL) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc. The [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://serviceworke.rs/) for several useful code samples).
-- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when {{glossary("DHTML")}} was a popular buzzword, and implementing effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily. See [JavaScripting.com/animation](https://www.javascripting.com/animation/) for a list of libraries.
+- Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/zh-CN/docs/Learn/WebGL) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc. The [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://serviceworke.rs/) for several useful code samples).
+- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when "DHTML" was a popular buzzword, and implementing effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily. See [JavaScripting.com/animation](https://www.javascripting.com/animation/) for a list of libraries.
 - UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [jQuery UI](http://jqueryui.com/) and [Foundation](http://foundation.zurb.com/). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
-- Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
+- Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
 
 When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on Github (or wherever else it is stored), etc.
 
@@ -347,7 +347,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/en-US/docs/Web/API/GlobalFetch/fetch) function exist in the browser. If both do, the function returns true. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called loadScript(), which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
+Here we are testing whether the [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/zh-CN/docs/Web/API/GlobalFetch/fetch) function exist in the browser. If both do, the function returns true. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called loadScript(), which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
 
 ```js
 function loadScript(src, done) {
@@ -427,13 +427,13 @@ If you come across browser sniffing when joining an existing project, look at wh
 
 ### Handling JavaScript prefixes
 
-In the previous article, we included quite a lot of discussion about [handing CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes). Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new shint API object called `Object`:
+In the previous article, we included quite a lot of discussion about [handing CSS prefixes](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes). Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new shint API object called `Object`:
 
 - Mozilla would use `mozObject`
 - Chrome/Opera/Safari would use `webkitObject`
 - Microsoft would use `msObject`
 
-Here's an example, taken from our [violent-theremin demo](http://mdn.github.io/violent-theremin/) (see [source code](https://github.com/mdn/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+Here's an example, taken from our [violent-theremin demo](http://mdn.github.io/violent-theremin/) (see [source code](https://github.com/mdn/violent-theremin)), which uses a combination of the [Canvas API](/zh-CN/docs/Web/API/Canvas_API) and the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -442,7 +442,7 @@ var audioCtx = new AudioContext();
 
 In the case of the Web Audio API, the key entry points to using the API were supported in Chrome/Opera via `webkit` prefixed versions (they now support the unprefixed versions). The easy way to get around this situation is to create a new version of the objects that are prefixed in some browsers, and make it equal to the non-prefixed version, OR the prefixed version (OR any other prefixed versions that need consideration) — whichever one is supported by the browser currently viewing the site will be used.
 
-Then we use that object to manipulate the API, rather than the original one. In this case we are creating a modified [AudioContext](/en-US/docs/Web/API/AudioContext) constructor, then creating a new audio context instance to use for our Web Audio coding.
+Then we use that object to manipulate the API, rather than the original one. In this case we are creating a modified [AudioContext](/zh-CN/docs/Web/API/AudioContext) constructor, then creating a new audio context instance to use for our Web Audio coding.
 
 This pattern can be applied to just about any prefixed JavaScript feature. JavaScript libraries/polyfills also make use of this kind of code, to abstract browser differences away from the developer as much as possible.
 
@@ -458,7 +458,7 @@ If this feature is supported in your browser, it will autocomplete.
 
 ## Finding help
 
-There are many other issues you'll encounter with JavaScript; the most important thing to know really is how to find answers online. Consult the HTML and CSS article's [Finding help section](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Finding_help) for our best advice.
+There are many other issues you'll encounter with JavaScript; the most important thing to know really is how to find answers online. Consult the HTML and CSS article's [Finding help section](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Finding_help) for our best advice.
 
 ## Summary
 
@@ -468,11 +468,11 @@ So that's JavaScript. Simple huh? Maybe not so simple, but this article should a
 
 ## In this module
 
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
+- [Introduction to cross browser testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
+- [Strategies for carrying out testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Handling common HTML and CSS problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [Handling common JavaScript problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
+- [Handling common accessibility problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+- [Implementing feature detection](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Introduction to automated testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
+- [Setting up your own test automation environment](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

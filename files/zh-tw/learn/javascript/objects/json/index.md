@@ -1,10 +1,8 @@
 ---
 title: 使用 JSON 資料
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-translation_of: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。
@@ -15,12 +13,12 @@ JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現
       <th scope="row">必要條件：</th>
       <td>
         基礎的計算機素養、了解 HTML 與 CSS 的基本概念、熟悉 JavaScript (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >First steps</a
-        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >〉) 與 OOJS 基本概念 (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >〉)。
       </td>
@@ -36,7 +34,7 @@ JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現
 
 {{glossary("JSON")}} 是依照 JavaScript 物件語法的資料格式，經 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford) 推廣普及。雖然 JSON 是以 JavaScript 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取 (剖析) 並產生 JSON。
 
-JSON 可能是物件或字串。當你想從 JSON 中讀取資料時，JSON 可作為物件；當要跨網路傳送 JSON 時，就會是字串。這不是什麼大問題 — JavaScript 提供全域 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件，其內的函式可進行切換。
+JSON 可能是物件或字串。當你想從 JSON 中讀取資料時，JSON 可作為物件；當要跨網路傳送 JSON 時，就會是字串。這不是什麼大問題 — JavaScript 提供全域 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件，其內的函式可進行切換。
 
 JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.json` 的文字檔案，以及 `application/json` 的 {{glossary("MIME type")}}。
 
@@ -88,7 +86,7 @@ JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.jso
 }
 ```
 
-舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/en-US/docs/Learn/JavaScript/Objects/Basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
+舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
 
 ```js
 superHeroes.hometown
@@ -192,7 +190,7 @@ var section = document.querySelector('section');
     var request = new XMLHttpRequest();
     ```
 
-3. 現在用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
+3. 現在用 [`open()`](/zh-TW/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
 
     ```js
     request.open('GET', requestURL);
@@ -200,10 +198,10 @@ var section = document.querySelector('section');
 
     這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
 
-    - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 就可以。
+    - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Methods/GET) 就可以。
     - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 
-4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
+4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/zh-TW/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
 
     ```js
     request.responseType = 'json';
@@ -220,9 +218,9 @@ var section = document.querySelector('section');
     }
     ```
 
-在這裡，我們將所獲得的響應 (可到 [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
+在這裡，我們將所獲得的響應 (可到 [`response`](/zh-TW/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
 
-當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
+當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/onload)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
 
 ### 產生標頭
 
@@ -240,7 +238,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-我們已經將參數命名為 `jsonObj`，所以在這個函式之內就要用 jsonObj 呼叫此參數。這裡先以 [`createElement()`](/en-US/docs/Web/API/Document/createElement) 建立 1 組 {{HTMLElement("h1")}} 元素、將其 [`textContent`](/en-US/docs/Web/API/Node/textContent) 指定為 JSON 的 `squadName` 屬性、透過 [`appendChild()`](/en-US/docs/Web/API/Node/appendChild) 將之附加到標頭。接著 {{HTMLElement("p")}} 元素依樣畫葫蘆一遍：建立、設定其文字內容、附加到標頭。唯一不同之處，就是將該文字設定為 1 組串接字串 (Concatenated string)，其內包含 JSON 的 `homeTown` 與 `formed` 屬性。
+我們已經將參數命名為 `jsonObj`，所以在這個函式之內就要用 jsonObj 呼叫此參數。這裡先以 [`createElement()`](/zh-TW/docs/Web/API/Document/createElement) 建立 1 組 {{HTMLElement("h1")}} 元素、將其 [`textContent`](/zh-TW/docs/Web/API/Node/textContent) 指定為 JSON 的 `squadName` 屬性、透過 [`appendChild()`](/zh-TW/docs/Web/API/Node/appendChild) 將之附加到標頭。接著 {{HTMLElement("p")}} 元素依樣畫葫蘆一遍：建立、設定其文字內容、附加到標頭。唯一不同之處，就是將該文字設定為 1 組串接字串 (Concatenated string)，其內包含 JSON 的 `homeTown` 與 `formed` 屬性。
 
 ### 建立超級英雄的資訊卡片
 
@@ -283,7 +281,7 @@ function showHeroes(jsonObj) {
 
 我們先把 JSON 的 `members` 屬性儲存到新的變數中。此陣列所具備的多個物件，均包含了各個超級英雄的資訊。
 
-接著我們以 [for 迴圈](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
+接著我們以 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
 
 1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>、3 組` `<p>、1 組` `<ul>。`
 2. 讓 \<h2> 納入目前超級英雄的 `name`。
@@ -294,7 +292,7 @@ function showHeroes(jsonObj) {
 
 > **備註：** 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 
-> **備註：** 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/en-US/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
+> **備註：** 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
 
 ## 物件與文字交互轉換
 
@@ -304,10 +302,10 @@ function showHeroes(jsonObj) {
 request.responseType = 'json';
 ```
 
-但有時候沒這麼好運。我們有時會接收到文字字串格式的 JSON 資料，且必須將之轉換為物件。且當我們要以某種訊息傳送 JSON 資料時，也必須將之轉換為字串才能正確運作。還好，這 2 種問題在 Web 開發過程中甚為常見。內建的 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件很早就新增到瀏覽器之中，且包含下列 2 種函式：
+但有時候沒這麼好運。我們有時會接收到文字字串格式的 JSON 資料，且必須將之轉換為物件。且當我們要以某種訊息傳送 JSON 資料時，也必須將之轉換為字串才能正確運作。還好，這 2 種問題在 Web 開發過程中甚為常見。內建的 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件很早就新增到瀏覽器之中，且包含下列 2 種函式：
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：接收文字字串形式的 JSON 物件作為參數，並回傳對應的物件。
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收 JSON 物件作為參數，並回傳對等的文字字串形式。
+- [`parse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：接收文字字串形式的 JSON 物件作為參數，並回傳對應的物件。
+- [`stringify()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收 JSON 物件作為參數，並回傳對等的文字字串形式。
 
 你可到 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 XHR 要回傳 JSON 為文字，接著再使用 `parse()` 轉換為實際的 JSON 物件。關鍵程式碼片段如下：
 
@@ -341,9 +339,9 @@ myString
 
 ## 另可參閱
 
-- [JSON 物件參考頁面](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [XMLHttpRequest 物件參考頁面](/en-US/docs/Web/API/XMLHttpRequest)
-- [使用 XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTTP 請求函式](/en-US/docs/Web/HTTP/Methods)
+- [JSON 物件參考頁面](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- [XMLHttpRequest 物件參考頁面](/zh-TW/docs/Web/API/XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Methods)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

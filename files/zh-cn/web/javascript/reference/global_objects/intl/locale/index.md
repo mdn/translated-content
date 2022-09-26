@@ -1,8 +1,8 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
+
 {{JSRef}}
 
 **`Intl.Locale`** 对象是 Intl 对象的标准内置属性，用于表示 Unicode 区域标识。

@@ -1,8 +1,8 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** 介面提供了特殊的屬性及方法以操作 `input` 元素的顯示與佈局。
@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLInputElement
 
 ## 屬性
 
-| `form `{{readonlyInline}} | _`{{domxref("HTMLFormElement")}} object:`_ Returns a reference to the parent form element.                                                                                                                                                                                                                             |
+| `form` {{readonlyInline}} | _`{{domxref("HTMLFormElement")}} object:`_ Returns a reference to the parent form element.                                                                                                                                                                                                                             |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `formAction`                    | _`string`:_ Returns / Sets the element's {{ htmlattrxref("formaction", "input") }} attribute, containing the URI of a program that processes information submitted by the element. This overrides the {{ htmlattrxref("action", "form") }} attribute of the parent form.                              |
 | `formEncType`                   | _`string`:_ Returns / Sets the element's {{ htmlattrxref("formenctype", "input") }} attribute, containing the type of content that is used to submit the form to the server. This overrides the {{ htmlattrxref("enctype", "form") }} attribute of the parent form.                                     |
@@ -28,9 +28,9 @@ translation_of: Web/API/HTMLInputElement
 | `value`                                      | `string:` Returns / Sets the current value of the control.**Note:** If the user enters a value different from the value expected, this may return an empty string.                                                                                                                                                                                                                                                                                                                                                                                         |
 | `validity` {{readonlyInline}}          | `{{domxref("ValidityState")}} object:` Returns the validity state that this element is in.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `validationMessage` {{readonlyInline}} | `string:` Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.                                                                                                                                                                                                                                         |
-| `willValidate `{{readonlyInline}}      | _`{{jsxref("Boolean")}}:`_ Indicates whether the element is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.                                                                                                                                                                                                                                                                                                                                                                                 |
+| `willValidate` {{readonlyInline}}      | _`{{jsxref("Boolean")}}:`_ Indicates whether the element is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.                                                                                                                                                                                                                                                                                                                                                                                 |
 
-| `checked`        | `boolean: `Returns / Sets the current state of the element when {{htmlattrxref("type","input")}} is `checkbox` or `radio`. |
+| `checked`        | `boolean:`Returns / Sets the current state of the element when {{htmlattrxref("type","input")}} is `checkbox` or `radio`. |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `defaultChecked` | _`boolean:`_ Returns / Sets the default state of a radio button or checkbox as originally specified in HTML that created this object.  |
 | `indeterminate`  | `boolean:` indicates that the checkbox is neither on nor off.                                                                          |
@@ -173,9 +173,9 @@ translation_of: Web/API/HTMLInputElement
 | `focus()`                                                                       | Focus on the input element; keystrokes will subsequently go to this element.                                                                                                                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `blur()`                                                                        | Removes focus from input; keystrokes will subsequently go nowhere.                                                                                                                                                                                                                                                                                                         |
-| [`select()`](/en-US/docs/Web/API/HTMLInputElement/select)                       | Selects the input text in the element, and focuses it so the user can subsequently replace the whole entry.                                                                                                                                                                                                                                                                |
-| [`click()`](/en-US/docs/Web/API/HTMLInputElement/click)                         | Simulates a click on the element.                                                                                                                                                                                                                                                                                                                                          |
-| [`setSelectionRange()`](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange) | Selects a range of text in the element (but does not focus it). The optional selectionDirection parameter may be "forward" or "backward" to establish the direction in which selection was set, or "none" if the direction is unknown or not relevant. The default is "none". Specifying a selectionDirection parameter sets the value of the selectionDirection property. |
+| [`select()`](/zh-TW/docs/Web/API/HTMLInputElement/select)                       | Selects the input text in the element, and focuses it so the user can subsequently replace the whole entry.                                                                                                                                                                                                                                                                |
+| [`click()`](/zh-TW/docs/Web/API/HTMLInputElement/click)                         | Simulates a click on the element.                                                                                                                                                                                                                                                                                                                                          |
+| [`setSelectionRange()`](/zh-TW/docs/Web/API/HTMLInputElement/setSelectionRange) | Selects a range of text in the element (but does not focus it). The optional selectionDirection parameter may be "forward" or "backward" to establish the direction in which selection was set, or "none" if the direction is unknown or not relevant. The default is "none". Specifying a selectionDirection parameter sets the value of the selectionDirection property. |
 | `setRangeText()`                                                                | Selects a range of text in the element (but does not focus it). The optional selectionDirection parameter may be "forward" or "backward" to establish the direction in which selection was set, or "none" if the direction is unknown or not relevant. The default is "none". Specifying a selectionDirection parameter sets the value of the selectionDirection property. |
 | `setCustomValidity()`                                                           | Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.                                                                                                                                                                                                |
 | `checkValidity()`                                                               | Returns a {{jsxref("Boolean")}} that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an {{event("invalid")}} event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.              |
@@ -191,11 +191,11 @@ translation_of: Web/API/HTMLInputElement
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 - {{domxref("HTMLInputElement.mozSetFileArray()")}}{{non-standard_inline}}
-  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/zh-TW/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/en-US/Firefox/Multiprocess_Firefox/The_message_manager).
+  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/zh-TW/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/zh-TW/Firefox/Multiprocess_Firefox/The_message_manager).
 - {{domxref("HTMLInputElement.mozGetFileNameArray()")}}
   - : Returns an array of all the file names from the input.
 - {{domxref("HTMLInputElement.mozSetFileNameArray()")}}
-  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
+  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/zh-TW/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
 
 ## 規範
 
@@ -203,7 +203,7 @@ translation_of: Web/API/HTMLInputElement
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: AudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 AudioContext.`createChannelMerger()方法，会创建一个`ChannelMergerNode，后者可以把多个音频流的通道整合到一个音频流。
@@ -22,7 +23,7 @@ var merger = audioCtx.createChannelMerger(2);
 
 一个 {{domxref("ChannelMergerNode")}}.
 
-## （举个）栗（例）子
+## 示例
 
 下面的例子展示了如何分离立体音轨（就是一段音乐），处理使左右声道不同。使用的时候，需要指定 AudioNode.connect(AudioNode) 方法的第二个和第三个参数，分别用来指定通道链接来源的索引和输出的索引。
 
@@ -60,8 +61,8 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createChannelMerger")}}
+{{Compat}}
 
-## 相关页面
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

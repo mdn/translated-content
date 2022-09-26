@@ -1,14 +1,11 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - 类型化数组
-  - 类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
+
 {{JSRef}}
 
-**`copyWithin()`** 方法将数组中元素的序列复制到以 `target` 起始的位置。拷贝的副本取自第二个参数（`start`）和第三个参数（`end`）的下标位置。`end` 参数是可选的，默认为数组长度。该方法与 {{jsxref("Array.prototype.copyWithin")}} 的算法相同。_TypedArray_ 指的是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`copyWithin()`** 方法将数组中元素的序列复制到以 `target` 起始的位置。拷贝的副本取自第二个参数（`start`）和第三个参数（`end`）的下标位置。`end` 参数是可选的，默认为数组长度。该方法与 {{jsxref("Array.prototype.copyWithin")}} 的算法相同。_TypedArray_ 指的是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 

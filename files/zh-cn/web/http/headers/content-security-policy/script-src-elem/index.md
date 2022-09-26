@@ -1,8 +1,8 @@
 ---
 title: 'CSP: script-src-elem'
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中 {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** 指示符明指定了合法的 js 要素来源 {{HTMLElement("script")}} ，但是不包括类似 onclick 这样的事件处理器中包含的内联脚本。

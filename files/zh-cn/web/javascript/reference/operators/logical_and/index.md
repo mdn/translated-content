@@ -1,9 +1,9 @@
 ---
 title: 逻辑与 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND
 original_slug: Web/JavaScript/Reference/Operators/逻辑和
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND (`&&`) operator (logical conjunction) for a set of operands is true if and only if all of its operands are true. It is typically used with {{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However, the `&&` operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.
@@ -30,7 +30,7 @@ Examples of expressions that can be converted to false are:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-Even though the `&&` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+Even though the `&&` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 
 ### Short-circuit evaluation
 
@@ -51,7 +51,7 @@ console.log( A() && B() );
 
 ### Operator precedence
 
-The following expressions might seem equivalent, but they are not, because the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+The following expressions might seem equivalent, but they are not, because the `&&` operator is executed before the `||` operator (see [operator precedence](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
 true || false && false      // returns true, because && is executed first

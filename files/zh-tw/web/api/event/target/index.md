@@ -1,8 +1,8 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 指向最初觸發事件的 DOM 物件。與 {{domxref("event.currentTarget")}} 屬性不同的是，`event.currentTarget` 屬性總會指向目前於冒泡或捕捉階段正在處理該事件之事件處理器所註冊的 DOM 物件，而 `event.target` 屬性則是永遠指向觸發事件的 DOM 物件。
@@ -44,7 +44,7 @@ ul.addEventListener('click', hide, false);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.target")}}
+{{Compat}}
 
 ## Compatibility notes
 
@@ -60,4 +60,4 @@ function hide(e) {
 
 ## 參見
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-TW/docs/Web/API/Event/Comparison_of_Event_Targets)

@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 ---
+
 {{JSRef}}
 
 **`setUint32()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 32-bit 数 (无符号长整型)。

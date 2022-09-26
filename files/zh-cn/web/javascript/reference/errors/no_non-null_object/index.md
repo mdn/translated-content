@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/No_non-null_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## 提示信息

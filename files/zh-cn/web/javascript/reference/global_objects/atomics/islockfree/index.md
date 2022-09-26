@@ -1,8 +1,8 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 静态方法 **`Atomics.isLockFree()`** 用于校验是否能够使用原子操作的 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) 的标准字节长度之一。若该字节长度为可处理的 TypedArray 标准字节长度之一则返回 `true`。TypedArray 的标准字节长度参见 [BYTES_PER_ELEMENT](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
@@ -18,11 +18,11 @@ Atomics.isLockFree(size)
 ### 参数
 
 - `size`
-  - : 整形。字节长度，通常为[`TypedArray.BYTES_PER_ELEMENT`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
+  - : 整形。字节长度，通常为[`TypedArray.BYTES_PER_ELEMENT`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
 
 ### 返回值
 
-{{jsxref("Boolean")}} 是否为能够使用原子操作的[`TypedArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)的标准字节长度之一。
+{{jsxref("Boolean")}} 是否为能够使用原子操作的[`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)的标准字节长度之一。
 
 ## 示例
 

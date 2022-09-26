@@ -1,20 +1,8 @@
 ---
 title: JavaScript 初探
 slug: Learn/JavaScript/First_steps
-tags:
-  - JavaScript
-  - 初學者
-  - 字串
-  - 指引
-  - 撰寫程式
-  - 數值
-  - 數學
-  - 文章
-  - 變數
-  - 運算子
-  - 陣列
-translation_of: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 帶領各位開始體驗撰寫 JavaScript 前，在第一個 JavaScript 單元中，我們首先來回答一些基本的問題，像是「什麼是 JavaScript 啊？」、「它長什麼樣子？」以及「它能拿來做什麼？」。之後我們會詳細討論幾個關鍵元素，諸如變量(variables)、字串(strings)、數字(numbers)和陣列(arrays)。

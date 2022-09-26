@@ -1,11 +1,11 @@
 ---
 title: 條件運算子
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
-**條件 (三元) 運算子** 是 JavaScript 唯一用到三個運算元的運算子：在一個條件後面會跟著一個問號 (`?`)，如果條件是 [truthy](/en-US/docs/Glossary/truthy)，在冒號(`:`)前的表達式會被執行，如果條件是 [falsy](/en-US/docs/Glossary/falsy)，在冒號後面的表達式會被執行，這個運算子常常被用來當作 [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 的簡潔寫法.
+**條件 (三元) 運算子** 是 JavaScript 唯一用到三個運算元的運算子：在一個條件後面會跟著一個問號 (`?`)，如果條件是 [truthy](/zh-TW/docs/Glossary/truthy)，在冒號(`:`)前的表達式會被執行，如果條件是 [falsy](/zh-TW/docs/Glossary/falsy)，在冒號後面的表達式會被執行，這個運算子常常被用來當作 [`if`](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else) 的簡潔寫法.
 
 {{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
@@ -20,9 +20,9 @@ condition ? exprIfTrue : exprIfFalse
 - `condition`
   - : 值用來做為條件的表達式
 - `exprIfTrue`
-  - : 如果 `condition` 的值是 [truthy](/en-US/docs/Glossary/truthy) (等於或是可轉換為 `true`) , `exprIfTrue` 會被執行
+  - : 如果 `condition` 的值是 [truthy](/zh-TW/docs/Glossary/truthy) (等於或是可轉換為 `true`) , `exprIfTrue` 會被執行
 - `exprIfFalse`
-  - : 如果 `condition` 的值是 [falsy](/en-US/docs/Glossary/falsy) (等於或是可轉換為 `false`) , `exprIfFalse` 會被執行
+  - : 如果 `condition` 的值是 [falsy](/zh-TW/docs/Glossary/falsy) (等於或是可轉換為 `false`) , `exprIfFalse` 會被執行
 
 ## 描述
 
@@ -76,12 +76,12 @@ function example(…) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## 參見
 
-- [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [if statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)

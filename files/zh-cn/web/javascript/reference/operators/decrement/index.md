@@ -1,32 +1,32 @@
 ---
-title: 自减 (--)
+title: 自减（--）
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - JavaScript
-  - 自减
-  - 语法特性
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Decrement
-original_slug: Web/JavaScript/Reference/Operators/自减
 ---
+
 {{jsSidebar("Operators")}}
 
-自减运算符 (`--`) 将它的操作数减一，然后返回操作数。
+自减操作符（`--`）对其操作数进行自减（减一），并根据操作符的位置返回自减之前或之后的值。
 
 {{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
 
-## <br>语法
+## 语法
 
-```js
+```js-nolint
 x--
 --x
 ```
 
-## 语法细节
+## 描述
 
 如果使用后缀式，即将操作符放在操作数的后面 (如，`x--`)，运算会减一，然后返回减一之前的值。
 
 如果使用前缀式，即将操作符放在操作数的前面 (如，`--x`)，运算会减一，然后返回减一之后的值。
+
+递减操作符只能应用于引用的操作数（变量和对象属性，即有效的[赋值目标](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）。`--x` 本身的计算结果是一个值，而不是一个引用，因此不能将多个自减操作符链接在一起。
+
+```js example-bad
+--(--x); // SyntaxError: Invalid left-hand side expression in prefix operation
+```
 
 ## 示例
 
@@ -34,20 +34,20 @@ x--
 
 ```js
 let x = 3;
-y = x--;
+const y = x--;
 
-// y = 3
 // x = 2
+// y = 3
 ```
 
 ### 前缀式
 
 ```js
-let a = 2;
-b = --a;
+let x = 3;
+const y = --x;
 
-// a = 1
-// b = 1
+// x = 2
+// y = 2
 ```
 
 ## 规范
@@ -58,14 +58,14 @@ b = --a;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

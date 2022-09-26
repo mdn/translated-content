@@ -3,6 +3,7 @@ title: 使用 Javascript 和 DOM Interfaces 来处理 HTML
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
+
 ### 简介
 
 本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建，访问，控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里所有的示例，在任何全面支持 DOM level1 的浏览器里都能正常工作；例如 Mozilla 浏览器或者其他基于 Mozilla 的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在 IE5 中也能正常工作。
@@ -57,39 +58,39 @@ slug: >-
 
 注意我们创建元素和文本节点的顺序：
 
-1.  首先我们创建了 TABLE 元素。
-2.  然后，我们创建了 TABLE 的子元素--TBODY。
-3.  然后，我们使用循环语句创建了 TBODY 的子元素--TR。
-4.  对于每一个 TR 元素，我们使用一个循环语句创建它的子元素--TD。
-5.  对于每一个 TD 元素，我们创建单元格内的文本节点。
+1. 首先我们创建了 TABLE 元素。
+2. 然后，我们创建了 TABLE 的子元素--TBODY。
+3. 然后，我们使用循环语句创建了 TBODY 的子元素--TR。
+4. 对于每一个 TR 元素，我们使用一个循环语句创建它的子元素--TD。
+5. 对于每一个 TD 元素，我们创建单元格内的文本节点。
 
 现在，我们创建了 TABLE，TBODY，TR，TD 等元素，然后创建了文本节点；接下来，我们将每一个对象接在各自的父节点上，使用逆序：
 
-1.  首先，我们将每一个文本节点接在 TD 元素上
+1. 首先，我们将每一个文本节点接在 TD 元素上
 
     ```
     mycurrent_cell.appendChild(currenttext);
     ```
 
-2.  然后，我们将每一个 TD 元素接在他的父 TR 元素上。
+2. 然后，我们将每一个 TD 元素接在他的父 TR 元素上。
 
     ```
     mycurrent_row.appendChild(mycurrent_cell);
     ```
 
-3.  然后，我们将每一个 TR 元素接在他们的父 TBODY 元素上。
+3. 然后，我们将每一个 TR 元素接在他们的父 TBODY 元素上。
 
     ```
     mytablebody.appendChild(mycurrent_row);
     ```
 
-4.  下一步，我们将 TBODY 元素接在他的父 TABLE 元素上
+4. 下一步，我们将 TBODY 元素接在他的父 TABLE 元素上
 
     ```
     mytable.appendChild(mytablebody);
     ```
 
-5.  最后，我们将 TABLE 元素接在他的父元素 BODY 上。
+5. 最后，我们将 TABLE 元素接在他的父元素 BODY 上。
 
     ```
     mybody.appendChild(mytable);
@@ -148,25 +149,25 @@ slug: >-
 
 在这个例子中，我们设置变量`myP`指向 DOM 对象 body 中的第二个`p`元素：
 
-1.  首先，我们使用下面的代码获得所有的 body 元素的列表，因为在任何合法的 HTML 文档中都只有一个 body 元素，所以这个列表是只包含一个单元的。
+1. 首先，我们使用下面的代码获得所有的 body 元素的列表，因为在任何合法的 HTML 文档中都只有一个 body 元素，所以这个列表是只包含一个单元的。
 
     ```
     document.getElementsByTagName("body")
     ```
 
-2.  下一步，我们取得列表的第一个元素，它本身就会 body 元素对象。
+2. 下一步，我们取得列表的第一个元素，它本身就会 body 元素对象。
 
     ```
     myBody=myDocumentElements.item(0);
     ```
 
-3.  然后，我们通过下面代码获得 body 的子元素中所有的 p 元素
+3. 然后，我们通过下面代码获得 body 的子元素中所有的 p 元素
 
     ```
     myBodyElements=myBody.getElementsByTagName("p");
     ```
 
-4.  最后，我们从列表中取第二个单元元素。
+4. 最后，我们从列表中取第二个单元元素。
 
     ```
     myP=myBodyElements.item(1);
@@ -193,9 +194,9 @@ myTextNode=document.createTextNode("world");
 
 #### 使用 appendChild(..) 插入元素
 
-那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。
+那么，通过调用 `myP.appendChild(node_element)` 你可以将这个元素设置成为第二个 P 的一个新的子元素。
 
-```
+```js
 myP.appendChild(myTextNode);
 ```
 

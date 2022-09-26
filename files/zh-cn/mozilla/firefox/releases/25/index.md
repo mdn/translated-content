@@ -1,8 +1,8 @@
 ---
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
-translation_of: Mozilla/Firefox/Releases/25
 ---
+
 {{FirefoxSidebar}}
 
 ## Web 开发者需要注意的变化
@@ -16,7 +16,7 @@ translation_of: Mozilla/Firefox/Releases/25
 ### HTML
 
 - 实现了 {{HTMLElement("iframe")}} 元素的 {{htmlattrxref("srcdoc", "iframe")}} 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).
-- `HTMLCanvasElement.toBlob` 方法，当第二个参数指定为 `"image/jpeg"` 时， 会接受第三个参数，用来指定 jpeg 图片质量。({{bug("891884")}}).
+- `HTMLCanvasElement.toBlob` 方法，当第二个参数指定为 `"image/jpeg"` 时，会接受第三个参数，用来指定 jpeg 图片质量。({{bug("891884")}}).
 
 ### JavaScript
 
@@ -38,8 +38,8 @@ translation_of: Mozilla/Firefox/Releases/25
 - 实现了 {{domxref("HTMLTableElement")}} 接口的 `createTBody()` 方法，可以用来获取 (创建) 表格的 {{HTMLElement("tbody")}} 子元素 ({{bug("813034")}}).
 - {{domxref("Range.collapse")}} 方法的 `toStart` 参数变为可选，且默认值为 `false` ({{bug("891340")}}).
 - 按照最新 DOM 规范，`window.Future()` 改名为 `window.Promise()`({{bug("884279")}}).
-- 实现了 document.firstElementChild, document.lastElementChild, document.children, document.childElementCount 以及 DocumentFragment 的 `parentNode` 等属性({{bug("895974")}}).
-- `navigator.geolocation` 属性更新以符合最新规范。它永远不会返回 `null`。当 `geo.enabled` 偏好设置为 `false` 时, 它会返回 `undefined` ({{bug("884921")}}).
+- 实现了 document.firstElementChild, document.lastElementChild, document.children, document.childElementCount 以及 DocumentFragment 的 `parentNode` 等属性 ({{bug("895974")}}).
+- `navigator.geolocation` 属性更新以符合最新规范。它永远不会返回 `null`。当 `geo.enabled` 偏好设置为 `false` 时，它会返回 `undefined` ({{bug("884921")}}).
 - {{domxref("ImageData")}} API 在 {{domxref("Worker")}} 内也可用 ({{bug("845545")}}).
 
 ### MathML

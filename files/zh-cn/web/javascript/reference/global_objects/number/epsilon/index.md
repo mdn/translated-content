@@ -1,8 +1,8 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 **`Number.EPSILON`** 属性表示 1 与{{jsxref("Number")}}可表示的大于 1 的最小的浮点数之间的差值。

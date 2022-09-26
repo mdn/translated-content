@@ -1,10 +1,8 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - 待翻譯
-translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 針對所有給定的 class 子元素，回傳類似陣列的物件。當呼叫 document 物件時，它會搜尋整個文件，包括根節點在內。你也可以在所有元素呼叫 {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}}，那它就只會回傳含有給定 class 的特定根元素的後代元素。
@@ -82,7 +80,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}
 
 ## 規範
 

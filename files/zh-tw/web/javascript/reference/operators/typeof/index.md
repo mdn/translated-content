@@ -1,10 +1,8 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - 運算子
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
+
 {{jsSidebar("Operators")}}
 
 ## 摘要

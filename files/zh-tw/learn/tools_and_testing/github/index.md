@@ -1,13 +1,8 @@
 ---
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - Beginner
-  - GitHub
-  - Learn
-  - Web
-  - git
 ---
+
 {{LearnSidebar}}
 
 所有開發者都將使用到一些**版本控制系統** ( **V**ersion **C**ontrol **S**ystem, 簡稱 **VCS** ), 這種工具讓人們可以與其他開發者同公開發一個專案同時避免了不必要的重複與衝突，如果遇到什麼問題，也可以及時回退到之前的版本。當今最流行的**版本控制系統**（至少在網路開發者中是這樣的）是 **Git**，和與之關聯的程式社區網站 **GitHub**。這篇短文將帶你簡單地了解他們。
@@ -31,7 +26,7 @@ tags:
 >
 > 我們準備了一系列的課程當中包括核心的資訊，讓你往你的目標(成為一位前端網頁程式開發者)邁進。
 >
-> [**開始學習**](/en-US/docs/Learn/Front-end_web_developer)
+> [**開始學習**](/zh-TW/docs/Learn/Front-end_web_developer)
 
 ## 事前準備
 

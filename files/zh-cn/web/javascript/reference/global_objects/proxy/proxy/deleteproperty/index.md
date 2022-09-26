@@ -1,9 +1,9 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
+
 {{JSRef}}
 
 **`handler.deleteProperty()`** 方法用于拦截对对象属性的 {{jsxref("Operators/delete", "delete")}} 操作。

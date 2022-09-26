@@ -1,13 +1,8 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-  - 引用
-translation_of: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 的**`border-right-width`** 用来设置盒子右边框的宽度。

@@ -1,8 +1,8 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 ---
+
 {{JSRef}}
 
 **`BigUint64Array`** 类型数组表示一个平台字节顺序的 64 位无符号整型数组。如果想要控制字符顺序，请使用 {{jsxref("DataView")}} 替代。内容初始化为 `0n`. 创建之后可以使用对象中的方法或使用标准数组索引语法 (括号表示法) 来获取数组中的元素。
@@ -17,7 +17,7 @@ new BigUint64Array(object);
 new BigUint64Array(buffer [, byteOffset [, length]]);
 ```
 
-更多有关构造方法和参数的信息，参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+更多有关构造方法和参数的信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -146,10 +146,10 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.BigUint64Array")}}
+{{Compat}}
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

@@ -1,16 +1,8 @@
 ---
 title: 语法和数据类型
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Enhanced Object Literals
-  - JavaScript
-  - 'Null'
-  - Object Literals
-  - Typed Objects
-  - typeof()
-  - 教程
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章讨论 JavaScript 的基本语法，变量声明，数据类型 和 字面量。
@@ -74,7 +66,7 @@ JavaScript 有三种声明方式。
 
 一个 JavaScript 标识符必须以字母、下划线（\_）或者美元符号（$）开头；后续的字符也可以是数字（0-9）。因为 JavaScript 语言是区分大小写的，所以字母可以是从“A”到“Z”的大写字母和从“a”到“z”的小写字母。
 
-你可以使用大部分 ISO 8859-1 或 Unicode 编码的字符作标识符，例如 å 和 ü（详情可查看[这篇博客文章](https://mathiasbynens.be/notes/javascript-identifiers-es6)）。你也可以使用 [Unicode 转义字符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) 作标识符。
+你可以使用大部分 ISO 8859-1 或 Unicode 编码的字符作标识符，例如 å 和 ü（详情可查看[这篇博客文章](https://mathiasbynens.be/notes/javascript-identifiers-es6)）。你也可以使用 [Unicode 转义字符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) 作标识符。
 
 合法的标识符示例：`Number_hits`，`temp99`，`$credit` 和 `_name`。
 
@@ -84,7 +76,7 @@ JavaScript 有三种声明方式。
 
 - 使用关键词 `var` 。例如 `var x = 42`。这个语法可以用来声明局部变量和全局变量。
 - 直接赋值。例如`x = 42`。在函数外使用这种形式赋值，会产生一个全局变量。在严格模式下会产生错误。因此你不应该使用这种方式来声明变量。
-- 使用关键词 `let` 。例如 `let y = 13`。这个语法可以用来声明块作用域的局部变量。參考下方[变量的作用域 (Variable scope)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域) 。
+- 使用关键词 `let` 。例如 `let y = 13`。这个语法可以用来声明块作用域的局部变量。參考下方[变量的作用域 (Variable scope)](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域) 。
 
 你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)将[对象字面量](#对象字面量_object_literals)的属性绑定到变量。就像这样`let { bar } = foo`。这会创建一个名为`bar`的变量，并且将`foo`对像中属性名与之相同的属性的值赋给它。
 
@@ -113,7 +105,7 @@ console.log("The value of y is " + y);// 未捕获的引用错误： y 未被定
 let y;
 ```
 
-你可以使用 `undefined` 来判断一个变量是否已赋值。在以下的代码中，变量`input`未被赋值，因此 [`if`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/if...else) 条件语句的求值结果是 `true` 。
+你可以使用 `undefined` 来判断一个变量是否已赋值。在以下的代码中，变量`input`未被赋值，因此 [`if`](/zh-CN/docs/JavaScript/Reference/Statements/if...else) 条件语句的求值结果是 `true` 。
 
 ```js
 var input;
@@ -149,7 +141,7 @@ console.log(n * 32); // 在控制台中会显示 0
 
 在函数之外声明的变量，叫做*全局*变量，因为它可被当前文档中的任何其他代码所访问。在函数内部声明的变量，叫做*局部*变量，因为它只能在当前函数的内部访问。
 
-ECMAScript 6 之前的 JavaScript 没有 [语句块](https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Statements#Block_Statement) 作用域；相反，语句块中声明的变量将成为语句块所在函数（或全局作用域）的局部变量。例如，如下的代码将在控制台输出 5，因为 `x` 的作用域是声明了 `x` 的那个函数（或全局范围），而不是 `if` 语句块。
+ECMAScript 6 之前的 JavaScript 没有 [语句块](/zh-CN/docs/JavaScript/Guide/Statements#Block_Statement) 作用域；相反，语句块中声明的变量将成为语句块所在函数（或全局作用域）的局部变量。例如，如下的代码将在控制台输出 5，因为 `x` 的作用域是声明了 `x` 的那个函数（或全局范围），而不是 `if` 语句块。
 
 ```js
 if (true) {
@@ -312,7 +304,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 - 以及对象（Object）。
 
-虽然这些数据类型相对来说比较少，但是通过他们你可以在程序中开发有用的功能。对象（[Objects](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Object)）和函数（[functions](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Function)）是这门语言的另外两个基本元素。你可以把对象当作存放值的一个命名容器，然后将函数当作你的程序能够执行的步骤。
+虽然这些数据类型相对来说比较少，但是通过他们你可以在程序中开发有用的功能。对象（[Objects](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object)）和函数（[functions](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function)）是这门语言的另外两个基本元素。你可以把对象当作存放值的一个命名容器，然后将函数当作你的程序能够执行的步骤。
 
 ### 数据类型的转换
 
@@ -350,8 +342,8 @@ y = 42 + " is the answer" // "42 is the answer"
 
 有一些方法可以将内存中表示一个数字的字符串转换为对应的数字。
 
-- [`parseInt()`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt)
-- [`parseFloat()`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat)
+- [`parseInt()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt)
+- [`parseFloat()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat)
 
 `parseInt` 方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制 (radix) 参数，这个参数用于指定使用哪一种进制。
 
@@ -392,11 +384,11 @@ console.log(a.length); // 1
 console.log(a[0]); // 3
 ```
 
-> **备注：** 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers)。
+> **备注：** 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers)。
 
 若在顶层（全局）脚本里用字面值创建数组，JavaScript 语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。
 
-数组字面值同时也是数组对象。有关数组对象的详情请参见[数组对象](https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#Array_Object)一文。
+数组字面值同时也是数组对象。有关数组对象的详情请参见[数组对象](/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#Array_Object)一文。
 
 #### 数组字面值中的多余逗号
 
@@ -438,7 +430,7 @@ var myList = ['home', , 'school', , ];
 
 布尔类型有两种字面量：`true`和`false`。
 
-不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见 [布尔对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)。
+不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见 [布尔对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)。
 
 ### 数字字面量
 
@@ -620,7 +612,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
        "bar": ${bar}}`(myOnReadyStateChangeHandler);
 ```
 
-除非有特别需要使用字符串对象，否则，你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见[字符串对象](https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object)。
+除非有特别需要使用字符串对象，否则，你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见[字符串对象](/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object)。
 
 #### 在字符串中使用的特殊字符
 
@@ -646,7 +638,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 | \\\\        | 反斜杠字符（\）                                                                                                                                                                                              |
 | \\_XXX_     | 由从 0 到 377 最多三位八进制数*XXX*表示的 Latin-1 字符。例如，\251 是版权符号的八进制序列。                                                                                                                  |
 | \x*XX*      | 由从 00 和 FF 的两位十六进制数字 XX 表示的 Latin-1 字符。例如，\ xA9 是版权符号的十六进制序列。                                                                                                              |
-| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见[Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
+| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见[Unicode escape sequences](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
 | \u*{XXXXX}* | Unicode 代码点 (code point) 转义字符。例如，\u{2F804} 相当于 Unicode 转义字符 \uD87E\uDC04 的简写。                                                                                                          |
 
 译注：严格模式下，不能使用八进制转义字符。
@@ -694,7 +686,7 @@ Sugar is sweet,\n\
 and so is foo."
 ```
 
-ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 **[template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)。**它包含一些新特征，包括了多行字符串！
+ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 **[template literals](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。**它包含一些新特征，包括了多行字符串！
 
 ```js
 var poem =

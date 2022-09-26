@@ -1,15 +1,8 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - instanceof
-  - 原型
-  - 原型链
-  - 对象
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`instanceof`** **运算符**用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。

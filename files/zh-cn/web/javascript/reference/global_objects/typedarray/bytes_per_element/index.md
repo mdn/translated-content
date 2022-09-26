@@ -1,8 +1,8 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
+
 {{JSRef("Global_Objects", "TypedArray", "Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array")}}
 
 ## 概要
@@ -45,5 +45,5 @@ Float64Array.BYTES_PER_ELEMENT;      // 8
 
 ## 参见
 
-- [JavaScript 强类型数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 强类型数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

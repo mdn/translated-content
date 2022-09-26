@@ -1,17 +1,11 @@
 ---
 title: '@property'
 slug: Web/CSS/@property
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-**`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是[CSS Houdini](/en-US/docs/Web/Houdini) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
+**`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是[CSS Houdini](/zh-CN/docs/Web/Houdini) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
 
 `@property` 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何 JS 代码。有效的 `@property` 规则会注册一个自定义属性，就像 {{domxref('CSS.registerProperty')}} 函数被使用同样的参数调用了一样。
 
@@ -35,7 +29,7 @@ tags:
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [规则](/en-US/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
 
 ```css
 @property --my-color {
@@ -45,7 +39,7 @@ tags:
 }
 ```
 
-使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
 ```js
 window.CSS.registerProperty({
@@ -68,7 +62,7 @@ window.CSS.registerProperty({
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.property")}}
+{{Compat}}
 
 ## 另见
 

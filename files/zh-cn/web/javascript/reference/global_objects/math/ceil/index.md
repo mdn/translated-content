@@ -1,14 +1,8 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - 参考
-  - 数学
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
+
 {{JSRef}}
 
 **`Math.ceil()`** 函数返回大于或等于一个给定数字的最小整数。

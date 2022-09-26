@@ -1,8 +1,8 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
+
 {{JSRef}}
 
 **`Math.cosh()`** 函数返回数值的双曲余弦函数，可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示：

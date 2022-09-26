@@ -1,18 +1,6 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
-tags:
-  - CSS
-  - CSS 封じ込め
-  - CSS プロパティ
-  - レイアウト
-  - Paint
-  - リファレンス
-  - Style
-  - Visibility
-  - ウェブ
-browser-compat: css.properties.content-visibility
-translation_of: Web/CSS/content-visibility
 ---
 {{CSSRef}}
 

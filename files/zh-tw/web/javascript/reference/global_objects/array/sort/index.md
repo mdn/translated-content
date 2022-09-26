@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
+
 {{JSRef}}
 
 **`sort()`** 方法會*[原地（in place）](https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)*對一個陣列的所有元素進行排序，並回傳此陣列。排序不一定是[穩定的（stable）](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95#%E7%A9%A9%E5%AE%9A%E6%80%A7)。預設的排序順序是根據字串的 Unicode 編碼位置（code points）而定。
@@ -210,7 +205,7 @@ var result = mapped.map(function(el){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## 參見
 

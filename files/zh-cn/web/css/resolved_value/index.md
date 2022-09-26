@@ -1,8 +1,8 @@
 ---
 title: 解析值
 slug: Web/CSS/resolved_value
-translation_of: Web/CSS/resolved_value
 ---
+
 {{cssref}}
 
 CSS 属性的解析值（**resolved value** ）是 {{domxref("Window.getComputedStyle", "getComputedStyle()")}}返回的值。对于大多数属性，它是计算值{{cssxref("computed_value", "computed value") }}，但对于一些旧属性（包括宽度和高度），它是使用值{{cssxref("used_value", "used value")}}。有关详细信息，请参阅下面的规范链接。
@@ -13,7 +13,7 @@ CSS 属性的解析值（**resolved value** ）是 {{domxref("Window.getComputed
 
 ## 参考
 
-- [CSS Reference](/en-US/docs/Web/CSS/Reference)
+- [CSS Reference](/zh-CN/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

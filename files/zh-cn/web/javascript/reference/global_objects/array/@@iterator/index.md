@@ -1,20 +1,8 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - 原型
-  - 参考
-  - 循环
-  - 方法
-  - 迭代
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 属性和 {{jsxref("Array.prototype.values()", "Array.prototype.values()")}} 属性的初始值是同一个函数对象。
@@ -90,6 +78,7 @@ logIterable('abc');
 
 ## 参见
 
+- [Polyfill of `Array.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.forEach()")}}

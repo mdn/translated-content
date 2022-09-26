@@ -1,15 +1,8 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 轮廓
-  - 参考
-  - 布局
-  - 轮廓
-translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
@@ -91,7 +84,7 @@ a:focus {
 
 ### 结果
 
-## 可访问性考虑
+## 无障碍考虑
 
 将 `outline` 设置为 `0` 或 `none` 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。
 
@@ -106,4 +99,4 @@ a:focus {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

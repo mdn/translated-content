@@ -11,6 +11,7 @@ tags:
   - origin
 translation_of: Web/API/ExtendableMessageEvent/origin
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **origin** de l'interface {{domxref("ExtendableMessageEvent")}} retourne l'origine du {{domxref("ServiceWorkerClient")}} qui a envoyé le message.
@@ -50,13 +51,11 @@ self.onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-origin-attribute', 'ExtendableMessageEvent.origin')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.origin")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,8 +1,8 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ---
+
 {{JSRef}}
 
 **`Atomics.xor()`** 静态方法会在数组中给定位置进行一次按位异或操作，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
@@ -49,6 +49,7 @@ Atomics.xor(typedArray, index, value)
 5  0101
 1  0001
    ----
+
 4  0100
 ```
 

@@ -1,16 +1,13 @@
 ---
 title: scroll-snap-points-y
 slug: Web/CSS/scroll-snap-points-y
-tags:
-  - CSS
-  - css snap
-translation_of: Web/CSS/scroll-snap-points-y
 ---
+
 {{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 
 ## 摘要
 
-**`scroll-snap-points-y`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的垂直位置。
+**`scroll-snap-points-y`** [CSS](/zh-CN/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的垂直位置。
 
 {{cssinfo}}
 
@@ -91,4 +88,4 @@ scroll-snap-points-y: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-points-y")}}
+{{Compat}}

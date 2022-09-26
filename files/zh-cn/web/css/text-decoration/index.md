@@ -1,10 +1,8 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - 文本修饰
-translation_of: Web/CSS/text-decoration
 ---
+
 {{ CSSRef() }}
 
 ## 简介

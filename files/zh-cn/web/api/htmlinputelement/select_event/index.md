@@ -2,6 +2,7 @@
 title: select
 slug: Web/API/HTMLInputElement/select_event
 ---
+
 {{APIRef}}
 
 **`select`** 选择某些文本时会触发事件。

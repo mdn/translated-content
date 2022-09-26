@@ -1,8 +1,8 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
-translation_of: Web/HTTP/Status/416
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`416 Range Not Satisfiable`** 错误状态码意味着服务器无法处理所请求的数据区间。最常见的情况是所请求的数据区间不在文件范围之内，也就是说，{{HTTPHeader("Range")}} 首部的值，虽然从语法上来说是没问题的，但是从语义上来说却没有意义。

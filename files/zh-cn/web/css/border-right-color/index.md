@@ -1,8 +1,8 @@
 ---
 title: border-right-color
 slug: Web/CSS/border-right-color
-translation_of: Web/CSS/border-right-color
 ---
+
 {{CSSRef}}
 
 **`border-right-color`** CSS 属性用来设置元素右边的 {{cssxref("border")}}. 这个属性的值也可以通过简写的 CSS 属性 {{cssxref("border-color")}} 或{{cssxref("border-right")}}来设置。
@@ -77,7 +77,7 @@ The `border-right-color` property is specified as a single value.
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-right-color")}}
+{{Compat}}
 
 ## See also
 

@@ -1,11 +1,11 @@
 ---
 title: target
 slug: Web/SVG/Attribute/target
-translation_of: Web/SVG/Attribute/target
 ---
+
 {{SVGRef}}
 
-**`target`**当结束资源有多个可能的目标时，例如，当父文档嵌入在 HTML 或 XHTML 文档中或使用选项卡式浏览器查看时，应使用该属性。此属性指定激活链接时要在其中打开文档的浏览上下文的名称（例如，浏览器选项卡或（X）HTML iframe 或 object 元素）：
+**`target`** 当结束资源有多个可能的目标时，例如，当父文档嵌入在 HTML 或 XHTML 文档中或使用选项卡式浏览器查看时，应使用该属性。此属性指定激活链接时要在其中打开文档的浏览上下文的名称（例如，浏览器选项卡或（X）HTML iframe 或 object 元素）：
 
 只有一个元素正在使用此属性：{{SVGElement("a")}}
 

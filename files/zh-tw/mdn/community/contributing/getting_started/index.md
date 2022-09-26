@@ -1,15 +1,9 @@
 ---
 title: 開始入門 MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Beginner
-  - Getting Started
-  - Guide
-  - MDN Meta
-  - 入門
-translation_of: MDN/Contribute/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 這是一個開放的開發者和作家社區，不分品牌、瀏覽器、平台，為更好的 Web 構建提供更多資源。每個人都能做出貢獻，而每個貢獻者的付出都讓我們變得更為壯大。要想持續推動 Web 創新、成就更為偉大的事物？就讓我們和您一起，從這裡開始。

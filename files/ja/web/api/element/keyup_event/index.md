@@ -1,16 +1,8 @@
 ---
 title: 'Element: keyup イベント'
 slug: Web/API/Element/keyup_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - keyup
-browser-compat: api.Element.keyup_event
-translation_of: Web/API/Element/keyup_event
 ---
+
 {{APIRef}}
 
 **`keyup`** イベントは、キーが離されたときに発生します。

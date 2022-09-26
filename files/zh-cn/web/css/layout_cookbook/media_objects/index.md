@@ -1,15 +1,9 @@
 ---
 title: 指南：媒体对象
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - 媒体对象
-  - 布局
-  - 指南
-  - 浮动
-  - 网格
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 original_slug: Web/CSS/Layout_cookbook/媒体对象
 ---
+
 {{CSSRef}}
 
 媒体对象是 web 上随处可见的一种模式。它由[Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。
@@ -66,12 +60,4 @@ original_slug: Web/CSS/Layout_cookbook/媒体对象
 
 ## 浏览器兼容性
 
-.各种各样的布局方法有不同的浏览器支持。查看下面的图表得到属性的基本支持的细节。
-
-#### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-#### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 **`find()`** 方法會回傳第一個滿足所提供之測試函式的元素**值**。否則回傳 {{jsxref("undefined")}}。
@@ -164,7 +164,7 @@ if (!Array.prototype.find) {
 }
 ```
 
-If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
+If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
 
 ## 規範
 
@@ -172,7 +172,7 @@ If you need to support truly obsolete JavaScript engines that don't support [`Ob
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,18 +1,8 @@
 ---
 title: 移动设备上的无障碍
-slug: learn/Accessibility/Mobile
-tags:
-  - 初学者
-  - 响应式
-  - 学习
-  - 屏幕阅读器
-  - 文章
-  - 无障碍
-  - 移动端
-  - 编程
-  - 触摸
-translation_of: Learn/Accessibility/Mobile
+slug: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 随着通过手机设备访问网络越来越受欢迎，例如 iOS 和 Android 等流行的平台都拥有了完善的无障碍工具，在这些平台上考虑你网页的无障碍访问性是一件很重要事情。本文将着重介绍移动端无障碍的注意事项。
@@ -23,7 +13,7 @@ translation_of: Learn/Accessibility/Mobile
       <th scope="row">前置条件：</th>
       <td>
         基本的计算机素养，对 Javascript,html,css 有基本的认识，对<a
-          href="/en-US/docs/Learn/Accessibility"
+          href="/zh-CN/docs/Learn/Accessibility"
           >之前的课程</a
         >有一定的理解。
       </td>
@@ -184,11 +174,11 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
 
 ## 控制机制
 
-在我们的 CSS 和 JavaScript 可访问性文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[鼠标特定的事件](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
+在我们的 CSS 和 JavaScript 无障碍文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[鼠标特定的事件](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
 
-举例来说，[点击事件](/en-US/docs/Web/API/GlobalEventHandlers/onclick)在可访问性方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子[simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) 来看看我们是什么意思。
+举例来说，[点击事件](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick)在无障碍方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子[simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) 来看看我们是什么意思。
 
-另一方面，像[mousedown](/en-US/docs/Web/API/GlobalEventHandlers/onmousedown)和[mouseup](/en-US/docs/Web/API/GlobalEventHandlers/onmouseup)这些特定的鼠标事件会产生一些问题 - 他们的事件处理程序不能使用除了鼠标意外的设备操作。
+另一方面，像[mousedown](/zh-CN/docs/Web/API/GlobalEventHandlers/onmousedown)和[mouseup](/zh-CN/docs/Web/API/GlobalEventHandlers/onmouseup)这些特定的鼠标事件会产生一些问题 - 他们的事件处理程序不能使用除了鼠标意外的设备操作。
 
 如果你尝试通过键盘或触摸来试试我们的[simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html))，你将发现问题。它发生的原因是我们用了下面的代码：
 
@@ -217,17 +207,17 @@ panel.ontouchend = stopMove;
 
 我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
 
-**注意**: 你可以看到一个功能完善的例子，展示如何在实现[游戏控制机制](/en-US/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
+**注意**: 你可以看到一个功能完善的例子，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
 
 ## 响应式设计
 
-[响应式设计](/en-US/Apps/Progressive/Responsive)是根据屏幕大小和分辨率等因素动态更改您的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
+[响应式设计](/zh-CN/Apps/Progressive/Responsive)是根据屏幕大小和分辨率等因素动态更改您的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
 
 特别是，移动端设备需要解决的最常见的问题是：
 
-- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要提高文字大小以便变成可读。这些问题可以通过[媒体查询](/en-US/docs/Web/CSS/Media_Queries)、[viewport](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)、[弹性布局](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)来解决上面的问题。
-- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。您可以使用[响应式图像技术](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
-- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，您可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 有一个小文件大小，并将保持清晰的大小显示在（请参阅[向网络添加矢量图形](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)一些更多的细节）。
+- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要提高文字大小以便变成可读。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)、[viewport](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)、[弹性布局](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来解决上面的问题。
+- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。您可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
+- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，您可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 有一个小文件大小，并将保持清晰的大小显示在（请参阅[向网络添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)一些更多的细节）。
 
 **注意**: 我们不会在这里对响应式设计进行完整的讨论，因为他们在 MDN 其他地方都有涉及（参考上面的链接）。
 
@@ -237,7 +227,7 @@ panel.ontouchend = stopMove;
 
 #### 不能缩放
 
-我们可以利用[viewport](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)来禁止用户缩放，在你的[\<head>](/en-US/docs/Web/HTML/Element/head)中加入下列代码即可：
+我们可以利用[viewport](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)来禁止用户缩放，在你的[\<head>](/zh-CN/docs/Web/HTML/Element/head)中加入下列代码即可：
 
 ```html
 <meta name="viewport" content="user-scalable=no">
@@ -264,11 +254,11 @@ panel.ontouchend = stopMove;
 - 在输入数字、电话和邮件时，展示合适的虚拟键盘来输入数字。
 - 在输入时间和日期时展示合适的选择器来选择时间和日期。
 
-如果你想为桌面端提供不同的解决方案，则可以使用功能检测为您的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](http://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[功能检测文章](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)获取更多信息。
+如果你想为桌面端提供不同的解决方案，则可以使用功能检测为您的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](http://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[功能检测文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)获取更多信息。
 
 ## 总结
 
-在本文中，我们向您提供了有关常见移动设备可访问性问题的一些细节以及如何克服这些问题。我们还通过使用最常用的屏幕阅读器来帮助您进行无障碍测试。
+在本文中，我们向您提供了有关常见移动设备无障碍问题的一些细节以及如何克服这些问题。我们还通过使用最常用的屏幕阅读器来帮助您进行无障碍测试。
 
 ## 参见
 
@@ -279,10 +269,10 @@ panel.ontouchend = stopMove;
 
 ## 在这个模块中
 
-- [什么是可访问性？](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

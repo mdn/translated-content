@@ -1,15 +1,8 @@
 ---
 title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Express
-  - Node
-  - nodejs
-  - 伺服器端
-  - 初學者
-  - 學習
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
@@ -21,10 +14,10 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
     <tr>
       <th scope="row">前置需求:</th>
       <td>
-        基本的電腦知識。 對<a href="/en-US/docs/Learn/Server-side/First_steps"
+        基本的電腦知識。 對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
           >伺服器端網站程式設計</a
         >的基本了解，特別是網站中<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >客戶端 - 伺服器交互的機制</a
         >。
       </td>
@@ -40,7 +33,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 ## 什麼是 Express 和 Node?
 
-[Node](https://nodejs.org/) (或者說*Node.js*) 是一個開源、跨平台和允許開發者使用[Javascript](/en-US/docs/Glossary/JavaScript)創造伺服器端工具和應用的執行環境。運行的目的是為了能在瀏覽器外使用，例如：直接執行在電腦或伺服器上。所以該環境捨棄了瀏覽器限定的 JavaScript APIs 並增加更多傳統 OS APIs 的支援，例如：HTTP 和檔案系統的程式庫。
+[Node](https://nodejs.org/) (或者說*Node.js*) 是一個開源、跨平台和允許開發者使用[Javascript](/zh-TW/docs/Glossary/JavaScript)創造伺服器端工具和應用的執行環境。運行的目的是為了能在瀏覽器外使用，例如：直接執行在電腦或伺服器上。所以該環境捨棄了瀏覽器限定的 JavaScript APIs 並增加更多傳統 OS APIs 的支援，例如：HTTP 和檔案系統的程式庫。
 
 從網站伺服器開發的觀點來看 Node 有幾項優點：
 
@@ -122,7 +115,7 @@ The following sections explain some of the common things you'll see when working
 
 First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world.html) example (we discuss each part of this below, and in the following sections).
 
-> **備註：** If you have Node and Express already installed (or if you install them as shown in the [next article](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
+> **備註：** If you have Node and Express already installed (or if you install them as shown in the [next article](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
 >
 > **`./node ./app.js`**
 
@@ -214,7 +207,7 @@ Using non-blocking asynchronous APIs is even more important on Node than in the 
 
 There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.
 
-> **備註：** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> **備註：** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 > **備註：** A common convention for Node and Express is to use error-first callbacks. In this convention the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
 
@@ -276,7 +269,7 @@ var wiki = require('./wiki.js');
 app.use('/wiki', wiki);
 ```
 
-We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes).
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes).
 
 ### Using middleware
 
@@ -289,7 +282,7 @@ Most apps will use _third-party_ middleware in order to simplify common web deve
 To use third party middleware you first need to install it into your app using NPM. For example, to install the [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 You could then call `use()` on the _Express application object_ to add the middleware to the stack:
@@ -404,7 +397,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
@@ -471,7 +464,7 @@ For more information see [Using template engines with Express](http://expressjs.
 
 ### File structure
 
-Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an [MVC architecture](/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)).
+Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an [MVC architecture](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)).
 
 In a later topic we'll use the _Express Application Generator_, which creates a modular app skeleton that we can easily extend for creating web applications.
 
@@ -499,12 +492,12 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 
 ## In this module
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

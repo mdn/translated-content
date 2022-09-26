@@ -1,8 +1,8 @@
 ---
 title: 分块导航
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 ---
+
 {{CSSRef}}
 
 一种导航样式，其中一个或多个元素与其余导航项之间是分离的。
@@ -33,7 +33,7 @@ translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 参见
 

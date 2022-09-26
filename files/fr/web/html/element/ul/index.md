@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ul
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
@@ -180,14 +181,11 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.ul")}}
+{{Compat}}
 
 ## Voir aussi
 

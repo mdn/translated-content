@@ -1,11 +1,8 @@
 ---
 title: ':root'
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - CSS 伪类
-translation_of: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -33,4 +30,4 @@ translation_of: Web/CSS/:root
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

@@ -1,12 +1,8 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** 回傳指定物件的原型，換句話說，就是取得該物件的 `[[Prototype]]` 屬性的值).

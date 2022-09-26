@@ -1,8 +1,8 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 WheelEvent DOM 事件會在用戶滚动滑鼠滚轮或操作其它類似滑鼠的設備時觸發。
@@ -45,7 +45,7 @@ _該介面本身未定義方法，但繼承了父介面{{domxref("MouseEvent")}}
 
 ## 瀏覽器相容性
 
-{{Compat("api.WheelEvent")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,8 +1,8 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-translation_of: Web/HTML/Element/li
 ---
+
 {{HTMLRef}}
 
 **HTML `<li>` 元素** （或称 _HTML 列表条目元素）_ 用于表示列表里的条目。它必须包含在一个父元素里：一个有序列表 ({{HTMLElement("ol")}})，一个无序列表 ({{HTMLElement("ul")}})，或者一个菜单 ({{HTMLElement("menu")}})。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。
@@ -93,7 +93,7 @@ translation_of: Web/HTML/Element/li
 
 ## 浏览兼容性
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 另见
 

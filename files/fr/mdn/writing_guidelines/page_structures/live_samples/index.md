@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Live_samples
 translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
+
 {{MDNSidebar}}
 
 MDN dispose d'un système d'exemples "[live](/fr/docs/MDN/Contribute/Editor/Live_samples)", grâce auxquels le code présent sur une page est exécuté pour afficher les résultats de l'exécution de ce code. Cependant, beaucoup d'articles existants affichent du code sans utiliser ce système, et ont donc besoin d'être convertis.

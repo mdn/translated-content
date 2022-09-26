@@ -1,11 +1,9 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
-{{jsSidebar("Statements")}}**`switch` 語句** 會比對一個 [表達式](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) 裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的 [陳述式](/en-US/docs/Web/JavaScript/Reference/Statements), 以及此一符合條件以外，剩下其他條件裡的陳述式。
+
+{{jsSidebar("Statements")}}**`switch` 語句** 會比對一個 [表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators) 裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的 [陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements), 以及此一符合條件以外，剩下其他條件裡的陳述式。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
@@ -46,7 +44,7 @@ switch (expression) {
 
 If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing the associated statements. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. 按照慣例， `default` 語句會是最後一個條件，但不一定要存在。
 
-The optional [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed and continues execution at the statement following switch. If `break` is omitted, the program continues execution at the next statement in the `switch` statement.
+The optional [`break`](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed and continues execution at the statement following switch. If `break` is omitted, the program continues execution at the next statement in the `switch` statement.
 
 ## 範例
 
@@ -194,7 +192,7 @@ The output from this example:
 
 ### Block-scope variables within `switch` statements
 
-With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) statements to declare block-scoped variables.
+With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use [let](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) and [const](/zh-TW/docs/Web/JavaScript/Reference/Statements/const) statements to declare block-scoped variables.
 
 Take a look at this example:
 
@@ -249,8 +247,8 @@ This code will now output `hello` in the console as it should, without any error
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## 你也可以看看
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)

@@ -1,22 +1,26 @@
 ---
 title: 'Feature-Policy: autoplay'
 slug: Web/HTTP/Headers/Feature-Policy/autoplay
-translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `autoplay` directive controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is enabled and there were no user gestures, the {{domxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `DOMException`. The {{htmlattrxref("autoplay", "audio")}} attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide).
 
 ## 语法
 
-```plain
-Feature-Policy: autoplay <可选>;
+```
+Feature-Policy: autoplay <allowlist>;
 ```
 
 - \<allowlist>
-  - : {{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}} 默认值是`'self'`.
+  - : 允许使用此特性的来源（origin）列表。参见 [`Feature-Policy`](/zh-CN/docs/Web/HTTP/Headers/Feature-Policy#语法)。
+
+## 默认策略
+
+[Google Chrome](https://chromestatus.com/feature/5100524789563392) 的默认值是 `'self'`。
 
 ## 规范
 
@@ -26,8 +30,8 @@ Feature-Policy: autoplay <可选>;
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{HTTPHeader("Feature-Policy")}} header
-- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- {{HTTPHeader("Feature-Policy")}} 标头
+- [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
+- [使用 Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

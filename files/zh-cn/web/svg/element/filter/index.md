@@ -1,12 +1,8 @@
 ---
 title: filter
 slug: Web/SVG/Element/filter
-tags:
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/filter
 ---
+
 {{SVGRef}}
 
 `filter`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。
@@ -19,9 +15,9 @@ translation_of: Web/SVG/Element/filter
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
-- [外观属性](/en-US/SVG/Attribute#Presentation) »
-- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [XLink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -39,7 +35,7 @@ translation_of: Web/SVG/Element/filter
 
 ## DOM 接口
 
-该元素实现了`SVGFilterElement接口。`
+该元素实现了 `SVGFilterElement` 接口。
 
 ## 示例：
 
@@ -88,4 +84,4 @@ translation_of: Web/SVG/Element/filter
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en-US/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

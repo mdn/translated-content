@@ -2,6 +2,7 @@
 title: document.mozFullScreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -30,8 +31,8 @@ function requestFullScreen() {
 
 ### 备注
 
-进入页面[使用全屏模式](/zh-cn/DOM/Using_full-screen_mode)查看详情和示例。
+进入页面[使用全屏模式](/zh-CN/DOM/Using_full-screen_mode)查看详情和示例。
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}

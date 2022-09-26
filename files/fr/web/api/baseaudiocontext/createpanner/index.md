@@ -12,6 +12,7 @@ tags:
   - createPanner
 translation_of: Web/API/BaseAudioContext/createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `createPanner()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{domxref("PannerNode")}}, qui sert à spatialiser dans un environnement 3D un flux audio entrant.
@@ -125,13 +126,11 @@ function positionPanner() {
 
 ## Spécifications
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createpanner', 'createPanner()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPanner")}}
+{{Compat}}
 
 ## Voir aussi
 

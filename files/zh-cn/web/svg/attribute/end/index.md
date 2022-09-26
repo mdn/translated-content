@@ -1,13 +1,9 @@
 ---
 title: end
 slug: Web/SVG/Attribute/end
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/end
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 这个属性定义了一个动画的结束值，可以约束激活持续时间。
 
@@ -29,7 +25,7 @@ translation_of: Web/SVG/Attribute/end
 
 下列元素可以使用`end`属性：
 
-- [Animation elements](/en/SVG/Element#Animation) »
+- [Animation elements](/zh-CN/SVG/Element#Animation) »
 
 ## 规范
 

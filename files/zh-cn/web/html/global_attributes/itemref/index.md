@@ -1,8 +1,8 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemref`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 不具有 `itemscope` 属性的元素的后代，才可以与具有 **`itemref`** 的元素关联。`itemref` 提供了元素 id（并不是 `itemid`）的列表，并具有文档其它地方的额外属性。
@@ -81,7 +81,7 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 ### 结果
 
-{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

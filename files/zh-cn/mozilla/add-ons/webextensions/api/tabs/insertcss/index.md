@@ -1,21 +1,19 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
-tags:
-  - 注入 CSS
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
+
 {{AddonSidebar()}}
 
 向一个页面注入 CSS
 
-使用该 API 前你必须拥有目标页面的权限，可以是 [主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), 或者使用 [activeTab 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+使用该 API 前你必须拥有目标页面的权限，可以是 [主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), 或者使用 [activeTab 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
-你只能向符合 [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
+你只能向符合 [match pattern](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) 的网页注入 CSS: 其形式必定是 "http", "https", "file", "ftp" 之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging, about:addons, 或者你打开的一个新的空白页。
 
 当再次调用{{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被清除。
 
-这是一个返回[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## Syntax
 
@@ -49,13 +47,13 @@ var inserting = browser.tabs.insertCSS(
 
 ### Return value
 
-[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 将会在 CSS 成功注入时 被填充，如果有任何错误发生，promise 将会被注入一个错误消息。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 将会在 CSS 成功注入时 被填充，如果有任何错误发生，promise 将会被注入一个错误消息。
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.insertCSS")}}
+{{Compat}}
 
-## 例子
+## 示例
 
 下面例子将通过字符串变量形式向当前活动标签注入一段 CSS 代码
 
@@ -93,7 +91,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +119,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

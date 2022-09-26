@@ -1,8 +1,8 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/Input/password
-translation_of: Web/HTML/Element/input/password
 ---
+
 {{HTMLRef}}
 
 `<input>` 元素 里有一种叫做 **`"password"`** 的值，给我们一个方法让用户更加安全的输入密码。这个元素是作为一行纯文本编辑器控件呈现的，其中文本被遮蔽以致于无法读取，通常通过用诸如星号（“\*”）或点（“•”）等符号替换每个字符来实现。）这个符号会根据用户的浏览器和操作系统来具体显示哪个。

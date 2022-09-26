@@ -1,12 +1,8 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
 **_TypedArray_** 物件表示了一個底層 [`ArrayBuffer`](/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer) 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 `ArrayBuffer`。但並沒有名為 `TypedArray` 的內建物件，`TypedArray` 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 `TypedArray` 的內建物件，它們可以建立限定成員型別的物件實體來操作 `ArrayBuffer`。這些 `TypedArray` 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 `ArrayBuffer` 物件當中。以下將說明每種限定成員型別之 `TypedArray` 的共同屬性與方法。
@@ -145,7 +141,7 @@ for (var k in typedArrayTypes)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## 相容性備註
 
@@ -163,6 +159,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## 參見
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

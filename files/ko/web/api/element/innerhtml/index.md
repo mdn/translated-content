@@ -13,9 +13,11 @@ translation_of: Web/API/Element/innerHTML
 
 ## Syntax
 
-    const content = element.innerHTML;
+```js
+const content = element.innerHTML;
 
-    element.innerHTML = htmlString;
+element.innerHTML = htmlString;
+```
 
 ### Value
 
@@ -66,9 +68,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 `innerHTML` 값을 설정할 때, 정확히 어떤 일이 발생하나요? 값을 설정하면, 유저 에이전트는 다음 단계를 따르게 됩니다.
 
-1.  지정한 값은 HTML 또는 XML(문서 타입에 따라)로 파싱되어, {{domxref("DocumentFragment")}} 객체가 새 요소에 대한 새로운 노드 DOM 노드 집합을 나타냅니다.
-2.  내용이 대체되는 요소가 {{HTMLElement("template")}} 요소 인 경우, `<template>` 요소의 {{domxref("HTMLTemplateElement.content", "content")}} 속성(attribute)은 1단계에서 작성한 새 `DocumentFragment` 로 대체됩니다.
-3.  다른 모든 요소의 경우, 요소의 내용은 새 `DocumentFragment` 의 노드로 대체됩니다.
+1. 지정한 값은 HTML 또는 XML(문서 타입에 따라)로 파싱되어, {{domxref("DocumentFragment")}} 객체가 새 요소에 대한 새로운 노드 DOM 노드 집합을 나타냅니다.
+2. 내용이 대체되는 요소가 {{HTMLElement("template")}} 요소 인 경우, `<template>` 요소의 {{domxref("HTMLTemplateElement.content", "content")}} 속성(attribute)은 1단계에서 작성한 새 `DocumentFragment` 로 대체됩니다.
+3. 다른 모든 요소의 경우, 요소의 내용은 새 `DocumentFragment` 의 노드로 대체됩니다.
 
 ### Security considerations
 
@@ -85,7 +87,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-이것은 [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 `innerHTML` 과 함께 삽입된 {{HTMLElement("script")}} 태그가 [실행되지 않도록 ](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)지정합니다.
+이것은 [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 `innerHTML` 과 함께 삽입된 {{HTMLElement("script")}} 태그가 [실행되지 않도록](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) 지정합니다.
 
 그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, 자바스크립트를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
 

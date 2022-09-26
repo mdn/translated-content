@@ -1,8 +1,8 @@
 ---
 title: 技能测试：图片和表格元素
 slug: Learn/CSS/Building_blocks/Images_tasks
-translation_of: Learn/CSS/Building_blocks/Images_tasks
 ---
+
 {{LearnSidebar}}
 
 该任务的目的是帮助您检查对我们在本课程[Images, Media and Form elements](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)(图像，媒体及表格元素）中了解的一些值和单位的理解。

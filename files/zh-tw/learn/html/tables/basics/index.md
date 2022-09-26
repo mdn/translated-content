@@ -1,9 +1,9 @@
 ---
 title: HTML表格的基礎
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
 original_slug: Learn/HTML/Tables/基礎
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索 HTML 表格。
@@ -212,8 +212,8 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 關於表格的理論我們已經談論夠了，所以，來深入實際的例子並建立一個簡單的表格吧!
 
 1. 第一件事，在自己的電腦複製一份新的[空白模板.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 以及 [簡易表格.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)
-2. 每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/en-US/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
-3. 表格裡最小的容器是表格儲存格，由**[`<td>`](/en-US/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
+2. 每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/zh-TW/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
+3. 表格裡最小的容器是表格儲存格，由**[`<td>`](/zh-TW/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -231,7 +231,7 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 就像你看到的，儲存格不會在各自的下方，它們彼此自動排列在同一列上。每個 `<td>` 元素會創造單個儲存格並且使它們據在同一行，我們新增的每一個儲存格都會使列更長。
 
-要讓這個列停止增加並開始在下一列增加連續的儲存格的話，我們需要用 **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** 元素 ('tr' 代表 'table row')，現在來探討一下:
+要讓這個列停止增加並開始在下一列增加連續的儲存格的話，我們需要用 **[`<tr>`](/zh-TW/docs/Web/HTML/Element/tr)** 元素 ('tr' 代表 'table row')，現在來探討一下:
 
 1. 放置四個你已新增在 `<tr>` 標籤裡的儲存格, 像這樣:
 
@@ -349,7 +349,7 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 1. 首先, 複製 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案到你的電腦。
     這份 HTML 裡包含跟底下你看到的一樣的狗狗範例。
-2. 為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/en-US/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
+2. 為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/zh-TW/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
     繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
 3. 儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
 
@@ -426,9 +426,9 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 ### Styling without \<col>
 
-在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML 有一個一次定義一整欄樣式資訊的方法 — **[`<col>`](/en-US/docs/Web/HTML/Element/col)** **[`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup)** 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
+在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML 有一個一次定義一整欄樣式資訊的方法 — **[`<col>`](/zh-TW/docs/Web/HTML/Element/col)** **[`<colgroup>`](/zh-TW/docs/Web/HTML/Element/colgroup)** 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
-> **備註：** Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/en-US/docs/Web/CSS/border), [`background`](/en-US/docs/Web/CSS/background), [`width`](/en-US/docs/Web/CSS/width), and [`visibility`](/en-US/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
+> **備註：** Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/zh-TW/docs/Web/CSS/border), [`background`](/zh-TW/docs/Web/CSS/background), [`width`](/zh-TW/docs/Web/CSS/width), and [`visibility`](/zh-TW/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
 Take the following simple example:
 
@@ -531,6 +531,6 @@ That just about wraps up the basics of HTML Tables. In the next article we will 
 
 ## In this module
 
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)
+- [HTML table basics](/zh-TW/docs/Learn/HTML/Tables/Basics)
+- [HTML table advanced features and accessibility](/zh-TW/docs/Learn/HTML/Tables/Advanced)
+- [Structuring planet data](/zh-TW/docs/Learn/HTML/Tables/Structuring_planet_data)

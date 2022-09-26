@@ -1,12 +1,8 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 **`toLocaleString()`** 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 `toLocaleString` 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ","）隔开。
@@ -15,8 +11,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 ## 语法
 
-```plain
-arr.toLocaleString([locales[,options]]);
+```js
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### 参数
@@ -137,7 +135,7 @@ if (!Array.prototype.toLocaleString) {
 }
 ```
 
-如果你需要支持真正不支持[`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，最好不要对`Array.prototype`方法进行填充，因为你不能使它们不可枚举。
+如果你需要支持真正不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，最好不要对`Array.prototype`方法进行填充，因为你不能使它们不可枚举。
 
 ## 规范
 

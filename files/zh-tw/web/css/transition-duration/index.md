@@ -1,16 +1,11 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-tags:
-  - CSS
-  - CSS Property
-  - CSS 轉場
-  - Reference
-translation_of: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
-**`transition-duration`** [CSS](/en/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
+**`transition-duration`** [CSS](/zh-TW/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
@@ -310,7 +305,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 瀏覽器支援情形
 
-{{Compat("css.properties.transition-duration")}}
+{{Compat}}
 
 ## 更多資訊
 

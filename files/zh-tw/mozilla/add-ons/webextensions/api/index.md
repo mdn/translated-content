@@ -1,17 +1,13 @@
 ---
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
-JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/zh-TW/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/zh-TW/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-To use the more powerful APIs you need to [request permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
+To use the more powerful APIs you need to [request permission](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
 
 You can access the APIs using the `browser` namespace:
 
@@ -23,7 +19,7 @@ function logTabs(tabs) {
 browser.tabs.query({currentWindow: true}, logTabs);
 ```
 
-Many of the APIs are asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Many of the APIs are asynchronous, returning a [`Promise`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```js
 function logCookie(c) {
@@ -46,6 +42,6 @@ Firefox also implements these APIs under the `chrome` namespace using callbacks.
 
 Microsoft Edge uses the `browser` namespace, but doesn't yet support promise-based asynchronous APIs. In Edge, for the time being, asynchronous APIs must use callbacks.
 
-Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
+Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
 {{SubpagesWithSummaries}}

@@ -1,18 +1,8 @@
 ---
 title: 常见 MIME 类型列表
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-tags:
-  - File Types
-  - Files
-  - HTTP
-  - MIME
-  - MIME Types
-  - MIME 类型
-  - 参考
-  - 文件
-  - 文件类型
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
+
 {{HTTPSidebar}}
 
 这是一份 MIME 类型列表，以及各个类型的文档类别，按照它们的常见扩展名排序。

@@ -1,10 +1,8 @@
 ---
 title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-tags:
-  - 语法错误
-translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 消息
@@ -15,7 +13,7 @@ Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}} 只在[严格模式](/en-US/docs/Web/JavaScript/Reference/Strict_mode)下会出现的警告。
+{{jsxref("SyntaxError")}} 只在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下会出现的警告。
 
 ## 什么地方出错了？
 
@@ -25,7 +23,7 @@ Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 
 ### 条件表达式内的赋值
 
-不建议在条件表达式中（例如 [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)）使用简单赋值语句，因为在扫视代码的时候赋值操作与相等判定容易产生混淆。例如，不要使用以下写法：
+不建议在条件表达式中（例如 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)）使用简单赋值语句，因为在扫视代码的时候赋值操作与相等判定容易产生混淆。例如，不要使用以下写法：
 
 ```js example-bad
 if (x = y) {
@@ -51,6 +49,6 @@ if (x == y) {
 
 ## 相关页面
 
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+- [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Comparison operators](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

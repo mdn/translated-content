@@ -1,8 +1,8 @@
 ---
 title: 左移 (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
-translation_of: Web/JavaScript/Reference/Operators/Left_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **左移操作符 (`<<`)** 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
@@ -24,6 +24,7 @@ a << b
 ```js
      9 (十进制): 00000000000000000000000000001001 (二进制)
                  --------------------------------
+
 9 << 2 (十进制): 00000000000000000000000000100100 (二进制) = 36 (十进制)
 ```
 
@@ -50,5 +51,5 @@ a << b
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
-- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Left shift assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

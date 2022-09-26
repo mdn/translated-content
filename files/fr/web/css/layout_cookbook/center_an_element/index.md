@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Center_an_element
 original_slug: Web/CSS/Layout_cookbook/Centrer_un_element
 ---
+
 {{CSSRef}}
 
 Comment centrer une boîte dans une autre boîte ? Centrer à la fois horizontalement et verticalement était difficile avant l'arrivée des boîtes flexibles (_flexbox_), mais c'est désormais beaucoup plus simple grâce aux propriétés du module de spécification _Box Alignment_.

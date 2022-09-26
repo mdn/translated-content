@@ -9,6 +9,7 @@ tags:
 translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 Bienvenue sur MDN Web Docs ! Si vous avez des suggestions ou avez des problèmes avec MDN, vous êtes au bon endroit. Nous vous remercions par avance de l'intérêt que vous nous portez.
@@ -49,7 +50,7 @@ Les discussions plus importantes et qui ne nécessitent pas d'être connecté à
 
 ### Problèmes dans la documentation
 
-Si vous voyez un problème avec la documentation et que vous ne pouvez pas la corriger vous-même pour une quelconque raison, vous pouvez [signaler un problème](https://github.com/mdn/translated-content/issues/new "Signaler un problème de contenu de la documentation."). Vous pouvez utiliser ce formulaire pour tout problème avec la documentation, pas exemple :
+Si vous voyez un problème avec la documentation et que vous ne pouvez pas la corriger vous-même pour une quelconque raison, vous pouvez [signaler un problème](https://github.com/mdn/translated-content/issues/new). Vous pouvez utiliser ce formulaire pour tout problème avec la documentation, pas exemple :
 
 - une simple correction
 - une demande de contenu entièrement nouveau

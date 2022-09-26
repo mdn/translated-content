@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript6
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - 迭代器
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（**`Array Iterator`**）物件。
@@ -50,7 +41,7 @@ for (let e of iterator) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## 參見
 

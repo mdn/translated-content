@@ -1,15 +1,8 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Method
-  - tanh
-  - 双曲正切
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 函数将会返回一个数的双曲正切函数值，公式如下：

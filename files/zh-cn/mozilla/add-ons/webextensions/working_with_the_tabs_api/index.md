@@ -1,11 +1,8 @@
 ---
 title: Working with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - 选项卡
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
+
 {{AddonSidebar}}
 
 选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。使用 Tabs API，您可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。
@@ -20,14 +17,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 
 最后，我们通过查看 API 提供的其他一些其他功能。
 
-> **备注：** 其他地方有一些 Tab API 功能。这些是可用于使用脚本操作选项卡内容的方法{{WebExtAPIRef("tabs.connect")}}，{{WebExtAPIRef("tabs.sendMessage")}}和{{WebExtAPIRef("tabs.executeScript")}}。如果您需要有关这些方法的更多信息，请参阅概念文章[内容脚本](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
+> **备注：** 其他地方有一些 Tab API 功能。这些是可用于使用脚本操作选项卡内容的方法{{WebExtAPIRef("tabs.connect")}}，{{WebExtAPIRef("tabs.sendMessage")}}和{{WebExtAPIRef("tabs.executeScript")}}。如果您需要有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
 
 ## 权限和选项卡 API
 
 对于大多数 Tabs API 函数，您不需要任何权限; 但是，有一些例外：
 
-- 需要`"tabs"`权限才能访问 Tab 对象的`Tab.url`，`Tab.title`和`Tab.favIconUrl`属性。在 Firefox 中，您还需要`"tabs"`来按 URL 执行[查询](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
-- {{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}需要[主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)。
+- 需要`"tabs"`权限才能访问 Tab 对象的`Tab.url`，`Tab.title`和`Tab.favIconUrl`属性。在 Firefox 中，您还需要`"tabs"`来按 URL 执行[查询](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
+- {{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}需要[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)。
 
 以下是您可以在扩展程序的 manifest.json 文件中请求`"tabs"`权限的方法：
 
@@ -38,12 +35,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ],
 ```
 
-此请求允许您在用户访问的所有网站上使用所有标签 API 功能。还有一种替代方法可以请求权限使用{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}，其中您不需要主机权限，形式为[`"activeTab"`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。此权限与`<all_urls>`提供与`"tabs"`相同的权限，但有两个限制：
+此请求允许您在用户访问的所有网站上使用所有标签 API 功能。还有一种替代方法可以请求权限使用{{WebExtAPIRef("tabs.executeScript")}}或{{WebExtAPIRef("tabs.insertCSS")}}，其中您不需要主机权限，形式为[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。此权限与`<all_urls>`提供与`"tabs"`相同的权限，但有两个限制：
 
 - 用户必须通过其浏览器或页面操作，上下文菜单或快捷键与扩展进行交互。
 - 它仅在活动选项卡中授予权限。
 
-这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。这是因为`<all_urls>`权限使扩展能够在任何选项卡中随时执行脚本，而[`"activeTab"`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)仅限于允许扩展在当前选项卡中执行用户请求的操作。
+这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。这是因为`<all_urls>`权限使扩展能够在任何选项卡中随时执行脚本，而[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)仅限于允许扩展在当前选项卡中执行用户请求的操作。
 
 ## Discovering more about tabs and their properties
 
@@ -336,7 +333,7 @@ This code snippet is for the “Move active tab to the beginning of the window l
  }
 ```
 
-It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
+It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
 
 ![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
 
@@ -459,7 +456,7 @@ Let’s walk through how it’s set up.
 
 To use the CSS features you need either:
 
-- `"tabs"` permission and [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
+- `"tabs"` permission and [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
 - `"activeTab"` permission.
 
 The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension’s browser or page action, context menu, or a shortcut.
@@ -605,5 +602,5 @@ There are a couple of other Tabs API features that don’t fit into one of the e
 
 If you want to learn more about the Tabs API, check out:
 
-- [Tabs API reference](/en-US/Add-ons/WebExtensions/API/tabs)
-- [Example extensions](/en-US/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)
+- [Tabs API reference](/zh-CN/Add-ons/WebExtensions/API/tabs)
+- [Example extensions](/zh-CN/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)

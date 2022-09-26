@@ -12,6 +12,7 @@ tags:
   - createPeriodicWave
 translation_of: Web/API/BaseAudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une onde sinusoïdale périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
@@ -75,13 +76,11 @@ Les coefficients de la transformation de Fourier doivent être données dans un 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createperiodicwave', 'createPeriodicWave')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## Voir aussi
 

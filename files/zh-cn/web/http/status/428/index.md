@@ -1,15 +1,11 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
-tags:
-  - HTTP
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/428
 ---
+
 {{HTTPSidebar}}
 
-在 HTTP 协议中，响应状态码 **`428 Precondition Required`** 表示服务器端要求发送[条件](/en-US/docs/Web/HTTP/Conditional_requests)请求。
+在 HTTP 协议中，响应状态码 **`428 Precondition Required`** 表示服务器端要求发送[条件](/zh-CN/docs/Web/HTTP/Conditional_requests)请求。
 
 一般的，这种情况意味着必要的条件首部——如 {{HTTPHeader("If-Match")}} ——的**缺失。**.
 
@@ -27,6 +23,6 @@ translation_of: Web/HTTP/Status/428
 
 ## 相关内容
 
-- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)
+- [HTTP conditional requests](/zh-CN/docs/Web/HTTP/Conditional_requests)
 - {{HTTPHeader("If-Match")}}
 - {{HTTPStatus(412)}}

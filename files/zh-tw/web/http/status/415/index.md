@@ -1,8 +1,8 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-translation_of: Web/HTTP/Status/415
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`415 Unsupported Media Type`** 用戶端的錯誤表示被請求資源的多媒體類型不被伺服器支援，因此該請求被拒絕。

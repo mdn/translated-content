@@ -3,6 +3,7 @@ title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 translation_of: Web/API/Clipboard/writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 La méthode **`writeText()`** de l’interface {{domxref("Clipboard")}} écrit le texte spécifié dans le presse-papiers du système.
@@ -38,10 +39,8 @@ navigator.clipboard.writeText("<presse-papiers vide>").then(function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Clipboard API','#h-clipboard-writetext-data','writeText()')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard.writeText")}}
+{{Compat}}

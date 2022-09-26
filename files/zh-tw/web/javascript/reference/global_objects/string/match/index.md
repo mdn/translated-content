@@ -1,8 +1,8 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
 The **`match()`** method retrieves the matches when matching a _string_ against a _regular expression_.
@@ -105,7 +105,7 @@ str3.match(null);       // returns ["null"]
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Firefox-specific notes
 

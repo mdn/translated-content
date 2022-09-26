@@ -2,6 +2,7 @@
 title: Canvas
 slug: Web/API/Canvas_API
 ---
+
 {{CanvasSidebar}}
 
 **Canvas API** 提供了一个通过[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [HTML](/zh-CN/docs/Web/HTML)的{{HtmlElement("canvas")}}元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
@@ -62,15 +63,8 @@ ctx.fillRect(10, 10, 150, 100);
 - [代码片段：Canvas](/zh-CN/Add-ons/Code_snippets/Canvas)
   - : 一些面向开发者的 \<canvas> 代码片段。
 - [深入 HTML5 Canvas](http://joshondesign.com/p/books/canvasdeepdive/title.html)
-
   - : 一个手把手的、长度与书本相若的 Canvas API 和 WebGL 介绍。
-
-- [Demo：一个基础的光线追踪器](/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster)
-
-  - : 运用 canvas 制作的光线追踪动画示例。
-
 - [使用 canvas 绘制视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-
   - : 结合{{HTMLElement("video")}}和 {{HTMLElement("canvas")}}来实现实时操作视频数据。
 
 ## 库
@@ -82,7 +76,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) 基于 canvas 的热点图的开源库
 - [JavaScript InfoVis Toolkit](http://thejit.org/) 创建交互式的 2D Canvas 数据可视化
 - [Konva.js](https://konvajs.github.io/) 用于桌面端和移动端应用的 2D canvas 库
-- [p5.js ](https://p5js.org/)包含给艺术家、设计师、教育者、初学者使用的完整的 canvas 绘制功能
+- [p5.js](https://p5js.org/) 包含给艺术家、设计师、教育者、初学者使用的完整的 canvas 绘制功能
 - [Paper.js](http://paperjs.org/) 运行于 HTML5 Canvas 上的开源矢量图形脚本框架
 - [Phaser](https://phaser.io/) 用于基于 Canvas 和 WebGL 的浏览器尤其的快速、自由、有趣的开源框架
 - [Processing.js](http://processingjs.org) 用于处理可视化语言

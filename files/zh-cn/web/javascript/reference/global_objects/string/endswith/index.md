@@ -1,21 +1,11 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - 原型
-  - 参考
-  - 字符串
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
+
 {{JSRef}}
 
-**`endsWith()`**方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`。
+**`endsWith()`** 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`。
 
 {{EmbedInteractiveExample("pages/js/string-endswith.html")}}
 

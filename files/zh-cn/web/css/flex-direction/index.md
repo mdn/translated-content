@@ -1,8 +1,8 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-translation_of: Web/CSS/flex-direction
 ---
+
 {{ CSSRef("CSS Flexible Boxes") }}
 
 [CSS](/zh-CN/docs/CSS) **`flex-direction`** 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。
@@ -51,7 +51,7 @@ flex-direction: unset;
 
 {{csssyntax("flex-direction")}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -106,7 +106,7 @@ flex-direction: unset;
 
 ### 结果
 
-{{ EmbedLiveSample('例子', '', '300', '', 'Web/CSS/flex-direction') }}
+{{ EmbedLiveSample('示例', '', '300') }}
 
 ## 规范
 
@@ -114,7 +114,7 @@ flex-direction: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## 参考
 

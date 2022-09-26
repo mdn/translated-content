@@ -1,8 +1,8 @@
 ---
 title: 書本實例清單頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
+
 接下來，我們將實作圖書館中所有書本實例 (`BookInstance`) 的列表頁面。這個頁面需要包含與每個 `BookInstance` (鏈接到其詳細信息頁面) 關聯的書本 `Book` 標題，以及 `BookInstance`模型中的其他信息，包含每個副本的狀態，印記和唯一 ID。唯一 ID 的文字，應該鏈接到 `BookInstance` 詳細信息頁面。
 
 ## Controller 控制器
@@ -67,5 +67,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下一個部分: [格式化日期 － 使用 moment](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment).
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 下一個部分: [格式化日期 － 使用 moment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment).

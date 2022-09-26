@@ -1,9 +1,9 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-translation_of: Web/SVG/Attribute/in
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 in 属性标识输入的原语。
 
@@ -23,7 +23,7 @@ in 属性标识输入的原语。
 - SourceGraphic
   - : 该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入。
 - SourceAlpha
-  - : 该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入. SourceAlpha 与 SourceGraphic 具有相同的规则除了 SourceAlpha 只使用元素的透明度。
+  - : 该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入。SourceAlpha 与 SourceGraphic 具有相同的规则除了 SourceAlpha 只使用元素的透明度。
 - BackgroundImage
   - : 该关键词表示 filter 元素当前底下的区域的图形快照将被调用。
 - BackgroundAlpha

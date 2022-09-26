@@ -1,8 +1,8 @@
 ---
 title: CSS 字体
 slug: Web/CSS/CSS_Fonts
-translation_of: Web/CSS/CSS_Fonts
 ---
+
 {{CSSRef}}
 
 **CSS 字体**是一个 CSS 模块，它定义了字体相关的属性和字体资源是如何加载的。它允许定义一个字体的样式，如字体家族、尺寸或字重、行高，以及对于一个字符有几个字形的字体时要使用的字形。

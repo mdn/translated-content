@@ -1,8 +1,8 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-translation_of: Web/HTTP/Status/417
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中的 **`417 Expectation Failed`** 状态码表示客户端错误，意味着服务器无法满足 {{HTTPHeader("Expect")}} 请求消息头中的期望条件。

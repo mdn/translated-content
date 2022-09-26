@@ -1,8 +1,8 @@
 ---
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
-translation_of: Web/API/HTMLDataElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLDataElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("data")}} elements.
@@ -26,7 +26,7 @@ _無具體的方法; 從它的父繼承, {{domxref("HTMLElement")}}._
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDataElement")}}
+{{Compat}}
 
 ## See also
 

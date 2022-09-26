@@ -1,15 +1,8 @@
 ---
 title: feSpecularLighting
 slug: Web/SVG/Element/feSpecularLighting
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feSpecularLighting
 ---
+
 {{SVGRef}}
 
 该滤镜照亮一个源图形，使用 alpha 通道作为隆起映射。该结果图像是一个基于光色的 RGBA 图象。该光照计算遵守标准[冯氏照明模式](http://en.wikipedia.org/wiki/Phong_reflection_model)的镜面组件。结果图像依赖于光色、光的位置以及输入隆起映射的表面几何形状。光照计算的结果是叠加的。该滤镜假定观察者在 X 方向无穷远处。
@@ -26,9 +19,9 @@ translation_of: Web/SVG/Element/feSpecularLighting
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -42,7 +35,7 @@ translation_of: Web/SVG/Element/feSpecularLighting
 
 ## DOM 接口
 
-该元素实现了`SVGFESpecularLightingElement接口。`
+该元素实现了 `SVGFESpecularLightingElement` 接口。
 
 ## 参见
 
@@ -65,4 +58,4 @@ translation_of: Web/SVG/Element/feSpecularLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

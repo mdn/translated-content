@@ -1,14 +1,8 @@
 ---
 title: 左移赋值 (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.left_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 左移赋值运算符 (`<<=`) 将变量向左移动指定数量的位，并将结果赋值给变量。
@@ -39,7 +33,7 @@ a <<= 2; // 20
 
 ## 浏览器兼容性
 
-{{Compat("javascript.operators.left_shift_assignment")}}
+{{Compat}}
 
 ## 参考
 

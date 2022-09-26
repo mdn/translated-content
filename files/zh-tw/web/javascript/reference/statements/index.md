@@ -1,12 +1,8 @@
 ---
 title: 陳述式與宣告
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 應用程式由適當的陳述式組成。一個單一的陳述式可以跨用好幾行。 多個陳述式也可以藉由分號分隔來寫在同一行。 這不是一個關鍵字，而是一群關鍵字。
@@ -48,7 +44,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/function", "function")}}
   - : 用指定的變數宣告一個函數
 - {{jsxref("Statements/function*", "function*")}}
-  - : Generators functions enable writing [iterators](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol) more easily.
+  - : Generators functions enable writing [iterators](/zh-TW/docs/Web/JavaScript/Guide/The_Iterator_protocol) more easily.
 - {{jsxref("Statements/async_function", "async function")}}
   - : Declares an async function with the specified parameters.
 - {{jsxref("Statements/return", "return")}}
@@ -67,7 +63,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/JavaScript/Guide/Iterators_and_Generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/zh-TW/docs/JavaScript/Guide/Iterators_and_Generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
   - : Creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 
@@ -86,7 +82,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements")}}
+{{Compat}}
 
 ## 參見
 

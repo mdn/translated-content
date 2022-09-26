@@ -1,8 +1,8 @@
 ---
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
-translation_of: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 ## 摘要
@@ -37,7 +37,7 @@ Essentially all web browsers (Firefox, Internet Explorer, recent versions of Ope
 
 ## Browser compatibility
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}
 
 ## Specification
 

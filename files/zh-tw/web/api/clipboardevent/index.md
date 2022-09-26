@@ -1,8 +1,8 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-translation_of: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 **`ClipboardEvent`** 介面表示了與修改剪貼簿相關的事件，包括 {{event("cut")}}、{{event("copy")}} 及 {{event("paste")}} 事件。
@@ -29,7 +29,7 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 ## 瀏覽器相容性
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## 參見
 

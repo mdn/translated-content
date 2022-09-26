@@ -1,24 +1,8 @@
 ---
 title: WebRTC プロトコル入門
 slug: Web/API/WebRTC_API/Protocols
-page-type: guide
-tags:
-  - API
-  - Audio
-  - Beginner
-  - Draft
-  - Guide
-  - ICE
-  - Media
-  - NAT
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
-translation_of: Web/API/WebRTC_API/Protocols
 ---
+
 {{WebRTCSidebar}}
 
 この記事では、 WebRTC API の基礎となっているプロトコルについて説明します。

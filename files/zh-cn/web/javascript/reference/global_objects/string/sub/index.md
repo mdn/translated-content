@@ -1,11 +1,8 @@
 ---
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
-tags:
-  - String.sub()
-  - 已废弃
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`sub()`**方法创建一个 {{HTMLElement("sub")}} HTML 元素，使字符串展示为下标。

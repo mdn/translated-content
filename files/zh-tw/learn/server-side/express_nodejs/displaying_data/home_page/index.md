@@ -1,8 +1,8 @@
 ---
 title: 主頁
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
+
 我們創建的第一個頁面，是網站的主頁面，可以從網站的根目錄 (`'/'`) ，或者 catalog 的根目錄 (`catalog/`) 訪問。這將呈現一些網站的靜態文字描述，以及動態計算數據庫中不同記錄類型的“計數”。
 
 我們已經為主頁創建了一個路由。為了完成頁面，我們需要更新控制器函數，以從數據庫中提取記錄的“計數”，並創建一個可用於呈現頁面的視圖（模板）。
@@ -30,7 +30,7 @@ It is this controller function that we extend to get information from our models
 
 The index controller function needs to fetch information about how many `Book`, `BookInstance`, available `BookInstance`, `Author`, and `Genre` records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
-> **備註：** We use the [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or `null`) as the first parameter and the count of records (or null if there was an error) as the second parameter.
+> **備註：** We use the [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or `null`) as the first parameter and the count of records (or null if there was an error) as the second parameter.
 >
 > ```js
 > SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
@@ -131,5 +131,5 @@ At this point we should have created everything needed to display the index page
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page).
+- Return to [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Book list page](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page).

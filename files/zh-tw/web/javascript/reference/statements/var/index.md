@@ -1,8 +1,8 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 宣告一個變數, 同時可以非強制性地賦予一初始值。
@@ -26,7 +26,7 @@ var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
 
 因此, 建議你一定要宣告你的變數, 不管你要將它使用於全域範圍內或者函數內。
 
-若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 [strict mode](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。
+若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 [strict mode](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。
 
 Variable declarations, wherever they occur, are processed before any code is executed. The scope of a variable declared with `var` is its current _execution context_, which is either the enclosing function or, for variables declared outside any function, global.
 
@@ -72,7 +72,7 @@ console.log(a, b); // Throws a ReferenceError.
 // The 'b' property was deleted and no longer exists.
 ```
 
-Because of these three differences, failure to declare variables will very likely lead to unexpected results. Thus **it is recommended to always declare variables, regardless of whether they are in a function or global scope.** And in ECMAScript 5 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), assigning to an undeclared variable throws an error.
+Because of these three differences, failure to declare variables will very likely lead to unexpected results. Thus **it is recommended to always declare variables, regardless of whether they are in a function or global scope.** And in ECMAScript 5 [strict mode](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), assigning to an undeclared variable throws an error.
 
 ### var hoisting
 
@@ -178,5 +178,5 @@ console.log(typeof y); // undefined as y is local to function a
 
 ## 參見
 
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)

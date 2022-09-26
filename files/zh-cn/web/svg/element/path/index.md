@@ -1,13 +1,8 @@
 ---
 title: path
 slug: Web/SVG/Element/path
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 **[起步](/zh-CN/docs/Web/SVG/Tutorial/Paths)**
@@ -54,11 +49,11 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## DOM 接口
 
-该元素实现了[`SVGPathElement`](/en-US/docs/DOM/SVGPathElement)接口。
+该元素实现了[`SVGPathElement`](/zh-CN/docs/DOM/SVGPathElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## 参见
 

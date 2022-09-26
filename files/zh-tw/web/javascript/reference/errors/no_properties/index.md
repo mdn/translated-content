@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
-translation_of: Web/JavaScript/Reference/Errors/No_properties
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 訊息

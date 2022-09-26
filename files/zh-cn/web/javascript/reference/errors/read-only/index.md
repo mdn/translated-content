@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
-translation_of: Web/JavaScript/Reference/Errors/Read-only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 报错消息
@@ -23,7 +23,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 全局变量或对象属性被设置为只读 (专业点讲，就是这条数据属性禁止写入.)
 
-这条错误值发生在[strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode)(俗称严格模式). 正常情况下，是没有报错的。
+这条错误值发生在[strict mode code](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)(俗称严格模式). 正常情况下，是没有报错的。
 
 ## 例如
 

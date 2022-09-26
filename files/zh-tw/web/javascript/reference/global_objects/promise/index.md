@@ -1,8 +1,8 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
@@ -39,7 +39,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
-> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作“promises” — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
+> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作“promises” — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
 
 > **備註：** 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。您也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
 
@@ -203,7 +203,7 @@ if ("Promise" in window) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise")}}
+{{Compat}}
 
 ## 參見
 

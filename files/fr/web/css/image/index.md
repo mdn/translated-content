@@ -1,126 +1,114 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS Images
-  - Reference
-  - Type
-translation_of: Web/CSS/image
+l10n:
+  sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{CSSRef}}
 
-Le type de donnée CSS **`<image>`** représente une image en deux dimensions. Il existe deux types d'images en CSS : les images statiques (souvent utilisées via une URL (cf. {{cssxref("&lt;url&gt;")}})), et les images générées dynamiquement comme les dégradés (cf. {{cssxref("&lt;gradient&gt;")}}) ou les images construites à partir de fragments de l'arbre du DOM ({{CSSxRef("element()")}}). D'autres fonctions peuvent être utilisées pour créer des images comme {{CSSxRef("imagefunction", "image()")}}, {{CSSxRef("image-set")}} et {{CSSxRef("cross-fade()")}}.
-
-Les images peuvent être utilisées pour de nombreuses propriétés CSS dont, par exemple, {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} et {{cssxref("cursor")}}.
-
-## Les types d'images
-
-Le CSS permet de manipuler différentes sortes d'images :
-
-- les images avec des _dimensions intrinsèques_, qui ont une taille propre, comme une image au format JPEG ou PNG (ou dans un autre [format matriciel](https://fr.wikipedia.org/wiki/Image_matricielle)) qui possède des dimensions fixes.
-- les images avec _plusieurs dimensions intrinsèques_, qui existent sous différentes dimensions dans un même fichier, comme certains formats .ico. Dans ce cas, les dimensions intrinsèques seront celles de la plus grande image en surface, et ayant le ratio le plus proche de la boîte englobante.
-- les images sans dimensions intrinsèques avec un _ratio intrinsèque_, entre la largeur et sa hauteur, comme certaines [images vectorielles](https://fr.wikipedia.org/wiki/Image_vectorielle), au format SVG par exemple.
-- les images n'ayant _ni dimensions intrinsèques, ni ratio intrisèque_, comme un dégradé CSS par exemple.
-
-Le CSS détermine la _taille concrète de l'objet_ en utilisant ces _dimensions intrinsèques_, la _taille spécifiée_ définie par les propriétés CSS comme {{cssxref("width")}}, {{cssxref("height")}} ou {{cssxref("background-size")}}, et la _taille par défaut de l'objet_ définie en fonction de la propriété utilisée :
-
-| Type d'objet                                                                                                           | Taille par défaut de l'objet                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{cssxref("background-image")}}                                                                               | La taille de la zone de positionnement de l'arrière-plan                                                                                    |
-| {{cssxref("list-style-image")}}                                                                               | La taille d'un caractère de `1em`                                                                                                           |
-| {{cssxref("border-image-source")}}                                                                           | La taille de la zone de bordure de l'élément                                                                                                |
-| {{cssxref("cursor")}}                                                                                           | La dimension correspondant à la taille d'un curseur sur le système utilisé                                                                  |
-| {{cssxref("mask-image")}}                                                                                       | ?                                                                                                                                           |
-| {{cssxref("shape-outside")}}                                                                                   | ?                                                                                                                                           |
-| {{cssxref("mask-border-source")}}                                                                           | ?                                                                                                                                           |
-| {{cssxref("symbols()")}} pour `@counter-style`                                                                 | Une fonctionnalité en cours de discussion. Si elle est prise en charge, la taille utilisée sera celle des curseurs utilisés par le système. |
-| {{cssxref("content")}} avec les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} | Un rectangle de `300px × 150px`                                                                                                        |
-
-La taille concrète de l'objet est calculée selon l'algorithme suivant :
-
-- si la taille spécifié définit à la fois la largeur et la hauteur, ces valeurs sont utilisées comme la taille concrète de l'élément.
-- si la taille spécifiée définit soit la hauteur soit la largeur, la valeur manquante est déterminée grâce au ratio intrinsèque s'il existe ou les dimensions intrisèques si la valeur spécifiée y correspond ou la taille par défaut de l'objet pour la dimension manquante.
-- si la taille spécifiée ne définit ni hauteur ni largeur, la taille concrète de l'objet est calculée de manière à ce que le ratio intrinsèque soit conservé et que la taille par défaut de l'objet ne soit pas dépassée. Si l'image n'a pas de ratio intrinsèque, le ratio intrinsèque de l'objet auquel il s'applique est utilisé ; si l'objet n'en possède pas, la hauteur ou la largeur manquante est prise depuis la taille par défaut de l'objet.
-
-Les images peuvent être utilisées pour de nombreuses propriétés CSS comme {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} ou {{cssxref("cursor")}}.
-
-> **Note :** tous les navigateurs ne supportent pas n'importe quel type d'image sur n'importe quelle propriété. Voir la section [compatibilité des navigateurs](/fr/docs/Web/CSS/image#compatibilit.c3.a9_des_navigateurs) pour une liste explicative.
+Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS)  **`<image>`** représente une image en deux dimensions.
 
 ## Syntaxe
 
-Un type de donnée CSS `<image>` peut représenter un type parmi les suivants :
+Le type de données `<image>` peut être représenté avec l'une des valeurs suivantes&nbsp;:
 
-- une image dénotée par le type de donnée CSS {{cssxref("&lt;url&gt;")}} et la fonction `url()` ;
-- une valeur CSS {{cssxref("&lt;gradient&gt;")}} (représentant un dégradé) ;
-- une partie de la page, définie par la fonction {{cssxref("element()")}} ;
-- une image, un fragment d'image ou une couleur définie grâce à la fonction {{cssxref("image()")}} ;
-- une fusion de deux ou plusieurs images avec la fonction {{cssxref("cross-face")}}
-- une image choisie parmi un ensemble d'images (selon leurs résolutions, l'appareil et la connexion utilisés) grâce à la fonction {{cssxref("image-set()")}}.
+- Une image portée par une valeur de type [`url()`](/fr/docs/Web/CSS/url)
+- Une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui représente un dégradé
+- Une partie d'une page web définie par la fonction [`element()`](/fr/docs/Web/CSS/element)
+- Une image, un fragment d'image ou une zone de couleur définie par la fonction [`image()`](/fr/docs/Web/CSS/image/image)
+- Une fusion d'une ou plusieurs images à l'aide de la fonction [`cross-fade()`](/fr/docs/Web/CSS/cross-fade).
+- Une sélection d'images déterminée selon la résolution à l'aide de la fonction [`image-set()`](/fr/docs/Web/CSS/image/image-set).
 
-## Exemples
+## Description
 
-Voici des exemples valides d'images :
+CSS peut gérer ces différents types d'images&nbsp;:
 
-```css example-good
-url(test.jpg)              /* La fonction url() fonctionne tant que test.jpg est bien une image */
-linear-gradient(blue, red) /* Un dégradé (<gradient>) */
-element(#colonne3)         /* Utilisation d'un élément de la page via la fonction element(),
-                              si colonne3 est bien un identifiant CSS existant. */
-image(ltr 'arrow.png#xywh=0,0,16,16', red)
-                           /* Une section de 16x16 pixels de l'image arrow.png et qui démarre au coin
-                              supérieur gauche de l'image et qui sera utilisée si arrow.png est à un
-                              format pris en charge. Sinon, ce sera un fond rouge qui sera utilisé.
-                              Si la langue est écrite de gauche à droite, l'image sera inversée
-                              horizontalement. */
-cross-fade(20% url(vingt.png), url(quatrevingt.png));
-                           /* Deux images superposées où « vingt » est 20%
-                              opaque et « quatrevingt » compose les 80%
-                              restants. */
-image-set('test.jpg' 1x, 'text-2x.jpg' 2x);
-                           /* Un ensemble d'images avec différentes résolutions. */
-```
+- Les images avec _des dimensions intrinsèques_ (c'est-à-dire une taille naturelle), comme celles au format JPEG, PNG, ou dans un autre [format matriciel](https://fr.wikipedia.org/wiki/Image_matricielle).
+- Les images avec _plusieurs dimensions intrinsèques_, qui existent en plusieurs versions à l'intérieur d'un même fichier (comme certains formats .ico), auquel cas les dimensions intrinsèques seront celles de l'image la plus grande de la zone et avec les proportions les plus proches de la boîte englobante.
+- Les images sans dimension intrinsèque, mais avec _des proportions intrinsèques_ entre la hauteur et la largeur, comme un fichier SVG ou une image dans [un format vectoriel](https://fr.wikipedia.org/wiki/Image_vectorielle).
+- Les images _sans dimension ou proportion intrinsèques_, comme les dégradés CSS.
 
-Voici des exemples invalides :
+Le moteur CSS détermine la _taille effective_ d'un objet en utilisant&nbsp;:
 
-```css example-bad
-nourl.jpg            /* Le fichier de l'image doit être ciblé via la fonction url(). */
-url(report.pdf)      /* Le fichier référencé par la fonction url() doit être une image. */
-element(#fakeid)     /* Ne fonctionne pas si 'fakeid' n'est pas un identifiant existant. */
-image(z.jpg#xy=0,0)  /* L'indicateur de fragment doit avoir la forme xywh=#,#,#,# */
-image-set('chat.jpg' 1x, 'chien.jpg' 1x) /* Chaque image doit avoir une résolution différente */
-```
+1. Ses dimensions intrinsèques
+2. Sa taille indiquée, définie par les propriétés CSS telles que [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), ou [`background-size`](/fr/docs/Web/CSS/background-size)
+3. Sa taille par défaut, déterminée en fonction de la propriété avec laquelle l'image est utilisée (voir le tableau qui suit)
+
+| Type d'objet (propriété CSS)                                                                                                                 | Taille par défaut de l'objet                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [`background-image`](/fr/docs/Web/CSS/background-image)                                                                                      | La taille de la zone de positionnement de l'arrière-plan de l'élément                                         |
+| [`list-style-image`](/fr/docs/Web/CSS/list-style-image)                                                                                      | La taille d'un caractère en `1em`                                                                             |
+| [`border-image-source`](/fr/docs/Web/CSS/border-image-source)                                                                                | La taille de la zone de bordure de l'élément                                                                  |
+| [`cursor`](/fr/docs/Web/CSS/cursor)                                                                                                          | La taille définie par le navigateur qui correspond à la taille du curseur du système client                   |
+| [`mask-image`](/fr/docs/Web/CSS/mask-image)                                                                                                  | ?                                                                                                             |
+| [`shape-outside`](/fr/docs/Web/CSS/shape-outside)                                                                                            | ?                                                                                                             |
+| [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source)                                                                                  | ?                                                                                                             |
+| [`symbols()`](/fr/docs/Web/CSS/symbols) pour [`@counter-style`](/fr/docs/Web/CSS/@counter-style)                                             | Fonctionnalité à risque. Si prise en charge, la taille est celle du curseur du système client                 |
+| [`content`](/fr/docs/Web/CSS/content) pour un pseudo-élément ([`::after`](/fr/docs/Web/CSS/::after)/[`::before`](/fr/docs/Web/CSS/::before)) | Un rectangle de 300px par 150px                                                                               |
+
+La taille effective d'un objet est calculée avec l'algorithme suivant&nbsp;:
+
+1. Si la taille indiquée définit _la largeur et la hauteur_, ces valeurs sont utilisées pour la taille effective de l'objet.
+2. Si la taille indiquée définit _uniquement la largeur ou la hauteur_, la valeur manquante est déterminée à l'aide des proportions intrinsèques si elles existent, de la dimension intrinsèque correspondante si la valeur correspond ou de la taille par défaut de l'objet pour la valeur manquante.
+3. Si la taille indiquée ne définit _ni la largeur, ni la hauteur_, la taille effective de l'objet est calculée afin de respecter les proportions intrinsèques de l'image sans dépasser la taille par défaut de l'objet sur aucun des deux axes. Si l'image n'a pas de proportions intrinsèques, ce sont celles de l'objet auquel elle s'applique qui sont utilisées et si l'objet n'en a pas non plus, la largeur ou la hauteur manquante est déterminée à partir de la taille par défaut de l'objet.
+
+> **Note :** Tous les navigateurs ne prennent pas en charge tous les types d'image pour chaque propriété. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
 
 ## Accessibilité
 
-Les navigateurs ne fournissent pas d'information aux outils d'assistance pour les images d'arrière-plan. Cela est particulièrement important pour les lecteurs d'écran car ces derniers ne pourront pas annoncer la présence de ces informations aux utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
+Les navigateurs ne fournissent pas d'informations particulières quant aux images d'arrière-plan pour les outils d'assistance. Cela est notamment important pour les lecteurs d'écran qui n'annonceront pas leur présence et ne véhiculeront pas d'informations à leur propos aux personnes. Si l'image contient des informations critiques pour la compréhension générale de la page, il faudra avoir une description sémantique dans le document.
 
-- [Comprendre la règle 1.1 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères pour 1.1.1, comprendre WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Comprendre les règles WCAG, explications de la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
+- [Comprendre le critère de réussite 1.1.1, dans le guide de compréhension des WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+
+## Syntaxe formelle
+
+{{csssyntax}}
+
+## Exemples
+
+### Images valides
+
+```css example-good
+url(test.jpg)               /* Une valeur <url>, qui fonctionne bien si test.jpg est une image existante. */
+linear-gradient(blue, red)  /* Un dégradé (type <gradient>). */
+element(#idexistant)        /* Une partie d'une page web, référencée grâce à la fonction element(), qui
+                               fonctionne bien si "idexistant" est un identifiant existant sur la page. */
+image(ltr 'fleche.png#xywh=0,0,16,16', red)
+                            /* Une section 16x16 d'une image commençant dans le coin supérieur gauche
+                               de l'image originale arrow.png si celle-ci est prise en charge ou sinon
+                               un damier rouge. Si la langue s'écrit de droit à gauche, l'image est
+                               renversée horizontalement. */
+cross-fade(20% url(vingt.png), url(quatrevingt.png))
+                            /* Des images fusionnées, la première ayant une opacité à 20% et la seconde
+                               une opacité de 80%. */
+image-set('test.jpg' 1x, 'test-2x.jpg' 2x)
+                            /* Une sélection d'image avec des résolutions différentes. */
+```
+
+### Images invalides
+
+```css example-bad
+pasdurl.jpg         /* Un fichier d'image doit être défini à l'aide de la fonction url(). */
+url(rapport.pdf)    /* Le fichier visé par la fonction url() doit être une image. */
+element(#idfaux)    /* L'identifiant d'un élément doit correspondre à un identifiant existant. */
+image(z.jpg#xy=0,0) /* Le fragment spatial doit être écrit selon le format xywh=#,#,#,#. */
+image-set('chat.jpg' 1x, 'chien.jpg' 1x) /* Chaque image d'un ensemble doit avoir une résolution différente. */
+```
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Images", "#typedef-image", "&lt;image&gt;")}} | {{Spec2('CSS3 Images')}} | Définition initiale. Avant [CSS3](/fr/docs/Web/CSS/CSS3), il n'existait pas de type défini de façon explicite pour les images. Celles-ci pouvaient uniquement être utilisées via la notation fonctionnelle `url()`.                                                                                |
-| {{SpecName("CSS4 Images", "#typedef-image", "&lt;image&gt;")}} | {{Spec2('CSS4 Images')}} | Ajout de {{cssxref("element()")}}, {{cssxref("image()")}}, {{cssxref("image-set()")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-conic-gradient", "repeating-conic-gradient()")}} et {{cssxref("image-resolution")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("&lt;gradient&gt;")}}
-
-  - [Manipuler les dégradés CSS](/fr/docs/Web/Guide/CSS/Using_CSS_gradients)
-  - {{cssxref("linear-gradient","linear-gradient()")}}
-  - {{cssxref("radial-gradient","radial-gradient()")}}
-  - {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}
-  - {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
-  - {{cssxref("conic-gradient")}}
-
-- {{cssxref("element()")}}
-- {{CSSxRef("imagefunction", "image()")}}
-- {{cssxref("image-set()")}}
-- {{CSSxRef("cross-fade()")}}
+- Le type [`<gradient>`](/fr/docs/Web/CSS/gradient)
+- [`element()`](/fr/docs/Web/CSS/element)
+- [`image()`](/fr/docs/Web/CSS/image/image)
+- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
+- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade).

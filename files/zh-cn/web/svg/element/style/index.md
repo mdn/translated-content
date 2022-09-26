@@ -1,12 +1,8 @@
 ---
 title: style
 slug: Web/SVG/Element/style
-tags:
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/style
 ---
+
 {{SVGRef}}
 
 `style`元素元素样式表直接在 SVG 内容中间嵌入。SVG 的`style`元素的属性与 HTML 中的相应的元素并无二致（请阅读 HTML 的 {{HTMLElement("style")}} 元素）。
@@ -42,7 +38,7 @@ translation_of: Web/SVG/Element/style
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -52,12 +48,12 @@ translation_of: Web/SVG/Element/style
 
 ## DOM 接口
 
-该元素实现了[`SVGStyleElement`](/en-US/DOM/SVGStyleElement)接口。
+该元素实现了[`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement)接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## 参见
 
-- [HTML 中的`<style>`元素](/en-US/HTML/Element/style)
+- [HTML 中的`<style>`元素](/zh-CN/HTML/Element/style)

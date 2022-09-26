@@ -1,14 +1,8 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Experimental
-  - NeedsTranslation
-  - TopicStub
-  - URL API
-translation_of: Web/API/URL
 ---
+
 {{ApiRef("URL API")}} {{SeeCompatTable}}
 
 **`URL`** 介面提供了建立 `URL` 物件的靜態方法。
@@ -69,9 +63,9 @@ _The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 參見
 
 - Property allowing to get such an object: {{domxref("Window.URL")}}.
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/zh-TW/docs/Components.utils.importGlobalProperties)

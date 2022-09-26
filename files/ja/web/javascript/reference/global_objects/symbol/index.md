@@ -1,16 +1,9 @@
 ---
 title: Symbol (シンボル)
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - データ型
-  - ECMAScript 2015
-  - 用語集
-  - JavaScript
-  - Sharing
-  - Symbol
-translation_of: Glossary/Symbol
 original_slug: Glossary/Symbol
 ---
+
 {{Glossary("JavaScript")}} では、シンボルは{{Glossary("Primitive", "プリミティブ値")}}です。
 
 **Symbol** データ型を持つ値は「シンボル値」として見ることができます。 JavaScript の実行時環境では、シンボル値は {{jsxref("Symbol")}} 関数を呼び出すことで生成され、動的に無名の一意の値を生み出します。シンボルはオブジェクトプロパティとして使用されることがあります。

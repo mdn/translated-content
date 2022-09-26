@@ -1,11 +1,11 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/en-US/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
 
 {{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
@@ -183,8 +183,8 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## 相关连接
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

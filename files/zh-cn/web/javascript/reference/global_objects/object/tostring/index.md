@@ -1,16 +1,8 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - 原型
-  - 对象
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回一个表示该对象的字符串。
@@ -36,7 +28,7 @@ var o = new Object();
 o.toString(); // 返回 [object Object]
 ```
 
-> **备注：** 如 ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，`toString()` 调用 {{jsxref("null")}} 返回`[object Null]`，{{jsxref("undefined")}} 返回 `[object Undefined]`。请参阅下面的[使用 `toString()` 检测对象类型](<#使用_tostring()_检测对象类型>)。
+> **备注：** 如 ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，`toString()` 调用 {{jsxref("null")}} 返回`[object Null]`，{{jsxref("undefined")}} 返回 `[object Undefined]`。请参阅下面的[使用 `toString()` 检测对象类型](#使用_tostring_检测对象类型)。
 
 ## 示例
 

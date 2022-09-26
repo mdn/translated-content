@@ -1,8 +1,8 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/DOM) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
@@ -22,7 +22,7 @@ new MutationObserver(
 #### 參數
 
 - `callback`
-  - : 這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 `MutationRecord `物件陣列，而第二個參數則是觀察者目標本身。
+  - : 這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 `MutationRecord` 物件陣列，而第二個參數則是觀察者目標本身。
 
 ## Instance methods
 
@@ -140,4 +140,4 @@ observer.disconnect();
 
 ## Browser compatibility
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}

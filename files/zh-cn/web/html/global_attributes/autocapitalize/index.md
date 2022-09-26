@@ -1,12 +1,8 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Atributos globales
-  - Autocapitalize
-  - HTML
-translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`autocapitalize`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是一个枚举属性，它控制用户输入/编辑文本输入时文本输入是否自动大写，以及如何自动大写。属性必须取下列值之一：

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noscript
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affiché si les fonctionnalités de script ne sont pas prises en charge ou si elles sont désactivées.
@@ -22,15 +23,21 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ```html
 <noscript>
-  <!-- Un lien vers un site externe -->
-  <a href="http://www.mozilla.com/">Un autre site</a>
+  <!-- élément d'ancre qui mène à un fichier externe  -->
+  <a href="https://www.mozilla.org/">Lien externe</a>
 </noscript>
-<p>Elle est où la poulette ?</p>
+<p>Elle est où, la poulette ?</p>
 ```
 
-### Résultat
+### Résultat avec JavaScript activé
 
-{{EmbedLiveSample("Exemples","300","200")}}
+Elle est où, la poulette&nbsp;?
+
+### Résultat avec JavaScript désactivé
+
+[Lien externe](https://www.mozilla.org/)
+
+Elle est où, la poulette&nbsp;?
 
 ## Résumé technique
 
@@ -110,12 +117,8 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

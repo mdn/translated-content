@@ -1,8 +1,8 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent`** 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 `MouseEvent` 實作事件包括了 {{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}} 與 {{event("mousedown")}}。
@@ -124,7 +124,7 @@ Click on the button to see how the sample works:
 
 ## 瀏覽器相容性
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,15 +1,8 @@
 ---
 title: 客户端存储
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - IndexedDB
-  - JavaScript
-  - 初学者
-  - 存储
-  - 文章
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -22,10 +15,10 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
       <th scope="row">Prerequisites:</th>
       <td>
         JavaScript 基础 (查看
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">第一步</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks">构建的块</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 对象</a>),
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">第一步</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建的块</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象</a>),
+        <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >基础的客户端 API</a
         >
       </td>
@@ -39,7 +32,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 ## 客户端存储？
 
-在其他的 MDN 学习中我们已经讨论过 静态网站（[static sites](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites)） 和动态网站（ [dynamic sites](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites)）的区别。 大多数现代的 web 站点是动态的— 它们在服务端使用各种类型的数据库来存储数据 (服务端存储), 之后通过运行服务端（ [server-side](/en-US/docs/Learn/Server-side)）代码来重新获取需要的数据，把其数据插入到静态页面的模板中，并且生成出 HTML 渲染到用户浏览上。
+在其他的 MDN 学习中我们已经讨论过 静态网站（[static sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites)） 和动态网站（ [dynamic sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites)）的区别。 大多数现代的 web 站点是动态的— 它们在服务端使用各种类型的数据库来存储数据 (服务端存储), 之后通过运行服务端（ [server-side](/zh-CN/docs/Learn/Server-side)）代码来重新获取需要的数据，把其数据插入到静态页面的模板中，并且生成出 HTML 渲染到用户浏览上。
 
 客户端存储以相同的原理工作，但是在使用上有一些不同。它是由 JavaScript APIs 组成的因此允许你在客户端存储数据 (比如在用户的机器上)，而且可以在需要的时候重新取得需要的数据。这有很多明显的用处，比如：
 
@@ -68,19 +61,19 @@ cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以�
 
 现代浏览器有比使用 cookies 更简单、更有效的存储客户端数据的 API。
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) 提供了一种非常简单的语法，用于存储和检索较小的、由名称和相应值组成的数据项。当您只需要存储一些简单的数据时，比如用户的名字，用户是否登录，屏幕背景使用了什么颜色等等，这是非常有用的。
-- [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) 为浏览器提供了一个完整的数据库系统来存储复杂的数据。这可以用于存储从完整的用户记录到甚至是复杂的数据类型，如音频或视频文件。
+- [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 提供了一种非常简单的语法，用于存储和检索较小的、由名称和相应值组成的数据项。当您只需要存储一些简单的数据时，比如用户的名字，用户是否登录，屏幕背景使用了什么颜色等等，这是非常有用的。
+- [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 为浏览器提供了一个完整的数据库系统来存储复杂的数据。这可以用于存储从完整的用户记录到甚至是复杂的数据类型，如音频或视频文件。
 
 您将在下面了解更多关于这些 API 的信息。
 
 ### 未来：Cache API
 
-一些现代浏览器支持新的 {{domxref("Cache")}} API。这个 API 是为存储特定 HTTP 请求的响应文件而设计的，它对于像存储离线网站文件这样的事情非常有用，这样网站就可以在没有网络连接的情况下使用。缓存通常与 [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) 组合使用，尽管不一定非要这么做。
+一些现代浏览器支持新的 {{domxref("Cache")}} API。这个 API 是为存储特定 HTTP 请求的响应文件而设计的，它对于像存储离线网站文件这样的事情非常有用，这样网站就可以在没有网络连接的情况下使用。缓存通常与 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 组合使用，尽管不一定非要这么做。
 Cache 和 Service Workers 的使用是一个高级主题，我们不会在本文中详细讨论它，尽管我们将在下面的 [离线文件存储](#离线文件存储) 一节中展示一个简单的例子。
 
 ## 存储简单数据 — web storage
 
-[Web Storage API](/en-US/docs/Web/API/Web_Storage_API) 非常容易使用 — 你只需存储简单的 键名/键值 对数据 (限制为字符串、数字等类型) 并在需要的时候检索其值。
+[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 非常容易使用 — 你只需存储简单的 键名/键值 对数据 (限制为字符串、数字等类型) 并在需要的时候检索其值。
 
 ### 基本语法
 
@@ -240,13 +233,13 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 你的例子完成了 - 做得好！现在剩下的就是保存你的代码并在浏览器中测试你的 HTML 页面。你可以在这里看到我们的[完成版本并在线运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)。
 
-> **备注：** 在 [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
+> **备注：** 在 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
 
 > **备注：** 在完成版本的源代码中， `<script src="index.js" defer></script>` 一行里， `defer` 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。
 
 ## 存储复杂数据 — IndexedDB
 
-[IndexedDB API](/en-US/docs/Web/API/IndexedDB_API)（有时简称 IDB）是可以在浏览器中访问的一个完整的数据库系统，在这里，你可以存储复杂的关系数据。其种类不限于像字符串和数字这样的简单值。你可以在一个 IndexedDB 中存储视频，图像和许多其他的内容。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)（有时简称 IDB）是可以在浏览器中访问的一个完整的数据库系统，在这里，你可以存储复杂的关系数据。其种类不限于像字符串和数字这样的简单值。你可以在一个 IndexedDB 中存储视频，图像和许多其他的内容。
 
 但是，这确实是有代价的：使用 IndexedDB 要比 Web Storage API 复杂得多。在本节中，我们仅仅只能浅尝辄止地一提它的能力，不过我们会给你足够基础知识以帮助你开始。
 
@@ -289,7 +282,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     };
     ```
 
-    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的{{event("load")}}事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
+    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
 
 3. 在`window.onload`处理程序内，添加以下内容：
 
@@ -299,7 +292,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     let request = window.indexedDB.open('notes', 1);
     ```
 
-    此行创建一个 `request` 变量，目的是打开 `notes`数据库的 `1`版本。如果`notes`数据库不存在，则后续代码将为您创建。您将在 IndexedDB 中经常看到此请求模式。数据库操作需要时间。您不希望在等待结果时挂起浏览器，因此数据库操作是[异步的](/en-US/docs/Glossary/asynchronous)，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。
+    此行创建一个 `request` 变量，目的是打开 `notes`数据库的 `1`版本。如果`notes`数据库不存在，则后续代码将为您创建。您将在 IndexedDB 中经常看到此请求模式。数据库操作需要时间。您不希望在等待结果时挂起浏览器，因此数据库操作是[异步的](/zh-CN/docs/Glossary/asynchronous)，这意味着它们不会立即发生，而是在将来的某个时刻发生，并且在完成后会收到通知。
 
     要在 IndexedDB 中处理此问题，您需要创建一个请求对象（可以随意命名 - 命名为`request`，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，您将在下面看到这些代码。
 
@@ -533,7 +526,7 @@ function deleteItem(e) {
 }
 ```
 
-- 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的[Number（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
+- 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的[Number（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
 - 然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该[`IDBObjectStore.delete()`](/zh-CN/docs/Web/API/IDBObjectStore/delete)方法从数据库中删除记录，并将 ID 传递给它。
 - 当数据库事务完成后，我们`<li>`从 DOM 中删除注释，然后再次检查以查看它是否`<ul>`为空，并根据需要插入注释。
 
@@ -661,11 +654,11 @@ function deleteItem(e) {
 
 ![](ff-offline.png)
 
-这就是[服务工作者](/en-US/docs/Web/API/Service_Worker_API)和密切相关的[Cache API 的](/en-US/docs/Web/API/Cache)用武之地。
+这就是[服务工作者](/zh-CN/docs/Web/API/Service_Worker_API)和密切相关的[Cache API 的](/zh-CN/docs/Web/API/Cache)用武之地。
 
 服务工作者是一个 JavaScript 文件，简单地说，它是在浏览器访问时针对特定来源（网站或某个域的网站的一部分）进行注册的。注册后，它可以控制该来源的可用页面。它通过坐在加载的页面和网络之间以及拦截针对该来源的网络请求来实现这一点。
 
-当它拦截一个请求时，它可以做任何你想做的事情（参见[用例思路](/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas)），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。实际上，它允许您使网站完全脱机工作。
+当它拦截一个请求时，它可以做任何你想做的事情（参见[用例思路](/zh-CN/docs/Web/API/Service_Worker_API#Other_use_case_ideas)），但经典的例子是离线保存网络响应，然后提供响应请求而不是来自网络的响应。实际上，它允许您使网站完全脱机工作。
 
 Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTTP 响应，因此与服务工作者一起工作得非常好。
 
@@ -730,7 +723,7 @@ self.addEventListener('install', function(e) {
 
 在这个块中，我们[`CacheStorage.match()`](/zh-CN/docs/Web/API/CacheStorage/match)用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果未找到匹配，或者`undefined`如果未找到匹配，则此承诺将满足匹配的响应。
 
-如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中[获取（）](/en-US/docs/Web/API/fetch)响应并返回该响应。
+如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中[获取（）](/zh-CN/docs/Web/API/fetch)响应并返回该响应。
 
 ```js
 self.addEventListener('fetch', function(e) {
@@ -761,19 +754,19 @@ self.addEventListener('fetch', function(e) {
 
 ## 相关链接
 
-- [网页存储 API](/en-US/docs/Web/API/Web_Storage_API)
-- [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API)
-- [Cookies](/en-US/docs/Web/HTTP/Cookies)
-- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [网页存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
+- [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)
+- [Cookies](/zh-CN/docs/Web/HTTP/Cookies)
+- [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## 在本单元中
 
-- [网页端 API 介绍](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获取数据 (fetch)](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频和音频 API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [网页端 API 介绍](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [从服务器获取数据 (fetch)](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [视频和音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

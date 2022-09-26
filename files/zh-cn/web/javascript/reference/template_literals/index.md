@@ -1,14 +1,9 @@
 ---
 title: 模板字符串
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Template string
-  - 模板字符串
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 模板字面量 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。它们在 ES2015 规范的先前版本中被称为“模板字符串”。
@@ -233,6 +228,6 @@ let bad = `bad escape sequence: \unicode`;
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
 - ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

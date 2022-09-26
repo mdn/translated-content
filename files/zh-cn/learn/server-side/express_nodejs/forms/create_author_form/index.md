@@ -1,9 +1,9 @@
 ---
 title: 创建作者表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
-[Ed](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form)本章节演示，如何为创建作者对象`Author`定义一个页面。
+
+本章节演示，如何为创建作者对象`Author`定义一个页面。
 
 ## 导入验证和清理方法
 

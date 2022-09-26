@@ -2,6 +2,7 @@
 title: document.importNode
 slug: Web/API/Document/importNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -15,7 +16,7 @@ var node = document.importNode(externalNode, deep);
 ```
 
 - `node`
-  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-cn/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态。
+  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态。
 - `externalNode`
   - : 将要从外部文档导入的节点。
 - `deep` {{ optional_inline() }}
@@ -44,7 +45,7 @@ document.getElementById("container").appendChild(newNode);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.importNode")}}
+{{Compat}}
 
 ## 规范
 

@@ -1,12 +1,8 @@
 ---
 title: 为 MDN 做贡献
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute
 ---
+
 {{MDNSidebar}}
 
 MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如错别字修正、示例编写、内容讨论，等等。随着用户数量的增长，这些工作也随之增加。下面列出了你可以通过哪些方式帮到我们。

@@ -11,6 +11,7 @@ tags:
   - outils de développement
 translation_of: Web/API/Console/debug
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message dans la console web, avec le niveau de log "debug". Le message est affiché uniquement si la console est configurée pour afficher les messages de type debug.
@@ -35,15 +36,13 @@ console.debug(msg [, subst1, ..., substN]);
 
 Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#debug", "console.debug()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.debug")}}
+{{Compat}}
 
 ## Voir aussi
 

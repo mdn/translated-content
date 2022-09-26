@@ -1,10 +1,8 @@
 ---
 title: 内容协商
 slug: Web/HTTP/Content_negotiation
-tags:
-  - 内容协商
-translation_of: Web/HTTP/Content_negotiation
 ---
+
 {{HTTPSidebar}}
 
 在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。

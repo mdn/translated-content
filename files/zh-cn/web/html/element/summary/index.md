@@ -1,20 +1,13 @@
 ---
 title: <summary>
 slug: Web/HTML/Element/summary
-tags:
-  - <summary>
-  - Element
-  - HTML
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
+
 {{HTMLRef}}
 
 ## 概述
 
-**HTML `<summary> `元素** 用作 一个{{HTMLElement("details")}}元素的一个内容的摘要，标题或图例。
+**HTML `<summary>` 元素** 用作 一个{{HTMLElement("details")}}元素的一个内容的摘要，标题或图例。
 
 > **备注：** 如果 `<summary>` 元素在浏览器内不能被正确解析和渲染，，则会展示\<details>标签内的其他内容。
 

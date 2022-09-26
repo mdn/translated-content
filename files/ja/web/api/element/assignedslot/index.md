@@ -1,17 +1,8 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Slottable
-  - ウェブコンポーネント
-  - assignedSlot
-  - シャドウ DOM
-browser-compat: api.Element.assignedSlot
-translation_of: Web/API/Element/assignedSlot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`assignedSlot`** は {{domxref("Element")}} インターフェイスの読み取り専用プロパティで、

@@ -12,6 +12,7 @@ tags:
   - messaging
 translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`MessageEvent`** représente un message reçu par un objet cible.
@@ -111,13 +112,11 @@ onconnect = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#messageevent", "MessageEvent")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

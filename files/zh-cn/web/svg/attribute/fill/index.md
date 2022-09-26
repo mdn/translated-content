@@ -1,13 +1,9 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/fill
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `fill`属性根据它的使用环境，拥有两个意义。
 
@@ -34,7 +30,7 @@ translation_of: Web/SVG/Attribute/fill
 
 | 类别     | 外观属性                                                                     |
 | -------- | ---------------------------------------------------------------------------- |
-| 值       | [\<paint>](/en/SVG/Content_type#Paint)                                        |
+| 值       | [\<paint>](/zh-CN/SVG/Content_type#Paint)                                        |
 | 可变性   | Yes                                                                          |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
@@ -44,6 +40,6 @@ translation_of: Web/SVG/Attribute/fill
 
 下列元素可以使用`fill`属性：
 
-- [动画元素](/en/SVG/Element#Animation_elements) »
-- [形状元素](/en/SVG/Element#Shape) »
-- [文本内容元素](/en/SVG/Element#TextContent) »
+- [动画元素](/zh-CN/SVG/Element#Animation_elements) »
+- [形状元素](/zh-CN/SVG/Element#Shape) »
+- [文本内容元素](/zh-CN/SVG/Element#TextContent) »

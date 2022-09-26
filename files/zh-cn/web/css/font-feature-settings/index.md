@@ -1,13 +1,8 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
-tags:
-  - CSS
-  - CSS 字体
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/font-feature-settings
 ---
+
 {{CSSRef}}
 
 **`font-feature-settings`** 属性用于控制 OpenType 字体中的高级印刷功能。
@@ -89,7 +84,7 @@ td.tabular { font-feature-settings: "tnum"; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-feature-settings")}}
+{{Compat}}
 
 ## 其他参考
 

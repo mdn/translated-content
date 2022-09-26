@@ -6,6 +6,7 @@ tags:
   - File
 translation_of: Web/API/File
 ---
+
 {{APIRef}}
 
 L’interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d’une une page web d’accéder à leurs contenus.
@@ -62,13 +63,11 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### Notes d'implémentation
 

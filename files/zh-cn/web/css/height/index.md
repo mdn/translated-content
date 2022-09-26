@@ -1,13 +1,9 @@
 ---
 title: height
 slug: Web/CSS/height
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/height
 ---
-{{CSSRef()}}`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)）的高度。{{EmbedInteractiveExample("pages/css/height.html")}}{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
+
+{{CSSRef()}}`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)）的高度。{{EmbedInteractiveExample("pages/css/height.html")}}{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
 
 ## 语法
 
@@ -104,7 +100,7 @@ div {
 
 确保设定了 `height` 的元素在显示上不会被截断，或者当页面放大时增大的字体大小不会遮挡其他内容。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 规范
@@ -119,4 +115,4 @@ div {
 
 ## 参见
 
-- [box model](https://developer.mozilla.org/en-US/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box model](/zh-CN/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

@@ -1,18 +1,8 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - PluralRules
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。

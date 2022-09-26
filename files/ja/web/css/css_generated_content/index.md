@@ -1,13 +1,6 @@
 ---
 title: CSS 生成コンテンツ
 slug: Web/CSS/CSS_Generated_Content
-tags:
-  - CSS
-  - CSS 生成コンテンツ
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Generated_Content
 ---
 {{CSSRef}}
 

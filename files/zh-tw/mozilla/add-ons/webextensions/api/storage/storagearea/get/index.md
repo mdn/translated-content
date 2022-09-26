@@ -1,8 +1,8 @@
 ---
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 從儲存空間內檢查一個或多個單元（item）。
@@ -32,7 +32,7 @@ let gettingItem = browser.storage.<storageType>.get(
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 示例
 

@@ -1,8 +1,8 @@
 ---
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -14,13 +14,13 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
       <th scope="row">需求：</th>
       <td>
         基本電腦操作、<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安裝基本的軟體</a
         >、
-        <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >檔案處理的基本知識</a
         >、HTML 基礎 (請參閱
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>)。
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>)。
       </td>
     </tr>
     <tr>
@@ -118,11 +118,11 @@ span {
 
 {{EmbedLiveSample('將_CSS_套用至_DOM', '100%', 55)}}
 
-在下個主題裡的[為 CSS 除錯](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)中我們將會使用瀏覽器的 DevTools 來為 CSS 除錯，屆時我們將會學到更多瀏覽器解析 CSS 的方法。
+在下個主題裡的[為 CSS 除錯](/zh-TW/docs/Learn/CSS/Building_blocks/Debugging_CSS)中我們將會使用瀏覽器的 DevTools 來為 CSS 除錯，屆時我們將會學到更多瀏覽器解析 CSS 的方法。
 
 ## 瀏覽器遇到不認識的 CSS 時會發生什麼事？
 
-[在先前的課程中](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#Browser_support)，我們曾提過瀏覽器並不會一次實作全部的新 CSS。此外，很多人都不是使用最新版的瀏覽器。要知道 CSS 是與時俱進的，會超出瀏覽器可辨認的範圍是很正常的事，所以啦，你可能會很好奇，當瀏覽器遇到它看不懂的 CSS 選擇器或宣告時會發生什麼事呢？
+[在先前的課程中](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS#Browser_support)，我們曾提過瀏覽器並不會一次實作全部的新 CSS。此外，很多人都不是使用最新版的瀏覽器。要知道 CSS 是與時俱進的，會超出瀏覽器可辨認的範圍是很正常的事，所以啦，你可能會很好奇，當瀏覽器遇到它看不懂的 CSS 選擇器或宣告時會發生什麼事呢？
 
 答案就是裝作沒看到，繼續往下解析其它的 CSS！
 
@@ -161,14 +161,14 @@ p {
 
 ## 最後
 
-你已經快完成這個主題了，但是還差臨門一腳，在下篇文章裡，你將會[利用你學到的新知識](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)來重新美化一個範例，並在過程中重溫你所學到的 CSS 技巧。
+你已經快完成這個主題了，但是還差臨門一腳，在下篇文章裡，你將會[利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)來重新美化一個範例，並在過程中重溫你所學到的 CSS 技巧。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
 ## 在這個主題中
 
-1. [CSS 是什麼？](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 是如何組織的](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何運作的](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [利用你學到的新知識](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 是如何組織的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 是如何運作的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

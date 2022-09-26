@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 填充工具
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 **`fill()`** 方法會將陣列中索引的第一個到最後一個的每個位置全部填入一個靜態的值。
@@ -123,7 +116,7 @@ if (!Array.prototype.fill) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,8 +1,8 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 与浏览器窗口互动。您可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。您也可以监听窗口的打开、关闭和其激活事件。
@@ -53,7 +53,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 ### Edge 的不兼容
 
@@ -65,7 +65,8 @@ Edge 中不支持 Promises。需使用回调。
 >
 > Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +93,4 @@ Edge 中不支持 Promises。需使用回调。
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

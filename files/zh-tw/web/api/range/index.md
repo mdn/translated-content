@@ -1,8 +1,8 @@
 ---
 title: Range
 slug: Web/API/Range
-translation_of: Web/API/Range
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range`** 介面代表一個文件的片段（fragment），可以包含節點及部分的文字節點。
@@ -94,8 +94,8 @@ _There are no inherited methods._
 
 ## 瀏覽器相容性
 
-{{Compat("api.Range")}}
+{{Compat}}
 
 ## 參見
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-TW/docs/DOM/DOM_Reference)

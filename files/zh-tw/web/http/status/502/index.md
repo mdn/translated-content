@@ -1,12 +1,8 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - Bad Gateway
-  - HTTP
-  - Status code
-translation_of: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 `502 Bad Gateway` 錯誤表明伺服器以閘道器或代理訪問時，收到了來自上游服務器的無效回應。
@@ -27,7 +23,7 @@ translation_of: Web/HTTP/Status/502
 
 The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.502")}}
+{{Compat}}
 
 ## See also
 

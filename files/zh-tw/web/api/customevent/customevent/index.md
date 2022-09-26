@@ -1,8 +1,8 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
-translation_of: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 `CustomEvent()` constructor 可用來建立 {{domxref("CustomEvent")}}物件。
@@ -19,7 +19,7 @@ new CustomEvent(type, options)
 - `type`
   - : 一個 {{domxref("DOMString")}} 用來表示事件名稱。
 - `options`{{optional_inline}}
-  - : 一個<i>繼承自{{domxref("Event/Event", "Event()")}}</i>的參數，其類型為 object。它有以下參數
+  - : 一個繼承自{{domxref("Event/Event", "Event()")}}的參數，其類型為 object。它有以下參數
     - `detail` {{optional_inline}}
       - : 用來表示事件相關的資訊。它能藉由 {{domxref("CustomEvent.detail")}} 屬性來取得值。
         其默認值為`null`。

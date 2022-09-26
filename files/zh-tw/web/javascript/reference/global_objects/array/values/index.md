@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
+
 {{JSRef}}
 
 **`values()`** 方法會回傳一個包含陣列中的每一個索引之對應值（values）的新 **`Array Iterator`** 物件。
@@ -47,7 +47,7 @@ for (let letter of iterator) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## 參見
 

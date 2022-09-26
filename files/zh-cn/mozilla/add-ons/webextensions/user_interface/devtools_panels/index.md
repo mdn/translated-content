@@ -1,8 +1,8 @@
 ---
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
 > **备注：** This feature is available since Firefox 54.
@@ -13,9 +13,9 @@ When an extension provides tools that are of use to developers, it's possible to
 
 ## Specifying a developer tools panel
 
-A developer tools panel is added using the [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) API, which in turn needs to be run from a special devtools page.
+A developer tools panel is added using the [`devtools.panels`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) API, which in turn needs to be run from a special devtools page.
 
-Add the devtools page by including the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) key in extension's [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) and provide the location of the page's HTML file in the extension:
+Add the devtools page by including the [`devtools_page`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) key in extension's [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) and provide the location of the page's HTML file in the extension:
 
 ```json
 "devtools_page": "devtools-page.html"
@@ -50,7 +50,7 @@ browser.devtools.panels.create(
 });
 ```
 
-The extension can now run code in the inspected window using [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) or by injecting a content script via the background script by passing a message. You can find more details on how to do this in [Extending the developer tools.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+The extension can now run code in the inspected window using [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) or by injecting a content script via the background script by passing a message. You can find more details on how to do this in [Extending the developer tools.](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
 
 ## Developer panel design
 

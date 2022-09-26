@@ -1,8 +1,8 @@
 ---
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 本文將探討 HTML 最基本的部分。首先，我們將會定義元素(elements)、屬性(attributes)以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
@@ -13,10 +13,10 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
       <th scope="row">需求:</th>
       <td>
         基礎電腦能力、已安裝<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
           >需要的基本軟體</a
         >、並知道如何<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files"
           >操作檔案</a
         >。
       </td>
@@ -218,7 +218,7 @@ textarea.onkeyup = function(){
 <p>fourth</p><p>fifth</p><p>sixth</p>
 ```
 
-{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間。(這些空間是由於瀏覽器套用預設的[CSS styling](/en-US/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故)。
+{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間。(這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故)。
 
 {{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}
 
@@ -226,7 +226,7 @@ textarea.onkeyup = function(){
 
 > **備註：** 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態(display type)並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
-> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/en-US/docs/Web/HTML/Block-level_elements)[evel elements](/en-US/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/en-US/docs/Web/HTML/Inline_elements)。
+> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
 
 ### 空元素(Empty elements)
 
@@ -391,7 +391,7 @@ window.addEventListener("load", drawOutput);
 <a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
 ```
 
-不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
+不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
 
 ```html
  <a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
@@ -455,8 +455,8 @@ window.addEventListener("load", drawOutput);
 - 在 {{htmlelement("body")}} 之後，加入這個文件的主要標題。這應該由一個 `<h1>` 以及一個 `</h1>` 包著。
 - 撰寫段落的內容，這些內容可以是一些你感興趣的事物。
 - 讓其中重要的字詞以粗體顯示，讓它們更加搶眼，你可以用一個 `<strong>` 以及一個 `</strong>` 包著它們來達成這件事情。
-- 加入一個連結到你的文章段落中，像[前面所講過的那樣](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)。
-- 在這段文字的下面加入一張圖片，[像前面所說的那樣](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)。如果你可以使用不同的圖片(你電腦裡的或網路上的都可以)，你就能獲得加分！！
+- 加入一個連結到你的文章段落中，像[前面所講過的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)。
+- 在這段文字的下面加入一張圖片，[像前面所說的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)。如果你可以使用不同的圖片(你電腦裡的或網路上的都可以)，你就能獲得加分！！
 
 如果你不小心打錯了，你可以用 _Reset_ 鍵重置。如果你卡關了，可以點擊 _Show solution_ 鍵來偷看答案。
 
@@ -588,22 +588,22 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 恭喜你看完了這個章節，我們你能享受這個學習基礎 HTML 的旅程！目前，你應該已經了解 HTML 長什麼樣子、它最基本的運作方式，並且能夠寫出一些元素和屬性。基礎 HTML 大致上就到這裡結束，在單元接下來的章節中，我們將會更深入探討本章節學到的內容並介紹更多 HTML 的觀念。千萬別轉台！
 
-> **備註：** 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/en-US/docs/Learn/CSS)(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
+> **備註：** 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn/CSS)(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
 
 ## 另見
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/zh-TW/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## 在本主題中的內容
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -1,13 +1,8 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - General Header
-  - HTTP
-  - HTTP Header
-  - Reference
 ---
+
 {{HTTPSidebar}}
 
 **`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。
@@ -117,15 +112,13 @@ Cache-Control: stale-if-error=<秒數>
 
 想要禁止快取一個資源，你可以在回應中設定這個標頭：
 
-<dl>
-    <dt>Good:</dt>
-    <dd><pre class="example-good brush: plain">Cache-Control: no-store</pre><div class="note"><p>這個 <code>no-store</code> 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 <code>max-age=0</code> 可以強制執行驗證（也就會清除既有快取）。</p><pre class="brush: plain">Cache-Control: no-store, max-age=0
-</pre></div>
-    </dd>
-    <dt>Bad:</dt>
-    <dd><pre class="example-bad brush: plain">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
-    </dd>
-</dl>
+- Good
+  - : `Cache-Control: no-store`
+
+    > **這個:** `no-store` 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 `max-age=0` 可以強制執行驗證（也就會清除既有快取）。
+
+- Bad
+  - : `Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0`
 
 ### 快取靜態檔案
 
@@ -158,7 +151,7 @@ Cache-Control: max-age=0, must-revalidate
 
 ## Browser compatibility
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## See also
 

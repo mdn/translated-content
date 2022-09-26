@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
@@ -17,7 +18,7 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
 - {{htmlattrdef("manifest")}}{{deprecated_inline}}
-  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache "en/Offline_resources_in_Firefox") pour plus de détails.
+  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache) pour plus de détails.
 - {{htmlattrdef("version")}}{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
 - {{htmlattrdef("xmlns")}}
@@ -95,15 +96,11 @@ Ajouter un attribut `lang` valide au sein de l'élément HTML permet également 
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                              |
-| {{SpecName('HTML5 W3C', 'semantics.html#the-html-element', '&lt;html&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Ajout de l'attribut `manifest`. L'attribut `version` est désormais obsolète. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.3', '&lt;html&gt;')}}             | {{Spec2('HTML4.01')}}     | L'attribut `version` est désormais déprécié.                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Voir aussi
 

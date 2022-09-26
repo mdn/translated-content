@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 ---
+
 {{JSRef}}
 
 **`setInt8()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (一个字节)。

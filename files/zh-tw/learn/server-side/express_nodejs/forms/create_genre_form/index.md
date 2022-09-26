@@ -1,8 +1,8 @@
 ---
 title: 創建種類表單
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
+
 本章節演示如何定義我們的頁面，創建`Genre` 物件（這是一個很好的起點，因為類型`Genre`只有一個欄位，就是它的名稱 `name`，沒有依賴項）。像任何其他頁面一樣，我們需要設置路由，控制器和視圖。
 
 ## 引入驗證與無害化方法
@@ -207,5 +207,5 @@ The only error we validate against server-side is that the genre field must not 
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- Proceed to the next subarticle of part 6: [Create Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).
+- Return to [Express Tutorial Part 6: Working with forms.](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- Proceed to the next subarticle of part 6: [Create Author form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).

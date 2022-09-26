@@ -1,15 +1,9 @@
 ---
 title: 为“弹球”示例添加新功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - JavaScript
-  - 初学者
-  - 对象
-  - 测验
-  - 面向对象
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 在此次测验中，你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。
@@ -342,8 +336,8 @@ function loop() {
 
 这个方法和 `Ball()`'s `draw()` 方法有着相同的目的：它们把都是对象的实例画在画布上（canvas） 。它们实现的方式差不多，所以你可以先复制 `Ball.prototype.draw` 的定义。然后你需要做下面的修改：
 
-- 我们不想让恶魔圈是实心的，而是一个圈或者说是环。你可以通过将 [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) 和 [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) 修改为 [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 和 [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke)而实现这个效果。
-- 我们还想让这个圈更厚一点， 从而使你能更好地辨认它。 可以在调用 [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) 的后面给 [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) 赋值实现这个效果。（赋值为 3 就可以了）
+- 我们不想让恶魔圈是实心的，而是一个圈或者说是环。你可以通过将 [`fillStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillStyle) 和 [`fill()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fill) 修改为 [`strokeStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 和 [`stroke()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/stroke)而实现这个效果。
+- 我们还想让这个圈更厚一点， 从而使你能更好地辨认它。 可以在调用 [`beginPath()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/beginPath) 的后面给 [`lineWidth`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineWidth) 赋值实现这个效果。（赋值为 3 就可以了）
 
 #### `checkBounds()`
 

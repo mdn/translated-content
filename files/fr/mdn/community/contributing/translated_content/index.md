@@ -7,6 +7,7 @@ tags:
   - l10n
 original_slug: MDN/Contribute/Localize
 ---
+
 {{MDNSidebar}}
 
 Depuis le 14 décembre 2020, MDN fonctionne sur la nouvelle plateforme [Yari](https://github.com/mdn/yari) basée sur GitHub. Cela présente de nombreux avantages pour MDN, mais nous avons dû apporter des changements radicaux à la façon dont nous gérons la localisation. En effet, nous nous sommes retrouvés avec un grand nombre de contenus non maintenus et obsolètes dans nos langues autres que l'anglais et nous voulons mieux les gérer à l'avenir.
@@ -27,7 +28,7 @@ Nous avons actuellement dégelé les langues suivantes :
 ### Français (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Contributeurs actuels : [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb), [Jb Audras](https://github.com/audrasjb)
+- Contributeurs actuels : [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japonais (ja)
 

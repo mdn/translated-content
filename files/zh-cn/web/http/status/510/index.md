@@ -1,12 +1,8 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/510
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议的 **`510 Not Extended`** 响应状态码在 HTTP 扩展框架协议（参见 [RFC 2774](https://tools.ietf.org/html/rfc2774)）中发送。

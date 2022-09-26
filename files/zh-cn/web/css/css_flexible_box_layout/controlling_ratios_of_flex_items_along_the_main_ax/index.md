@@ -2,9 +2,8 @@
 title: 控制 Flex 子元素在主轴上的比例
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
+
 > **备注：** 译者注：在 html 中若一个元素的 css 设置为 display: flex，则这个元素就是 flex container , 其子元素为 flex item，若是直译过来就是弹性容器和弹性项目。但是译者认为直译过来不好理解，且不便记忆（就像我们常说 TCP 而不会说传输控制协议一样），因此在此文中，译者将不会翻译为 flex container 和 flex item，而是翻译为 flex 容器和 flex 子元素。 同样，在原文中有些单词（如 items, flex-items，container），我会根据情况译为 flex 容器和 flex 子元素。请各位读者理解。
 >
 > 如果各位读的不舒服，请阅读原文！
@@ -39,7 +38,7 @@ translation_of: >-
 
 为了计算出有多少可用空间能布局于 flex 子元素，浏览器必须知道这个 item 有多大才能开始。它是如何解决没有应用于绝对单位的宽度和高度的 flex 子元素？
 
-在 [`min-content`](/en-US/docs/Web/CSS/width#min-content) 和[`max-content`](/en-US/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在[ CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length ](/zh-CN/docs/Web/CSS/length)单位代替。
+在 [`min-content`](/zh-CN/docs/Web/CSS/width#min-content) 和 [`max-content`](/zh-CN/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在 [CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length](/zh-CN/docs/Web/CSS/length)单位代替。
 
 例如下面的例子，我有两段包含一个文本字符串的段落。第一段设置了`min-content`的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，变得尽可能小且没有溢出。此之后就是那个字符串的 min-content 大小。本质上讲，字符串中最长的单词决定了大小。
 
@@ -175,17 +174,17 @@ translation_of: >-
 
 ### 什么设置 flex item 的基本大小？
 
-1.  `flex-basis`设置为`auto`吗，这个 flex 子元素设置了宽度吗？如果设置了，flex 子元素的大小将会基于设置的宽度。
-2.  `flex-basis` 设为 `auto` 还是`content` (在支持的浏览器中)? 如果是`auto`, flex 子元素的大小为原始大小。
-3.  `flex-basis`是不为`0`的长度单位吗？如果是这样那这就是 flex 子元素的大小。
-4.  `flex-basis` 设为 `0`呢？如果是这样，则 flex 子元素的大小不在空间分配计算的考虑之内。
+1. `flex-basis` 设置为`auto`吗，这个 flex 子元素设置了宽度吗？如果设置了，flex 子元素的大小将会基于设置的宽度。
+2. `flex-basis` 设为 `auto` 还是`content` (在支持的浏览器中)? 如果是`auto`, flex 子元素的大小为原始大小。
+3. `flex-basis` 是不为`0`的长度单位吗？如果是这样那这就是 flex 子元素的大小。
+4. `flex-basis` 设为 `0`呢？如果是这样，则 flex 子元素的大小不在空间分配计算的考虑之内。
 
 ### 我们有可用空间吗？
 
 flex 子元素没有 positive free space 就不会增长，没有 negative free space 就不会缩小。
 
-1.  如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于 flex 容器的总宽度（或高度）？如果是这样，那么你有 positive free space，并且`flex-grow`会发挥作用。
-2.  如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于 flex 容器的总宽度（或高度）？如果是这样，那么你有 negative free space，并且`flex-shrink`会发挥作用。
+1. 如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否小于 flex 容器的总宽度（或高度）？如果是这样，那么你有 positive free space，并且 `flex-grow` 会发挥作用。
+2. 如果我们把所有的 flex 子元素的宽度相加（如果在列方向工作则为高度），那么总和是否大于 flex 容器的总宽度（或高度）？如果是这样，那么你有 negative free space，并且 `flex-shrink` 会发挥作用。
 
 ### 分配空间的其他方式
 

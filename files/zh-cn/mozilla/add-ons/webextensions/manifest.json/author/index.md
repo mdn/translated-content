@@ -1,10 +1,8 @@
 ---
 title: 作者 - author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
-tags:
-  - 作者
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -34,4 +32,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

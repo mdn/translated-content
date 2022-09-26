@@ -1,19 +1,8 @@
 ---
 title: 'Element: mousemove イベント'
 slug: Web/API/Element/mousemove_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mousemove
-  - move
-  - ポインター
-translation_of: Web/API/Element/mousemove_event
 ---
+
 {{APIRef}}
 
 `mousemove` イベントは、カーソルのホットスポットが要素内にあるときに、ポインティングデバイス (通常はマウス) が移動されると、その要素に発行されます。

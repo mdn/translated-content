@@ -1,8 +1,8 @@
 ---
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
-translation_of: Web/API/Node/removeChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.removeChild()`** 方法從 DOM 移除一個子節點，並傳回移除的節點。
@@ -21,7 +21,7 @@ node.removeChild(child);
 
 被刪除的子節點仍然存於記憶體之中，只是不在 DOM 了。從上述的第一種語法形式中，我們知道，透過引用 `oldChild` 還是可以在程式中重新使用已經被移除的子節點。
 
-而第二種語法形式，因為沒有保留 `oldChild` 引用，因此假設你並沒有在其他地方保留節點引用，則它會立即無法使用且不可挽回，而且通常會在短時間內從[內存管理](/en-US/docs/Web/JavaScript/Memory_Management)中被自動刪除。
+而第二種語法形式，因為沒有保留 `oldChild` 引用，因此假設你並沒有在其他地方保留節點引用，則它會立即無法使用且不可挽回，而且通常會在短時間內從[內存管理](/zh-TW/docs/Web/JavaScript/Memory_Management)中被自動刪除。
 
 如果 `child` 並非某 `element` 節點的子元素，則此方法會拋出異常。而如果調用此方法時，`child` 雖是某 `element` 的子元素，但在嘗試刪除它的過程中已被其他事件處理程序刪除，也會拋出異常（例如 {{Event("blur")}}）。
 
@@ -118,7 +118,7 @@ while (element.firstChild) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.removeChild")}}
+{{Compat}}
 
 ## 相關連結
 

@@ -1,14 +1,8 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Forms
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
+
 ## 總覽
 
 In a Web form, the **HTML `<optgroup>` element** creates a grouping of options within a {{HTMLElement("select")}} element.
@@ -16,7 +10,7 @@ In a Web form, the **HTML `<optgroup>` element** creates a grouping of options w
 | [Content categories](/zh-TW/docs/HTML/Content_categories) | None.                                                                                                                                                                    |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Permitted content                                         | Zero or more {{HTMLElement("option")}} elements.                                                                                                                  |
-| Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another <optgroup> element, or if the parent element has no more content. |
+| Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another \<optgroup> element, or if the parent element has no more content. |
 | Permitted parent elements                                 | A {{HTMLElement("select")}} element.                                                                                                                              |
 | DOM interface                                             | {{domxref("HTMLOptGroupElement")}}                                                                                                                             |
 
@@ -60,7 +54,7 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}
 
 ## 參見
 

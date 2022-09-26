@@ -1,13 +1,8 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
+
 {{JSRef}}
 
 **`padEnd()`** 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
@@ -16,8 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 
 ## 语法
 
-```plain
-str.padEnd(targetLength [, padString])
+```js
+padEnd(targetLength)
+padEnd(targetLength, padString)
 ```
 
 ### 参数
@@ -40,31 +36,6 @@ str.padEnd(targetLength [, padString])
 'abc'.padEnd(1);           // "abc"
 ```
 
-## Polyfill
-
-如果原生环境不支持该方法，在其他代码之前先运行下面的代码，将创建 `String.prototype.padEnd()` 方法。
-
-```js
-// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
-if (!String.prototype.padEnd) {
-    String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
-        padString = String((typeof padString !== 'undefined' ? padString: ''));
-        if (this.length > targetLength) {
-            return String(this);
-        }
-        else {
-            targetLength = targetLength-this.length;
-            if (targetLength > padString.length) {
-                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
-            }
-            return String(this) + padString.slice(0,targetLength);
-        }
-    };
-}
-```
-
 ## 规范
 
 {{Specifications}}
@@ -73,6 +44,8 @@ if (!String.prototype.padEnd) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
+- [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

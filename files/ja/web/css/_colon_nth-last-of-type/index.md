@@ -1,15 +1,6 @@
 ---
 title: ':nth-last-of-type()'
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-last-of-type
-translation_of: Web/CSS/:nth-last-of-type
 ---
 {{CSSRef}}
 

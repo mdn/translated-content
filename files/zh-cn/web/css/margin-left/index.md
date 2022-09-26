@@ -1,8 +1,8 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-translation_of: Web/CSS/margin-left
 ---
+
 {{CSSRef()}}
 
 ## Summary

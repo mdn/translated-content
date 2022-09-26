@@ -1,8 +1,8 @@
 ---
 title: HTML 拖放 API
 slug: Web/API/HTML_Drag_and_Drop_API
-translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用拖放功能。舉例來說，使用者可以利用此功能以滑鼠選擇*可拖曳（draggable）*元素，拖曳至一個*可放置（droppable）*元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的*可拖曳（draggable）*元素會跟隨著滑鼠游標。
@@ -20,13 +20,13 @@ HTML 拖放操作基於 {{domxref("Event","DOM 事件模型")}}並且使用繼�
 | 事件                         | 事件處理器屬性                                                                   | 說明                                                                                                                                         |
 | ---------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{event('drag')}}     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                       |
-| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/en-US/docs/DragDrop/Drag_Operations#dragend)。）           |
-| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/en-US/docs/DragDrop/Drag_Operations#droptargets)。） |
+| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragend)。）           |
+| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-TW/docs/DragDrop/Drag_Operations#droptargets)。） |
 | {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | 當一個元素不再是被選取中的拖曳元素時觸發。                                                                                                   |
 | {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                             |
 | {{event('dragover')}} | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                       |
-| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/en-US/docs/DragDrop/Drag_Operations#dragstart)。）                         |
-| {{event('drop')}}     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/en-US/docs/DragDrop/Drag_Operations#drop)。）                  |
+| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragstart)。）                         |
+| {{event('drop')}}     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/zh-TW/docs/DragDrop/Drag_Operations#drop)。）                  |
 
 注意：`dragstart` 與 `dragend` 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。
 
@@ -46,7 +46,7 @@ HTML 拖放介面有 {{domxref("DragEvent")}}、{{domxref("DataTransfer")}}、{{
 
 ### Gecko-specific interfaces
 
-Mozilla and Firefox support some features not in the standard drag and drop model. These are _convenience functions_ to facilitate dragging multiple items and dragging non-string data (such as files). For more information, see [Dragging and Dropping Multiple Items](/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Additionally, see the {{domxref("DataTransfer")}} reference page for all of the [Gecko-specific properties](/en-US/docs/Web/API/DataTransfer#Gecko_properties) and [Gecko-specific methods](/en-US/docs/Web/API/DataTransfer#Gecko_methods).
+Mozilla and Firefox support some features not in the standard drag and drop model. These are _convenience functions_ to facilitate dragging multiple items and dragging non-string data (such as files). For more information, see [Dragging and Dropping Multiple Items](/zh-TW/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Additionally, see the {{domxref("DataTransfer")}} reference page for all of the [Gecko-specific properties](/zh-TW/docs/Web/API/DataTransfer#Gecko_properties) and [Gecko-specific methods](/zh-TW/docs/Web/API/DataTransfer#Gecko_methods).
 
 ## 基本用法
 
@@ -68,7 +68,7 @@ function dragstart_handler(ev) {
 </body>
 ```
 
-See the [draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable) and the [Drag operations guide](/en-US/docs/Web/Guide/HTML/Drag_operations#draggableattribute) for more information.
+See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/Guide/HTML/Drag_operations#draggableattribute) for more information.
 
 ### Define the drag's data
 
@@ -85,7 +85,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-For a list of common data types used for drag and drop (such as text, HTML, links, and files), see [Recommended Drag Types](/en-US/docs/DragDrop/Recommended_Drag_Types) and for more information about drag data, see [Drag Data](/en-US/docs/Web/Guide/HTML/Drag_operations#dragdata).
+For a list of common data types used for drag and drop (such as text, HTML, links, and files), see [Recommended Drag Types](/zh-TW/docs/DragDrop/Recommended_Drag_Types) and for more information about drag data, see [Drag Data](/zh-TW/docs/Web/Guide/HTML/Drag_operations#dragdata).
 
 ### Define the drag image
 
@@ -102,7 +102,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-To learn more about drag feedback images, see [Setting the Drag Feedback Image](/en-US/docs/DragDrop/Drag_Operations#dragfeedback).
+To learn more about drag feedback images, see [Setting the Drag Feedback Image](/zh-TW/docs/DragDrop/Drag_Operations#dragfeedback).
 
 ### Define the drag _effect_
 
@@ -127,7 +127,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-See [Drag Effects](/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
+See [Drag Effects](/zh-TW/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
 
 ### Define a _drop zone_
 
@@ -152,7 +152,7 @@ function drop_handler(ev) {
 
 Note each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this prevent (such as touch events or pointer events).
 
-For more information, see [Specifying Drop Targets](/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets).
+For more information, see [Specifying Drop Targets](/zh-TW/docs/Web/Guide/HTML/Drag_operations#droptargets).
 
 ### Handle the drop _effect_
 
@@ -183,17 +183,17 @@ function drop_handler(ev) {
 </body>
 ```
 
-For more information, see [Performing a Drop](/en-US/docs/Web/Guide/HTML/Drag_operations#drop).
+For more information, see [Performing a Drop](/zh-TW/docs/Web/Guide/HTML/Drag_operations#drop).
 
 ### Drag end
 
 At the end of a drag operation, the {{event("dragend")}} event fires at the _source_ element - the element that was the target of the drag start. This event fires whether the drag completed or was canceled. The {{event("dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.
 
-For more information about handling the end of a drag operation, see [Finishing a Drag](/en-US/docs/DragDrop/Drag_Operations#dragend).
+For more information about handling the end of a drag operation, see [Finishing a Drag](/zh-TW/docs/DragDrop/Drag_Operations#dragend).
 
 ## Interoperability
 
-As can be seen in the [DataTransferItem interface's Browser Compatibility table](/en-US/docs/Web/API/DataTransferItem#Browser_compatibility), drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag and drop support among mobile browsers is very low.
+As can be seen in the [DataTransferItem interface's Browser Compatibility table](/zh-TW/docs/Web/API/DataTransferItem#Browser_compatibility), drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag and drop support among mobile browsers is very low.
 
 ## Examples and demos
 
@@ -209,8 +209,8 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 
 ## 參見
 
-- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Drag Operations](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)

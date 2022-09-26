@@ -1,14 +1,8 @@
 ---
 title: HTML：超文本標記語言
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML元素
-  - 多媒體
-  - 影像
-  - 音樂
-translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML**（HyperText Markup Language，超文本標記語言）是打造網頁的基石。它表述並定義網頁的*內容*。伴隨 HTML 而來的技術還有描述網頁外觀（[CSS](/zh-TW/docs/Web/CSS)）及功能性的程式語言（[JavaScript](/zh-TW/docs/Web/JavaScript)）。

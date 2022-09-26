@@ -1,11 +1,8 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS3 Multiple column layout
-  - CSS3 多列布局
-translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 **column-count** CSS 属性，描述元素的列数。
@@ -45,4 +42,4 @@ column-count: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.column-count")}}
+{{Compat}}

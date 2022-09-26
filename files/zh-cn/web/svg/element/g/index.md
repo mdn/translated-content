@@ -1,13 +1,8 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 元素`g`是用来组合对象的容器。添加到`g`元素上的变换会应用到其所有的子元素上。添加到`g`元素的属性会被其所有的子元素继承。此外，`g`元素也可以用来定义复杂的对象，之后可以通过{{SVGElement("use")}}元素来引用它们。
@@ -51,8 +46,8 @@ _没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了`SVGGElement的所有接口`.
+该元素实现了 `SVGGElement` 的所有接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

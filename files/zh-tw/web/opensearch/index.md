@@ -1,11 +1,8 @@
 ---
 title: 製作 OpenSearch 搜尋模組
 slug: Web/OpenSearch
-tags:
-  - 待翻譯
-  - 搜尋模組
-translation_of: Web/OpenSearch
 ---
+
 {{AddonSidebar}}
 
 [OpenSearch 描述語法](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document)敘述了搜尋引擎，以便網站用戶透過瀏覽器或其他用戶端程式使用之。OpenSearch 支援最新版的 Firefox、Internet Explorer、Safari、Chrome.

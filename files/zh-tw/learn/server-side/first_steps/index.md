@@ -1,8 +1,8 @@
 ---
 title: 伺服器端程式設計起步走
 slug: Learn/Server-side/First_steps
-translation_of: Learn/Server-side/First_steps
 ---
+
 {{LearnSidebar}}
 
 在我們的伺服器端程式設計模組內，我們會回答一些關於伺服器端編程的問題 ──「那是什麼？」、「它和用戶端程式設計有何不同？」、還有「為什麼它有用？」。接著，我們會比較各大熱門框架、並佐以一些如何選擇最適合框架的指引。最後，我們還會提供關於伺服器安全的進階介紹性文章。

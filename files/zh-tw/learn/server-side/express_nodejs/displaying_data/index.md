@@ -1,8 +1,8 @@
 ---
 title: 'Express 教程 5: 呈現圖書館數據'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 我們現在準備好要新增網頁，以顯示本地圖書館網站的書本與其它資料。這些網頁將包括一個主頁 ，顯示我們每個模型的型態有多少筆紀錄，以及我們所有模型的清單與細節頁面。藉此，我們將得到從數據庫取得紀錄、以及使用樣版的實務經驗。
@@ -25,7 +25,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概覽
 
-在我們先前的教程中，定義了可以用來跟資料庫互動的 [Mongoose models](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose) ，並創建了一些初始的圖書館紀錄。我們接著[創建本地圖書館網站需要的所有路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)，但僅使用"空殼控制器" 函式（這些是骨架控制器函式，當一個網頁被存取時，只回傳一個"未實作" 信息）。
+在我們先前的教程中，定義了可以用來跟資料庫互動的 [Mongoose models](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose) ，並創建了一些初始的圖書館紀錄。我們接著[創建本地圖書館網站需要的所有路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)，但僅使用"空殼控制器" 函式（這些是骨架控制器函式，當一個網頁被存取時，只回傳一個"未實作" 信息）。
 
 下一步，是為這些顯示圖書館信息的網頁，提供充分的實作（我們將在後面的文章，檢視網頁表單的實作，像是創建、更新、刪除信息）。這包含了更新控制器函式，以利用我們的模型取得紀錄，並定義模板，為使用者顯示這些信息。
 
@@ -37,18 +37,18 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 本教程分為下列章節，說明為了顯示圖書館網站頁面，如何新增各種特性 。在進入下一個教程之前，你需要閱讀並逐一實作下列章節。
 
-1. [使用 async 控制非同步流](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2. [模板入門](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [本地圖書館基礎模板](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4. [主頁](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5. [書本清單頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6. [書本實例清單頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [日期格式化 - 使用 moment](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8. [作者清單頁面、分類清單頁面、與自我挑戰](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9. [分類詳情頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-10. [書本詳情頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [作者詳情頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-12. [書本實例詳情頁面與自我挑戰](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+1. [使用 async 控制非同步流](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+2. [模板入門](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+3. [本地圖書館基礎模板](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+4. [主頁](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+5. [書本清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+6. [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+7. [日期格式化 - 使用 moment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+8. [作者清單頁面、分類清單頁面、與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+9. [分類詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+10. [書本詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+11. [作者詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+12. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 總結
 
@@ -67,12 +67,12 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 本教學連結
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

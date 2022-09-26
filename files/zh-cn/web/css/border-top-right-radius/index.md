@@ -1,15 +1,8 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - CSS 属性
-  - CSS 边框
-  - Layout
-  - 互联网
-  - 参考
-  - 需要移动浏览器兼容
-translation_of: Web/CSS/border-top-right-radius
 ---
+
 {{ CSSRef("CSS Borders") }}
 
 ## 概要
@@ -20,7 +13,7 @@ translation_of: Web/CSS/border-top-right-radius
 
 一个背景通常以一张图片或者颜色开始，在边框处被剪切，更甚至就是一个圆形；剪切的额外定位通过一个 CSS 属性"background-clip"来定义。
 
-> **备注：** 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](https://developer.mozilla.org/en/CSS/Shorthand_properties)重新设置成它的初始值。
+> **备注：** 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](/zh-CN/CSS/Shorthand_properties)重新设置成它的初始值。
 
 {{cssinfo}}
 

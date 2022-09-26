@@ -2,6 +2,7 @@
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 `OfflineAudioContext` 接口是一个 {{domxref("AudioContext")}} 的接口，代表由多个 {{domxref("AudioNode")}} 连接在一起构成的音频处理图。与 {{domxref("AudioContext")}} 标准相反的是， `OfflineAudioContext` 不在硬件设备渲染音频；相反，它尽可能快地生成音频，输出一个 {{domxref("AudioBuffer")}} 作为结果。
@@ -84,7 +85,7 @@ function getData() {
           song.start();
         }
       }).catch(function(err) {
-          console.log('渲染失败: ' + err);
+          console.log('渲染失败：' + err);
           // 注意：当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
       });
     });

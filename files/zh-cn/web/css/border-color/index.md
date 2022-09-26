@@ -1,8 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 ## 概括

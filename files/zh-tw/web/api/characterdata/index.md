@@ -1,8 +1,8 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData`** 介面表示了含有字元的 {{domxref("Node")}} 物件。`CharacterData` 為抽象介面，代表不會有型別為 `CharacterData` 的物件。物件是由其子介面，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 等非抽象介面來實作。
@@ -45,7 +45,7 @@ _Inherits properties from its parent, {{domxref("Node")}}, and implements the {{
 
 ## 瀏覽器相容性
 
-{{Compat("api.CharacterData")}}
+{{Compat}}
 
 ## 參見
 

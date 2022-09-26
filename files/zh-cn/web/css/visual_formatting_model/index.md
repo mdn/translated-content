@@ -1,13 +1,9 @@
 ---
 title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS 盒模型
-  - 参考
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
+
 {{CSSRef}}
 
 CSS 视觉格式化模型（*visual formatting model）*是用来处理和在视觉媒体上显示文档时使用的计算规则。该模型是 CSS 的基础概念之一。

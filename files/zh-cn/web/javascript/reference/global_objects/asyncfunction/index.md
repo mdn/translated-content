@@ -1,13 +1,8 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - JavaScript
-  - Reference
-  - 实验性内容
-  - 构造函数
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
 `AsyncFunction` 构造函数用来创建新的 {{jsxref("Statements/async_function", "异步函数")}} 对象，JavaScript 中每个异步函数都是 `AsyncFunction` 的对象。

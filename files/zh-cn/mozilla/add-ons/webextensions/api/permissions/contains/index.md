@@ -1,18 +1,15 @@
 ---
 title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
-tags:
-  - Contains
-  - permissions.contains()
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
+
 {{AddonSidebar()}}
 
 检查扩展名是否具有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
-The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), or both.
+The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or a `permissions` property, which is an array of [API permissions](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), or both.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions [pattern-match](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
+This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions [pattern-match](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
 
 ## Syntax
 
@@ -29,11 +26,11 @@ var getContains = browser.permissions.contains(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.permissions.contains")}}
+{{Compat}}
 
 ## Examples
 

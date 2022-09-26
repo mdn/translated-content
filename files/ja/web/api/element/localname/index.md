@@ -1,16 +1,8 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- プロパティ
-- リファレンス
-browser-compat: api.Element.localName
-translation_of: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。

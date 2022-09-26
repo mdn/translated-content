@@ -1,22 +1,15 @@
 ---
 title: <canvas>
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
-`<canvas>`元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
+
+`<canvas>` 元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
 
 {{HTMLRef}}
 
-## **属性**
+## 属性
 
-本元素支持 [全局属性](https://developer.mozilla.org/en-
-
-US/docs/HTML/Global_attributes).
+本元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("height")}}
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。
@@ -25,7 +18,7 @@ US/docs/HTML/Global_attributes).
 - {{htmlattrdef("width")}}
   - : 该元素占用空间的宽度，以 CSS 像素（px）表示，默认为 300。
 
-## **注意事项**
+## 注意事项
 
 ### 标签需要闭合
 
@@ -74,9 +67,9 @@ ctx.fillRect(10, 10, 100, 100);
 
 {{EmbedLiveSample('示例')}}
 
-## 可访问性
+## 无障碍
 
-`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给可访问性工具。以下指南可以帮助您更方便地访问它。
+`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给无障碍工具。以下指南可以帮助您更方便地访问它。
 
 - [MDN Hit regions and accessability](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
@@ -88,19 +81,15 @@ ctx.fillRect(10, 10, 100, 100);
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
-## 参阅
+## 参见
 
-- [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
-- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [MDN canvas portal](/zh-CN/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
-- [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVi
-
-deo/Conceptual/HTML-canvas-
-
-guide/Introduction/Introduction.html)
+- [Canvas-related demos](/zh-CN/docs/Web/Demos#canvas)
+- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

@@ -1,8 +1,8 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-translation_of: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -67,7 +67,7 @@ border-bottom-color: #F5F6F7;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-bottom-color")}}
+{{Compat}}
 
 ## 另见
 

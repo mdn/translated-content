@@ -1,15 +1,9 @@
 ---
 title: ArrayBufferView
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - API
-  - Interface
-  - JavaScript
-  - Reference
-  - Typed Arrays
-translation_of: Web/API/ArrayBufferView
 original_slug: Web/API/ArrayBufferView
 ---
+
 {{APIRef}}
 
 **`ArrayBufferView`** 是一个表示以下任意一个 {{jsxref("TypedArray")}} 类型的辅助数据类型：

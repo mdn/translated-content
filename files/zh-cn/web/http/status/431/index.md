@@ -1,13 +1,8 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - 响应状态码
-  - 响应码
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/431
 ---
+
 {{HTTPSidebar}}
 
 响应码 **`431 Request Header Fields Too Large`** 表示由于请求中的首部字段的值过大，服务器拒绝接受客户端的请求。客户端可以在缩减首部字段的体积后再次发送请求。

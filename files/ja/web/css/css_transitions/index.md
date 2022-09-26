@@ -1,13 +1,6 @@
 ---
 title: CSS トランジション
 slug: Web/CSS/CSS_Transitions
-tags:
-  - CSS
-  - CSS トランジション
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Transitions
 ---
 {{CSSRef}}
 

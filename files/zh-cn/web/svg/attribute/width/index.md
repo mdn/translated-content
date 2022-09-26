@@ -1,13 +1,9 @@
 ---
 title: width
 slug: Web/SVG/Attribute/width
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/width
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性在用户坐标系统中标识了一个水平长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的宽度（请阅读每个元素的文档以了解例外情况）。
 
@@ -17,7 +13,7 @@ translation_of: Web/SVG/Attribute/width
 
 | 类别   | 无                                      |
 | ------ | --------------------------------------- |
-| 值     | [\<length>](/en/SVG/Content_type#Length) |
+| 值     | [\<length>](/zh-CN/SVG/Content_type#Length) |
 | 可变性 | Yes                                     |
 
 {{ page("/zh-CN/docs/Web/SVG/Content_type","长度") }}
@@ -26,7 +22,7 @@ translation_of: Web/SVG/Attribute/width
 
 下列元素可以使用`width`属性：
 
-- [滤镜元素](/en/SVG/Element#FilterPrimitive) »
+- [滤镜元素](/zh-CN/SVG/Element#FilterPrimitive) »
 - {{ SVGElement("filter") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("image") }}

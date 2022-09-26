@@ -1,14 +1,9 @@
 ---
 title: GlobalEventHandlers.onclose
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
+
 {{ApiRef("HTML DOM")}}
 
 送至視窗的 close event 的處理器（handler）。（不支援 Firefox 2 及 Safari）
@@ -35,4 +30,4 @@ window.onclose = resetThatServerThing;
 
 ## 瀏覽器相容性
 
-{{Compat("api.GlobalEventHandlers.onclose")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 「行數」屬性含括了檔案中引起錯誤的所在行數。

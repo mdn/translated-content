@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
+
 {{JSRef}}
 
 **`setUTCMonth()`** 方法根据通用的时间来设置一个准确的月份。

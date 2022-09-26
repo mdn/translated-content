@@ -1,8 +1,8 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 **`Event.type`** 唯讀屬性會回傳一個代表此事件物件類型的字串。`Event.type` 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。

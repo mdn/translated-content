@@ -1,12 +1,8 @@
 ---
 title: 属性访问器
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 属性访问器提供了两种方式用于访问一个对象的属性，它们分别是点号和方括号。

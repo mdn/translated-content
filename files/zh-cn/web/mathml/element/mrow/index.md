@@ -1,16 +1,11 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
-tags:
-  - MathML
-  - MathML 元素
-  - MathML 参考
-  - MathML 布局
-translation_of: Web/MathML/Element/mrow
 ---
+
 {{MathMLRef}}
 
-MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个[操作符](/en-US/docs/MathML/Element/mo)与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
+MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个[操作符](/zh-CN/docs/MathML/Element/mo)与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
 
 在编写 MathML 表达式时，您应该使用 `<mrow>` 将表达式中的元素分组，就像它们在数学解释时的分成一行行一样。正确的分组有助于表达式的呈现，具体体现在以下几个方面：
 
@@ -27,9 +22,9 @@ MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行�
 - href
   - : 用于设置一个指向指定的 URI 的超链接。
 - mathbackground
-  - : 背景色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/en-US/docs/CSS/color_value#Color_Keywords)。
+  - : 背景色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/zh-CN/docs/CSS/color_value#Color_Keywords)。
 - mathcolor
-  - : 文本颜色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/en-US/docs/CSS/color_value#Color_Keywords)。
+  - : 文本颜色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/zh-CN/docs/CSS/color_value#Color_Keywords)。
 
 ## 示例
 

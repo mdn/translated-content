@@ -1,8 +1,8 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 本次函数调用时传入函数的实参数量。

@@ -1,8 +1,8 @@
 ---
 title: 严格不相等 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 严格不等式操作符 (!==) 检查它的两个对象是否不相等，返回一个布尔结果。与不等式运算符不同，严格不等式运算符总是认为不同类型的对象是不同的。
@@ -85,6 +85,6 @@ console.log(object1 !== object1);  // false
 
 ## See also
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)

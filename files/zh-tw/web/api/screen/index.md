@@ -1,8 +1,8 @@
 ---
 title: Screen
 slug: Web/API/Screen
-translation_of: Web/API/Screen
 ---
+
 {{APIRef("CSSOM View")}}
 
 `Screen` 介面表示了一個用戶端螢幕，通常是指呈現目前頁面的視窗。

@@ -10,6 +10,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/left
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`left`** de l'interface **`DOMRectReadOnly`** renvoie la valeur de la coordonnée gauche du `DOMRect` (a la même valeur que `x`, ou `x + width` _(x + largeur)_ si `width` est négative).
@@ -26,13 +27,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                                       | Commentaire                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-left', 'left')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.left")}}
+{{Compat}}
 
 ## Voir aussi
 

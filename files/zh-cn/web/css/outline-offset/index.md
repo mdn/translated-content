@@ -1,10 +1,8 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - outline-offset
-translation_of: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -70,4 +68,4 @@ outline: multiple offsets;
 
 ## Browser compatibility
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

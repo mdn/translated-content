@@ -1,44 +1,35 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-browser-compat: javascript.builtins.Map.keys
 ---
+
 {{JSRef}}
 
-**`keys()`** 返回一个引用的 **`Iterator`** 对象。它包含按照顺序插入 `Map` 对象中每个元素的 key 值。
+**`keys()`** 返回一个引用的[_迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象。它包含按照顺序插入 `Map` 对象中每个元素的 key 值。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
 ## 语法
 
-```plain
-myMap.keys()
+```js-nolint
+keys()
 ```
 
 ### 返回值
 
-一个存在引用关系的 {{jsxref("Map")}} iterator 对象。
+一个新的 {{jsxref("Map")}} 迭代器对象。
 
 ## 例子
 
-### 使用 `keys()`
+### 使用 keys()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
 
-var mapIter = myMap.keys();
+const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1

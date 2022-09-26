@@ -24,6 +24,6 @@ Por diez años, la comunidad MDN ha estado documentando la Web abierta. Desde la
 
 ## Subnav
 
-1.  [MDN en 10](/es/docs/MDN_at_ten/)
-2.  [La historia de MDN](/es/docs/MDN_at_ten/History_of_MDN)
-3.  [Contribuyendo a MDN](/es/docs/MDN_at_ten/Contributing_to_MDN)
+1. [MDN en 10](/es/docs/MDN_at_ten/)
+2. [La historia de MDN](/es/docs/MDN_at_ten/History_of_MDN)
+3. [Contribuyendo a MDN](/es/docs/MDN_at_ten/Contributing_to_MDN)

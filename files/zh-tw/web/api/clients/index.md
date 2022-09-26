@@ -1,11 +1,11 @@
 ---
 title: Clients
 slug: Web/API/Clients
-translation_of: Web/API/Clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-The `Clients` interface of the [Service Workers API](/en-US/docs/Web/API/Service_Worker_API) represents a container for a list of {{domxref("Client")}} objects.
+The `Clients` interface of the [Service Workers API](/zh-TW/docs/Web/API/Service_Worker_API) represents a container for a list of {{domxref("Client")}} objects.
 
 ## Methods
 
@@ -37,12 +37,12 @@ clients.matchAll(options).then(function(clients) {
 
 ## Browser compatibility
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-TW/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/zh-TW/docs/Web/Guide/Performance/Using_web_workers)

@@ -1,13 +1,8 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
 
 ARIA is a set of special accessibility attributes which can be added to any markup, but is especially suited to HTML. The `role` attribute defines what the general type of object is (such as an article, alert, or slider). Additional ARIA attributes provide other useful properties, such as a description for a form or the current value of a progressbar.
@@ -18,9 +13,9 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 
 ### Getting Started with ARIA
 
-- [Introduction to ARIA](/en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+- [Introduction to ARIA](/zh-TW/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
   - : A quick introduction to making dynamic content accessible with ARIA. See also the classic [ARIA intro by Gez Lemon](http://dev.opera.com/articles/view/introduction-to-wai-aria/), from 2008.
-- [Web Applications and ARIA FAQ](/en-US/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
+- [Web Applications and ARIA FAQ](/zh-TW/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
   - : Answers common questions about WAI-ARIA and why it's needed to make web applications accessible.
 - [Videos of Screen Readers Using ARIA](http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
   - : See both real and simplfied examples from around the web, including "before" and "after" ARIA videos.
@@ -31,23 +26,23 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 
 - [Enhancing Page Navigation with ARIA Landmarks](http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/)
   - : A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. [See also, ARIA landmark implementation notes](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) and examples on real sites (updated as of July '11).
-- [Improving Form Accessibility](/en-US/docs/ARIA/forms)
+- [Improving Form Accessibility](/zh-TW/docs/ARIA/forms)
   - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
-- [Live regions (work-in-progress)](/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions)
+- [Live regions (work-in-progress)](/zh-TW/docs/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 - [Using ARIA Live Regions to Announce Content Changes](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : A quick summary of live regions, by the makers of JAWS screen reader software. Note that live regions are also supported by NVDA in Firefox, and VoiceOver with Safari (as of OS X Lion and iOS 5).
 
 ### ARIA for Scripted Widgets
 
-- [Keyboard Navigation and Focus for JavaScript Widgets](/en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Keyboard Navigation and Focus for JavaScript Widgets](/zh-TW/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : The first step in developing an accessible JavaScript widget is to make it keyboard navigable. This article steps through the process. The [Yahoo! focus management article](http://www.yuiblog.com/blog/2009/02/23/managing-focus/) is a great resource as well.
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
   - : A challenge with ARIA is getting developers to implement consistent behavior -- clearly best for users. This style guide describes the keyboard interface for common widgets.
 
 ### ARIA Resources
 
-- [Widget Techniques, Tutorials, and Examples](/en-US/docs/Accessibility/ARIA/widgets/overview)
+- [Widget Techniques, Tutorials, and Examples](/zh-TW/docs/Accessibility/ARIA/widgets/overview)
   - : Need a slider, a menu, or another kind of widget? Find resources here.
 - [ARIA-Enabled JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
   - : If you're starting a new project, choose a UI widget library with ARIA support already built-in. Warning: this is from 2009 -- content should be moved to an MDN page where it can be updated.
@@ -69,11 +64,11 @@ ARIA information on blogs tends to get out of date quickly. Still, there is some
 
 ### Filing Bugs
 
-[File ARIA bugs on browsers, screen readers, and JavaScript libraries](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
+[File ARIA bugs on browsers, screen readers, and JavaScript libraries](/zh-TW/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
 
 ### Examples
 
-- [ARIA Examples Library](/en-US/docs/Accessibility/ARIA/ARIA_Test_Cases)
+- [ARIA Examples Library](/zh-TW/docs/Accessibility/ARIA/ARIA_Test_Cases)
   - : A set of barebones example files which are easy to learn from.
 - Accessible JS Widget Library Demos
   - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
@@ -96,11 +91,11 @@ ARIA information on blogs tends to get out of date quickly. Still, there is some
 
 - [Open AJAX Accessibility Task Force](http://www.openajax.org/member/wiki/Accessibility)
   - : The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.
-- [Under Construction: WCAG 2.0 ARIA Techniques](/en-US/docs/Accessibility/ARIA/ARIA_Techniques)
+- [Under Construction: WCAG 2.0 ARIA Techniques](/zh-TW/docs/Accessibility/ARIA/ARIA_Techniques)
   - : The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is mostly important when regulations or policies are based on WCAG.
 
 ### Related Topics
 
-- [Accessibility](/en-US/docs/Accessibility)
-- [AJAX](/en-US/docs/AJAX)
-- [JavaScript](/en-US/docs/JavaScript)
+- [Accessibility](/zh-TW/docs/Accessibility)
+- [AJAX](/zh-TW/docs/AJAX)
+- [JavaScript](/zh-TW/docs/JavaScript)

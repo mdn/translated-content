@@ -1,16 +1,6 @@
 ---
 title: KeyboardEvent.repeat
 slug: Web/API/KeyboardEvent/repeat
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.repeat
-translation_of: Web/API/KeyboardEvent/repeat
 ---
 {{APIRef("UI Events")}}
 

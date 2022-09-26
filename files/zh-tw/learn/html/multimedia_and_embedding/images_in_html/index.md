@@ -1,21 +1,21 @@
 ---
 title: HTML中的圖片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/en-US/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
+最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">課成需求:</th>
       <td>
-        基本的電腦操作, <a href="/en-US/docs/">安裝軟體的能力</a>,
-        <a href="/en-US/docs/">處理檔案的基本能力</a>, 熟悉最基本的HTML的 （<a
-          href="/en-US/docs/"
+        基本的電腦操作, <a href="/zh-TW/docs/">安裝軟體的能力</a>,
+        <a href="/zh-TW/docs/">處理檔案的基本能力</a>, 熟悉最基本的HTML的 （<a
+          href="/zh-TW/docs/"
           >如HTML入門中所述</a
         >）
       </td>
@@ -33,7 +33,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/en-US/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
 舉例來說, 如果您的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
@@ -100,11 +100,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 - **裝飾：** 你可以用 [CSS\_背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
 - **內容：** 如果您的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
 - **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，您可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
-- **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/en-US/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
+- **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
 
 本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。您很快就會意識到，如果看不到圖片，替代文字會很有幫助。
 
-> **備註：** For more information, see our guide to [Text Alternatives](/en-US/docs/Learn/Accessibility/HTML#Text_alternatives).
+> **備註：** For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn/Accessibility/HTML#Text_alternatives).
 
 ### 寬與高
 
@@ -126,11 +126,11 @@ This is a good thing to do, resulting in the page loading quicker and more smoot
 
 However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
 
-> **備註：** If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
+> **備註：** If you do need to alter an image's size, you should use [CSS](/zh-TW/docs/Learn/CSS) instead.
 
 ### 圖片標題
 
-As [with links](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
+As [with links](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
 <img src="images/dinosaur.jpg"
@@ -153,7 +153,9 @@ It is better to include such supporting information in the main article text, ra
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Earlier we said to never hotlink to images on other servers, but this is just for learning purposes, so we'll let you off this one time.
 
@@ -465,7 +467,7 @@ textarea.onkeyup = function(){
 
 ## CSS 背景圖片
 
-您還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。 CSS[`background-image`](/en-US/docs/Web/CSS/background-image)屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
+您還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。 CSS[`background-image`](/zh-TW/docs/Web/CSS/background-image)屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
 
 ```css
 p {
@@ -491,9 +493,9 @@ p {
 
 ## 在這個主題中
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Images in HTML](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [From \<object> to \<iframe> — other embedding technologies](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Adding vector graphics to the Web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla splash page](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

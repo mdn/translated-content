@@ -1,52 +1,47 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-{{JSRef("Global_Objects", "Set")}}
 
-## 概述
+{{JSRef}}
 
-**has()** 方法返回一个布尔值来指示对应的值 value 是否存在 Set 对象中。
+**`has()`** 方法返回一个布尔值来指示对应的值是否存在于 `Set` 对象中。
+
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
 ## 语法
 
-```plain
-mySet.has(value);
+```js-nolint
+has(value)
 ```
 
 ### 参数
 
-- value
-  - : 必需。用以测试该值是否存在于 Set 对象中。
+- `value`
+  - : 要测试是否存在于 `Set` 对象中的值。
 
 ### 返回值
 
-- Boolean
-  - : 如果指定的值（value）存在于 Set 对象当中，返回`true`；否则返回 `false`。
+如果 `Set` 对象中存在具有指定值的元素，则返回 `true`；否则返回 `false`。
 
 ## 示例
 
-### 使用 `has` 方法
+### 使用 has() 方法
 
 ```js
-var mySet = new Set();
-mySet.add('foo');
+const mySet = new Set();
+mySet.add("foo");
 
-mySet.has('foo');  // 返回 true
-mySet.has('bar');  // 返回 false
+console.log(mySet.has("foo"));  // true
+console.log(mySet.has("bar"));  // false
 
-var set1 = new Set();
-var obj1 = {'key1': 1};
+const set1 = new Set();
+const obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // 返回 true
-set1.has({'key1': 1}); // 会返回 false，因为其是另一个对象的引用
-set1.add({'key1': 1}); // 现在 set1 中有 2 条（不同引用的）对象了
+console.log(set1.has(obj1));        // true
+console.log(set1.has({ key1: 1 })); // false, 因为它们是不同的对象引用
+console.log(set1.add({ key1: 1 })); // 现在 set1 包含 2 个条目
 ```
 
 ## 规范

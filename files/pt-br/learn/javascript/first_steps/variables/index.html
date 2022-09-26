@@ -10,7 +10,7 @@ original_slug: Learn/JavaScript/First_steps/Variáveis
 
 <p class="summary">Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript, o que ele pode fazer para você, como você usa isso junto com outras tecnologias da web e as características principais de alto nível. Neste artigo, iremos ao básico, vendo como trabalhar com a maioria dos blocos de construção básicos de JavaScript - Variáveis.</p>
 
-<table class="learn-box">
+<table>
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
@@ -182,7 +182,7 @@ minhaIdade = 40;</pre>
  <li>Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.</li>
  <li>Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.</li>
  <li>Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.</li>
- <li>Uma conveção segura e se ater é a chamada <a href="https://pt.wikipedia.org/wiki/CamelCase">"lower camel case"</a>, onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguita, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.</li>
+ <li>Uma conveção segura e se ater é a chamada <a href="https://pt.wikipedia.org/wiki/CamelCase">"lower camel case"</a>, onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.</li>
  <li>Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.</li>
  <li>As variáveis diferenciam letras maiúsculas e minúsculas — então <code>minhaidade</code> é uma variável diferente de <code>minhaIdade</code>.</li>
  <li>Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como <code>var</code>, <code>function</code>, <code>let</code> e <code>for</code> como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.</li>
@@ -300,13 +300,13 @@ typeof(meuNumero);</pre>
 
 <p>Nos primeiros dias do JavaScript, não existiam <em>constants</em>. No JavaScript moderno, temos a palavra-chave <code>const</code>, que nos permite armazenar valores que nunca podem ser alterados:</p>
 
-<pre class="brush: js notranslate">const diasNaSemana = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-const horasNoDia = 24;</span></span></span></span></pre>
+<pre class="brush: js">const diasNaSemana = 7;
+const horasNoDia = 24;</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> funciona exatamente da mesma maneira que <code>let</code>, exceto que você não pode atribuir um novo valor a <code>const</code>. No exemplo a seguir, a segunda linha geraria um erro:</span></span></span></span></p>
+<p><code>const</code> funciona exatamente da mesma maneira que <code>let</code>, exceto que você não pode atribuir um novo valor a <code>const</code>. No exemplo a seguir, a segunda linha geraria um erro:</p>
 
-<pre class="brush: js notranslate">const diasNaSemana = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-</span></span></span></span>diasNaSemana<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"> = 8;</span></span></span></span></pre>
+<pre class="brush: js">const diasNaSemana = 7;
+diasNaSemana = 8;</pre>
 
 <h2 id="Teste_suas_habilidades!">Teste suas habilidades!</h2>
 

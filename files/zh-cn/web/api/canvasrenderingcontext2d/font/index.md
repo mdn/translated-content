@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.font`** 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 [CSS font](/zh-CN/docs/Web/CSS/font) 规范相同的字符串值。
@@ -80,8 +81,6 @@ window.addEventListener("load", drawCanvas);
 
 {{EmbedLiveSample('Playable_code', 700, 360)}}
 
-##
-
 ### 使用 CSS 字体加载 API 加载字体
 
 借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。
@@ -100,7 +99,7 @@ f.load().then(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.font")}}
+{{Compat}}
 
 ### Gecko-specific 注解
 

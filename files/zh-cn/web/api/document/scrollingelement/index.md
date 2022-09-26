@@ -2,6 +2,7 @@
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
 ---
+
 {{APIRef("DOM")}}
 
 **`scrollingElement`** （ {{domxref("Document")}} 的只读属性）返回滚动文档的 {{domxref("Element")}} 对象的引用。 在标准模式下，这是文档的根元素， {{domxref("document.documentElement")}}.
@@ -27,4 +28,4 @@ scrollElm.scrollTop = 0;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.scrollingElement")}}
+{{Compat}}

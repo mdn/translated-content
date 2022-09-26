@@ -1,17 +1,8 @@
 ---
 title: JavaScript 是什麼?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - JavaScript
-  - 學習
-  - 撰寫程式
-  - 新手
-  - 核心觀念
-  - 瀏覽器
-  - 註解
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。

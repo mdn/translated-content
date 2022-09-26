@@ -1,8 +1,8 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.CookieStore")}}
+{{Compat}}
 
 ## 示例
 
@@ -43,7 +43,8 @@ getting.then(logStores);
 >
 > Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +71,4 @@ getting.then(logStores);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

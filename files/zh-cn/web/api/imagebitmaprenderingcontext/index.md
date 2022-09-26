@@ -2,11 +2,12 @@
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`ImageBitmapRenderingContext`** 接口是 canvas 的渲染上下文，它只提供了使用给定 {{domxref("ImageBitmap")}} 替换 canvas 的功能。它的上下文 ID ({{domxref("HTMLCanvasElement.getContext()")}} 或 {{domxref("OffscreenCanvas.getContext()")}} 的第一个参数) 是 `"bitmaprenderer"。`
 
-这个接口可用于 window context 和 [worker](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API) context.
+这个接口可用于 window context 和 [worker](/zh-CN/docs/Web/API/Web_Workers_API) context.
 
 ## 方法
 
@@ -19,7 +20,7 @@ Currently drafted as a proposal in the [OffscreenCanvas](https://wiki.whatwg.org
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmapRenderingContext")}}
+{{Compat}}
 
 ## 相关链接
 

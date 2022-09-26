@@ -2,6 +2,7 @@
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
+
 {{APIRef("WebRTC")}}只读的 **{{domxref("RTCPeerConnection")}}** 属性 `canTrickleIceCandidates` 返回一个{{jsxref("Boolean")}}，它指示远程对等端是否可以接受 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02) 。
 
 **ICE trickling**是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。
@@ -61,6 +62,6 @@ pc.addEventListener('icecandidate', e => {
 
 ## 相关阅读
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)

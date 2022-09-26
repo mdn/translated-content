@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Affiche des données tabulaires sous la forme d'un tableau.
@@ -133,12 +134,10 @@ console.table(data [, columns]);
 - `columns`
   - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.table")}}
+{{Compat}}

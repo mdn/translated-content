@@ -1,26 +1,21 @@
 ---
-title: 除法 (/)
+title: 除法（/）
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - 参考
-  - 语言特征
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Division
 ---
+
 {{jsSidebar("Operators")}}
 
-除法运算符 (`/`) 计算了两个操作数的商，左边的数是被除数，右边的是除数
+除法运算符（`/`）计算了两个操作数的商，左边的数是被除数，右边的是除数。
 
 {{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
 ## 语法
 
-```plain
-Operator: x / y
+```js-nolint
+x / y
 ```
 
-## 例子
+## 示例
 
 ### 基本除法
 
@@ -52,12 +47,12 @@ Math.floor(3 / 2) // 1
 
 ## 参见
 
-- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

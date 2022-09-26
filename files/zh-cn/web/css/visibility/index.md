@@ -1,10 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS_参考
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef()}}
 
 CSS 属性 `visibility` 显示或隐藏元素而不更改文档的布局。该属性还可以隐藏 {{HTMLElement("table")}} 中的行或列。

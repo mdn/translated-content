@@ -3,6 +3,7 @@ title: CSS
 slug: Web/API/CSS
 translation_of: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 L'interface CSS possède les méthodes utiles au CSS. Aucun objet de cette interface ne sont implémentés : il ne contient que des méthodes statiques et est donc une interface abstraite.
@@ -29,15 +30,12 @@ _Aucun héritage de méthode statique_.
 
 ## Spécifications
 
-| Spécification                                                                    | Status                                   | Commentaire                         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}} | {{Spec2('CSSOM')}}                 | Ajoute la méthode statique escape() |
-| {{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}} | {{Spec2('CSS3 Conditional')}} | Définition initiale                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

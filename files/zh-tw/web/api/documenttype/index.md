@@ -1,13 +1,8 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
-tags:
-  - API
-  - DOM
-  - DocumentType
-  - Interface
-translation_of: Web/API/DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType`** 介面表示了一個代表文件類型的 {{domxref("Node")}} 節點。
@@ -44,7 +39,7 @@ _此介面繼承了其父介面 {{domxref("Node")}} 的方法，以及實作了 
 
 ## 瀏覽器相容性
 
-{{Compat("api.DocumentType")}}
+{{Compat}}
 
 ## 參見
 

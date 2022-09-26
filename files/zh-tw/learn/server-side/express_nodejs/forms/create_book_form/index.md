@@ -1,9 +1,9 @@
 ---
 title: Create Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
-[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form)此章節展示如何定義頁面/表單以創建`Book`對象。這比相同的作者`Author`或種類`Genre`頁面稍微複雜一點，因為我們需要在我們的書本表單中，獲取並顯示可用的作者和種類記錄。
+
+[Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form)此章節展示如何定義頁面/表單以創建`Book`對象。這比相同的作者`Author`或種類`Genre`頁面稍微複雜一點，因為我們需要在我們的書本表單中，獲取並顯示可用的作者和種類記錄。
 
 ## 導入驗證和清理方法
 
@@ -38,7 +38,7 @@ exports.book_create_get = function(req, res, next) {
 };
 ```
 
-This uses the async module (described in [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)) to get all `Author` and `Genre` objects. These are then passed to the view **`book_form.pug`** as variables named `authors` and `genres` (along with the page `title`).
+This uses the async module (described in [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)) to get all `Author` and `Genre` objects. These are then passed to the view **`book_form.pug`** as variables named `authors` and `genres` (along with the page `title`).
 
 ## Controller—post route
 
@@ -219,6 +219,6 @@ Run the application, open your browser to <http://localhost:3000/>, then select 
 
 ## Next steps
 
-Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
+Return to [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms).
 
-Proceed to the next subarticle of part 6: [Create BookInstance form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form).
+Proceed to the next subarticle of part 6: [Create BookInstance form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form).

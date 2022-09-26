@@ -1,10 +1,8 @@
 ---
 title: GainNode.gain
 slug: Web/API/GainNode/gain
-tags:
-  - API
-translation_of: Web/API/GainNode/gain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("GainNode") }} 介面的 `gain` 屬性是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，代表增益的數值。
@@ -33,7 +31,7 @@ gainNode.gain.value = 0.5;
 
 ## 瀏覽器相容度
 
-{{Compat("api.GainNode.gain")}}
+{{Compat}}
 
 ## 參見
 

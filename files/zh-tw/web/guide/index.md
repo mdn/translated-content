@@ -1,14 +1,8 @@
 ---
 title: Web 開發者指引
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/Guide
 ---
+
 這些文章提供了如何幫助你使用特定技術和 APIs 的資訊。
 
 > **備註：** 很抱歉。這個頁面在我們完成內容遷移之前會很混亂。

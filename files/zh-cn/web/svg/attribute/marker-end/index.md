@@ -1,17 +1,17 @@
 ---
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
-translation_of: Web/SVG/Attribute/marker-end
 ---
+
 {{SVGRef}}
 
 **`marker-end`** 属性将在给定[形状](/zh-CN/docs/Web/SVG/Element#Shape_elements)的最终顶点绘制的箭头或者多边形标记。
 
-对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的 marker-start 属性和 `marker-end` 的值都不是 `none` ，然后再最后一个顶点渲染两个图标。 对于一个 `<path>` 元素， 对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 `marker-end` 仅在[路径数据](/zh-CN/docs/Web/SVG/Attribute/d#Path_commands)的最终顶点上呈现。
+对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的 marker-start 属性和 `marker-end` 的值都不是 `none` ，然后再最后一个顶点渲染两个图标。对于一个 `<path>` 元素，对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 `marker-end` 仅在[路径数据](/zh-CN/docs/Web/SVG/Attribute/d#Path_commands)的最终顶点上呈现。
 
 **Note:** 作为一个图像属性，`marker-end` 可以用作 CSS 属性。
 
-作为一个图像属性，他可以应用到所有的元素上，但是他只针对于一下其中元素有效: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}}
+作为一个图像属性，他可以应用到所有的元素上，但是他只针对于一下其中元素有效：{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}}
 
 ## 示例
 

@@ -1,12 +1,8 @@
 ---
 title: 運算子優先序
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - JavaScript
-  - Operator
-  - precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 運算子優先序（Operator precedence）決定了運算子彼此之間被語法解析的方式，優先序較高的運算子會成為優先序較低運算子的運算元（operands）。

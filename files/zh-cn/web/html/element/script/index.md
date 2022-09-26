@@ -1,14 +1,6 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-tags:
-  - <script>
-  - Element
-  - HTML 脚本
-  - Web
-  - 元素
-  - 网络
-translation_of: Web/HTML/Element/script
 ---
 
 HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌入或者指向 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 WebGL 的 GLSL 着色器语言。
@@ -17,7 +9,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Metadata_content">元数据内容</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流式元素</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语元素</a>.</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Metadata_content">元数据内容</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流式元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语元素</a>.</td>
   </tr>
   <tr>
    <th scope="row">可用内容</th>
@@ -58,9 +50,11 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     关于浏览器支持请参见[浏览器兼容性](#浏览器兼容性)。另可参见文章[asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)。
 - {{htmlattrdef("crossorigin")}}
   - : 那些没有通过标准[CORS](/zh-CN/docs/HTTP_access_control)检查的正常`script` 元素传递最少的信息到 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。可以使用本属性来使那些将静态资源放在另外一个域名的站点打印错误信息。参考 [CORS 设置属性](/zh-CN/docs/Web/HTML/CORS_settings_attributes)了解对有效参数的更具描述性的解释。
+
     ```html
     <script src="" crossorigin="anonymous"></script>
     ```
+
 - {{htmlattrdef("defer")}}
   - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 {{event("DOMContentLoaded")}} 事件前执行。
     有 `defer` 属性的脚本会阻止 `DOMContentLoaded` 事件，直到脚本被加载并且解析完成。
@@ -89,7 +83,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     如果 MIME 类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。
     如果 type 属性为`module`，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见[ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
     在 Firefox 中可以通过定义 type=application/javascript;version=1.8 来使用如 let 声明这类的 JS 高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。
-    关于如何引入特殊编程语言，请参见[这篇文章](/en-US/Add-ons/Code_snippets/Rosetta)。
+    关于如何引入特殊编程语言，请参见[这篇文章](/zh-CN/Add-ons/Code_snippets/Rosetta)。
 - {{htmlattrdef("text")}}
   - : 和 textContent 属性类似，本属性用于设置元素的文本内容。但和 textContent 不一样的是，本属性在节点插入到 DOM 之后，此属性被解析为可执行代码。
 
@@ -129,7 +123,7 @@ Browsers that support the `module` value for the `type` attribute ignore any scr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.script")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 **`setUTCMilliseconds()`** 方法会根据世界时来设置指定时间的毫秒数。

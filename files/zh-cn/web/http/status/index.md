@@ -1,15 +1,8 @@
 ---
 title: HTTP 响应状态码
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - Landing
-  - Overview
-  - Reference
-  - 状态码
-  - Web
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否成功完成。
@@ -176,7 +169,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 
 ## 浏览器兼容性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 参见
 

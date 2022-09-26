@@ -1,8 +1,8 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`404 Not Found`** 用戶端錯誤回應碼，表明了伺服器找不到請求的資源。引發 404 頁面的連結，通常被稱作斷連或死連（broken or dead link）、並可以導到失效連結（[link rot](https://en.wikipedia.org/wiki/Link_rot)）頁面。
@@ -33,7 +33,7 @@ ErrorDocument 404 /notfound.html
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## 參見
 

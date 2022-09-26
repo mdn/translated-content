@@ -1,14 +1,8 @@
 ---
 title: CSS Object Model
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSS_Object_Model
 ---
+
 {{DefaultAPISidebar('CSSOM')}}
 
 The **CSS Object Model** is a set of APIs allowing to manipulate CSS from JavaScript. It is the pendant of DOM and HTML APIs, but for CSS. It allows to read and modify CSS style dynamically.

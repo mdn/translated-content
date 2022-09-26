@@ -1,16 +1,8 @@
 ---
 title: 正则表达式
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - JavaScript
-  - RegExp
-  - Regular Expressions
-  - 中级
-  - 参考
-  - 指南
-  - 正则表达式
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript 中，正则表达式也是对象。这些模式被用于 {{jsxref("RegExp")}} 的 {{jsxref("RegExp.exec", "exec")}} 和 {{jsxref("RegExp.test", "test")}} 方法，以及 {{jsxref("String")}} 的 {{jsxref("String.match", "match")}}、{{jsxref("String.matchAll", "matchAll")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}} 和 {{jsxref("String.split", "split")}} 方法。本章介绍 JavaScript 正则表达式。
@@ -223,7 +215,7 @@ var re = new RegExp("ab+c");
           <code>\1</code>、<code>\2</code>、...、<code>\n</code>
           是用在正则表达式的匹配环节，详情可以参阅后文的
           <a
-            href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
+            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
             >\n</a
           >
           条目。而在正则表达式的替换环节，则要使用像

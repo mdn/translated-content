@@ -1,12 +1,8 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - CSS 数据类型
-  - Web
-translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 **`<time>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。
@@ -53,4 +49,4 @@ translation_of: Web/CSS/time
 
 ## 浏览器兼容性
 
-{{Compat("css.types.time")}}
+{{Compat}}

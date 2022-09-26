@@ -1,8 +1,8 @@
 ---
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 現在你已經了解 Express 的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和 Mac OS X 上的 Node/Express 開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發 Express 應用的入門需知。
@@ -32,11 +32,11 @@ _Express_ 開發環境包含 _Nodejs、NPM_ 套件管理器的安裝, 還有 _Ex
 
 _Node_ 和 _NPM_ 套件管理器會從準備好的 binary package、安裝檔、 作業系統的套件管理器或是從源檔一起安裝。接著 _Express_ 會透過 NPM 進行安裝，成為你所有個別 Express web 應用的依賴項(以及其他函式庫，如模板引擎，資料庫驅動程式，身份驗證中間層，用於提供靜態文件的中間件等)
 
-NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 [MVC 模式](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個 Express 應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。
+NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 [MVC 模式](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個 Express 應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。
 
 > **備註：** 與其他不包含單獨的 web 開發伺服器的 Web 框架不同。 在 Node / Express 中，Web 應用程式創建並運行自己的 Web 伺服器！
 
-典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/en-US/docs/Learn/Common_questions/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的[Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
+典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/zh-TW/docs/Learn/Common_questions/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的[Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
 
 ### 哪些作業系統有支援?
 
@@ -371,12 +371,12 @@ We'll talk more about the generated app when we get to the article on generating
 
 ## In this module
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

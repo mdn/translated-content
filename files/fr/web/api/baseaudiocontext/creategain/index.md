@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/BaseAudioContext/createGain
 original_slug: Web/API/AudioContext/createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode createGain de l'interface {{ domxref("AudioContext") }} crée un {{ domxref("GainNode") }} qui peut être utilisé pour contrôler le volume global du graphe audio.
@@ -87,15 +88,13 @@ function couperSon () {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | Status                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createGain-GainNode', 'createGain()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createGain")}}
+{{Compat}}
 
 ## Voir aussi
 

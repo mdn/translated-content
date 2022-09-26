@@ -1,15 +1,13 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - DOMParser SVG XML
-translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-`DOMParser可以將XML或是HTML格式的字串轉成`DOM [文件](/en-US/docs/DOM/document). `DOMParser`的規格請參閱[DOM 解譯與串流化](http://html5.org/specs/dom-parsing.html).
+`DOMParser可以將XML或是HTML格式的字串轉成`DOM [文件](/zh-TW/docs/DOM/document). `DOMParser`的規格請參閱[DOM 解譯與串流化](http://html5.org/specs/dom-parsing.html).
 
-請注意[XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件.
+請注意[XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件.
 
 ## 產生一個 DOMParser
 
@@ -37,7 +35,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 </parsererror>
 ```
 
-解譯錯誤也會記錄在錯誤終端機中（[Error Console](/en-US/docs/Error_Console)）, 紀錄裡頭的文件 URI (如下) 則為錯誤來源.
+解譯錯誤也會記錄在錯誤終端機中（[Error Console](/zh-TW/docs/Error_Console)）, 紀錄裡頭的文件 URI (如下) 則為錯誤來源.
 
 ## 解譯 SVG 或 HTML 文件
 
@@ -110,15 +108,15 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ### DOMParser from Chrome/JSM/XPCOM/Privileged Scope
 
-See article here: [nsIDOMParser](/en-US/docs/nsIDOMParser)
+See article here: [nsIDOMParser](/zh-TW/docs/nsIDOMParser)
 
 ## 瀏覽器相容性
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## 參考資料
 
-- [Parsing and serializing XML](/en-US/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest)
-- [XMLSerializer](/en-US/docs/XMLSerializer)
-- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)
+- [Parsing and serializing XML](/zh-TW/docs/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)
+- [XMLSerializer](/zh-TW/docs/XMLSerializer)
+- [Parsing HTML to DOM](/zh-TW/Add-ons/Code_snippets/HTML_to_DOM)

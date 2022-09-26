@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`toDateString()`** 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。
@@ -17,9 +17,9 @@ dateObj.toDateString()
 
 ## 描述
 
-{{jsxref("Global_Objects/Date", "Date")}} 对象实例引用一个具体的时间点。调用 {{jsxref("Date.toString", "toString")}} 方法会以美式英语和人类易读的形式返回日期对象的格式化字符串。在 [SpiderMonkey](/en-US/docs/SpiderMonkey) 里，该字符串由日期部分（年月日）和其后的时间部分（时分秒及时区）组成。有时需要获取日期部分的字符串，这可以由 `toDateString` 方法完成。
+{{jsxref("Global_Objects/Date", "Date")}} 对象实例引用一个具体的时间点。调用 {{jsxref("Date.toString", "toString")}} 方法会以美式英语和人类易读的形式返回日期对象的格式化字符串。在 [SpiderMonkey](/zh-CN/docs/SpiderMonkey) 里，该字符串由日期部分（年月日）和其后的时间部分（时分秒及时区）组成。有时需要获取日期部分的字符串，这可以由 `toDateString` 方法完成。
 
-The `toDateString` method is especially useful because compliant engines implementing [ECMA-262](/en-US/docs/ECMAScript) may differ in the string obtained from `toString` for `Date` objects, as the format is implementation-dependent and simple string slicing approaches may not produce consistent results across multiple engines.
+The `toDateString` method is especially useful because compliant engines implementing [ECMA-262](/zh-CN/docs/ECMAScript) may differ in the string obtained from `toString` for `Date` objects, as the format is implementation-dependent and simple string slicing approaches may not produce consistent results across multiple engines.
 
 ## 例子
 

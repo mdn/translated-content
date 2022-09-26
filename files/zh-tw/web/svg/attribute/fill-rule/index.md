@@ -1,8 +1,8 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-translation_of: Web/SVG/Attribute/fill-rule
 ---
+
 « [SVG Attribute reference home](/zh-TW/docs/Web/SVG/Attribute)
 
 The `fill-rule` attribute indicates the algorithm which is to be used to determine what side of a path is inside the shape. For a simple, non-intersecting path, it is intuitively clear what region lies "inside"; however, for a more complex path, such as a path that intersects itself or where one subpath encloses another, the interpretation of "inside" is not so obvious.

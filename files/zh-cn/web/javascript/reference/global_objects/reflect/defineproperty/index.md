@@ -1,13 +1,8 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2016
-  - JavaScript
-  - Method
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 静态方法 **`Reflect.defineProperty()`** 基本等同于 {{jsxref("Object.defineProperty()")}} 方法，唯一不同是返回 {{jsxref("Boolean")}} 值。
@@ -53,7 +48,7 @@ obj.x                                         // 7
 
 ### 检查属性是否被成功定义
 
-{{jsxref("Object.defineProperty")}} 方法，如果成功则返回一个对象，否则抛出一个 {{jsxref("TypeError")}} 。另外，当定义一个属性时，你也可以使用 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 去捕获其中任何的错误。而因为 `Reflect.defineProperty` 返回 Boolean 值作为成功的标识，所以只能使用 [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) ：
+{{jsxref("Object.defineProperty")}} 方法，如果成功则返回一个对象，否则抛出一个 {{jsxref("TypeError")}} 。另外，当定义一个属性时，你也可以使用 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 去捕获其中任何的错误。而因为 `Reflect.defineProperty` 返回 Boolean 值作为成功的标识，所以只能使用 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) ：
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {

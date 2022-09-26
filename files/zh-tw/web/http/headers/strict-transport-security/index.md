@@ -1,8 +1,8 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 **HTTP `Strict-Transport-Security`** 回應標頭（簡稱為 {{Glossary("HSTS")}}）告知瀏覽器應強制使用 HTTPS 以取代 HTTP。
 
 | Header type                                      | {{Glossary("Response header")}} |
@@ -28,7 +28,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## Description
 
-若是網站在被訪問時經由 HTTP 被重定向至 HTTPS，則訪客將在受到 HTTPS 保護前與該網站的非加密版本通信。例如若使用者輸入 http\://www\.foo.com/ 或是 foo.com 時，未加密的首次連線為中間人留下了機會。他們可以使用中間人攻擊將使用者定向至惡意網站而非使用者預期的網站的安全版本。
+若是網站在被訪問時經由 HTTP 被重定向至 HTTPS，則訪客將在受到 HTTPS 保護前與該網站的非加密版本通信。例如若使用者輸入 `http://www.foo.com/` 或是 foo.com 時，未加密的首次連線為中間人留下了機會。他們可以使用中間人攻擊將使用者定向至惡意網站而非使用者預期的網站的安全版本。
 
 HTTP Strict Transport Security 標頭明確告知瀏覽器在有效期間費不應該使用 HTTP 與該網站進行通訊，並且應該將所有的 HTTP 請求自動轉換成 HTTPS。
 
@@ -69,7 +69,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Browser compatibility
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+{{Compat}}
 
 ## See also
 

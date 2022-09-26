@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toGMTString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
+
 {{JSRef("Global_Objects", "Date")}} {{ Deprecated_header() }}
 
 The **`toGMTString()`** method converts a date to a string, using Internet GMT conventions. The exact format of the value returned by `toGMTString` varies according to the platform and browser, in general it should represent a human readable date string.

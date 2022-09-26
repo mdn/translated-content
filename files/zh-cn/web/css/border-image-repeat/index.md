@@ -1,18 +1,13 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Summary
 
-`border-image-repeat `定义图片如何填充边框。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。
+`border-image-repeat` 定义图片如何填充边框。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。
 
 {{cssinfo}}
 
@@ -58,4 +53,4 @@ border-image-repeat: inherit
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-image-repeat")}}
+{{Compat}}

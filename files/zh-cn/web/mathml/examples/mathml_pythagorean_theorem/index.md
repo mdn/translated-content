@@ -1,13 +1,8 @@
 ---
 title: 证明毕达哥拉斯定理
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - MathML
-  - 初学者
-  - 指南
-  - 数学
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
+
 {{MathMLRef}}
 
 现在，我们来证明毕达哥拉斯定理（勾股定理）：

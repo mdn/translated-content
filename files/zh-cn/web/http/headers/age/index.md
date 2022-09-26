@@ -1,12 +1,8 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - 响应头
-  - 缓存
-  - 首部
-translation_of: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** 消息头里包含对象在缓存代理中存贮的时长，以秒为单位。.

@@ -1,8 +1,8 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-translation_of: Web/CSS/font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 **`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。 会使文字最终的表现形式更加统一。
@@ -74,7 +74,7 @@ font-variant-ligatures: unset;
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
 ### Setting font ligatures and contextual forms
 
@@ -179,9 +179,9 @@ p {
 }
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700') }}
 
 ## Specifications
 
@@ -189,4 +189,4 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-variant-ligatures")}}
+{{Compat}}

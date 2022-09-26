@@ -1,15 +1,8 @@
 ---
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableRowElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLTableRowElement.insertCell
-translation_of: Web/API/HTMLTableRowElement/insertCell
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableRowElement.insertCell()`** メソッドは、新しいセル ({{HtmlElement("td")}}) を表の行 ({{HtmlElement("tr")}}) に挿入し、そのセルの参照を返します。

@@ -1,8 +1,8 @@
 ---
 title: 大于运算符 (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
-translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
+
 {{jsSidebar("Operators")}}
 
 当左边操作数大于右边的时候，大于 (`>`) 运算符返回`true`，否则返回`false`
@@ -17,7 +17,7 @@ x > y
 
 ## 描述
 
-操作数之间按照 [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) 算法进行比较。进一步了解该算法，请参考 [小于](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) 运算符的相关文档。
+操作数之间按照 [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) 算法进行比较。进一步了解该算法，请参考 [小于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than) 运算符的相关文档。
 
 ## 例子
 
@@ -87,6 +87,6 @@ console.log(NaN > 3);          // false
 
 ## 参考
 
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Less than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

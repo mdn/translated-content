@@ -1,49 +1,40 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/clear
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-browser-compat: javascript.builtins.Map.clear
 ---
+
 {{JSRef}}
 
-`clear()` 方法会移除 Map 对象中的所有元素。
+`clear()` 方法会移除 `Map` 对象中的所有元素。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
 ## 语法
 
-```plain
-myMap.clear();
+```js-nolint
+clear()
 ```
 
 ### 返回值
 
-{{jsxref("undefined")}}.
+{{jsxref("undefined")}}。
 
 ## 示例
 
-### 调用`clear`方法
+### 使用 clear()
 
 ```js
-var myMap = new Map();
-myMap.set("bar", "baz");
-myMap.set(1, "foo");
+const myMap = new Map();
+myMap.set('bar', 'baz');
+myMap.set(1, 'foo');
 
-myMap.size;       // 2
-myMap.has("bar"); // true
+console.log(myMap.size);       // 2
+console.log(myMap.has('bar')); // true
 
 myMap.clear();
 
-myMap.size;       // 0
-myMap.has("bar")  // false
+console.log(myMap.size);       // 0
+console.log(myMap.has('bar')); // false
 ```
 
 ## 规范
@@ -54,6 +45,6 @@ myMap.has("bar")  // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Map")}}

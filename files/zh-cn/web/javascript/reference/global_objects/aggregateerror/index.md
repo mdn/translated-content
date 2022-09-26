@@ -1,8 +1,8 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
+
 > {{JSRef}}{{SeeCompatTable}}
 
 **`AggregateError`**当多个错误 ​​ 需要包装在一个错误中时，该对象表示一个错误。
@@ -22,7 +22,7 @@ new AggregateError(errors[, message])
 
 ## 描述
 
-一个`AggregateError`当需要由操作报告多个错误被抛出，例如通过[`Promise.any()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)，在传递给它的所有[`Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)拒绝。
+一个`AggregateError`当需要由操作报告多个错误被抛出，例如通过[`Promise.any()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)，在传递给它的所有[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)拒绝。
 
 ## 属性
 

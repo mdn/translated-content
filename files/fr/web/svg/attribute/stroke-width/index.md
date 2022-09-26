@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-width
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
@@ -69,34 +70,10 @@ html,body,svg { height:100% }
 
 Une valeur en pourcentage est toujours calculée en tant que pourcentage de la longueur diagonale {{SVGAttr('viewBox')}} normalisée.
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-width")}}
-
-## Spécification
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeWidthProperty", "stroke-width")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td><p>Définition pour les formes et le texte</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeWidthProperty", "stroke-width")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Définition initiale pour les formes et le texte</td>
-    </tr>
-  </tbody>
-</table>
+{{Compat}}

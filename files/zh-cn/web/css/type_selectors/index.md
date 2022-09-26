@@ -1,11 +1,8 @@
 ---
 title: 元素选择器
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Type_selectors
 ---
+
 {{ CSSRef }}
 
 ## 概述
@@ -47,6 +44,6 @@ span {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.type")}}
+{{Compat}}
 
 ## See also

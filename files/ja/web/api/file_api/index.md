@@ -1,14 +1,8 @@
 ---
 title: ファイル API
 slug: Web/API/File_API
-page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-spec-urls: https://w3c.github.io/FileAPI/
-translation_of: Web/API/File_API
 ---
+
 {{DefaultAPISidebar("File API")}}
 
 ## 概念と使い方

@@ -1,11 +1,8 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - 弱比较算法
-  - 条件请求
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 **`If-None-Match`** 是一个条件式请求首部。对于 GET{{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 请求方法来说，当且仅当服务器上没有任何资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中列出的相匹配的时候，服务器端才会返回所请求的资源，响应码为 {{HTTPStatus("200")}} 。对于其他方法来说，当且仅当最终确认没有已存在的资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。
@@ -64,5 +61,5 @@ If-None-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`

@@ -1,17 +1,6 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - リファレンス
-  - エディター
-  - 非推奨
-browser-compat: api.Document.queryCommandSupported
-translation_of: Web/API/Document/queryCommandSupported
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

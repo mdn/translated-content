@@ -2,6 +2,7 @@
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 发生拖动时，从拖动目标 ({{event("dragstart")}}事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
@@ -34,7 +35,7 @@ void dataTransfer.setDragImage(img, xOffset, yOffset);
 
 无
 
-## 举个例子
+## 示例
 
 这个例子展示如何使用 `setDragImage()` 方法。请注意，此例子引用了命名为 `example.gif` 的图片文件。如果此文件存在，它将被用作拖动图像，如果此文件不存在，浏览器会使用其默认的拖动图像。
 
@@ -100,8 +101,12 @@ function drop_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.setDragImage")}}
+{{Compat}}
 
-## 参考链接
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

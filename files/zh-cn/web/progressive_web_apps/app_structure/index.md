@@ -1,22 +1,22 @@
 ---
 title: PWA 结构
 slug: Web/Progressive_web_apps/App_structure
-translation_of: Web/Progressive_web_apps/App_structure
 ---
-{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
-现在，我们已经知道了 PWA 背后的原理， 让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
+{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+
+现在，我们已经知道了 PWA 背后的原理，让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
 
 ## 应用架构
 
 渲染网站主要有两种方法 - 在服务器上或在客户端上。它们都有其优点和缺点，你可以适当地混合使用这两种方法
 
 - 服务器端渲染（SSR）的意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的 HTML 内容。它的跨浏览器兼容性良好，但代价是页间加载时间延长，也就是总体感知上的性能降低：每加载一个页面，都需要一个服务器请求往返的时间。
-- 客户端渲染（CSR）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。 首次访问时网站速度较慢，但后续访问速度要快得多。
+- 客户端渲染（CSR）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。首次访问时网站速度较慢，但后续访问速度要快得多。
 
 将 SSR 与 CSR 混用可以获得最佳效果：您可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。因为使用了 SSR，第一页加载很快；因为客户端可以仅使用已更改的部分重新渲染页面，所以页面之间的导航也是平滑的。
 
-您可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及[Streams API](/en-US/docs/Web/API/Streams_API)的新方法
+您可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及[Streams API](/zh-CN/docs/Web/API/Streams_API)的新方法
 
 ## App Shell 概念
 
@@ -24,17 +24,17 @@ App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便�
 
 这种结构的页面很快，给用户的感觉也很快：用户会立即看到内容而不是加载动画或空白页。如果网络连接不可用，它还允许离线访问网站。
 
-我们可以通过 [service worker](/en-US/docs/Web/API/Service_Worker_API) 控制从服务器请求的内容以及从缓存中检索的内容，这将在下一篇文章中详细解释。现在让我们关注这个结构本身。
+我们可以通过 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 控制从服务器请求的内容以及从缓存中检索的内容，这将在下一篇文章中详细解释。现在让我们关注这个结构本身。
 
 ### 我为什么要用它？
 
-这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如[添加到主屏幕](/en-US/docs/Web/Apps/Progressive/Add_to_home_screen)或[推送通知](/en-US/docs/Web/API/Push_API)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
+这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如[添加到主屏幕](/zh-CN/docs/Web/Apps/Progressive/Add_to_home_screen)或[推送通知](/zh-CN/docs/Web/API/Push_API)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
 
 在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。
 
 ### 可链接、渐进式和响应式
 
-记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。 app shell 方案允许网站：
+记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。app shell 方案允许网站：
 
 - 可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：您可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。
 - 渐进式（Progressive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
@@ -287,4 +287,6 @@ var games = [
 
 下一篇文章中，我们会探讨更多的细节：Service Worker 如何帮助我们缓存 App Shell 和内容，从而让我们实现离线功能。
 
-{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

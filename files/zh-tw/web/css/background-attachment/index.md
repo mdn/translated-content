@@ -1,16 +1,11 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
-**`background-attachment`** 這個 [CSS](/en-US/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
+**`background-attachment`** 這個 [CSS](/zh-TW/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
 
 {{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
@@ -118,8 +113,8 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## See also
 
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

@@ -1,9 +1,9 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-translation_of: Web/HTTP/Feature_Policy
 original_slug: Web/HTTP/策略特征
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 特征策略允许 web 开发者在浏览器中选择启用、禁用和修改确切特征和 API 的行为。比如{{Glossary("CSP","内容安全策略")}}，但是它控制的是浏览器的特征非安全行为。
@@ -19,7 +19,7 @@ original_slug: Web/HTTP/策略特征
 - 改变手机和第三方视频自动播放的默认行为。
 - 限制网站使用敏感的 api，如摄像头或麦克风。
 - 允许 iframes 使用全屏 API.
-- 阻止使用过时的 api，比如 [synchronous XHR](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) 和 {{domxref("document.write()")}}.
+- 阻止使用过时的 api，比如 [synchronous XHR](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) 和 {{domxref("document.write()")}}.
 - 确保图像的大小正确，对于视口来说不会太大。
 
 ## 概念和用法
@@ -41,7 +41,7 @@ original_slug: Web/HTTP/策略特征
 
 HTTP 标头和 allow 属性之间的主要区别在于 allow 属性仅控制 iframe 中的功能。标头控制响应中的功能以及页面内的任何嵌入式内容。
 
-点此链接查看更多详细信息 [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
+点此链接查看更多详细信息 [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
 
 ## 策略控制功能的类型
 
@@ -71,7 +71,7 @@ HTTP 标头和 allow 属性之间的主要区别在于 allow 属性仅控制 ifr
 - 超大号的图片
 - 同步脚本
 - 同步 XMLHTTPRequest
-- 为优化的图像
+- 未优化的图像
 - 大小不一的媒体
 
 ### 精细控制某些功能
@@ -111,7 +111,7 @@ Web 提供的功能和 API 如果被滥用，可能会带来隐私或安全风�
 
 ## 参见
 
-- [Using Feature Policy](/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)

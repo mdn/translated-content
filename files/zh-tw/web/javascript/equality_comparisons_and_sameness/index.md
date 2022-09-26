@@ -1,8 +1,8 @@
 ---
 title: 相等比較
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 在 ES2015，有四個相等比較方法：
@@ -177,7 +177,7 @@ function attemptMutation(v)
 
 ## 一般相等、嚴格相等和同值相等的規範
 
-在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is。`
+在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is。`
 
 我們可以發現在 11.9.6.1 中，除了 11.9.6.1 規範型別檢查，嚴格相等規範是從屬於一般相等規範，因為 11.9.6.2–7 和 11.9.3.1.a–f 相應。
 

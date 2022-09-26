@@ -11,6 +11,7 @@ tags:
   - trace
 translation_of: Web/API/Console/trace
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche la _stack trace_ dans la [Web Console](/fr/docs/Outils/Console_Web).
@@ -46,15 +47,13 @@ foo
 <anonymous>
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#trace", "console.trace()")}} | {{Spec2("Console API")}} | Définition Initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.trace")}}
+{{Compat}}
 
 ## Voir aussi
 

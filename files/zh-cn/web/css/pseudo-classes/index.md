@@ -1,13 +1,8 @@
 ---
 title: 伪类
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - CSS 参考
-  - 进阶
-  - 选择器
-translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 CSS **_伪类_** 是添加到选择器的关键字，指定要选择的元素的特殊状态。例如，{{ cssxref(":hover") }} 可被用于在用户将鼠标悬停在按钮上时改变按钮的颜色。

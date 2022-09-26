@@ -1,8 +1,8 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。
@@ -32,7 +32,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 從既有的資料取得 ArrayBuffer
 
-- [From a Base64 string](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a Base64 string](/zh-TW/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## 屬性
@@ -47,7 +47,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 ## 方法
 
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
+  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
 - {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
   - : Returns a new `ArrayBuffer` whose contents are taken from the `oldBuffer`'s data and then is either truncated or zero-extended by `newByteLength`.
 

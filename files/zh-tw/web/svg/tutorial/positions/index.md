@@ -1,11 +1,8 @@
 ---
 title: 座標定位
 slug: Web/SVG/Tutorial/Positions
-tags:
-  - SVG
-  - SVG:教程
-translation_of: Web/SVG/Tutorial/Positions
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 ## 網格

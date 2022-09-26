@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
 La propriété **`max-width`** est utilisée pour définir la largeur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir supérieure à la valeur spécifiée par `max-width` (autrement dit, `max-width` est une borne supérieur pour `width`).
@@ -119,4 +120,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 - {{cssxref("min-height")}}
 - {{cssxref("max-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

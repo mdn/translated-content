@@ -1,16 +1,6 @@
 ---
 title: '::cue-region'
 slug: Web/CSS/::cue-region
-tags:
-  - '::cue-region'
-  - CSS
-  - メディア
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - Web Video Text Tracks
-  - WebVTT
-browser-compat: css.selectors.cue-region
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

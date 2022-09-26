@@ -1,8 +1,8 @@
 ---
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
-translation_of: Web/API/MediaSource/activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`activeSourceBuffers`** 是 {{domxref("MediaSource")}} 介面的唯讀屬性，回傳一個 {{domxref("SourceBufferList")}} 物件，含有在 {{domxref("SourceBuffers")}} 之中的 {{domxref("SourceBuffer")}} 物件子集合—物件的串列提供被選擇的影片軌 (video track), 啟用的音軌 (audio tracks), 以及顯示或隱藏的字軌。
@@ -48,7 +48,7 @@ function sourceOpen (_) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource.activeSourceBuffers")}}
+{{Compat}}
 
 ## 相關資料
 

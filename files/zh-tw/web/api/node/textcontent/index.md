@@ -1,8 +1,8 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.textContent`** 屬性表示了節點或其後代的文字內容。
@@ -16,8 +16,8 @@ element.textContent = "this is some sample text";
 
 ## 描述
 
-- `textContent` returns `null` if the element is a [document](/en-US/docs/DOM/document), a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use `document.documentElement.textContent`.
-- If the node is a CDATA section, a comment, a processing instruction, or a text node, `textContent` returns the text inside this node (the [nodeValue](/en-US/docs/DOM/Node.nodeValue)).
+- `textContent` returns `null` if the element is a [document](/zh-TW/docs/DOM/document), a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use `document.documentElement.textContent`.
+- If the node is a CDATA section, a comment, a processing instruction, or a text node, `textContent` returns the text inside this node (the [nodeValue](/zh-TW/docs/DOM/Node.nodeValue)).
 - For other node types, `textContent` returns the concatenation of the `textContent` attribute value of every child node, excluding comments and processing instruction nodes. This is an empty string if the node has no children.
 - Setting this property on a node removes all of its children and replaces them with a single text node with the given value.
 

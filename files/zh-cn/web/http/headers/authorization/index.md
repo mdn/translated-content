@@ -1,8 +1,8 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-translation_of: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中的 **`Authorization`** 请求消息头含有服务器用于验证用户代理身份的凭证，通常会在服务器返回{{HTTPStatus("401")}} `Unauthorized` 状态码以及{{HTTPHeader("WWW-Authenticate")}} 消息头之后在后续请求中发送此消息头。
@@ -38,7 +38,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-请参考[ HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 来获取在 Apache 或 nginx 中使用 HTTP 基本验证方案加密保护站点的配置示例。
+请参考 [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 来获取在 Apache 或 nginx 中使用 HTTP 基本验证方案加密保护站点的配置示例。
 
 ## 规范
 

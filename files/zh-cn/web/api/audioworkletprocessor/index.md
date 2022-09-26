@@ -2,6 +2,7 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)的 **`AudioWorkletProcessor`** 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。
@@ -34,21 +35,21 @@ _`AudioWorkletProcessor` 接口不响应任何事件。_
 
 Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 
-The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
+The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/zh-CN/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
 
 ### 处理音频
 
 一个创建自定义音频处理算法的步骤的实例：
 
-1.  创建一个独立的文件;
-2.  在这个文件中：
+1. 创建一个独立的文件;
+2. 在这个文件中：
 
-    1.  Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
-    2.  Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
+    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
+    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
-3.  Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
-4.  Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
-5.  Connect the node to the other nodes.
+3. Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
+4. Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
+5. Connect the node to the other nodes.
 
 ## 例子
 
@@ -88,7 +89,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## Browser compatibility
 
-{{Compat("api.AudioWorkletProcessor")}}
+{{Compat}}
 
 ## See also
 

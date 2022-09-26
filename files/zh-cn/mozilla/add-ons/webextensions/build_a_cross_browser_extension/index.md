@@ -1,14 +1,9 @@
 ---
 title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-tags:
-  - Web 插件
-  - 扩展
-  - 指南
-  - 插件
-translation_of: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件
 ---
+
 {{AddonSidebar()}}
 
 浏览器扩展 API 的引入为浏览器扩展的开发创造了“一次开发跨浏览器”的前景。然而，在使用扩展 API 的浏览器中 (主要是 Chrome、Firefox、Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。
@@ -48,7 +43,7 @@ Firefox 也支持 Chrome 浏览器的 `chrome.*` 名称空间，主要用于协�
 
 Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome [迁移](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)。然而，应该首选使用 promises（以及 `browser.*` 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。
 
-> **备注：** 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) 或者 MDN 的 [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) 页面。
+> **备注：** 如果你对这两种方法之间的差异不熟悉，可以看一下 [了解异步 JavaScript: Callbacks、Promises 和 Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) 或者 MDN 的 [Using promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) 页面。
 
 #### 浏览器扩展 API 的垫片（Polyfill）
 
@@ -92,7 +87,7 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 - **缺乏对某些特性的支持。**例如，在撰写本文时，Firefox 不支持 `onButtonClicked`，而只支持 `onShown`。
 - **专有功能，支持特定于浏览器的特性。**例如，在撰写本文时，容器是一个特定于 firefox 的特性，由 `contextualidentity` 函数支持。
 
-你可以在 [Mozilla Developer Network 浏览器对 JavaScript API 页面的支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)上找到 4 个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network [JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) 参考页面中。
+你可以在 [Mozilla Developer Network 浏览器对 JavaScript API 页面的支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)上找到 4 个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network [JavaScript APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 参考页面中。
 
 #### 处理 API 差异
 
@@ -114,11 +109,11 @@ if (typeof <function> === "function") {
 
 4 个主要浏览器支持的 [`manifest.json`](/zh-CN/docs//zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) 文件字段的差异大致可分为三类：
 
-- **扩展信息属性。**例如，在撰写本文时，Firefox 和 Opera 包含和 [`author`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility) 地位相等的 [`developer`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility) 关键字，以获取扩展的开发者和作者的详细信息。
-- **扩展功能。**例如，在编写本文时，Edge 不支持扩展定义快捷键的 [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility) 字段。
-- **字段可选性。**例如，在编写本文时，在 Edge 中 [`author`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility) 字段是必需的，但在其他主要浏览器中是可选的。
+- **扩展信息属性。**例如，在撰写本文时，Firefox 和 Opera 包含和 [`author`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility) 地位相等的 [`developer`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility) 关键字，以获取扩展的开发者和作者的详细信息。
+- **扩展功能。**例如，在编写本文时，Edge 不支持扩展定义快捷键的 [`commands`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility) 字段。
+- **字段可选性。**例如，在编写本文时，在 Edge 中 [`author`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility) 字段是必需的，但在其他主要浏览器中是可选的。
 
-浏览器兼容性信息包含在 Mozilla Developer Network [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 页的每个字段中。
+浏览器兼容性信息包含在 Mozilla Developer Network [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 页的每个字段中。
 
 `manifest.json` 文件在不同浏览器之间的版本号可能有所不同，为每个浏览器创建和编辑一个静态版本号通常是最简单的方法。
 
@@ -153,7 +148,7 @@ if (typeof <function> === "function") {
       <td><p>否</p></td>
       <td>
         <p>
-          <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference"
+          <a href="/zh-CN/Add-ons/WebExtensions/web-ext_command_reference"
             >web-ext</a
           >
         </p>

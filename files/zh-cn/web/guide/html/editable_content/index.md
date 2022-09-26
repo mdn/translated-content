@@ -1,9 +1,9 @@
 ---
 title: Content Editable
 slug: Web/Guide/HTML/Editable_content
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Content_Editable
 ---
+
 在 HTML 中，任何元素都可以被编辑。通过使用一些 JavaScript 事件处理程序，您可以将您的网页转换为完整且快速的富文本编辑器。本文提供了有关此功能的一些信息。
 
 ## 它是如何工作的？
@@ -28,7 +28,7 @@ original_slug: Web/Guide/HTML/Content_Editable
 
 ## 在标记生成上的不同点
 
-因为各个浏览器在标记生成上的不同，因此跨浏览器使用 `contenteditable` 一直以来都是痛点，例如一些看起来十分简单的事情，如： 当你按下 Enter/Return 键在可编辑区域中创建一个新的文本行时，不同主流浏览器对此有不同处理 (Firefox 插入{{htmlelement("br")}}、IE/Opera 将使用{{htmlelement("p")}}、 Chrome/Safari 将使用 {{htmlelement("div")}}）
+因为各个浏览器在标记生成上的不同，因此跨浏览器使用 `contenteditable` 一直以来都是痛点，例如一些看起来十分简单的事情，如：当你按下 Enter/Return 键在可编辑区域中创建一个新的文本行时，不同主流浏览器对此有不同处理 (Firefox 插入{{htmlelement("br")}}、IE/Opera 将使用{{htmlelement("p")}}、Chrome/Safari 将使用 {{htmlelement("div")}}）
 
 幸运的是在现代浏览器中，这些不同都趋于一致了。截止到[Firefox 60](/zh-CN/docs/Mozilla/Firefox/Releases/60)，火狐开始使用{{htmlelement("div")}}元素来包裹新生成的文本行，以与 Chrome, modern Opera, Edge, and Safari.的行为趋于一致
 

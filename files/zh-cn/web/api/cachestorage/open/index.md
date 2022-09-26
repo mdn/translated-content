@@ -2,6 +2,7 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个 resolve 为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
@@ -32,9 +33,9 @@ caches.open(cacheName).then(function(cache) {
 
 此示例来自于 MDN [sw-test example](https://github.com/mdn/sw-test/) （请参阅 [sw-test running live](https://mdn.github.io/sw-test/)）。这里，等待 {{domxref("FetchEvent")}} 事件触发。我们构建自定义响应，像这样：
 
-1.  使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。
-2.  如果没有，使用 {{domxref("CacheStorage.open","CacheStorage.open()")}} 打开 `v1` cache，使用 {{domxref("Cache.put","Cache.put()")}} 将默认网络请求放入 cache 中，并使用 `return response.clone()` 返回默认网络请求的克隆副本。最后一个是必须的，因为 `put()` 使用响应主体。
-3.  如果此操作失败（例如，因为网络已关闭），则返回备用响应。
+1. 使用 {{domxref("CacheStorage.match","CacheStorage.match()")}} 检查 {{domxref("CacheStorage")}} 中是否存在匹配请求，如果存在，则使用它。
+2. 如果没有，使用 {{domxref("CacheStorage.open","CacheStorage.open()")}} 打开 `v1` cache，使用 {{domxref("Cache.put","Cache.put()")}} 将默认网络请求放入 cache 中，并使用 `return response.clone()` 返回默认网络请求的克隆副本。最后一个是必须的，因为 `put()` 使用响应主体。
+3. 如果此操作失败（例如，因为网络已关闭），则返回备用响应。
 
 ```js
 var cachedResponse = caches.match(event.request).catch(function() {
@@ -55,7 +56,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## See also
 

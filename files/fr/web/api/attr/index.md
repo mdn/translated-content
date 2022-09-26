@@ -7,6 +7,7 @@ tags:
   - DOM
 translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.
@@ -114,12 +115,8 @@ Les méthodes suivantes ont été dépréciées:
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                                                                                                            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("DOM WHATWG", "#interface-attr", "Attr")}}         | {{Spec2("DOM WHATWG")}} | Ajoute la propriété `ownerElement` property                                                                                                            |
-| {{SpecName("DOM4", "#interface-attr", "Attr")}}                 | {{Spec2("DOM4")}}         | A déplacé les `namespaceURI`, `prefix` et `localName` de {{domxref("Node")}} vers cet API et supprimé `ownerElement`, `schemaTypeInfo` et `isId`. |
-| {{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}} | {{Spec2("DOM3 Core")}}     | Définition initiale                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr")}}
+{{Compat}}

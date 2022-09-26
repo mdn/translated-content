@@ -1,11 +1,8 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - Promise
-  - Promise.prototype.catch()
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
+
 {{JSRef}}
 
 **catch()** 方法返回一个[Promise](/zh-CN/docs/Web/API/Promise)，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling `obj.catch(onRejected)` 内部 calls `obj.then(undefined, onRejected)`).

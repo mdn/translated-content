@@ -1,13 +1,8 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-tags:
-  - 响应状态码
-  - 响应码
-  - 客户端错误
-  - 状态码
-translation_of: Web/HTTP/Status/415
 ---
+
 {{HTTPSidebar}}
 
 **`415 Unsupported Media Type`** 是一种 HTTP 协议的错误状态代码，表示服务器由于不支持其有效载荷的格式，从而拒绝接受客户端的请求。

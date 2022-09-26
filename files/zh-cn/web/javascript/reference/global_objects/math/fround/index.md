@@ -1,8 +1,8 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

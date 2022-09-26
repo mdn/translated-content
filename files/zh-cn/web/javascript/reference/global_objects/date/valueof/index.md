@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - 原型
-  - 参考
-  - 方法
-  - 日期
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 方法返回一个 {{jsxref("Date")}} 对象的原始值。

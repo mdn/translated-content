@@ -2,6 +2,7 @@
 title: CanvasCaptureMediaStream
 slug: Web/API/CanvasCaptureMediaStreamTrack
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`CanvasCaptureMediaStream`** 接口表示 {{domxref("MediaStream")}} 对 {{domxref("HTMLCanvasElement")}} 元素进行实时画面捕捉的内容。
@@ -26,7 +27,7 @@ _此接口继承了其父类 {{domxref("MediaStream")}} 与 {{domxref("EventTarg
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasCaptureMediaStreamTrack")}}
+{{Compat}}
 
 ## 其他参考资料
 

@@ -1,9 +1,9 @@
 ---
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
-translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 original_slug: Web/JavaScript/Reference/Errors/不能添加属性
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息

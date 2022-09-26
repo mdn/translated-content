@@ -1,8 +1,8 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}
 
 **`line-break`** CSS 屬性能夠設定在中文、日文和韓文(CJK) 的文字中，遇到標點或符號時該如何斷行。
@@ -48,4 +48,4 @@ line-break: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.line-break")}}
+{{Compat}}

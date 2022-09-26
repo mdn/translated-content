@@ -2,6 +2,7 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
@@ -75,16 +76,20 @@ function drop(dropevent) {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600) }}
+{{ EmbedLiveSample('示例', 600) }}
 
-## 说明
+## 规范
 
 {{Specifications}}
 
-## 兼容性
+## 浏览器兼容性
 
-{{Compat("api.DataTransfer.getData")}}
+{{Compat}}
 
-## 参考
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

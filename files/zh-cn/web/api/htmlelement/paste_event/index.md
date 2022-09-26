@@ -2,6 +2,7 @@
 title: element.onpaste
 slug: Web/API/HTMLElement/paste_event
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -67,5 +68,5 @@ _functionRef_ 是一个函数名或者函数表达式。
 
 ### 相关链接
 
-- [`oncopy`](/zh-cn/DOM/element.oncopy)
-- [`oncut`](/zh-cn/DOM/element.oncut)
+- [`oncopy`](/zh-CN/DOM/element.oncopy)
+- [`oncut`](/zh-CN/DOM/element.oncut)

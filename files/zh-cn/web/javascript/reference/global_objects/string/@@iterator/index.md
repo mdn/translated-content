@@ -1,8 +1,8 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
+
 {{JSRef}}
 
 **`[@@iterator]()`** 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。
@@ -60,4 +60,4 @@ for (var v of string) {
 
 ## 相关链接
 
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

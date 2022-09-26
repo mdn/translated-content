@@ -1,8 +1,8 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
+
 {{JSRef}}
 
 **`Reflect.get()`**方法与从 对象 (`target[propertyKey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
@@ -32,7 +32,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 ## 描述
 
-`Reflect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法，但却是通过函数调用来实现。
+`Reflect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法，但却是通过函数调用来实现。
 
 ## 实例
 
@@ -65,4 +65,4 @@ Reflect.get(obj, "foo"); // "foobar"
 ## 相关链接
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

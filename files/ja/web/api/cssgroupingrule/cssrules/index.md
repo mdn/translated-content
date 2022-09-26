@@ -1,14 +1,6 @@
 ---
 title: CSSGroupingRule.cssRules
 slug: Web/API/CSSGroupingRule/cssRules
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSGroupingRule.cssRules
-translation_of: Web/API/CSSGroupingRule/cssRules
 ---
 {{ APIRef("CSSOM") }}
 

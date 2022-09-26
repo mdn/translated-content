@@ -1,14 +1,8 @@
 ---
 title: 右移 (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **右移操作符 (`>>`)** 是将一个操作数按指定移动的位数向右移动，右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。
@@ -32,6 +26,7 @@ a >> b
 ```js
      9 (十进制): 00000000000000000000000000001001 (二进制)
                   --------------------------------
+
 9 >> 2 (十进制): 00000000000000000000000000000010 (二进制) = 2 (十进制)
 ```
 
@@ -40,6 +35,7 @@ a >> b
 ```js
      -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
+
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
 ```
 

@@ -8,6 +8,7 @@ tags:
   - débogage
 translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'assertion est vraie, rien ne se produit.
@@ -38,15 +39,13 @@ console.assert(assertion, msg [, subst1, ..., substN]);
 
 Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#assert", "console.assert()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité entre les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Console.assert")}}
+{{Compat}}
 
 ## Voir aussi
 

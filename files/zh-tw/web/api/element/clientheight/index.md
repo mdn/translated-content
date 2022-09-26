@@ -1,11 +1,8 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-tags:
-  - API
-  - Reference
-translation_of: Web/API/Element/clientHeight
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.clientHeight`** 唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。
@@ -38,5 +35,5 @@ var h = element.clientHeight;
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/en-US/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/zh-TW/docs/Determining_the_dimensions_of_elements)
 - [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

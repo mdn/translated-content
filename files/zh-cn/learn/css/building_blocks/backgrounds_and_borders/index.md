@@ -1,8 +1,8 @@
 ---
 title: 背景与边框
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 在这节课中，我们来看看，使用 CSS 背景和边框来做一些，具有一些创造性的事情。渐变、背景图像和圆角，背景和边框的巧妙运用是 CSS 中许多样式问题的答案。
@@ -207,7 +207,7 @@ background-position: 10px 20px,  top right;
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}
 
-### 背景的可访问性考虑
+### 背景的无障碍考虑
 
 当你把文字放在背景图片或颜色上面时，你应该注意你有足够的对比度让文字对你的访客来说是清晰易读的。如果指定了一个图像，并且文本将被放置在该图像的顶部，您还应该指定一个`background-color` ，以便在图像未加载时文本也足够清晰。
 
@@ -320,4 +320,4 @@ background-position: 10px 20px,  top right;
 9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)
+12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

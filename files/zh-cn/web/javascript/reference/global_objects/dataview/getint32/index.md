@@ -1,8 +1,8 @@
 ---
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 ---
+
 {{JSRef}}
 
 **`getInt32()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 相对于起始位置偏移 n 个字节处开始，获取一个 32-bit 数 (长整型，4 个字节)。

@@ -1,8 +1,8 @@
 ---
 title: 删除作者表单
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
+
 此子文档显示，如何定义页面以删除`Author`对象。
 
 正如[表单设计](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所讨论的那样，我们的策略是，只允许删除“未被其他对象引用”的对象（在这种情况下，这意味着如果作者`Author`被一本书`Book`引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除`Author`对象之前，必须删除它们。

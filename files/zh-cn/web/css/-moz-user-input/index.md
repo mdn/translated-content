@@ -1,8 +1,8 @@
 ---
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
-translation_of: Web/CSS/-moz-user-input
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Summary
@@ -36,7 +36,7 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 - enabled
   - : The element accepts user input. For textboxes, this is the default behavior.
 - disabled
-  - : The element does not accept user input. However, this is not the same as setting {{XULAttr("disabled")}} to true, in that the element is drawn normally.
+  - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally.
 
 ### Formal syntax
 

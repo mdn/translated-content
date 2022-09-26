@@ -1,16 +1,8 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Map
-browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。

@@ -1,13 +1,8 @@
 ---
 title: 举个例子
 slug: Web/MathML/Examples
-tags:
-  - MathML
-  - 例子
-  - 初学者
-  - 指南
-translation_of: Web/MathML/Examples
 ---
+
 {{MathMLRef}}
 
 您可以在下面找到一些可以参考的例子，以帮助您了解如何使用 MathML 在 Web 内容中显示越来越复杂的数学概念。

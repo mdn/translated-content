@@ -1,11 +1,8 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - SVG
-  - SVG 属性
-translation_of: Web/SVG/Attribute/stroke-linecap
 ---
+
 « [SVG 属性 参照主页](/zh-CN/docs/Web/SVG/Attribute)
 
 `stroke-linecap` 属性制定了，在开放子路径被设置描边的情况下，用于开放自路径两端的形状。

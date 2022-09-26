@@ -1,8 +1,8 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-translation_of: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef()}}
 
 **`mix-blend-mode`** CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。
@@ -640,7 +640,7 @@ circle { mix-blend-mode: screen; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## 另见
 

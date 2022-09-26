@@ -1,13 +1,8 @@
 ---
 title: JavaScript 参考
 slug: Web/JavaScript/Reference
-tags:
-  - ECMAScript
-  - JS
-  - JavaScript
-  - 参考
-translation_of: Web/JavaScript/Reference
 ---
+
 {{JsSidebar}}在 MDN 的 JavaScript 分区中，这一部分被作为 Javascript 的资料库。阅读[关于该参考](/zh-CN/docs/Web/JavaScript/Reference/About)以了解更多。
 
 ## 内置

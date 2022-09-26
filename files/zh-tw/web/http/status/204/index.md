@@ -1,8 +1,8 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-translation_of: Web/HTTP/Status/204
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`204 No Content`** 成功狀態碼表明請求成功，但客戶端不需要更新目前的頁面。204 回應預設是可被快取的，此類回應中會包含 {{HTTPHeader("ETag")}} 標頭。
@@ -21,7 +21,7 @@ HTTP **`204 No Content`** 成功狀態碼表明請求成功，但客戶端不需
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.204")}}
+{{Compat}}
 
 ## 相容性事項
 

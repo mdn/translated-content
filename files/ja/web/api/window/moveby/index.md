@@ -1,15 +1,8 @@
 ---
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - リファレンス
-  - Window
-browser-compat: api.Window.moveBy
-translation_of: Web/API/Window/moveBy
 ---
+
 {{APIRef}}
 
 **`moveBy()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された量だけ移動します。

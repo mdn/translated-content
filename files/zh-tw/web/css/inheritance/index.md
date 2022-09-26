@@ -1,15 +1,15 @@
 ---
 title: 繼承
 slug: Web/CSS/inheritance
-translation_of: Web/CSS/inheritance
 ---
+
 ## 摘要
 
-每個 [CSS property definition](/en-US/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
+每個 [CSS property definition](/zh-TW/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
 
 ## 繼承屬性
 
-When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/en-US/docs/CSS/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/en-US/docs/CSS/initial_value) given in the property's summary.
+When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/zh-TW/docs/CSS/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/zh-TW/docs/CSS/initial_value) given in the property's summary.
 
 A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:
 
@@ -27,7 +27,7 @@ the words "emphasized text" will appear green, since the `em` element has inheri
 
 ## 非繼承屬性
 
-When no value for an **non-inherited property** (sometimes called a **reset property** in Mozilla code) has been specified on an element, the element gets the [initial value](/en-US/docs/CSS/initial_value) of that property (as specified in the property's summary).
+When no value for an **non-inherited property** (sometimes called a **reset property** in Mozilla code) has been specified on an element, the element gets the [initial value](/zh-TW/docs/CSS/initial_value) of that property (as specified in the property's summary).
 
 A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:
 
@@ -49,7 +49,7 @@ the words "emphasized text" will not have a border (since the initial value of {
 
 ## 參見
 
-- [CSS Reference](/en-US/docs/CSS/CSS_Reference)
+- [CSS Reference](/zh-TW/docs/CSS/CSS_Reference)
 - CSS 重要概念：
 
   - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)

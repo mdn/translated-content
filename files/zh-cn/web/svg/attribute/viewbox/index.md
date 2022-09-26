@@ -1,17 +1,13 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
-tags:
-  - SVG
-  - SVG Attribute
-  - viewBox
-translation_of: Web/SVG/Attribute/viewBox
 ---
-« [SVG 属性参考](/en/SVG/Attribute)
+
+« [SVG 属性参考](/zh-CN/SVG/Attribute)
 
 viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。
 
-viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `width` and `height`， 以空格或者逗号分隔开， 在用户空间中指定一个矩形区域映射到给定的元素，查看属性{{ SVGAttr("preserveAspectRatio") }}。
+viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `width` and `height`，以空格或者逗号分隔开，在用户空间中指定一个矩形区域映射到给定的元素，查看属性{{ SVGAttr("preserveAspectRatio") }}。
 
 不允许宽度和高度为负值，0 则禁用元素的呈现。
 
@@ -95,4 +91,4 @@ viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `widt
 
 ## See also
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/zh-CN/SVG/Tutorial/Positions)

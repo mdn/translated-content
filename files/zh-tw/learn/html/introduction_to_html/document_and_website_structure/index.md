@@ -1,8 +1,8 @@
 ---
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 {{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如“段落”或“圖片”），還可以使用區塊級元素（例如“標題欄”、“導覽選單”、“主內容列”）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
@@ -13,15 +13,15 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
       <th scope="row">預備知識:</th>
       <td>
         Basic HTML familiarity, as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >. How hyperlinks work, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >.
       </td>
@@ -40,7 +40,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 頁首:
   - : 通常橫跨於整個頁面頂部有一個大標題。這是網站的主要資訊，通常存在於所有網頁。
 - 導覽列:
-  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/en-US/docs/Learn/Accessibility)訪問特性，因為螢幕可以更清晰地分辨二者。
+  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/zh-TW/docs/Learn/Accessibility)訪問特性，因為螢幕可以更清晰地分辨二者。
 - 主要內容:
   - : 中心的大部分區域是當前網頁大多數的獨有內容，例如影片、文章、地圖、新聞等。這些內容是網站的一部分，且會因頁面而異。
 - 側邊攔:
@@ -60,7 +60,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 > **備註：** Colorblind people represent around [4% of the world population](http://www.color-blindness.com/2006/04/28/colorblind-population/) or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women are colorblind. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were [285 million such people in the world](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
-In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure).
+In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure).
 
 To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
 
@@ -164,13 +164,13 @@ Take some time to look over the code and understand it — the comments inside t
 
 ## HTML layout elements in more detail
 
-It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/en-US/docs/Web/HTML/Element). For now, these are the main definitions that you should try to understand:
+It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/zh-TW/docs/Web/HTML/Element). For now, these are the main definitions that you should try to understand:
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
 - {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/en-US/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
+- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
 - {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
-- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/en-US/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title)).
+- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title)).
 - {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
 - {{HTMLElement('footer')}} represents a group of end content for a page.
 
@@ -225,7 +225,7 @@ But his structure was bad, his semantics were sad<br>
 and his markup didn't read very well.</p>
 ```
 
-Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with `<br>` elements in the code, the markup renders like this:
+Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with `<br>` elements in the code, the markup renders like this:
 
 {{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
 
@@ -261,7 +261,7 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
+You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
 
 ## Summary
 
@@ -269,18 +269,18 @@ At this point you should have a better idea about how to structure a web page/si
 
 ## See also
 
-- [Using HTML sections and outlines](/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [Using HTML sections and outlines](/zh-TW/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## In this module
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

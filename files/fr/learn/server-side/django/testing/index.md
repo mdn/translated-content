@@ -13,6 +13,7 @@ tags:
   - unit tests
 translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des _tests unitaires_ sur votre site web en utilisant le framework de tests de Django.
@@ -65,7 +66,7 @@ Il y a beaucoup de genres, de niveaux et de classifications de tests, ainsi que 
 
 Tester un site web est une tâche complexe, car c'est une opération qui comporte plusieurs couches de logique : depuis la couche HTTP, la gestion des requêtes, les modèles d'interrogation de bases de données, jusqu'à la validation des formulaires, leur traitement et le rendu des templates.
 
-Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest "(in Python v3.5)"). Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) et des outils pour [utiliser d'autres frameworks de test](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks). Par exemple vous pouvez intégrer le célèbre framework [Selenium](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) pour simuler l'interaction entre un utilisateur et un vrai navigateur.
+Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest). Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) et des outils pour [utiliser d'autres frameworks de test](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks). Par exemple vous pouvez intégrer le célèbre framework [Selenium](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) pour simuler l'interaction entre un utilisateur et un vrai navigateur.
 
 Pour écrire un test, vous partez de l'une des classes de test de base fournies par Django (ou par _unittest_) ([SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)), et ensuite vous écrivez des méthodes séparées pour vérifier que telle fonctionnalité se comporte comme prévu (les tests utilisent des méthodes "assert" pour vérifier qu'une expression retourne `True` ou `False`, ou que deux valeurs sont égales, etc.). Quant vous commencez à lancer un test, le framework exécute les méthodes de test écrites dans vos classes dérivées. Les méthodes de test sont lancées de manière indépendante, avec en commun un réglage initial (_setUp_) et/ou un comportement de fin (_tearDown_) définis dans la classe, comme indiqué ci-dessous.
 
@@ -86,7 +87,7 @@ class YourTestClass(TestCase):
         self.assertTrue(False)
 ```
 
-La meilleure classe de base pour la plupart des tests est [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase). Cette classe de test crée une base de données vide avant que ses tests ne soient lancés, et lance toutes les fonctions de test dans sa propre transaction. La classe possède aussi un [Client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client "django.test.Client") de test, que vous pouvez utiliser pour simuler l'interaction entre un utilisateur et le code au niveau de la vue. Dans les sections suivantes, nous allons nous concentrer sur les tests unitaires, créés en utilisant la classe de base [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase).
+La meilleure classe de base pour la plupart des tests est [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase). Cette classe de test crée une base de données vide avant que ses tests ne soient lancés, et lance toutes les fonctions de test dans sa propre transaction. La classe possède aussi un [Client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client) de test, que vous pouvez utiliser pour simuler l'interaction entre un utilisateur et le code au niveau de la vue. Dans les sections suivantes, nous allons nous concentrer sur les tests unitaires, créés en utilisant la classe de base [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase).
 
 > **Note :** La classe [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase) est très commode, mais peut avoir pour effet de ralentir certains tests plus que nécessaire (tous les tests n'ont pas besoin de créer leur propre base de données ni de simuler une interaction au niveau de la vue). Une fois que vous serez familiarisé avec ce que vous pouvez faire avec cette classe, vous voudrez sans doute remplacer certains de vos tests avec d'autres classes plus simples parmi celles qui sont disponibles.
 
@@ -122,7 +123,7 @@ Avec cela en tête, commençons à voir comment définir et lancer des tests.
 
 Avant d'entrer dans le détail de "que tester", voyons d'abord brièvement _où_ et _comment_ les tests sont définis.
 
-Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)") du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
+Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery) du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
 
 ```
 catalog/
@@ -229,6 +230,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)
@@ -937,7 +939,7 @@ Dans ce tutoriel, nous vous avons montré comment écrire et lancer des tests po
 
 Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre merveilleux (et entièrement testé !) site web Django.
 
-## À voir également
+## Voir aussi
 
 - [Writing and running tests](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)

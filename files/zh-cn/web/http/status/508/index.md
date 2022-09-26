@@ -1,13 +1,8 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - '508'
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/508
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议的 **`508 Loop Detected`** 状态码可以在 WebDAV 协议（基于 Web 的分布式创作和版本控制）中给出。

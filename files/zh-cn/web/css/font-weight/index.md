@@ -1,11 +1,8 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - CSS Fonts
-translation_of: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -288,4 +285,4 @@ span {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-weight")}}
+{{Compat}}

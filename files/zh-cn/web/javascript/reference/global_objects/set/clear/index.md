@@ -1,43 +1,38 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - set
-  - 原型
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
-**`clear()`** 方法用来清空一个 `Set` 对象中的所有元素。
+**`clear()`** 方法移除 `Set` 对象中所有元素。
+
+{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
 ## 语法
 
-```plain
-mySet.clear();
+```js-nolint
+clear()
 ```
 
 ### 返回值
 
-{{jsxref("undefined")}}.
+{{jsxref("undefined")}}。
 
 ## 示例
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
-mySet.size;       // 2
-mySet.has("foo"); // true
+console.log(mySet.size);       // 2
+console.log(mySet.has("foo")); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has("bar")  // false
+console.log(mySet.size);       // 0
+console.log(mySet.has("foo")); // false
 ```
 
 ## 规范

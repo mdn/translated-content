@@ -1,12 +1,8 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Math.sign()
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef}}
 
 **`Math.sign()`** 函数返回一个数字的符号，指示数字是正数，负数还是零。

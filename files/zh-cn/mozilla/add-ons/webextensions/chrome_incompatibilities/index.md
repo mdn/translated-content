@@ -1,10 +1,8 @@
 ---
 title: Chrome 不兼容情况
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 使用 WebExtension API 构建的扩展旨在与 Chrome 和 Opera 扩展兼容：尽可能为这些浏览器编写的扩展应该在 Firefox 上运行，并且只需进行极少的更改。
@@ -44,7 +42,7 @@ chrome.cookies.set(
 );
 ```
 
-在 WebExtensions 中应使用 [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 来访问等价的 API：
+在 WebExtensions 中应使用 [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 来访问等价的 API：
 
 ```js
 function logCookie(c) {
@@ -69,23 +67,23 @@ setCookie.then(logCookie, logError);
 
 ### 部分受支持的 API
 
-页面 [JavaScript API 的浏览器支持情况](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 包含了介绍受 Firefox 任意程度支持的 API 的兼容性表格。若对 API 的支持存在须要注意的事项，并标有星号“\*”，且在 API 的参考页面会介绍注意事项。
+页面 [JavaScript API 的浏览器支持情况](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 包含了介绍受 Firefox 任意程度支持的 API 的兼容性表格。若对 API 的支持存在须要注意的事项，并标有星号“\*”，且在 API 的参考页面会介绍注意事项。
 
 这些表格由 [在 GitHub 上以 JSON 文件存储的兼容性数据](https://github.com/mdn/browser-compat-data)生成。
 
 本节剩余部分介绍了表格未涵盖的兼容性问题。
 
-#### [notifications](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
+#### [notifications](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
 
-- For `notifications.create(), with the "basic"` [`type`](/en-US/Add-ons/WebExtensions/API/notifications/TemplateType), `iconUrl` is optional in Firefox. It is required in Chrome.
+- For `notifications.create(), with the "basic"` [`type`](/zh-CN/Add-ons/WebExtensions/API/notifications/TemplateType), `iconUrl` is optional in Firefox. It is required in Chrome.
 - Notifications are cleared immediately when the user clicks on them. This is not the case in Chrome.
 - If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all. Waiting to make subsequent calls until within the `chrome.notifications.create() callback` function is not a sufficiently long delay to prevent this from happening.
 
-#### [proxy](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+#### [proxy](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
 - This API is completely different to the design of the Chrome API. With Chrome's API an extension can register a PAC file, but can also define explicit proxying rules. Since this is also possible using the extended PAC files, this API only supports the PAC file approach. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
-#### [tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+#### [tabs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
 - In Firefox, relative URLs passed into `tabs.executeScript()` or `tabs.insertCSS()` are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:
 
@@ -95,13 +93,13 @@ setCookie.then(logCookie, logError);
 
 - 在 Firefox 中，用 `tabs.query()` 根据 URL 查询标签页需要有`"tabs"` 权限。在 Chrome 中，没有`"tabs"`权限也可以，但结果将限制在 URL 匹配主机权限的标签页。
 
-#### [webRequest](/en-US/Add-ons/WebExtensions/API/webRequest)
+#### [webRequest](/zh-CN/Add-ons/WebExtensions/API/webRequest)
 
 - 在 Firefx 中，只有原网址使用 `http:` `或 https:` 协议时所请求的重定向才有效。
 - In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
-- In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
+- In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
 
-#### [windows](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+#### [windows](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/windows)
 
 - Firefox 中 `onFocusChanged` 对于指定的焦点变化将触发多次。
 
@@ -113,7 +111,7 @@ Firefox 解析 CSS 中嵌入的 URL 时，若 URL 时相对地址，将是相对
 
 #### 更多不兼容情况
 
-Firefox 不支持从后台标签页使用 `alert()、confirm()` 或 [`prompt()`](/en-US/docs/Web/API/Window/prompt)。
+Firefox 不支持从后台标签页使用 `alert()、confirm()` 或 [`prompt()`](/zh-CN/docs/Web/API/Window/prompt)。
 
 #### web_accessible_resources
 
@@ -127,11 +125,11 @@ Firefox 以不同方式进行实现。它使用一个随机的 UUID，在每个 
 
 #### Content script requests happen in the context of extension, not content page
 
-In Chrome when request is called (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) to relative URL like `/api` from content script, it will be sent to `https://example.com/api`. In Firefox you have to provide absolute URLs.
+In Chrome when request is called (for example, using [`fetch()`](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)) to relative URL like `/api` from content script, it will be sent to `https://example.com/api`. In Firefox you have to provide absolute URLs.
 
 ## manifest.json 键
 
-The main [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "\*" and in the reference page for the key, the caveats are explained.
+The main [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "\*" and in the reference page for the key, the caveats are explained.
 
 These tables are generated from compatibility data stored as [JSON files in GitHub](https://github.com/mdn/browser-compat-data).
 

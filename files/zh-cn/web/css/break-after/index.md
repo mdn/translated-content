@@ -1,12 +1,8 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 **`break-after`** [CSS](/zh-CN/docs/CSS) 属性描述在生成的盒子之后的页面，列或区域中断行为（换句话说，如何以及是否中断）。如果没有生成的盒子，则该属性将被忽略。
@@ -44,8 +40,8 @@ break-after: unset;
 
 以下规则被用于判断中断是否必要：
 
-1.  如果上述三个属性中，如果任何一个的值属于“强制中断”值，那么这个属性将被优先应用，此处所称“强制中断”的值为： `always`、 `left`、 `right`、 `page`、 `column` 和 `region`。If several of the concerned values is such a break, the one of the element that appears the latest in the flow is taken (that is the {{cssxref("break-before")}} value has precedence over the `break-after` value, which itself has precedence over the {{cssxref("break-inside")}} value).
-2.  If any of the three concerned values is an _avoid break value_, that is `avoid`, `avoid-page`, `avoid-region`, `avoid-column`, no such break will be applied at that point.
+1. 如果上述三个属性中，如果任何一个的值属于“强制中断”值，那么这个属性将被优先应用，此处所称“强制中断”的值为： `always`、 `left`、 `right`、 `page`、 `column` 和 `region`。If several of the concerned values is such a break, the one of the element that appears the latest in the flow is taken (that is the {{cssxref("break-before")}} value has precedence over the `break-after` value, which itself has precedence over the {{cssxref("break-inside")}} value).
+2. If any of the three concerned values is an _avoid break value_, that is `avoid`, `avoid-page`, `avoid-region`, `avoid-column`, no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 

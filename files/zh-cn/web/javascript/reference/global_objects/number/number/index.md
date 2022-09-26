@@ -1,8 +1,8 @@
 ---
 title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
+
 {{JSRef}}
 
 **`Number()` 构造函数创建一个** {{jsxref("Number")}} 对象。

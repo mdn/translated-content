@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/computed_value
 original_slug: Web/CSS/Valeur_calculée
 ---
+
 {{CSSRef}}
 
 La **valeur calculée** d'une propriété CSS est calculée à partir de [la valeur définie](/fr/docs/Web/CSS/Valeur_spécifiée) :

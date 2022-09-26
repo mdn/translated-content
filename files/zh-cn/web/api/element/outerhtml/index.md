@@ -2,6 +2,7 @@
 title: element.outerHTML
 slug: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 {{ domxref("element") }} DOM 接口的`outerHTML`属性获取描述元素（包括其后代）的序列化 HTML 片段。它也可以设置为用从给定字符串解析的节点替换元素。
@@ -73,7 +74,7 @@ console.log(container.firstChild.nodeName);
 
 ## 注意事项
 
-如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-cn/DOM/DOMException) 。例如：
+如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/DOM/DOMException) 。例如：
 
 ```js
 document.documentElement.outerHTML = "test";
@@ -85,11 +86,11 @@ document.documentElement.outerHTML = "test";
 ```js
 let p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName);
-// 显示: "P"
+// 显示："P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 
 console.log(p.nodeName);
-// 仍然为: "P";
+// 仍然为："P";
 ```
 
 ## 规范
@@ -98,7 +99,7 @@ console.log(p.nodeName);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.outerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

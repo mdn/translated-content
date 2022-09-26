@@ -1,12 +1,8 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - JavaScript
-  - 函数
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
+
 {{JSRef}}
 
 **`call()`** 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。
@@ -24,7 +20,7 @@ function.call(thisArg, arg1, arg2, ...)
 ### 参数
 
 - `thisArg`
-  - : 可选的。在 _`function`_ 函数运行时使用的 `this` 值。请注意，`this`可能不是该方法看到的实际值：如果这个函数处于[非严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，则指定为 `null` 或 `undefined` 时会自动替换为指向全局对象，原始值会被包装。
+  - : 可选的。在 _`function`_ 函数运行时使用的 `this` 值。请注意，`this`可能不是该方法看到的实际值：如果这个函数处于[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，则指定为 `null` 或 `undefined` 时会自动替换为指向全局对象，原始值会被包装。
 - `arg1, arg2, ...`
   - : 指定的参数列表。
 

@@ -1,8 +1,8 @@
 ---
 title: CSS 层叠
 slug: Web/CSS/Cascade
-translation_of: Web/CSS/Cascade
 ---
+
 {{ CSSRef() }}
 
 层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。
@@ -43,7 +43,7 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
     | 7   | 用户代理                   | `!important` |
     | 8   | css 过渡 (css transitions) |              |
 
-3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/en-US/docs/CSS/Specificity)。
+3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/CSS/Specificity)。
 
 ## 重置样式
 
@@ -53,7 +53,7 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 
 ## CSS 动画与层叠
 
-[CSS 动画](/en-US/docs/CSS/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
+[CSS 动画](/zh-CN/docs/CSS/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
 
 当有多个满足条件的关键帧时，在最重要的文档里面最后定义的关键帧会被选中，而不会是将它们组合在一起。
 

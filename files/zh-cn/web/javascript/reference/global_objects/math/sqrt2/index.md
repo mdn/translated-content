@@ -1,8 +1,8 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasGradient
 ---
+
 {{APIRef("Canvas API")}}
 
 L'interface **`CanvasGradient`**  représente un objet opaque décrivant un dégradé. Il est retourné par les méthodes {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} ou {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.
@@ -27,15 +28,13 @@ _Il n'y a pas de méthode héritée._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasGradient")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Créateur dans  {{domxref("CanvasRenderingContext2D")}}.
 - L'élément {{HTMLElement("canvas")}} et son interface associée {{domxref("HTMLCanvasElement")}}.

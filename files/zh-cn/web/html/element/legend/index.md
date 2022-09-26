@@ -1,15 +1,8 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - HTML
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/legend
 ---
+
 {{HTMLRef}}
 
 **HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
@@ -19,12 +12,12 @@ translation_of: Web/HTML/Element/legend
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">语句内容（Phrasing content</a>）。</td>
   </tr>
   <tr>
    <th scope="row">标签忽略</th>

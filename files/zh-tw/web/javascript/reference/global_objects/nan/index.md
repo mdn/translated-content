@@ -1,8 +1,8 @@
 ---
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
-translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 全域屬性 **`NaN`** 表示「非數值」（Not-A-Number）的數值。
@@ -49,7 +49,7 @@ valueIsNaN(Number.NaN); // true
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.NaN")}}
+{{Compat}}
 
 ## 參見
 

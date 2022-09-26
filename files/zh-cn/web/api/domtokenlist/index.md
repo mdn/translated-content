@@ -2,6 +2,7 @@
 title: DOMTokenList
 slug: Web/API/DOMTokenList
 ---
+
 {{APIRef}}
 
 **`DOMTokenList`** 接口表示一组空格分隔的标记（tokens）。如由 {{ domxref("Element.classList") }}、{{domxref("HTMLLinkElement.relList")}}、{{domxref("HTMLAnchorElement.relList")}} 或 {{domxref("HTMLAreaElement.relList")}} 返回的一组值。它和 JavaScript {{jsxref("Array")}} 对象一样，索引从 0 开始。`DOMTokenList` 总是区分大小写（case-sensitive）。

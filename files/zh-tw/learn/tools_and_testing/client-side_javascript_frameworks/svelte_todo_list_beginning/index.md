@@ -2,22 +2,8 @@
 title: 開始寫我們的Svelte待辦清單應用程式
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - client-side
-  - state
-  - 初學者
-  - 元件
-  - 框架
-  - 學習
-  - 客戶端
-  - 狀態
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

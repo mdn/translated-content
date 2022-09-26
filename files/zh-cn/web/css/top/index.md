@@ -1,8 +1,8 @@
 ---
 title: top
 slug: Web/CSS/top
-translation_of: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 **`top`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素的上外边距边界与其包含块上边界之间的偏移，非定位元素设置此属性无效。

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_expression_closures
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

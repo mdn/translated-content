@@ -1,8 +1,8 @@
 ---
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
+
 {{JSRef}}
 
 Creates a JavaScript **`Date`** instance that represents a single moment in time in a platform-independent format. `Date` objects contain a `Number` that represents milliseconds since 1 January 1970 UTC.

@@ -1,13 +1,8 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - 实验的
-  - 火狐
-  - 特性
-  - 设置
-translation_of: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。实验性特性，例如所提议的可用的 Web 平台标准的实现。这个页面列出了 Firefox Nightly 中的一些新特性和启用方法等信息。在发布这些功能之前，你可以测试 Web 站点和应用程序，并确保一切都能与最新的 Web 技术功能协同工作。
@@ -18,7 +13,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
 
 | 功能                                                                                                                                                                                   | Firefox Nightly                                      | Firefox 开发者版                 | Firefox 测试版                   | Firefox 发行版 | Preference                   |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------- | -------------------------------- | -------------- | ---------------------------- |
-| **日期和时间输入**{{HTMLElement("input")}}为 [日期](/en-US/docs/Web/HTML/Element/input/date) 和 [时间](/en-US/docs/Web/HTML/Element/input/time) 相关的输入类型提供的新用户界面 | 开启 <sub>(从 51 开始支持，从 55 开始默认开启)</sub> | 开启 <sub>(从 51 开始支持)</sub> | 关闭 <sub>(从 51 开始支持)</sub> | ---            | `dom.forms.datetime`         |
+| **日期和时间输入**{{HTMLElement("input")}}为 [日期](/zh-CN/docs/Web/HTML/Element/input/date) 和 [时间](/zh-CN/docs/Web/HTML/Element/input/time) 相关的输入类型提供的新用户界面 | 开启 <sub>(从 51 开始支持，从 55 开始默认开启)</sub> | 开启 <sub>(从 51 开始支持)</sub> | 关闭 <sub>(从 51 开始支持)</sub> | ---            | `dom.forms.datetime`         |
 | **{{HTMLElement("dialog")}}** 包含与之交互的 DOM 元素的对话框元素。Implementation of modal dialogs and accessibility still missing.                                             | 关闭 <sub>(从 53 开始支持)</sub>                     | 关闭 <sub>(从 53 开始支持)</sub> | ---                              | ---            | `dom.dialog_element.enabled` |
 
 ## CSS
@@ -74,7 +69,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>Positioned CSS Masks</strong><br />A subset of CSS Masks that
         includes
-        <a href="/en-US/docs/Web/CSS/CSS_Masks"
+        <a href="/zh-CN/docs/Web/CSS/CSS_Masks"
           >longhand properties of CSS Masks</a
         >, as well as a change in the shorthand property
       </td>
@@ -205,7 +200,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>The <code>frames()</code> timing function</strong><br />See
         <a
-          href="/en-US/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
+          href="/zh-CN/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
           >The frames() class of timing-functions</a
         >
         for more details.
@@ -221,14 +216,14 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
 
 ## JavaScript
 
-See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) for implemented features of ECMAScript 2016 and later, that are not experimental and thus available without preferences in Firefox Release.
+See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) for implemented features of ECMAScript 2016 and later, that are not experimental and thus available without preferences in Firefox Release.
 
 | Feature                                                                                                                                                                                                                                                                                                                                                                   | Firefox Nightly | Firefox Developer Edition | Firefox Beta | Firefox Release | Preference                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------- | ------------ | --------------- | --------------------------- |
 | **Additions to the `ArrayBuffer` object** Adds the {{jsxref("ArrayBuffer.transfer()")}} that returns a new `ArrayBuffer` whose contents have been taken from the `oldBuffer`'s data ([spec](https://gist.github.com/lukewagner/2735af7eea411e18cf20)).                                                                                                        | 36              | Disabled                  | Disabled     | Disabled        | None                        |
 | **TypedObject objects** ([spec](https://github.com/dslomov-chromium/typed-objects-es7))                                                                                                                                                                                                                                                                                   | Enabled         | Disabled                  | Disabled     | Disabled        | None                        |
-| [SIMD](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SIMD) ([specification and polyfill](https://github.com/johnmccutchan/ecmascript_simd))                                                                                                                                                                                                                         | Enabled         | Disabled                  | Disabled     | Disabled        | None                        |
-| **ECMAScript modules** Allows you to use native ECMAScript modules, for example defining modules with `<script type="module">`, defining fallback scripts with `<script nomodule>`, and [importing](/en-US/docs/Web/JavaScript/Reference/Statements/import) code features that have been [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) from modules. | Disabled        | Disabled                  | Disabled     | Disabled        | `dom.moduleScripts.enabled` |
+| [SIMD](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SIMD) ([specification and polyfill](https://github.com/johnmccutchan/ecmascript_simd))                                                                                                                                                                                                                         | Enabled         | Disabled                  | Disabled     | Disabled        | None                        |
+| **ECMAScript modules** Allows you to use native ECMAScript modules, for example defining modules with `<script type="module">`, defining fallback scripts with `<script nomodule>`, and [importing](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) code features that have been [exported](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) from modules. | Disabled        | Disabled                  | Disabled     | Disabled        | `dom.moduleScripts.enabled` |
 
 ## APIs
 
@@ -237,8 +232,8 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
 | Feature                                                                                                                                                                                                                                                                                                                                                        | Firefox Nightly                          | Firefox Developer Edition                | Firefox Beta                                                    | Firefox Release                                                 | Preference                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------- |
 | **`WEBGL_debug_renderer_info` extension** The {{domxref("WEBGL_debug_renderer_info")}} extension allows you to transmit information useful to help debugging problems to the server.                                                                                                                                                               | 42                                       | 42                                       | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | `webgl.enable-debug-renderer-info` |
-| **OffscreenCanvas** The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.                                                                                                                                   | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub>                        | Disabled <sub>(available since 44)</sub>                        | `gfx.offscreencanvas.enabled`      |
-| **[Hit regions](/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)** Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools. | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub>                        | Disabled <sub>(available since 30)</sub>                        | `canvas.hitregions.enabled`        |
+| **OffscreenCanvas** The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/zh-CN/docs/Web/API/Web_Workers_API) contexts.                                                                                                                                   | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub>                        | Disabled <sub>(available since 44)</sub>                        | `gfx.offscreencanvas.enabled`      |
+| **[Hit regions](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)** Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools. | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub>                        | Disabled <sub>(available since 30)</sub>                        | `canvas.hitregions.enabled`        |
 
 ### DOM
 
@@ -257,7 +252,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>Mac 上的 WebVR API 1.1</strong><br /><a
-          href="/en-US/docs/Web/API/WebVR_API"
+          href="/zh-CN/docs/Web/API/WebVR_API"
           >WebVR API</a
         >
         允许你控制并和使用虚拟现实设备。
@@ -271,7 +266,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>游戏手柄扩展</strong><br /><a
-          href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
+          href="/zh-CN/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
           >The Gamepad Extensions</a
         >
         provide access to additional functionality such as pose information in
@@ -289,7 +284,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Experimental fetch controller/signal/observer interfaces</strong
         ><br />Also known as "cancellable fetch",
         <a
-          href="/en-US/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
+          href="/zh-CN/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
           >these interfaces</a
         >
         contain functionality to allow fetch request operations to be observed
@@ -403,7 +398,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Performance Observer API</strong><br />The
         {{domxref("PerformanceObserver")}} interface is used to
         <em>observe</em> performance measurement events and be notified of new
-        <a href="/en-US/docs/Web/API/PerformanceEntry">performance entries</a>
+        <a href="/zh-CN/docs/Web/API/PerformanceEntry">performance entries</a>
         as they are recorded in the browser's <em>performance timeline</em>.
       </td>
       <td>49</td>
@@ -415,7 +410,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>WebVTT Regions API</strong><br /><a
-          href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format"
+          href="/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format"
           >WebVTT</a
         >
         regions are parts of the video viewport that provide a rendering area
@@ -511,7 +506,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Web_Animations_API"
+          ><a href="/zh-CN/docs/Web/API/Web_Animations_API"
             >Web Animations API: KeyframeEffect and KeyframeEffectReadOnly</a
           ></strong
         ><br />The
@@ -546,7 +541,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Payment_Request_API"
+          ><a href="/zh-CN/docs/Web/API/Payment_Request_API"
             >Payment Request API</a
           ></strong
         ><br />为网络支付提供的一个 API。
@@ -636,7 +631,7 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
       <td>
         <strong>Layout side panel</strong><br />The Layout side panel allows to
         inspect and manage different CSS layout types like
-        <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
+        <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
       </td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
@@ -651,11 +646,11 @@ See also [ECMAScript Next support](/en-US/docs/Web/JavaScript/New_in_JavaScript/
 
 | Feature                                                                                                                                                                                                                                                                                                                                                                                                                                     | Firefox Nightly                      | Firefox Developer Edition            | Firefox Beta                         | Firefox Release                      | Preference                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | --------------------------------- |
-| [**添加到主屏幕**](https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992) The `icons`, `name`, `short_name`, and `theme_color` fields of the [Web App Manifest](/en-US/docs/Web/Manifest) (if present) can now be as the source of the homescreen/apps window icons, apps window title, homescreen icon title, and apps window color (respectively) for "Add to home screen" (Firefox Mobile only). | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 52)</sub> | `manifest.install.enabled`        |
+| [**添加到主屏幕**](https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992) The `icons`, `name`, `short_name`, and `theme_color` fields of the [Web App Manifest](/zh-CN/docs/Web/Manifest) (if present) can now be as the source of the homescreen/apps window icons, apps window title, homescreen icon title, and apps window color (respectively) for "Add to home screen" (Firefox Mobile only). | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 53)</sub> | 关闭 <sub>(available since 52)</sub> | `manifest.install.enabled`        |
 | **TLS 1.3**                                                                                                                                                                                                                                                                                                                                                                                                                                 | 开启                                 | 开启                                 | 关闭                                 | 关闭                                 | `security.tls.version.max` to `4` |
 
 ## See also
 
-- [Firefox 开发者发行日志](/en-US/docs/Mozilla/Firefox/Releases)
+- [Firefox 开发者发行日志](/zh-CN/docs/Mozilla/Firefox/Releases)
 - [Firefox Nightly](https://nightly.mozilla.org/)
 - [Firefox 开发者版本](https://www.mozilla.org/en-US/firefox/developer/)

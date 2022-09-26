@@ -1,8 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 ## 摘要
@@ -80,7 +80,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-origin")}}
+{{Compat}}
 
 ## 相关文献
 

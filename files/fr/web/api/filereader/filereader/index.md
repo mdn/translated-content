@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/FileReader
 ---
+
 **`FileReader()`**  est un constructeur qui permet de créer un nouvel objet FileReader.
 
 Pour plus de details à propos de `FileReader`, visiter [Using files from web applications](/fr/docs/Web/API/File/Using_files_from_web_applications).
@@ -36,11 +37,9 @@ function printFile(file) {
 }
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristique                  | Status                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Définition Initiale |
+{{Specifications}}
 
 ## Voir aussi
 

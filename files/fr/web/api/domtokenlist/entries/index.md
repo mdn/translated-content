@@ -3,6 +3,7 @@ title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
 translation_of: Web/API/DOMTokenList/entries
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet. Les valeurs sont des objets {{domxref("DOMString")}} (_chaînes de caractères_), chacun représentant une seule marque.
@@ -45,13 +46,11 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-domtokenlist','entries() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

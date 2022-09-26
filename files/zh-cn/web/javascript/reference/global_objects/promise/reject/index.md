@@ -1,13 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECAMScript 2015
-  - JavaScript
-  - Method
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject()`** 方法返回一个带有拒绝原因的 `Promise` 对象。

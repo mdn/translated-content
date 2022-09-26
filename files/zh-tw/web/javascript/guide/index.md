@@ -1,8 +1,8 @@
 ---
 title: JavaScript 指南
 slug: Web/JavaScript/Guide
-translation_of: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 JavaScript 指南會讓您了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaScript) 並給您這個語言的概觀。若您需要語言功能詳細資訊請參考 [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/Reference)。

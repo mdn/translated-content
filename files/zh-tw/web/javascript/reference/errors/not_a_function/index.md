@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
-translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 訊息

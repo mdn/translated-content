@@ -1,15 +1,15 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
-{{AddonSidebar()}}向你的扩展或其他扩展发送单条消息。如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用`runtime.sendMessage的页面。`
+
+{{AddonSidebar()}}向你的扩展或其他扩展发送单条消息。如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用`runtime.sendMessage` 的页面。
 
 如果发送给其他扩展，则将参数 `extensionId` 设置为其他扩展的 ID。其他扩展的 {{WebExtAPIRef('runtime.onMessageExternal')}} 将会被触发。
 
 此接口不能给 content script 发消息，如果要给 content script 发消息，请使用 {{WebExtAPIRef('tabs.sendMessage')}}。
 
-这是个异步方法，将返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是个异步方法，将返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 Syntax
 
@@ -24,7 +24,7 @@ var sending = browser.runtime.sendMessage(
 ### 参数
 
 - `extensionId`{{optional_inline}}
-  - : `string`. 若你想要发给不同的扩展，这里传入接收方的扩展 ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) key in manifest.json, then `extensionId` should have this value. Otherwise it should be have the ID that was generated for the intended recipient. 若此省略此参数，则发送给自己的扩展。
+  - : `string`. 若你想要发给不同的扩展，这里传入接收方的扩展 ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) key in manifest.json, then `extensionId` should have this value. Otherwise it should be have the ID that was generated for the intended recipient. 若此省略此参数，则发送给自己的扩展。
 - `message`
   - : `any`. 任何可以序列化成 JSON 的东西。
 - `options`{{optional_inline}}
@@ -54,11 +54,11 @@ var sending = browser.runtime.sendMessage(
 
 ### Return value
 
-返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。若接收方响应，Promise 将会变为 fulfilled 并且返回接收方响应的 JSON 对象（数字、字符串、数组、true/false 都是合法的 JSON 对象）。否则，Promise 会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise 将会变为 rejected 并返回一个错误消息。
+返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。若接收方响应，Promise 将会变为 fulfilled 并且返回接收方响应的 JSON 对象（数字、字符串、数组、true/false 都是合法的 JSON 对象）。否则，Promise 会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise 将会变为 rejected 并返回一个错误消息。
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.sendMessage")}}
+{{Compat}}
 
 ## Examples
 
@@ -105,7 +105,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -132,4 +133,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,13 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS Font
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS 属性 `font-family` 允许您通过给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。
@@ -46,7 +41,7 @@ font-family: initial;
 font-family: unset;
 ```
 
-属性 `font-family` 列举一个或多个由逗号隔开的字体族。每个字体族由 [`<family-name>`](#<family-name>) 或 [`<generic-name>`](#<generic-name>) 值指定。
+属性 `font-family` 列举一个或多个由逗号隔开的字体族。每个字体族由 [`<family-name>`](#family-name) 或 [`<generic-name>`](#generic-name) 值指定。
 
 下面的例子列举了两个字体族，其中第一个是 `<family-name>`，第二个是 `<generic-name>`：
 
@@ -189,4 +184,4 @@ font-family: Hawaii 5-0, sans-serif;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

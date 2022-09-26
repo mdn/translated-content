@@ -1,11 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 **break 语句**中止当前循环，{{jsxref("Statements/switch", "switch")}}语句或{{jsxref("Statements/label", "label")}} 语句，并把程序控制流转到紧接着被中止语句后面的语句。

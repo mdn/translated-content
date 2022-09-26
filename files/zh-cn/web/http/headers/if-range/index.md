@@ -1,8 +1,8 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-translation_of: Web/HTTP/Headers/If-Range
 ---
+
 {{HTTPSidebar}}
 
 **`If-Range`** HTTP 请求头字段用来使得 **`Range`** 头字段在一定条件下起作用：当字段值中的条件得到满足时，**`Range`** 头字段才会起作用，同时服务器回复{{HTTPStatus("206")}} 部分内容状态码，以及**`Range`** 头字段请求的相应部分；如果字段值中的条件没有得到满足，服务器将会返回 {{HTTPStatus("200")}} `OK` 状态码，并返回完整的请求资源。
@@ -68,5 +68,5 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("206")}} Partial Content
 - [HTTP Conditional Requests](/zh-CN/docs/Web/HTTP/Conditional_requests)

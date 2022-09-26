@@ -1,11 +1,8 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 当指定条件为真，**if 语句**会执行一段语句。如果条件为假，则执行另一段语句。

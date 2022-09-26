@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`setMonth()`** 方法根据本地时间为一个日期对象设置月份。

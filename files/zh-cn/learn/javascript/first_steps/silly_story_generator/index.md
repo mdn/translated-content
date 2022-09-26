@@ -1,20 +1,8 @@
 ---
 title: 笑话生成器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - JavaScript
-  - 初学者
-  - 变量
-  - 字符串
-  - 学习
-  - 操作符
-  - 数字
-  - 数组
-  - 测试
-  - 脚本代码
-  - 课程设计
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！
@@ -208,12 +196,12 @@ function result() {
 
 ## 本章目录
 
-- [JavaScript 是什么？](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
+- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
+- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
+- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
+- [课程评估：笑话机](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

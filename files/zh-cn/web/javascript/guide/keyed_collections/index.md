@@ -1,14 +1,8 @@
 ---
 title: 带键的集合
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Guide
-  - JavaScript
-  - Map
-  - set
-  - 集合
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。
@@ -46,7 +40,7 @@ sayings.size; // 0
 
 一般地，{{jsxref("Object", "objects", "", 1)}}会被用于将字符串类型映射到数值。`Object`允许设置键值对、根据键获取值、删除键、检测某个键是否存在。而`Map`具有更多的优势。
 
-- `Object`的键均为`Strings`类型，在`Map`里键可以是任意类型。
+- `Object` 的键均为 `String` 类型，在 `Map` 里键可以是任意类型。
 - 必须手动计算`Object`的尺寸，但是可以很容易地获取使用`Map`的尺寸。
 - `Map`的遍历遵循元素的插入顺序。
 - `Object`有原型，所以映射中有一些缺省的键。（可以用 `map = Object.create(null) 回避`）。

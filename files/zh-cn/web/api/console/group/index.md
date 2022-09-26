@@ -2,11 +2,12 @@
 title: console.group
 slug: Web/API/Console/group
 ---
+
 {{ ApiRef() }}
 
 ## 概述
 
-在 [Web 控制台](/zh-cn/Tools/Web_Console)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用{{ domxref("console.groupEnd()") }}之后，当前分组结束。
+在 [Web 控制台](/zh-CN/Tools/Web_Console)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用{{ domxref("console.groupEnd()") }}之后，当前分组结束。
 
 ## 语法
 
@@ -20,7 +21,7 @@ console.group();
 
 ## 备注
 
-在文档{{ domxref("console") }}中查看[在控制台中使用分组](/zh-cn/DOM/console#Using_groups_in_the_console),了解更多详细内容。
+在文档{{ domxref("console") }}中查看[在控制台中使用分组](/zh-CN/DOM/console#Using_groups_in_the_console),了解更多详细内容。
 
 ## 规范
 
@@ -28,7 +29,7 @@ console.group();
 
 ## 浏览器兼容性
 
-{{Compat("api.console.group")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,16 +1,8 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - NeedsTranslation
-  - TopicStub
-  - Élément(2)
-translation_of: Web/API/Element
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element`** 介面表示了一個在 {{domxref("Document")}} 中的物件，其描述了各類型元素的共同屬性與方法，`Element` 的子介面則定義了不同類型元素的具體行為並增加額外的功能。例如 {{domxref("HTMLElement")}} 為所有 HTML 元素的基礎介面，而 {{domxref("SVGElement")}} 則是定義所有 SVG 元素的介面。
@@ -153,7 +145,7 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
   - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
 - {{ domxref("Element.insertAdjacentText") }} {{experimental_inline}}
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
-- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
+- {{ domxref("Element.matches()") }} {{experimental_inline}}
   - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
 - {{ domxref("Element.querySelector()") }}
   - : Returns the first {{ domxref("Node") }} which matches the specified selector string relative to the element.
@@ -196,4 +188,4 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element")}}
+{{Compat}}

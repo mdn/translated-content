@@ -1,10 +1,8 @@
 ---
 title: page-break-inside
 slug: Web/CSS/page-break-inside
-tags:
-  - page-break-inside
-translation_of: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
 **`page-break-inside`** CSS 属性调整当前元素内的分页符。
@@ -103,5 +101,5 @@ p:first-child {
 
 ## See also
 
-- [`page-break-after`](/en-US/docs/CSS/page-break-after), [`page-break-before`](/en-US/docs/CSS/page-break-before)
-- [`orphans`](/en-US/docs/CSS/orphans), [`widows`](/en-US/docs/CSS/widows)
+- [`page-break-after`](/zh-CN/docs/CSS/page-break-after), [`page-break-before`](/zh-CN/docs/CSS/page-break-before)
+- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)

@@ -1,8 +1,8 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-translation_of: Web/API/Window/navigator
 ---
+
 {{APIRef}}
 
 The `Window.navigator` read-only property returns a reference to the {{domxref("Navigator")}} object, which can be queried for information about the application running the script.

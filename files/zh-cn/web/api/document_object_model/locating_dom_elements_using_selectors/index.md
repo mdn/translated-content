@@ -2,11 +2,12 @@
 title: 使用选择器定位 DOM 元素
 slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 ---
+
 Selectors API 提供了通过与一组选择器匹配来快速轻松地从 DOM 检索 [`Element`](/zh-CN/docs/DOM/element)节点的方法。这比以前的技术要快得多，其中有必要使用 JavaScript 代码中的循环来定位您需要查找的特定项目。
 
 ## NodeSelector 接口
 
-此规范向实现 [`Document`](/zh-CN/docs/DOM/document), [`DocumentFragment`](/zh-CN/docs/DOM/DocumentFragment), 或 `Element `接口的任何对象添加了两种新方法：
+此规范向实现 [`Document`](/zh-CN/docs/DOM/document), [`DocumentFragment`](/zh-CN/docs/DOM/DocumentFragment), 或 `Element` 接口的任何对象添加了两种新方法：
 
 - `querySelector`
   - : 返回节点子树内与之相匹配的第一个 [`Element`](/zh-CN/docs/DOM/element) 节点。如果没有匹配的节点，则返回 null。

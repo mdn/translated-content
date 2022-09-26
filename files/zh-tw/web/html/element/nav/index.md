@@ -1,17 +1,8 @@
 ---
 title: <nav>
 slug: Web/HTML/Element/nav
-tags:
-  - 元素
-  - 區域
-  - 導航欄
-  - 網站
-  - 網站區域
-  - 網頁
-  - 網頁區域
-  - 連結
-translation_of: Web/HTML/Element/nav
 ---
+
 {{HTMLRef}}
 
 **HTML \<nav> 元素**代表一個網頁中提供導航欄連結的區域，不管是當前網頁或者其他網頁，還是這個連結最終抵達的只是當前網頁的某個區塊，或者會抵達其他網頁，常見的導航欄範例有菜單、內容的表單，以及頁面本身。
@@ -54,7 +45,7 @@ translation_of: Web/HTML/Element/nav
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## 參見
 

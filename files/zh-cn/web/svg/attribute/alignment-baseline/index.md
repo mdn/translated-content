@@ -1,13 +1,9 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/alignment-baseline
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `alignment-baseline`属性指定了一个对象如何相对于它的父元素对齐。这个属性指定了该元素的基线对齐到相应的父元素的基线。举个例子，允许罗马文字中的字母表基线在字体大小发生变化时保持一致。它的默认值是 baseline，与该`alignment-baseline`属性的计算值同名。
 

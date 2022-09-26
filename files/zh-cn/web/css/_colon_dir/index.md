@@ -1,13 +1,8 @@
 ---
 title: ':dir()'
 slug: Web/CSS/:dir
-tags:
-  - CSS 伪类
-  - 布局
-  - 网络
-  - 选择器 4
-translation_of: Web/CSS/:dir
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
@@ -45,7 +40,7 @@ translation_of: Web/CSS/:dir
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## 参见
 

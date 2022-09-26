@@ -1,19 +1,8 @@
 ---
 title: 伺服端網站程式設計
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 **_動態網站_**–**_伺服端網站程式設計_**是一連串有關如何建立動態網站的模塊：動態網站可以針對 HTTP 請求，發送客製化的資訊。這些模塊將介紹伺服端網站程式設計：還有以初學者的角度，來教你怎麼使用 Django (Python) 與 Express (Node.js/JavaScript) 來架設基本的動態網路程式。

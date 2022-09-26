@@ -2,11 +2,12 @@
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLStyleElement`** 接口表示 {{HTMLElement("style")}} 元素。它从 {{domxref("HTMLElement")}} 和 {{domxref("LinkStyle")}} 中继承属性和方法。
 
-这个接口不允许修改包含其中的 CSS（大多数情况下）。如果需要修改 CSS，前往[关于使用动态样式的信息](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)查看在 DOM 中用于修改特定 CSS 属性的对象。
+这个接口不允许修改包含其中的 CSS（大多数情况下）。如果需要修改 CSS，前往[关于使用动态样式的信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)查看在 DOM 中用于修改特定 CSS 属性的对象。
 
 {{InheritanceDiagram(600, 120)}}
 
@@ -35,9 +36,9 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLStyleElement")}}
+{{Compat}}
 
 ## 参见
 
 - The HTML element implementing this interface: {{HTMLElement("style")}}.
-- [Using dynamic styling information](/en-US/docs/DOM/Using_dynamic_styling_information) to see how to manipulate CSS.
+- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information) to see how to manipulate CSS.

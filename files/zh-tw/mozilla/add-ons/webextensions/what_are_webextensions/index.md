@@ -1,8 +1,8 @@
 ---
 title: 何謂附加元件？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 附加元件（Add-ons）擴展並修改了瀏覽器的功能。他們使用標準的網路技術 ──JavaScript、HTML、以及 CSS、還有一些專用的 JavaScript API── 寫成。除此之外，附加元件可以給瀏覽器添加新功能、或是改變特定網站的外觀或內容。

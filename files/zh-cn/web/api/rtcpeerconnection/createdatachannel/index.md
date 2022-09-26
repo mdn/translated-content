@@ -2,6 +2,7 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 {{domxref("RTCPeerConnection")}} 的 `createDataChannel()` 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如: 图像，文件传输，聊天文字，游戏数据更新包，等等。
@@ -34,7 +35,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `protocol` {{optional_inline}}
   - : The name of the sub-protocol being used on the {{domxref("RTCDataChannel")}}, if any; otherwise, the empty string (""). **Default: empty string, `""`.** This string may not be longer than 65,535 _bytes_.
 - `negotiated` {{optional_inline}}
-  - : By default (`false`), data channels are negotiated in-band, where one side calls `createDataChannel`, and the other side listens to the {{domxref("RTCDataChannelEvent")}} event using the `ondatachannel` `EventHandler` . Alternatively (`true`), they can be negotiated out of-band, where both sides call `createDataChannel `with an agreed-upon id. **Default: `false`.**
+  - : By default (`false`), data channels are negotiated in-band, where one side calls `createDataChannel`, and the other side listens to the {{domxref("RTCDataChannelEvent")}} event using the `ondatachannel` `EventHandler` . Alternatively (`true`), they can be negotiated out of-band, where both sides call `createDataChannel` with an agreed-upon id. **Default: `false`.**
 - `id` {{optional_inline}}
   - : An 16-bit numeric ID for the channel; permitted values are 0-65534. If you don't include this option, the user agent will select an ID for you.
 

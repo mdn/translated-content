@@ -1,11 +1,8 @@
 ---
 title: MDN 專案
 slug: MDN
-tags:
-  - Documentation
-  - MDN
-translation_of: MDN
 ---
+
 {{MDNSidebar}}
 
 **MDN Web Docs** 是我們為開放網路、Mozilla 技術、Firefox 與其他開發者相關專題建立文件的 Wiki 系統。歡迎任何人新增與編輯內容。你不需要是程式設計師或非常了解技術；這邊有各種需要協助的工作，從最簡單（閱讀文件、改錯字）到最複雜（撰寫 API 文件）都有。

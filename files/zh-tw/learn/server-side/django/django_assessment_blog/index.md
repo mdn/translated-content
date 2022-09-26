@@ -1,15 +1,11 @@
 ---
 title: 'Assessment: DIY Django mini blog'
 slug: Learn/Server-side/Django/django_assessment_blog
-tags:
-  - django
-  - 初學者
-  - 部落格
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-在這個評估中，您將使用您在 [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
+在這個評估中，您將使用您在 [Django Web Framework (Python)](/zh-TW/docs/Learn/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -216,7 +212,7 @@ The following screenshot provide an example of what the finished program should 
 
 以下說明實作的步驟。
 
-1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/en-US/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
+1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
 2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
 
     - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
@@ -232,12 +228,12 @@ The following screenshot provide an example of what the finished program should 
 
 ## 提示與小技巧
 
-This project is very similar to the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) tutorial. You will be able to set up the skeleton, user login/logout behaviour, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.
+This project is very similar to the [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) tutorial. You will be able to set up the skeleton, user login/logout behaviour, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.
 
 Some general hints:
 
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
-2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
+2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic list Blog list view and filtering for blog object that match the specified author.
 
     - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
@@ -263,7 +259,7 @@ Some general hints:
 
     - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
 
-We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
+We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
 
 ```python
 class SomeView(generic.ListView):
@@ -287,18 +283,18 @@ Once you've completed this module you've also finished all the MDN content for l
 
 ## In this module
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

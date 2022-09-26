@@ -1,11 +1,8 @@
 ---
 title: 'Yari：MDN 的渲染平台'
 slug: MDN/Yari
-tags:
-  - Yari
-  - Landing
-  - MDN Meta
 ---
+
 {{MDNSidebar}}
 
 Yari 被用于渲染 MDN Web 文档。它采用了 [JAMStack](https://jamstack.org/) 架构，将存储在 GitHub 仓库中的 MDN 文档内容（包含元数据和宏调用）渲染为静态 HTML 文件，并快速和高效地提供这些文件。

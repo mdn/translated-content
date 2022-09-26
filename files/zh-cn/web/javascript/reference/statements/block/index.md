@@ -1,12 +1,8 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 **块语句**（或其他语言的**复合语句**）用于组合零个或多个语句。该块由一对大括号界定，可以是{{jsxref("Statements/label", "labelled")}}：
@@ -100,7 +96,7 @@ a[6]();                // 6
 
 #### 使用`function`
 
-[函数声明](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)同样被限制在声明他的语句块内：
+[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)同样被限制在声明他的语句块内：
 
 ```plain
 foo('outside');  // TypeError: foo is not a function

@@ -1,13 +1,8 @@
 ---
 title: 標準內建物件
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{jsSidebar("Objects")}}
 
 本章節記錄了 JavaScript 所有標準、內建的物件，以及這些物件的方法與屬性。

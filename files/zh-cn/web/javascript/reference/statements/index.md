@@ -1,13 +1,8 @@
 ---
 title: 语句和声明
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - 参考
-  - 声明
-  - 语句和声明
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 应用程序是由许多语法正确的语句组成的。单个语句可以跨多行。如果每个语句用分号隔开，那么多个语句可以在一行中出现。本页的内容并不是一个关键字，而是一组关键字。

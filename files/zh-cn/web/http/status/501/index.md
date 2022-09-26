@@ -1,12 +1,8 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/501
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`501 Not Implemented`** 服务器错误响应码表示请求的方法不被服务器支持，因此无法被处理。服务器必须支持的方法（即不会返回这个状态码的方法）只有 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}}。

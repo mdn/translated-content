@@ -1,13 +1,13 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-translation_of: Web/CSS/word-spacing
 ---
+
 {{ CSSRef() }}
 
 ## Summary
 
-` 属性 ``word-spacing ` 用于声明标签和单词直接的间距行为。
+属性 `word-spacing` 用于声明标签和单词直接的间距行为。
 
 {{cssinfo}}
 
@@ -32,7 +32,7 @@ word-spacing: inherit;
 
 ### Formal syntax
 
-[How to read CSS syntax.](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
+[How to read CSS syntax.](/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax("word-spacing")}}
 

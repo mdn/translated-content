@@ -1,20 +1,15 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - JavaScript
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
+
 {{JSRef}}
 
 **`Array[@@species]`** 访问器属性返回 `Array` 的构造函数。
 
 ## 语法
 
-```plain
+```js
 Array[Symbol.species]
 ```
 
@@ -53,5 +48,6 @@ class MyArray extends Array {
 
 ## 参见
 
+- [Polyfill of `Array[Symbol.species]` and support of `Symbol.species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

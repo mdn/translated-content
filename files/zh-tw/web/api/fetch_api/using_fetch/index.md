@@ -1,14 +1,8 @@
 ---
 title: Using Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - Fetch
-  - HTTP
-  - Promise
-  - Response
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。

@@ -1,8 +1,8 @@
 ---
 title: CSS 流式布局
 slug: Web/CSS/CSS_Flow_Layout
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
+
 {{CSSRef}}
 
 "文档流"或"流式布局"是在对布局进行任何更改之前，在页面上显示"块"和"内联"元素的方式。这个"流"本质上是一系列的事物，它们都在你的布局中一起工作，并且互相了解。一旦某部分脱离了"流"，它就会独立地工作。
@@ -31,5 +31,5 @@ translation_of: Web/CSS/CSS_Flow_Layout
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/zh-CN/docs/Web/CSS)
-2.  [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+1. [**CSS**](/zh-CN/docs/Web/CSS)
+2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)

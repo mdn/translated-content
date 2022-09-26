@@ -1,8 +1,8 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-translation_of: Web/HTML/Element/map
 ---
+
 > **备注：** 这篇文章翻译不完整
 
 **HTML `<map>` 属性** 与 {{HTMLElement("area")}} 属性一起使用来定义一个图像映射 (一个可点击的链接区域).
@@ -50,7 +50,7 @@ translation_of: Web/HTML/Element/map
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '350', '166', '', 'Web/HTML/Element/map') }}
+{{ EmbedLiveSample('示例', '350', '166') }}
 
 ### Expected live example output
 
@@ -68,7 +68,7 @@ _For the `right.html` link_
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 另见
 

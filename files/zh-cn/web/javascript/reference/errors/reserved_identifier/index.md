@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 消息提示
@@ -22,7 +18,7 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## 哪里出错了？
 
-[保留字](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：
+[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：
 
 - `enum`
 

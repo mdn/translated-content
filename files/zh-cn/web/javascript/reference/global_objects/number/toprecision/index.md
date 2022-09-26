@@ -1,8 +1,8 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述

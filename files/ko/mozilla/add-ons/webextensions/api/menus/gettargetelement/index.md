@@ -1,7 +1,6 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
 {{AddonSidebar}}
@@ -12,7 +11,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 
 ## 문법
 
-    let elem = browser.menus.getTargetElement(targetElementId);
+```js
+let elem = browser.menus.getTargetElement(targetElementId);
+```
 
 ### 파라메터
 

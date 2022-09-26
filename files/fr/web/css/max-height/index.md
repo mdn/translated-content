@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 La propriété **`max-height`** est utilisée pour définir la hauteur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("height")}} de devenir supérieure à la valeur spécifiée par `max-height` (autrement dit, `max-height` est une borne supérieure pour `height`).
@@ -117,4 +118,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-h
 - {{cssxref("height")}}
 - {{cssxref("min-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

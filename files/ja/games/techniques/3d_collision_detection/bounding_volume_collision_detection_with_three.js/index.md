@@ -1,17 +1,6 @@
 ---
 title: THREE.js によるバウンディングボリューム衝突検出
-slug: >-
-  Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
-tags:
-  - 3D
-  - Games
-  - JavaScript
-  - WebGL
-  - bounding boxes
-  - collision detection
-  - three.js
-translation_of: >-
-  Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
+slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 ---
 {{GamesSidebar}}
 

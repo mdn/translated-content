@@ -1,8 +1,8 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
+
 {{JSRef}}
 
 **`JSON.stringify()`** method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified, or optionally including only the specified properties if a replacer array is specified.

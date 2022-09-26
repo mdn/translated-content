@@ -1,13 +1,9 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
-tags:
-  - SVG
-  - SVG 属性
-  - 需要兼容性表
-translation_of: Web/SVG/Attribute/attributeType
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性指定目标属性和它相对应的值处于哪个命名空间里。
 

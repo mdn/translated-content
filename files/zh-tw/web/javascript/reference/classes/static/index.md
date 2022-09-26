@@ -1,8 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}使用關鍵字 **static** 來定義一個靜態的方法（method）給類別（class），靜態方法在由類別所建立的物件實體（instance）上不能被呼叫，取而代之的是，靜態方法只能由類別本身呼叫。他們通常作為工具函式（utility functions）使用。像是建立物件或複製物件的函式。
 
 ## 語法
@@ -50,6 +50,6 @@ console.log(tp.triple());             // 'tp.triple is not a function'.
 
 ## 你可能會需要看看
 
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`class` expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)

@@ -1,14 +1,8 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
@@ -139,13 +133,13 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Firefox 規範註記
 
 #### Generators and iterators in Firefox versions before 26
 
-Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
+Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
 
 #### `IteratorResult` object returned instead of throwing
 

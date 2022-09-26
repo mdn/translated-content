@@ -2,6 +2,7 @@
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的 **`WorkerGlobalScope`** 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 `WorkerGlobalScope` 都有自己的事件循环。
@@ -58,7 +59,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("WorkerGlobalScope.close()")}}
   - : Discards any tasks queued in the `WorkerGlobalScope`'s event loop, effectively closing this particular scope.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### Non-standard methods
 
@@ -101,7 +102,7 @@ console.log(navigator);
 
 ## Browser compatibility
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

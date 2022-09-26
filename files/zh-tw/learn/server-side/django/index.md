@@ -1,8 +1,8 @@
 ---
 title: Django 網站框架 (Python)
 slug: Learn/Server-side/Django
-translation_of: Learn/Server-side/Django
 ---
+
 {{LearnSidebar}}
 
 Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的服務器端網站框架。本模塊將為您展示，為什麼 Django 能夠成為一個廣受歡迎的服務器端框架，如何設置開發環境，以及如何開始創建你自己的網絡應用。

@@ -1,34 +1,34 @@
 ---
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
+
 {{AddonSidebar()}}利用此事件来监听来自你的扩展其他部分的消息。例如，使用：
 
-- in a [content script](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts), to listen for messages from a [background script.](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
+- in a [content script](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts), to listen for messages from a [background script.](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
 - in a background script, to listen for messages from a content script.
-- in an [options page](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages) or [popup](/en-US/Add-ons/WebExtensions/User_interface_components#Popups) script, to listen for messages from a background script.
+- in an [options page](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages) or [popup](/zh-CN/Add-ons/WebExtensions/User_interface_components#Popups) script, to listen for messages from a background script.
 - in a background script, to listen for messages from an options page or popup script.
 
 To send a message that is received by the `onMessage` listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.
 
-> **备注：** Avoid creating multiple `onMessage` listeners for the same type of message, as the order in which multiple listeners will fire is not guaranteed. Where you want to guarantee the delivery of a message to a specific end point, use the [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
+> **备注：** Avoid creating multiple `onMessage` listeners for the same type of message, as the order in which multiple listeners will fire is not guaranteed. Where you want to guarantee the delivery of a message to a specific end point, use the [connection-based approach to exchange messages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 
 Along with the message itself, the listener is passed:
 
 - a `sender` object giving details about the message sender.
 - a `sendResponse` function that can be used to send a response back to the sender.
 
-You can send a synchronous response to the message by calling the `sendResponse` function inside your listener. [See an example](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response).
+You can send a synchronous response to the message by calling the `sendResponse` function inside your listener. [See an example](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response).
 
 To send an asynchronous response, there are two options:
 
-- return `true` from the event listener. This keeps the `sendResponse` function valid after the listener returns, so you can call it later. [See an example](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse).
-- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise).
+- return `true` from the event listener. This keeps the `sendResponse` function valid after the listener returns, so you can call it later. [See an example](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse).
+- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise).
 
 > **警告：** Returning a `Promise` is now preferred as `sendResponse` [will be removed from the W3C spec](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219). The popular [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library has already removed the `sendResponse` function from its implementation.
 
-> **备注：** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
+> **备注：** You can also use a [connection-based approach to exchange messages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 
 ## Syntax
 
@@ -68,9 +68,9 @@ Events have three functions:
         To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
 
         - either keep a reference to the `sendResponse` argument and return `true` from the listener function. You will then be able to call `sendResponse` after the listener function has returned.
-        - or return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready. This is a preferred way.
+        - or return a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready. This is a preferred way.
 
-    The listener function can return either a Boolean or a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+    The listener function can return either a Boolean or a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
     > **警告：** Do not call `addListener` using the `async` function, as in:
     >
@@ -92,7 +92,7 @@ Events have three functions:
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.onMessage")}}
+{{Compat}}
 
 ## Examples
 
@@ -113,7 +113,7 @@ function notifyExtension(e) {
 }
 ```
 
-The background script listens for these messages and displays a notification using the [`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API:
+The background script listens for these messages and displays a notification using the [`notifications`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API:
 
 ```js
 // background-script.js
@@ -217,7 +217,7 @@ browser.runtime.sendMessage({
 }).then(handleResponse);
 ```
 
-Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```js
 // background-script.js
@@ -233,7 +233,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-If the asynchronous handler doesn't return a promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using [`Window.setTimeout()`](/en-US/docs/Web/API/setTimeout):
+If the asynchronous handler doesn't return a promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using [`Window.setTimeout()`](/zh-CN/docs/Web/API/setTimeout):
 
 ```js
 // background-script.js
@@ -255,7 +255,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -282,4 +283,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

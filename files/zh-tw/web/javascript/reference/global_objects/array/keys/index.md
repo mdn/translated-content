@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** 方法會回傳一個包含陣列中的每一個索引之鍵（keys）的新 **`Array Iterator`** 物件。
@@ -44,7 +37,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,9 +1,9 @@
 ---
 title: Node.innerText
 slug: Web/API/HTMLElement/innerText
-translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
+
 {{APIRef("DOM")}}
 
 ## 概述
@@ -18,7 +18,7 @@ original_slug: Web/API/Node/innerText
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLElement.innerText")}}
+{{Compat}}
 
 ## 參見
 

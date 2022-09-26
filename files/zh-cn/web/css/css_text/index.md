@@ -1,13 +1,8 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
-tags:
-  - CSS
-  - CSS Text
-  - Overview
-  - 总览
-translation_of: Web/CSS/CSS_Text
 ---
+
 {{CSSRef}}
 
 **CSS Text** 是一个控制文本渲染方式的 CSS 模块，例如换行、对齐、空格处理、大小写。

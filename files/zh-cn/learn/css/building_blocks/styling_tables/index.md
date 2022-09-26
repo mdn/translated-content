@@ -1,8 +1,8 @@
 ---
 title: 样式化表格
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes")}}
 
 设计一个 HTML 表格不是世界上最迷人的工作，但有时我们必须这样做。本文提供了一个使 HTML 表格看起来不错的指南，其中一些功能在前面的文章中已作详细介绍。

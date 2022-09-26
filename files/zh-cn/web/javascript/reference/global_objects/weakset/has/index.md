@@ -1,8 +1,8 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
+
 {{JSRef}}
 
 **`has()`** 方法根据 `WeakSet` 是否存在相应对象返回布尔值。
@@ -21,7 +21,7 @@ ws.has(value);
 ### 返回值
 
 - Boolean
-  - : 如果 `WeakSet` 对象中存在指定的元素，返回 true；否则返回 `false。`
+  - : 如果 `WeakSet` 对象中存在指定的元素，返回 true；否则返回 `false`。
 
 ## 示例
 

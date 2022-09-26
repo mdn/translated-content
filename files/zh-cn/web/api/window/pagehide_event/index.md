@@ -2,6 +2,7 @@
 title: 'Window: 页面隐藏事件 (pagehide event)'
 slug: Web/API/Window/pagehide_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时，**`pagehide`**(页面隐藏) 事件会被发送到一个{{domxref("Window")}} 。例如，当用户单击浏览器的“后退”按钮时，当前页面在显示上一页之前会收到一个`pagehide`(页面隐藏) 事件。
@@ -29,7 +30,7 @@ slug: Web/API/Window/pagehide_event
 
 ## 例子
 
-在此示例中，建立了一个事件处理程序以监视 `pagehide `(页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。
+在此示例中，建立了一个事件处理程序以监视 `pagehide` (页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。
 
 ```js
 window.addEventListener("pagehide", event => {
@@ -55,7 +56,7 @@ window.onpagehide = event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.pagehide_event")}}
+{{Compat}}
 
 ## 了解更多
 

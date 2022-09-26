@@ -1,18 +1,13 @@
 ---
 title: switch
 slug: Web/SVG/Element/switch
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要示例
-translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
-`switch`元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为`true`的子元素。 其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。
+`switch`元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为`true`的子元素。其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。
 
-注意：属性`display`和属性`visibility`的值对`switch 元素处理是不起作用的。`特别是， 在`switch 元素的子元素上`设置`display`为 none，对`switch` 元素的 true/false 测试处理不起作用。
+注意：属性`display`和属性`visibility`的值对`switch 元素处理是不起作用的。`特别是，在`switch 元素的子元素上`设置`display`为 none，对`switch` 元素的 true/false 测试处理不起作用。
 
 ## 用法
 
@@ -39,8 +34,8 @@ translation_of: Web/SVG/Element/switch
 
 ## DOM 接口
 
-该元素实现了[`SVGSwitchElement`](/en-US/docs/DOM/SVGSwitchElement) 接口。
+该元素实现了[`SVGSwitchElement`](/zh-CN/docs/DOM/SVGSwitchElement) 接口。
 
 ## 浏览器支持
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

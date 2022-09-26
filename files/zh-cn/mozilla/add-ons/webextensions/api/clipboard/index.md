@@ -1,13 +1,9 @@
 ---
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
-tags:
-  - 剪切板
-  - 扩展
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板
 ---
+
 {{AddonSidebar}}
 
 WebExtention 的 `clipboard` API 增加了一个将图像复制到剪贴板的函数。目前，这个 API 仅支持复制图像，但我们期望它未来支持复制文本和 HTML（译者注：原文如此，可能是指被支持复制富内容之后的标准剪贴板 API 取代）。
@@ -27,6 +23,6 @@ To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/do
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}
+{{Compat}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

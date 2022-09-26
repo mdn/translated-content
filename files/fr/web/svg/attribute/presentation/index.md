@@ -3,6 +3,7 @@ title: Attributs SVG de présentation
 slug: Web/SVG/Attribute/Presentation
 translation_of: Web/SVG/Attribute/Presentation
 ---
+
 Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être utilisées comme attributs sur les éléments SVG
 
 - alignment-baseline
@@ -205,10 +206,10 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_:; _Animation_: **-**
 - {{SVGAttr('stop-color')}}
   - : Indique la couleur à utiliser sur un {{SVGElement('stop')}} d'un dégradé.
-    _Valeur_: `currentColor`|[\<color>](/fr/SVG/Content_type#Color "en/SVG/Content_type#Color")|[\<icccolor>](/fr/SVG/Content_type#ICCColor "en/SVG/Content_type#ICCColor")|`inherit`; _Animation_: **Oui**
+    _Valeur_: `currentColor`|[\<color>](/fr/SVG/Content_type#Color)|[\<icccolor>](/fr/SVG/Content_type#ICCColor)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('stop-opacity')}}
   - : Indique l'opacité du {{SVGElement('stop')}}.
-    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value")|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('stroke')}}
   - : Définit la couleur à utiliser pour le contour de l'élément.
     _Valeur_: [\<paint>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
@@ -217,7 +218,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: `none`|`<dasharray>`; _Animation_: **Oui**
 - {{SVGAttr('stroke-dashoffset')}}
   - : Décale la position de départ des pointillés.
-    _Valeur_: [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage")|[\<length>](/fr/SVG/Content_type#Length "en/SVG/Content_type#Length"); _Animation_: **Oui**
+    _Valeur_: [\<percentage>](/fr/SVG/Content_type#Percentage)|[\<length>](/fr/SVG/Content_type#Length); _Animation_: **Oui**
 - **{{SVGAttr('stroke-linecap')}}**
   - : Définit la forme de la fin des lignes.
     _Valeur_: **`butt`**|`round`|`square`; _Animation_: **Oui**
@@ -226,10 +227,10 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: `arcs`|`bevel`|**`miter`**|`miter-clip`|`round`; _Animation_: **Oui**
 - **{{SVGAttr('stroke-miterlimit')}}**
   - : Définit la limite du rapport entre la longueur du coin et la valeur de {{SVGAttr('stroke-width')}} utilisée pour dessiner la liaison entre deux segments de ligne.
-    _Valeur_: [\<number>](/fr/SVG/Content_type#Number "en/SVG/Content_type#Number"); _Animation_: **Oui**
+    _Valeur_: [\<number>](/fr/SVG/Content_type#Number); _Animation_: **Oui**
 - **{{SVGAttr('stroke-opacity')}}**
   - : Définit l'opacité du contour d'une forme.
-    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value")|[\<percentage>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value)|[\<percentage>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
 - **{{SVGAttr('stroke-width')}}**
   - : Définit l'épaisseur du contour appliqué à une forme.
     _Valeur_: [\<length>](/docs/Web/SVG/Content_type#Length)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
@@ -256,7 +257,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: **`visible`**|`hidden`|`collapse`|`inherit`; _Animation_: **Oui**
 - **{{SVGAttr('word-spacing')}}**
   - : Définit la longueur des espaces entre les mots d'un texte.
-    _Valeur_: [\<length>](/fr/SVG/Content_type#Length "https://developer.mozilla.org/en/SVG/Content_type#Length")|**`inherit`**; _Animation_: **Oui**
+    _Valeur_: [\<length>](/fr/SVG/Content_type#Length)|**`inherit`**; _Animation_: **Oui**
 - **{{SVGAttr('writing-mode')}}**
   - : Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
     _Valeur_: **`lr-tb`**|`rl-tb`|`tb-rl`|`lr`|`rl`|`tb`|`inherit`; _Animation_: **Oui**

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Guide/HTML/Content_categories
 original_slug: Web/Guide/HTML/Catégories_de_contenu
 ---
+
 Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.
 
 Il y a trois types différents de catégories de contenu :
@@ -36,17 +37,17 @@ Les éléments appartenant à la catégorie de contenu de flux contiennent gén�
 Quelques autres éléments appartiennent à cette catégorie mais seulement sous certaines conditions :
 
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop "/fr/docs/HTML/Global_attributes#itemprop") est présent
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop "/fr/docs/HTML/Global_attributes#itemprop") est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
 - {{HTMLElement("style")}} si l'attribut {{htmlattrxref("scoped","style")}} {{deprecated_inline()}} est présent
 
 ### Contenu sectionnant
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document "/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document") qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](<#Contenu de titre> "#Contenu de titre").
+Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 
-> **Note :** Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement "/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement") qui isole un contenu par rapport à la structure (ou plan) principale.
+> **Note :** Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
 
 ### Contenu de titre
 
@@ -70,9 +71,9 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement selo
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
 - {{HTMLElement("del")}} s'il contient seulement du contenu phrasé
 - {{HTMLElement("ins")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop "/fr/docs/HTML/Global_attributes#itemprop") est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
 - {{HTMLElement("map")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop "/fr/docs/HTML/Global_attributes#itemprop") est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
 
 ### Contenu intégré
 
@@ -116,7 +117,7 @@ Cette catégorie contient les éléments :
 Cette catégorie peut être subdivisée en plusieurs sous-catégories.
 
 - listed (éléments listés)
-  - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/DOM/form.elements "DOM/form.elements") et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
+  - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/DOM/form.elements) et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
 - labelable (éléments étiquetables)
   - : Les éléments pouvant être associés avec des éléments  {{HTMLElement("label")}}. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - submittable (éléments participants à l'envoi du formulaire)
@@ -153,4 +154,4 @@ Si ces éléments étaient retirés, ce fragment de code HTML serait toujours du
 
 ## Autres modèles de contenu
 
-[Racine de sectionnement.](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement "/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement")
+[Racine de sectionnement.](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement)

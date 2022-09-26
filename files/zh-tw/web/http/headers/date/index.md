@@ -1,12 +1,8 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** 標頭的值是傳送當下的日期與時間。
@@ -67,7 +63,7 @@ new Date().toUTCString()
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Date")}}
+{{Compat}}
 
 ## 參閱
 

@@ -1,17 +1,8 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - global
-  - globalThis
-  - this
-  - 全局
-  - 参考
-  - 属性
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 全局属性 `globalThis` 包含全局的 `this` 值，类似于全局对象（global object）。

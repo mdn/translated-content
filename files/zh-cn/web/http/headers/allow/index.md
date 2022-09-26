@@ -1,8 +1,8 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 **`Allow`** 首部字段用于枚举资源所支持的 HTTP 方法的集合。
@@ -22,7 +22,7 @@ Allow: <http-methods>
 ## 声明
 
 - \<http-methods>
-  - : [HTTP ](/zh-CN/docs/Web/HTTP/Methods)请求方法的集合。
+  - : [HTTP](/zh-CN/docs/Web/HTTP/Methods) 请求方法的集合。
 
 ## 示例
 

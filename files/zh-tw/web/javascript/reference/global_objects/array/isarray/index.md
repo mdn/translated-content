@@ -1,17 +1,8 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
-  - 方法
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef}}
 
 **`Array.isArray()`** 函式會檢查傳入的值是否為一個 {{jsxref("Array")}}。
@@ -102,7 +93,7 @@ if (!Array.isArray) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## 參見
 

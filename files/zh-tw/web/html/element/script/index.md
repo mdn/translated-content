@@ -1,8 +1,8 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-translation_of: Web/HTML/Element/script
 ---
+
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。\<script> 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content). |
@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/script
 
     - **`module`**：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 `charset` 與 `defer` 屬性影響。針對 `module` 的資訊，請參閱 [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)。在使用 `module` 關鍵字時，程式碼的行為會有所不同。
     - **其他值**：嵌入的內容會被當成一段不給瀏覽器執行的資料塊（data block）。開發者應當使用非 JavaScript 的有效 MIME 類型，以標明資料塊。`src` 屬性也將被忽略。
-    
+
     > **備註：** 在 Firefox 你可以在 `<script>` 元素的 `type` 屬性，透過標明非標準參數 `version`，指定要使用的 JavaScript 版本：例如說 `type="application/javascript;version=1.8"`。這個功能在 Firefox 59 移除了（請參見 {{bug(1428745)}}）。
 
 ### 棄用屬性
@@ -99,7 +99,7 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.script", 2)}}
+{{Compat}}
 
 ## 相容性註解
 

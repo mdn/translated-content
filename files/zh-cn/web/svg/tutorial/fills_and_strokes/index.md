@@ -1,13 +1,8 @@
 ---
 title: 填充和边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedsLiveSample
-  - SVG
-  - Tutorial
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 可以使用几种方法来着色（包括指定对象的属性）使用内联 CSS 样式、内嵌 CSS 样式，或者使用外部 CSS 样式文件。大多数的 web 网站的 SVG 使用的是内联样式 CSS，对于这些方法都有优缺点。
@@ -102,7 +97,7 @@ CSS 可以利用 style 属性插入到元素的行间：
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-或者利用 \<style> 设置一段样式段落。就像在 HTML 里这样的 \<style> 一般放在`<head>`里，在 svg 里 \<style> 则放在[`<defs>`](https://developer.mozilla.org/en/SVG/Element/defs)标签里。`<defs>`表示定义，这里面可以定义一些不会在 SVG 图形中出现、但是可以被其他元素使用的元素。
+或者利用 \<style> 设置一段样式段落。就像在 HTML 里这样的 \<style> 一般放在`<head>`里，在 svg 里 \<style> 则放在[`<defs>`](/zh-CN/SVG/Element/defs)标签里。`<defs>`表示定义，这里面可以定义一些不会在 SVG 图形中出现、但是可以被其他元素使用的元素。
 
 ```xml
 <?xml version="1.0" standalone="no"?>

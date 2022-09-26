@@ -2,6 +2,7 @@
 title: compositionend
 slug: Web/API/Element/compositionend_event
 ---
+
 当文本段落的组成完成或取消时，compositionend 事件将被触发 (具有特殊字符的触发，需要一系列键和其他输入，如语音识别或移动中的字词建议)。
 
 <table class="properties">
@@ -35,7 +36,7 @@ slug: Web/API/Element/compositionend_event
 | `cancelable` {{ReadOnlyInline}} | `boolean`                                 | 是否可以取消该事件                                                          |
 | `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}      | {{domxref("Document.defaultView")}} (`window` of the document) |
 | `detail` {{ReadOnlyInline}}     | `long` (`float`)                          | 0.                                                                          |
-| `data `{{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 正在编辑的原始字符串，否则为空字符串。只读。                                |
+| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 正在编辑的原始字符串，否则为空字符串。只读。                                |
 | `locale`                              | {{domxref("DOMString")}} (string) | 组合事件的语言代码 (如果可用);否则，为空字符串。只读。                      |
 
 ## 规范
@@ -44,7 +45,7 @@ slug: Web/API/Element/compositionend_event
 
 ## Browser compatibility
 
-{{Compat("api.Element.compositionend_event")}}
+{{Compat}}
 
 ## Related events
 

@@ -3,6 +3,7 @@ title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 translation_of: Web/API/BaseAudioContext/createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `createBufferSource()` de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
@@ -69,13 +70,11 @@ button.onclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffersource', 'createBufferSource()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createBufferSource")}}
+{{Compat}}
 
 ## Voir aussi
 

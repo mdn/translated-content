@@ -1,38 +1,27 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
+
 {{AddonSidebar}}
 
 使用 `history` API 与浏览器历史记录进行交互。
 
-> **备注：** 下载也被当做一个 [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) 对象。因此，[`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited)等事件也会被下载所触发。
+> **备注：** 下载也被当做一个 [`HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) 对象。因此，[`history.onVisited`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited)等事件也会被下载所触发。
 
 浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：
 
-- [查找浏览器历史记录中出现过的页面](/en-US/Add-ons/WebExtensions/API/history/search)
-- [移除浏览器历史记录中的单个页面](/en-US/Add-ons/WebExtensions/API/history/deleteUrl)
-- [向浏览器历史记录中添加页面](/en-US/Add-ons/WebExtensions/API/history/addUrl)
-- [移除所有浏览器历史记录中的页面](/en-US/Add-ons/WebExtensions/API/history/deleteAll)
+- [查找浏览器历史记录中出现过的页面](/zh-CN/Add-ons/WebExtensions/API/history/search)
+- [移除浏览器历史记录中的单个页面](/zh-CN/Add-ons/WebExtensions/API/history/deleteUrl)
+- [向浏览器历史记录中添加页面](/zh-CN/Add-ons/WebExtensions/API/history/addUrl)
+- [移除所有浏览器历史记录中的页面](/zh-CN/Add-ons/WebExtensions/API/history/deleteAll)
 
 然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：
 
-- [获取用户对单个页面的所有访问记录的集合](/en-US/Add-ons/WebExtensions/API/history/getVisits)
-- [移除给定期间内任意页面的访问记录的集合](/en-US/Add-ons/WebExtensions/API/history/deleteRange)
+- [获取用户对单个页面的所有访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/getVisits)
+- [移除给定期间内任意页面的访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/deleteRange)
 
-使用该 API 之前，扩展程序必须在其 [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中获取 history 的[许可](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+使用该 API 之前，扩展程序必须在其 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中获取 history 的[许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 类型
 
@@ -46,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ## 方法
 
 - {{WebExtAPIRef("history.search()")}}
-  - : 在浏览器历史记录中查找符合给定条件的[`history.HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem)
+  - : 在浏览器历史记录中查找符合给定条件的[`history.HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem)
 - {{WebExtAPIRef("history.getVisits()")}}
   - : 获取指定页面的访问集信息。
 - {{WebExtAPIRef("history.addUrl()")}}
@@ -69,7 +58,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -77,7 +66,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 >
 > 微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,4 +94,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

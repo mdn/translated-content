@@ -1,17 +1,6 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-tags:
-  - '-moz-appearance'
-  - '-webkit-appearance'
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ユーザーインターフェイス
-  - Reference
-  - appearance
-  - recipe:css-property
-browser-compat: css.properties.appearance
-translation_of: Web/CSS/appearance
 ---
 {{CSSRef}}
 

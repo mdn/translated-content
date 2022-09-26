@@ -1,19 +1,8 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
 该模块提供关于附加组件以及运行环境的信息。
@@ -57,9 +46,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : 打开你的扩展的 [选项页面](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)。
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : 获得完整的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
+  - : 获得完整的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : 给定某个打包在扩展中的资源的基于 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 相对路径，返回一个完整有效的 URL。
+  - : 给定某个打包在扩展中的资源的基于 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 相对路径，返回一个完整有效的 URL。
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : 指定一个此扩展被卸载后打开的 URL。
 - {{WebExtAPIRef("runtime.reload()")}}
@@ -114,7 +103,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -141,4 +131,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

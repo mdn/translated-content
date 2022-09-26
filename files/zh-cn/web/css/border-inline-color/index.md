@@ -1,11 +1,11 @@
 ---
 title: border-inline-color
 slug: Web/CSS/border-inline-color
-translation_of: Web/CSS/border-inline-color
 ---
+
 {{CSSRef}}
 
-The **`border-inline-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The **`border-inline-color`** [CSS](/zh-CN/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 ```css
 border-inline-color: yellow;
@@ -67,7 +67,7 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-inline-color")}}
+{{Compat}}
 
 ## See also
 

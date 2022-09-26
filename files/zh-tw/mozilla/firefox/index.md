@@ -1,13 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Mozilla
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) 是 Mozilla 基金會最受歡迎的網頁瀏覽程式，在眾多平台包含 Windows、Mac OS X、桌面版 Linux 及 Android 行動裝置上發行。 具有廣大相容性，整合最新的 Web 技術和強大的[開發工具](/zh-TW/docs/Tools)。不管你是一般使用者還是開發者，Firefox 都是您的最佳選擇。

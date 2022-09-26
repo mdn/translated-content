@@ -12,6 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}
@@ -22,7 +23,7 @@ Le jeu lui-même est en fait terminé, alors travaillons à le peaufiner. Nous a
 
 ## Détecter les mouvements de la souris
 
-Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement {{event("mousemove")}}. Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de `l'évènement keyup` :
+Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement [`mousemove`](/fr//docs/Web/API/Element/mousemove_event). Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de `l'évènement keyup` :
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);

@@ -1,8 +1,8 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## 概述
@@ -22,7 +22,7 @@ Object.isExtensible(obj)
 
 ### 返回值
 
-表示给定对象是否可扩展的一个[`Boolean`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Boolean) 。
+表示给定对象是否可扩展的一个 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Boolean)。
 
 ## 描述
 

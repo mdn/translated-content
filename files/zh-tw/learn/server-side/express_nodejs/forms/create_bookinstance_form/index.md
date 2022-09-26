@@ -1,9 +1,9 @@
 ---
 title: Create BookInstance form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
-[Edi](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form)本章節演示如何定義一個頁面/表單，以創建 `BookInstance` 物件。這很像我們用來創建書本 `Book` 物件的表單。
+
+[Edi](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form)本章節演示如何定義一個頁面/表單，以創建 `BookInstance` 物件。這很像我們用來創建書本 `Book` 物件的表單。
 
 ## 導入驗證和清理方法
 
@@ -152,5 +152,5 @@ Run the application and open your browser to <http://localhost:3000/>. Then sele
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Delete Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form).
+- Return to [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the next subarticle of part 6: [Delete Author form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form).

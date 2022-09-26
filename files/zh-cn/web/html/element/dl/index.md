@@ -1,14 +1,8 @@
 ---
 title: <dl>
 slug: Web/HTML/Element/dl
-tags:
-  - HTML
-  - HTML 分组内容
-  - Web
-  - 元素
-  - 引用
-translation_of: Web/HTML/Element/dl
 ---
+
 ## 简介
 
 **HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
@@ -17,7 +11,7 @@ translation_of: Web/HTML/Element/dl
 
 - _[内容分类](/zh-CN/docs/HTML/Content_categories)_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content)(流体内容), 如果`<dl>` 元素的子元素包含一个键值对，则显示其中内容。
 
-1.  *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。
+1. *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。
 
 - _标签省略_ {{no_tag_omission}}
 - *允许的父元素*符合流内容的任何元素
@@ -148,7 +142,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## 相关内容
 

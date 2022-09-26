@@ -1,8 +1,8 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-translation_of: Web/CSS/transition-property
 ---
+
 {{CSSRef("CSS Transitions")}} {{SeeCompatTable}}
 
 ## 概述
@@ -59,7 +59,7 @@ transition-property: unset;
 
 ## 浏览器兼容
 
-{{Compat("css.properties.transition-property")}}
+{{Compat}}
 
 ## 参考
 

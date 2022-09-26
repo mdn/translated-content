@@ -1,19 +1,8 @@
 ---
 title: 非同步的 JavaScript 介紹
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Introducing
-  - JavaScript
-  - Learn
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。

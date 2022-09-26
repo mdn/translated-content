@@ -1,14 +1,8 @@
 ---
 title: 混合內容
 slug: Web/Security/Mixed_content
-tags:
-  - HTTP
-  - HTTPS
-  - NeedsTranslation
-  - Security
-  - TopicStub
-translation_of: Web/Security/Mixed_content
 ---
+
 當使用者以 {{Glossary("HTTPS")}} 瀏覽網站時，他們與伺服器之間的連線就會以 {{Glossary("TLS")}} 加密，以防受到竊聽或中間人攻擊。一個含有 HTTP 明文內容的 HTTPS 頁面稱為**混合內容（mixed content）**。這種頁面只有部份加密，沒有加密的內容，易於遭到竊聽和中間人攻擊。這會令網頁不安全。
 
 ## 混合內容的類型

@@ -1,8 +1,8 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
+
 {{JSRef}}
 
 @@iterator 的初始值是和 {{jsxref("TypedArray.prototype.values()", "values")}} 属性的初始值相同的对象。
@@ -52,7 +52,7 @@ console.log(eArr.next().value); // 50
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

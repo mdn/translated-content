@@ -1,8 +1,8 @@
 ---
 title: 其餘參數
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **其餘參數（rest parameter）** 語法可以讓我們表示不確定數量的參數，並將其視為一個陣列。
@@ -26,7 +26,7 @@ function f(a, b, ...theArgs) {
 以下是其餘參數和 `arguments 物件`三個主要的差異：
 
 - 其餘參數是 `arguments` 物件被傳入到函式的時候，還沒被指定變數名稱的引數。
-- `arguments` 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 [`sort`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或 [`pop`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 可以直接在其餘參數被調用。
+- `arguments` 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 [`sort`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`map`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`forEach`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或 [`pop`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 可以直接在其餘參數被調用。
 - `arguments` 物件自身有額外的功能，例如 `callee` 屬性。
 
 ### 將參數轉成陣列
@@ -124,14 +124,14 @@ console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## 參見
 
-- [Spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
-- [Arguments object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Arguments object](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

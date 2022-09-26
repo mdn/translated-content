@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`continue()`** de l'interface {{domxref("IDBCursor")}} fait avancer le curseur jusqu'à la prochaine position qui corrrespond à une clé donnée si celle-ci est passée en paramètre, si aucune clé n'est indiquée, le curseur avancera à la position qui suit immédiatement la position actuelle (dans la direction de progression du curseur).
@@ -93,13 +94,11 @@ function afficheDonnee() {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBCursor.continue")}}
+{{Compat}}
 
 ## Voir aussi
 

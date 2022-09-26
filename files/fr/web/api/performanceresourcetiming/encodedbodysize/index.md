@@ -11,6 +11,7 @@ tags:
   - encodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété **`encodedBodySize`** en lecture seule représente la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
@@ -63,10 +64,8 @@ function check_PerformanceEntries() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-encodedbodysize', 'encodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.encodedBodySize")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.readyState** 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 XHR 客戶端可以為下列其中一種狀態：
@@ -26,7 +26,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。
 
-> **備註：** 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` 和 `DONE 變成了 READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
+> **備註：** 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
 
 ## 範例
 
@@ -54,4 +54,4 @@ xhr.send(null);
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

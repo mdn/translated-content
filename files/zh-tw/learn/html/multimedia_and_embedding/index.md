@@ -1,8 +1,8 @@
 ---
 title: Multimedia and Embedding
 slug: Learn/HTML/Multimedia_and_embedding
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
+
 {{LearnSidebar}}
 
 到目前為止，我們已經看到了很多文字，但是只使用文字讓人感到無聊。讓我們開始研究如何透過更有趣的內容讓網絡變得活躍起來！本單元探討如何使用 HTML 在您的網頁中包增加媒體，包括可以嵌入圖像的不同方式，以及如何嵌入影片，音訊甚至整個網頁。

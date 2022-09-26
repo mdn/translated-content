@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/Guide
 ---
+
 **Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**
 
 - [Apprendre - HTML](/fr/docs/Apprendre/HTML)
@@ -25,7 +26,7 @@ translation_of: Web/Guide
   - : Les sites et applications web modernes utilisent généralement des graphismes (avec différents degrés de sophistication).
 - [Guide pour les API web](/fr/docs/Web/Guide/API)
   - : Une liste de l'ensemble des API web et de leur rôle.
-- [JavaScript](/fr/docs/JavaScript "/fr/docs/JavaScript")
+- [JavaScript](/fr/docs/JavaScript)
   - : JavaScript est un langage de script notamment utilisé pour créer des applications sur le Web.
 - [Localisations et encodages](/fr/docs/Localizations_and_character_encodings)
   - : En interne, les navigateurs traitent le texte en Unicode. Toutefois, la façon de représenter les caractères sous forme d'octets (l'encodage) est utilisée lors du transfert du texte sur le réseau vers le navigateur. La [spécification HTML recommande l'usage de l'encodage UTF-8](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset) (qui peut représenter l'ensemble des caractères Unicode). Quel que soit l'encodage utilisé, le contenu web doit déclarer l'encodage qu'il utilise.
@@ -50,4 +51,4 @@ translation_of: Web/Guide
 
 ## Voir aussi
 
-- [Référence pour les développeurs web](/fr/docs/Web/Reference "/fr/docs/Web/Reference")
+- [Référence pour les développeurs web](/fr/docs/Web/Reference)

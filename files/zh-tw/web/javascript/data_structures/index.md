@@ -1,8 +1,8 @@
 ---
 title: JavaScript 的資料型別與資料結構
 slug: Web/JavaScript/Data_structures
-translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 程式語言都具有資料結構，但在不同的程式語言之間會有些差異。這裡將列出可以在 JavaScript 中使用的資料結構，以及它們的特性；它們可以用來構成其他的資料結構。如果可以的話，會標示與其他語言不同的地方。
@@ -51,7 +51,7 @@ Null 型別只有一個值：`null`。請參見 {{jsxref("null")}} 與 {{Glossar
 
 ### 數字型別
 
-根據 ECMAScript 標準，數字型別只有一種：[雙精度 64 位元二進制格式 IEEE 754 值](https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8)（在 -(2^53 -1) and 2^53 -1 之間的數字）。**而整數並沒有指定的型別**。數字除了能代表浮點數以外，還有三個符號值：`+Infinity`、`-Infinity`、[`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)（not-a-number，非數字）。
+根據 ECMAScript 標準，數字型別只有一種：[雙精度 64 位元二進制格式 IEEE 754 值](https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8)（在 -(2^53 -1) and 2^53 -1 之間的數字）。**而整數並沒有指定的型別**。數字除了能代表浮點數以外，還有三個符號值：`+Infinity`、`-Infinity`、[`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN)（not-a-number，非數字）。
 
 要檢查在 `+/-Infinity` 內可用的最大值或最小值，可以用 {{jsxref("Number.MAX_VALUE")}} 或 {{jsxref("Number.MIN_VALUE")}} 常數。從 ECMAScript 6 開始，也可以透過 {{jsxref("Number.isSafeInteger()")}}、{{jsxref("Number.MAX_SAFE_INTEGER")}}、{{jsxref("Number.MIN_SAFE_INTEGER")}} 檢查某數字是否為雙精度浮點值之間。Beyond this range, integers in JavaScript are not safe anymore and will be a double-precision floating point approximation of the value.
 
@@ -64,7 +64,7 @@ Infinity
 -Infinity
 ```
 
-Although a number often represents only its value, JavaScript provides [some binary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). These can be used to represent several Boolean values within a single number using [bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29). However, this is usually considered a bad practice, since JavaScript offers other means to represent a set of Booleans (like an array of Booleans or an object with Boolean values assigned to named properties). Bit masking also tends to make code more difficult to read, understand, and maintain. It may be necessary to use such techniques in very constrained environments, like when trying to cope with the storage limitation of local storage or in extreme cases when each bit over the network counts. This technique should only be considered when it is the last measure that can be taken to optimize size.
+Although a number often represents only its value, JavaScript provides [some binary operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). These can be used to represent several Boolean values within a single number using [bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29). However, this is usually considered a bad practice, since JavaScript offers other means to represent a set of Booleans (like an array of Booleans or an object with Boolean values assigned to named properties). Bit masking also tends to make code more difficult to read, understand, and maintain. It may be necessary to use such techniques in very constrained environments, like when trying to cope with the storage limitation of local storage or in extreme cases when each bit over the network counts. This technique should only be considered when it is the last measure that can be taken to optimize size.
 
 ### 字串型別
 
@@ -81,7 +81,7 @@ It can be tempting to use strings to represent complex data. Doing this comes wi
 
 - It is easy to build complex strings with concatenation.
 - Strings are easy to debug (what you see printed is always what is in the string).
-- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Storage) values, {{ domxref("XMLHttpRequest") }} responses when using `responseText`, etc.) and it can be tempting to only work with strings.
+- Strings are the common denominator of a lot of APIs ([input fields](/zh-TW/docs/Web/API/HTMLInputElement), [local storage](/zh-TW/docs/Storage) values, {{ domxref("XMLHttpRequest") }} responses when using `responseText`, etc.) and it can be tempting to only work with strings.
 
 With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.
 
@@ -97,7 +97,7 @@ Symbols are new to JavaScript in ECMAScript Edition 6. A Symbol is a **unique** 
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
 
 There are two types of object properties which have certain attributes: The data property and the accessor property.
 
@@ -109,7 +109,7 @@ Associates a key with a value and has the following attributes:
 | ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | [[Value]]        | Any JavaScript type | The value retrieved by a get access of the property.                                                                                                                                                                                                 | undefined     |
 | [[Writable]]     | Boolean             | If `false`, the property's [[Value]] can't be changed.                                                                                                                                                                                               | false         |
-| [[Enumerable]]   | Boolean             | If `true`, the property will be enumerated in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) | false         |
+| [[Enumerable]]   | Boolean             | If `true`, the property will be enumerated in [for...in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops. See also [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) | false         |
 | [[Configurable]] | Boolean             | If `false`, the property can't be deleted and attributes other than [[Value]] and [[Writable]] can't be changed.                                                                                                                                     | false         |
 
 | Attribute  | Type    | Description                                           |
@@ -124,12 +124,12 @@ Associates a key with one or two accessor functions (get and set) to retrieve or
 
 | Attribute        | Type                         | Description                                                                                                                                                                                                              | Default value |
 | ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| [[Get]]          | Function object or undefined | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/en-US/docs/Web/JavaScript/Reference/Operators/get).               | undefined     |
-| [[Set]]          | Function object or undefined | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/en-US/docs/Web/JavaScript/Reference/Operators/set). | undefined     |
-| [[Enumerable]]   | Boolean                      | If `true`, the property will be enumerated in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | false         |
+| [[Get]]          | Function object or undefined | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/zh-TW/docs/Web/JavaScript/Reference/Operators/get).               | undefined     |
+| [[Set]]          | Function object or undefined | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/zh-TW/docs/Web/JavaScript/Reference/Operators/set). | undefined     |
+| [[Enumerable]]   | Boolean                      | If `true`, the property will be enumerated in [for...in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | false         |
 | [[Configurable]] | Boolean                      | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | false         |
 
-> **備註：** Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
+> **備註：** Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
 
 ### "Normal" objects, and functions
 
@@ -139,13 +139,13 @@ Functions are regular objects with the additional capability of being callable.
 
 ### Dates
 
-When representing dates, the best choice is to use the built-in [`Date` utility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JavaScript.
+When representing dates, the best choice is to use the built-in [`Date` utility](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date) in JavaScript.
 
 ### Indexed collections: Arrays and typed Arrays
 
-[Arrays](/en-US/docs/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-key-ed properties and the 'length' property. Additionally, arrays inherit from `Array.prototype` which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), etc. This makes Arrays a perfect candidate to represent lists or sets.
+[Arrays](/zh-TW/docs/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-key-ed properties and the 'length' property. Additionally, arrays inherit from `Array.prototype` which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), etc. This makes Arrays a perfect candidate to represent lists or sets.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript Edition 6 and present an array-like view of an underlying binary data buffer. The following table helps you to find the equivalent C data types:
+[Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript Edition 6 and present an array-like view of an underlying binary data buffer. The following table helps you to find the equivalent C data types:
 
 {{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
 
@@ -163,11 +163,11 @@ JSON (JavaScript Object Notation) is a lightweight data-interchange format, deri
 
 ### More objects in the standard library
 
-JavaScript has a standard library of built-in objects. Please have a look at the [reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects) to find out about more objects.
+JavaScript has a standard library of built-in objects. Please have a look at the [reference](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects) to find out about more objects.
 
 ## 使用 `typeof` 運算子來判斷型別
 
-`typeof` 運算子可以幫助你找到你的變數型別，請閱讀〈[reference page](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 〉來取得更多細節及邊緣案例。
+`typeof` 運算子可以幫助你找到你的變數型別，請閱讀〈[reference page](/zh-TW/docs/Web/JavaScript/Reference/Operators/typeof) 〉來取得更多細節及邊緣案例。
 
 ## See also
 

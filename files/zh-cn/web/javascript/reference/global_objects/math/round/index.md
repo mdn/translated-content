@@ -1,11 +1,8 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - Math.round()
-  - 四舍五入
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef}}
 
 **`Math.round()`** 函数返回一个数字四舍五入后最接近的整数。

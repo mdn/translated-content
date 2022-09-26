@@ -1,16 +1,8 @@
 ---
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-browser-compat: api.Screen.pixelDepth
-translation_of: Web/API/Screen/pixelDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 画面のビット深度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。

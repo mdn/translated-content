@@ -1,18 +1,8 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - 標準外
-  - リファレンス
-  - ウェブ開発
-  - profileEnd
-  - ウェブコンソール
-browser-compat: api.console.profileEnd
-translation_of: Web/API/Console/profileEnd
+i10n:
+  sourceCommit: 6c498a447fb5e776a67af7f9801a3aa407fc4d1c
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 
@@ -31,13 +21,17 @@ translation_of: Web/API/Console/profileEnd
 ## 構文
 
 ```js
-console.profileEnd(profileName);
+profileEnd(profileName)
 ```
 
-## 引数
+### 引数
 
 - `profileName`
   - : プロファイルにつける名前。この引数は省略可能です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## ブラウザーの互換性
 

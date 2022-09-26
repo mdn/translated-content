@@ -1,12 +1,8 @@
 ---
 title: CSS 注释
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - 参考
-  - 注释
-translation_of: Web/CSS/Comments
 ---
+
 {{CSSRef}}
 
 CSS 注释用于为代码添加额外的解释，或者用于阻止浏览器解析特定区域内的 CSS 代码。注释对文档布局没有影响。

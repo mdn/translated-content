@@ -1,8 +1,8 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
+
 {{JSRef}}
 
 **`keys()`**方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
@@ -15,7 +15,7 @@ arr.keys()
 
 ### 返回值
 
-新的**`Array Iterator`**对象
+新的 **`Array Iterator`** 对象
 
 ## 示例
 
@@ -53,10 +53,10 @@ console.log(eArr.next().value); // 4
 
 ## 另见
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
 - {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

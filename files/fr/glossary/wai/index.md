@@ -7,9 +7,10 @@ tags:
 translation_of: Glossary/WAI
 original_slug: Glossaire/WAI
 ---
+
 La WAI ou Web Accessibility Initiative a été lancée par le World Wide Web Consortium (W3C) pour rendre le web plus accessibie aux personnes handicapées, celles-ci pouvant avoir besoin d'un {{Glossary("navigateur")}} ou d'appareils non standards.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

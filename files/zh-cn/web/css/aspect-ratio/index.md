@@ -1,11 +1,11 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-translation_of: Web/CSS/aspect-ratio
 ---
+
 {{CSSRef}}
 
-**`aspect-ratio`** [CSS](/en-US/docs/CSS) 属性为 box 容器规定了一个**期待的纵横比**，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。
+**`aspect-ratio`** [CSS](/zh-CN/docs/CSS) 属性为 box 容器规定了一个**期待的纵横比**，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。
 
 ```css
 aspect-ratio: 1 / 1;
@@ -60,9 +60,9 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.aspect-ratio")}}
+{{Compat}}
 
 ## 相关阅读
 
-- [关联媒体容器元素的宽度与高度到它的宽高比上](/en-US/docs/Web/Media/images/aspect_ratio_mapping)
+- [关联媒体容器元素的宽度与高度到它的宽高比上](/zh-CN/docs/Web/Media/images/aspect_ratio_mapping)
 - [为 CSS 设计一个宽高比单元](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)

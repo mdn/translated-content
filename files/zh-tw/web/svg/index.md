@@ -1,16 +1,16 @@
 ---
 title: SVG
 slug: Web/SVG
-translation_of: Web/SVG
 ---
+
 **[由此開始](/zh_tw/SVG/教學)**
 本教程將輔助你開始使用 SVG。
 
-**可縮放向量圖形** (Scalable Vector Graphics，SVG) 是用於描述二維向量圖形的 [XML](/en/XML) 標記語言。基本上，SVG 用於圖形，而
+**可縮放向量圖形** (Scalable Vector Graphics，SVG) 是用於描述二維向量圖形的 [XML](/zh-TW/XML) 標記語言。基本上，SVG 用於圖形，而
 XHTML 用於文字。
 
 SVG 類似 Adobe 專有的 Flash 技術，SVG 與 Flash 兩者最大的分別在於 SVG 為 [W3C 所推薦](http://www.w3.org/Graphics/SVG/) (即標準)，並以
-XML 為基礎，而非封閉的二進制格式。SVG 設計為與其他 [W3C](http://www.w3.org/) 標準 (如 [CSS](/en/CSS)、[DOM](/en/DOM) 及 [SMIL](http://www.w3.org/AudioVideo/)) 一同運作。
+XML 為基礎，而非封閉的二進制格式。SVG 設計為與其他 [W3C](http://www.w3.org/) 標準 (如 [CSS](/zh-TW/CSS)、[DOM](/zh-TW/DOM) 及 [SMIL](http://www.w3.org/AudioVideo/)) 一同運作。
 
 ## 為何使用 SVG？
 
@@ -26,7 +26,7 @@ SVG 是一種向量圖形格式。向量圖形可縮可放，圖形完全不會�
 
 SVG 可和 HTML、CSS 及 JavaScript 一同運作。使用 SVG 增強普通 HTML 頁面或 web 應用程式。
 
-- 如何[在 XHTML 中使用 SVG](/en/SVG_In_HTML_Introduction) 教程
+- 如何[在 XHTML 中使用 SVG](/zh-TW/SVG_In_HTML_Introduction) 教程
 - Google [Maps](http://maps.google.com) (路徑圖) & [Docs](http://docs.google.com) (試算表繪圖)
 - [SVG 泡沫選單](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
 
@@ -36,7 +36,7 @@ SVG 如何在 Mozilla 裡實作的註解和資訊。
 
 - Firefox 目前已實作 [SVG 1.1 規範](/En/SVG_in_Firefox)
 - [SVG 編寫指南](http://jwatt.org/svg/authoring/)
-- [Mozilla SVG 專案](/en/Mozilla_SVG_Project)概述
+- [Mozilla SVG 專案](/zh-TW/Mozilla_SVG_Project)概述
 - 有關 SVG 和 Mozilla 的[問答集](/En/SVG/FAQ)
 
 ## 工具
@@ -68,4 +68,4 @@ SVG 如何在 Mozilla 裡實作的註解和資訊。
 
 ## 關聯主題
 
-- [XML](/en/XML), [Canvas](/en/HTML/Canvas)
+- [XML](/zh-TW/XML), [Canvas](/zh-TW/HTML/Canvas)

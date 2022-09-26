@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/multiEntry
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`multiEntry`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique le comportement de l'index lorsque le résultat de l'évaluation d'un chemin de clé renvoie un tableau.
@@ -69,13 +70,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.multiEntry")}}
+{{Compat}}
 
 ## Voir aussi
 

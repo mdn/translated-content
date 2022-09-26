@@ -1,11 +1,8 @@
 ---
 title: '@document'
 slug: Web/CSS/@document
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/@document
 ---
+
 {{CSSRef}} {{ SeeCompatTable}}
 
 `@document` [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表（UserStyle）而设计的，但也可以在作者定义的样式表上使用。

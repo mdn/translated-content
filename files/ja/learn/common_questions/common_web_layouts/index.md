@@ -1,13 +1,6 @@
 ---
 title: 一般的なウェブレイアウトには何が含まれているのか？
 slug: Learn/Common_questions/Common_web_layouts
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - HTML
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/Common_web_layouts
 ---
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
 
@@ -45,7 +38,7 @@ translation_of: Learn/Common_questions/Common_web_layouts
 
 これらの要素は、すべてのフォームファクターで非常に一般的ですが、さまざまな方法でレイアウトすることができます。以下に例を示します（**1** はヘッダー、 **2** はフッター、 **A** は本文、 **B1, B2** はサイドにあるものを表します）。
 
-**1 列レイアウト**。特にモバイルブラウザでは、小さな画面の中でごちゃごちゃしないようにすることが重要です。
+**1 列レイアウト**。特にモバイルブラウザーでは、小さな画面の中でごちゃごちゃしないようにすることが重要です。
 
 ![1 列レイアウトの例。本文が一番上で、その下にサイド記事が積み重なっています。](1-col-layout.png)
 

@@ -2,6 +2,7 @@
 title: window.alert
 slug: Web/API/Window/alert
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -15,7 +16,7 @@ window.alert(message);
 ```
 
 > **备注：**
-> 
+>
 > ```js
 > alert(uid = `${uid}`);
 >

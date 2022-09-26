@@ -1,8 +1,8 @@
 ---
 title: 居中一个元素
 slug: Web/CSS/Layout_cookbook/Center_an_element
-translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
+
 {{CSSRef}}
 
 在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在伸缩盒子模型 (flexbox) 出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性 (Box Alignment) 就很直截了当了。
@@ -27,15 +27,7 @@ translation_of: Web/CSS/Layout_cookbook/Center_an_element
 
 ## 浏览器兼容性
 
-各种布局方法具有不同的浏览器支持。有关所使用属性的基本支持的详细信息，请参见下表
-
-#### align-items
-
-{{Compat("css.properties.align-items")}}
-
-#### justify-content
-
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## MDN 上相关的资源
 
