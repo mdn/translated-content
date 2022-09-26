@@ -471,7 +471,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Syntax
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Description
 

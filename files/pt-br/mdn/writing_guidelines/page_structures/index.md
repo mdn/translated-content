@@ -209,7 +209,7 @@ The feature data for [border-width](/pt-BR/docs/Web/CSS/border-width#Browser_com
 
 #### Adicionando uma descrição
 
-There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
+There is a fourth, optional, member that can go inside the compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
 
 ```json
 {

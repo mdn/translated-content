@@ -35,7 +35,7 @@ _The `Performance` interface doesn't inherit any properties._
 
 ## Methods
 
-\__The `Performance` interface doesn't inherit any_ method\_.
+_The `Performance` interface doesn't inherit any method_.
 
 - {{domxref("Performance.clearFrameTimings()")}}
   - : TBD

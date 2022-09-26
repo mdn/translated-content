@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 
-A sintaxe _**`set`**_ liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
+A sintaxe **`set`** liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
 
 ## Sintaxe
 
