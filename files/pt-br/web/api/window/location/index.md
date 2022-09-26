@@ -5,9 +5,9 @@ translation_of: Web/API/Window/location
 ---
 {{APIRef}}
 
-O **`Window.location `**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.
+O **`Window.location`**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.
 
-Embora `Window.location `seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com `location `como se fosse uma string na maioria dos casos: `location = 'http://www.exemplo.com'` é um sinônimo de `location.href = 'http://www.exemplo.com'`.
+Embora `Window.location` seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com `location` como se fosse uma string na maioria dos casos: `location = 'http://www.exemplo.com'` é um sinônimo de `location.href = 'http://www.exemplo.com'`.
 
 ## Sintaxe
 
@@ -26,7 +26,7 @@ alert(location); // alerta "https://developer.mozilla.org/en-US/docs/Web/API/Win
 
 ### Exemplo #1: Navegando para uma nova página
 
-Sempre que um novo valor é atribuído a um objeto de localização, um documento será carregado usando a URL como se `location.assign() `tivesse sido chamado com a URL modificada. Observe que as configurações de segurança, como CORS, pode impedir que isso aconteça de forma eficaz.
+Sempre que um novo valor é atribuído a um objeto de localização, um documento será carregado usando a URL como se `location.assign()` tivesse sido chamado com a URL modificada. Observe que as configurações de segurança, como CORS, pode impedir que isso aconteça de forma eficaz.
 
 ```js
 location.assign("http://www.mozilla.org"); // ou
@@ -41,7 +41,7 @@ location.reload(true);
 
 ### Exemplo #3
 
-Considere o exemplo a seguir, que vai recarregar a página usando o método [`replace() `](/pt-BR/docs/Web/API/Location.replace)para inserir o valor do `location.pathname `depois da hash:
+Considere o exemplo a seguir, que vai recarregar a página usando o método [`replace()`](/pt-BR/docs/Web/API/Location.replace) para inserir o valor do `location.pathname`depois da hash:
 
 ```js
 function reloadPageWithHash() {
@@ -50,7 +50,7 @@ function reloadPageWithHash() {
 }
 ```
 
-> **Nota:**O exemplo acima funciona em situações onde `location.hash` não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo `location.pathname` desta forma irá apagar qualquer informação em `location.hash`, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar o hash. Se você precisa mudar o pathname mas manter o hash como é, use o `método replace(), `que deve funcionar de forma consistente em todos os navegadores.
+> **Nota:**O exemplo acima funciona em situações onde `location.hash` não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo `location.pathname` desta forma irá apagar qualquer informação em `location.hash`, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar o hash. Se você precisa mudar o pathname mas manter o hash como é, use o `método replace()`, que deve funcionar de forma consistente em todos os navegadores.
 
 ### Exemplo #4: Mostrar as propriedades da URL atual em um alerta:
 
@@ -198,5 +198,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the {{Glossary("browsing context")}}, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history "en/DOM/Manipulating the browser history")
+- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
 - [hashchange](/pt-BR/docs/DOM/Mozilla_event_reference/hashchange)

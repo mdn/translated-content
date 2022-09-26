@@ -39,7 +39,7 @@ translation_of: Web/API/Web_Authentication_API
 
 <p>The registration steps are:</p>
 
-<ol start="0">
+<ol>
  <li><strong>Приложение запрашивает регистрацию</strong> - The application makes the initial registration request. The protocol and format of this request is outside of the scope of the Web Authentication API.</li>
  <li><strong>Server Sends Challenge, User Info, and Relying Party Info</strong> - The server sends a challenge, user information, and relying party information to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be <a href="/en-US/docs/Glossary/REST">REST</a> over https (probably using <a href="/en-US/docs/User:maybe/webidl_mdn/XMLHttpRequest_API">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>), but they could also be <a href="/en-US/docs/Glossary/SOAP">SOAP</a>, <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the <a href="/en-US/docs/Web/API/CredentialsContainer/create">create()</a> call, typically with little or no modification and returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> that will resolve to a {{domxref("PublicKeyCredential")}} containing an {{domxref("AuthenticatorAttestationResponse")}}. <strong>Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the registration process.</strong></li>
  <li><strong>Браузер вызывает authenticatorMakeCredential() для аутентификатора</strong> - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which is recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the create() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).</li>
@@ -63,7 +63,7 @@ translation_of: Web/API/Web_Authentication_API
 
 <p><em>Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action.</em></p>
 
-<ol start="0">
+<ol>
  <li><strong>Приложение запрашивает аутентификацию</strong> - The application makes the initial authentication request. The protocol and format of this request is outside of the scope of the Web Authentication API.</li>
  <li><strong>Server Sends Challenge</strong> - The server sends a challenge to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be <a href="/en-US/docs/Glossary/REST">REST</a> over https (probably using <a href="/en-US/docs/User:maybe/webidl_mdn/XMLHttpRequest_API">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>), but they could also be <a href="/en-US/docs/Glossary/SOAP">SOAP</a>, <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the <a href="/en-US/docs/Web/API/CredentialsContainer/get">get()</a> call, typically with little or no modification. <strong>Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.</strong></li>
  <li><strong>Браузер вызывает authenticatorGetCredential() для аутентификатора</strong> - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the get() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).</li>
@@ -178,8 +178,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 </pre>
 
 <ul>
- <li><span class="external">Сайт </span><a class="external" href="https://webauthn.bin.coffee/">Mozilla Demo</a> и его <a href="https://github.com/jcjones/webauthn.bin.coffee">source code</a>.</li>
- <li><span class="external">Сайт </span><a class="external" href="http://webauthndemo.appspot.com/">Google Demo</a> и его <a href="https://github.com/google/webauthndemo">source code</a>.</li>
+ <li>Сайт <a class="external" href="https://webauthn.bin.coffee/">Mozilla Demo</a> и его <a href="https://github.com/jcjones/webauthn.bin.coffee">source code</a>.</li>
+ <li>Сайт <a class="external" href="http://webauthndemo.appspot.com/">Google Demo</a> и его <a href="https://github.com/google/webauthndemo">source code</a>.</li>
  <li><a href="https://webauthn.org">webauthn.org</a>: <a href="https://github.com/apowers313/webauthn-simple-app">client source code</a> и <a href="https://github.com/apowers313/fido2-lib">server source code</a></li>
 </ul>
 
@@ -235,5 +235,5 @@ navigator.credentials.create(createCredentialDefaultArgs)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><span class="st"><a href="https://secure.wphackedhelp.com/blog/wordpress-two-factor-authentication/">WordPress Two-Factor Authentication</a>, ( 2FA) is an additional layer of security you can add to your <em>WordPress</em> login page.</span></li>
+ <li><a href="https://secure.wphackedhelp.com/blog/wordpress-two-factor-authentication/">WordPress Two-Factor Authentication</a>, ( 2FA) is an additional layer of security you can add to your <em>WordPress</em> login page.</li>
 </ul>

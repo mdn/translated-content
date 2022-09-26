@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 {{APIRef("HTML DOM")}}
 
-O método **`setInterval() `**oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.
+O método **`setInterval()`** oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.
 
 ## Sintaxe.
 
@@ -556,7 +556,7 @@ Your HTML page:
 </html>
 ```
 
-[View this example in action](/files/3995/minidaemon_example.html "MiniDaemon Example")
+[View this example in action](/files/3995/minidaemon_example.html)
 
 ## Notes
 

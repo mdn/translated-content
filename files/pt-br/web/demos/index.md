@@ -14,7 +14,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 - [Blob Sallad: an interactive blob using javascript and canvas](http://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
 - [Flying through space](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
-- [3D RayCaster](/samples/raycaster/RayCaster.html "https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html")
+- [3D RayCaster](/samples/raycaster/RayCaster.html)
 - [processing.js](http://processingjs.org/exhibition/)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
 - [miniPaint: Image editor](http://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
@@ -77,7 +77,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 ## HTML
 
-- [Zen Photon Garden ](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](http://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 
 ## API da Web
 
