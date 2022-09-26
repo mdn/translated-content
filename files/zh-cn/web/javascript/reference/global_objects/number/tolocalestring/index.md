@@ -148,6 +148,6 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Number.prototype.toString()")}}
