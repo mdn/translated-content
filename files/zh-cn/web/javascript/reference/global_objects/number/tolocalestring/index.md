@@ -25,7 +25,7 @@ toLocaleString(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : 缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组。与 `Intl.NumberFormat()` 构造器的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 参数相同。
+  - : 缩写语言代码（BCP 47 language tag，例如 cmn-Hans-CN）的字符串或者这些字符串组成的数组。与 `Intl.NumberFormat()` 构造器的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 参数相同。
 
     在无 `Intl.NumberFormat` 支持的实现中，往往使用主机的区域设置，这个参数是忽略的。
 
