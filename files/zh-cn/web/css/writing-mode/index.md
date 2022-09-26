@@ -169,7 +169,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## 请参阅
 

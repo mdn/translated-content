@@ -62,7 +62,7 @@ pad: 3 "0";
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.counter-style.pad")}}
+{{Compat}}
 
 ## 参见
 

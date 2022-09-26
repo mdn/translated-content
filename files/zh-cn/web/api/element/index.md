@@ -41,7 +41,7 @@ slug: Web/API/Element
   - : 是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。
 - {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
 
-  - : 元素对应的 namespace URI ，如果没有则返回 `null`
+  - : 元素对应的 namespace URI，如果没有则返回 `null`
 
     > **备注：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
 
@@ -350,4 +350,4 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## 浏览器兼容性
 
-{{Compat("api.Element")}}
+{{Compat}}

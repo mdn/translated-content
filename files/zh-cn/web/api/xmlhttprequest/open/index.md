@@ -41,7 +41,7 @@ xhrReq.open(method, url, async, user, password);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.open")}}
+{{Compat}}
 
 ## 参见
 

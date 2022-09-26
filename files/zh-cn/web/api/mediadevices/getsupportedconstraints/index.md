@@ -62,4 +62,4 @@ for (let constraint in supportedConstraints) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getSupportedConstraints")}}
+{{Compat}}

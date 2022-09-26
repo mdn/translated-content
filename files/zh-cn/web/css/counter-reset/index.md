@@ -71,7 +71,7 @@ h1 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}
 
 ## 参考
 

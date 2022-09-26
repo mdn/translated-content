@@ -27,4 +27,4 @@ A {{domxref('ConstantSourceNode')}} instance.
 
 ## Browser Compatibility
 
-{{Compat("api.BaseAudioContext.createConstantSource")}}
+{{Compat}}

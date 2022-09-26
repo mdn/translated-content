@@ -44,7 +44,7 @@ if (parg.childElementCount)
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.children")}}
+{{Compat}}
 
 ## 相关链接
 

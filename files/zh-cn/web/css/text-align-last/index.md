@@ -77,7 +77,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-align-last")}}
+{{Compat}}
 
 ## 参见
 

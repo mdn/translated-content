@@ -75,7 +75,7 @@ input:placeholder-shown {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## 参见
 

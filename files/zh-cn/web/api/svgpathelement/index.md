@@ -835,7 +835,7 @@ slug: Web/API/SVGPathElement
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGPathElement")}}
+{{Compat}}
 
 ## 参见
 

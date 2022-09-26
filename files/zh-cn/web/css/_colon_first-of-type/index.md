@@ -80,7 +80,7 @@ article :first-of-type {
 
 ## 浏览器兼容
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## 参见
 

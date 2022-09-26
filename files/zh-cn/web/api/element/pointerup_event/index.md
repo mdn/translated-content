@@ -46,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointerup")}}
+{{Compat}}
 
 ## 相关链接
 

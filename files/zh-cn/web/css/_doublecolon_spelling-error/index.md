@@ -38,7 +38,7 @@ slug: Web/CSS/::spelling-error
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## 参见
 

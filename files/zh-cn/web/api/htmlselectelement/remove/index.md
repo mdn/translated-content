@@ -47,7 +47,7 @@ sel.remove(1);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.remove")}}
+{{Compat}}
 
 ## 参考
 

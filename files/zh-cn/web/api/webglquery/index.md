@@ -35,7 +35,7 @@ var query = gl.createQuery();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLQuery")}}
+{{Compat}}
 
 ## 参见
 

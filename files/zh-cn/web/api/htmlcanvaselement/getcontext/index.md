@@ -96,7 +96,7 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## 另请参阅
 

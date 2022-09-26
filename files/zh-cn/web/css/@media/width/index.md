@@ -54,4 +54,4 @@ slug: Web/CSS/@media/width
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.width")}}
+{{Compat}}

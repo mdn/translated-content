@@ -207,7 +207,7 @@ if (!Array.prototype.indexOf) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
 ## 相容性備註
 

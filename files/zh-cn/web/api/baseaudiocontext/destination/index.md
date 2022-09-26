@@ -40,7 +40,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.destination")}}
+{{Compat}}
 
 ## 另见
 

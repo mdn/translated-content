@@ -167,7 +167,7 @@ accessed.</p>
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## 参见
 

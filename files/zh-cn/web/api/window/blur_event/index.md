@@ -90,7 +90,7 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.blur_event")}}
+{{Compat}}
 
 {{DOMxRef(" document. activeelement ")}}的值在处理 ({{bug(452307)}}) 时因浏览器而异 ;({{bug(452307)}}):IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。
 

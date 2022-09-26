@@ -26,7 +26,7 @@ slug: Web/API/FileSystemSync
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystemSync")}}
+{{Compat}}
 
 ## 另见
 

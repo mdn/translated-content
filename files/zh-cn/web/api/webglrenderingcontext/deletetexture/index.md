@@ -40,7 +40,7 @@ gl.deleteTexture(texture);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.deleteTexture")}}
+{{Compat}}
 
 ## See also
 

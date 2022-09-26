@@ -2,6 +2,7 @@
 title: VRDisplay.exitPresent()
 slug: Web/API/VRDisplay/exitPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`exitPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、この `VRDisplay` がシーンを表示するのを停止します。

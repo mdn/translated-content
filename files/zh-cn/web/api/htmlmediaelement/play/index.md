@@ -88,7 +88,7 @@ function handlePlayButton() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}
 
 ## 参见
 

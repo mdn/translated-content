@@ -79,7 +79,7 @@ slug: Web/HTML/Element/col
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.col")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -183,7 +183,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 ## 参见
 

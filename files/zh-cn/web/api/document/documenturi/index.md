@@ -21,4 +21,4 @@ HTML 文档有一个 {{domxref("document.URL")}} 属性返回同样的值。但�
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}

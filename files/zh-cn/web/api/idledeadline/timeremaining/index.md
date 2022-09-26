@@ -31,7 +31,7 @@ See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline.timeRemaining")}}
+{{Compat}}
 
 ## See also
 

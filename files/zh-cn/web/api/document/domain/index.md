@@ -61,7 +61,7 @@ if (document.domain == badDomain) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.domain")}}
+{{Compat}}
 
 ### Firefox 备注
 

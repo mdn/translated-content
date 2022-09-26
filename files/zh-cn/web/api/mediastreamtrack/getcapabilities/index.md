@@ -29,4 +29,4 @@ A {{domxref('MediaTrackCapabilities')}} object which specifies the value or rang
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamTrack.getCapabilities")}}
+{{Compat}}

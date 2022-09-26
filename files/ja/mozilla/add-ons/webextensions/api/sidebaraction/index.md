@@ -2,6 +2,7 @@
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
+
 {{AddonSidebar}}
 
 拡張機能のサイドバーのプロパティを取得、設定します。

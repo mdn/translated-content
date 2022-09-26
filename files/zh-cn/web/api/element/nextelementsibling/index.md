@@ -94,7 +94,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.nextElementSibling")}}
+{{Compat}}
 
 ## 相关链接
 

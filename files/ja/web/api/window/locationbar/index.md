@@ -2,6 +2,7 @@
 title: Window.locationbar
 slug: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 `locationbar` オブジェクトを返し、これで表示/非表示を確認することができます。

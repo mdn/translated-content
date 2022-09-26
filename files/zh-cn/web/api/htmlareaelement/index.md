@@ -73,7 +73,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}} and implement thos
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAreaElement")}}
+{{Compat}}
 
 ## See also
 

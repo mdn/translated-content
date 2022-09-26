@@ -120,7 +120,7 @@ To listen to named events, you'll require a listener for each type of event sent
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## 参见
 

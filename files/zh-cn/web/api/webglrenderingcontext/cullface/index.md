@@ -49,7 +49,7 @@ gl.getParameter(gl.CULL_FACE_MODE) === gl.FRONT_AND_BACK;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.cullFace")}}
+{{Compat}}
 
 ## 相关资料
 

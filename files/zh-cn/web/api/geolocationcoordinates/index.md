@@ -36,7 +36,7 @@ _The `Coordinates` interface_ **doesn't inherit any property**.
 
 ## 浏览器兼容性
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## 请参见
 

@@ -47,4 +47,4 @@ var myMerger = new ChannelMergerNode(ac, options);
 
 ## 浏览器兼容性
 
-{{Compat("api.ChannelMergerNode.ChannelMergerNode")}}
+{{Compat}}

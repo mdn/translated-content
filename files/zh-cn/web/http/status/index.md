@@ -169,7 +169,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 
 ## 浏览器兼容性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 参见
 

@@ -45,7 +45,7 @@ transform-style: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## 另见
 

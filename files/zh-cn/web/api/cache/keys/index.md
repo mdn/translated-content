@@ -54,7 +54,7 @@ caches.open('v1').then(function(cache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.keys")}}
+{{Compat}}
 
 ## 参见
 

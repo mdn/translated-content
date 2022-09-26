@@ -58,7 +58,7 @@ gl.getParameter(gl.RENDERBUFFER_BINDING);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindRenderbuffer")}}
+{{Compat}}
 
 ## 另见
 

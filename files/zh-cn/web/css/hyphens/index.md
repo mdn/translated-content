@@ -100,7 +100,7 @@ p.auto {
 
 ## Browser compatibility
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## See also
 

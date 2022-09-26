@@ -76,7 +76,7 @@ function logMouseButton(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.button")}}
+{{Compat}}
 
 ## 参阅
 

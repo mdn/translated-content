@@ -68,7 +68,7 @@ original_slug: Web/API/Document/dragenter_event
 
 ## 浏览器支持
 
-{{Compat("api.Document.dragenter_event")}}
+{{Compat}}
 
 ## 相关
 

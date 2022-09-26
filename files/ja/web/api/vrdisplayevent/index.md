@@ -2,6 +2,7 @@
 title: VRDisplayEvent
 slug: Web/API/VRDisplayEvent
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRDisplayEvent`** インターフェイスは、 WebVR 関連イベントのイベントオブジェクトを表します ([WebVR ウインドウ拡張機能のリスト](/ja/docs/Web/API/WebVR_API#Window)を参照)。

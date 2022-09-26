@@ -32,7 +32,7 @@ newStream = new MediaStream(tracks[]);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.MediaStream")}}
+{{Compat}}
 
 ## 参见
 

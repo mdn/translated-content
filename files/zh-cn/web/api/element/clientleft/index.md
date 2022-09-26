@@ -35,7 +35,7 @@ padding-bottom
 
 ## Browser compatibility
 
-{{Compat("api.Element.clientLeft")}}
+{{Compat}}
 
 ## 备注
 

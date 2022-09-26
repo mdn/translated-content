@@ -59,4 +59,4 @@ navigator.serviceWorker.register(..).then(function(swr) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorker.onstatechange")}}
+{{Compat}}

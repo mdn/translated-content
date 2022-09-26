@@ -301,7 +301,7 @@ if (objCtr.defineProperty) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
 ## 參見
 

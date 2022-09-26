@@ -86,7 +86,7 @@ p.secret {
 
 ### Support of `contents`
 
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## 其它参考
 

@@ -269,4 +269,4 @@ dd + dd {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.position")}}
+{{Compat}}

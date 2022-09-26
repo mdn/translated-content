@@ -24,7 +24,7 @@ _没有继承来的方法_
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasPattern")}}
+{{Compat}}
 
 ## 参见
 

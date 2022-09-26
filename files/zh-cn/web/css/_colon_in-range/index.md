@@ -77,7 +77,7 @@ input:out-of-range + label::after {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.in-range")}}
+{{Compat}}
 
 ## 参见
 

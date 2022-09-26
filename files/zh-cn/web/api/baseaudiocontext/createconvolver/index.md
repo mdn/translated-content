@@ -60,7 +60,7 @@ convolver.buffer = concertHallBuffer;
 
 ## 浏览器兼容
 
-{{Compat("api.BaseAudioContext.createConvolver")}}
+{{Compat}}
 
 ## 另见
 

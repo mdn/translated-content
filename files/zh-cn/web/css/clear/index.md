@@ -198,7 +198,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.clear")}}
+{{Compat}}
 
 ## 参见
 

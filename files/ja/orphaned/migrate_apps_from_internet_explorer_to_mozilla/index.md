@@ -3,6 +3,7 @@ title: Migrate apps from Internet Explorer to Mozilla
 slug: orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla
 original_slug: Migrate_apps_from_Internet_Explorer_to_Mozilla
 ---
+
 ### イントロダクション
 
 Netscape が Mozilla ブラウザを始めたときには、W3C 標準をサポートすると明確に決めていました。その結果、Mozilla は Netscape Navigator 4.x 系や Microsoft Internet Explorer のレガシコードと完全に後方互換ではなくなっています。たとえば、Mozilla は、後述する \<layer> タグをサポートしません。W3C 標準というコンセプトがもたらされる前に開発された Internet Explorer 4 のようなブラウザは、さまざまな特異な仕様を引き継いでいます。この記事では、Internet Explorer やその他のレガシブラウザとの強力な HTML 後方互換を実現するための Mozilla の quirks モードについて解説します。

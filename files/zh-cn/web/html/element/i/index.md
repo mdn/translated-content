@@ -48,4 +48,4 @@ The Latin phrase _Veni, vidi, vici_ is often mentioned in music, art, and litera
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.i")}}
+{{Compat}}

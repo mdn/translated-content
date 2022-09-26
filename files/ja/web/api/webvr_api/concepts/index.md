@@ -2,6 +2,7 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 ---
+
 {{APIRef("WebVR API")}}
 
 この文書は，バーチャルリアリティ(VR)の背景にある概念と理論について述べています．もしあなたがこの分野の初学者なら，コードを書き始める前に，これらのトピックを理解すると役に立つでしょう．

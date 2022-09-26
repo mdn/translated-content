@@ -121,7 +121,7 @@ answer(1337); // 56154
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## 參見
 

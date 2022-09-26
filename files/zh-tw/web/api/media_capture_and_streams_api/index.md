@@ -62,7 +62,7 @@ The articles below provide additional guidance and how-to information that will 
 
 ## Browser compatibility
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## 也可以看看
 

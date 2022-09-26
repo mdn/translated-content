@@ -55,7 +55,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("api.HTMLAudioElement.Audio")}}
+{{Compat}}
 
 ## 参见
 

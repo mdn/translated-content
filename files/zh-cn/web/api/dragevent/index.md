@@ -69,4 +69,4 @@ slug: Web/API/DragEvent
 
 ## 浏览器兼容性
 
-{{Compat("api.DragEvent")}}
+{{Compat}}

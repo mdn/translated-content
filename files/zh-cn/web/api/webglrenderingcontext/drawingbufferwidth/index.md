@@ -35,7 +35,7 @@ gl.drawingBufferWidth; // 300
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.drawingBufferWidth")}}
+{{Compat}}
 
 ## 相关链接
 

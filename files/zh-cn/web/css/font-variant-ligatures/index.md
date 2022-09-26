@@ -189,4 +189,4 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-variant-ligatures")}}
+{{Compat}}

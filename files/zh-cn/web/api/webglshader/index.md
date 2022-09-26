@@ -63,7 +63,7 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLShader")}}
+{{Compat}}
 
 ## 参阅
 

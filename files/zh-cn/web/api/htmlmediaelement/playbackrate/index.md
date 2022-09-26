@@ -39,7 +39,7 @@ console.log(obj.playbackRate); // 1
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.playbackRate")}}
+{{Compat}}
 
 ## 请参阅
 

@@ -52,4 +52,4 @@ function clear_all_marks() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.clearMarks")}}
+{{Compat}}

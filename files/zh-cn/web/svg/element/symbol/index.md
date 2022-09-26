@@ -55,7 +55,7 @@ slug: Web/SVG/Element/symbol
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.symbol")}}
+{{Compat}}
 
 ## 另见
 

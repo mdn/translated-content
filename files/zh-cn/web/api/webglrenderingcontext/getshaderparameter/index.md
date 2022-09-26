@@ -41,7 +41,7 @@ gl.getShaderParameter(shader, gl.SHADER_TYPE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getShaderParameter")}}
+{{Compat}}
 
 ## 相关链接
 

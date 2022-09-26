@@ -31,7 +31,7 @@ slug: Web/API/InputEvent/InputEvent
 
 ## 浏览器兼容性
 
-{{Compat("api.InputEvent.InputEvent")}}
+{{Compat}}
 
 ## 参考
 

@@ -2,6 +2,7 @@
 title: Worklet
 slug: Web/API/Worklet
 ---
+
 {{APIRef("Worklets")}}{{SeeCompatTable}}
 
 **`Worklet`** インターフェイスは軽量な{{domxref("Worker", "ウェブワーカー", "", 1)}}を提供し、開発者がレンダリングパイプラインの低水準な部分を制御できるようにします。

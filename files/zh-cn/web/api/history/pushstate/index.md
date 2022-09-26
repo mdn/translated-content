@@ -53,7 +53,7 @@ history.pushState(state, title, url)
 
 ## 浏览器兼容性
 
-{{Compat("api.History.pushState")}}
+{{Compat}}
 
 ## 参见
 

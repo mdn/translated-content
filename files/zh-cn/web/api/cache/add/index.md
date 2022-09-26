@@ -65,7 +65,7 @@ this.addEventListener('install', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.add")}}
+{{Compat}}
 
 ## 参见
 

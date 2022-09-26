@@ -30,7 +30,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.permissions.contains")}}
+{{Compat}}
 
 ## Examples
 

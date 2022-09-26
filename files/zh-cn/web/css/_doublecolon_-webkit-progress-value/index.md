@@ -41,7 +41,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-value")}}
+{{Compat}}
 
 ## 参见
 

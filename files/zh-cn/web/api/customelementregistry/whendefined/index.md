@@ -66,4 +66,4 @@ container.removeChild(placeholder);
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.whenDefined")}}
+{{Compat}}

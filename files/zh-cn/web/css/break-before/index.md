@@ -100,4 +100,4 @@ The `break-before` property is specified as one of the keyword values from the l
 
 ## Browser compatibility
 
-{{Compat("css.properties.break-before")}}
+{{Compat}}

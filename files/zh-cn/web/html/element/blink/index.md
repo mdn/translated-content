@@ -29,7 +29,7 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 ## 浏览器兼容
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 参见
 

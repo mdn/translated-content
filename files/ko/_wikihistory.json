@@ -9831,62 +9831,6 @@
     "modified": "2020-10-15T21:48:47.357Z",
     "contributors": ["alattalatta", "Netaras", "fscholz"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T21:53:02.555Z",
-    "contributors": ["limkukhyun", "0xABCDEF"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError": {
-    "modified": "2020-10-15T22:07:58.077Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-10-15T22:08:05.155Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T22:07:55.815Z",
-    "contributors": ["limkukhyun", "alattalatta"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError": {
-    "modified": "2020-10-15T22:08:04.793Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-10-15T22:08:00.915Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module": {
-    "modified": "2020-10-15T22:07:56.280Z",
-    "contributors": ["limkukhyun", "alattalatta"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError": {
-    "modified": "2020-10-15T22:08:08.186Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T22:07:58.705Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T22:07:56.654Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T22:07:56.654Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate": {
-    "modified": "2020-10-15T22:07:57.168Z",
-    "contributors": ["fnwinter", "limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming": {
-    "modified": "2020-10-15T22:08:08.189Z",
-    "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/validate": {
-    "modified": "2020-10-15T22:08:00.982Z",
-    "contributors": ["limkukhyun"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-10-15T22:01:55.624Z",
     "contributors": ["jeoyoho"]
@@ -10983,6 +10927,62 @@
   },
   "WebAssembly/Exported_functions": {
     "modified": "2019-03-18T21:27:58.372Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T21:53:02.555Z",
+    "contributors": ["limkukhyun", "0xABCDEF"]
+  },
+  "WebAssembly/JavaScript_interface/CompileError": {
+    "modified": "2020-10-15T22:07:58.077Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Global": {
+    "modified": "2020-10-15T22:08:05.155Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Instance": {
+    "modified": "2020-10-15T22:07:55.815Z",
+    "contributors": ["limkukhyun", "alattalatta"]
+  },
+  "WebAssembly/JavaScript_interface/LinkError": {
+    "modified": "2020-10-15T22:08:04.793Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Memory": {
+    "modified": "2020-10-15T22:08:00.915Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Module": {
+    "modified": "2020-10-15T22:07:56.280Z",
+    "contributors": ["limkukhyun", "alattalatta"]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError": {
+    "modified": "2020-10-15T22:08:08.186Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T22:07:58.705Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T22:07:56.654Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T22:07:56.654Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/instantiate": {
+    "modified": "2020-10-15T22:07:57.168Z",
+    "contributors": ["fnwinter", "limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+    "modified": "2020-10-15T22:08:08.189Z",
+    "contributors": ["limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/validate": {
+    "modified": "2020-10-15T22:08:00.982Z",
     "contributors": ["limkukhyun"]
   },
   "WebAssembly/Loading_and_running": {

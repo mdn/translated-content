@@ -111,4 +111,4 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-variant-numeric")}}
+{{Compat}}

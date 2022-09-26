@@ -81,7 +81,7 @@ div :first-of-type {
 
 ## 瀏覽器相容性
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## 參見
 

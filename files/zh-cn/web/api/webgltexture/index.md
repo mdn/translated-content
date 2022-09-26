@@ -30,7 +30,7 @@ var texture = gl.createTexture();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLTexture")}}
+{{Compat}}
 
 ## See also
 

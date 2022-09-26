@@ -45,9 +45,9 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ### Related Topics
 
-- [AJAX](/pt-BR/docs/AJAX "AJAX")
-- [JavaScript](/pt-BR/docs/JavaScript "JavaScript")
-- [WebSockets](/pt-BR/docs/WebSockets "WebSockets")
+- [AJAX](/pt-BR/docs/AJAX)
+- [JavaScript](/pt-BR/docs/JavaScript)
+- [WebSockets](/pt-BR/docs/WebSockets)
 
 ### Other resources
 

@@ -38,7 +38,7 @@ audioCtx.onstatechange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.state")}}
+{{Compat}}
 
 ## 另见
 

@@ -66,7 +66,7 @@ if (tOLeft > 5) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## 相关链接
 

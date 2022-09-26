@@ -155,7 +155,7 @@ li::before {
 
 ## Browser compatibility
 
-{{Compat("css.types.counters")}}
+{{Compat}}
 
 ## See also
 

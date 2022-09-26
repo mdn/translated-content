@@ -2,6 +2,7 @@
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.responseXML`** は読み取り専用のプロパティで、リクエストによって受け取った HTML または XML を含む {{domxref("Document")}}、またはリクエストが成功しなかった場合、まだ送信されていない場合、データが XML または HTML として解釈できない場合は `null` を返します。

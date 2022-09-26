@@ -135,7 +135,7 @@ for (i=0;i<4;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.arc")}}
+{{Compat}}
 
 ## 参见
 

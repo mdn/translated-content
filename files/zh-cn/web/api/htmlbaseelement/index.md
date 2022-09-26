@@ -26,7 +26,7 @@ _没有特殊的方法，继承了其父级 {{domxref("HTMLElement")}} 的所有
 
 ## Browser compatibility
 
-{{Compat("api.HTMLBaseElement")}}
+{{Compat}}
 
 ## See also
 

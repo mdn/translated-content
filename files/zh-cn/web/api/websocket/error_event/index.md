@@ -48,7 +48,7 @@ socket.addEventListener('error', function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.error_event")}}
+{{Compat}}
 
 ## 查看更多
 

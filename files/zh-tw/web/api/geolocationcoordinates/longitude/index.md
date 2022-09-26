@@ -19,7 +19,7 @@ lon = coordinates.longitude
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.longitude")}}
+{{Compat}}
 
 ## 請參考
 

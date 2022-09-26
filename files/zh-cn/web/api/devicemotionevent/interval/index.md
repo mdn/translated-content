@@ -19,7 +19,7 @@ var interval = instanceOfDeviceMotionEvent.interval;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.interval")}}
+{{Compat}}
 
 ## 推荐浏览
 

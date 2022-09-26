@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## 相关链接
 

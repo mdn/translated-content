@@ -102,7 +102,7 @@ grid-row: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-row")}}
+{{Compat}}
 
 ## See also
 

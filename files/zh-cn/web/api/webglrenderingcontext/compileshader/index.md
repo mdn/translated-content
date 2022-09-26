@@ -30,7 +30,7 @@ gl.compileShader(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.compileShader")}}
+{{Compat}}
 
 ## 更多：
 

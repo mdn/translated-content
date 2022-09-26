@@ -26,28 +26,27 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 <h3 id="Параметры">Параметры</h3>
 
-<p><span id="result_box" lang="ru"><span>Следующие параметры передаются методу </span></span><code>set()</code> <span lang="ru"><span>.</span> </span><code>this</code><span lang="ru"><span> привязан к обработчику</span></span></p>
+<p>Следующие параметры передаются методу <code>set()</code> . <code>this</code> привязан к обработчику</p>
 
 <dl>
  <dt><code>target</code></dt>
  <dd>Исходный объект, который проксируется.</dd>
  <dt><code>property</code></dt>
- <dd><span id="result_box" lang="ru"><span>Имя свойства, в которое устанавливается значение </span></span><code>value</code><span lang="ru"><span>.</span></span></dd>
+ <dd>Имя свойства, в которое устанавливается значение <code>value</code>.</dd>
  <dt><code>value</code></dt>
- <dd><span id="result_box" lang="ru"><span>Значение, устанавливаемое в свойство </span></span><code>property</code><span lang="ru"><span>.</span></span></dd>
+ <dd>Значение, устанавливаемое в свойство <code>property</code>.</dd>
  <dt><code>receiver</code></dt>
- <dd><span id="result_box" lang="ru"><span>Объект, которому первоначально было присвоено задание.</span> <span>Обычно это сам прокси.</span> <span>Но обработчик </span></span><code>set()</code><span lang="ru"><span> также может быть вызван косвенно, через цепочку прототипов или различными другими способами.</span><br>
-      <span>Например, предположим, что скрипт выполняет </span></span><code><var>obj</var>.name = "jen"</code><span lang="ru"><span>, при этом </span></span><code><var>obj</var></code><span lang="ru"><span> не является прокси и не имеет собственного свойства </span></span><code>.name</code><span lang="ru"><span>, но имеет прокси в цепочке прототипов.</span> Б<span>удет вызван обработчик прокси </span></span><code>set()</code><span lang="ru"><span> , а </span></span><code><var>obj</var></code><span lang="ru"><span> будет передан в качестве получателя.</span></span></dd>
- <dd></dd>
+ <dd>Объект, которому первоначально было присвоено задание. Обычно это сам прокси. Но обработчик <code>set()</code><span> также может быть вызван косвенно, через цепочку прототипов или различными другими способами.<br>
+      Например, предположим, что скрипт выполняет </span><code><var>obj</var>.name = "jen"</code>, при этом <code><var>obj</var></code> не является прокси и не имеет собственного свойства <code>.name</code>, но имеет прокси в цепочке прототипов. Будет вызван обработчик прокси <code>set()</code> , а <code><var>obj</var></code> будет передан в качестве получателя.</dd>
 </dl>
 
 <h3 id="Возвращаемые_результаты">Возвращаемые результаты</h3>
 
-<p>Метод <code>set</code> <span id="result_box" lang="ru"><span>должен возвращать boolean значение</span></span>.</p>
+<p>Метод <code>set</code> должен возвращать boolean значение.</p>
 
 <ul>
- <li>Возвращает <code>true</code>, если <span id="result_box" lang="ru"><span>присвоение выполнено успешно</span></span>.</li>
- <li>Если метод <code>set()</code> возвращает <code>false</code>, <span id="result_box" lang="ru"><span>а присваивание произошло в коде строгого режима, то будет выброшена</span></span> {{jsxref("TypeError")}}.</li>
+ <li>Возвращает <code>true</code>, если присвоение выполнено успешно.</li>
+ <li>Если метод <code>set()</code> возвращает <code>false</code>, а присваивание произошло в коде строгого режима, то будет выброшена {{jsxref("TypeError")}}.</li>
 </ul>
 
 <h2 id="Описание">Описание</h2>
@@ -73,14 +72,14 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 <p>Если нарушены следующие инварианты, то proxy выбросит {{jsxref("TypeError")}}:</p>
 
 <ul>
- <li><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Невозможно изменить значение свойства так, чтобы оно отличалось от значения соответствующего свойства целевого объекта, если соответствующее свойство целевого объекта не является доступным для записи и не настраиваемым свойством данных.</span></span></span></li>
- <li><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Невозможно установить значение свойства, если соответствующее свойство целевого объекта является неконфигурируемым свойством средства доступа, для которого в качестве атрибута [[Set]] указано значение undefined.</span></span></span></li>
- <li><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>В строгом режиме при возврате из обработчика </span></span></span><code>set()</code><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span> значения </span></span></span><code>false</code><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>, будет выброшено исключение {{jsxref ("TypeError")}}</span></span></span>.</li>
+ <li>Невозможно изменить значение свойства так, чтобы оно отличалось от значения соответствующего свойства целевого объекта, если соответствующее свойство целевого объекта не является доступным для записи и не настраиваемым свойством данных.</li>
+ <li>Невозможно установить значение свойства, если соответствующее свойство целевого объекта является неконфигурируемым свойством средства доступа, для которого в качестве атрибута [[Set]] указано значение undefined.</li>
+ <li>В строгом режиме при возврате из обработчика <code>set()</code> значения <code>false</code>, будет выброшено исключение {{jsxref ("TypeError")}}.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Следующий код перехватывает установку значения свойству</span></span></span><span lang="ru"><span>.</span></span></p>
+<p>Следующий код перехватывает установку значения свойству.</p>
 
 <pre class="brush: js">var p = new Proxy({}, {
   set: function(target, prop, value, receiver) {

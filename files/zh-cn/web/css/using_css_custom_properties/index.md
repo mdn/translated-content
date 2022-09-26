@@ -250,7 +250,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## 浏览器支持
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 > **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。 ({{bug(985838)}})
 

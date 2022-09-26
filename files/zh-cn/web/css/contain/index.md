@@ -181,7 +181,7 @@ This also means that the first image no longer floats down to the second article
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## 参见
 
