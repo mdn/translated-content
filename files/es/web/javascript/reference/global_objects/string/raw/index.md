@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/raw
 ---
 {{JSRef}}
 
-El método estatico **`String.raw()` **es una función de [plantilla de literales](/es/docs/Web/JavaScript/Reference/template_strings), similar al prefijo `r` en Python o al prefijo `@` en C# para strings literales (con ciertas diferencias: ver la explicación en [este problema](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Se utiliza para obtener un _string_ crudo a partir de plantillas de _string_ (es decir, el original, texto no interpretado).
+El método estatico **`String.raw()`** es una función de [plantilla de literales](/es/docs/Web/JavaScript/Reference/template_strings), similar al prefijo `r` en Python o al prefijo `@` en C# para strings literales (con ciertas diferencias: ver la explicación en [este problema](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Se utiliza para obtener un _string_ crudo a partir de plantillas de _string_ (es decir, el original, texto no interpretado).
 
 ## Sintaxis
 

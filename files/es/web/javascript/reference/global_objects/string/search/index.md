@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 
 ## Resumen
 
-El método **`search() `**ejecuta una búsqueda que encaje entre una expresión regular y el objeto `String` desde el que se llama.
+El método **`search()`** ejecuta una búsqueda que encaje entre una expresión regular y el objeto `String` desde el que se llama.
 
 ## Sintaxis
 
