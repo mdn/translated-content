@@ -26,6 +26,8 @@ La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément 
 
 En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
 
+{{CSSInfo}}
+
 ## Syntaxe
 
 ### Valeurs
