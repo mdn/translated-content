@@ -48,7 +48,7 @@ slug: Mozilla/Firefox/Releases/103
 
 ### API
 
-- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [転送可能なオブジェクト](/ja/docs/Glossary/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/structuredClone) を使用するときに、所有権を渡せることを意味します。
+- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [移譲可能なオブジェクト](/ja/docs/Glossary/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/structuredClone) を使用するときに、所有権を渡せることを意味します。
   転送後は、元のオブジェクトを使用できなくなります。
   詳しくは {{bug(1659025)}} をご覧ください。
 
