@@ -1,14 +1,6 @@
 ---
 title: MediaList
 slug: Web/API/MediaList
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - MediaList
-  - リファレンス
-browser-compat: api.MediaList
-translation_of: Web/API/MediaList
 ---
 {{APIRef("CSSOM")}}
 

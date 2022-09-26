@@ -2,6 +2,7 @@
 title: 扩展是什么？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **备注：** 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
@@ -30,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 ![](qr_code_image_generator_add_on.png)
 
-示例: [Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/zh-CN/firefox/addon/tomato-clock/)
+示例：[Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/zh-CN/firefox/addon/tomato-clock/)
 
 **游戏**: 通过离线游玩的特性或者探索新游戏的可能性来提供传统计算机游戏的功能；例如，把游戏性融入到每天的网页浏览中。
 

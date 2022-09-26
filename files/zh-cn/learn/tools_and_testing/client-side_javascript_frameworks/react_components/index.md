@@ -2,6 +2,7 @@
 title: 组件化我们的 React App
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 此时，我们的 App 是一个单体。在我们能使用它之前，我们需要把它分解成可管理的、可描述的组件。React 对于什么是组件和什么不是组件并没有任何硬性规定，这完全取决于你！在这篇文章，我们将向你展示一种合理分解 App 的方法。
@@ -287,7 +288,6 @@ const taskList = props.tasks.map((task) => (
 ## 特殊的 key
 
 现在 React 正在将我们的任务从一个数组中渲染出来，它必须跟踪谁是谁，以便正确的渲染它们。React 通过自行猜测来保持对每一项的追踪，不过我们通过给 `<Todo />` 传递一个 `key` prop 来帮助 React 保持追踪。`key` 是一个被 React 管理的特殊的 prop，你不能将其用于其他目的。
-
 
 因为每个 key 必须是不同的，我们复用每个任务对象的 `id` 属性来作为它的 key。像这样更新你的 `taskList` 常量：
 

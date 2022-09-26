@@ -1,16 +1,8 @@
 ---
 title: 'HTMLSlotElement: slotchange イベント'
 slug: Web/API/HTMLSlotElement/slotchange_event
-tags:
-  - Event
-  - リファレンス
-  - ウェブコンポーネント
-  - イベント
-  - シャドウ DOM
-  - slotchange
-browser-compat: api.HTMLSlotElement.slotchange_event
-translation_of: Web/API/HTMLSlotElement/slotchange_event
 ---
+
 {{APIRef}}
 
 **`slotchange`** イベントは、 {{DOMxRef("HTMLSlotElement")}} インスタンス({{HTMLElement("slot")}} 要素) において、そのスロットに含まれるノードが変更された場合に発行されます。

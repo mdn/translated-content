@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/getKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getKey()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, récupère la clé associée ou la clé primaire si l'argument passé à la fonction est un intervalle {{domxref("IDBKeyRange")}}.

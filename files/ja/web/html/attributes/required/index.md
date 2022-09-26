@@ -1,13 +1,6 @@
 ---
 title: 'HTML 属性: required'
 slug: Web/HTML/Attributes/required
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/required
 ---
 {{HTMLSidebar}}
 
@@ -23,7 +16,7 @@ translation_of: Web/HTML/Attributes/required
 
 同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
 
-> **Note:** 注: `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **Note:** `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 

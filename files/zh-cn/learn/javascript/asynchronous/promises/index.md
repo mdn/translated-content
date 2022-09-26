@@ -3,6 +3,7 @@ title: 如何使用 Promise
 slug: Learn/JavaScript/Asynchronous/Promises
 original_slug: learn/JavaScript/异步/Promises语法
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promise** 是现代 JavaScript 中异步编程的基础，是一个由异步函数返回的可以向我们指示当前操作所处的状态的对象。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象可以让我们操作最终完成时对其进行处理（无论成功还是失败）。
@@ -355,7 +356,7 @@ Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出
 
 在这篇文章中，我们没有涉及到所有的 Promise 功能，只是介绍了最有趣和最有用的那一部分。随着你开始学习更多关于 Promise 的知识，你会遇到更多有趣的特性。
 
-许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/en-US/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
+许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
 
 ## 参见
 

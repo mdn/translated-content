@@ -2,6 +2,7 @@
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 方法返回 {{jsxref("BigInt")}} 对象包装的原始值。

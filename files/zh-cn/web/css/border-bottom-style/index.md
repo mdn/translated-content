@@ -2,9 +2,10 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
+
 {{CSSRef}}
 
-The **`border-bottom-style`** [CSS](/en/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
+The **`border-bottom-style`** [CSS](/zh-CN/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
 
 ```css
 /* Keyword values */
@@ -99,7 +100,7 @@ tr, td {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-bottom-style")}}
+{{Compat}}
 
 ## See also
 

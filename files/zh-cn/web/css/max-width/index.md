@@ -2,6 +2,7 @@
 title: max-width
 slug: Web/CSS/max-width
 ---
+
 {{ CSSRef() }}
 
 ## 摘要
@@ -107,9 +108,9 @@ fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.max-width")}}
+{{Compat}}
 
 ## 参考链接
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [The box model](/en/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [The box model](/zh-CN/CSS/box_model), {{ Cssxref("box-sizing") }}

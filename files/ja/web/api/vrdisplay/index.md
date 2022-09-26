@@ -1,22 +1,9 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Interface
-  - Media
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-browser-compat: api.VRDisplay
-translation_of: Web/API/VRDisplay
 original_slug: Web/API/VRDevice
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRDisplay`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、この API が対応している VR 機器を表します。機器 ID や説明文のような汎用的な情報が含まれており、 VR シーンの表示を開始するためのメソッドや、視線パラメーターやディスプレイの備える機能の取得、その他の重要な機能を含んでいます。

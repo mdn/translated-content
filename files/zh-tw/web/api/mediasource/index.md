@@ -2,6 +2,7 @@
 title: MediaSource
 slug: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 [Media Source Extensions API](/zh-TW/docs/Web/API/Media_Source_Extensions_API) 的 **`MediaSource`** 介面代表 {{domxref("HTMLMediaElement")}} 物件的媒體資料來源。一個 `MediaSource` 物件可以被附加到一個 {{domxref("HTMLMediaElement")}} 以被用戶代理 (user agent) 播放。
@@ -108,7 +109,7 @@ function fetchAB (url, cb) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## 相關資料
 

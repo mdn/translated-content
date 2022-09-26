@@ -1,10 +1,6 @@
 ---
 title: リテラル
 slug: Glossary/Literal
-tags:
-  - Literal
-  - JavaScript
-  - Glossary
 ---
 **リテラル**は、JavaScript の値を表現します。これはスクリプト中に直接記述される固定値であり、変数ではありません。
 

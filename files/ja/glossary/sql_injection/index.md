@@ -1,13 +1,6 @@
 ---
 title: SQL Injection (SQLインジェクション)
 slug: Glossary/SQL_Injection
-tags:
-  - Glossary
-  - Security
-  - Sql
-  - Sql Injection
-  - Webapp
-translation_of: Glossary/SQL_Injection
 ---
 SQL インジェクションはユーザーからの入力の検証が十分でない・行っていないウェブアプリケーションに対して利用されます。悪意のあるクラッカーは、SQL コマンドをウェブアプリケーションに渡し、バックエンドのデータベースにそれを実行させて攻撃します。
 
@@ -72,4 +65,4 @@ $id = $_GET['id']
 ### 一般知識
 
 - Wikipedia の {{interwiki("wikipedia", "SQL injection")}}
-- [Explanation of SQL injection ](https://www.owasp.org/index.php/SQL_Injection)on OWASP (Open Web Application Security Project)
+- [Explanation of SQL injection](https://www.owasp.org/index.php/SQL_Injection) on OWASP (Open Web Application Security Project)

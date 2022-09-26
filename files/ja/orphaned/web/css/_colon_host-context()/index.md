@@ -1,19 +1,9 @@
 ---
 title: ':host-context()'
 slug: orphaned/Web/CSS/:host-context()
-tags:
-  - ':host-context()'
-  - CSS
-  - 実験的
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: Web/CSS/:host-context()
 original_slug: Web/CSS/:host-context()
-browser-compat: css.selectors.host-context
 ---
+
 <div>{{CSSRef}}</div>
 
 **`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、内部で使用される CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します (そのため、シャドウ DOM の中のカスタム要素を選択することができます)。 — しかし、関数の引数として与えられたセレクターがシャドウホストの祖先に一致した場合のみです。

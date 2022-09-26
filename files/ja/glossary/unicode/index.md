@@ -1,9 +1,6 @@
 ---
 title: Unicode
 slug: Glossary/Unicode
-tags:
-  - Infrastructure
-translation_of: Glossary/Unicode
 ---
 Unicode とは、世界の様々な言語、書式、記号に、番号を割り当てて定義した標準の{{Glossary("Character set","文字コード")}} です。一つ一つの{{Glossary("Character","文字")}} に番号を割り当てることで、プログラマーは、どの言語が混ざっていても、コンピューターに保存、処理、伝送させるような{{Glossary("Character encoding","文字エンコーディング")}}を同じファイルやプログラムの中に作ることができます。
 

@@ -12,6 +12,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 Ajout d'écouteurs d'événements pour les différentes étapes d'une requête HTTP. L'écouteur de l'événement reçoit des informations détaillées sur la demande et peut modifier ou annuler la demande.

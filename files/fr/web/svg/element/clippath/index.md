@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/clipPath
 ---
+
 {{SVGRef}}
 
 L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
@@ -78,14 +79,11 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#ClipPathElement", "&lt;clipPath&gt;")}}                             | {{Spec2("CSS Masks")}} |                     |
-| {{SpecName("SVG1.1", "masking.html#EstablishingANewClippingPath", "&lt;clipPath&gt;")}} | {{Spec2("SVG1.1")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.clipPath")}}
+{{Compat}}
 
 ## Voir aussi
 

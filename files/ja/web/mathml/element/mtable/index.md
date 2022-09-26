@@ -1,7 +1,6 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
-translation_of: Web/MathML/Element/mtable
 ---
 {{MathMLRef()}}
 
@@ -97,8 +96,6 @@ Rendering: ![](mtable-1.png)
 
 </math>
 ```
-
-##
 
 ## 仕様
 

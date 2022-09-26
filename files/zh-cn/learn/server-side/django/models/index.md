@@ -1,7 +1,8 @@
 ---
 title: 'Django Tutorial Part 3: 使用模型'
-slug: learn/Server-side/Django/Models
+slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
 
 <table class="learn-box standard-table">
@@ -9,7 +10,7 @@ slug: learn/Server-side/Django/Models
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>
@@ -25,7 +26,7 @@ slug: learn/Server-side/Django/Models
 
 Django 网络应用通过作为模型被参照的 Python 对象访问并管理数据。模型定义了储存数据的结构，包括域类型和可能的最大值，默认值，可选择的列表，帮助理解文档的文本，表格内的标签文本，等等。模型的定义是独立于数据库的——你可以为你自己的项目设置选择一种。一旦你已经选择了你想用的数据库，你不需要直接谈论它——你只是写出你的模型结构和其他代码，然后 Django 会为你处理所有繁琐的和数据库打交道的工作。
 
-这个教程展示了如何定义并访问 [LocalLibrary website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的模型。
+这个教程展示了如何定义并访问 [LocalLibrary website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的模型。
 
 ## 设计 LocalLibaray 模型
 

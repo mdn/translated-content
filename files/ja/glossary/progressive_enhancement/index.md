@@ -1,11 +1,6 @@
 ---
 title: Progressive Enhancement (プログレッシブエンハンスメント)
 slug: Glossary/Progressive_Enhancement
-tags:
-  - アクセシビリティ
-  - Design
-  - 用語集
-translation_of: Glossary/Progressive_Enhancement
 ---
 **プログレッシブエンハンスメント** (Progressive enhancement) とは、可能な限り多くのユーザーに不可欠なコンテンツと機能のベースラインを提供することを中心とした設計哲学であり、必要なすべてのコードを実行できる最新のブラウザーのユーザーに限り、最高の体験を提供します。
 

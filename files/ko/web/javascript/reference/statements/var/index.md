@@ -32,43 +32,43 @@ translation_of: Web/JavaScript/Reference/Statements/var
 
 1. 선언된 변수들은 변수가 선언된 실행 콘텍스트(execution context) 안에서 만들어집니다. 선언되지 않은 변수들은 항상 전역변수 입니다.
 
-```js
-function x() {
-  y = 1;   // strict 모드에서는 ReferenceError를 출력합니다.
-  var z = 2;
-}
+    ```js
+    function x() {
+      y = 1;   // strict 모드에서는 ReferenceError를 출력합니다.
+      var z = 2;
+    }
 
-x();
+    x();
 
-console.log(y); // 로그에 "1" 출력합니다.
-console.log(z); // ReferenceError: z is not defined outside x를 출력합니다.
-```
+    console.log(y); // 로그에 "1" 출력합니다.
+    console.log(z); // ReferenceError: z is not defined outside x를 출력합니다.
+    ```
 
 2. 선언된 변수들은 어떠한 코드가 실행되기 전에 만들어집니다. 선언되지 않은 변수들은 변수들을 할당하는 코드가 실행되기 전까지는 존재하지 않습니다.
 
-```js
-console.log(a);                // ReferenceError를 출력합니다.
-console.log('still going...'); // 결코 실행되지 않습니다.
-```
+    ```js
+    console.log(a);                // ReferenceError를 출력합니다.
+    console.log('still going...'); // 결코 실행되지 않습니다.
+    ```
 
-```js
-var a;
-console.log(a);                // 브라우저에 따라 로그에 "undefined" 또는 "" 출력합니다.
-console.log('still going...'); // 로그에 "still going..." 출력합니다.
-```
+    ```js
+    var a;
+    console.log(a);                // 브라우저에 따라 로그에 "undefined" 또는 "" 출력합니다.
+    console.log('still going...'); // 로그에 "still going..." 출력합니다.
+    ```
 
 3. 선언된 변수들은 변수들의 실행 콘텍스트(execution context)의 프로퍼티를 변경되지 않습니다. 선언되지 않은 변수들은 변경 가능합니다. (e.g 삭제 될 수도 있습니다.)
 
-```js
-var a = 1;
-b = 2;
+    ```js
+    var a = 1;
+    b = 2;
 
-delete this.a; // strict 모드에서는 TypeError를 출력합니다. 그렇지 않으면 자동적으로 실패합니다.
-delete this.b;
+    delete this.a; // strict 모드에서는 TypeError를 출력합니다. 그렇지 않으면 자동적으로 실패합니다.
+    delete this.b;
 
-console.log(a, b); // ReferenceError를 출력합니다.
-// 'b' 프로퍼티는 삭제되었고, 어디에도 존재하지 않습니다.
-```
+    console.log(a, b); // ReferenceError를 출력합니다.
+    // 'b' 프로퍼티는 삭제되었고, 어디에도 존재하지 않습니다.
+    ```
 
 이러한 세가지 다른점 때문에, 변수 선언 오류는 예기치않은 결과로 이어질 가능성이 높습니다. 그러므로 **함수 또는 전역 범위인지 여부와 상관없이, 항상 변수를 선언 하는 것을 추천합니다.** 그리고 ECMAScript 5 안에 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), 선언되지 않은 변수에 할당하면 오류를 출력합니다.
 
@@ -115,7 +115,7 @@ var x = y, y = 'A';
 console.log(x + y); // undefinedA
 ```
 
-여기, x와 y는 어떠한 코드 실행하기 전에 선언되었다, 할당은 후에 발생하였다. "`x = y`"가 실행될 때, `y`는 존재하여 `ReferenceError를 출력하진 않고` 값은 '`undefined`' 입니다. 그래서, `x는` undefined 값이 할당 됩니다. 그리고나서, `y는 `'A' 값이 할당 됩니다. 결과적으로, 첫번째 줄 이후에, `x === undefined && y === 'A'`, 이와 같은 결과가 됩니다.
+여기, x와 y는 어떠한 코드 실행하기 전에 선언되었다, 할당은 후에 발생하였다. "`x = y`"가 실행될 때, `y`는 존재하여 `ReferenceError를 출력하진 않고` 값은 '`undefined`' 입니다. 그래서, `x는` undefined 값이 할당 됩니다. 그리고나서, `y` 는 `'A'` 값이 할당 됩니다. 결과적으로, 첫번째 줄 이후에, `x === undefined && y === 'A'`, 이와 같은 결과가 됩니다.
 
 ### 다수의 변수들의 초기화
 

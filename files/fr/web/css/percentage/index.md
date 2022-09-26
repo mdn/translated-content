@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<percentage>`** représente une valeur exprimée en pourcentages. De nombreuses propriétés CSS utilisent des valeurs en pourcentages, la plupart du temps pour déterminer des tailles en fonction de la taille des éléments parent.

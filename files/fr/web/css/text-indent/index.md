@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 La propriété **`text-indent`** définit la longueur qui doit être laissée avant le début de la première ligne d'un élément contenant du texte.

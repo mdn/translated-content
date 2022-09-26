@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.arcTo
-translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
 {{APIRef}}
 

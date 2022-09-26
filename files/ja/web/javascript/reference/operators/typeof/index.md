@@ -1,15 +1,8 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - 単項
-browser-compat: javascript.operators.typeof
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
+
 {{JSSidebar("Operators")}}
 
 <strong>`typeof`</strong> 演算子は、未評価のオペランドの型を示す文字列を返します。

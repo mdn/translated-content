@@ -1,15 +1,8 @@
 ---
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
-tags:
-  - API
-  - Method
-  - リファレンス
-  - 画面起動ロック API
-  - WakeLock
-browser-compat: api.WakeLock.request
-translation_of: Web/API/WakeLock/request
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`request()`** は {{domxref("WakeLock")}} インターフェイスのメソッドで、画面を暗くしたりロックしたりすることを制御することができる {{domxref("WakeLockSentinel")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。

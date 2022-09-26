@@ -1,13 +1,8 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
+
 > **Warning:** 混乱させるバグや互換性問題の原因になり得るため、`with` 文の使用は推奨されません。詳しくは "説明" の章の "あいまい性の欠点" をご覧ください。
 
 {{jsSidebar("Statements")}}

@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法向 uniform 变量中传入指定的矩阵值。
@@ -47,7 +48,7 @@ gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## 令见
 

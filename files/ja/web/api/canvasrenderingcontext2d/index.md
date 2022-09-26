@@ -1,16 +1,6 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-page-type: web-api-interface
-tags:
-  - API
-  - キャンバス
-  - CanvasRenderingContext2D
-  - ゲーム
-  - グラフィック
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D
 ---
 {{APIRef}}
 

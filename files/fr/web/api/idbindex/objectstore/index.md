@@ -3,6 +3,7 @@ title: IDBIndex.objectStore
 slug: Web/API/IDBIndex/objectStore
 translation_of: Web/API/IDBIndex/objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriètè **`objectStore`** de l'interface {{domxref("IDBIndex")}} renvoie un accès au magasin d'objet que référence l'index.

@@ -2,6 +2,7 @@
 title: element.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
 ---
+
 {{ApiRef}}
 
 ## 概述

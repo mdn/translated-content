@@ -2,9 +2,10 @@
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
 ---
+
 {{APIRef("DOM")}}
 
-返回一个新的 [`NodeIterator`](/en/DOM/NodeIterator) 对象。
+返回一个新的 [`NodeIterator`](/zh-CN/DOM/NodeIterator) 对象。
 
 ## 语法
 
@@ -67,4 +68,4 @@ while (currentNode = nodeIterator.nextNode()) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createNodeIterator")}}
+{{Compat}}

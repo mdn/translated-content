@@ -1,14 +1,6 @@
 ---
 title: '<small>: 附随コメント要素'
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - font-size
-translation_of: Web/HTML/Element/small
 ---
 {{HTMLRef}}
 

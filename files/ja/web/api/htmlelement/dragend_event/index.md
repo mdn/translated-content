@@ -1,20 +1,8 @@
 ---
 title: 'HTMLElement: dragend イベント'
 slug: Web/API/HTMLElement/dragend_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragend
-browser-compat: api.HTMLElement.dragend_event
-translation_of: Web/API/HTMLElement/dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` イベントは、ドラッグ操作が終わろうとしているとき（マウスボタンを離したり、エスケープキーを押したりしたとき）に発生します。

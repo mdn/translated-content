@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}{{deprecated_header}}
 
 La propriété **`arguments.callee`** contient la fonction en cours d'exécution.

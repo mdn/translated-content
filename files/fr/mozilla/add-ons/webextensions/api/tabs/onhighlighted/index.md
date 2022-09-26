@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'ensemble des onglets en surbrillance dans une fenêtre change

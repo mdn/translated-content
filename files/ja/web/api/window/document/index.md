@@ -1,14 +1,8 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 **`window.document`** は、ウィンドウに含まれている[文書](/ja/docs/Web/API/document)への参照を返します。

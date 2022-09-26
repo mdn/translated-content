@@ -1,14 +1,6 @@
 ---
 title: '-webkit-line-clamp'
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - '-webkit-line-clamp'
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - recipe:css-property
-browser-compat: css.properties.-webkit-line-clamp
-translation_of: Web/CSS/-webkit-line-clamp
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: ':checked'
 slug: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 **`:checked`** CSS [伪类](/zh-CN/docs/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。
@@ -153,7 +154,7 @@ option:checked {
 
 ### 图片相册
 
-同时，可以使用隐藏的 radioboxes 中的:checked 伪类来构建一个**只有在鼠标单击“预览”时，图片才会以全尺寸展示的图片相册，**查看[演示](https://developer.mozilla.org/@api/deki/files/6268/=css-checked-gallery.zip)。
+同时，可以使用隐藏的 radioboxes 中的:checked 伪类来构建一个**只有在鼠标单击“预览”时，图片才会以全尺寸展示的图片相册，**查看[演示](/@api/deki/files/6268/=css-checked-gallery.zip)。
 
 > **备注：** 一个类似的效果，基于[`:hover`](/zh-CN/docs/CSS/:hover)伪类和没有隐藏的 radioboxes，查看[这个演示](/@api/deki/files/6247/=css-gallery.zip)，来自[:hover](/zh-CN/docs/CSS/:hover)页面。
 
@@ -163,4 +164,4 @@ option:checked {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

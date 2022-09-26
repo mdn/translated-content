@@ -1,11 +1,8 @@
 ---
 title: Chrome との非互換性
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-  - 初心者向け
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互換性があるように設計されています。可能な限り、それぞれのブラウザー向けに書かれた拡張機能は最低限の変更で Firefox で実行できるように設計されています。
@@ -45,7 +42,7 @@ chrome.cookies.set(
 );
 ```
 
-同様の WebExtensions API では[ promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
+同様の WebExtensions API では [promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
 
 ```js
 function logCookie(c) {
@@ -80,7 +77,7 @@ setCookie.then(logCookie, logError);
 
 - `notifications.create()`の `"basic"` [`type`](/ja/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
 - 通知はユーザーがクリックするとすぐに消去されます。 これは Chrome では当てはまりません。
-- `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 ` chrome.notifications.create() ``のコールバック `関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
+- `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 `chrome.notifications.create()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
 
 #### [proxy](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
@@ -135,7 +132,7 @@ chrome では、コンテンツスクリプトから`/api`のような相対 URL
 
 ## manifest.json のキー
 
-メインの[ manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
+メインの[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
 
 これらの表は、 [GitHub で JSON ファイル](https://github.com/mdn/browser-compat-data)として保存された互換性データから生成されます。
 

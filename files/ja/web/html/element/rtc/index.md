@@ -1,17 +1,6 @@
 ---
 title: '<rtc>: ルビ文字列コンテナー要素'
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - NeedsContent
-  - Reference
-  - Ruby Text
-  - Text
-  - Web
-  - rtc
-translation_of: Web/HTML/Element/rtc
 ---
 {{HTMLRef}}
 

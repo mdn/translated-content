@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
+
 ## Introduction et demo
 
 Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). Il y a aussi une version plus avancée pour charger des photos sur **imgur** en JavaScript, disponible en [code source sur GitHub](https://github.com/codepo8/interaction-cam/) ou [en demo](http://codepo8.github.com/interaction-cam/).

@@ -1,19 +1,9 @@
 ---
 title: MDN で始めよう
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Documentation
-  - Getting Started
-  - Guide
-  - MDN
-  - MDN Project
-  - MDN プロジェクト
-  - New Contributors
-  - 初心者
-  - 新たな協力者
-translation_of: MDN/Contribute/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 私たちは開発者のオープンなコミュニティであり、ブランドやブラウザー、プラットフォームを問わず、ウェブをより良くするリソースを構築しています。誰でも協力でき、それによってコミュニティはより強固なものとなります。ともに協力することで、ウェブをより良いものへ革新していく後押しを継続できます。ここから、あなたと始まります。

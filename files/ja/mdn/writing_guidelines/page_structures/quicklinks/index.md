@@ -1,15 +1,11 @@
 ---
 title: クイックリンク
 slug: MDN/Writing_guidelines/Page_structures/Quicklinks
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Page_structures/Quicklinks
 original_slug: MDN/Structures/Quicklinks
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN はページへのクイックリンクの追加に対応しています。これらのボックスは、 MDN 上の他のページやサイト外のページへの階層的なリストを含むことができます。この記事では、クイックリンクボックスの生成方法を解説します。

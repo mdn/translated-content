@@ -67,9 +67,9 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
 
 表の例を一緒にスタイリングしてみましょう。
 
-1.  まず始めに、[サンプルマークアップ](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)のローカルコピーを作成し、[noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) と [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg) の両方の画像をダウンロードして、3 つのファイルをローカルコンピュータのどこかの作業ディレクトリーに配置します。
-2.  次に、`style.css` という名前の新しいファイルを作成し、他のファイルと同じディレクトリーに保存します。
-3.  {{htmlelement("head")}} の内側に次の HTML 行を配置して、CSS を HTML にリンクします。
+1. まず始めに、[サンプルマークアップ](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)のローカルコピーを作成し、[noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) と [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg) の両方の画像をダウンロードして、3 つのファイルをローカルコンピュータのどこかの作業ディレクトリーに配置します。
+2. 次に、`style.css` という名前の新しいファイルを作成し、他のファイルと同じディレクトリーに保存します。
+3. {{htmlelement("head")}} の内側に次の HTML 行を配置して、CSS を HTML にリンクします。
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -283,21 +283,21 @@ caption {
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

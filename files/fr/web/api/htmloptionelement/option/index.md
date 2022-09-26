@@ -8,6 +8,7 @@ tags:
   - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 Le constructeur **`Option()`** permet de créer un nouvel objet {{domxref("HTMLOptionElement")}}.

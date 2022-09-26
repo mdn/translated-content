@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Getter_only
 original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

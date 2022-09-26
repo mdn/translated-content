@@ -2,6 +2,7 @@
 title: 交易过程的基本概念
 slug: Web/API/Payment_Request_API/Concepts
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
 [交易请求 API](/zh-CN/docs/Web/API/Payment_Request_API)使在网站或应用上进行的交易变得更便捷。在这篇文档中，我们将了解此接口如何运作，以及各个组件的功能。
@@ -76,7 +77,7 @@ paymentRequest.onmerchantvalidation = function(event) {
 ## 相关文档
 
 - [支付请求 API](/zh-CN/docs/Web/API/Payment_Request_API)
-- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/zh-CN/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)

@@ -8,6 +8,7 @@ tags:
   - Méthode
 translation_of: Web/API/Window/scrollByPages
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 Fait défiler le document du nombre de pages spécifié.

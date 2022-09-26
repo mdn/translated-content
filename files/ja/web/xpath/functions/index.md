@@ -1,13 +1,6 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
-tags:
-  - Transforming_XML_with_XSLT
-  - XPath
-  - XPath_Reference
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions
 ---
 {{ XsltRef() }}
 
@@ -27,7 +20,7 @@ translation_of: Web/XPath/Functions
 - [function-available()](/ja/docs/XPath/Functions/function-available)
 - [generate-id()](/ja/docs/XPath/Functions/generate-id) _XSLT 固有_
 - [id()](/ja/docs/XPath/Functions/id) _(一部対応)_
-- [key() ](/ja/docs/XPath/Functions/key)_XSLT 固有_
+- [key()](/ja/docs/XPath/Functions/key) _XSLT 固有_
 - [lang()](/ja/docs/XPath/Functions/lang)
 - [last()](/ja/docs/XPath/Functions/last)
 - [local-name()](/ja/docs/XPath/Functions/local-name)

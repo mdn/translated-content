@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 Au cours de tout process de développement, vous allez très certainement être confronté à la nécessité d'exécuter des commandes dans un terminal (ce que l'on appelle "travailler en ligne de commande"). Cet article vous propose une introduction au terminal et vous dévoile les commandes essentielles dont vous aurez besoin, la façon de les chaîner, et comment ajouter vos propres outils d'interface en ligne de commande (CLI, command line interface).
@@ -277,7 +278,7 @@ Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons 
 
 En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
 
-Par conséquent, si vous utilisez curl pour faire une requête à https\://developer.mozilla.org/docs/Web/API/fetch, vous n'aurez pas de résultat. Essayez :
+Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
 curl https://developer.mozilla.org/fr/docs/Web/API/fetch

@@ -1,18 +1,6 @@
 ---
 title: MediaDevices.getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
-tags:
-  - API
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - getSupportedConstraints
-browser-compat: api.MediaDevices.getSupportedConstraints
-translation_of: Web/API/MediaDevices/getSupportedConstraints
 ---
 {{APIRef("Media Capture and Streams")}}
 

@@ -1,18 +1,6 @@
 ---
 title: ':root'
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - 要素
-  - レイアウト
-  - ノード
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - root
-browser-compat: css.selectors.root
-translation_of: Web/CSS/:root
 ---
 {{CSSRef}}
 

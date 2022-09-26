@@ -1,17 +1,6 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - 字下げ
-  - レイアウト
-  - Reference
-  - recipe:css-property
-  - text-indent
-browser-compat: css.properties.text-indent
-translation_of: Web/CSS/text-indent
 ---
 {{CSSRef}}
 

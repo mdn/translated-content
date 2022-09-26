@@ -2,6 +2,7 @@
 title: Proximity
 slug: Web/API/Proximity_Events
 ---
+
 {{ SeeCompatTable }}
 
 ## 摘要

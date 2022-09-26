@@ -3,6 +3,7 @@ title: 基本的 CSS 理解
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 
 你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。
@@ -87,15 +88,15 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 ## 在本单元中
 
-- [How CSS works](/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [CSS syntax](/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-- [Selectors](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-- [Simple selectors](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Attribute selectors](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinators and multiple selectors](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [CSS values and units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-- [The box model](/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+- [How CSS works](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
+- [CSS syntax](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Syntax)
+- [Selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors)
+- [Simple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
+- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
+- [Pseudo-classes and pseudo-elements](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Combinators and multiple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
+- [CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [Cascade and inheritance](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+- [The box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
+- [Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
+- [Fundamental CSS comprehension](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

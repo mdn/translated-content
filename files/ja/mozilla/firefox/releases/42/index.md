@@ -1,14 +1,8 @@
 ---
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
-tags:
-  - '42'
-  - Firefox
-  - Mozilla
-  - Release
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/42
 ---
+
 {{FirefoxSidebar}}
 
 > **Callout:** [Firefox の最新の開発者向け機能をテストするには、

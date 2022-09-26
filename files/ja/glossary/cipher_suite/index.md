@@ -1,11 +1,6 @@
 ---
 title: Cipher suite (暗号スイート)
 slug: Glossary/Cipher_suite
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-translation_of: Glossary/Cipher_suite
 ---
 暗号スイートは鍵交換アルゴリズム・鍵認証方式・{{glossary("cipher","サイファー")}}・メッセージ認証符号の組み合わせです。
 

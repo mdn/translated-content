@@ -3,6 +3,7 @@ title: 使用 Javascript 和 DOM Interfaces 来处理 HTML
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
+
 ### 简介
 
 本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建，访问，控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里所有的示例，在任何全面支持 DOM level1 的浏览器里都能正常工作；例如 Mozilla 浏览器或者其他基于 Mozilla 的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在 IE5 中也能正常工作。
@@ -193,9 +194,9 @@ myTextNode=document.createTextNode("world");
 
 #### 使用 appendChild(..) 插入元素
 
-那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。
+那么，通过调用 `myP.appendChild(node_element)` 你可以将这个元素设置成为第二个 P 的一个新的子元素。
 
-```
+```js
 myP.appendChild(myTextNode);
 ```
 

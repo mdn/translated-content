@@ -1,22 +1,6 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
-tags:
-  - 色の調整
-  - CSS
-  - CSS 色
-  - CSS プロパティ
-  - HTML 色
-  - HTML スタイル
-  - レイアウト
-  - リファレンス
-  - HTML 整形
-  - テキスト整形
-  - ウェブ
-  - forced-color-adjust
-  - recipe:css-property
-browser-compat: css.properties.forced-color-adjust
-translation_of: Web/CSS/forced-color-adjust
 ---
 {{CSSRef}}
 

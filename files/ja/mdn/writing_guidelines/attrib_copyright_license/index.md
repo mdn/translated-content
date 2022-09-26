@@ -1,12 +1,8 @@
 ---
 title: 帰属表示と著作権使用許諾
 slug: MDN/Writing_guidelines/Attrib_copyright_license
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Attrib_copyright_license
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs のコンテンツは無料で利用でき、様々なオープンソースライセンスのもとで利用することができます。
@@ -22,12 +18,12 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 ここでのコンテンツの再利用は、元のコンテンツと同じライセンス、CC-BY-SA v2.5 またはそれ以降のバージョン、の下で公開する必要があります。 MDN Web Docs のコンテンツを再利用する場合、"Mozilla Contributors" だけでなく、元ののコンテンツにも帰属することを確認する必要があります。出典となるコンテンツの特定のページへのハイパーリンク（オンライン）または URL （印刷物）入れてください。例：この記事の帰属表示を提供するには、次のように書きます。
 
 > [帰属表示と著作権使用許諾](/ja/docs/MDN/Writing_guidelines/Attrib_copyright_license)は [Mozilla Contributors](/ja/docs/MDN/About/contributors.txt) によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) の元でライセンスされています。
-
-    この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
+>
+> この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
 
 ### コード例
 
-2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)) にあります。ライセンス表記は必要ありませんが、必要な場合は、 "すべての著作権はパブリックドメインに帰属します。http\://creativecommons.org/publicdomain/zero/1.0/" を使用できます。
+2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)) にあります。ライセンス表記は必要ありませんが、必要な場合は、 "すべての著作権はパブリックドメインに帰属します。<http://creativecommons.org/publicdomain/zero/1.0/>" を使用できます。
 
 2010 年 8 月 20 日より前に追加されたコードサンプルは [MIT ライセンス](https://opensource.org/licenses/mit-license.php)の下で利用可能です。帰属情報 "© \<ページの最終改訂日> \<Wiki に掲載した人の名前>" を MIT のテンプレートに挿入する必要があります。
 

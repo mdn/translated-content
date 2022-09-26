@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.isPointInStroke()`** 是 Canvas 2D API 用于检测某点是否在路径的描边线上的方法。
@@ -98,7 +99,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.isPointInStroke")}}
+{{Compat}}
 
 ## 参见
 

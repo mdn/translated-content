@@ -2,6 +2,7 @@
 title: 如何确保你的网站正常运行？
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
+
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
 <table class="learn-box standard-table">
@@ -9,7 +10,7 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
     <tr>
       <th scope="row">前提 :</th>
       <td>
-        你需要知道怎么<a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+        你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a
         >。
       </td>
@@ -80,7 +81,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![Deleting the ‘s’](code-correct.png)
 
-保存，[推送到服务器](/en-US/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
+保存，[推送到服务器](/zh-CN/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
 
 ![The image loads corectly in the browser](image-corrected.png)
 
@@ -115,7 +116,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![A Javascript error is shown in the Console](js-error.png)
 
-在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/en-US/Learn/JavaScript) 的文章中提到 JavaScript )。
+在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/zh-CN/Learn/JavaScript) 的文章中提到 JavaScript )。
 
 ### 更多需要检查的地方
 
@@ -142,6 +143,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
 ^C
 --- mozilla.org ping statistics ---
+
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
@@ -158,5 +160,5 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
 恭喜，你的网站已经成功运作，任何人都可以访问。这是一项巨大的成就。现在，你可以开始深入探索各种主题。
 
-- 来自世界各地的人会进入你的网站，你应该考虑 [让每个人都可以访问网站](/en-US/docs/Learn/What_is_accessibility) 。
+- 来自世界各地的人会进入你的网站，你应该考虑 [让每个人都可以访问网站](/zh-CN/docs/Learn/What_is_accessibility) 。
 - 你的网站是否设计的得太粗糙了？是时候[了解更多 CSS](/zh-CN/docs/Learn/CSS/Using_CSS_in_a_web_page) 了。

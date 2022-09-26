@@ -2,6 +2,7 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`ShadowRoot`** は Shadow DOM API のインターフェイスで、文書の DOM ツリーから分離してレンダリングされた部分ツリーのルートノードを指します。

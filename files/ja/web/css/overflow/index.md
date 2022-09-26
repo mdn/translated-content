@@ -1,18 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - クリッピング
-  - レイアウト
-  - リファレンス
-  - overflow
-  - recipe:css-shorthand-property
-  - スクロール
-browser-compat: css.properties.overflow
-translation_of: Web/CSS/overflow
 ---
 {{CSSRef}}
 

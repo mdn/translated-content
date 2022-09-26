@@ -2,6 +2,7 @@
 title: Web Audio API 的运用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 让我们来看看 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 入门。我们将简要介绍一些概念，然后学习一个简单的允许我们加载音轨，播放暂停，改变音量和立体声声像的音箱例子。
 
 Web Audio API 并不会取代\<audio>音频元素，倒不如说它是\<audio>的补充更好，就好比如\<canvas>与\<img>共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，\<audio>或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API 提供了更多的优势以及控制。
@@ -255,15 +256,15 @@ Web Audio API 包含在音频上下文的处理音频操作，以及已被设计
 
 音频节点通过输入与输出进行连接，形成一个链，从一个或多个源出发，通过一个或更多的节点，最终到输出终端（你也可以不提供输出终端，换句话说，如果只是想使一些音频数据可视化）。一个简单经典的 web Audio 的工作流程如下：
 
-1\. 构建音频上下文 AudioContext 对象；
+1. 构建音频上下文 AudioContext 对象；
 
-2\. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
+2. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
 
-3\. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
+3. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
 
-4\. 选择最终的音频目的地，比如说你的系统扬声器
+4. 选择最终的音频目的地，比如说你的系统扬声器
 
-5\. 连接源到效果，效果到输出终端
+5. 连接源到效果，效果到输出终端
 
 ### 构建 AudioContext 对象
 

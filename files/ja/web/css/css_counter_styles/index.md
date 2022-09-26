@@ -1,14 +1,6 @@
 ---
 title: CSS カウンタースタイル
 slug: Web/CSS/CSS_Counter_Styles
-tags:
-  - CSS
-  - CSS カウンタースタイル
-  - ガイド
-  - NeedsContent
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Counter_Styles
 ---
 {{CSSRef}}
 

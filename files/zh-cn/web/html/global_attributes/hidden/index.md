@@ -2,6 +2,7 @@
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) `hidden` 是一个布尔属性，表示一个元素尚未或者不再相关。例如，它可以被用来隐藏一个页面元素直到登录完毕。如果一个元素设置了这个属性，它就不会被显示。
@@ -12,7 +13,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 比如说，用 `href` 标签链接到一个带有 `hidden` 标签的区块是不对的。 如果这个区块和这个页面不相干，或者这个区块不适用于这个页面，那没有任何理由需要链接到它。
 
-不过，你还是可以使用 ARIA ` aria-``describedby ` 标签去引用本身是隐藏的一些描述。
+不过，你还是可以使用 ARIA `aria-describedby` 标签去引用本身是隐藏的一些描述。
 
 类似的，你也可以将一个带有 hidden 标签的 canvas 元素作为屏幕外的缓存区域，或者在表单控件中引用一个已经隐藏的表单。
 

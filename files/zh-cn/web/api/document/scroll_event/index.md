@@ -2,7 +2,8 @@
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
 ---
-文档视图或者一个元素在滚动时，会触发元素的**`scroll`**事件。
+
+文档视图或者一个元素在滚动时，会触发元素的 **`scroll`** 事件。
 
 <table class="properties">
   <thead></thead>
@@ -62,7 +63,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-在 [`resize`](/en-US/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
+在 [`resize`](/zh-CN/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
 
 ## 规范
 
@@ -70,7 +71,7 @@ window.addEventListener('scroll', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## 参见
 

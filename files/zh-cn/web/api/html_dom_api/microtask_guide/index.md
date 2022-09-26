@@ -2,6 +2,7 @@
 title: 在 JavaScript 中通过 queueMicrotask() 使用微任务
 slug: Web/API/HTML_DOM_API/Microtask_guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 一个 **微任务（microtask）**就是一个简短的函数，当创建该函数的函数执行之后，_并且_ 只有当 Javascript 调用栈为空，而控制权尚未返还给被 {{Glossary("user agent")}} 用来驱动脚本执行环境的事件循环之前，该微任务才会被执行。 事件循环既可能是浏览器的主事件循环也可能是被一个 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 所驱动的事件循环。这使得给定的函数在没有其他脚本执行干扰的情况下运行，也保证了微任务能在用户代理有机会对该微任务带来的行为做出反应之前运行。

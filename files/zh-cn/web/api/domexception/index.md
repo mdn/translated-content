@@ -2,6 +2,7 @@
 title: DOMException
 slug: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 **`DOMException`** 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为**异常**，**exception**）。 这基本上是在 Web API 中如何描述错误情况的
@@ -59,7 +60,7 @@ slug: Web/API/DOMException
 - `SecurityError` {{experimental_inline}}
   - : 操作不安全。 (Legacy code value: `18` and legacy constant name: `SECURITY_ERR`)
 - `NetworkError` {{experimental_inline}}
-  - : 网络错误发生. (Legacy code value: `19` and legacy constant name: ` NETWORK_ER``R `)
+  - : 网络错误发生. (Legacy code value: `19` and legacy constant name: `NETWORK_ERR`)
 - `AbortError` {{experimental_inline}}
   - : T 操作中止. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
 - `URLMismatchError` {{experimental_inline}}
@@ -99,7 +100,7 @@ slug: Web/API/DOMException
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException")}}
+{{Compat}}
 
 ## 参见
 

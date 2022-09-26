@@ -1,15 +1,7 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/translateX()
 original_slug: Web/CSS/transform-function/translateX()
-browser-compat: css.types.transform-function.translateX
 ---
 {{CSSRef}}
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_radix
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/Compositing_and_Blending
 ---
+
 {{CSSRef}}
 
 **_Compositing and Blending_** (Composition et fusion) est un module de la spécification CSS qui définit la façon dont les formes de différents éléments sont combinés afin de former une seule image.

@@ -2,6 +2,7 @@
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 **debugger 语句**调用任何可用的调试功能，例如设置断点。 如果没有调试功能可用，则此语句不起作用。
@@ -37,5 +38,5 @@ function potentiallyBuggyCode() {
 
 ## 相关链接
 
-- [JavaScript 调试](https://developer.mozilla.org/en-US/docs/Debugging_JavaScript)
-- [在火狐开发者工具中调试](https://developer.mozilla.org/en-US/docs/Tools/Debugger)
+- [JavaScript 调试](/zh-CN/docs/Debugging_JavaScript)
+- [在火狐开发者工具中调试](/zh-CN/docs/Tools/Debugger)

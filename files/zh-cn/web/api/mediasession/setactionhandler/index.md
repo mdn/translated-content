@@ -2,6 +2,7 @@
 title: MediaSession.setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
 ---
+
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 {{domxref("MediaSession")}} 接口的属性 **`setActionHandler()`** 为 media session 动作设置一个监听器。这些动作让网页程序在用户操作设备的内置物理或屏上媒体控制项时收到消息，例如播放、停止或搜寻按钮。
@@ -77,4 +78,4 @@ navigator.mediaSession.setActionHandler('nexttrack', null);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSession.setActionHandler")}}
+{{Compat}}

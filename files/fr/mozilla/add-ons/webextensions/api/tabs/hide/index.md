@@ -12,6 +12,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
+
 {{AddonSidebar()}}
 
 Masque un ou plusieurs onglets.

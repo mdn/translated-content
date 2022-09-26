@@ -1,12 +1,6 @@
 ---
 title: プロキシサーバーとトンネリング
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
-translation_of: Web/HTTP/Proxy_servers_and_tunneling
 ---
 {{HTTPSidebar}}
 

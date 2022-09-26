@@ -2,6 +2,7 @@
 title: XRSystem
 slug: Web/API/XRSystem
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRSystem`** インターフェイスは、WebXR セッションを表す {{domxref("XRSession")}} オブジェクトにアクセスできるようにするメソッドを提供します。 その `XRSession` が手元にあれば、それを使用して拡張現実（AR）または仮想現実（VR）デバイスと対話できます。

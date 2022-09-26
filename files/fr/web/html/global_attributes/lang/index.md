@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/lang
 original_slug: Web/HTML/Attributs_universels/lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`lang`** permet de définir la langue utilisée pour l'élément. Pour les éléments non-éditables, c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables, c'est la langue dans laquelle devrait écrire l'utilisateur. La valeur de cet attribut est une «&nbsp;balise de langue&nbsp;» dont le format est défini par le document de l'IETF : [_Les balises d'identification de langues (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). Si cette balise est la chaîne vide, la langue sera définie comme _inconnue_. Si la balise de langue n'est pas valide selon BCP47, la langue sera définie comme _invalide_.
@@ -36,16 +37,11 @@ La sous-balise de script doit précéder la sous-balise régionale si les deux s
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}} | {{Spec2('HTML WHATWG')}} | Aucun changement depuis la dernière dérivation, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "dom.html#the-lang-and-xmllang-attributes", "lang")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucun changement de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', "dom.html#the-lang-and-xmllang-attributes", "lang")}}     | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. Définition du comportement de l'attribut **xml:lang** et de l'algorithme à utiliser pour déterminer la langue utilisée. Cet attribut devient également un attribut global à part entière.                                                                                                                        |
-| {{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}                             | {{Spec2('HTML4.01')}}     | Attribut supporté pour tous les éléments {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, et {{HTMLElement("script")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Voir aussi
 

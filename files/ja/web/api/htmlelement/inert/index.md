@@ -1,9 +1,8 @@
 ---
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
-browser-compat: api.HTMLElement.inert
-translation_of: Web/API/HTMLElement/inert
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement")}} の **`inert`** プロパティは論理値で、存在する場合は、フォーカスイベントや支援技術からのイベントを含む、要素に対するユーザーの入力イベントをブラウザーが「無視」するようにします。ブラウザーは、要素でのページ検索やテキスト選択も無視することができます。これは、モーダルのような UI を構築する際に、モーダルが表示されているときにフォーカスをモーダル内に「閉じ込める」場合に便利です。

@@ -1,21 +1,6 @@
 ---
 title: 背景画像の拡大縮小
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-tags:
-  - CSS
-  - CSS 背景
-  - 例
-  - ガイド
-  - 中級者
-  - リファレンス
-  - Scale
-  - Scaling
-  - ウェブ
-  - dimensions
-  - height
-  - resize
-  - width
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 {{CSSRef}}

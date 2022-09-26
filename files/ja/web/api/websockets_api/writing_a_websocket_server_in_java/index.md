@@ -1,14 +1,8 @@
 ---
 title: Java で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
-tags:
-  - HTML5
-  - ハンドシェイク
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSocket
-translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
+
 ## はじめに
 
 この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。

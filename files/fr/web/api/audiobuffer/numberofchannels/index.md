@@ -3,6 +3,7 @@ title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 translation_of: Web/API/AudioBuffer/numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `numberOfChannels` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre entier représentant le nombre de canaux audio diiscrets décrits par les données PCM stockées dans la mémoire-tampon.

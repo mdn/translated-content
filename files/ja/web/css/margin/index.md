@@ -1,13 +1,6 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ボックスモデル
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin
-translation_of: Web/CSS/margin
 ---
 {{CSSRef}}
 

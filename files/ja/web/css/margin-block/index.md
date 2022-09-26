@@ -1,16 +1,6 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - margin-block
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin-block
-translation_of: Web/CSS/margin-block
 ---
 {{CSSRef}}
 

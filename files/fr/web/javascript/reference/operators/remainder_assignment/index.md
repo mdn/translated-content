@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de reste et d'affectation (`%=`) calcule le reste de la division de l'opérande gauche par l'opérande droit et affecte ce résultat à la variable représentée par l'opérande gauche.

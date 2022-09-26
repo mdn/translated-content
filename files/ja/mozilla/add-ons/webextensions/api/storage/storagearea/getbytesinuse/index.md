@@ -1,18 +1,8 @@
 ---
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - getBytesInUse
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のストレージ領域内に格納されたアイテムが占めるストレージ空間をバイト単位で取得します。

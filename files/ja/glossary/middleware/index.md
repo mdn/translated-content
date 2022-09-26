@@ -1,10 +1,6 @@
 ---
 title: Middleware (ミドルウェア)
 slug: Glossary/Middleware
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Middleware
 ---
 ミドルウェアとは、システムの各部分がデータを通信および管理できるようにする、あらゆるソフトウェアまたはサービスの（定義があやふやな）用語です。コンポーネントと入出力間の通信を処理するソフトウェアであるため、開発者はアプリケーションの特定の目的に集中できます。
 

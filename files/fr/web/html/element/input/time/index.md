@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/time
 translation_of: Web/HTML/Element/input/time
 browser-compat: html.elements.input.input-time
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`time`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir une heure (avec des minutes et éventuellement des secondes).

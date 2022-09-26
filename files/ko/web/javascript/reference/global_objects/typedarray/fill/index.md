@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 
 ## 구문
 
-    typedarray.fill(value[, start = 0[, end = this.length]])
+```js
+typedarray.fill(value[, start = 0[, end = this.length]])
+```
 
 ### 매개변수
 

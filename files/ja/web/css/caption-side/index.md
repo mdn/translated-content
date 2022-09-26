@@ -1,14 +1,6 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.caption-side
-translation_of: Web/CSS/caption-side
 ---
 {{CSSRef}}
 

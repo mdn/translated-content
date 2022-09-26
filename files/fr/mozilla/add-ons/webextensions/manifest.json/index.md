@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
