@@ -24,7 +24,7 @@ content: url("http://www.example.com/test.png") / "Le texte alternatif";
 
 /* Une valeur <string>, les caractères non-latin */
 /* doivent être échappées par ex. \000A9 for &copy; */
-content: 'prefix';
+content: "prefix";
 
 /* Valeurs utilisant un compteur, éventuellement
    avec <list-style-type> */
