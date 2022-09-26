@@ -3,6 +3,7 @@ title: Doc sprints
 slug: orphaned/MDN/Community/Doc_sprints
 original_slug: MDN/Community/Doc_sprints
 ---
+
 {{MDNSidebar}}
 
 > **Note:**The MDN community often held doc sprints during 2010-2013. Starting in 2014, these events were broadened in scope to "[Hack on MDN](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/)" events that include code hacking as well as documentation projects. Most of the advice below applies equally well to "Hack" sprints and documentation sprints.

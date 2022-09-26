@@ -3,6 +3,7 @@ title: 'Document: pointerlockerror イベント'
 slug: orphaned/Web/API/Element/pointerlockerror_event
 original_slug: Web/API/Element/pointerlockerror_event
 ---
+
 {{APIRef}}
 
 `pointerlockerror` イベントは、 (技術的な理由、またはパーミッションが拒否されたために) ポインターのロックに失敗したときに発生します。

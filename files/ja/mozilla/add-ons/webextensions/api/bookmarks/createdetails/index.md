@@ -2,6 +2,7 @@
 title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
+
 {{AddonSidebar()}}
 
 `CreateDetails` 型は、新しいブックマークやフォルダのプロパティを表すためのオブジェクト型です。{{WebExtAPIRef("bookmarks.create()")}} メソッドの呼び出し時に渡します。
