@@ -10,29 +10,31 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Ключевое слово <strong>super</strong> используется для вызова функций, принадлежащих родителю объекта.</p>
+Ключевое слово **super** используется для вызова функций, принадлежащих родителю объекта.
 
-<p>Выражения <code>super.prop</code> и <code>super[expr]</code> действительны в любом <a href="/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions">определении метода</a> в <a href="/ru/docs/Web/JavaScript/Reference/Classes">классах</a> и в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литералах объекта</a>.</p>
+Выражения `super.prop` и `super[expr]` действительны в любом [определении метода](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions) в [классах](/ru/docs/Web/JavaScript/Reference/Classes) и в [литералах объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">super([arguments]); // вызов родительского конструктора.
+```js
+super([arguments]); // вызов родительского конструктора.
 super.functionOnParent([arguments]);
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>В конструкторе ключевое слово <code>super()</code> используется как функция, вызывающая родительский конструктор. Её необходимо вызвать до первого обращения к ключевому слову <code>this</code> в теле конструктора. Ключевое слово <code>super</code> также может быть использовано для вызова функций родительского объекта.</p>
+В конструкторе ключевое слово `super()` используется как функция, вызывающая родительский конструктор. Её необходимо вызвать до первого обращения к ключевому слову `this` в теле конструктора. Ключевое слово `super` также может быть использовано для вызова функций родительского объекта.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Использование_super_в_классах">Использование super в классах</h3>
+### Использование super в классах
 
-<p>Этот фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">демонстрация</a>). В этом примере <code>super()</code> вызывается, чтобы не повторять части конструктора, одинаковые для классов <code>Rectangle</code> и <code>Square</code>.</p>
+Этот фрагмент кода взят из [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([демонстрация](https://googlechrome.github.io/samples/classes-es6/index.html)). В этом примере `super()` вызывается, чтобы не повторять части конструктора, одинаковые для классов `Rectangle` и `Square`.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.name = 'Rectangle';
     this.height = height;
@@ -61,13 +63,15 @@ class Square extends Rectangle {
     // использовать 'this'. Если этого не сделать, произойдет ошибка ReferenceError.
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h3 id="Вызов_статических_методов_через_super">Вызов статических методов через super</h3>
+### Вызов статических методов через super
 
-<p>Вы также можете вызывать super для <a href="/ru/docs/Web/JavaScript/Reference/Classes/static">статических</a> методов.</p>
+Вы также можете вызывать super для [статических](/ru/docs/Web/JavaScript/Reference/Classes/static) методов.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   static logNbSides() {
     return 'У меня 4 стороны';
   }
@@ -79,13 +83,14 @@ class Square extends Rectangle {
   }
 }
 Square.logDescription(); // 'У меня 4 стороны, равные между собой'
-</pre>
+```
 
-<h3 id="Удаление_свойств_через_super_вызывает_ошибку">Удаление свойств через super вызывает ошибку</h3>
+### Удаление свойств через super вызывает ошибку
 
-<p>Вы не можете использовать <a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">оператор delete</a> и <code>super.prop</code> или <code>super[expr]</code> для удаления свойств родительского класса, он выдаст: {{jsxref("ReferenceError")}}.</p>
+Вы не можете использовать [оператор delete](/ru/docs/Web/JavaScript/Reference/Operators/delete) и `super.prop` или `super[expr]` для удаления свойств родительского класса, он выдаст: {{jsxref("ReferenceError")}}.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   constructor() {}
   foo() {}
 }
@@ -96,13 +101,15 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+```
 
-<h3 id="super.prop_не_может_переопределять_свойства_защищённые_от_записи"><code>super.prop</code> не может переопределять свойства, защищённые от записи</h3>
+### `super.prop` не может переопределять свойства, защищённые от записи
 
-<p>При определении незаписываемых свойств с помощью, например, {{jsxref("Object.defineProperty")}}, <code>super</code> не может перезаписать значение свойства.</p>
+При определении незаписываемых свойств с помощью, например, {{jsxref("Object.defineProperty")}}, `super` не может перезаписать значение свойства.
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -124,13 +131,14 @@ class Y extends X {
 var y = new Y();
 y.foo(); // TypeError: "prop" доступен только для чтения
 console.log(y.prop); // 1
-</pre>
+```
 
-<h3 id="Использование_super.prop_в_объектных_литералах">Использование <code>super.prop</code> в объектных литералах</h3>
+### Использование `super.prop` в объектных литералах
 
-<p>Super также можно использовать в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">объекте инициализатора / литерала</a>. В этом примере метод определяют два объекта. Во втором объекте <code>super</code> вызывает метод первого объекта. Это работает благодаря {{jsxref("Object.setPrototypeOf()")}}, с помощью которого мы можем установить прототип для <code>obj2</code> в <code>obj1</code>, так что <code>super</code> может найти <code>method1</code> в <code>obj1</code>.</p>
+Super также можно использовать в [объекте инициализатора / литерала](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer). В этом примере метод определяют два объекта. Во втором объекте `super` вызывает метод первого объекта. Это работает благодаря {{jsxref("Object.setPrototypeOf()")}}, с помощью которого мы можем установить прототип для `obj2` в `obj1`, так что `super` может найти `method1` в `obj1`.
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log('method 1');
   }
@@ -144,18 +152,16 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // выведет "method 1"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Classes">Классы</a></li>
-</ul>
+- [Классы](/ru/docs/Web/JavaScript/Reference/Classes)

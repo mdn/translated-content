@@ -3,52 +3,48 @@ title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>Нестандартное свойство <strong>lastMatch </strong>является доступным только для чтения статическим свойством регулярных выражений. Оно содержит последние совпавшие символы. Значение свойства также можно получить как <code>RegExp.$&amp;</code>.</p>
+Нестандартное свойство **lastMatch** является доступным только для чтения статическим свойством регулярных выражений. Оно содержит последние совпавшие символы. Значение свойства также можно получить как `RegExp.$&`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>RegExp</var>.lastMatch
-RegExp['$&amp;']
-</pre>
+```
+RegExp.lastMatch
+RegExp['$&']
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Поскольку свойство <code>lastMatch</code>  статическое, к нему можно обратиться только как  <code>RegExp.lastMatch</code> или <code>RegExp['$&amp;'].</code></p>
+Поскольку свойство `lastMatch` статическое, к нему можно обратиться только как `RegExp.lastMatch` или `RegExp['$&'].`
 
-<p>Значение свойства <code>lastMatch</code> доступно только для чтение и изменяется при успешном совпадении с регулярным выражением.</p>
+Значение свойства `lastMatch` доступно только для чтение и изменяется при успешном совпадении с регулярным выражением.
 
-<p>Поскольку использование символа "&amp;" приведёт к выбрасыванию ошибки {{jsxref("SyntaxError")}}, обратиться к данному свойству с помощью точечной нотации(<code>RegExp.$&amp;</code>) нельзя. Вместо этого стоит использовать <a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors">скобочную нотацию</a> (<code>RegExp['$&amp;']</code>).</p>
+Поскольку использование символа "&" приведёт к выбрасыванию ошибки {{jsxref("SyntaxError")}}, обратиться к данному свойству с помощью точечной нотации(`RegExp.$&`) нельзя. Вместо этого стоит использовать [скобочную нотацию](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors) (`RegExp['$&']`).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_lastMatch_и">Использование <code>lastMatch</code> и <code>$&amp;</code></h3>
+### Использование `lastMatch` и `$&`
 
-<pre class="brush: js">var re = /hi/g;
+```js
+var re = /hi/g;
 re.test('hi there!');
 RegExp.lastMatch; // "hi"
-RegExp['$&amp;'];     // "hi"
-</pre>
+RegExp['$&'];     // "hi"
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<p>Не стандартизированной. Не является частью какой-либо спецификации.</p>
+Не стандартизированной. Не является частью какой-либо спецификации.
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}

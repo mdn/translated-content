@@ -9,57 +9,56 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Объект <code><strong>TypeError</strong></code> представляет ошибку, возникающую, когда значение имеет не ожидаемый тип.</p>
+Объект **`TypeError`** представляет ошибку, возникающую, когда значение имеет не ожидаемый тип.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```
+new TypeError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
-</dl>
+- `message`
+  - : Необязательный параметр. Человеко-читаемое описание ошибки.
+- `fileName` {{non-standard_inline}}
+  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
+- `lineNumber` {{non-standard_inline}}
+  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Исключение <code>TypeError</code> выбрасывается, когда операнд или аргумент, переданный в функцию, не совместим с типом, ожидаемым оператором или функцией.</p>
+Исключение `TypeError` выбрасывается, когда операнд или аргумент, переданный в функцию, не совместим с типом, ожидаемым оператором или функцией.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{jsxref("TypeError.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в объект <code>TypeError</code>.</dd>
-</dl>
+- {{jsxref("TypeError.prototype")}}
+  - : Позволяет добавлять свойства в объект `TypeError`.
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<p>Глобальный объект <code>TypeError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+Глобальный объект `TypeError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
 
-<h2 id="TypeError_instances">Экземпляры объекта <code>TypeError</code></h2>
+## Экземпляры объекта `TypeError`
 
-<h3 id="Properties_of_TypeError_instances">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties')}}
 
-<h3 id="Methods_of_TypeError_instances">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Catch_an_TypeError">Пример: перехват исключения <code>TypeError</code></h3>
+### Пример: перехват исключения `TypeError`
 
-<pre class="brush: js">try {
+```js
+try {
   null.f();
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -70,11 +69,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber);         // 2
   console.log(e.stack);                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_TypeError">Пример: возбуждение исключения <code>TypeError</code></h3>
+### Пример: возбуждение исключения `TypeError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new TypeError('Привет', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -85,19 +85,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("TypeError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("TypeError.prototype")}}

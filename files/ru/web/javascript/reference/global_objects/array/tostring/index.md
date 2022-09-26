@@ -8,44 +8,45 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>toString()</strong></code> возвращает строковое представление указанного массива и его элементов.</p>
+Метод **`toString()`** возвращает строковое представление указанного массива и его элементов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.toString()</code></pre>
+```
+arr.toString()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Объект {{jsxref("Global_Objects/Array", "Array")}} переопределяет метод <code>toString</code> объекта {{jsxref("Global_Objects/Object", "Object")}}. Для объектов класса <code>Array</code>, метод <code>toString</code> соединяет массив и возвращает одну строку, содержащую каждый элемент массива, разделённый запятыми. Например, следующий код создаёт массив и использует метод <code>toString</code> для преобразования массива в строку.</p>
+Объект {{jsxref("Global_Objects/Array", "Array")}} переопределяет метод `toString` объекта {{jsxref("Global_Objects/Object", "Object")}}. Для объектов класса `Array`, метод `toString` соединяет массив и возвращает одну строку, содержащую каждый элемент массива, разделённый запятыми. Например, следующий код создаёт массив и использует метод `toString` для преобразования массива в строку.
 
-<pre class="brush: js">var monthNames = ['Янв', 'Фев', 'Мар', 'Апр'];
+```js
+var monthNames = ['Янв', 'Фев', 'Мар', 'Апр'];
 var myVar = monthNames.toString(); // присваивает 'Янв,Фев,Мар,Апр' переменной myVar.
-</pre>
+```
 
-<p>JavaScript вызывает метод <code>toString</code> автоматически, когда массив представляется текстовым значением или когда массив находится в контексте конкатенации строк.</p>
+JavaScript вызывает метод `toString` автоматически, когда массив представляется текстовым значением или когда массив находится в контексте конкатенации строк.
 
-<h3 id="ECMAScript_5_semantics">Семантика ECMAScript 5</h3>
+### Семантика ECMAScript 5
 
-<p>Начиная с JavaScript 1.8.5 (<span class="st">Firefox 4</span>), и в соответствии с семантикой ECMAScript 5-го издания, метод <code>toString()</code> является обобщённым и может использоваться с любым объектом. В случае с массивами, если он имеет метод <code>join()</code>, он будет вызван и результат его работы будет возвращён. В противном случае будет вызван метод {{jsxref("Object.prototype.toString()")}}, и будет возвращён результат его работы.</p>
+Начиная с JavaScript 1.8.5 (Firefox 4), и в соответствии с семантикой ECMAScript 5-го издания, метод `toString()` является обобщённым и может использоваться с любым объектом. В случае с массивами, если он имеет метод `join()`, он будет вызван и результат его работы будет возвращён. В противном случае будет вызван метод {{jsxref("Object.prototype.toString()")}}, и будет возвращён результат его работы.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

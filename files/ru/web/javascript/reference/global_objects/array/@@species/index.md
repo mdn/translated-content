@@ -1,5 +1,5 @@
 ---
-title: 'get Array[@@species]'
+title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 tags:
   - Array
@@ -8,52 +8,51 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод<strong> </strong><code><strong>Array[@@species]</strong></code>возвращает конструктор <code>Array</code> .</p>
+Метод** \*\***`Array[@@species]`\*\*возвращает конструктор `Array` .
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Array[Symbol.species]
-</pre>
+```
+Array[Symbol.species]
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Конструктор {{jsxref("Array")}}.</p>
+Конструктор {{jsxref("Array")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code>species</code>  возвращает стандартный конструктор объектов <code>Array</code> . Дочерние элементы могут переопределить метод для смены назначения конструктора.</p>
+Метод `species` возвращает стандартный конструктор объектов `Array` . Дочерние элементы могут переопределить метод для смены назначения конструктора.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Метод <code>species</code> возвращает стандартное значение функции конструктора, то есть<br>
-  <code>Array</code> конструктор для <code>Array</code> объектов:</p>
+Метод `species` возвращает стандартное значение функции конструктора, то есть
+`Array` конструктор для `Array` объектов:
 
-<pre class="brush: js">Array[Symbol.species]; // функция Array()</pre>
+```js
+Array[Symbol.species]; // функция Array()
+```
 
-<p>В полученном объекте (на примере обычного массива <code>MyArray</code>),  <code>MyArray</code> является конструктором <code>MyArray</code>. В случае, если вы захотите вернуть родительские объекты <code>Array</code> в полученных классовых методах, вы можете переопределить метод:</p>
+В полученном объекте (на примере обычного массива `MyArray`), `MyArray` является конструктором `MyArray`. В случае, если вы захотите вернуть родительские объекты `Array` в полученных классовых методах, вы можете переопределить метод:
 
-<pre class="brush: js">class MyArray extends Array {
-  //  <span id="result_box" lang="ru"><span>Переписывает тип MyArray в родительский конструктор Array</span></span>
+```js
+class MyArray extends Array {
+  //  Переписывает тип MyArray в родительский конструктор Array
   static get [Symbol.species]() { return Array; }
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также:
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также:</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Symbol.species")}}

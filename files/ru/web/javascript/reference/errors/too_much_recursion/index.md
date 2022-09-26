@@ -7,48 +7,51 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">InternalError: too much recursion
-</pre>
+```
+InternalError: too much recursion
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("InternalError")}}.</p>
+{{jsxref("InternalError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Функция, вызывающая сама себя, называется <em>рекурсивной функцией</em>. В некотором смысле рекурсия аналогична циклу. Оба выполняют один и тот же код несколько раз, и оба требуют условия (чтобы избежать бесконечного цикла или, вернее, бесконечной рекурсии в этом случае). Когда функция вызывается рекурсивно слишком много раз или бесконечно, JavaScript выдаёт эту ошибку<span class="seoSummary">.</span></p>
+Функция, вызывающая сама себя, называется _рекурсивной функцией_. В некотором смысле рекурсия аналогична циклу. Оба выполняют один и тот же код несколько раз, и оба требуют условия (чтобы избежать бесконечного цикла или, вернее, бесконечной рекурсии в этом случае). Когда функция вызывается рекурсивно слишком много раз или бесконечно, JavaScript выдаёт эту ошибку.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Функция выполняется рекурсивно 10 раз, в соответствии с условием выхода:</p>
+Функция выполняется рекурсивно 10 раз, в соответствии с условием выхода:
 
-<pre class="brush: js">function loop(x) {
-  if (x &gt;= 10) // "x &gt;= 10" это условие выхода
+```js
+function loop(x) {
+  if (x >= 10) // "x >= 10" это условие выхода
     return;
   // do stuff
   loop(x + 1); // рекурсивный вызов
 }
-loop(0);</pre>
+loop(0);
+```
 
-<p>В условии установлено слишком большое значение, не будет работать:</p>
+В условии установлено слишком большое значение, не будет работать:
 
-<pre class="brush: js example-bad">function loop(x) {
-  if (x &gt;= 1000000000000)
+```js example-bad
+function loop(x) {
+  if (x >= 1000000000000)
     return;
   // do stuff
   loop(x + 1);
 }
 loop(0);
 
-// InternalError: too much recursion</pre>
+// InternalError: too much recursion
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Glossary("Recursion")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Functions#Рекурсия">Рекурсия</a></li>
-</ul>
+- {{Glossary("Recursion")}}
+- [Рекурсия](/ru/docs/Web/JavaScript/Guide/Functions#Рекурсия)

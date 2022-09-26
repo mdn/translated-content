@@ -3,68 +3,77 @@ title: Spread syntax
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}**Spread syntax** позволяет расширить доступные для итерации элементы (например, массивы или строки) в местах
 
-<div><strong>Spread syntax</strong> позволяет расширить доступные для итерации элементы (например, массивы или строки) в местах</div>
+- для функций: где ожидаемое количество аргументов для вызовов функций равно нулю или больше нуля
+- для элементов (литералов массива)
+- для выражений объектов: в местах, где количество пар "ключ-значение" должно быть равно нулю или больше (для объектных литералов)
 
-<ul>
- <li>для функций: где ожидаемое количество аргументов для вызовов функций равно нулю или больше нуля</li>
- <li>для элементов (литералов массива)</li>
- <li>для выражений объектов: в местах, где количество пар "ключ-значение" должно быть равно нулю или больше (для объектных литералов)</li>
-</ul>
+{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Для вызовов функций:
 
-<p>Для вызовов функций:</p>
+```
+myFunction(...iterableObj);
+```
 
-<pre class="syntaxbox">myFunction(...iterableObj);
-</pre>
+Для литералов массива или строк:
 
-<p>Для литералов массива или строк:</p>
+```
+[...iterableObj, '4', 'five', 6];
+```
 
-<pre class="syntaxbox">[...iterableObj, '4', 'five', 6];</pre>
+Для литералов объекта (новое в ECMAScript 2018):
 
-<p>Для литералов объекта (новое в ECMAScript 2018):</p>
+```
+let objClone = { ...obj };
+```
 
-<pre class="syntaxbox">let objClone = { ...obj };</pre>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Spread в вызовах функций
 
-<h3 id="Spread_в_вызовах_функций">Spread в вызовах функций</h3>
+#### Замена apply
 
-<h4 id="Замена_apply">Замена apply</h4>
+Обычно используют {{jsxref( "Function.prototype.apply")}} в случаях, когда хотят использовать элементы массива в качестве аргументов функции.
 
-<p>Обычно используют {{jsxref( "Function.prototype.apply")}} в случаях, когда хотят использовать элементы массива в качестве аргументов функции.</p>
-
-<pre class="brush: js">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction.apply(null, args);</pre>
+myFunction.apply(null, args);
+```
 
-<p>С <strong>spread syntax</strong> вышеприведённое можно записать как:</p>
+С **spread syntax** вышеприведённое можно записать как:
 
-<pre class="brush: js">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction(...args);</pre>
+myFunction(...args);
+```
 
-<p>Любой аргумент в списке аргументов может использовать <strong>spread syntax</strong>, и его можно использовать несколько раз.</p>
+Любой аргумент в списке аргументов может использовать **spread syntax**, и его можно использовать несколько раз.
 
-<pre class="brush: js">function myFunction(v, w, x, y, z) { }
+```js
+function myFunction(v, w, x, y, z) { }
 var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);</pre>
+myFunction(-1, ...args, 2, ...[3]);
+```
 
-<h4 id="Apply_для_new">Apply для new</h4>
+#### Apply для new
 
-<p>Вызывая конструктор через ключевое слово <code>new</code>, невозможно использовать массив и <code>apply</code> <strong>напрямую </strong>(<code>apply</code> выполняет <code>[[Call]]</code>, а не <code>[[Construct]]</code>).Однако благодаря spread syntax, массив может быть с лёгкостью использован со словом <code>new:</code></p>
+Вызывая конструктор через ключевое слово `new`, невозможно использовать массив и `apply` **напрямую** (`apply` выполняет `[[Call]]`, а не `[[Construct]]`).Однако благодаря spread syntax, массив может быть с лёгкостью использован со словом `new:`
 
-<pre class="brush: js">var dateFields = [1970, 0, 1];  // 1 Jan 1970
+```js
+var dateFields = [1970, 0, 1];  // 1 Jan 1970
 var d = new Date(...dateFields);
-</pre>
+```
 
-<p>Чтобы использовать <code>new</code> с массивом параметров без spread syntax, вам потребуется использование частичного применения:</p>
+Чтобы использовать `new` с массивом параметров без spread syntax, вам потребуется использование частичного применения:
 
-<pre class="brush: js">function applyAndNew(constructor, args) {
+```js
+function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -88,160 +97,146 @@ var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 console.log(new myConstructorWithArguments);
 // (internal log of myConstructor):           arguments.length: 6
 // (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
-// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}</pre>
+// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
+```
 
-<h3 id="Spread_в_литералах_массива">Spread в литералах массива</h3>
+### Spread в литералах массива
 
-<h4 id="Более_мощный_литерал_массива">Более мощный литерал массива</h4>
+#### Более мощный литерал массива
 
-<p>Без spread syntax, применение синтаксиса литерала массива для создания нового массива на основе существующего недостаточно и требуется императивный код вместо комбинации методов <code>push</code>, <code>splice</code>, <code>concat</code> и т.д. С spread syntax реализация становится гораздо более лаконичной:</p>
+Без spread syntax, применение синтаксиса литерала массива для создания нового массива на основе существующего недостаточно и требуется императивный код вместо комбинации методов `push`, `splice`, `concat` и т.д. С spread syntax реализация становится гораздо более лаконичной:
 
-<pre class="brush: js">var parts = ['shoulders', 'knees'];
+```js
+var parts = ['shoulders', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes'];
 // ["head", "shoulders", "knees", "and", "toes"]
-</pre>
+```
 
-<p>Аналогично развёртыванию в массиве аргументов, <code>...</code> может быть использован повсеместно и многократно в литерале массива.</p>
+Аналогично развёртыванию в массиве аргументов, `...` может быть использован повсеместно и многократно в литерале массива.
 
-<h4 id="Копирование_массива">Копирование массива</h4>
+#### Копирование массива
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var arr2 = [...arr]; // like arr.slice()
 arr2.push(4);
 
 // arr2 becomes [1, 2, 3, 4]
 // arr remains unaffected
-</pre>
+```
 
-<p><strong>Примечание:</strong> Spread syntax на самом деле переходит лишь на один уровень глубже при копировании массива. Таким образом, он может не подходить для копирования многоразмерных массивов, как показывает следующий пример: (также как и c {{jsxref("Object.assign()")}}) и синтаксис spred </p>
+**Примечание:** Spread syntax на самом деле переходит лишь на один уровень глубже при копировании массива. Таким образом, он может не подходить для копирования многоразмерных массивов, как показывает следующий пример: (также как и c {{jsxref("Object.assign()")}}) и синтаксис spred
 
-<pre class="brush: js">const a = [[1], [2], [3]];
+```js
+const a = [[1], [2], [3]];
 const b = [...a];
 b.shift().shift(); // 1
 // О нет. Теперь на массив "а" относятся также: а
 //[[], [2], [3]]
-</pre>
+```
 
-<h4 id="Лучший_способ_конкатенации_массивов">Лучший способ конкатенации массивов</h4>
+#### Лучший способ конкатенации массивов
 
-<p>Для конкатенации массива часто используется {{jsxref("Array.concat")}}:</p>
+Для конкатенации массива часто используется {{jsxref("Array.concat")}}:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Append all items from arr2 onto arr1
-arr1 = arr1.concat(arr2);</pre>
+arr1 = arr1.concat(arr2);
+```
 
-<p>С использованием spread syntax:</p>
+С использованием spread syntax:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
-</pre>
+```
 
-<p>{{jsxref("Array.unshift")}} часто используется для вставки массива значений в начало существующего массива. Без spread syntax:</p>
+{{jsxref("Array.unshift")}} часто используется для вставки массива значений в начало существующего массива. Без spread syntax:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]</pre>
+Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]
+```
 
-<p>С использованием spread syntax [Следует отметить, что такой способ создаёт новый массив <code>arr1</code>. В отличие от {{jsxref("Array.unshift")}}, исходный массив не мутируется]:</p>
+С использованием spread syntax \[Следует отметить, что такой способ создаёт новый массив `arr1`. В отличие от {{jsxref("Array.unshift")}}, исходный массив не мутируется]:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
-</pre>
+```
 
-<h3 id="Spread_в_литералах_объекта">Spread в литералах объекта</h3>
+### Spread в литералах объекта
 
-<p>Предложение <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> (стадия 4) добавляет свойства spread в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литералы объекта</a>. Оно копирует собственные перечисляемые свойства данного объекта в новый объект.</p>
+Предложение [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (стадия 4) добавляет свойства spread в [литералы объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer). Оно копирует собственные перечисляемые свойства данного объекта в новый объект.
 
-<p>Поверхностное копирование (без прототипа) или объединение объектов теперь возможно с использованием более короткого, чем {{jsxref("Object.assign()")}}, синтаксиса.</p>
+Поверхностное копирование (без прототипа) или объединение объектов теперь возможно с использованием более короткого, чем {{jsxref("Object.assign()")}}, синтаксиса.
 
-<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }</pre>
+// Object { foo: "baz", x: 42, y: 13 }
+```
 
-<p>Обратите внимание, что {{jsxref("Object.assign()")}} запускает <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>, а <strong>spread syntax</strong> нет.</p>
+Обратите внимание, что {{jsxref("Object.assign()")}} запускает [setters](/ru/docs/Web/JavaScript/Reference/Functions/set), а **spread syntax** нет.
 
-<p>Обратите внимание, что вы не можете заменить или имитировать функцию {{jsxref("Object.assign()")}}:</p>
+Обратите внимание, что вы не можете заменить или имитировать функцию {{jsxref("Object.assign()")}}:
 
-<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) =&gt; ( { ...objects } );
+const merge = ( ...objects ) => ( { ...objects } );
 
 var mergedObj = merge ( obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
 var mergedObj = merge ( {}, obj1, obj2);
-// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }</pre>
+// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
+```
 
-<p>В приведённом выше примере оператор распространения не работает так, как можно было бы ожидать: он распространяет <em>массив</em> аргументов в литерал <em>объекта</em> благодаря параметру rest.</p>
+В приведённом выше примере оператор распространения не работает так, как можно было бы ожидать: он распространяет _массив_ аргументов в литерал _объекта_ благодаря параметру rest.
 
-<h3 id="Только_для_итерируемых_объектов">Только для итерируемых объектов</h3>
+### Только для итерируемых объектов
 
-<p>Spread syntax ( кроме случаев spread properties) может быть применён только к итерируемым объектам (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterable</a> objects) :</p>
+Spread syntax ( кроме случаев spread properties) может быть применён только к итерируемым объектам ([iterable](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) objects) :
 
-<pre class="brush: js">var obj = {'key1': 'value1'};
+```js
+var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable
-</pre>
+```
 
-<h3 id="Spread_с_большим_количеством_значений">Spread с большим количеством значений</h3>
+### Spread с большим количеством значений
 
-<p>При использовании spread оператора в вызовах функций необходимо быть внимательным к возможному переполнению в ядре JavaScript. Существует ограничение по максимально возможному количеству аргументов функции. См. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object)."><code>apply()</code></a> для уточнения.</p>
+При использовании spread оператора в вызовах функций необходимо быть внимательным к возможному переполнению в ядре JavaScript. Существует ограничение по максимально возможному количеству аргументов функции. См. [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") для уточнения.
 
-<h2 id="Rest_синтаксис_параметры">Rest синтаксис (параметры)</h2>
+## Rest синтаксис (параметры)
 
-<p>Синтаксис для rest оператора выглядит таким же как и для spread оператора, однако он используется для деструктуризации массивов и объектов. Фактически, rest оператор противоположен spread оператору: последний раскладывает массив на элементы, тогда как первый собирает много элементов в один. См. <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">rest parameters.</a></p>
+Синтаксис для rest оператора выглядит таким же как и для spread оператора, однако он используется для деструктуризации массивов и объектов. Фактически, rest оператор противоположен spread оператору: последний раскладывает массив на элементы, тогда как первый собирает много элементов в один. См. [rest parameters.](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer">Array Initializer</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists">Argument Lists</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2018', '#sec-object-initializer')}}</td>
-   <td>{{Spec2('ES2018')}}</td>
-   <td>Defined in <a href="http://www.ecma-international.org/ecma-262/9.0/#sec-object-initializer">Object Initializer</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-initializer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Без изменений.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES2015', '#sec-array-initializer')}}     | {{Spec2('ES2015')}}     | Defined in several sections of the specification: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
+| {{SpecName('ES2018', '#sec-object-initializer')}}     | {{Spec2('ES2018')}}     | Defined in [Object Initializer](http://www.ecma-international.org/ecma-262/9.0/#sec-object-initializer)                                                                                                                            |
+| {{SpecName('ESDraft', '#sec-array-initializer')}}     | {{Spec2('ESDraft')}} | Без изменений.                                                                                                                                                                                                                     |
+| {{SpecName('ESDraft', '#sec-object-initializer')}} | {{Spec2('ESDraft')}} | Без изменений.                                                                                                                                                                                                                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a> (also ‘<code>...</code>’)</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">fn.apply</a> (also ‘<code>...</code>’)</li>
-</ul>
+- [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also ‘`...`’)
+- [fn.apply](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (also ‘`...`’)

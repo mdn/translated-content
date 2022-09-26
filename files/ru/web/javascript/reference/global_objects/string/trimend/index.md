@@ -11,38 +11,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
-<div>{{JSRef("Global_Objects", "String")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>trimRight()</code></strong> удаляет пробельные символы с правого конца строки.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.trimRight()</code></pre>
+Метод **`trimRight()`** удаляет пробельные символы с правого конца строки.
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>trimRight()</code> возвращает строку с вырезанными пробельными символами с её правого конца. Метод <code>trimRight()</code> не изменяет значение самой строки.</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+str.trimRight()
+```
 
-<h3 id="Example:_Using_trimRight">Пример: использование метода <code>trimRight()</code></h3>
-<p>Следующий пример покажет строку <code style="white-space: pre;">'   foo'</code>:</p>
-<pre class="brush: js">var str = '   foo  ';
+## Описание
+
+Метод `trimRight()` возвращает строку с вырезанными пробельными символами с её правого конца. Метод `trimRight()` не изменяет значение самой строки.
+
+## Примеры
+
+### Пример: использование метода `trimRight()`
+
+Следующий пример покажет строку `' foo'`:
+
+```js
+var str = '   foo  ';
 
 console.log(str.length); // 8
 
 str = str.trimRight();
 console.log(str.length); // 5
 console.log(str);        // '   foo'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.8.1.</p>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+Не является частью какого-либо стандарта. Реализована в JavaScript 1.8.1.
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}

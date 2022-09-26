@@ -8,34 +8,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.round()</code></strong> возвращает число, округлённое к ближайшему целому.</p>
+Метод **`Math.round()`** возвращает число, округлённое к ближайшему целому.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.round(<var>x</var>)</code></pre>
+```
+Math.round(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если дробная часть числа больше, либо равна 0,5, аргумент будет округлён до ближайшего большего целого. Если дробная часть числа меньше 0,5, аргумент будет округлён до ближайшего меньшего целого.</p>
+Если дробная часть числа больше, либо равна 0,5, аргумент будет округлён до ближайшего большего целого. Если дробная часть числа меньше 0,5, аргумент будет округлён до ближайшего меньшего целого.
 
-<p>Поскольку метод <code>round()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.round()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `round()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.round()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.round">Пример: использование метода <code>Math.round()</code></h3>
+### Пример: использование метода `Math.round()`
 
-<pre class="brush: js">// Вернёт значение 20
+```js
+// Вернёт значение 20
 x = Math.round(20.49);
 
 // Вернёт значение 21
@@ -51,11 +52,12 @@ x = Math.round(-20.51);
 // Обратите внимание на ошибку округления из-за неточности арифметики с плавающей запятой
 // Сравните этот результат с результатом Math.round(1.005, -2) из следующего примера
 x = Math.round(1.005*100)/100;
-</pre>
+```
 
-<h3 id="Example:_Decimal_rounding">Пример: корректировка округления десятичных дробей</h3>
+### Пример: корректировка округления десятичных дробей
 
-<pre class="brush: js">// Замыкание
+```js
+// Замыкание
 (function() {
   /**
    * Корректировка округления десятичных дробей.
@@ -73,7 +75,7 @@ x = Math.round(1.005*100)/100;
     value = +value;
     exp = +exp;
     // Если значение не является числом, либо степень не является целым числом...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Сдвиг разрядов
@@ -124,22 +126,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.sign()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.trunc()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxref("Math.trunc()")}} {{experimental_inline}}

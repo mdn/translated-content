@@ -9,47 +9,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getHours()</code></strong> возвращает часы указанной даты по местному времени.</p>
+Метод **`getHours()`** возвращает часы указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getHours()</code></pre>
+```
+dateObj.getHours()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getHours()</code>, является целым числом от 0 до 23.</p>
+Значение, возвращённое методом `getHours()`, является целым числом от 0 до 23.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getHours">Пример: использование метода <code>getHours()</code></h3>
+### Пример: использование метода `getHours()`
 
-<p>Вторая инструкция в примере ниже присваивает значение 23 переменной <code>hours</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>.</p>
+Вторая инструкция в примере ниже присваивает значение 23 переменной `hours` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
-<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
+```js
+let date = new Date('December 25, 1995 23:15:30');
 let hours = date.getHours();
 
 console.log(hours); // 23
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div id="compat-mobile">{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>
- <li>{{jsxref("Date.prototype.setHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCHours()")}}
+- {{jsxref("Date.prototype.setHours()")}}

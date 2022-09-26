@@ -7,54 +7,51 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<p>Функция <code><strong>parseFloat()</strong></code> принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)</p>
+Функция **`parseFloat()`** принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">parseFloat(<em>строка</em>)</pre>
+```
+parseFloat(строка)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>строка</code></dt>
- <dd>Текстовая строка, из которой вам надо выделить десятичное число.</dd>
-</dl>
+- `строка`
+  - : Текстовая строка, из которой вам надо выделить десятичное число.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Число с плавающей точкой, полученное из строки. Если первый символ не может быть сконвертирован в число, то возвращается {{jsxref("NaN")}}.</p>
+Число с плавающей точкой, полученное из строки. Если первый символ не может быть сконвертирован в число, то возвращается {{jsxref("NaN")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>parseFloat</code> - это высокоуровневая функция, не привязанная ни к одному объекту.</p>
+`parseFloat` - это высокоуровневая функция, не привязанная ни к одному объекту.
 
-<p><code>parseFloat</code> разбирает текстовую строку, ищет и возвращает из неё десятичное число. Если функция встретит знак, отличный от (+ или -), цифр(0-9), разделительной точки, или показателя степени, она вернёт значение, предшествующее этому знаку, игнорируя все последующие символы . Допускаются позади и впереди идущие пробелы.</p>
+`parseFloat` разбирает текстовую строку, ищет и возвращает из неё десятичное число. Если функция встретит знак, отличный от (+ или -), цифр(0-9), разделительной точки, или показателя степени, она вернёт значение, предшествующее этому знаку, игнорируя все последующие символы . Допускаются позади и впереди идущие пробелы.
 
-<p>Если первый символ нельзя привести к числовому виду, <code>parseFloat</code> вернёт<code> NaN</code>.</p>
+Если первый символ нельзя привести к числовому виду, `parseFloat` вернёт` NaN`.
 
-<p>С точки зрения математики, <code>значение NaN</code> не является числом в какой-либо системе счисления. Чтобы определить, вернёт ли <code>parseFloat </code>значение {{jsxref("NaN")}} в качестве результата, можно вызвать функцию {{jsxref("Global_Objects/isNaN", "isNaN")}}. Если <code>NaN</code> участвует в арифметических операциях, результатом также будет <code>NaN</code>.</p>
+С точки зрения математики, `значение NaN` не является числом в какой-либо системе счисления. Чтобы определить, вернёт ли `parseFloat `значение {{jsxref("NaN")}} в качестве результата, можно вызвать функцию {{jsxref("Global_Objects/isNaN", "isNaN")}}. Если `NaN` участвует в арифметических операциях, результатом также будет `NaN`.
 
-<p><code>parseFloat</code> также может вернуть значение <code>Infinity</code> ("бесконечность"). Вы можете использовать функцию {{jsxref("Global_Objects/isFinite", "isFinite")}}, чтобы определить, является ли результат конечным числом  (not <code>Infinity</code>, <code>-Infinity</code>, или <code>NaN</code>).</p>
+`parseFloat` также может вернуть значение `Infinity` ("бесконечность"). Вы можете использовать функцию {{jsxref("Global_Objects/isFinite", "isFinite")}}, чтобы определить, является ли результат конечным числом (not `Infinity`, `-Infinity`, или `NaN`).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="parseFloat_возвращает_число"><code>parseFloat</code> возвращает число</h3>
+### `parseFloat` возвращает число
 
-<p>Все примеры ниже вернут <strong>3.14</strong></p>
+Все примеры ниже вернут **3.14**
 
-<pre><code>parseFloat(3.14);
+```
+parseFloat(3.14);
 parseFloat('3.14');
 parseFloat('314e-2');
 parseFloat('0.0314E+2');
-parseFloat('</code>3.14какие-нибудь не цифровые знаки<code>');
+parseFloat('3.14какие-нибудь не цифровые знаки');
 
 var foo = Object.create(null);
 foo.toString = function () { return "3.14"; };
@@ -62,29 +59,29 @@ parseFloat(foo);
 
 var foo = Object.create(null);
 foo.valueOf = function () { return "3.14"; };
-parseFloat(foo);​​​​​</code></pre>
+parseFloat(foo);​​​​​
+```
 
-<h3 id="parseFloat_возвращает_NaN"><code>parseFloat</code> возвращает NaN</h3>
+### `parseFloat` возвращает NaN
 
-<p>Пример ниже вернёт <code>NaN</code></p>
+Пример ниже вернёт `NaN`
 
-<pre class="brush: js">parseFloat("FF2");
-</pre>
+```js
+parseFloat("FF2");
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("parseInt", "parseInt()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("isNaN", "isNaN()")}}

@@ -14,55 +14,52 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+Метод **`keys()`** возвращает новый **итератор массива** **`Array Iterator`**, содержащий ключи каждого индекса в массиве.
 
+{{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
-<p>Метод <code><strong>keys()</strong></code> возвращает новый <strong>итератор массива</strong> <code><strong>Array Iterator</strong></code>, содержащий ключи каждого индекса в массиве.</p>
+## Синтаксис
 
-<div>{{EmbedInteractiveExample("pages/js/array-keys.html")}}</div>
+```
+arr.keys()
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+## Примеры
 
-<pre class="syntaxbox"><code><var>arr</var>.keys()</code></pre>
+### Пример: базовое использование
 
-<h2 id="Examples">Примеры</h2>
-
-<h3 id="Example:_basic_usages">Пример: базовое использование</h3>
-
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var iterator = arr.keys();
 
 console.log(iterator.next()); // { value: 0, done: false }
 console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="Example:_keys_iterator_doesnt_ignore_holes">Пример: итератор, возвращаемый методом <code>keys()</code>, не пропускает дырки в массиве</h3>
+### Пример: итератор, возвращаемый методом `keys()`, не пропускает дырки в массиве
 
-<pre class="brush: js">var arr = ['a', , 'c'];
+```js
+var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // [0, 2]
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
+## Совместимость с браузерами
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+{{Compat}}
 
-<div>
-<p>{{Compat}}</p>
-</div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- [Iteration protocols](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)

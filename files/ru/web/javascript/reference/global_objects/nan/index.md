@@ -7,29 +7,30 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Глобальное свойство <code><strong>NaN</strong></code> является значением, представляющим не-число (Not-A-Number).</p>
+Глобальное свойство **`NaN`** является значением, представляющим не-число (Not-A-Number).
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><code>NaN</code> является свойством <em>глобального объекта</em>.</p>
+`NaN` является свойством _глобального объекта_.
 
-<p>Начальным значением <code>NaN</code> является Not-A-Number (не-число) — то же самое значение, что и у {{jsxref("Number.NaN")}}. В современных браузерах <code>NaN</code> является ненастраиваемым и незаписываемым свойством. Даже когда это не так, избегайте его переопределения.</p>
+Начальным значением `NaN` является Not-A-Number (не-число) — то же самое значение, что и у {{jsxref("Number.NaN")}}. В современных браузерах `NaN` является ненастраиваемым и незаписываемым свойством. Даже когда это не так, избегайте его переопределения.
 
-<p>В программах <code>NaN</code> используется довольно редко. Это возвращаемое значение в ситуациях, когда математические ({{jsxref("Math")}}) функции не срабатывают должным образом (например, при вызове <code>Math.sqrt(-1)</code>) или когда функция, пытающаяся считать число из строки, терпит неудачу по причине того, что в строке не число (<code>parseInt('blabla')</code>).</p>
+В программах `NaN` используется довольно редко. Это возвращаемое значение в ситуациях, когда математические ({{jsxref("Math")}}) функции не срабатывают должным образом (например, при вызове `Math.sqrt(-1)`) или когда функция, пытающаяся считать число из строки, терпит неудачу по причине того, что в строке не число (`parseInt('blabla')`).
 
-<h3 id="Testing_against_NaN">Проверка на равенство <code>NaN</code></h3>
+### Проверка на равенство `NaN`
 
-<p><code>NaN</code> является неравным (посредством сравнения через <code>==</code>, <code>!=</code>, <code>===</code>, and <code>!==</code>) любому другому значению, включая другое значение NaN. Используйте {{jsxref("Number.isNaN()")}} или {{jsxref("Global_Objects/isNaN", "isNaN()")}}, чтобы наиболее понятным образом определить является ли значение значением NaN. Или выполните само-сравнение: NaN, и только NaN, в результате такого сравнения будет неравным самому себе.</p>
+`NaN` является неравным (посредством сравнения через `==`, `!=`, `===`, and `!==`) любому другому значению, включая другое значение NaN. Используйте {{jsxref("Number.isNaN()")}} или {{jsxref("Global_Objects/isNaN", "isNaN()")}}, чтобы наиболее понятным образом определить является ли значение значением NaN. Или выполните само-сравнение: NaN, и только NaN, в результате такого сравнения будет неравным самому себе.
 
-<pre><code>NaN === NaN;        // false
+```
+NaN === NaN;        // false
 Number.NaN === NaN; // false
 isNaN(NaN);         // true
 isNaN(Number.NaN);  // true
@@ -37,29 +38,26 @@ isNaN(Number.NaN);  // true
 function valueIsNaN(v) { return v !== v; }
 valueIsNaN(1);          // false
 valueIsNaN(NaN);        // true
-valueIsNaN(Number.NaN); // true</code></pre>
+valueIsNaN(Number.NaN); // true
+```
 
-<p>Тем не менее, обратите внимание на разницу между функцией <code>isNaN()</code> и методом <code>Number.isNaN()</code>: первая вернёт <code>true</code>, если значение в настоящий момент является <code>NaN</code>, или если оно станет <code>NaN</code> после того, как преобразуется в число, в то время как последний вернёт <code>true</code>, только если текущим значением является <code>NaN</code>:</p>
+Тем не менее, обратите внимание на разницу между функцией `isNaN()` и методом `Number.isNaN()`: первая вернёт `true`, если значение в настоящий момент является `NaN`, или если оно станет `NaN` после того, как преобразуется в число, в то время как последний вернёт `true`, только если текущим значением является `NaN`:
 
-<pre><code>isNaN('hello world');        // true
-Number.isNaN('hello world'); // false</code></pre>
+```
+isNaN('hello world');        // true
+Number.isNaN('hello world'); // false
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-desktop"></div>
+## Смотрите также
 
-<div id="compat-mobile"></div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Number.NaN")}}</li>
- <li>{{jsxref("Number.isNaN()")}}</li>
- <li>{{jsxref("isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}

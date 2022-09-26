@@ -3,13 +3,12 @@ title: 'SyntaxError: "use strict" not allowed in function with non-simple parame
 slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<p> </p>
-
-<pre>Edge:
+```
+Edge:
 Cannot apply strict mode on functions with non-simple parameter list
 
 Firefox:
@@ -18,11 +17,13 @@ SyntaxError: "use strict" not allowed in function with rest parameter
 SyntaxError: "use strict" not allowed in function with destructuring parameter
 
 Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list</pre>
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```
 
-<p>Перевод:</p>
+Перевод:
 
-<pre class="syntaxbox">Edge:
+```
+Edge:
 Не удаётся применить строгий режим к функциям со списком, содержащим сложные параметры
 
 Firefox:
@@ -32,95 +33,96 @@ Firefox:
 
 Chrome:
 Ошибка синтаксиса: недопустимая директива 'use strict' в функции со списком, содержащим сложные параметры
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Директива <code>"use strict"</code> была использована в верхней части функции, которая имеет один из следующих параметров:<br>
-  </p>
+Директива `"use strict"` была использована в верхней части функции, которая имеет один из следующих параметров:
 
-<ul>
- <li>{{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}</li>
- <li>{{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}</li>
- <li>{{jsxref("операторы/Destructuring_assignment", "деконструкция параметров", "", 1)}}</li>
-</ul>
+- {{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}
+- {{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}
+- {{jsxref("операторы/Destructuring_assignment", "деконструкция параметров", "", 1)}}
 
-<p>Директива "use strict" не допускается в верхней части таких функций согласно спецификации ECMAScript.</p>
+Директива "use strict" не допускается в верхней части таких функций согласно спецификации ECMAScript.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Функция_заявления">Функция заявления</h3>
+### Функция заявления
 
-<p>В этом случае функция sum имеет параметры по умолчанию a=1 и b=2:</p>
+В этом случае функция sum имеет параметры по умолчанию a=1 и b=2:
 
-<pre class="brush: js example-bad">function sum(a = 1, b = 2) {
+```js example-bad
+function sum(a = 1, b = 2) {
   //SyntaxError: использовать "use strict" не разрешено в функции с параметром по умолчанию
   'use strict';
   return a + b;
 }
-</pre>
+```
 
-<p>Если функция должна находиться в строгом режиме, и весь скрипт или заключающая функция также в порядке, чтобы быть в строгом режиме, вы можете переместить директиву "use strict" за пределы функции:</p>
+Если функция должна находиться в строгом режиме, и весь скрипт или заключающая функция также в порядке, чтобы быть в строгом режиме, вы можете переместить директиву "use strict" за пределы функции:
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 function sum(a = 1, b = 2) {
   return a + b;
 }
-</pre>
+```
 
-<h3 id="Функция_выражения">Функция выражения</h3>
+### Функция выражения
 
-<p>Выражение функции может использовать ещё один обходной путь:</p>
+Выражение функции может использовать ещё один обходной путь:
 
-<pre class="brush: js example-bad">var sum = function sum([a, b]) {
+```js example-bad
+var sum = function sum([a, b]) {
   // SyntaxError: "use strict" не допускается в функции с параметром деструктурирования
   'use strict';
   return a + b;
 };
-</pre>
+```
 
-<p>Это может быть преобразовано в следующее выражение:</p>
+Это может быть преобразовано в следующее выражение:
 
-<pre class="brush: js example-good">var sum = (function() {
+```js example-good
+var sum = (function() {
   'use strict';
   return function sum([a, b]) {
     return a + b;
   };
 })();
-</pre>
+```
 
-<h3 id="Указательная_функция">Указательная функция</h3>
+### Указательная функция
 
-<p>Если функция со стрелкой должна получить доступ к переменной this, можно использовать функцию со стрелкой в качестве функции включения:</p>
+Если функция со стрелкой должна получить доступ к переменной this, можно использовать функцию со стрелкой в качестве функции включения:
 
-<pre class="brush: js example-bad">var callback = (...args) =&gt; {
+```js example-bad
+var callback = (...args) => {
   // SyntaxError: "use strict" не допускается в функции с параметром rest
   'use strict';
   return this.run(args);
 };
-</pre>
+```
 
-<p>Это может быть преобразовано в следующее выражение:</p>
+Это может быть преобразовано в следующее выражение:
 
-<pre class="brush: js example-good">var callback = (() =&gt; {
+```js example-good
+var callback = (() => {
   'use strict';
-  return (...args) =&gt; {
+  return (...args) => {
     return this.run(args);
   };
 })();
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Strict_mode", "строгий режим", "", 1)}}</li>
- <li>{{jsxref("Ведомости/функция", "оператор function", "", 1)}}</li>
- <li>{{jsxref("операторы/функции", "свободное выражение функции", "", 1)}}</li>
- <li>{{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}</li>
- <li>{{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}</li>
- <li>{{jsxref("операторы/Destructuring_assignment", "деконструкция параметры", "", 1)}}</li>
-</ul>
+- {{jsxref("Strict_mode", "строгий режим", "", 1)}}
+- {{jsxref("Ведомости/функция", "оператор function", "", 1)}}
+- {{jsxref("операторы/функции", "свободное выражение функции", "", 1)}}
+- {{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}
+- {{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}
+- {{jsxref("операторы/Destructuring_assignment", "деконструкция параметры", "", 1)}}

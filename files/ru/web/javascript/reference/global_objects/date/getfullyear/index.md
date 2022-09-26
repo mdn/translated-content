@@ -9,50 +9,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getFullYear()</code></strong> возвращает год указанной даты по местному времени.</p>
+Метод **`getFullYear()`** возвращает год указанной даты по местному времени.
 
-<p>Используйте этот метод вместо метода {{jsxref("Date.prototype.getYear()", "getYear()")}}.</p>
+Используйте этот метод вместо метода {{jsxref("Date.prototype.getYear()", "getYear()")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getFullYear()</code></pre>
+```
+dateObj.getFullYear()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getFullYear()</code> является абсолютным числом. Для дат между 1000 и 9999 годом метод <code>getFullYear()</code> возвращает четырёхзначный номер, например, 1995. Используйте эту функцию, чтобы быть уверенным, что год будет правильным после 2000 года.</p>
+Значение, возвращённое методом `getFullYear()` является абсолютным числом. Для дат между 1000 и 9999 годом метод `getFullYear()` возвращает четырёхзначный номер, например, 1995. Используйте эту функцию, чтобы быть уверенным, что год будет правильным после 2000 года.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getFullYear">Пример: использование метода <code>getFullYear()</code></h3>
+### Пример: использование метода `getFullYear()`
 
-<p>В следующем примере переменной <code>year</code> присваивается четырёхзначное значение текущего года.</p>
+В следующем примере переменной `year` присваивается четырёхзначное значение текущего года.
 
-<pre class="brush: js">let today = new Date(); // Mon Nov 23 2020 15:23:46 GMT+0300 (Москва, стандартное время)
+```js
+let today = new Date(); // Mon Nov 23 2020 15:23:46 GMT+0300 (Москва, стандартное время)
 let year = today.getFullYear(); // 2020
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<div id="compat-mobile">{{Compat}}</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.getYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.getYear()")}}

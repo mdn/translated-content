@@ -6,46 +6,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
-<div>{{JSSidebar("Statements")}}</div>
+{{JSSidebar("Statements")}}
 
-<p><code style=""><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Объект </span></font><strong>import.meta</strong></code> это мета-свойство, указывающее мета-данные JavaScript модуля в зависимости от контекста. Он содержит информацию о модуле, например, URL модуля.</p>
+`Объект import.meta` это мета-свойство, указывающее мета-данные JavaScript модуля в зависимости от контекста. Он содержит информацию о модуле, например, URL модуля.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">import.meta</pre>
+```
+import.meta
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Объект <code>import.meta</code> состоит из ключевого слова {{JSxRef("Statements/import","import")}}, точки и свойства с именем <code>meta</code>. Обычно выражение <code>import.</code> служит для доступа к свойству, но здесь <code>import.</code>, в действительности, не является объектом.</p>
+Объект `import.meta` состоит из ключевого слова {{JSxRef("Statements/import","import")}}, точки и свойства с именем `meta`. Обычно выражение `import.` служит для доступа к свойству, но здесь `import.`, в действительности, не является объектом.
 
-<p>Объект <code>import.meta</code> создан по реализации ECMAScript с прототипом объекта {{JSxRef("null")}}. Этот объект расширяем, и его свойства являются записываемыми, настраиваемыми и перечисляемыми.</p>
+Объект `import.meta` создан по реализации ECMAScript с прототипом объекта {{JSxRef("null")}}. Этот объект расширяем, и его свойства являются записываемыми, настраиваемыми и перечисляемыми.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Допустим, есть модуль <code>my-module.js</code></p>
+Допустим, есть модуль `my-module.js`
 
-<pre class="brush: html">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
-</pre>
+```html
+<script type="module" src="my-module.js"></script>
+```
 
-<p>вы можете получить доступ к мета-информации об этом модуле, используя объект <code>import.meta</code>.</p>
+вы можете получить доступ к мета-информации об этом модуле, используя объект `import.meta`.
 
-<pre class="brush: js;">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
+```js
+console.log(import.meta); // { url: "file:///home/user/my-module.js" }
+```
 
-<p>Это возвращает объект со свойством <code>url</code> показывающее базовый URL этого модуля. Это может быть либо URL с которого скрипт был получен (для внешних скриптов), либо базовый URL содержащего его документа (для внутренних скриптов).</p>
+Это возвращает объект со свойством `url` показывающее базовый URL этого модуля. Это может быть либо URL с которого скрипт был получен (для внешних скриптов), либо базовый URL содержащего его документа (для внутренних скриптов).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{JSxRef("Statements/import", "import")}}</li>
- <li>{{JSxRef("Statements/export", "export")}}</li>
-</ul>
+- {{JSxRef("Statements/import", "import")}}
+- {{JSxRef("Statements/export", "export")}}

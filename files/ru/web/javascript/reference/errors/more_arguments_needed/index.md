@@ -7,42 +7,44 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">TypeError: Object.create requires more than 0 arguments
+```
+TypeError: Object.create requires more than 0 arguments
 TypeError: Object.setPrototypeOf requires more than 1 argument
 TypeError: Object.defineProperties requires more than 0 arguments
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Ошибка в вызове функции. Необходимо передать больше аргументов.</p>
+Ошибка в вызове функции. Необходимо передать больше аргументов.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Метод {{jsxref("Object.create()")}} требует хотя бы один аргумент, а {{jsxref("Object.setPrototypeOf()")}} минимум двух:</p>
+Метод {{jsxref("Object.create()")}} требует хотя бы один аргумент, а {{jsxref("Object.setPrototypeOf()")}} минимум двух:
 
-<pre class="brush: js example-bad">var obj = Object.create();
+```js example-bad
+var obj = Object.create();
 // TypeError: Object.create requires more than 0 arguments
 
 var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
-</pre>
+```
 
-<p>Вы можете исправить это, установив {{jsxref("null")}} в качестве прототипа, например:</p>
+Вы можете исправить это, установив {{jsxref("null")}} в качестве прототипа, например:
 
-<pre class="brush: js example-good">var obj = Object.create(null);
+```js example-good
+var obj = Object.create(null);
 
-var obj = Object.setPrototypeOf({}, null);</pre>
+var obj = Object.setPrototypeOf({}, null);
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Functions">Функции</a></li>
-</ul>
+- [Функции](/ru/docs/Web/JavaScript/Guide/Functions)

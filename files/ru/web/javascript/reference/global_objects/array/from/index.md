@@ -10,95 +10,100 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Array.from()</strong></code> создаёт новый экземпляр <code>Array</code> из массивоподобного или итерируемого объекта.</p>
+Метод **`Array.from()`** создаёт новый экземпляр `Array` из массивоподобного или итерируемого объекта.
 
-<p>{{EmbedInteractiveExample("pages/js/array-from.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-from.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Array.from(<var>arrayLike</var>[, <var>mapFn</var>[, <var>thisArg</var>]])</code></pre>
+```
+Array.from(arrayLike[, mapFn[, thisArg]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>arrayLike</code></dt>
- <dd>Массивоподобный или итерируемый объект, преобразуемый в массив.</dd>
- <dt><code>mapFn</code> {{Optional_inline}}</dt>
- <dd>Отображающая функция, вызываемая для каждого элемента массива.</dd>
- <dt><code>thisArg</code> {{Optional_inline}}</dt>
- <dd>Значение, используемое в качестве <code>this</code> при выполнении функции <code>mapFn</code>.</dd>
-</dl>
+- `arrayLike`
+  - : Массивоподобный или итерируемый объект, преобразуемый в массив.
+- `mapFn` {{Optional_inline}}
+  - : Отображающая функция, вызываемая для каждого элемента массива.
+- `thisArg` {{Optional_inline}}
+  - : Значение, используемое в качестве `this` при выполнении функции `mapFn`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новый экземпляр {{jsxref("Array")}}</p>
+Новый экземпляр {{jsxref("Array")}}
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><code>Array.from()</code> позволяет вам создавать массивы из:</p>
+`Array.from()` позволяет вам создавать массивы из:
 
-<ul>
- <li>массивоподобных объектов (объектов со свойством <code>length</code> и элементами по индексным ключам) или</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">итерируемых объектов</a> (объектов, из которых вы можете достать их элементы, например {{jsxref("Map")}} или {{jsxref("Set")}}).</li>
-</ul>
+- массивоподобных объектов (объектов со свойством `length` и элементами по индексным ключам) или
+- [итерируемых объектов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (объектов, из которых вы можете достать их элементы, например {{jsxref("Map")}} или {{jsxref("Set")}}).
 
-<p><code>Array.from()</code> имеет необязательный параметр <code>mapFn</code>, который позволяет вам выполнять функцию {{jsxref("Array.prototype.map", "map")}} для каждого элемента создаваемого массива (или его подкласса). Проще говоря, вызов <code>Array.from(obj, mapFn, thisArg)</code> эквивалентен цепочке <code>Array.from(obj).map(mapFn, thisArg)</code>, за исключением того, что он не создаёт промежуточного массива. Это особенно важно для некоторых подклассов массива, вроде <a href="/ru/docs/Web/JavaScript/Typed_arrays">типизированных массивов</a>, поскольку промежуточный массив неизбежно приведёт к усечению значений, чтобы они подпали под подходящий тип.</p>
+`Array.from()` имеет необязательный параметр `mapFn`, который позволяет вам выполнять функцию {{jsxref("Array.prototype.map", "map")}} для каждого элемента создаваемого массива (или его подкласса). Проще говоря, вызов `Array.from(obj, mapFn, thisArg)` эквивалентен цепочке `Array.from(obj).map(mapFn, thisArg)`, за исключением того, что он не создаёт промежуточного массива. Это особенно важно для некоторых подклассов массива, вроде [типизированных массивов](/ru/docs/Web/JavaScript/Typed_arrays), поскольку промежуточный массив неизбежно приведёт к усечению значений, чтобы они подпали под подходящий тип.
 
-<p>Свойство <code>length</code> метода <code>from()</code> равно 1.</p>
+Свойство `length` метода `from()` равно 1.
 
-<p>В ES2015 классовый синтаксис позволяет создавать подклассы как встроенных классов, так и классов, определённых пользователем; в результате статические методы класса, вроде <code>Array.from</code> «наследуются» подклассами {{jsxref("Global_Objects/Array", "Array")}} и создают новые экземпляры подкласса, а не класса {{jsxref("Global_Objects/Array", "Array")}}.</p>
+В ES2015 классовый синтаксис позволяет создавать подклассы как встроенных классов, так и классов, определённых пользователем; в результате статические методы класса, вроде `Array.from` «наследуются» подклассами {{jsxref("Global_Objects/Array", "Array")}} и создают новые экземпляры подкласса, а не класса {{jsxref("Global_Objects/Array", "Array")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Массив_из_строки_String">Массив из строки <code>String</code></h3>
+### Массив из строки `String`
 
-<pre class="brush: js">Array.from('foo');
+```js
+Array.from('foo');
 // ['f', 'o', 'o']
-</pre>
+```
 
-<h3 id="Массив_из_Set">Массив из <code>Set</code></h3>
+### Массив из `Set`
 
-<pre class="brush: js">var s = new Set(['foo', window]);
+```js
+var s = new Set(['foo', window]);
 Array.from(s);
 // ['foo', window]
-</pre>
+```
 
-<h3 id="Массив_из_Map">Массив из <code>Map</code></h3>
+### Массив из `Map`
 
-<pre class="brush: js">var m = new Map([[1, 2], [2, 4], [4, 8]]);
+```js
+var m = new Map([[1, 2], [2, 4], [4, 8]]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
-</pre>
+```
 
-<h3 id="Массив_из_массивоподобного_объекта_(arguments)">Массив из массивоподобного объекта (arguments)</h3>
+### Массив из массивоподобного объекта (arguments)
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   return Array.from(arguments);
 }
 
 f(1, 2, 3);
 // [1, 2, 3]
-</pre>
+```
 
-<h3 id="Использование_стрелочной_функции_и_Array.from()">Использование стрелочной функции и <code>Array.from()</code></h3>
+### Использование стрелочной функции и `Array.from()`
 
-<pre class="brush: js">// Использование стрелочной функции в качестве функции отображения для
+```js
+// Использование стрелочной функции в качестве функции отображения для
 
 // манипулирования элементами
-Array.from([1, 2, 3], x =&gt; x + x);
+Array.from([1, 2, 3], x => x + x);
 // [2, 4, 6]
 
 // Генерирования последовательности чисел
-Array.from({ length: 5 }, (v, k) =&gt; k);
-// [0, 1, 2, 3, 4]</pre>
+Array.from({ length: 5 }, (v, k) => k);
+// [0, 1, 2, 3, 4]
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>Array.from</code> был добавлен к стандарту ECMA-262 в 6-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>Array.from</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 6-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}. Кроме того, поскольку истинные итерируемые объекты не могут быть заменены полифилом, эта реализация не поддерживает общие итерируемые объекты, как они определены в 6-м издании ECMA-262.</p>
+Метод `Array.from` был добавлен к стандарту ECMA-262 в 6-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `Array.from` в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 6-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что `callback.call` вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}. Кроме того, поскольку истинные итерируемые объекты не могут быть заменены полифилом, эта реализация не поддерживает общие итерируемые объекты, как они определены в 6-м издании ECMA-262.
 
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 6-е издание, 22.1.2.1
+```js
+// Шаги алгоритма ECMA-262, 6-е издание, 22.1.2.1
 // Ссылка: https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from
 if (!Array.from) {
   Array.from = (function() {
@@ -110,7 +115,7 @@ if (!Array.from) {
       var number = Number(value);
       if (isNaN(number)) { return 0; }
       if (number === 0 || !isFinite(number)) { return number; }
-      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
+      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
     var toLength = function (value) {
@@ -132,7 +137,7 @@ if (!Array.from) {
       }
 
       // 4. Если mapfn равен undefined, положим mapping равным false.
-      var mapFn = arguments.length &gt; 1 ? arguments[1] : void undefined;
+      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
       if (typeof mapFn !== 'undefined') {
         // 5. иначе
@@ -142,7 +147,7 @@ if (!Array.from) {
         }
 
         // 5. b. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
-        if (arguments.length &gt; 2) {
+        if (arguments.length > 2) {
           T = arguments[2];
         }
       }
@@ -159,9 +164,9 @@ if (!Array.from) {
 
       // 16. Положим k равным 0.
       var k = 0;
-      // 17. Пока k &lt; len, будем повторять... (шаги с a по h)
+      // 17. Пока k < len, будем повторять... (шаги с a по h)
       var kValue;
-      while (k &lt; len) {
+      while (k < len) {
         kValue = items[k];
         if (mapFn) {
           A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
@@ -177,22 +182,18 @@ if (!Array.from) {
     };
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("TypedArray.from()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("TypedArray.from()")}}

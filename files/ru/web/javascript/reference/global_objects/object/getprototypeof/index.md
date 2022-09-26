@@ -9,63 +9,64 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Object.getPrototypeOf()</code></strong> возвращает прототип (то есть, внутреннее свойство <code>[[Prototype]]</code>) указанного объекта.</p>
+Метод **`Object.getPrototypeOf()`** возвращает прототип (то есть, внутреннее свойство `[[Prototype]]`) указанного объекта.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.getPrototypeOf(<var>obj</var>)</code></pre>
+```
+Object.getPrototypeOf(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чей прототип будет возвращён.</dd>
-</dl>
+- `obj`
+  - : Объект, чей прототип будет возвращён.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var proto = {};
+```js
+var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
-</pre>
+```
 
-<pre class="brush: js">&gt; Object.getPrototypeOf('foo')
+```js
+> Object.getPrototypeOf('foo')
 TypeError: "foo" is not an object  // код ES5
-&gt; Object.getPrototypeOf('foo')
+> Object.getPrototypeOf('foo')
 String.prototype                   // код ES6
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>В ES5, если параметр <code>obj</code> не является объектом, будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6, параметр будет приведён к объекту {{jsxref("Global_Objects/Object", "Object")}}.</p>
+В ES5, если параметр `obj` не является объектом, будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6, параметр будет приведён к объекту {{jsxref("Global_Objects/Object", "Object")}}.
 
-<pre class="brush: js">&gt; Object.getPrototypeOf('foo')
+```js
+> Object.getPrototypeOf('foo')
 TypeError: "foo" is not an object  // код ES5
-&gt; Object.getPrototypeOf('foo')
+> Object.getPrototypeOf('foo')
 String.prototype                   // код ES6
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Opera-specific_notes">Примечания по Opera</h3>
+### Примечания по Opera
 
-<p>Хотя старые версии Opera и не поддерживают метод <code>Object.getPrototypeOf()</code>, Opera поддерживает нестандартное свойство {{jsxref("Object.proto", "__proto__")}}, начиная с версии Opera 10.50.</p>
+Хотя старые версии Opera и не поддерживают метод `Object.getPrototypeOf()`, Opera поддерживает нестандартное свойство {{jsxref("Object.proto", "__proto__")}}, начиная с версии Opera 10.50.
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>Запись в блоге Джона Резига о <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
-</ul>
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.__proto__")}}
+- Запись в блоге Джона Резига о [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)

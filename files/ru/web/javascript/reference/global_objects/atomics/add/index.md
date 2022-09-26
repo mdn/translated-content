@@ -3,70 +3,56 @@ title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Atomics</strong></code><strong><code>.add()</code></strong> добавляет значение к текущему по указанной позиции в массиве и возвращает предыдущее значение в этой позиции. Эта атомарная операция гарантирует, что никакой другой записи не произойдёт, пока изменённое значение не будет записано обратно.</p>
+Статический метод **`Atomics`\*\***`.add()`\*\* добавляет значение к текущему по указанной позиции в массиве и возвращает предыдущее значение в этой позиции. Эта атомарная операция гарантирует, что никакой другой записи не произойдёт, пока изменённое значение не будет записано обратно.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Atomics.add(typedArray, index, value)
-</pre>
+```
+Atomics.add(typedArray, index, value)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>Разделённый массив целых чисел. {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} или {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>Позиция в <code>typedArray</code> для добавления <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>Число для добавления.</dd>
-</dl>
+- `typedArray`
+  - : Разделённый массив целых чисел. {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} или {{jsxref("Uint32Array")}}.
+- `index`
+  - : Позиция в `typedArray` для добавления `value`.
+- `value`
+  - : Число для добавления.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Предыдущее значение в указанной позиции (<code>typedArray[index]</code>).</p>
+Предыдущее значение в указанной позиции (`typedArray[index]`).
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<ul>
- <li>Выбрасывает {{jsxref("TypeError")}}, если тип <code>typedArray</code> не является одним из допустимых целочисленных типов.</li>
- <li>Выбрасывает {{jsxref("TypeError")}}, если тип <code>typedArray</code> не общего типа.</li>
- <li>Выбрасывает {{jsxref("RangeError")}}, если <code>index</code> вне <code>typedArray</code>.</li>
-</ul>
+- Выбрасывает {{jsxref("TypeError")}}, если тип `typedArray` не является одним из допустимых целочисленных типов.
+- Выбрасывает {{jsxref("TypeError")}}, если тип `typedArray` не общего типа.
+- Выбрасывает {{jsxref("RangeError")}}, если `index` вне `typedArray`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12); // возвращает 0, предыдущее значение
-Atomics.load(ta, 0); // 12</pre>
+Atomics.load(ta, 0); // 12
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition in ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment                       |
+| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| {{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.sub()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.sub()")}}

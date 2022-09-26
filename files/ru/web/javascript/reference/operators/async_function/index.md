@@ -3,42 +3,43 @@ title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Ключевое слово <strong><code>async function</code></strong> используется для определения асинхронной функции внутри выражений.</p>
+Ключевое слово **`async function`** используется для определения асинхронной функции внутри выражений.
 
-<p>Вы также можете определить асинхронные функции при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="The async function keyword can be used to define async functions inside expressions.">инструкции async function</a>.</p>
+Вы также можете определить асинхронные функции при помощи [инструкции async function](/ru/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">async function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>statements</em>
-}</pre>
+```
+async function [name]([param1[, param2[, ..., paramN]]]) {
+   statements
+}
+```
 
-<p>Согласно спецификации <a href="https://developer.mozilla.org/en-US/docs/">ES2015</a>, вы также можете использовать <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочные функции</a>.</p>
+Согласно спецификации [ES2015](/ru/docs/), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя функции. Этот параметр может быть опущен, в этом случае говорят об <em>анонимной функции</em>. Имя используется только в теле функции.</dd>
- <dt><code>paramN</code></dt>
- <dd>Имя аргумента, передаваемого функции.</dd>
- <dt><code>statements</code></dt>
- <dd>Инструкции, составляющие тело функции.</dd>
-</dl>
+- `name`
+  - : Имя функции. Этот параметр может быть опущен, в этом случае говорят об _анонимной функции_. Имя используется только в теле функции.
+- `paramN`
+  - : Имя аргумента, передаваемого функции.
+- `statements`
+  - : Инструкции, составляющие тело функции.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Выражение <code>async function</code> очень похоже, и имеет почти тот же синтаксис, что и {{jsxref('Statements/async_function', 'async function statement')}}. Главное отличие между выражениями async <code>function</code> и объявлениями async <code>function</code> заключается в <em>имени функции,</em> которое может быть опущено в выражении <code>async function</code> для создания <em>анонимной</em> функции. Выражение <code>async function</code> можно использовать в виде {{Glossary("IIFE")}} (Immediately Invoked Function Expression), и оно будет запущено сразу после объявления. Смотрите также главу о <a href="/en-US/docs/Web/JavaScript/Reference/Functions">функциях</a>.</p>
+Выражение `async function` очень похоже, и имеет почти тот же синтаксис, что и {{jsxref('Statements/async_function', 'async function statement')}}. Главное отличие между выражениями async `function` и объявлениями async `function` заключается в _имени функции,_ которое может быть опущено в выражении `async function` для создания _анонимной_ функции. Выражение `async function` можно использовать в виде {{Glossary("IIFE")}} (Immediately Invoked Function Expression), и оно будет запущено сразу после объявления. Смотрите также главу о [функциях](/ru/docs/Web/JavaScript/Reference/Functions).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -48,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Operators/async_function
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
   return x + await a + await b;
-})(10).then(v =&gt; {
+})(10).then(v => {
   console.log(v);  // выведет 60 после 2 секунд.
 });
 
@@ -58,38 +59,23 @@ var add = async function(x) { // назначение выражения аси�
   return x + a + b;
 };
 
-add(10).then(v =&gt; {
+add(10).then(v => {
   console.log(v);  // выведет 60 после 4 секунд.
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition in ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                       | Comment                       |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}

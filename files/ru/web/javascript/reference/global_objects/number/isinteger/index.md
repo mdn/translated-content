@@ -8,36 +8,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<p>Метод <strong><code>Number.isInteger()</code></strong> определяет, является ли переданное значение целым числом.</p>
+Метод **`Number.isInteger()`** определяет, является ли переданное значение целым числом.
 
-<p>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</p>
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
+## Синтаксис
 
+```
+Number.isInteger(value)
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><code>Number.isInteger(<var>value</var>)</code></pre>
+- `value`
+  - : Значение, проверяемое на целочисленность.
 
-<h3 id="Parameters">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение, проверяемое на целочисленность.</dd>
-</dl>
+{{jsxref("Boolean")}} сообщающий о том, является ли переданное значение целочисленным числом.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Описание
 
-<p>{{jsxref("Boolean")}} сообщающий о том, является ли переданное значение целочисленным числом.</p>
+Если целевое значение является целым числом, возвращает `true`. Если значение {{jsxref("NaN")}} или {{jsxref("Infinity")}}, то возвращает `false`. Метод также возвращает `true`, если это вещественное число с точкой, которое может быть представлено в целочисленном виде.
 
-<h2 id="Description">Описание</h2>
+## Примеры
 
-<p>Если целевое значение является целым числом, возвращает <code>true</code>. Если значение {{jsxref("NaN")}} или {{jsxref("Infinity")}}, то возвращает <code>false</code>. Метод также возвращает <code>true</code>, если это вещественное число с точкой, которое может быть представлено в целочисленном виде.</p>
-
-<h2 id="Examples">Примеры</h2>
-
-<pre class="brush: js">Number.isInteger(0);         // true
+```js
+Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 Number.isInteger(99999999999999999999999); // true
@@ -55,30 +54,27 @@ Number.isInteger([1]);       // false
 
 Number.isInteger(5.0);       // true
 Number.isInteger(5.000000000000001); // false
-Number.isInteger(5.0000000000000001); // true</pre>
+Number.isInteger(5.0000000000000001); // true
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === 'number' &amp;&amp;
-    isFinite(value) &amp;&amp;
+```js
+Number.isInteger = Number.isInteger || function(value) {
+  return typeof value === 'number' &&
+    isFinite(value) &&
     Math.floor(value) === value;
-};</pre>
+};
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-
-
-<div>{{Compat}}</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>Объект {{jsxref("Number")}}, которому принадлежит этот метод.</li>
-</ul>
+- Объект {{jsxref("Number")}}, которому принадлежит этот метод.

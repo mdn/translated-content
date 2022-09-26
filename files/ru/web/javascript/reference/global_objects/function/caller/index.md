@@ -8,76 +8,79 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
-<div>{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Свойство <strong><code>function.caller</code></strong> возвращает функцию, которая вызвала указанную функцию.</p>
+Свойство **`function.caller`** возвращает функцию, которая вызвала указанную функцию.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если функция <code>f</code> была вызвана из кода самого верхнего уровня, значение <code>f.caller</code> будет равно {{jsxref("Global_Objects/null", "null")}}, в противном случае значение будет равно функции, вызвавшей <code>f</code>.</p>
+Если функция `f` была вызвана из кода самого верхнего уровня, значение `f.caller` будет равно {{jsxref("Global_Objects/null", "null")}}, в противном случае значение будет равно функции, вызвавшей `f`.
 
-<p>Это свойство пришло на замену удалённого свойства {{jsxref("Functions_and_function_scope/arguments/caller", "arguments.caller")}} объекта {{jsxref("Functions_and_function_scope/arguments", "arguments")}}.</p>
+Это свойство пришло на замену удалённого свойства {{jsxref("Functions_and_function_scope/arguments/caller", "arguments.caller")}} объекта {{jsxref("Functions_and_function_scope/arguments", "arguments")}}.
 
-<p>Специальное свойство <code>__caller__</code>, возвращающее объект активации вызывающей функции и, таким образом, позволяющее восстанавливать стек вызовов, было удалено по соображениям безопасности.</p>
+Специальное свойство `__caller__`, возвращающее объект активации вызывающей функции и, таким образом, позволяющее восстанавливать стек вызовов, было удалено по соображениям безопасности.
 
-<h3 id="Notes">Примечания</h3>
+### Примечания
 
-<p>Обратите внимание, что в случае рекурсии, вы не сможете воссоздать стек вызовов, используя это свойство. Пусть у нас есть функции:</p>
+Обратите внимание, что в случае рекурсии, вы не сможете воссоздать стек вызовов, используя это свойство. Пусть у нас есть функции:
 
-<pre class="brush: js">function f(n) { g(n - 1); }
-function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
+```js
+function f(n) { g(n - 1); }
+function g(n) { if (n > 0) { f(n); } else { stop(); } }
 f(2);
-</pre>
+```
 
-<p>В момент вызова функции <code>stop()</code>, стек вызовов имеет следующий вид:</p>
+В момент вызова функции `stop()`, стек вызовов имеет следующий вид:
 
-<pre class="eval">f(2) -&gt; g(2) -&gt; f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
-</pre>
+```
+f(2) -> g(2) -> f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
-<p>Следующее условие верно:</p>
+Следующее условие верно:
 
-<pre class="eval">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
-</pre>
+```
+stop.caller === g && f.caller === g && g.caller === f
+```
 
-<p>так что если вы попытаетесь оттрассировать стек в функции <code>stop()</code> подобным образом:</p>
+так что если вы попытаетесь оттрассировать стек в функции `stop()` подобным образом:
 
-<pre class="brush: js">var f = stop;
+```js
+var f = stop;
 var stack = 'Трассировка стека:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-</pre>
+```
 
-<p>то этот цикл никогда не остановится.</p>
+то этот цикл никогда не остановится.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property">Пример: проверка значения свойства <code>caller</code> функции</h3>
+### Пример: проверка значения свойства `caller` функции
 
-<p>Следующий код проверяет значение свойства <code>caller</code> функции.</p>
+Следующий код проверяет значение свойства `caller` функции.
 
-<pre class="brush: js">function myFunc() {
+```js
+function myFunc() {
   if (myFunc.caller == null) {
     return 'Эта функция была вызвана из верхнего уровня!';
   } else {
     return 'Эта функция была вызвана из ' + myFunc.caller;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<p>Не является частью какой-либо спецификации. Реализована в JavaScript 1.5.</p>
+Не является частью какой-либо спецификации. Реализована в JavaScript 1.5.
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Ошибка реализации в SpiderMonkey: {{bug(65683)}}</li>
-</ul>
+- Ошибка реализации в SpiderMonkey: {{bug(65683)}}

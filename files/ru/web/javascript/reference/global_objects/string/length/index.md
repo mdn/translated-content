@@ -9,23 +9,32 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>length</code></strong> представляет длину строки.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.length</code></pre>
+Свойство **`length`** представляет длину строки.
 
-<h2 id="Description">Описание</h2>
-<p>Это свойство возвращает количество кодовых значений в строке. В {{interwiki("wikipedia", "UTF-16")}}, строковом формате, используемом в JavaScript, для представления большинства символов используется одно 16-битное кодовое значение, но для представления не так часто используемых символов требуется два кодовых значения, так что вполне может быть так, что значение, возвращённое свойством <code>length</code> не будет соответствовать действительному количеству символов в строке.</p>
-<p>Для пустых строк свойство <code>length</code> возвращает 0.</p>
-<p>Статическое свойство <code>String.length</code> возвращает значение 1.</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+str.length
+```
 
-<h3 id="Example:_Basic_usage">Пример: базовое использование</h3>
-<pre class="brush: js">var x = 'Mozilla';
+## Описание
+
+Это свойство возвращает количество кодовых значений в строке. В {{interwiki("wikipedia", "UTF-16")}}, строковом формате, используемом в JavaScript, для представления большинства символов используется одно 16-битное кодовое значение, но для представления не так часто используемых символов требуется два кодовых значения, так что вполне может быть так, что значение, возвращённое свойством `length` не будет соответствовать действительному количеству символов в строке.
+
+Для пустых строк свойство `length` возвращает 0.
+
+Статическое свойство `String.length` возвращает значение 1.
+
+## Примеры
+
+### Пример: базовое использование
+
+```js
+var x = 'Mozilla';
 var empty = '';
 
 console.log('Слово «Mozilla» занимает ' + x.length + ' кодовых значений');
@@ -33,38 +42,20 @@ console.log('Слово «Mozilla» занимает ' + x.length + ' кодов
 
 console.log('Пустая строка имеет длину, равную ' + empty.length);
 /* "Пустая строка имеет длину, равную 0" */
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                                 | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li><a class="external" href="http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications">Свойство <code>String.length</code> в JavaScript и интернационализация веб-приложений</a></li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- [Свойство `String.length` в JavaScript и интернационализация веб-приложений](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)

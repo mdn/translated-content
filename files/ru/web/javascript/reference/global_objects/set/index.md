@@ -8,66 +8,64 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
-<div>{{JSRef("Global_Objects", "Set")}}</div>
+{{JSRef("Global_Objects", "Set")}}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p>Объекты <strong><code>Set</code></strong> позволяют вам сохранять <em>уникальные</em> значения любого типа, как {{Glossary("Primitive", "примитивы")}}, так и другие типы объектов.</p>
+Объекты **`Set`** позволяют вам сохранять _уникальные_ значения любого типа, как {{Glossary("Primitive", "примитивы")}}, так и другие типы объектов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"> new Set([iterable]);</pre>
+```
+ new Set([iterable]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>iterable</dt>
- <dd>При передаче <a href="/ru/docs/Web/JavaScript/Reference/Statements/for...of">итерируемого объекта</a>, все его элементы будут добавлены в новый Set. Иначе (или при <code>null</code>) новый <code>Set</code> будет пуст.</dd>
- <dt>
- <h3 id="Возвращает">Возвращает</h3>
- </dt>
- <dd>
- <p>Новый <code>Set</code> объект.</p>
- </dd>
-</dl>
+- iterable
+  - : При передаче [итерируемого объекта](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый Set. Иначе (или при `null`) новый `Set` будет пуст.
+- ### Возвращает
+  - : Новый `Set` объект.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Объекты <code>Set</code> представляют коллекции значений, по которым вы можете выполнить обход в порядке вставки элементов. Значение элемента в <code>Set</code> может присутствовать <strong>только в одном экземпляре</strong>, что обеспечивает его уникальность в коллекции <code>Set</code>.</p>
+Объекты `Set` представляют коллекции значений, по которым вы можете выполнить обход в порядке вставки элементов. Значение элемента в `Set` может присутствовать **только в одном экземпляре**, что обеспечивает его уникальность в коллекции `Set`.
 
-<h3 id="Сравнение_значений">Сравнение значений</h3>
+### Сравнение значений
 
-<p>Поскольку каждое значение в <code>Set</code> должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": <code>NaN</code> равно <code>NaN</code> (несмотря на то, что <code>NaN !== NaN</code>); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 <code>-0</code> и <code>+0</code> считались разными (несмотря на то, что <code>-0 === +0</code>), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и <a href="https://code.google.com/p/v8/issues/detail?id=3069">последней ночной сборке Chrome</a>. <code>NaN</code> и <code>undefined</code> также могут сохраняться в <code>Set</code>.</p>
+Поскольку каждое значение в `Set` должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": `NaN` равно `NaN` (несмотря на то, что `NaN !== NaN`); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 `-0` и `+0` считались разными (несмотря на то, что `-0 === +0`), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и [последней ночной сборке Chrome](https://code.google.com/p/v8/issues/detail?id=3069). `NaN` и `undefined` также могут сохраняться в `Set`.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt><code>Set.length</code></dt>
- <dd><p>Значение свойства <code>length</code> всегда равно 0.</p>
- <p>Чтобы узнать количество элементов в <code>Set</code>, используйте {{jsxref("Set.prototype.size")}}.</p></dd>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>Функция-конструктор, которая используется для создания производных объектов.</dd>
- <dt>{{jsxref("Set.prototype")}}</dt>
- <dd>Представляет прототип конструктора <code>Set</code>. Позволяет добавлять свойства всем объектам типа <code>Set</code>.</dd>
-</dl>
+- `Set.length`
 
-<h2 id="Set_instances">Экземпляры <code>Set</code></h2>
+  - : Значение свойства `length` всегда равно 0.
 
-<p>Все экземпляры <code>Set</code> унаследованы от {{jsxref("Set.prototype")}}.</p>
+    Чтобы узнать количество элементов в `Set`, используйте {{jsxref("Set.prototype.size")}}.
 
-<h3 id="Свойства">Свойства</h3>
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : Функция-конструктор, которая используется для создания производных объектов.
+- {{jsxref("Set.prototype")}}
+  - : Представляет прототип конструктора `Set`. Позволяет добавлять свойства всем объектам типа `Set`.
 
-<p>{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}</p>
+## Экземпляры `Set`
 
-<h3 id="Методы">Методы</h3>
+Все экземпляры `Set` унаследованы от {{jsxref("Set.prototype")}}.
 
-<p>{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}</p>
+### Свойства
 
-<h2 id="Примеры">Примеры</h2>
+{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
 
-<h3 id="Использование_объекта_Set">Использование объекта <code>Set</code></h3>
+### Методы
 
-<pre class="brush: js">var mySet = new Set();
+{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
+
+## Примеры
+
+### Использование объекта `Set`
+
+```js
+var mySet = new Set();
 
 mySet.add(1); // Set { 1 }
 mySet.add(5); // Set { 1, 5 }
@@ -91,11 +89,13 @@ mySet.delete(5); // удаляет 5 из set
 mySet.has(5);    // false, 5 было удалено
 
 mySet.size; // 4, было удалено одно значение
-console.log(mySet); // Set {1, 'some text', Object {a: 1, b: 2}, Object {a: 1, b: 2}}</pre>
+console.log(mySet); // Set {1, 'some text', Object {a: 1, b: 2}, Object {a: 1, b: 2}}
+```
 
-<h3 id="Обход_Set">Обход Set</h3>
+### Обход Set
 
-<pre class="brush: js">// обход элементов set
+```js
+// обход элементов set
 // выведет элементы по порядку: 1, "some text", {"a": 1, "b": 2}
 for (let item of mySet) console.log(item);
 
@@ -122,10 +122,10 @@ mySet2.size; // 4
 [...mySet2]; // [1,2,3,4]
 
 // пересечение можно представить следующим образом
-var intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
+var intersection = new Set([...set1].filter(x => set2.has(x)));
 
 // разность можно представить следующим образом
-var difference = new Set([...set1].filter(x =&gt; !set2.has(x)));
+var difference = new Set([...set1].filter(x => !set2.has(x)));
 
 // Обход элементов set при помощи forEach
 mySet.forEach(function(value) {
@@ -136,11 +136,12 @@ mySet.forEach(function(value) {
 // 2
 // 3
 // 4
-</pre>
+```
 
-<h3 id="Реализация_простых_операций">Реализация простых операций</h3>
+### Реализация простых операций
 
-<pre class="brush: js"><code>function isSuperset(set, subset) {
+```js
+function isSuperset(set, subset) {
     for (var elem of subset) {
         if (!set.has(elem)) {
             return false;
@@ -180,15 +181,16 @@ var setA = new Set([1, 2, 3, 4]),
     setB = new Set([2, 3]),
     setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB);   // =&gt; true
-union(setA, setC);        // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC); // =&gt; Set [3, 4]
-difference(setA, setC);   // =&gt; Set [1, 2]</code>
-</pre>
+isSuperset(setA, setB);   // => true
+union(setA, setC);        // => Set [1, 2, 3, 4, 5, 6]
+intersection(setA, setC); // => Set [3, 4]
+difference(setA, setC);   // => Set [1, 2]
+```
 
-<h3 id="Взаимоотношения_с_объектом_Array">Взаимоотношения с объектом <code>Array</code></h3>
+### Взаимоотношения с объектом `Array`
 
-<pre class="brush: js">var myArray = ["value1", "value2", "value3"];
+```js
+var myArray = ["value1", "value2", "value3"];
 
 // Используйте конструктор Set для преобразования Array в Set
 var mySet = new Set(myArray);
@@ -197,28 +199,27 @@ mySet.has("value1"); // вернёт true
 
 // Используйте spread оператор для преобразования Set в Array
 console.log([...mySet]); // Отобразит тот же массив, что и myArray
-</pre>
+```
 
-<h3 id="Взаимоотношения_со_String">Взаимоотношения со <code>String</code></h3>
+### Взаимоотношения со `String`
 
-<pre class="brush: js"><code>var text = 'India';
+```js
+var text = 'India';
 
 var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
-mySet.size;  // 5</code>
-</pre>
+mySet.size;  // 5
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

@@ -8,13 +8,18 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
-<div>
- {{JSRef("Global_Objects", "Object")}}</div>
-<h2 id="Summary">Сводка</h2>
-<p>Возвращает ссылку на функцию {{jsxref("Global_Objects/Object", "Object")}}, создавшую прототип экземпляра. Обратите внимание, что значение этого свойства является ссылкой на саму функцию, а не строкой, содержащей имя функции. Для примитивных значений, вроде <code>1</code>, <code>true</code> или <code>"test"</code>, значение доступно только для чтения.</p>
-<h2 id="Description">Описание</h2>
-<p>Все объекты наследуют свойство <code>constructor</code> из своего прототипа:</p>
-<pre class="brush: js">var o = {};
+{{JSRef("Global_Objects", "Object")}}
+
+## Сводка
+
+Возвращает ссылку на функцию {{jsxref("Global_Objects/Object", "Object")}}, создавшую прототип экземпляра. Обратите внимание, что значение этого свойства является ссылкой на саму функцию, а не строкой, содержащей имя функции. Для примитивных значений, вроде `1`, `true` или `"test"`, значение доступно только для чтения.
+
+## Описание
+
+Все объекты наследуют свойство `constructor` из своего прототипа:
+
+```js
+var o = {};
 o.constructor === Object; // true
 
 var a = [];
@@ -22,25 +27,37 @@ a.constructor === Array; // true
 
 var n = new Number(3);
 n.constructor === Number; // true
-</pre>
-<h2 id="Examples">Примеры</h2>
-<h3 id="Example:_Displaying_the_constructor_of_an_object">Пример: отображение конструктора объекта</h3>
-<p>В следующем примере создаётся прототип <code>Tree</code> и объект этого типа <code>theTree</code>. Затем в примере отображается свойство <code>constructor</code> объекта <code>theTree</code>.</p>
-<pre class="brush: js">function Tree(name) {
+```
+
+## Примеры
+
+### Пример: отображение конструктора объекта
+
+В следующем примере создаётся прототип `Tree` и объект этого типа `theTree`. Затем в примере отображается свойство `constructor` объекта `theTree`.
+
+```js
+function Tree(name) {
   this.name = name;
 }
 
 var theTree = new Tree("Красное дерево");
 console.log("theTree.constructor равен " + theTree.constructor);
-</pre>
-<p>Вывод примера будет следующим:</p>
-<pre class="brush: js">theTree.constructor равен function Tree(name) {
+```
+
+Вывод примера будет следующим:
+
+```js
+theTree.constructor равен function Tree(name) {
   this.name = name;
 }
-</pre>
-<h3 id="Example:_Changing_the_constructor_of_an_object">Пример: изменение конструктора объекта</h3>
-<p>Следующий пример показывает, как изменить конструктор значений общих объектов. Не затрагиваются только значения <code>true</code>, <code>1</code> и <code>"тест"</code>, поскольку они имеют родные конструкторы только для чтения. Этот пример показывает, что полагаться на свойство <code>constructor</code> объекта не всегда безопасно.</p>
-<pre class="brush: js">function Type() {}
+```
+
+### Пример: изменение конструктора объекта
+
+Следующий пример показывает, как изменить конструктор значений общих объектов. Не затрагиваются только значения `true`, `1` и `"тест"`, поскольку они имеют родные конструкторы только для чтения. Этот пример показывает, что полагаться на свойство `constructor` объекта не всегда безопасно.
+
+```js
+function Type() {}
 
 var types = [
   new Array(),
@@ -62,15 +79,18 @@ var types = [
   'тест'            // останется неизменным
 ];
 
-for (var i = 0; i &lt; types.length; i++) {
+for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
   types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
 }
 
 console.log(types.join('\n'));
-</pre>
-<p>Вывод примера будет следующим:</p>
-<pre class="brush: js">function Type() {},false,
+```
+
+Вывод примера будет следующим:
+
+```js
+function Type() {},false,
 function Type() {},false,
 function Type() {},false,false
 function Boolean() {
@@ -95,9 +115,12 @@ function Type() {},false,
 function String() {
     [native code]
 },false,тест
-</pre>
-<h2 id="Specifications">Спецификации</h2>
+```
+
+## Спецификации
+
 {{Specifications}}
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<div>
-<p>{{Compat}}</p>
+
+## Совместимость с браузерами
+
+{{Compat}}

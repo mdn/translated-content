@@ -7,45 +7,29 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Number.NaN</code></strong> представляет «не число». Эквивалентно глобальному объекту {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
-<p>Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте <code>Number.NaN</code>).</p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Number.NaN`** представляет «не число». Эквивалентно глобальному объекту {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте `Number.NaN`).
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>Глобальный объект {{jsxref("Global_Objects/NaN", "NaN")}}.</li>
- <li>Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит это свойство.</li>
-</ul>
+## Спецификации
+
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}} | {{Spec2('ES6')}}     |                                                        |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- Глобальный объект {{jsxref("Global_Objects/NaN", "NaN")}}.
+- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит это свойство.

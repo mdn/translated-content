@@ -3,54 +3,53 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Reflect</strong> - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler</a>`ов. <code>Reflect</code> - это не функциональный, а простой объект, он не является сконструированным.</p>
+**Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)\`ов. `Reflect` - это не функциональный, а простой объект, он не является сконструированным.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>В отличие от большинства глобальных объектов, <code>Reflect</code> - это не конструктор. Вы не можете использовать его с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>оператором new</code></a> или вызывать <code>Reflect,</code> как функцию. Все свойства и методы объекта <code>Reflect</code> являются статическими (так же, как и у объекта {{jsxref("Math")}}).</p>
+В отличие от большинства глобальных объектов, `Reflect` - это не конструктор. Вы не можете использовать его с [`оператором new`](/ru/docs/Web/JavaScript/Reference/Operators/new) или вызывать `Reflect,` как функцию. Все свойства и методы объекта `Reflect` являются статическими (так же, как и у объекта {{jsxref("Math")}}).
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>Объект <code>Reflect</code> обеспечивает работу статических функций, называющиеся так же, как <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">методы proxy handler</a>`а. Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.</p>
+Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)\`а. Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
 
-<dl>
- <dt>{{jsxref("Reflect.apply()")}}</dt>
- <dd>Вызывает целевую функцию с аргументами, переданными в параметре <code>args</code>. Смотрите также {{jsxref("Function.prototype.apply()")}}.</dd>
- <dt>{{jsxref("Reflect.construct()")}}</dt>
- <dd> Оператор <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> как функция. Аналогично <code>new target(...args)</code>. Также предоставляет возможность определить другой прототип.</dd>
- <dt>{{jsxref("Reflect.defineProperty()")}}</dt>
- <dd>Похож на {{jsxref("Object.defineProperty()")}}. Возвращает {{jsxref("Boolean")}}.</dd>
- <dt>{{jsxref("Reflect.deleteProperty()")}}</dt>
- <dd>Оператор <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> как функция. Аналогично <code>delete target[name]</code>.</dd>
- <dt>{{jsxref("Reflect.enumerate()")}}</dt>
- <dd>Похож на цикл <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a>. Возвращает итератор с собственными перечисляемыми и наследуемыми свойствами целевого объекта.</dd>
- <dt>{{jsxref("Reflect.get()")}}</dt>
- <dd>Функция, которая возвращает значение свойств.</dd>
- <dt>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</dt>
- <dd>Аналогично {{jsxref("Object.getOwnPropertyDescriptor()")}}. Возвращает дескриптор указанного свойства если присутствует в объекте, иначе {{jsxref("undefined")}}.</dd>
- <dt>{{jsxref("Reflect.getPrototypeOf()")}}</dt>
- <dd>Аналогично {{jsxref("Object.getPrototypeOf()")}}.</dd>
- <dt>{{jsxref("Reflect.has()")}}</dt>
- <dd>Оператор <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> </a>как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.</dd>
- <dt>{{jsxref("Reflect.isExtensible()")}}</dt>
- <dd>Аналогично {{jsxref("Object.isExtensible()")}}.</dd>
- <dt>{{jsxref("Reflect.ownKeys()")}}</dt>
- <dd>Возвращает массив строк с именами собственных (не наследованных) свойств.</dd>
- <dt>{{jsxref("Reflect.preventExtensions()")}}</dt>
- <dd>Аналогично {{jsxref("Object.preventExtensions()")}}. Возвращает {{jsxref("Boolean")}}.</dd>
- <dt>{{jsxref("Reflect.set()")}}</dt>
- <dd>Функция, присваивающая значения свойствам. Возвращает {{jsxref("Boolean")}} значение <code>true</code> при успешном выполнении.</dd>
- <dt>{{jsxref("Reflect.setPrototypeOf()")}}</dt>
- <dd>Функция, присваивающая прототип целевому объекту.</dd>
-</dl>
+- {{jsxref("Reflect.apply()")}}
+  - : Вызывает целевую функцию с аргументами, переданными в параметре `args`. Смотрите также {{jsxref("Function.prototype.apply()")}}.
+- {{jsxref("Reflect.construct()")}}
+  - : Оператор [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new) как функция. Аналогично `new target(...args)`. Также предоставляет возможность определить другой прототип.
+- {{jsxref("Reflect.defineProperty()")}}
+  - : Похож на {{jsxref("Object.defineProperty()")}}. Возвращает {{jsxref("Boolean")}}.
+- {{jsxref("Reflect.deleteProperty()")}}
+  - : Оператор [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) как функция. Аналогично `delete target[name]`.
+- {{jsxref("Reflect.enumerate()")}}
+  - : Похож на цикл [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in). Возвращает итератор с собственными перечисляемыми и наследуемыми свойствами целевого объекта.
+- {{jsxref("Reflect.get()")}}
+  - : Функция, которая возвращает значение свойств.
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+  - : Аналогично {{jsxref("Object.getOwnPropertyDescriptor()")}}. Возвращает дескриптор указанного свойства если присутствует в объекте, иначе {{jsxref("undefined")}}.
+- {{jsxref("Reflect.getPrototypeOf()")}}
+  - : Аналогично {{jsxref("Object.getPrototypeOf()")}}.
+- {{jsxref("Reflect.has()")}}
+  - : Оператор [`in` ](/ru/docs/Web/JavaScript/Reference/Operators/in)как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.
+- {{jsxref("Reflect.isExtensible()")}}
+  - : Аналогично {{jsxref("Object.isExtensible()")}}.
+- {{jsxref("Reflect.ownKeys()")}}
+  - : Возвращает массив строк с именами собственных (не наследованных) свойств.
+- {{jsxref("Reflect.preventExtensions()")}}
+  - : Аналогично {{jsxref("Object.preventExtensions()")}}. Возвращает {{jsxref("Boolean")}}.
+- {{jsxref("Reflect.set()")}}
+  - : Функция, присваивающая значения свойствам. Возвращает {{jsxref("Boolean")}} значение `true` при успешном выполнении.
+- {{jsxref("Reflect.setPrototypeOf()")}}
+  - : Функция, присваивающая прототип целевому объекту.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Проверка_наличия_конкретных_свойств_у_объекта">Проверка наличия конкретных свойств у объекта</h3>
+### Проверка наличия конкретных свойств у объекта
 
-<pre class="brush: js">const duck = {
+```js
+const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -61,30 +60,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 Reflect.has(duck, 'color');
 // true
 Reflect.has(duck, 'haircut');
-// false</pre>
+// false
+```
 
-<h3 id="Возврат_собственных_ключей_объекта">Возврат собственных ключей объекта</h3>
+### Возврат собственных ключей объекта
 
-<pre class="brush: js">Reflect.ownKeys(duck);
-// [ "name", "color", "greeting" ]</pre>
+```js
+Reflect.ownKeys(duck);
+// [ "name", "color", "greeting" ]
+```
 
-<h3 id="Добавление_нового_свойства_в_объект">Добавление нового свойства в объект</h3>
+### Добавление нового свойства в объект
 
-<pre class="brush: js">Reflect.set(duck, 'eyes', 'black');
+```js
+Reflect.set(duck, 'eyes', 'black');
 // вернётся "true" если вызов успешен
-// объект "duck" теперь содержит свойство "eyes" со значением "black"</pre>
+// объект "duck" теперь содержит свойство "eyes" со значением "black"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Глобальный объект {{jsxref("Proxy")}}.</li>
- <li>Объект {{jsxref("Proxy.handler", "handler")}}.</li>
-</ul>
+- Глобальный объект {{jsxref("Proxy")}}.
+- Объект {{jsxref("Proxy.handler", "handler")}}.

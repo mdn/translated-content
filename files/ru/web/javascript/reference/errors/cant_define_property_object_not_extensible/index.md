@@ -9,57 +9,61 @@ tags:
   - Исключение
 translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre>TypeError: Cannot create property for a non-extensible object (Edge)
+```
+TypeError: Cannot create property for a non-extensible object (Edge)
 TypeError: can't define property "x": "obj" is not extensible (Firefox)
-TypeError: Cannot define property: "x", object is not extensible. (Chrome)</pre>
+TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Что_произошло_не_так">Что произошло не так?</h2>
+## Что произошло не так?
 
-<p>Обычно, объект расширяемый и к нему можно добавить новые свойства. Однако в этой ситуации {{jsxref("Object.preventExtensions()")}} сделал объект нерасширяемым, так что у него не может появиться других свойств, отличных от тех, которые были объявлены когда объект стал нерасширяемым.</p>
+Обычно, объект расширяемый и к нему можно добавить новые свойства. Однако в этой ситуации {{jsxref("Object.preventExtensions()")}} сделал объект нерасширяемым, так что у него не может появиться других свойств, отличных от тех, которые были объявлены когда объект стал нерасширяемым.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В строгом режиме при попытке добавить новые свойства в нерасширяемый объект возникает ошибка TypeError. В нестрогом режиме добавление свойства "x" игнорируется.</p>
+В строгом режиме при попытке добавить новые свойства в нерасширяемый объект возникает ошибка TypeError. В нестрогом режиме добавление свойства "x" игнорируется.
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 var obj = {};
 Object.preventExtensions(obj);
 
 obj.x = 'foo';
 // TypeError: can't define property "x": "obj" is not extensible
-</pre>
+```
 
-<p>В обеих, строгом и нестрогом режимах, вызов {{jsxref("Object.defineProperty()")}} вызывает исключение при добавлении нового свойства в нерасширяемый объект.</p>
+В обеих, строгом и нестрогом режимах, вызов {{jsxref("Object.defineProperty()")}} вызывает исключение при добавлении нового свойства в нерасширяемый объект.
 
-<pre class="brush: js example-bad">var obj = { };
+```js example-bad
+var obj = { };
 Object.preventExtensions(obj);
 
 Object.defineProperty(obj,
   'x', { value: "foo" }
 );
 // TypeError: can't define property "x": "obj" is not extensible
-</pre>
+```
 
-<p>Чтобы исправить эту ошибку, необходимо удалить вызов {{jsxref("Object.preventExtensions()")}} полностью или переместить его в положение, чтобы сначала свойство добавлялось, а потом объект помечался как нерасширяемый. Конечно вы также можете удалить свойство, которое пытались добавить, если оно вам не нужно.</p>
+Чтобы исправить эту ошибку, необходимо удалить вызов {{jsxref("Object.preventExtensions()")}} полностью или переместить его в положение, чтобы сначала свойство добавлялось, а потом объект помечался как нерасширяемый. Конечно вы также можете удалить свойство, которое пытались добавить, если оно вам не нужно.
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 
 var obj = {};
 obj.x = 'foo'; // add property first and only then prevent extensions
 
-Object.preventExtensions(obj);</pre>
+Object.preventExtensions(obj);
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}

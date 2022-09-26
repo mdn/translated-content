@@ -10,38 +10,39 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
-<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+{{JSRef("Global_Objects", "RegExp")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>test()</code></strong> выполняет поиск сопоставления регулярного выражения указанной строке. Возвращает <code>true</code> или <code>false</code>.</p>
+Метод **`test()`** выполняет поиск сопоставления регулярного выражения указанной строке. Возвращает `true` или `false`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><code><var>regexObj</var>.test(str)</code></pre>
+```
+regexObj.test(str)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Строка, с которой сопоставляется регулярное выражение.</dd>
-</dl>
+- `str`
+  - : Строка, с которой сопоставляется регулярное выражение.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Логическое значение: <code>true</code> или <code>false</code>.</p>
+Логическое значение: `true` или `false`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Используйте метод <code>test()</code>, если вы просто хотите узнать, находится ли шаблон в строке (он почти аналогичен методу {{jsxref("String.prototype.search()")}}, только вместо индекса шаблона возвращает <code>true</code> или <code>false</code>); для получения дополнительной информации о сопоставлении (но за счёт более медленного выполнения) используйте метод {{jsxref("RegExp.prototype.exec()", "exec()")}} (он аналогичен методу {{jsxref("String.prototype.match()")}}). Как и при вызове метода {{jsxref("RegExp.prototype.exec()", "exec()")}} (или при совместном с ним вызове), метод <code>test()</code>, вызванный несколько раз на одном и том же экземпляре глобального регулярного выражения, будет начинать проверку с конца предыдущего сопоставления.</p>
+Используйте метод `test()`, если вы просто хотите узнать, находится ли шаблон в строке (он почти аналогичен методу {{jsxref("String.prototype.search()")}}, только вместо индекса шаблона возвращает `true` или `false`); для получения дополнительной информации о сопоставлении (но за счёт более медленного выполнения) используйте метод {{jsxref("RegExp.prototype.exec()", "exec()")}} (он аналогичен методу {{jsxref("String.prototype.match()")}}). Как и при вызове метода {{jsxref("RegExp.prototype.exec()", "exec()")}} (или при совместном с ним вызове), метод `test()`, вызванный несколько раз на одном и том же экземпляре глобального регулярного выражения, будет начинать проверку с конца предыдущего сопоставления.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_test">Пример: использование метода <code>test()</code></h3>
+### Пример: использование метода `test()`
 
-<p>Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:</p>
+Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:
 
-<pre class="brush: js">function testinput(re, str){
+```js
+function testinput(re, str){
   var midstring;
   if (re.test(str)) {
     midstring = ' содержит ';
@@ -50,19 +51,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
   }
   console.log(str + midstring + re.source);
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Глава про <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">регулярные выражения</a> в <a href="/ru/docs/Web/JavaScript/Guide">руководстве по JavaScript</a></li>
- <li>{{jsxref("Global_Objects/RegExp", "RegExp")}}</li>
-</ul>
+- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- {{jsxref("Global_Objects/RegExp", "RegExp")}}

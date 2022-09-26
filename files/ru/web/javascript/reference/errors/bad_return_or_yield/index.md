@@ -7,50 +7,53 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: 'return' statement outside of function (Edge)
+```
+SyntaxError: 'return' statement outside of function (Edge)
 SyntaxError: return not in function (Firefox)
 SyntaxError: yield not in function (Firefox)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Вызов оператора <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> или <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> был осуществлён вне <a href="/ru/docs/Web/JavaScript/Guide/Functions">функции</a>. Может, где-то пропущена фигурная скобка? Операторы <code>return</code> и <code>yield</code> не могут существовать вне функции, поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, откуда она была вызвана.</p>
+Вызов оператора [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) или [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) был осуществлён вне [функции](/ru/docs/Web/JavaScript/Guide/Functions). Может, где-то пропущена фигурная скобка? Операторы `return` и `yield` не могут существовать вне функции, поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, откуда она была вызвана.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js example-bad">var cheer = function(score) {
+```js example-bad
+var cheer = function(score) {
   if (score === 147)
     return 'Максимум!';
   };
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Столетие!';
   }
 }
 
-// SyntaxError: return not in function</pre>
+// SyntaxError: return not in function
+```
 
-<p>На первый взгляд кажется, что фигурные скобки расставлены правильно, но в данном примере пропущена <code>{</code> после первого оператора <code>if</code>. Правильный вариант:</p>
+На первый взгляд кажется, что фигурные скобки расставлены правильно, но в данном примере пропущена `{` после первого оператора `if`. Правильный вариант:
 
-<pre class="brush: js example-good">var cheer = function(score) {
+```js example-good
+var cheer = function(score) {
   if (score === 147) {
     return 'Максимум!';
   }
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Столетие!';
   }
-};</pre>
+};
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/return">return</a></code></li>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code></li>
-</ul>
+- [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return)
+- [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield)

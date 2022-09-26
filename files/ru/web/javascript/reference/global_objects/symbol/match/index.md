@@ -8,58 +8,48 @@ tags:
   - Символы
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.match</strong></code> — известный символ, определяющий соответствие строки регулярному выражению. Этот метод вызывается функцией {{jsxref("String.prototype.match()")}}.</p>
+**`Symbol.match`** — известный символ, определяющий соответствие строки регулярному выражению. Этот метод вызывается функцией {{jsxref("String.prototype.match()")}}.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Данный метод также используется для того, чтобы определить, обладает ли объект поведением регулярного выражения. Например, методы {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} и {{jsxref("String.prototype.includes()")}} проверяют, является ли первый аргумент регулярным выражением, и бросают {{jsxref("TypeError")}}, если это так. Соответственно, если символ <code>match</code> установлен в <code>false</code> (или имеет {{Glossary("Falsy", "ложное")}} значение) — это говорит о том, что объект не предназначен для использования в качестве регулярного выражения.</p>
+Данный метод также используется для того, чтобы определить, обладает ли объект поведением регулярного выражения. Например, методы {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} и {{jsxref("String.prototype.includes()")}} проверяют, является ли первый аргумент регулярным выражением, и бросают {{jsxref("TypeError")}}, если это так. Соответственно, если символ `match` установлен в `false` (или имеет {{Glossary("Falsy", "ложное")}} значение) — это говорит о том, что объект не предназначен для использования в качестве регулярного выражения.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Блокировка_проверки_isRegExp">Блокировка проверки i<code>sRegExp</code></h3>
+### Блокировка проверки i`sRegExp`
 
-<p>Следующий код выбросит {{jsxref("TypeError")}}:</p>
+Следующий код выбросит {{jsxref("TypeError")}}:
 
-<pre class="brush: js">"/bar/".startsWith(/bar/); // Бросает TypeError, так как /bar/ является
-                           // регулярным выражением и Symbol.match не изменён.</pre>
+```js
+"/bar/".startsWith(/bar/); // Бросает TypeError, так как /bar/ является
+                           // регулярным выражением и Symbol.match не изменён.
+```
 
-<p>Несмотря на это, если вы зададите свойству <code>Symbol.match</code> значение <code>false</code>, проверка <code>isRegExp</code> (которая использует свойство <code>match</code>) покажет, что объект не является регулярным выражением — как следствие, методы <code>startsWith</code> и <code>endsWith</code> не станут бросать <code>TypeError</code>.</p>
+Несмотря на это, если вы зададите свойству `Symbol.match` значение `false`, проверка `isRegExp` (которая использует свойство `match`) покажет, что объект не является регулярным выражением — как следствие, методы `startsWith` и `endsWith` не станут бросать `TypeError`.
 
-<pre class="brush: js">var re = /foo/;
+```js
+var re = /foo/;
 re[Symbol.match] = false;
 "/foo/".startsWith(re); // true
 "/baz/".endsWith(re);   // false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-symbol.match', 'Symbol.match')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                 | Статус               | Комментарий              |
+| ---------------------------------------------------------------------------- | -------------------- | ------------------------ |
+| {{SpecName('ES6', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES6')}} | Изначальное определение. |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
-</ul>
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}

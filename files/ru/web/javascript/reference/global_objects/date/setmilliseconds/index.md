@@ -9,61 +9,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setMilliseconds()</code></strong> устанавливает миллисекунды указанной даты по местному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setMilliseconds(<var>millisecondsValue</var>)</code></pre>
+Метод **`setMilliseconds()`** устанавливает миллисекунды указанной даты по местному времени.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>millisecondsValue</code></dt>
- <dd>Целое число от 0 до 999, представляющее миллисекунды.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Если значение параметра <code>millisecondsValue</code> будет выходить за пределы ожидаемого диапазона, метод <code>setMilliseconds()</code> соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>millisecondsValue</code> передать значение 1005, количество секунд увеличится на 1, а в качестве миллисекунд будет использоваться значение 5.</p>
+```
+dateObj.setMilliseconds(millisecondsValue)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_setMilliseconds">Пример: использование метода <code>setMilliseconds()</code></h3>
-<pre class="brush: js">var theBigDay = new Date();
+- `millisecondsValue`
+  - : Целое число от 0 до 999, представляющее миллисекунды.
+
+## Описание
+
+Если значение параметра `millisecondsValue` будет выходить за пределы ожидаемого диапазона, метод `setMilliseconds()` соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `millisecondsValue` передать значение 1005, количество секунд увеличится на 1, а в качестве миллисекунд будет использоваться значение 5.
+
+## Примеры
+
+### Пример: использование метода `setMilliseconds()`
+
+```js
+var theBigDay = new Date();
 theBigDay.setMilliseconds(100);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.28', 'Date.prototype.setMilliseconds')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                                 | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.28', 'Date.prototype.setMilliseconds')}}                             | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}

@@ -3,47 +3,47 @@ title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
-<div>{{jsSidebar("Objects")}} {{deprecated_header}}</div>
+{{jsSidebar("Objects")}} {{deprecated_header}}
 
-<p>Устаревший метод <code><strong>escape()</strong></code> возвращает новую строку, в которой определённые символы заменены шестнадцатеричной управляющей последовательностью.  Используйте методы {{jsxref("encodeURI")}} или {{jsxref("encodeURIComponent")}} вместо него.</p>
+Устаревший метод **`escape()`** возвращает новую строку, в которой определённые символы заменены шестнадцатеричной управляющей последовательностью. Используйте методы {{jsxref("encodeURI")}} или {{jsxref("encodeURIComponent")}} вместо него.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>escape(str)</code></pre>
+```
+escape(str)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Строка для кодирования.</dd>
-</dl>
+- `str`
+  - : Строка для кодирования.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Функция <code>escape() является свойством </code><em>глобального объекта</em>, т.е. относится к глобальным функциям. <span>Эта функция</span> <span>кодирует</span> <span>специальные символы</span>, <span>за исключением</span>: @*_+-./</p>
+Функция `escape() является свойством `_глобального объекта_, т.е. относится к глобальным функциям. Эта функция кодирует специальные символы, за исключением: @\*\_+-./
 
-<p>The hexadecimal form for characters, whose code unit value is 0xFF or less, is a two-digit escape sequence: %xx. For characters with a greater code unit, the four-digit format %<strong>u</strong>xxxx is used.</p>
+The hexadecimal form for characters, whose code unit value is 0xFF or less, is a two-digit escape sequence: %xx. For characters with a greater code unit, the four-digit format %**u**xxxx is used.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">escape("abc123");     // "abc123"
+```js
+escape("abc123");     // "abc123"
 escape("текст");      // "%u0442%u0435%u043A%u0441%u0442"
 escape("ć");          // "%u0107"
 
 /* специальные символы */
-escape("@*_+-./");    // "@*_+-./"</pre>
+escape("@*_+-./");    // "@*_+-./"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

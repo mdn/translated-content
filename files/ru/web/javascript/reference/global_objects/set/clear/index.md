@@ -9,23 +9,26 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>clear()</strong></code> удаляет все элементы из объекта <code>Set</code>.</p>
+Метод **`clear()`** удаляет все элементы из объекта `Set`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>mySet</em>.clear();</code></pre>
+```
+mySet.clear();
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_clear">Использование метода <code>clear</code></h3>
+### Использование метода `clear`
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 
@@ -36,21 +39,17 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has('bar')  // false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}

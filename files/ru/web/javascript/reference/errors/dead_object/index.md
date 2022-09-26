@@ -5,44 +5,46 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Dead_object
 translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
-<div>{{JSSidebar("Errors")}}</div>
+{{JSSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">TypeError: can't access dead object
-</pre>
+```
+TypeError: can't access dead object
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Что_не_так">Что не так?</h2>
+## Что не так?
 
-<p>Для улучшения использования памяти и предотвращения утечек памяти Firefox запрещает надстройкам сохранять строгие ссылки на объекты DOM после уничтожения родительского документа. Мёртвый объект содержит сильную ссылку (keep alive) на элемент DOM, который сохраняется даже после того, как он был уничтожен в DOM. Чтобы избежать этих проблем, ссылки на узлы DOM во внешнем документе должны храниться в объекте, который относится к этому документу, и очищаться при выгрузке документа или храниться как слабые ссылки.</p>
+Для улучшения использования памяти и предотвращения утечек памяти Firefox запрещает надстройкам сохранять строгие ссылки на объекты DOM после уничтожения родительского документа. Мёртвый объект содержит сильную ссылку (keep alive) на элемент DOM, который сохраняется даже после того, как он был уничтожен в DOM. Чтобы избежать этих проблем, ссылки на узлы DOM во внешнем документе должны храниться в объекте, который относится к этому документу, и очищаться при выгрузке документа или храниться как слабые ссылки.
 
-<h2 id="Проверка_если_объект_мёртв">Проверка, если объект мёртв</h2>
+## Проверка, если объект мёртв
 
-<p><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a> предлагает <code>isDeadWrapper()</code>метод, который может использовать привилегированный код. <br>
-  </p>
+[Components.utils](/ru/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils) предлагает `isDeadWrapper()`метод, который может использовать привилегированный код.
 
-<pre class="brush: js">if (Components.utils.isDeadWrapper(window)) {
+```js
+if (Components.utils.isDeadWrapper(window)) {
   // dead
-}</pre>
+}
+```
 
-<p>Непривилегированный код не имеет доступа к Component.utils и мог бы просто быть в состоянии поймать исключение.</p>
+Непривилегированный код не имеет доступа к Component.utils и мог бы просто быть в состоянии поймать исключение.
 
-<pre class="brush: js">try {
+```js
+try {
   String(window);
 }
 catch (e) {
   console.log("window is likely dead");
-}</pre>
+}
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/">What does “can’t access dead object” mean?</a>(Что значит “не могу получить доступ к мёртвому объекту”?)</li>
- <li><a href="/en-US/docs/Extensions/Common_causes_of_memory_leaks_in_extensions">Common causes of memory leaks in extensions</a>(Распространённые причины утечек памяти в расширениях)</li>
- <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a></li>
- <li><a href="/en-US/docs/Mozilla/Zombie_compartments">Zombie Compartments</a></li>
-</ul>
+- [What does “can’t access dead object” mean?](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)(Что значит “не могу получить доступ к мёртвому объекту”?)
+- [Common causes of memory leaks in extensions](/ru/docs/Extensions/Common_causes_of_memory_leaks_in_extensions)(Распространённые причины утечек памяти в расширениях)
+- [Components.utils](/ru/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils)
+- [Zombie Compartments](/ru/docs/Mozilla/Zombie_compartments)

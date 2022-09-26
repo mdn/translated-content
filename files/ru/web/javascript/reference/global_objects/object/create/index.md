@@ -11,38 +11,39 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Object.create()</strong></code> создаёт новый объект с указанным прототипом и свойствами.</p>
+Метод **`Object.create()`** создаёт новый объект с указанным прототипом и свойствами.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.create(<var>proto</var>[, <var>propertiesObject</var>])</code></pre>
+```
+Object.create(proto[, propertiesObject])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>Объект, который станет прототипом вновь созданного объекта.</dd>
- <dt><code>propertiesObject</code></dt>
- <dd>Необязательный параметр. Если указан и не равен {{jsxref("Global_Objects/undefined", "undefined")}}, должен быть объектом, чьи собственные перечисляемые свойства (то есть такие, которые определены на самом объекте, а не унаследованы по цепочке прототипов) указывают дескрипторы свойств, добавляемых в новый объект. Имена добавляемых свойств совпадают с именами свойств в этом объекте. Эти свойства соответствуют второму аргументу метода {{jsxref("Object.defineProperties()")}}.</dd>
-</dl>
+- `proto`
+  - : Объект, который станет прототипом вновь созданного объекта.
+- `propertiesObject`
+  - : Необязательный параметр. Если указан и не равен {{jsxref("Global_Objects/undefined", "undefined")}}, должен быть объектом, чьи собственные перечисляемые свойства (то есть такие, которые определены на самом объекте, а не унаследованы по цепочке прототипов) указывают дескрипторы свойств, добавляемых в новый объект. Имена добавляемых свойств совпадают с именами свойств в этом объекте. Эти свойства соответствуют второму аргументу метода {{jsxref("Object.defineProperties()")}}.
 
-<h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
+### Возвращаемые значения
 
-<p>Новый объект с заданным прототипом и свойствами</p>
+Новый объект с заданным прототипом и свойствами
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).</p>
+Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр `proto` не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example.3A_Classical_inheritance_with_Object.create">Пример: классическое наследование с <code>Object.create()</code></h3>
+### Пример: классическое наследование с `Object.create()`
 
-<p>Ниже показан пример использования <code>Object.create()</code> для имитации классического наследования. Это пример одиночного наследования, поскольку только его поддерживает JavaScript.</p>
+Ниже показан пример использования `Object.create()` для имитации классического наследования. Это пример одиночного наследования, поскольку только его поддерживает JavaScript.
 
-<pre class="brush: js">// Shape — суперкласс
+```js
+// Shape — суперкласс
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -69,11 +70,12 @@ var rect = new Rectangle();
 console.log('Является ли rect экземпляром Rectangle? ' + (rect instanceof Rectangle)); // true
 console.log('Является ли rect экземпляром Shape? ' + (rect instanceof Shape)); // true
 rect.move(1, 1); // выведет 'Фигура переместилась.'
-</pre>
+```
 
-<p>Если вы хотите наследоваться от нескольких объектов, то это возможно сделать при помощи примесей.</p>
+Если вы хотите наследоваться от нескольких объектов, то это возможно сделать при помощи примесей.
 
-<pre class="brush: js">function MyClass() {
+```js
+function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -84,13 +86,14 @@ mixin(MyClass.prototype, OtherSuperClass.prototype); // примешивание
 MyClass.prototype.myMethod = function() {
   // что-то делаем
 };
-</pre>
+```
 
-<p>Функция примешивания должна копировать функции из прототипа суперкласса в прототип подкласса, она должна предоставляться пользователем. Примером примеси может служить функция <a href="http://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
+Функция примешивания должна копировать функции из прототипа суперкласса в прототип подкласса, она должна предоставляться пользователем. Примером примеси может служить функция [jQuery.extend()](http://api.jquery.com/jQuery.extend/).
 
-<h3 id="Example.3A_Using_propertiesObject_argument_with_Object.create">Пример: использование аргумента <code>propertiesObject</code> с <code>Object.create()</code></h3>
+### Пример: использование аргумента `propertiesObject` с `Object.create()`
 
-<pre class="brush: js">var o;
+```js
+var o;
 
 // создаём объект с нулевым прототипом
 o = Object.create(null);
@@ -153,13 +156,14 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.</p>
+Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.
 
-<pre class="brush: js">if (typeof Object.create != 'function') {
+```js
+if (typeof Object.create != 'function') {
   // Этапы производства ECMA-262, издание 5, 15.2.3.5
   // Ссылка: http://es5.github.io/#x15.2.3.5
   Object.create = (function() {
@@ -187,7 +191,7 @@ o2 = Object.create({}, {
       //    собственные свойства к obj, как будто вызывая стандартную встроенную
       //    функцию Object.defineProperties с аргументами obj и
       //    Properties.
-      if (arguments.length &gt; 1) {
+      if (arguments.length > 1) {
         // Object.defineProperties делает ToObject своим первым аргументом.
         var Properties = Object(arguments[1]);
         for (var prop in Properties) {
@@ -202,21 +206,19 @@ o2 = Object.create({}, {
     };
   })();
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>Запись в блоге Джона Резига о <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- Запись в блоге Джона Резига о [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)

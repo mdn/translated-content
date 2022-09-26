@@ -11,57 +11,59 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.hypot()</code></strong> возвращает квадратный корень суммы квадратов своих аргументов, то есть</p>
+Метод **`Math.hypot()`** возвращает квадратный корень суммы квадратов своих аргументов, то есть
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v_1, v_2, \dots, v_n)} = \sqrt{\sum_{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)} = \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.hypot([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+```
+Math.hypot([value1[, value2[, ...]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value1, value2, ...</code></dt>
- <dd>Числа.</dd>
-</dl>
+- `value1, value2, ...`
+  - : Числа.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>hypot()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.hypot()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `hypot()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.hypot()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<p>При вызове без аргументов результатом вызова будет значение +0.</p>
+При вызове без аргументов результатом вызова будет значение +0.
 
-<p>Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
+Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<p>При вызове с одним аргументом, метод <code>Math.hypot()</code> то же самое значение, что и метод <code>Math.abs()</code>.</p>
+При вызове с одним аргументом, метод `Math.hypot()` то же самое значение, что и метод `Math.abs()`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.hypot">Пример: использование метода <code>Math.hypot()</code></h3>
+### Пример: использование метода `Math.hypot()`
 
-<pre class="brush: js">Math.hypot(3, 4);        // 5
+```js
+Math.hypot(3, 4);        // 5
 Math.hypot(3, 4, 5);     // 7.0710678118654755
 Math.hypot();            // 0
 Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' =&gt; NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' =&gt; 5
+Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
+Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
 Math.hypot(-3);          // 3, то же самое, что и Math.abs(-3)
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод может эмулироваться следующим образом:</p>
+Этот метод может эмулироваться следующим образом:
 
-<pre class="brush: js">Math.hypot = Math.hypot || function() {
+```js
+Math.hypot = Math.hypot || function() {
   var y = 0;
   var length = arguments.length;
 
-  for (var i = 0; i &lt; length; i++) {
+  for (var i = 0; i < length; i++) {
     if (arguments[i] === Infinity || arguments[i] === -Infinity) {
       return Infinity;
     }
@@ -69,20 +71,18 @@ Math.hypot(-3);          // 3, то же самое, что и Math.abs(-3)
   }
   return Math.sqrt(y);
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

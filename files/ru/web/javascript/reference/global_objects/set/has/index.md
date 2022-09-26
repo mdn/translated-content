@@ -3,43 +3,37 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод  <code><strong>has()</strong></code> возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте  <code>Set</code> или нет.</p>
+Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
+## Syntax
 
+```
+mySet.has(value);
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="syntaxbox"><code><em>mySet</em>.has(value);</code></pre>
+- value
+  - : Required. The value to test for presence in the `Set` object.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt>value</dt>
- <dd>Required. The value to test for presence in the <code>Set</code> object.</dd>
-</dl>
+- Boolean
 
-<h3 id="Return_value">Return value</h3>
+  - : Returns `true` if an element with the specified value exists in the `Set` object; otherwise `false`.
 
-<dl>
- <dt>Boolean</dt>
- <dd>
- <p>Returns <code>true</code> if an element with the specified value exists in the <code>Set</code> object; otherwise <code>false</code>.</p>
+    > **Примечание:** Technically speaking, `has()` uses the [`sameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) algorithm to determine whether the given element is found.
 
- <div class="note">
- <p><strong>Note:</strong> Technically speaking, <code>has()</code> uses the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code> algorithm to determine whether the given element is found.</p>
- </div>
- </dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the `has` method
 
-<h3 id="Using_the_has_method">Using the <code>has</code> method</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
@@ -52,40 +46,21 @@ set1.add(obj1);
 set1.has(obj1);        // returns true
 set1.has({'key1': 1}); // returns false because they are different object references
 set1.add({'key1': 1}); // now set1 contains 2 entries
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}

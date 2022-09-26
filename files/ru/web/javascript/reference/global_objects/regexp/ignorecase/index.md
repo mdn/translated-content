@@ -10,60 +10,46 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
-<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+{{JSRef("Global_Objects", "RegExp")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>ignoreCase</code></strong> указывает, использовался ли в определении регулярного выражения флаг <code>"i"</code>. Свойство <code>ignoreCase</code> является свойством только для чтения и принадлежит экземпляру регулярного выражения.</p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`ignoreCase`** указывает, использовался ли в определении регулярного выражения флаг `"i"`. Свойство `ignoreCase` является свойством только для чтения и принадлежит экземпляру регулярного выражения.
 
-<h2 id="Description">Описание</h2>
-<p>Значение свойства <code>ignoreCase</code> имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и содержит <code>true</code>, если при определении регулярного выражения использовался флаг <code>"i"</code>; в противном случае оно содержит <code>false</code>. Флаг <code>"i"</code> указывает на то, что регистр символов в строке, с которой сопоставляется регулярное выражение, должен игнорироваться.</p>
-<p>Вы не можете напрямую изменить это свойство.</p>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Examples">Примеры</h2>
+## Описание
 
-<h3 id="Example:_Using_ignoreCase">Пример: использование свойства <code>ignoreCase</code></h3>
-<pre class="brush: js">var regex = new RegExp('foo', 'i');
+Значение свойства `ignoreCase` имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и содержит `true`, если при определении регулярного выражения использовался флаг `"i"`; в противном случае оно содержит `false`. Флаг `"i"` указывает на то, что регистр символов в строке, с которой сопоставляется регулярное выражение, должен игнорироваться.
+
+Вы не можете напрямую изменить это свойство.
+
+## Примеры
+
+### Пример: использование свойства `ignoreCase`
+
+```js
+var regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.<br>
-    JavaScript 1.5: свойство <code>ignoreCase</code> является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Свойство <code>ignoreCase</code> теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.</td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                             | Статус                   | Комментарии                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `ignoreCase` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+| {{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}                             | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                                                            |
+| {{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} | {{Spec2('ES6')}}     | Свойство `ignoreCase` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                                                 |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

@@ -9,42 +9,37 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод доступа <code><strong>size</strong></code> возвращает количество (уникальных) элементов в объекте {{jsxref("Set")}}</p>
+Метод доступа **`size`** возвращает количество (уникальных) элементов в объекте {{jsxref("Set")}}
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
+## Описание
 
+Значение `size` является целым числом, которое показывает как много записей имеет объект `Set`. Функция для установки `size` равна `undefined`; вы не можете изменить это свойство.
 
-<h2 id="Описание">Описание</h2>
+## Примеры
 
-<p>Значение <code>size</code> является целым числом, которое показывает как много записей имеет объект <code>Set</code>. Функция для установки <code>size</code> равна <code>undefined</code>; вы не можете изменить это свойство.</p>
+### Использование `size`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_size">Использование <code>size</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
 mySet.add('некоторый текст')
 
 mySet.size; // 3
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}

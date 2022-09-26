@@ -5,104 +5,115 @@ tags:
   - Итератор
 translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
-<div>
-<div>{{jsSidebar("More")}}</div>
-</div>
+{{jsSidebar("More")}}
 
-<p>Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.</p>
+Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.
 
-<h2 id="Протоколы_перебора">Протоколы перебора</h2>
+## Протоколы перебора
 
-<p>Протоколы перебора включают <a href="#The_.22iterable.22_protocol">the "iterable" protocol</a> и <a href="#The_.22iterator.22_protocol">the "iterator" protocol</a>.</p>
+Протоколы перебора включают [the "iterable" protocol](#The_.22iterable.22_protocol) и [the "iterator" protocol](#The_.22iterator.22_protocol).
 
-<h3 id="Протокол_Итерируемый">Протокол "Итерируемый"</h3>
+### Протокол "Итерируемый"
 
-<p>Протокол "<strong>Итерируемый</strong>" позволяет JavaScript объектам определять или настраивать поведение перебора, например, то какие значения перебираются в конструкции {{jsxref("Statements/for...of", "for..of")}}. Некоторые встроенные типы, такие как {{jsxref("Array")}} или {{jsxref("Map")}}, имеют поведение перебора по умолчанию, в то время как другие типы (такие как {{jsxref("Object")}}) его не имеют</p>
+Протокол "**Итерируемый**" позволяет JavaScript объектам определять или настраивать поведение перебора, например, то какие значения перебираются в конструкции {{jsxref("Statements/for...of", "for..of")}}. Некоторые встроенные типы, такие как {{jsxref("Array")}} или {{jsxref("Map")}}, имеют поведение перебора по умолчанию, в то время как другие типы (такие как {{jsxref("Object")}}) его не имеют
 
-<p>Для того, чтобы объект был <strong>итерируемым</strong>, в нем должен быть реализован метод <strong>@@iterator</strong>, т.е. этот объект (или любой из объектов из его <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) должен иметь свойство с именем {{jsxref("Symbol")}}<code>.iterator</code>:</p>
+Для того, чтобы объект был **итерируемым**, в нем должен быть реализован метод **@@iterator**, т.е. этот объект (или любой из объектов из его [prototype chain](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) должен иметь свойство с именем {{jsxref("Symbol")}}`.iterator`:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Свойство</th>
-   <th scope="col">Значение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[Symbol.iterator]</code></td>
-   <td>Функция без аргументов, возвращающая объект, соответствующий <a href="#The_.22iterator.22_protocol">iterator protocol</a>.</td>
-  </tr>
- </tbody>
-</table>
+| Свойство            | Значение                                                                                                        |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `[Symbol.iterator]` | Функция без аргументов, возвращающая объект, соответствующий [iterator protocol](#The_.22iterator.22_protocol). |
 
-<p>Всякий раз, когда объект подлежит перебору (например, когда в коде встречается цикл <code>for..of</code>), вызывается его метод <code>@@iterator</code> без аргументов, и возвращаемый <strong>iterator</strong> используется для получения перебираемых значений.</p>
+Всякий раз, когда объект подлежит перебору (например, когда в коде встречается цикл `for..of`), вызывается его метод `@@iterator` без аргументов, и возвращаемый **iterator** используется для получения перебираемых значений.
 
-<h3 id="Протокол_Итератор">Протокол "Итератор"</h3>
+### Протокол "Итератор"
 
-<p>Протокол "<strong>Итератор</strong>" определяет стандартный способ получения последовательности значений  (конечной или бесконечной).</p>
+Протокол "**Итератор**" определяет стандартный способ получения последовательности значений (конечной или бесконечной).
 
-<p>Объект является итератором, если в нем определён метод <strong>next()</strong> , реализующий следующую логику:</p>
+Объект является итератором, если в нем определён метод **next()** , реализующий следующую логику:
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Свойство</th>
-   <th scope="col">Значение</th>
-  </tr>
-  <tr>
-   <td><code>next</code></td>
-   <td>
-    <p>Функция без аргументов, возвращающая объект с двумя свойствами:</p>
-
-    <ul>
-     <li><code>done</code> (boolean)
-
-      <ul>
-       <li>Принимает значение <code>true</code> если итератор достиг конца итерируемой последовательности. В этом случае свойство <code>value</code> может определять <em>возвращаемое значение</em> итератора. Возвращаемые значения объясняются более подробно <a href="http://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads">here</a>.</li>
-       <li>Принимает значение <code>false</code> если итератор может генерировать следующее значение последовательности. Это эквивалентно не указанному done.</li>
-      </ul>
-     </li>
-     <li><code>value</code> - любое JavaScript значение, возвращаемое итератором. Может быть опущено, если <code>done имеет значение</code> <code>true</code>.</li>
-    </ul>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Свойство</th>
+      <th scope="col">Значение</th>
+    </tr>
+    <tr>
+      <td><code>next</code></td>
+      <td>
+        <p>Функция без аргументов, возвращающая объект с двумя свойствами:</p>
+        <ul>
+          <li>
+            <code>done</code> (boolean)
+            <ul>
+              <li>
+                Принимает значение <code>true</code> если итератор достиг конца
+                итерируемой последовательности. В этом случае свойство
+                <code>value</code> может определять
+                <em>возвращаемое значение</em> итератора. Возвращаемые значения
+                объясняются более подробно
+                <a
+                  href="http://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads"
+                  >here</a
+                >.
+              </li>
+              <li>
+                Принимает значение <code>false</code> если итератор может
+                генерировать следующее значение последовательности. Это
+                эквивалентно не указанному done.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>value</code> - любое JavaScript значение, возвращаемое
+            итератором. Может быть опущено, если
+            <code>done имеет значение</code> <code>true</code>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Некоторые итераторы, в свою очередь, итерабельны:</p>
+Некоторые итераторы, в свою очередь, итерабельны:
 
-<pre class="brush: js">var someArray = [1, 5, 7];
+```js
+var someArray = [1, 5, 7];
 var someArrayEntries = someArray.entries();
 
 someArrayEntries.toString();           // "[object Array Iterator]"
 someArrayEntries === someArrayEntries[Symbol.iterator]();    // true
-</pre>
+```
 
-<h2 id="Примеры_использования_протокола_итератора">Примеры использования протокола "итератора"</h2>
+## Примеры использования протокола "итератора"
 
-<p>{{jsxref("String")}} является примером встроенного итерабельного объекта:</p>
+{{jsxref("String")}} является примером встроенного итерабельного объекта:
 
-<pre class="brush: js">var someString = "hi";
+```js
+var someString = "hi";
 typeof someString[Symbol.iterator]           // "function"
-</pre>
+```
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">По умолчанию итератор строки возвращает символы строки друг за другом:</font></p>
+По умолчанию итератор строки возвращает символы строки друг за другом:
 
-<pre class="brush: js">var iterator = someString[Symbol.iterator]();
+```js
+var iterator = someString[Symbol.iterator]();
 iterator + ""                                // "[object String Iterator]"
 
 iterator.next()                              // { value: "h", done: false }
 iterator.next()                              // { value: "i", done: false }
-iterator.next()                              // { value: undefined, done: true }</pre>
+iterator.next()                              // { value: undefined, done: true }
+```
 
-<p>Некоторые встроенные конструкции языка, например, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>, используют в своей внутренней реализации тот же протокол итерации:</p>
+Некоторые встроенные конструкции языка, например, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), используют в своей внутренней реализации тот же протокол итерации:
 
-<pre class="brush: js">[...someString]                              // ["h", "i"]</pre>
+```js
+[...someString]                              // ["h", "i"]
+```
 
-<p>Поведение итератора можно переопределить применив собственный <code>@@iterator</code>:</p>
+Поведение итератора можно переопределить применив собственный `@@iterator`:
 
-<pre class="brush: js">var someString = new String("hi");          // need to construct a String object explicitly to avoid auto-boxing
+```js
+var someString = new String("hi");          // need to construct a String object explicitly to avoid auto-boxing
 
 someString[Symbol.iterator] = function() {
   return { // this is the iterator object, returning a single element, the string "bye"
@@ -117,36 +128,39 @@ someString[Symbol.iterator] = function() {
     _first: true
   };
 };
-</pre>
+```
 
-<p>Notice how redefining <code>@@iterator</code> affects the behavior of built-in constructs, that use the iteration protocol:</p>
+Notice how redefining `@@iterator` affects the behavior of built-in constructs, that use the iteration protocol:
 
-<pre class="brush: js">[...someString]                              // ["bye"]
+```js
+[...someString]                              // ["bye"]
 someString + ""                              // "hi"
-</pre>
+```
 
-<h2 id="Встроенная_итерируемость">Встроенная итерируемость</h2>
+## Встроенная итерируемость
 
-<p>{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат <code>@@</code><code>iterator</code> метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода <code>@@</code><code>iterator</code></p>
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат ` @@``iterator ` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода ` @@``iterator `
 
-<h2 id="Итерируемость_определённая_пользователем">Итерируемость определённая пользователем</h2>
+## Итерируемость определённая пользователем
 
-<p>Мы можем создать итерируемый объект сами:</p>
+Мы можем создать итерируемый объект сами:
 
-<pre class="brush: js">var myIterable = {}
+```js
+var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
     yield 3;
 };
 [...myIterable] // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Builtin_APIs_need_iterables">Builtin APIs need iterables</h2>
+## Builtin APIs need iterables
 
-<p>{{jsxref("Map", "Map([iterable])")}}, {{jsxref("WeakMap", "WeakMap([iterable])")}}, {{jsxref("Set", "Set([iterable])")}} and {{jsxref("WeakSet", "WeakSet([iterable])")}}:</p>
+{{jsxref("Map", "Map([iterable])")}}, {{jsxref("WeakMap", "WeakMap([iterable])")}}, {{jsxref("Set", "Set([iterable])")}} and {{jsxref("WeakSet", "WeakSet([iterable])")}}:
 
-<pre class="brush: js">var myObj = {}
+```js
+var myObj = {}
 new Map([[1,"a"],[2,"b"],[3,"c"]]).get(2)               // "b"
 new WeakMap([[{},"a"],[myObj,"b"],[{},"c"]]).get(myObj) // "b"
 new Set([1, 2, 3]).has(3)                               // true
@@ -156,15 +170,16 @@ new WeakSet(function*() {
     yield myObj;
     yield {};
 }()).has(myObj)                                     // true
-</pre>
+```
 
-<p>and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from", "Array.from()")}}</p>
+and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from", "Array.from()")}}
 
-<h2 id="Синтаксис_предполагающий_итерируемость">Синтаксис предполагающий итерируемость</h2>
+## Синтаксис предполагающий итерируемость
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for-of</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a>, yield*, destructing  - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:</p>
+[for-of](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), yield\*, destructing - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:
 
-<pre class="brush: js">for(let value of ["a", "b", "c"]){
+```js
+for(let value of ["a", "b", "c"]){
     console.log(value)
 }
 // "a"
@@ -181,23 +196,24 @@ gen().next() // { value:"a", done:false }
 
 [a, b, c] = new Set(["a", "b", "c"])
 a // "a"
+```
 
-</pre>
+## Non-well-formed iterables
 
-<h2 id="Non-well-formed_iterables">Non-well-formed iterables</h2>
+If an iterable's `@@iterator` method doesn't return an iterator object, then it's a non-well-formed iterable, using it as such is likely to result in runtime exceptions or buggy behavior:
 
-<p>If an iterable's <code>@@iterator</code> method doesn't return an iterator object, then it's a non-well-formed iterable, using it as such is likely to result in runtime exceptions or buggy behavior:</p>
-
-<pre class="brush: js">var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
+```js
+var nonWellFormedIterable = {}
+nonWellFormedIterable[Symbol.iterator] = () => 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
-</pre>
+```
 
-<h2 id="Объект-генератор_является_итератором_или_итерируемым">Объект-генератор является итератором или итерируемым</h2>
+## Объект-генератор является итератором или итерируемым
 
-<p>И тем и другим</p>
+И тем и другим
 
-<pre class="brush: js">var aGeneratorObject = function*(){
+```js
+var aGeneratorObject = function*(){
     yield 1;
     yield 2;
     yield 3;
@@ -210,18 +226,19 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject
 // true, because its @@iterator method return its self (an iterator), so it's an well-formed iterable
 [...aGeneratorObject]
 // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_итератор">Простой итератор</h3>
+### Простой итератор
 
-<pre class="brush: js">function makeIterator(array){
+```js
+function makeIterator(array){
     var nextIndex = 0;
 
     return {
        next: function(){
-           return nextIndex &lt; array.length ?
+           return nextIndex < array.length ?
                {value: array[nextIndex++], done: false} :
                {done: true};
        }
@@ -233,11 +250,12 @@ var it = makeIterator(['yo', 'ya']);
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
 console.log(it.next().done);  // true
-</pre>
+```
 
-<h3 id="Бесконечный_итератор">Бесконечный итератор</h3>
+### Бесконечный итератор
 
-<pre class="brush: js">function idMaker(){
+```js
+function idMaker(){
     var index = 0;
 
     return {
@@ -253,14 +271,15 @@ console.log(it.next().value); // '0'
 console.log(it.next().value); // '1'
 console.log(it.next().value); // '2'
 // ...
-</pre>
+```
 
-<h3 id="С_генератором">С генератором</h3>
+### С генератором
 
-<pre class="brush: js">function* makeSimpleGenerator(array){
+```js
+function* makeSimpleGenerator(array){
     var nextIndex = 0;
 
-    while(nextIndex &lt; array.length){
+    while(nextIndex < array.length){
         yield array[nextIndex++];
     }
 }
@@ -285,32 +304,15 @@ console.log(gen.next().value); // '0'
 console.log(gen.next().value); // '1'
 console.log(gen.next().value); // '2'
 // ...
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-iteration', 'Iteration')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-iteration', 'Iteration')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                             | Статус                       | Комментарии              |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------------ |
+| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Изначальное определение. |
+| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                          |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Дополнительную информацию о генераторах ES 2015 смотри <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">на отдельной странице.</a></li>
-</ul>
+- Дополнительную информацию о генераторах ES 2015 смотри [на отдельной странице.](/ru/docs/Web/JavaScript/Reference/Statements/function*)

@@ -9,59 +9,58 @@ tags:
   - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Статический метод <strong><code>String.fromCharCode()</code></strong> возвращает строку, созданную из указанной последовательности значений единиц кода UTF-16.</p>
+Статический метод **`String.fromCharCode()`** возвращает строку, созданную из указанной последовательности значений единиц кода UTF-16.
 
-<p>. </p>
+.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+```
+String.fromCharCode(num1[, ...[, numN]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>Последовательность чисел, являющихся значениями единиц кода UTF-16. <span style="font-size: 1rem; letter-spacing: -0.00278rem;">Диапазон составляет от 0 до 65535 (0xFFFF). Числа больше 0xFFFF усекаются. Проверка достоверности не производится.</span></dd>
-</dl>
+- `num1, ..., numN`
+  - : Последовательность чисел, являющихся значениями единиц кода UTF-16. Диапазон составляет от 0 до 65535 (0xFFFF). Числа больше 0xFFFF усекаются. Проверка достоверности не производится.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Этот метод возвращает примитивную строку, а не объект {{jsxref("Global_Objects/String", "String")}}.</p>
+Этот метод возвращает примитивную строку, а не объект {{jsxref("Global_Objects/String", "String")}}.
 
-<p>Поскольку метод <code>fromCharCode()</code> является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как <code>String.fromCharCode()</code>, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.</p>
+Поскольку метод `fromCharCode()` является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как `String.fromCharCode()`, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_fromCharCode">Пример: использование метода <code>fromCharCode()</code></h3>
+### Пример: использование метода `fromCharCode()`
 
-<p>Следующий пример вернёт строку "ABC".</p>
+Следующий пример вернёт строку "ABC".
 
-<pre class="brush: js">String.fromCharCode(65, 66, 67);  // "ABC"
-</pre>
+```js
+String.fromCharCode(65, 66, 67);  // "ABC"
+```
 
-<p dir="ltr" id="tw-target-text"><a href="https://asecuritysite.com/coding/asc2">Полная таблица UTF-16</a></p>
+[Полная таблица UTF-16](https://asecuritysite.com/coding/asc2)
 
-<h2 id="Getting_it_to_work_with_higher_values">Как заставить его работать с большими значениями</h2>
+## Как заставить его работать с большими значениями
 
-<p>Хотя большинство распространённых значений Юникода может быть представлено одним 16-битным числом (как ожидалось на ранней стадии стандартизации JavaScript) и метод <code>fromCharCode()</code> может использоваться для возврата одного символа для самых распространённых значений (точнее, значений UCS-2, которые являются подмножеством самых распространённых символов UTF-16), для работы со ВСЕМИ допустимыми значениями Юникода (занимающими до 21 бита) одного метода <code>fromCharCode()</code> недостаточно. Поскольку большие кодовые точки используют (самое меньшее) два «суррогатных» числа для представления одного символа, для возврата таких пар можно использовать метод {{jsxref("String.fromCodePoint()")}} (являющийся частью черновика ES6) и, таким образом, адекватно представлять эти символы.</p>
+Хотя большинство распространённых значений Юникода может быть представлено одним 16-битным числом (как ожидалось на ранней стадии стандартизации JavaScript) и метод `fromCharCode()` может использоваться для возврата одного символа для самых распространённых значений (точнее, значений UCS-2, которые являются подмножеством самых распространённых символов UTF-16), для работы со ВСЕМИ допустимыми значениями Юникода (занимающими до 21 бита) одного метода `fromCharCode()` недостаточно. Поскольку большие кодовые точки используют (самое меньшее) два «суррогатных» числа для представления одного символа, для возврата таких пар можно использовать метод {{jsxref("String.fromCodePoint()")}} (являющийся частью черновика ES6) и, таким образом, адекватно представлять эти символы.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

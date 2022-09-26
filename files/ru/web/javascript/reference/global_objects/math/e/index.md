@@ -8,60 +8,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Math.E</code></strong> представляет основание натурального логарифма, e, приблизительно равное 2,718.</p>
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2,718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2,718</annotation></semantics></math></p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Math.E`** представляет основание натурального логарифма, e, приблизительно равное 2,718.
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку свойство <code>E</code> является статическим свойством объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.E</code>, а не пытаться создавать экземпляр объекта <code>Math</code> и получать свойство от него (поскольку объект <code>Math</code> не является конструктором).</p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2,718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2,718</annotation></semantics></math>
 
-<h2 id="Examples">Примеры</h2>
+{{js_property_attributes(0, 0, 0)}}
 
-<h3 id="Example:_Using_Math.E">Пример: использование свойства <code>Math.E</code></h3>
-<p>Следующая функция возвращает e:</p>
-<pre class="brush: js">function getNapier() {
+## Описание
+
+Поскольку свойство `E` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.E`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.E`
+
+Следующая функция возвращает e:
+
+```js
+function getNapier() {
   return Math.E;
 }
 
 getNapier(); // 2.718281828459045
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.e', 'Math.E')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                     | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}} {{experimental_inline}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}} {{experimental_inline}}

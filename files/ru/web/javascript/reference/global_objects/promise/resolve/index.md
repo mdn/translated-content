@@ -8,63 +8,66 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Promise.resolve(value)</strong></code> возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.</p>
+Метод **`Promise.resolve(value)`** возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>Promise.resolve(value)</var>;
+```
+Promise.resolve(value);
 Promise.resolve(promise);
 Promise.resolve(thenable);
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>value</dt>
- <dd>Значение с которым будет выполнен промис. Может также быть промисом или объект подобный промису (thenable - объект имеющий метод then).</dd>
-</dl>
+- value
+  - : Значение с которым будет выполнен промис. Может также быть промисом или объект подобный промису (thenable - объект имеющий метод then).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Выполненный с переданным значением {{jsxref("Promise")}}.</p>
+Выполненный с переданным значением {{jsxref("Promise")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>Метод Promise.resolve</code> возвращает выполненное промис (<code>Promise</code>).</p>
+`Метод Promise.resolve` возвращает выполненное промис (`Promise`).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_Promise.resolve">Использование метода <code>Promise.resolve</code></h3>
+### Использование метода `Promise.resolve`
 
-<pre class="brush: js">Promise.resolve("Success").then(function(value) {
+```js
+Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // не будет вызвана
 });
-</pre>
+```
 
-<h3 id="Выполнение_с_массивом">Выполнение с массивом</h3>
+### Выполнение с массивом
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="Выполнение_с_другим_промисом_Promise">Выполнение с другим промисом ( <code>Promise</code>)</h3>
+### Выполнение с другим промисом ( `Promise`)
 
-<pre class="brush: js">var original = Promise.resolve(true);
+```js
+var original = Promise.resolve(true);
 var cast = Promise.resolve(original);
 cast.then(function(v) {
   console.log(v); // true
 });
-</pre>
+```
 
-<h3 id="Выполнение_с_thenable_объектом_и_выбрасывание_исключений">Выполнение с thenable объектом и выбрасывание исключений</h3>
+### Выполнение с thenable объектом и выбрасывание исключений
 
-<pre class="brush: js">// Выполнение с thenable объектом
+```js
+// Выполнение с thenable объектом
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill("fulfilled!"); }
 });
@@ -103,18 +106,16 @@ p3.then(function(v) {
 }, function(e) {
   // не вызывается
 });
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

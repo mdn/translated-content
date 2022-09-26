@@ -9,41 +9,42 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>valueOf()</code></strong> возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}}.</p>
+Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.valueOf()</code></pre>
+```
+str.valueOf()
+```
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>valueOf()</code> возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}} в виде строкового типа данных. Это значение эквивалентно значению вызова метода {{jsxref("String.prototype.toString()")}}.</p>
+Метод `valueOf()` возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}} в виде строкового типа данных. Это значение эквивалентно значению вызова метода {{jsxref("String.prototype.toString()")}}.
 
-<p>Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.</p>
+Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_valueOf">Пример: использование метода <code>valueOf()</code></h3>
+### Пример: использование метода `valueOf()`
 
-<pre class="brush: js">var x = new String('Привет, мир');
+```js
+var x = new String('Привет, мир');
 console.log(x.valueOf()); // Отобразит 'Привет, мир'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

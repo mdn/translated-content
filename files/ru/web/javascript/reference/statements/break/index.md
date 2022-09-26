@@ -9,44 +9,45 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/break
 browser-compat: javascript.statements.break
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>Оператор <code>break</code></strong> прерывает выполнение текущего цикла,
-  оператора множественного выбора {{jsxref("Statements/switch", "switch")}} или блочного {{jsxref("Statements/label", "выражения с меткой", "", 1)}}.
-  Выполнение кода продолжается с конструкции, следующей за прерванной.</p>
+**Оператор `break`** прерывает выполнение текущего цикла,
+оператора множественного выбора {{jsxref("Statements/switch", "switch")}} или блочного {{jsxref("Statements/label", "выражения с меткой", "", 1)}}.
+Выполнение кода продолжается с конструкции, следующей за прерванной.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-break.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-break.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">break [<var>label</var>];</pre>
+```js
+break [label];
+```
 
-<dl>
-  <dt><code><var>label</var></code> {{optional_inline}}</dt>
-  <dd>Идентификатор связанной метки. Если прерываемое выражение не цикл или {{jsxref("Statements/switch", "switch")}}, указание метки обязательно.</dd>
-</dl>
+- `label` {{optional_inline}}
+  - : Идентификатор связанной метки. Если прерываемое выражение не цикл или {{jsxref("Statements/switch", "switch")}}, указание метки обязательно.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>С помощью оператора <code>break</code> можно прервать выполнение {{jsxref("Statements/block", "блочного выражения", "", 1)}} с меткой.
-  В таком случае <code>break</code> должен находиться внутри блока кода с указанной меткой. Само блочное выражение может быть любым, а не только циклом.</p>
+С помощью оператора `break` можно прервать выполнение {{jsxref("Statements/block", "блочного выражения", "", 1)}} с меткой.
+В таком случае `break` должен находиться внутри блока кода с указанной меткой. Само блочное выражение может быть любым, а не только циклом.
 
-<p>Использование <code>break</code>, с меткой или без, невозможно внутри функции,
-  которая вложена в прерываемые цикл, конструкцию {{jsxref("Statements/switch", "switch")}}
-  или {{jsxref("Statements/block", "блочное выражение", "", 1)}} с меткой.</p>
+Использование `break`, с меткой или без, невозможно внутри функции,
+которая вложена в прерываемые цикл, конструкцию {{jsxref("Statements/switch", "switch")}}
+или {{jsxref("Statements/block", "блочное выражение", "", 1)}} с меткой.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="break_in_while_loop">break в цикле while</h3>
+### break в цикле while
 
-<p>Следующая функция использует оператор <code>break</code> для выхода из цикла
-  {{jsxref("Statements/while", "while")}}, когда <code>i</code> станет равно 3, и возвращает
-  значение 3 * <code>x</code>.</p>
+Следующая функция использует оператор `break` для выхода из цикла
+{{jsxref("Statements/while", "while")}}, когда `i` станет равно 3, и возвращает
+значение 3 \* `x`.
 
-<pre class="brush: js">function testBreak(x) {
+```js
+function testBreak(x) {
   var i = 0;
 
-  while (i &lt; 6) {
+  while (i < 6) {
     if (i == 3) {
       break;
     }
@@ -54,14 +55,16 @@ browser-compat: javascript.statements.break
   }
 
   return i * x;
-}</pre>
+}
+```
 
-<h3 id="break_in_switch_statements">break в конструкции switch</h3>
+### break в конструкции switch
 
-<p>В примере оператор <code>break</code> прервёт выполнение {{jsxref("Statements/switch", "switch")}}
-  сразу после выполнения кода в совпавшем <code>case</code>.</p>
+В примере оператор `break` прервёт выполнение {{jsxref("Statements/switch", "switch")}}
+сразу после выполнения кода в совпавшем `case`.
 
-<pre class="brush: js">const food = "sushi";
+```js
+const food = "sushi";
 
 switch (food) {
   case "sushi":
@@ -74,15 +77,16 @@ switch (food) {
     console.log("I have never heard of that dish.");
     break;
 }
-</pre>
+```
 
-<h3 id="break_in_labeled_blocks">break в блочном выражении с указанной меткой</h3>
+### break в блочном выражении с указанной меткой
 
-<p>В примере используется оператор <code>break</code> с меткой. В таком случае <code>break</code>
-  обязательно должен быть вложен в блок кода с той же меткой. Обратите внимание,
-  что <code>inner_block</code> вложен в <code>outer_block</code>.</p>
+В примере используется оператор `break` с меткой. В таком случае `break`
+обязательно должен быть вложен в блок кода с той же меткой. Обратите внимание,
+что `inner_block` вложен в `outer_block`.
 
-<pre class="brush: js">outer_block: {
+```js
+outer_block: {
   inner_block: {
     console.log('1');
     break outer_block; // break прервёт выполнение кода как в inner_block, так и в outer_block
@@ -90,18 +94,19 @@ switch (food) {
   }
   console.log('2'); // не будет выполнено
 }
-</pre>
+```
 
-<h3 id="break_in_labeled_blocks_that_throw">break вне блочного выражения с указанной меткой</h3>
+### break вне блочного выражения с указанной меткой
 
-<p>В примере также используется <code>break</code> с меткой,
-  но код будет выполнен с ошибкой <code>SyntaxError</code>,
-  потому что <code>break</code> находится в блоке с меткой <code>block_1</code>,
-  а прерывается выполнение блока кода с меткой <code>block_2</code>.
-  Ещё раз, в таком случае <code>break</code> обязательно должен быть вложен в блок кода с меткой,
-  выполнение которого требуется прервать.</p>
+В примере также используется `break` с меткой,
+но код будет выполнен с ошибкой `SyntaxError`,
+потому что `break` находится в блоке с меткой `block_1`,
+а прерывается выполнение блока кода с меткой `block_2`.
+Ещё раз, в таком случае `break` обязательно должен быть вложен в блок кода с меткой,
+выполнение которого требуется прервать.
 
-<pre class="brush: js">block_1: {
+```js
+block_1: {
   console.log('1');
   break block_2; // SyntaxError: label not found
 }
@@ -109,18 +114,19 @@ switch (food) {
 block_2: {
   console.log('2');
 }
-</pre>
+```
 
-<h3 id="break_within_functions">break внутри функций</h3>
+### break внутри функций
 
-<p>Код в примерах также будет выполнен с ошибкой <code>SyntaxError</code>,
-  потому что в обоих случаях <code>break</code> находится в теле функции, вложенной в прерываемый цикл
-  или прерываемое блочное выражение с меткой.</p>
+Код в примерах также будет выполнен с ошибкой `SyntaxError`,
+потому что в обоих случаях `break` находится в теле функции, вложенной в прерываемый цикл
+или прерываемое блочное выражение с меткой.
 
-<pre class="brush: js">function testBreak(x) {
+```js
+function testBreak(x) {
   var i = 0;
 
-  while (i &lt; 6) {
+  while (i < 6) {
     if (i == 3) {
       (function() {
         break;
@@ -133,28 +139,27 @@ return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
-</pre>
+```
 
-<pre class="brush: js">block_1: {
+```js
+block_1: {
   console.log('1');
   ( function() {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-  <li>{{jsxref("Statements/continue", "continue")}}</li>
-  <li>{{jsxref("Statements/label", "label", "", 1)}}</li>
-  <li>{{jsxref("Statements/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label", "", 1)}}
+- {{jsxref("Statements/switch", "switch")}}

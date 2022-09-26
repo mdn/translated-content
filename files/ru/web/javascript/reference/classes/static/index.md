@@ -3,25 +3,28 @@ title: static
 slug: Web/JavaScript/Reference/Classes/static
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>Для того, чтобы объявить статический метод класса, необходимо использовать ключевое слово <strong>static</strong>.</p>
+Для того, чтобы объявить статический метод класса, необходимо использовать ключевое слово **static**.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">static <em>methodName</em>() { ... }</pre>
+```
+static methodName() { ... }
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Статические методы вызываются через имя класса. Вызывать статические методы через имя объекта запрещено. Статические методы часто используются для создания вспомогательных функций приложения.</p>
+Статические методы вызываются через имя класса. Вызывать статические методы через имя объекта запрещено. Статические методы часто используются для создания вспомогательных функций приложения.
 
-<h2 id="Вызов_статических_методов">Вызов статических методов</h2>
+## Вызов статических методов
 
-<h3 id="Вызов_из_другого_статического_метода">Вызов из другого статического метода</h3>
+### Вызов из другого статического метода
 
-<p>Чтобы вызвать статический метод в другом статическом методе того же класса, вы можете использовать ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>.</p>
+Чтобы вызвать статический метод в другом статическом методе того же класса, вы можете использовать ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this).
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   static staticMethod() {
     return 'Вызван статический метод';
   }
@@ -34,13 +37,14 @@ StaticMethodCall.staticMethod();
 
 StaticMethodCall.anotherStaticMethod();
 // 'Вызван статический метод из другого статического метода'
-</pre>
+```
 
-<h3 id="Вызов_из_конструктора_класса_и_других_методов">Вызов из конструктора класса и других методов</h3>
+### Вызов из конструктора класса и других методов
 
-<p>Статические методы недоступны напрямую, используя ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> из нестатических методов. Вам нужно вызвать их с помощью имени класса: <code>CLASSNAME.STATIC_METHOD_NAME()</code> или вызовом метода как свойства конструктора: <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
+Статические методы недоступны напрямую, используя ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) из нестатических методов. Вам нужно вызвать их с помощью имени класса: `CLASSNAME.STATIC_METHOD_NAME()` или вызовом метода как свойства конструктора: `this.constructor.STATIC_METHOD_NAME()`.
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticMethod());
     // 'вызван статический метод.'
@@ -52,19 +56,19 @@ StaticMethodCall.anotherStaticMethod();
   static staticMethod() {
     return 'вызван статический метод.';
   }
-}</pre>
+}
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий пример демонстрирует:</p>
+Следующий пример демонстрирует:
 
-<ol>
- <li>Как статический метод реализуется в классе.</li>
- <li>Как переопределить статический метод при наследовании.</li>
- <li>Как можно и как нельзя вызывать статические методы.</li>
-</ol>
+1.  Как статический метод реализуется в классе.
+2.  Как переопределить статический метод при наследовании.
+3.  Как можно и как нельзя вызывать статические методы.
 
-<pre class="brush: js">class Triple {
+```js
+class Triple {
   static triple(n) {
     if (n === undefined) {
       n = 1;
@@ -90,19 +94,18 @@ console.log(BiggerTriple.triple(3));
 console.log(tp.triple());
 // Выведет сообщение, что "tripple" не является
 // функцией ('tp.tripple is not a function').
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
-<p>{{Compat}}</p>
+## Поддержка в браузерах
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+## Смотрите также
+
+- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/ru/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)

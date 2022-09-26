@@ -7,29 +7,31 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+```
+ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
 ReferenceError: 'x' is not defined (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("ReferenceError")}}</p>
+{{jsxref("ReferenceError")}}
 
-<h2 id="Что_случилось">Что случилось?</h2>
+## Что случилось?
 
-<p>Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> или <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> до того, как им было присвоено значение.</p>
+Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неправильно">Неправильно</h3>
+### Неправильно
 
-<p>Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова <code>let</code>.</p>
+Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова `let`.
 
-<pre class="brush: js example-bad">function test() {
+```js example-bad
+function test() {
   let foo = 33;
   if (true) {
     let foo = (foo + 55);
@@ -38,23 +40,22 @@ ReferenceError: 'x' is not defined (Chrome)
   }
 }
 test();
-</pre>
+```
 
-<h3 id="Правильно">Правильно</h3>
+### Правильно
 
-<p>Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово <code>let</code> и таким образом избавиться от повторного объявления.</p>
+Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово `let` и таким образом избавиться от повторного объявления.
 
-<pre class="brush: js example-good">function test(){
+```js example-good
+function test(){
    let foo = 33;
    if (true) {
       foo = (foo + 55);
    }
 }
 test();
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">Temporal Dead Zone and errors with let</a></li>
-</ul>
+- [Temporal Dead Zone and errors with let](/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)

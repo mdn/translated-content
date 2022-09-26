@@ -9,76 +9,76 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>endsWith()</code></strong> позволяет определить, заканчивается ли строка символами указанными в скобках, возвращая, соответственно, <code>true</code> или <code>false</code>.</p>
+Метод **`endsWith()`** позволяет определить, заканчивается ли строка символами указанными в скобках, возвращая, соответственно, `true` или `false`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</code></pre>
+```
+str.endsWith(searchString[, length])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>searchString</code></dt>
- <dd>Символы, искомые в конце строки.</dd>
- <dt><code><var>length</var></code></dt>
- <dd>Необязательный параметр. Позволяет искать внутри строки, обрезая её по диапазону; по умолчанию равен длине строки.</dd>
-</dl>
+- `searchString`
+  - : Символы, искомые в конце строки.
+- `length`
+  - : Необязательный параметр. Позволяет искать внутри строки, обрезая её по диапазону; по умолчанию равен длине строки.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><strong><code>true</code></strong> если данные символы находятся в конце строки; в противном случае, <strong><code>false</code></strong>.</p>
+**`true`** если данные символы находятся в конце строки; в противном случае, **`false`**.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Этот метод позволяет определять, заканчивается ли строка искомыми символами. Метод чувствителен к регистру.</p>
+Этот метод позволяет определять, заканчивается ли строка искомыми символами. Метод чувствителен к регистру.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_endsWith">Пример: использование метода <code>endsWith()</code></h3>
+### Пример: использование метода `endsWith()`
 
-<pre class="brush: js">var str = 'Быть или не быть, вот в чём вопрос.';
+```js
+var str = 'Быть или не быть, вот в чём вопрос.';
 
 console.log(str.endsWith('вопрос.'));   // true
 console.log(str.endsWith('быть'));      // false
 console.log(str.endsWith('быть', 16));  // true
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:</p>
+Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:
 
-<pre class="brush: js">if (!String.prototype.endsWith) {
+```js
+if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
     value: function(searchString, position) {
       var subjectString = this.toString();
-      if (position === undefined || position &gt; subjectString.length) {
+      if (position === undefined || position > subjectString.length) {
         position = subjectString.length;
       }
       position -= searchString.length;
       var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 &amp;&amp; lastIndex === position;
+      return lastIndex !== -1 && lastIndex === position;
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}</li>
- <li>{{jsxref("String.prototype.contains()")}} {{experimental_inline}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.contains()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

@@ -7,55 +7,58 @@ tags:
   - Функция
 translation_of: Web/JavaScript/Reference/Operators/function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Ключевое слово <strong><code>function</code></strong> может использоваться для определения функции внутри выражения.</p>
+Ключевое слово **`function`** может использоваться для определения функции внутри выражения.
 
-<p>Вы можете также определять функции используя конструктор {{jsxref("Function")}} и {{jsxref("Statements/function", "объявление функции")}}.</p>
+Вы можете также определять функции используя конструктор {{jsxref("Function")}} и {{jsxref("Statements/function", "объявление функции")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var myFunction = function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>statements</em>
-};</pre>
+```
+var myFunction = function [name]([param1[, param2[, ..., paramN]]]) {
+   statements
+};
+```
 
-<p>С версии ES2015 можно также использовать <a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочные функции</a>.</p>
+С версии ES2015 можно также использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-<h3 id="Parameters" name="Parameters"><a id="Параметры">Параметры</a></h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя функции. Может быть опущено, в таком случае функция является <em>анонимной</em>. Имя функции является локальным для её тела.</dd>
- <dt><code>paramN</code></dt>
- <dd>Имя аргумента, передаваемого в функцию.</dd>
- <dt><code>statements</code></dt>
- <dd>Инструкции, составляющие тело функции.</dd>
-</dl>
+- `name`
+  - : Имя функции. Может быть опущено, в таком случае функция является _анонимной_. Имя функции является локальным для её тела.
+- `paramN`
+  - : Имя аргумента, передаваемого в функцию.
+- `statements`
+  - : Инструкции, составляющие тело функции.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Функциональное выражение и <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">объявление функции</a> очень похожи и имеют почти одинаковый синтаксис. Главным отличием между ними является <em>имя функции,</em> которое в случае функциональных выражений может быть опущено для создания <em>анонимных</em> функций. Функциональное выражение может быть использовано для создания самовызывающейся функции {{Glossary("IIFE")}} (Immediately Invoked Function Expression), которая исполняется сразу же после того, как она была определена. Более подробная информация изложена в разделе о <a href="/ru/docs/Web/JavaScript/Reference/Functions">функциях</a>.</p>
+Функциональное выражение и [объявление функции](/ru/docs/Web/JavaScript/Reference/Statements/function) очень похожи и имеют почти одинаковый синтаксис. Главным отличием между ними является _имя функции,_ которое в случае функциональных выражений может быть опущено для создания _анонимных_ функций. Функциональное выражение может быть использовано для создания самовызывающейся функции {{Glossary("IIFE")}} (Immediately Invoked Function Expression), которая исполняется сразу же после того, как она была определена. Более подробная информация изложена в разделе о [функциях](/ru/docs/Web/JavaScript/Reference/Functions).
 
-<h3 id="Поднятие_функциональных_выражений_2"><a id="Поднятие_функциональных_выражений">Поднятие функциональных выражений</a></h3>
+### Поднятие функциональных выражений
 
-<p>Функциональные выражения в JavaScript не {{Glossary("поднятие", "поднимаются (hoisting)")}}, в отличие от {{jsxref("Statements/function", "объявленных функций", "#Поднимание_объявленной_функции")}}. Вы не можете использовать функциональные выражения прежде, чем вы их определили.</p>
+Функциональные выражения в JavaScript не {{Glossary("поднятие", "поднимаются (hoisting)")}}, в отличие от {{jsxref("Statements/function", "объявленных функций", "#Поднимание_объявленной_функции")}}. Вы не можете использовать функциональные выражения прежде, чем вы их определили.
 
-<pre class="brush: js">console.log(notHoisted) // undefined
+```js
+console.log(notHoisted) // undefined
 //Хотя объявленная переменная и поднимается, определение переменной происходит позже
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');
-};</pre>
+};
+```
 
-<h3 id="Именованное_функциональное_выражение"><a id="№Именованное функциональное выражение">Именованное функциональное выражение</a></h3>
+### Именованное функциональное выражение
 
-<p>Если вы хотите сослаться на текущую функцию внутри тела этой функции, вам необходимо создать именованное функциональное выражение. Данное имя будет локальным только для тела функции (её области видимости). Кроме того, это позволяет избежать использования нестандартного свойства {{jsxref("arguments.callee")}}.</p>
+Если вы хотите сослаться на текущую функцию внутри тела этой функции, вам необходимо создать именованное функциональное выражение. Данное имя будет локальным только для тела функции (её области видимости). Кроме того, это позволяет избежать использования нестандартного свойства {{jsxref("arguments.callee")}}.
 
-<pre class="brush: js">var math = {
+```js
+var math = {
   'factit': function factorial(n) {
     console.log(n);
-    if (n &lt;= 1) {
+    if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
@@ -63,11 +66,12 @@ var notHoisted = function() {
 };
 
 math.factit(3) //3;2;1;
-</pre>
+```
 
-<p>Переменная, которой присвоено функциональное выражение, будет иметь свойство <code>name</code>, содержащее имя функции. Оно не изменится при переприсваивании другой переменной. Для анонимной функции, значением свойства <code>name</code> будет имя переменной (неявное имя). Если же имя задано, то будет использовано имя функции (явное имя). Это же касается стрелочных функций (в их случае там будет записано имя переменной, т.к. они всегда анонимные).</p>
+Переменная, которой присвоено функциональное выражение, будет иметь свойство `name`, содержащее имя функции. Оно не изменится при переприсваивании другой переменной. Для анонимной функции, значением свойства `name` будет имя переменной (неявное имя). Если же имя задано, то будет использовано имя функции (явное имя). Это же касается стрелочных функций (в их случае там будет записано имя переменной, т.к. они всегда анонимные).
 
-<pre class="brush: js">var foo = function() {}
+```js
+var foo = function() {}
 foo.name // "foo"
 
 var foo2 = foo
@@ -78,38 +82,40 @@ bar.name // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
-console.log(bar === baz); // false (errors because baz == undefined)</pre>
+console.log(bar === baz); // false (errors because baz == undefined)
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Следующий пример демонстрирует создание безымянной (анонимной) функции и присвоение её переменной <code>x</code>. Функция возвращает квадрат переданного значения:</p>
+Следующий пример демонстрирует создание безымянной (анонимной) функции и присвоение её переменной `x`. Функция возвращает квадрат переданного значения:
 
-<pre class="brush: js">var x = function (y) {
+```js
+var x = function (y) {
    return y * y;
 };
-</pre>
+```
 
-<p>Преимущественно анонимные функции используются как {{Glossary("колбэк-функция", "колбэк-функции", 1)}}.</p>
+Преимущественно анонимные функции используются как {{Glossary("колбэк-функция", "колбэк-функции", 1)}}.
 
-<pre class="brush: js">button.addEventListener('click', function(event) {
+```js
+button.addEventListener('click', function(event) {
     console.log('button is clicked!')
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
-</ul>
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}}

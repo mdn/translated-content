@@ -3,53 +3,49 @@ title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/input
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>Нестандартное свойство <strong><code>input</code> </strong>является статическим свойством регулярных выражений. Оно содержит строку, для которой произошло совпадение по регулярному выражению. Значение свойства также можно получить как <code>RegExp.$_</code>.</p>
+Нестандартное свойство **`input` **является статическим свойством регулярных выражений. Оно содержит строку, для которой произошло совпадение по регулярному выражению. Значение свойства также можно получить как `RegExp.$_`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>RegExp</var>.input
+```
+RegExp.input
 RegExp.$_
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Поскольку свойство <code>input</code> статическое, к нему можно обратиться только как <code>RegExp.input</code> или <code>RegExp.$_</code>.</p>
+Поскольку свойство `input` статическое, к нему можно обратиться только как `RegExp.input` или `RegExp.$_`.
 
-<p>Значение данного свойства изменяется каждый раз при возникновении совпадений с регулярным выражением для новой строки.</p>
+Значение данного свойства изменяется каждый раз при возникновении совпадений с регулярным выражением для новой строки.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_input_и__">Использование <code>input</code> и <code>$_</code></h3>
+### Использование `input` и `$_`
 
-<pre class="brush: js">var re = /hi/g;
+```js
+var re = /hi/g;
 re.test('hi there!');
 RegExp.input;         // "hi there!"
 re.test('foo');       // новая проверка, совпадений нет
 RegExp.$_;            // "hi there!"
 re.test('hi world!'); // новая проверка, совпадение есть
 RegExp.$_;            // "hi world!"
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<p>Не стандартизированной. Не является частью какой-либо спецификации.</p>
+Не стандартизированной. Не является частью какой-либо спецификации.
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}

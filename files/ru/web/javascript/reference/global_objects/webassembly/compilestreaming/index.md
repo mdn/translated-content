@@ -3,75 +3,57 @@ title: WebAssembly.compileStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Функция <strong><code>WebAssembly.compileStreaming()</code></strong> компилирует {{jsxref("WebAssembly.Module")}} непосредственно из потокового исходника. Эта функция полезна, если необходимо скомпилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
+Функция **`WebAssembly.compileStreaming()`** компилирует {{jsxref("WebAssembly.Module")}} непосредственно из потокового исходника. Эта функция полезна, если необходимо скомпилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiateStreaming()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Promise&lt;WebAssembly.Module&gt; WebAssembly.compileStreaming(<em>source</em>);</pre>
+```
+Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>source</em></dt>
- <dd>Промис, или {{domxref("Response")}}, который будет выполнен с одним, представляющим основной источник модулем <code>.wasm</code>, который вы хотите передать и скомпилировать.</dd>
-</dl>
+- _source_
+  - : Промис, или {{domxref("Response")}}, который будет выполнен с одним, представляющим основной источник модулем `.wasm`, который вы хотите передать и скомпилировать.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Промис (<code>Promise</code>), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.</p>
+Промис (`Promise`), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<ul>
- <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
- <li>Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
-</ul>
+- Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Typed_arrays), генерируется {{jsxref("TypeError")}}.
+- Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий пример (см. Нашу демонстрацию <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> на GitHub и <a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">view it live</a>) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект {{jsxref("WebAssembly.Module")}}.<br>
- Поскольку функция <code>compileStreaming()</code> принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.</p>
+Следующий пример (см. Нашу демонстрацию [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) на GitHub и [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект {{jsxref("WebAssembly.Module")}}.
+Поскольку функция `compileStreaming()` принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.
 
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+```js
+var importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module =&gt; WebAssembly.instantiate(module, importObject))
-.then(instance =&gt; instance.exports.exported_func());</pre>
+.then(module => WebAssembly.instantiate(module, importObject))
+.then(instance => instance.exports.exported_func());
+```
 
-<p>Затем создаётся полученный экземпляр модуля с помощью {{jsxref("WebAssembly.instantiate()")}} и вызывается экспортированная функция.</p>
+Затем создаётся полученный экземпляр модуля с помощью {{jsxref("WebAssembly.instantiate()")}} и вызывается экспортированная функция.
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}}</td>
-   <td>{{Spec2('WebAssembly Embedding')}}</td>
-   <td>Первоначальное определение <br>
-    проекта.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                             | Статус                                       | Коммент                             |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------- |
+| {{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Первоначальное определение проекта. |
 
-<h2 id="Browser_compatibility">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> обзорная страница</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly концепции</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Использование WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ru/docs/WebAssembly) обзорная страница
+- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)

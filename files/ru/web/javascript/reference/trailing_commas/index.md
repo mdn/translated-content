@@ -9,63 +9,70 @@ tags:
   - Синтаксис
 translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
-<div>{{JsSidebar("More")}}</div>
+{{JsSidebar("More")}}
 
-<p><strong>Висящие запятые</strong> (или "последние запятые") могут быть полезны при добавлении новых элементов, параметров или свойств в код JavaScript. Если вы хотите добавить новое свойство, вы просто добавляете новую строчку без изменения предыдущей, если в ней уже использована висящая запятая. Это делает различия в контроле версий чище и изменение кода может быть менее хлопотным.</p>
+**Висящие запятые** (или "последние запятые") могут быть полезны при добавлении новых элементов, параметров или свойств в код JavaScript. Если вы хотите добавить новое свойство, вы просто добавляете новую строчку без изменения предыдущей, если в ней уже использована висящая запятая. Это делает различия в контроле версий чище и изменение кода может быть менее хлопотным.
 
-<p>JavaScript с самого начала допускает использовать висящих запятых в литералах массива, а затем добавлял их в литералы объекта (ECMAScript 5) и, совсем недавно (ECMAScript 2017), к параметрам функций.</p>
+JavaScript с самого начала допускает использовать висящих запятых в литералах массива, а затем добавлял их в литералы объекта (ECMAScript 5) и, совсем недавно (ECMAScript 2017), к параметрам функций.
 
-<p>{{Glossary("JSON")}}, однако, не допускает висящих запятых.</p>
+{{Glossary("JSON")}}, однако, не допускает висящих запятых.
 
-<h2 id="Висящие_запятые_в_литералах">Висящие запятые в литералах</h2>
+## Висящие запятые в литералах
 
-<h3 id="Массивы">Массивы</h3>
+### Массивы
 
-<p>JavaScript игнорирует висящие запятые в массивах:</p>
+JavaScript игнорирует висящие запятые в массивах:
 
-<pre class="brush: js">var arr = [
+```js
+var arr = [
   1,
   2,
   3,
 ];
 
 arr; // [1, 2, 3]
-arr.length; // 3</pre>
+arr.length; // 3
+```
 
-<p>Если использовано больше одной висящей запятой, будут созданы "дырки". Массив с "дырками" называется <em>разреженным </em>(<em>плотный </em>массив не имеет "дырок"). При итерации массива при помощи, например, {{jsxref("Array.prototype.forEach()")}} или {{jsxref("Array.prototype.map()")}}, "дырки" будут пропущены.</p>
+Если использовано больше одной висящей запятой, будут созданы "дырки". Массив с "дырками" называется _разреженным_ (_плотный_ массив не имеет "дырок"). При итерации массива при помощи, например, {{jsxref("Array.prototype.forEach()")}} или {{jsxref("Array.prototype.map()")}}, "дырки" будут пропущены.
 
-<pre class="brush: js">var arr = [1, 2, 3,,,];
+```js
+var arr = [1, 2, 3,,,];
 arr.length; // 5
-</pre>
+```
 
-<h3 id="Объекты">Объекты</h3>
+### Объекты
 
-<p>Начиная с ECMAScript 5, висящие запятые в объектах также допустимы:</p>
+Начиная с ECMAScript 5, висящие запятые в объектах также допустимы:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   foo: "bar",
   baz: "qwerty",
   age: 42,
-};</pre>
+};
+```
 
-<h2 id="Висящие_запятые_в_функциях">Висящие запятые в функциях</h2>
+## Висящие запятые в функциях
 
-<p>ECMAScript 2017 допускает висящие запятые в списке параметров функции.</p>
+ECMAScript 2017 допускает висящие запятые в списке параметров функции.
 
-<h3 id="Определение_параметров">Определение параметров</h3>
+### Определение параметров
 
-<p>Следующие определения параметров функций допустимы и равнозначны друг другу. Висящие запятые не влияют на свойство <code>length</code> функции или их объект <code>arguments</code>.</p>
+Следующие определения параметров функций допустимы и равнозначны друг другу. Висящие запятые не влияют на свойство `length` функции или их объект `arguments`.
 
-<pre class="brush: js">function f(p) {}
+```js
+function f(p) {}
 function f(p,) {}
 
-(p) =&gt; {};
-(p,) =&gt; {};
-</pre>
+(p) => {};
+(p,) => {};
+```
 
-<p>Висящая запятая также работает с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов">определением методов</a> для классов или объектов:</p>
+Висящая запятая также работает с [определением методов](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) для классов или объектов:
 
-<pre class="brush: js">class C {
+```js
+class C {
   one(a,) {},
   two(a, b,) {},
 }
@@ -74,36 +81,39 @@ var obj = {
   one(a,) {},
   two(a, b,) {},
 };
-</pre>
+```
 
-<h3 id="Вызов_функции">Вызов функции</h3>
+### Вызов функции
 
-<p>Следующие вызовов функций допустимы и равнозначны друг другу.</p>
+Следующие вызовов функций допустимы и равнозначны друг другу.
 
-<pre class="brush: js">f(p);
+```js
+f(p);
 f(p,);
 
 Math.max(10, 20);
 Math.max(10, 20,);
-</pre>
+```
 
-<h3 id="Недопустимые_висящие_запятые">Недопустимые висящие запятые</h3>
+### Недопустимые висящие запятые
 
-<p>Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a> не допускается использовать висящие запятые:</p>
+Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) не допускается использовать висящие запятые:
 
-<pre class="brush: js example-bad">function f(,) {} // SyntaxError: missing formal parameter
-(,) =&gt; {};       // SyntaxError: expected expression, got ','
+```js example-bad
+function f(,) {} // SyntaxError: missing formal parameter
+(,) => {};       // SyntaxError: expected expression, got ','
 f(,)             // SyntaxError: expected expression, got ','
 
 function f(...p,) {} // SyntaxError: parameter after rest parameter
-(...p,) =&gt; {}        // SyntaxError: expected closing parenthesis, got ','
-</pre>
+(...p,) => {}        // SyntaxError: expected closing parenthesis, got ','
+```
 
-<h2 id="Висящие_запятые_в_деструктурировании">Висящие запятые в деструктурировании</h2>
+## Висящие запятые в деструктурировании
 
-<p>Висящие запятые так же можно использовать слева при использовании <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурирующего присваивания</a>:</p>
+Висящие запятые так же можно использовать слева при использовании [деструктурирующего присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
-<pre class="brush: js">// массив деструктурируется с висящей запятой
+```js
+// массив деструктурируется с висящей запятой
 [a, b,] = [1, 2];
 
 // объект деструктурируется с висящей запятой
@@ -112,44 +122,43 @@ var o = {
   q: true,
 };
 var {p, q,} = o;
-</pre>
+```
 
-<p>Ещё раз, при использовании оставшихся параметров будет сгенерирована {{jsxref("SyntaxError")}}:</p>
+Ещё раз, при использовании оставшихся параметров будет сгенерирована {{jsxref("SyntaxError")}}:
 
-<pre class="brush: js example-bad">var [a, ...b,] = [1, 2, 3];
-// SyntaxError: rest element may not have a trailing comma</pre>
+```js example-bad
+var [a, ...b,] = [1, 2, 3];
+// SyntaxError: rest element may not have a trailing comma
+```
 
-<h2 id="Висящие_запятые_в_JSON">Висящие запятые в JSON</h2>
+## Висящие запятые в JSON
 
-<p>Висящие запятые в объекте допустимы только в ECMAScript 5. Так как JSON основан на синтаксисе JavaScript старше, чем ES5, <strong>висящие запятые не допускаются в JSON</strong>.</p>
+Висящие запятые в объекте допустимы только в ECMAScript 5. Так как JSON основан на синтаксисе JavaScript старше, чем ES5, **висящие запятые не допускаются в JSON**.
 
-<p>Обе строки генерируют <code>SyntaxError</code>:</p>
+Обе строки генерируют `SyntaxError`:
 
-<pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4, ]');
+```js example-bad
+JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
-</pre>
+```
 
-<p>Опустите висящие запятые, чтобы правильно проанализировать JSON:</p>
+Опустите висящие запятые, чтобы правильно проанализировать JSON:
 
-<pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4 ]');
-JSON.parse('{"foo" : 1 }');</pre>
+```js example-good
+JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse('{"foo" : 1 }');
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Initial ECMAScript proposal: <a href="https://github.com/tc39/proposal-trailing-function-commas">trailing function commas</a> by Jeff Morrison</li>
-</ul>
+- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison

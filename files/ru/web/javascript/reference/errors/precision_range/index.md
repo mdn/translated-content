@@ -7,64 +7,43 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Precision_range
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">RangeError: precision {0} out of range (Firefox)
+```
+RangeError: precision {0} out of range (Firefox)
 RangeError: toExponential() argument must be between 0 and 20 (Chrome)
 RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
 RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>В одном из следующих методов был использован аргумент, значение которого лежит вне допустимых интервалов:</p>
+В одном из следующих методов был использован аргумент, значение которого лежит вне допустимых интервалов:
 
-<ul>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 
-<p>Допустимые значения для аргументов данных методов обычно лежат в диапазоне от 0 до 20 (или 21), однако спецификация ECMAScript допускает его расширение.</p>
+Допустимые значения для аргументов данных методов обычно лежат в диапазоне от 0 до 20 (или 21), однако спецификация ECMAScript допускает его расширение.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Метод</th>
-   <th scope="col">Firefox (SpiderMonkey)</th>
-   <th scope="col">Chrome, Opera (V8)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("Number.prototype.toExponential()")}}</td>
-   <td>от 0 до 100</td>
-   <td>от 0 до 20</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Number.prototype.toFixed()")}}</td>
-   <td>от -20 до 100</td>
-   <td>от 0 до 20</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Number.prototype.toPrecision()")}}</td>
-   <td>от 1 до 100</td>
-   <td>от 1 до 21</td>
-  </tr>
- </tbody>
-</table>
+| Метод                                                        | Firefox (SpiderMonkey) | Chrome, Opera (V8) |
+| ------------------------------------------------------------ | ---------------------- | ------------------ |
+| {{jsxref("Number.prototype.toExponential()")}} | от 0 до 100            | от 0 до 20         |
+| {{jsxref("Number.prototype.toFixed()")}}         | от -20 до 100          | от 0 до 20         |
+| {{jsxref("Number.prototype.toPrecision()")}} | от 1 до 100            | от 1 до 21         |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Примеры_некорректного_кода">Примеры некорректного кода</h3>
+### Примеры некорректного кода
 
-<pre class="brush: js example-bad">77.1234.toExponential(-1);  // RangeError
+```js example-bad
+77.1234.toExponential(-1);  // RangeError
 77.1234.toExponential(101); // RangeError
 
 2.34.toFixed(-100);         // RangeError
@@ -72,11 +51,12 @@ RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 
 1234.5.toPrecision(-1);     // RangeError
 1234.5.toPrecision(101);    // RangeError
-</pre>
+```
 
-<h3 id="Примеры_правильного_кода">Примеры правильного кода</h3>
+### Примеры правильного кода
 
-<pre class="brush: js example-good">77.1234.toExponential(4); // 7.7123e+1
+```js example-good
+77.1234.toExponential(4); // 7.7123e+1
 77.1234.toExponential(2); // 7.71e+1
 
 2.34.toFixed(1); // 2.3
@@ -85,12 +65,10 @@ RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 5.123456.toPrecision(5); // 5.1235
 5.123456.toPrecision(2); // 5.1
 5.123456.toPrecision(1); // 5
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}

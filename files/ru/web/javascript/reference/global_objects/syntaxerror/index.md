@@ -9,57 +9,56 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Объект <code><strong>SyntaxError</strong></code> представляет ошибку, возникающую при попытке интерпретировать синтаксически неправильный код.</p>
+Объект **`SyntaxError`** представляет ошибку, возникающую при попытке интерпретировать синтаксически неправильный код.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```
+new SyntaxError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
-</dl>
+- `message`
+  - : Необязательный параметр. Человеко-читаемое описание ошибки.
+- `fileName` {{non-standard_inline}}
+  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
+- `lineNumber` {{non-standard_inline}}
+  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Исключение <code>SyntaxError</code> выбрасывается, когда движок JavaScript при разборе кода обнаруживает токены или токен, которые, согласно синтаксису, не должны здесь находиться.</p>
+Исключение `SyntaxError` выбрасывается, когда движок JavaScript при разборе кода обнаруживает токены или токен, которые, согласно синтаксису, не должны здесь находиться.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{jsxref("SyntaxError.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в объект <code>SyntaxError</code>.</dd>
-</dl>
+- {{jsxref("SyntaxError.prototype")}}
+  - : Позволяет добавлять свойства в объект `SyntaxError`.
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<p>Глобальный объект <code>SyntaxError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+Глобальный объект `SyntaxError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
 
-<h2 id="SyntaxError_instances">Экземпляры объекта <code>SyntaxError</code></h2>
+## Экземпляры объекта `SyntaxError`
 
-<h3 id="Properties_of_SyntaxError_instances">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Properties')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Properties')}}
 
-<h3 id="Methods_of_SyntaxError_instances">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Catch_an_SyntaxError">Пример: перехват исключения <code>SyntaxError</code></h3>
+### Пример: перехват исключения `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   eval('hoo bar');
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -70,11 +69,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
   console.log(e.columnNumber);           // 4
   console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_SyntaxError">Пример: возбуждение исключения <code>SyntaxError</code></h3>
+### Пример: возбуждение исключения `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new SyntaxError('Привет', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -85,19 +85,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
   console.log(e.columnNumber);           // 0
   console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("SyntaxError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("SyntaxError.prototype")}}

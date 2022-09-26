@@ -9,39 +9,39 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Statements/function*
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p><code><strong>function*</strong></code> (ключевое слово <code>function</code> со звёздочкой) определяет <em>функцию-генератор</em>.</p>
+**`function*`** (ключевое слово `function` со звёздочкой) определяет _функцию-генератор_.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre>function* <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) { <em>statements</em> }
-</pre>
+```
+function* name([param[, param[, ... param]]]) { statements }
+```
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя функции.</dd>
- <dt><code>param</code></dt>
- <dd>Именованные аргументы функции (параметры). Функция-генератор может иметь 255 аргументов.</dd>
- <dt><code>statements</code></dt>
- <dd>Инструкции составляющие тело функции.</dd>
-</dl>
+- `name`
+  - : Имя функции.
+- `param`
+  - : Именованные аргументы функции (параметры). Функция-генератор может иметь 255 аргументов.
+- `statements`
+  - : Инструкции составляющие тело функции.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Генераторы являются функциями с возможностью выхода и последующего входа. Их контекст исполнения (значения переменных) сохраняется при последующих входах.</p>
+Генераторы являются функциями с возможностью выхода и последующего входа. Их контекст исполнения (значения переменных) сохраняется при последующих входах.
 
-<p>Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-<a href="/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol">итератор</a>. При вызове метода <code>next() </code>итератора тело функции-генератора исполняется до первого встреченного оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/yield"><code><strong>yield</strong></code></a>, который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи <code><strong>yield*</strong> anotherGenerator()</code>. Метод <code>next()</code> возвращает объект со свойством <code>value</code>, содержащим отданное значение, и свойством <code>done</code>, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода <code>next()</code> с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение  на аргумент переданный в <code>next().</code></p>
+Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-[итератор](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol). При вызове метода `next() `итератора тело функции-генератора исполняется до первого встреченного оператора [**`yield`**](/ru/docs/Web/JavaScript/Reference/Operators/yield), который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи `yield* anotherGenerator()`. Метод `next()` возвращает объект со свойством `value`, содержащим отданное значение, и свойством `done`, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода `next()` с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение на аргумент переданный в `next().`
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_пример">Простой пример</h3>
+### Простой пример
 
-<pre class="brush: js">function* idMaker() {
+```js
+function* idMaker() {
   var index = 0;
-  while (index &lt; 3)
+  while (index < 3)
     yield index++;
 }
 
@@ -51,11 +51,13 @@ console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
-// ...</pre>
+// ...
+```
 
-<h3 id="Пример_с_yield*">Пример с yield*</h3>
+### Пример с yield\*
 
-<pre class="brush: js">function* anotherGenerator(i) {
+```js
+function* anotherGenerator(i) {
   yield i + 1;
   yield i + 2;
   yield i + 3;
@@ -73,11 +75,13 @@ console.log(gen.next().value); // 10
 console.log(gen.next().value); // 11
 console.log(gen.next().value); // 12
 console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20</pre>
+console.log(gen.next().value); // 20
+```
 
-<h3 id="Передача_аргументов_в_генератор">Передача аргументов в генератор</h3>
+### Передача аргументов в генератор
 
-<pre class="brush: js">function* logGenerator() {
+```js
+function* logGenerator() {
   console.log(yield);
   console.log(yield);
   console.log(yield);
@@ -90,11 +94,13 @@ var gen = logGenerator();
 gen.next();
 gen.next('pretzel'); // pretzel
 gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise</pre>
+gen.next('mayonnaise'); // mayonnaise
+```
 
-<h3 id="Инструкция_return_в_генераторе">Инструкция return в генераторе</h3>
+### Инструкция return в генераторе
 
-<pre class="brush: js">function* yieldAndReturn() {
+```js
+function* yieldAndReturn() {
   yield "Y";
   return "R";
   yield "unreachable";
@@ -103,32 +109,31 @@ gen.next('mayonnaise'); // mayonnaise</pre>
 var gen = yieldAndReturn()
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }</pre>
+console.log(gen.next()); // { value: undefined, done: true }
+```
 
-<h3 id="Генераторы_не_могут_быть_инстанцированы_(not_constructable)">Генераторы не могут быть инстанцированы (not constructable)</h3>
+### Генераторы не могут быть инстанцированы (not constructable)
 
-<pre class="brush: js example-bad">function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor"</pre>
+```js example-bad
+function* f() {}
+var obj = new f; // throws "TypeError: f is not a constructor"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol">Протокол итераторов</a></li>
- <li>Оператор <a href="/ru/docs/Web/JavaScript/Reference/Operators/yield">yield</a></li>
- <li>Оператор <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">function</a></li>
- <li>Другие ресурсы:
-  <ul>
-   <li>Компилятор <a href="http://facebook.github.io/regenerator/">Regenerator</a> из ES2015 в ES5</li>
-   <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
-   <li><a href="http://taskjs.org/">Task.js</a></li>
-  </ul>
- </li>
-</ul>
+- [Протокол итераторов](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- Оператор [yield](/ru/docs/Web/JavaScript/Reference/Operators/yield)
+- Оператор [function](/ru/docs/Web/JavaScript/Reference/Statements/function)
+- Другие ресурсы:
+
+  - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
+  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Task.js](http://taskjs.org/)

@@ -3,53 +3,50 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><font face="Open Sans, Arial, sans-serif">Метод </font><strong>delete()</strong></code> удаляет элемент из объекта WeakMap.</p>
+`Метод delete()` удаляет элемент из объекта WeakMap.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>wm</em>.delete(key);</code></pre>
+```
+wm.delete(key);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>key</dt>
- <dd>Обязателен. Ключ элемента, который будет уделён из объекта WeakMap.</dd>
-</dl>
+- key
+  - : Обязателен. Ключ элемента, который будет уделён из объекта WeakMap.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Возвращает true если элемент из объекта WeakMap удалён успешно.</p>
+Возвращает true если элемент из объекта WeakMap удалён успешно.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_delete">Использование метода delete</h3>
+### Использование метода delete
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.delete(window); // Возвращает true. Успешно удалён.
 
 wm.has(window);    // Возвращает false. Объекта window больше нет в WeakMap.
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li>Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the <code>key</code> parameter was not an object. This has been fixed in version 38 and later to return <code>false</code> as per latest ES6 standard ({{bug(1127827)}}).</li>
-</ul>
+- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ({{bug(1127827)}}).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

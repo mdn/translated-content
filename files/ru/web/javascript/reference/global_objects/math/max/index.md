@@ -8,59 +8,59 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.max()</code></strong> возвращает наибольшее из нуля или более чисел.</p>
+Метод **`Math.max()`** возвращает наибольшее из нуля или более чисел.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+```
+Math.max([value1[, value2[, ...]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value1, value2, ...</code></dt>
- <dd>Числа.</dd>
-</dl>
+- `value1, value2, ...`
+  - : Числа.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>max()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.max()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `max()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.max()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<p>При вызове без аргументов результатом вызова будет значение -{{jsxref("Global_Objects/Infinity", "Infinity")}}.</p>
+При вызове без аргументов результатом вызова будет значение -{{jsxref("Global_Objects/Infinity", "Infinity")}}.
 
-<p>Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
+Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_Math.max">Пример: использование метода <code>Math.max()</code></h3>
+### Пример: использование метода `Math.max()`
 
-<pre class="brush: js">Math.max(10, 20);   //  20
+```js
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
-</pre>
+```
 
-<h4 id="Нахождение_максимального_элемента_в_массиве"><strong>Нахождение максимального элемента в массиве</strong></h4>
+#### Нахождение максимального элемента в массиве
 
-<p>Следующая функция использует метод {{jsxref("Function.prototype.apply()")}} для нахождения максимального элемента в числовом массиве. Вызов <code>getMaxOfArray([1, 2, 3])</code> эквивалентен вызову <code>Math.max(1, 2, 3)</code>, однако вы можете использовать функцию <code>getMaxOfArray()</code> вместе с программно сконструированными массивами любого размера. Рекомендуется использовать только в случае обработки массивов с небольшим количеством элементов.</p>
+Следующая функция использует метод {{jsxref("Function.prototype.apply()")}} для нахождения максимального элемента в числовом массиве. Вызов `getMaxOfArray([1, 2, 3])` эквивалентен вызову `Math.max(1, 2, 3)`, однако вы можете использовать функцию `getMaxOfArray()` вместе с программно сконструированными массивами любого размера. Рекомендуется использовать только в случае обработки массивов с небольшим количеством элементов.
 
-<pre class="brush: js">function getMaxOfArray(numArray) {
+```js
+function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- {{jsxref("Math.min()")}}

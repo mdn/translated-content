@@ -7,25 +7,28 @@ tags:
   - Унарные
 translation_of: Web/JavaScript/Reference/Operators/void
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>Оператор <code>void</code></strong> вычисляет переданное <em>выражение</em> и возвращает {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+**Оператор `void`** вычисляет переданное _выражение_ и возвращает {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <em>expression</em></pre>
+```
+void expression
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Этот оператор позволяет вставлять выражения, которые производят дополнительные действия, в места, где ожидается {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+Этот оператор позволяет вставлять выражения, которые производят дополнительные действия, в места, где ожидается {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<p>Оператор <code>void</code> часто используется для получения примитивного значения <code>undefined</code>, используя <code>"void(0)"</code> (что эквивалентно <code>"void 0"</code>). В подобных случаях можно просто использовать глобальную переменную {{jsxref("Global_Objects/undefined", "undefined")}} (предполагая, что её значение по умолчанию не было изменено).</p>
+Оператор `void` часто используется для получения примитивного значения `undefined`, используя `"void(0)"` (что эквивалентно `"void 0"`). В подобных случаях можно просто использовать глобальную переменную {{jsxref("Global_Objects/undefined", "undefined")}} (предполагая, что её значение по умолчанию не было изменено).
 
-<h2 id="Самовызывающаяся_функция_(IIFE)">Самовызывающаяся функция (IIFE)</h2>
+## Самовызывающаяся функция (IIFE)
 
-<p>С оператором void можно использовать самовызывающиеся функции.</p>
+С оператором void можно использовать самовызывающиеся функции.
 
-<pre class="brush: js">void function iife() {
+```js
+void function iife() {
     var bar = function () {};
     var baz = function () {};
     var foo = function () {
@@ -37,33 +40,32 @@ translation_of: Web/JavaScript/Reference/Operators/void
     foo();
     biz();
 }();
-</pre>
+```
 
-<h2 id="JavaScript_URIs">JavaScript URIs</h2>
+## JavaScript URIs
 
-<p>Когда браузер переходит по <code>javascript: URI</code>, он вычисляет код в <code>URI</code> и заменяет содержание страницы возвращённым значением, если оно не равно {{jsxref("Global_Objects/undefined", "undefined")}}. Можно воспользоваться оператором <code>void</code> для возврата {{jsxref("Global_Objects/undefined", "undefined")}}. Например:</p>
+Когда браузер переходит по `javascript: URI`, он вычисляет код в `URI` и заменяет содержание страницы возвращённым значением, если оно не равно {{jsxref("Global_Objects/undefined", "undefined")}}. Можно воспользоваться оператором `void` для возврата {{jsxref("Global_Objects/undefined", "undefined")}}. Например:
 
-<pre class="brush: html">&lt;a href="javascript:void(0);"&gt;
+```html
+<a href="javascript:void(0);">
   Click here to do nothing
-&lt;/a&gt;
+</a>
 
-&lt;a href="javascript:void(document.body.style.backgroundColor='green');"&gt;
+<a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<p>Однако заметим, что не рекомендуется использовать псевдо-протокол <code>javascript:</code>.  Лучше прибегнуть к другим альтернативам, таким, как обработчики событий.</p>
+Однако заметим, что не рекомендуется использовать псевдо-протокол `javascript:`. Лучше прибегнуть к другим альтернативам, таким, как обработчики событий.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code></li>
-</ul>
+- [`undefined`](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined)

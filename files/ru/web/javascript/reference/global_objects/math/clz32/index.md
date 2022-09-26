@@ -12,38 +12,39 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.clz32()</code></strong> возвращает количество ведущих нулевых битов в 32-битном двоичном представлении числа.</p>
+Метод **`Math.clz32()`** возвращает количество ведущих нулевых битов в 32-битном двоичном представлении числа.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.clz32(<var>x</var>)</code></pre>
+```
+Math.clz32(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Название <code>clz32</code> является сокращением для более длинного <code>CountLeadingZeroes32</code> (<code>ПосчтитатьВедущиеНули32</code>).</p>
+Название `clz32` является сокращением для более длинного `CountLeadingZeroes32` (`ПосчтитатьВедущиеНули32`).
 
-<p>Если значение <code>x</code> не является числом, оно будет сначала преобразовано в число, а потом в 32-битное беззнаковое целое число.</p>
+Если значение `x` не является числом, оно будет сначала преобразовано в число, а потом в 32-битное беззнаковое целое число.
 
-<p>Если преобразованное 32-битное беззнаковое целое число равно <code>0</code>, метод вернёт <code>32</code>, поскольку все биты в числе равны <code>0</code>.</p>
+Если преобразованное 32-битное беззнаковое целое число равно `0`, метод вернёт `32`, поскольку все биты в числе равны `0`.
 
-<p>Этот метод особенно полезен для систем, которые компилируются в JS, например, для <a href="/ru/docs/Emscripten">Emscripten</a>.</p>
+Этот метод особенно полезен для систем, которые компилируются в JS, например, для [Emscripten](/ru/docs/Emscripten).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.clz32">Пример: использование метода <code>Math.clz32()</code></h3>
+### Пример: использование метода `Math.clz32()`
 
-<pre class="brush: js">Math.clz32(1);                // 31
+```js
+Math.clz32(1);                // 31
 Math.clz32(1000);             // 22
 Math.clz32();                 // 32
 
@@ -54,26 +55,25 @@ function(n) {
 
 Math.clz32(true);             // 31
 Math.clz32(3.5);              // 30
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">Math.clz32 = Math.clz32 || function(value) {
-  value = Number(value) &gt;&gt;&gt; 0;
+```js
+Math.clz32 = Math.clz32 || function(value) {
+  value = Number(value) >>> 0;
   return value !== 0 ? 31 - Math.floor(Math.log(value + 0.5) / Math.log(2)) : 32;
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}}

@@ -8,34 +8,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод  <code><strong>Object.values()</strong></code><strong> </strong>возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxref("Statements/for...in", "for...in")}}. Разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов.</p>
+Метод **`Object.values()`\*\*** \*\*возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxref("Statements/for...in", "for...in")}}. Разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов.
 
-<p>{{EmbedInteractiveExample("pages/js/object-values.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+```
+Object.values(obj)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чьи значения перечисляемых свойств будут возвращены.</dd>
-</dl>
+- `obj`
+  - : Объект, чьи значения перечисляемых свойств будут возвращены.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Массив содержащий значения перечисляемых свойств объекта.</p>
+Массив содержащий значения перечисляемых свойств объекта.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>Object.values()</code> возвращает массив, чьи элементы это значения перечисляемых свойств найденных в объекте. Порядок такой же как если пройтись по объекту циклом вручную.</p>
+`Object.values()` возвращает массив, чьи элементы это значения перечисляемых свойств найденных в объекте. Порядок такой же как если пройтись по объекту циклом вручную.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
+```js
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // Массив как объект
@@ -54,27 +55,25 @@ console.log(Object.values(my_obj)); // ['bar']
 
 // Аргумент, не являющийся объектом, будет приведён к объекту
 console.log(Object.values("foo")); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Для добавления совместимости <code>Object.values</code> со старым окружением, которое не поддерживает нативно его, вы можете найти полифил здесь <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> или в <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> репозитории.</p>
+Для добавления совместимости `Object.values` со старым окружением, которое не поддерживает нативно его, вы можете найти полифил здесь [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) или в [es-shims/Object.values](https://github.com/es-shims/Object.values) репозитории.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Перечисляемость и принадлежность свойств</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Перечисляемость и принадлежность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

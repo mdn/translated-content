@@ -8,69 +8,58 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>Math.cos()</code></strong> возвращает косинус числа.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>Math.cos(<var>x</var>)</code></pre>
+Метод **`Math.cos()`** возвращает косинус числа.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>x</code></dt>
- <dd>Число радиан.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>Math.cos()</code> возвращает числовое значение от -1 до 1, которое представляет косинус угла.</p>
-<p>Поскольку метод <code>cos()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.cos()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+```
+Math.cos(x)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_Math.cos">Пример: использование метода <code>Math.cos()</code></h3>
-<pre class="brush: js">Math.cos(0);           // 1
+- `x`
+  - : Число радиан.
+
+## Описание
+
+Метод `Math.cos()` возвращает числовое значение от -1 до 1, которое представляет косинус угла.
+
+Поскольку метод `cos()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.cos()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование метода `Math.cos()`
+
+```js
+Math.cos(0);           // 1
 Math.cos(1);           // 0.5403023058681398
 
 Math.cos(Math.PI);     // -1
 Math.cos(2 * Math.PI); // 1
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.7', 'Math.cos')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.cos', 'Math.cos')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.7', 'Math.cos')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.cos', 'Math.cos')}}     | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

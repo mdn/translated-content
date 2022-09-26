@@ -10,40 +10,44 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>trim()</code></strong> удаляет пробельные символы с начала и конца строки. Пробельными символами в этом контексте считаются все собственно пробельные символы (пробел, табуляция, неразрывный пробел и прочие) и все символы конца строки (LF, CR и прочие).</p>
+Метод **`trim()`** удаляет пробельные символы с начала и конца строки. Пробельными символами в этом контексте считаются все собственно пробельные символы (пробел, табуляция, неразрывный пробел и прочие) и все символы конца строки (LF, CR и прочие).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.trim()</code></pre>
+```
+str.trim()
+```
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>trim()</code> возвращает строку с вырезанными пробельными символами с её концов. Метод <code>trim()</code> не изменяет значение самой строки.</p>
+Метод `trim()` возвращает строку с вырезанными пробельными символами с её концов. Метод `trim()` не изменяет значение самой строки.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_trim">Пример: использование метода <code>trim()</code></h3>
+### Пример: использование метода `trim()`
 
-<p>Следующий пример покажет строку <code>'foo'</code>:</p>
+Следующий пример покажет строку `'foo'`:
 
-<pre class="brush: js">var orig = '   foo  ';
+```js
+var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 
 // Другой пример, в котором .trim() убирает пробельные символы только с одной стороны.
 
 var orig = 'foo    ';
 console.log(orig.trim()); // 'foo'
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Запуск следующего кода до любого другого создаст метод <code>trim()</code>, если он ещё не реализуется браузером.</p>
+Запуск следующего кода до любого другого создаст метод `trim()`, если он ещё не реализуется браузером.
 
-<pre class="brush: js">if (!String.prototype.trim) {
+```js
+if (!String.prototype.trim) {
   (function() {
     // Вырезаем BOM и неразрывный пробел
     String.prototype.trim = function() {
@@ -51,19 +55,17 @@ console.log(orig.trim()); // 'foo'
     };
   })();
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</li>
- <li>{{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}</li>
-</ul>
+- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
+- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}

@@ -3,36 +3,38 @@ title: 'Синтаксическая ошибка: пропущенный сим
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">Синтаксическая ошибка: пропущенный символ ")" после списка аргументов
-</pre>
+```
+Синтаксическая ошибка: пропущенный символ ")" после списка аргументов
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Причина_возникновения_ошибки">Причина возникновения ошибки</h2>
+## Причина возникновения ошибки
 
-<p>Ошибка в вызове функции. Например, опечатка, пропущенный оператор, или некорректно обрамлённая кавычками строка.</p>
+Ошибка в вызове функции. Например, опечатка, пропущенный оператор, или некорректно обрамлённая кавычками строка.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Из-за отсутствия оператора конкатенации "+", JavaScript ожидает аргумент функции <code>log</code> просто <code>"PI: "</code>. В этом случае, он должен быть заключён в закрывающие скобки.</p>
+Из-за отсутствия оператора конкатенации "+", JavaScript ожидает аргумент функции `log` просто `"PI: "`. В этом случае, он должен быть заключён в закрывающие скобки.
 
-<pre class="brush: js example-bad">console.log('PI: ' Math.PI);
+```js example-bad
+console.log('PI: ' Math.PI);
 // SyntaxError: missing ) after argument list
-</pre>
+```
 
-<p>Можно скорректировать вызов функции <code>log</code> добавлением оператора "<code>+</code>":</p>
+Можно скорректировать вызов функции `log` добавлением оператора "`+`":
 
-<pre class="brush: js example-good">console.log('PI: ' + Math.PI);
-// "PI: 3.141592653589793"</pre>
+```js example-good
+console.log('PI: ' + Math.PI);
+// "PI: 3.141592653589793"
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Функции</a></li>
-</ul>
+- [Функции](/ru/docs/Web/JavaScript/Guide/Functions)

@@ -7,21 +7,22 @@ tags:
   - toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.toPrimitive</code> </strong>является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.</p>
+**`Symbol.toPrimitive` **является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.
 
-<p>{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}</p>
+{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>С помощью свойства <strong><code>Symbol.toPrimitive</code></strong><code> </code>(которое описывается как функция), объект может быть приведён к примитивному типу. Функция вызывается со строковым аргументом <code><strong>hint</strong></code>, который передаёт желаемый тип примитива. Значением аргумента <code><strong>hint</strong></code> может быть одно из следующих значений <code>"<em>number</em>"</code>, <code>"<em>string</em>"</code>, и <code>"<em>default</em>"</code>.</p>
+С помощью свойства **`Symbol.toPrimitive`**` `(которое описывается как функция), объект может быть приведён к примитивному типу. Функция вызывается со строковым аргументом **`hint`**, который передаёт желаемый тип примитива. Значением аргумента **`hint`** может быть одно из следующих значений `"number"`, `"string"`, и `"default"`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Описанные ниже примеры показывают как с помощью свойства <strong><code>Symbol.toPrimitive</code></strong> можно привести объект к примитивному типу.</p>
+Описанные ниже примеры показывают как с помощью свойства **`Symbol.toPrimitive`** можно привести объект к примитивному типу.
 
-<pre class="brush: js">// Объект без свойства Symbol.toPrimitive
+```js
+// Объект без свойства Symbol.toPrimitive
 var obj1 = {};
 console.log(+obj1);     // NaN
 console.log(`${obj1}`); // "[object Object]"
@@ -39,26 +40,22 @@ var obj2 = {
     return true;
   }
 };
-console.log(+obj2);     // 10        -- желаемый тип (<strong>hint</strong>) - "number"
-console.log(`${obj2}`); // "hello"   -- желаемый тип (<strong>hint</strong>) - "string"
-console.log(obj2 + ''); // "true"    -- желаемый тип (<strong>hint</strong>) - "default"
-</pre>
+console.log(+obj2);     // 10        -- желаемый тип (hint) - "number"
+console.log(`${obj2}`); // "hello"   -- желаемый тип (hint) - "string"
+console.log(obj2 + ''); // "true"    -- желаемый тип (hint) - "default"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
+- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

@@ -9,48 +9,56 @@ tags:
   - URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Объект <code><strong>URIError</strong></code> представляет ошибку, возникающую при неправильном использовании глобальных функций обработки URI.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+Объект **`URIError`** представляет ошибку, возникающую при неправильном использовании глобальных функций обработки URI.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>message</code></dt>
- <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Исключение <code>URIError</code> выбрасывается при передаче некорректного URI в глобальные функции обработки URI.</p>
+```
+new URIError([message[, fileName[, lineNumber]]])
+```
 
-<h2 id="Properties">Свойства</h2>
-<dl>
- <dt>{{jsxref("URIError.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в объект <code>URIError</code>.</dd>
-</dl>
+### Параметры
 
-<h2 id="Methods">Методы</h2>
-<p>Глобальный объект <code>URIError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+- `message`
+  - : Необязательный параметр. Человеко-читаемое описание ошибки.
+- `fileName` {{non-standard_inline}}
+  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
+- `lineNumber` {{non-standard_inline}}
+  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
 
-<h2 id="URIError_instances">Экземпляры объекта <code>URIError</code></h2>
+## Описание
 
-<h3 id="Properties_of_URIError_instances">Свойства</h3>
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}</div>
+Исключение `URIError` выбрасывается при передаче некорректного URI в глобальные функции обработки URI.
 
-<h3 id="Methods_of_URIError_instances">Методы</h3>
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}</div>
+## Свойства
 
-<h2 id="Examples">Примеры</h2>
+- {{jsxref("URIError.prototype")}}
+  - : Позволяет добавлять свойства в объект `URIError`.
 
-<h3 id="Example:_Catch_an_URIError">Пример: перехват исключения <code>URIError</code></h3>
-<pre class="brush: js">try {
+## Методы
+
+Глобальный объект `URIError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
+
+## Экземпляры объекта `URIError`
+
+### Свойства
+
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}
+
+### Методы
+
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}
+
+## Примеры
+
+### Пример: перехват исключения `URIError`
+
+```js
+try {
   decodeURIComponent('%');
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -61,10 +69,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 2
   console.log(e.stack);               // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_URIError">Пример: возбуждение исключения <code>URIError</code></h3>
-<pre class="brush: js">try {
+### Пример: возбуждение исключения `URIError`
+
+```js
+try {
   throw new URIError('Привет', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -75,43 +85,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 0
   console.log(e.stack);               // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.6', 'URIError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                             | Статус                   | Комментарии              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------ |
+| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение. |
+| {{SpecName('ES5.1', '#sec-15.11.6.6', 'URIError')}}                                                     | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}} | {{Spec2('ES6')}}     |                          |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("URIError.prototype")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Error")}}
+- {{jsxref("URIError.prototype")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

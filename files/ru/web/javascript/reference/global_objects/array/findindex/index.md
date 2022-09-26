@@ -14,73 +14,75 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>findIndex()</strong></code> возвращает <strong>индекс</strong> в массиве, если элемент удовлетворяет условию проверяющей функции. В противном случае возвращается -1.</p>
+Метод **`findIndex()`** возвращает **индекс** в массиве, если элемент удовлетворяет условию проверяющей функции. В противном случае возвращается -1.
 
-<p>Также смотрите метод {{jsxref("Array.find", "find()")}}, который возвращает <strong>значение</strong> найденного в массиве элемента вместо его индекса.</p>
+Также смотрите метод {{jsxref("Array.find", "find()")}}, который возвращает **значение** найденного в массиве элемента вместо его индекса.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+```
+arr.findIndex(callback[, thisArg])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция, вызывающаяся для каждого значения в массиве, принимает три аргумента:
- <dl>
-  <dt><code>element</code></dt>
-  <dd>Текущий обрабатываемый элемент в массиве.</dd>
-  <dt><code>index</code></dt>
-  <dd>Индекс текущего обрабатываемого элемента в массиве.</dd>
-  <dt><code>array</code></dt>
-  <dd>Массив, по которому осуществляется проход.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Необязательный параметр. Значение, используемое в качестве <code>this</code> при выполнении функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h2 id="Description">Описание</h2>
+  - : Функция, вызывающаяся для каждого значения в массиве, принимает три аргумента:
 
-<p>Метод <code>findIndex</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, до тех пор, пока она не вернёт <code>true</code>. Если такой элемент найден, метод <code>findIndex</code> немедленно вернёт индекс этого элемента. В противном случае, метод <code>findIndex</code> вернёт -1. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.</p>
+    - `element`
+      - : Текущий обрабатываемый элемент в массиве.
+    - `index`
+      - : Индекс текущего обрабатываемого элемента в массиве.
+    - `array`
+      - : Массив, по которому осуществляется проход.
 
-<p>Функция <code>callback</code> вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.</p>
+- `thisArg`
+  - : Необязательный параметр. Значение, используемое в качестве `this` при выполнении функции `callback`.
 
-<p>Если в метод <code>findIndex</code> был передан параметр <code>thisArg</code>, при вызове <code>callback</code> он будет использоваться в качестве значения <code>this</code>. В противном случае в качестве значения <code>this</code> будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+## Описание
 
-<p>Метод <code>findIndex</code> не изменяет массив, для которого он был вызван.</p>
+Метод `findIndex` вызывает переданную функцию `callback` один раз для каждого элемента, присутствующего в массиве, до тех пор, пока она не вернёт `true`. Если такой элемент найден, метод `findIndex` немедленно вернёт индекс этого элемента. В противном случае, метод `findIndex` вернёт -1. Функция `callback` вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.
 
-<p>Диапазон элементов, обрабатываемых методом <code>findIndex</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>findIndex</code>, не будут посещены функцией <code>callback</code>. Если существующие, непосещение элементы массива изменяются функцией <code>callback</code>, их значения, переданные в функцию, будут значениями на тот момент времени, когда метод <code>findIndex</code> посетит их; удалённые элементы посещены не будут.</p>
+Функция `callback` вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.
 
-<h2 id="Examples">Примеры</h2>
+Если в метод `findIndex` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<h3 id="Example:_Find_the_index_of_a_prime_number_in_an_array">Пример: поиск индекса простого числа в массиве</h3>
+Метод `findIndex` не изменяет массив, для которого он был вызван.
 
-<p>Следующий пример находит в массиве индекс элемента, являющийся простым числом (либо возвращает -1, если в массиве нет простых чисел).</p>
+Диапазон элементов, обрабатываемых методом `findIndex`, устанавливается до первого вызова функции `callback`. Элементы, добавленные в массив после начала выполнения метода `findIndex`, не будут посещены функцией `callback`. Если существующие, непосещение элементы массива изменяются функцией `callback`, их значения, переданные в функцию, будут значениями на тот момент времени, когда метод `findIndex` посетит их; удалённые элементы посещены не будут.
 
-<pre class="brush: js">function isPrime(element, index, array) {
+## Примеры
+
+### Пример: поиск индекса простого числа в массиве
+
+Следующий пример находит в массиве индекс элемента, являющийся простым числом (либо возвращает -1, если в массиве нет простых чисел).
+
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, не найдено
 console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод был добавлен в спецификации ECMAScript 6 и пока может быть недоступен во всех реализациях JavaScript. Однако, вы можете использовать следующий кусочек кода в качестве полифила:</p>
+Этот метод был добавлен в спецификации ECMAScript 6 и пока может быть недоступен во всех реализациях JavaScript. Однако, вы можете использовать следующий кусочек кода в качестве полифила:
 
-<pre class="brush: js">if (!Array.prototype.findIndex) {
+```js
+if (!Array.prototype.findIndex) {
   Array.prototype.findIndex = function(predicate) {
     if (this == null) {
       throw new TypeError('Array.prototype.findIndex called on null or undefined');
@@ -89,11 +91,11 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
       throw new TypeError('predicate must be a function');
     }
     var list = Object(this);
-    var length = list.length &gt;&gt;&gt; 0;
+    var length = list.length >>> 0;
     var thisArg = arguments[1];
     var value;
 
-    for (var i = 0; i &lt; length; i++) {
+    for (var i = 0; i < length; i++) {
       value = list[i];
       if (predicate.call(thisArg, value, i, list)) {
         return i;
@@ -102,19 +104,17 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
     return -1;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.find()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}} {{experimental_inline}}
+- {{jsxref("Array.prototype.indexOf()")}}

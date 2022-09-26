@@ -8,107 +8,101 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p>Метод <strong><code>Date.UTC()</code></strong> принимает те же самые параметры, что и самая длинная форма конструктора {{jsxref("Global_Objects/Date", "Date")}} и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
+Метод **`Date.UTC()`** принимает те же самые параметры, что и самая длинная форма конструктора {{jsxref("Global_Objects/Date", "Date")}} и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-utc.html")}}
 
+## Синтаксис
 
+**Начиная с ECMAScript 2017:**
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+Date.UTC(year[, month[, day[, hour[, minute[, second[, millisecond]]]]]])
+```
 
-<p> <strong>Начиная с  ECMAScript 2017:</strong></p>
+**ECMAScript 2016 и ранее:** (_использование `month` обязательно_)
 
-<pre class="syntaxbox">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
+```
+Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
+```
 
-<p><strong>ECMAScript 2016 и ранее: </strong>(<em>использование <code>month</code> обязательно</em>)</p>
+### Параметры
 
-<pre class="syntaxbox"><code>Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</code></pre>
+- `year`
+  - : Год, полностью.
+- `month`
+  - : Целое число между `0` и `11`, представляющее месяц. (начиная с ES2017 необязательный параметр)
+- `day` {{optional_inline}}
+  - : Целое число между `1` и `31`, представляющее дни месяца.
+- `hour` {{optional_inline}}
+  - : Целое число между `0` и `23`, представляющее часы.
+- `minute` {{optional_inline}}
+  - : Целое число между `0` и `59`, представляющее минуты.
+- `second` {{optional_inline}}
+  - : Целое число между `0` и `59`, представляющее секунды.
+- `millisecond` {{optional_inline}}
+  - : Целое число между `0` и `999`, представляющее миллисекунды.
 
-<h3 id="Parameters">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>year</code></dt>
- <dd>Год, полностью.</dd>
- <dt><code>month</code></dt>
- <dd>Целое число между <code>0</code> и <code>11</code>, представляющее месяц. (начиная с ES2017 необязательный параметр)</dd>
- <dt><code>day</code> {{optional_inline}}</dt>
- <dd>Целое число между <code>1</code> и <code>31</code>, представляющее дни месяца.</dd>
- <dt><code>hour</code> {{optional_inline}}</dt>
- <dd>Целое число между <code>0</code> и <code>23</code>, представляющее часы.</dd>
- <dt><code>minute</code> {{optional_inline}}</dt>
- <dd>Целое число между <code>0</code> и <code>59</code>, представляющее минуты.</dd>
- <dt><code>second</code> {{optional_inline}}</dt>
- <dd>Целое число между <code>0</code> и <code>59</code>, представляющее секунды.</dd>
- <dt><code>millisecond</code> {{optional_inline}}</dt>
- <dd>Целое число между <code>0</code> и <code>999</code>, представляющее миллисекунды.</dd>
-</dl>
+Число, представляющее собой количество миллисекунд, прошедших с 1-ого Января 1970 года 00:00:00 UTC.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Описание
 
-<p>Число, представляющее собой количество миллисекунд, прошедших с 1-ого Января 1970 года 00:00:00 UTC.</p>
+Метод `UTC()` принимает параметры даты, разделённые запятыми и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC и указанным вами временем.
 
-<h2 id="Описание">Описание</h2>
+Для параметра `year` вы должны указать полный год; например, 1998. Если указан год между `0` и `99`, метод преобразует год в год в 20-м веке `(1900 + year)`; например, если вы указали `95`, будет использоваться `1995` год.
 
-<p>Метод <code>UTC()</code> принимает параметры даты, разделённые запятыми и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC и указанным вами временем.</p>
+Метод `UTC()` отличается от конструктора {{jsxref("Global_Objects/Date", "Date")}} двумя вещами.
 
-<p>Для параметра <code>year</code> вы должны указать полный год; например, 1998. Если указан год между <code>0</code> и <code>99</code>, метод преобразует год в год в 20-м веке <code>(1900 + year)</code>; например, если вы указали <code>95</code>, будет использоваться <code>1995</code> год.</p>
+- Метод `Date.UTC()` использует всемирное время вместо местного времени.
+- Метод `Date.UTC()` возвращает значение времени как число вместо создания объекта {{jsxref("Global_Objects/Date", "Date")}}.
 
-<p>Метод <code>UTC()</code> отличается от конструктора {{jsxref("Global_Objects/Date", "Date")}} двумя вещами.</p>
+Если определённый вами параметр выходит за пределы ожидаемого диапазона, метод `UTC()` обновит другие параметры чтобы привести это число в ожидаемый диапазон. Например, если вы используете в качестве месяца число 15, год будет увеличен на 1 `(year + 1)`, и в качестве месяца будет использоваться значение 3.
 
-<ul>
- <li>Метод <code>Date.UTC()</code> использует всемирное время вместо местного времени.</li>
- <li>Метод <code>Date.UTC()</code> возвращает значение времени как число вместо создания объекта {{jsxref("Global_Objects/Date", "Date")}}.</li>
-</ul>
+Поскольку метод `UTC()` является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как `Date.UTC()`.
 
-<p>Если определённый вами параметр выходит за пределы ожидаемого диапазона, метод <code>UTC()</code> обновит другие параметры чтобы привести это число в ожидаемый диапазон. Например, если вы используете в качестве месяца число 15, год будет увеличен на 1 <code>(year + 1)</code>, и в качестве месяца будет использоваться значение 3.</p>
+## Примеры
 
-<p>Поскольку метод <code>UTC()</code> является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как <code>Date.UTC()</code>.</p>
+### Пример: использование `Date.UTC()`
 
-<h2 id="Examples">Примеры</h2>
+Следующее выражение создаёт объект {{jsxref("Global_Objects/Date", "Date")}}, используя всемирное время вместо местного:
 
-<h3 id="Example_Using_Date.UTC">Пример: использование <code>Date.UTC()</code></h3>
+```js
+var utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+```
 
-<p>Следующее выражение создаёт объект {{jsxref("Global_Objects/Date", "Date")}}, используя всемирное время вместо местного:</p>
-
-<pre class="brush:js">var utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
-</pre>
-
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Примечание о совместимости
 
-<p>{{Compat}}</p>
-</div>
+### Date.UTC() с менее чем двумя аргументами
 
-<h2 id="See_also">Примечание о совместимости</h2>
+Когда вы предоставляете функции `Date.UTC()` меньше, чем два аргумента, то по стандартам ECMAScript 2017, она должна вернуть {{jsxref("NaN")}}. Браузерные движки, не поддерживающие подобное поведение, были обновлены (смотрите [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
 
-<h3 id="Date.UTC_с_менее_чем_двумя_аргументами">Date.UTC() с менее чем двумя аргументами</h3>
-
-<p>Когда вы предоставляете функции <code>Date.UTC()</code> меньше, чем два аргумента, то по стандартам ECMAScript 2017, она должна вернуть {{jsxref("NaN")}}. Браузерные движки, не поддерживающие подобное поведение, были обновлены (смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
-
-<pre class="brush: js">Date.UTC();
+```js
+Date.UTC();
 Date.UTC(1);
 
 // Safari: NaN
 // Chrome/Opera/V8: NaN
 
-// Firefox &lt;54: non-NaN
+// Firefox <54: non-NaN
 // Firefox 54+: NaN
 
 // IE: non-NaN
 // Edge: NaN
-</pre>
+```
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.parse()")}}</li>
- <li>{{jsxref("Date")}}</li>
-</ul>
+- {{jsxref("Date.parse()")}}
+- {{jsxref("Date")}}

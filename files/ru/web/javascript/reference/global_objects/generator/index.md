@@ -12,15 +12,16 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Генератор</strong></code> - это объект, возвращаемый {{jsxref("Statements/function*", "функцией-генератором", "", 1)}} и соответствующий как <a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">"Итерируемому" протоколу</a>, так и <a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">протоколу "Итератор"</a>.</p>
+**`Генератор`** - это объект, возвращаемый {{jsxref("Statements/function*", "функцией-генератором", "", 1)}} и соответствующий как ["Итерируемому" протоколу](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable), так и [протоколу "Итератор"](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterator).
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<p>Этот объект не может быть инстанциирован напрямую. Вместо этого, экземпляр <code>Generator</code> может быть возвращён из <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction">функции-генератора</a>:</p>
+Этот объект не может быть инстанциирован напрямую. Вместо этого, экземпляр `Generator` может быть возвращён из [функции-генератора](/ru/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction):
 
-<pre class="brush: js">function* generator() {
+```js
+function* generator() {
   yield 1;
   yield 2;
   yield 3;
@@ -30,24 +31,24 @@ const gen = generator(); // "Generator { }"
 
 console.log(gen.next().value); // 1
 console.log(generator().next().value); // 1
-console.log(generator().next().value); // 1</pre>
+console.log(generator().next().value); // 1
+```
 
-<h2 id="Методы_экземпляра">Методы экземпляра</h2>
+## Методы экземпляра
 
-<dl>
- <dt>{{jsxref("Generator.prototype.next()")}}</dt>
- <dd>Возвращает значение, полученное выражением {{jsxref("Operators/yield", "yield")}}.</dd>
- <dt>{{jsxref("Generator.prototype.return()")}}</dt>
- <dd>Возвращает заданное значение и заканчивает генератор.</dd>
- <dt>{{jsxref("Generator.prototype.throw()")}}</dt>
- <dd>Выдаёт ошибку генератора.</dd>
-</dl>
+- {{jsxref("Generator.prototype.next()")}}
+  - : Возвращает значение, полученное выражением {{jsxref("Operators/yield", "yield")}}.
+- {{jsxref("Generator.prototype.return()")}}
+  - : Возвращает заданное значение и заканчивает генератор.
+- {{jsxref("Generator.prototype.throw()")}}
+  - : Выдаёт ошибку генератора.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Бесконечный_Итератор">Бесконечный Итератор</h3>
+### Бесконечный Итератор
 
-<pre class="brush: js">function* idMaker() {
+```js
+function* idMaker() {
     var index = 0;
     while(true)
         yield index++;
@@ -58,33 +59,30 @@ var gen = idMaker(); // "Generator { }"
 console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
-// ...</pre>
+// ...
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h3 id="Legacy_generators">Legacy generators</h3>
+### Legacy generators
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol">The legacy Iterator protocol</a></li>
-</ul>
+- [The legacy Iterator protocol](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
 
-<h3 id="ES2015_generators">ES2015 generators</h3>
+### ES2015 generators
 
-<ul>
- <li>{{jsxref("Functions", "Functions", "", 1)}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
-</ul>
+- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}}
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)

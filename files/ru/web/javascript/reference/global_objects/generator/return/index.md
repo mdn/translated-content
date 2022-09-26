@@ -3,32 +3,33 @@ title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>return()</strong></code> возвращает полученное значение и останавливает генератор.</p>
+Метод **`return()`** возвращает полученное значение и останавливает генератор.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>gen</var>.return(value)</code></pre>
+```
+gen.return(value)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение для возврата.</dd>
-</dl>
+- `value`
+  - : Значение для возврата.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, которое было передано в виде аргумента.</p>
+Значение, которое было передано в виде аргумента.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_return">Использование <code>return()</code></h3>
+### Использование `return()`
 
-<p>Следующий пример показывает простой генератор и метод <code>return</code>.</p>
+Следующий пример показывает простой генератор и метод `return`.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -39,11 +40,12 @@ var g = gen();
 g.next();        // { value: 1, done: false }
 g.return('foo'); // { value: "foo", done: true }
 g.next();        // { value: undefined, done: true }
-</pre>
+```
 
-<p>Если <code>return(value)</code> вызывает генератор, который находится в уже "завершённом" состоянии, генератор останется в "завершённом" состоянии. Если аргумент не был передан, свойство <code>value</code> вернёт тот же объект, что и <code>.next()</code>. Если аргумент был передан, он будет установлен как значение свойства <code>value</code> возвращаемого объекта.</p>
+Если `return(value)` вызывает генератор, который находится в уже "завершённом" состоянии, генератор останется в "завершённом" состоянии. Если аргумент не был передан, свойство `value` вернёт тот же объект, что и `.next()`. Если аргумент был передан, он будет установлен как значение свойства `value` возвращаемого объекта.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -56,22 +58,16 @@ g.next(); // { value: 3, done: false }
 g.next(); // { value: undefined, done: true }
 g.return(); // { value: undefined, done: true }
 g.return(1); // { value: 1, done: true }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
-</ul>
+- [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)

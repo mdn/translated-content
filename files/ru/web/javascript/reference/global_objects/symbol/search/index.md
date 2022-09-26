@@ -8,26 +8,25 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Широко известный символ <code><strong>Symbol.search</strong></code> указывает метод, который вернёт индекс внутри строки, соответствующей регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.search()")}}.</p>
+Широко известный символ **`Symbol.search`** указывает метод, который вернёт индекс внутри строки, соответствующей регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.search()")}}.
 
-<p>Для получения дополнительной информации см. {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} и {{jsxref("String.prototype.search()")}}.</p>
+Для получения дополнительной информации см. {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} и {{jsxref("String.prototype.search()")}}.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}

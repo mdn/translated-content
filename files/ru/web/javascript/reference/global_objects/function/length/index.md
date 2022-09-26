@@ -8,75 +8,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
-<div>{{JSRef("Global_Objects", "Function")}}</div>
+{{JSRef("Global_Objects", "Function")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <code><strong>length</strong></code> определяет количество аргументов, ожидаемых функцией.</p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+Свойство **`length`** определяет количество аргументов, ожидаемых функцией.
 
-<h2 id="Description">Описание</h2>
-<p>Свойство <code>length</code> является свойством объекта функции и указывает, сколько аргументов ожидает функция, то есть, количество формальных параметров. Это количество не включает {{jsxref("rest_parameters", "остаточные параметры", "", 1)}}. В отличие от него, свойство {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} является локальным для функции и предоставляет количество аргументов, реально переданных в функцию.</p>
+{{js_property_attributes(0, 0, 1)}}
 
-<h3 id="Data_property_of_the_Function_constructor">Свойство данных конструктора <code>Function</code></h3>
-<p>Конструктор {{jsxref("Global_Objects/Function", "Function")}} сам является объектом {{jsxref("Global_Objects/Function", "Function")}}. Его свойство данных <code>length</code> имеет значение 1. Атрибуты свойства: записываемое: <code>false</code>, перечисляемое: <code>false</code>, настраиваемое: <code>true</code>.</p>
+## Описание
 
-<h3 id="Property_of_the_Function_prototype_object">Свойство объекта прототипа <code>Function</code></h3>
-<p>Свойство <code>length</code> объекта прототипа {{jsxref("Global_Objects/Function", "Function")}} имеет значение 0.</p>
+Свойство `length` является свойством объекта функции и указывает, сколько аргументов ожидает функция, то есть, количество формальных параметров. Это количество не включает {{jsxref("rest_parameters", "остаточные параметры", "", 1)}}. В отличие от него, свойство {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} является локальным для функции и предоставляет количество аргументов, реально переданных в функцию.
 
-<h2 id="Examples">Примеры</h2>
-<pre class="brush: js">console.log(Function.length); /* 1 */
+### Свойство данных конструктора `Function`
+
+Конструктор {{jsxref("Global_Objects/Function", "Function")}} сам является объектом {{jsxref("Global_Objects/Function", "Function")}}. Его свойство данных `length` имеет значение 1. Атрибуты свойства: записываемое: `false`, перечисляемое: `false`, настраиваемое: `true`.
+
+### Свойство объекта прототипа `Function`
+
+Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}} имеет значение 0.
+
+## Примеры
+
+```js
+console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
 console.log((function(a, b)    {}).length); /* 2 и так далее */
 console.log((function(...args) {}).length); /* 0, остаточные параметры не считаются */
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>
-    Свойство <code>length</code> конструктора {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}}<br>
-    Свойство <code>length</code> объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}}<br>
-    Свойство <code>length</code> экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}
-   </td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>
-    Свойство <code>length</code> конструктора {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES6', '#sec-function.length', 'Function.length')}}<br>
-    Свойство <code>length</code> объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}}<br>
-    Свойство <code>length</code> экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}:<br>
-    {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}<br>
-   </td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Статус                   | Комментарии                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| Свойство `length` конструктора {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}} Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}} Свойство `length` экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}} | {{Spec2('ES5.1')}} |                                                        |
+| Свойство `length` конструктора {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function.length', 'Function.length')}} Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}} Свойство `length` экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}                         | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Global_Objects/Function", "Function")}}

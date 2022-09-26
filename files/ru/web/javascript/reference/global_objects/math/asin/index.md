@@ -8,72 +8,63 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>Math.asin()</code></strong> возвращает арксинус числа (в радианах), то есть</p>
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> уникальный </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ уникальный } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{такой, что} \; \sin(y) = x</annotation></semantics></math></p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>Math.asin(<var>x</var>)</code></pre>
+Метод **`Math.asin()`** возвращает арксинус числа (в радианах), то есть
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> уникальный </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ уникальный } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{такой, что} \; \sin(y) = x</annotation></semantics></math>
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>Math.asin()</code> возвращает числовое значение между <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> и <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> радианами для значения <code>x</code>, лежащего в диапазоне от -1 до 1. Метод вернёт {{jsxref("NaN")}}, если значение <code>x</code> выйдет за этот диапазон.</p>
-<p>Поскольку метод <code>asin()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.asin()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+Math.asin(x)
+```
 
-<h3 id="Example:_Using_Math.asin">Пример: использование метода <code>Math.asin()</code></h3>
-<pre class="brush: js">Math.asin(-2);  // NaN
+### Параметры
+
+- `x`
+  - : Число.
+
+## Описание
+
+Метод `Math.asin()` возвращает числовое значение между <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> и <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> радианами для значения `x`, лежащего в диапазоне от -1 до 1. Метод вернёт {{jsxref("NaN")}}, если значение `x` выйдет за этот диапазон.
+
+Поскольку метод `asin()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.asin()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование метода `Math.asin()`
+
+```js
+Math.asin(-2);  // NaN
 Math.asin(-1);  // -1.5707963267948966 (-pi/2)
 Math.asin(0);   // 0
 Math.asin(0.5); // 0.5235987755982989
 Math.asin(1);   // 1.570796326794897 (pi/2)
 Math.asin(2);   // NaN
-</pre>
-<p>Для значений, меньших -1 или больших 1, метод <code>Math.asin()</code> возвращает {{jsxref("NaN")}}.</p>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Для значений, меньших -1 или больших 1, метод `Math.asin()` возвращает {{jsxref("NaN")}}.
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Спецификации
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ES6')}}     |                                                        |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

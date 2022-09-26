@@ -8,23 +8,21 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<div class="note">
-  <p><strong>Примечание:</strong> Эта страница описывает экспериментальные возможности.</p>
+> **Примечание:** Эта страница описывает экспериментальные возможности.
+>
+> Публичные и приватные поля — это [экспериментальная функция (stage
+> 3\)](https://github.com/tc39/proposal-class-fields), предложенная комитетом по стандарту JavaScript [TC39](https://tc39.es/).
+>
+> Поддержка этой возможности в браузерах ограничена, но ее можно использовать посредством транспилирования с такими системами как [Babel](https://babeljs.io/). Смотрите [информацию о совместимости](#browser_compatibility) ниже.
 
-  <p>Публичные и приватные поля — это <a
-      href="https://github.com/tc39/proposal-class-fields">экспериментальная функция (stage
-      3)</a>, предложенная комитетом по стандарту JavaScript <a href="https://tc39.es/">TC39</a>.</p>
+И статические, и публичные поля являются изменяемыми, перечисляемыми, настраиваемыми свойствами. Таким образом, в отличие от приватных полей, они участвуют в прототипном наследовании.
 
-  <p>Поддержка этой возможности в браузерах ограничена, но ее можно использовать посредством транспилирования с такими системами как <a href="https://babeljs.io/">Babel</a>. Смотрите <a href="#browser_compatibility">информацию о совместимости</a> ниже.</p>
-</div>
+## Синтаксис
 
-<p>И статические, и публичные поля являются изменяемыми, перечисляемыми, настраиваемыми свойствами. Таким образом, в отличие от приватных полей, они участвуют в прототипном наследовании.</p>
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField = 'instance field'
 }
 
@@ -37,37 +35,41 @@ class ClassWithPublicInstanceMethod {
     return 'hello world'
   }
 }
-</pre>
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Публичные_статические_поля">Публичные статические поля</h3>
+### Публичные статические поля
 
-<p>Публичные статические поля полезны тогда, когда необходимо существование одного единственного поля для всего класса, а не для каждого созданного экземпляра по отдельности. Это полезно для кеша, конфигураций или любых прочих данных, которые одинаковы для всех экземпляров.</p>
+Публичные статические поля полезны тогда, когда необходимо существование одного единственного поля для всего класса, а не для каждого созданного экземпляра по отдельности. Это полезно для кеша, конфигураций или любых прочих данных, которые одинаковы для всех экземпляров.
 
-<p>Публичные статические поля объявляются при помощи ключевого слова <code>static</code>. Они добавляются в конструктор класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Доступ также осуществляется через конструктор класса.</p>
+Публичные статические поля объявляются при помощи ключевого слова `static`. Они добавляются в конструктор класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Доступ также осуществляется через конструктор класса.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static staticField = 'static field';
 }
 
 console.log(ClassWithStaticField.staticField);
 // Ожидаемый вывод: "static field"
-</pre>
+```
 
-<p>Поля без инициализации имеют значение <code>("javascript.classes")</code>.</p>
+Поля без инициализации имеют значение `("javascript.classes")`.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static staticField;
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
 console.log(ClassWithStaticField.staticField);
-// Ожидаемый вывод: "undefined"</pre>
+// Ожидаемый вывод: "undefined"
+```
 
-<p>Публичные статические поля не переопределяются в наследниках класса, а могут быть доступны через иерархию прототипов.</p>
+Публичные статические поля не переопределяются в наследниках класса, а могут быть доступны через иерархию прототипов.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static baseStaticField = 'base field';
 }
 
@@ -79,11 +81,13 @@ console.log(SubClassWithStaticField.subStaticField);
 // Ожидаемый вывод: "sub class field"
 
 console.log(SubClassWithStaticField.baseStaticField);
-// Ожидаемый вывод: "base field"</pre>
+// Ожидаемый вывод: "base field"
+```
 
-<p>При определении полей <code>this</code> ссылается на конструктор класса. Также можно обратиться к нему по имени и использовать <code>super</code> для получения конструктора базового класса, если он существует.</p>
+При определении полей `this` ссылается на конструктор класса. Также можно обратиться к нему по имени и использовать `super` для получения конструктора базового класса, если он существует.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static baseStaticField = 'base static field';
   static anotherBaseStaticField = this.baseStaticField;
 
@@ -99,37 +103,42 @@ console.log(ClassWithStaticField.anotherBaseStaticField);
 
 console.log(SubClassWithStaticField.subStaticField);
 // Ожидаемый вывод: "base static method output"
-</pre>
+```
 
-<h3 id="Публичные_поля_экземпляра">Публичные поля экземпляра</h3>
+### Публичные поля экземпляра
 
-<p>Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.</p>
+Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.
 
-<p>Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
-  "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится <code>super()</code> в классе наследнике.</p>
+Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
+  "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField = 'instance field';
 }
 
 const instance = new ClassWithInstanceField();
 console.log(instance.instanceField);
-// Ожидаемый вывод: "instance field"</pre>
+// Ожидаемый вывод: "instance field"
+```
 
-<p>Поля без инициализации имеют значение <code>undefined</code>.</p>
+Поля без инициализации имеют значение `undefined`.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField;
 }
 
 const instance = new ClassWithInstanceField();
 console.assert(instance.hasOwnProperty('instanceField'));
 console.log(instance.instanceField);
-// Ожидаемый вывод: "undefined"</pre>
+// Ожидаемый вывод: "undefined"
+```
 
-<p>Как и свойства, названия полей могут вычисляться.</p>
+Как и свойства, названия полей могут вычисляться.
 
-<pre class="brush: js">const PREFIX = 'prefix';
+```js
+const PREFIX = 'prefix';
 
 class ClassWithComputedFieldName {
     [`${PREFIX}Field`] = 'prefixed field';
@@ -137,11 +146,13 @@ class ClassWithComputedFieldName {
 
 const instance = new ClassWithComputedFieldName();
 console.log(instance.prefixField);
-// Ожидаемый вывод: "prefixed field"</pre>
+// Ожидаемый вывод: "prefixed field"
+```
 
-<p>При определении полей <code>this</code> ссылается на создающийся экземпляр класса. Как и в публичных методах экземпляра, получить доступ к прототипу базового класса можно с помощью <code>super</code>.</p>
+При определении полей `this` ссылается на создающийся экземпляр класса. Как и в публичных методах экземпляра, получить доступ к прототипу базового класса можно с помощью `super`.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   baseInstanceField = 'base field';
   anotherBaseInstanceField = this.baseInstanceField;
   baseInstanceMethod() { return 'base method output'; }
@@ -158,15 +169,17 @@ console.log(base.anotherBaseInstanceField);
 // Ожидаемый вывод: "base field"
 
 console.log(sub.subInstanceField);
-// Ожидаемый вывод: "base method output"</pre>
+// Ожидаемый вывод: "base method output"
+```
 
-<h2 id="Публичные_методы">Публичные методы</h2>
+## Публичные методы
 
-<h3 id="Публичные_статические_методы">Публичные статические методы</h3>
+### Публичные статические методы
 
-<p>Ключевое слово <code><strong>static</strong></code> объявляет статический метод класса. Статические методы не вызываются из экземпляра, вместо этого они вызывается из самого класса. Чаще всего это какие-либо служебные функции, такие как функции создания или копирования объектов.</p>
+Ключевое слово **`static`** объявляет статический метод класса. Статические методы не вызываются из экземпляра, вместо этого они вызывается из самого класса. Чаще всего это какие-либо служебные функции, такие как функции создания или копирования объектов.
 
-<pre class="brush: js">class ClassWithStaticMethod {
+```js
+class ClassWithStaticMethod {
   static staticMethod() {
     return 'static method has been called.';
   }
@@ -174,15 +187,16 @@ console.log(sub.subInstanceField);
 
 console.log(ClassWithStaticMethod.staticMethod());
 // expected output: "static method has been called."
-</pre>
+```
 
-<p>Статические методы добавляются в конструктор класса с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} во время его создания. Эти методы - изменяемые, неперечисляемые и настраиваемые свойства объекта.</p>
+Статические методы добавляются в конструктор класса с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} во время его создания. Эти методы - изменяемые, неперечисляемые и настраиваемые свойства объекта.
 
-<h3 id="Публичные_методы_экземпляра">Публичные методы экземпляра</h3>
+### Публичные методы экземпляра
 
-<p>Как и следует из названия, публичные методы экземпляра это методы, доступные для вызова из экземпляров.</p>
+Как и следует из названия, публичные методы экземпляра это методы, доступные для вызова из экземпляров.
 
-<pre class="brush: js">class ClassWithPublicInstanceMethod {
+```js
+class ClassWithPublicInstanceMethod {
   publicMethod() {
     return 'hello world';
   }
@@ -190,22 +204,26 @@ console.log(ClassWithStaticMethod.staticMethod());
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// Ожидаемый вывод: "hello worl​d"</pre>
+// Ожидаемый вывод: "hello worl​d"
+```
 
-<p>Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.</p>
+Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.
 
-<p>Вы можете использовать генераторы, асинхронные функции и асинхронные генераторы.</p>
+Вы можете использовать генераторы, асинхронные функции и асинхронные генераторы.
 
-<pre class="brush: js">class ClassWithFancyMethods {
+```js
+class ClassWithFancyMethods {
   *generatorMethod() { }
   async asyncMethod() { }
   async *asyncGeneratorMethod() { }
-}</pre>
+}
+```
 
-<p>Внутри методов экземпляра, <code>this</code> ссылается на сам экземпляр.<br>
- В классах наследниках, <code>super</code> даёт доступ к прототипу базового класса, позволяя вызывать его методы.</p>
+Внутри методов экземпляра, `this` ссылается на сам экземпляр.
+В классах наследниках, `super` даёт доступ к прототипу базового класса, позволяя вызывать его методы.
 
-<pre class="brush: js">class BaseClass {
+```js
+class BaseClass {
   msg = 'hello world';
   basePublicMethod() {
     return this.msg;
@@ -221,11 +239,12 @@ class SubClass extends BaseClass {
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
 // Ожидаемый вывод: "hello worl​d"
-</pre>
+```
 
-<p>Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте <a href="/ru/docs/Web/JavaScript/Reference/Functions/get">get</a> и <a href="/ru/docs/Web/JavaScript/Reference/Functions/set">set</a> для объявления публичных геттеров и сеттеров экземпляра.</p>
+Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте [get](/ru/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set) для объявления публичных геттеров и сеттеров экземпляра.
 
-<pre class="brush: js">class ClassWithGetSet {
+```js
+class ClassWithGetSet {
   #msg = 'hello world';
   get msg() {
     return this.#msg;
@@ -242,21 +261,18 @@ console.log(instance.msg);
 instance.msg = 'cake';
 console.log(instance.msg);
 // Ожидаемый вывод: "hello cake"
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
+{{Specifications("javascript.classes")}}
 
-<p>{{Specifications("javascript.classes")}}</p>
+## Браузерная совместимость
 
-<h2 id="Browser_compatibility">Браузерная совместимость</h2>
+{{Compat("javascript.classes")}}
 
-<p>{{Compat("javascript.classes")}}</p>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
-  <li><a href="https://v8.dev/features/class-fields">Публичные и приватные поля классов</a> статья на сайте v8.dev.</li>
-  <li><a href="https://github.com/tc39/proposal-class-fields#class-field-declarations-for-javascript">Объявление полей класса в JavaScript</a>, от авторов <a href="https://github.com/tc39/proposal-class-fields">Публичных и приватных полей экземпляра</a></li>
-  <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">Семантика всех элементов JS класса</a></li>
-</ul>
+- [Публичные и приватные поля классов](https://v8.dev/features/class-fields) статья на сайте v8.dev.
+- [Объявление полей класса в JavaScript](https://github.com/tc39/proposal-class-fields#class-field-declarations-for-javascript), от авторов [Публичных и приватных полей экземпляра](https://github.com/tc39/proposal-class-fields)
+- [Семантика всех элементов JS класса](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

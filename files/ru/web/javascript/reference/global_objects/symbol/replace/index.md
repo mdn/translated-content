@@ -3,27 +3,25 @@ title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.replace</strong></code> — известный символ, задающий метод для замены подстрок в строке. Эта функция вызывается методом {{jsxref("String.prototype.replace()")}}.</p>
+**`Symbol.replace`** — известный символ, задающий метод для замены подстрок в строке. Эта функция вызывается методом {{jsxref("String.prototype.replace()")}}.
 
-<p>Смотрите также {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} и {{jsxref("String.prototype.replace()")}} для получения дополнительных сведений.</p>
+Смотрите также {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} и {{jsxref("String.prototype.replace()")}} для получения дополнительных сведений.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}

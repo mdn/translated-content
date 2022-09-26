@@ -3,27 +3,28 @@ title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод  <code><strong>entries()</strong></code> возвращает новый <strong><code><a href="/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators">Итератор</a></code></strong>, который содержит массив <strong><code>[значение, значение]</code></strong> для каждого элемента в объекте <code>Set</code> в порядке их добавления. Для объекта <code>Set</code> не существует ключа <code>key</code>, как в объекте <code>Map</code>. Тем не менее, чтобы API было схож с объектом <code>Map</code>, каждая <em>запись</em> содержит значение как в <em>ключе,</em> так и в <em>значении</em>, возвращая массив <code>[значение, значение]</code>.</p>
+Метод **`entries()`** возвращает новый **[`Итератор`](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)**, который содержит массив **`[значение, значение]`** для каждого элемента в объекте `Set` в порядке их добавления. Для объекта `Set` не существует ключа `key`, как в объекте `Map`. Тем не менее, чтобы API было схож с объектом `Map`, каждая _запись_ содержит значение как в _ключе,_ так и в _значении_, возвращая массив `[значение, значение]`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 
+## Синтаксис
 
+```
+mySet.entries()
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Возвращаемое значение
 
-<pre class="syntaxbox"><code><em>mySet</em>.entries()</code></pre>
+Новый `Итератор`, который содержит массив `[значение, значение]` для каждого элемента, полученного в `Set` в порядке их добавления.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Новый <code>Итератор</code>, который содержит массив <code>[значение, значение]</code> для каждого элемента, полученного в <code>Set</code> в порядке их добавления. </p>
+### Использование `entries()`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_entries">Использование <code>entries()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foobar');
 mySet.add(1);
 mySet.add('baz');
@@ -33,21 +34,17 @@ var setIter = mySet.entries();
 console.log(setIter.next().value); // ["foobar", "foobar"]
 console.log(setIter.next().value); // [1, 1]
 console.log(setIter.next().value); // ["baz", "baz"]
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

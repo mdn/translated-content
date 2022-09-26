@@ -7,54 +7,47 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>Intl.getCanonicalLocales()</code></strong> возвращает массив, содержащий канонические коды языков. Повторяющиеся значения будут отброшены и элементы будут проверены на соответствие структуры языковых тегов.</p>
+Метод **`Intl.getCanonicalLocales()`** возвращает массив, содержащий канонические коды языков. Повторяющиеся значения будут отброшены и элементы будут проверены на соответствие структуры языковых тегов.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
 
+## Синтаксис
 
+```
+Intl.getCanonicalLocales(locales)
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">Intl.getCanonicalLocales(locales)</pre>
+- `locales`
+  - : Список {{jsxref("String")}} значений, из которых нужно получить канонические коды языков.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>Список {{jsxref("String")}} значений, из которых нужно получить канонические коды языков.</dd>
-</dl>
+Массив, содержащий канонические коды языков
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Массив, содержащий канонические коды языков</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: js">Intl.getCanonicalLocales('RU-RU'); // ["ru-RU"]
+```js
+Intl.getCanonicalLocales('RU-RU'); // ["ru-RU"]
 Intl.getCanonicalLocales(['RU-RU', 'Fr']); // ["ru-RU", "fr"]
 
 Intl.getCanonicalLocales('RU_RU');
 // RangeError:'EN_US' is not a structurally valid language tag
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</li>
-</ul>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

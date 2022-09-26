@@ -9,50 +9,49 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Date.now()</code></strong> возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
+Метод **`Date.now()`** возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>var timeInMs = Date.now();</code></pre>
+```
+var timeInMs = Date.now();
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>now()</code> возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC по текущий момент времени в качестве {{jsxref("Global_Objects/Number", "числа", "", 1)}}.</p>
+Метод `now()` возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC по текущий момент времени в качестве {{jsxref("Global_Objects/Number", "числа", "", 1)}}.
 
-<p>Поскольку метод <code>now()</code> является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как <code>Date.now()</code>.</p>
+Поскольку метод `now()` является статическим методом объекта {{jsxref("Global_Objects/Date", "Date")}}, вы всегда должны использовать его как `Date.now()`.
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод был стандартизирован в ECMA-262 5-го издания. Отсутствие этого метода в движках, которые не были обновлены для его поддержки, можно обойти следующей прокладкой:</p>
+Этот метод был стандартизирован в ECMA-262 5-го издания. Отсутствие этого метода в движках, которые не были обновлены для его поддержки, можно обойти следующей прокладкой:
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Performance.now()")}} — предоставляет временные метки с разрешением в доли миллисекунд для использования при измерении производительности веб-страницы</li>
- <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>
-</ul>
+- {{domxref("Performance.now()")}} — предоставляет временные метки с разрешением в доли миллисекунд для использования при измерении производительности веб-страницы
+- {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}

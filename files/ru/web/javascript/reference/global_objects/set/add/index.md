@@ -3,56 +3,51 @@ title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>add()</strong></code> добавляет новый элемент с заданным значением в конец объекта <code>Set</code>.</p>
+Метод **`add()`** добавляет новый элемент с заданным значением в конец объекта `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
+## Синтаксис
 
+```
+mySet.add(value);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><code><em>mySet</em>.add(value);</code></pre>
+- value
+  - : Обязательное. Значение элемента, добавляемого в объект `Set`.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>value</dt>
- <dd>Обязательное. Значение элемента, добавляемого в объект <code>Set</code>.</dd>
-</dl>
+Объект `Set`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Объект <code>Set</code>.</p>
+### Использование метода `add`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_метода_add">Использование метода <code>add</code> </h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add('some text'); // можно делать цепочки
 
 console.log(mySet);
 // Set [1, 5, "some text"]
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

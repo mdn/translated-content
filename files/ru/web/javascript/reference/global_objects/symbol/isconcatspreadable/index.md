@@ -7,51 +7,52 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>Symbol.isConcatSpreadable</code></strong> - это известный символ, который используется для  определения, должен ли объект редуцироваться к сумме своих элементов при использовании метода {{jsxref("Array.prototype.concat()")}}.</p>
+**`Symbol.isConcatSpreadable`** - это известный символ, который используется для определения, должен ли объект редуцироваться к сумме своих элементов при использовании метода {{jsxref("Array.prototype.concat()")}}.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>@@isConcatSpreadable-символ</code> (<code>Symbol.isConcatSpreadable</code>) можно определить как собственное или унаследованное свойство с булевым значением. Оно контролирует поведение массивов и массивоподобных объектов:</p>
+`@@isConcatSpreadable-символ` (`Symbol.isConcatSpreadable`) можно определить как собственное или унаследованное свойство с булевым значением. Оно контролирует поведение массивов и массивоподобных объектов:
 
-<ul>
- <li>Для массивов поведением по умолчанию будет редуцирование к сумме своих элементов. <code>Symbol.isConcatSpreadable</code> поможет избежать редукции в подобных случаях.</li>
- <li>Для массивоподобных объектов поведением по умолчанию будет <code>сохранение своей структуры.isConcatSpreadable</code> может вызвать редуцирование в подобных случаях.</li>
-</ul>
+- Для массивов поведением по умолчанию будет редуцирование к сумме своих элементов. `Symbol.isConcatSpreadable` поможет избежать редукции в подобных случаях.
+- Для массивоподобных объектов поведением по умолчанию будет `сохранение своей структуры.isConcatSpreadable` может вызвать редуцирование в подобных случаях.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Массивы">Массивы</h3>
+### Массивы
 
-<p>По умолчанию, {{jsxref("Array.prototype.concat()")}}  возвращает массив, объединяющий  элементы исходных массивов:</p>
+По умолчанию, {{jsxref("Array.prototype.concat()")}} возвращает массив, объединяющий элементы исходных массивов:
 
-<pre class="brush: js">var alpha = ['a', 'b', 'c'],
+```js
+var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
 
 var alphaNumeric = alpha.concat(numeric);
 
 console.log(alphaNumeric); // Result: ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<p>Если значение <code>Symbol.isConcatSpreadable</code>  =  <code>false</code>, то можно отменить поведение по умолчанию:</p>
+Если значение `Symbol.isConcatSpreadable` = `false`, то можно отменить поведение по умолчанию:
 
-<pre class="brush: js">var alpha = ['a', 'b', 'c'],
+```js
+var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
 
 numeric[Symbol.isConcatSpreadable] = false;
 var alphaNumeric = alpha.concat(numeric);
 
 console.log(alphaNumeric); // Result: ['a', 'b', 'c', [1, 2, 3] ]
-</pre>
+```
 
-<h3 id="Массивоподобные_объекты">Массивоподобные объекты</h3>
+### Массивоподобные объекты
 
-<p>Для массивоподобных объектов поведением по умолчанию будет <code>сохранение своей структуры. </code>Чтобы вызвать его разложение до суммы  элементов  в итоговом массиве, нужно задать значение <code>true для Symbol.isConcatSpreadable</code>:</p>
+Для массивоподобных объектов поведением по умолчанию будет `сохранение своей структуры. `Чтобы вызвать его разложение до суммы элементов в итоговом массиве, нужно задать значение `true для Symbol.isConcatSpreadable`:
 
-<pre class="brush: js">var x = [1, 2, 3];
+```js
+var x = [1, 2, 3];
 
 var fakeArray = {
   [Symbol.isConcatSpreadable]: true,
@@ -61,18 +62,16 @@ var fakeArray = {
 }
 
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}

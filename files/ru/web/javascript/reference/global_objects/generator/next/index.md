@@ -10,43 +10,40 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>next</strong></code><strong><code>()</code></strong> возвращает объект с двумя свойствами <code>done</code> и <code>value</code>. Также вы можете задать параметр для метода <code>next</code>, чтобы отправить значение в генератор.</p>
+Метод **`next`\*\***`()`\*\* возвращает объект с двумя свойствами `done` и `value`. Также вы можете задать параметр для метода `next`, чтобы отправить значение в генератор.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>gen</var>.next(value)</code></pre>
+```
+gen.next(value)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение, отправляемое в генератор. Значение будет установлено в виде результата выражения yield, т. е. в [переменная] = yield [выражение] значение, которое было передано в функцию .next будет присвоено [переменной].</dd>
-</dl>
+- `value`
+  - : Значение, отправляемое в генератор. Значение будет установлено в виде результата выражения yield, т. е. в \[переменная] = yield \[выражение] значение, которое было передано в функцию .next будет присвоено \[переменной].
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> с двумя свойствами:</p>
+[`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) с двумя свойствами:
 
-<ul>
- <li><code>done</code> (boolean)
+- `done` (boolean)
 
-  <ul>
-   <li>Имеет значение <code>true</code>, если итератор находится за окончанием итерируемой последовательности. В этом случае <code>value</code> может указывать <em>возвращаемое значение</em> итератора.</li>
-   <li>Имеет значение <code>false</code>, если итератор может создать следующее значение в последовательности. Это эквивалентно вообще не указанному свойству <code>done</code>.</li>
-  </ul>
- </li>
- <li><code>value</code> - любое JavaScript значение, возвращаемое итератором. Может быть опущено, когда <code>done</code> имеет значение <code>true</code>.</li>
-</ul>
+  - Имеет значение `true`, если итератор находится за окончанием итерируемой последовательности. В этом случае `value` может указывать _возвращаемое значение_ итератора.
+  - Имеет значение `false`, если итератор может создать следующее значение в последовательности. Это эквивалентно вообще не указанному свойству `done`.
 
-<h2 id="Примеры">Примеры</h2>
+- `value` - любое JavaScript значение, возвращаемое итератором. Может быть опущено, когда `done` имеет значение `true`.
 
-<h3 id="Использование_next">Использование <code>next()</code></h3>
+## Примеры
 
-<p>Следующий пример показывает простой генератор и объект, который возвращает метод <code>next</code>:</p>
+### Использование `next()`
 
-<pre class="brush: js">function* gen() {
+Следующий пример показывает простой генератор и объект, который возвращает метод `next`:
+
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -57,13 +54,14 @@ g.next();      // "Object { value: 1, done: false }"
 g.next();      // "Object { value: 2, done: false }"
 g.next();      // "Object { value: 3, done: false }"
 g.next();      // "Object { value: undefined, done: true }"
-</pre>
+```
 
-<h3 id="Отправка_значения_в_генератор">Отправка значения в генератор</h3>
+### Отправка значения в генератор
 
-<p>В этом примере <code>next</code> вызывается со значением. Отметим, что первый вызов ничего не вывел, потому что генератор изначально ничего не получил.</p>
+В этом примере `next` вызывается со значением. Отметим, что первый вызов ничего не вывел, потому что генератор изначально ничего не получил.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   while(true) {
     var value = yield null;
     console.log(value);
@@ -76,23 +74,17 @@ g.next(1);
 g.next(2);
 // 2
 // "{ value: null, done: false }"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators">Итераторы и генераторы</a></li>
-</ul>
+- [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)
+- [Итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)

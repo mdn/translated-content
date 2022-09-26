@@ -3,45 +3,43 @@ title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a>.</p>
+Статический метод **`Reflect`\*\***`.deleteProperty()`\*\* позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
+## Синтаксис
 
+```
+Reflect.deleteProperty(target, propertyKey)
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">Reflect.deleteProperty(<em>target</em>, <em>propertyKey</em>)
-</pre>
+- `target`
+  - : Целевой объект в котором будет удалено свойство.
+- `propertyKey`
+  - : Имя удаляемого свойства.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Целевой объект в котором будет удалено свойство.</dd>
- <dt><code>propertyKey</code></dt>
- <dd>Имя удаляемого свойства.</dd>
-</dl>
+{{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Исключения
 
-<p>{{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено.</p>
+Исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
 
-<h3 id="Исключения">Исключения</h3>
+## Описание
 
-<p>Исключение {{jsxref("TypeError")}}, если <code>target</code> не является {{jsxref("Object")}}.</p>
+Метод `Reflect.deleteProperty` позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) без использования строгого режима.
 
-<h2 id="Описание">Описание</h2>
+## Примеры
 
-<p>Метод <code>Reflect.deleteProperty</code> позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> без использования строгого режима.</p>
+### Использования `Reflect.deleteProperty()`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использования_Reflect.deleteProperty()">Использования <code>Reflect.deleteProperty()</code></h3>
-
-<pre class="brush: js">var obj = { x: 1, y: 2 };
+```js
+var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, 'x'); // true
 obj; // { y: 2 }
 
@@ -54,21 +52,17 @@ Reflect.deleteProperty({}, 'foo'); // true
 
 // Возвращает false если такое свойство ненастраиваемое
 Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`delete` operator](/ru/docs/Web/JavaScript/Reference/Operators/delete)

@@ -9,67 +9,59 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setMonth()</code></strong> устанавливает месяц указанной даты по местному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setMonth(<var>monthValue</var>[, <var>dayValue</var>])</code></pre>
+Метод **`setMonth()`** устанавливает месяц указанной даты по местному времени.
 
-<h3 id="Версия_до_JavaScript_1.3">Версия до JavaScript 1.3</h3>
-<pre class="syntaxbox"><code><var>dateObj</var>.setMonth(<var>monthValue</var>)</code></pre>
+## Синтаксис
 
-<h3 id="Parameter">Parameter</h3>
-<dl>
- <dt><code>monthValue</code></dt>
- <dd>Целое число от 0 до 11, представляющее месяцы от января до декабря.</dd>
- <dt><code>dayValue</code></dt>
- <dd>Необязательный параметр. Целое число от 1 до 31, представляющее день месяца.</dd>
-</dl>
+```
+dateObj.setMonth(monthValue[, dayValue])
+```
 
-<h2 id="Description">Описание</h2>
-<p>Если вы не определите значения параметра <code>dayValue</code>, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getDate()", "getDate()")}}.</p>
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setMonth()</code> попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>monthValue</code> передать значение 15, год увеличится на 1, а в качестве месяца будет использоваться значение 3.</p>
+### Версия до JavaScript 1.3
 
-<h2 id="Examples">Примеры</h2>
+```
+dateObj.setMonth(monthValue)
+```
 
-<h3 id="Example:_Using_setMonth">Пример: использование метода <code>setMonth()</code></h3>
-<pre class="brush: js">var theBigDay = new Date();
+### Parameter
+
+- `monthValue`
+  - : Целое число от 0 до 11, представляющее месяцы от января до декабря.
+- `dayValue`
+  - : Необязательный параметр. Целое число от 1 до 31, представляющее день месяца.
+
+## Описание
+
+Если вы не определите значения параметра `dayValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getDate()", "getDate()")}}.
+
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setMonth()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `monthValue` передать значение 15, год увеличится на 1, а в качестве месяца будет использоваться значение 3.
+
+## Примеры
+
+### Пример: использование метода `setMonth()`
+
+```js
+var theBigDay = new Date();
 theBigDay.setMonth(6);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.38', 'Date.prototype.setMonth')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                             | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.38', 'Date.prototype.setMonth')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getMonth()")}}
+- {{jsxref("Date.prototype.setUTCMonth()")}}

@@ -8,27 +8,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Reference/Operators/Группировка
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор группировки <code>( )</code> контролирует порядок выполнения в выражениях.</p>
+Оператор группировки `( )` контролирует порядок выполнения в выражениях.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
+## Синтаксис
 
+```
+ ( )
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Описание
 
-<pre class="syntaxbox"> ( )</pre>
+Оператор группировки из пары круглых скобок вокруг выражения или подвыражения, переопределяющего нормальный [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), так что выражения с меньшим приоритетом выполняются раньше выражений с большим.
 
-<h2 id="Описание">Описание</h2>
+## Примеры
 
-<p>Оператор группировки из пары круглых скобок вокруг выражения или подвыражения, переопределяющего нормальный <a href="/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">приоритет операторов</a>, так что выражения с меньшим приоритетом выполняются раньше выражений с большим.</p>
+Переопределяем порядок, когда сначала выполняется умножение и деление, а потом сложение и вычитание, чтобы сначала выполнить сложение.
 
-<h2 id="Примеры">Примеры</h2>
-
-<p>Переопределяем порядок, когда сначала выполняется умножение и деление, а потом сложение и вычитание, чтобы сначала выполнить сложение.</p>
-
-<pre class="brush:js">let a = 1;
+```js
+let a = 1;
 let b = 2;
 let c = 3;
 
@@ -43,22 +44,18 @@ a + (b * c)   // 7
 
 // что эквивалентно следующему
 a * c + b * c // 9
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
-  <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Приоритет операторов</a></li>
-  <li>{{jsxref("Operators/delete", "delete")}}</li>
-  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
-</ul>
+- [Приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/typeof", "typeof")}}

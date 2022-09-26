@@ -8,62 +8,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>Значение <code>null</code> представляет отсутствие какого-либо объектного значения. В JavaScript, <code>null</code> является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.</p>
+Значение `null` представляет отсутствие какого-либо объектного значения. В JavaScript, `null` является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>null</code></pre>
+```
+null
+```
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Значение <code>null</code> записывается литералом <code>null</code>. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("Global_Objects/undefined", "undefined")}}). В API, <code>null</code> часто присутствует в местах где ожидается объект, но подходящего объекта нет.</p>
+Значение `null` записывается литералом `null`. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("Global_Objects/undefined", "undefined")}}). В API, `null` часто присутствует в местах где ожидается объект, но подходящего объекта нет.
 
-<pre class="brush: js">// переменная foo не существует - она не была определена и никогда не инициализировалась:
-&gt; foo
+```js
+// переменная foo не существует - она не была определена и никогда не инициализировалась:
+> foo
 'ReferenceError: foo is not defined'
 
 // переменная foo существует, но она не имеет ни типа, ни значения:
-&gt; var foo = null; foo
+> var foo = null; foo
 'null'
-</pre>
+```
 
+### Отличия между `null` и `undefined`
 
+`null` является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например:
 
-<h3 id="Difference_between_null_and_undefined">Отличия между <code>null</code> и <code>undefined</code></h3>
-
-<p><code>null</code> является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например: </p>
-
-<pre class="brush: js">var element;
+```js
+var element;
 // значение переменной element до её инициализации не определённо: undefined
 
 element = document.getElementById('not-exists');
 // здесь при попытке получения несуществующего элемента, метод getElementById возвращает null
 // переменная element теперь инициализирована значением null, её значение определено
-</pre>
+```
 
-<p>При проверке на <code>null</code> или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о <a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства">различии между операторами равенства (==) и идентичности (===)</a>: с первым, выполняется преобразование типов. </p>
+При проверке на `null` или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о [различии между операторами равенства (==) и идентичности (===)](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства): с первым, выполняется преобразование типов.
 
-<pre class="brush: js">typeof null        // object (не "null" из соображений обратной совместимости)
+```js
+typeof null        // object (не "null" из соображений обратной совместимости)
 typeof undefined   // undefined
 null === undefined // false
 null  == undefined // true
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Global_Objects/undefined", "undefined")}}</li>
- <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>
-</ul>
+- {{jsxref("Global_Objects/undefined", "undefined")}}
+- {{jsxref("Global_Objects/NaN", "NaN")}}

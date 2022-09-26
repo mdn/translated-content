@@ -3,91 +3,83 @@ title: WebAssembly.Table
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Объект <code><strong>WebAssembly.Table()</strong></code> - это JavaScript обёртка — структура похожая на массив, представляющая таблицу функций WebAssembly. Таблица, созданная через JavaScript или в коде WebAssembly, будет доступна и может быть изменена как из JavaScript, так и из WebAssembly.</p>
+Объект **`WebAssembly.Table()`** - это JavaScript обёртка — структура похожая на массив, представляющая таблицу функций WebAssembly. Таблица, созданная через JavaScript или в коде WebAssembly, будет доступна и может быть изменена как из JavaScript, так и из WebAssembly.
 
-<div class="note">
-<p><strong>Обратите внимание</strong>: Таблицы сейчас хранят только ссылки на функции, но это может быть расширено в будущем.</p>
-</div>
+> **Примечание:** **Обратите внимание**: Таблицы сейчас хранят только ссылки на функции, но это может быть расширено в будущем.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table">WebAssembly.Table()</a></code></dt>
- <dd>Создаёт новый объект <code>Table</code>.</dd>
-</dl>
+- [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+  - : Создаёт новый объект `Table`.
 
-<h2 id="Экземпляры_Table">Экземпляры <code>Table</code></h2>
+## Экземпляры `Table`
 
-<p>Все экземпляры <code>Table</code> наследуются от <a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype">прототипа конструктора</a> <code>Table()</code>, следовательно изменения прототипа затронут все экземпляры <code>Table</code>.</p>
+Все экземпляры `Table` наследуются от [прототипа конструктора](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype) `Table()`, следовательно изменения прототипа затронут все экземпляры `Table`.
 
-<h3 id="Свойства_экземпляра">Свойства экземпляра</h3>
+### Свойства экземпляра
 
-<dl>
- <dt><code>Table.prototype.constructor</code></dt>
- <dd>Возвращает функцию которая создала этот объект. По умолчанию это конструктор {{jsxref("WebAssembly.Table()")}}.</dd>
- <dt>{{jsxref("WebAssembly/Table/length","Table.prototype.length")}}</dt>
- <dd>Возвращает длину таблицы (количество элементов в таблице).</dd>
-</dl>
+- `Table.prototype.constructor`
+  - : Возвращает функцию которая создала этот объект. По умолчанию это конструктор {{jsxref("WebAssembly.Table()")}}.
+- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+  - : Возвращает длину таблицы (количество элементов в таблице).
 
-<h3 id="Instance_methods">Instance methods</h3>
+### Instance methods
 
-<dl>
- <dt>{{jsxref("WebAssembly/Table/get","Table.prototype.get(index)")}}</dt>
- <dd>Возвращает указанное значение из таблицы.</dd>
- <dt>{{jsxref("WebAssembly/Table/grow","Table.prototype.grow(count)")}}</dt>
- <dd>Увеличивает размер таблицы на указанное количество элементов.</dd>
- <dt>{{jsxref("WebAssembly/Table/set","Table.prototype.set(index, value)")}}</dt>
- <dd>Сохраняет указанное значение в таблицу под указанным индексом.</dd>
-</dl>
+- {{jsxref("WebAssembly/Table/get","Table.prototype.get(index)")}}
+  - : Возвращает указанное значение из таблицы.
+- {{jsxref("WebAssembly/Table/grow","Table.prototype.grow(count)")}}
+  - : Увеличивает размер таблицы на указанное количество элементов.
+- {{jsxref("WebAssembly/Table/set","Table.prototype.set(index, value)")}}
+  - : Сохраняет указанное значение в таблицу под указанным индексом.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий пример (смотри <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html">исходный код</a> и <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table2.html">живую версию</a> table2.html) создаёт новый экземпляр WebAssembly Table с 2 элементами. После этого выводит длину таблицы и содержимое первых двух элементов (полученных через {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} чтобы показать что длина равняется 2 и элементы равны {{jsxref("null")}}.</p>
+Следующий пример (смотри [исходный код](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) и [живую версию](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) table2.html) создаёт новый экземпляр WebAssembly Table с 2 элементами. После этого выводит длину таблицы и содержимое первых двух элементов (полученных через {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} чтобы показать что длина равняется 2 и элементы равны {{jsxref("null")}}.
 
-<pre class="brush: js">var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+```js
+var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 console.log(tbl.length);  // "2"
 console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"</pre>
+console.log(tbl.get(1));  // "null"
+```
 
-<p>После этого мы создаём объект импорта содержащий таблицу:</p>
+После этого мы создаём объект импорта содержащий таблицу:
 
-<pre class="brush: js">var importObj = {
+```js
+var importObj = {
   js: {
     tbl: tbl
   }
-};</pre>
+};
+```
 
-<p>После этого, мы создаём экземпляр модуля wasm (table2.wasm) используя метод {{jsxref("WebAssembly.instantiateStreaming()")}}.  Модуль table2.wasm содержит две функции, одна возвращает 42, а вторая - 83) и сохраняет эти функции под индексами 0 и 1 в импортированную таблицу (смотри <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">текстовую версию</a>).  Таким образом, после создания wasm-модуля, таблица имеет туже длину, но элементы таблицы стали <a href="/ru-RU/docs/WebAssembly/Exported_functions">функциями экспортированными из WebAssembly</a> которые можно вызывать из JS.</p>
+После этого, мы создаём экземпляр модуля wasm (table2.wasm) используя метод {{jsxref("WebAssembly.instantiateStreaming()")}}. Модуль table2.wasm содержит две функции, одна возвращает 42, а вторая - 83) и сохраняет эти функции под индексами 0 и 1 в импортированную таблицу (смотри [текстовую версию](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Таким образом, после создания wasm-модуля, таблица имеет туже длину, но элементы таблицы стали [функциями экспортированными из WebAssembly](/ru/docs/WebAssembly/Exported_functions) которые можно вызывать из JS.
 
-<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
+```js
+WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
   console.log(tbl.length);
   console.log(tbl.get(0)());
   console.log(tbl.get(1)());
-});</pre>
+});
+```
 
-<p>Заметьте что понадобилось добавить второй оператор вызова функции чтобы вызвать функцию возвращённую из талицы (т.е. <code>get(0)()</code> вместо <code>get(0)</code>) .</p>
+Заметьте что понадобилось добавить второй оператор вызова функции чтобы вызвать функцию возвращённую из талицы (т.е. `get(0)()` вместо `get(0)`) .
 
-<p>Этот пример показывает что мы создаём и работаем с таблицей из JavaScript, но экземпляр таблицы также виден и доступен внутри модуля wasm.</p>
+Этот пример показывает что мы создаём и работаем с таблицей из JavaScript, но экземпляр таблицы также виден и доступен внутри модуля wasm.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Обзор <a href="/ru-RU/docs/WebAssembly">WebAssembly</a></li>
- <li><a href="/ru-RU/docs/WebAssembly/Concepts">Концепция WebAssembly</a></li>
- <li><a href="/ru-RU/docs/WebAssembly/Using_the_JavaScript_API">Использование JavaScript API WebAssembly</a></li>
-</ul>
+- Обзор [WebAssembly](/ru/docs/WebAssembly)
+- [Концепция WebAssembly](/ru/docs/WebAssembly/Concepts)
+- [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API)

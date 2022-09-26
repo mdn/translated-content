@@ -11,53 +11,53 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
-<div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>sup()</code></strong> создаёт HTML-элемент {{HTMLElement("sup")}}, заставляющий строку отображаться надстрочным текстом (верхним индексом).</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.sup()</code></pre>
+Метод **`sup()`** создаёт HTML-элемент {{HTMLElement("sup")}}, заставляющий строку отображаться надстрочным текстом (верхним индексом).
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>sup()</code> заключает строку в тег <code>&lt;sup&gt;</code>: <code>"&lt;sup&gt;str&lt;/sup&gt;"</code>.</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+str.sup()
+```
 
-<h3 id="Example:_Using_sub_and_sup_methods_to_format_a_string">Пример: использование методов <code>sub()</code> и <code>sup()</code></h3>
-<p>В следующем примере для форматирования строки используются методы {{jsxref("String.prototype.sub()", "sub()")}} и <code>sup()</code>:</p>
-<pre class="brush: js">var superText = 'надстрочный';
+## Описание
+
+Метод `sup()` заключает строку в тег `<sup>`: `"<sup>str</sup>"`.
+
+## Примеры
+
+### Пример: использование методов `sub()` и `sup()`
+
+В следующем примере для форматирования строки используются методы {{jsxref("String.prototype.sub()", "sub()")}} и `sup()`:
+
+```js
+var superText = 'надстрочный';
 var subText = 'подстрочный';
 
 document.write('Вот так выглядит ' + superText.sup() + ' текст.');
 document.write('Вот так выглядит ' + subText.sub() + ' текст.');
-</pre>
-<p>Этот пример генерирует такой же вывод, как и следующий HTML:</p>
-<pre class="brush: html">Вот так выглядит &lt;sup&gt;надстрочный&lt;/sup&gt; текст.
-Вот так выглядит &lt;sub&gt;подстрочный&lt;/sub&gt; текст.
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.sup', 'String.prototype.sup')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.<br>
-    Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров.</td>
-  </tr>
- </tbody>
-</table>
+Этот пример генерирует такой же вывод, как и следующий HTML:
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+```html
+Вот так выглядит <sup>надстрочный</sup> текст.
+Вот так выглядит <sub>подстрочный</sub> текст.
+```
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("String.prototype.sub()")}}</li>
-</ul>
+## Спецификации
+
+| Спецификация                                                                                     | Статус               | Комментарии                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.sup', 'String.prototype.sup')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("String.prototype.sub()")}}

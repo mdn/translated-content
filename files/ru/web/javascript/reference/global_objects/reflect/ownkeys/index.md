@@ -3,41 +3,41 @@ title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.ownKeys()</code></strong> возвращает массив имён, а также <code>Symbols</code> собственных полей объекта <code>target</code> .</p>
+Статический метод **`Reflect`\*\***`.ownKeys()`\*\* возвращает массив имён, а также `Symbols` собственных полей объекта `target` .
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Reflect.ownKeys(target)
-</pre>
+```
+Reflect.ownKeys(target)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Объект <code>target</code>, из которого получаем собственные ключи.</dd>
-</dl>
+- `target`
+  - : Объект `target`, из которого получаем собственные ключи.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Массив {{jsxref("Array")}} собственных полей объекта <code>target</code>.</p>
+Массив {{jsxref("Array")}} собственных полей объекта `target`.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>Выбрасывает исключение {{jsxref("TypeError")}}, если <code>target</code> не является {{jsxref("Object")}}.</p>
+Выбрасывает исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code>Reflect.ownKeys</code> возвращает массив собственных ключей объекта <code>target</code>. Эквивалентом этого метода является <code>{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))</code>.</p>
+Метод `Reflect.ownKeys` возвращает массив собственных ключей объекта `target`. Эквивалентом этого метода является `{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_Reflect.ownKeys()">Использование <code>Reflect.ownKeys()</code></h3>
+### Использование `Reflect.ownKeys()`
 
-<pre class="brush: js">Reflect.ownKeys({z: 3, y: 2, x: 1}); // [ "z", "y", "x" ]
+```js
+Reflect.ownKeys({z: 3, y: 2, x: 1}); // [ "z", "y", "x" ]
 Reflect.ownKeys([]); // ["length"]
 
 var sym = Symbol.for('comet');
@@ -49,21 +49,17 @@ Reflect.ownKeys(obj);
 // Индексы в порядке их перечисления,
 // Строки в порядке их ввода,
 // Symbols в порядке их ввода
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

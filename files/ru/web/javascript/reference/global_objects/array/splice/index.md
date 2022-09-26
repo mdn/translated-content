@@ -10,110 +10,121 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>splice()</strong></code> изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.</p>
+Метод **`splice()`** изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>array</var>.splice(<var>start[</var>, <var>deleteCount</var>[, <var>item1</var>[, <var>item2</var>[, ...]]]])
-</code></pre>
+```
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Индекс, по которому начинает изменять массив. Если больше длины массива, реальный индекс будет установлен на длину массива. Если отрицателен, указывает индекс элемента с конца.</dd>
- <dt><code>deleteCount </code>{{optional_inline}}</dt>
- <dd>Целое число, показывающее количество старых удаляемых из массива элементов. Если <code>deleteCount</code> равен 0, элементы не удаляются. В этом случае вы должны указать как минимум один новый элемент. Если <code>deleteCount</code> больше количества элементов, оставшихся в массиве, начиная с индекса <code>start</code>, то будут удалены все элементы до конца массива.</dd>
- <dt><code>item<em>N </em></code>{{optional_inline}}</dt>
- <dd>Необязательные параметры. Добавляемые к массиву элементы. Если вы не укажете никакого элемента, <code>splice()</code> просто удалит элементы из массива.</dd>
-</dl>
+- `start`
+  - : Индекс, по которому начинает изменять массив. Если больше длины массива, реальный индекс будет установлен на длину массива. Если отрицателен, указывает индекс элемента с конца.
+- `deleteCount `{{optional_inline}}
+  - : Целое число, показывающее количество старых удаляемых из массива элементов. Если `deleteCount` равен 0, элементы не удаляются. В этом случае вы должны указать как минимум один новый элемент. Если `deleteCount` больше количества элементов, оставшихся в массиве, начиная с индекса `start`, то будут удалены все элементы до конца массива.
+- `itemN `{{optional_inline}}
+  - : Необязательные параметры. Добавляемые к массиву элементы. Если вы не укажете никакого элемента, `splice()` просто удалит элементы из массива.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Массив, содержащий удалённые элементы. Если будет удалён только один элемент, вернётся массив из одного элемента. Если никакие элементы не будут удалены, вернётся пустой массив.</p>
+Массив, содержащий удалённые элементы. Если будет удалён только один элемент, вернётся массив из одного элемента. Если никакие элементы не будут удалены, вернётся пустой массив.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если количество указанных вставляемых элементов будет отличным от количества удаляемых элементов, массив изменит длину после вызова.</p>
+Если количество указанных вставляемых элементов будет отличным от количества удаляемых элементов, массив изменит длину после вызова.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Удаляет_0_элементов_по_индексу_2_и_вставляет_drum">Удаляет 0 элементов по индексу 2 и вставляет "drum"</h3>
+### Удаляет 0 элементов по индексу 2 и вставляет "drum"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
 
 // myFish равен ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// removed равен [], ничего не удалено</pre>
+// removed равен [], ничего не удалено
+```
 
-<h3 id="Удаляет_1_элемент_по_индексу_3">Удаляет 1 элемент по индексу 3</h3>
+### Удаляет 1 элемент по индексу 3
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 
 // removed равен ["mandarin"]
-// myFish равен ["angel", "clown", "drum", "sturgeon"]</pre>
+// myFish равен ["angel", "clown", "drum", "sturgeon"]
+```
 
-<h3 id="Удаляет_1_элемент_по_индексу_2_и_вставляет_trumpet">Удаляет 1 элемент по индексу 2 и вставляет "trumpet"</h3>
+### Удаляет 1 элемент по индексу 2 и вставляет "trumpet"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, 'trumpet');
 
 // myFish равен ["angel", "clown", "trumpet", "sturgeon"]
-// removed равен ["drum"]</pre>
+// removed равен ["drum"]
+```
 
-<h3 id="Удаляет_2_элемента_начиная_с_индекса_0_и_вставляет_parrot_anemone_и_blue">Удаляет 2 элемента начиная с индекса 0 и вставляет "parrot", "anemone" и "blue"</h3>
+### Удаляет 2 элемента начиная с индекса 0 и вставляет "parrot", "anemone" и "blue"
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // myFish равен ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// removed равен ["angel", "clown"]</pre>
+// removed равен ["angel", "clown"]
+```
 
-<h3 id="Удаляет_2_элемента_начиная_с_индекса_2">Удаляет 2 элемента начиная с индекса 2</h3>
+### Удаляет 2 элемента начиная с индекса 2
 
-<pre class="brush: js">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish равен ["parrot", "anemone", "sturgeon"]
-// removed равен ["blue", "trumpet"]</pre>
+// removed равен ["blue", "trumpet"]
+```
 
-<h3 id="Удаляет_1_элемент_по_индексу_-2">Удаляет 1 элемент по индексу -2</h3>
+### Удаляет 1 элемент по индексу -2
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
 
 // myFish равен ["angel", "clown", "sturgeon"]
-// removed равен s ["mandarin"]</pre>
+// removed равен s ["mandarin"]
+```
 
-<h3 id="Удаляет_все_элементы_после_индекса_2_включительно">Удаляет все элементы после индекса 2 (включительно)</h3>
+### Удаляет все элементы после индекса 2 (включительно)
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);
 
 // myFish равен ["angel", "clown"]
-// removed равен ["mandarin", "sturgeon"]</pre>
+// removed равен ["mandarin", "sturgeon"]
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Backward_compatibility">Обратная совместимость</h3>
+### Обратная совместимость
 
-<p>В JavaScript 1.2 метод <code>splice()</code> возвращал удалённый элемент только если был удалён один элемент (параметр <code>deleteCount</code> равен 1); в противном случае метод возвращал массив с удалёнными элементами. Обратите внимание, что последним браузером, использующим JavaScript 1.2, был Netscape Navigator 4, так что вы можете считать, что <code>splice()</code> всегда возвращает массив.</p>
+В JavaScript 1.2 метод `splice()` возвращал удалённый элемент только если был удалён один элемент (параметр `deleteCount` равен 1); в противном случае метод возвращал массив с удалёнными элементами. Обратите внимание, что последним браузером, использующим JavaScript 1.2, был Netscape Navigator 4, так что вы можете считать, что `splice()` всегда возвращает массив.
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — добавление / удаление элементов с конца массива</li>
- <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — добавление / удаление элементов с начала массива</li>
- <li>{{jsxref("Array.prototype.concat()", "concat()")}} — возвращает новый массив, состоящий из данного массива, соединённого с другими массивами и/или значениями</li>
-</ul>
+- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — добавление / удаление элементов с конца массива
+- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — добавление / удаление элементов с начала массива
+- {{jsxref("Array.prototype.concat()", "concat()")}} — возвращает новый массив, состоящий из данного массива, соединённого с другими массивами и/или значениями

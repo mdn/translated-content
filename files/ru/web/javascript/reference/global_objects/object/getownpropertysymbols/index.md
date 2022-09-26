@@ -10,36 +10,37 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<p>Метод <code><strong>Object.getOwnPropertySymbols()</strong></code> возвращает массив всех символьных свойств, найденных непосредственно на переданном объекте.</p>
+Метод **`Object.getOwnPropertySymbols()`** возвращает массив всех символьных свойств, найденных непосредственно на переданном объекте.
 
-<p>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чьи символьные будут возвращены.</dd>
-</dl>
+- `obj`
+  - : Объект, чьи символьные будут возвращены.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Массив всех свойств символа, найденных прямо на данном объекте.</p>
+Массив всех свойств символа, найденных прямо на данном объекте.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Подобно методу {{jsxref("Object.getOwnPropertyNames()")}}, вы можете получить все символьные свойства указанного объекта в качестве массива символов. Обратите внимание, что метод {{jsxref("Object.getOwnPropertyNames()")}} сам не возвращает символьные свойства объекта, он возвращает только строковые свойства.</p>
+Подобно методу {{jsxref("Object.getOwnPropertyNames()")}}, вы можете получить все символьные свойства указанного объекта в качестве массива символов. Обратите внимание, что метод {{jsxref("Object.getOwnPropertyNames()")}} сам не возвращает символьные свойства объекта, он возвращает только строковые свойства.
 
-<p>Поскольку изначально никакой объект не содержит собственных символьных свойств, метод <code>Object.getOwnPropertySymbols()</code> будет возвращать пустой массив, пока вы не установите символьные свойства на вашем объекте.</p>
+Поскольку изначально никакой объект не содержит собственных символьных свойств, метод `Object.getOwnPropertySymbols()` будет возвращать пустой массив, пока вы не установите символьные свойства на вашем объекте.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -51,23 +52,17 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0]);     // Symbol(a)
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<div id="compat-desktop"> </div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

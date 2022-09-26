@@ -4,43 +4,49 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Functions/Определение_методов
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>Начиная с ECMAScript 6, существует короткий синтаксис для определения методов в инициализаторе объекта. По сути, это сокращение для функции, которая назначена имени метода.</p>
+Начиная с ECMAScript 6, существует короткий синтаксис для определения методов в инициализаторе объекта. По сути, это сокращение для функции, которая назначена имени метода.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var obj = {
-  <var>property</var>([<var>parameters</var>]) {},
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {},
-  * <var>generator</var>() {}
+```
+var obj = {
+  property([parameters]) {},
+  get property() {},
+  set property(value) {},
+  * generator() {}
 };
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Короткий синтаксис похожий на синтаксис <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a>'ов и <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>'ов представленных в ECMAScript 5.</p>
+Короткий синтаксис похожий на синтаксис [getter](/ru/docs/Web/JavaScript/Reference/Functions/get)'ов и [setter](/ru/docs/Web/JavaScript/Reference/Functions/set)'ов представленных в ECMAScript 5.
 
-<p>Следующий код:</p>
+Следующий код:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: function() {},
   bar: function() {}
-};</pre>
+};
+```
 
-<p>Вы теперь можете сократить до:</p>
+Вы теперь можете сократить до:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo() {},
   bar() {}
-};</pre>
+};
+```
 
-<h3 id="Сокращение_методов-генераторов">Сокращение методов-генераторов</h3>
+### Сокращение методов-генераторов
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Методы-генераторы</a> также могут быть определены используя короткий синтаксис. Обратите внимание, что звёздочка (*) в коротком синтаксисе должна быть перед именем свойства генератора. То есть, <code>* g(){}</code> будет работать, а <code>g *(){}</code> не будет.</p>
+[Методы-генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*) также могут быть определены используя короткий синтаксис. Обратите внимание, что звёздочка (\*) в коротком синтаксисе должна быть перед именем свойства генератора. То есть, `* g(){}` будет работать, а `g *(){}` не будет.
 
-<pre class="brush: js">// Используя свойство с именем (pre-ES6)
+```js
+// Используя свойство с именем (pre-ES6)
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -60,13 +66,15 @@ var obj2 = {
 
 var it = obj2.g();
 console.log(it.next().value); // 0
-console.log(it.next().value); // 1</pre>
+console.log(it.next().value); // 1
+```
 
-<h3 id="Определения_методов_(ES6)_не_могут_быть_конструкторами">Определения методов (ES6) не могут быть конструкторами</h3>
+### Определения методов (ES6) не могут быть конструкторами
 
-<p>Все определения методов кроме методов-генераторов не могут быть конструкторами и будут выбрасывать {{jsxref("TypeError")}} если вы попытаетесь создать их экземпляр.</p>
+Все определения методов кроме методов-генераторов не могут быть конструкторами и будут выбрасывать {{jsxref("TypeError")}} если вы попытаетесь создать их экземпляр.
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   method() {},
 };
 new obj.method; // TypeError: obj.method is not a constructor
@@ -75,24 +83,26 @@ var obj = {
   * g() {}
 };
 new obj.g; // Генератор
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_тестовый_пример">Простой тестовый пример</h3>
+### Простой тестовый пример
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   a : "foo",
   b(){ return this.a; }
 };
 console.log(obj.b()); // "foo"
-</pre>
+```
 
-<h3 id="Вычисляемые_имена_свойств">Вычисляемые имена свойств</h3>
+### Вычисляемые имена свойств
 
-<p>Короткий синтаксис также поддерживает вычисляемые имена свойств.</p>
+Короткий синтаксис также поддерживает вычисляемые имена свойств.
 
-<pre class="brush: js">var bar = {
+```js
+var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},
@@ -100,32 +110,32 @@ console.log(obj.b()); // "foo"
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2</pre>
+console.log(bar.foo2()); // 2
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="SpiderMonkey-specific_notes">SpiderMonkey-specific notes</h2>
+## SpiderMonkey-specific notes
 
-<ul>
- <li>Prior to SpiderMonkey 38 {{geckoRelease(38)}},  "<code>get</code>" and "<code>set</code>" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.</li>
- <li>Prior to SpiderMonkey 41 {{geckoRelease(41)}}, curly braces were not required in method definitions. They are required from now on to conform to the ES6 specification and will throw a {{jsxref("SyntaxError")}} in this and later versions ({{bug(1150855)}}).
-  <pre class="brush: js example-bad">var o = {x() 12}; // SyntaxError</pre>
- </li>
- <li>The restriction that only generator methods are constructors has been implemented in SpiderMonkey 41 {{geckoRelease(41)}}. See also {{bug(1059908)}} and {{bug(1166950)}}.</li>
-</ul>
+- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, "`get`" and "`set`" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.
+- Prior to SpiderMonkey 41 {{geckoRelease(41)}}, curly braces were not required in method definitions. They are required from now on to conform to the ES6 specification and will throw a {{jsxref("SyntaxError")}} in this and later versions ({{bug(1150855)}}).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+  ```js example-bad
+  var o = {x() 12}; // SyntaxError
+  ```
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
-</ul>
+- The restriction that only generator methods are constructors has been implemented in SpiderMonkey 41 {{geckoRelease(41)}}. See also {{bug(1059908)}} and {{bug(1166950)}}.
+
+## Смотрите также
+
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

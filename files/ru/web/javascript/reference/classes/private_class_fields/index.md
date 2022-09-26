@@ -4,13 +4,14 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Приватные_поля_класса
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p><span class="seoSummary">Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. Тем не менее, есть <a href="https://github.com/tc39/proposal-class-fields">экспериментальное предложение</a>, позволяющее определить приватные поля класса, используя префикс хэша <code>#</code>.</span></p>
+Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. Тем не менее, есть [экспериментальное предложение](https://github.com/tc39/proposal-class-fields), позволяющее определить приватные поля класса, используя префикс хэша `#`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">class ClassWithPrivateField {
+```
+class ClassWithPrivateField {
   #privateField
 }
 
@@ -23,17 +24,18 @@ class ClassWithPrivateMethod {
 class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 }
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Приватные_статические_поля">Приватные статические поля</h3>
+### Приватные статические поля
 
-<p>Приватные поля доступны в конструкторе класса изнутри самой декларации класса.</p>
+Приватные поля доступны в конструкторе класса изнутри самой декларации класса.
 
-<p>Ограничение статических переменных, вызываемых только статическими методами, все ещё сохраняется.</p>
+Ограничение статических переменных, вызываемых только статическими методами, все ещё сохраняется.
 
-<pre class="brush: js">class ClassWithPrivateStaticField {
+```js
+class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -42,15 +44,17 @@ class ClassWithPrivateStaticField {
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
+console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+```
 
-<p>Приватные статические поля добавляются в конструктор класса во время обработки класса.</p>
+Приватные статические поля добавляются в конструктор класса во время обработки класса.
 
-<p>Существует ограничение по происхождению частных статических полей. Только класс, который определяет приватное статическое поле, может получить доступ к этому полю.</p>
+Существует ограничение по происхождению частных статических полей. Только класс, который определяет приватное статическое поле, может получить доступ к этому полю.
 
-<p>Это может привести к неожиданному поведению при использовании this.</p>
+Это может привести к неожиданному поведению при использовании this.
 
-<pre class="brush: js">class BaseClassWithPrivateStaticField {
+```js
+class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -68,15 +72,16 @@ try {
 } catch(e) { error = e}
 
 console.assert(error instanceof TypeError)
-</pre>
+```
 
-<h3 id="Приватные_поля_экземпляров">Приватные поля экземпляров</h3>
+### Приватные поля экземпляров
 
-<p>Приватные поля экземпляров объявляются <strong>#имя </strong>(произносится как "хэш нэймс"), которые идентифицируются префиксом <code><strong>#</strong></code>. <code>#</code> является частью имени, а также используется для объявления и доступа.</p>
+Приватные поля экземпляров объявляются **#имя** (произносится как "хэш нэймс"), которые идентифицируются префиксом **`#`**. `#` является частью имени, а также используется для объявления и доступа.
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Инкапсуляция обеспечивается языком.</span> <span title="">Обращение к <code>#</code> именам вне области видимости является синтаксической ошибкой.</span></span></p>
+Инкапсуляция обеспечивается языком. Обращение к `#` именам вне области видимости является синтаксической ошибкой.
 
-<pre class="brush: js">class ClassWithPrivateField {
+```js
+class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -87,19 +92,20 @@ console.assert(error instanceof TypeError)
 
 const instance = new ClassWithPrivateField()
 instance.#privateField === 42 // Syntax error
-</pre>
+```
 
-<h3 id="Приватные_методы">Приватные методы</h3>
+### Приватные методы
 
-<h4 id="Приватные_статические_методы">Приватные статические методы</h4>
+#### Приватные статические методы
 
-<p>Приватные статические методы</p>
+Приватные статические методы
 
-<p>Как и их публичный эквивалент, приватные статические методы вызываются на самом классе, а не на экземплярах класса. Как и приватные статические поля, они доступны только изнутри объявления класса.</p>
+Как и их публичный эквивалент, приватные статические методы вызываются на самом классе, а не на экземплярах класса. Как и приватные статические поля, они доступны только изнутри объявления класса.
 
-<p>Приватные статические методы могут быть генераторами, асинхронными функциями и асинхронными функциями-генераторами.</p>
+Приватные статические методы могут быть генераторами, асинхронными функциями и асинхронными функциями-генераторами.
 
-<pre class="brush: js">class ClassWithPrivateStaticMethod {
+```js
+class ClassWithPrivateStaticMethod {
     static #privateStaticMethod() {
         return 42
     }
@@ -115,11 +121,12 @@ instance.#privateField === 42 // Syntax error
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
-</pre>
+```
 
-<p>Это может привести к неожиданному поведению при его использовании <strong><code>this</code></strong>. В следующем примере <code>this</code> относится к классу <code>Derived</code> (а не к классу <code>Base</code>), когда мы пытаемся вызвать <code>Derived.publicStaticMethod2()</code>, и, таким образом, имеет такое же "ограничение по происхождению", как упоминалось выше:</p>
+Это может привести к неожиданному поведению при его использовании **`this`**. В следующем примере `this` относится к классу `Derived` (а не к классу `Base`), когда мы пытаемся вызвать `Derived.publicStaticMethod2()`, и, таким образом, имеет такое же "ограничение по происхождению", как упоминалось выше:
 
-<pre class="brush: js">class Base {
+```js
+class Base {
     static #privateStaticMethod() {
         return 42;
     }
@@ -135,13 +142,14 @@ class Derived extends Base {}
 
 console.log(Derived.publicStaticMethod1()); // 42
 console.log(Derived.publicStaticMethod2()); // TypeError
-</pre>
+```
 
-<h4 id="Приватные_методы_экземпляровinstance">Приватные методы экземпляров(instance)</h4>
+#### Приватные методы экземпляров(instance)
 
-<p>Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещён также, как у приватных полей класса.</p>
+Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещён также, как у приватных полей класса.
 
-<pre class="brush: js">class ClassWithPrivateMethod {
+```js
+class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -153,11 +161,13 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"</pre>
+// expected output: "hello worl​d"
+```
 
-<p>Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:</p>
+Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:
 
-<pre class="brush: js">class ClassWithPrivateAccessor {
+```js
+class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {
@@ -175,19 +185,17 @@ console.log(instance.getPrivateMessage())
 
 new ClassWithPrivateAccessor();
 // expected output: "✨hello worl​d✨"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>{{Specifications("javascript.classes")}}</p>
+{{Specifications("javascript.classes")}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat("javascript.classes")}}</p>
+{{Compat("javascript.classes")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
-</ul>
+- [Public class fields](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

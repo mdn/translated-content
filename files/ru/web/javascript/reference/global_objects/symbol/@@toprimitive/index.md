@@ -1,5 +1,5 @@
 ---
-title: 'Symbol.prototype[@@toPrimitive]'
+title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 tags:
   - ECMAScript 2015
@@ -10,39 +10,34 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+Метод **`[@@toPrimitive]()`** преобразует объект Symbol в примитивное значение.
 
+## Синтаксис
 
-<p>Метод <code><strong>[@@toPrimitive]()</strong></code>  <span style="font-size: 1rem; letter-spacing: -0.00278rem;">преобразует объект Symbol в примитивное значение.</span></p>
+```
+Symbol()[Symbol.toPrimitive](hint)
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Возвращаемое значение
 
-<pre class="syntaxbox"><var>Symbol()[Symbol.toPrimitive](hint)
-</var></pre>
+Примитивное значение указанного объекта Symbol {{jsxref("Symbol")}}.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Описание
 
-<p>Примитивное значение указанного объекта Symbol {{jsxref("Symbol")}}.</p>
+Метод `[@@toPrimitive]()` возвращает примитивное значение объекта Symbol как тип данных Symbol. Аргумент `hint` не используется.
 
-<h2 id="Описание">Описание</h2>
+JavaScript вызывает метод`[@@toPrimitive] ()` для преобразования объекта в примитив. JavaScript автоматически вызывает метод, когда на месте объекта ожидается примитивное значение.
 
-<p>Метод <code>[@@toPrimitive]()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> возвращает примитивное значение объекта Symbol как тип данных Symbol. Аргумент </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">hint</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> не используется.</span></p>
-
-<p>JavaScript вызывает метод<code style="font-size: 1rem; letter-spacing: -0.00278rem;">[@@toPrimitive] ()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> для преобразования объекта в примитив. </span><span style="font-size: 1rem; letter-spacing: -0.00278rem;">JavaScript автоматически вызывает метод, когда на месте</span><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> объекта ожидается примитивное значение.</span></p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Symbol.toPrimitive")}}

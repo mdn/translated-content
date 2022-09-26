@@ -8,59 +8,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Math.SQRT1_2</code></strong> представляет квадратный корень из 1/2, приблизительно равный 0,707:</p>
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0,707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0,707</annotation></semantics></math></p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Math.SQRT1_2`** представляет квадратный корень из 1/2, приблизительно равный 0,707:
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку свойство <code>SQRT1_2</code> является статическим свойством объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.SQRT1_2</code>, а не пытаться создавать экземпляр объекта <code>Math</code> и получать свойство от него (поскольку объект <code>Math</code> не является конструктором).</p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0,707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0,707</annotation></semantics></math>
 
-<h2 id="Examples">Примеры</h2>
+{{js_property_attributes(0, 0, 0)}}
 
-<h3 id="Example:_Using_Math.SQRT1_2">Пример: использование свойства <code>Math.SQRT1_2</code></h3>
-<p>Следующая функция возвращает единицу, делённую на квадратный корень из двух:</p>
-<pre class="brush: js">function getRoot1_2() {
+## Описание
+
+Поскольку свойство `SQRT1_2` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.SQRT1_2`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.SQRT1_2`
+
+Следующая функция возвращает единицу, делённую на квадратный корень из двух:
+
+```js
+function getRoot1_2() {
   return Math.SQRT1_2;
 }
 
 getRoot1_2(); // 0.7071067811865476
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                 | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

@@ -3,48 +3,50 @@ title: 'RangeError: argument is not a valid code point'
 slug: Web/JavaScript/Reference/Errors/Not_a_codepoint
 translation_of: Web/JavaScript/Reference/Errors/Not_a_codepoint
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">RangeError: Invalid code point {0} (Edge)
+```
+RangeError: Invalid code point {0} (Edge)
 RangeError: {0} is not a valid code point (Firefox)
 RangeError: Invalid code point {0} (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Метод {{jsxref("String.fromCodePoint()")}} выдаёт ошибку, если ему было передано значение {{jsxref("NaN")}}, отрицательное целое число (-1), нецелое число (5.4) или значение, которое превышает 0x10FFFF (1114111).</p>
+Метод {{jsxref("String.fromCodePoint()")}} выдаёт ошибку, если ему было передано значение {{jsxref("NaN")}}, отрицательное целое число (-1), нецелое число (5.4) или значение, которое превышает 0x10FFFF (1114111).
 
-<p><a href="https://en.wikipedia.org/wiki/Code_point">Кодовая точка (code point)</a> – это значение в кодовом пространстве Unicode, то есть диапазон целых чисел от <code>0</code> до <code>0x10FFFF</code>.</p>
+[Кодовая точка (code point)](https://en.wikipedia.org/wiki/Code_point) – это значение в кодовом пространстве Unicode, то есть диапазон целых чисел от `0` до `0x10FFFF`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Нерабочие_случаи">Нерабочие случаи</h3>
+### Нерабочие случаи
 
-<pre class="brush: js example-bad">String.fromCodePoint('_');      // RangeError
+```js example-bad
+String.fromCodePoint('_');      // RangeError
 String.fromCodePoint(Infinity); // RangeError
 String.fromCodePoint(-1);       // RangeError
 String.fromCodePoint(3.14);     // RangeError
 String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError</pre>
+String.fromCodePoint(NaN);      // RangeError
+```
 
-<h3 id="Рабочие_случаи">Рабочие случаи</h3>
+### Рабочие случаи
 
-<pre class="brush: js example-good">String.fromCodePoint(42);       // "*"
+```js example-good
+String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
 String.fromCodePoint(0x404);    // "\u0404"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
 String.fromCodePoint(194564);   // "\uD87E\uDC04"
 String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}

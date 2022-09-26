@@ -3,34 +3,34 @@ title: class
 slug: Web/JavaScript/Reference/Statements/class
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>Class declaration</strong> создаёт новый класс с данным именем на основе прототипного наследования.</p>
+**Class declaration** создаёт новый класс с данным именем на основе прототипного наследования.
 
-<div class="noinclude">
-<p>Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это <strong>приведёт к ошибке типа</strong>.</p>
-</div>
+Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это **приведёт к ошибке типа**.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">class <em>name</em> [extends] {
+```js
+class name [extends] {
   // тело класса
 }
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Как и class expression, тело class declaration будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}. Свойство конструктора является опциональным.</p>
+Как и class expression, тело class declaration будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}. Свойство конструктора является опциональным.
 
-<p>Class declaration не {{Glossary("Hoisting", "поднимается")}} (в отличие от <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">декларируемых функций</a>).</p>
+Class declaration не {{Glossary("Hoisting", "поднимается")}} (в отличие от [декларируемых функций](/ru/docs/Web/JavaScript/Reference/Statements/function)).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_class_declaration">Простой class declaration</h3>
+### Простой class declaration
 
-<p>В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.</p>
+В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -43,55 +43,30 @@ class Square extends Polygon {
     super(length, length);
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<div class="warning">
-<h3 id="Попытка_объявить_класс_дважды">Попытка объявить класс дважды</h3>
+> **Предупреждение:** ### Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа.`js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared `Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.```js
+> var Foo = class {};
+> class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
+>
+> ```
+>
+> ```
 
-<p>Переопределение класса с помощью class declaration вызовет ошибку типа.</p>
+## Спецификации
 
-<pre class="brush: js">class Foo {};
-class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
-</pre>
+| Спецификация                                                                                 | Статус                       | Комментарий         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
 
-<p>Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.</p>
+## Поддержка браузерами
 
-<pre class="brush: js">var Foo = class {};
-class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
+{{Compat}}
 
-</pre>
-</div>
+## Смотрите также
 
-<h2 id="Спецификации">Спецификации</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`function` declaration](/ru/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)

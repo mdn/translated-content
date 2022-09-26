@@ -3,68 +3,57 @@ title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>BigInt.asUintN</code></strong> static method is used to wrap a BigInt value to an unsigned integer between 0 and 2<sup>width</sup>-1.</p>
+The **`BigInt.asUintN`** static method is used to wrap a BigInt value to an unsigned integer between 0 and 2width-1.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">BigInt.asUintN(<var>width</var>, <var>bigint</var>);</pre>
+```
+BigInt.asUintN(width, bigint);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>width</var></code></dt>
- <dd>The amount of bits available for the integer size.</dd>
- <dt><code><var>bigint</var></code></dt>
- <dd>The integer to clamp to fit into the supplied bits.</dd>
-</dl>
+- `width`
+  - : The amount of bits available for the integer size.
+- `bigint`
+  - : The integer to clamp to fit into the supplied bits.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The value of <code><var>bigint</var></code> modulo 2<sup><code><var>width</var></code></sup> as an unsigned integer.</p>
+The value of `bigint` modulo 2`width` as an unsigned integer.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Staying_in_64-bit_ranges">Staying in 64-bit ranges</h3>
+### Staying in 64-bit ranges
 
-<p>The <code>BigInt.asUintN()</code> method can be useful to stay in the range of 64-bit arithmetic.</p>
+The `BigInt.asUintN()` method can be useful to stay in the range of 64-bit arithmetic.
 
-<pre class="brush: js">const max = 2n ** 64n - 1n;
+```js
+const max = 2n ** 64n - 1n;
 
 BigInt.asUintN(64, max);
 // ↪ 18446744073709551615n
 
 BigInt.asUintN(64, max + 1n);
 // ↪ 0n
-// zero because of overflow</pre>
+// zero because of overflow
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{JSxRef("BigInt")}}</li>
- <li>{{JSxRef("BigInt.asIntN()")}}</li>
-</ul>
+- {{JSxRef("BigInt")}}
+- {{JSxRef("BigInt.asIntN()")}}

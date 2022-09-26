@@ -11,36 +11,37 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<p>Метод <strong><code>Object.getOwnPropertyNames()</code></strong> возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.</p>
+Метод **`Object.getOwnPropertyNames()`** возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.
 
-<p>{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>Object.getOwnPropertyNames(<var>obj</var>)</code></pre>
+```js
+Object.getOwnPropertyNames(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чьи перечисляемые <em>и неперечисляемые</em> собственные свойства будут возвращены.</dd>
-</dl>
+- `obj`
+  - : Объект, чьи перечисляемые _и неперечисляемые_ собственные свойства будут возвращены.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Массив строк, который соответствует свойствам, найденным непосредственно в данном объекте.</p>
+Массив строк, который соответствует свойствам, найденным непосредственно в данном объекте.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>Object.getOwnPropertyNames</code> возвращает массив строк, соответствующих перечисляемым <em>и неперечисляемым</em> свойствам, найденным непосредственно в объекте <code>obj</code>. Порядок перечисляемых свойств в массиве соответствует порядку при обходе объекта циклом {{jsxref("Statements/for...in", "for...in")}} (или при возврате методом {{jsxref("Object.keys")}}). Порядок неперечисляемых свойств в массиве, а также их местоположение среди перечисляемых свойств не определены.</p>
+Метод `Object.getOwnPropertyNames` возвращает массив строк, соответствующих перечисляемым _и неперечисляемым_ свойствам, найденным непосредственно в объекте `obj`. Порядок перечисляемых свойств в массиве соответствует порядку при обходе объекта циклом {{jsxref("Statements/for...in", "for...in")}} (или при возврате методом {{jsxref("Object.keys")}}). Порядок неперечисляемых свойств в массиве, а также их местоположение среди перечисляемых свойств не определены.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Object.getOwnPropertyNames">Пример: использование <code>Object.getOwnPropertyNames()</code></h3>
+### Пример: использование `Object.getOwnPropertyNames()`
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); // напечатает '0,1,2,length'
 
 // Массивоподобный объект
@@ -49,12 +50,12 @@ console.log(Object.getOwnPropertyNames(obj).sort()); // напечатает '0,
 
 // Печать имён и значений свойств с помощью Array.forEach
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  console.log(val + ' -&gt; ' + obj[val]);
+  console.log(val + ' -> ' + obj[val]);
 });
 // напечатает
-// 0 -&gt; a
-// 1 -&gt; b
-// 2 -&gt; c
+// 0 -> a
+// 1 -> b
+// 2 -> c
 
 // Не перечисляемое свойство
 var my_obj = Object.create({}, {
@@ -66,13 +67,14 @@ var my_obj = Object.create({}, {
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort()); // напечатает 'foo,getFoo'
-</pre>
+```
 
-<p>Если вы хотите обработать только перечисляемые свойства, смотрите в сторону метода {{jsxref("Object.keys()")}} или используйте цикл {{jsxref("Statements/for...in", "for...in")}} (хотя стоит отметить, что он пройдётся по перечисляемым свойствам, присутствующим не только непосредственно в самом объекте, но и унаследованным из цепочки прототипов объекта; последние можно отфильтровать с помощью метода {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).</p>
+Если вы хотите обработать только перечисляемые свойства, смотрите в сторону метода {{jsxref("Object.keys()")}} или используйте цикл {{jsxref("Statements/for...in", "for...in")}} (хотя стоит отметить, что он пройдётся по перечисляемым свойствам, присутствующим не только непосредственно в самом объекте, но и унаследованным из цепочки прототипов объекта; последние можно отфильтровать с помощью метода {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
 
-<p>Элементы в цепочке прототипов не перечисляются:</p>
+Элементы в цепочке прототипов не перечисляются:
 
-<pre class="brush: js">function ParentClass() {}
+```js
+function ParentClass() {}
 ParentClass.prototype.inheritedMethod = function() {};
 
 function ChildClass() {
@@ -87,13 +89,14 @@ alert(
     new ChildClass() // ['prop', 'method']
   )
 );
-</pre>
+```
 
-<h3 id="Example:_Get_Non-Enumerable_Only">Пример: получение только не перечисляемых свойств</h3>
+### Пример: получение только не перечисляемых свойств
 
-<p>Здесь используется функция {{jsxref("Array.prototype.filter()")}} для удаления перечисляемых ключей (полученных через метод {{jsxref("Object.keys()")}}) из списка всех ключей (полученных через метод <code>Object.getOwnPropertyNames()</code>) и, таким образом, оставляющая только неперечисляемые ключи.</p>
+Здесь используется функция {{jsxref("Array.prototype.filter()")}} для удаления перечисляемых ключей (полученных через метод {{jsxref("Object.keys()")}}) из списка всех ключей (полученных через метод `Object.getOwnPropertyNames()`) и, таким образом, оставляющая только неперечисляемые ключи.
 
-<pre class="brush: js">var target = myObject;
+```js
+var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
@@ -108,36 +111,33 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 });
 
 console.log(nonenum_only);
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет приведён к объекту.</p>
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет приведён к объекту.
 
-<pre class="brush: js">&gt; Object.getOwnPropertyNames('foo')
+```js
+> Object.getOwnPropertyNames('foo')
 TypeError: "foo" is not an object // код ES5
 
-&gt; Object.getOwnPropertyNames('foo')
+> Object.getOwnPropertyNames('foo')
 ['length', '0', '1', '2']         // код ES6
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Array.forEach()")}}</li>
-</ul>
+- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Array.forEach()")}}

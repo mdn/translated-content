@@ -2,46 +2,50 @@
 title: Пустая инструкция
 slug: Web/JavaScript/Reference/Statements/Empty
 tags:
-  - 'Statement, инструкция, пустая инструкция'
+  - Statement, инструкция, пустая инструкция
 translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>Пустая инструкция</strong> используется, когда инструкция не нужна, хотя синтаксис JavaScript будет предполагать её.</p>
+**Пустая инструкция** используется, когда инструкция не нужна, хотя синтаксис JavaScript будет предполагать её.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">;
-</pre>
+```
+;
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Пустая инструкция - точка с запятой (;) оповещает о том, что ни одно выражение не будет выполняться, даже если синтаксис JavaScript ожидает этого.</p>
+Пустая инструкция - точка с запятой (;) оповещает о том, что ни одно выражение не будет выполняться, даже если синтаксис JavaScript ожидает этого.
 
-<p>Противоположное поведение, где вы хотите использовать несколько заявлений, но JavaScript позволяет только одно, можно сделать используя <a href="/ru/docs/Web/JavaScript/Reference/Statements/block"> блок</a>; он комбинирует несколько инструкций в одно.</p>
+Противоположное поведение, где вы хотите использовать несколько заявлений, но JavaScript позволяет только одно, можно сделать используя [блок](/ru/docs/Web/JavaScript/Reference/Statements/block); он комбинирует несколько инструкций в одно.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Пустая инструкция используется в выражениях циклов. Смотрите следующий пример с пустым телом цикла:</p>
+Пустая инструкция используется в выражениях циклов. Смотрите следующий пример с пустым телом цикла:
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 
 // Приравняет все значения массива к 0
-for (i = 0; i &lt; arr.length; arr[i++] = 0) /* выражения */ ;
+for (i = 0; i < arr.length; arr[i++] = 0) /* выражения */ ;
 
 console.log(arr)
 // [0, 0, 0]
-</pre>
+```
 
-<p><strong>Заметьте:</strong> Это хорошая идея: комментировать намеренное использование пустых инструкций, т.к. не очевидно отличить их от нормальной точки с запятой. В следующем примере использование, вероятно, ненамеренное:</p>
+**Заметьте:** Это хорошая идея: комментировать намеренное использование пустых инструкций, т.к. не очевидно отличить их от нормальной точки с запятой. В следующем примере использование, вероятно, ненамеренное:
 
-<pre class="brush: js">if (condition);       // Внимание, этот if ничего не делает!
+```js
+if (condition);       // Внимание, этот if ничего не делает!
    killTheUniverse()  // Это всегда выполняется!!!
-</pre>
+```
 
-<p>Другой пример: <a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a> без фигурных скобок  (<code>{}</code>). Если <code>three</code> истинно, ничего не произойдёт, <code>four</code> не важна, и функция <code>launchRocket()</code> тоже не запустится.</p>
+Другой пример: [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) без фигурных скобок (`{}`). Если `three` истинно, ничего не произойдёт, `four` не важна, и функция `launchRocket()` тоже не запустится.
 
-<pre class="brush: js">if (one)
+```js
+if (one)
   doOne();
 else if (two)
   doTwo();
@@ -50,51 +54,23 @@ else if (three)
 else if (four)
   doFour();
 else
-  launchRocket();</pre>
+  launchRocket();
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-empty-statement', 'Empty statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.3', 'Empty statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.3', 'Empty statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.3', 'Empty statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                       | Комментарий             |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------- |
+| {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} | {{Spec2('ESDraft')}} |                         |
+| {{SpecName('ES6', '#sec-empty-statement', 'Empty statement')}}     | {{Spec2('ES6')}}         |                         |
+| {{SpecName('ES5.1', '#sec-12.3', 'Empty statement')}}                 | {{Spec2('ES5.1')}}     |                         |
+| {{SpecName('ES3', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES3')}}         |                         |
+| {{SpecName('ES1', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES1')}}         | Изначальное определение |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/block", "Блок")}}</li>
-</ul>
+- {{jsxref("Statements/block", "Блок")}}

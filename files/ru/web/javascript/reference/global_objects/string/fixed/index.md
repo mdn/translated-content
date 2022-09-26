@@ -11,52 +11,52 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
-<div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>fixed()</code></strong> создаёт HTML-элемент {{HTMLElement("tt")}}, заставляющий строку отображаться моноширинным шрифтом.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.fixed()</code></pre>
+Метод **`fixed()`** создаёт HTML-элемент {{HTMLElement("tt")}}, заставляющий строку отображаться моноширинным шрифтом.
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>fixed()</code> заключает строку в тег <code>&lt;tt&gt;</code>: <code>"&lt;tt&gt;str&lt;/tt&gt;"</code>.</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+str.fixed()
+```
 
-<h3 id="Example:_Using_fixed">Пример: использование метода <code>fixed()</code></h3>
-<p>В следующем примере для изменения форматирования строки используется метод <code>fixed()</code>:</p>
-<pre class="brush: js">var worldString = 'Привет, мир';
+## Описание
+
+Метод `fixed()` заключает строку в тег `<tt>`: `"<tt>str</tt>"`.
+
+## Примеры
+
+### Пример: использование метода `fixed()`
+
+В следующем примере для изменения форматирования строки используется метод `fixed()`:
+
+```js
+var worldString = 'Привет, мир';
 
 document.write(worldString.fixed());
-</pre>
-<p>Этот пример генерирует такой же вывод, как и следующий HTML:</p>
-<pre class="brush: html">&lt;tt&gt;Привет, мир&lt;/tt&gt;
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.<br>
-    Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров.</td>
-  </tr>
- </tbody>
-</table>
+Этот пример генерирует такой же вывод, как и следующий HTML:
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+```html
+<tt>Привет, мир</tt>
+```
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+## Спецификации
+
+| Спецификация                                                                                         | Статус               | Комментарии                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

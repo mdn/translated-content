@@ -8,81 +8,71 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>Math.atan2()</code></strong> возвращает арктангенс от частного своих аргументов.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>Math.atan2(<var>y</var>, <var>x</var>)</code></pre>
+Метод **`Math.atan2()`** возвращает арктангенс от частного своих аргументов.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>y</code></dt>
- <dd>Первое число.</dd>
- <dt><code>x</code></dt>
- <dd>Второе число.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>Math.atan2()</code> возвращает числовое значение от -π до π, представляющее угол тета точки <code>(x, y)</code>. Это выраженный в радианах угол, отсчитываемый против часовой стрелки от положительного направления оси X до точки <code>(x, y)</code>. Обратите внимание, что первым в метод передаётся координата y, а только вторым — координата x.</p>
-<p>В метод <code>Math.atan2()</code> аргументы <code>x</code> и <code>y</code> передаются по отдельности, в то время, как в метод <code>Math.atan()</code> передаётся отношение этих двух аргументов.</p>
-<p>Поскольку метод <code>atan2()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.atan2()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+```
+Math.atan2(y, x)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_Math.atan2">Пример: использование метода <code>Math.atan2()</code></h3>
-<pre class="brush: js">Math.atan2(90, 15); // 1.4056476493802699
+- `y`
+  - : Первое число.
+- `x`
+  - : Второе число.
+
+## Описание
+
+Метод `Math.atan2()` возвращает числовое значение от -π до π, представляющее угол тета точки `(x, y)`. Это выраженный в радианах угол, отсчитываемый против часовой стрелки от положительного направления оси X до точки `(x, y)`. Обратите внимание, что первым в метод передаётся координата y, а только вторым — координата x.
+
+В метод `Math.atan2()` аргументы `x` и `y` передаются по отдельности, в то время, как в метод `Math.atan()` передаётся отношение этих двух аргументов.
+
+Поскольку метод `atan2()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.atan2()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование метода `Math.atan2()`
+
+```js
+Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
 
 Math.atan2(±0, -0);               // ±PI.
 Math.atan2(±0, +0);               // ±0.
-Math.atan2(±0, -x);               // ±PI для x &gt; 0.
-Math.atan2(±0, x);                // ±0 для x &gt; 0.
-Math.atan2(-y, ±0);               // -PI/2 для y &gt; 0.
-Math.atan2(y, ±0);                // PI/2 для y &gt; 0.
-Math.atan2(±y, -Infinity);        // ±PI для конечного y &gt; 0.
-Math.atan2(±y, +Infinity);        // ±0 для конечного y &gt; 0.
+Math.atan2(±0, -x);               // ±PI для x > 0.
+Math.atan2(±0, x);                // ±0 для x > 0.
+Math.atan2(-y, ±0);               // -PI/2 для y > 0.
+Math.atan2(y, ±0);                // PI/2 для y > 0.
+Math.atan2(±y, -Infinity);        // ±PI для конечного y > 0.
+Math.atan2(±y, +Infinity);        // ±0 для конечного y > 0.
 Math.atan2(±Infinity, x);         // ±PI/2 для конечного x.
 Math.atan2(±Infinity, -Infinity); // ±3*PI/4.
 Math.atan2(±Infinity, +Infinity); // ±PI/4.
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

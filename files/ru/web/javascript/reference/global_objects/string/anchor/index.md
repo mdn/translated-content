@@ -11,55 +11,55 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
-<div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>anchor()</code></strong> создаёт якорный HTML-элемент {{HTMLElement("a")}}, используемый в качестве цели гиперссылки.</p>
+Метод **`anchor()`** создаёт якорный HTML-элемент {{HTMLElement("a")}}, используемый в качестве цели гиперссылки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.anchor(<var>name</var>)</code></pre>
+```
+str.anchor(name)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Строка, представляющая атрибут <code>name</code> создаваемого тега.</dd>
-</dl>
+- `name`
+  - : Строка, представляющая атрибут `name` создаваемого тега.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>anchor()</code> используется для программного создания и отображения якоря в документе.</p>
+Метод `anchor()` используется для программного создания и отображения якоря в документе.
 
-<p>Текстовая строка представляет из себя буквальный текст, который ва хотите показать пользователю. Строковый параметр <code>name</code> представляет атрибут <code>name</code> элемента {{HTMLElement("a")}}.</p>
+Текстовая строка представляет из себя буквальный текст, который ва хотите показать пользователю. Строковый параметр `name` представляет атрибут `name` элемента {{HTMLElement("a")}}.
 
-<p>Якоря, созданные методом <code>anchor()</code>, становятся элементами в массиве {{domxref("document.anchors")}}.</p>
+Якоря, созданные методом `anchor()`, становятся элементами в массиве {{domxref("document.anchors")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_anchor">Пример: использование метода <code>anchor()</code></h3>
+### Пример: использование метода `anchor()`
 
-<pre class="brush: js">var myString = 'Оглавление';
+```js
+var myString = 'Оглавление';
 
 document.body.innerHTML = myString.anchor('contents_anchor');
-</pre>
+```
 
-<p>приведёт к выводу следующего HTML:</p>
+приведёт к выводу следующего HTML:
 
-<pre class="brush: html">&lt;a name="contents_anchor"&gt;Оглавление&lt;/a&gt;
-</pre>
+```html
+<a name="contents_anchor">Оглавление</a>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.link()")}}</li>
-</ul>
+- {{jsxref("String.prototype.link()")}}

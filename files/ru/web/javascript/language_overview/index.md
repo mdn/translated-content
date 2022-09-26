@@ -4,252 +4,274 @@ slug: Web/JavaScript/Language_Overview
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
-<div>{{jsSidebar}}</div>
+{{jsSidebar}}
 
-<p>Почему повторное введение? Потому что {{Glossary("JavaScript")}} известен тем, что является <a href="http://javascript.crockford.com/javascript.html">самым неправильно понятым языком программирования в мире</a>. Его часто называют игрушкой, но под слоем обманчивой простоты ожидают мощные языковые возможности. В настоящее время JavaScript используется невероятным количеством высококлассных приложений, показывая, что углублённое знание этой технологии является важным навыком для любого веб или мобильного разработчика.</p>
+Почему повторное введение? Потому что {{Glossary("JavaScript")}} известен тем, что является [самым неправильно понятым языком программирования в мире](http://javascript.crockford.com/javascript.html). Его часто называют игрушкой, но под слоем обманчивой простоты ожидают мощные языковые возможности. В настоящее время JavaScript используется невероятным количеством высококлассных приложений, показывая, что углублённое знание этой технологии является важным навыком для любого веб или мобильного разработчика.
 
-<p>Было бы полезно начать с истории языка. JavaScript был создан в 1995 Бренданом Айком, инженером в компании Netscape. Первый релиз состоялся вместе с выходом браузера Netscape 2 в начале 1996 года. Сначала язык назывался LiveScript, но затем был переименован в связи с маркетинговыми целями, чтобы сыграть на популярности языка Java компании Sun Microsystem — несмотря на это языки практически не имеют ничего общего друг с другом. Так было положено начало путаницы между этими языками.</p>
+Было бы полезно начать с истории языка. JavaScript был создан в 1995 Бренданом Айком, инженером в компании Netscape. Первый релиз состоялся вместе с выходом браузера Netscape 2 в начале 1996 года. Сначала язык назывался LiveScript, но затем был переименован в связи с маркетинговыми целями, чтобы сыграть на популярности языка Java компании Sun Microsystem — несмотря на это языки практически не имеют ничего общего друг с другом. Так было положено начало путаницы между этими языками.
 
-<p>Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в <a href="http://www.ecma-international.org/">Ecma International</a>, Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта <a href="https://developer.mozilla.org/en/JavaScript/Language_Resources" title="en/ECMAScript">ECMAScript</a> в 1997. Стандарт получил значимое обновление в <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> в 1999, и остаётся самым стабильным до сегодняшнего дня. Четвёртая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвёртого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).</p>
+Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в [Ecma International](http://www.ecma-international.org/), Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта [ECMAScript](https://developer.mozilla.org/en/JavaScript/Language_Resources "en/ECMAScript") в 1997. Стандарт получил значимое обновление в [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) в 1999, и остаётся самым стабильным до сегодняшнего дня. Четвёртая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвёртого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).
 
-<div class="note">
-<p><strong>На заметку</strong>: Далее по тексту мы будем называть язык ECMAScript как "JavaScript".</p>
-</div>
+> **Примечание:** **На заметку**: Далее по тексту мы будем называть язык ECMAScript как "JavaScript".
 
-<p>В отличие от большинства языков, JavaScript не следует концепции ввода (input) и вывода (output). Он спроектирован таким образом, чтобы запускаться как язык сценариев, встроенный в среду исполнения. Самая популярная среда исполнения это браузер, однако интерпретаторы JavaScript присутствуют и в Adobe Acrobat, Photoshop, Yahoo!'s Widget engine, и даже в серверном окружении, например <a href="http://nodejs.org/" title="nodejs.org">node.js</a>.</p>
+В отличие от большинства языков, JavaScript не следует концепции ввода (input) и вывода (output). Он спроектирован таким образом, чтобы запускаться как язык сценариев, встроенный в среду исполнения. Самая популярная среда исполнения это браузер, однако интерпретаторы JavaScript присутствуют и в Adobe Acrobat, Photoshop, Yahoo!'s Widget engine, и даже в серверном окружении, например [node.js](http://nodejs.org/ "nodejs.org").
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>JavaScript является объектно-ориентированным языком, имеющий типы и операторы, встроенные объекты и методы. Его синтаксис происходит от языков Java и C, поэтому много конструкций из этих языков применимы и к JavaScript. Одним из ключевых отличий JavaScript является отсутствие классов, вместо этого функциональность классов осуществляется прототипами объектов (смотрите ES6 {{jsxref("Classes")}}) . Другое главное отличие в том, что функции это объекты, в которых содержится исполняемый код и которые могут быть переданы куда-либо, как и любой другой объект.</p>
+JavaScript является объектно-ориентированным языком, имеющий типы и операторы, встроенные объекты и методы. Его синтаксис происходит от языков Java и C, поэтому много конструкций из этих языков применимы и к JavaScript. Одним из ключевых отличий JavaScript является отсутствие классов, вместо этого функциональность классов осуществляется прототипами объектов (смотрите ES6 {{jsxref("Classes")}}) . Другое главное отличие в том, что функции это объекты, в которых содержится исполняемый код и которые могут быть переданы куда-либо, как и любой другой объект.
 
-<p>Начнём с основы любого языка: с типов данных. Программы на JavaScript оперируют значениями, и все эти значения принадлежат к определённому типу. Типы данных в JavaScript:</p>
+Начнём с основы любого языка: с типов данных. Программы на JavaScript оперируют значениями, и все эти значения принадлежат к определённому типу. Типы данных в JavaScript:
 
-<ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Number">Числа</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String" title="en/Core_JavaScript_1.5_Reference/Global_Objects/String">Строки</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Boolean">Логические типы</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Функции</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Object">Объекты</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Символы</a> (новый тип из шестой редакции)</li>
-</ul>
+- [Числа](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number "en/Core_JavaScript_1.5_Reference/Global_Objects/Number")
+- [Строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "en/Core_JavaScript_1.5_Reference/Global_Objects/String")
+- [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean "en/Core_JavaScript_1.5_Reference/Global_Objects/Boolean")
+- [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function")
+- [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object "en/Core_JavaScript_1.5_Reference/Global_Objects/Object")
+- [Символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (новый тип из шестой редакции)
 
-<p>Да, ещё <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined">Undefined</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null">Null</a>, которые немного обособлены. И <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Массивы</a>, которые являются особым видом объектов. А также <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Date">Даты</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp">Регулярные выражения</a>, тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:</p>
+Да, ещё [Undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined) и [Null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null), которые немного обособлены. И [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "en/Core_JavaScript_1.5_Reference/Global_Objects/Array"), которые являются особым видом объектов. А также [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date "en/Core_JavaScript_1.5_Reference/Global_Objects/Date") и [Регулярные выражения](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp "en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp"), тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:
 
-<ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number">Числа</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String">Строки</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Логические типы</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Символы</a> (новый тип из шестой редакции)</li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object">Объекты</a>
-  <ul>
-   <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function">Функции</a></li>
-   <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">Массивы</a></li>
-   <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date">Даты</a></li>
-   <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp">Регулярные выражения</a></li>
-  </ul>
- </li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null">Null</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></li>
-</ul>
+- [Числа](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [Строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [Символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (новый тип из шестой редакции)
+- [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-<p>Также есть несколько встроенных типов <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Error" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Error">Ошибок</a>. Чтобы было проще, рассмотрим подробнее первую схему.</p>
+  - [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
+  - [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
+  - [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)
+  - [Регулярные выражения](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-<h2 id="Числа">Числа</h2>
+- [Null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
-<p>Числа в JavaScript — это "64-битные значения двойной точности формата IEEE 754", согласно спецификации. Это имеет интересные последствия. В JavaScript нет такой вещи, как целое число, поэтому с арифметикой нужно быть начеку, если вы привыкли к вычислениям в языках C или Java. Взгляните на пример:</p>
+Также есть несколько встроенных типов [Ошибок](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error "en/Core_JavaScript_1.5_Reference/Global_Objects/Error"). Чтобы было проще, рассмотрим подробнее первую схему.
 
-<pre class="brush: js">0.1 + 0.2 == 0.30000000000000004
-</pre>
+## Числа
 
-<p>На практике целые значения это 32-битные целые (и хранятся таким образом в некоторых браузерных реализациях), что может быть важно для побитовых операций.</p>
+Числа в JavaScript — это "64-битные значения двойной точности формата IEEE 754", согласно спецификации. Это имеет интересные последствия. В JavaScript нет такой вещи, как целое число, поэтому с арифметикой нужно быть начеку, если вы привыкли к вычислениям в языках C или Java. Взгляните на пример:
 
-<p>Поддерживаются стандартные <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" title="en/Core_JavaScript_1.5_Reference/Operators/Arithmetic_Operators">арифметические операторы</a>, включая сложение, вычитание, остаток от деления и т.д. Есть ещё встроенный объект, который я забыл упомянуть, называемый <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Math">Math</a>, который содержит более продвинутые математические функции и константы:</p>
+```js
+0.1 + 0.2 == 0.30000000000000004
+```
 
-<pre class="brush: js">Math.sin(3.5);
+На практике целые значения это 32-битные целые (и хранятся таким образом в некоторых браузерных реализациях), что может быть важно для побитовых операций.
+
+Поддерживаются стандартные [арифметические операторы](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators "en/Core_JavaScript_1.5_Reference/Operators/Arithmetic_Operators"), включая сложение, вычитание, остаток от деления и т.д. Есть ещё встроенный объект, который я забыл упомянуть, называемый [Math](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math "en/Core_JavaScript_1.5_Reference/Global_Objects/Math"), который содержит более продвинутые математические функции и константы:
+
+```js
+Math.sin(3.5);
 var circumference = Math.PI * (r + r);
-</pre>
+```
 
-<p>Вы можете преобразовать строку в целое число, используя встроенную функцию <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt" title="en/Core_JavaScript_1.5_Reference/Global_Functions/parseInt">parseInt()</a></code>. Её необязательный второй параметр — основание системы счисления, которое следует всегда явно указывать:</p>
+Вы можете преобразовать строку в целое число, используя встроенную функцию [`parseInt()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/Core_JavaScript_1.5_Reference/Global_Functions/parseInt"). Её необязательный второй параметр — основание системы счисления, которое следует всегда явно указывать:
 
-<pre class="brush: js">parseInt("123", 10); // 123
+```js
+parseInt("123", 10); // 123
 parseInt("010", 10); // 10
-</pre>
+```
 
-<p>Если вы не предоставите основание, то можете получить неожиданные результаты:</p>
+Если вы не предоставите основание, то можете получить неожиданные результаты:
 
-<pre class="brush: js">parseInt("010");  // 8
+```js
+parseInt("010");  // 8
 parseInt("0x10"); // 16
-</pre>
+```
 
-<p>Это случилось потому, что функция <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt()</a></code> расценила строку как восьмеричную из-за начального 0, а шестнадцатеричную - из-за начального "0x".</p>
+Это случилось потому, что функция [`parseInt()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt) расценила строку как восьмеричную из-за начального 0, а шестнадцатеричную - из-за начального "0x".
 
-<p>Если хотите преобразовать двоичное число в десятичное целое, просто смените основание:</p>
+Если хотите преобразовать двоичное число в десятичное целое, просто смените основание:
 
-<pre class="brush: js">parseInt("11", 2); // 3
-</pre>
+```js
+parseInt("11", 2); // 3
+```
 
-<p>Вы можете аналогично парсить дробные числа, используя встроенную функцию <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code>, которая использует всегда основание 10 в отличие от родственной <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a>.</p>
+Вы можете аналогично парсить дробные числа, используя встроенную функцию [`parseFloat()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat"), которая использует всегда основание 10 в отличие от родственной [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt").
 
-<p>Также можно использовать унарный оператор <strong><code>+</code></strong> для преобразования значения в число:</p>
+Также можно использовать унарный оператор **`+`** для преобразования значения в число:
 
-<pre class="brush: js">+ "42";   // 42
+```js
++ "42";   // 42
 + "0x10"; // 16
-</pre>
+```
 
-<p>Специальное значение <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a> (сокращение от "Not a Number") возвращается, если строка не является числом:</p>
+Специальное значение [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) (сокращение от "Not a Number") возвращается, если строка не является числом:
 
-<pre class="brush: js">parseInt("hello", 10); // NaN
-</pre>
+```js
+parseInt("hello", 10); // NaN
+```
 
-<p><code>NaN</code> "заразителен": любая математическая операция над <code>NaN</code> возвращает <code>NaN</code>:</p>
+`NaN` "заразителен": любая математическая операция над `NaN` возвращает `NaN`:
 
-<pre class="brush: js">NaN + 5; // NaN
-</pre>
+```js
+NaN + 5; // NaN
+```
 
-<p>Проверить значение на <code>NaN</code> можно встроенной функцией <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN" title="en/Core_JavaScript_1.5_Reference/Global_Functions/isNaN">isNaN()</a></code>:</p>
+Проверить значение на `NaN` можно встроенной функцией [`isNaN()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN "en/Core_JavaScript_1.5_Reference/Global_Functions/isNaN"):
 
-<pre class="brush: js">isNaN(NaN); // true
-</pre>
+```js
+isNaN(NaN); // true
+```
 
-<p>JavaScript также имеет специальные значения <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="en/Core_JavaScript_1.5_Reference/Global_Properties/Infinity">Infinity</a></code> (бесконечность) и<code> -Infinity</code>:</p>
+JavaScript также имеет специальные значения [`Infinity`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity "en/Core_JavaScript_1.5_Reference/Global_Properties/Infinity") (бесконечность) и` -Infinity`:
 
-<pre class="brush: js">1 / 0; // Infinity
+```js
+1 / 0; // Infinity
 -1 / 0; // -Infinity
-</pre>
+```
 
-<p>Проверить значение на <code>Infinity</code>, <code>-Infinity</code> и <code>NaN</code> можно с помощью встроенной функции <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite" title="en/Core_JavaScript_1.5_Reference/Global_Functions/isFinite">isFinite()</a></code>:</p>
+Проверить значение на `Infinity`, `-Infinity` и `NaN` можно с помощью встроенной функции [`isFinite()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite "en/Core_JavaScript_1.5_Reference/Global_Functions/isFinite"):
 
-<pre class="brush: js">isFinite(1/0); // false
+```js
+isFinite(1/0); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
-</pre>
+```
 
-<div class="note"><strong>Примечание:</strong> функции <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> и <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> обрабатывают строку до тех пор, пока не будет встречен символ, не являющийся корректным для заданного числового формата, затем эти функции возвращают число, полученное в результате обработки вплоть до этого символа. А оператор "+" просто возвращает <code>NaN</code>, если в строке есть хоть один некорректный символ. Попробуйте сами в консоли преобразовать строку "10.2abc" каждым из методов, и различие станет ясным.</div>
+> **Примечание:** функции [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt") и [`parseFloat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat") обрабатывают строку до тех пор, пока не будет встречен символ, не являющийся корректным для заданного числового формата, затем эти функции возвращают число, полученное в результате обработки вплоть до этого символа. А оператор "+" просто возвращает `NaN`, если в строке есть хоть один некорректный символ. Попробуйте сами в консоли преобразовать строку "10.2abc" каждым из методов, и различие станет ясным.
 
-<h2 id="Строки">Строки</h2>
+## Строки
 
-<p>Строки в JavaScript - это последовательности <a href="/ru/docs/Web/JavaScript/Guide/Grammar_and_types" title="en/Core_JavaScript_1.5_Guide/Unicode">символов Unicode</a> (в кодировке UTF-16). Для тех, кто имеет дело с интернационализацией, это должно стать хорошей новостью. Если быть более точным, то строка - это последовательность кодовых единиц, каждая из которых представлена 16-битовым числом, а каждый символ Unicode состоит из 1 или 2 кодовых единиц.</p>
+Строки в JavaScript - это последовательности [символов Unicode](/ru/docs/Web/JavaScript/Guide/Grammar_and_types "en/Core_JavaScript_1.5_Guide/Unicode") (в кодировке UTF-16). Для тех, кто имеет дело с интернационализацией, это должно стать хорошей новостью. Если быть более точным, то строка - это последовательность кодовых единиц, каждая из которых представлена 16-битовым числом, а каждый символ Unicode состоит из 1 или 2 кодовых единиц.
 
-<p>Чтобы представить единственный символ, используйте строку, содержащую только этот символ.</p>
+Чтобы представить единственный символ, используйте строку, содержащую только этот символ.
 
-<p>Чтобы выяснить длину строки (в кодовых единицах), используйте свойство <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="en/Core_JavaScript_1.5_Reference/Global_Objects/String/length">length</a></code>:</p>
+Чтобы выяснить длину строки (в кодовых единицах), используйте свойство [`length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length "en/Core_JavaScript_1.5_Reference/Global_Objects/String/length"):
 
-<pre class="brush: js">"hello".length; // 5
-</pre>
+```js
+"hello".length; // 5
+```
 
-<p>Это уже первый шаг для работы с объектами! Мы уже говорили, что и строки можно использовать как объекты? У них тоже есть <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String" title="en/Core_JavaScript_1.5_Reference/Global_Objects/String#Methods">методы</a>:</p>
+Это уже первый шаг для работы с объектами! Мы уже говорили, что и строки можно использовать как объекты? У них тоже есть [методы](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "en/Core_JavaScript_1.5_Reference/Global_Objects/String#Methods"):
 
-<pre class="brush: js">"hello".charAt(0); // h
+```js
+"hello".charAt(0); // h
 "hello, world".replace("hello", "goodbye"); // goodbye, world
 "hello".toUpperCase(); // HELLO
-</pre>
+```
 
-<h2 id="Другие_типы">Другие типы</h2>
+## Другие типы
 
-<p>JavaScript дополнительно различает такие типы, как <code>null</code>, который указывает на преднамеренное отсутствующее значение, и <code>undefined</code>, указывающий на неинициализированное значение — то есть, значение, которое даже не было назначено. Мы поговорим о переменных позже, но в JavaScript можно объявить переменную без присвоения ей значения. В этом случае тип переменной будет <code>"undefined"</code>.</p>
+JavaScript дополнительно различает такие типы, как `null`, который указывает на преднамеренное отсутствующее значение, и `undefined`, указывающий на неинициализированное значение — то есть, значение, которое даже не было назначено. Мы поговорим о переменных позже, но в JavaScript можно объявить переменную без присвоения ей значения. В этом случае тип переменной будет `"undefined"`.
 
-<p>Ещё в JavaScript есть логический (булевый) тип данных, который может принимать два возможных значения <span style="font-family: consolas,monaco,andale mono,monospace;">true</span> или <span style="font-family: consolas,monaco,andale mono,monospace;">false</span> (оба являются ключевыми словами). Любое значение может быть преобразовано в логическое значение в соответствии со следующими правилами:</p>
+Ещё в JavaScript есть логический (булевый) тип данных, который может принимать два возможных значения true или false (оба являются ключевыми словами). Любое значение может быть преобразовано в логическое значение в соответствии со следующими правилами:
 
-<ol>
- <li><code>false</code>, <code>0</code>, пустая строка (<code>""</code>), <code>NaN</code>, <code>null</code> и <code>undefined</code> преобразуются в <code>false.</code></li>
- <li>Все остальные значения преобразуются в <code>true.</code></li>
-</ol>
+1.  `false`, `0`, пустая строка (`""`), `NaN`, `null` и `undefined` преобразуются в `false.`
+2.  Все остальные значения преобразуются в `true.`
 
-<p>Преобразование значений можно осуществить явно, используя функцию <code>Boolean()</code>:</p>
+Преобразование значений можно осуществить явно, используя функцию `Boolean()`:
 
-<pre class="brush: js">Boolean(""); // false
+```js
+Boolean(""); // false
 Boolean(234); // true
-</pre>
+```
 
-<p>Этот метод используется редко, так как JavaScript может автоматически преобразовывать типы в тех случаях, когда ожидается булевое значение, например в операторе <code>if</code>. Из-за того, что любой тип данных может быть преобразован в булевое значение, иногда говорят, что данные "истинные" или "ложные".</p>
+Этот метод используется редко, так как JavaScript может автоматически преобразовывать типы в тех случаях, когда ожидается булевое значение, например в операторе `if`. Из-за того, что любой тип данных может быть преобразован в булевое значение, иногда говорят, что данные "истинные" или "ложные".
 
-<p>Для операций с логическими данными используются логические операторы: <code>&amp;&amp;</code> (логическое <em>И</em>), <code>||</code> (логическое <em>ИЛИ</em>), <code>!</code> (логическое <em>НЕ</em>).</p>
+Для операций с логическими данными используются логические операторы: `&&` (логическое _И_), `||` (логическое _ИЛИ_), `!` (логическое _НЕ_).
 
-<h2 id="Переменные">Переменные</h2>
+## Переменные
 
-<p>Для объявления новых переменных в  JavaScript используются ключевые слова <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> или <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" title="/en/JavaScript/Reference/Statements/var">var</a></code>.</p>
+Для объявления новых переменных в JavaScript используются ключевые слова [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) или [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var "/en/JavaScript/Reference/Statements/var").
 
-<pre class="brush: js">let a;
+```js
+let a;
 let name = "Simon";
-</pre>
+```
 
-<p><strong><code>let</code>  </strong>позволяет объявлять переменные, которые доступны только в <em><strong>блоке</strong>,</em> в котором они объявлены:</p>
+**`let` **позволяет объявлять переменные, которые доступны только в _**блоке**,_ в котором они объявлены:
 
-<pre class="brush: js">// myLetVariable недоступна здесь
+```js
+// myLetVariable недоступна здесь
 
-for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
+for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
   // myLetVariable доступна только здесь
 }
 
-// myLetVariable недоступна здесь</pre>
+// myLetVariable недоступна здесь
+```
 
-<p><code><strong>const</strong></code> позволяет создавать переменные, чьи значения не предполагают изменений. Переменная доступна из <em><strong>блока</strong></em>, в котором она объявлена.</p>
+**`const`** позволяет создавать переменные, чьи значения не предполагают изменений. Переменная доступна из _**блока**_, в котором она объявлена.
 
-<pre class="brush: js">const Pi = 3.14; // в переменную Pi записано значение.
-Pi = 1; // вызовет исключение, так как значение константы нельзя изменить.</pre>
+```js
+const Pi = 3.14; // в переменную Pi записано значение.
+Pi = 1; // вызовет исключение, так как значение константы нельзя изменить.
+```
 
-<p><code><strong>var</strong></code> наиболее общее средство объявления переменной. Оно не имеет ограничений, которые имеют два вышеописанных способа. Это потому, что это был изначально единственный способ объявления переменной в JavaScript. Переменная, объявленная с помощью <strong><code>var</code>, </strong>доступна в пределах <strong><em>функции</em></strong>, в которой она объявлена.</p>
+**`var`** наиболее общее средство объявления переменной. Оно не имеет ограничений, которые имеют два вышеописанных способа. Это потому, что это был изначально единственный способ объявления переменной в JavaScript. Переменная, объявленная с помощью **`var`,** доступна в пределах **_функции_**, в которой она объявлена.
 
-<pre class="brush: js">var a;
-var name = 'Simon';</pre>
+```js
+var a;
+var name = 'Simon';
+```
 
-<p>Пример кода с переменной, объявленной с помощью <strong><code>var</code>:</strong></p>
+Пример кода с переменной, объявленной с помощью **`var`:**
 
-<pre class="brush: js">// myVarVariable доступна здесь
+```js
+// myVarVariable доступна здесь
 
-for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
+for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
   // myVarVariable доступна для всей функции
 }
 
-// myVarVariable доступна и здесь</pre>
+// myVarVariable доступна и здесь
+```
 
-<p>Если вы объявляете переменную без присвоения ей какого-либо значения, то её тип будет определён как <code>undefined</code>. </p>
+Если вы объявляете переменную без присвоения ей какого-либо значения, то её тип будет определён как `undefined`.
 
-<p>Важной особенностью языка JavaScript является то, что блоки данных не имеют своей области видимости, она есть только у функций. Поэтому, если объявить переменную через <code>var</code> в блоке данных (например, внутри контролирующей структуры <code>if</code>), то она будет доступна всей функции. Следует отметить, что в новом стандарте ECMAScript Edition 6 появились инструкции <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> и <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, позволяющие объявлять переменные с областью видимости, ограниченной пределами блока.</p>
+Важной особенностью языка JavaScript является то, что блоки данных не имеют своей области видимости, она есть только у функций. Поэтому, если объявить переменную через `var` в блоке данных (например, внутри контролирующей структуры `if`), то она будет доступна всей функции. Следует отметить, что в новом стандарте ECMAScript Edition 6 появились инструкции [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) и [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const), позволяющие объявлять переменные с областью видимости, ограниченной пределами блока.
 
-<h2 id="Операторы">Операторы</h2>
+## Операторы
 
-<p>JavaScript поддерживает такие операторы, как <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> и <code>%</code>, который возвращает остаток от деления (<a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29">не путать с модулем</a>). Значения присваиваются с помощью оператора <code>=</code>, или с помощью составных операторов <code>+=</code> и <code>-=</code>. Это сокращённая запись выражения <code><strong>x = x </strong><em>оператор</em><strong> y</strong></code>.</p>
+JavaScript поддерживает такие операторы, как `+`, `-`, `*`, `/` и `%`, который возвращает остаток от деления ([не путать с модулем](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Значения присваиваются с помощью оператора `=`, или с помощью составных операторов `+=` и `-=`. Это сокращённая запись выражения `x = x оператор y`.
 
-<pre class="brush: js">x += 5
+```js
+x += 5
 x = x + 5
-</pre>
+```
 
-<p>Так же используются операторы инкремента (<code>++</code>) и декремента (<code>--</code>). Которые имеют префиксную и постфиксную форму записи.</p>
+Так же используются операторы инкремента (`++`) и декремента (`--`). Которые имеют префиксную и постфиксную форму записи.
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" title="en/Core_JavaScript_1.5_Reference/Operators/String_Operators">Оператор <code>+</code></a> так же выполняет конкатенацию (объединение) строк:</p>
+[Оператор `+`](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators "en/Core_JavaScript_1.5_Reference/Operators/String_Operators") так же выполняет конкатенацию (объединение) строк:
 
-<pre class="brush: js">"hello" + " world"; // "hello world"
-</pre>
+```js
+"hello" + " world"; // "hello world"
+```
 
-<p>При сложении строкового и числового значений происходит автоматическое преобразование в строку. Поначалу такое может запутать:</p>
+При сложении строкового и числового значений происходит автоматическое преобразование в строку. Поначалу такое может запутать:
 
-<pre class="brush: js">"3" + 4 + 5; // "345"
+```js
+"3" + 4 + 5; // "345"
 3 + 4 + "5"; // "75"
-</pre>
+```
 
-<p>Для приведения значения к строке просто прибавьте к нему пустую строку.</p>
+Для приведения значения к строке просто прибавьте к нему пустую строку.
 
-<p>Для <a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="en/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators">сравнения</a> в JavaScript используются следующие операторы: <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> и <code>&gt;=</code>. Сравнивать можно не только числа, но и строки. Проверка на равенство немного сложнее. Для проверки используют двойной (<code>==</code>) или тройной (<code>===</code>) оператор присваивания. Двойной оператор <code>==</code> осуществляет автоматическое преобразование типов, что может приводить к интересным результатам:</p>
+Для [сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators "en/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators") в JavaScript используются следующие операторы: `<`, `>`, `<=` и `>=`. Сравнивать можно не только числа, но и строки. Проверка на равенство немного сложнее. Для проверки используют двойной (`==`) или тройной (`===`) оператор присваивания. Двойной оператор `==` осуществляет автоматическое преобразование типов, что может приводить к интересным результатам:
 
-<pre class="brush: js">123 == "123"; // true
-1 == true;    // true</pre>
+```js
+123 == "123"; // true
+1 == true;    // true
+```
 
-<p>Если преобразование нежелательно, то используют оператор строгого равенства:</p>
+Если преобразование нежелательно, то используют оператор строгого равенства:
 
-<pre class="brush: js">1 === true; // false
+```js
+1 === true; // false
 123 === "123"; // false
-true === true; // true</pre>
+true === true; // true
+```
 
-<p>Для проверки на неравенство используют операторы <code>!=</code> и <code>!==</code>.</p>
+Для проверки на неравенство используют операторы `!=` и `!==`.
 
-<p>Отдельного внимания стоят <a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">побитовые операторы</a>, с которыми вы можете ознакомиться в соответствующем разделе.</p>
+Отдельного внимания стоят [побитовые операторы](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators), с которыми вы можете ознакомиться в соответствующем разделе.
 
-<h2 id="Управляющие_структуры">Управляющие структуры</h2>
+## Управляющие структуры
 
-<p>Управляющие структуры в JavaScript очень похожи на таковые в языках семейства C. Условные операторы выражены ключевыми словами <code>if</code> и <code>else</code>, которые можно составлять в цепочки:</p>
+Управляющие структуры в JavaScript очень похожи на таковые в языках семейства C. Условные операторы выражены ключевыми словами `if` и `else`, которые можно составлять в цепочки:
 
-<pre class="brush: js">var name = "kittens";
+```js
+var name = "kittens";
 if (name == "puppies") {
   name += "!";
 } else if (name == "kittens") {
@@ -258,11 +280,12 @@ if (name == "puppies") {
   name = "!" + name;
 }
 name == "kittens!!"
-</pre>
+```
 
-<p>В JavaScript есть три типа циклов: <code>while</code>, <code>do-while</code> и <code>for</code>. While используется для задания обычного цикла, а do-while  целесообразно применить в том случае, если вы хотите, чтобы цикл был выполнен хотя бы один раз:</p>
+В JavaScript есть три типа циклов: `while`, `do-while` и `for`. While используется для задания обычного цикла, а do-while целесообразно применить в том случае, если вы хотите, чтобы цикл был выполнен хотя бы один раз:
 
-<pre class="brush: js">while (true) {
+```js
+while (true) {
   // бесконечный цикл!
 }
 
@@ -270,45 +293,54 @@ var input;
 do {
   input = get_input();
 } while (inputIsNotValid(input))
-</pre>
+```
 
-<p>Цикл <code>for</code> похож на такой же в языках C и Java: он позволяет задавать данные для контроля за выполнением цикла:</p>
+Цикл `for` похож на такой же в языках C и Java: он позволяет задавать данные для контроля за выполнением цикла:
 
-<pre class="brush: js">for (var i = 0; i &lt; 5; i++) {
+```js
+for (var i = 0; i < 5; i++) {
   // Выполнится 5 раз
 }
-</pre>
+```
 
-<p>JavaScript также содержит две других известных конструкции: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
+JavaScript также содержит две других известных конструкции: [`for`...`of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
-<pre class="brush: js">for (let value of array) {
+```js
+for (let value of array) {
   // операции с value
-}</pre>
+}
+```
 
-<p>и <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a>:</p>
+и [`for`...`in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in):
 
-<pre class="brush: js">for (let property in object) {
+```js
+for (let property in object) {
   // операции над свойствами объекта
-}</pre>
+}
+```
 
-<p>Логические операторы <code>&amp;&amp;</code> и <code>||</code> используют "короткий цикл вычисления", это значит, что вычисление каждого последующего оператора зависит от предыдущего. Например, полезно проверить существует ли объект или нет, прежде чем пытаться получить доступ к его свойствам:</p>
+Логические операторы `&&` и `||` используют "короткий цикл вычисления", это значит, что вычисление каждого последующего оператора зависит от предыдущего. Например, полезно проверить существует ли объект или нет, прежде чем пытаться получить доступ к его свойствам:
 
-<pre class="brush: js">var name = o &amp;&amp; o.getName();
-</pre>
+```js
+var name = o && o.getName();
+```
 
-<p>Таким способом удобно задавать значения по умолчанию:</p>
+Таким способом удобно задавать значения по умолчанию:
 
-<pre class="brush: js">var name = otherName || "default";
-</pre>
+```js
+var name = otherName || "default";
+```
 
-<p>К условным операторам в JavaScript принадлежит также тернарный оператор "<code>?</code>" :</p>
+К условным операторам в JavaScript принадлежит также тернарный оператор "`?`" :
 
-<pre class="brush: js">var allowed = (age &gt; 18) ? "yes" : "no";
-</pre>
+```js
+var allowed = (age > 18) ? "yes" : "no";
+```
 
-<p>Оператор <code>switch</code> используется при необходимости множественного сравнения:</p>
+Оператор `switch` используется при необходимости множественного сравнения:
 
-<pre class="brush: js">switch(action) {
+```js
+switch(action) {
     case 'draw':
         drawit();
         break;
@@ -318,11 +350,12 @@ do {
     default:
         donothing();
 }
-</pre>
+```
 
-<p>Если в конце инструкции <code>case</code> не добавить останавливающую инструкцию <code>break</code>, то выполнение перейдёт к следующей инструкции <code>case</code>. Как правило, такое поведение нежелательно, но если вдруг вы решили его использовать, настоятельно рекомендуем писать соответствующий комментарий для облегчения поиска ошибок:</p>
+Если в конце инструкции `case` не добавить останавливающую инструкцию `break`, то выполнение перейдёт к следующей инструкции `case`. Как правило, такое поведение нежелательно, но если вдруг вы решили его использовать, настоятельно рекомендуем писать соответствующий комментарий для облегчения поиска ошибок:
 
-<pre class="brush: js">switch(a) {
+```js
+switch(a) {
     case 1: // fallthrough
     case 2:
         eatit();
@@ -330,48 +363,50 @@ do {
     default:
         donothing();
 }
-</pre>
+```
 
-<p>Вариант <code>default</code> опциональный. Допускается использование выражений как в условии <code>switch</code>, так и в <code>cases</code>. При проверке на равенство используется оператор строгого равенства <code>===</code>:</p>
+Вариант `default` опциональный. Допускается использование выражений как в условии `switch`, так и в `cases`. При проверке на равенство используется оператор строгого равенства `===`:
 
-<pre class="brush: js">switch(1 + 3) {
+```js
+switch(1 + 3) {
     case 2 + 2:
         yay();
         break;
     default:
         neverhappens();
 }
-</pre>
+```
 
-<h2 id="Объекты">Объекты</h2>
+## Объекты
 
-<p>Объекты в JavaScript представляют собой коллекции пар имя-значение (ключ-значение). Они похожи на:</p>
+Объекты в JavaScript представляют собой коллекции пар имя-значение (ключ-значение). Они похожи на:
 
-<ul>
- <li>Словари в Python.</li>
- <li>Хеши в Perl и Ruby.</li>
- <li>Таблицы хешей в C и C++.</li>
- <li>HashMaps в Java.</li>
- <li>Ассоциативные массивы в PHP.</li>
-</ul>
+- Словари в Python.
+- Хеши в Perl и Ruby.
+- Таблицы хешей в C и C++.
+- HashMaps в Java.
+- Ассоциативные массивы в PHP.
 
-<p>Именем свойства объекта в JavaScript выступает строка, а значением может быть любой тип данных JavaScript, даже другие объекты. Это позволяет создавать структуры данных любой сложности.</p>
+Именем свойства объекта в JavaScript выступает строка, а значением может быть любой тип данных JavaScript, даже другие объекты. Это позволяет создавать структуры данных любой сложности.
 
-<p>Существует два основных способа создать объект:</p>
+Существует два основных способа создать объект:
 
-<pre class="brush: js">var obj = new Object();
-</pre>
+```js
+var obj = new Object();
+```
 
-<p>А также:</p>
+А также:
 
-<pre class="brush: js">var obj = {};
-</pre>
+```js
+var obj = {};
+```
 
-<p>Обе эти записи делают одно и то же. Вторая запись называется литералом объекта и более удобная. Такой способ является основой формата JSON, и при написании кода лучше использовать именно его.</p>
+Обе эти записи делают одно и то же. Вторая запись называется литералом объекта и более удобная. Такой способ является основой формата JSON, и при написании кода лучше использовать именно его.
 
-<p>С помощью литерала объекта можно создавать не только пустые объекты, но и объекты с данными:</p>
+С помощью литерала объекта можно создавать не только пустые объекты, но и объекты с данными:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   name: "Carrot",
   "for": "Max",
   details: {
@@ -379,205 +414,177 @@ do {
     size: 12
   }
 }
-</pre>
+```
 
-<p>Доступ к свойствам объекта можно получить следующими способами:</p>
+Доступ к свойствам объекта можно получить следующими способами:
 
-<pre class="brush: js">obj.details.color; // orange
-obj['details']['size']; // 12</pre>
+```js
+obj.details.color; // orange
+obj['details']['size']; // 12
+```
 
-<p>Эти два метода равнозначны. Первый метод используется, если мы точно знаем к какому методу нам нужно обратиться. Второй метод принимает в качестве имени свойства строку, и позволяет вычислять имя в процессе вычислений. Следует отметить, что последний метод мешает некоторым движкам и минимизаторам оптимизировать код. Если появится необходимость назначить в качестве имён свойств объекта <a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords" title="en/Core_JavaScript_1.5_Reference/Reserved_Words">зарезервированные слова</a>, то данный метод тоже может пригодиться:</p>
+Эти два метода равнозначны. Первый метод используется, если мы точно знаем к какому методу нам нужно обратиться. Второй метод принимает в качестве имени свойства строку, и позволяет вычислять имя в процессе вычислений. Следует отметить, что последний метод мешает некоторым движкам и минимизаторам оптимизировать код. Если появится необходимость назначить в качестве имён свойств объекта [зарезервированные слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords "en/Core_JavaScript_1.5_Reference/Reserved_Words"), то данный метод тоже может пригодиться:
 
-<pre class="brush: js">// Вызовет Syntax error, ведь 'for' это зарезервированное слово
+```js
+// Вызовет Syntax error, ведь 'for' это зарезервированное слово
 obj.for = "Simon";
 
 // А тут всё нормально
 obj["for"] = "Simon";
+```
 
-</pre>
+> **Примечание:** **На заметку:** Стандарт EcmaScript 5 позволяет использовать зарезервированные слова в качестве имён свойств объекта без "оборачивания" их в кавычки. Подробнее в [спецификации ES5](http://es5.github.io/#x7.6.1).
 
-<div class="note">
-<p><strong>На заметку:</strong> Стандарт EcmaScript 5 позволяет использовать зарезервированные слова в качестве имён свойств объекта без "оборачивания" их в кавычки. Подробнее в <a href="http://es5.github.io/#x7.6.1">спецификации ES5</a>.</p>
-</div>
+Больше информации об объектах и прототипах: [Object.prototype](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype).
 
-<p>Больше информации об объектах и прототипах: <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>.</p>
+Для получения информации по прототипам объектов и цепям прототипов объектов смотрите [Inheritance and the prototype chain](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-<p>Для получения информации по прототипам объектов и цепям прототипов объектов смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+> **Примечание:** Начиная с ECMAScript 2015, ключи объектов могут быть определены переменными с использованием квадратных скобок при создании: `{[phoneType]: 12345}` допустимо вместо `var userPhone = {}; userPhone[phoneType] = 12345`.
 
-<div class="blockIndicator note">
-<p>Начиная с ECMAScript 2015, ключи объектов могут быть определены переменными с  использованием квадратных скобок при создании: <code>{[phoneType]: 12345}</code> допустимо вместо  <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
-</div>
+## Массивы
 
-<h2 id="Массивы">Массивы</h2>
+Массивы в JavaScript всего лишь частный случай объектов. Работают они практически одинаково (если именем свойства является число, то доступ к нему можно получить только через вызов в скобках \[]), только у массивов есть одно удивительное свойство '`length`' (длина). Оно возвращает число, равное самому большому индексу массива + 1.
 
-<p>Массивы в JavaScript всего лишь частный случай объектов. Работают они практически одинаково (если именем свойства является число, то доступ к нему можно получить только через вызов в скобках []), только у массивов есть одно удивительное свойство '<code>length</code>' (длина). Оно возвращает число, равное самому большому индексу массива + 1.</p>
+Создать массив можно по старинке:
 
-<p>Создать массив можно по старинке:</p>
-
-<pre class="brush: js">var a = new Array();
+```js
+var a = new Array();
 a[0] = "dog";
 a[1] = "cat";
 a[2] = "hen";
 a.length; // 3
-</pre>
+```
 
-<p>Но гораздо удобнее использовать литерал массива:</p>
+Но гораздо удобнее использовать литерал массива:
 
-<pre class="brush: js">var a = ["dog", "cat", "hen"];
+```js
+var a = ["dog", "cat", "hen"];
 a.length; // 3
-</pre>
+```
 
-<p>Запомните, свойство <code>array.length</code> не обязательно будет показывать количество элементов в массиве. Посмотрите пример:</p>
+Запомните, свойство `array.length` не обязательно будет показывать количество элементов в массиве. Посмотрите пример:
 
-<pre class="brush: js">var a = ["dog", "cat", "hen"];
+```js
+var a = ["dog", "cat", "hen"];
 a[100] = "fox";
 a.length; // 101
-</pre>
+```
 
-<p>Запомните — длина массива это его самый большой индекс плюс один.</p>
+Запомните — длина массива это его самый большой индекс плюс один.
 
-<p>Если попытаться получить доступ к несуществующему элементу массива, то получите <code>undefined</code>:</p>
+Если попытаться получить доступ к несуществующему элементу массива, то получите `undefined`:
 
-<pre class="brush: js">typeof a[90]; // undefined
-</pre>
+```js
+typeof a[90]; // undefined
+```
 
-<p>Для перебора элементов массива используйте такой способ:</p>
+Для перебора элементов массива используйте такой способ:
 
-<pre class="brush: js">for (var i = 0; i &lt; a.length; i++) {
+```js
+for (var i = 0; i < a.length; i++) {
     // Сделать что-нибудь с элементом a[i]
 }
-</pre>
+```
 
-<p>ES2015 представляет более краткий <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> способ обхода по итерируемым объектам, в т.ч. массивам:</p>
+ES2015 представляет более краткий [`for`...`of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) способ обхода по итерируемым объектам, в т.ч. массивам:
 
-<pre><code>for (const currentValue of a) {
-  // С</code>делать что-нибудь с<code> currentValue
-}</code>
-</pre>
+```
+for (const currentValue of a) {
+  // Сделать что-нибудь с currentValue
+}
+```
 
-<p>Перебрать элементы массива также можно с помощью цикла <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/for...in" title="en/Core_JavaScript_1.5_Reference/Statements/for...in">for...in</a></code>. Но, если вдруг будет изменено какое-либо свойство <code>Array.prototype</code>, то оно тоже будет участвовать в выборке. Не используйте данный метод.</p>
+Перебрать элементы массива также можно с помощью цикла [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in "en/Core_JavaScript_1.5_Reference/Statements/for...in"). Но, если вдруг будет изменено какое-либо свойство `Array.prototype`, то оно тоже будет участвовать в выборке. Не используйте данный метод.
 
-<p>И самый новый способ перебора свойств массива был добавлен в ECMAScript 5 — это метод <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a>:</p>
+И самый новый способ перебора свойств массива был добавлен в ECMAScript 5 — это метод [forEach()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
-<pre class="brush: js">["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
+```js
+["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
 // Сделать что-нибудь с currentValue или array[index]
-});</pre>
+});
+```
 
-<p>Для добавления данных в массив используйте метод <code>push()</code>:</p>
+Для добавления данных в массив используйте метод `push()`:
 
-<pre class="brush: js">a.push(item);</pre>
+```js
+a.push(item);
+```
 
-<p>У массивов есть ещё множество полезных методов. С их полным списком вы можете ознакомиться <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">по ссылке</a>.</p>
+У массивов есть ещё множество полезных методов. С их полным списком вы можете ознакомиться [по ссылке](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-<table style="height: 124px; width: 598px;">
- <thead>
-  <tr>
-   <th scope="col">Метод</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>a.toString()</code></td>
-   <td>Возвращает строковое представление массива, где все элементы разделены запятыми.</td>
-  </tr>
-  <tr>
-   <td><code>a.toLocaleString()</code></td>
-   <td>Возвращает строковое представление массива в соответствии с выбранной локалью.</td>
-  </tr>
-  <tr>
-   <td><code>a.concat(item1[, item2[, ...[, itemN]]])​</code></td>
-   <td>Возвращает новый массив с добавлением указанных элементов.</td>
-  </tr>
-  <tr>
-   <td><code>a.join(sep)</code></td>
-   <td>Преобразует массив в строку, где в качестве разделителя используется параметр <code>sep</code></td>
-  </tr>
-  <tr>
-   <td><code>a.pop()</code></td>
-   <td>Удаляет последний элемент массива и возвращает его.</td>
-  </tr>
-  <tr>
-   <td><code>a.push(item1, ..., itemN)</code></td>
-   <td>Добавляет один или более элементов в конец массива.</td>
-  </tr>
-  <tr>
-   <td><code>a.reverse()</code></td>
-   <td>Меняет порядок элементов массива на обратный.</td>
-  </tr>
-  <tr>
-   <td><code>a.shift()</code></td>
-   <td>Удаляет первый элемент массива и возвращает его.</td>
-  </tr>
-  <tr>
-   <td><code>a.slice(start[, end])</code></td>
-   <td>Возвращает новый массив.</td>
-  </tr>
-  <tr>
-   <td><code>a.sort([cmpfn])</code></td>
-   <td>Сортирует данные в массиве.</td>
-  </tr>
-  <tr>
-   <td><code>a.splice(start, delcount[, item1[, ...[, itemN]]])</code></td>
-   <td>Позволяет вырезать из массива его часть и добавлять на это место новые элементы.</td>
-  </tr>
-  <tr>
-   <td><code>a.unshift(item1[, item2[, ...[, itemN]]])</code></td>
-   <td>Добавляет элементы в начало массива.</td>
-  </tr>
- </tbody>
-</table>
+| Метод                                                | Описание                                                                            |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `a.toString()`                                       | Возвращает строковое представление массива, где все элементы разделены запятыми.    |
+| `a.toLocaleString()`                                 | Возвращает строковое представление массива в соответствии с выбранной локалью.      |
+| `a.concat(item1[, item2[, ...[, itemN]]])​`          | Возвращает новый массив с добавлением указанных элементов.                          |
+| `a.join(sep)`                                        | Преобразует массив в строку, где в качестве разделителя используется параметр `sep` |
+| `a.pop()`                                            | Удаляет последний элемент массива и возвращает его.                                 |
+| `a.push(item1, ..., itemN)`                          | Добавляет один или более элементов в конец массива.                                 |
+| `a.reverse()`                                        | Меняет порядок элементов массива на обратный.                                       |
+| `a.shift()`                                          | Удаляет первый элемент массива и возвращает его.                                    |
+| `a.slice(start[, end])`                              | Возвращает новый массив.                                                            |
+| `a.sort([cmpfn])`                                    | Сортирует данные в массиве.                                                         |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Позволяет вырезать из массива его часть и добавлять на это место новые элементы.    |
+| `a.unshift(item1[, item2[, ...[, itemN]]])`          | Добавляет элементы в начало массива.                                                |
 
-<h2 id="Функции">Функции</h2>
+## Функции
 
-<p>Наряду с объектами функции также являются ключевыми компонентами языка JavaScript. Базовые функции очень просты:</p>
+Наряду с объектами функции также являются ключевыми компонентами языка JavaScript. Базовые функции очень просты:
 
-<pre class="brush: js">function add(x, y) {
+```js
+function add(x, y) {
     var total = x + y;
     return total;
 }
-</pre>
+```
 
-<p>В этом примере показано практически всё, что нужно знать о функциях. Функции в JavaScript могут принимать ноль или более параметров. Тело функции может содержать любые выражения и определять свои собственные переменные, которые будут для этой функции локальными. Инструкция <code>return</code> используется для возврата значения и остановки выполнения функции. Если инструкции return в функции нет (или есть, но не указано возвращаемое значение), то JavaScript возвратит <code>undefined</code>.</p>
+В этом примере показано практически всё, что нужно знать о функциях. Функции в JavaScript могут принимать ноль или более параметров. Тело функции может содержать любые выражения и определять свои собственные переменные, которые будут для этой функции локальными. Инструкция `return` используется для возврата значения и остановки выполнения функции. Если инструкции return в функции нет (или есть, но не указано возвращаемое значение), то JavaScript возвратит `undefined`.
 
-<p>Можно вызвать функцию, вообще не передавая ей параметры. В таком случае будет считаться, что их значения равны <code>undefined</code>:</p>
+Можно вызвать функцию, вообще не передавая ей параметры. В таком случае будет считаться, что их значения равны `undefined`:
 
-<pre class="brush: js">add(); // NaN
-// Нельзя проводить сложение undefined и undefined</pre>
+```js
+add(); // NaN
+// Нельзя проводить сложение undefined и undefined
+```
 
-<p>Можно передать больше аргументов, чем ожидает функция:</p>
+Можно передать больше аргументов, чем ожидает функция:
 
-<pre class="brush: js">add(2, 3, 4); // 5
-// используются только первые два аргумента, "4" игнорируется</pre>
+```js
+add(2, 3, 4); // 5
+// используются только первые два аргумента, "4" игнорируется
+```
 
-<p>Это может показаться бессмысленным, но на самом деле функции могут получить доступ к "лишним" аргументам с помощью псевдомассива <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="En/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments"><code>arguments</code></a>, в нём содержатся значения всех аргументов, переданных функции. Давайте напишем функцию, которая принимает неограниченное количество аргументов:</p>
+Это может показаться бессмысленным, но на самом деле функции могут получить доступ к "лишним" аргументам с помощью псевдомассива [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments "En/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments"), в нём содержатся значения всех аргументов, переданных функции. Давайте напишем функцию, которая принимает неограниченное количество аргументов:
 
-<pre class="brush: js">function add() {
+```js
+function add() {
     var sum = 0;
-    for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    for (var i = 0, j = arguments.length; i < j; i++) {
         sum += arguments[i];
     }
     return sum;
 }
 
 add(2, 3, 4, 5); // 14
-</pre>
+```
 
-<p>Или создадим функцию для вычисления среднего значения:</p>
+Или создадим функцию для вычисления среднего значения:
 
-<pre class="brush: js">function avg() {
+```js
+function avg() {
     var sum = 0;
-    for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    for (var i = 0, j = arguments.length; i < j; i++) {
         sum += arguments[i];
     }
     return sum / arguments.length;
 }
 avg(2, 3, 4, 5); // 3.5
-</pre>
+```
 
-<p>Это довольно  полезно, но при этом кажется излишне подробным. Для уменьшения количества кода взглянем на замену использования массива аргументов <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">синтаксисом остаточных параметров</a>. В этом случае мы можем передавать в функцию любое количество аргументов, сохраняя код минималистичным. <strong>Оператор остаточных параметров</strong> используется в списке параметров функции в формате: <strong>...variable</strong> и включает в себя целый список аргументов, с которыми функция будет вызвана. Мы будем также использовать замену цикла <strong>for</strong>  циклом <strong>for...of</strong> для получения значений, которые будет содержать наша переменная.</p>
+Это довольно полезно, но при этом кажется излишне подробным. Для уменьшения количества кода взглянем на замену использования массива аргументов [синтаксисом остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters). В этом случае мы можем передавать в функцию любое количество аргументов, сохраняя код минималистичным. **Оператор остаточных параметров** используется в списке параметров функции в формате: **...variable** и включает в себя целый список аргументов, с которыми функция будет вызвана. Мы будем также использовать замену цикла **for** циклом **for...of** для получения значений, которые будет содержать наша переменная.
 
-<pre class="brush: js">function avg(...args) {
+```js
+function avg(...args) {
   var sum = 0;
   for (let value of args) {
     sum += value;
@@ -585,51 +592,53 @@ avg(2, 3, 4, 5); // 3.5
   return sum / args.length;
 }
 
-avg(2, 3, 4, 5); // 3.5</pre>
+avg(2, 3, 4, 5); // 3.5
+```
 
-<div class="blockIndicator note">
-<p>В вышенаписанном коде переменная <strong>args</strong> содержит все значения, которые были переданы в функцию.<br>
- <br>
- Важно отметить, что где бы ни был  размещён <em>rest parameter operator</em> в объявлении функции, он будет содержать все аргументы  <em>после</em> его объявления, не раньше. например: <em>function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em><strong> </strong>будет хранить первое переданное значение в переменной <strong>firstValue </strong>и оставшиеся в <strong>args</strong>. Это ещё одно полезное свойство языка, однако оно ведёт нас к новой проблеме.  <code>avg()</code> функция принимает список аргументов, разделённый запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:</p>
-</div>
+> **Примечание:** В вышенаписанном коде переменная **args** содержит все значения, которые были переданы в функцию.
+>
+> Важно отметить, что где бы ни был размещён _rest parameter operator_ в объявлении функции, он будет содержать все аргументы _после_ его объявления, не раньше. например: _function_ _avg(_**firstValue,** _...args)_\*\* **будет хранить первое переданное значение в переменной **firstValue** и оставшиеся в **args\*\*. Это ещё одно полезное свойство языка, однако оно ведёт нас к новой проблеме. `avg()` функция принимает список аргументов, разделённый запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:
 
-<pre class="brush: js">function avgArray(arr) {
+```js
+function avgArray(arr) {
   var sum = 0;
-  for (var i = 0, j = arr.length; i &lt; j; i++) {
+  for (var i = 0, j = arr.length; i < j; i++) {
     sum += arr[i];
   }
   return sum / arr.length;
 }
 
-avgArray([2, 3, 4, 5]); // 3.5</pre>
+avgArray([2, 3, 4, 5]); // 3.5
+```
 
-<p>На тот случай, если вы хотите использовать первый вариант функции, а не переписывать её заново, то в JavaScript есть возможность вызывать функцию с произвольным массивом аргументов. Для этого используется метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply">apply()</a>:</code></p>
+На тот случай, если вы хотите использовать первый вариант функции, а не переписывать её заново, то в JavaScript есть возможность вызывать функцию с произвольным массивом аргументов. Для этого используется метод `apply():`
 
-<pre class="brush: js">avg.apply(null, [2, 3, 4, 5]); // 3.5
-</pre>
+```js
+avg.apply(null, [2, 3, 4, 5]); // 3.5
+```
 
-<p>Вторым аргументом метода <code>apply()</code> передаётся массив, который будет передан функции в качестве аргументов. О первом аргументе мы поговорим позже. Наличие у функций методов также говорит о том, что на самом деле они являются объектами.</p>
+Вторым аргументом метода `apply()` передаётся массив, который будет передан функции в качестве аргументов. О первом аргументе мы поговорим позже. Наличие у функций методов также говорит о том, что на самом деле они являются объектами.
 
-<div class="blockIndicator note">
-<p>Этот же результат можно получить, используя <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> в вызове функции.</p>
+> **Примечание:** Этот же результат можно получить, используя [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator) в вызове функции.
+>
+> For instance: `avg(...numbers)`
 
-<p>For instance: <code>avg(...numbers)</code></p>
-</div>
+В JavaScript можно создавать анонимные функции:
 
-<p>В JavaScript можно создавать анонимные функции:</p>
-
-<pre class="brush: js">var avg = function() {
+```js
+var avg = function() {
     var sum = 0;
-    for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    for (var i = 0, j = arguments.length; i < j; i++) {
         sum += arguments[i];
     }
     return sum / arguments.length;
 }
-</pre>
+```
 
-<p>Данная запись семантически равнозначна записи <code>function</code> <code>avg()</code>. Это даёт возможность использовать разные интересные трюки. Вот посмотрите, как можно "спрятать" локальные переменные в функции:</p>
+Данная запись семантически равнозначна записи `function` `avg()`. Это даёт возможность использовать разные интересные трюки. Вот посмотрите, как можно "спрятать" локальные переменные в функции:
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 (function() {
     var b = 3;
@@ -637,11 +646,12 @@ var b = 2;
 })();
 a; // 4
 b; // 2
-</pre>
+```
 
-<p>В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с <a href="/ru/DOM" title="en/DOM">DOM</a>).</p>
+В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с [DOM](/ru/DOM "en/DOM")).
 
-<pre class="brush: js">function countChars(elm) {
+```js
+function countChars(elm) {
     if (elm.nodeType == 3) { // TEXT_NODE
         return elm.nodeValue.length;
     }
@@ -651,11 +661,12 @@ b; // 2
     }
     return count;
 }
-</pre>
+```
 
-<p>Тут мы сталкиваемся с проблемой: как вызвать функцию рекурсивно, если у неё нет имени? Для этого в JavaScript есть именованные функциональные выражения <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">IIFEs (Immediately Invoked Function Expressions)</a>. Вот пример использования именованной самовызывающейся функции:</p>
+Тут мы сталкиваемся с проблемой: как вызвать функцию рекурсивно, если у неё нет имени? Для этого в JavaScript есть именованные функциональные выражения [IIFEs (Immediately Invoked Function Expressions)](/ru/docs/Glossary/IIFE). Вот пример использования именованной самовызывающейся функции:
 
-<pre class="brush: js">var charsInBody = (function counter(elm) {
+```js
+var charsInBody = (function counter(elm) {
     if (elm.nodeType == 3) { // TEXT_NODE
         return elm.nodeValue.length;
     }
@@ -665,41 +676,44 @@ b; // 2
     }
     return count;
 })(document.body);
-</pre>
+```
 
-<p>Имя функции в примере доступно только внутри самой функции. Это улучшает оптимизацию и читаемость кода.</p>
+Имя функции в примере доступно только внутри самой функции. Это улучшает оптимизацию и читаемость кода.
 
-<h2 id="Собственные_объекты">Собственные объекты</h2>
+## Собственные объекты
 
-<div class="note"><strong>На заметку:</strong> Для более подробной информации по объектно-ориентированному программированию в JavaScript смотрите <a href="/ru/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" title="https://developer.mozilla.org/en/Introduction_to_Object-Oriented_JavaScript">Введение в объектно-ориентированный JavaScript</a>.</div>
+> **Примечание:** **На заметку:** Для более подробной информации по объектно-ориентированному программированию в JavaScript смотрите [Введение в объектно-ориентированный JavaScript](/ru/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript "https://developer.mozilla.org/en/Introduction_to_Object-Oriented_JavaScript").
 
-<p>В классическом Объектно-Ориентированном Программировании (ООП) объекты — это коллекции данных и методов, которые этими данными оперируют. JavaScript - это язык, основанный на прототипах, и в его определении нет понятия классов, таких, как в языках C++ или Java. (Иногда это может запутать программистов, знакомых с языками, в которых есть классы.) Вместо классов JavaScript использует функции. Давайте представим объект с личными данными, содержащий поля с именем и фамилией. Есть два типа отображения имён: "Имя Фамилия" или "Фамилия, Имя". С помощью объектов и функций можно сделать следующее:</p>
+В классическом Объектно-Ориентированном Программировании (ООП) объекты — это коллекции данных и методов, которые этими данными оперируют. JavaScript - это язык, основанный на прототипах, и в его определении нет понятия классов, таких, как в языках C++ или Java. (Иногда это может запутать программистов, знакомых с языками, в которых есть классы.) Вместо классов JavaScript использует функции. Давайте представим объект с личными данными, содержащий поля с именем и фамилией. Есть два типа отображения имён: "Имя Фамилия" или "Фамилия, Имя". С помощью объектов и функций можно сделать следующее:
 
-<div class="blockIndicator warning">
-<pre class="brush: js">function makePerson(first, last) {
-    return {
-        first: first,
-        last: last
-    }
-}
+> **Предупреждение:** ```js
+> function makePerson(first, last) {
+> return {
+> first: first,
+> last: last
+> }
+> }
+>
+> function personFullName(person) {
+> return person.first + ' ' + person.last;
+> }
+>
+> function personFullNameReversed(person) {
+> return person.last + ', ' + person.first
+> }
+>
+> s = makePerson("Simon", "Willison");
+> personFullName(s); // Simon Willison
+> personFullNameReversed(s); // Willison, Simon
+>
+> ```
+>
+> ```
 
-function personFullName(person) {
-    return person.first + ' ' + person.last;
-}
+Работает, но сам код никуда не годится. С таким подходом у вас будут десятки функций, засоряющих глобальный объект. Это можно исправить, прикрепив функцию к объекту. Это просто, ведь все функции и есть объекты:
 
-function personFullNameReversed(person) {
-    return person.last + ', ' + person.first
-}
-
-s = makePerson("Simon", "Willison");
-personFullName(s); // Simon Willison
-personFullNameReversed(s); // Willison, Simon
-</pre>
-</div>
-
-<p>Работает, но сам код никуда не годится. С таким подходом у вас будут десятки функций, засоряющих глобальный объект. Это можно исправить, прикрепив функцию к объекту. Это просто, ведь все функции и есть объекты:</p>
-
-<pre class="brush: js">function makePerson(first, last) {
+```js
+function makePerson(first, last) {
     return {
         first: first,
         last: last,
@@ -714,20 +728,22 @@ personFullNameReversed(s); // Willison, Simon
 s = makePerson("Simon", "Willison")
 s.fullName(); // Simon Willison
 s.fullNameReversed(); // Willison, Simon
-</pre>
+```
 
-<p>А вот кое-что новенькое: ключевое слово '<code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator">this</a></code>'. Когда '<code>this</code>' используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через <a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="en/Core_JavaScript_1.5_Reference/Operators/Member_Operators">точку или квадратные скобки</a>, то '<code>this</code>' получится равным данному объекту. В ином случае '<code>this</code>' будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:</p>
+А вот кое-что новенькое: ключевое слово '[`this`](/ru/docs/Web/JavaScript/Reference/Operators/this "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator")'. Когда '`this`' используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors "en/Core_JavaScript_1.5_Reference/Operators/Member_Operators"), то '`this`' получится равным данному объекту. В ином случае '`this`' будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
 
-<pre class="brush: js">s = makePerson("Simon", "Willison")
+```js
+s = makePerson("Simon", "Willison")
 var fullName = s.fullName;
 fullName(); // undefined undefined
-</pre>
+```
 
-<p>При вызове <code>fullName()</code>, '<code>this</code>' получает ссылку на глобальный объект. А так как в глобальном объекте не определены переменные <code>first</code> и <code>last</code>, то имеем два <code>undefined</code>.</p>
+При вызове `fullName()`, '`this`' получает ссылку на глобальный объект. А так как в глобальном объекте не определены переменные `first` и `last`, то имеем два `undefined`.
 
-<p>Используя особенность ключевого слова '<code>this</code>', можно улучшить код функции <code>makePerson</code>:</p>
+Используя особенность ключевого слова '`this`', можно улучшить код функции `makePerson`:
 
-<pre class="brush: js">function Person(first, last) {
+```js
+function Person(first, last) {
     this.first = first;
     this.last = last;
     this.fullName = function() {
@@ -738,15 +754,16 @@ fullName(); // undefined undefined
     };
 }
 var s = new Person("Simon", "Willison");
-</pre>
+```
 
-<p>В примере мы использовали новое ключевое слово: '<code><a href="/ru/docs/Web/JavaScript/Reference/Operators/new" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code>'. Оно тесно связано с '<a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a>'. Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а <code>this</code> получает ссылку на этот новый объект. Функции, которые предназначены для вызова с '<code>new</code>' называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.</p>
+В примере мы использовали новое ключевое слово: '[`new`](/ru/docs/Web/JavaScript/Reference/Operators/new "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator")'. Оно тесно связано с '[this](/ru/docs/Web/JavaScript/Reference/Operators/this)'. Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а `this` получает ссылку на этот новый объект. Функции, которые предназначены для вызова с '`new`' называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.
 
-<p>Мы доработали наш код в предыдущем примере, но всё равно остался один неприятный момент с самостоятельным вызовом  <code>fullName()</code>.</p>
+Мы доработали наш код в предыдущем примере, но всё равно остался один неприятный момент с самостоятельным вызовом `fullName()`.
 
-<p>Каждый раз, когда с помощью конструктора создаётся новый объект, мы заново создаём и две новые функции. Гораздо удобнее создать эти функции отдельно и дать доступ к ним конструктору:</p>
+Каждый раз, когда с помощью конструктора создаётся новый объект, мы заново создаём и две новые функции. Гораздо удобнее создать эти функции отдельно и дать доступ к ним конструктору:
 
-<pre class="brush: js">function personFullName() {
+```js
+function personFullName() {
     return this.first + ' ' + this.last;
 }
 function personFullNameReversed() {
@@ -758,27 +775,29 @@ function Person(first, last) {
     this.fullName = personFullName;
     this.fullNameReversed = personFullNameReversed;
 }
-</pre>
+```
 
-<p>Уже лучше: мы создали функции-методы только один раз, а при новом вызове функции-конструктора просто ссылаемся на них. Можно сделать ещё лучше? Конечно:</p>
+Уже лучше: мы создали функции-методы только один раз, а при новом вызове функции-конструктора просто ссылаемся на них. Можно сделать ещё лучше? Конечно:
 
-<pre class="brush: js">function Person(first, last) {
+```js
+function Person(first, last) {
     this.first = first;
     this.last = last;
 }
-<code>Person.prototype.fullName = function fullName() {</code>
+Person.prototype.fullName = function fullName() {
     return this.first + ' ' + this.last;
 }
-<code>Person.prototype.fullNameReversed = function fullNameReversed() {</code>
+Person.prototype.fullNameReversed = function fullNameReversed() {
     return this.last + ', ' + this.first;
 }
-</pre>
+```
 
-<p><code>Person.prototype</code> это объект, доступ к которому есть у всех экземпляров класса <code>Person</code>. Он создаёт особую цепочку прототипов. Каждый раз, когда вы пытаетесь получить доступ к несуществующему свойству объекта <code>Person</code>, JavaScript проверяет, существует ли свойство в <code>Person.prototype</code>. В результате все, что передано в <code>Person.prototype</code>, становится доступным и всем экземплярам этого конструктора через <code>this</code> объект.</p>
+`Person.prototype` это объект, доступ к которому есть у всех экземпляров класса `Person`. Он создаёт особую цепочку прототипов. Каждый раз, когда вы пытаетесь получить доступ к несуществующему свойству объекта `Person`, JavaScript проверяет, существует ли свойство в `Person.prototype`. В результате все, что передано в `Person.prototype`, становится доступным и всем экземплярам этого конструктора через `this` объект.
 
-<p>Это очень мощный инструмент. JavaScript позволяет изменять прототипы в любое время, это значит, что можно добавлять новые методы к существующим объектам во время выполнения программы:</p>
+Это очень мощный инструмент. JavaScript позволяет изменять прототипы в любое время, это значит, что можно добавлять новые методы к существующим объектам во время выполнения программы:
 
-<pre class="brush: js">s = new Person("Simon", "Willison");
+```js
+s = new Person("Simon", "Willison");
 s.firstNameCaps();
 // TypeError on line 1: s.firstNameCaps is not a function
 
@@ -786,75 +805,87 @@ Person.prototype.firstNameCaps = function() {
     return this.first.toUpperCase()
 }
 s.firstNameCaps(); // "SIMON"
-</pre>
+```
 
-<p>Занимательно то, что добавлять свойства в прототип можно и для встроенных объектов JavaScript. Давайте добавим новый метод <code>reversed </code>классу <code>String</code>, этот метод будет возвращать строку задом наперёд:</p>
+Занимательно то, что добавлять свойства в прототип можно и для встроенных объектов JavaScript. Давайте добавим новый метод `reversed `классу `String`, этот метод будет возвращать строку задом наперёд:
 
-<pre class="brush: js">var s = "Simon";
-s.reversed()<code>; // TypeError on line 1: s.reversed is not a function</code>
+```js
+var s = "Simon";
+s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function <code>reversed</code>() {
+String.prototype.reversed = function reversed() {
     var r = "";
-    for (var i = this.length - 1; i &gt;= 0; i--) {
+    for (var i = this.length - 1; i >= 0; i--) {
         r += this[i];
     }
     return r;
 }
 s.reversed(); // "nomiS"
-</pre>
+```
 
-<p>Данный метод будет работать даже на литералах строки!</p>
+Данный метод будет работать даже на литералах строки!
 
-<pre class="brush: js">"This can now be reversed".reversed();
+```js
+"This can now be reversed".reversed();
 // desrever eb won nac sihT
-</pre>
+```
 
-<p>Как уже упоминалось, prototype формирует часть цепочки. Конечным объектом этой цепочки прототипов является <code>Object.prototype</code>, методы которого включают и <code>toString()</code> — тот метод, который вызывается тогда, когда надо получить строковое отображение объекта. Вот что можно сделать с нашими объектами <code>Person</code>:</p>
+Как уже упоминалось, prototype формирует часть цепочки. Конечным объектом этой цепочки прототипов является `Object.prototype`, методы которого включают и `toString()` — тот метод, который вызывается тогда, когда надо получить строковое отображение объекта. Вот что можно сделать с нашими объектами `Person`:
 
-<pre class="brush: js">var s = new Person("Simon", "Willison");
+```js
+var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
-    return '&lt;Person: ' + this.fullName() + '&gt;';
+    return '<Person: ' + this.fullName() + '>';
 }
 
-s.toString(); // "&lt;Person: Simon Willison&gt;"</pre>
+s.toString(); // "<Person: Simon Willison>"
+```
 
-<p>Помните, мы вызывали <code>avg.apply()</code> с первым аргументом равным null? Теперь мы можем сделать так: первым аргументом, переданным методу <code>apply()</code> будет объект, который примет значение '<code>this</code>'. Вот к примеру упрощённая реализация '<code>new</code>':</p>
+Помните, мы вызывали `avg.apply()` с первым аргументом равным null? Теперь мы можем сделать так: первым аргументом, переданным методу `apply()` будет объект, который примет значение '`this`'. Вот к примеру упрощённая реализация '`new`':
 
-<pre class="brush: js">function trivialNew(constructor, ...args) {
+```js
+function trivialNew(constructor, ...args) {
     var o = {}; // Создаём новый объект
     constructor.apply(o, args);
     return o;
 }
-</pre>
+```
 
-<p>Это не точная копия <code>new</code>, так как она не устанавливает цепочку прототипов (это сложно ). Метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> применяется не очень часто, но знать его важно. В примере выше, синтаксис <code>...args</code> (включая многоточие) называется <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">остаточными параметрами</a>, потому что они включают в себя все оставшиеся аргументы.</p>
+Это не точная копия `new`, так как она не устанавливает цепочку прототипов (это сложно ). Метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) применяется не очень часто, но знать его важно. В примере выше, синтаксис `...args` (включая многоточие) называется [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), потому что они включают в себя все оставшиеся аргументы.
 
-<p>Вызов</p>
+Вызов
 
-<pre class="brush: js">var bill = trivialNew(Person, 'William', 'Orange');</pre>
+```js
+var bill = trivialNew(Person, 'William', 'Orange');
+```
 
-<p>практически полностью эквивалентен этому:</p>
+практически полностью эквивалентен этому:
 
-<pre class="brush: js">var bill = new Person('William', 'Orange');</pre>
+```js
+var bill = new Person('William', 'Orange');
+```
 
-<p>В JavaScript метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> имеет похожий метод <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"><code>call()</code></a>, который тоже позволяет устанавливать '<code>this</code>', но принимает список, а не массив аргументов.</p>
+В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"), который тоже позволяет устанавливать '`this`', но принимает список, а не массив аргументов.
 
-<pre class="brush: js">function lastNameCaps() {
+```js
+function lastNameCaps() {
     return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
 // Аналогично записи:
 s.lastNameCaps = lastNameCaps;
-s.lastNameCaps(); <code>// WILLISON</code></pre>
+s.lastNameCaps(); // WILLISON
+```
 
-<h2 id="Вложенные_функции">Вложенные функции</h2>
+## Вложенные функции
 
-<p>Объявлять новые функции можно и внутри других функций. Мы использовали этот приём чуть выше, создавая функцию <code>makePerson()</code>. Главная особенность вложенных функций в том, что они получают доступ к переменным, объявленным в их функции-родителе:</p>
+Объявлять новые функции можно и внутри других функций. Мы использовали этот приём чуть выше, создавая функцию `makePerson()`. Главная особенность вложенных функций в том, что они получают доступ к переменным, объявленным в их функции-родителе:
 
-<pre class="brush: js">function parentFunc() {
+```js
+function parentFunc() {
   var a = 1;
 
   function nestedFunc() {
@@ -862,17 +893,19 @@ s.lastNameCaps(); <code>// WILLISON</code></pre>
     return a + b;
   }
   return nestedFunc(); // 5
-}</pre>
+}
+```
 
-<p>Это очень полезное свойство, которое делает сопровождение кода более удобным. Если ваша функция в своей работе использует другие функции, которые больше нигде не используются, то можно просто вложить вспомогательные функции в основную. Это сократит количество функций в глобальном объекте, что довольно неплохо.</p>
+Это очень полезное свойство, которое делает сопровождение кода более удобным. Если ваша функция в своей работе использует другие функции, которые больше нигде не используются, то можно просто вложить вспомогательные функции в основную. Это сократит количество функций в глобальном объекте, что довольно неплохо.
 
-<p>Ещё это отличный способ сократить количество глобальных переменных. Так при написании кода у нас часто будет возникать искушение понасоздавать глобальных переменных, которые будут доступны разным функциям. Всё это усложняет код, делает его менее читаемым. Вложенные функции имеют доступ к переменным своей функции-родителя, и мы можем использовать это для группировки множества функций вместе (естественно в разумных пределах), что позволит держать наш глобальный объект в чистоте и порядке.</p>
+Ещё это отличный способ сократить количество глобальных переменных. Так при написании кода у нас часто будет возникать искушение понасоздавать глобальных переменных, которые будут доступны разным функциям. Всё это усложняет код, делает его менее читаемым. Вложенные функции имеют доступ к переменным своей функции-родителя, и мы можем использовать это для группировки множества функций вместе (естественно в разумных пределах), что позволит держать наш глобальный объект в чистоте и порядке.
 
-<h2 id="Замыкания_Closures"><a href="/ru/docs/Web/JavaScript/Closures">Замыкания</a> (Closures)</h2>
+## [Замыкания](/ru/docs/Web/JavaScript/Closures) (Closures)
 
-<p>Мы подошли к одному из самых мощных и непонятных инструментов JavaScript. Давайте разберёмся.</p>
+Мы подошли к одному из самых мощных и непонятных инструментов JavaScript. Давайте разберёмся.
 
-<pre class="brush: js">function makeAdder(a) {
+```js
+function makeAdder(a) {
     return function(b) {
         return a + b;
     };
@@ -882,20 +915,21 @@ var x = makeAdder(5);
 var y = makeAdder(20);
 x(6); // ?
 y(7); // ?
-</pre>
+```
 
-<p>Функция <code>makeAdder</code> создаёт новую функцию, которая прибавляет полученное значение к значению, которые было получено при создании функции.</p>
+Функция `makeAdder` создаёт новую функцию, которая прибавляет полученное значение к значению, которые было получено при создании функции.
 
-<p>Такой же фокус мы наблюдали в предыдущем примере, когда внутренние функции получали доступ к переменным той функции, в которой были объявлены. Только в нашем примере основная функция возвращает вложенную. Поначалу может показаться, что локальные переменные при этом перестанут существовать. Но они продолжают существовать — иначе код попросту не сработал бы. Вдобавок ко всему у нас есть две разные "копии" функции <code>makeAdder</code>, присвоенные разным переменным (одна копия, в которой <code>а</code> - это 5, а во второй <code>а</code> - это 20). Вот что имеем в результате вызова:</p>
+Такой же фокус мы наблюдали в предыдущем примере, когда внутренние функции получали доступ к переменным той функции, в которой были объявлены. Только в нашем примере основная функция возвращает вложенную. Поначалу может показаться, что локальные переменные при этом перестанут существовать. Но они продолжают существовать — иначе код попросту не сработал бы. Вдобавок ко всему у нас есть две разные "копии" функции `makeAdder`, присвоенные разным переменным (одна копия, в которой `а` - это 5, а во второй `а` - это 20). Вот что имеем в результате вызова:
 
-<pre class="brush: js">x(6); // возвратит 11
+```js
+x(6); // возвратит 11
 y(7); // возвратит 27
-</pre>
+```
 
-<p>И вот что произошло: когда JavaScript выполняет функцию, создаётся объект 'scope', который содержит в себе все локальные переменные, объявленные внутри этой функции. Он инициализируется любым значением, переданным функции в качестве параметра. 'Scope' подобен глобальному объекту, который содержит все глобальные переменные и функции, кроме нескольких важных отличий: при каждом вызове функции создаётся новый объект 'scope' и, в отличие от глобального, к объекту 'scope' нельзя получить прямой доступ из вашего кода. И нет способа пройтись по свойствам данного объекта.</p>
+И вот что произошло: когда JavaScript выполняет функцию, создаётся объект 'scope', который содержит в себе все локальные переменные, объявленные внутри этой функции. Он инициализируется любым значением, переданным функции в качестве параметра. 'Scope' подобен глобальному объекту, который содержит все глобальные переменные и функции, кроме нескольких важных отличий: при каждом вызове функции создаётся новый объект 'scope' и, в отличие от глобального, к объекту 'scope' нельзя получить прямой доступ из вашего кода. И нет способа пройтись по свойствам данного объекта.
 
-<p>Так что при вызове функции <code>makeAdder</code> создаётся новый объект 'scope' с единственным свойством: <code>a</code>, которому присваивается значение, переданное функции в качестве аргумента.  Потом <code>makeAdder</code> возвращает новую анонимную функцию. В любом другом случае 'сборщик мусора' удалил бы объект scope, но возвращаемая функция ссылается на этот объект. В итоге объект scope не удаляется до тех пор, пока существует хотя бы одна ссылка на него.</p>
+Так что при вызове функции `makeAdder` создаётся новый объект 'scope' с единственным свойством: `a`, которому присваивается значение, переданное функции в качестве аргумента. Потом `makeAdder` возвращает новую анонимную функцию. В любом другом случае 'сборщик мусора' удалил бы объект scope, но возвращаемая функция ссылается на этот объект. В итоге объект scope не удаляется до тех пор, пока существует хотя бы одна ссылка на него.
 
-<p>Все объекты scope соединяются в цепочку областей видимости, которая похожа на цепочку прототипов в объектной системе JavaScript.</p>
+Все объекты scope соединяются в цепочку областей видимости, которая похожа на цепочку прототипов в объектной системе JavaScript.
 
-<p><strong>Замыкание</strong> это связка из функции и объекта scope, созданного при её вызове. <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">Подробнее о замыканиях здесь</a>.</p>
+**Замыкание** это связка из функции и объекта scope, созданного при её вызове. [Подробнее о замыканиях здесь](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work).

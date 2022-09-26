@@ -7,48 +7,52 @@ tags:
   - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">RangeError: invalid date (Firefox)
+```
+RangeError: invalid date (Firefox)
 RangeError: invalid time value (Chrome)
 RangeError: Provided date is not in valid range (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p><span id="result_box" lang="ru"><span>Строка, ведущая к недопустимой дате, была выведена</span></span> {{jsxref("Date")}} или {{jsxref("Date.parse()")}}.</p>
+Строка, ведущая к недопустимой дате, была выведена {{jsxref("Date")}} или {{jsxref("Date.parse()")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неверные_записи">Неверные записи</h3>
+### Неверные записи
 
-<p>Неопознанные строки или даты, содержащие недопустимые значения элементов в строках, отформатированных ISO, обычно возвращают <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="Глобальное свойство NaN является значением, представляющим не-число (Not-A-Number)."><code>NaN</code></a>. Тем не менее, в зависимости от реализации, при несоответствии строкам формата ISO, может также возникнуть ошибка <code>RangeError: invalid date</code>, например в следующих случаях, в Firefox.</p>
+Неопознанные строки или даты, содержащие недопустимые значения элементов в строках, отформатированных ISO, обычно возвращают [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN "Глобальное свойство NaN является значением, представляющим не-число (Not-A-Number)."). Тем не менее, в зависимости от реализации, при несоответствии строкам формата ISO, может также возникнуть ошибка `RangeError: invalid date`, например в следующих случаях, в Firefox.
 
-<pre class="brush: js example-bad">new Date('foo-bar 2014');
+```js example-bad
+new Date('foo-bar 2014');
 new Date('2014-25-23').toISOString();
 new Date('foo-bar 2014').toString();
-</pre>
+```
 
-<p>Это, без сомнения, вернёт {{jsxref("NaN")}} в Firefox:</p>
+Это, без сомнения, вернёт {{jsxref("NaN")}} в Firefox:
 
-<pre class="brush: js example-bad">Date.parse('foo-bar 2014'); // NaN</pre>
+```js example-bad
+Date.parse('foo-bar 2014'); // NaN
+```
 
-<p>Для получения более подробной информации, смотрите документацию по {{jsxref("Date.parse()")}}</p>
+Для получения более подробной информации, смотрите документацию по {{jsxref("Date.parse()")}}
 
-<h3 id="Верная_запись">Верная запись</h3>
+### Верная запись
 
-<pre class="brush: js example-good">new Date('05 October 2011 14:48 UTC');</pre>
+```js example-good
+new Date('05 October 2011 14:48 UTC');
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date")}}</li>
- <li>{{jsxref("Date.prototype.parse()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date")}}
+- {{jsxref("Date.prototype.parse()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

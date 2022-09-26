@@ -3,52 +3,51 @@ title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Promise.reject(reason)</strong></code> возвращает объект <code>Promise, который был отклонён по указанной причине</code>.</p>
+Метод **`Promise.reject(reason)`** возвращает объект `Promise, который был отклонён по указанной причине`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>Promise.reject(reason)</var>;</pre>
+```
+Promise.reject(reason);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>reason</dt>
- <dd>Причина по которой <code>Promise</code> был отклонён.</dd>
-</dl>
+- reason
+  - : Причина по которой `Promise` был отклонён.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Отклонённый с указанной причиной {{jsxref("Promise")}}.</p>
+Отклонённый с указанной причиной {{jsxref("Promise")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>Promise.reject</code> возвращает <code>Promise</code> который был отклонён. В целях отладки и выборочного отлова ошибок, удобно использовать в качестве причины объекты {{jsxref("Error")}}.</p>
+`Promise.reject` возвращает `Promise` который был отклонён. В целях отладки и выборочного отлова ошибок, удобно использовать в качестве причины объекты {{jsxref("Error")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_статического_метода_Promise.reject()">Использование статического метода Promise.reject()</h3>
+### Использование статического метода Promise.reject()
 
-<pre class="brush: js">Promise.reject(new Error("провал")).then(function(success) {
+```js
+Promise.reject(new Error("провал")).then(function(success) {
   // не вызывается
 }, function(error) {
   console.log(error); // печатает "провал" + Stacktrace
   throw error; // повторно выбрасываем ошибку, вызывая новый reject
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="http://bluebirdjs.com/docs/api/error.html">Выборочный отлов ошибок с использованием библиотеки BlueBird Promise</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Выборочный отлов ошибок с использованием библиотеки BlueBird Promise](http://bluebirdjs.com/docs/api/error.html)

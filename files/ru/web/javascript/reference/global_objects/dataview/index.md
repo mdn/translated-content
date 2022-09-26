@@ -3,97 +3,95 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Вид <strong><code>DataView</code></strong> предоставляет низко-уровневый интерфейс для чтения и записи многочисленных числовых типов в бинарном {{jsxref("ArrayBuffer")}}, независимо от порядка байтов платформы.</p>
+Вид **`DataView`** предоставляет низко-уровневый интерфейс для чтения и записи многочисленных числовых типов в бинарном {{jsxref("ArrayBuffer")}}, независимо от порядка байтов платформы.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
+## Синтаксис
 
+```
+new DataView(buffer [, byteOffset [, byteLength]])
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">new DataView(buffer [, byteOffset [, byteLength]])</pre>
+- `buffer`
+  - : Существующий {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} для использования как хранилище для нового объекта `DataView`.
+- `byteOffset` {{optional_inline}}
+  - : Смещение в байтах к первому байту в заданном буфере. Если не определён, то вид буфера будет начинаться с первого байта.
+- `byteLength` {{optional_inline}}
+  - : Количество элементов в массиве байтов. Если не определён, то длина вида будет соответствовать длине буфера.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>buffer</code></dt>
- <dd>Существующий {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} для использования как хранилище для нового объекта <code>DataView</code>.</dd>
- <dt><code>byteOffset</code> {{optional_inline}}</dt>
- <dd>Смещение в байтах к первому байту в заданном буфере. Если не определён, то вид буфера будет начинаться с первого байта.</dd>
- <dt><code>byteLength</code> {{optional_inline}}</dt>
- <dd>Количество элементов в массиве байтов. Если не определён, то длина вида будет соответствовать длине буфера.</dd>
-</dl>
+Новый объект `DataView` представляющий определённый буфер данных.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Исключения
 
-<p>Новый объект <code>DataView</code> представляющий определённый буфер данных.</p>
+- `{{jsxref("RangeError")}}`
+  - : Выкидывается если `byteOffset` и `byteLength` заходит за пределы буфера.
 
-<h3 id="Исключения">Исключения</h3>
+## Описание
 
-<dl>
- <dt><code>{{jsxref("RangeError")}}</code></dt>
- <dd>Выкидывается если <code>byteOffset</code>  и <code>byteLength</code> заходит за пределы буфера.</dd>
-</dl>
+### Порядок байтов
 
-<h2 id="Описание">Описание</h2>
+Многобайтовые числовые форматы представлены в памяти по разному в зависимости от архитектуры машины, см {{Glossary("Endianness")}} для объяснения. Аксессоры DataView предоставляют явный контроль над обращением к данным вне зависимости от порядка байтов архитектуры платформы.
 
-<h3 id="Порядок_байтов">Порядок байтов</h3>
-
-<p>Многобайтовые числовые форматы представлены в памяти по разному в зависимости от архитектуры машины, см {{Glossary("Endianness")}} для объяснения. Аксессоры DataView предоставляют явный контроль над обращением к данным вне зависимости от порядка байтов архитектуры платформы.</p>
-
-<pre class="brush: js">var littleEndian = (function() {
+```js
+var littleEndian = (function() {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
 })();
 console.log(littleEndian); // true or false
-</pre>
+```
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p>All <code>DataView</code> instances inherit from {{jsxref("DataView.prototype")}} and allows the addition of properties to all DataView objects.</p>
+All `DataView` instances inherit from {{jsxref("DataView.prototype")}} and allows the addition of properties to all DataView objects.
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var buffer = new ArrayBuffer(16);
+```js
+var buffer = new ArrayBuffer(16);
 var dv = new DataView(buffer, 0);
 
 dv.setInt16(1, 42);
 dv.getInt16(1); //42
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Таблица_совместимости">Таблица совместимости</h2>
+## Таблица совместимости
 
+{{Compat}}
 
+## Замечания совместимости
 
-<p>{{Compat}}</p>
+Starting with Firefox 40, `DataView` requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling `DataView()` as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
-<h2 id="Замечания_совместимости">Замечания совместимости</h2>
+```js example-bad
+var dv = DataView(buffer, 0);
+// TypeError: calling a builtin DataView constructor without new is forbidden
+```
 
-<p>Starting with Firefox 40, <code>DataView</code> requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling <code>DataView()</code> as a function without <code>new</code>, will throw a {{jsxref("TypeError")}} from now on.</p>
+```js example-good
+var dv = new DataView(buffer, 0);
+```
 
-<pre class="brush: js example-bad">var dv = DataView(buffer, 0);
-// TypeError: calling a builtin DataView constructor without new is forbidden</pre>
+## Также
 
-<pre class="brush: js example-good">var dv = new DataView(buffer, 0);</pre>
-
-<h2 id="Также">Также</h2>
-
-<ul>
- <li><a class="link-https" href="https://github.com/jDataView/jDataView">jDataView</a>: JavaScript library that polyfills and extends the <code>DataView</code> API to all browsers and Node.js.</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- [jDataView](https://github.com/jDataView/jDataView): JavaScript library that polyfills and extends the `DataView` API to all browsers and Node.js.
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

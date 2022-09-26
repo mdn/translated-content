@@ -7,134 +7,123 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
-<div>{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}</div>
+{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Объект <strong><code>Intl.DateTimeFormat</code></strong> является конструктором объектов, включающих языка-зависимое форматирование даты и времени.</p>
+Объект **`Intl.DateTimeFormat`** является конструктором объектов, включающих языка-зависимое форматирование даты и времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
-Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
+```
+new Intl.DateTimeFormat([locales[, options]])
+Intl.DateTimeFormat.call(this[, locales[, options]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента <code>locales</code> смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:</p>
+- `locales`
 
- <dl>
-  <dt><code>nu</code></dt>
-  <dd>Используемая система нумерации. Возможные значения включают в себя: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
-  <dt><code>ca</code></dt>
-  <dd>Используемый календарь. Возможные значения включают в себя: <code>"buddhist"</code>, <code>"chinese"</code>, <code>"coptic"</code>, <code>"ethioaa"</code>, <code>"ethiopic"</code>, <code>"gregory"</code>, <code>"hebrew"</code>, <code>"indian"</code>, <code>"islamic"</code>, <code>"islamicc"</code>, <code>"iso8601"</code>, <code>"japanese"</code>, <code>"persian"</code>, <code>"roc"</code>.</dd>
- </dl>
- </dd>
- <dt><code>options</code></dt>
- <dd>
- <p>Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:</p>
+  - : Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>Используемый алгоритм сопоставления локалей. Возможными значениями являются <code>"lookup"</code> и <code>"best fit"</code>; значением по умолчанию является <code>"best fit"</code>. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.</dd>
-  <dt><code>timeZone</code></dt>
-  <dd>Используемый часовой пояс. Единственным значением, которые реализации обязаны распознавать, является <code>"UTC"</code>; значением по умолчанию является часовой пояс по умолчанию среды выполнения. Реализации также могут распознавать названия часовых поясов из <a href="https://www.iana.org/time-zones">базы данных часовых поясов IANA</a>, например <code>"Asia/Shanghai"</code>, <code>"Asia/Kolkata"</code> или <code>"America/New_York"</code>.</dd>
-  <dt><code>hour12</code></dt>
-  <dd>Определяет, использовать ли 12-часовой формат времени (в противовес 24-часовому). Возможными значениями являются <code>true</code> и <code>false</code>; значение по умолчанию зависит от локали.</dd>
-  <dt><code>formatMatcher</code></dt>
-  <dd>Используемый алгоритм сопоставления форматов. Возможными значениями являются <code>"basic"</code> и <code>"best fit"</code>; значением по умолчанию является <code>"best fit"</code>. Смотрите следующий абзац, объясняющий, как использовать это свойство.</dd>
- </dl>
+    - `nu`
+      - : Используемая система нумерации. Возможные значения включают в себя: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
+    - `ca`
+      - : Используемый календарь. Возможные значения включают в себя: `"buddhist"`, `"chinese"`, `"coptic"`, `"ethioaa"`, `"ethiopic"`, `"gregory"`, `"hebrew"`, `"indian"`, `"islamic"`, `"islamicc"`, `"iso8601"`, `"japanese"`, `"persian"`, `"roc"`.
 
- <p>Следующие свойства описывают компоненты даты/времени, используемые в форматированном выводе, и их желаемые представления. Реализации должны поддерживать, как минимум, следующие подмножества:</p>
+- `options`
 
- <ul>
-  <li><code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code></li>
-  <li><code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code></li>
-  <li><code>year</code>, <code>month</code>, <code>day</code></li>
-  <li><code>year</code>, <code>month</code></li>
-  <li><code>month</code>, <code>day</code></li>
-  <li><code>hour</code>, <code>minute</code>, <code>second</code></li>
-  <li><code>hour</code>, <code>minute</code></li>
- </ul>
+  - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
 
- <p>Также реализации могут поддерживать другие подмножества и запросы будут сравниваться со всеми доступными подмножествами представлений для поиска наилучшего соответствия. Для такого сравнения доступно два алгоритма, нужный из которых выбирается свойством <code>formatMatcher</code>: <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">чётко определённый алгоритм <code>"basic"</code></a> и зависящий от реализации алгоритм <code>"best fit"</code>.</p>
+    - `localeMatcher`
+      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
+    - `timeZone`
+      - : Используемый часовой пояс. Единственным значением, которые реализации обязаны распознавать, является `"UTC"`; значением по умолчанию является часовой пояс по умолчанию среды выполнения. Реализации также могут распознавать названия часовых поясов из [базы данных часовых поясов IANA](https://www.iana.org/time-zones), например `"Asia/Shanghai"`, `"Asia/Kolkata"` или `"America/New_York"`.
+    - `hour12`
+      - : Определяет, использовать ли 12-часовой формат времени (в противовес 24-часовому). Возможными значениями являются `true` и `false`; значение по умолчанию зависит от локали.
+    - `formatMatcher`
+      - : Используемый алгоритм сопоставления форматов. Возможными значениями являются `"basic"` и `"best fit"`; значением по умолчанию является `"best fit"`. Смотрите следующий абзац, объясняющий, как использовать это свойство.
 
- <dl>
-  <dt><code>weekday</code></dt>
-  <dd>Представление дней недели. Возможными значениями являются <code>"narrow"</code>, <code>"short"</code> и <code>"long"</code>.</dd>
-  <dt><code>era</code></dt>
-  <dd>Представление эр. Возможными значениями являются <code>"narrow"</code>, <code>"short"</code> и <code>"long"</code>.</dd>
-  <dt><code>year</code></dt>
-  <dd>Представление лет. Возможными значениями являются <code>"numeric"</code> и <code>"2-digit"</code>.</dd>
-  <dt><code>month</code></dt>
-  <dd>Представление месяцев. Возможными значениями являются <code>"numeric"</code>, <code>"2-digit"</code>, <code>"narrow"</code>, <code>"short"</code> и <code>"long"</code>.</dd>
-  <dt><code>day</code></dt>
-  <dd>Представление дней. Возможными значениями являются <code>"numeric"</code> и <code>"2-digit"</code>.</dd>
-  <dt><code>hour</code></dt>
-  <dd>Представление часов. Возможными значениями являются <code>"numeric"</code> и <code>"2-digit"</code>.</dd>
-  <dt><code>minute</code></dt>
-  <dd>Представление минут. Возможными значениями являются <code>"numeric"</code> и <code>"2-digit"</code>.</dd>
-  <dt><code>second</code></dt>
-  <dd>Представление секунд. Возможными значениями являются <code>"numeric"</code> и <code>"2-digit"</code>.</dd>
-  <dt><code>timeZoneName</code></dt>
-  <dd>Представление названий часовых поясов. Возможными значениями являются <code>"short"</code> и <code>"long"</code>.</dd>
- </dl>
+    Следующие свойства описывают компоненты даты/времени, используемые в форматированном выводе, и их желаемые представления. Реализации должны поддерживать, как минимум, следующие подмножества:
 
- <p class="noinclude">Значение по умолчанию для всех свойств компонентов даты/времени является значение {{jsxref("Global_Objects/undefined", "undefined")}},но если все свойства компонентов будут равны {{jsxref("Global_Objects/undefined", "undefined")}}, то будет предполагаться, что значением свойств <code>year</code>, <code>month</code> и <code>day</code> является <code>"numeric"</code>.</p>
- </dd>
-</dl>
+    - `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
+    - `weekday`, `year`, `month`, `day`
+    - `year`, `month`, `day`
+    - `year`, `month`
+    - `month`, `day`
+    - `hour`, `minute`, `second`
+    - `hour`, `minute`
 
-<h2 id="Description">Описание</h2>
+    Также реализации могут поддерживать другие подмножества и запросы будут сравниваться со всеми доступными подмножествами представлений для поиска наилучшего соответствия. Для такого сравнения доступно два алгоритма, нужный из которых выбирается свойством `formatMatcher`: [чётко определённый алгоритм `"basic"`](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) и зависящий от реализации алгоритм `"best fit"`.
 
-<h3 id="Properties">Свойства</h3>
+    - `weekday`
+      - : Представление дней недели. Возможными значениями являются `"narrow"`, `"short"` и `"long"`.
+    - `era`
+      - : Представление эр. Возможными значениями являются `"narrow"`, `"short"` и `"long"`.
+    - `year`
+      - : Представление лет. Возможными значениями являются `"numeric"` и `"2-digit"`.
+    - `month`
+      - : Представление месяцев. Возможными значениями являются `"numeric"`, `"2-digit"`, `"narrow"`, `"short"` и `"long"`.
+    - `day`
+      - : Представление дней. Возможными значениями являются `"numeric"` и `"2-digit"`.
+    - `hour`
+      - : Представление часов. Возможными значениями являются `"numeric"` и `"2-digit"`.
+    - `minute`
+      - : Представление минут. Возможными значениями являются `"numeric"` и `"2-digit"`.
+    - `second`
+      - : Представление секунд. Возможными значениями являются `"numeric"` и `"2-digit"`.
+    - `timeZoneName`
+      - : Представление названий часовых поясов. Возможными значениями являются `"short"` и `"long"`.
 
-<dl>
- <dt>{{jsxref("DateTimeFormat.prototype", "Intl.DateTimeFormat.prototype")}}</dt>
- <dd>Позволяет добавлять свойства ко всем объектам.</dd>
-</dl>
+    Значение по умолчанию для всех свойств компонентов даты/времени является значение {{jsxref("Global_Objects/undefined", "undefined")}},но если все свойства компонентов будут равны {{jsxref("Global_Objects/undefined", "undefined")}}, то будет предполагаться, что значением свойств `year`, `month` и `day` является `"numeric"`.
 
-<h2 id="Methods">Методы</h2>
+## Описание
 
-<dl>
- <dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.</dd>
-</dl>
+### Свойства
 
-<h2 id="DateTimeFormat_instances">Экземпляры объекта <code>DateTimeFormat</code></h2>
+- {{jsxref("DateTimeFormat.prototype", "Intl.DateTimeFormat.prototype")}}
+  - : Позволяет добавлять свойства ко всем объектам.
 
-<h3 id="Properties_of_DateTimeFormat_instance">Свойства</h3>
+## Методы
 
-<p>Экземпляры <code>DateTimeFormat</code> наследуют следующие свойства из своего прототипа:</p>
+- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+  - : Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}</div>
+## Экземпляры объекта `DateTimeFormat`
 
-<h3 id="Methods_of_DateTimeFormat_instance">Методы</h3>
+### Свойства
 
-<p>Экземпляры <code>DateTimeFormat</code> наследуют следующие методы из своего прототипа:</p>
+Экземпляры `DateTimeFormat` наследуют следующие свойства из своего прототипа:
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}
 
-<h2 id="Examples">Примеры</h2>
+### Методы
 
-<h3 id="Example_Using_DateTimeFormat">Пример: использование <code>DateTimeFormat</code></h3>
+Экземпляры `DateTimeFormat` наследуют следующие методы из своего прототипа:
 
-<p>При базовом использовании без определения локали <code>DateTimeFormat</code> использует локаль и опции по умолчанию.</p>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+## Примеры
+
+### Пример: использование `DateTimeFormat`
+
+При базовом использовании без определения локали `DateTimeFormat` использует локаль и опции по умолчанию.
+
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Вывод format без аргументов зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
 console.log(new Intl.DateTimeFormat().format(date));
 // → "12/19/2012", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
-</pre>
+```
 
-<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+### Пример: использование аргумента `locales`
 
-<p>Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
+Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
@@ -153,7 +142,7 @@ console.log(new Intl.DateTimeFormat('ko-KR').format(date));
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
 console.log(new Intl.DateTimeFormat('ar-EG').format(date));
-// → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢</span>"
+// → "٢٠‏/١٢‏/٢٠١٢"
 
 // В Японии приложения могут захотеть использовать японский календарь,
 // в котором 2012 год является 24-м годом эры Хейсей
@@ -164,13 +153,14 @@ console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
 console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "20/12/2012"
-</pre>
+```
 
-<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
+### Пример: использование аргумента `options`
 
-<p>Формат даты и времени может быть настроен с помощью аргумента <code>options</code>:</p>
+Формат даты и времени может быть настроен с помощью аргумента `options`:
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Запрашиваем день недели вместе с длинным форматом даты
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -199,16 +189,16 @@ options = {
 };
 console.log(date.toLocaleString('en-US', options));
 // → "12/19/2012, 19:00:00"
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

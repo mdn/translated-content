@@ -10,45 +10,47 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>startsWith()</code></strong> помогает определить, начинается ли строка с символов указанных в скобках, возвращая, соответственно, <code>true</code> или <code>false</code>.</p>
+Метод **`startsWith()`** помогает определить, начинается ли строка с символов указанных в скобках, возвращая, соответственно, `true` или `false`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
+```
+str.startsWith(searchString[, position])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>searchString</code></dt>
- <dd>Символы, искомые в начале данной строки.</dd>
- <dt><code>position</code></dt>
- <dd>Необязательный параметр. Позиция в строке, с которой начинать поиск  <code>searchString</code>; по умолчанию 0.</dd>
-</dl>
+- `searchString`
+  - : Символы, искомые в начале данной строки.
+- `position`
+  - : Необязательный параметр. Позиция в строке, с которой начинать поиск `searchString`; по умолчанию 0.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Этот метод позволяет определять, начинается ли строка с указанных в скобках символов.</p>
+Этот метод позволяет определять, начинается ли строка с указанных в скобках символов.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_startsWith">Пример: использование метода <code>startsWith()</code></h3>
+### Пример: использование метода `startsWith()`
 
-<pre class="brush: js">var str = 'Быть или не быть, вот в чём вопрос.';
+```js
+var str = 'Быть или не быть, вот в чём вопрос.';
 
 console.log(str.startsWith('Быть'));        // true
 console.log(str.startsWith('не быть'));     // false
 console.log(str.startsWith('не быть', 9));  // true
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:</p>
+Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:
 
-<pre class="brush: js">if (!String.prototype.startsWith) {
+```js
+if (!String.prototype.startsWith) {
   Object.defineProperty(String.prototype, 'startsWith', {
     enumerable: false,
     configurable: false,
@@ -59,19 +61,15 @@ console.log(str.startsWith('не быть', 9));  // true
     }
   });
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}</li>
- <li>{{jsxref("String.prototype.includes()")}} {{experimental_inline}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.includes()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

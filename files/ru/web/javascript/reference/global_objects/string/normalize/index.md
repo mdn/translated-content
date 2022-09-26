@@ -11,65 +11,63 @@ tags:
   - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>normalize()</code></strong> возвращает форму нормализации Юникода данной строки (если значение не является строкой, сначала оно будет в неё преобразовано).</p>
+Метод **`normalize()`** возвращает форму нормализации Юникода данной строки (если значение не является строкой, сначала оно будет в неё преобразовано).
 
-<p>Одна из особенностей Юникода - возможность считать два разных символа эквивалентными при выполнении сортировки и иных операций, которые основаны на сравнении.</p>
+Одна из особенностей Юникода - возможность считать два разных символа эквивалентными при выполнении сортировки и иных операций, которые основаны на сравнении.
 
-<p>Виды эквивалентности:<br>
- - первый - каноническая эквивалентность, когда две последовательности code point являются полностью взаимозаменяемыми.</p>
+Виды эквивалентности:
+\- первый - каноническая эквивалентность, когда две последовательности code point являются полностью взаимозаменяемыми.
 
-<p>- второй - совместимость - две совместимые последовательности code point выглядят по-разному, но в некоторых случаях они могут быть взаимозаменяемыми.</p>
+\- второй - совместимость - две совместимые последовательности code point выглядят по-разному, но в некоторых случаях они могут быть взаимозаменяемыми.
 
-<p>'æ' взаимозаменяемый 'ae', но они не являются строго эквивалентными, если не провести некоторую нормализацию</p>
+'æ' взаимозаменяемый 'ae', но они не являются строго эквивалентными, если не провести некоторую нормализацию
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.normalize(<var>[form</var>])</code></pre>
+```
+str.normalize([form])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>form</code></dt>
- <dd>Одно из значений <code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code> или <code>"NFKD"</code>, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение <code>"NFC"</code>.
- <ul>
-  <li><code>NFC</code> —  форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;</li>
-  <li><code>NFD</code> — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');</li>
-  <li><code>NFKC</code> — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');</li>
-  <li><code>NFKD</code> — форма нормализации совместимой декомпозицией (Normalization Form Compatibility Decomposition, 'NFKD').</li>
- </ul>
- </dd>
-</dl>
+- `form`
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+  - : Одно из значений `"NFC"`, `"NFD"`, `"NFKC"` или `"NFKD"`, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение `"NFC"`.
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>Если параметр <code>form</code> не является одним из вышеперечисленных значений, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
-</dl>
+    - `NFC` — форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;
+    - `NFD` — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');
+    - `NFKC` — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');
+    - `NFKD` — форма нормализации совместимой декомпозицией (Normalization Form Compatibility Decomposition, 'NFKD').
 
-<h2 id="Description">Описание</h2>
+### Выбрасываемые исключения
 
-<p>Метод <code>normalize()</code> возвращает указанную форму нормализации Юникода строки. Он не изменяет значение самой строки.</p>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : Если параметр `form` не является одним из вышеперечисленных значений, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Описание
 
-<h3 id="Example_Using_normalize">Пример: использование метода <code>normalize()</code></h3>
+Метод `normalize()` возвращает указанную форму нормализации Юникода строки. Он не изменяет значение самой строки.
 
-<pre class="brush: js">let valueStr = ['h', 'ĥ', 'æ', 'ae', 'g', 'ġ'],
+## Примеры
+
+### Пример: использование метода `normalize()`
+
+```js
+let valueStr = ['h', 'ĥ', 'æ', 'ae', 'g', 'ġ'],
     normArr = valueStr.map(function (text) {
-        return text.normalize(); // (по умолчанию 'NFC') normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, æ, ġ, ĥ]</span></span></span></span>
-        //return text.normalize('NFD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
-        //return text.normalize('NFKC'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, æ, ġ, ĥ]</span></span></span></span>
-        //return text.normalize('NFKD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
+        return text.normalize(); // (по умолчанию 'NFC') normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
+        //return text.normalize('NFD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
+        //return text.normalize('NFKC'); // normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
+        //return text.normalize('NFKD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
     });
 
 //После приведение строк в нормальную форму, мы можем провести сортировку, массива:
 normArr.sort(function (f,s) {
-    if (f &lt; s) {
+    if (f < s) {
         return -1;
     } else if (f === s) {
         return 0;
@@ -84,7 +82,7 @@ valueStrNorm.sort(function (first, second) {
     let fN = first.normalize(),
         sN = second.normalize('NFKC');
 
-    if (fN &lt; sN) {
+    if (fN < sN) {
         return -1;
     } else if (fN === sN) {
         return 0;
@@ -93,20 +91,18 @@ valueStrNorm.sort(function (first, second) {
     }
 });
 
-valueStrNorm.join(', ');//-&gt; <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, s, æ, ġ, ĥ, ș</span></span></span></span>
-</pre>
+valueStrNorm.join(', ');//-> ae, g, h, s, æ, ġ, ĥ, ș
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://www.unicode.org/reports/tr15/">Приложение №15 к стандарту Юникода: формы нормализации Юникода</a></li>
- <li><a href="http://en.wikipedia.org/wiki/Unicode_equivalence">Эквивалентность в Юникоде</a></li>
-</ul>
+- [Приложение №15 к стандарту Юникода: формы нормализации Юникода](http://www.unicode.org/reports/tr15/)
+- [Эквивалентность в Юникоде](http://en.wikipedia.org/wiki/Unicode_equivalence)

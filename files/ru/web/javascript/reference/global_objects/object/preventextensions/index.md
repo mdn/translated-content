@@ -9,38 +9,39 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<p>Метод <code><strong>Object.preventExtensions()</strong></code> предотвращает добавление новых свойств к объекту (то есть, предотвращает расширение этого объекта в будущем).</p>
+Метод **`Object.preventExtensions()`** предотвращает добавление новых свойств к объекту (то есть, предотвращает расширение этого объекта в будущем).
 
-<p>{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>Object.preventExtensions(<var>obj</var>)</code></pre>
+```js
+Object.preventExtensions(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, который нужно сделать нерасширяемым.</dd>
-</dl>
+- `obj`
+  - : Объект, который нужно сделать нерасширяемым.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект, который делается нерасширяемым.</p>
+Объект, который делается нерасширяемым.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Объект называется расширяемым, если к нему могут быть добавлены новые свойства. <code>Object.preventExtensions()</code> помечает объект как нерасширяемый, так что он никогда не будет иметь других свойств, кроме тех, что были у него на момент пометки его нерасширяемым. Обратите внимание, что, в общем случае, свойства нерасширяемого объекта всё ещё могут быть <em>удалены</em>. Попытка добавить новые свойства к нерасширяемому объекту потерпит неудачу, либо молча, либо с выбрасыванием исключения {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Functions_and_function_scope/Strict_mode", "строгом режиме", "", 1)}}).</p>
+Объект называется расширяемым, если к нему могут быть добавлены новые свойства. `Object.preventExtensions()` помечает объект как нерасширяемый, так что он никогда не будет иметь других свойств, кроме тех, что были у него на момент пометки его нерасширяемым. Обратите внимание, что, в общем случае, свойства нерасширяемого объекта всё ещё могут быть _удалены_. Попытка добавить новые свойства к нерасширяемому объекту потерпит неудачу, либо молча, либо с выбрасыванием исключения {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Functions_and_function_scope/Strict_mode", "строгом режиме", "", 1)}}).
 
-<p>Метод <code>Object.preventExtensions()</code> предотвращает добавление только собственных свойств. Свойства всё ещё могут быть добавлены в прототип объекта. Однако, вызов <code>Object.preventExtensions()</code> на объекте также предотвращает расширение его свойства {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}.</p>
+Метод `Object.preventExtensions()` предотвращает добавление только собственных свойств. Свойства всё ещё могут быть добавлены в прототип объекта. Однако, вызов `Object.preventExtensions()` на объекте также предотвращает расширение его свойства {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}.
 
-<p>Если превратить расширяемый объект в нерасширяемый возможно, в ECMAScript 5 нет никакого способа сделать обратную операцию.</p>
+Если превратить расширяемый объект в нерасширяемый возможно, в ECMAScript 5 нет никакого способа сделать обратную операцию.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Object.preventExtensions возвращает объект, который нужно сделать нерасширяемым.
+```js
+// Object.preventExtensions возвращает объект, который нужно сделать нерасширяемым.
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
 assert(obj === obj2);
@@ -70,33 +71,32 @@ fail();
 // нерасширяемые объекты неизменны.
 var fixed = Object.preventExtensions({});
 fixed.__proto__ = { oh: 'hai' }; // выбросит TypeError
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться как простой нерасширяемый объект и метод его просто вернёт.</p>
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться как простой нерасширяемый объект и метод его просто вернёт.
 
-<pre class="brush: js">&gt; Object.preventExtensions(1)
+```js
+> Object.preventExtensions(1)
 TypeError: 1 is not an object // код ES5
 
-&gt; Object.preventExtensions(1)
+> Object.preventExtensions(1)
 1                             // код ES6
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

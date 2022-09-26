@@ -7,32 +7,33 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>Глобальная <code><strong>isFinite()</strong></code> функция определяет, является ли переданное значение конечным числом. Если необходимо, параметр сначала преобразуется в число.</p>
+Глобальная **`isFinite()`** функция определяет, является ли переданное значение конечным числом. Если необходимо, параметр сначала преобразуется в число.
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">isFinite(<em>testValue</em>)</pre>
+```
+isFinite(testValue)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>testValue</code></dt>
- <dd>Аргумент для проверки, является ли он конечным числом.</dd>
-</dl>
+- `testValue`
+  - : Аргумент для проверки, является ли он конечным числом.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><code>isFinite</code> это функция верхнего уровня и она не связана ни с одним объектом.</p>
+`isFinite` это функция верхнего уровня и она не связана ни с одним объектом.
 
-<p>Вы можете использовать эту функцию там, где требуется определить, является ли аргумент конечным числом. Функция <code>isFinite</code> исследует число в своём параметре. Если аргумент является NaN, положительной или отрицательной бесконечностью, метод вернёт <code>false</code>; иначе возвращается <code>true</code>.</p>
+Вы можете использовать эту функцию там, где требуется определить, является ли аргумент конечным числом. Функция `isFinite` исследует число в своём параметре. Если аргумент является NaN, положительной или отрицательной бесконечностью, метод вернёт `false`; иначе возвращается `true`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -42,21 +43,19 @@ isFinite(2e64);      // true
 
 isFinite("0");       // true, но было бы false если использовать
                      // более надёжный вариант Number.isFinite("0")
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Number.NaN()")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN()")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

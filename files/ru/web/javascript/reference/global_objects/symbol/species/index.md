@@ -9,60 +9,44 @@ tags:
   - Символы
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.species</strong></code><strong> —</strong> известный символ, позволяющий определить конструктор, использующийся для создания порождённых объектов.</p>
+**`Symbol.species`** **—** известный символ, позволяющий определить конструктор, использующийся для создания порождённых объектов.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство <code><strong>Symbol.species</strong></code>, содержащее аксессор (геттер), позволяет подклассам переопределить конструктор, используемый по умолчанию для создания новых объектов.</p>
+Свойство **`Symbol.species`**, содержащее аксессор (геттер), позволяет подклассам переопределить конструктор, используемый по умолчанию для создания новых объектов.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Вам может понадобиться возвращать объекты типа {{jsxref("Array")}} в методах вашего производного класса <code>MyArray</code>. Например, при использовании метода вроде {{jsxref("Array.map", "map()")}}, использующего конструктор по умолчанию, вам может потребоваться возвращать объект родительского типа <code>Array</code>, вместо <code>MyArray</code>. Символ <code><strong>species</strong></code> позволит вам это сделать:</p>
+Вам может понадобиться возвращать объекты типа {{jsxref("Array")}} в методах вашего производного класса `MyArray`. Например, при использовании метода вроде {{jsxref("Array.map", "map()")}}, использующего конструктор по умолчанию, вам может потребоваться возвращать объект родительского типа `Array`, вместо `MyArray`. Символ **`species`** позволит вам это сделать:
 
-<pre class="brush: js">class MyArray extends Array {
+```js
+class MyArray extends Array {
   // Перегружаем species для использования родительского конструктора Array
   static get [Symbol.species]() { return Array; }
 }
 var a = new MyArray(1,2,3);
-var mapped = a.map(x =&gt; x * x);
+var mapped = a.map(x => x * x);
 
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-symbol.species', 'Symbol.species')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                         | Статус                       | Комментарий              |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------ |
+| {{SpecName('ES6', '#sec-symbol.species', 'Symbol.species')}}     | {{Spec2('ES6')}}         | Изначальное определение. |
+| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                          |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Map.@@species", "Map[@@species]")}}</li>
- <li>{{jsxref("Set.@@species", "Set[@@species]")}}</li>
-</ul>
+- {{jsxref("Map.@@species", "Map[@@species]")}}
+- {{jsxref("Set.@@species", "Set[@@species]")}}

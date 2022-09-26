@@ -12,49 +12,42 @@ tags:
   - целая часть
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
-<div>
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Функция <strong><code>Math.trunc()</code></strong> возвращает целую часть числа путём удаления всех дробных знаков.</p>
+Функция **`Math.trunc()`** возвращает целую часть числа путём удаления всех дробных знаков.
 
-<div>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 
+## Синтаксис
 
-</div>
+```
+Math.trunc(x)
+```
 
-<p>
- </p><h2 id="Syntax">Синтаксис</h2>
+### Параметры
 
+- `x`
+  - : Число.
 
-<pre class="syntaxbox"><code>Math.trunc(<var>x</var>)</code></pre>
+### Возвращаемое значение
 
-<h3 id="Parameters">Параметры</h3>
+- `x`
+  - : Целая часть данного числа.
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+## Описание
 
-<h3 id="Parameters">Возвращаемое значение</h3>
+В отличие от других трёх методов объекта `Math` — {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} и {{jsxref("Math.round()")}} — метод `Math.trunc()` работает очень просто. Отбрасывается запятая и все цифры после неё, не обращая внимания на знак аргумента.
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Целая часть данного числа.</dd>
-</dl>
+Аргумент, переданный в этот метод, будет неявно преобразован в число.
 
-<h2 id="Description">Описание</h2>
+Поскольку `trunc()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.trunc()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` ( `Math` не является конструктором).
 
-<p>В отличие от других трёх методов объекта <code>Math</code> — {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} и {{jsxref("Math.round()")}} — метод <code>Math.trunc()</code> работает очень просто. Отбрасывается запятая и все цифры после неё, не обращая внимания на знак аргумента.</p>
+## Примеры
 
-<p>Аргумент, переданный в этот метод, будет неявно преобразован в число.</p>
+### Использование `Math.trunc()`
 
-<p>Поскольку <code>trunc()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.trunc()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> ( <code>Math</code> не является конструктором).</p>
-
-<h2 id="Examples">Примеры</h2>
-
-<h3 id="Example:_Using_Math.trunc">Использование <code>Math.trunc()</code></h3>
-
-<pre class="brush: js">Math.trunc(13.37);    // 13
+```js
+Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -62,55 +55,56 @@ Math.trunc('-1.123'); // -1
 Math.trunc(NaN);      // NaN
 Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">if (!Math.trunc) {
+```js
+if (!Math.trunc) {
 	Math.trunc = function(v) {
 		v = +v;
 		if (!isFinite(v)) return v;
 
-		return (v - v % 1)   ||   (v &lt; 0 ? -0 : v === 0 ? v : 0);
+		return (v - v % 1)   ||   (v < 0 ? -0 : v === 0 ? v : 0);
 
 		// returns:
-		//  0        -&gt;  0
-		// -0        -&gt; -0
-		//  0.2      -&gt;  0
-		// -0.2      -&gt; -0
-		//  0.7      -&gt;  0
-		// -0.7      -&gt; -0
-		//  Infinity -&gt;  Infinity
-		// -Infinity -&gt; -Infinity
-		//  NaN      -&gt;  NaN
-		//  null     -&gt;  0
+		//  0        ->  0
+		// -0        -> -0
+		//  0.2      ->  0
+		// -0.2      -> -0
+		//  0.7      ->  0
+		// -0.7      -> -0
+		//  Infinity ->  Infinity
+		// -Infinity -> -Infinity
+		//  NaN      ->  NaN
+		//  null     ->  0
 	};
 }
-</pre>
+```
 
-<p>Либо:</p>
+Либо:
 
-<pre class="brush: js">if (!Math.trunc) {
+```js
+if (!Math.trunc) {
 	Math.trunc = function(v) {
 		v = +v;
-		return (v - v % 1)   ||   (!isFinite(v) || v === 0 ? v : v &lt; 0 ? -0 : 0);
+		return (v - v % 1)   ||   (!isFinite(v) || v === 0 ? v : v < 0 ? -0 : 0);
 	};
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}

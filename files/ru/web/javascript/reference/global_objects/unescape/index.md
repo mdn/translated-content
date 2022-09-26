@@ -3,53 +3,48 @@ title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}} {{deprecated_header()}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}} {{deprecated_header()}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Устаревший метод <code><strong>unescape(str)</strong></code> создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.</p>
+Устаревший метод **`unescape(str)`** создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.
 
-<p>Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.</p>
+Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.
 
-<div class="note"><strong>Обратите внимание:</strong> Не рекомендуется использовать <code>unescape</code> чтобы декодировать URI, используйте <code>decodeURI</code> вместо него.</div>
+> **Примечание:** **Обратите внимание:** Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>unescape(str)</code></pre>
+```
+unescape(str)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Строка которую необходимо преобразовать</dd>
-</dl>
+- `str`
+  - : Строка которую необходимо преобразовать
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><code>Функция unescape</code> это свойство <em>глобального объекта</em>.</p>
+`Функция unescape` это свойство _глобального объекта_.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">unescape("abc123");     // "abc123"
+```js
+unescape("abc123");     // "abc123"
 unescape("%E4%F6%FC");  // "äöü"
 unescape("%u0107");     // "ć"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}}</li>
-</ul>
+- {{jsxref("Global_Objects/decodeURI", "decodeURI")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}}

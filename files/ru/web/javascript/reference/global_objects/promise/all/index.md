@@ -8,97 +8,95 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<h2 id="Summary">Общее описание</h2>
+## Общее описание
 
-<p>Метод <code><strong>Promise.all(iterable)</strong></code> возвращает промис, который выполнится тогда, когда будут выполнены все промисы, переданные в виде перечисляемого аргумента, или отклонено любое из переданных промисов.</p>
+Метод **`Promise.all(iterable)`** возвращает промис, который выполнится тогда, когда будут выполнены все промисы, переданные в виде перечисляемого аргумента, или отклонено любое из переданных промисов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>Promise.all(iterable)</var>;</pre>
+```
+Promise.all(iterable);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>iterable</dt>
- <dd>Перечисляемый объект, например, массив ({{jsxref("Array")}}). Смотрите <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
-</dl>
+- iterable
+  - : Перечисляемый объект, например, массив ({{jsxref("Array")}}). Смотрите [iterable](/ru/docs/Web/JavaScript/Guide/iterable).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который будет выполнен когда будут выполнены все промисы, переданные в виде перечисляемого аргумента, или отклонён, если будет отклонено хоть одно из переданных промисов.</p>
+{{jsxref("Promise")}}, который будет выполнен когда будут выполнены все промисы, переданные в виде перечисляемого аргумента, или отклонён, если будет отклонено хоть одно из переданных промисов.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><strong>Promise.all</strong> возвращает массив значений от всех промисов, которые были ему переданы. Возвращаемый массив значений сохраняет порядок оригинального перечисляемого объекта, но не порядок выполнения промисов. <code>Если какой-либо элемент перечисляемого объекта не является промисом, то он будет преобразован с помощью метода </code>{{jsxref("Promise.resolve")}}<code>.</code></p>
+**Promise.all** возвращает массив значений от всех промисов, которые были ему переданы. Возвращаемый массив значений сохраняет порядок оригинального перечисляемого объекта, но не порядок выполнения промисов. `Если какой-либо элемент перечисляемого объекта не является промисом, то он будет преобразован с помощью метода `{{jsxref("Promise.resolve")}}`.`
 
-<p>Если одно из переданных промисов будет отклонено, <code><strong>Promise.all </strong></code>будет немедленно отклонён со значением отклонённого промиса, не учитывая другие промисы, независимо выполнены они или нет. Если в качестве аргумента будет передан пустой массив, то <code><strong>Promise.all</strong> </code>будет выполнен немедленно<code>. </code></p>
+Если одно из переданных промисов будет отклонено, **`Promise.all `**будет немедленно отклонён со значением отклонённого промиса, не учитывая другие промисы, независимо выполнены они или нет. Если в качестве аргумента будет передан пустой массив, то `Promise.all `будет выполнен немедленно`.`
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_Promise.all">Использование <code>Promise.all</code></h3>
+### Использование `Promise.all`
 
-<p><strong>Promise.all</strong> ждёт выполнения всех промисов (или первого метода <code><strong>reject</strong>()</code>).</p>
+**Promise.all** ждёт выполнения всех промисов (или первого метода `reject()`).
 
-<pre><code>var p1 = Promise.resolve(3);
+```
+var p1 = Promise.resolve(3);
 var p2 = 1337;
-var p3 = new Promise((resolve, reject) =&gt; {
+var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then(values =&gt; {
+Promise.all([p1, p2, p3]).then(values => {
   console.log(values);
 });
 
 //Выведет:
-// [3, 1337, "foo"] </code>
-</pre>
+// [3, 1337, "foo"]
+```
 
-<h3 id="Promise.all_поведение_немедленного_отклонения"><code>Promise.all</code> поведение немедленного отклонения</h3>
+### `Promise.all` поведение немедленного отклонения
 
-<p><strong><code>Promise.all</code></strong> будет немедленно отклонён если один из переданных промисов будет отклонен: если у вас есть четыре промиса которые будут выполнены с задержкой и один, который будет отклонен немедленно - тогда <strong><code>Promise.all</code></strong> будет немедленно отклонён.</p>
+**`Promise.all`** будет немедленно отклонён если один из переданных промисов будет отклонен: если у вас есть четыре промиса которые будут выполнены с задержкой и один, который будет отклонен немедленно - тогда **`Promise.all`** будет немедленно отклонён.
 
-<pre><code>var p1 = new Promise((resolve, reject) =&gt; {
+```
+var p1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 1000, "one");
 });
-var p2 = new Promise((resolve, reject) =&gt; {
+var p2 = new Promise((resolve, reject) => {
   setTimeout(resolve, 2000, "two");
 });
-var p3 = new Promise((resolve, reject) =&gt; {
+var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 3000, "three");
 });
-var p4 = new Promise((resolve, reject) =&gt; {
+var p4 = new Promise((resolve, reject) => {
   setTimeout(resolve, 4000, "four");
 });
-var p5 = new Promise((resolve, reject) =&gt; {
+var p5 = new Promise((resolve, reject) => {
 // Этот промис прервёт Promise.all
   reject("reject");
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(value =&gt; {
+Promise.all([p1, p2, p3, p4, p5]).then(value => {
   console.log(value);
-}, reason =&gt; {
+}, reason => {
   console.log(reason)
 });
 
 //Выведет:
-//"reject"</code>
-</pre>
+//"reject"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Родственные темы
 
-<h2 id="Родственные_темы">Родственные темы</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.race()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.race()")}}

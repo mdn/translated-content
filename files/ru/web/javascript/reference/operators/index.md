@@ -6,286 +6,234 @@ tags:
   - Operators
 translation_of: Web/JavaScript/Reference/Operators
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Эта глава описывает все операторы, выражения и ключевые слова языка JavaScript.</p>
+Эта глава описывает все операторы, выражения и ключевые слова языка JavaScript.
 
-<h2 id="Expressions_and_operators_by_category">Выражения и операторы по категориям</h2>
+## Выражения и операторы по категориям
 
-<p>Алфавитный список смотрите в боковой панели слева.</p>
+Алфавитный список смотрите в боковой панели слева.
 
-<h3 id="Primary_expressions">Первичные выражения</h3>
+### Первичные выражения
 
-<p>Базовые ключевые слова и общие выражения в JavaScript.</p>
+Базовые ключевые слова и общие выражения в JavaScript.
 
-<dl>
- <dt>{{jsxref("Operators/this", "this")}}</dt>
- <dd>Ключевое слово <code>this</code> ссылается на контекст выполняемой функции.</dd>
- <dt>{{jsxref("Operators/function", "function")}}</dt>
- <dd>Ключевое слово <code>function</code> определяет выражение функции.</dd>
- <dt>{{jsxref("Operators/class", "class")}}</dt>
- <dd>Ключевое слово <code>class</code> определяет выражение класса.</dd>
- <dt>{{jsxref("Operators/function*", "function*")}}</dt>
- <dd>Ключевое слово <code>function*</code> (со звёздочкой) определяет функцию-генератор.</dd>
- <dt>{{jsxref("Operators/yield", "yield")}}</dt>
- <dd>Пауза или продолжение выполнения функции-генератора.</dd>
- <dt>{{jsxref("Operators/yield*", "yield*")}}</dt>
- <dd>Делегирует выполнение другому генератору итерируемому объекту.</dd>
- <dt>{{experimental_inline}} {{jsxref("Operators/async_function", "async function*")}}</dt>
- <dd><code>async function</code> определяет выражение асинхронной функции.</dd>
- <dt>{{experimental_inline}} {{jsxref("Operators/await", "await")}}</dt>
- <dd>Пауза и продолжение выполнения асинхронной функции и ожидание <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> (результата выполнения) с результатом разрешено/отклонено.</dd>
- <dt>{{jsxref("Global_Objects/Array", "[]")}}</dt>
- <dd>Синтаксис создания инициализатора/литерала массива.</dd>
- <dt>{{jsxref("Operators/Object_initializer", "{}")}}</dt>
- <dd>Синтаксис создания инициализатора/литерала объекта</dd>
- <dt>{{jsxref("Global_Objects/RegExp", "/ab+c/i")}}</dt>
- <dd>Синтаксис создания литерала регулярного выражения.</dd>
- <dt>{{jsxref("Operators/Grouping", "( )")}}</dt>
- <dd>Оператор группировки.</dd>
-</dl>
+- {{jsxref("Operators/this", "this")}}
+  - : Ключевое слово `this` ссылается на контекст выполняемой функции.
+- {{jsxref("Operators/function", "function")}}
+  - : Ключевое слово `function` определяет выражение функции.
+- {{jsxref("Operators/class", "class")}}
+  - : Ключевое слово `class` определяет выражение класса.
+- {{jsxref("Operators/function*", "function*")}}
+  - : Ключевое слово `function*` (со звёздочкой) определяет функцию-генератор.
+- {{jsxref("Operators/yield", "yield")}}
+  - : Пауза или продолжение выполнения функции-генератора.
+- {{jsxref("Operators/yield*", "yield*")}}
+  - : Делегирует выполнение другому генератору итерируемому объекту.
+- {{experimental_inline}} {{jsxref("Operators/async_function", "async function*")}}
+  - : `async function` определяет выражение асинхронной функции.
+- {{experimental_inline}} {{jsxref("Operators/await", "await")}}
+  - : Пауза и продолжение выполнения асинхронной функции и ожидание [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) (результата выполнения) с результатом разрешено/отклонено.
+- {{jsxref("Global_Objects/Array", "[]")}}
+  - : Синтаксис создания инициализатора/литерала массива.
+- {{jsxref("Operators/Object\_initializer", "{}")}}
+  - : Синтаксис создания инициализатора/литерала объекта
+- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+  - : Синтаксис создания литерала регулярного выражения.
+- {{jsxref("Operators/Grouping", "( )")}}
+  - : Оператор группировки.
 
-<h3 id="Left-hand-side_expressions">Левосторонние выражения</h3>
+### Левосторонние выражения
 
-<p>Значения слева являются назначением присваивания.</p>
+Значения слева являются назначением присваивания.
 
-<dl>
- <dt>{{jsxref("Operators/Property_accessors", "Доступ к свойству", "", 1)}}</dt>
- <dd>Операторы доступа к членам предоставляют доступ к свойству или методу объекта<br>
- (<code>object.property</code> и <code>object['property']</code>).</dd>
- <dt>{{jsxref("Operators/new", "new")}}</dt>
- <dd>Оператор <code>new</code> создаёт экземпляр объекта с использованием конструктора.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></dt>
- <dd>Свойство <code>new.target</code> ссылается на конструктор или функцию, который был вызван через оператор {{jsxref("Operators/new", "new")}}.</dd>
- <dt>{{jsxref("Operators/super", "super")}}</dt>
- <dd>Ключевое слово <code>super</code> вызывает конструктор родительского класса.</dd>
- <dt>{{jsxref("Operators/Spread_operator", "...obj")}}</dt>
- <dd>Оператор распространения позволяет развернуть выражение в местах, где ожидается несколько аргументов (при вызове функций) или несколько элементов (при создании литералов массива).</dd>
-</dl>
+- {{jsxref("Operators/Property_accessors", "Доступ к свойству", "", 1)}}
+  - : Операторы доступа к членам предоставляют доступ к свойству или методу объекта
+    (`object.property` и `object['property']`).
+- {{jsxref("Operators/new", "new")}}
+  - : Оператор `new` создаёт экземпляр объекта с использованием конструктора.
+- [new.target](/ru/docs/Web/JavaScript/Reference/Operators/new.target)
+  - : Свойство `new.target` ссылается на конструктор или функцию, который был вызван через оператор {{jsxref("Operators/new", "new")}}.
+- {{jsxref("Operators/super", "super")}}
+  - : Ключевое слово `super` вызывает конструктор родительского класса.
+- {{jsxref("Operators/Spread_operator", "...obj")}}
+  - : Оператор распространения позволяет развернуть выражение в местах, где ожидается несколько аргументов (при вызове функций) или несколько элементов (при создании литералов массива).
 
-<h3 id="Increment_and_decrement">Инкремент и декремент</h3>
+### Инкремент и декремент
 
-<p>Операторы постфиксного/префиксного инкремента и декремента.</p>
+Операторы постфиксного/префиксного инкремента и декремента.
 
-<dl>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "A++", "#Increment")}}</dt>
- <dd>Оператор постфиксного инкремента.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "A--", "#Decrement")}}</dt>
- <dd>Оператор постфиксного декремента.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "++A", "#Increment")}}</dt>
- <dd>Оператор префиксного инкремента. <em>(Значение переменной, сначала, увеличивается на 1, а затем используется в выражении)</em></dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "--A", "#Decrement")}}</dt>
- <dd>Оператор префиксного декремента.</dd>
-</dl>
+- {{jsxref("Operators/Arithmetic_Operators", "A++", "#Increment")}}
+  - : Оператор постфиксного инкремента.
+- {{jsxref("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
+  - : Оператор постфиксного декремента.
+- {{jsxref("Operators/Arithmetic_Operators", "++A", "#Increment")}}
+  - : Оператор префиксного инкремента. _(Значение переменной, сначала, увеличивается на 1, а затем используется в выражении)_
+- {{jsxref("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+  - : Оператор префиксного декремента.
 
-<h3 id="Unary_operators">Унарные операторы</h3>
+### Унарные операторы
 
-<p>Унарные операции — это операции с одним операндом.</p>
+Унарные операции — это операции с одним операндом.
 
-<dl>
- <dt>{{jsxref("Operators/delete", "delete")}}</dt>
- <dd>Оператор <code>delete</code> удаляет свойство из объекта.</dd>
- <dt>{{jsxref("Operators/void", "void")}}</dt>
- <dd>Оператор <code>void</code> отбрасывает возвращаемое значение выражения.</dd>
- <dt>{{jsxref("Operators/typeof", "typeof")}}</dt>
- <dd>Оператор <code>typeof</code> определяет тип переданного объекта.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}</dt>
- <dd>Оператор унарного плюса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}</dt>
- <dd>Оператор унарного минуса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}, а затем меняет его знак.</dd>
- <dt>{{jsxref("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}</dt>
- <dd>Оператор побитового НЕ.</dd>
- <dt>{{jsxref("Operators/Logical_Operators", "!", "#Logical_NOT")}}</dt>
- <dd>Оператор логического НЕ.</dd>
-</dl>
+- {{jsxref("Operators/delete", "delete")}}
+  - : Оператор `delete` удаляет свойство из объекта.
+- {{jsxref("Operators/void", "void")}}
+  - : Оператор `void` отбрасывает возвращаемое значение выражения.
+- {{jsxref("Operators/typeof", "typeof")}}
+  - : Оператор `typeof` определяет тип переданного объекта.
+- {{jsxref("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
+  - : Оператор унарного плюса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}.
+- {{jsxref("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
+  - : Оператор унарного минуса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}, а затем меняет его знак.
+- {{jsxref("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
+  - : Оператор побитового НЕ.
+- {{jsxref("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+  - : Оператор логического НЕ.
 
-<h3 id="Arithmetic_operators">Арифметические операторы</h3>
+### Арифметические операторы
 
-<p>Арифметические операторы своими операндами принимают числовые значения (литералы или переменные) и возвращают одно числовое значение.</p>
+Арифметические операторы своими операндами принимают числовые значения (литералы или переменные) и возвращают одно числовое значение.
 
-<dl>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "+", "#Addition")}}</dt>
- <dd>Оператор сложения.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "-", "#Subtraction")}}</dt>
- <dd>Оператор вычитания.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "/", "#Division")}}</dt>
- <dd>Оператор деления.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "*", "#Multiplication")}}</dt>
- <dd>Оператор умножения.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "%", "#Remainder")}}</dt>
- <dd>Оператор взятия остатка от деления.</dd>
- <dt>{{jsxref("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}</dt>
- <dd>Оператор возведения в степень.</dd>
-</dl>
+- {{jsxref("Operators/Arithmetic_Operators", "+", "#Addition")}}
+  - : Оператор сложения.
+- {{jsxref("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
+  - : Оператор вычитания.
+- {{jsxref("Operators/Arithmetic_Operators", "/", "#Division")}}
+  - : Оператор деления.
+- {{jsxref("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
+  - : Оператор умножения.
+- {{jsxref("Operators/Arithmetic_Operators", "%", "#Remainder")}}
+  - : Оператор взятия остатка от деления.
+- {{jsxref("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+  - : Оператор возведения в степень.
 
-<h3 id="Relational_operators">Реляционные операторы</h3>
+### Реляционные операторы
 
-<p>Реляционные операторы (операторы отношения) сравнивают свои операнды и возвращают значение типа {{jsxref("Global_Objects/Boolean", "Boolean")}}, зависящее от того, был ли результат сравнения истинным или ложным.</p>
+Реляционные операторы (операторы отношения) сравнивают свои операнды и возвращают значение типа {{jsxref("Global_Objects/Boolean", "Boolean")}}, зависящее от того, был ли результат сравнения истинным или ложным.
 
-<dl>
- <dt>{{jsxref("Operators/in", "in")}}</dt>
- <dd>Оператор <code>in</code> определяет, содержит ли объект указанное свойство.</dd>
- <dt>{{jsxref("Operators/instanceof", "instanceof")}}</dt>
- <dd>Оператор <code>instanceof</code> определяет, является ли объект экземпляром потомком Prototype (или экземпляром) другого объекта.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}</dt>
- <dd>Оператор меньше.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}</dt>
- <dd>Оператор больше.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}</dt>
- <dd>Оператор меньше или равно.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</dt>
- <dd>Оператор больше или равно.</dd>
-</dl>
+- {{jsxref("Operators/in", "in")}}
+  - : Оператор `in` определяет, содержит ли объект указанное свойство.
+- {{jsxref("Operators/instanceof", "instanceof")}}
+  - : Оператор `instanceof` определяет, является ли объект экземпляром потомком Prototype (или экземпляром) другого объекта.
+- {{jsxref("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
+  - : Оператор меньше.
+- {{jsxref("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
+  - : Оператор больше.
+- {{jsxref("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+  - : Оператор меньше или равно.
+- {{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+  - : Оператор больше или равно.
 
-<div class="note">
-<p><strong>Заметьте: =&gt;</strong> это не оператор. Это нотация для <a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Стрелочных функций</a>.</p>
-</div>
+> **Примечание:** **Заметьте: =>** это не оператор. Это нотация для [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-<h3 id="Equality_operators">Операторы равенства</h3>
+### Операторы равенства
 
-<p>Результат вычисления оператора равенства всегда имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и значение, зависящее от того, был ли результат проверки истинным или ложным.</p>
+Результат вычисления оператора равенства всегда имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и значение, зависящее от того, был ли результат проверки истинным или ложным.
 
-<dl>
- <dt>{{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}</dt>
- <dd>Оператор проверки на равенство.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "!=", "#Inequality")}}</dt>
- <dd>Оператор проверки на неравенство.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}</dt>
- <dd>Оператор проверки на идентичность.</dd>
- <dt>{{jsxref("Operators/Comparison_Operators", "!==", "#Nonidentity")}}</dt>
- <dd>Оператор проверки на неидентичность.</dd>
-</dl>
+- {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}
+  - : Оператор проверки на равенство.
+- {{jsxref("Operators/Comparison_Operators", "!=", "#Inequality")}}
+  - : Оператор проверки на неравенство.
+- {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}
+  - : Оператор проверки на идентичность.
+- {{jsxref("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+  - : Оператор проверки на неидентичность.
 
-<h3 id="Bitwise_shift_operators">Операторы побитового сдвига</h3>
+### Операторы побитового сдвига
 
-<p>Операции для сдвига всех битов операнда.</p>
+Операции для сдвига всех битов операнда.
 
-<dl>
- <dt>{{jsxref("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}</dt>
- <dd>Оператор побитового сдвига влево.</dd>
- <dt>{{jsxref("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}</dt>
- <dd>Оператор знакового побитового сдвига вправо.</dd>
- <dt>{{jsxref("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}</dt>
- <dd>Оператор беззнакового побитового сдвига вправо.</dd>
-</dl>
+- {{jsxref("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
+  - : Оператор побитового сдвига влево.
+- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
+  - : Оператор знакового побитового сдвига вправо.
+- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+  - : Оператор беззнакового побитового сдвига вправо.
 
-<h3 id="Binary_bitwise_operators">Бинарные побитовые операторы</h3>
+### Бинарные побитовые операторы
 
-<p>Побитовые операторы трактуют свои операнды как набор из 32 битов (нулей и единиц) и возвращают стандартные числовые значения JavaScript.</p>
+Побитовые операторы трактуют свои операнды как набор из 32 битов (нулей и единиц) и возвращают стандартные числовые значения JavaScript.
 
-<dl>
- <dt>{{jsxref("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}</dt>
- <dd>Оператор побитового И.</dd>
- <dt>{{jsxref("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}</dt>
- <dd>Оператор побитового ИЛИ.</dd>
- <dt>{{jsxref("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}</dt>
- <dd>Оператор побитового ИСКЛЮЧАЮЩЕГО ИЛИ.</dd>
-</dl>
+- {{jsxref("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
+  - : Оператор побитового И.
+- {{jsxref("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
+  - : Оператор побитового ИЛИ.
+- {{jsxref("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+  - : Оператор побитового ИСКЛЮЧАЮЩЕГО ИЛИ.
 
-<h3 id="Binary_logical_operators">Бинарные логические операторы</h3>
+### Бинарные логические операторы
 
-<p>Логические операторы обычно используются вместе с булевыми (логическими) значениями и в сочетании с ними они возвращают булево значение.</p>
+Логические операторы обычно используются вместе с булевыми (логическими) значениями и в сочетании с ними они возвращают булево значение.
 
-<dl>
- <dt>{{jsxref("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}</dt>
- <dd>Оператор логического И.</dd>
- <dt>{{jsxref("Operators/Logical_Operators", "||", "#Logical_OR")}}</dt>
- <dd>Оператор логического ИЛИ.</dd>
-</dl>
+- {{jsxref("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
+  - : Оператор логического И.
+- {{jsxref("Operators/Logical_Operators", "||", "#Logical_OR")}}
+  - : Оператор логического ИЛИ.
 
-<h3 id="Conditional_(ternary)_operator">Условный (тернарный) оператор</h3>
+### Условный (тернарный) оператор
 
-<dl>
- <dt>{{jsxref("Operators/Conditional_Operator", "(условие ? ifTrue : ifFalse)")}}</dt>
- <dd>Условный оператор возвращает одно значение из двух данных в зависимости от логического значения условия.</dd>
-</dl>
+- {{jsxref("Operators/Conditional_Operator", "(условие ? ifTrue : ifFalse)")}}
+  - : Условный оператор возвращает одно значение из двух данных в зависимости от логического значения условия.
 
-<h3 id="Assignment_operators">Операторы присваивания</h3>
+### Операторы присваивания
 
-<p>Операторы присваивания присваивают значение своему левому операнду, зависящее от значения их правого операнда.</p>
+Операторы присваивания присваивают значение своему левому операнду, зависящее от значения их правого операнда.
 
-<dl>
- <dt>{{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}</dt>
- <dd>Оператор присваивания.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}</dt>
- <dd>Оператор присваивания с умножением.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}</dt>
- <dd>Оператор присваивания с делением.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}</dt>
- <dd>Оператор присваивания с взятием остатка от деления.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}</dt>
- <dd>Оператор присваивания со сложением.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}</dt>
- <dd>Оператор присваивания с вычитанием.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}</dt>
- <dd>Оператор присваивания со сдвигом влево.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}</dt>
- <dd>Оператор присваивания со знаковым сдвигом вправо.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}</dt>
- <dd>Оператор присваивания с беззнаковым сдвигом вправо.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}</dt>
- <dd>Оператор присваивания с побитовым И.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}</dt>
- <dd>Оператор присваивания с побитовым ИСКЛЮЧАЮЩИМ ИЛИ.</dd>
- <dt>{{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}</dt>
- <dd>Оператор присваивания с побитовым ИЛИ.</dd>
- <dt>{{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}<br>
- {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</dt>
- <dd>Деструктурирующее присваивание позволяет вам присваивать свойства массива или объекта переменным с использованием синтаксиса, очень похожего на объявление литералов массива или объекта.</dd>
-</dl>
+- {{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}
+  - : Оператор присваивания.
+- {{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
+  - : Оператор присваивания с умножением.
+- {{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
+  - : Оператор присваивания с делением.
+- {{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
+  - : Оператор присваивания с взятием остатка от деления.
+- {{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
+  - : Оператор присваивания со сложением.
+- {{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
+  - : Оператор присваивания с вычитанием.
+- {{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+  - : Оператор присваивания со сдвигом влево.
+- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+  - : Оператор присваивания со знаковым сдвигом вправо.
+- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+  - : Оператор присваивания с беззнаковым сдвигом вправо.
+- {{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+  - : Оператор присваивания с побитовым И.
+- {{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
+  - : Оператор присваивания с побитовым ИСКЛЮЧАЮЩИМ ИЛИ.
+- {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+  - : Оператор присваивания с побитовым ИЛИ.
+- {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
+  {{jsxref("Operators/Destructuring\_assignment", "{a, b} = {a:1, b:2}")}}
+  - : Деструктурирующее присваивание позволяет вам присваивать свойства массива или объекта переменным с использованием синтаксиса, очень похожего на объявление литералов массива или объекта.
 
-<h3 id="Comma_operator">Оператор запятая</h3>
+### Оператор запятая
 
-<dl>
- <dt>{{jsxref("Operators/Comma_Operator", ",")}}</dt>
- <dd>Оператор запятая позволяет вычислять несколько выражений в одном операторе и возвращает результат вычисления последнего выражения.</dd>
- <dt>
- <h3 id="Нестандартные_особенности">Нестандартные особенности</h3>
- </dt>
- <dt>{{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}</dt>
- <dd>Ключевое слово <code>function</code> может быть использовано для определения устаревших функций-генераторов в одном выражении. Для того, чтобы сделать такую функцию, её тело должно содержать хотя бы одно выражение {{jsxref("Operators/yield", "yield")}}.</dd>
- <dt>{{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}</dt>
- <dd>Синтаксис закрытого выражения для сокращённого написания простейших функций.</dd>
- <dt>{{non-standard_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}</dt>
- <dd>Упрощённый синтаксис создания массива.</dd>
- <dt>{{non-standard_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}</dt>
- <dd>Упрощённый синтаксис создания генератора.</dd>
-</dl>
+- {{jsxref("Operators/Comma_Operator", ",")}}
+  - : Оператор запятая позволяет вычислять несколько выражений в одном операторе и возвращает результат вычисления последнего выражения.
+- ### Нестандартные особенности
 
-<h2 id="Specifications">Спецификации</h2>
+  {{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11', 'Expressions')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11', 'Expressions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Новое: Оператор распространения, деструктурирующее присваивание, ключевое слово <code>super</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+  - : Ключевое слово `function` может быть использовано для определения устаревших функций-генераторов в одном выражении. Для того, чтобы сделать такую функцию, её тело должно содержать хотя бы одно выражение {{jsxref("Operators/yield", "yield")}}.
 
-<h2 id="See_also">Смотрите также</h2>
+- {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
+  - : Синтаксис закрытого выражения для сокращённого написания простейших функций.
+- {{non-standard_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+  - : Упрощённый синтаксис создания массива.
+- {{non-standard_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+  - : Упрощённый синтаксис создания генератора.
 
-<ul>
- <li>{{jsxref("Operators/Operator_Precedence", "Приоритеты операторов", "", 1)}}</li>
-</ul>
+## Спецификации
+
+| Спецификация                                                                                                                         | Статус                       | Комментарии                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------- |
+| {{SpecName('ES1', '#sec-11', 'Expressions')}}                                                                         | {{Spec2('ES1')}}         | Изначальное определение.                                                                 |
+| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                                     | {{Spec2('ES5.1')}}     |                                                                                          |
+| {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}     | {{Spec2('ES6')}}         | Новое: Оператор распространения, деструктурирующее присваивание, ключевое слово `super`. |
+| {{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ESDraft')}} |                                                                                          |
+
+## Смотрите также
+
+- {{jsxref("Operators/Operator_Precedence", "Приоритеты операторов", "", 1)}}

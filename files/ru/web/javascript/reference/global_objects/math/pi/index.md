@@ -8,58 +8,46 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Math.PI</code></strong> представляет отношение длины окружности круга к его диаметру, приблизительно равное 3,14159:</p>
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3,14159</annotation></semantics></math></p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Math.PI`** представляет отношение длины окружности круга к его диаметру, приблизительно равное 3,14159:
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку свойство <code>PI</code> является статическим свойством объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.PI</code>, а не пытаться создавать экземпляр объекта <code>Math</code> и получать свойство от него (поскольку объект <code>Math</code> не является конструктором).</p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3,14159</annotation></semantics></math>
 
-<h2 id="Examples">Примеры</h2>
+{{js_property_attributes(0, 0, 0)}}
 
-<h3 id="Example:_Using_PI">Пример: использование свойства <code>Math.PI</code></h3>
-<p>Следующая функция использует значение <code>Math.PI</code> для вычисления длины окружности по известному радиусу круга.</p>
-<pre class="brush: js">function calculateCircumference(radius) {
+## Описание
+
+Поскольку свойство `PI` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.PI`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.PI`
+
+Следующая функция использует значение `Math.PI` для вычисления длины окружности по известному радиусу круга.
+
+```js
+function calculateCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
 calculateCircumference(1);  // 6.283185307179586
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                     | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}     | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Global_Objects/Math", "Math")}}

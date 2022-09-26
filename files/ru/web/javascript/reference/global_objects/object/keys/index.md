@@ -12,30 +12,31 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>Object.keys()</strong></code> возвращает массив из собственных перечисляемых свойств переданного объекта, в том же порядке, в котором они бы обходились циклом {{jsxref("Statements/for...in", "for...in")}} (разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов).</p>
+Метод **`Object.keys()`** возвращает массив из собственных перечисляемых свойств переданного объекта, в том же порядке, в котором они бы обходились циклом {{jsxref("Statements/for...in", "for...in")}} (разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.keys(<var>obj</var>)</code></pre>
+```
+Object.keys(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чьи собственные перечисляемые свойства будут возвращены.</dd>
-</dl>
+- `obj`
+  - : Объект, чьи собственные перечисляемые свойства будут возвращены.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>Object.keys</code> возвращает массив строковых элементов, соответствующих именам перечисляемых свойств, найденных непосредственно в самом объекте. Порядок свойств такой же, как и при ручном перечислении свойств в объекте через цикл.</p>
+Метод `Object.keys` возвращает массив строковых элементов, соответствующих именам перечисляемых свойств, найденных непосредственно в самом объекте. Порядок свойств такой же, как и при ручном перечислении свойств в объекте через цикл.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // консоль: ['0', '1', '2']
 
 // Массивоподобный объект
@@ -51,26 +52,28 @@ var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; 
 my_obj.foo = 1;
 
 console.log(Object.keys(my_obj)); // консоль: ['foo']
-</pre>
+```
 
-<p>Если вы хотите увидеть все свойства, а не только перечисляемые, смотрите метод {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+Если вы хотите увидеть все свойства, а не только перечисляемые, смотрите метод {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES2015 такой аргумент будет приведён к объекту.</p>
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES2015 такой аргумент будет приведён к объекту.
 
-<pre class="brush: js">&gt; Object.keys('foo')
+```js
+> Object.keys('foo')
 TypeError: 'foo' is not an object // код ES5
 
-&gt; Object.keys('foo')
+> Object.keys('foo')
 ['0', '1', '2']                   // код ES2015
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Для добавления поддержки совместимого метода <code>Object.keys</code> в старых окружениях, которые его ещё не реализуют, скопируйте следующий кусок кода:</p>
+Для добавления поддержки совместимого метода `Object.keys` в старых окружениях, которые его ещё не реализуют, скопируйте следующий кусок кода:
 
-<pre class="brush: js">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+```js
+// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -88,7 +91,7 @@ if (!Object.keys) {
         dontEnumsLength = dontEnums.length;
 
     return function(obj) {
-      if (typeof obj !== 'object' &amp;&amp; (typeof obj !== 'function' || obj === null)) {
+      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
         throw new TypeError('Object.keys called on non-object');
       }
 
@@ -101,7 +104,7 @@ if (!Object.keys) {
       }
 
       if (hasDontEnumBug) {
-        for (i = 0; i &lt; dontEnumsLength; i++) {
+        for (i = 0; i < dontEnumsLength; i++) {
           if (hasOwnProperty.call(obj, dontEnums[i])) {
             result.push(dontEnums[i]);
           }
@@ -111,25 +114,23 @@ if (!Object.keys) {
     };
   }());
 }
-</pre>
+```
 
-<p>Пожалуйста, обратите внимание, что вышеприведённый код в IE7 (и, может быть, в IE8) включает и не перечисляемые ключи, если объект передаётся из другого окна.</p>
+Пожалуйста, обратите внимание, что вышеприведённый код в IE7 (и, может быть, в IE8) включает и не перечисляемые ключи, если объект передаётся из другого окна.
 
-<p>Более простой полифил может быть найден в статье <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a> (англ.).</p>
+Более простой полифил может быть найден в статье [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html) (англ.).
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

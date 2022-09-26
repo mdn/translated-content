@@ -9,55 +9,54 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Объект <code><strong>ReferenceError</strong></code> представляет ошибку, возникающую при обращении к несуществующей переменной.</p>
+Объект **`ReferenceError`** представляет ошибку, возникающую при обращении к несуществующей переменной.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```
+new ReferenceError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Необязательный параметр. Человеко-читаемое описание ошибки</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Имя файла, содержащего код, вызвавший исключение</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение</dd>
-</dl>
+- `message`
+  - : Необязательный параметр. Человеко-читаемое описание ошибки
+- `fileName` {{non-standard_inline}}
+  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение
+- `lineNumber` {{non-standard_inline}}
+  - : Необязательный параметр. Номер строки кода, вызвавшей исключение
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Исключение <code>ReferenceError</code> выбрасывается при попытке обратиться к переменной, которая не была объявлена.</p>
+Исключение `ReferenceError` выбрасывается при попытке обратиться к переменной, которая не была объявлена.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{jsxref("ReferenceError.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в объект <code>ReferenceError</code>.</dd>
-</dl>
+- {{jsxref("ReferenceError.prototype")}}
+  - : Позволяет добавлять свойства в объект `ReferenceError`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>Глобальный объект <code>ReferenceError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+Глобальный объект `ReferenceError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
 
-<h2 id="Экземпляры_объекта_ReferenceError">Экземпляры объекта <code>ReferenceError</code></h2>
+## Экземпляры объекта `ReferenceError`
 
-<h3 id="Свойства_2">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
 
-<h3 id="Методы_2">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Перехват_ReferenceError">Перехват <code>ReferenceError</code></h3>
+### Перехват `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   var a = undefinedVariable;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -68,11 +67,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 6
   console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="Выбрасывание_ReferenceError">Выбрасывание <code>ReferenceError</code></h3>
+### Выбрасывание `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Привет', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -83,21 +83,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 0
   console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("ReferenceError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("ReferenceError.prototype")}}

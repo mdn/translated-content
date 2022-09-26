@@ -11,61 +11,61 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.expm1()</code></strong> возвращает значение выражения <code>e<sup>x</sup> - 1</code>, где <code>x</code> — аргумент метода, а {{jsxref("Math.E", "e", "", 1)}} — основание натурального логарифма.</p>
+Метод **`Math.expm1()`** возвращает значение выражения `ex - 1`, где `x` — аргумент метода, а {{jsxref("Math.E", "e", "", 1)}} — основание натурального логарифма.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.expm1(<var>x</var>)</code></pre>
+```
+Math.expm1(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>expm1()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.expm1()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `expm1()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.expm1()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.expm1">Пример: использование метода <code>Math.expm1()</code></h3>
+### Пример: использование метода `Math.expm1()`
 
-<pre class="brush: js">Math.expm1(-1); // -0.6321205588285577
+```js
+Math.expm1(-1); // -0.6321205588285577
 Math.expm1(0);  // 0
 Math.expm1(1);  // 1.718281828459045
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод может эмулироваться при помощи метода {{jsxref("Math.exp()")}}:</p>
+Этот метод может эмулироваться при помощи метода {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.expm1 = Math.expm1 || function(x) {
+```js
+Math.expm1 = Math.expm1 || function(x) {
   return Math.exp(x) - 1;
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.E")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.log1p()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.log2()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}} {{experimental_inline}}
+- {{jsxref("Math.log1p()")}} {{experimental_inline}}
+- {{jsxref("Math.log2()")}} {{experimental_inline}}
+- {{jsxref("Math.pow()")}}

@@ -7,24 +7,26 @@ tags:
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
-<div>{{jsSidebar("Functions")}} </div>
+{{jsSidebar("Functions")}}
 
-<p>Синтаксис <strong>остаточных параметров</strong> функции позволяет представлять неограниченное множество аргументов в виде массива.</p>
+Синтаксис **остаточных параметров** функции позволяет представлять неограниченное множество аргументов в виде массива.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">function(a, b, ...theArgs) {
+```js
+function(a, b, ...theArgs) {
   // ...
 }
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Если последний именованный аргумент функции имеет префикс <code>...</code>, он автоматически становится массивом с элементами от <code>0</code> до <code>theArgs.length-1</code> в соответствии с актуальным количеством аргументов, переданных в функцию.</p>
+Если последний именованный аргумент функции имеет префикс `...`, он автоматически становится массивом с элементами от `0` до `theArgs.length-1` в соответствии с актуальным количеством аргументов, переданных в функцию.
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -36,23 +38,22 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 // a, один
 // b, два
 // manyMoreArgs, [три, четыре, пять, шесть]
-</pre>
+```
 
-<h3 id="Отличия_остаточных_параметров_от_объекта_arguments">Отличия остаточных параметров от объекта <code>arguments</code></h3>
+### Отличия остаточных параметров от объекта `arguments`
 
-<p>Существует три основных отличия остаточных параметров от объекта <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
+Существует три основных отличия остаточных параметров от объекта [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments "arguments"):
 
-<ul>
- <li>остаточные параметры включают только те, которым не задано отдельное имя, в то время как объект <code>arguments</code> содержит все аргументы, передаваемые в функцию;</li>
- <li>объект <code>arguments</code> не является массивом, в то время как остаточные параметры являются экземпляром <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> и методы <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> или <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> могут непосредственно у них использоваться;</li>
- <li>объект <code>arguments</code> имеет дополнительную функциональность, специфичную только для него (например, свойство <code>callee</code>).</li>
-</ul>
+- остаточные параметры включают только те, которым не задано отдельное имя, в то время как объект `arguments` содержит все аргументы, передаваемые в функцию;
+- объект `arguments` не является массивом, в то время как остаточные параметры являются экземпляром [`Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "Array") и методы [`sort`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") или [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") могут непосредственно у них использоваться;
+- объект `arguments` имеет дополнительную функциональность, специфичную только для него (например, свойство `callee`).
 
-<h3 id="Из_аргументов_в_массив">Из аргументов в массив</h3>
+### Из аргументов в массив
 
-<p>Остаточные параметры были введены для уменьшения количества шаблонного кода:</p>
+Остаточные параметры были введены для уменьшения количества шаблонного кода:
 
-<pre class="brush: js">// До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
+```js
+// До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
 
 function f(a, b) {
 
@@ -72,25 +73,29 @@ function f(a, b) {
 function f(...args) {
   var normalArray = args;
   var first = normalArray.shift(); // OK, даёт первый аргумент
-}</pre>
+}
+```
 
-<h3 id="Деструктуризация_остаточных_параметров">Деструктуризация остаточных параметров</h3>
+### Деструктуризация остаточных параметров
 
-<p>Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Деструктурирующее присваивание</a>.</p>
+Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите [Деструктурирующее присваивание](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
-<pre><code>function f(...[a, b, c]) {
+```
+function f(...[a, b, c]) {
   return a + b + c;
 }
 
 f(1)          // NaN (b и c равны undefined)
 f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (четвёртый параметр не деструктурирован)</code></pre>
+f(1, 2, 3, 4) // 6 (четвёртый параметр не деструктурирован)
+```
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<p>В этом примере первый аргумент задан как <code>"a"</code>, второй как <code>"b"</code>, так что эти аргументы используются как обычно. Однако третий аргумент <code>"manyMoreArgs"</code> будет массивом, который содержит 3-й, 4-й, 5-й, 6-й ... n-й аргументы, которые передаст пользователь.</p>
+В этом примере первый аргумент задан как `"a"`, второй как `"b"`, так что эти аргументы используются как обычно. Однако третий аргумент `"manyMoreArgs"` будет массивом, который содержит 3-й, 4-й, 5-й, 6-й ... n-й аргументы, которые передаст пользователь.
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -100,52 +105,62 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 
 // a, один
 // b, два
-// manyMoreArgs, [три, четыре, пять, шесть]</pre>
+// manyMoreArgs, [три, четыре, пять, шесть]
+```
 
-<p>Ниже... даже если передано одно значение последним аргументом, оно всё равно помещается в массив.</p>
+Ниже... даже если передано одно значение последним аргументом, оно всё равно помещается в массив.
 
-<pre class="brush: js">// использование той же функции, что и в примере выше
+```js
+// использование той же функции, что и в примере выше
 
 myFun("один", "два", "три");
 
 // a, один
 // b, два
-// manyMoreArgs, [три]</pre>
+// manyMoreArgs, [три]
+```
 
-<p>Ниже... третий аргумент не был передан, но "manyMoreArgs" всё ещё массив (хотя и пустой).</p>
+Ниже... третий аргумент не был передан, но "manyMoreArgs" всё ещё массив (хотя и пустой).
 
-<pre class="brush: js">// использование той же функции, что и в примере выше
+```js
+// использование той же функции, что и в примере выше
 
 myFun("один", "два");
 
 // a, один
 // b, два
-// manyMoreArgs, []</pre>
+// manyMoreArgs, []
+```
 
-<p>Поскольку <code>theArgs</code> является массивом, количество элементов в нём определяется свойством <code>length</code>:</p>
+Поскольку `theArgs` является массивом, количество элементов в нём определяется свойством `length`:
 
-<pre class="brush: js">function fun1(...theArgs) {
+```js
+function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
 fun1();  // 0
 fun1(5); // 1
-fun1(5, 6, 7); // 3</pre>
+fun1(5, 6, 7); // 3
+```
 
-<p>В следующем примере, остаточные параметры используются для сбора всех аргументов после первого в массив. Каждый из них умножается на первый параметр и возвращается массив:</p>
+В следующем примере, остаточные параметры используются для сбора всех аргументов после первого в массив. Каждый из них умножается на первый параметр и возвращается массив:
 
-<pre class="brush: js"><code>function multiply(multiplier, ...theArgs) {
+```js
+function multiply(multiplier, ...theArgs) {
   return theArgs.map(function(element) {
     return multiplier * element;
   });
 }
 
 var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]</code></pre>
+console.log(arr); // [2, 4, 6]
+```
 
-<p>Методы <code>Array</code> могут быть использованы на остаточных параметрах, но не на объекте <code>arguments</code>: </p>
+Методы `Array` могут быть использованы на остаточных параметрах, но не на объекте `arguments`:
 
-<pre class="brush: js">function sortRestArgs(...theArgs) {
+```js
+function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -158,34 +173,33 @@ function sortArguments() {
 }
 
 
-console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a function)</pre>
+console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a function)
+```
 
-<p>Чтобы использовать методы <code>Array</code> на объекте <code>arguments</code>, нужно преобразовать его в настоящий массив.</p>
+Чтобы использовать методы `Array` на объекте `arguments`, нужно преобразовать его в настоящий массив.
 
-<pre class="brush: js"><code>function sortArguments() {
+```js
+function sortArguments() {
   var args = Array.from(arguments);
   var sortedArgs = args.sort();
   return sortedArgs;
 }
-console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7</code></pre>
+console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Объект arguments</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Функции</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Оператор распространения</a></li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Оригинальное предложение на ecmascript.org</a></li>
- <li><a class="external" href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
-</ul>
+- [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
+- [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "Array")
+- [Функции](/ru/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
+- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
+- [Оригинальное предложение на ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
+- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

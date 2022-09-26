@@ -8,13 +8,18 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
-<div>
- {{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}</div>
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>function.displayName</code></strong> возвращает отображаемое имя функции.</p>
-<h2 id="Description">Описание</h2>
-<p>Если оно определено, свойство <code>displayName</code> возвращает отображаемое имя функции:</p>
-<pre class="brush: js">function doSomething() {}
+{{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}
+
+## Сводка
+
+Свойство **`function.displayName`** возвращает отображаемое имя функции.
+
+## Описание
+
+Если оно определено, свойство `displayName` возвращает отображаемое имя функции:
+
+```js
+function doSomething() {}
 
 alert(doSomething.displayName); // "undefined"
 
@@ -23,9 +28,12 @@ var popup = function(content) { alert(content); };
 popup.displayName = 'Показать всплывающее окно';
 
 alert(popup.displayName); // "Показать всплывающее окно"
-</pre>
-<p>Вы можете определить функцию с отображаемым именем в {{jsxref("Functions_and_function_scope", "выражении функции", "", 1)}}:</p>
-<pre class="brush: js">var object = {
+```
+
+Вы можете определить функцию с отображаемым именем в {{jsxref("Functions_and_function_scope", "выражении функции", "", 1)}}:
+
+```js
+var object = {
   someMethod: function() {}
 };
 
@@ -35,9 +43,12 @@ alert(object.someMethod.displayName); // выведет "someMethod"
 
 try { someMethod } catch(e) { alert(e); }
 // ReferenceError: someMethod is not defined
-</pre>
-<p>Вы можете динамически изменять свойство <code>displayName</code> функции:</p>
-<pre class="brush: js">var object = {
+```
+
+Вы можете динамически изменять свойство `displayName` функции:
+
+```js
+var object = {
   // анонимная функция
   someMethod: function(value) {
     this.displayName = 'someMethod (' + value + ')';
@@ -48,17 +59,25 @@ alert(object.someMethod.displayName); // "undefined"
 
 object.someMethod('123')
 alert(object.someMethod.displayName); // "someMethod (123)"
-</pre>
-<h2 id="Examples">Примеры</h2>
-<p>Обычно оно используется консолью и профилировщиком, как обёртка над {{jsxref("Function.name", "func.name")}} для отображения имени функции.</p>
-<p>Введя следующий пример в консоль, вы должны увидеть что-то вроде "<code>function Моя функция()</code>":</p>
-<pre class="brush: js">var a = function() {};
+```
+
+## Примеры
+
+Обычно оно используется консолью и профилировщиком, как обёртка над {{jsxref("Function.name", "func.name")}} для отображения имени функции.
+
+Введя следующий пример в консоль, вы должны увидеть что-то вроде "`function Моя функция()`":
+
+```js
+var a = function() {};
 a.displayName = 'Моя функция';
 
 a
-</pre>
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какой-либо спецификации.</p>
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<div>
-<p>{{Compat}}</p>
+```
+
+## Спецификации
+
+Не является частью какой-либо спецификации.
+
+## Совместимость с браузерами
+
+{{Compat}}

@@ -6,49 +6,49 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщения">Сообщения</h2>
+## Сообщения
 
-<pre class="syntaxbox">TypeError: циклическое значение объекта (Firefox)
+```
+TypeError: циклическое значение объекта (Firefox)
 TypeError: преобразование круговой структуры в JSON (Chrome и Opera)
 TypeError: циклическая ссылка в аргументе значения не поддерживается (Edge)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки?</h2>
+## Тип ошибки?
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Что_не_так">Что не так?</h2>
+## Что не так?
 
-<p>Сам по себе <a href="https://www.json.org/">JSON-формат</a> не поддерживает ссылки на объекты (не смотря на то что существует <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF</a>, который позволяет значению JSON ссылаться на другое значение в JSON-документе), поэтому {{jsxref("JSON.stringify()")}} не пытаеться их анализировать и терпит неудачу при попытке сделать это.</p>
+Сам по себе [JSON-формат](https://www.json.org/) не поддерживает ссылки на объекты (не смотря на то что существует [IETF](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03), который позволяет значению JSON ссылаться на другое значение в JSON-документе), поэтому {{jsxref("JSON.stringify()")}} не пытаеться их анализировать и терпит неудачу при попытке сделать это.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В круговой структуре как эта</p>
+В круговой структуре как эта
 
-<pre class="brush: js">var circularReference = {otherData: 123};
+```js
+var circularReference = {otherData: 123};
 circularReference.myself = circularReference;
-</pre>
+```
 
-<p>{{jsxref("JSON.stringify()")}} закончится неудачей</p>
+{{jsxref("JSON.stringify()")}} закончится неудачей
 
-<pre class="brush: js example-bad">JSON.stringify(circularReference);
+```js example-bad
+JSON.stringify(circularReference);
 // TypeError: циклическое значение объекта
-</pre>
+```
 
+Для сериализации циклических ссылок можно использовать библиотеку, которая их поддерживает (например, cycle.js) или самостоятельно реализовать решение, которое потребует поиска и замены (или удаления) циклических ссылок сериализуемыми значениями.
 
+Во фрагменте кода ниже показано, как найти и отфильтровать циклическую ссылку (что приводит к потере данных) с помощью параметра `replacer`{{jsxref("JSON.stringify()")}}:
 
-<p>Для сериализации циклических ссылок можно использовать библиотеку, которая их поддерживает (например, cycle.js) или самостоятельно реализовать решение, которое потребует поиска и замены (или удаления) циклических ссылок сериализуемыми значениями.</p>
-
-<p>Во фрагменте кода ниже показано, как найти и отфильтровать циклическую ссылку (что приводит к потере данных) с помощью параметра <code>replacer</code>{{jsxref("JSON.stringify()")}}:</p>
-
-
-
-<pre class="brush: js">const getCircularReplacer = () =&gt; {
+```js
+const getCircularReplacer = () => {
   const seen = new WeakSet();
-  return (key, value) =&gt; {
-    if (typeof value === "object" &amp;&amp; value !== null) {
+  return (key, value) => {
+    if (typeof value === "object" && value !== null) {
       if (seen.has(value)) {
         return;
       }
@@ -60,11 +60,9 @@ circularReference.myself = circularReference;
 
 JSON.stringify(circularReference, getCircularReplacer());
 // {"otherData":123}
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("JSON.stringify")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> – вводит две функции, JSON.decycle и JSON.retrocycle, что даёт возможность кодирования и декодирования циклических структур и групп обеспечения доступности баз данных в расширенный и обратно совместимый формат JSON.</li>
-</ul>
+- {{jsxref("JSON.stringify")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – вводит две функции, JSON.decycle и JSON.retrocycle, что даёт возможность кодирования и декодирования циклических структур и групп обеспечения доступности баз данных в расширенный и обратно совместимый формат JSON.

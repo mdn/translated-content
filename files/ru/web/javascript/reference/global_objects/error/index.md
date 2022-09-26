@@ -8,106 +8,102 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Конструктор <strong><code>Error</code></strong> создаёт объект ошибки. Экземпляры объекта <code>Error</code> выбрасываются при возникновении ошибок во время выполнения. Объект <code>Error</code> также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.</p>
+Конструктор **`Error`** создаёт объект ошибки. Экземпляры объекта `Error` выбрасываются при возникновении ошибок во время выполнения. Объект `Error` также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+```
+new Error([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>message </code> <code>{{optional_inline()}}</code></dt>
- <dd>Человеко-читаемое описание ошибки.</dd>
- <dt><code>fileName</code> {{non-standard_inline}} <code>{{optional_inline()}}</code></dt>
- <dd>Значение свойства <code>fileName</code> созданного объекта <code>Error</code>. Значением по умолчанию является имя файла, содержащего код, вызвавший конструктор <code>Error()</code>.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}} <code>{{optional_inline()}}</code></dt>
- <dd>Значение свойства <code>lineNumber</code> созданного объекта <code>Error</code>. Значением по умолчанию является номер строки, содержащей вызов конструктора <code>Error()</code>.</dd>
-</dl>
+- ` message ``{{optional_inline()}} `
+  - : Человеко-читаемое описание ошибки.
+- `fileName` {{non-standard_inline}} `{{optional_inline()}}`
+  - : Значение свойства `fileName` созданного объекта `Error`. Значением по умолчанию является имя файла, содержащего код, вызвавший конструктор `Error()`.
+- `lineNumber` {{non-standard_inline}} `{{optional_inline()}}`
+  - : Значение свойства `lineNumber` созданного объекта `Error`. Значением по умолчанию является номер строки, содержащей вызов конструктора `Error()`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Во время выполнения кода ошибки приводят к созданию и выбрасыванию новых объектов <code>Error</code>.</p>
+Во время выполнения кода ошибки приводят к созданию и выбрасыванию новых объектов `Error`.
 
-<p>Данная страница документирует использование объекта <code>Error</code> как самого по себе, так и при использовании в качестве функции-конструктора. Список свойств и методов, унаследованных экземплярами объекта <code>Error</code>, смотрите в разделе {{jsxref("Error.prototype")}}.</p>
+Данная страница документирует использование объекта `Error` как самого по себе, так и при использовании в качестве функции-конструктора. Список свойств и методов, унаследованных экземплярами объекта `Error`, смотрите в разделе {{jsxref("Error.prototype")}}.
 
-<p> </p>
+### Использование как функции
 
-<h3 id="Использование_как_функции">Использование как функции</h3>
+Когда `Error` используется как функции-- без {{jsxref("Operators/new", "new")}}, она возвращает `Error` объект. Следовательно простой вызов `Error` произведёт тот же результат, что и конструктор `Error` объявленный через `new`.
 
-<p>Когда <code>Error</code> используется как функции-- без {{jsxref("Operators/new", "new")}}, она возвращает <code>Error</code> объект. Следовательно простой вызов <code>Error</code> произведёт тот же результат, что и конструктор <code>Error</code> объявленный через <code>new</code>.</p>
-
-<pre><code>// this:
+```
+// this:
 const x = Error('I was created using a function call!');
-​​​​// Такая же </code>функциональность<code>:
-const y = new Error('I was constructed via the "new" keyword!');</code></pre>
+​​​​// Такая же функциональность:
+const y = new Error('I was constructed via the "new" keyword!');
+```
 
-<p> </p>
+### Типы ошибок
 
-<h3 id="Error_types" name="Error_types"><a id="Error_types">Типы ошибок</a></h3>
+Кроме общего конструктора `Error`, в JavaScript существует ещё семь других основных конструкторов ошибок. По обработке исключений смотрите раздел [Выражения обработки исключений](/ru/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
 
-<p>Кроме общего конструктора <code>Error</code>, в JavaScript существует ещё семь других основных конструкторов ошибок. По обработке исключений смотрите раздел <a href="/ru/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements">Выражения обработки исключений</a>.</p>
+- {{jsxref("EvalError")}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую в глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("InternalError")}} {{non-standard_inline}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при выбрасывании внутренней ошибки в движке JavaScript. К примеру, ошибки «слишком глубокая рекурсия» («too much recursion»).
+- {{jsxref("RangeError")}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при выходе числовой переменной или параметра за пределы допустимого диапазона.
+- {{jsxref("ReferenceError")}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при разыменовывании недопустимой ссылки.
+- {{jsxref("SyntaxError")}}
+  - : Создаёт экземпляр, представляющий синтаксическую ошибку, возникающую при разборе исходного кода в функции {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("TypeError")}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при недопустимом типе для переменной или параметра.
+- {{jsxref("URIError")}}
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} или {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} недопустимых параметров.
 
-<dl>
- <dt>{{jsxref("EvalError")}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую в глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("InternalError")}} {{non-standard_inline}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую при выбрасывании внутренней ошибки в движке JavaScript. К примеру, ошибки «слишком глубокая рекурсия» («too much recursion»).</dd>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую при выходе числовой переменной или параметра за пределы допустимого диапазона.</dd>
- <dt>{{jsxref("ReferenceError")}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую при разыменовывании недопустимой ссылки.</dd>
- <dt>{{jsxref("SyntaxError")}}</dt>
- <dd>Создаёт экземпляр, представляющий синтаксическую ошибку, возникающую при разборе исходного кода в функции {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую при недопустимом типе для переменной или параметра.</dd>
- <dt>{{jsxref("URIError")}}</dt>
- <dd>Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} или {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} недопустимых параметров.</dd>
-</dl>
+## Свойства
 
-<h2 id="Properties">Свойства</h2>
+- {{jsxref("Error.prototype")}}
+  - : Позволяет добавлять свойства в экземпляры объекта `Error`.
 
-<dl>
- <dt>{{jsxref("Error.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в экземпляры объекта <code>Error</code>.</dd>
-</dl>
+## Методы
 
-<h2 id="Methods">Методы</h2>
+Глобальный объект `Error` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
 
-<p>Глобальный объект <code>Error</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+## Экземпляры объекта `Error`
 
-<h2 id="Error_instances">Экземпляры объекта <code>Error</code></h2>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}</div>
+### Свойства
 
-<h3 id="Properties_2">Свойства</h3>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}</div>
+### Методы
 
-<h3 id="Methods_2">Методы</h3>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}</div>
+## Примеры
 
-<h2 id="Examples">Примеры</h2>
+### Пример: выбрасывание обычной ошибки
 
-<h3 id="Example:_Throwing_a_generic_error">Пример: выбрасывание обычной ошибки</h3>
+Обычно, вы создаёте объект `Error` с намерением возбудить ошибку с помощью ключевого слова {{jsxref("Statements/throw", "throw")}}. Вы можете обработать ошибку с помощью конструкции {{jsxref("Statements/try...catch", "try...catch")}}:
 
-<p>Обычно, вы создаёте объект <code>Error</code> с намерением возбудить ошибку с помощью ключевого слова {{jsxref("Statements/throw", "throw")}}. Вы можете обработать ошибку с помощью конструкции {{jsxref("Statements/try...catch", "try...catch")}}:</p>
-
-<pre class="brush: js">try {
+```js
+try {
   throw new Error('Уупс!');
 } catch (e) {
   console.log(e.name + ': ' + e.message);
 }
-</pre>
+```
 
-<h3 id="Example:_Handling_a_specific_error">Пример: обработка ошибки конкретного типа</h3>
+### Пример: обработка ошибки конкретного типа
 
-<p><span class="comment">Возможно, это следует удалить</span> вы можете обрабатывать только какой-то определённый вид ошибок, проверяя тип ошибки в свойстве {{jsxref("Object.prototype.constructor", "constructor")}} или, если вы пишете для современных движков JavaScript, с помощью ключевого слова {{jsxref("Operators/instanceof", "instanceof")}}:</p>
+Возможно, это следует удалить вы можете обрабатывать только какой-то определённый вид ошибок, проверяя тип ошибки в свойстве {{jsxref("Object.prototype.constructor", "constructor")}} или, если вы пишете для современных движков JavaScript, с помощью ключевого слова {{jsxref("Operators/instanceof", "instanceof")}}:
 
-<pre class="brush: js">try {
+```js
+try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
@@ -117,19 +113,18 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
   }
   // ... и т.д.
 }
-</pre>
+```
 
-<h3 id="Example:_Custom_Error_Types">Пример: пользовательские типы ошибок</h3>
+### Пример: пользовательские типы ошибок
 
-<p>Вы можете захотеть определить свои собственные типы ошибок, унаследованные от <code>Error</code>, что бы иметь возможность писать <code>throw new MyError()</code> и использовать <code>instanceof MyError</code> для проверки вида ошибки в обработчике исключений. Ниже продемонстрирован общий подход к выполнению этой задачи.</p>
+Вы можете захотеть определить свои собственные типы ошибок, унаследованные от `Error`, что бы иметь возможность писать `throw new MyError()` и использовать `instanceof MyError` для проверки вида ошибки в обработчике исключений. Ниже продемонстрирован общий подход к выполнению этой задачи.
 
-<div class="warning">
-<p><strong>Предупреждение:</strong> обратите внимание, что выбрасывание <code>MyError</code> будет сообщать неправильные номер строки <code>lineNumber</code> и имя файла <code>fileName</code> как минимум, в Firefox.</p>
-</div>
+> **Предупреждение:** обратите внимание, что выбрасывание `MyError` будет сообщать неправильные номер строки `lineNumber` и имя файла `fileName` как минимум, в Firefox.
 
-<p>Также смотрите <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">обсуждение «Какой способ расширения Error в JavaScript более предпочтителен?» на Stackoverflow</a>.</p>
+Также смотрите [обсуждение «Какой способ расширения Error в JavaScript более предпочтителен?» на Stackoverflow](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
-<pre class="brush: js">// Создаём новый объект, затем через прототип делаем его наследником конструктора Error.
+```js
+// Создаём новый объект, затем через прототип делаем его наследником конструктора Error.
 function MyError(message) {
   this.name = 'MyError';
   this.message = message || 'Сообщение по умолчанию';
@@ -151,26 +146,18 @@ try {
   console.log(e.name);     // 'MyError'
   console.log(e.message);  // 'пользовательское сообщение'
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<div> </div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Error.prototype")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{jsxref("Error.prototype")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}

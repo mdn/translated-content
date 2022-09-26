@@ -9,60 +9,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>toUTCString()</code></strong> преобразует дату в строку, используя часовой пояс UTC.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.toUTCString()</code></pre>
+Метод **`toUTCString()`** преобразует дату в строку, используя часовой пояс UTC.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Значение, возвращаемое методом <code>toUTCString()</code>, является человеко-читаемой строкой в часовом поясе <abbr title="Всемирное координированное время">UTC</abbr>. Формат возвращаемого значения зависит от платформы. Наиболее распространённым значением является форматированная по RFC-1123 временная метка, которая является немного обновлённой версией временной метки RFC-822.</p>
+```
+dateObj.toUTCString()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_toUTCString">Пример: использование метода <code>toUTCString()</code></h3>
-<pre class="brush: js">var today = new Date();
+Нет.
+
+## Описание
+
+Значение, возвращаемое методом `toUTCString()`, является человеко-читаемой строкой в часовом поясе UTC. Формат возвращаемого значения зависит от платформы. Наиболее распространённым значением является форматированная по RFC-1123 временная метка, которая является немного обновлённой версией временной метки RFC-822.
+
+## Примеры
+
+### Пример: использование метода `toUTCString()`
+
+```js
+var today = new Date();
 var UTCstring = today.toUTCString();
 // Mon, 03 Jul 2006 21:44:38 GMT
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

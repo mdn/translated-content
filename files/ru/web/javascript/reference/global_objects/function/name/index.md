@@ -9,149 +9,163 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>Read-only свойство <code><strong>name</strong></code> глобального объекта {{jsxref("Function")}} и его <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function#Function_instances">экземпляров</a> содержит название функции созданное во время определения функции или присваивания ссылки на функцию переменной, свойству, аргументу и т. п. Для анонимных функций это свойство может иметь значение <code>"anonymous"</code> или пустую строку  <code>""</code>.</p>
+Read-only свойство **`name`** глобального объекта {{jsxref("Function")}} и его [экземпляров](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function#Function_instances) содержит название функции созданное во время определения функции или присваивания ссылки на функцию переменной, свойству, аргументу и т. п. Для анонимных функций это свойство может иметь значение `"anonymous"` или пустую строку `""`.
 
-<p>{{EmbedInteractiveExample("pages/js/function-name.html")}}</p>
+{{EmbedInteractiveExample("pages/js/function-name.html")}}
 
-<p>Интерактивные примеры размещены в GitHub репозитории. Если вы хотите добавить свои примеры, то клонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и пришлите пул реквест.</p>
+Интерактивные примеры размещены в GitHub репозитории. Если вы хотите добавить свои примеры, то клонируйте <https://github.com/mdn/interactive-examples> и пришлите пул реквест.
 
-<p>{{js_property_attributes(0,0,1)}}<br>
-  </p>
+{{js_property_attributes(0,0,1)}}
 
-<div class="blockIndicator note">
-<p>Заметьте, что в нестандартном, pre-ES2015 релизе <code>configurable</code> свойство было <code>false</code></p>
-</div>
+> **Примечание:** Заметьте, что в нестандартном, pre-ES2015 релизе `configurable` свойство было `false`
 
-<h2 id="Summary">Примеры</h2>
+## Примеры
 
-<h3 id="Имя_объявленной_функции">Имя объявленной функции</h3>
+### Имя объявленной функции
 
-<p>Свойство <code>name</code> возвращает имя функции, либо пустую строку для анонимных функций:</p>
+Свойство `name` возвращает имя функции, либо пустую строку для анонимных функций:
 
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 
 alert(doSomething.name); // выведет "doSomething"
-</pre>
+```
 
-<h3 id="Имя_функции-конструктора">Имя функции-конструктора</h3>
+### Имя функции-конструктора
 
-<p>Функции, созданные синтаксисом <code>new Function(...)</code> или просто <code>Function(...)</code> создают  {{jsxref("Function")}} и имеют name "anonymous":​​​</p>
+Функции, созданные синтаксисом `new Function(...)` или просто `Function(...)` создают {{jsxref("Function")}} и имеют name "anonymous":​​​
 
-<pre class="brush: js"><code>(new Function).name; // "anonymous"</code>
-</pre>
+```js
+(new Function).name; // "anonymous"
+```
 
-<h3 id="Предполагаемые_имена_функций">Предполагаемые имена функций</h3>
+### Предполагаемые имена функций
 
-<p>Переменные и методы могут предположить название анонимной функции из её синтаксической позиции  (new in ECMAScript 2015).</p>
+Переменные и методы могут предположить название анонимной функции из её синтаксической позиции (new in ECMAScript 2015).
 
-<pre class="brush: js">var f = function() {};
+```js
+var f = function() {};
 var object = {
   someMethod: function() {}
 };
 
-<code>console.log(f.name); // "f"
-console.log(object.someMethod.name); // "someMethod"</code></pre>
+console.log(f.name); // "f"
+console.log(object.someMethod.name); // "someMethod"
+```
 
-<p>Вы можете определить функцию с именем в {{jsxref("Operators/Function", "function expression", "", 1)}}:</p>
+Вы можете определить функцию с именем в {{jsxref("Operators/Function", "function expression", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function object_someMethod() {}
 };
 console.log(object.someMethod.name); // выведет "object_someMethod"
 
 try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
-</pre>
+```
 
-<p>Вы не можете изменить имя функции, это свойство только для чтения:</p>
+Вы не можете изменить имя функции, это свойство только для чтения:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // анонимная функция
   someMethod: function() {}
 };
 
 object.someMethod.name = 'otherMethod';
 alert(object.someMethod.name); //someMethod
+```
 
-</pre>
+Для изменения name можно использовать {{jsxref("Object.defineProperty()")}}.
 
-<p>Для изменения name можно использовать {{jsxref("Object.defineProperty()")}}.</p>
+### Сокращённые имена методов
 
-<h3 id="Сокращённые_имена_методов">Сокращённые имена методов</h3>
-
-<pre class="brush: js"><code>var o = {
+```js
+var o = {
   foo(){}
 };
-o.foo.name; // "foo";</code></pre>
+o.foo.name; // "foo";
+```
 
-<h3 id="Имена_функций_после_привязки">Имена функций после привязки</h3>
+### Имена функций после привязки
 
-<p>{{jsxref("Function.bind()")}} производит функцию, получающую имя "bound  и название самой функции.</p>
+{{jsxref("Function.bind()")}} производит функцию, получающую имя "bound и название самой функции.
 
-<pre class="brush: js"><code>function foo() {};
-foo.bind({}).name; // "bound foo"</code>
-</pre>
+```js
+function foo() {};
+foo.bind({}).name; // "bound foo"
+```
 
-<h3 id="Имена_функций_для_getters_и_setters">Имена функций для getters и setters</h3>
+### Имена функций для getters и setters
 
-<p>Когда используются <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> и <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>, "get" и "set" появятся в имени функции.</p>
+Когда используются [`get`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set), "get" и "set" появятся в имени функции.
 
-<pre><code>let o = {
+```
+let o = {
   get foo(){},
   set foo(x){}
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";</code></pre>
+descriptor.set.name; // "set foo";
+```
 
-<h3 id="Имена_функций-классов">Имена функций-классов</h3>
+### Имена функций-классов
 
-<p>Можно использовать <code>obj.constructor.name</code> чтобы проверить "class" объекта (читайте предупреждение ниже):</p>
+Можно использовать `obj.constructor.name` чтобы проверить "class" объекта (читайте предупреждение ниже):
 
-<pre><code>function Foo() {}  // ES2015 Syntax: class Foo {}
+```
+function Foo() {}  // ES2015 Syntax: class Foo {}
 
 var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs "Foo"</code>
-</pre>
+console.log(fooInstance.constructor.name); // logs "Foo"
+```
 
-<div class="blockIndicator warning">
-<p><strong>Warning:</strong> Интерпретатор объявит встроенное <code>Function.name</code> свойство только если функция не имеет своего собственного свойства <em>name</em> (см.  <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 of the ECMAScript2015 Language Specification</a>). Однако, в ES2015 статичные методы перезаписывают OwnProperty конструкторов класса-функции (ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>).</p>
-</div>
+> **Предупреждение:** Интерпретатор объявит встроенное `Function.name` свойство только если функция не имеет своего собственного свойства _name_ (см. [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Однако, в ES2015 статичные методы перезаписывают OwnProperty конструкторов класса-функции (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
-<p>Таким образом, нельзя получить доступ к <code>name</code> любого класса со статичным свойством <code>name()​​​​​​:</code></p>
+Таким образом, нельзя получить доступ к `name` любого класса со статичным свойством `name()​​​​​​:`
 
-<pre class="brush: js"><code>class Foo {
+```js
+class Foo {
   constructor() {}
   static name() {}
 }
-</code></pre>
+```
 
-<p>Со <code>static name()</code> методом <code>Foo.name</code> больше не содержит название класса, но отсылает к функции <code>name()</code>. Приведённое выше определение класса в ES2015 будет вести себя в Chrome и Firefx как в  ES5:</p>
+Со `static name()` методом `Foo.name` больше не содержит название класса, но отсылает к функции `name()`. Приведённое выше определение класса в ES2015 будет вести себя в Chrome и Firefx как в ES5:
 
-<pre><code>function Foo() {}
+```
+function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};</code></pre>
+Foo.name = function() {};
+```
 
-<p>Пытаясь получить доступ к <code>fooInstance</code> с помощью <code>fooInstance.constructor.name</code> не даст название класса, но выведет метод <code>name()</code>. Пример:</p>
+Пытаясь получить доступ к `fooInstance` с помощью `fooInstance.constructor.name` не даст название класса, но выведет метод `name()`. Пример:
 
-<pre><code>let fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs function name()</code></pre>
+```
+let fooInstance = new Foo();
+console.log(fooInstance.constructor.name); // logs function name()
+```
 
-<p>Из ES5 syntax примера также видно, что в Chrome или Firefox статичное определение <code>Foo.name</code> становится <em>записываемым (writable)</em>. Встроенное определение в отсутствии кастомного статичного метода<em>доступно только для чтения</em>:</p>
+Из ES5 syntax примера также видно, что в Chrome или Firefox статичное определение `Foo.name` становится _записываемым (writable)_. Встроенное определение в отсутствии кастомного статичного метода*доступно только для чтения*:
 
-<pre><code>Foo.name = 'Hello';
-console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.</code></pre>
+```
+Foo.name = 'Hello';
+console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
+```
 
-<p>Следовательно не ожидайте, что <code>Function.name</code> свойство будет всегда содержать имя класса.</p>
+Следовательно не ожидайте, что `Function.name` свойство будет всегда содержать имя класса.
 
-<h3 id="Имена_функций-символов">Имена функций-символов</h3>
+### Имена функций-символов
 
-<p>Если у {{jsxref("Symbol")}} объявляется имя, то название метода - это имя квадратных скобках.</p>
+Если у {{jsxref("Symbol")}} объявляется имя, то название метода - это имя квадратных скобках.
 
-<pre class="brush: js"><code>let sym1 = Symbol("foo");
+```js
+let sym1 = Symbol("foo");
 let sym2 = Symbol();
 let o = {
   [sym1]: function(){},
@@ -159,57 +173,44 @@ let o = {
 };
 
 o[sym1].name; // "[foo]"
-o[sym2].name; // ""</code>
-</pre>
+o[sym2].name; // ""
+```
 
-<h2 id="JavaScript_минифицированный">JavaScript минифицированный</h2>
+## JavaScript минифицированный
 
-<div class="blockIndicator warning">
-<p><strong>Warning:</strong> Будьте осторожны, используя <code>Function.name</code> и изменения source кода с помощью JavaScript compressors (minifiers) или обфускаторов. Эти инструменты часто используются, как встроенные в  JavaScript build pipeline, чтобы сократить размер билда перед деплоем в production. Такие трансформации часто изменяют имена функций.</p>
-</div>
+> **Предупреждение:** Будьте осторожны, используя `Function.name` и изменения source кода с помощью JavaScript compressors (minifiers) или обфускаторов. Эти инструменты часто используются, как встроенные в JavaScript build pipeline, чтобы сократить размер билда перед деплоем в production. Такие трансформации часто изменяют имена функций.
 
-<p>Такой source code:</p>
+Такой source code:
 
-<pre><code>function Foo() {};
+```
+function Foo() {};
 let foo = new Foo();
 
 if (foo.constructor.name === 'Foo') {
   console.log("'foo' is an instance of 'Foo'");
 } else {
   console.log('Oops!');
-}</code></pre>
+}
+```
 
-<p>может быть сжат в:</p>
+может быть сжат в:
 
-<pre><code>function a() {};
+```
+function a() {};
 let b = new a();
 if (b.constructor.name === 'Foo') {
   console.log("'foo' is an instance of 'Foo'");
 } else {
   console.log('Oops!');
-}</code></pre>
+}
+```
 
-<p>В несжатой версии код выполняется ожидаемо <code>"'foo' is an instance of 'Foo'"</code>. В то время, как в сжатой версии он ведёт себя иначе. Если вы полагаетесь на <code>Function.name</code>, как в примере, то убедитесь, что pipeline не меняет код или не ожидайте от функции определённого имени.</p>
+В несжатой версии код выполняется ожидаемо `"'foo' is an instance of 'Foo'"`. В то время, как в сжатой версии он ведёт себя иначе. Если вы полагаетесь на `Function.name`, как в примере, то убедитесь, что pipeline не меняет код или не ожидайте от функции определённого имени.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">
-    <p>Спецификация</p>
-   </th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-name', 'name')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                         | Статус               | Комментарии              |
+| ---------------------------------------------------- | -------------------- | ------------------------ |
+| {{SpecName('ES6', '#sec-name', 'name')}} | {{Spec2('ES6')}} | Изначальное определение. |
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
-
-<div id="compat-mobile"></div>
+{{Compat}}

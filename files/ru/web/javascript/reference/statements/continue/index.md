@@ -6,68 +6,68 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/continue
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p>Инструкция <strong>continue</strong> прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.</p>
+Инструкция **continue** прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">continue [ label ];</pre>
+```
+continue [ label ];
+```
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Идентификатор, являющийся меткой (<code>label</code>) инструкции.</dd>
-</dl>
+- `label`
+  - : Идентификатор, являющийся меткой (`label`) инструкции.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>По сравнению с инструкцией {{jsxref("Statements/break", "break")}}, <code>continue</code> прерывает выполнение цикла не полностью, вместо этого:</p>
+По сравнению с инструкцией {{jsxref("Statements/break", "break")}}, `continue` прерывает выполнение цикла не полностью, вместо этого:
 
-<ul>
- <li>В цикле {{jsxref("Statements/while", "while")}} оно переносит поток выполнения к условию.</li>
-</ul>
+- В цикле {{jsxref("Statements/while", "while")}} оно переносит поток выполнения к условию.
 
-<ul>
- <li>В цикле {{jsxref("Statements/for", "for")}} оно переносит поток выполнения к финальному выражению в описании цикла.</li>
-</ul>
+<!---->
 
-<p>Инструкция <code>continue</code> может использоваться вместе с необязательной меткой, которая будет начинать следующую итерацию отмеченного цикла, а не текущего. В этом случае, <code>continue</code> должен находиться внутри отмеченного блока, который соответствует метке.</p>
+- В цикле {{jsxref("Statements/for", "for")}} оно переносит поток выполнения к финальному выражению в описании цикла.
 
-<h2 id="Examples">Примеры</h2>
+Инструкция `continue` может использоваться вместе с необязательной меткой, которая будет начинать следующую итерацию отмеченного цикла, а не текущего. В этом случае, `continue` должен находиться внутри отмеченного блока, который соответствует метке.
 
-<h3 id="Example_Using_continue_with_while">Использование <code>continue</code> с циклом <code>while</code></h3>
+## Примеры
 
-<p>Пример показывает использование цикла {{jsxref("Statements/while", "while")}} вместе с инструкцией <code>continue, которая выполняется, когда</code> <code>i</code> станет равно 3-м. Таким образом, <code>n</code> принимает значения 1, 3, 7 и 12.</p>
+### Использование `continue` с циклом `while`
 
-<pre class="brush: js">i = 0;
+Пример показывает использование цикла {{jsxref("Statements/while", "while")}} вместе с инструкцией `continue, которая выполняется, когда` `i` станет равно 3-м. Таким образом, `n` принимает значения 1, 3, 7 и 12.
+
+```js
+i = 0;
 n = 0;
-while (i &lt; 5) {
+while (i < 5) {
    i++;
    if (i === 3) {
       continue;
    }
    n += i;
 }
-</pre>
+```
 
-<h3 id="Использование_continue_вместе_с_меткой">Использование <code>continue</code> вместе с меткой</h3>
+### Использование `continue` вместе с меткой
 
-<p>В примере цикл, отмеченный <code>checkiandj</code>, содержит внутри себя цикл, отмеченный <code>checkj</code>. Если встретится инструкция <code>continue</code>, выполнение кода продолжится в начале блока кода <code>checkj</code>. При каждом вызове <code>continue цикл</code> <code>checkj</code> будет начинать новую итерацию, пока условие не начнёт возвращать <code>false</code>. Когда это случится, продолжится выполнение оставшейся части цикла <code>checkiandj</code>.</p>
+В примере цикл, отмеченный `checkiandj`, содержит внутри себя цикл, отмеченный `checkj`. Если встретится инструкция `continue`, выполнение кода продолжится в начале блока кода `checkj`. При каждом вызове `continue цикл` `checkj` будет начинать новую итерацию, пока условие не начнёт возвращать `false`. Когда это случится, продолжится выполнение оставшейся части цикла `checkiandj`.
 
-<p>Если бы <code>continue</code> имело метку <code>checkiandj</code>, программа продолжала бы свою работу с начала цикла <code>checkiandj</code>.</p>
+Если бы `continue` имело метку `checkiandj`, программа продолжала бы свою работу с начала цикла `checkiandj`.
 
-<p>Смотрите также {{jsxref("Statements/label", "label")}}.</p>
+Смотрите также {{jsxref("Statements/label", "label")}}.
 
-<pre class="brush: js">var i = 0,
+```js
+var i = 0,
     j = 8;
 
-checkiandj: while (i &lt; 4) {
+checkiandj: while (i < 4) {
    console.log("i: " + i);
    i += 1;
 
-   checkj: while (j &gt; 4) {
+   checkj: while (j > 4) {
       console.log("j: "+ j);
       j -= 1;
       if ((j % 2) == 0)
@@ -77,11 +77,12 @@ checkiandj: while (i &lt; 4) {
    console.log("i = " + i);
    console.log("j = " + j);
 }
-</pre>
+```
 
-<p>Вывод:</p>
+Вывод:
 
-<pre class="brush: js">"i: 0"
+```js
+"i: 0"
 
 // начало checkj
 "j: 8"
@@ -106,19 +107,17 @@ checkiandj: while (i &lt; 4) {
 "i: 3"
 "i = 4"
 "j = 4"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label")}}

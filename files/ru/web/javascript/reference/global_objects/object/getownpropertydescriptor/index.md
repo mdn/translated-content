@@ -8,45 +8,52 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <code><strong>Object.getOwnPropertyDescriptor()</strong></code> возвращает дескриптор свойства для <dfn>собственного свойства</dfn> (то есть такого, которое находится непосредственно в объекте, а не получено через цепочку прототипов) переданного объекта.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</code></pre>
+Метод **`Object.getOwnPropertyDescriptor()`** возвращает дескриптор свойства для _собственного свойства_ (то есть такого, которое находится непосредственно в объекте, а не получено через цепочку прототипов) переданного объекта.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, в котором ищется свойство.</dd>
- <dt><code>prop</code></dt>
- <dd>Имя свойства, чьё описание будет возвращено.</dd>
-</dl>
+## Синтаксис
 
-<h3 id="Returns">Возвращаемое значение</h3>
-<p>Дескриптор переданного свойства, если оно присутствует в объекте, либо {{jsxref("undefined")}}, если его там нет.</p>
+```
+Object.getOwnPropertyDescriptor(obj, prop)
+```
 
-<h2 id="Description">Описание</h2>
-<p>Этот метод позволяет просмотреть точное описание свойства. <dfn>Свойство</dfn> в JavaScript состоит из строкового имени и дескриптора свойства. Подробная информация о типах дескрипторов свойств и их атрибутах может быть найдена в описании метода {{jsxref("Object.defineProperty()")}}.</p>
-<p><dfn>Дескриптор свойства</dfn> — это запись с некоторыми из следующих атрибутов:</p>
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение, ассоциированное со свойством (только в дескрипторе данных).</dd>
- <dt><code>writable</code></dt>
- <dd>Значение <code>true</code>, если значение, ассоциированное со свойством, может быть изменено, иначе <code>false</code> (только в дескрипторе данных).</dd>
- <dt><code>get</code></dt>
- <dd>Функция, возвращающая значение свойства, либо {{jsxref("undefined")}}, если такая функция отсутствует (только в дескрипторе доступа).</dd>
- <dt><code>set</code></dt>
- <dd>Функция, изменяющая значение свойства, либо {{jsxref("undefined")}}, если такая функция отсутствует (только в дескрипторе доступа).</dd>
- <dt><code>configurable</code></dt>
- <dd>Значение <code>true</code>, если тип дескриптора этого свойства может быть изменён и если свойство может быть удалено из содержащего его объекта, иначе <code>false</code>.</dd>
- <dt><code>enumerable</code></dt>
- <dd>Значение <code>true</code>, если это свойство доступно при перечислении свойств содержащего его объекта, иначе <code>false</code>.</dd>
-</dl>
+### Параметры
 
-<h2 id="Examples">Примеры</h2>
-<pre class="brush: js">var o, d;
+- `obj`
+  - : Объект, в котором ищется свойство.
+- `prop`
+  - : Имя свойства, чьё описание будет возвращено.
+
+### Возвращаемое значение
+
+Дескриптор переданного свойства, если оно присутствует в объекте, либо {{jsxref("undefined")}}, если его там нет.
+
+## Описание
+
+Этот метод позволяет просмотреть точное описание свойства. _Свойство_ в JavaScript состоит из строкового имени и дескриптора свойства. Подробная информация о типах дескрипторов свойств и их атрибутах может быть найдена в описании метода {{jsxref("Object.defineProperty()")}}.
+
+_Дескриптор свойства_ — это запись с некоторыми из следующих атрибутов:
+
+- `value`
+  - : Значение, ассоциированное со свойством (только в дескрипторе данных).
+- `writable`
+  - : Значение `true`, если значение, ассоциированное со свойством, может быть изменено, иначе `false` (только в дескрипторе данных).
+- `get`
+  - : Функция, возвращающая значение свойства, либо {{jsxref("undefined")}}, если такая функция отсутствует (только в дескрипторе доступа).
+- `set`
+  - : Функция, изменяющая значение свойства, либо {{jsxref("undefined")}}, если такая функция отсутствует (только в дескрипторе доступа).
+- `configurable`
+  - : Значение `true`, если тип дескриптора этого свойства может быть изменён и если свойство может быть удалено из содержащего его объекта, иначе `false`.
+- `enumerable`
+  - : Значение `true`, если это свойство доступно при перечислении свойств содержащего его объекта, иначе `false`.
+
+## Примеры
+
+```js
+var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
@@ -60,42 +67,31 @@ o = {};
 Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
 d = Object.getOwnPropertyDescriptor(o, 'baz');
 // d равен { value: 8675309, writable: false, enumerable: false, configurable: false }
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
-<p>В ES5, если первый аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет сначала приведён к объекту.</p>
-<pre class="brush: js">&gt; Object.getOwnPropertyDescriptor('foo', 0)
+## Примечания
+
+В ES5, если первый аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет сначала приведён к объекту.
+
+```js
+> Object.getOwnPropertyDescriptor('foo', 0)
 TypeError: "foo" is not an object  // код ES5
 
-&gt; Object.getOwnPropertyDescriptor('foo', 0)
+> Object.getOwnPropertyDescriptor('foo', 0)
 { configurable: false, enumerable: true, value: 'f', writable: false }  // код ES6
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                                 | Статус                   | Комментарии                                              |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                             | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}     |                                                          |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.defineProperty()")}}

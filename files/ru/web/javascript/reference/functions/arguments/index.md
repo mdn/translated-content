@@ -8,196 +8,220 @@ tags:
   - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>Объект <code><strong>arguments</strong></code> — это подобный массиву объект, который содержит аргументы, переданные в функцию.</p>
+Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> Если вы пишете ES6-совместимый код, то лучше использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>.</p>
-</div>
+> **Примечание:** Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> "Подобный массиву" означает, что <code>arguments</code> имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание">§Описании</a>.</p>
-</div>
+> **Примечание:** "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
 
-<p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">arguments</pre>
+```
+arguments
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Объект <code>arguments</code> - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект <code>arguments</code> позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:</p>
+Объект `arguments` - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект `arguments` позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:
 
-<pre class="brush: js">arguments[0]
+```js
+arguments[0]
 arguments[1]
 arguments[2]
-</pre>
+```
 
-<p>Аргументам может быть присвоено значение:</p>
+Аргументам может быть присвоено значение:
 
-<pre class="brush: js">arguments[1] = 'new value';</pre>
+```js
+arguments[1] = 'new value';
+```
 
-<p>Объект <code>arguments</code> не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">length</a></code>. Например, у него нет метода <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a></code>. Однако, он может быть преобразован в обычный массив:</p>
+Объект `arguments` не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме [`length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"). Например, у него нет метода [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "JavaScript/Reference/Global_Objects/Array/pop"). Однако, он может быть преобразован в обычный массив:
 
-<pre class="brush: js">var args = Array.prototype.slice.call(arguments);
+```js
+var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 
 // ES2015
 const args = Array.from(arguments);
 const args = [...arguments];
-</pre>
+```
 
-<div class="warning">
-<p>Использование <code>slice</code> на объекте <code>arguments</code> не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">подробнее</a>). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта <code>arguments.</code> Альтернативный вариант — использовать конструктор <code>Array</code> как функцию:</p>
+> **Предупреждение:** Использование `slice` на объекте `arguments` не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — [подробнее](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта `arguments.` Альтернативный вариант — использовать конструктор `Array` как функцию:
+>
+> ```js
+> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> ```
 
-<pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</pre>
-</div>
+Объект `arguments` можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"), чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта `arguments`. Чтобы определить количество параметров функции, описанных в её [сигнатуре](/ru/docs/Glossary/Signature/Function), можно использовать свойство [`Function.length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length "JavaScript/Reference/Global_Objects/Function/length").
 
-<p>Объект <code>arguments</code> можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>, чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта <code>arguments</code>. Чтобы определить количество параметров функции, описанных в её <a href="/en-US/docs/Glossary/Signature/Function">сигнатуре</a>, можно использовать свойство <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length" title="JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>.</p>
+### Использование `typeof` с объектом `arguments`
 
-<h3 id="Использование_typeof_с_объектом_arguments">Использование <code>typeof</code> с объектом <code>arguments</code></h3>
+Применение оператора `typeof` к `arguments` вернёт 'object'.
 
-<p>Применение оператора <code>typeof</code> к <code>arguments</code> вернёт 'object'.</p>
+```
+console.log(typeof arguments); // 'object'
+```
 
-<pre>console.log(typeof arguments); // 'object'</pre>
+Определение типов аргументов может быть выполнено применением оператора `typeof` и индексацией.
 
-<p>Определение типов аргументов может быть выполнено применением оператора <code>typeof</code> и индексацией.</p>
+```
+// выведет тип первого аргумента
+console.log(typeof arguments[0]);
+```
 
-<pre>// выведет тип первого аргумента
-console.log(typeof arguments[0]);</pre>
+### Использование оператора расширения для объекта `arguments`
 
-<h3 id="Использование_оператора_расширения_для_объекта_arguments">Использование оператора расширения для объекта <code>arguments</code></h3>
+Как и с обычными массива-подобными объектами, для преобразования объекта `arguments` в обычный массив можно использовать метод {{jsxref("Array.from()")}} или [оператор расширения:](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 
-<p>Как и с обычными массива-подобными объектами, для преобразования объекта <code>arguments</code> в обычный массив можно использовать метод {{jsxref("Array.from()")}} или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator">оператор расширения:</a></p>
+```js
+var args = Array.from(arguments);
+var args = [...arguments];
+```
 
-<pre class="brush: js">var args = Array.from(arguments);
-var args = [...arguments];</pre>
+## Свойства
 
-<h2 id="Свойства">Свойства</h2>
+- [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee "JavaScript/Reference/Functions_and_function_scope/arguments/callee")
+  - : Ссылка на функцию, которая выполняется в текущий момент.
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller "JavaScript/Reference/Functions_and_function_scope/arguments/caller") {{ Obsolete_inline() }}
+  - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
+- [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length")
+  - : Количество переданных в функцию аргументов.
+- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+  - : Возвращает новый объект `Array Iterator`, содержащий значения для каждого индекса в массиве.
 
-<dl>
- <dt><code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
- <dd>Ссылка на функцию, которая выполняется в текущий момент.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller" title="JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code> {{ Obsolete_inline() }}</dt>
- <dd>Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.</dd>
- <dt><code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
- <dd>Количество переданных в функцию аргументов.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
- <dd>Возвращает новый объект <code>Array Iterator</code>, содержащий значения для каждого индекса в массиве.</dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Создание функции, соединяющей несколько строк
 
-<h3 id="Создание_функции_соединяющей_несколько_строк">Создание функции, соединяющей несколько строк</h3>
+Данный пример описывает функцию, которая соединяет несколько строк. Для этой функции объявлен только один аргумент, определяющий символ-разделитель соединяемых элементов. Функция определена следующим образом:
 
-<p>Данный пример описывает функцию, которая соединяет несколько строк. Для этой функции объявлен только один аргумент, определяющий символ-разделитель соединяемых элементов. Функция определена следующим образом:</p>
-
-<pre class="brush:js">function myConcat(separator) {
+```js
+function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
-}</pre>
+}
+```
 
-<p>Вы можете передать любое количество аргументов в эту функцию. Она создаёт строку, используя каждый аргумент:</p>
+Вы можете передать любое количество аргументов в эту функцию. Она создаёт строку, используя каждый аргумент:
 
-<pre class="brush:js">// возвращает "red, orange, blue"
+```js
+// возвращает "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
 
 // получает "elephant; giraffe; lion; cheetah"
 myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // выводит "sage. basil. oregano. pepper. parsley"
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+```
 
-<h3 id="Функция_создающая_HTML_списки"> Функция, создающая HTML списки</h3>
+### Функция, создающая HTML списки
 
-<p>В данном примере приведена функция, которая создаёт строку с HTML-разметкой для списка. Единственный её аргумент — строка, определяющая вид списка: если его значение равно "u", формируется неупорядоченный (маркированный) список, а если "o" — то упорядоченный (нумерованный):</p>
+В данном примере приведена функция, которая создаёт строку с HTML-разметкой для списка. Единственный её аргумент — строка, определяющая вид списка: если его значение равно "u", формируется неупорядоченный (маркированный) список, а если "o" — то упорядоченный (нумерованный):
 
-<pre class="brush:js">function list(type) {
-  var result = "&lt;" + type + "l&gt;&lt;li&gt;";
+```js
+function list(type) {
+  var result = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join("&lt;/li&gt;&lt;li&gt;");
-  result += "&lt;/li&gt;&lt;/" + type + "l&gt;"; // конец списка
+  result += args.join("</li><li>");
+  result += "</li></" + type + "l>"; // конец списка
 
   return result;
-}</pre>
+}
+```
 
-<p>Вы можете использовать любое количество аргументов, а функция добавит каждый элемент в список заданного первым аргументом типа. Например:</p>
+Вы можете использовать любое количество аргументов, а функция добавит каждый элемент в список заданного первым аргументом типа. Например:
 
-<pre class="brush:js">var listHTML = list("u", "One", "Two", "Three");
+```js
+var listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML:
 
-"&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
+"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
 
-*/</pre>
+*/
+```
 
-<h3 id="Остаточные_деструктурированные_и_параметры_по_умолчанию">Остаточные, деструктурированные и параметры по умолчанию</h3>
+### Остаточные, деструктурированные и параметры по умолчанию
 
-<p>Объект <code>arguments</code> может использоваться совместно с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточными параметрами</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию </a>или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированными параметрами</a>.</p>
+Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметрами по умолчанию ](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
-<pre class="brush: js">function foo(...args) {
+```js
+function foo(...args) {
   return arguments;
 }
-foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }</pre>
+foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
+```
 
-<p>Тем не менее, в нестрогих функциях <strong>соответствие между их аргументами и объектом <code>arguments</code></strong> существует только в том случае, если функция <strong>не</strong> содержит никаких <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>. Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:</p>
+Тем не менее, в нестрогих функциях **соответствие между их аргументами и объектом `arguments`** существует только в том случае, если функция **не** содержит никаких [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:
 
-<pre class="brush: js">function bar(a=1) {
+```js
+function bar(a=1) {
   arguments[0] = 100;
   return a;
 }
-bar(10); // 10</pre>
+bar(10); // 10
+```
 
-<p>В следующем примере возвращается 100, поскольку здесь нет <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>:</p>
+В следующем примере возвращается 100, поскольку здесь нет [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
-<pre class="brush: js">function zoo(a) {
+```js
+function zoo(a) {
   arguments[0] = 100;
   return a;
 }
-zoo(10); // 100</pre>
+zoo(10); // 100
+```
 
-<p>На самом деле, если <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a> не используются, формальные аргументы будут ссылаться на последние значения объекта <strong><code>arguments</code></strong>, при считывании значений формальных аргументов будут считаны последние данные из <strong><code>arguments</code></strong>, а при изменении значений формальных аргументов будет обновлён и объект <strong><code>arguments</code></strong>. Пример приведён в коде ниже:</p>
+На самом деле, если [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) не используются, формальные аргументы будут ссылаться на последние значения объекта **`arguments`**, при считывании значений формальных аргументов будут считаны последние данные из **`arguments`**, а при изменении значений формальных аргументов будет обновлён и объект **`arguments`**. Пример приведён в коде ниже:
 
-<pre class="brush: js">function func(a, b) {
+```js
+function func(a, b) {
     arguments[0] = 90;
     arguments[1] = 99;
     console.log(a + " " + b);
 }
 
-func(1, 2); //90, 99</pre>
+func(1, 2); //90, 99
+```
 
-<p>или</p>
+или
 
-<pre class="brush: js">function func(a, b) {
+```js
+function func(a, b) {
     a = 9;
     b = 99;
     console.log(arguments[0] + " " + arguments[1]);
 }
 
-func(3, 4); //9, 99</pre>
+func(3, 4); //9, 99
+```
 
-<p>Но в случае, когда применяются <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a>, будет обработано нормальное поведение, как в случае <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a>:</p>
+Но в случае, когда применяются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), будет обработано нормальное поведение, как в случае [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters):
 
-<pre class="brush: js">function func(a, b, c=9) {
+```js
+function func(a, b, c=9) {
     arguments[0] = 99;
     arguments[1] = 98;
     console.log(a + " " + b);
 }
 
-func(3, 4); //3, 4</pre>
+func(3, 4); //3, 4
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

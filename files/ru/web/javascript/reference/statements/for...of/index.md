@@ -8,31 +8,31 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Оператор <code>for...of</code> выполняет цикл обхода <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">итерируемых объектов</a> (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">аргументов</a> и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.</p>
+Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">for (<em>variable</em> of <em>iterable</em>) {
-  <em>statement</em>
+```
+for (variable of iterable) {
+  statement
 }
-</pre>
+```
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>На каждом шаге итерации <code><em>variable</em></code> присваивается значение нового свойства объекта <em><code>iterable</code></em>. Переменная <em><code>variable</code></em> может быть также объявлена с помощью <code>const</code>, <code>let</code> или <code>var</code>.</dd>
- <dt><code>iterable</code></dt>
- <dd>Объект, перечисляемые свойства которого обходятся во время выполнения цикла.</dd>
-</dl>
+- `variable`
+  - : На каждом шаге итерации `variable` присваивается значение нового свойства объекта _`iterable`_. Переменная _`variable`_ может быть также объявлена с помощью `const`, `let` или `var`.
+- `iterable`
+  - : Объект, перечисляемые свойства которого обходятся во время выполнения цикла.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Обход_jsxrefArray">Обход {{jsxref("Array")}}</h3>
+### Обход {{jsxref("Array")}}
 
-<pre><code>let iterable = [10, 20, 30];
+```
+let iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -40,43 +40,51 @@ for (let value of iterable) {
 }
 // 11
 // 21
-// 31</code></pre>
+// 31
+```
 
-<p>Можно также использовать <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> вместо <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>, если не нужно переназначать переменные внутри блока.</p>
+Можно также использовать [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) вместо [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), если не нужно переназначать переменные внутри блока.
 
-<pre><code>let iterable = [10, 20, 30];
+```
+let iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
 }
 // 10
 // 20
-// 30</code></pre>
+// 30
+```
 
-<h3 id="Обход_jsxrefString">Обход {{jsxref("String")}}</h3>
+### Обход {{jsxref("String")}}
 
-<pre><code>let iterable = 'boo';
+```
+let iterable = 'boo';
 
 for (let value of iterable) {
   console.log(value);
 }
 // "b"
 // "o"
-// "o"</code></pre>
+// "o"
+```
 
-<h3 id="Обход_jsxrefTypedArray">Обход {{jsxref("TypedArray")}}</h3>
+### Обход {{jsxref("TypedArray")}}
 
-<pre><code>let iterable = new Uint8Array([0x00, 0xff]);
+```
+let iterable = new Uint8Array([0x00, 0xff]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 0
-// 255</code></pre>
+// 255
+```
 
-<h3 id="Обход_jsxrefMap">Обход {{jsxref("Map")}}</h3>
+### Обход {{jsxref("Map")}}
 
-<pre><code>let iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+```
+let iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -90,22 +98,26 @@ for (let [key, value] of iterable) {
 }
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Обход_jsxrefSet">Обход {{jsxref("Set")}}</h3>
+### Обход {{jsxref("Set")}}
 
-<pre><code>let iterable = new Set([1, 1, 2, 2, 3, 3]);
+```
+let iterable = new Set([1, 1, 2, 2, 3, 3]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Обход_объекта_jsxrefarguments">Обход объекта {{jsxref("arguments")}} </h3>
+### Обход объекта {{jsxref("arguments")}}
 
-<pre><code>(function() {
+```
+(function() {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -113,25 +125,29 @@ for (let value of iterable) {
 
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Обход_DOM_коллекций">Обход DOM коллекций</h3>
+### Обход DOM коллекций
 
-<p>Обход DOM коллекций наподобие {{domxref("NodeList")}}: следующий пример добавляет класс <code>read</code> параграфам, являющимся непосредственными потомками статей:</p>
+Обход DOM коллекций наподобие {{domxref("NodeList")}}: следующий пример добавляет класс `read` параграфам, являющимся непосредственными потомками статей:
 
-<pre><code>// Примечание: работает только на платформах, где
+```
+// Примечание: работает только на платформах, где
 // реализован NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll('article &gt; p');
+let articleParagraphs = document.querySelectorAll('article > p');
 
 for (let paragraph of articleParagraphs) {
   paragraph.classList.add('read');
-}</code></pre>
+}
+```
 
-<h3 id="Закрытие_итераторов">Закрытие итераторов</h3>
+### Закрытие итераторов
 
-<p>В циклах <code>for...of</code>  аварийный выход осуществляется через <code>break</code>, <code>throw</code> или <code>return</code>. Во всех вариантах итератор завершается.</p>
+В циклах `for...of` аварийный выход осуществляется через `break`, `throw` или `return`. Во всех вариантах итератор завершается.
 
-<pre><code>function* foo(){
+```
+function* foo(){
   yield 1;
   yield 2;
   yield 3;
@@ -140,14 +156,15 @@ for (let paragraph of articleParagraphs) {
 for (let o of foo()) {
   console.log(o);
   break; //  итератор закрывается, возврат
-}</code>
-</pre>
+}
+```
 
-<h3 id="Обход_генераторов">Обход генераторов</h3>
+### Обход генераторов
 
-<p>Вы можете выполнять обход <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">генераторов</a>, вот пример:</p>
+Вы можете выполнять обход [генераторов](/ru/docs/Web/JavaScript/Reference/Statements/function*), вот пример:
 
-<pre class="brush:js">function* fibonacci() { // функция-генератор
+```js
+function* fibonacci() { // функция-генератор
     let [prev, curr] = [0, 1];
     for (;;) {
         [prev, curr] = [curr, prev + curr];
@@ -157,17 +174,18 @@ for (let o of foo()) {
 
 for (let n of fibonacci()) {
     // ограничивает последовательность на 1000
-    if (n &gt; 1000)
+    if (n > 1000)
         break;
     console.log(n);
 }
-</pre>
+```
 
-<h4 id="Не_пытайтесь_повторно_использовать_генератор">Не пытайтесь повторно использовать генератор</h4>
+#### Не пытайтесь повторно использовать генератор
 
-<p>Генераторы нельзя использовать дважды, даже если цикл <code>for...of </code> завершится аварийно, например, через оператор {{jsxref("Statements/break", "break")}} . При выходе из цикла генератор завершается, и любые попытки получить из него значение обречены.</p>
+Генераторы нельзя использовать дважды, даже если цикл `for...of `завершится аварийно, например, через оператор {{jsxref("Statements/break", "break")}} . При выходе из цикла генератор завершается, и любые попытки получить из него значение обречены.
 
-<pre class="brush: js example-bad"><code>var gen = (function *(){
+```js example-bad
+var gen = (function *(){
   yield 1;
   yield 2;
   yield 3;
@@ -180,18 +198,20 @@ for (let o of gen) {
 // Генератор нельзя повторно обойти, следующее не имеет смысла!
 for (let o of gen) {
   console.log(o); // Не будет вызван
-}</code></pre>
+}
+```
 
-<h3 id="Обход_итерируемых_объектов">Обход итерируемых объектов</h3>
+### Обход итерируемых объектов
 
-<p>Кроме того, можно сделать обход объекта, явно реализующего <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterable</a>:</p>
+Кроме того, можно сделать обход объекта, явно реализующего [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable):
 
-<pre><code>var iterable = {
+```
+var iterable = {
   [Symbol.iterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
@@ -205,19 +225,21 @@ for (var value of iterable) {
 }
 // 0
 // 1
-// 2</code></pre>
+// 2
+```
 
-<h3 id="Различия_между_for...of_и_for...in">Различия между <code>for...of</code> и <code>for...in</code></h3>
+### Различия между `for...of` и `for...in`
 
-<p>Оба оператора, и <code>for...in</code> и <code>for...of</code> производят обход объектов . Разница в том, как они это делают.</p>
+Оба оператора, и `for...in` и `for...of` производят обход объектов . Разница в том, как они это делают.
 
-<p>Для {{jsxref("Statements/for...in", "for...in")}} обход <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties" title="перечисляемые свойства">перечисляемых свойств</a> объекта осуществляется в произвольном порядке.</p>
+Для {{jsxref("Statements/for...in", "for...in")}} обход [перечисляемых свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties "перечисляемые свойства") объекта осуществляется в произвольном порядке.
 
-<p>Для <code>for...of</code> обход происходит в соответствии с тем, какой порядок определён в <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">итерируемом объекте</a>.</p>
+Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Guide/iterable).
 
-<p>Следующий пример показывает различия в работе циклов <code>for...of</code> и <code>for...in</code> при обходе {{jsxref("Array")}}.</p>
+Следующий пример показывает различия в работе циклов `for...of` и `for...in` при обходе {{jsxref("Array")}}.
 
-<pre><code>Object.prototype.objCustom = function() {};
+```
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 let iterable = [3, 5, 7];
@@ -235,50 +257,57 @@ for (let i in iterable) {
 
 for (let i of iterable) {
   console.log(i); // выведет 3, 5, 7
-}</code></pre>
+}
+```
 
-<p>Разберёмся шаг за шагом в вышеописанном коде.</p>
+Разберёмся шаг за шагом в вышеописанном коде.
 
-<pre><code>Object.prototype.objCustom = function() {};
+```
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 let iterable = [3, 5, 7];
-iterable.foo = 'hello';</code></pre>
+iterable.foo = 'hello';
+```
 
-<p>Каждый объект унаследует метод <code>objCustom</code> и каждый массив {{jsxref("Array")}} унаследует метод <code>arrCustom</code> благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект <code>iterable</code> унаследует методы <code>objCustom</code> и <code>arrCustom</code> из-за <a href="/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">наследования через прототип</a>.</p>
+Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-<pre><code>for (let i in iterable) {
+```
+for (let i in iterable) {
   console.log(i); // выведет 0, 1, 2, "foo", "arrCustom", "objCustom"
-}</code></pre>
+}
+```
 
-<p>Цикл выводит только <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">перечисляемые свойства</a> объекта <code>iterable</code>, в порядке их создания. Он не выводит <strong>значения</strong> <code>3</code>, <code>5</code>, <code>7</code> и <code>hello</code> поскольку они <strong>не являются</strong> перечисляемыми, фактически они вообще не являются свойствами, они являются <strong>значениями</strong>. Выводятся же <strong>имена свойств и методов</strong>, например <code>arrCustom</code> и <code>objCustom</code>. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .</p>
+Цикл выводит только [перечисляемые свойства](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) объекта `iterable`, в порядке их создания. Он не выводит **значения** `3`, `5`, `7` и `hello` поскольку они **не являются** перечисляемыми, фактически они вообще не являются свойствами, они являются **значениями**. Выводятся же **имена свойств и методов**, например `arrCustom` и `objCustom`. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .
 
-<pre><code>for (let i in iterable) {
+```
+for (let i in iterable) {
   if (iterable.hasOwnProperty(i)) {
     console.log(i); // выведет 0, 1, 2, "foo"
   }
-}</code></pre>
+}
+```
 
-<p>Цикл аналогичен предыдущему, но использует {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} для проверки того, собственное ли это свойство объекта или унаследованное. Выводятся только собственные свойства. Имена <code>0</code>, <code>1</code>, <code>2</code> и <code>foo</code> принадлежат только экземпляру объекта (<strong>не унаследованы</strong>). Методы <code>arrCustom</code> и <code>objCustom</code> не выводятся, поскольку они <strong>унаследованы</strong>.</p>
+Цикл аналогичен предыдущему, но использует {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} для проверки того, собственное ли это свойство объекта или унаследованное. Выводятся только собственные свойства. Имена `0`, `1`, `2` и `foo` принадлежат только экземпляру объекта (**не унаследованы**). Методы `arrCustom` и `objCustom` не выводятся, поскольку они **унаследованы**.
 
-<pre><code>for (let i of iterable) {
+```
+for (let i of iterable) {
   console.log(i); // выведет 3, 5, 7
-}</code></pre>
+}
+```
 
-<p>Этот цикл обходит <code>iterable</code> и выводит те значения <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators$edit#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B">итерируемого объекта</a>,<strong> </strong>которые определены в способе его перебора, т.е. не свойства объекта, а значения массива <code>3</code>, <code>5</code>, <code>7</code> .</p>
+Этот цикл обходит `iterable` и выводит те значения [итерируемого объекта](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators$edit#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B),\*\* \*\*которые определены в способе его перебора, т.е. не свойства объекта, а значения массива `3`, `5`, `7` .
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Object.entries()")}}

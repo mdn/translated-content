@@ -11,33 +11,41 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ---
-<div>{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>__defineSetter__()</code></strong> привязывает свойство объекта к функции, вызываемой каждый раз при попытке установить значение этого свойства.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>obj</var>.__defineSetter__(<var>prop</var>, <var>fun</var>)</code></pre>
+Метод **`__defineSetter__()`** привязывает свойство объекта к функции, вызываемой каждый раз при попытке установить значение этого свойства.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>prop</code></dt>
- <dd>Строка, содержащая имя свойства, привязываемого к заданной функции.</dd>
- <dt><code>fun</code></dt>
- <dd><p>Функция, вызываемая при попытке установить значение указанному свойству. Эта функция имеет вид:</p>
-  <pre>function(<var>val</var>) { . . . }</pre>
-  <dl>
-   <dt><code>val</code></dt>
-   <dd>Псевдоним переменной, содержащей значение, которое пытаются присвоить свойству <code>prop</code>.</dd>
-  </dl>
- </dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>__defineSetter__()</code> позволяет определять {{jsxref("Operators/set", "сеттер", "", 1)}} на уже существующем объекте.</p>
+```
+obj.__defineSetter__(prop, fun)
+```
 
-<h2 id="Examples">Примеры</h2>
-<pre class="brush: js">// Нестандартный и устаревший способ
+### Параметры
+
+- `prop`
+  - : Строка, содержащая имя свойства, привязываемого к заданной функции.
+- `fun`
+
+  - : Функция, вызываемая при попытке установить значение указанному свойству. Эта функция имеет вид:
+
+    ```
+    function(val) { . . . }
+    ```
+
+    - `val`
+      - : Псевдоним переменной, содержащей значение, которое пытаются присвоить свойству `prop`.
+
+## Описание
+
+Метод `__defineSetter__()` позволяет определять {{jsxref("Operators/set", "сеттер", "", 1)}} на уже существующем объекте.
+
+## Примеры
+
+```js
+// Нестандартный и устаревший способ
 
 var o = {};
 o.__defineSetter__('value', function(val) { this.anotherValue = val; });
@@ -64,22 +72,23 @@ Object.defineProperty(o, 'value', {
 o.value = 5;
 console.log(o.value);         // undefined
 console.log(o.anotherValue);  // 5
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какой-либо спецификации.</p>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+Не является частью какой-либо спецификации.
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
- <li>оператор {{jsxref("Operators/set", "set")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
- <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
- <li><a href="ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects#.D0.9E.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B3.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2_.D0.B8_.D1.81.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2">Руководство по JS: определение геттеров и сеттеров</a></li>
- <li><a href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Запись в блоге] Устаревание __defineGetter__ и __defineSetter__</a> (англ.)</li>
- <li>{{bug(647423)}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- оператор {{jsxref("Operators/set", "set")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [Руководство по JS: определение геттеров и сеттеров](ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects#.D0.9E.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B3.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2_.D0.B8_.D1.81.D0.B5.D1.82.D1.82.D0.B5.D1.80.D0.BE.D0.B2)
+- [\[Запись в блоге\] Устаревание \_\_defineGetter\_\_ и \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (англ.)
+- {{bug(647423)}}

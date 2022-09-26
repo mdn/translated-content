@@ -3,106 +3,83 @@ title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>GeneratorFunction</code> constructor</strong> создаёт новый {{jsxref("Statements/function*", "generator function")}} объект. В JavaScript каждая функция-генератор - это фактически <code>GeneratorFunction</code> объект.</p>
+**`GeneratorFunction` constructor** создаёт новый {{jsxref("Statements/function*", "generator function")}} объект. В JavaScript каждая функция-генератор - это фактически `GeneratorFunction` объект.
 
-<p><code>Обратите внимание, что GeneratorFunction</code> - это не глобальный объект. Он может быть получен при выполнении следующего кода.</p>
+`Обратите внимание, что GeneratorFunction` - это не глобальный объект. Он может быть получен при выполнении следующего кода.
 
-<pre class="brush: js">Object.getPrototypeOf(function*(){}).constructor
-</pre>
+```js
+Object.getPrototypeOf(function*(){}).constructor
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new GeneratorFunction ([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</code></pre>
+```
+new GeneratorFunction ([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Имена, используемые функцией как имена формальных аргументов. Каждый должен быть строкой, которая соответствует правильному JavaScript идентификатору или списком таких строк, разделённых запятыми; например "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>".</dd>
- <dt><code>functionBody</code></dt>
- <dd>A string containing the JavaScript statements comprising the function definition.</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : Имена, используемые функцией как имена формальных аргументов. Каждый должен быть строкой, которая соответствует правильному JavaScript идентификатору или списком таких строк, разделённых запятыми; например "`x`", "`theValue`", или "`a,b`".
+- `functionBody`
+  - : A string containing the JavaScript statements comprising the function definition.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>{{jsxref("Statements/function*", "generator function")}} objects created with the <code>GeneratorFunction</code> constructor are parsed when the function is created. This is less efficient than declaring a generator function with a {{jsxref("Statements/function*", "function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.</p>
+{{jsxref("Statements/function*", "generator function")}} objects created with the `GeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with a {{jsxref("Statements/function*", "function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.
 
-<p>All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.</p>
+All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
-<div class="note">
-<p><strong>Note:</strong> {{jsxref("Statements/function*", "generator function")}} created with the <code>GeneratorFunction</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>GeneratorFunction</code> constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.</p>
-</div>
+> **Примечание:** {{jsxref("Statements/function*", "generator function")}} created with the `GeneratorFunction` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `GeneratorFunction` constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.
 
-<p>Invoking the <code>GeneratorFunction</code> constructor as a function (without using the <code>new</code> operator) has the same effect as invoking it as a constructor.</p>
+Invoking the `GeneratorFunction` constructor as a function (without using the `new` operator) has the same effect as invoking it as a constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code><strong>GeneratorFunction.length</strong></code></dt>
- <dd>The <code>GeneratorFunction</code> constructor's length property whose value is 1.</dd>
- <dt>{{jsxref("GeneratorFunction.prototype")}}</dt>
- <dd>Allows the addition of properties to all generator function objects.</dd>
-</dl>
+- **`GeneratorFunction.length`**
+  - : The `GeneratorFunction` constructor's length property whose value is 1.
+- {{jsxref("GeneratorFunction.prototype")}}
+  - : Allows the addition of properties to all generator function objects.
 
-<h2 id="GeneratorFunction_prototype_object"><code>GeneratorFunction</code> prototype object</h2>
+## `GeneratorFunction` prototype object
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype', 'Properties')}}
 
-<h2 id="GeneratorFunction_instances"><code>GeneratorFunction</code> instances</h2>
+## `GeneratorFunction` instances
 
-<p><code>GeneratorFunction</code> instances inherit methods and properties from {{jsxref("GeneratorFunction.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all <code>GeneratorFunction</code> instances.</p>
+`GeneratorFunction` instances inherit methods and properties from {{jsxref("GeneratorFunction.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `GeneratorFunction` instances.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_generator_function_from_a_GeneratorFunction_constructor">Creating a generator function from a <code>GeneratorFunction</code> constructor</h3>
+### Creating a generator function from a `GeneratorFunction` constructor
 
-<pre class="brush: js">var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
+```js
+var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
 var g = new GeneratorFunction('a', 'yield a * 2');
 var iterator = g(10);
 console.log(iterator.next().value); // 20
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Statements/function*", "function* function")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function* function")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

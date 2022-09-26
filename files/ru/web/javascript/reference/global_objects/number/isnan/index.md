@@ -11,32 +11,33 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Number.isNaN()</code></strong> определяет, является ли переданное значение {{jsxref("Global_Objects/NaN", "NaN")}}. Это более надёжная версия оригинальной глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}.</p>
+Метод **`Number.isNaN()`** определяет, является ли переданное значение {{jsxref("Global_Objects/NaN", "NaN")}}. Это более надёжная версия оригинальной глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Number.isNaN(<var>value</var>)</code></pre>
+```
+Number.isNaN(value)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение, проверяемое на {{jsxref("Global_Objects/NaN", "NaN")}}.</dd>
-</dl>
+- `value`
+  - : Значение, проверяемое на {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку оба оператора проверки на равенство, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} и {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, вычисляются в <code>false</code> при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} <em>и есть</em> {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции <code>Number.isNaN()</code>. Эта ситуация отличается от всех других возможных сравнений в JavaScript.</p>
+Поскольку оба оператора проверки на равенство, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} и {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, вычисляются в `false` при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} _и есть_ {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции `Number.isNaN()`. Эта ситуация отличается от всех других возможных сравнений в JavaScript.
 
-<p>В отличие от глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}, <code>Number.isNaN()</code> не имеет проблемы принудительного преобразования параметра в число. Это значит, что в него безопасно передавать значения, которые обычно превращаются в {{jsxref("Global_Objects/NaN", "NaN")}}, но на самом деле {{jsxref("Global_Objects/NaN", "NaN")}} не являются. Также это значит, что метод возвращает <code>true</code> только для числовых значений, имеющих значение {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
+В отличие от глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}, `Number.isNaN()` не имеет проблемы принудительного преобразования параметра в число. Это значит, что в него безопасно передавать значения, которые обычно превращаются в {{jsxref("Global_Objects/NaN", "NaN")}}, но на самом деле {{jsxref("Global_Objects/NaN", "NaN")}} не являются. Также это значит, что метод возвращает `true` только для числовых значений, имеющих значение {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">Number.isNaN(NaN); // true
+```js
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0) // true
 
@@ -54,25 +55,25 @@ Number.isNaN('37');
 Number.isNaN('37.37');
 Number.isNaN('');
 Number.isNaN(' ');
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">Number.isNaN = Number.isNaN || function(value) {
-  return typeof value === 'number' &amp;&amp; isNaN(value);
+```js
+Number.isNaN = Number.isNaN || function(value) {
+  return typeof value === 'number' && isNaN(value);
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Number", "Number")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Global_Objects/Number", "Number")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}

@@ -9,47 +9,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getMonth()</code></strong> возвращает месяц указанной даты по местному времени, нумерация месяцев начинается с нуля для первого месяца в году.</p>
+Метод **`getMonth()`** возвращает месяц указанной даты по местному времени, нумерация месяцев начинается с нуля для первого месяца в году.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getMonth()</code></pre>
+```
+dateObj.getMonth()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getMonth()</code>, является целым числом от 0 до 11. 0 соответствует январю, 1 — февралю и так далее.</p>
+Значение, возвращённое методом `getMonth()`, является целым числом от 0 до 11. 0 соответствует январю, 1 — февралю и так далее.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getMonth">Пример: использование метода <code>getMonth()</code></h3>
+### Пример: использование метода `getMonth()`
 
-<p>Вторая инструкция в примере ниже присваивает значение 11 переменной <code>month</code> из значения переменной <code>date</code> объекта {{jsxref("Global_Objects/Date", "Date")}}.</p>
+Вторая инструкция в примере ниже присваивает значение 11 переменной `month` из значения переменной `date` объекта {{jsxref("Global_Objects/Date", "Date")}}.
 
-<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
+```js
+let date = new Date('December 25, 1995 23:15:30');
 let month = date.getMonth();
 
 console.log(month); // 11
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

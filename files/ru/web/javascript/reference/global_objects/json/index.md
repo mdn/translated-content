@@ -9,53 +9,74 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
-<div>{{JSRef("Global_Objects", "JSON")}}</div>
+{{JSRef("Global_Objects", "JSON")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Объект <strong><code>JSON</code></strong> содержит методы для разбора <a class="external" href="http://json.org/">объектной нотации JavaScript</a> (JavaScript Object Notation — сокращённо {{glossary("JSON")}}) и преобразования значений в JSON. Его нельзя вызвать как функцию или сконструировать как объект, и кроме своих двух методов он не содержит никакой интересной функциональности.</p>
+Объект **`JSON`** содержит методы для разбора [объектной нотации JavaScript](http://json.org/) (JavaScript Object Notation — сокращённо {{glossary("JSON")}}) и преобразования значений в JSON. Его нельзя вызвать как функцию или сконструировать как объект, и кроме своих двух методов он не содержит никакой интересной функциональности.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<h3 id="JavaScript_Object_Notation">Объектная нотация JavaScript</h3>
+### Объектная нотация JavaScript
 
-<p>JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения {{jsxref("null")}}. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript. Смотрите также статью <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JSON: подмножество JavaScript, которым он не является</a> (на английском).</p>
+JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения {{jsxref("null")}}. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript. Смотрите также статью [JSON: подмножество JavaScript, которым он не является](http://timelessrepo.com/json-isnt-a-javascript-subset) (на английском).
 
 <table>
- <caption>Различия между JavaScript и JSON</caption>
- <thead>
-  <tr>
-   <th scope="col">Тип JavaScript</th>
-   <th scope="col">Отличия от JSON</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Объекты и массивы</td>
-   <td>Имена свойств должны быть строками, заключёнными в двойные кавычки; конечные запятые запрещены.</td>
-  </tr>
-  <tr>
-   <td>Числа</td>
-   <td>Ведущие нули запрещены; перед десятичной запятой обязательно должна быть хотя бы одна цифра.</td>
-  </tr>
-  <tr>
-   <td>Строки</td>
-   <td>
-    <p>Только ограниченный набор символов может быть заэкранирован; некоторые управляющие символы запрещены; разрешены юникодные символы разделительной линии (<a href="http://unicode-table.com/ru/2028/">U+2028</a>) и разделительного параграфа (<a href="http://unicode-table.com/ru/2029/">U+2029</a>); строки должны быть заключены в двойные кавычки. Смотрите следующий пример, в котором метод {{jsxref("JSON.parse()")}} отрабатывает без проблем, а при вычислении кода как JavaScript выбрасывается исключение {{jsxref("SyntaxError")}}:</p>
-
-    <pre class="brush: js">
+  <caption>
+    Различия между JavaScript и JSON
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Тип JavaScript</th>
+      <th scope="col">Отличия от JSON</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Объекты и массивы</td>
+      <td>
+        Имена свойств должны быть строками, заключёнными в двойные кавычки;
+        конечные запятые запрещены.
+      </td>
+    </tr>
+    <tr>
+      <td>Числа</td>
+      <td>
+        Ведущие нули запрещены; перед десятичной запятой обязательно должна быть
+        хотя бы одна цифра.
+      </td>
+    </tr>
+    <tr>
+      <td>Строки</td>
+      <td>
+        <p>
+          Только ограниченный набор символов может быть заэкранирован; некоторые
+          управляющие символы запрещены; разрешены юникодные символы
+          разделительной линии (<a href="http://unicode-table.com/ru/2028/"
+            >U+2028</a
+          >) и разделительного параграфа (<a
+            href="http://unicode-table.com/ru/2029/"
+            >U+2029</a
+          >); строки должны быть заключены в двойные кавычки. Смотрите следующий
+          пример, в котором метод {{jsxref("JSON.parse()")}}
+          отрабатывает без проблем, а при вычислении кода как JavaScript
+          выбрасывается исключение {{jsxref("SyntaxError")}}:
+        </p>
+        <pre class="brush: js">
 var code = '"\u2028\u2029"';
 JSON.parse(code); // работает
 eval(code); // ошибка
-</pre>
-   </td>
-  </tr>
- </tbody>
+</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Ниже представлен полный синтаксис JSON:</p>
+Ниже представлен полный синтаксис JSON:
 
-<pre>JSON = null
+```
+JSON = null
     or true or false
     or JSONNumber
     or JSONString
@@ -101,62 +122,60 @@ Members = JSONString : JSON
 JSONArray = [ ]
          or [ ArrayElements ]
 ArrayElements = JSON
-             or ArrayElements , JSON</pre>
+             or ArrayElements , JSON
+```
 
-<p>Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций <code><var>ЧислоJSON</var></code> (числа не должны содержать пробелов) и <code><var>СтрокаJSON</var></code> (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции (<a href="http://unicode-table.com/ru/0009/">U+0009</a>), возврата каретки (<a href="http://unicode-table.com/ru/000D/">U+000D</a>), перевода строки (<a href="http://unicode-table.com/ru/000A/">U+000A</a>) и, собственно, пробела (<a href="http://unicode-table.com/ru/0020/">U+0020</a>).</p>
+Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций `ЧислоJSON` (числа не должны содержать пробелов) и `СтрокаJSON` (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции ([U+0009](http://unicode-table.com/ru/0009/)), возврата каретки ([U+000D](http://unicode-table.com/ru/000D/)), перевода строки ([U+000A](http://unicode-table.com/ru/000A/)) и, собственно, пробела ([U+0020](http://unicode-table.com/ru/0020/)).
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{jsxref("JSON.parse()")}}</dt>
- <dd>Разбирает строку JSON, возможно с преобразованием получаемого значения и его свойств и возвращает разобранное значение.</dd>
- <dt>{{jsxref("JSON.stringify()")}}</dt>
- <dd>Возвращает строку JSON, соответствующую указанному значению, возможно с включением только определённых свойств или с заменой значений свойств определяемым пользователем способом.</dd>
-</dl>
+- {{jsxref("JSON.parse()")}}
+  - : Разбирает строку JSON, возможно с преобразованием получаемого значения и его свойств и возвращает разобранное значение.
+- {{jsxref("JSON.stringify()")}}
+  - : Возвращает строку JSON, соответствующую указанному значению, возможно с включением только определённых свойств или с заменой значений свойств определяемым пользователем способом.
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Объект <code>JSON</code> не поддерживается старыми браузерами. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать объект <code>JSON</code> в реализациях, которые его ещё не поддерживают (например, в Internet Explorer 6).</p>
+Объект `JSON` не поддерживается старыми браузерами. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать объект `JSON` в реализациях, которые его ещё не поддерживают (например, в Internet Explorer 6).
 
-<p>Следующий алгоритм имитирует работу настоящего объекта <code>JSON</code>:</p>
+Следующий алгоритм имитирует работу настоящего объекта `JSON`:
 
-<pre class="brush: js">if (!window.JSON) {
+```js
+if (!window.JSON) {
   window.JSON = {
     parse: function(sJSON) { return eval('(' + sJSON + ')'); },
     stringify: function(vContent) {
       if (vContent instanceof Object) {
         var sOutput = '';
         if (vContent.constructor === Array) {
-          for (var nId = 0; nId &lt; vContent.length; sOutput += this.stringify(vContent[nId]) + ',', nId++);
+          for (var nId = 0; nId < vContent.length; sOutput += this.stringify(vContent[nId]) + ',', nId++);
           return '[' + sOutput.substr(0, sOutput.length - 1) + ']';
         }
         if (vContent.toString !== Object.prototype.toString) {
-          return '"' + vContent.toString().replace(/"/g, '\\$&amp;') + '"';
+          return '"' + vContent.toString().replace(/"/g, '\\$&') + '"';
         }
         for (var sProp in vContent) {
-          sOutput += '"' + sProp.replace(/"/g, '\\$&amp;') + '":' + this.stringify(vContent[sProp]) + ',';
+          sOutput += '"' + sProp.replace(/"/g, '\\$&') + '":' + this.stringify(vContent[sProp]) + ',';
         }
         return '{' + sOutput.substr(0, sOutput.length - 1) + '}';
      }
-     return typeof vContent === 'string' ? '"' + vContent.replace(/"/g, '\\$&amp;') + '"' : String(vContent);
+     return typeof vContent === 'string' ? '"' + vContent.replace(/"/g, '\\$&') + '"' : String(vContent);
     }
   };
 }
-</pre>
+```
 
-<p>Более сложными известными <a class="external" href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">полифилами</a> для объекта <code>JSON</code> являются проекты <a class="link-https" href="https://github.com/douglascrockford/JSON-js">JSON2</a> и <a class="external" href="http://bestiejs.github.com/json3">JSON3</a>.</p>
+Более сложными известными [полифилами](http://remysharp.com/2010/10/08/what-is-a-polyfill/) для объекта `JSON` являются проекты [JSON2](https://github.com/douglascrockford/JSON-js) и [JSON3](http://bestiejs.github.com/json3).
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Using_native_JSON">Использование родного объекта <code>JSON</code></a></li>
- <li>{{jsxref("Date.prototype.toJSON()")}}</li>
-</ul>
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- {{jsxref("Date.prototype.toJSON()")}}

@@ -3,34 +3,33 @@ title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.entries()</strong></code> метод возвращает массив собственных перечисляемых свойств указанного объекта в формате <code>[key, value]</code>, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается <code><strong>Object.entries()</strong></code> не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то  массив должен быть отсортирован до вызова метода, например <code>Object.entries(obj).sort((a, b) =&gt; a[0] - b[0]);</code>.</p>
+**`Object.entries()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, value]`, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается **`Object.entries()`** не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то массив должен быть отсортирован до вызова метода, например `Object.entries(obj).sort((a, b) => a[0] - b[0]);`.
 
-<p>{{EmbedInteractiveExample("pages/js/object-entries.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.entries(<var>obj</var>)</code></pre>
+```
+Object.entries(obj)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, чьи перечислимые свойства будут возвращены в виде массива <code>[key, value]</code>.</dd>
- <dt>
- <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
- </dt>
- <dd>Массив перечислений собственных свойств объекта с парами <code>[key, value]</code>.</dd>
-</dl>
+- `obj`
+  - : Объект, чьи перечислимые свойства будут возвращены в виде массива `[key, value]`.
+- ### Возвращаемое значение
+  - : Массив перечислений собственных свойств объекта с парами `[key, value]`.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>Object.entries()</code> возвращает массив, элементами которого являются массивы, соответствующие перечисляемому свойству пары <code>[key, value],</code> найденной прямо в <code>object</code>. Порядок свойств тот же, что и при прохождении циклом по свойствам объекта вручную.</p>
+`Object.entries()` возвращает массив, элементами которого являются массивы, соответствующие перечисляемому свойству пары `[key, value],` найденной прямо в `object`. Порядок свойств тот же, что и при прохождении циклом по свойствам объекта вручную.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
+```js
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // массив как объект
@@ -47,9 +46,11 @@ my_obj.foo = "bar";
 console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
 
 // non-object argument will be coerced to an object
-console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]</pre>
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+```
 
-<pre><code>// returns an empty array for any primitive type, since primitives have no own properties
+```
+// returns an empty array for any primitive type, since primitives have no own properties
 console.log(Object.entries(100)); // [ ]
 
 // iterate through key-value gracefully
@@ -59,48 +60,47 @@ for (const [key, value] of Object.entries(obj)) {
 }
 
 // Or, using array extras
-Object.entries(obj).forEach(([key, value]) =&gt; {
+Object.entries(obj).forEach(([key, value]) => {
   console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
-});</code></pre>
+});
+```
 
-<h3 id="Преобразование_Object_в_Map">Преобразование <code>Object</code> в <code>Map</code></h3>
+### Преобразование `Object` в `Map`
 
-<p>Конструктор {{jsxref("Map", "new Map()")}} принимает повторение <em>значений</em>. С <code>Object.entries </code>вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:</p>
+Конструктор {{jsxref("Map", "new Map()")}} принимает повторение _значений_. С `Object.entries `вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:
 
-<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
+```js
+var obj = { foo: "bar", baz: 42 };
 var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }</pre>
+console.log(map); // Map { foo: "bar", baz: 42 }
+```
 
-<h3 id="Итерация_по_Object">Итерация по <code>Object</code></h3>
+### Итерация по `Object`
 
-<p>Используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2">метод Разбора Массивов</a> Вы можете легко итерировать объекты.</p>
+Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
 
-<pre><code>const obj = { foo: 'bar', baz: 42 };
-Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"</code></pre>
+```
+const obj = { foo: 'bar', baz: 42 };
+Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
+```
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Чтобы добавить поддержку <code>Object.entries</code> в более старых окружениях, которые не поддерживают его нативно, вы можете найти полифил в <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> или <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> репозиториях.</p>
+Чтобы добавить поддержку `Object.entries` в более старых окружениях, которые не поддерживают его нативно, вы можете найти полифил в [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) или [es-shims/Object.entries](https://github.com/es-shims/Object.entries) репозиториях.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<div>
-<p>{{Compat}}</p>
-</div>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

@@ -8,41 +8,40 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>toPrecision()</code></strong> возвращает строку, представляющую объект {{jsxref("Global_Objects/Number", "Number")}} с указанной точностью.</p>
+Метод **`toPrecision()`** возвращает строку, представляющую объект {{jsxref("Global_Objects/Number", "Number")}} с указанной точностью.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>numObj</var>.toPrecision([<var>precision</var>])</code></pre>
+```
+numObj.toPrecision([precision])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>precision</code></dt>
- <dd>Необязательный параметр. Целое число, определяющее количество значащих цифр.</dd>
-</dl>
+- `precision`
+  - : Необязательный параметр. Целое число, определяющее количество значащих цифр.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Строка, представляющая объект {{jsxref("Global_Objects/Number", "Number")}} в записи с фиксированной запятой или в экспоненциальной записи, округлённое до <code>precision</code> значащих цифр. Смотрите обсуждение округления в описании метода {{jsxref("Number.prototype.toFixed", "toFixed()")}}, которое таким же образом применяется и к методу <code>toPrecision()</code>.</p>
+Строка, представляющая объект {{jsxref("Global_Objects/Number", "Number")}} в записи с фиксированной запятой или в экспоненциальной записи, округлённое до `precision` значащих цифр. Смотрите обсуждение округления в описании метода {{jsxref("Number.prototype.toFixed", "toFixed()")}}, которое таким же образом применяется и к методу `toPrecision()`.
 
-<p>Если аргумент <code>precision</code> опущен, поведение аналогично методу {{jsxref("Number.prototype.toString()")}}. Если он не является целым числом, он будет округлён к ближайшему целому числу.</p>
+Если аргумент `precision` опущен, поведение аналогично методу {{jsxref("Number.prototype.toString()")}}. Если он не является целым числом, он будет округлён к ближайшему целому числу.
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>Если параметр <code>precison</code> не находится в диапазоне от 1 до 100 (включительно), будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}. Также реализации могут поддерживать большие и меньшие значения. ECMA-262 требует точности только до 21 значащей цифры.</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : Если параметр `precison` не находится в диапазоне от 1 до 100 (включительно), будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}. Также реализации могут поддерживать большие и меньшие значения. ECMA-262 требует точности только до 21 значащей цифры.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_toPrecision">Пример: использование <code>toPrecision</code></h3>
+### Пример: использование `toPrecision`
 
-<pre class="brush: js">var numObj = 5.123456;
+```js
+var numObj = 5.123456;
 
 console.log(numObj.toPrecision());    // выведет '5.123456'
 console.log(numObj.toPrecision(5));   // выведет '5.1235'
@@ -60,20 +59,18 @@ console.log(numObj.toPrecision(1));   // выведет '0.0001'
 // недостаточно для точного отображения целой части числа,
 // значение может быть возвращено в экспоненциальной записи.
 console.log((1234.5).toPrecision(2)); // выведет '1.2e+3'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toString()")}}

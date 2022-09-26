@@ -3,67 +3,63 @@ title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>handler.get()</code></strong> является ловушкой для получения значения свойства.</p>
+Метод **`handler.get()`** является ловушкой для получения значения свойства.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
-  get: function(<var>target</var>, <var>property</var>, <var>receiver</var>) {
+```
+const p = new Proxy(target, {
+  get: function(target, property, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Следующие параметры передаются методу <code>get()</code>. <code>this</code> привязан к обработчику.</p>
+Следующие параметры передаются методу `get()`. `this` привязан к обработчику.
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>Исходный объект, который проксируется.</dd>
- <dt><code><var>property</var></code></dt>
- <dd>Наименование или {{jsxref("Symbol")}} получаемого свойства. </dd>
- <dt><code><var>receiver</var></code></dt>
- <dd>Прокси или объект, наследуемый от прокси..</dd>
-</dl>
+- `target`
+  - : Исходный объект, который проксируется.
+- `property`
+  - : Наименование или {{jsxref("Symbol")}} получаемого свойства.
+- `receiver`
+  - : Прокси или объект, наследуемый от прокси..
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Метод <code>get()</code> может возвращать значение.</p>
+Метод `get()` может возвращать значение.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code><strong>handler.get()</strong></code> является ловушкой для получения значения свойства.</p>
+Метод **`handler.get()`** является ловушкой для получения значения свойства.
 
-<h3 id="Перехват">Перехват</h3>
+### Перехват
 
-<p>Эта ловушка может перехватывать следующие операции:</p>
+Эта ловушка может перехватывать следующие операции:
 
-<ul>
- <li>Доступ к свойству: <code><var>proxy</var>[<var>foo</var>]</code>and <code><var>proxy</var>.<var>bar</var></code></li>
- <li>Доступ к наследованному свойству: <code>Object.create(<var>proxy</var>)[<var>foo</var>]</code></li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- Доступ к свойству: `proxy[foo]`and `proxy.bar`
+- Доступ к наследованному свойству: `Object.create(proxy)[foo]`
+- {{jsxref("Reflect.get()")}}
 
-<h3 id="Инварианты">Инварианты</h3>
+### Инварианты
 
-<p>Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}:</p>
+Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}:
 
-<ul>
- <li>Значение, сообщаемое для свойства, должно быть таким же, как значение соответствующего свойства целевого объекта, если свойство целевого объекта является неперезаписываемым, не настраиваемым свойством собственных данных.</li>
- <li>Значение, сообщаемое для свойства, должно быть undefined, если соответствующее свойство целевого объекта не является настраиваемым собственным свойством доступа, которое <code>undefined</code> как и его атрибут <code>[[Get]]</code> attribute.</li>
-</ul>
+- Значение, сообщаемое для свойства, должно быть таким же, как значение соответствующего свойства целевого объекта, если свойство целевого объекта является неперезаписываемым, не настраиваемым свойством собственных данных.
+- Значение, сообщаемое для свойства, должно быть undefined, если соответствующее свойство целевого объекта не является настраиваемым собственным свойством доступа, которое `undefined` как и его атрибут `[[Get]]` attribute.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Ловушка_для_получения_значения_свойства">Ловушка для получения значения свойства</h3>
+### Ловушка для получения значения свойства
 
-<p>Следующий код перехватывает получение значения свойства.</p>
+Следующий код перехватывает получение значения свойства.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   get: function(target, property, receiver) {
     console.log('called: ' + property);
     return 10;
@@ -72,11 +68,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 
 console.log(p.a); // "called: a"
                   // 10
-</pre>
+```
 
-<p>Следующий код нарушает инвариант.</p>
+Следующий код нарушает инвариант.
 
-<pre class="brush: js">const obj = {};
+```js
+const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: false,
@@ -91,24 +88,18 @@ const p = new Proxy(obj, {
 });
 
 p.a; // TypeError is thrown
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat("javascript.builtins.Proxy.handler.get")}}
 
+## Смотрите также
 
-<p>{{Compat("javascript.builtins.Proxy.handler.get")}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.get()")}}

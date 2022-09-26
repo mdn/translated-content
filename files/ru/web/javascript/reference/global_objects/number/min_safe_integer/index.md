@@ -8,37 +8,36 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Константа <strong><code>Number.MIN_SAFE_INTEGER</code></strong> представляет минимальное безопасное целочисленное значение в JavaScript (<code>-(2<sup>53</sup> - 1)</code>).</p>
+Константа **`Number.MIN_SAFE_INTEGER`** представляет минимальное безопасное целочисленное значение в JavaScript (`-(253 - 1)`).
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Константа <code>MIN_SAFE_INTEGER</code> имеет значение <code>-9007199254740991</code>. Смысл этого числа в том, что в JavaScript используется <a href="https://ru.wikipedia.org/wiki/Число_двойной_точности">формат чисел с плавающей запятой двойной точности</a>, как определено в стандарте <a href="https://ru.wikipedia.org/wiki/IEEE_754">IEEE 754</a>, а он может безопасно представлять числа только в диапазоне от <code>-(2<sup>53</sup> - 1)</code> до <code>2<sup>53</sup> - 1</code>.</p>
+Константа `MIN_SAFE_INTEGER` имеет значение `-9007199254740991`. Смысл этого числа в том, что в JavaScript используется [формат чисел с плавающей запятой двойной точности](https://ru.wikipedia.org/wiki/Число_двойной_точности), как определено в стандарте [IEEE 754](https://ru.wikipedia.org/wiki/IEEE_754), а он может безопасно представлять числа только в диапазоне от `-(253 - 1)` до `253 - 1`.
 
-<p>Поскольку <code>MIN_SAFE_INTEGER</code> является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как <code>Number.MIN_SAFE_INTEGER</code>, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
+Поскольку `MIN_SAFE_INTEGER` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MIN_SAFE_INTEGER`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">Number.MIN_SAFE_INTEGER // -9007199254740991
+```js
+Number.MIN_SAFE_INTEGER // -9007199254740991
 -(Math.pow(2, 53) - 1)  // -9007199254740991
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.isSafeInteger()")}}</li>
-</ul>
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- {{jsxref("Number.isSafeInteger()")}}

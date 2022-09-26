@@ -11,59 +11,61 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.imul()</code></strong> возвращает результат перемножения в стиле C двух 32-битных чисел.</p>
+Метод **`Math.imul()`** возвращает результат перемножения в стиле C двух 32-битных чисел.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.imul(<var>a</var>, <var>b</var>)</code></pre>
+```
+Math.imul(a, b)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>a</code></dt>
- <dd>Первое число.</dd>
- <dt><code>b</code></dt>
- <dd>Второе число.</dd>
-</dl>
+- `a`
+  - : Первое число.
+- `b`
+  - : Второе число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>Math.imul()</code> позволяет выполнять быстрое перемножение двух 32-битных чисел с семантикой C. Эта возможность полезна для таких проектов, как <a href="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a>. Поскольку метод <code>imul()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.imul()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Метод `Math.imul()` позволяет выполнять быстрое перемножение двух 32-битных чисел с семантикой C. Эта возможность полезна для таких проектов, как [Emscripten](http://en.wikipedia.org/wiki/Emscripten). Поскольку метод `imul()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.imul()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.imul">Пример: использование метода <code>Math.imul()</code></h3>
+### Пример: использование метода `Math.imul()`
 
-<pre class="brush: js">Math.imul(2, 4);          // 8
+```js
+Math.imul(2, 4);          // 8
 Math.imul(-1, 8);         // -8
 Math.imul(-2, -2);        // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод может эмулироваться следующим способом:</p>
+Этот метод может эмулироваться следующим способом:
 
-<pre class="brush: js">Math.imul = Math.imul || function(a, b) {
-  var ah = (a &gt;&gt;&gt; 16) &amp; 0xffff;
-  var al = a &amp; 0xffff;
-  var bh = (b &gt;&gt;&gt; 16) &amp; 0xffff;
-  var bl = b &amp; 0xffff;
+```js
+Math.imul = Math.imul || function(a, b) {
+  var ah = (a >>> 16) & 0xffff;
+  var al = a & 0xffff;
+  var bh = (b >>> 16) & 0xffff;
+  var bl = b & 0xffff;
   // сдвиг на 0 бит закрепляет знак в старшей части числа
   // окончательный |0 преобразует беззнаковое значение обратно в знаковое значение
-  return ((al * bl) + (((ah * bl + al * bh) &lt;&lt; 16) &gt;&gt;&gt; 0)|0);
+  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

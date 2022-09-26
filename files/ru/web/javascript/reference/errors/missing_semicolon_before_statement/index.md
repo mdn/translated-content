@@ -8,75 +8,84 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: Expected ';' (Edge)
-SyntaxError: missing ; before statement (Firefox)</pre>
+```
+SyntaxError: Expected ';' (Edge)
+SyntaxError: missing ; before statement (Firefox)
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Отсутствует точка с запятой (<code>;</code>). <a href="/ru/docs/Web/JavaScript/Reference/Statements">Инструкции JavaScript</a> должны заканчиваться точкой с запятой. В некоторых случаях имеет место <a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Автоматическая_вставка_точки_с_запятой">автоматическая вставка точки с запятой (ASI)</a>, но в данном случае необходимо её поставить, чтобы JavaScript мог правильно обработать исходный код.</p>
+Отсутствует точка с запятой (`;`). [Инструкции JavaScript](/ru/docs/Web/JavaScript/Reference/Statements) должны заканчиваться точкой с запятой. В некоторых случаях имеет место [автоматическая вставка точки с запятой (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Автоматическая_вставка_точки_с_запятой), но в данном случае необходимо её поставить, чтобы JavaScript мог правильно обработать исходный код.
 
-<p><span id="result_box" lang="ru"><span>Часто эта ошибка является следствием другой ошибки, например, некорректного экранирования строк или неправильного использования <code>var</code>.</span> Кроме того, где-то может быть с<span>лишком много скобок.</span> <span>Тщательно проверьте синтаксис при возникновении этой ошибки.</span></span></p>
+Часто эта ошибка является следствием другой ошибки, например, некорректного экранирования строк или неправильного использования `var`. Кроме того, где-то может быть слишком много скобок. Тщательно проверьте синтаксис при возникновении этой ошибки.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неэкранированные_строки">Неэкранированные строки</h3>
+### Неэкранированные строки
 
-<p>Эта ошибка может легко возникнуть, если не экранировать строку правильным образом, из-за чего JavaScript будет рассматривать это место как конец строки. Например:</p>
+Эта ошибка может легко возникнуть, если не экранировать строку правильным образом, из-за чего JavaScript будет рассматривать это место как конец строки. Например:
 
-<pre class="brush: js example-bad">var foo = 'Tom's bar';
-// SyntaxError: missing ; before statement</pre>
+```js example-bad
+var foo = 'Tom's bar';
+// SyntaxError: missing ; before statement
+```
 
-<p>Можно использовать двойные кавычки или экранировать апостроф:</p>
+Можно использовать двойные кавычки или экранировать апостроф:
 
-<pre class="brush: js example-good">var foo = "Tom's bar";
+```js example-good
+var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
-</pre>
+```
 
-<h3 id="Объявление_свойств_через_var">Объявление свойств через var</h3>
+### Объявление свойств через var
 
-<p><strong>Нельзя</strong> объявить свойство объекта или массива с помощью <code>var</code>.</p>
+**Нельзя** объявить свойство объекта или массива с помощью `var`.
 
-<pre class="brush: js example-bad">var obj = {};
+```js example-bad
+var obj = {};
 var obj.foo = 'привет'; // SyntaxError missing ; before statement
 
 var array = [];
 var array[0] = 'всем'; // SyntaxError missing ; before statement
-</pre>
+```
 
-<p>Ключевое слово <code>var</code> необходимо опустить:</p>
+Ключевое слово `var` необходимо опустить:
 
-<pre class="brush: js example-good">var obj = {};
+```js example-good
+var obj = {};
 obj.foo = 'привет';
 
 var array = [];
 array[0] = 'всем';
-</pre>
+```
 
-<h3 id="Неправильные_ключевые_слова">Неправильные ключевые слова</h3>
+### Неправильные ключевые слова
 
-<p>При переходе с другого языка программирования частой проблемой является использование ключевых слов, которые в JavaScript имеют другое значение или ничего не означают.</p>
+При переходе с другого языка программирования частой проблемой является использование ключевых слов, которые в JavaScript имеют другое значение или ничего не означают.
 
-<pre class="brush: js example-bad">def print(info){
+```js example-bad
+def print(info){
   console.log(info);
-}; // SyntaxError missing ; before statement</pre>
+}; // SyntaxError missing ; before statement
+```
 
-<p>Вместо <code>def</code> используйте <code>function</code>:</p>
+Вместо `def` используйте `function`:
 
-<pre class="brush: js example-good">function print(info){
+```js example-good
+function print(info){
   console.log(info);
-};</pre>
+};
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Автоматическая_вставка_точки_с_запятой">Автоматическая вставка точки с запятой (ASI)</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Statements">Инструкции JavaScript</a></li>
-</ul>
+- [Автоматическая вставка точки с запятой (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Автоматическая_вставка_точки_с_запятой)
+- [Инструкции JavaScript](/ru/docs/Web/JavaScript/Reference/Statements)

@@ -6,39 +6,39 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">Опасно: Внимание: -file- является в сущности назначенным //# sourceMappingURL, но уже имеет один)</pre>
+```
+Опасно: Внимание: -file- является в сущности назначенным //# sourceMappingURL, но уже имеет один)
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>Предупреждение. Выполнение скрипта не будет остановлено.</p>
+Предупреждение. Выполнение скрипта не будет остановлено.
 
-<h2 id="Что_вы_сделали_не_так">Что вы сделали не так?</h2>
+## Что вы сделали не так?
 
-<p> </p>
+Для данного источника JavaScript исходная карта была указана несколько раз.
 
-<p>Для данного источника JavaScript исходная карта была указана несколько раз.</p>
+Источники JavaScript часто объединяются и минимизируются, чтобы сделать их доставку с сервера более эффективной. С помощью сопоставлений исходного кода отладчик может сопоставить выполняемый код с исходными файлами. Существует два способа назначения исходной карты: с помощью комментария или путём установки заголовка для файла JavaScript.
 
-<p>Источники JavaScript часто объединяются и минимизируются, чтобы сделать их доставку с сервера более эффективной. С помощью сопоставлений исходного кода отладчик может сопоставить выполняемый код с исходными файлами. Существует два способа назначения исходной карты: с помощью комментария или путём установки заголовка для файла JavaScript.</p>
+## Примеры
 
-<p> </p>
+Настройка исходной карты с помощью комментария в файле:
 
-<h2 id="Примеры">Примеры</h2>
+```js example-good
+//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```
 
-<p>Настройка исходной карты с помощью комментария в файле:</p>
+Или, в качестве альтернативы, вы можете установить заголовок, на ваш JavaScript файл :
 
-<pre class="brush: js example-good">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
+```js example-good
+X-SourceMap: /path/to/file.js.map
+```
 
-<p>Или, в качестве альтернативы, вы можете установить заголовок, на ваш JavaScript файл :</p>
+## Смотрите также
 
-<pre class="brush: js example-good">X-SourceMap: /path/to/file.js.map</pre>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">How to use a source map – Firefox Tools documentation</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Introduction to source maps – HTML5 rocks</a></li>
-</ul>
+- [How to use a source map – Firefox Tools documentation](/ru/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [Introduction to source maps – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

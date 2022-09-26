@@ -9,59 +9,66 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Объект <code><strong>InternalError</strong></code> представляет ошибку, возникающую внутри движка JavaScript. Например: "InternalError: too much recursion".</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+Объект **`InternalError`** представляет ошибку, возникающую внутри движка JavaScript. Например: "InternalError: too much recursion".
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>message</code></dt>
- <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Исключение <code>InternalError</code> выбрасывается при возникновении внутренней ошибки в движке JavaScript.</p>
-<p>Как правило, эти ошибки связаны с тем, что что-то стало слишком большим, либо чего-то стало слишком много, например:</p>
-<ul>
- <li>"too many switch cases" — слишком много веток <code>case</code> в операторе <code>switch</code>;</li>
- <li>"too many parentheses in regular expression" — слишком много круглых скобок в регулярном выражении;</li>
- <li>"array initializer too large" — инициализатор массива слишком большой;</li>
- <li>"too much recursion" — слишком глубокая рекурсия.</li>
-</ul>
+```
+new InternalError([message[, fileName[, lineNumber]]])
+```
 
-<h2 id="Properties">Свойства</h2>
-<dl>
- <dt>{{jsxref("InternalError.prototype")}}</dt>
- <dd>Позволяет добавлять свойства в объект <code>InternalError</code>.</dd>
-</dl>
+### Параметры
 
-<h2 id="Methods">Методы</h2>
-<p>Глобальный объект <code>InternalError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
+- `message`
+  - : Необязательный параметр. Человеко-читаемое описание ошибки.
+- `fileName` {{non-standard_inline}}
+  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
+- `lineNumber` {{non-standard_inline}}
+  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
 
-<h2 id="InternalError_instances">Экземпляры объекта <code>InternalError</code></h2>
+## Описание
 
-<h3 id="Properties_of_InternalError_instances">Свойства</h3>
-<div>{{page('/ru/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Properties')}}</div>
+Исключение `InternalError` выбрасывается при возникновении внутренней ошибки в движке JavaScript.
 
-<h3 id="Methods_of_InternalError_instances">Методы</h3>
-<div>{{page('/ru/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Methods')}}</div>
+Как правило, эти ошибки связаны с тем, что что-то стало слишком большим, либо чего-то стало слишком много, например:
 
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какой-либо спецификации.</p>
+- "too many switch cases" — слишком много веток `case` в операторе `switch`;
+- "too many parentheses in regular expression" — слишком много круглых скобок в регулярном выражении;
+- "array initializer too large" — инициализатор массива слишком большой;
+- "too much recursion" — слишком глубокая рекурсия.
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Свойства
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("InternalError.prototype")}}</li>
-</ul>
+- {{jsxref("InternalError.prototype")}}
+  - : Позволяет добавлять свойства в объект `InternalError`.
+
+## Методы
+
+Глобальный объект `InternalError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
+
+## Экземпляры объекта `InternalError`
+
+### Свойства
+
+{{page('/ru/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Properties')}}
+
+### Методы
+
+{{page('/ru/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Methods')}}
+
+## Спецификации
+
+Не является частью какой-либо спецификации.
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Error")}}
+- {{jsxref("InternalError.prototype")}}

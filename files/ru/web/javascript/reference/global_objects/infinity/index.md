@@ -5,45 +5,44 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Глобальное свойство <code><strong>Infinity</strong></code> является числовым значением, представляющим бесконечность.</p>
+Глобальное свойство **`Infinity`** является числовым значением, представляющим бесконечность.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
+{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}</p>
+## Описание
 
-<h2 id="Description">Описание</h2>
+`Infinity` является свойством _глобального объекта_, то есть, это переменная в глобальной области видимости.
 
-<p><code>Infinity</code> является свойством <em>глобального объекта</em>, то есть, это переменная в глобальной области видимости.</p>
+Начальным значением `Infinity` является {{jsxref("Number.POSITIVE_INFINITY")}}. Значение `Infinity` (положительная бесконечность) больше любого другого числа, включая саму положительную бесконечность. Это значение ведёт себя как математическая бесконечность; например, любое положительное число, умноженное на `Infinity` даёт `Infinity`, а любое число, делённое на `Infinity` даёт 0.
 
-<p>Начальным значением <code>Infinity</code> является {{jsxref("Number.POSITIVE_INFINITY")}}. Значение <code>Infinity</code> (положительная бесконечность) больше любого другого числа, включая саму положительную бесконечность. Это значение ведёт себя как математическая бесконечность; например, любое положительное число, умноженное на <code>Infinity</code> даёт <code>Infinity</code>, а любое число, делённое на <code>Infinity</code> даёт 0.</p>
+В спецификации ECMAScript 5 `Infinity` является свойством только для чтения (реализована в JavaScript 1.8.5 / Firefox 4).
 
-<p>В спецификации ECMAScript 5 <code>Infinity</code> является свойством только для чтения (реализована в JavaScript 1.8.5 / Firefox 4).</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre><code>console.log(Infinity          ); /* Infinity */
+```
+console.log(Infinity          ); /* Infinity */
 console.log(Infinity + 1      ); /* Infinity */
 console.log(Math.pow(10, 1000)); /* Infinity */
 console.log(Math.log(0)       ); /* -Infinity */
-console.log(1 / Infinity      ); /* 0 */</code></pre>
+console.log(1 / Infinity      ); /* 0 */
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite")}}

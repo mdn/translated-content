@@ -6,76 +6,44 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор <strong><code>typeof</code></strong> возвращает строку, указывающую тип операнда.</p>
+Оператор **`typeof`** возвращает строку, указывающую тип операнда.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Операнд следует за оператором <code>typeof</code>:</p>
+Операнд следует за оператором `typeof`:
 
-<pre class="syntaxbox">typeof <em>operand</em></pre>
+```
+typeof operand
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p><code><em>operand</em></code> является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.</p>
+`operand` является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>В следующей таблице приведены возможные возвращаемые значения <code>typeof</code>. Дополнительная информация о типах и примитивах находится на странице <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures">структуры данных JavaScript</a>.</p>
+В следующей таблице приведены возможные возвращаемые значения `typeof`. Дополнительная информация о типах и примитивах находится на странице [структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Type</th>
-   <th scope="col">Result</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Undefined</td>
-   <td><code>"undefined"</code></td>
-  </tr>
-  <tr>
-   <td>Null</td>
-   <td><code>"object" </code>(смотрите ниже)</td>
-  </tr>
-  <tr>
-   <td>Boolean</td>
-   <td><code>"boolean"</code></td>
-  </tr>
-  <tr>
-   <td>Number</td>
-   <td><code>"number"</code></td>
-  </tr>
-  <tr>
-   <td>String</td>
-   <td><code>"string"</code></td>
-  </tr>
-  <tr>
-   <td>Symbol (новый тип из ECMAScript 2015)</td>
-   <td><code>"symbol"</code></td>
-  </tr>
-  <tr>
-   <td>Host object (определено JS окружением)</td>
-   <td><em>Зависит от реализации</em></td>
-  </tr>
-  <tr>
-   <td>Function object (реализует [[Call]] в терминах ECMA-262)</td>
-   <td><code>"function"</code></td>
-  </tr>
-  <tr>
-   <td>Любой другой тип</td>
-   <td><code>"object"</code></td>
-  </tr>
- </tbody>
-</table>
+| Type                                                       | Result                     |
+| ---------------------------------------------------------- | -------------------------- |
+| Undefined                                                  | `"undefined"`              |
+| Null                                                       | `"object" `(смотрите ниже) |
+| Boolean                                                    | `"boolean"`                |
+| Number                                                     | `"number"`                 |
+| String                                                     | `"string"`                 |
+| Symbol (новый тип из ECMAScript 2015)                      | `"symbol"`                 |
+| Host object (определено JS окружением)                     | _Зависит от реализации_    |
+| Function object (реализует \[\[Call]] в терминах ECMA-262) | `"function"`               |
+| Любой другой тип                                           | `"object"`                 |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:js">// Числа
+```js
+// Числа
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
@@ -114,7 +82,7 @@ typeof undeclaredVariable === 'undefined';
 // Объекты
 typeof {a: 1} === 'object';
 
-// используйте <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray</a> или Object.prototype.toString.call
+// используйте Array.isArray или Object.prototype.toString.call
 // чтобы различить обычные объекты и массивы
 typeof [1, 2, 4] === 'object';
 
@@ -131,23 +99,23 @@ typeof new String('abc') === 'object';
 typeof function() {} === 'function';
 typeof class C {} === 'function';
 typeof Math.sin === 'function';
-</pre>
+```
 
-<h3 id="null"><code>null</code></h3>
+### `null`
 
-<pre class="brush:js">// Это было определено с рождения JavaScript
+```js
+// Это было определено с рождения JavaScript
 typeof null === 'object';
-</pre>
+```
 
-<p> </p>
+В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. `null` был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для `null` равнялся нулю, поэтому возвращаемое значение `typeof` является фиктивным. ([подробнее](http://www.2ality.com/2013/10/typeof-null.html))
 
-<p>В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. <code>null</code> был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для <code>null</code> равнялся нулю, поэтому возвращаемое значение <code>typeof</code> является фиктивным. (<a href="http://www.2ality.com/2013/10/typeof-null.html">подробнее</a>)</p>
+Исправление было предложено в ECMAScript (через отключение), но [было отклонено](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null). Это привело бы к тому, что `typeof null === 'null'`.
 
-<p>Исправление было предложено в ECMAScript (через отключение), но <a href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">было отклонено</a>. Это привело бы к тому, что <code>typeof null === 'null'</code>.</p>
+### Использование оператора `new`
 
-<h3 id="Использование_оператора_new">Использование оператора <code>new</code></h3>
-
-<pre class="brush:js">// Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object'
+```js
+// Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object'
 var str = new String('String');
 var num = new Number(100);
 
@@ -159,51 +127,54 @@ typeof num; // Вернёт 'object'
 var func = new Function();
 
 typeof func; // Вернёт 'function'
-</pre>
+```
 
-<h3 id="Регулярные_выражения">Регулярные выражения</h3>
+### Регулярные выражения
 
-<p>Вызываемые регулярные выражения были нестандартным дополнением в некоторых браузерах.</p>
+Вызываемые регулярные выражения были нестандартным дополнением в некоторых браузерах.
 
-<pre class="brush:js">typeof /s/ === 'function'; // Chrome 1-12 Не соответствует ECMAScript 5.1
+```js
+typeof /s/ === 'function'; // Chrome 1-12 Не соответствует ECMAScript 5.1
 typeof /s/ === 'object';   // Firefox 5+  Соответствует ECMAScript 5.1
-</pre>
+```
 
-<h3 id="Ошибки_связанные_с_временными_мёртвыми_зонами">Ошибки, связанные с временными мёртвыми зонами</h3>
+### Ошибки, связанные с временными мёртвыми зонами
 
-<p>До ECMAScript 2015, гарантировалось, что оператор <code>typeof</code> вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code> с блочной областью  видимости. Теперь, если переменные объявлены с помощью <code>let</code> и <code>const</code>, и для них вызывается <code>typeof</code> в блоке объявления переменных, но до объявления, то выбрасывается <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>. Поведение отличается от необъявленных переменных, для которых <code>typeof</code> вернёт 'undefined'. Переменные с блочной областью видимости находятся в "<a href="/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">временной мёртвой зоне</a>", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.</p>
+До ECMAScript 2015, гарантировалось, что оператор `typeof` вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) с блочной областью видимости. Теперь, если переменные объявлены с помощью `let` и `const`, и для них вызывается `typeof` в блоке объявления переменных, но до объявления, то выбрасывается [`ReferenceError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Поведение отличается от необъявленных переменных, для которых `typeof` вернёт 'undefined'. Переменные с блочной областью видимости находятся в "[временной мёртвой зоне](/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.
 
-<pre class="brush: js">typeof undeclaredVariable === 'undefined';
+```js
+typeof undeclaredVariable === 'undefined';
 typeof newLetVariable; let newLetVariable; // ReferenceError
 typeof newConstVariable; const newConstVariable = 'hello'; // ReferenceError
-</pre>
+```
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>Во всех текущих браузерах существует нестандартный host-объект {{domxref("document.all")}}, который имеет тип Undefined.</p>
+Во всех текущих браузерах существует нестандартный host-объект {{domxref("document.all")}}, который имеет тип Undefined.
 
-<pre class="brush:js">typeof document.all === 'undefined';
-</pre>
+```js
+typeof document.all === 'undefined';
+```
 
-<p>Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, требуется чтобы эти имена отличались от предопределённых. Ситуация, когда <code>document.all</code> имеет тип <code>undefined</code> должна рассматриваться как исключительное нарушение правил.</p>
+Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, требуется чтобы эти имена отличались от предопределённых. Ситуация, когда `document.all` имеет тип `undefined` должна рассматриваться как исключительное нарушение правил.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="IE-специфичные_замечания">IE-специфичные замечания</h2>
+## IE-специфичные замечания
 
-<p>В IE 6, 7 и 8 многие host-объекты являются объектами, но не функциями. Например:</p>
+В IE 6, 7 и 8 многие host-объекты являются объектами, но не функциями. Например:
 
-<pre class="brush: js">typeof alert === 'object'</pre>
+```js
+typeof alert === 'object'
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></code></li>
- <li><a href="http://es-discourse.com/t/why-typeof-is-no-longer-safe/15">Why typeof is no longer "safe"</a></li>
-</ul>
+- [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [Why typeof is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15)

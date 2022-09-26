@@ -9,38 +9,37 @@ tags:
   - asIntN
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>BigInt.asIntN</code></strong> — это статический метод, который позволяет перенести BigInt-значение в целое число со знаком между  -2<sup>ширина-1</sup> and 2<sup>ширина-1</sup>-1.</p>
+**`BigInt.asIntN`** — это статический метод, который позволяет перенести BigInt-значение в целое число со знаком между -2ширина-1 and 2ширина-1-1.
 
-<div>\{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}</div>
+\\{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}
 
+## Синтаксис
 
+```
+BigInt.asIntN(width, bigint);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Аргументы
 
-<pre class="syntaxbox">BigInt.asIntN(<var>width</var>, <var>bigint</var>);</pre>
+- `width`
+  - : Количество битов, доступных для целочисленного размера.
+- `bigint`
+  - : Целое число для зажима, чтобы соответствовать поставляемым битам.
 
-<h3 id="Аргументы">Аргументы</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>width</code></dt>
- <dd>Количество битов, доступных для целочисленного размера.</dd>
- <dt><code>bigint</code></dt>
- <dd>Целое число для зажима, чтобы соответствовать поставляемым битам.</dd>
-</dl>
+Значение `bigint` по модулю 2`width` как целое число со знаком.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Значение <code>bigint</code><span style="font-size: 13.3333px;"> </span>по модулю 2<code><sup>width</sup></code> как целое число со знаком.</p>
+### Пребывание в 64-битных диапазонах
 
-<h2 id="Примеры">Примеры</h2>
+Метод `BigInt.asIntN()` может быть полезен, чтобы оставаться в диапазоне 64-битной арифметики.
 
-<h3 id="Пребывание_в_64-битных_диапазонах">Пребывание в 64-битных диапазонах</h3>
-
-<p>Метод  <code>BigInt.asIntN()</code> может быть полезен, чтобы оставаться в диапазоне 64-битной арифметики.</p>
-
-<pre class="brush: js">const max = 2n ** (64n - 1n) - 1n;
+```js
+const max = 2n ** (64n - 1n) - 1n;
 
 BigInt.asIntN(64, max);
 // ↪ 9223372036854775807n
@@ -48,21 +47,17 @@ BigInt.asIntN(64, max);
 BigInt.asIntN(64, max + 1n);
 // ↪ -9223372036854775807n
 // отрицательное число из-за переполнения
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{JSxRef("BigInt")}}</li>
- <li>{{JSxRef("BigInt.asUintN()")}}</li>
-</ul>
+- {{JSxRef("BigInt")}}
+- {{JSxRef("BigInt.asUintN()")}}

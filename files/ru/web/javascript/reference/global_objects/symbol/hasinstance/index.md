@@ -7,39 +7,33 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.hasInstance</code></strong> — известный символ, который используется для определения является ли объект экземпляром конструктора. Этот символ используется для изменения поведения оператора {{jsxref("Operators/instanceof", "instanceof")}}.</p>
+**`Symbol.hasInstance`** — известный символ, который используется для определения является ли объект экземпляром конструктора. Этот символ используется для изменения поведения оператора {{jsxref("Operators/instanceof", "instanceof")}}.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Поведение <code>instanceof</code> может быть изменено, например, следующим образом:</p>
+Поведение `instanceof` может быть изменено, например, следующим образом:
 
-<pre class="brush: js">class MyArray {
+```js
+class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance);
   }
 }
-console.log([] instanceof MyArray); // true</pre>
+console.log([] instanceof MyArray); // true
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<div id="compat-desktop"> </div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}

@@ -9,60 +9,51 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>getUTCDate()</code></strong> возвращает день месяца указанной даты по всемирному координированному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><var>dateObj</var>.getUTCDate()</pre>
+Метод **`getUTCDate()`** возвращает день месяца указанной даты по всемирному координированному времени.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h3 id="Returns">Возвращаемое значение</h3>
-<p>Значение, возвращённое методом <code>getUTCDate()</code>, является целым числом от 1 до 31.</p>
+```
+dateObj.getUTCDate()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_getUTCDate">Пример: использование метода <code>getUTCDate()</code></h3>
-<p>В следующем примере переменной <code>day</code> присваивается значение дня из текущей даты.</p>
-<pre class="brush: js">var today = new Date();
+Нет.
+
+### Возвращаемое значение
+
+Значение, возвращённое методом `getUTCDate()`, является целым числом от 1 до 31.
+
+## Примеры
+
+### Пример: использование метода `getUTCDate()`
+
+В следующем примере переменной `day` присваивается значение дня из текущей даты.
+
+```js
+var today = new Date();
 var day = today.getUTCDate();
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.15', 'Date.prototype.getUTCDate')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализовано в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.15', 'Date.prototype.getUTCDate')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

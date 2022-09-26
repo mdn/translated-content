@@ -11,30 +11,31 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Number.isFinite()</code></strong> определяет, является ли переданное значение конечным числом.</p>
+Метод **`Number.isFinite()`** определяет, является ли переданное значение конечным числом.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Number.isFinite(<var>testValue</var>)</code></pre>
+```
+Number.isFinite(testValue)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>testValue</code></dt>
- <dd>Значение, проверяемое на конечность.</dd>
-</dl>
+- `testValue`
+  - : Значение, проверяемое на конечность.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>В отличии от глобальной функции {{jsxref("Global_Objects/isFinite", "isFinite()")}}, этот метод принудительно не преобразует параметр в число. Это означает, что он возвращает <code>true</code> только для конечных значений числового типа.</p>
+В отличии от глобальной функции {{jsxref("Global_Objects/isFinite", "isFinite()")}}, этот метод принудительно не преобразует параметр в число. Это означает, что он возвращает `true` только для конечных значений числового типа.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -43,25 +44,24 @@ Number.isFinite(2e64);      // true
 
 Number.isFinite('0');       // false, при использовании глобальной
                             // функции isFinite('0') было бы true
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-  return typeof value === 'number' &amp;&amp; isFinite(value);
+```js
+Number.isFinite = Number.isFinite || function(value) {
+  return typeof value === 'number' && isFinite(value);
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.</li>
-</ul>
+- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.

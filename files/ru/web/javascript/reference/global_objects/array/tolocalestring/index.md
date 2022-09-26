@@ -9,35 +9,36 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>toLocaleString()</strong></code> возвращает строковое представление элементов массива. Элементы преобразуются в строки с использованием своих собственных методов <code>toLocaleString</code> и эти строки разделяются локале-зависимой строкой (например, запятой «,»).</p>
+Метод **`toLocaleString()`** возвращает строковое представление элементов массива. Элементы преобразуются в строки с использованием своих собственных методов `toLocaleString` и эти строки разделяются локале-зависимой строкой (например, запятой «,»).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.toLocaleString();</code></pre>
+```
+arr.toLocaleString();
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Элементы массива преобразуются в строки с использованием своих собственных методов <code>toLocaleString</code>:</p>
+Элементы массива преобразуются в строки с использованием своих собственных методов `toLocaleString`:
 
-<ul>
- <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
+- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
+- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_toLocaleString">Пример: использование <code>toLocaleString</code></h3>
+### Пример: использование `toLocaleString`
 
-<pre class="brush: js">var number = 1337;
+```js
+var number = 1337;
 var date = new Date();
 var myArr = [number, date, 'foo'];
 
@@ -46,18 +47,16 @@ var str = myArr.toLocaleString();
 console.log(str);
 // напечатает '1337,6.12.2013 19:37:35,foo',
 // если работает под германской локалью (de-DE) с временной зоной Европа/Берлин
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toString()")}}

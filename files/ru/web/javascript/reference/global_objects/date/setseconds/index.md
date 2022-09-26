@@ -9,67 +9,59 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setSeconds()</code></strong> устанавливает секунды указанной даты по местному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setSeconds(<var>secondsValue</var>[, <var>msValue</var>])</code></pre>
+Метод **`setSeconds()`** устанавливает секунды указанной даты по местному времени.
 
-<h3 id="Версия_до_JavaScript_1.3">Версия до JavaScript 1.3</h3>
-<pre class="syntaxbox"><code><var>dateObj</var>.setSeconds(<var>secondsValue</var>)</code></pre>
+## Синтаксис
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>secondsValue</code></dt>
- <dd>Целое число от 0 до 59, представляющее количество секунд.</dd>
- <dt><code>msValue</code></dt>
- <dd>Необязательный параметр. Число от 0 до 999, представляющее количество миллисекунд.</dd>
-</dl>
+```
+dateObj.setSeconds(secondsValue[, msValue])
+```
 
-<h2 id="Description">Описание</h2>
-<p>Если вы не определите значения параметра <code>msValue</code>, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.</p>
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setSeconds()</code> попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>secondsValue</code> передать значение 100, минуты увеличатся на 1, а в качестве секунд будет использоваться значение 40.</p>
+### Версия до JavaScript 1.3
 
-<h2 id="Examples">Примеры</h2>
+```
+dateObj.setSeconds(secondsValue)
+```
 
-<h3 id="Example:_Using_setSeconds">Пример: использование метода <code>setSeconds()</code></h3>
-<pre class="brush: js">var theBigDay = new Date();
+### Параметры
+
+- `secondsValue`
+  - : Целое число от 0 до 59, представляющее количество секунд.
+- `msValue`
+  - : Необязательный параметр. Число от 0 до 999, представляющее количество миллисекунд.
+
+## Описание
+
+Если вы не определите значения параметра `msValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.
+
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setSeconds()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `secondsValue` передать значение 100, минуты увеличатся на 1, а в качестве секунд будет использоваться значение 40.
+
+## Примеры
+
+### Пример: использование метода `setSeconds()`
+
+```js
+var theBigDay = new Date();
 theBigDay.setSeconds(30);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}
