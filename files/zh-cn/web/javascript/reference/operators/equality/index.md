@@ -36,7 +36,7 @@ x == y
    - Number to BigInt：按数值进行比较。如果数值为 ±∞ 或 `NaN`，返回 `false`。
    - String to BigInt：使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为 BigInt。如果转换失败，返回 `false`。
 
-宽松相等是 _对称的_: `A == B` 对于 `A` 和 `B` 的任何值总是具有与 `B == A` 相同的语义（应用转换的顺序除外）。
+宽松相等是*对称的*：`A == B` 对于 `A` 和 `B` 的任何值总是具有与 `B == A` 相同的语义（应用转换的顺序除外）。
 
 该运算符与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/strict_equal)（`===`）运算符之间最显著的区别是，严格相等操作符不尝试类型转换。相反，严格相等操作符总是认为不同类型的操作数是不同的。严格相等运算符本质上只执行第 1 步，然后对所有其他情况返回 `false`。
 
