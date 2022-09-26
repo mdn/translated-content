@@ -72,7 +72,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.downloads")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

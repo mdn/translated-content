@@ -71,7 +71,7 @@ _从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAudioElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -65,7 +65,7 @@ observer.disconnect();
 
 ## 浏览器兼容
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}
 
 ## 参见
 

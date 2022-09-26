@@ -53,7 +53,7 @@ console.log(str);        // "foo  "
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## Polyfill
 

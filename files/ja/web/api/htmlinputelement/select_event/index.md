@@ -3,6 +3,7 @@ title: 'Element: select イベント'
 slug: Web/API/HTMLInputElement/select_event
 original_slug: Web/API/Element/select_event
 ---
+
 {{APIRef}}
 
 **`select`** イベントは、いくらかのテキストが選択されたときに発生します。

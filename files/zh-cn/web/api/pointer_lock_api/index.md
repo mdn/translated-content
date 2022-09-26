@@ -206,7 +206,7 @@ partial interface MouseEvent {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 参见
 

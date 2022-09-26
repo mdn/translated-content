@@ -111,7 +111,7 @@ q:after {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.quotes")}}
+{{Compat}}
 
 ## 参考
 

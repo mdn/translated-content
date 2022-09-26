@@ -105,4 +105,4 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-image-width")}}
+{{Compat}}

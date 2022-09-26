@@ -27,7 +27,7 @@ _此接口继承了其父类 {{domxref("MediaStream")}} 与 {{domxref("EventTarg
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasCaptureMediaStreamTrack")}}
+{{Compat}}
 
 ## 其他参考资料
 

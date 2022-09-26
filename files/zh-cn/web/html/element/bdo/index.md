@@ -77,7 +77,7 @@ HTML 4 规范未指定此元素的事件。 它们是在 XHTML 中添加的。 �
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}
 
 ## 另参见
 

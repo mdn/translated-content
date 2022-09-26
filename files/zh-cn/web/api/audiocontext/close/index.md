@@ -42,7 +42,7 @@ stopBtn.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.close")}}
+{{Compat}}
 
 ## 另见
 

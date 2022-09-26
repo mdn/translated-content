@@ -105,7 +105,7 @@ var el = document.getElementById('testqq'); // el 是个 null
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## 相关链接
 

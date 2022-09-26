@@ -34,11 +34,11 @@ slug: Web/SVG/Element/polygon
 
 ## DOM 接口
 
-该元素实现了`SVGPolygonElement接口。`
+该元素实现了 `SVGPolygonElement` 接口。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## 相关内容
 

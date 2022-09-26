@@ -45,7 +45,7 @@ for (i = 0; i < files.length; i++) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## 參見
 

@@ -35,4 +35,4 @@ document.forms['myform'].addEventListener('submit', function() {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLFormElement.reportValidity")}}
+{{Compat}}

@@ -21,4 +21,4 @@ slug: Web/CSS/time-percentage
 
 ## Browser compatibility
 
-{{Compat("css.types.time-percentage")}}
+{{Compat}}

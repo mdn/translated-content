@@ -34,4 +34,4 @@ _此接口没有方法。_
 
 ## 浏览器兼容
 
-{{Compat("api.IntersectionObserverEntry")}}
+{{Compat}}

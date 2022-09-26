@@ -91,7 +91,7 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.focus_event")}}
+{{Compat}}
 
 ## 参考
 

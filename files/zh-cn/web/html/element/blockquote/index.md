@@ -83,7 +83,7 @@ slug: Web/HTML/Element/blockquote
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 参见
 

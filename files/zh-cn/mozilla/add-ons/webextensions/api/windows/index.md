@@ -53,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 ### Edge 的不兼容
 

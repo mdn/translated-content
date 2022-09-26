@@ -39,7 +39,7 @@ var source = gl.getShaderSource(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.shaderSource")}}
+{{Compat}}
 
 ## 另见
 

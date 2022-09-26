@@ -240,7 +240,7 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.texImage2D")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,6 +2,7 @@
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
+
 {{JSRef}}
 
 **`dotAll`** プロパティは、正規表現で "`s`" フラグが使用されているかどうかを示します。 `dotAll` は、個々の正規表現インスタンスの読み取り専用プロパティです。

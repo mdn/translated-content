@@ -150,7 +150,7 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event")}}
+{{Compat}}
 
 ## 參見
 

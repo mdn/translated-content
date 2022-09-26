@@ -23,4 +23,4 @@ var protocol = aWebSocket.protocol;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.protocol")}}
+{{Compat}}

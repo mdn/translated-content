@@ -185,7 +185,7 @@ String readAsDataURL(
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReaderSync")}}
+{{Compat}}
 
 ## 相关链接
 

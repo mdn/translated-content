@@ -105,7 +105,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## 参见
 

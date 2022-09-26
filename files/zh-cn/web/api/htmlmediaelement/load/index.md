@@ -52,4 +52,4 @@ mediaElem.load();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.load")}}
+{{Compat}}

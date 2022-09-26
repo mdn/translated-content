@@ -214,7 +214,7 @@ html 3.2 只定义 name, href, rel, rev，和 title 属性。
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## 相关链接
 

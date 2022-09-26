@@ -2,6 +2,7 @@
 title: 'HTMLInputElement: search イベント'
 slug: Web/API/HTMLInputElement/search_event
 ---
+
 {{APIRef}}{{non-standard_header}}
 
 **`search`** イベントは、 {{HTMLElement("input")}} 要素の `type="search"` にて検索が開始されたときに発生します。

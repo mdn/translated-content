@@ -30,4 +30,4 @@ A {{domxref("DOMPoint")}} indicating the point at a given distance along the pat
 
 ## Browser compatibility
 
-{{Compat("api.SVGGeometryElement.getPointAtLength")}}
+{{Compat}}

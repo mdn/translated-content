@@ -32,7 +32,7 @@ let result = anchor.search;
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAnchorElement.search")}}
+{{Compat}}
 
 ## 相关链接
 

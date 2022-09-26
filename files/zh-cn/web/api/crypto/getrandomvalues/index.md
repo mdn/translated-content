@@ -45,7 +45,7 @@ for (var i = 0; i < array.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Crypto.getRandomValues")}}
+{{Compat}}
 
 ## 参见
 

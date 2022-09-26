@@ -43,7 +43,7 @@ newTopLeft.y += 100;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPoint.DOMPoint")}}
+{{Compat}}
 
 ## 相关链接
 

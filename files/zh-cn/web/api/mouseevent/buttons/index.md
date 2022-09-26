@@ -32,7 +32,7 @@ var buttonPressed = instanceOfMouseEvent.buttons
 
 ## Browser compatibility
 
-{{Compat("api.MouseEvent.buttons")}}
+{{Compat}}
 
 ## See also
 

@@ -78,7 +78,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## 可查看
 

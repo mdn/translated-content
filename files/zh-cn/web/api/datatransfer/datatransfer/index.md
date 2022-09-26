@@ -27,4 +27,4 @@ var dataTrans = new DataTransfer()
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.DataTransfer")}}
+{{Compat}}

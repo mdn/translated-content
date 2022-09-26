@@ -36,7 +36,7 @@ _方法继承自其父类, {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLOptionElement")}}
+{{Compat}}
 
 ## 参见
 

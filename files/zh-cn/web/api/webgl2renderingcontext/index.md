@@ -212,7 +212,7 @@ Methods for working with {{domxref("WebGLVertexArrayObject")}} (VAO) objects.
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext")}}
+{{Compat}}
 
 ## 相关链接
 

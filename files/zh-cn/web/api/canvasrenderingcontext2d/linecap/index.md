@@ -140,7 +140,7 @@ for (var i = 0; i < lineCap.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
+{{Compat}}
 
 ## 参见
 

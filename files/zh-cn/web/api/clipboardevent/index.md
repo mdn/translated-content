@@ -29,7 +29,7 @@ _同样是从其父类_ _{{domxref("Event")}}_ _继承的属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## 相关链接
 

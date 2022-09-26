@@ -47,7 +47,7 @@ var client = new XMLHttpRequest()
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.timeout_event")}}
+{{Compat}}
 
 ## 相关链接
 

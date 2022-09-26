@@ -62,7 +62,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.play")}}
+{{Compat}}
 
 ## 了解更多
 

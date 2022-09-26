@@ -112,7 +112,7 @@ let expandingList = document.createElement('ul', { is : 'expanding-list' })
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createElement")}}
+{{Compat}}
 
 ## 参考
 

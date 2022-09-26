@@ -19,7 +19,7 @@ flag = ProgressEvent.lengthComputable
 
 ## 浏览器兼容性
 
-{{Compat("api.ProgressEvent.lengthComputable")}}
+{{Compat}}
 
 ## See also
 

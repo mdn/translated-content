@@ -29,4 +29,4 @@ var sensorReading = AmbientLightLevel.reading
 
 ## 浏览器兼容性
 
-{{Compat("api.AmbientLightSensor.illuminance")}}
+{{Compat}}

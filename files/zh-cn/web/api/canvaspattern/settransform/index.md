@@ -108,7 +108,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasPattern.setTransform")}}
+{{Compat}}
 
 ## 参见
 

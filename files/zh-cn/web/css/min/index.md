@@ -107,7 +107,7 @@ small {
 
 ## Browser compatibility
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## See also
 

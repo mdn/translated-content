@@ -508,7 +508,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## 浏览器兼容性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## 参见
 

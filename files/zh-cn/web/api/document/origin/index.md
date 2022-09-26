@@ -22,7 +22,7 @@ var origin = document.origin;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.origin")}}
+{{Compat}}
 
 ## 参见
 

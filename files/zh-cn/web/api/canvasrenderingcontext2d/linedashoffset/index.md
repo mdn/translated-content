@@ -129,7 +129,7 @@ march();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineDashOffset")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.error`** は最新のエラーの {{domxref("MediaError")}} オブジェクトです。エラーが発生していない場合は `null` です。 要素が {{domxref("HTMLMediaElement/error_event", "error")}} イベントを受け取ったら、このオブジェクトを調べることで、何が起こったのかについての詳細を決定することができます。

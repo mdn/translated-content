@@ -74,7 +74,7 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}_。
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTableElement")}}
+{{Compat}}
 
 ## 另请参阅
 

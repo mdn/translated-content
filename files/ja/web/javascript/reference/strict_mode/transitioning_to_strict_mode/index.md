@@ -2,6 +2,7 @@
 title: 厳格モードへの移行
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 第 5 版では[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) (strict mode) を導入し、主要なブラウザーすべて（IE10 を含む）に実装されました。ウェブブラウザーにコードを厳格モードとして解釈させるのは簡単ですが（ソースコードの先頭に `'use strict';` を追加するだけです）、既存のコードベースを厳格モードに移行するには、もう少し作業が必要です。

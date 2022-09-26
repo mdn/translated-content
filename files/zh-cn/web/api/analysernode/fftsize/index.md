@@ -86,7 +86,7 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.fftSize")}}
+{{Compat}}
 
 ## 相关内容
 

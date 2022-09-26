@@ -66,7 +66,7 @@ gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.enableVertexAttribArray")}}
+{{Compat}}
 
 ## See also
 

@@ -349,7 +349,7 @@ slug: Web/CSS/blend-mode
 
 ## 浏览器兼容性
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## 另请参阅
 

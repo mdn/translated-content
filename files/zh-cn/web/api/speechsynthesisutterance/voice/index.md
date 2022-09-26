@@ -54,7 +54,7 @@ inputForm.onsubmit = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechSynthesisUtterance.voice")}}
+{{Compat}}
 
 ## See also
 

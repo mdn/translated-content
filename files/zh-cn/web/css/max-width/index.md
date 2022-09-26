@@ -108,7 +108,7 @@ fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.max-width")}}
+{{Compat}}
 
 ## 参考链接
 

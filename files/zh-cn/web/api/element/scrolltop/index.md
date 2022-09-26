@@ -49,7 +49,7 @@ padding-bottom
 
 ## 浏览器兼容
 
-{{Compat("api.Element.scrollTop")}}
+{{Compat}}
 
 ## 参考
 

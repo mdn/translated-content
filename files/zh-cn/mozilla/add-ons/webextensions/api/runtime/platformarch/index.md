@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.PlatformArch")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

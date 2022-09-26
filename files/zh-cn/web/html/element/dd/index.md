@@ -49,7 +49,7 @@ slug: Web/HTML/Element/dd
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## See also
 

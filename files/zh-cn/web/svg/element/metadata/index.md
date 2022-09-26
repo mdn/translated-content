@@ -29,4 +29,4 @@ _没有专有属性_
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

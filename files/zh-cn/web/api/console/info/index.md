@@ -33,7 +33,7 @@ console.info(msg [, subst1, ..., substN]);
 
 ## 浏览器兼容
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## 参见
 

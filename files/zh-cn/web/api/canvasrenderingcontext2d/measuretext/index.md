@@ -46,7 +46,7 @@ text.width; // 16;
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.measureText")}}
+{{Compat}}
 
 ## 参见
 

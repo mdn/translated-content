@@ -2,6 +2,7 @@
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 **`isNaN()`** 関数は引数が {{jsxref("NaN")}} (非数) かどうかを判定します。`isNaN` 関数の型強制は[意外なもの](#confusing_special-case_behavior)になる可能性があるため、他の {{jsxref("Number.isNaN()")}} を使用した方が良いかもしれません。

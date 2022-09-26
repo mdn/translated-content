@@ -25,4 +25,4 @@ A [`DOMString`](/zh-CN/docs/Web/API/DOMString).
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.url")}}
+{{Compat}}

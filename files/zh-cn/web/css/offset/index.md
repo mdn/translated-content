@@ -81,4 +81,4 @@ offset: url(arc.svg) 30deg / 50px 100px;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.offset")}}
+{{Compat}}

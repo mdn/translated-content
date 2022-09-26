@@ -27,7 +27,7 @@ _没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLDetailsElement")}}
+{{Compat}}
 
 ## 另见
 

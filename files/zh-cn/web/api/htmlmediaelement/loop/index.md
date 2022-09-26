@@ -31,7 +31,7 @@ obj.loop = true; // true
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.loop")}}
+{{Compat}}
 
 ## 相关链接
 

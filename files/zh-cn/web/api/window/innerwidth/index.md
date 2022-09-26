@@ -49,7 +49,7 @@ var intOuterFramesetWidth = top.innerWidth;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.innerWidth")}}
+{{Compat}}
 
 ## 参考
 

@@ -44,7 +44,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.onActivated")}}
+{{Compat}}
 
 ## 示例
 

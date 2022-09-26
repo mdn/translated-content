@@ -229,7 +229,7 @@ if (typeof Object.assign != 'function') {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## 參閱
 

@@ -23,4 +23,4 @@ var htmlAllCollection = document.all;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.all")}}
+{{Compat}}

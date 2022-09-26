@@ -50,7 +50,7 @@ slug: Web/API/Element/dblclick_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.dblclick_event")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -43,7 +43,7 @@ Promise.all(
 
 ## 浏览器支持
 
-{{Compat("api.Animation.finished")}}
+{{Compat}}
 
 ## 相关内容
 

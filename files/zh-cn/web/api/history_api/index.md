@@ -171,7 +171,7 @@ history.replaceState(stateObj, "page 3", "bar2.html");
 
 ## 浏览器兼容性
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## 另见
 

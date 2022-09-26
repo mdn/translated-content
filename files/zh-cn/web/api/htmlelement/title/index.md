@@ -27,4 +27,4 @@ link.title = '维基百科上对葡萄的描述';
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.title")}}
+{{Compat}}

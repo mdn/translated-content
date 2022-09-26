@@ -2,6 +2,7 @@
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MIN_SAFE_INTEGER`** 定数は、JavaScript における安全な整数の最小値 (`-(2^53 - 1)`) を表します。

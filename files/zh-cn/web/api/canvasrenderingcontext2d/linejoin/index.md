@@ -136,7 +136,7 @@ for (var i = 0; i < lineJoin.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
+{{Compat}}
 
 ## 参见
 

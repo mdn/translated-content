@@ -54,7 +54,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.downloads.DownloadItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -56,7 +56,7 @@ ten dpi    The number must use digits only.
 
 ## Browser compatibility
 
-{{Compat("css.types.resolution")}}
+{{Compat}}
 
 ## See also
 

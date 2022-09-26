@@ -43,7 +43,7 @@ var ext = gl.getExtension("ANGLE_instanced_arrays");
 
 ## 浏览器兼容性
 
-{{Compat("api.ANGLE_instanced_arrays")}}
+{{Compat}}
 
 ## 相关链接
 

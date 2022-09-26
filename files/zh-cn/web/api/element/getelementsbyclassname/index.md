@@ -54,4 +54,4 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

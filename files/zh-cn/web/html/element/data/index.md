@@ -60,7 +60,7 @@ slug: Web/HTML/Element/data
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 参见
 

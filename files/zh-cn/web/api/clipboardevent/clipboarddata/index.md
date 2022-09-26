@@ -24,7 +24,7 @@ data = ClipboardEvent.clipboardData
 
 ## 浏览器兼容性
 
-{{Compat("api.ClipboardEvent.clipboardData")}}
+{{Compat}}
 
 ## 相关链接
 

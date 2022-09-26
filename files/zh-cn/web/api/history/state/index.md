@@ -36,7 +36,7 @@ console.log(`History.state after pushState: ${history.state}`);
 
 ## Browser compatibility
 
-{{Compat("api.History.state")}}
+{{Compat}}
 
 ## See also
 

@@ -35,7 +35,7 @@ _Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds 
 
 ## Browser compatibility
 
-{{Compat("api.AudioScheduledSourceNode")}}
+{{Compat}}
 
 ## See also
 

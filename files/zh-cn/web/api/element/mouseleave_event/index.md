@@ -157,7 +157,7 @@ slug: Web/API/Element/mouseleave_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mouseleave_event")}}
+{{Compat}}
 
 ## 相关链接
 

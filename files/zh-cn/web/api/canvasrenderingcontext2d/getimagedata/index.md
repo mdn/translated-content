@@ -63,7 +63,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 

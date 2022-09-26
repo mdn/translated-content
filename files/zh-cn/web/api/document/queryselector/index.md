@@ -86,7 +86,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.querySelector")}}
+{{Compat}}
 
 ## 相关链接
 

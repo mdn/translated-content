@@ -96,7 +96,7 @@ That is, the rendered outline might show the primary title, _HTML_, followed by 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 参阅
 

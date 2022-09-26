@@ -160,7 +160,7 @@ function putImageData(ctx, imageData, dx, dy,
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.putImageData")}}
+{{Compat}}
 
 ## 参见
 

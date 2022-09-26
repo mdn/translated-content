@@ -30,7 +30,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 浏览器兼容性
 
-{{Compat("http.status.402")}}
+{{Compat}}
 
 ## 相关内容
 

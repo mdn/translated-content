@@ -38,7 +38,7 @@ console.log(audioCtx.currentTime);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.currentTime")}}
+{{Compat}}
 
 ## 另见
 

@@ -78,4 +78,4 @@ for (i=0 ; i < paragraphs.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.caretRangeFromPoint")}}
+{{Compat}}

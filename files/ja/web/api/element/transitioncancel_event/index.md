@@ -3,6 +3,7 @@ title: 'Document: transitioncancel イベント'
 slug: Web/API/Element/transitioncancel_event
 original_slug: Web/API/Document/transitioncancel_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`transitioncancel`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)がキャンセルされたときに発生します。

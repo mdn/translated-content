@@ -318,4 +318,4 @@ var showBookmark = (function () {
 
 ### Browser compatibility
 
-{{Compat("api.Window.location")}}
+{{Compat}}

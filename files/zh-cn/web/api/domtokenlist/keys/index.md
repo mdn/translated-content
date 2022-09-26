@@ -53,4 +53,4 @@ for(var value of iterator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.keys")}}
+{{Compat}}

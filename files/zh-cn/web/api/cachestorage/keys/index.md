@@ -49,7 +49,7 @@ this.addEventListener('activate', function(event) {
 
 ## 浏览器兼容
 
-{{Compat("api.CacheStorage.keys")}}
+{{Compat}}
 
 ## 亦可参考
 

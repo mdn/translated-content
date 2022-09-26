@@ -52,4 +52,4 @@ selectElem.addEventListener('change', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.selectedIndex")}}
+{{Compat}}

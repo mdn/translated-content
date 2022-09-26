@@ -2,6 +2,7 @@
 title: FormData.keys()
 slug: Web/API/FormData/keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.keys()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全てのキーを通過できるようにします。キーは {{domxref("USVString")}} オブジェクトです。

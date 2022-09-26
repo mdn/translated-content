@@ -49,7 +49,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+{{Compat}}
 
 ## 另见
 

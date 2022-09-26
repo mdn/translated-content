@@ -55,4 +55,4 @@ if (result) {
 
 ## Browser compatibility
 
-{{Compat("api.DOMTokenList.contains")}}
+{{Compat}}

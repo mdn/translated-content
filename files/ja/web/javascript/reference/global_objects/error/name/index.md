@@ -2,6 +2,7 @@
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
+
 {{JSRef}}
 
 **`name`** プロパティは、エラーの種類の名称を表します。初期値は "Error" です。

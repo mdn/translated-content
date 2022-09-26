@@ -148,7 +148,7 @@ slug: Web/HTML/Element/body
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## 参见
 

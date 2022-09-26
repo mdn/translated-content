@@ -2,6 +2,7 @@
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableRowElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて） HTML の表の行のレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
