@@ -62,7 +62,7 @@ Note que o resultado do instanceof pode alterar quando a gente altera o prototyp
 Different scope have different execution environments. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, `[] instanceof window.frames[0].Array` will return `false`, because ` Array.prototype !== ``window.frames[0].Array ` and arrays inherit from the former. This may not make sense at first but when you start dealing with multiple frames or windows in your script and pass objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is in fact an Array using `Array.isArray(myObj)`
 
 > **Nota:** **Note for Mozilla developers:**
-> In code using XPCOM `instanceof` has special effect: `obj instanceof `_`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) calls `obj.QueryInterface(xpcomInterface)` and returns `true` if QueryInterface succeeded. A side effect of such call is that you can use _`xpcomInterface`_'s properties on `obj` after a successful `instanceof` test. Unlike standard JavaScript globals, the test `obj instanceof xpcomInterface `works as expected even if `obj` is from a different scope.
+> In code using XPCOM `instanceof` has special effect: `obj instanceof xpcomInterface` (e.g. `Components.interfaces.nsIFile`) calls `obj.QueryInterface(xpcomInterface)` and returns `true` if QueryInterface succeeded. A side effect of such call is that you can use _`xpcomInterface`_'s properties on `obj` after a successful `instanceof` test. Unlike standard JavaScript globals, the test `obj instanceof xpcomInterface`works as expected even if `obj` is from a different scope.
 
 ## Examples
 
@@ -123,4 +123,4 @@ var b = mycar instanceof Object; // retorna true
 
 ## Veja também
 
-- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof "/en-US/docs/JavaScript/Reference/Operators/typeof")
+- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

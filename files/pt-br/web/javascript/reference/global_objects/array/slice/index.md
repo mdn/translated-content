@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 {{JSRef}}
 
-O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é necessário) de um array original. O Array original não é modificado.
+O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é incluído) de um array original. O Array original não é modificado.
 
 ## Syntaxe
 
@@ -39,7 +39,7 @@ arr.slice([início[,fim]])
 
     Como índice negativo, `fim` indica um deslocamento em relação ao fim do array. `slice(2,-1)` extrai o terceiro elemento através do segundo-para-o-último elemento no array.
 
-    Se `fim` for omitido ou for maior que o tamanho do array, `slice` considerará o último elemento do array como sendo o `fim `(`arr.length`)`.`
+    Se `fim` for omitido ou for maior que o tamanho do array, `slice` considerará o último elemento do array como sendo o `fim` (`arr.length`).
 
 ### Valor de retorno
 

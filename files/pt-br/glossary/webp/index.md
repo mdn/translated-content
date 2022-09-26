@@ -10,4 +10,4 @@ original_slug: Glossario/webp
 
 ### Conhecimentos gerais
 
-- [WebP ](https://en.wikipedia.org/wiki/WebP)na Wikipedia
+- [WebP](https://en.wikipedia.org/wiki/WebP) na Wikipedia

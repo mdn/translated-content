@@ -50,7 +50,7 @@ SyntaxError: expected '=&gt;' after argument list, got "x"
 
 <p>Иногда можно потерять скобки при использовании <code>if</code>:</p>
 
-<pre class="brush: js example-bad line-numbers  language-js">function round(n, upperBound, lowerBound){
+<pre class="brush: js example-bad">function round(n, upperBound, lowerBound){
   if(n &gt; upperBound) || (n &lt; lowerBound){
     throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
   }else if(n &lt; ((upperBound + lowerBound)/2)){

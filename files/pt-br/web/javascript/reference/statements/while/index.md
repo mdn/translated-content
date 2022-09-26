@@ -19,9 +19,9 @@ while (condição) {
 ```
 
 - `condição`
-  - : Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço` while`.
+  - : Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço `while`.
 - rotina
-  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/ "JavaScript/Reference/Statements/block") (`{ ... }`) para agrupar essas declarações.
+  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/JavaScript/Reference/Statements/block) (`{ ... }`) para agrupar essas declarações.
 
 ## Exemplos
 
