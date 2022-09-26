@@ -6,32 +6,26 @@ tags:
 translation_of: Learn/HTML/Tables
 original_slug: Aprender/HTML/Tables
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p class="summary">Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem <a href="https://developer.mozilla.org/pt-PT/docs/Learn/CSS">CSS</a> para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.</p>
+Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem [CSS](/pt-BR/docs/Learn/CSS) para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.
 
-<h2 id="Pré-requisitos">Pré-requisitos</h2>
+## Pré-requisitos
 
-<p>Antes de iniciar este módulo, você deverá ter domínio dos básicos de HTML — consulte <a href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Introducao_ao_HTML">Introdução ao HTML</a>.</p>
+Antes de iniciar este módulo, você deverá ter domínio dos básicos de HTML — consulte [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introducao_ao_HTML).
 
-<div class="note">
-<p><strong>Nota</strong>: se está utilizando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar os seus próprios arquivos, pode testar a maioria dos exemplos de código num programa de codificação on-line, tais como <a href="http://jsbin.com/" rel="noopener">JSBin</a> ou <a href="https://thimble.mozilla.org/" rel="noopener">Thimble</a>.</p>
-</div>
+> **Nota:** se está utilizando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar os seus próprios arquivos, pode testar a maioria dos exemplos de código num programa de codificação on-line, tais como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
-<h2 id="Guias">Guias</h2>
+## Guias
 
-<p>Este módulo contém os seguintes artigos:</p>
+Este módulo contém os seguintes artigos:
 
-<dl>
- <dt><a href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Tables/Basicos">HTML - o básico sobre tabelas</a></dt>
- <dd>Este artigo apresenta as tabelas HTML, cobrindo o essencial, tal como linhas e células, cabeçalhos, como extender células por múltiplas colunas e linhas, e como agrupar todas as células numa coluna para efeitos de estilo.</dd>
- <dt><a href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Tables/Avancada">HTML - funcionalidades avançadas de tabelas e acessibilidade</a></dt>
- <dd>No segundo artigo deste módulo, nós vamos ver algumas funcionalidades mais avançadas das tabelas HTML — tais como legendas/resumos e agrupar as suas filas no cabeçalho da tabela (head), seções de corpo (body) e rodapé (footer) — bem como, veremos sobre a acessibilidade das tabelas para os utilizadores deficientes visuais .</dd>
-</dl>
+- [HTML - o básico sobre tabelas](/pt-BR/docs/Learn/HTML/Tables/Basicos)
+  - : Este artigo apresenta as tabelas HTML, cobrindo o essencial, tal como linhas e células, cabeçalhos, como extender células por múltiplas colunas e linhas, e como agrupar todas as células numa coluna para efeitos de estilo.
+- [HTML - funcionalidades avançadas de tabelas e acessibilidade](/pt-BR/docs/Learn/HTML/Tables/Avancada)
+  - : No segundo artigo deste módulo, nós vamos ver algumas funcionalidades mais avançadas das tabelas HTML — tais como legendas/resumos e agrupar as suas filas no cabeçalho da tabela (head), seções de corpo (body) e rodapé (footer) — bem como, veremos sobre a acessibilidade das tabelas para os utilizadores deficientes visuais .
 
-<h2 id="Exercícios">Exercícios</h2>
+## Exercícios
 
-<dl>
- <dt><a href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Tables/Avaliacao_Estruturar_os_dados_dos_planetas">Estruturar dados sobre planetas</a></dt>
- <dd>Na nossa avaliação sobre tabelas em HTML, vamos fornecer alguns dados sobre os planetas do nosso sistema solar, para que possa estruturá-los numa tabela HTML.</dd>
-</dl>
+- [Estruturar dados sobre planetas](/pt-BR/docs/Learn/HTML/Tables/Avaliacao_Estruturar_os_dados_dos_planetas)
+  - : Na nossa avaliação sobre tabelas em HTML, vamos fornecer alguns dados sobre os planetas do nosso sistema solar, para que possa estruturá-los numa tabela HTML.

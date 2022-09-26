@@ -13,185 +13,190 @@ tags:
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Aprender/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-<div>{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}</div>
-
-<p class="summary">No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento {{htmlelement("img")}}, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento {{htmlelement("figure")}}, e detalhando como ele se relaciona com imagens de fundo do CSS.</p>
+No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento {{htmlelement("img")}}, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento {{htmlelement("figure")}}, e detalhando como ele se relaciona com imagens de fundo do CSS.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimento básico em informática, <a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos">Instalando os Programas Básicos</a>, conhecimento básico em <a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos">lidando com arquivos</a>, familiaridade com fundamentos do HTML (como abordado em <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started">Iniciando com HTML</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivos:</th>
-   <td>Para aprender a incorporar imagens simples em HTML, anote-as com legendas e como as imagens HTML se relacionam às imagens de plano de fundo CSS.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Conhecimento básico em informática,
+        <a
+          href="/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
+          >Instalando os Programas Básicos</a
+        >, conhecimento básico em
+        <a
+          href="/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
+          >lidando com arquivos</a
+        >, familiaridade com fundamentos do HTML (como abordado em
+        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+          >Iniciando com HTML</a
+        >.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivos:</th>
+      <td>
+        Para aprender a incorporar imagens simples em HTML, anote-as com
+        legendas e como as imagens HTML se relacionam às imagens de plano de
+        fundo CSS.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Como_colocamos_uma_imagem_numa_página_web">Como colocamos uma imagem numa página web?</h2>
+## Como colocamos uma imagem numa página web?
 
-<p>Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlelement("img")}}. Isso é um elemento vazio (quer dizer que não possui conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — <code>src</code> (às vezes pronunciado como seu título completo, <em>source</em>). O atributo src contém um caminho apontando para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma maneira que o valores de atributo <code>href</code> no elemento {{htmlelement("a")}}.</p>
+Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlelement("img")}}. Isso é um elemento vazio (quer dizer que não possui conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — `src` (às vezes pronunciado como seu título completo, _source_). O atributo src contém um caminho apontando para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma maneira que o valores de atributo `href` no elemento {{htmlelement("a")}}.
 
-<div class="note">
-<p><strong>Nota</strong>: Antes de continuar, você deveria ler <a href="https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">Um guia rápido sobre URLs e caminhos</a> para refrescar sua memória sobre URL relativo e absoluto.</p>
-</div>
+> **Nota:** Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
 
-<p>Por exemplo, se sua imagem for chamada <code>dinossauro.jpg</code>, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:</p>
+Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 
-<pre class="brush: html">&lt;img src="dinossauro.jpg"&gt;</pre>
+```html
+<img src="dinossauro.jpg">
+```
 
-<p>Se a imagem estivesse em um subdiretório de <code>images</code>, que estivesse dentro do mesmo diretório da página HTML (que o Google recomenda para fins de indexição/{{glossary("SEO")}}), então você a incorporaria da seguinte maneira:</p>
+Se a imagem estivesse em um subdiretório de `images`, que estivesse dentro do mesmo diretório da página HTML (que o Google recomenda para fins de indexição/{{glossary("SEO")}}), então você a incorporaria da seguinte maneira:
 
-<pre class="brush: html">&lt;img src="images/dinossauro.jpg"&gt;</pre>
+```html
+<img src="images/dinossauro.jpg">
+```
 
-<p>E assim por diante.</p>
+E assim por diante.
 
-<div class="note">
-<p><strong>Note</strong>: Os mecanismos de pesquisa também leem os nomes dos arquivos de imagem e os contam para o  SEO. Portanto, dê à sua imagem um nome de arquivo descritivo; <code>dinosaur.jpg</code> é melhor que <code>img835.png</code>.</p>
-</div>
+> **Nota:** Os mecanismos de pesquisa também leem os nomes dos arquivos de imagem e os contam para o SEO. Portanto, dê à sua imagem um nome de arquivo descritivo; `dinosaur.jpg` é melhor que `img835.png`.
 
-<p>Você pode incorporar a imagem usando seu URL absoluto, por exemplo:</p>
+Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
 
-<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+```html
+<img src="https://www.example.com/images/dinosaur.jpg">
+```
 
-<p>Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor que o HTML.</p>
+Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor que o HTML.
 
-<div class="warning">
-<p><strong>Aviso:</strong> A  maioria das imagens tem direitos autorais. Não exiba uma imagem em sua página da web, a menos que:</p>
+> **Aviso:** A maioria das imagens tem direitos autorais. Não exiba uma imagem em sua página da web, a menos que:
+>
+> 1\) você é o dono da imagem
+> 2\) você recebeu permissão explícita e por escrito do proprietário da imagem, ou
+> 3\) você tem ampla prova de que a imagem é, de fato, de domínio público.
+>
+> Violações de direitos autorais são ilegais e antiéticas. Além disso, **nunca** aponte seu atributo `src `para uma imagem hospedada no site de outra pessoa à qual você não tem permissão para vincular. Isso é chamado de "hotlinking". Mais uma vez, roubar a largura de banda de alguém é ilegal. Ele também torna a página mais lenta, deixando você sem controle sobre se a imagem é removida ou substituída por algo embaraçoso.
 
-<p>1) você é o dono da imagem<br>
- 2) você recebeu permissão explícita e por escrito do proprietário da imagem, ou<br>
- 3) você tem ampla prova de que a imagem é, de fato, de domínio público.</p>
+Nosso código acima nos daria o seguinte resultado:
 
-<p><br>
- Violações de direitos autorais são ilegais e antiéticas. Além disso, <strong>nunca</strong> aponte seu atributo <code>src </code>para uma imagem hospedada no site de outra pessoa à qual você não tem permissão para vincular. Isso é chamado de "hotlinking". Mais uma vez, roubar a largura de banda de alguém é ilegal. Ele também torna a página mais lenta, deixando você sem controle sobre se a imagem é removida ou substituída por algo embaraçoso.</p>
-</div>
+![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
 
-<p>Nosso código acima nos daria o seguinte resultado:</p>
+> **Nota:** Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.
 
-<p><img alt="A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it" src="https://mdn.mozillademos.org/files/12700/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+> **Nota:** Você pode encontrar o exemplo final desta seção [running on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (Veja o [source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html) também.)
 
-<div class="note">
-<p><strong>Nota</strong>: Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.</p>
-</div>
+### Texto alternativo
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode encontrar o exemplo final desta seção <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">running on Github</a> (Veja o <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">source code</a> também.)</p>
-</div>
+O próximo atributo que veremos é `alt`. Seu valor deve ser uma descrição textual da imagem, para uso em situações em que a imagem não pode ser vista/exibida ou leva muito tempo para renderizar devido a uma conexão lenta à Internet. Por exemplo, nosso código acima pode ser modificado da seguinte maneira:
 
-<h3 id="Texto_alternativo">Texto alternativo</h3>
-
-<p>O próximo atributo que veremos é <code>alt</code>. Seu valor deve ser uma descrição textual da imagem, para uso em situações em que a imagem não pode ser vista/exibida ou leva muito tempo para renderizar devido a uma conexão lenta à Internet. Por exemplo, nosso código acima pode ser modificado da seguinte maneira:</p>
-
-<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+```html
+<img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth"&gt;</pre>
+          it has a large head with long sharp teeth">
+```
 
-<p>A maneira mais fácil de testar seu texto <code>alt</code> é digitar incorretamente seu nome de arquivo. Se, por exemplo, o nome da nossa imagem estivesse escrito <code>dinosooooor.jpg</code>, o navegador não exibiria a imagem, mas exibiria o texto alternativo:</p>
+A maneira mais fácil de testar seu texto `alt` é digitar incorretamente seu nome de arquivo. Se, por exemplo, o nome da nossa imagem estivesse escrito `dinosooooor.jpg`, o navegador não exibiria a imagem, mas exibiria o texto alternativo:
 
-<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
 
-<p>Então, por que você veria ou precisaria de texto alternativo? Pode ser útil por vários motivos:</p>
+Então, por que você veria ou precisaria de texto alternativo? Pode ser útil por vários motivos:
 
-<ul>
- <li>O usuário é deficiente visual e usa um <a href="https://pt.wikipedia.org/wiki/Leitor_de_tela">leitor de tela</a> para ler a web para eles. De fato, ter o texto alternativo disponível para descrever imagens é útil para a maioria dos usuários.</li>
- <li>Como descrito acima, você pode ter digitado o nome do arquivo ou caminho errado.</li>
- <li>O navegador não suporta o tipo de imagem. Algumas pessoas ainda usam navegadores somente de texto, como <a href="https://pt.wikipedia.org/wiki/Lynx_(navegador_web)">Lynx</a>, que alternativamente exibe o texto alternativo das imagens.</li>
- <li>Você pode fornecer texto para os mecanismos de pesquisa utilizarem. Por exemplo, os mecanismos de pesquisa podem corresponder o texto alternativo às consultas de pesquisa.</li>
- <li>Os usuários desativaram as imagens para reduzir o volume e as distrações de transferência de dados. Isso é especialmente comum em telefones celulares e em países onde a largura de banda é limitada e cara.</li>
-</ul>
+- O usuário é deficiente visual e usa um [leitor de tela](https://pt.wikipedia.org/wiki/Leitor_de_tela) para ler a web para eles. De fato, ter o texto alternativo disponível para descrever imagens é útil para a maioria dos usuários.
+- Como descrito acima, você pode ter digitado o nome do arquivo ou caminho errado.
+- O navegador não suporta o tipo de imagem. Algumas pessoas ainda usam navegadores somente de texto, como [Lynx](<https://pt.wikipedia.org/wiki/Lynx_(navegador_web)>), que alternativamente exibe o texto alternativo das imagens.
+- Você pode fornecer texto para os mecanismos de pesquisa utilizarem. Por exemplo, os mecanismos de pesquisa podem corresponder o texto alternativo às consultas de pesquisa.
+- Os usuários desativaram as imagens para reduzir o volume e as distrações de transferência de dados. Isso é especialmente comum em telefones celulares e em países onde a largura de banda é limitada e cara.
 
-<p>O que exatamente você deve escrever dentro do seu atributo <code>alt</code>? Depende do <em>por que</em> a imagem está lá em primeiro lugar. Em outras palavras, o que você perde se sua imagem não aparecer:</p>
+O que exatamente você deve escrever dentro do seu atributo `alt`? Depende do _por que_ a imagem está lá em primeiro lugar. Em outras palavras, o que você perde se sua imagem não aparecer:
 
-<ul>
- <li><strong>Decoração. </strong>Se a imagem é apenas decoração e não faz parte do conteúdo, adicione um espaço em branco <code>alt=""</code>. Por exemplo, um leitor de tela não perde tempo lendo conteúdo que não é essencial para o usuário. Imagens decorativas realmente não pertencem ao seu HTML. <a href="#css_background_images">CSS background images</a> deve ser usado para inserir decoração, mas se for inevitável, <code>alt=""</code> é o melhor caminho a percorrer.</li>
- <li><strong>Conteúdo. </strong>Se sua imagem fornecer informações significativas, forneça as mesmas informações em um <em>breve</em><em> </em><code>alt</code> texto. Ou melhor ainda, no texto principal que todos podem ver. Não escreva redundante <code>alt</code> texto. O quão irritante seria para um usuário que enxerga se todos os parágrafos fossem escritos duas vezes no conteúdo principal? Se a imagem for descrita adequadamente pelo corpo do texto principal, você pode simplesmente usar <code>alt=""</code>.</li>
- <li><strong>Link.</strong> Se você colocar uma imagem dentro das tags {{htmlelement("a")}}, para transformar uma imagem em um link, você ainda deve fornecer <a href="/pt-BR/docs/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks#Pr%C3%A1ticas_recomendadas">links acessíveis</a>. Nesses casos, você também pode escrevê-lo no mesmo elemento <code>&lt;a&gt;</code>, ou dentro do atributo <code>alt</code> da imagem. O que funcionar melhor no seu caso.</li>
- <li><strong>Texto.</strong> Você não deve colocar seu texto em imagens. Se o cabeçalho principal precisar de uma sombra projetada, por exemplo, <a href="/pt-BR/docs/Web/CSS/text-shadow">use CSS</a> para isso, em vez de colocar o texto em uma imagem. No entanto, se você <em>realmente não puder evitar fazer isso</em>, deve fornecer o texto dentro do atributo <code>alt</code>.</li>
-</ul>
+- **Decoração.** Se a imagem é apenas decoração e não faz parte do conteúdo, adicione um espaço em branco `alt=""`. Por exemplo, um leitor de tela não perde tempo lendo conteúdo que não é essencial para o usuário. Imagens decorativas realmente não pertencem ao seu HTML. [CSS background images](#css_background_images) deve ser usado para inserir decoração, mas se for inevitável, `alt=""` é o melhor caminho a percorrer.
+- **Conteúdo.** Se sua imagem fornecer informações significativas, forneça as mesmas informações em um _breve\_\_ _`alt` texto. Ou melhor ainda, no texto principal que todos podem ver. Não escreva redundante `alt` texto. O quão irritante seria para um usuário que enxerga se todos os parágrafos fossem escritos duas vezes no conteúdo principal? Se a imagem for descrita adequadamente pelo corpo do texto principal, você pode simplesmente usar `alt=""`.
+- **Link.** Se você colocar uma imagem dentro das tags {{htmlelement("a")}}, para transformar uma imagem em um link, você ainda deve fornecer [links acessíveis](/pt-BR/docs/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks#Pr%C3%A1ticas_recomendadas). Nesses casos, você também pode escrevê-lo no mesmo elemento `<a>`, ou dentro do atributo `alt` da imagem. O que funcionar melhor no seu caso.
+- **Texto.** Você não deve colocar seu texto em imagens. Se o cabeçalho principal precisar de uma sombra projetada, por exemplo, [use CSS](/pt-BR/docs/Web/CSS/text-shadow) para isso, em vez de colocar o texto em uma imagem. No entanto, se você _realmente não puder evitar fazer isso_, deve fornecer o texto dentro do atributo `alt`.
 
-<p>Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não estejam perdendo nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.</p>
+Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não estejam perdendo nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.
 
-<div class="note">
-<p><strong>Nota</strong>: Para mais informações, consulte o nosso guia para <a href="/pt-BR/docs/Learn/Accessibility/HTML#Alternativas_em_textos">Textos alternativos</a>.</p>
-</div>
+> **Nota:** Para mais informações, consulte o nosso guia para [Textos alternativos](/pt-BR/docs/Learn/Accessibility/HTML#Alternativas_em_textos).
 
-<h3 id="Largura_e_altura">Largura e altura</h3>
+### Largura e altura
 
-<p>Você pode usar os atributos <code>width</code> e <code>height</code>, para especificar a largura e altura da sua imagem. Você pode encontrar a largura e a altura da sua imagem de várias maneiras. Por exemplo, no Mac, você pode usar <kbd>Cmd</kbd> + <kbd>I</kbd>  para exibir as informações do arquivo de imagem. Voltando ao nosso exemplo, poderíamos fazer isso:</p>
+Você pode usar os atributos `width` e `height`, para especificar a largura e altura da sua imagem. Você pode encontrar a largura e a altura da sua imagem de várias maneiras. Por exemplo, no Mac, você pode usar <kbd>Cmd</kbd> + <kbd>I</kbd> para exibir as informações do arquivo de imagem. Voltando ao nosso exemplo, poderíamos fazer isso:
 
-<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+```html
+<img src="images/dinosaur.jpg"
      alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
      width="400"
-     height="341"&gt;</pre>
+     height="341">
+```
 
-<p>Isso não resulta em muita diferença para a tela, em circunstâncias normais. Mas se a imagem não estiver sendo exibida, por exemplo, o usuário acabou de navegar para a página e a imagem ainda não foi carregada, você notará que o navegador está deixando um espaço para a imagem aparecer:</p>
+Isso não resulta em muita diferença para a tela, em circunstâncias normais. Mas se a imagem não estiver sendo exibida, por exemplo, o usuário acabou de navegar para a página e a imagem ainda não foi carregada, você notará que o navegador está deixando um espaço para a imagem aparecer:
 
-<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
 
-<p>É uma coisa boa a fazer, resultando no carregamento da página mais rápido e sem problemas.</p>
+É uma coisa boa a fazer, resultando no carregamento da página mais rápido e sem problemas.
 
-<p>No entanto, você não deve alterar o tamanho das suas imagens usando atributos HTML. Se você definir o tamanho da imagem muito grande, terá imagens granuladas, confusas ou muito pequenas e desperdiçando largura de banda ao fazer o download de uma imagem que não atenda às necessidades do usuário. A imagem também pode ficar distorcida, se você não mantiver a <a href="Proporção de tela">proporção de tela</a>. Você deve usar um editor de imagens para colocar sua imagem no tamanho correto antes de colocá-la em sua página da web.</p>
+No entanto, você não deve alterar o tamanho das suas imagens usando atributos HTML. Se você definir o tamanho da imagem muito grande, terá imagens granuladas, confusas ou muito pequenas e desperdiçando largura de banda ao fazer o download de uma imagem que não atenda às necessidades do usuário. A imagem também pode ficar distorcida, se você não mantiver a [proporção de tela](<Proporção de tela>). Você deve usar um editor de imagens para colocar sua imagem no tamanho correto antes de colocá-la em sua página da web.
 
-<div class="note">
-<p><strong>Nota</strong>: Se você precisar alterar o tamanho de uma imagem, use <a href="/pt-BR/docs/Aprender/CSS">CSS</a> então.</p>
-</div>
+> **Nota:** Se você precisar alterar o tamanho de uma imagem, use [CSS](/pt-BR/docs/Aprender/CSS) então.
 
-<h3 id="Títulos_de_imagem">Títulos de imagem</h3>
+### Títulos de imagem
 
-<p>Como <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks">nos links</a>, você também pode adicionar o atributo <code>title</code> nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:</p>
+Como [nos links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
 
-<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+```html
+<img src="images/dinosaur.jpg"
      alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
      width="400"
      height="341"
-     title="Um T-Rex em exibição no Museu da Universidade de Manchester"&gt;</pre>
+     title="Um T-Rex em exibição no Museu da Universidade de Manchester">
+```
 
-<p>Isso nos dá uma dica de ferramenta, assim como os títulos dos links:</p>
+Isso nos dá uma dica de ferramenta, assim como os títulos dos links:
 
-<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="https://mdn.mozillademos.org/files/12708/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
 
-<p>Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor incluir essas informações de suporte no texto principal do artigo, em vez de anexá-las à imagem. No entanto, eles são úteis em algumas circunstâncias; por exemplo, em uma galeria de imagens quando você não tem espaço para legendas.</p>
+Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor incluir essas informações de suporte no texto principal do artigo, em vez de anexá-las à imagem. No entanto, eles são úteis em algumas circunstâncias; por exemplo, em uma galeria de imagens quando você não tem espaço para legendas.
 
-<h3 id="Aprendizado_ativo_incorporando_uma_imagem">Aprendizado ativo: incorporando uma imagem</h3>
+### Aprendizado ativo: incorporando uma imagem
 
-<p>Agora é sua vez de jogar! Esta seção de aprendizado ativo o ajudará a executar com um simples exercício de incorporação. Você é fornecido com um básico {{htmlelement("img")}} tag; gostaríamos que você incorporasse a imagem localizada no seguinte URL:</p>
+Agora é sua vez de jogar! Esta seção de aprendizado ativo o ajudará a executar com um simples exercício de incorporação. Você é fornecido com um básico {{htmlelement("img")}} tag; gostaríamos que você incorporasse a imagem localizada no seguinte URL:
 
-<p>https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg</p>
+https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 
-<p>Anteriormente, dissemos para nunca vincular as imagens a outros servidores, mas isso é apenas para fins de aprendizado; portanto, deixaremos você de fora dessa vez.</p>
+Anteriormente, dissemos para nunca vincular as imagens a outros servidores, mas isso é apenas para fins de aprendizado; portanto, deixaremos você de fora dessa vez.
 
-<p>Também gostaríamos que você:</p>
+Também gostaríamos que você:
 
-<ul>
- <li>Adicione algum texto alternativo e verifique se ele funciona incorretamente com o URL da imagem.</li>
- <li>Defina a imagem correta <code>width</code> e <code>height</code> (dica; isto é 200px largo e 171px altura), experimente outros valores para ver qual é o efeito.</li>
- <li>Defina um <code>title</code> na imagem.</li>
-</ul>
+- Adicione algum texto alternativo e verifique se ele funciona incorretamente com o URL da imagem.
+- Defina a imagem correta `width` e `height` (dica; isto é 200px largo e 171px altura), experimente outros valores para ver qual é o efeito.
+- Defina um `title` na imagem.
 
-<p>Se você cometer um erro, sempre poderá redefini-lo usando o botão <em>Reset</em>. Se você realmente ficar preso, pressione o botão <em>Show solution</em> para ver a resposta:</p>
+Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se você realmente ficar preso, pressione o botão _Show solution_ para ver a resposta:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+```html hidden
+<h2>Input</h2>
+<textarea id="code" class="input">
+<img></textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
 
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
-&lt;textarea id="code" class="input"&gt;
-&lt;img&gt;&lt;/textarea&gt;
-&lt;h2&gt;Output&lt;/h2&gt;
-&lt;div class="output"&gt;&lt;/div&gt;
-&lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-  &lt;input id="solution" type="button" value="Show solution" /&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -206,9 +211,10 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Images_in_HTML
 button {
   padding: 10px 10px 10px 0;
 }
-</pre>
+```
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+```js hidden
+var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -224,87 +230,83 @@ reset.addEventListener("click", function() {
 });
 
 solution.addEventListener("click", function() {
-textarea.value = '&lt;img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum"&gt;';
+textarea.value = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
   drawOutput();
 });
 
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 500) }}
 
-<h2 id="Anotar_imagens_com_figuras_e_legendas_de_figuras">Anotar imagens com figuras e legendas de figuras</h2>
+## Anotar imagens com figuras e legendas de figuras
 
-<p>Por falar em legendas, existem várias maneiras de adicionar uma legenda para acompanhar sua imagem. Por exemplo, não haveria nada para impedi-lo de fazer isso:</p>
+Por falar em legendas, existem várias maneiras de adicionar uma legenda para acompanhar sua imagem. Por exemplo, não haveria nada para impedi-lo de fazer isso:
 
-<pre class="brush: html">&lt;div class="figure"&gt;
-  &lt;img src="images/dinosaur.jpg"
+```html
+<div class="figure">
+  <img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
        width="400"
-       height="341"&gt;
+       height="341">
 
-  &lt;p&gt;A T-Rex on display in the Manchester University Museum.&lt;/p&gt;
-&lt;/div&gt;</pre>
+  <p>A T-Rex on display in the Manchester University Museum.</p>
+</div>
+```
 
-<p>Está tudo bem. Isso contém o conteúdo que você precisa e é bem estiloso usando CSS. Mas há um problema aqui: não há nada que vincule semanticamente a imagem à sua legenda, o que pode causar problemas para os leitores de tela. Por exemplo, quando você tem 50 imagens e legendas, qual legenda combina com qual imagem?</p>
+Está tudo bem. Isso contém o conteúdo que você precisa e é bem estiloso usando CSS. Mas há um problema aqui: não há nada que vincule semanticamente a imagem à sua legenda, o que pode causar problemas para os leitores de tela. Por exemplo, quando você tem 50 imagens e legendas, qual legenda combina com qual imagem?
 
-<p>Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e {{htmlelement("figcaption")}}. Eles são criados exatamente para esse propósito: fornecer um contêiner semântico para figuras e vincular claramente a figura à legenda. Nosso exemplo acima, pode ser reescrito assim:</p>
+Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e {{htmlelement("figcaption")}}. Eles são criados exatamente para esse propósito: fornecer um contêiner semântico para figuras e vincular claramente a figura à legenda. Nosso exemplo acima, pode ser reescrito assim:
 
-<pre>&lt;figure&gt;
-  &lt;img src="images/dinosaur.jpg"
+```
+<figure>
+  <img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
        width="400"
-       height="341"&gt;
+       height="341">
 
-  &lt;figcaption&gt;A T-Rex on display in the Manchester University Museum.&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+</figure>
+```
 
-<p>O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.</p>
+O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.
 
-<div class="note">
-<p><strong>Nota</strong>: Do ponto de vista da acessibilidade, legendas e {{htmlattrxref('alt','img')}} texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto {{htmlattrxref('alt','img')}} texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e <code>alt</code> texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.</p>
+> **Nota:** Do ponto de vista da acessibilidade, legendas e {{htmlattrxref('alt','img')}} texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto {{htmlattrxref('alt','img')}} texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+
+Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
+
+- Expressa seu significado de maneira compacta e fácil de entender.
+- Pode ir em vários lugares no fluxo linear da página.
+- Fornece informações essenciais de suporte ao texto principal.
+
+Uma figura pode ser várias imagens, um trecho de código, áudio, vídeo, equações, uma tabela ou outra coisa.
+
+### Aprendizado ativo: criando uma figura
+
+Nesta seção de aprendizado ativo, gostaríamos que você pegasse o código finalizado da seção de aprendizado ativo anterior e o transformasse em uma figura:
+
+- Envolve em um elemento {{htmlelement("figure")}}.
+- Copie o texto do atributo `title`, remova o atributo `title`, e coloque o texto dentro de um elemento {{htmlelement("figcaption")}} abaixo da imagem.
+
+Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se você realmente ficar preso, pressione o botão _Show solution_ para ver a resposta:
+
+```html hidden
+<h2>Input</h2>
+<textarea id="code" class="input">
+</textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
+```
 
-<p>Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:</p>
-
-<ul>
- <li>Expressa seu significado de maneira compacta e fácil de entender.</li>
- <li>Pode ir em vários lugares no fluxo linear da página.</li>
- <li>Fornece informações essenciais de suporte ao texto principal.</li>
-</ul>
-
-<p>Uma figura pode ser várias imagens, um trecho de código, áudio, vídeo, equações, uma tabela ou outra coisa.</p>
-
-<h3 id="Aprendizado_ativo_criando_uma_figura">Aprendizado ativo: criando uma figura</h3>
-
-<p>Nesta seção de aprendizado ativo, gostaríamos que você pegasse o código finalizado da seção de aprendizado ativo anterior e o transformasse em uma figura:</p>
-
-<ul>
- <li>Envolve em um elemento {{htmlelement("figure")}}.</li>
- <li>Copie o texto do atributo <code>title</code>, remova o atributo <code>title</code>, e coloque o texto dentro de um elemento {{htmlelement("figcaption")}} abaixo da imagem.</li>
-</ul>
-
-<p>Se você cometer um erro, sempre poderá redefini-lo usando o botão <em>Reset</em>. Se você realmente ficar preso, pressione o botão <em>Show solution</em> para ver a resposta:</p>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
-&lt;textarea id="code" class="input"&gt;
-&lt;/textarea&gt;
-&lt;h2&gt;Output&lt;/h2&gt;
-&lt;div class="output"&gt;&lt;/div&gt;
-&lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-  &lt;input id="solution" type="button" value="Show solution" /&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -319,9 +321,10 @@ window.addEventListener("load", drawOutput);
 button {
   padding: 10px 10px 10px 0;
 }
-</pre>
+```
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+```js hidden
+var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -337,33 +340,32 @@ reset.addEventListener("click", function() {
 });
 
 solution.addEventListener("click", function() {
-textarea.value = '&lt;figure&gt;\n  &lt;img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171"&gt;\n  &lt;figcaption&gt;A T-Rex on display in the Manchester University Museum&lt;/figcaption&gt;\n&lt;/figure&gt;';
+textarea.value = '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
   drawOutput();
 });
 
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 500) }}</p>
+{{ EmbedLiveSample('Playable_code_2', 700, 500) }}
 
-<h2 id="Imagens_de_fundo_CSS">Imagens de fundo CSS</h2>
+## Imagens de fundo CSS
 
-<p>Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e o outras propriedades <code>background-*</code>, são usados ​​para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:</p>
+Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e o outras propriedades `background-*`, são usados ​​para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
 
-<pre class="brush: css">p {
+```css
+p {
   background-image: url("images/dinosaur.jpg");
-}</pre>
+}
+```
 
-<p>A imagem incorporada resultante é sem dúvida mais fácil de posicionar e controlar do que as imagens HTML. Então, por que se preocupar com imagens HTML? Como sugerido acima, as imagens de plano de fundo CSS são apenas para decoração. Se você quiser adicionar algo bonito à sua página para melhorar o visual, tudo bem. No entanto, essas imagens não têm significado semântico. Eles não podem ter nenhum equivalente de texto, são invisíveis para os leitores de tela, etc. É hora das imagens HTML brilharem!</p>
+A imagem incorporada resultante é sem dúvida mais fácil de posicionar e controlar do que as imagens HTML. Então, por que se preocupar com imagens HTML? Como sugerido acima, as imagens de plano de fundo CSS são apenas para decoração. Se você quiser adicionar algo bonito à sua página para melhorar o visual, tudo bem. No entanto, essas imagens não têm significado semântico. Eles não podem ter nenhum equivalente de texto, são invisíveis para os leitores de tela, etc. É hora das imagens HTML brilharem!
 
-<p>Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você deverá usar uma imagem HTML. Se uma imagem é puramente decorativa, você deve usar imagens de plano de fundo CSS.</p>
+Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você deverá usar uma imagem HTML. Se uma imagem é puramente decorativa, você deve usar imagens de plano de fundo CSS.
 
-<div class="note">
-<p><strong>Nota</strong>: Você aprenderá muito mais sobre <a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">CSS background images</a> no nosso tópico de <a href="/pt-BR/docs/Aprender/CSS">CSS</a>.</p>
-</div>
+> **Nota:** Você aprenderá muito mais sobre [CSS background images](/pt-BR/docs/Learn/CSS/Styling_boxes/Backgrounds) no nosso tópico de [CSS](/pt-BR/docs/Aprender/CSS).
 
-<p>É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.</p>
+É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.
 
-<p>{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}</p>
+{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}

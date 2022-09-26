@@ -3,56 +3,56 @@ title: Um primeiro mergulho no JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
 translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
-
-<p class="summary">Agora você poderá aprender um pouco sobre a Teoria do Javascript e o que você poderá fazer com ele. Nós vamos lhe fornecer aqui um Curso rápido sobre as características básicas do JavaScript através de um tutorial completamente prático. Você irá construir um simples jogo de "Adivinhe o número", passo a passo. </p>
+Agora você poderá aprender um pouco sobre a Teoria do Javascript e o que você poderá fazer com ele. Nós vamos lhe fornecer aqui um Curso rápido sobre as características básicas do JavaScript através de um tutorial completamente prático. Você irá construir um simples jogo de "Adivinhe o número", passo a passo.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimentos básicos de informática, uma compreensão básica de HTML e CSS, uma compreensão do que é JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>
-    <p>Ter um primeiro bit de experiência em escrever um pouco de  JavaScript, e adquirir  pelo menos uma compreensão básica do que envolve escrever um programa em JavaScript.</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Conhecimentos básicos de informática, uma compreensão básica de HTML e
+        CSS, uma compreensão do que é JavaScript.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        <p>
+          Ter um primeiro bit de experiência em escrever um pouco de JavaScript,
+          e adquirir pelo menos uma compreensão básica do que envolve escrever
+          um programa em JavaScript.
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Nós não esperamos que você entenda todo o código imediatamente - Apenas queremos ensinar-lhe os melhores conceitos por enquanto e dar a você uma idéia de como o JavaScript (e outras linguagens de programação) funcionam. Em artigos posteriores você vai rever todos esses recursos com muito mais detalhes!</p>
+Nós não esperamos que você entenda todo o código imediatamente - Apenas queremos ensinar-lhe os melhores conceitos por enquanto e dar a você uma idéia de como o JavaScript (e outras linguagens de programação) funcionam. Em artigos posteriores você vai rever todos esses recursos com muito mais detalhes!
 
-<div class="note">
-<p><strong>Nota</strong>: Muitos dos recursos de código que você verá no JavaScript são iguais aos de outra linguagem de programação - funções, loops, etc. A sintaxe do código parece diferente, mas os conceitos ainda são praticamente os mesmos.</p>
-</div>
+> **Nota:** Muitos dos recursos de código que você verá no JavaScript são iguais aos de outra linguagem de programação - funções, loops, etc. A sintaxe do código parece diferente, mas os conceitos ainda são praticamente os mesmos.
 
-<h2 id="Pensando_como_um_Programador">Pensando como um Programador</h2>
+## Pensando como um Programador
 
-<p>Uma das coisas mais difíceis de aprender na programação não é a sintaxe que você precisa aprender, mas como aplicá-la para resolver problemas do mundo real. Você precisa começar a pensar como um programador - isso geralmente envolve olhar para as descrições do que seu programa precisa fazer e analisar como eles podem ser aplicados na solução real (prática), quais recursos de código são necessários para alcançar esse objetivo, e como fazê-los trabalhar em conjunto.</p>
+Uma das coisas mais difíceis de aprender na programação não é a sintaxe que você precisa aprender, mas como aplicá-la para resolver problemas do mundo real. Você precisa começar a pensar como um programador - isso geralmente envolve olhar para as descrições do que seu programa precisa fazer e analisar como eles podem ser aplicados na solução real (prática), quais recursos de código são necessários para alcançar esse objetivo, e como fazê-los trabalhar em conjunto.
 
-<p>Isso requer um mistura de trabalho duro, experiência com a sintaxe de programação utilizada e prática, além de um pouco de criatividade, é claro. Quanto mais você programa, melhor programador se torna. Nós não prometemos transformar seu cérebro em um "cérebro de programador" em 5 minutos, mas vamos te dar todas as oportunidades para pensar na prática como um programador ao longo deste curso. </p>
+Isso requer um mistura de trabalho duro, experiência com a sintaxe de programação utilizada e prática, além de um pouco de criatividade, é claro. Quanto mais você programa, melhor programador se torna. Nós não prometemos transformar seu cérebro em um "cérebro de programador" em 5 minutos, mas vamos te dar todas as oportunidades para pensar na prática como um programador ao longo deste curso.
 
-<p>Com isso em mente, vejamos o exemplo que estaremos construindo neste artigo e analisaremos o processo geral de dissecá-lo em tarefas tangíveis.</p>
+Com isso em mente, vejamos o exemplo que estaremos construindo neste artigo e analisaremos o processo geral de dissecá-lo em tarefas tangíveis.
 
-<p> </p>
+## Exemplo — Jogo adivinhe um número
 
-<h2 id="Exemplo_—_Jogo_adivinhe_um_número">Exemplo — Jogo adivinhe um número</h2>
+Neste artigo vamos mostrar a você como construir este simples jogo, que pode ser visto abaixo:
 
-<p>Neste artigo vamos mostrar a você como construir este simples jogo, que pode ser visto abaixo:</p>
+```html hidden
+<!DOCTYPE html>
+<html>
 
-<div class="hidden">
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Jogo adivinhe o número&lt;/title&gt;
-    &lt;style&gt;
+<head>
+    <meta charset="utf-8">
+    <title>Jogo adivinhe o número</title>
+    <style>
         html {
             font-family: sans-serif;
         }
@@ -68,20 +68,20 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
             color: white;
             padding: 3px;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
+    </style>
+</head>
 
-&lt;body&gt;
-    &lt;h1&gt;Jogo Adivinhe um número&lt;/h1&gt;
-    &lt;p&gt;Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.&lt;/p&gt;
-    &lt;div class="form"&gt; &lt;label for="guessField"&gt;Digite seu palpite: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt; &lt;input type="submit" value="Enviar palpite" class="guessSubmit"&gt; &lt;/div&gt;
-    &lt;div class="resultParas"&gt;
-        &lt;p class="guesses"&gt;&lt;/p&gt;
-        &lt;p class="lastResult"&gt;&lt;/p&gt;
-        &lt;p class="lowOrHi"&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;script&gt;
+<body>
+    <h1>Jogo Adivinhe um número</h1>
+    <p>Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.</p>
+    <div class="form"> <label for="guessField">Digite seu palpite: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Enviar palpite" class="guessSubmit"> </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+</body>
+<script>
     // Seu JavaScipt vem aqui
     var randomNumber = Math.floor(Math.random() * 100) + 1;
     var guesses = document.querySelector('.guesses');
@@ -112,9 +112,9 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
       } else {
         lastResult.textContent = 'Errado!';
         lastResult.style.backgroundColor = 'red';
-        if(userGuess &lt; randomNumber) {
+        if(userGuess < randomNumber) {
           lowOrHi.textContent='Seu palpite está muito baixo!' ;
-        } else if(userGuess &gt; randomNumber) {
+        } else if(userGuess > randomNumber) {
           lowOrHi.textContent = 'Seu palpite está muito alto!';
         }
       }
@@ -137,7 +137,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
     function resetGame() {
       guessCount = 1;
       var resetParas = document.querySelectorAll('.resultParas p');
-      for(var i = 0 ; i &lt; resetParas.length ; i++) {
+      for(var i = 0 ; i < resetParas.length ; i++) {
         resetParas[i].textContent='';
       }
 
@@ -149,74 +149,68 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
       lastResult.style.backgroundColor='white';
       randomNumber=Math.floor(Math.random() * 100) + 1;
     }
-&lt;/script&gt;
+</script>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-</div>
+{{ EmbedLiveSample('Top_hidden_code', '100%', 320) }}
 
-<p>{{ EmbedLiveSample('Top_hidden_code', '100%', 320) }}</p>
+Vá em frente e jogue por um tempo para se familiarizar com o jogo antes de continuar.
 
-<p>Vá em frente e jogue por um tempo para se familiarizar com o jogo antes de continuar.</p>
+Vamos imaginar que o seu chefe te deu as seguintes diretrizes para criar este jogo:
 
-<p>Vamos imaginar que o seu chefe te deu as seguintes diretrizes para criar este jogo:</p>
+> Quero que você crie um jogo simples do tipo adivinhe um número. Ele deve gerar um número aleatório de 1 a 100, depois desafiar o jogador a adivinhar o número em 10 rodadas. A cada rodada deve ser dito ao jogador se ele está certo ou errado, se estiver errado, deve ser dito se o palpite é muito baixo ou muito alto. Também deve ser mostrado ao jogador os números que ele tentou adivinhar anteriormente. O jogo termina se o jogador acertar o número ou acabarem o número de tentativas. Quando o jogo acabar, deve ser dado ao jogador a opção de jogar novamente.
 
-<blockquote>
-<p>Quero que você crie um jogo simples do tipo adivinhe um número. Ele deve gerar um número aleatório de 1 a 100, depois desafiar o jogador a adivinhar o número em 10 rodadas. A cada rodada deve ser dito ao jogador se ele está certo ou errado, se estiver errado, deve ser dito se o palpite é muito baixo ou muito alto. Também deve ser mostrado ao jogador os números que ele tentou adivinhar anteriormente. O jogo termina se o jogador acertar o número ou acabarem o número de tentativas. Quando o jogo acabar, deve ser dado ao jogador a opção de jogar novamente.</p>
-</blockquote>
+Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pequenas tarefas, da forma mais parecida com o pensamento de um programador quanto possível:
 
-<p>Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pequenas tarefas, da forma mais parecida com o pensamento de um programador quanto possível:</p>
+1.  Gerar um número aleatório entre 1 e 100.
+2.  Gravar o número do turno que o jogador está. Iniciar em 1.
+3.  Dar ao jogador uma forma de adivinhar o número.
+4.  Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.
+5.  Depois, verificar se o palpite está correto.
+6.  Se estiver correto:
 
-<ol>
- <li>Gerar um número aleatório entre 1 e 100.</li>
- <li>Gravar o número do turno que o jogador está. Iniciar em 1.</li>
- <li>Dar ao jogador uma forma de adivinhar o número.</li>
- <li>Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.</li>
- <li>Depois, verificar se o palpite está correto.</li>
- <li>Se estiver correto:
-  <ol>
-   <li>Escrever mensagem de parabéns.</li>
-   <li>Impedir que o jogador insira mais respostas (isso pode bugar o jogo).</li>
-   <li>Mostrar controle que permita ao jogador reiniciar o jogo.</li>
-  </ol>
- </li>
- <li>Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
-  <ol>
-   <li>Dizer ao jogador que ele está errado.</li>
-   <li>Permitir que ele insira outra resposta.</li>
-   <li>Incrementar o número do turno em 1.</li>
-  </ol>
- </li>
- <li>Se o jogador está errado mas não tem turnos sobrando:
-  <ol>
-   <li>Dizer ao jogador que o jogo acabou.</li>
-   <li>Impedir que o jogador insira mais respostas (isso pode bugar o jogo).</li>
-   <li>Mostrar controle que permita ao jogador reiniciar o jogo.</li>
-  </ol>
- </li>
- <li>Quando reiniciar, tenha certeza de resetar todas as variáveis e a interface do jogo, então volte para o passo 1.</li>
-</ol>
+    1.  Escrever mensagem de parabéns.
+    2.  Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+    3.  Mostrar controle que permita ao jogador reiniciar o jogo.
 
-<p>Então vamos em frente, olhando como podemos transformar esses passos em código, construindo esse exemplo e explorando as ferramentas do JavaScript ao longo do caminho.</p>
+7.  Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
 
-<h3 id="Configuração_Inicial">Configuração Inicial</h3>
+    1.  Dizer ao jogador que ele está errado.
+    2.  Permitir que ele insira outra resposta.
+    3.  Incrementar o número do turno em 1.
 
-<p>Para iniciar este tutorial, gostaríamos que você fizesse uma cópia do arquivo <a href="https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">jogo-adivinhe-o-numero-inicio.html</a> (<a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">ver demonstração</a>). Abra-o em um editor de texto e também no seu browser. No momento você vai apenas ver um simples cabeçalho, parágrafo de instruções e um formulário para entrada de informações, mas o formulário não fará nada por enquanto.</p>
+8.  Se o jogador está errado mas não tem turnos sobrando:
 
-<p>O lugar em que começaremos a escrever nosso código será dentro da tag {{htmlelement("script")}} na parte inferior do HTML:</p>
+    1.  Dizer ao jogador que o jogo acabou.
+    2.  Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+    3.  Mostrar controle que permita ao jogador reiniciar o jogo.
 
-<pre class="brush: html">&lt;script&gt;
+9.  Quando reiniciar, tenha certeza de resetar todas as variáveis e a interface do jogo, então volte para o passo 1.
+
+Então vamos em frente, olhando como podemos transformar esses passos em código, construindo esse exemplo e explorando as ferramentas do JavaScript ao longo do caminho.
+
+### Configuração Inicial
+
+Para iniciar este tutorial, gostaríamos que você fizesse uma cópia do arquivo [jogo-adivinhe-o-numero-inicio.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) ([ver demonstração](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Abra-o em um editor de texto e também no seu browser. No momento você vai apenas ver um simples cabeçalho, parágrafo de instruções e um formulário para entrada de informações, mas o formulário não fará nada por enquanto.
+
+O lugar em que começaremos a escrever nosso código será dentro da tag {{htmlelement("script")}} na parte inferior do HTML:
+
+```html
+<script>
 
   // Seu JavaScript vai aqui
 
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Adicionando_variáveis_para_armazenar_nossos_dados">Adicionando variáveis para armazenar nossos dados</h3>
+### Adicionando variáveis para armazenar nossos dados
 
-<p>Vamos começar. Primeiramente, adicione as seguintes linhas na sua tag {{htmlelement("script")}} :</p>
+Vamos começar. Primeiramente, adicione as seguintes linhas na sua tag {{htmlelement("script")}} :
 
-<pre class="brush: js">var numeroAleatorio= Math.floor(Math.random() * 100) + 1;
+```js
+var numeroAleatorio= Math.floor(Math.random() * 100) + 1;
 
 var palpites = document.querySelector('.palpites');
 var ultimoResultado = document.querySelector('.ultimoResultado');
@@ -226,69 +220,72 @@ var envioPalpite = document.querySelector('.envioPalpite');
 var campoPalpite = document.querySelector('.campoPalpite');
 
 var contagemPalpites = 1;
-var botaoReinicio;</pre>
+var botaoReinicio;
+```
 
-<p>Aqui estamos setando as variáveis que precisamos para guardar os dados que nosso programa irá utilizar. Variáveis são basicamente recipientes para valores (como números, ou strings ou textos). Variáveis são criadas com a palavra-chave <code>var</code> seguida de um nome para sua variável. Você pode atribuir um valor para sua variável com um sinal de igual (<code>=</code>) seguido do valor que você quer dar a ela.</p>
+Aqui estamos setando as variáveis que precisamos para guardar os dados que nosso programa irá utilizar. Variáveis são basicamente recipientes para valores (como números, ou strings ou textos). Variáveis são criadas com a palavra-chave `var` seguida de um nome para sua variável. Você pode atribuir um valor para sua variável com um sinal de igual (`=`) seguido do valor que você quer dar a ela.
 
-<p>No nosso exemplo:</p>
+No nosso exemplo:
 
-<ul>
- <li>À primeira variável — <code>numeroAleatorio</code> — é atribuído um número aleatório entre 1 e 100, calculado usando um algoritmo matemático.</li>
- <li>As próximas três variáveis são criadas para guardar uma referência para os parágrafos resultantes em nosso HTML, e são usadas para inserir valores nos parágrafos no código:
-  <pre class="brush: html">&lt;p class="palpites"&gt;&lt;/p&gt;
-&lt;p class="ultimoResultado"&gt;&lt;/p&gt;
-&lt;p class="baixoOuAlto"&gt;&lt;/p&gt;</pre>
- </li>
- <li>As próximas duas variáveis armazenam referências para o campo de texto e o botão de envio e são usados para controlar o envio do palpite.
-  <pre class="brush: html">&lt;label for="campoPalpite"&gt;Digite seu palpite: &lt;/label&gt;&lt;input type="text" id="campoPalpite" class="campoPalpite"&gt;
-&lt;input type="submit" value="Enviar palpite" class="envioPalpite"&gt;</pre>
- </li>
- <li>As últimas duas variáveis (contagemPalpites e botaoReinicio) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).</li>
-</ul>
+- À primeira variável — `numeroAleatorio` — é atribuído um número aleatório entre 1 e 100, calculado usando um algoritmo matemático.
+- As próximas três variáveis são criadas para guardar uma referência para os parágrafos resultantes em nosso HTML, e são usadas para inserir valores nos parágrafos no código:
 
-<div class="note">
-<p><strong>Nota</strong>: Você irá aprender muito mais sobre variáveis a partir do <a href="https://developer.mozilla.org/en-US/docs/user:chrisdavidmills/variables">próximo artigo</a>.</p>
-</div>
+  ```html
+  <p class="palpites"></p>
+  <p class="ultimoResultado"></p>
+  <p class="baixoOuAlto"></p>
+  ```
 
-<h3 id="Funções">Funções</h3>
+- As próximas duas variáveis armazenam referências para o campo de texto e o botão de envio e são usados para controlar o envio do palpite.
 
-<p>Em seguida, adicione o seguinte código abaixo do JavaScript anterior:</p>
+  ```html
+  <label for="campoPalpite">Digite seu palpite: </label><input type="text" id="campoPalpite" class="campoPalpite">
+  <input type="submit" value="Enviar palpite" class="envioPalpite">
+  ```
 
-<pre class="brush: js">function conferirPalpite() {
+- As últimas duas variáveis (contagemPalpites e botaoReinicio) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).
+
+> **Nota:** Você irá aprender muito mais sobre variáveis a partir do [próximo artigo](/pt-BR/docs/user:chrisdavidmills/variables).
+
+### Funções
+
+Em seguida, adicione o seguinte código abaixo do JavaScript anterior:
+
+```js
+function conferirPalpite() {
   alert('Eu sou um placeholder');
-}</pre>
+}
+```
 
-<p>Funções são blocos reutilizáveis de código que você pode escrever uma vez e executá-lo de novo e de novo, eliminando a necessidade de repetir o código todas as vezes. Isso é realmente útil. Há várias formas de se definir funções, mas, por agora, vamos nos concentrar em um tipo simples. Aqui nós definimos uma função usando a palavra chave <code>function</code>, seguida de um nome, com parênteses colocados na sequência. Depois disso nós colocamos duas chaves (<code>{ }</code>). Dentro das chaves vai todo o código que queremos executar sempre que chamarmos a função.</p>
+Funções são blocos reutilizáveis de código que você pode escrever uma vez e executá-lo de novo e de novo, eliminando a necessidade de repetir o código todas as vezes. Isso é realmente útil. Há várias formas de se definir funções, mas, por agora, vamos nos concentrar em um tipo simples. Aqui nós definimos uma função usando a palavra chave `function`, seguida de um nome, com parênteses colocados na sequência. Depois disso nós colocamos duas chaves (`{ }`). Dentro das chaves vai todo o código que queremos executar sempre que chamarmos a função.
 
-<p>O código é executado digitando o nome da função seguido pelos parênteses.</p>
+O código é executado digitando o nome da função seguido pelos parênteses.
 
-<p>Tente salvar o seu código agora e atualizá-lo no navegador.</p>
+Tente salvar o seu código agora e atualizá-lo no navegador.
 
-<p>Vá até o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console JavaScript</a>, e insira a seguinte linha:</p>
+Vá até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), e insira a seguinte linha:
 
-<pre class="brush: js">conferirPalpite();</pre>
+```js
+conferirPalpite();
+```
 
-<p>Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós definimos uma função em nosso código que cria um alerta a qualquer hora em que a chamarmos.</p>
+Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós definimos uma função em nosso código que cria um alerta a qualquer hora em que a chamarmos.
 
-<div class="note">
-<p><strong>Nota</strong>: Você irá aprender muito mais sobre funções mais tarde no curso.</p>
-</div>
+> **Nota:** Você irá aprender muito mais sobre funções mais tarde no curso.
 
-<h3 id="Operadores">Operadores</h3>
+### Operadores
 
-<p>Os operadores JavaScript nos permite realizar testes, fazer cálculos matemáticos, unir sequências de texto, e outras coisas do tipo.</p>
+Os operadores JavaScript nos permite realizar testes, fazer cálculos matemáticos, unir sequências de texto, e outras coisas do tipo.
 
-<p>Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console JavaScript</a> se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:</p>
+Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Console JavaScript&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Console JavaScript</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -336,14 +333,14 @@ var botaoReinicio;</pre>
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
 
     function createInput() {
@@ -352,7 +349,7 @@ var botaoReinicio;</pre>
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class','input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
@@ -384,102 +381,61 @@ var botaoReinicio;</pre>
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
-</div>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
 
-<p>Primeiro vamos ver os operadores matemáticos, como por exemplo:</p>
+Primeiro vamos ver os operadores matemáticos, como por exemplo:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Operador</th>
-   <th scope="col">Nome</th>
-   <th scope="col">Exemplo</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>+</code></td>
-   <td>Adição</td>
-   <td><code>6 + 9</code></td>
-  </tr>
-  <tr>
-   <td><code>-</code></td>
-   <td>Subtração</td>
-   <td><code>20 - 15</code></td>
-  </tr>
-  <tr>
-   <td><code>*</code></td>
-   <td>Multiplicação</td>
-   <td><code>3 * 7</code></td>
-  </tr>
-  <tr>
-   <td><code>/</code></td>
-   <td>Divisão</td>
-   <td><code>10 / 5</code></td>
-  </tr>
- </tbody>
-</table>
+| Operador | Nome          | Exemplo   |
+| -------- | ------------- | --------- |
+| `+`      | Adição        | `6 + 9`   |
+| `-`      | Subtração     | `20 - 15` |
+| `*`      | Multiplicação | `3 * 7`   |
+| `/`      | Divisão       | `10 / 5`  |
 
-<p>Você também pode usar o operador <code>+</code> para unir sequências de texto (isso é chamado de concatenação em programação). Tente inserir as seguintes linhas:</p>
+Você também pode usar o operador `+` para unir sequências de texto (isso é chamado de concatenação em programação). Tente inserir as seguintes linhas:
 
-<pre class="brush: js">var nome = 'Bingo';
+```js
+var nome = 'Bingo';
 nome;
 var ola = ' diz olá!';
 ola;
 var cumprimento = nome + ola;
-cumprimento;</pre>
+cumprimento;
+```
 
-<p>Há também alguns atalhos para operadores disponíveis, chamados de operadores de atribuição ampliada (ou atribuição composta). Por exemplo, se você quer adicionar uma nova sequência de texto à uma existente e retornar o resultado, você pode fazer o seguinte:</p>
+Há também alguns atalhos para operadores disponíveis, chamados de operadores de atribuição ampliada (ou atribuição composta). Por exemplo, se você quer adicionar uma nova sequência de texto à uma existente e retornar o resultado, você pode fazer o seguinte:
 
-<pre class="brush: js">nome += ' diz olá!';</pre>
+```js
+nome += ' diz olá!';
+```
 
-<p>Isso é equivalente a:</p>
+Isso é equivalente a:
 
-<pre class="brush: js">nome = nome + ' diz olá!';</pre>
+```js
+nome = nome + ' diz olá!';
+```
 
-<p>Quando estamos rodando testes de verdadeiro/falso (por exemplo, condicinais internas — veja <a href="#conditionals">abaixo</a>, usamos operadores de comparação, por exemplo:</p>
+Quando estamos rodando testes de verdadeiro/falso (por exemplo, condicinais internas — veja [abaixo](#conditionals), usamos operadores de comparação, por exemplo:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Operador</th>
-   <th scope="col">Nome</th>
-   <th scope="col">Exemplo</th>
-  </tr>
-  <tr>
-   <td><code>===</code></td>
-   <td>Igualdade estrita (é estritamente o mesmo?)</td>
-   <td><code>5 === 2 + 4</code></td>
-  </tr>
-  <tr>
-   <td><code>!==</code></td>
-   <td>Não-igualdade (não é o mesmo?)</td>
-   <td><code>'Chris' !== 'Ch' + 'ris'</code></td>
-  </tr>
-  <tr>
-   <td><code>&lt;</code></td>
-   <td>Menor que</td>
-   <td><code>10 &lt; 6</code></td>
-  </tr>
-  <tr>
-   <td><code>&gt;</code></td>
-   <td>Maior que</td>
-   <td><code>10 &gt; 20</code></td>
-  </tr>
- </thead>
-</table>
+| Operador | Nome                                        | Exemplo                    |
+| -------- | ------------------------------------------- | -------------------------- |
+| `===`    | Igualdade estrita (é estritamente o mesmo?) | `5 === 2 + 4`              |
+| `!==`    | Não-igualdade (não é o mesmo?)              | `'Chris' !== 'Ch' + 'ris'` |
+| `<`      | Menor que                                   | `10 < 6`                   |
+| `>`      | Maior que                                   | `10 > 20`                  |
 
-<h3 id="Condicionais">Condicionais</h3>
+### Condicionais
 
-<p>Voltando à nossa função <code>conferirPalpite()</code>, imagino que seja seguro dizer que não queremos que ela apenas exiba uma mensagem de teste (placeholder). Nós queremos verificar se o palpite do jogador está correto ou não, e responder apropriadamente.</p>
+Voltando à nossa função `conferirPalpite()`, imagino que seja seguro dizer que não queremos que ela apenas exiba uma mensagem de teste (placeholder). Nós queremos verificar se o palpite do jogador está correto ou não, e responder apropriadamente.
 
-<p>Neste ponto, substitua sua função <code>conferirPalpite()</code> atual por esta versão:</p>
+Neste ponto, substitua sua função `conferirPalpite()` atual por esta versão:
 
-<pre class="brush: js">function conferirPalpite() {
+```js
+function conferirPalpite() {
   var palpiteUsuario = Number(campoPalpite.value);
   if (contagemPalpites === 1) {
     palpites.textContent = 'Palpites anteriores: ';
@@ -498,9 +454,9 @@ cumprimento;</pre>
   } else {
     ultimoResultado.textContent = 'Errado!';
     ultimoResultado.style.backgroundColor = 'red';
-    if(palpiteUsuario &lt; numeroAleatorio) {
+    if(palpiteUsuario < numeroAleatorio) {
       baixoOuAlto.textContent = 'Seu palpite está muito baixo!';
-    } else if(palpiteUsuario &gt; numeroAleatorio) {
+    } else if(palpiteUsuario > numeroAleatorio) {
       baixoOuAlto.textContent = 'Seu palpite está muito alto!';
     }
   }
@@ -508,64 +464,70 @@ cumprimento;</pre>
   contagemPalpites++;
   campoPalpite.value = '';
   campoPalpite.focus();
-}</pre>
+}
+```
 
-<p>Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que faz.</p>
+Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que faz.
 
-<ul>
- <li>A primeira linha (linha 2 no código acima) declara uma variável chamada <code>palpiteUsuario</code> e define seu valor igual ao valor inserido pelo jogador no campo de texto. Nós também rodamos esse valor através do método embutido <code>Number()</code>, apenas para ter certeza de que o valor inserido é um número.</li>
- <li>Em seguida, encontramos nosso primero bloco de código condicional (linhas 3–5 no código acima). Um bloco de código condicional lhe permite executar código seletivamente, dependendo se uma condição é verdadeira ou não. Se parece um pouco com uma função, mas não é. A forma mais simples de um bloco condicional começa com a palavra chave <code>if</code>, depois os parênteses, depois as chaves. Dentro dos parênteses nós incluímos um teste. Se o teste retornar <code>true</code>(verdadeiro), o código dentro das chaves é executado. Caso contrário, não é executado, e seguimos para a próxima parte do código. Neste caso, o teste está verificando se a variável <code>contagemPalpites</code> é igual a <code>1</code> (isto é, se essa é ou não a primeira tentativa do jogador):
-  <pre class="brush: js">contagemPalpites === 1</pre>
-  Se a condição for verdadeira, nós tornamos o conteúdo do parágrafo de palpites, <code>&lt;p class="palpites"&gt;&lt;/p&gt;</code> igual a "Palpites anteriores: ". Caso contrário, o texto não é exibido.</li>
- <li>A linha 6 acrescenta o valor atual de <code>palpiteUsuario</code> ao final do parágrafo <code>palpites</code>, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.</li>
- <li>O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
-  <ul>
-   <li>O primeiro <code>if(){ }</code> confere se o palpite do jogador é igual ao número aleatório (<code>numeroAleatorio</code>) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo <code>&lt;p class="baixoOuAlto"&gt;&lt;/p&gt;</code>, e executamos uma função chamada <code>configFimDeJogo()</code>, que iremos discutir mais tarde.</li>
-   <li>Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura <code>else if(){ }</code>. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.</li>
-   <li>O bloco final encadeado ao final do código (<code>else { }</code>) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.</li>
-  </ul>
- </li>
- <li>As próximas três linhas da função (linhas 26–28) nos deixa preparados para o próximo palpite ser submetido. Nós somamos 1 à variável <code>contagemPalpites</code> para que o jogador use sua tentativa (<code>++</code> é uma operação de incremento — incrementa em 1), e o campo de texto do formulário de inserção seja esvaziado e focado novamente, pronto para que o próximo palpite seja inserido.</li>
-</ul>
+- A primeira linha (linha 2 no código acima) declara uma variável chamada `palpiteUsuario` e define seu valor igual ao valor inserido pelo jogador no campo de texto. Nós também rodamos esse valor através do método embutido `Number()`, apenas para ter certeza de que o valor inserido é um número.
+- Em seguida, encontramos nosso primero bloco de código condicional (linhas 3–5 no código acima). Um bloco de código condicional lhe permite executar código seletivamente, dependendo se uma condição é verdadeira ou não. Se parece um pouco com uma função, mas não é. A forma mais simples de um bloco condicional começa com a palavra chave `if`, depois os parênteses, depois as chaves. Dentro dos parênteses nós incluímos um teste. Se o teste retornar `true`(verdadeiro), o código dentro das chaves é executado. Caso contrário, não é executado, e seguimos para a próxima parte do código. Neste caso, o teste está verificando se a variável `contagemPalpites` é igual a `1` (isto é, se essa é ou não a primeira tentativa do jogador):
 
-<h3 id="Eventos">Eventos</h3>
+  ```js
+  contagemPalpites === 1
+  ```
 
-<p>Neste ponto temos uma função <code>conferirPalpite()</code> bem implementada, mas ela não irá fazer nada pois nós não a chamamos ainda. Idealmente nós queremos que ela seja acionada quando o botão "Enviar palpite" for pressionado, e para fazer isso precisamos usar um evento. Eventos são ações que acontencem no navegador, como um botão sendo clicado, ou uma página carregada, ou um vídeo tocando; ações as quais podemos responder executando blocos de código. Os construtores que monitoram os acontecimentos de eventos são chamados de <strong>event listeners</strong>, e os blocos de código executados em resposta ao acontecimento do evento são chamados de <strong>event handlers</strong>.</p>
+  Se a condição for verdadeira, nós tornamos o conteúdo do parágrafo de palpites, `<p class="palpites"></p>` igual a "Palpites anteriores: ". Caso contrário, o texto não é exibido.
 
-<p>Adicione a seguinte linha abaixo da chave de fechamento da sua função <code>conferirPalpite()</code>:</p>
+- A linha 6 acrescenta o valor atual de `palpiteUsuario` ao final do parágrafo `palpites`, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.
+- O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
 
-<pre class="brush: js">envioPalpite.addEventListener('click', conferirPalpite);</pre>
+  - O primeiro `if(){ }` confere se o palpite do jogador é igual ao número aleatório (`numeroAleatorio`) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo `<p class="baixoOuAlto"></p>`, e executamos uma função chamada `configFimDeJogo()`, que iremos discutir mais tarde.
+  - Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura `else if(){ }`. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.
+  - O bloco final encadeado ao final do código (`else { }`) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.
 
-<p>Aqui nós estamos adicionando um <em>event listener</em> ao botão <code>envioPalpite</code>. Esse é um método que aceita a inserção de dois valores (chamados de argumentos) — o tipo de envento que estamos monitorando (neste caso o evento <code>click</code>) como um <em>string</em> (sequência de texto), e o código que queremos executar quando o evento ocorrer (neste caso a função <code>conferirPalpite()</code> — note que não temos que especificar os parênteses quando estivermos escrevendo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}).</p>
+- As próximas três linhas da função (linhas 26–28) nos deixa preparados para o próximo palpite ser submetido. Nós somamos 1 à variável `contagemPalpites` para que o jogador use sua tentativa (`++` é uma operação de incremento — incrementa em 1), e o campo de texto do formulário de inserção seja esvaziado e focado novamente, pronto para que o próximo palpite seja inserido.
 
-<p>Tente agora salvar e atualizar seu código, e seu exemplo deve funcionar agora, até um ponto. O único problema agora é que se você acertar o palpite ou ficar sem mais tentativas o jogo irá falhar, porque ainda não definimos a função <code>configFimDeJogo()</code> que deve ser executada uma vez que o jogo terminar. Vamos adicionar agora o código restante e completar a funcionalidade do nosso exemplo.</p>
+### Eventos
 
-<h3 id="Finalizando_a_funcionalidade_do_jogo">Finalizando a funcionalidade do jogo</h3>
+Neste ponto temos uma função `conferirPalpite()` bem implementada, mas ela não irá fazer nada pois nós não a chamamos ainda. Idealmente nós queremos que ela seja acionada quando o botão "Enviar palpite" for pressionado, e para fazer isso precisamos usar um evento. Eventos são ações que acontencem no navegador, como um botão sendo clicado, ou uma página carregada, ou um vídeo tocando; ações as quais podemos responder executando blocos de código. Os construtores que monitoram os acontecimentos de eventos são chamados de **event listeners**, e os blocos de código executados em resposta ao acontecimento do evento são chamados de **event handlers**.
 
-<p>Vamos adicionar a função <code>configFimDeJogo()</code> ao final do nosso código e então explorá-lo. Adicione agora isso, abaixo do restante do seu JavaScript:</p>
+Adicione a seguinte linha abaixo da chave de fechamento da sua função `conferirPalpite()`:
 
-<pre class="brush: js">function configFimDeJogo() {
+```js
+envioPalpite.addEventListener('click', conferirPalpite);
+```
+
+Aqui nós estamos adicionando um _event listener_ ao botão `envioPalpite`. Esse é um método que aceita a inserção de dois valores (chamados de argumentos) — o tipo de envento que estamos monitorando (neste caso o evento `click`) como um _string_ (sequência de texto), e o código que queremos executar quando o evento ocorrer (neste caso a função `conferirPalpite()` — note que não temos que especificar os parênteses quando estivermos escrevendo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
+
+Tente agora salvar e atualizar seu código, e seu exemplo deve funcionar agora, até um ponto. O único problema agora é que se você acertar o palpite ou ficar sem mais tentativas o jogo irá falhar, porque ainda não definimos a função `configFimDeJogo()` que deve ser executada uma vez que o jogo terminar. Vamos adicionar agora o código restante e completar a funcionalidade do nosso exemplo.
+
+### Finalizando a funcionalidade do jogo
+
+Vamos adicionar a função `configFimDeJogo()` ao final do nosso código e então explorá-lo. Adicione agora isso, abaixo do restante do seu JavaScript:
+
+```js
+function configFimDeJogo() {
   campoPalpite.disabled = true;
   envioPalpite.disabled = true;
   botaoReinicio = document.createElement('button');
   botaoReinicio.textContent = 'Iniciar novo jogo';
   document.body.appendChild(botaoReinicio);
   botaoReinicio.addEventListener('click', reiniciarJogo);
-}</pre>
+}
+```
 
-<ul>
- <li>As primeiras duas linhas desabilitam a entrada de texto do formulário e o clique do botão, definindo a propriedade <em>disabled</em> (desabilitado) de cada um como <code>true</code> (verdadeiro). Isso é necessário, pois se não o fizermos, o usuário poderia submeter mais palpites depois do jogo ter terminado, o que iria bagunçar as coisas.</li>
- <li>As próximas três linhas geram um novo elemento {{htmlelement("button")}}, define o texto de seu rótulo como "Iniciar novo jogo", e o adiciona ao final do nosso HTML existente.</li>
- <li>A linha final define um monitor de evento (<em>event listener</em>) em nosso botão, para que quando seja clicado, uma função chamada <code>reiniciarJogo()</code> seja executada.</li>
-</ul>
+- As primeiras duas linhas desabilitam a entrada de texto do formulário e o clique do botão, definindo a propriedade _disabled_ (desabilitado) de cada um como `true` (verdadeiro). Isso é necessário, pois se não o fizermos, o usuário poderia submeter mais palpites depois do jogo ter terminado, o que iria bagunçar as coisas.
+- As próximas três linhas geram um novo elemento {{htmlelement("button")}}, define o texto de seu rótulo como "Iniciar novo jogo", e o adiciona ao final do nosso HTML existente.
+- A linha final define um monitor de evento (_event listener_) em nosso botão, para que quando seja clicado, uma função chamada `reiniciarJogo()` seja executada.
 
-<p>Agora precisamos definir essa função também! Adicione o seguinte código, novamente ao final do nosso JavaScript:</p>
+Agora precisamos definir essa função também! Adicione o seguinte código, novamente ao final do nosso JavaScript:
 
-<pre class="brush: js">function reiniciarJogo() {
+```js
+function reiniciarJogo() {
   contagemPalpites = 1;
 
   var reiniciarParas = document.querySelectorAll('.resultadoParas p');
-  for (var i = 0 ; i &lt; reiniciarParas.length ; i++) {
+  for (var i = 0 ; i < reiniciarParas.length ; i++) {
     reiniciarParas[i].textContent = '';
   }
 
@@ -579,101 +541,121 @@ cumprimento;</pre>
   ultimoResultado.style.backgroundColor = 'white';
 
   numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-}</pre>
+}
+```
 
-<p>Esse longo bloco de código redefine completamente tudo do modo como era no início do jogo, para que o jogador possa jogá-lo novamente. Ele:</p>
+Esse longo bloco de código redefine completamente tudo do modo como era no início do jogo, para que o jogador possa jogá-lo novamente. Ele:
 
-<ul>
- <li>Coloca o valor da variável <code>contagemPalpites</code> novamente igual a 1.</li>
- <li>Limpa todos os parágrafos de informativos.</li>
- <li>Remove o botão resete do nosso código.</li>
- <li>Habilita os elementos do formulários, esvazia e direciona o foco ao campo de texto, pronto para que um novo palpite seja inserido.</li>
- <li>Remove a cor de fundo do parágrafo <code>ultimoResultado</code>.</li>
- <li>Gera um novo número aleatório para que o jogador não esteja tentando adivinhar o mesmo número novamente!</li>
-</ul>
+- Coloca o valor da variável `contagemPalpites` novamente igual a 1.
+- Limpa todos os parágrafos de informativos.
+- Remove o botão resete do nosso código.
+- Habilita os elementos do formulários, esvazia e direciona o foco ao campo de texto, pronto para que um novo palpite seja inserido.
+- Remove a cor de fundo do parágrafo `ultimoResultado`.
+- Gera um novo número aleatório para que o jogador não esteja tentando adivinhar o mesmo número novamente!
 
-<p><strong>Neste ponto você deve ter um jogo (simples) completamente funcional — parabéns!</strong></p>
+**Neste ponto você deve ter um jogo (simples) completamente funcional — parabéns!**
 
-<p>Tudo o que temos que fazer agora neste artigo é falar sobre alguns outros recursos importantes que você já viu, mesmo que não os tenha notado ainda.</p>
+Tudo o que temos que fazer agora neste artigo é falar sobre alguns outros recursos importantes que você já viu, mesmo que não os tenha notado ainda.
 
-<h3 id="Loops">Loops</h3>
+### Loops
 
-<p>Uma parte do código acima que precisamos olhar mais detalhadamente é o loop <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a>. Loop é um conceito muito importante em programação, que permite a você continuar executando um pedaço do código repetidamente, até que determinada condição seja satisfeita.</p>
+Uma parte do código acima que precisamos olhar mais detalhadamente é o loop [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for). Loop é um conceito muito importante em programação, que permite a você continuar executando um pedaço do código repetidamente, até que determinada condição seja satisfeita.
 
-<p>Para começar, vá novamente até o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console JavaScript</a> do seu navegador, e insira o seguinte:</p>
+Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
 
-<pre class="brush: js">for (var i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
+```js
+for (var i = 1 ; i < 21 ; i++) { console.log(i) }
+```
 
-<p>O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acontece por causa do loop. Um loop <code>for</code> utiliza a inserção de três valores (argumentos):</p>
+O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acontece por causa do loop. Um loop `for` utiliza a inserção de três valores (argumentos):
 
-<ol>
- <li><strong>Um valor inicial</strong>: Nesse caso estamos iniciando a contagem em 1, mas poderia ser qualquer outro número que quisesse utilizar. Você pode substituir <code>i</code> por qualquer número que quiser também, mas <code>i</code> é utilizado por convenção porque é curto e fácil de lembrar.</li>
- <li><strong>Uma condição de saída</strong>: Aqui nós especificamos <code>i &lt; 21</code> — o loop irá continuar rodando até que <code>i</code> não seja mais menor que 21. Quando <code>i</code> alcançar 21, o loop não será mais executado.</li>
- <li><strong>Incremento</strong>: Nós especificamos <code>i++</code>, que siginifica "adicione 1 à i". O loop irá rodar uma vez para cada valor de <code>i</code>, até que <code>i</code> alcance o valor de 21 (como abordado acima). Nesse caso, nós estamos simplesmente imprimindo o valor de <code>i</code> no console em cada iteração usando {{domxref("Console.log", "console.log()")}}.</li>
-</ol>
+1.  **Um valor inicial**: Nesse caso estamos iniciando a contagem em 1, mas poderia ser qualquer outro número que quisesse utilizar. Você pode substituir `i` por qualquer número que quiser também, mas `i` é utilizado por convenção porque é curto e fácil de lembrar.
+2.  **Uma condição de saída**: Aqui nós especificamos `i < 21` — o loop irá continuar rodando até que `i` não seja mais menor que 21. Quando `i` alcançar 21, o loop não será mais executado.
+3.  **Incremento**: Nós especificamos `i++`, que siginifica "adicione 1 à i". O loop irá rodar uma vez para cada valor de `i`, até que `i` alcance o valor de 21 (como abordado acima). Nesse caso, nós estamos simplesmente imprimindo o valor de `i` no console em cada iteração usando {{domxref("Console.log", "console.log()")}}.
 
-<p>Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função <code>reiniciarJogo()</code>:</p>
+Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função `reiniciarJogo()`:
 
-<pre class="brush: js">var reiniciarParas = document.querySelectorAll('.resultadoParas p');
-for (var i = 0 ; i &lt; reiniciarParas.length ; i++) {
+```js
+var reiniciarParas = document.querySelectorAll('.resultadoParas p');
+for (var i = 0 ; i < reiniciarParas.length ; i++) {
   reiniciarParas[i].textContent = '';
-}</pre>
+}
+```
 
-<p>Esse código cria uma variável contendo uma lista de todos os parágrafos dentro de <code>&lt;div class="resultadoParas"&gt;</code> usando o método {{domxref("Document.querySelectorAll", "querySelectorAll()")}}, e então faz o loop em cada um, removendo o conteúdo de texto dos mesmos.</p>
+Esse código cria uma variável contendo uma lista de todos os parágrafos dentro de `<div class="resultadoParas">` usando o método {{domxref("Document.querySelectorAll", "querySelectorAll()")}}, e então faz o loop em cada um, removendo o conteúdo de texto dos mesmos.
 
-<h3 id="Uma_pequena_discussão_sobre_objetos">Uma pequena discussão sobre objetos</h3>
+### Uma pequena discussão sobre objetos
 
-<p>Vamos adicionar uma melhoria final antes de chegarmos a essa discussão. Adicione a linha seguinte logo abaixo da linha <code>var botaoReinicio;</code> próximo ao topo do seu JavaScript, em seguida salve nosso arquivo:</p>
+Vamos adicionar uma melhoria final antes de chegarmos a essa discussão. Adicione a linha seguinte logo abaixo da linha `var botaoReinicio;` próximo ao topo do seu JavaScript, em seguida salve nosso arquivo:
 
-<pre class="brush: js">campoPalpite.focus();</pre>
+```js
+campoPalpite.focus();
+```
 
-<p>Essa linha usa o método {{domxref("HTMLElement.focus", "focus()")}} para automaticamente colocar o cursor dentro campo de texto do {{htmlelement("input")}} assim que a página carrega, significando que o usuário já pode começar a digitar o primeiro palpite, e não precisa clicar no campo do formulário primeiro. É apenas uma pequena adição, mas melhora a usabilidade — dando ao usuário uma boa dica visual do que ele deve fazer para jogar o jogo.</p>
+Essa linha usa o método {{domxref("HTMLElement.focus", "focus()")}} para automaticamente colocar o cursor dentro campo de texto do {{htmlelement("input")}} assim que a página carrega, significando que o usuário já pode começar a digitar o primeiro palpite, e não precisa clicar no campo do formulário primeiro. É apenas uma pequena adição, mas melhora a usabilidade — dando ao usuário uma boa dica visual do que ele deve fazer para jogar o jogo.
 
-<p>Vamos analisar o que está acontencedo aqui com um pouco mais de detalhes. Em JavaScript, tudo é um objeto. Um objeto é uma coleção de funcionalidades relacionadas armazenadas em um único agrupamento. Você pode criar seus próprios objetos, mas isso é bastante avançado e nós não iremos abordar até mais tarde no curso. Por agora, vamos apenas discutir brevemente os objetos pré-construídos presentes em seu navegador, que lhe permite fazer várias coisas úteis.</p>
+Vamos analisar o que está acontencedo aqui com um pouco mais de detalhes. Em JavaScript, tudo é um objeto. Um objeto é uma coleção de funcionalidades relacionadas armazenadas em um único agrupamento. Você pode criar seus próprios objetos, mas isso é bastante avançado e nós não iremos abordar até mais tarde no curso. Por agora, vamos apenas discutir brevemente os objetos pré-construídos presentes em seu navegador, que lhe permite fazer várias coisas úteis.
 
-<p>Neste caso particular, nós primeiro criamos a variável <code>campoPalpite</code> que armazena uma referência ao campo de inserção de texto do formulário em nosso HTML — a linha seguinte pode ser achada entre nossas declarações de variáveis próximas ao topo:</p>
+Neste caso particular, nós primeiro criamos a variável `campoPalpite` que armazena uma referência ao campo de inserção de texto do formulário em nosso HTML — a linha seguinte pode ser achada entre nossas declarações de variáveis próximas ao topo:
 
-<pre class="brush: js">var campoPalpite = document.querySelector('.campoPalpite');</pre>
+```js
+var campoPalpite = document.querySelector('.campoPalpite');
+```
 
-<p>Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. <code>querySelector()</code> pega um pedaço de informação — um <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">seletor CSS</a> que seleciona o elemento ao qual você quer referenciar.</p>
+Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) que seleciona o elemento ao qual você quer referenciar.
 
-<p>Como agora <code>campoPalpite</code> contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção <code>&lt;input&gt;</code>, é o <code>focus()</code>, então agora podemos usar essa linha para focar o campo de inserção de texto:</p>
+Como agora `campoPalpite` contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção `<input>`, é o `focus()`, então agora podemos usar essa linha para focar o campo de inserção de texto:
 
-<pre class="brush: js">campoPalpite.focus();</pre>
+```js
+campoPalpite.focus();
+```
 
-<p>Variáveis que não contém referências a elementos de formulário não terão <code>focus()</code> disponível para elas. Por exemplo, a variável <code>palpites</code> contém referência de um elemento {{htmlelement("p")}}, e <code>contagemPalpites</code> contém um número.</p>
+Variáveis que não contém referências a elementos de formulário não terão `focus()` disponível para elas. Por exemplo, a variável `palpites` contém referência de um elemento {{htmlelement("p")}}, e `contagemPalpites` contém um número.
 
-<h3 id="Brincando_com_objetos_do_navegador">Brincando com objetos do navegador</h3>
+### Brincando com objetos do navegador
 
-<p>Vamos brincar um pouco com alguns objetos do navegador.</p>
+Vamos brincar um pouco com alguns objetos do navegador.
 
-<ol>
- <li>Primeiro abra seu programa em um navegador.</li>
- <li>Em seguida, abra as <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">ferramentas de desenvolvimento do navegador</a>, e certifique-se de que a aba do console JavaScript esteja aberta.</li>
- <li>Digite <code>campoPalpite</code> e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
-  <ol>
-   <li>Agora digite o seguinte:
-    <pre class="brush: js">campoPalpite.value = 'Olá';</pre>
-    A propriedade <code>value</code> representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!</li>
-  </ol>
- </li>
- <li>Agora tente digitar <code>palpites</code> e pressione <em>return</em>. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.</li>
- <li>Agora tente inserir a linha seguinte:
-  <pre class="brush: js">palpites.value</pre>
-  O navegador irá retornar <code>undefined</code>, porque <code>value</code> não existe em parágrafos.</li>
- <li>Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
-  <pre class="brush: js">palpites.textContent = 'Onde está meu parágrafo?';</pre>
- </li>
- <li>Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
-  <pre class="brush: js">palpites.style.backgroundColor = 'yellow';
-palpites.style.fontSize = '200%';
-palpites.style.padding = '10px';
-palpites.style.boxShadow = '3px 3px 6px black';</pre>
-  Cada elemento em uma página tem uma propriedade <code>style</code>, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.</li>
-</ol>
+1.  Primeiro abra seu programa em um navegador.
+2.  Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
+3.  Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
 
-<h2 id="Finalizado_por_enquanto...">Finalizado por enquanto...</h2>
+    1.  Agora digite o seguinte:
 
-<p>Então é isso, para construir o exemplo — você chegou ao final, muito bem! Teste o resultado do seu código, ou <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">jogue com nossa versão finalizada aqui</a>. Se você não conseguir fazer o exemplo funcionar, compare com o <a href="https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">código fonte</a>.</p>
+        ```js
+        campoPalpite.value = 'Olá';
+        ```
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</p>
+        A propriedade `value` representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!
+
+4.  Agora tente digitar `palpites` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
+5.  Agora tente inserir a linha seguinte:
+
+    ```js
+    palpites.value
+    ```
+
+    O navegador irá retornar `undefined`, porque `value` não existe em parágrafos.
+
+6.  Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
+
+    ```js
+    palpites.textContent = 'Onde está meu parágrafo?';
+    ```
+
+7.  Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
+
+    ```js
+    palpites.style.backgroundColor = 'yellow';
+    palpites.style.fontSize = '200%';
+    palpites.style.padding = '10px';
+    palpites.style.boxShadow = '3px 3px 6px black';
+    ```
+
+    Cada elemento em uma página tem uma propriedade `style`, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.
+
+## Finalizado por enquanto...
+
+Então é isso, para construir o exemplo — você chegou ao final, muito bem! Teste o resultado do seu código, ou [jogue com nossa versão finalizada aqui](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Se você não conseguir fazer o exemplo funcionar, compare com o [código fonte](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

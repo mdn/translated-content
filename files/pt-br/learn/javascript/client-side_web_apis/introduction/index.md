@@ -4,122 +4,121 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Aprender/JavaScript/Client-side_web_APIs/Introdução
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
-<div>{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}</div>
-
-<p class="summary">Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como funcionam, como usá-las em seu código e como são estruturadas? Ainda, vamos entender quais são as principais classes de APIs e quais usos elas possuem.</p>
+Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como funcionam, como usá-las em seu código e como são estruturadas? Ainda, vamos entender quais são as principais classes de APIs e quais usos elas possuem.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>
-    <p>Conhecimentos básicos de computação, <a href="/pt-BR/docs/Aprender/HTML">HTML</a>, <a href="/pt-BR/docs/Aprender/CSS">CSS</a> e JavaScript (veja <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiros passos</a>, <a href="/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos">elementos construtivos</a> e <a href="/pt-BR/docs/Aprender/JavaScript/Objetos">introdução a objetos</a>).</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Familiarizar-se com APIs, o que elas podem fazer, e como usá-las em seu código.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        <p>
+          Conhecimentos básicos de computação,
+          <a href="/pt-BR/docs/Aprender/HTML">HTML</a>,
+          <a href="/pt-BR/docs/Aprender/CSS">CSS</a> e JavaScript (veja
+          <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiros passos</a
+          >,
+          <a href="/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos"
+            >elementos construtivos</a
+          >
+          e
+          <a href="/pt-BR/docs/Aprender/JavaScript/Objetos"
+            >introdução a objetos</a
+          >).
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Familiarizar-se com APIs, o que elas podem fazer, e como usá-las em seu
+        código.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="O_que_são_APIs">O que são APIs?</h2>
+## O que são APIs?
 
-<p>As APIs (Application Programming Interfaces) são construções disponíveis nas linguagens de programação que permitem a desenvolvedores criar funcionalidades complexas mais facilmente. Tais construções abstraem o código mais complexo, proporcionando o uso de sintaxes mais simples em seu lugar.</p>
+As APIs (Application Programming Interfaces) são construções disponíveis nas linguagens de programação que permitem a desenvolvedores criar funcionalidades complexas mais facilmente. Tais construções abstraem o código mais complexo, proporcionando o uso de sintaxes mais simples em seu lugar.
 
-<p>Pense no seguinte exemplo: o uso de energia elétrica em sua casa ou apartamento. Quando você deseja utilizar um eletrodoméstico, você precisa somente ligar o aparelho na tomada. Não é preciso conectar diretamente o fio do aparelho diretamente na caixa de luz. Isso seria, além de muito ineficiente, difícil e perigoso de ser feito (caso você não seja eletricista).</p>
+Pense no seguinte exemplo: o uso de energia elétrica em sua casa ou apartamento. Quando você deseja utilizar um eletrodoméstico, você precisa somente ligar o aparelho na tomada. Não é preciso conectar diretamente o fio do aparelho diretamente na caixa de luz. Isso seria, além de muito ineficiente, difícil e perigoso de ser feito (caso você não seja eletricista).
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14317/plug-socket.png" style="display: block; height: 472px; margin: 0px auto; width: 700px;"></p>
+![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
 
-<p><em>Fonte da imagem: <a href="https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/">Overloaded plug socket</a> por <a href="https://www.flickr.com/photos/easy-pics/">The Clear Communication People</a>, retirado do Flickr.</em></p>
+_Fonte da imagem: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) por [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), retirado do Flickr._
 
-<p>Da mesma forma, caso você queira programar gráficos em 3D, é muito mais fácil usar uma API escrita em linguagem de alto nível como JavaScript ou Python, do que escrever em código de mais baixo nível (C ou C++) que controla diretamente a GPU ou outras funções gráficas.</p>
+Da mesma forma, caso você queira programar gráficos em 3D, é muito mais fácil usar uma API escrita em linguagem de alto nível como JavaScript ou Python, do que escrever em código de mais baixo nível (C ou C++) que controla diretamente a GPU ou outras funções gráficas.
 
-<div class="note">
-<p><strong>Nota</strong>: para mais informações, consulte o <a href="/pt-BR/docs/Glossario/API">termo API</a> no glossário.</p>
-</div>
+> **Nota:** para mais informações, consulte o [termo API](/pt-BR/docs/Glossario/API) no glossário.
 
-<h3 id="APIs_JavaScript_client-side">APIs JavaScript client-side</h3>
+### APIs JavaScript client-side
 
-<p>A linguagem JavaScript, especialmente client-side, possui diversas APIs disponíveis. Elas não fazem parte da linguagem em si, mas são escritas sobre o <em>core </em>da linguagem JavaScript, fornecendo superpoderes para serem utilizados em seu código. Geralmente, tais APIs fazem parte de uma das seguintes categorias:</p>
+A linguagem JavaScript, especialmente client-side, possui diversas APIs disponíveis. Elas não fazem parte da linguagem em si, mas são escritas sobre o _core_ da linguagem JavaScript, fornecendo superpoderes para serem utilizados em seu código. Geralmente, tais APIs fazem parte de uma das seguintes categorias:
 
-<ul>
- <li><strong>APIs de navegadores: </strong>fazem parte do seu navegador web, sendo capazes de expor dados do navegador e do ambiente ao redor do computador circundante, além de fazer coisas úteis com esses dados. Por exemplo, a <a href="/pt-BR/docs/Web/API/API_Web_Audio">API Web Áudio</a> fornece construções JavaScript simples para manipular áudio em seu navegador - pegar uma faixa de áudio, alterar o volume dela, aplicar efeitos, etc. Por trás dos panos, o navegador utiliza códigos complexos de baixo nível (ex: C++) para realizar o processamento de áudio de fato. Como foi dito anteriormente, essa complexidade toda é abstraída de você pela API. </li>
- <li><strong>APIs de terceiros:</strong> geralmente, não fazem parte do navegador e você precisa recuperar seu código e suas informações de outro local da web. A <a href="https://developer.twitter.com/en/docs">API do Twitter</a>, por exemplo, permite mostrar os seus últimos tweets no seu site. Ela fornece um conjunto de construções especiais para ser usado de maneira a consultar o serviço do Twitter e retornar informações específicas.</li>
-</ul>
+- **APIs de navegadores:** fazem parte do seu navegador web, sendo capazes de expor dados do navegador e do ambiente ao redor do computador circundante, além de fazer coisas úteis com esses dados. Por exemplo, a [API Web Áudio](/pt-BR/docs/Web/API/API_Web_Audio) fornece construções JavaScript simples para manipular áudio em seu navegador - pegar uma faixa de áudio, alterar o volume dela, aplicar efeitos, etc. Por trás dos panos, o navegador utiliza códigos complexos de baixo nível (ex: C++) para realizar o processamento de áudio de fato. Como foi dito anteriormente, essa complexidade toda é abstraída de você pela API.
+- **APIs de terceiros:** geralmente, não fazem parte do navegador e você precisa recuperar seu código e suas informações de outro local da web. A [API do Twitter](https://developer.twitter.com/en/docs), por exemplo, permite mostrar os seus últimos tweets no seu site. Ela fornece um conjunto de construções especiais para ser usado de maneira a consultar o serviço do Twitter e retornar informações específicas.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13508/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;"></p>
+![](https://mdn.mozillademos.org/files/13508/browser.png)
 
-<h3 id="Relacionamento_entre_JavaScript_APIs_e_outras_ferramentas_JavaScript">Relacionamento entre JavaScript, APIs, e outras ferramentas JavaScript</h3>
+### Relacionamento entre JavaScript, APIs, e outras ferramentas JavaScript
 
-<p>Na seção anterior, abordamos as APIs JavaScript client-side e como elas se relacionam com a linguagem JavaScript. Esse ponto merece uma revisão e também uma breve menção de como outras ferramentas JavaScript encaixam-se nesse contexto:</p>
+Na seção anterior, abordamos as APIs JavaScript client-side e como elas se relacionam com a linguagem JavaScript. Esse ponto merece uma revisão e também uma breve menção de como outras ferramentas JavaScript encaixam-se nesse contexto:
 
-<ul>
- <li>JavaScript — linguagem de alto nível, embutida em navegadores, que permite implementar funcionalidades em páginas web/aplicativos. A linguagem também está disponível em outros ambientes de programação, tais como o <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introdução">Node</a>.</li>
- <li>APIs de navegadores — construções presentes no navegador, as quais são baseadas em linguagem JavaScript e permitem a implementação de funcionalidades de uma maneira mais fácil.</li>
- <li>APIs de terceiros — construções presentes em plataformas de terceiros (ex: Twitter, Facebook), que permitem o uso de alguma funcionalidade da plataforma em suas páginas na web. Um exemplo é a possibilidade de mostrar os últimos tweets em sua página.</li>
- <li>Bibliotecas JavaScript — em geral, um ou mais arquivos JavaScript contendo<a href="/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos/Functions#Funções_personalizadas"> funções personalizadas</a>, as quais podem ser usadas em sua página web para acelerar ou permitir escrever funcionalidades comuns. Exemplos: jQuery, Mootools e React.</li>
- <li>Frameworks JavaScript — uma evolução das bibliotecas. Frameworks JavaScript (ex: Angular e Ember), normalmente, são pacotes de tecnologias HTML, CSS, JavaScript e outras, que você instala e usa para escrever uma aplicação web completa do zero. A principal diferença entre uma biblioteca e um framework é a inversão de controle ("Inversion of Control"). Quando um método de uma biblioteca é chamado, a pessoa desenvolvedora está no controle. Em um framework, o controle inverte-se: é o framework que chama o código da pessoa desenvolvedora.</li>
-</ul>
+- JavaScript — linguagem de alto nível, embutida em navegadores, que permite implementar funcionalidades em páginas web/aplicativos. A linguagem também está disponível em outros ambientes de programação, tais como o [Node](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introdução).
+- APIs de navegadores — construções presentes no navegador, as quais são baseadas em linguagem JavaScript e permitem a implementação de funcionalidades de uma maneira mais fácil.
+- APIs de terceiros — construções presentes em plataformas de terceiros (ex: Twitter, Facebook), que permitem o uso de alguma funcionalidade da plataforma em suas páginas na web. Um exemplo é a possibilidade de mostrar os últimos tweets em sua página.
+- Bibliotecas JavaScript — em geral, um ou mais arquivos JavaScript contendo[ funções personalizadas](/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos/Functions#Funções_personalizadas), as quais podem ser usadas em sua página web para acelerar ou permitir escrever funcionalidades comuns. Exemplos: jQuery, Mootools e React.
+- Frameworks JavaScript — uma evolução das bibliotecas. Frameworks JavaScript (ex: Angular e Ember), normalmente, são pacotes de tecnologias HTML, CSS, JavaScript e outras, que você instala e usa para escrever uma aplicação web completa do zero. A principal diferença entre uma biblioteca e um framework é a inversão de controle ("Inversion of Control"). Quando um método de uma biblioteca é chamado, a pessoa desenvolvedora está no controle. Em um framework, o controle inverte-se: é o framework que chama o código da pessoa desenvolvedora.
 
-<h2 id="O_que_as_APIs_podem_fazer">O que as APIs podem fazer?</h2>
+## O que as APIs podem fazer?
 
-<p>Existem muitas APIs disponíveis, nos navegadores modernos, que permitem uma liberdade de ação na hora de codar. Você pode conferir isso na <a href="https://developer.mozilla.org/pt-BR/docs/Web/API">página de referência das APIs da MDN</a>.</p>
+Existem muitas APIs disponíveis, nos navegadores modernos, que permitem uma liberdade de ação na hora de codar. Você pode conferir isso na [página de referência das APIs da MDN](/pt-BR/docs/Web/API).
 
-<h3 id="APIs_comuns_de_navegadores">APIs comuns de navegadores</h3>
+### APIs comuns de navegadores
 
-<p>As categorias mais comuns de APIs de navegadores que você irá utilizar (e que veremos em detalhes neste módulo), são:</p>
+As categorias mais comuns de APIs de navegadores que você irá utilizar (e que veremos em detalhes neste módulo), são:
 
-<ul>
- <li><strong>APIs para manipular documentos </strong>carregados no navegador. O exemplo mais óbvio é a <a href="https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM">API DOM (Document Object Model)</a>, que permite manipular HTML e CSS — criando, removendo a alterando o HTML, aplicando dinamicamente novos estilos a sua página, etc. Toda vez que você vê uma janela pop-up em uma página, ou um novo conteúdo é mostrado, o DOM está em ação. Para saber mais sobre estes tipos de API, leia <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulando documentos</a>.</li>
- <li><strong>APIs</strong><strong> que buscam dados no servidor</strong> para atualizar pequenas seções da página, por conta própria, são bastante usadas. Isso, a princípio, parece ser um detalhe pequeno, mas tem um impacto enorme na performance e no comportamento dos sites. Se você precisa atualizar a cotação de uma ação ou listar novas histórias disponíveis, a possibilidade de fazer isso instantaneamente sem precisar atualizar a página dá a impressão de um site muito mais responsivo. Entre as APIs que tornam isso possível, podemos destacar o <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> e a <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API">API Fetch</a>. Você pode também encontrar o termo <strong>Ajax</strong>, que descreve essa técnica. Para saber mais sobre essas APIs, leia <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>.</li>
- <li><strong>APIs para desenhar e manipular elementos gráficos</strong> são completamente suportados nos browsers — os mais comuns são <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> e <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, que possibilitam que você atualize os dados dos pixels em um elemento HTML de maneira programática. {{htmlelement("canvas")}} elemento para criar cenas 2d e 3d. Por exemplo, você poderia dezenhar formas como retangulos e circulos, importar uma imagem para o canvas, e aplicar um filtro para sepia ou grayscale usando o Canvas API, ou criar uma complexa cena 3d com brilho e texturas usando WebGL. Essas APIs são frequentemente combinar com APIs para criar loops de animações(como {{domxref("window.requestAnimationFrame()")}}) e outros para constantemente lançar cenas like como cartoons e jogos.</li>
- <li><strong><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a></strong> como {{domxref("HTMLMediaElement")}}, a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, e <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> permiten a você fazer coisas realmente interessantes com multimedia como a criação personalizada controles de UI para executar audio e video, exibindo faixas de texto como legendas e legendas ocultas junto com seus vídeos, capturando vídeo de sua câmera da web para ser manipulado por meio de uma tela (veja acima) ou exibido no computador de outra pessoa em uma webconferência,ou adicionar efeitos às trilhas de áudio (como ganho, distorção, panorâmica, etc.).</li>
- <li><strong>Device APIs</strong> São basicamente APIs para manipulação e recuperação de dados de hardware de dispositivo moderno de uma forma que seja útil para aplicativos da web.Já falamos sobre a Geolocation API acessando o dispositivo dados de localização para que você possa marcar sua posição em um mapa.Outros exemplos incluem informar ao usuário que uma atualização útil está disponível em um aplicativo da web por meio de notificações do sistema(Veja em <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a>)ou hardware de vibração(Veja em <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>).</li>
- <li><strong>Client-side storage APIs</strong> estão se tornando muito mais difundidos em navegadores da web - a capacidade de armazenar dados no lado do cliente é muito útil se você quer criar um app que vai salvar seu estado entre carregamentos de página, e talvez até funcione quando o dispositivo estiver offline. Existem várias opções disponíveis, por exemplo, armazenamento simples de nome / valor com o <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, e armazenamento de dados tabulares mais complexos com o <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>.</li>
-</ul>
+- **APIs para manipular documentos** carregados no navegador. O exemplo mais óbvio é a [API DOM (Document Object Model)](/pt-BR/docs/DOM/Referencia_do_DOM), que permite manipular HTML e CSS — criando, removendo a alterando o HTML, aplicando dinamicamente novos estilos a sua página, etc. Toda vez que você vê uma janela pop-up em uma página, ou um novo conteúdo é mostrado, o DOM está em ação. Para saber mais sobre estes tipos de API, leia [Manipulando documentos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
+- **APIs** **que buscam dados no servidor** para atualizar pequenas seções da página, por conta própria, são bastante usadas. Isso, a princípio, parece ser um detalhe pequeno, mas tem um impacto enorme na performance e no comportamento dos sites. Se você precisa atualizar a cotação de uma ação ou listar novas histórias disponíveis, a possibilidade de fazer isso instantaneamente sem precisar atualizar a página dá a impressão de um site muito mais responsivo. Entre as APIs que tornam isso possível, podemos destacar o [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest "XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing.") e a [API Fetch](/pt-BR/docs/Web/API/Fetch_API). Você pode também encontrar o termo **Ajax**, que descreve essa técnica. Para saber mais sobre essas APIs, leia [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+- **APIs para desenhar e manipular elementos gráficos** são completamente suportados nos browsers — os mais comuns são [Canvas](/pt-BR/docs/Web/API/Canvas_API) e [WebGL](/pt-BR/docs/Web/API/WebGL_API), que possibilitam que você atualize os dados dos pixels em um elemento HTML de maneira programática. {{htmlelement("canvas")}} elemento para criar cenas 2d e 3d. Por exemplo, você poderia dezenhar formas como retangulos e circulos, importar uma imagem para o canvas, e aplicar um filtro para sepia ou grayscale usando o Canvas API, ou criar uma complexa cena 3d com brilho e texturas usando WebGL. Essas APIs são frequentemente combinar com APIs para criar loops de animações(como {{domxref("window.requestAnimationFrame()")}}) e outros para constantemente lançar cenas like como cartoons e jogos.
+- **[Audio and Video APIs](https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, a [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permiten a você fazer coisas realmente interessantes com multimedia como a criação personalizada controles de UI para executar audio e video, exibindo faixas de texto como legendas e legendas ocultas junto com seus vídeos, capturando vídeo de sua câmera da web para ser manipulado por meio de uma tela (veja acima) ou exibido no computador de outra pessoa em uma webconferência,ou adicionar efeitos às trilhas de áudio (como ganho, distorção, panorâmica, etc.).
+- **Device APIs** São basicamente APIs para manipulação e recuperação de dados de hardware de dispositivo moderno de uma forma que seja útil para aplicativos da web.Já falamos sobre a Geolocation API acessando o dispositivo dados de localização para que você possa marcar sua posição em um mapa.Outros exemplos incluem informar ao usuário que uma atualização útil está disponível em um aplicativo da web por meio de notificações do sistema(Veja em [Notifications API](/pt-BR/docs/Web/API/Notifications_API))ou hardware de vibração(Veja em [Vibration API](/pt-BR/docs/Web/API/Vibration_API)).
+- **Client-side storage APIs** estão se tornando muito mais difundidos em navegadores da web - a capacidade de armazenar dados no lado do cliente é muito útil se você quer criar um app que vai salvar seu estado entre carregamentos de página, e talvez até funcione quando o dispositivo estiver offline. Existem várias opções disponíveis, por exemplo, armazenamento simples de nome / valor com o [Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API), e armazenamento de dados tabulares mais complexos com o [IndexedDB API](/pt-BR/docs/Web/API/IndexedDB_API).
 
-<h3 id="APIs_comuns_de_terceiros">APIs comuns de terceiros</h3>
+### APIs comuns de terceiros
 
-<p>APIs de terceiros são bastante variadas. Dentre as mais populares, que você eventualmente irá utilizar em algum momento, podermos destacar:</p>
+APIs de terceiros são bastante variadas. Dentre as mais populares, que você eventualmente irá utilizar em algum momento, podermos destacar:
 
-<ul>
- <li>A <a href="https://dev.twitter.com/overview/documentation">Twitter API</a>, que permite coisas como mostrar seu últimos tweets no seu website.</li>
- <li>O <a href="https://developers.google.com/maps/">Google Maps API</a> permite que você faça todo tipo de coisa com mapas nas suas páginas web (funnily enough, it also powers Google Maps). This is now an entire suite of APIs, which handle a wide variety of tasks, as evidenced by the <a href="https://developers.google.com/maps/documentation/api-picker">Google Maps API Picker</a>.</li>
- <li>The <a href="https://developers.facebook.com/docs/">Facebook suite of APIs</a> enables you to use various parts of the Facebook ecosystem to benefit your app, for example by providing app login using Facebook login, accepting in-app payments, rolling out targetted ad campaigns, etc.</li>
- <li>The <a href="https://developers.google.com/youtube/">YouTube API</a>, which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.</li>
- <li>The <a href="https://www.twilio.com/">Twilio API</a>, which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.</li>
-</ul>
+- A [Twitter API](https://dev.twitter.com/overview/documentation), que permite coisas como mostrar seu últimos tweets no seu website.
+- O [Google Maps API](https://developers.google.com/maps/) permite que você faça todo tipo de coisa com mapas nas suas páginas web (funnily enough, it also powers Google Maps). This is now an entire suite of APIs, which handle a wide variety of tasks, as evidenced by the [Google Maps API Picker](https://developers.google.com/maps/documentation/api-picker).
+- The [Facebook suite of APIs](https://developers.facebook.com/docs/) enables you to use various parts of the Facebook ecosystem to benefit your app, for example by providing app login using Facebook login, accepting in-app payments, rolling out targetted ad campaigns, etc.
+- The [YouTube API](https://developers.google.com/youtube/), which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.
+- The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
 
-<div class="note">
-<p><strong>Note</strong>: Você pode encontrar informações sobre muitas outras APIs de terceiros no <a href="http://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>.</p>
-</div>
+> **Nota:** Você pode encontrar informações sobre muitas outras APIs de terceiros no [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
 
-<h2 id="Como_as_APIs_funcionam">Como as APIs funcionam?</h2>
+## Como as APIs funcionam?
 
-<p>APIs JavaScript possuem pequenas diferenças mas, em geral, possuem funcionalidades em comum e operam de maneira semelhante.</p>
+APIs JavaScript possuem pequenas diferenças mas, em geral, possuem funcionalidades em comum e operam de maneira semelhante.
 
-<h3 id="Elas_são_baseadas_em_objetos">Elas são baseadas em objetos</h3>
+### Elas são baseadas em objetos
 
-<p>Your code interacts with APIs using one or more <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).</p>
+Your code interacts with APIs using one or more [JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
 
-<div class="note">
-<p><strong>Note</strong>: If you are not already familiar with how objects work, you should go back and work through our <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> module before continuing.</p>
-</div>
+> **Nota:** If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects) module before continuing.
 
-<p>Let's return to the example of the Geolocation API — this is a very simple API that consists of a few simple objects:</p>
+Let's return to the example of the Geolocation API — this is a very simple API that consists of a few simple objects:
 
-<ul>
- <li>{{domxref("Geolocation")}}, which contains three methods for controlling the retrieval of geodata.</li>
- <li>{{domxref("Position")}}, which represents the position of a device at a given time — this contains a {{domxref("Coordinates")}} object that contains the actual position information, plus a timestamp representing the given time.</li>
- <li>{{domxref("Coordinates")}}, which contains a whole lot of useful data on the device position, including latitude and longitude, altitude, velocity and direction of movement, and more.</li>
-</ul>
+- {{domxref("Geolocation")}}, which contains three methods for controlling the retrieval of geodata.
+- {{domxref("Position")}}, which represents the position of a device at a given time — this contains a {{domxref("Coordinates")}} object that contains the actual position information, plus a timestamp representing the given time.
+- {{domxref("Coordinates")}}, which contains a whole lot of useful data on the device position, including latitude and longitude, altitude, velocity and direction of movement, and more.
 
-<p>So how do these objects interact? If you look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">maps-example.html</a> example (<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">see it live also</a>), you'll see the following code:</p>
+So how do these objects interact? If you look at our [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) example ([see it live also](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), you'll see the following code:
 
-<pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) {
+```js
+navigator.geolocation.getCurrentPosition(function(position) {
   var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
   var myOptions = {
     zoom: 8,
@@ -128,101 +127,113 @@ original_slug: Aprender/JavaScript/Client-side_web_APIs/Introdução
     disableDefaultUI: true
   }
   var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>Note</strong>: When you first load up the above example, you should be given a dialog box asking if you are happy to share your location with this application (see the <a href="#they_have_additional_security_mechanisms_where_appropriate">They have additional security mechanisms where appropriate</a> section later in the article). You need to agree to this to be able to plot your location on the map. If you still can't see the map, you may need to set your permissions manually; you can do this in various ways depending on what browser you are using; for example in Firefox go to &gt; <em>Tools</em> &gt; <em>Page Info</em> &gt; <em>Permissions</em>, then change the setting for <em>Share Location</em>; in Chrome go to <em>Settings</em> &gt; <em>Privacy</em> &gt; <em>Show advanced settings</em> &gt; <em>Content settings</em> then change the settings for <em>Location</em>.</p>
-</div>
+> **Nota:** When you first load up the above example, you should be given a dialog box asking if you are happy to share your location with this application (see the [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) section later in the article). You need to agree to this to be able to plot your location on the map. If you still can't see the map, you may need to set your permissions manually; you can do this in various ways depending on what browser you are using; for example in Firefox go to > _Tools_ > _Page Info_ > _Permissions_, then change the setting for _Share Location_; in Chrome go to _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ then change the settings for _Location_.
 
-<p>We first want to use the {{domxref("Geolocation.getCurrentPosition()")}} method to return the current location of our device. The browser's {{domxref("Geolocation")}} object is accessed by calling the {{domxref("Navigator.geolocation")}} property, so we start off by using</p>
+We first want to use the {{domxref("Geolocation.getCurrentPosition()")}} method to return the current location of our device. The browser's {{domxref("Geolocation")}} object is accessed by calling the {{domxref("Navigator.geolocation")}} property, so we start off by using
 
-<pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) { ... });</pre>
+```js
+navigator.geolocation.getCurrentPosition(function(position) { ... });
+```
 
-<p>Isso é equivalente a fazer algo como</p>
+Isso é equivalente a fazer algo como
 
-<pre class="brush: js notranslate">var myGeo = navigator.geolocation;
-myGeo.getCurrentPosition(function(position) { ... });</pre>
+```js
+var myGeo = navigator.geolocation;
+myGeo.getCurrentPosition(function(position) { ... });
+```
 
-<p>But we can use the dot syntax to chain our property/method access together, reducing the number of lines we have to write.</p>
+But we can use the dot syntax to chain our property/method access together, reducing the number of lines we have to write.
 
-<p>The {{domxref("Geolocation.getCurrentPosition()")}} method only has a single mandatory parameter, which is an anonymous function that will run when the device's current position has been successfully retrieved. This function itself has a parameter, which contains a {{domxref("Position")}} object representing the current position data.</p>
+The {{domxref("Geolocation.getCurrentPosition()")}} method only has a single mandatory parameter, which is an anonymous function that will run when the device's current position has been successfully retrieved. This function itself has a parameter, which contains a {{domxref("Position")}} object representing the current position data.
 
-<div class="note">
-<p><strong>Note</strong>: A function that is taken by another function as an argument is called a <a href="/en-US/docs/Glossary/Callback_function">callback function</a>.</p>
-</div>
+> **Nota:** A function that is taken by another function as an argument is called a [callback function](/pt-BR/docs/Glossary/Callback_function).
 
-<p>This pattern of invoking a function only when an operation has been completed is very common in JavaScript APIs — making sure one operation has completed before trying to use the data the operation returns in another operation. These are called <strong><a href="/en-US/docs/Glossary/Asynchronous">asynchronous</a> operations</strong>. Because getting the device's current position relies on an external component (the device's GPS or other geolocation hardware), we can't guarantee that it will be done in time to just immediately use the data it returns. Therefore, something like this wouldn't work:</p>
+This pattern of invoking a function only when an operation has been completed is very common in JavaScript APIs — making sure one operation has completed before trying to use the data the operation returns in another operation. These are called **[asynchronous](/pt-BR/docs/Glossary/Asynchronous) operations**. Because getting the device's current position relies on an external component (the device's GPS or other geolocation hardware), we can't guarantee that it will be done in time to just immediately use the data it returns. Therefore, something like this wouldn't work:
 
-<pre class="brush: js example-bad notranslate">var position = navigator.geolocation.getCurrentPosition();
-var myLatitude = position.coords.latitude;</pre>
+```js example-bad
+var position = navigator.geolocation.getCurrentPosition();
+var myLatitude = position.coords.latitude;
+```
 
-<p>If the first line had not yet returned its result, the second line would throw an error, because the position data would not yet be available. For this reason, APIs involving asynchronous operations are designed to use {{glossary("callback function")}}s, or the more modern system of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>, which were made available in ECMAScript 6 and are widely used in newer APIs.</p>
+If the first line had not yet returned its result, the second line would throw an error, because the position data would not yet be available. For this reason, APIs involving asynchronous operations are designed to use {{glossary("callback function")}}s, or the more modern system of [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), which were made available in ECMAScript 6 and are widely used in newer APIs.
 
-<p>We are combining the Geolocation API with a third party API — the Google Maps API — which we are using to plot the location returned by <code>getCurrentPosition()</code> on a Google Map. We make this API available on our page by linking to it — you'll find this line in the HTML:</p>
+We are combining the Geolocation API with a third party API — the Google Maps API — which we are using to plot the location returned by `getCurrentPosition()` on a Google Map. We make this API available on our page by linking to it — you'll find this line in the HTML:
 
-<pre class="brush: html notranslate">&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"&gt;&lt;/script&gt;</pre>
+```html
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+```
 
-<p>To use the API, we first create a <code>LatLng</code> object instance using the <code>google.maps.LatLng()</code> constructor, which takes our geolocated {{domxref("Coordinates.latitude")}} and {{domxref("Coordinates.longitude")}} values as parameters:</p>
+To use the API, we first create a `LatLng` object instance using the `google.maps.LatLng()` constructor, which takes our geolocated {{domxref("Coordinates.latitude")}} and {{domxref("Coordinates.longitude")}} values as parameters:
 
-<pre class="brush: js notranslate">var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);</pre>
+```js
+var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+```
 
-<p>This object is itself set as the value of the <code>center</code> property of an options object that we've called <code>myOptions</code>. We then create an object instance to represent our map by calling the <code>google.maps.Map()</code> constructor, passing it two parameters — a reference to the {{htmlelement("div")}} element we want to render the map on (with an ID of <code>map_canvas</code>), and the options object we defined just above it.</p>
+This object is itself set as the value of the `center` property of an options object that we've called `myOptions`. We then create an object instance to represent our map by calling the `google.maps.Map()` constructor, passing it two parameters — a reference to the {{htmlelement("div")}} element we want to render the map on (with an ID of `map_canvas`), and the options object we defined just above it.
 
-<pre class="brush: js notranslate">var myOptions = {
+```js
+var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
   disableDefaultUI: true
 }
 
-var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);</pre>
+var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+```
 
-<p>With this done, our map now renders.</p>
+With this done, our map now renders.
 
-<p>This last block of code highlights two common patterns you'll see across many APIs. First of all, API objects commonly contain constructors, which are invoked to create instances of those objects that you'll use to write your program. Second, API objects often have several options available that can be tweaked to get the exact environment you want for your program. API constructors commonly accept options objects as parameters, which is where you'd set such options.</p>
+This last block of code highlights two common patterns you'll see across many APIs. First of all, API objects commonly contain constructors, which are invoked to create instances of those objects that you'll use to write your program. Second, API objects often have several options available that can be tweaked to get the exact environment you want for your program. API constructors commonly accept options objects as parameters, which is where you'd set such options.
 
-<div class="note">
-<p><strong>Note</strong>: Don't worry if you don't understand all the details of this example immediately. We'll cover using third party APIs in a lot more detail in a future article.</p>
-</div>
+> **Nota:** Don't worry if you don't understand all the details of this example immediately. We'll cover using third party APIs in a lot more detail in a future article.
 
-<h3 id="Possuem_pontos_de_entrada_reconhecíveis">Possuem pontos de entrada reconhecíveis</h3>
+### Possuem pontos de entrada reconhecíveis
 
-<p>When using an API, you should make sure you know where the entry point is for the API. In The Geolocation API, this is pretty simple — it is the {{domxref("Navigator.geolocation")}} property, which returns the browser's {{domxref("Geolocation")}} object that all the useful geolocation methods are available inside.</p>
+When using an API, you should make sure you know where the entry point is for the API. In The Geolocation API, this is pretty simple — it is the {{domxref("Navigator.geolocation")}} property, which returns the browser's {{domxref("Geolocation")}} object that all the useful geolocation methods are available inside.
 
-<p>The Document Object Model (DOM) API has an even simpler entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:</p>
+The Document Object Model (DOM) API has an even simpler entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:
 
-<pre class="brush: js notranslate">var em = document.createElement('em'); // create a new em element
+```js
+var em = document.createElement('em'); // create a new em element
 var para = document.querySelector('p'); // reference an existing p element
 em.textContent = 'Hello there!'; // give em some text content
-para.appendChild(em); // embed em inside para</pre>
+para.appendChild(em); // embed em inside para
+```
 
-<p>Other APIs have slightly more complex entry points, often involving creating a specific context for the API code to be written in. For example, the Canvas API's context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
+Other APIs have slightly more complex entry points, often involving creating a specific context for the API code to be written in. For example, the Canvas API's context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');</pre>
+```js
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+```
 
-<p>Anything that we want to do to the canvas is then achieved by calling properties and methods of the content object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:</p>
+Anything that we want to do to the canvas is then achieved by calling properties and methods of the content object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:
 
-<pre class="brush: js notranslate">Ball.prototype.draw = function() {
+```js
+Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">bouncing balls demo</a> (see it <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">running live</a> also).</p>
-</div>
+> **Nota:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
-<h3 id="Usam_eventos_para_lidar_com_mudanças_de_estado">Usam eventos para lidar com mudanças de estado</h3>
+### Usam eventos para lidar com mudanças de estado
 
-<p>We already discussed events earlier on in the course, in our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a> article — this article looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.</p>
+We already discussed events earlier on in the course, in our [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events) article — this article looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.
 
-<p>Some web APIs contain no events, but some contain a number of events. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections. As a simple example, instances of the <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> object (each one represents an HTTP request to the server to retrieve a new resource of some kind) have a number of events available on them, for example the <code>load</code> event is fired when a response has been successfully returned containing the requested resource, and it is now available.</p>
+Some web APIs contain no events, but some contain a number of events. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections. As a simple example, instances of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object (each one represents an HTTP request to the server to retrieve a new resource of some kind) have a number of events available on them, for example the `load` event is fired when a response has been successfully returned containing the requested resource, and it is now available.
 
-<p>O código seguinte fornece um exemplo simples de como isso seria utilizado:</p>
+O código seguinte fornece um exemplo simples de como isso seria utilizado:
 
-<pre class="brush: js notranslate">var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+```js
+var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -232,44 +243,41 @@ request.onload = function() {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> example (<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
-</div>
+> **Nota:** You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
-<p>The first five lines specify the location of resource we want to fetch, create a new instance of a request object using the <code>XMLHttpRequest()</code> constructor, open an HTTP <code>GET</code> request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.</p>
+The first five lines specify the location of resource we want to fetch, create a new instance of a request object using the `XMLHttpRequest()` constructor, open an HTTP `GET` request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.
 
-<p>The <code>onload</code> handler function then specifies what we do with the response. We know the response will be successfully returned and available after the load event has required (unless an error occurred), so we save the response containing the returned JSON in the <code>superHeroes</code> variable, then pass it to two different functions for further processing.</p>
+The `onload` handler function then specifies what we do with the response. We know the response will be successfully returned and available after the load event has required (unless an error occurred), so we save the response containing the returned JSON in the `superHeroes` variable, then pass it to two different functions for further processing.
 
-<h3 id="Possuem_mecanismos_de_segurança_adicionais_quando_apropriado">Possuem mecanismos de segurança adicionais, quando apropriado</h3>
+### Possuem mecanismos de segurança adicionais, quando apropriado
 
-<p>WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push</a>).</p>
+WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy)), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) and [Push](/pt-BR/docs/Web/API/Push_API)).
 
-<p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, you may have noticed a dialog like the following when loading up our earlier <a href="/en-US/docs/Web/API/Geolocation">Geolocation</a> example:</p>
+In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, you may have noticed a dialog like the following when loading up our earlier [Geolocation](/pt-BR/docs/Web/API/Geolocation) example:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14313/location-permission.png" style="border-style: solid; border-width: 1px; display: block; height: 188px; margin: 0px auto; width: 413px;"></p>
+![](https://mdn.mozillademos.org/files/14313/location-permission.png)
 
-<p>The <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission in a similar fashion:</p>
+The [Notifications API](/pt-BR/docs/Web/API/Notifications_API) asks for permission in a similar fashion:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14315/notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
 
-<p>These permission prompts are given to users for security — if they weren't in place, then sites could start secretly tracking your location without you knowing it, or spamming you with a lot of annoying notifications.</p>
+These permission prompts are given to users for security — if they weren't in place, then sites could start secretly tracking your location without you knowing it, or spamming you with a lot of annoying notifications.
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).</p>
+Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).
 
-<p>{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}</p>
+{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+## Neste módulo
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
-</ul>
+- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

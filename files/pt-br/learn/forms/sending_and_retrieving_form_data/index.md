@@ -4,133 +4,149 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 ---
-<p>Em muitos casos, a finalidade de <a href="/en-US/docs/HTML/Forms" title="/en-US/docs/HTML/Forms">HTML Form</a> Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.</p>
+Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/HTML/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
 
-<h2 id="Para_onde_vão_os_dados">Para onde vão os dados?</h2>
+## Para onde vão os dados?
 
-<p>Aqui nós discutiremos o que acontece com os dadosquando um formulário é enviado.</p>
+Aqui nós discutiremos o que acontece com os dadosquando um formulário é enviado.
 
-<h3 id="Sobre_a_arquitetura_cliente_servidor">Sobre a arquitetura cliente / servidor</h3>
+### Sobre a arquitetura cliente / servidor
 
-<p>A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como <a href="http://httpd.apache.org/" rel="external">Apache</a>, <a href="http://nginx.com/" rel="external">Nginx</a>, <a href="http://www.iis.net/" rel="external">IIS</a>, <a href="http://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), usando o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a>. O servidor responde a solicitação usando o mesmo protocolo.</p>
+A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](http://httpd.apache.org/), [Nginx](http://nginx.com/), [IIS](http://www.iis.net/), [Tomcat](http://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
 
-<p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="height: 141px; width: 400px;"></p>
+![A basic schema of the Web client/server architecture](/files/4291/client-server.png)
 
-<p>No lado do cliente, um formulário HTML é nada mais do que uma maneira conveniente e amigável para configurar uma solicitação HTTP para enviar dados para um servidor. Isso permite que o usuário forneça informações a serem entregues na solicitação HTTP.</p>
+No lado do cliente, um formulário HTML é nada mais do que uma maneira conveniente e amigável para configurar uma solicitação HTTP para enviar dados para um servidor. Isso permite que o usuário forneça informações a serem entregues na solicitação HTTP.
 
-<h3 id="No_lado_do_cliente_definindo_como_enviar_os_dados">No lado do cliente: definindo como enviar os dados</h3>
+### No lado do cliente: definindo como enviar os dados
 
-<p>O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:{{htmlattrxref("action","form")}} e {{htmlattrxref("method","form")}}.</p>
+O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:{{htmlattrxref("action","form")}} e {{htmlattrxref("method","form")}}.
 
-<h4 id="o_atributo_htmlattrxref(actionform)">o atributo {{htmlattrxref("action","form")}}</h4>
+#### o atributo {{htmlattrxref("action","form")}}
 
-<p>Este atributo define para onde os dados são enviados. Seu valor deve ser um URL válido. Se esse atributo não for fornecido, os dados serão enviados para o URL da página que contém o formulário.</p>
+Este atributo define para onde os dados são enviados. Seu valor deve ser um URL válido. Se esse atributo não for fornecido, os dados serão enviados para o URL da página que contém o formulário.
 
-<h5 id="Exemplos">Exemplos</h5>
+##### Exemplos
 
-<p>Neste exemplo, os dados são enviados para http://foo.com:</p>
+Neste exemplo, os dados são enviados para http\://foo.com:
 
-<pre class="brush: html">&lt;form action="http://foo.com"&gt;</pre>
+```html
+<form action="http://foo.com">
+```
 
-<p>Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:</p>
+Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:
 
-<pre class="brush: html">&lt;form action="/somewhere_else"&gt;</pre>
+```html
+<form action="/somewhere_else">
+```
 
-<p>Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}}   faz com que os dados sejam enviados para a página que inclui o formulário:</p>
+Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}} faz com que os dados sejam enviados para a página que inclui o formulário:
 
-<pre class="brush: html">&lt;form&gt;</pre>
+```html
+<form>
+```
 
-<p>Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo {{htmlattrxref ( "action", "form")}} era obrigatório. Isso não é mais necessário.</p>
+Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo {{htmlattrxref ( "action", "form")}} era obrigatório. Isso não é mais necessário.
 
-<pre class="brush: html">&lt;form action="#"&gt;</pre>
+```html
+<form action="#">
+```
 
-<div class="note">
-<p><strong>Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo {{htmlattrxref ( "action", "form")}}, todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.</strong></p>
-</div>
+> **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo {{htmlattrxref ( "action", "form")}}, todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
 
-<h4 id="o_atributo_htmlattrxref(methodform)">o atributo {{htmlattrxref("method","form")}}</h4>
+#### o atributo {{htmlattrxref("method","form")}}
 
-<p>Este atributo define como os dados são enviados. o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a> </p>
+Este atributo define como os dados são enviados. o [HTTP protocol](/pt-BR/docs/HTTP)
 
-<p>Fornece várias maneiras de executar um pedido; Os dados de formulários HTML podem ser enviados através de pelo menos dois deles: o método GET eo método POST.</p>
+Fornece várias maneiras de executar um pedido; Os dados de formulários HTML podem ser enviados através de pelo menos dois deles: o método GET eo método POST.
 
-<p>Para entender a diferença entre esses dois métodos, vamos dar um passo atrás e examinar como funciona o HTTP. Cada vez que você deseja acessar um recurso na Web, o navegador envia uma solicitação para um URL. Uma solicitação HTTP consiste em duas partes: um cabeçalho que contém um conjunto de metadados globais sobre as capacidades do navegador e um corpo que pode conter informações necessárias ao servidor para processar a solicitação específica.</p>
+Para entender a diferença entre esses dois métodos, vamos dar um passo atrás e examinar como funciona o HTTP. Cada vez que você deseja acessar um recurso na Web, o navegador envia uma solicitação para um URL. Uma solicitação HTTP consiste em duas partes: um cabeçalho que contém um conjunto de metadados globais sobre as capacidades do navegador e um corpo que pode conter informações necessárias ao servidor para processar a solicitação específica.
 
-<h5 id="O_método_GET">O método GET</h5>
+##### O método GET
 
-<p>O método GET é o método usado pelo navegador para pedir ao servidor para enviar de volta um determinado recurso: "Hey servidor, eu quero obter este recurso." Nesse caso, o navegador envia um corpo vazio. Como o corpo está vazio, se um formulário é enviado usando esse método, os dados enviados para o servidor são anexados ao URL.</p>
+O método GET é o método usado pelo navegador para pedir ao servidor para enviar de volta um determinado recurso: "Hey servidor, eu quero obter este recurso." Nesse caso, o navegador envia um corpo vazio. Como o corpo está vazio, se um formulário é enviado usando esse método, os dados enviados para o servidor são anexados ao URL.
 
-<h6 id="Exemplo_Considere_o_seguinte_formulário">Exemplo<br>
- Considere o seguinte formulário:</h6>
+###### Exemplo<br>Considere o seguinte formulário:
 
-<pre class="brush: html">&lt;form action="http://foo.com" method="get"&gt;
-  &lt;input name="say" value="Hi"&gt;
-  &lt;input name="to" value="Mom"&gt;
-  &lt;button&gt;Envie meus cumprimentos&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="http://foo.com" method="get">
+  <input name="say" value="Hi">
+  <input name="to" value="Mom">
+  <button>Envie meus cumprimentos</button>
+</form>
+```
 
-<p>Com o método GET, a solicitação HTTP tem esta aparência:</p>
+Com o método GET, a solicitação HTTP tem esta aparência:
 
-<pre>GET /?say=Hi&amp;to=Mom HTTP/1.1
-Host: foo.com</pre>
+```
+GET /?say=Hi&to=Mom HTTP/1.1
+Host: foo.com
+```
 
-<h5 id="O_método_POST">O método POST</h5>
+##### O método POST
 
-<p>O método POST é um pouco diferente. É o método que o navegador envia ao servidor para pedir uma resposta que leva em conta os dados fornecidos no corpo da solicitação HTTP: "Hey servidor, dê uma olhada nesses dados e envie-me de volta um resultado apropriado". Se um formulário é enviado usando esse método, os dados são anexados ao corpo do pedido HTTP.</p>
+O método POST é um pouco diferente. É o método que o navegador envia ao servidor para pedir uma resposta que leva em conta os dados fornecidos no corpo da solicitação HTTP: "Hey servidor, dê uma olhada nesses dados e envie-me de volta um resultado apropriado". Se um formulário é enviado usando esse método, os dados são anexados ao corpo do pedido HTTP.
 
-<h6 id="Exemplo">Exemplo</h6>
+###### Exemplo
 
-<p>Considere esta forma (a mesma acima):</p>
+Considere esta forma (a mesma acima):
 
-<pre class="brush: html">&lt;form action="http://foo.com" method="post"&gt;
-  &lt;input name="say" value="Hi"&gt;
-  &lt;input name="to" value="Mom"&gt;
-  &lt;button&gt;Send my greetings&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="http://foo.com" method="post">
+  <input name="say" value="Hi">
+  <input name="to" value="Mom">
+  <button>Send my greetings</button>
+</form>
+```
 
-<p>Quando enviado usando o método POST, o pedido HTTP se parece com isto:</p>
+Quando enviado usando o método POST, o pedido HTTP se parece com isto:
 
-<pre>POST / HTTP/1.1
+```
+POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
-say=Hi&amp;to=Mom</pre>
+say=Hi&to=Mom
+```
 
-<p>O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.</p>
+O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.
 
-<p>Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a> ou o <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:</p>
+Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox [Web Console](/pt-BR/docs/Tools/Web_Console) ou o [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:
 
-<ol>
- <li>Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.</li>
- <li>Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.</li>
-</ol>
+1.  Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.
+2.  Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.
 
-<h3 id="No_lado_do_servidor_recuperar_os_dados">No lado do servidor: recuperar os dados</h3>
+### No lado do servidor: recuperar os dados
 
-<p>Seja qual for o método HTTP escolhido, o servidor recebe uma string que será analisada para obter os dados como uma lista de pares chave / valor. A maneira como você acessa essa lista depende da plataforma de desenvolvimento que você usa e de quaisquer frameworks específicos que você possa usar com ele. A tecnologia que você usa também determina como as chaves duplicadas são manipuladas; Freqüentemente, o valor recebido mais recentemente para uma determinada chave recebe prioridade.</p>
+Seja qual for o método HTTP escolhido, o servidor recebe uma string que será analisada para obter os dados como uma lista de pares chave / valor. A maneira como você acessa essa lista depende da plataforma de desenvolvimento que você usa e de quaisquer frameworks específicos que você possa usar com ele. A tecnologia que você usa também determina como as chaves duplicadas são manipuladas; Freqüentemente, o valor recebido mais recentemente para uma determinada chave recebe prioridade.
 
-<h4 id="Exemplo_PHP_Bruto">Exemplo: PHP Bruto</h4>
+#### Exemplo: PHP Bruto
 
-<p>O PHP oferece alguns objetos globais para acessar os dados. Supondo que você tenha usado o método POST, o exemplo a seguir apenas leva os dados e exibe-o para o usuário. Claro, o que você faz com os dados depende de você. Você pode exibi-lo, armazená-lo em um banco de dados, enviá-los por e-mail, ou processá-lo de alguma outra maneira.</p>
+O PHP oferece alguns objetos globais para acessar os dados. Supondo que você tenha usado o método POST, o exemplo a seguir apenas leva os dados e exibe-o para o usuário. Claro, o que você faz com os dados depende de você. Você pode exibi-lo, armazená-lo em um banco de dados, enviá-los por e-mail, ou processá-lo de alguma outra maneira.
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
   // The global $_POST variable allows you to access the data sent with the POST method
   // To access the data sent with the GET method, you can use $_GET
   $say = htmlspecialchars($_POST['say']);
   $to  = htmlspecialchars($_POST['to']);
 
-  echo  $say, ' ', $to;</pre>
+  echo  $say, ' ', $to;
+```
 
-<p>Este exemplo exibe uma página com os dados enviados. Em nosso exemplo de antes, a saída seria:</p>
+Este exemplo exibe uma página com os dados enviados. Em nosso exemplo de antes, a saída seria:
 
-<pre>Oi Mãe</pre>
+```
+Oi Mãe
+```
 
-<h4 id="Example_Python_Bruto">Example: Python Bruto</h4>
+#### Example: Python Bruto
 
-<p>This example uses Python to do the same thing--display the provided data on a web page. It uses the <a href="http://docs.python.org/3/library/cgi.html" rel="external">CGI Python package</a> to access the form data.</p>
+This example uses Python to do the same thing--display the provided data on a web page. It uses the [CGI Python package](http://docs.python.org/3/library/cgi.html) to access the form data.
 
-<pre class="brush: python">#!/usr/bin/env python
+```python
+#!/usr/bin/env python
 import html
 import cgi
 import cgitb; cgitb.enable()     # for troubleshooting
@@ -142,111 +158,104 @@ form = cgi.FieldStorage()
 say  = html.escape(form["say"].value);
 to   = html.escape(form["to"].value);
 
-print(say, " ", to)</pre>
+print(say, " ", to)
+```
 
-<p>O resultado é o mesmo que com o PHP:</p>
+O resultado é o mesmo que com o PHP:
 
-<pre>Oi Mãe</pre>
+```
+Oi Mãe
+```
 
-<h4 id="Outros_idiomas_e_frameworks">Outros idiomas e frameworks</h4>
+#### Outros idiomas e frameworks
 
-<p>Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>, etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:</p>
+Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/), [Java](/pt-BR/docs/), [.Net](http://www.microsoft.com/net), [Ruby](/pt-BR/docs/), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
 
-<ul>
- <li><a href="http://symfony.com/" rel="external">Symfony</a> Para PHP</li>
- <li><a href="https://www.djangoproject.com/" rel="external">Django</a> Para Python</li>
- <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> Para Ruby</li>
- <li><a href="http://grails.org/" rel="external">Grails</a> Para Java</li>
- <li>etc.</li>
-</ul>
+- [Symfony](http://symfony.com/) Para PHP
+- [Django](https://www.djangoproject.com/) Para Python
+- [Ruby On Rails](http://rubyonrails.org/) Para Ruby
+- [Grails](http://grails.org/) Para Java
+- etc.
 
-<p>Vale a pena notar que mesmo usando essas estruturas, trabalhar com formulários não é necessariamente fácil. Mas é muito melhor, e você vai economizar muito tempo.</p>
+Vale a pena notar que mesmo usando essas estruturas, trabalhar com formulários não é necessariamente fácil. Mas é muito melhor, e você vai economizar muito tempo.
 
-<h2 id="Um_caso_especial_enviar_arquivos">Um caso especial: enviar arquivos</h2>
+## Um caso especial: enviar arquivos
 
-<p>Arquivos são um caso especial com formulários HTML. Eles são dados binários - ou considerados como tal - onde todos os outros dados são dados de texto. Porque HTTP é um protocolo de texto, há requisitos especiais para manipular dados binários.</p>
+Arquivos são um caso especial com formulários HTML. Eles são dados binários - ou considerados como tal - onde todos os outros dados são dados de texto. Porque HTTP é um protocolo de texto, há requisitos especiais para manipular dados binários.
 
-<h3 id="o_htmlattrxref(enctypeform)_atributo">o {{htmlattrxref("enctype","form")}} atributo</h3>
+### o {{htmlattrxref("enctype","form")}} atributo
 
-<p>Esse atributo permite especificar o valor do cabeçalho HTTP Content-Type. Este cabeçalho é muito importante porque informa ao servidor que tipo de dados está sendo enviado. Por padrão, seu valor é application / x-www-form-urlencoded. Em termos humanos, isso significa: "Este é o formulário de dados que foi codificado em forma de URL."</p>
+Esse atributo permite especificar o valor do cabeçalho HTTP Content-Type. Este cabeçalho é muito importante porque informa ao servidor que tipo de dados está sendo enviado. Por padrão, seu valor é application / x-www-form-urlencoded. Em termos humanos, isso significa: "Este é o formulário de dados que foi codificado em forma de URL."
 
-<p>Mas se você quiser enviar arquivos, você precisa fazer duas coisas:</p>
+Mas se você quiser enviar arquivos, você precisa fazer duas coisas:
 
-<ul>
- <li>Colocou o {{htmlattrxref("method","form")}} Atributo para POST porque o conteúdo do arquivo não pode ser colocado dentro de um parâmetro de URL usando um formulário.</li>
- <li>Defina o valor de {{htmlattrxref("enctype","form")}} Para multipart / form-data porque os dados serão divididos em várias partes, uma para cada arquivo mais uma para o texto do corpo do formulário que pode ser enviado com eles.</li>
-</ul>
+- Colocou o {{htmlattrxref("method","form")}} Atributo para POST porque o conteúdo do arquivo não pode ser colocado dentro de um parâmetro de URL usando um formulário.
+- Defina o valor de {{htmlattrxref("enctype","form")}} Para multipart / form-data porque os dados serão divididos em várias partes, uma para cada arquivo mais uma para o texto do corpo do formulário que pode ser enviado com eles.
 
-<p>Por exemplo:</p>
+Por exemplo:
 
-<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;input type="file" name="myFile"&gt;
-  &lt;button&gt;Send the file&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form method="post" enctype="multipart/form-data">
+  <input type="file" name="myFile">
+  <button>Send the file</button>
+</form>
+```
 
-<div class="note">
-<p><strong>Nota: Alguns navegadores suportam</strong>{{htmlattrxref("multiple","input")}} Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.</p>
-</div>
+> **Nota:** **Nota: Alguns navegadores suportam**{{htmlattrxref("multiple","input")}} Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
 
-<div class="warning">
-<p><strong>Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.</strong></p>
-</div>
+> **Aviso:** **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**
 
-<h2 id="Preocupações_com_segurança">Preocupações com segurança</h2>
+## Preocupações com segurança
 
-<p>Cada vez que você envia dados para um servidor, você precisa considerar a segurança. Formulários HTML são um dos primeiros vetores de ataque contra servidores. Os problemas nunca vêm dos formulários HTML em si; Eles vêm de como o servidor manipula dados.</p>
+Cada vez que você envia dados para um servidor, você precisa considerar a segurança. Formulários HTML são um dos primeiros vetores de ataque contra servidores. Os problemas nunca vêm dos formulários HTML em si; Eles vêm de como o servidor manipula dados.
 
-<h3 id="Falhas_de_segurança_comuns">Falhas de segurança comuns</h3>
+### Falhas de segurança comuns
 
-<p>Dependendo do que você está fazendo, existem alguns problemas de segurança muito conhecidos:</p>
+Dependendo do que você está fazendo, existem alguns problemas de segurança muito conhecidos:
 
-<h4 id="XSS_e_CSRF">XSS e CSRF</h4>
+#### XSS e CSRF
 
-<p>Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF) são tipos comuns de ataques que ocorrem quando você exibe dados enviados por um usuário para o usuário ou para outro usuário.</p>
+Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF) são tipos comuns de ataques que ocorrem quando você exibe dados enviados por um usuário para o usuário ou para outro usuário.
 
-<p>O XSS permite que os invasores injetem scripts do lado do cliente em páginas da Web vistas por outros usuários. Uma vulnerabilidade de scripts entre sites pode ser usada por atacantes para ignorar controles de acesso, como o <a href="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript" title="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript">same origin policy</a>. O efeito desses ataques pode variar de um pequeno incômodo a um risco de segurança significativo.</p>
+O XSS permite que os invasores injetem scripts do lado do cliente em páginas da Web vistas por outros usuários. Uma vulnerabilidade de scripts entre sites pode ser usada por atacantes para ignorar controles de acesso, como o [same origin policy](/pt-BR/docs/JavaScript/Same_origin_policy_for_JavaScript). O efeito desses ataques pode variar de um pequeno incômodo a um risco de segurança significativo.
 
-<p>CSRF são semelhantes aos ataques XSS, já que eles começam da mesma maneira - injetando script do lado do cliente em páginas da Web - mas seu destino é diferente. Os invasores do CSRF tentam aumentar os privilégios para aqueles de um usuário com privilégios mais altos (como um administrador do site) para executar uma ação que não deve ser capaz de fazer (por exemplo, enviar dados para um usuário não confiável).</p>
+CSRF são semelhantes aos ataques XSS, já que eles começam da mesma maneira - injetando script do lado do cliente em páginas da Web - mas seu destino é diferente. Os invasores do CSRF tentam aumentar os privilégios para aqueles de um usuário com privilégios mais altos (como um administrador do site) para executar uma ação que não deve ser capaz de fazer (por exemplo, enviar dados para um usuário não confiável).
 
-<p>Os ataques XSS exploram a confiança que um usuário tem para um site, enquanto os ataques CSRF exploram a confiança que um site tem para seus usuários.</p>
+Os ataques XSS exploram a confiança que um usuário tem para um site, enquanto os ataques CSRF exploram a confiança que um site tem para seus usuários.
 
-<p>To prevent these attacks, you should always check the data a user sends to your server and (if you need to display it) try not to display the HTML content as provided by the user. Intead, you should process the user-provided data so you don't display it verbatim. <span style="line-height: 1.5;"> Almost all frameworks on the market today implement a minimal filter that removes the HTML {{HTMLElement("script")}}, {{HTMLElement("iframe")}} and {{HTMLElement("object")}} elements from data sent by any user. This helps to mitigate the risk, but doesn't necessarily eradicate it.</span></p>
+To prevent these attacks, you should always check the data a user sends to your server and (if you need to display it) try not to display the HTML content as provided by the user. Intead, you should process the user-provided data so you don't display it verbatim. Almost all frameworks on the market today implement a minimal filter that removes the HTML {{HTMLElement("script")}}, {{HTMLElement("iframe")}} and {{HTMLElement("object")}} elements from data sent by any user. This helps to mitigate the risk, but doesn't necessarily eradicate it.
 
-<h4 id="SQL_injection">SQL injection</h4>
+#### SQL injection
 
-<p>SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">one of the main vector attacks against web sites</a>.</p>
+SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually [one of the main vector attacks against web sites](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project).
 
-<p>The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code> on a PHP/MySQL infrastructure).</p>
+The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using [`mysql_real_escape_string()`](http://www.php.net/manual/en/function.mysql-real-escape-string.php) on a PHP/MySQL infrastructure).
 
-<h4 id="HTTP_header_injection_and_email_injection">HTTP header injection and email injection</h4>
+#### HTTP header injection and email injection
 
-<p>These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users, but they are an open door to deeper problems such as session hijacking or phishing attacks.</p>
+These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users, but they are an open door to deeper problems such as session hijacking or phishing attacks.
 
-<p>These attacks are mostly silent, and can turn your server into a <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal">zombie</a>.</p>
+These attacks are mostly silent, and can turn your server into a [zombie](<http://en.wikipedia.org/wiki/Zombie_(computer_science)>).
 
-<h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
+### Be paranoid: Never trust your users
 
-<p>So, how do you fight these threats? This is a topic far beyond this guide, but there are a few rules to keep in mind. The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked.</p>
+So, how do you fight these threats? This is a topic far beyond this guide, but there are a few rules to keep in mind. The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked.
 
-<p>All data that comes to your server must be checked and sanitized. Always. No exception.</p>
+All data that comes to your server must be checked and sanitized. Always. No exception.
 
-<ul>
- <li>Escape potentially dangerous characters. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this.</li>
- <li>Limit the incoming amount of data to allow only what's necessary.</li>
- <li>Sandbox uploaded files (store them on a different server and allow access to the file only through a different subdomain or even better through a fully different domain name).</li>
-</ul>
+- Escape potentially dangerous characters. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this.
+- Limit the incoming amount of data to allow only what's necessary.
+- Sandbox uploaded files (store them on a different server and allow access to the file only through a different subdomain or even better through a fully different domain name).
 
-<p>You should avoid many/most problems if you follow these three rules, but it's always a good idea to get a security review performed by a competent third party. Don't assume that you've seen all the possible problems.</p>
+You should avoid many/most problems if you follow these three rules, but it's always a good idea to get a security review performed by a competent third party. Don't assume that you've seen all the possible problems.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to <a href="/en-US/docs/HTML/Forms/Data_form_validation" title="/en-US/docs/HTML/Forms/Data_form_validation">perform client side data validation</a> but the server can't trust this validation because it has no way to truly know what really happens on the client side.</p>
+As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/HTML/Forms/Data_form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>If you want to learn more about securing a web application, you can dig into these resources:</p>
+If you want to learn more about securing a web application, you can dig into these resources:
 
-<ul>
- <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">The Open Web Application Security Project (OWASP)</a></li>
- <li><a href="http://shiflett.org/" rel="external">Chris Shiflett's blog about PHP Security</a></li>
-</ul>
+- [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
+- [Chris Shiflett's blog about PHP Security](http://shiflett.org/)

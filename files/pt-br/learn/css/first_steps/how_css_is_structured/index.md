@@ -4,51 +4,68 @@ slug: Learn/CSS/First_steps/How_CSS_is_structured
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</div>
-
-<p class="summary">Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de olhar um pouco mais a fundo das estruturas da linguagem em si. Nós ja conhecemos muitos conceitos discutidos aqui, entretanto, você pode voltar para qualquer um em específico, se achar algum dos proximos conceitos um tanto confuso</p>
+Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de olhar um pouco mais a fundo das estruturas da linguagem em si. Nós ja conhecemos muitos conceitos discutidos aqui, entretanto, você pode voltar para qualquer um em específico, se achar algum dos proximos conceitos um tanto confuso
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conceitos básicos de computação, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">softwares básicos instalados</a>, conhecimentos básicos de <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">operação com arquivos</a>,  básico de HTML (veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introdução ao HTML</a>), e  uma ideia de <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">Como  funciona o CSS</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Aprender as estruturas da sintaxe básica do CSS em detalhes.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Conceitos básicos de computação,
+        <a
+          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >softwares básicos instalados</a
+        >, conhecimentos básicos de
+        <a
+          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >operação com arquivos</a
+        >, básico de HTML (veja
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introdução ao HTML</a
+        >), e uma ideia de
+        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+          >Como funciona o CSS</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>Aprender as estruturas da sintaxe básica do CSS em detalhes.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Aplicando_CSS_no_seu_HTML">Aplicando CSS no seu HTML</h2>
+## Aplicando CSS no seu HTML
 
-<p>A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS em um documento.</p>
+A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS em um documento.
 
-<h3 id="Folha_de_Estilos_Externa">Folha de Estilos Externa</h3>
+### Folha de Estilos Externa
 
-<p>Em <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">Começando com o CSS</a> nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.</p>
+Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Uma folha de estilos externa  é quando você tem seu CSS escrito em um arquivo separado com uma extensão </span></font>.css</code>, e você o refere dentro de um elemento <code>&lt;link&gt;</code> do HTML:</p>
+`Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<p>O arquivo CSS deve se parecer com algo nesse estilo:</p>
+O arquivo CSS deve se parecer com algo nesse estilo:
 
-<pre class="brush: css notranslate">h1 {
+```css
+h1 {
   color: blue;
   background-color: yellow;
   border: 1px solid black;
@@ -56,33 +73,37 @@ original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 
 p {
   color: red;
-}</pre>
+}
+```
 
-<p>O atributo <code>href</code> do elemento {{htmlelement("link")}}, precisa fazer referência a um arquivo em nosso sistema de arquivos.</p>
+O atributo `href` do elemento {{htmlelement("link")}}, precisa fazer referência a um arquivo em nosso sistema de arquivos.
 
-<p>No exemplo abaixo, o arquivo CSS está na mesma pasta que o documento HTML, mas você pode colocá-lo em outro lugar e reajustar o caminho marcado para encontrá-lo, como a seguir: </p>
+No exemplo abaixo, o arquivo CSS está na mesma pasta que o documento HTML, mas você pode colocá-lo em outro lugar e reajustar o caminho marcado para encontrá-lo, como a seguir:
 
-<pre class="brush: html notranslate">&lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
-&lt;link rel="stylesheet" href="styles/style.css"&gt;
+```html
+<!-- Inside a subdirectory called styles inside the current directory -->
+<link rel="stylesheet" href="styles/style.css">
 
-&lt;!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory --&gt;
-&lt;link rel="stylesheet" href="styles/general/style.css"&gt;
+<!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
+<link rel="stylesheet" href="styles/general/style.css">
 
-&lt;!-- Go up one directory level, then inside a subdirectory called styles --&gt;
-&lt;link rel="stylesheet" href="../styles/style.css"&gt;</pre>
+<!-- Go up one directory level, then inside a subdirectory called styles -->
+<link rel="stylesheet" href="../styles/style.css">
+```
 
-<h3 id="Folha_de_estilos_interna">Folha de estilos interna</h3>
+### Folha de estilos interna
 
-<p>Uma folha de estilos interna é  usada quando você não tem um arquivo CSS externo, mas, ao contrário,  coloca seu CSS dentro de elemento {{htmlelement("style")}} localizado no {{htmlelement("head")}} do documento HTML.</p>
+Uma folha de estilos interna é usada quando você não tem um arquivo CSS externo, mas, ao contrário, coloca seu CSS dentro de elemento {{htmlelement("style")}} localizado no {{htmlelement("head")}} do documento HTML.
 
-<p>Deste modo, seu HTML se parecerá assim:</p>
+Deste modo, seu HTML se parecerá assim:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <style>
       h1 {
         color: blue;
         background-color: yellow;
@@ -92,174 +113,181 @@ p {
       p {
         color: red;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<p>Isso pode ser útil em algumas circunstâncias (talvez você esteja trabalhando em um sistema de gerenciamento de conteúdo - CMS - onde não tem permissão para modificar diretamente os arquivos CSS), entretanto isso não é tão eficiente quanto o uso de folhas de estilo externas — em um website, o CSS precisaria ser repetido em todas as páginas e atualizado em vários locais sempre que mudanças fossem necessárias.</p>
+Isso pode ser útil em algumas circunstâncias (talvez você esteja trabalhando em um sistema de gerenciamento de conteúdo - CMS - onde não tem permissão para modificar diretamente os arquivos CSS), entretanto isso não é tão eficiente quanto o uso de folhas de estilo externas — em um website, o CSS precisaria ser repetido em todas as páginas e atualizado em vários locais sempre que mudanças fossem necessárias.
 
-<h3 id="Estilos_inline">Estilos inline</h3>
+### Estilos inline
 
-<p>Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo <code>style</code>:</p>
+Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo `style`:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiment&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1 style="color: blue;background-color: yellow;border: 1px solid black;"&gt;Hello World!&lt;/h1&gt;
-    &lt;p style="color:red;"&gt;This is my first CSS example&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+  </head>
+  <body>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <p style="color:red;">This is my first CSS example</p>
+  </body>
+</html>
+```
 
-<p><strong>Por favor, não utilize isso a menos que seja estritamente necessário!</strong> É péssimo para manutenção (você precisará atualizar a mesma informação diversas vezes em cada documento), além do que, mistura sua informação de estilização do CSS com sua informação de estrutura HTML, tornando seu código de difícil leitura e compreensão. Manter diferentes tipos de código separados torna o trabalho muito mais fácil para todos os que trabalham no código.</p>
+**Por favor, não utilize isso a menos que seja estritamente necessário!** É péssimo para manutenção (você precisará atualizar a mesma informação diversas vezes em cada documento), além do que, mistura sua informação de estilização do CSS com sua informação de estrutura HTML, tornando seu código de difícil leitura e compreensão. Manter diferentes tipos de código separados torna o trabalho muito mais fácil para todos os que trabalham no código.
 
-<p>Existem alguns lugares onde o estilo embutido é mais comum, ou mesmo aconselhável. Você pode ter que recorrer ao uso deles se seu ambiente de trabalho for realmente restritivo (talvez o seu CMS permita apenas que você edite o corpo do HTML). Você também os verá sendo muito usados em e-mails em HTML de modo a obter compatibilidade com o maior número possível de clientes de e-mail.</p>
+Existem alguns lugares onde o estilo embutido é mais comum, ou mesmo aconselhável. Você pode ter que recorrer ao uso deles se seu ambiente de trabalho for realmente restritivo (talvez o seu CMS permita apenas que você edite o corpo do HTML). Você também os verá sendo muito usados em e-mails em HTML de modo a obter compatibilidade com o maior número possível de clientes de e-mail.
 
-<h2 id="Playing_with_the_CSS_in_this_article">Playing with the CSS in this article</h2>
+## Playing with the CSS in this article
 
-<p>There is a lot of CSS to play with in this article. To do so, we'd recommend creating a new directory/folder on your computer, and inside it creating a copy of the following two files:</p>
+There is a lot of CSS to play with in this article. To do so, we'd recommend creating a new directory/folder on your computer, and inside it creating a copy of the following two files:
 
-<p>index.html:</p>
+index.html:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My CSS experiments&lt;/title&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiments</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-    &lt;p&gt;Create your test HTML here&lt;/p&gt;
+    <p>Create your test HTML here</p>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<p>styles.css:</p>
+styles.css:
 
-<pre class="brush: css notranslate">/* Create your test CSS here */
+```css
+/* Create your test CSS here */
 
 p {
   color: red;
-}</pre>
+}
+```
 
-<p>Then, when you come across some CSS you want to experiment with, replace the HTML <code>&lt;body&gt;</code> contents with some HTML to style, and start adding CSS to style it inside your CSS file.</p>
+Then, when you come across some CSS you want to experiment with, replace the HTML `<body>` contents with some HTML to style, and start adding CSS to style it inside your CSS file.
 
-<p>If you are not using a system where you can easily create files, you can instead use the interactive editor below to experiment.</p>
+If you are not using a system where you can easily create files, you can instead use the interactive editor below to experiment.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}
 
-<p>Read on, and have fun!</p>
+Read on, and have fun!
 
-<h2 id="Seletores">Seletores</h2>
+## Seletores
 
-<p>Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.</p>
+Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.
 
-<p>Each CSS rule starts with a selector or a list of selectors in order to tell the browser which element or elements the rules should apply to. All of the following are examples of valid selectors, or lists of selectors.</p>
+Each CSS rule starts with a selector or a list of selectors in order to tell the browser which element or elements the rules should apply to. All of the following are examples of valid selectors, or lists of selectors.
 
-<pre class="brush: css notranslate">h1
+```css
+h1
 a:link
 .manythings
 #onething
 *
 .box p
 .box p:first-child
-h1, h2, .intro</pre>
+h1, h2, .intro
+```
 
-<p><strong>Try creating some CSS rules that use the above selectors, and some HTML to be styled by them. If you don't know what some of the above syntax means, try searching for it on MDN!</strong></p>
+**Try creating some CSS rules that use the above selectors, and some HTML to be styled by them. If you don't know what some of the above syntax means, try searching for it on MDN!**
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: You will learn a lot more about selectors in our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a> tutorials, in the next module.</p>
-</div>
+> **Nota:** You will learn a lot more about selectors in our [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) tutorials, in the next module.
 
-<h3 id="Specificity">Specificity</h3>
+### Specificity
 
-<p>There will often be scenarios where two selectors could select the same HTML element. Consider the stylesheet below where I have a rule with a <code>p</code> selector that will set paragraphs to blue, and also a class that will set selected elements red.</p>
+There will often be scenarios where two selectors could select the same HTML element. Consider the stylesheet below where I have a rule with a `p` selector that will set paragraphs to blue, and also a class that will set selected elements red.
 
-<pre class="brush: css notranslate">.special {
+```css
+.special {
   color: red;
 }
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p>Let's say that in our HTML document we have a paragraph with a class of <code>special</code>. Both rules could apply, so which one wins? What color do you think our paragraph will become?</p>
+Let's say that in our HTML document we have a paragraph with a class of `special`. Both rules could apply, so which one wins? What color do you think our paragraph will become?
 
-<pre class="brush: html notranslate">&lt;p class="special"&gt;What color am I?&lt;/p&gt;</pre>
+```html
+<p class="special">What color am I?</p>
+```
 
-<p>The CSS language has rules to control which rule will win in the event of a collision — these are called <strong>cascade</strong> and <strong>specificity</strong>. In the below code block we have defined two rules for the <code>p</code> selector, but the paragraph ends up being colored blue. This is because the declaration that sets it to blue appears later in the stylesheet, and later styles override earlier ones. This is the cascade in action.</p>
+The CSS language has rules to control which rule will win in the event of a collision — these are called **cascade** and **specificity**. In the below code block we have defined two rules for the `p` selector, but the paragraph ends up being colored blue. This is because the declaration that sets it to blue appears later in the stylesheet, and later styles override earlier ones. This is the cascade in action.
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: red;
 }
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p>However, in the case of our earlier block with the class selector and the element selector, the class will win, making the paragraph red — even thought it appears earlier in the stylesheet. A class is described as being more specific, or having more specificity than the element selector, so it wins.</p>
+However, in the case of our earlier block with the class selector and the element selector, the class will win, making the paragraph red — even thought it appears earlier in the stylesheet. A class is described as being more specific, or having more specificity than the element selector, so it wins.
 
-<p><strong>Try the above experiment for yourself — add the HTML to your experiment, then add the two <code>p { ... }</code> rules to your stylesheet. Next, change the first <code>p</code> selector to <code>.special</code> to see how it changes the styling.</strong></p>
+**Try the above experiment for yourself — add the HTML to your experiment, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.**
 
-<p>The rules of specificity and the cascade can seem a little complicated at first and are easier to understand once you have built up further CSS knowledge. In our <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a> article, which you'll get to in the next module, I'll explain this in detail, including how to calculate specificity. For now, remember that this exists, and that sometimes CSS might not apply like you expect it to because something else in your stylesheet has a higher specificity. Identifying that more than one rule could apply to an element is the first step in fixing such issues.</p>
+The rules of specificity and the cascade can seem a little complicated at first and are easier to understand once you have built up further CSS knowledge. In our [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) article, which you'll get to in the next module, I'll explain this in detail, including how to calculate specificity. For now, remember that this exists, and that sometimes CSS might not apply like you expect it to because something else in your stylesheet has a higher specificity. Identifying that more than one rule could apply to an element is the first step in fixing such issues.
 
-<h2 id="Propriedades_e_valores">Propriedades e valores</h2>
+## Propriedades e valores
 
-<p>At its most basic level, CSS consists of two building blocks:</p>
+At its most basic level, CSS consists of two building blocks:
 
-<ul>
- <li><strong>Properties</strong>: Human-readable identifiers that indicate which stylistic features (e.g. <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code>) you want to change.</li>
- <li><strong>Values</strong>: Each specified property is given a value, which indicates how you want to change those stylistic features (e.g. what you want to change the font, width or background color to.)</li>
-</ul>
+- **Properties**: Human-readable identifiers that indicate which stylistic features (e.g. [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) you want to change.
+- **Values**: Each specified property is given a value, which indicates how you want to change those stylistic features (e.g. what you want to change the font, width or background color to.)
 
-<p>The below image highlights a single property and value. The property name is <code>color</code>, and the value <code>blue</code>.</p>
+The below image highlights a single property and value. The property name is `color`, and the value `blue`.
 
-<p><img alt="A declaration highlighted in the CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
 
-<p>A property paired with a value is called a <em>CSS declaration</em>. CSS declarations are put within <em>CSS Declaration Blocks</em>. This next image shows our CSS with the declaration block highlighted.</p>
+A property paired with a value is called a _CSS declaration_. CSS declarations are put within _CSS Declaration Blocks_. This next image shows our CSS with the declaration block highlighted.
 
-<p><img alt="A highlighted declaration block" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
 
-<p>Finally, CSS declaration blocks are paired with <em>selectors</em> to produce <em>CSS Rulesets</em> (or <em>CSS Rules</em>). Our image contains two rules, one for the <code>h1</code> selector and one for the <code>p</code> selector. The rule for <code>h1</code> is highlighted.</p>
+Finally, CSS declaration blocks are paired with _selectors_ to produce _CSS Rulesets_ (or _CSS Rules_). Our image contains two rules, one for the `h1` selector and one for the `p` selector. The rule for `h1` is highlighted.
 
-<p><img alt="The rule for h1 highlighted" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
 
-<p>Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (<code>:</code>).</p>
+Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (`:`).
 
-<p><strong>Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements: </strong></p>
+**Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements:**
 
-<ul>
- <li><strong>{{cssxref("font-size")}}</strong></li>
- <li><strong>{{cssxref("width")}}</strong></li>
- <li><strong>{{cssxref("background-color")}}</strong></li>
- <li><strong>{{cssxref("color")}}</strong></li>
- <li><strong>{{cssxref("border")}}</strong></li>
-</ul>
+- **{{cssxref("font-size")}}**
+- **{{cssxref("width")}}**
+- **{{cssxref("background-color")}}**
+- **{{cssxref("color")}}**
+- **{{cssxref("border")}}**
 
-<div class="warning">
-<p><strong>Important</strong>: If a property is unknown or if a value is not valid for a given property, the declaration is deemed <em>invalid</em> and is completely ignored by the browser's CSS engine.</p>
-</div>
+> **Aviso:** **Important**: If a property is unknown or if a value is not valid for a given property, the declaration is deemed _invalid_ and is completely ignored by the browser's CSS engine.
 
-<div class="warning">
-<p><strong>Important</strong>: In CSS (and other web standards), US spelling has been agreed on as the standard to stick to where language uncertainty arises. For example, <code>color</code> should <em>always</em> be spelled <code>color</code>. <code>colour</code> won't work.</p>
-</div>
+> **Aviso:** **Important**: In CSS (and other web standards), US spelling has been agreed on as the standard to stick to where language uncertainty arises. For example, `color` should _always_ be spelled `color`. `colour` won't work.
 
-<h3 id="Functions">Functions</h3>
+### Functions
 
-<p>While most values are relatively simple keywords or numeric values, there are some possible values which take the form of a function. An example would be the <code>calc()</code> function. This function allows you to do simple math from within your CSS, for example:</p>
+While most values are relatively simple keywords or numeric values, there are some possible values which take the form of a function. An example would be the `calc()` function. This function allows you to do simple math from within your CSS, for example:
 
-<div id="calc_example">
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
+```html
+<div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+```
 
-<pre class="brush: css notranslate">.outer {
+```css
+.outer {
   border: 5px solid black;
 }
 
@@ -268,52 +296,55 @@ p {
   width: calc(90% - 30px);
   background-color: rebeccapurple;
   color: white;
-}</pre>
-</div>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{EmbedLiveSample('calc_example', '100%', 200)}}</p>
+{{EmbedLiveSample('calc_example', '100%', 200)}}
 
-<p>A function consists of the function name, and then some brackets into which the allowed values for that function are placed. In the case of the <code>calc()</code> example above I am asking for the width of this box to be 90% of the containing block width, minus 30 pixels. This isn't something I can calculate ahead of time and just enter the value into the CSS, as I don't know what 90% will be. As with all values, the relevant page on MDN will have usage examples so you can see how the function works.</p>
+A function consists of the function name, and then some brackets into which the allowed values for that function are placed. In the case of the `calc()` example above I am asking for the width of this box to be 90% of the containing block width, minus 30 pixels. This isn't something I can calculate ahead of time and just enter the value into the CSS, as I don't know what 90% will be. As with all values, the relevant page on MDN will have usage examples so you can see how the function works.
 
-<p>Another example would be the various values for {{cssxref("transform")}}, such as <code>rotate()</code>.</p>
+Another example would be the various values for {{cssxref("transform")}}, such as `rotate()`.
 
-<div id="transform_example">
-<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   margin: 30px;
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
   transform: rotate(0.8turn)
-}</pre>
-</div>
+}
+```
 
-<p>The output from the above code looks like this:</p>
+The output from the above code looks like this:
 
-<p>{{EmbedLiveSample('transform_example', '100%', 200)}}</p>
+{{EmbedLiveSample('transform_example', '100%', 200)}}
 
-<p><strong>Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements: </strong></p>
+**Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements:**
 
-<ul>
- <li><strong>{{cssxref("transform")}}</strong></li>
- <li><strong>{{cssxref("background-image")}}, in particular gradient values</strong></li>
- <li><strong>{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values</strong></li>
-</ul>
+- **{{cssxref("transform")}}**
+- **{{cssxref("background-image")}}, in particular gradient values**
+- **{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values**
 
-<h2 id="rules">@rules</h2>
+## @rules
 
-<p>As yet, we have not encountered <code><a href="/en-US/docs/Web/CSS/At-rule">@rules</a></code> (pronounced "at-rules"). These are special rules giving CSS some instruction on how to behave. Some <code>@rules</code> are simple with the rule name and a value. For example, to import an additional stylesheet into your main CSS stylesheet you can use <code>@import</code>:</p>
+As yet, we have not encountered [`@rules`](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules"). These are special rules giving CSS some instruction on how to behave. Some `@rules` are simple with the rule name and a value. For example, to import an additional stylesheet into your main CSS stylesheet you can use `@import`:
 
-<pre class="brush: css notranslate">@import 'styles2.css';</pre>
+```css
+@import 'styles2.css';
+```
 
-<p>One of the most common <code>@rules</code> you will come across is <code>@media</code>, which allows you to use <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> to apply CSS only when certain conditions are true (e.g. when the screen resolution is above a certain amount, or the screen is wider than a certain width).</p>
+One of the most common `@rules` you will come across is `@media`, which allows you to use [media queries](/pt-BR/docs/Web/CSS/Media_Queries) to apply CSS only when certain conditions are true (e.g. when the screen resolution is above a certain amount, or the screen is wider than a certain width).
 
-<p>In the below CSS, we have a stylesheet that gives the <code>&lt;body&gt;</code> element a pink background color. However, we then use <code>@media</code> to create a section of our stylesheet that will only be applied in browsers with a viewport wider than 30em. If the browser is wider than 30em then the background color will be blue.</p>
+In the below CSS, we have a stylesheet that gives the `<body>` element a pink background color. However, we then use `@media` to create a section of our stylesheet that will only be applied in browsers with a viewport wider than 30em. If the browser is wider than 30em then the background color will be blue.
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background-color: pink;
 }
 
@@ -321,58 +352,66 @@ p {
   body {
     background-color: blue;
   }
-}</pre>
+}
+```
 
-<p>You will encounter other <code>@rules</code> throughout these tutorials.</p>
+You will encounter other `@rules` throughout these tutorials.
 
-<p><strong>See if you can add a media query to your CSS that changes styles based on the viewport width. Change the width of your browser window to see the result.</strong></p>
+**See if you can add a media query to your CSS that changes styles based on the viewport width. Change the width of your browser window to see the result.**
 
-<h2 id="Shorthands">Shorthands</h2>
+## Shorthands
 
-<p>Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called <strong>shorthand properties</strong> — this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.</p>
+Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties** — this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.
 
-<p>For example, this line:</p>
+For example, this line:
 
-<pre class="brush: css notranslate">/* In 4-value shorthands like padding and margin, the values are applied
+```css
+/* In 4-value shorthands like padding and margin, the values are applied
    in the order top, right, bottom, left (clockwise from the top). There are also other
    shorthand types, for example 2-value shorthands, which set padding/margin
    for top/bottom, then left/right */
-padding: 10px 15px 15px 5px;</pre>
+padding: 10px 15px 15px 5px;
+```
 
-<p>Does the same thing as all these together:</p>
+Does the same thing as all these together:
 
-<pre class="brush: css notranslate">padding-top: 10px;
+```css
+padding-top: 10px;
 padding-right: 15px;
 padding-bottom: 15px;
-padding-left: 5px;</pre>
+padding-left: 5px;
+```
 
-<p>Whereas this line:</p>
+Whereas this line:
 
-<pre class="brush: css notranslate">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
+```css
+background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+```
 
-<p>Does the same thing as all these together:</p>
+Does the same thing as all these together:
 
-<pre class="brush: css notranslate">background-color: red;
+```css
+background-color: red;
 background-image: url(bg-graphic.png);
 background-position: 10px 10px;
 background-repeat: repeat-x;
-background-scroll: fixed;</pre>
+background-scroll: fixed;
+```
 
-<p>We won't attempt to teach these exhaustively now — you'll come across many examples later on in the course, and you are advised to look up the shorthand property names in our <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> to find out more.</p>
+We won't attempt to teach these exhaustively now — you'll come across many examples later on in the course, and you are advised to look up the shorthand property names in our [CSS reference](/pt-BR/docs/Web/CSS/Reference) to find out more.
 
-<p><strong>Try adding the above declarations to your CSS to see how it affects the styling of your HTML. Try experimenting with some different values.</strong></p>
+**Try adding the above declarations to your CSS to see how it affects the styling of your HTML. Try experimenting with some different values.**
 
-<div class="blockIndicator warning">
-<p><strong>Warning</strong>: While shorthands often allow you to miss out values, they will then reset any values that you do not include to their initial values. This ensures that a sensible set of values are used. However, this might be confusing if you were expecting the shorthand to only change the values you passed in.</p>
-</div>
+> **Aviso:** While shorthands often allow you to miss out values, they will then reset any values that you do not include to their initial values. This ensures that a sensible set of values are used. However, this might be confusing if you were expecting the shorthand to only change the values you passed in.
 
-<h2 id="Comments">Comments</h2>
+## Comments
 
-<p>As with HTML, you are encouraged to make comments in your CSS, to help you understand how your code works when coming back to it after several months, and to help others coming to the code to work on it understand it.</p>
+As with HTML, you are encouraged to make comments in your CSS, to help you understand how your code works when coming back to it after several months, and to help others coming to the code to work on it understand it.
 
-<p>Comments in CSS begin with <code>/*</code> and end with <code>*/</code>. In the below code block I have used comments to mark the start of different distinct code sections. This is useful to help you navigate your codebase as it gets larger — you can search for the comments in your code editor.</p>
+Comments in CSS begin with `/*` and end with `*/`. In the below code block I have used comments to mark the start of different distinct code sections. This is useful to help you navigate your codebase as it gets larger — you can search for the comments in your code editor.
 
-<pre class="brush: css notranslate">/* Handle basic element styling */
+```css
+/* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
   font: 1em/150% Helvetica, Arial, sans-serif;
@@ -405,27 +444,31 @@ div p{
 
 div p + p {
   padding-top: 0;
-}</pre>
+}
+```
 
-<p>Comments are also useful for temporarily <em>commenting out</em> certain parts of the code for testing purposes, for example if you are trying to find which part of your code is causing an error. In the next example I have commented out the rules for the <code>.special</code> selector.</p>
+Comments are also useful for temporarily _commenting out_ certain parts of the code for testing purposes, for example if you are trying to find which part of your code is causing an error. In the next example I have commented out the rules for the `.special` selector.
 
-<pre class="brush: css notranslate">/*.special {
+```css
+/*.special {
   color: red;
 }*/
 
 p {
   color: blue;
-}</pre>
+}
+```
 
-<p><strong>Add some comments to your CSS, to get used to using them.</strong></p>
+**Add some comments to your CSS, to get used to using them.**
 
-<h2 id="Whitespace">Whitespace</h2>
+## Whitespace
 
-<p>White space means actual spaces, tabs and new lines. In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability.</p>
+White space means actual spaces, tabs and new lines. In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability.
 
-<p>In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:</p>
+In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   font: 1em/150% Helvetica, Arial, sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -456,11 +499,12 @@ div p {
 div p + p {
   padding-top: 0;
 }
-</pre>
+```
 
-<p id="Very_compact">You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:</p>
+You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:
 
-<pre class="brush: css notranslate">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+```css
+body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
 
 h1 {font-size: 1.5em;}
@@ -468,36 +512,38 @@ h1 {font-size: 1.5em;}
 div p, #id:first-line {background-color: red; background-style: none}
 div p {margin: 0; padding: 1em;}
 div p + p {padding-top: 0;}
-</pre>
+```
 
-<p>The code layout you choose is usually a personal preference, although when you start to work in teams, you may find that the existing team has its own styleguide that specifies an agreed convention to follow.</p>
+The code layout you choose is usually a personal preference, although when you start to work in teams, you may find that the existing team has its own styleguide that specifies an agreed convention to follow.
 
-<p>The whitespace you do need to be careful of in CSS is the whitespace between the properties and their values. For example, the following declarations are valid CSS:</p>
+The whitespace you do need to be careful of in CSS is the whitespace between the properties and their values. For example, the following declarations are valid CSS:
 
-<pre class="brush: css notranslate">margin: 0 auto;
-padding-left: 10px;</pre>
+```css
+margin: 0 auto;
+padding-left: 10px;
+```
 
-<p>But the following are invalid:</p>
+But the following are invalid:
 
-<pre class="brush: css notranslate">margin: 0auto;
-padding- left: 10px;</pre>
+```css
+margin: 0auto;
+padding- left: 10px;
+```
 
-<p><code>0auto</code> is not recognised as a valid value for the <code>margin</code> property (<code>0</code> and <code>auto</code> are two separate values,) and the browser does not recognise <code>padding-</code> as a valid property. So you should always make sure to separate distinct values from one another by at least a space, but keep property names and property values together as single unbroken strings.</p>
+`0auto` is not recognised as a valid value for the `margin` property (`0` and `auto` are two separate values,) and the browser does not recognise `padding-` as a valid property. So you should always make sure to separate distinct values from one another by at least a space, but keep property names and property values together as single unbroken strings.
 
-<p><strong>Try playing with whitespace inside your CSS, to see what breaks things and what doesn't.</strong></p>
+**Try playing with whitespace inside your CSS, to see what breaks things and what doesn't.**
 
-<h2 id="Whats_next">What's next?</h2>
+## What's next?
 
-<p>It's useful to understand a little about how the browser takes your HTML and CSS and turns it into a webpage, so in the next article — <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a> — we will take a look at that process.</p>
+It's useful to understand a little about how the browser takes your HTML and CSS and turns it into a webpage, so in the next article — [How CSS works](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works) — we will take a look at that process.
 
-<p>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+## Neste módulo
 
-<ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">O que é CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Começando com CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Como o CSS é  estruturad</a>o</li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Como o CSS funciona</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Usando seu novo conhecimento</a></li>
-</ol>
+1.  [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
+3.  [Como o CSS é estruturad](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)o
+4.  [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
+5.  [Usando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

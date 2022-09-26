@@ -5,267 +5,246 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 translation_of_original: Web/Guide/CSS/Getting_started/Lists
 original_slug: Web/CSS/Getting_Started/Lists
 ---
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</p>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-<p><font><font>Este é o 10º seção do </font></font><a href="/en-US/docs/Web/Guide/CSS/Getting_Started" title="EN-US / docs / Web / Guia / CSS / Introdução"><font><font>CSS Introdução</font></font></a><font><font> tutorial; </font><font>ele descreve como você pode usar CSS para especificar o aparecimento de listas. </font><font>Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.</font></font></p>
+Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Web/Guide/CSS/Getting_Started "EN-US / docs / Web / Guia / CSS / Introdução") tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
 
-<h2 class="clearLeft" id="Informação_Lists"><font><font>Informação: Lists</font></font></h2>
+## Informação: Lists
 
-<p><font><font>Se você aceitou o desafio na </font></font><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Content" title="/ en-US / docs / Web / Guia / CSS / Getting_Started / Conteúdo"><font><font>última </font></font></a><font><font>seção, </font><font>em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.</font></font></p>
+Se você aceitou o desafio na [última ](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Content "/ en-US / docs / Web / Guia / CSS / Getting_Started / Conteúdo")seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
 
-<p><font><font>CSS proporciona propriedades especiais que são projetados para listas. </font><font>Geralmente é mais conveniente usar estas propriedades sempre que puder.</font></font></p>
+CSS proporciona propriedades especiais que são projetados para listas. Geralmente é mais conveniente usar estas propriedades sempre que puder.
 
-<p><font><font>Para especificar o estilo para uma lista, use o {{cssxref ("list-style")}} propriedade para especificar o tipo de marcador.</font></font></p>
+Para especificar o estilo para uma lista, use o {{cssxref ("list-style")}} propriedade para especificar o tipo de marcador.
 
-<p><font><font>O seletor na sua regra de CSS pode selecionar os elementos de item de lista (por exemplo, {{HTMLElement ("li")}}), ou pode selecionar o elemento primário da lista (por exemplo, {{HTMLElement ("ul")}}) de modo a que os elementos da lista herdam o modelo.</font></font></p>
+O seletor na sua regra de CSS pode selecionar os elementos de item de lista (por exemplo, {{HTMLElement ("li")}}), ou pode selecionar o elemento primário da lista (por exemplo, {{HTMLElement ("ul")}}) de modo a que os elementos da lista herdam o modelo.
 
-<h3 id="Listas_não_ordenadas"><font><font>Listas não ordenadas</font></font></h3>
+### Listas não ordenadas
 
-<p><font><font>Em uma lista </font></font><em><font><font>desordenada</font></font></em><font><font>, cada item da lista é marcado da mesma forma.</font></font></p>
+Em uma lista _desordenada_, cada item da lista é marcado da mesma forma.
 
-<p><font><font>CSS tem três tipos de marcadores, e aqui está como seu navegador exibe-os:</font></font></p>
+CSS tem três tipos de marcadores, e aqui está como seu navegador exibe-os:
 
-<ul style="padding-left: 2em;">
- <li style="list-style-type: disc;"><code><font><font>disc</font></font></code></li>
- <li style="list-style-type: circle;"><code><font><font>circle</font></font></code></li>
- <li style="list-style-type: square;"><code><font><font>square</font></font></code></li>
-</ul>
+- `disc`
+- `circle`
+- `square`
 
-<p style="list-style-type: square;">        none</p>
+none
 
-<p><font><font>Alternativamente, você pode especificar o URL de uma imagem.</font></font></p>
+Alternativamente, você pode especificar o URL de uma imagem.
 
-<div class="tuto_example">
-<div class="tuto_type"><font><font>Exemplo</font></font></div>
+Exemplo
 
-<p><font><font>Essas regras especificam diferentes marcadores para diferentes classes de item da lista:</font></font></p>
+Essas regras especificam diferentes marcadores para diferentes classes de item da lista:
 
-<pre class="brush:css"><font><font>li.open {list-style: circle;} </font></font><font><font>
-li.closed {list-style: disc;}</font></font>
-</pre>
+```css
+li.open {list-style: circle;}
+li.closed {list-style: disc;}
+```
 
-<p><font><font>Quando estas classes são usadas em uma lista, que distinguir entre os itens abertos e fechados (por exemplo, em uma lista de tarefas):</font></font></p>
+Quando estas classes são usadas em uma lista, que distinguir entre os itens abertos e fechados (por exemplo, em uma lista de tarefas):
 
-<pre class="brush: html"><font><font>&lt;ul&gt; </font></font><font><font>
-  &lt;li class="open"&gt; Lorem ipsum &lt;/ li&gt; </font></font><font><font>
-  &lt;li class="closed"&gt; dolor sit &lt;/ li&gt;
-  &lt;li class="closed"&gt; Amet consectetuer &lt;/ li&gt;
-  &lt;li class="open"&gt; Magna aliquam &lt;/ li&gt;
-  &lt;li class="closed"&gt; Autem veleum &lt;/ li&gt;
-&lt;/ ul&gt;</font></font>
-</pre>
+```html
+<ul>
+  <li class="open"> Lorem ipsum </ li>
+  <li class="closed"> dolor sit </ li>
+  <li class="closed"> Amet consectetuer </ li>
+  <li class="open"> Magna aliquam </ li>
+  <li class="closed"> Autem veleum </ li>
+</ ul>
+```
 
-<p><font><font>O resultado pode parecer:</font></font></p>
+O resultado pode parecer:
 
-<p><font><font>{{EmbedLiveSample ('Listas_não_ordenadas', '', '', '')}}</font></font></p>
-</div>
+{{EmbedLiveSample ('Listas_não_ordenadas', '', '', '')}}
 
-<h3 id="Listas_ordenadas"><font><font>Listas ordenadas</font></font></h3>
+### Listas ordenadas
 
-<p><font><font>Em uma lista<em>ordenada</em></font></font><font><font> , cada item da lista é marcado diferentemente para mostrar a sua posição na sequência.</font></font></p>
+Em uma lista*ordenada* , cada item da lista é marcado diferentemente para mostrar a sua posição na sequência.
 
-<p><font><font>Use a propriedade {{cssxref ("list-style")}} para especificar o tipo de marcador:</font></font></p>
+Use a propriedade {{cssxref ("list-style")}} para especificar o tipo de marcador:
 
-<ul style="padding-left: 2em;">
- <li><code>decimal</code></li>
- <li><code>lower-roman</code></li>
- <li><code>upper-roman</code></li>
- <li><code>lower-latin</code></li>
- <li><code>upper-latin</code></li>
-</ul>
+- `decimal`
+- `lower-roman`
+- `upper-roman`
+- `lower-latin`
+- `upper-latin`
 
-<div class="tuto_example">
-<div class="tuto_type"><font><font>Exemplo</font></font></div>
+Exemplo
 
-<p><font><font>Esta regra especifica que em {{HTMLElement ("OL")}} elementos com a classe </font></font><code><font><font>informações, os itens são identificados com letras maiúsculas.</font></font></code></p>
+Esta regra especifica que em {{HTMLElement ("OL")}} elementos com a classe `informações, os itens são identificados com letras maiúsculas.`
 
-<pre><code>&lt;ol class="info"&gt;
-  &lt;li&gt;Lorem ipsum&lt;/li&gt;
-  &lt;li&gt;Dolor sit&lt;/li&gt;
-  &lt;li&gt;Amet consectetuer&lt;/li&gt;
-  &lt;li&gt;Magna aliquam&lt;/li&gt;
-  &lt;li&gt;Autem veleum&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+```
+<ol class="info">
+  <li>Lorem ipsum</li>
+  <li>Dolor sit</li>
+  <li>Amet consectetuer</li>
+  <li>Magna aliquam</li>
+  <li>Autem veleum</li>
+</ol>
+```
 
-<pre class="brush:css"><font><font>ol.info {list-style: upper-latin;}
-</font></font></pre>
+```css
+ol.info {list-style: upper-latin;}
+```
 
-<p><font><font>O {{HTMLElement ("LI")}} elementos da lista herdam esse estilo:</font></font></p>
+O {{HTMLElement ("LI")}} elementos da lista herdam esse estilo:
 
-<p><font><font>{{EmbedLiveSample ('Listas_ordenadas', '', '', '')}}</font></font></p>
-</div>
+{{EmbedLiveSample ('Listas_ordenadas', '', '', '')}}
 
-<div class="tuto_details">
-<div class="tuto_type"><font><font>Mais detalhes</font></font></div>
+Mais detalhes
 
-<p><font><font>O {{cssxref ("list-style")}} propriedade é uma propriedade taquigrafia. </font><font>Em folhas de estilo complexas você pode preferir usar propriedades separadas para definir valores separados. </font><font>Para obter links para essas propriedades separadas, e mais detalhes de como CSS especifica listas, consulte o {{cssxref ("list-style")}} página de referência.</font></font></p>
+O {{cssxref ("list-style")}} propriedade é uma propriedade taquigrafia. Em folhas de estilo complexas você pode preferir usar propriedades separadas para definir valores separados. Para obter links para essas propriedades separadas, e mais detalhes de como CSS especifica listas, consulte o {{cssxref ("list-style")}} página de referência.
 
-<p><font><font>Se você estiver usando uma linguagem de marcação como HTML que fornece etiquetas convencionais para não-ordenada ({{HTMLElement ("ul")}}) e ordenou ({{HTMLElement ("ol")}}) listas, então é uma boa prática para usar as marcas na forma como eles se destinam. </font><font>No entanto, você pode usar CSS para fazer {{HTMLElement ("ul")}} exibição ordenada e {{HTMLElement ("ol")}} visualização não ordenada, se desejar.</font></font></p>
+Se você estiver usando uma linguagem de marcação como HTML que fornece etiquetas convencionais para não-ordenada ({{HTMLElement ("ul")}}) e ordenou ({{HTMLElement ("ol")}}) listas, então é uma boa prática para usar as marcas na forma como eles se destinam. No entanto, você pode usar CSS para fazer {{HTMLElement ("ul")}} exibição ordenada e {{HTMLElement ("ol")}} visualização não ordenada, se desejar.
 
-<p><font><font>Browsers diferem na maneira de implementar os estilos para listas. </font><font>Não espere que sua folha de estilo dê resultados idênticos em todos os navegadores.</font></font></p>
-</div>
+Browsers diferem na maneira de implementar os estilos para listas. Não espere que sua folha de estilo dê resultados idênticos em todos os navegadores.
 
-<h3 id="Contadores"><font><font>Contadores</font></font></h3>
+### Contadores
 
-<div style="border: 1px solid red; padding: 6px; margin: 0 0 .5em -6px; width: 100%;">
-<p><strong><font><font>Nota: </font></font></strong><font><font> Alguns navegadores não suportam contadores. </font><font>O </font></font><a class="external" href="http://www.quirksmode.org/css/contents.html"><font><font>conteúdo CSS e compatibilidade do navegador</font></font></a><font><font> página no </font></font><a class="external" href="http://www.quirksmode.org/"><font><font>site de modo Quirks</font></font></a><font><font> contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. </font><font>Páginas individuais na </font></font><a href="/en-US/docs/Web/CSS/Reference" title="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS_Reference"><font><font>referência CSS</font></font></a><font><font> neste local também têm tabelas de compatibilidade do navegador.</font></font></p>
-</div>
+**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](http://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](http://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS_Reference") neste local também têm tabelas de compatibilidade do navegador.
 
-<p><font><font>Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. </font><font>Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.</font></font></p>
+Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.
 
-<p><font><font>Para especificar a numeração, você precisa de um </font></font><em><font><font>contador</font></font></em><font><font> com um nome que você especificar.</font></font></p>
+Para especificar a numeração, você precisa de um _contador_ com um nome que você especificar.
 
-<p><font><font>Em alguns elementos antes da contagem é começar, reinicie o contador com a propriedade {{cssxref ("counter-reset")}} eo nome do seu contador. </font><font>O pai dos elementos que você estiver contando é um bom lugar para fazer isso, mas você pode usar qualquer elemento que vem antes os itens da lista.</font></font></p>
+Em alguns elementos antes da contagem é começar, reinicie o contador com a propriedade {{cssxref ("counter-reset")}} eo nome do seu contador. O pai dos elementos que você estiver contando é um bom lugar para fazer isso, mas você pode usar qualquer elemento que vem antes os itens da lista.
 
-<p><font><font>Em cada elemento que o contador é incrementado, use a propriedade {{cssxref ("contra-incremento")}} eo nome do seu contador.</font></font></p>
+Em cada elemento que o contador é incrementado, use a propriedade {{cssxref ("contra-incremento")}} eo nome do seu contador.
 
-<p><font><font>Para mostrar seu contador, adicione {{cssxref (":: before")}} ou {{cssxref (":: after")}} para o selector e usar o </font></font><code><font><font>conteúdo</font></font></code><font><font> da propriedade (como você fez na página anterior, </font><font>Conteúdo) </font><font>.</font></font></p>
+Para mostrar seu contador, adicione {{cssxref (":: before")}} ou {{cssxref (":: after")}} para o selector e usar o `conteúdo` da propriedade (como você fez na página anterior, Conteúdo) .
 
-<p><font><font>No valor do </font></font><code><font><font>conteúdo</font></font></code><font><font> de propriedade, especifique </font></font><code><font><font>counter ()</font></font></code><font><font> com o nome de seu contador. </font><font>Opcionalmente especifique um tipo. </font><font>Os tipos são os mesmos que na </font></font><strong><font><font>lista ordenada</font></font></strong><font><font> secção acima.</font></font></p>
+No valor do `conteúdo` de propriedade, especifique `counter ()` com o nome de seu contador. Opcionalmente especifique um tipo. Os tipos são os mesmos que na **lista ordenada** secção acima.
 
-<p><font><font>Normalmente, o elemento que apresenta o contador também incrementa-lo.</font></font></p>
+Normalmente, o elemento que apresenta o contador também incrementa-lo.
 
-<div class="tuto_example">
-<div class="tuto_type"><font><font>Exemplo</font></font></div>
+Exemplo
 
-<p><font><font>Esta regra inicializa um contador para cada {{HTMLElement ("h3")}} elemento com a classe </font><font>numeradas:</font></font></p>
+Esta regra inicializa um contador para cada {{HTMLElement ("h3")}} elemento com a classe numeradas:
 
-<pre class="brush:css"><font><font>h3.numbered {counter-reset: mynum;}
-</font></font></pre>
+```css
+h3.numbered {counter-reset: mynum;}
+```
 
-<p> </p>
+Esta regra mostra e incrementa o contador para cada {{HTMLElement ("p")}} elemento com a classe numeradas:
 
-<p><font><font>Esta regra mostra e incrementa o contador para cada {{HTMLElement ("p")}} elemento com a classe </font><font>numeradas:</font></font></p>
+```html
+<p class = "numbered"> Lorem ipsum </ p>
+<p class = "numbered"> dolor sit </ p>
+<p class = "numbered"> Amet consectetuer </ p>
+<p class = "numbered"> Magna aliquam </ p>
+<p class = "numbered"> Autem veleum </ p>
+```
 
-<pre class="brush: html"><font><font>&lt;p class = "numbered"&gt; Lorem ipsum &lt;/ p&gt;
-&lt;p class = "numbered"&gt; dolor sit &lt;/ p&gt;
-&lt;p class = "numbered"&gt; Amet consectetuer &lt;/ p&gt;
-&lt;p class = "numbered"&gt; Magna aliquam &lt;/ p&gt;
-&lt;p class = "numbered"&gt; Autem veleum &lt;/ p&gt;</font></font>
-</pre>
-
-<pre class="brush:css"><font><font>body </font></font><font><font>
-   {counter-reset: </font></font><font><font>
-mynum;} </font></font><font><font>
+```css
+body
+   {counter-reset:
+mynum;}
 p.numbered:before
   {content: counter(mynum) ": ";
   counter-increment: mynum;
-  font-weight: bold;}</font></font>
-</pre>
+  font-weight: bold;}
+```
 
-<p><font><font>O resultado se parece com isso:</font></font></p>
+O resultado se parece com isso:
 
-<p><font><font>{{ EmbedLiveSample("Contadores", '300', '200', '') }}</font></font></p>
-</div>
+{{ EmbedLiveSample("Contadores", '300', '200', '') }}
 
-<div class="tuto_details">
-<div class="tuto_type"><font><font>Mais detalhes</font></font></div>
+Mais detalhes
 
-<p><font><font>Você não pode usar os contadores a menos que você sabe que todo mundo que lê o documento tem um navegador que os suporta.</font></font></p>
+Você não pode usar os contadores a menos que você sabe que todo mundo que lê o documento tem um navegador que os suporta.
 
-<p><font><font>Se você é capaz de usar contadores, eles têm a vantagem de que você pode estilizar os contadores separadamente dos itens da lista. </font><font>No exemplo acima, os contadores estão em negrito mas os itens da lista não são.</font></font></p>
+Se você é capaz de usar contadores, eles têm a vantagem de que você pode estilizar os contadores separadamente dos itens da lista. No exemplo acima, os contadores estão em negrito mas os itens da lista não são.
 
-<p><font><font>Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. </font><font>Para mais detalhes, consulte </font></font><a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters"><font><font>contadores automáticos e numeração</font></font></a><font><font> em CSS Specification.</font></font></p>
-</div>
+Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](http://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
 
-<h2 id="Listas_denominadas_Ação"><font><font>Listas denominadas: Ação</font></font></h2>
+## Listas denominadas: Ação
 
-<p><font><font>Crie um novo documento HTML, </font><font>doc2.html. </font><font>Copie e cole o conteúdo daqui:</font></font></p>
+Crie um novo documento HTML, doc2.html. Copie e cole o conteúdo daqui:
 
-<pre class="brush:html;"><font><font>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Sample document 2&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style2.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample document 2</title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
 
-    &lt;h3 id="oceans"&gt;The oceans&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Arctic&lt;/li&gt;
-      &lt;li&gt;Atlantic&lt;/li&gt;
-      &lt;li&gt;Pacific&lt;/li&gt;
-      &lt;li&gt;Indian&lt;/li&gt;
-      &lt;li&gt;Southern&lt;/li&gt;
-    &lt;/ul&gt;
+    <h3 id="oceans">The oceans</h3>
+    <ul>
+      <li>Arctic</li>
+      <li>Atlantic</li>
+      <li>Pacific</li>
+      <li>Indian</li>
+      <li>Southern</li>
+    </ul>
 
-    &lt;h3 class="numbered"&gt;Numbered paragraphs&lt;/h3&gt;
-    &lt;p class="numbered"&gt;Lorem ipsum&lt;/p&gt;
-    &lt;p class="numbered"&gt;Dolor sit&lt;/p&gt;
-    &lt;p class="numbered"&gt;Amet consectetuer&lt;/p&gt;
-    &lt;p class="numbered"&gt;Magna aliquam&lt;/p&gt;
-    &lt;p class="numbered"&gt;Autem veleum&lt;/p&gt;
+    <h3 class="numbered">Numbered paragraphs</h3>
+    <p class="numbered">Lorem ipsum</p>
+    <p class="numbered">Dolor sit</p>
+    <p class="numbered">Amet consectetuer</p>
+    <p class="numbered">Magna aliquam</p>
+    <p class="numbered">Autem veleum</p>
 
-  &lt;/body&gt;
-&lt;/html&gt;</font></font>
+  </body>
+</html>
+```
 
-</pre>
+Faça uma nova folha de estilo, style2.css. Copie e cole o conteúdo daqui:
 
-<p><font><font>Faça uma nova folha de estilo, </font><font>style2.css. </font><font>Copie e cole o conteúdo daqui:</font></font></p>
-
-<pre class="brush:css;"><font><font>/* numbered paragraphs */
+```css
+/* numbered paragraphs */
 h3.numbered {counter-reset: mynum;}
 
 p.numbered:before {
   content: counter(mynum) ": ";
   counter-increment: mynum;
   font-weight: bold;
-}</font></font>
-</pre>
+}
+```
 
-<p><font><font>Se o layout e comentário não são a seu gosto, alterá-los.</font></font></p>
+Se o layout e comentário não são a seu gosto, alterá-los.
 
-<p><font><font>Abra o documento no seu browser. </font><font>Se o seu navegador suporta contadores, você verá algo parecido com o exemplo abaixo. </font><font>Se seu navegador não suporta contadores, então você não ver os números (e provavelmente nem mesmo os dois pontos):</font></font></p>
+Abra o documento no seu browser. Se o seu navegador suporta contadores, você verá algo parecido com o exemplo abaixo. Se seu navegador não suporta contadores, então você não ver os números (e provavelmente nem mesmo os dois pontos):
 
-<p><font><font>{{EmbedLiveSample ('Listas_denominadas_Ação', '300', '400', '')}}</font></font></p>
+{{EmbedLiveSample ('Listas_denominadas_Ação', '300', '400', '')}}
 
-<div class="tuto_example">
-<div class="tuto_type"><font><font>Desafios</font></font></div>
+Desafios
 
-<p><font><font>Adicione uma regra à sua folha de estilo, para numerar os oceanos usando numerais romanos de I a V:</font></font></p>
+Adicione uma regra à sua folha de estilo, para numerar os oceanos usando numerais romanos de I a V:
 
-<table style="background-color: white; border: 2px outset #3366bb; padding: 0 6em 1em 1em;">
- <tbody>
-  <tr>
-   <td>
-    <p><strong>The oceans</strong></p>
-
-    <ul>
-     <li>Arctic</li>
-     <li>Atlantic</li>
-     <li>Pacific</li>
-     <li>Indian</li>
-     <li>Southern</li>
-    </ul>
-   </td>
-  </tr>
- </tbody>
+<table
+  style="
+    background-color: white;
+    border: 2px outset #3366bb;
+    padding: 0 6em 1em 1em;
+  "
+>
+  <tbody>
+    <tr>
+      <td>
+        <p><strong>The oceans</strong></p>
+        <ul>
+          <li>Arctic</li>
+          <li>Atlantic</li>
+          <li>Pacific</li>
+          <li>Indian</li>
+          <li>Southern</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p> </p>
+Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:
 
-<p><font><font>Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:</font></font></p>
+| **(A) The oceans\*\***. . .\***\*(B) Numbered paragraphs\*\***. . .\*\* |
+| ----------------------------------------------------------------------- |
 
-<table style="background-color: white; border: 2px outset #3366bb; padding: 0 6em 1em 1em;">
- <tbody>
-  <tr>
-   <td>
-    <p><strong>(A) The oceans</strong></p>
+[Ver soluções para esses desafios.](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists "EN-US / docs / Web / Guia / CSS / Introdução / desafio soluções # Lists")
 
-    <p><strong>. . .</strong></p>
+## Qual o proximo?
 
-    <p><strong>(B) Numbered paragraphs</strong></p>
-
-    <p><strong>. . .</strong></p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists" title="EN-US / docs / Web / Guia / CSS / Introdução / desafio soluções # Lists"><font><font>Ver soluções para esses desafios.</font></font></a></p>
-
-<h2 id="Qual_o_proximo"><font><font>Qual o proximo?</font></font></h2>
-
-<p><font><font>{{NextPage ("/ en-US / docs / Web / Guia / CSS / Getting_Started / Boxes", "caixas")}} Quando seu navegador exibe seu documento de amostra, ele cria espaço ao redor dos elementos quando ele coloca-los na página. </font><font>A próxima página descreve como você pode usar CSS para trabalhar com as formas subjacentes de elementos, </font><font>caixas.</font></font></p>
+{{NextPage ("/ en-US / docs / Web / Guia / CSS / Getting_Started / Boxes", "caixas")}} Quando seu navegador exibe seu documento de amostra, ele cria espaço ao redor dos elementos quando ele coloca-los na página. A próxima página descreve como você pode usar CSS para trabalhar com as formas subjacentes de elementos, caixas.

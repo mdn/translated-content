@@ -3,50 +3,54 @@ title: Métodos úteis de string
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
-
-<p class="summary">Agora que nós vimos o básico de strings, vamos engatar a próxima marcha e começar a pensar sobre as operações úteis que podemos fazer em strings com métodos embutidos, como encontrar o comprimento de um string, unir e dividir sequências de caracteres, substituindo um caracter em uma string por outro, e muito mais.</p>
+Agora que nós vimos o básico de strings, vamos engatar a próxima marcha e começar a pensar sobre as operações úteis que podemos fazer em strings com métodos embutidos, como encontrar o comprimento de um string, unir e dividir sequências de caracteres, substituindo um caracter em uma string por outro, e muito mais.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimento básico de computador, uma compreensão básica de HTML e CSS, uma compreensão do que é o JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>
-    <p>Entender que strings são objetos e aprender a usar alguns do métodos básicos disponíveis nesses objetos para manipular strings.</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Conhecimento básico de computador, uma compreensão básica de HTML e CSS,
+        uma compreensão do que é o JavaScript.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        <p>
+          Entender que strings são objetos e aprender a usar alguns do métodos
+          básicos disponíveis nesses objetos para manipular strings.
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Strings_como_objetos">Strings como objetos</h2>
+## Strings como objetos
 
-<p>Como dissemos antes e diremos novamente — <em>tudo</em> é um objeto em JavaScript. Quando você cria um string, usando por exemplo</p>
+Como dissemos antes e diremos novamente — _tudo_ é um objeto em JavaScript. Quando você cria um string, usando por exemplo
 
-<pre class="brush: js">var string = 'This is my string';</pre>
+```js
+var string = 'This is my string';
+```
 
-<p>sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos diponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!</p>
+sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos diponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!
 
-<p><strong>Agora, antes de seu cérebro começar a derreter, não se preocupe!</strong> Você não precisa saber sobre a maioria deles no início da sua jornada de aprendizado. Mas há alguns que você potencialmente usará com bastante frequência que veremos aqui.</p>
+**Agora, antes de seu cérebro começar a derreter, não se preocupe!** Você não precisa saber sobre a maioria deles no início da sua jornada de aprendizado. Mas há alguns que você potencialmente usará com bastante frequência que veremos aqui.
 
-<p>Vamos digitar alguns exemplos em um console novo. Nós fornecemos um abaixo (você também pode abrir este console em uma guia ou janela separada, ou usar o console do desenvolvedor do navegador, se preferir).</p>
+Vamos digitar alguns exemplos em um console novo. Nós fornecemos um abaixo (você também pode abrir este console em uma guia ou janela separada, ou usar o console do desenvolvedor do navegador, se preferir).
 
-<p>Nós fornecemos um abaixo (você também pode <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir esse console</a> em uma aba ou janela separada, ou usar o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console do navegador do desenvolvedor</a> se você preferir).</p>
+Nós fornecemos um abaixo (você também pode [abrir esse console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma aba ou janela separada, ou usar o [console do navegador do desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você preferir).
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;JavaScript console&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -94,14 +98,14 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -109,7 +113,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
@@ -140,113 +144,131 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
-</div>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
 
-<h3 id="Descobrindo_o_comprimento_de_uma_string">Descobrindo o comprimento de uma string</h3>
+### Descobrindo o comprimento de uma string
 
-<p>Essa é fácil  — você simplesmente usa a propriedade {{jsxref("String.prototype.length", "length")}}. Tente digitar as linhas a seguir:</p>
+Essa é fácil — você simplesmente usa a propriedade {{jsxref("String.prototype.length", "length")}}. Tente digitar as linhas a seguir:
 
-<pre class="brush: js">var browserType = 'mozilla';
-browserType.length;</pre>
+```js
+var browserType = 'mozilla';
+browserType.length;
+```
 
-<p>Isso deve retornar o número 7, porque "mozilla"  tem 7 caracteres. Isso é útil por vários motivos; por exemplo, você pode querer encontrar os comprimentos de uma série de nomes para que você possa exibi-los em ordem de comprimento, ou deixar um usuário saber que um nome de usuário que ele informou em um campo de formulário é muito longo se este for maior do que um certo comprimento.</p>
+Isso deve retornar o número 7, porque "mozilla" tem 7 caracteres. Isso é útil por vários motivos; por exemplo, você pode querer encontrar os comprimentos de uma série de nomes para que você possa exibi-los em ordem de comprimento, ou deixar um usuário saber que um nome de usuário que ele informou em um campo de formulário é muito longo se este for maior do que um certo comprimento.
 
-<h3 id="Recuperando_um_caractere_de_string_específico">Recuperando um caractere de string específico</h3>
+### Recuperando um caractere de string específico
 
-<p>Nota complementar: você pode retornar qualquer caractere dentro de uma string usando a<strong> notação colchete</strong> - isso significa que você inclui colchetes (<code>[]</code>) no final do nome da variável. Dentro dos colchetes, você inclui o número do caractere que deseja retornar, por exemplo, para recuperar a primeira letra, faça o seguinte:</p>
+Nota complementar: você pode retornar qualquer caractere dentro de uma string usando a **notação colchete** - isso significa que você inclui colchetes (`[]`) no final do nome da variável. Dentro dos colchetes, você inclui o número do caractere que deseja retornar, por exemplo, para recuperar a primeira letra, faça o seguinte:
 
-<pre class="brush: js">browserType[0];</pre>
+```js
+browserType[0];
+```
 
-<p>Computadores contam a partir de 0, não 1! Para recuperar o último caractere de <em>qualquer</em> string, nós podemos usar a linha a seguir, combinando essa técnica com a propriedade <code>length</code> que vimos anteriormente:</p>
+Computadores contam a partir de 0, não 1! Para recuperar o último caractere de _qualquer_ string, nós podemos usar a linha a seguir, combinando essa técnica com a propriedade `length` que vimos anteriormente:
 
-<pre class="brush: js">browserType[browserType.length-1];</pre>
+```js
+browserType[browserType.length-1];
+```
 
-<p>O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição do caractere é 6, daí precisamos usar <code>length-1</code>. Você pode usar isso para, por exemplo, encontrar a primeira letra de uma série de strings e ordená-los alfabeticamente.</p>
+O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição do caractere é 6, daí precisamos usar `length-1`. Você pode usar isso para, por exemplo, encontrar a primeira letra de uma série de strings e ordená-los alfabeticamente.
 
-<h3 id="Encontrando_uma_substring_dentro_de_uma_string_e_extraindo-a">Encontrando uma substring dentro de uma string e extraindo-a</h3>
+### Encontrando uma substring dentro de uma string e extraindo-a
 
-<ol>
- <li>Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos <em>se uma substring está presente dentro de uma string</em>). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
+1.  Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
 
-  <pre class="brush: js">browserType.indexOf('zilla');</pre>
-  Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2  — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".</li>
- <li>Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
-  <pre class="brush: js">browserType.indexOf('vanilla');</pre>
-  Isso deve lhe dar um resultado <code>-1</code> — isso é retornado quando a substring, neste caso 'vanilla', não é encontrada na string principal.<br>
-  <br>
-  Você pode usar isso para encontrar todas as instâncias de strings que <strong>não contém</strong> a substring 'mozilla', ou <strong>contém</strong>, se você usar o operador de negação, conforme mostrado abaixo. Você poderia fazer algo assim:
+    ```js
+    browserType.indexOf('zilla');
+    ```
 
-  <pre class="brush: js">if(browserType.indexOf('mozilla') !== -1) {
-  // faz coisas com a string
-}</pre>
- </li>
- <li>Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
-  <pre class="brush: js">browserType.slice(0,3);</pre>
-  Isso retorna "moz" — o primeiro parâmetro é a posição do caractere a partir da qual será iniciada a extração, e o segundo parâmetro é a posição seguinte do último caractere a ser extraído. Então, a fatia ocorre da primeira posição, até a última posição, mas não incluindo. Você também pode dizer que o segundo parâmetro é igual ao comprimento da string que está sendo retornada.</li>
-</ol>
+    Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
 
-<p>Também, se você sabe que você deseja extrair todos os caracteres restantes em uma string após um certo caracter, você não tem que incluir o segundo parametro! Você apenas precisa incluir a posição do caracter a partir de onde você deseja extrar os caracteres restantes em uma string. Tente o seguinte: </p>
+2.  Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
 
-<pre class="brush: js">browserType.slice(2);</pre>
+    ```js
+    browserType.indexOf('vanilla');
+    ```
 
-<p>Isso retornará "zilla" — isso é porque a posição de caracter 2 é a letra z, e porque você não incluiu o segundo parametro, a substring retornou todos os caracteres restantes na string. </p>
+    Isso deve lhe dar um resultado `-1` — isso é retornado quando a substring, neste caso 'vanilla', não é encontrada na string principal.
 
-<div class="note">
-<p><strong>Note</strong>: O segundo parametro do <code>slice()</code> é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} pagina para ver o que mais você pode descobrir.</p>
-</div>
+    Você pode usar isso para encontrar todas as instâncias de strings que **não contém** a substring 'mozilla', ou **contém**, se você usar o operador de negação, conforme mostrado abaixo. Você poderia fazer algo assim:
 
-<h3 id="Mudando_entre_maiúsculas_e_minúsculas">Mudando entre maiúsculas e minúsculas</h3>
+    ```js
+    if(browserType.indexOf('mozilla') !== -1) {
+      // faz coisas com a string
+    }
+    ```
 
-<p>O método string {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} e {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} toma a string e converte todos os caracteres para minusculo - ou maiusculo, respectivamente. Este pode ser util, por exemplo, se você quer normalizar todas as entradas de dados do usuário antes de armazenar em um banco de dados.</p>
+3.  Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
 
-<p>Vamos testar inserindo as seguintes linhas para ver o que acontece:</p>
+    ```js
+    browserType.slice(0,3);
+    ```
 
-<pre class="brush: js">var radData = 'My NaMe Is MuD';
+    Isso retorna "moz" — o primeiro parâmetro é a posição do caractere a partir da qual será iniciada a extração, e o segundo parâmetro é a posição seguinte do último caractere a ser extraído. Então, a fatia ocorre da primeira posição, até a última posição, mas não incluindo. Você também pode dizer que o segundo parâmetro é igual ao comprimento da string que está sendo retornada.
+
+Também, se você sabe que você deseja extrair todos os caracteres restantes em uma string após um certo caracter, você não tem que incluir o segundo parametro! Você apenas precisa incluir a posição do caracter a partir de onde você deseja extrar os caracteres restantes em uma string. Tente o seguinte:
+
+```js
+browserType.slice(2);
+```
+
+Isso retornará "zilla" — isso é porque a posição de caracter 2 é a letra z, e porque você não incluiu o segundo parametro, a substring retornou todos os caracteres restantes na string.
+
+> **Nota:** O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} pagina para ver o que mais você pode descobrir.
+
+### Mudando entre maiúsculas e minúsculas
+
+O método string {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} e {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} toma a string e converte todos os caracteres para minusculo - ou maiusculo, respectivamente. Este pode ser util, por exemplo, se você quer normalizar todas as entradas de dados do usuário antes de armazenar em um banco de dados.
+
+Vamos testar inserindo as seguintes linhas para ver o que acontece:
+
+```js
+var radData = 'My NaMe Is MuD';
 radData.toLowerCase();
-radData.toUpperCase();</pre>
+radData.toUpperCase();
+```
 
-<h3 id="Atualizando_partes_de_uma_string">Atualizando partes de uma string</h3>
+### Atualizando partes de uma string
 
-<p>Você pode substituir uma substring dentro de uma string com uma outra substring usando o método {{jsxref("String.prototype.replace()", "replace()")}}. Este funciona muito simples em um nível básico, apesar haver algumas coisas avançadas que você pode fazer com ele, nós não iremos tão longe ainda.</p>
+Você pode substituir uma substring dentro de uma string com uma outra substring usando o método {{jsxref("String.prototype.replace()", "replace()")}}. Este funciona muito simples em um nível básico, apesar haver algumas coisas avançadas que você pode fazer com ele, nós não iremos tão longe ainda.
 
-<p>Ele toma dois parametros — A string que você quer substituir e a string que você quer que substitua o primeiro parametro. Tente este exemplo:</p>
+Ele toma dois parametros — A string que você quer substituir e a string que você quer que substitua o primeiro parametro. Tente este exemplo:
 
-<pre class="brush: js">browserType.replace('moz','van');</pre>
+```js
+browserType.replace('moz','van');
+```
 
-<p>Observe que para realmente obter o valor atualizado refletido na variavel <code>browserType</code> em um programa real, você teria que setar o valor da variavel para ser o resultado da operação; não apenas atualizar o valor da substring automaticamente. Assim você teria que realmente escrever isso: <code>browserType = browserType.replace('moz','van');</code></p>
+Observe que para realmente obter o valor atualizado refletido na variavel `browserType` em um programa real, você teria que setar o valor da variavel para ser o resultado da operação; não apenas atualizar o valor da substring automaticamente. Assim você teria que realmente escrever isso: `browserType = browserType.replace('moz','van');`
 
-<h2 id="Exemplos_para_aprendizado_ativo">Exemplos para aprendizado ativo</h2>
+## Exemplos para aprendizado ativo
 
-<p>Nesta seção, tentaremos escrever um código de manipulação de string. Em cada exercício abaixo, temos uma matriz de strings e um loop que processa cada valor na matriz e o exibe em uma lista com marcadores. Você não precisa entender matrizes ou loops agora - isso será explicado em artigos futuros. Tudo o que você precisa fazer em cada caso é escrever o código que produzirá as strings no formato em que as queremos.</p>
+Nesta seção, tentaremos escrever um código de manipulação de string. Em cada exercício abaixo, temos uma matriz de strings e um loop que processa cada valor na matriz e o exibe em uma lista com marcadores. Você não precisa entender matrizes ou loops agora - isso será explicado em artigos futuros. Tudo o que você precisa fazer em cada caso é escrever o código que produzirá as strings no formato em que as queremos.
 
-<p>Cada exemplo vem com um botão "Reset", que você pode usar para redefinir o código original, isso se cometer um erro e não conseguir faze-lo funcionar novamente, e um botão "Show Solution" que você pode pressionar para ver aresposta em potencial se realmente estiver travado.</p>
+Cada exemplo vem com um botão "Reset", que você pode usar para redefinir o código original, isso se cometer um erro e não conseguir faze-lo funcionar novamente, e um botão "Show Solution" que você pode pressionar para ver aresposta em potencial se realmente estiver travado.
 
-<h3 id="Filtrando_mensagens_de_saudação">Filtrando mensagens de saudação</h3>
+### Filtrando mensagens de saudação
 
-<p>No primeiro exercício, começaremos com simplicidade - temos várias mensagens de cartão, mas queremos classificá-las para listar apenas as mensagens de Natal. Queremos que você preencha um teste condicional dentro da estrutura if (...), para testar cada string e apenas imprimi-la na lista se for uma mensagem de Natal.</p>
+No primeiro exercício, começaremos com simplicidade - temos várias mensagens de cartão, mas queremos classificá-las para listar apenas as mensagens de Natal. Queremos que você preencha um teste condicional dentro da estrutura if (...), para testar cada string e apenas imprimi-la na lista se for uma mensagem de Natal.
 
-<ol>
- <li>Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?</li>
- <li>Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?</li>
- <li>Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.</li>
-</ol>
+1.  Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?
+2.  Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?
+3.  Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+```html hidden
+<div class="output" style="min-height: 125px;">
 
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<ul>
 
-&lt;ul&gt;
+</ul>
 
-&lt;/ul&gt;
+</div>
 
-&lt;/div&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 290px;"&gt;
+<textarea id="code" class="playable-code" style="height: 290px;">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var greetings = ['Happy Birthday!',
@@ -255,7 +277,7 @@ var greetings = ['Happy Birthday!',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
-for (var i = 0; i &lt; greetings.length; i++) {
+for (var i = 0; i < greetings.length; i++) {
   var input = greetings[i];
   // Seu teste condicional precisa ir dentro dos parênteses
   // na linha abaixo, substituindo o que está lá
@@ -266,15 +288,16 @@ for (var i = 0; i &lt; greetings.length; i++) {
     list.appendChild(listItem);
   }
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -293,46 +316,39 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i &lt; greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
-</pre>
+```
+
+{{ EmbedLiveSample('Playable_code', '100%', 490) }}
+
+### Corrigindo a capitalização
+
+Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalização está toda desarrumada. Nós queremos que você as altere para que elas sejam todas minúsculas, exceto pela primeira letra maiúscula. Uma boa maneira de fazer isso é:
+
+1.  Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.
+2.  Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.
+3.  Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.
+4.  Altere o valor da variável `result` para igual ao resultado final, não a `input`.
+
+> **Nota:** Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.
+
+```html hidden
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 490) }}</p>
-
-<h3 id="Corrigindo_a_capitalização">Corrigindo a capitalização</h3>
-
-<p>Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalização está toda desarrumada. Nós queremos que você as altere para que elas sejam todas minúsculas, exceto pela primeira letra maiúscula. Uma boa maneira de fazer isso é:</p>
-
-<ol>
- <li>Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.</li>
- <li>Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.</li>
- <li>Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.</li>
- <li>Altere o valor da variável  <code>result</code> para igual ao resultado final, não a <code>input</code>.</li>
-</ol>
-
-<div class="note">
-<p><strong>Nota</strong>: Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.</p>
-</div>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 250px;"&gt;
+<textarea id="code" class="playable-code" style="height: 250px;">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
-for(var i = 0; i &lt; cities.length; i++) {
+for(var i = 0; i < cities.length; i++) {
   var input = cities[i];
   // write your code just below here
 
@@ -341,15 +357,16 @@ for(var i = 0; i &lt; cities.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -368,47 +385,46 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i &lt; cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
-</pre>
+```
+
+{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}
+
+### Fazendo novas strings a partir de partes antigas
+
+Neste último exercício, o array contém um monte de strings contendo informações sobre estações de trem no norte da Inglaterra. As strings são itens de dados que contêm o código da estação de três letras, seguido por alguns dados legíveis por máquina, seguidos por um ponto-e-vírgula, seguido pelo nome da estação legível por humanos. Por exemplo:
+
+```
+MAN675847583748sjt567654;Manchester Piccadilly
+```
+
+Queremos extrair o código e o nome da estação e juntá-los em uma string com a seguinte estrutura:
+
+```
+MAN: Manchester Piccadilly
+```
+
+Nós recomendamos que faça assim:
+
+1.  Extraia o código da estação de três letras e armazene-o em uma nova variável.
+2.  Encontre o número de índice do caractere do ponto e vírgula.
+3.  Extraia o nome da estação legível usando o número do índice de caracteres de ponto-e-vírgula como ponto de referência e armazene-o em uma nova variável.
+4.  Concatene as duas novas variáveis e uma string literal para fazer a string final.
+5.  Altere o valor da variável `result` para igual à string final, não a `input`.
+
+```html hidden
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}</p>
-
-<h3 id="Fazendo_novas_strings_a_partir_de_partes_antigas">Fazendo novas strings a partir de partes antigas</h3>
-
-<p>Neste último exercício, o array contém um monte de strings contendo informações sobre estações de trem no norte da Inglaterra. As strings são itens de dados que contêm o código da estação de três letras, seguido por alguns dados legíveis por máquina, seguidos por um ponto-e-vírgula, seguido pelo nome da estação legível por humanos. Por exemplo:</p>
-
-<pre>MAN675847583748sjt567654;Manchester Piccadilly</pre>
-
-<p>Queremos extrair o código e o nome da estação e juntá-los em uma string com a seguinte estrutura:</p>
-
-<pre>MAN: Manchester Piccadilly</pre>
-
-<p>Nós recomendamos que faça assim:</p>
-
-<ol>
- <li>Extraia o código da estação de três letras e armazene-o em uma nova variável.</li>
- <li>Encontre o número de índice do caractere do ponto e vírgula.</li>
- <li>Extraia o nome da estação legível usando o número do índice de caracteres de ponto-e-vírgula como ponto de referência e armazene-o em uma nova variável.</li>
- <li>Concatene as duas novas variáveis e uma string literal para fazer a string final.</li>
- <li>Altere o valor da variável <code>result</code> para igual à string final, não a <code>input</code>.</li>
-</ol>
-
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 285px;"&gt;
+<textarea id="code" class="playable-code" style="height: 285px;">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
@@ -417,7 +433,7 @@ var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                 'SYB4f65hf75f736463;Stalybridge',
                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (var i = 0; i &lt; stations.length; i++) {
+for (var i = 0; i < stations.length; i++) {
   var input = stations[i];
   // write your code just below here
 
@@ -426,15 +442,16 @@ for (var i = 0; i &lt; stations.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -453,32 +470,29 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i &lt; stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var result = code + \': \' + name;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var result = code + \': \' + name;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
 
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}</p>
+{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}
 
-<h2 id="Conclusão">Conclusão</h2>
+## Conclusão
 
-<p>Você não pode escapar do fato de que ser capaz de lidar com palavras e frases em programação é muito importante — particularmente em JavaScript, pois os sites são todos sobre comunicação com pessoas. Este artigo forneceu os fundamentos que você precisa saber sobre a manipulação de strings por enquanto. Isso deve atendê-lo bem ao abordar tópicos mais complexos no futuro. Em seguida, vamos ver o último tipo de dados importante que precisamos focar no curto prazo — arrays.</p>
+Você não pode escapar do fato de que ser capaz de lidar com palavras e frases em programação é muito importante — particularmente em JavaScript, pois os sites são todos sobre comunicação com pessoas. Este artigo forneceu os fundamentos que você precisa saber sobre a manipulação de strings por enquanto. Isso deve atendê-lo bem ao abordar tópicos mais complexos no futuro. Em seguida, vamos ver o último tipo de dados importante que precisamos focar no curto prazo — arrays.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+## Neste módulo
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
-</ul>
+- [What is JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [A first splash into JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Storing the information you need — Variables](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
+- [Basic math in JavaScript — numbers and operators](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
+- [Handling text — strings in JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
+- [Useful string methods](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
+- [Assessment: Silly story generator](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

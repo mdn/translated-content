@@ -4,42 +4,57 @@ slug: Learn/JavaScript/Objects/Basics
 translation_of: Learn/JavaScript/Objects/Basics
 original_slug: Aprender/JavaScript/Objetos/Básico
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
-<div>{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</div>
-
-<p class="summary">Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremos alguns recursos JavaScript vistos anteriormente no curso, reiterando o fato de que muitos dos recursos que você já utilizou são objetos.</p>
+Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremos alguns recursos JavaScript vistos anteriormente no curso, reiterando o fato de que muitos dos recursos que você já utilizou são objetos.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Interação básica com o computador, entendimento básico de HTML e CSS, familiaridade com o básico de JavaScript (ver <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a> e <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Elementos construtivos</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Entender a teoria básica por trás da programação orientada a objetos, como isso se relaciona com o JavaScript ("quase tudo é objeto"), e como começar a trabalhar com objetos JavaScript.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Interação básica com o computador, entendimento básico de HTML e CSS,
+        familiaridade com o básico de JavaScript (ver
+        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        e
+        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+          >Elementos construtivos</a
+        >).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Entender a teoria básica por trás da programação orientada a objetos,
+        como isso se relaciona com o JavaScript ("quase tudo é objeto"), e como
+        começar a trabalhar com objetos JavaScript.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Objeto_noções_básicas">Objeto, noções básicas</h2>
+## Objeto, noções básicas
 
-<p>Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.</p>
+Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.
 
-<p>Para começar, faça uma cópia do nosso arquivo <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a>. Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console">console de ferramentas de desenvolvedor JavaScript</a> aberto e pronto para digitar alguns comandos.</p>
+Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console) aberto e pronto para digitar alguns comandos.
 
-<p>Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:</p>
+Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
 
-<pre class="brush: js notranslate">var pessoa = {};</pre>
+```js
+var pessoa = {};
+```
 
-<p>Se você inserir <code>pessoa</code> no seu console JS e pressionar o botão, deverá obter o seguinte resultado:</p>
+Se você inserir `pessoa` no seu console JS e pressionar o botão, deverá obter o seguinte resultado:
 
-<pre class="brush: js notranslate">[object Object]</pre>
+```js
+[object Object]
+```
 
-<p>Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:</p>
+Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:
 
-<pre class="brush: js notranslate">var pessoa = {
+```js
+var pessoa = {
   nome: ['Bob', 'Smith'],
   idade: 32,
   sexo: 'masculino',
@@ -51,145 +66,182 @@ original_slug: Aprender/JavaScript/Objetos/Básico
     alert('Oi! Eu sou ' + this.nome[0] + '.');
   }
 };
-</pre>
+```
 
-<p>Depois de salvar e atualizar, tente inserir alguns dos itens a seguir no console JavaScript no devtools do seu navegador:</p>
+Depois de salvar e atualizar, tente inserir alguns dos itens a seguir no console JavaScript no devtools do seu navegador:
 
-<pre class="brush: js notranslate">pessoa.nome
+```js
+pessoa.nome
 pessoa.nome[0]
 pessoa.idade
 pessoa.interesses[1]
 pessoa.bio()
-pessoa.saudacao()</pre>
+pessoa.saudacao()
+```
 
-<p>Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!</p>
+Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
 
-<div class="note">
-<p><strong>Nota</strong>: Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html">oojs-finished.html</a> (ou <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html">veja um exemplo funcionando</a>). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.</p>
-</div>
+> **Nota:** Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
 
-<p>Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um  com um nome (ex.: <code>nome</code> e <code>idade</code> vistos acima), e um valor (ex.: <code>['Bob', 'Smith']</code> e <code>32</code>). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:</p>
+Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um com um nome (ex.: `nome` e `idade` vistos acima), e um valor (ex.: `['Bob', 'Smith']` e `32`). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:
 
-<pre class="brush: js notranslate">var nomeDoObjeto = {
+```js
+var nomeDoObjeto = {
   nomeMembro1: valorMembro1,
   nomeMembro2: valorMembro2,
   nomeMembro3: valorMembro3
-};</pre>
+};
+```
 
-<p>O valor de um membro do objeto pode ser praticamente qualquer coisa. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como <strong>propriedades</strong> do objeto. Enquanto os dois últimos itens são funções que permitem que o objeto faça algo com esses dados. São chamados de <strong>métodos </strong>do objeto.</p>
+O valor de um membro do objeto pode ser praticamente qualquer coisa. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como **propriedades** do objeto. Enquanto os dois últimos itens são funções que permitem que o objeto faça algo com esses dados. São chamados de **métodos** do objeto.
 
-<p>Um objeto como esse é chamado de  <strong>objeto literal</strong> — ao pé da letra, escrevemos o conteúdo do objeto conforme o criamos. Isto está em contraste com objetos instanciados de classes, que veremos mais adiante.</p>
+Um objeto como esse é chamado de **objeto literal** — ao pé da letra, escrevemos o conteúdo do objeto conforme o criamos. Isto está em contraste com objetos instanciados de classes, que veremos mais adiante.
 
-<p>É muito comum criar um objeto usando um objeto literal quando você deseja transferir uma série de itens de dados relacionados estruturados de alguma maneira, por exemplo, enviando uma solicitação para o servidor para ser colocado em um banco de dados. Enviar um único objeto é muito mais eficiente do que enviar vários itens individualmente, e é mais fácil trabalhar com um array, quando você deseja identificar itens individuais pelo nome.</p>
+É muito comum criar um objeto usando um objeto literal quando você deseja transferir uma série de itens de dados relacionados estruturados de alguma maneira, por exemplo, enviando uma solicitação para o servidor para ser colocado em um banco de dados. Enviar um único objeto é muito mais eficiente do que enviar vários itens individualmente, e é mais fácil trabalhar com um array, quando você deseja identificar itens individuais pelo nome.
 
-<h2 id="Notação_de_ponto">Notação de ponto</h2>
+## Notação de ponto
 
-<p>Acima, você acessou as propriedades de objetos e métodos usando <strong>notação de ponto</strong>. O objeto nome (pessoa) atua como <strong>namespace </strong>(espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa <strong>encapsulada </strong>dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo: </p>
+Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
 
-<pre class="brush: js notranslate">pessoa.idade
+```js
+pessoa.idade
 pessoa.interesse[1]
-pessoa.bio()</pre>
+pessoa.bio()
+```
 
-<h3 id="Sub-namespaces">Sub-namespaces</h3>
+### Sub-namespaces
 
-<p>É até possível fazer o valor de um membro de um objeto ser outro objeto. Por exemplo, tente alterar o nome do membro de:</p>
+É até possível fazer o valor de um membro de um objeto ser outro objeto. Por exemplo, tente alterar o nome do membro de:
 
-<pre class="brush: js notranslate">nome: ['Bob', 'Smith'],</pre>
+```js
+nome: ['Bob', 'Smith'],
+```
 
-<p>para</p>
+para
 
-<pre class="brush: js notranslate">nome : {
+```js
+nome : {
   primeiro: 'Bob',
   ultimo: 'Smith'
-},</pre>
+},
+```
 
-<p>Aqui estamos efetivamente criando um <strong>sub-namespace</strong>. Parece difícil, mas não é — para acessar esses itens você apenas precisa encadear mais um passo ao final de outro ponto. Tente isso aqui no console:</p>
+Aqui estamos efetivamente criando um **sub-namespace**. Parece difícil, mas não é — para acessar esses itens você apenas precisa encadear mais um passo ao final de outro ponto. Tente isso aqui no console:
 
-<pre class="brush: js notranslate">pessoa.nome.primeiro
-pessoa.nome.ultimo</pre>
+```js
+pessoa.nome.primeiro
+pessoa.nome.ultimo
+```
 
-<p><strong>Importante</strong>: Nesse ponto você também precisará revisar seus métodos e mudar quaisquer instâncias de</p>
+**Importante**: Nesse ponto você também precisará revisar seus métodos e mudar quaisquer instâncias de
 
-<pre class="brush: js notranslate">nome[0]
-nome[1]</pre>
+```js
+nome[0]
+nome[1]
+```
 
-<p>para</p>
+para
 
-<pre class="brush: js notranslate">nome.primeiro
-nome.ultimo</pre>
+```js
+nome.primeiro
+nome.ultimo
+```
 
-<p>Caso contrário seus métodos não funcionarão.</p>
+Caso contrário seus métodos não funcionarão.
 
-<h2 id="Notação_de_colchetes">Notação de colchetes</h2>
+## Notação de colchetes
 
-<p>Há outra forma de acessar propriedades do objeto — usando notação de colchetes. Ao invés desses:</p>
+Há outra forma de acessar propriedades do objeto — usando notação de colchetes. Ao invés desses:
 
-<pre class="brush: js notranslate">pessoa.idade
-pessoa.nome.primeiro</pre>
+```js
+pessoa.idade
+pessoa.nome.primeiro
+```
 
-<p>Você pode usar:</p>
+Você pode usar:
 
-<pre class="brush: js notranslate">pessoa['idade']
-pessoa['nome']['primeiro']</pre>
+```js
+pessoa['idade']
+pessoa['nome']['primeiro']
+```
 
-<p>Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de <strong>arrays associativos</strong> — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.</p>
+Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
 
-<h2 id="Setando_membros_do_objeto">Setando membros do objeto</h2>
+## Setando membros do objeto
 
-<p>Até agora nós apenas procuramos receber (ou <strong>apanhar</strong>) membros de objetos — podemos também <strong>setar </strong>(atualizar) o valor de membros de objetos simplesmente declarando o membro que queremos setar (usando notação de ponto ou colchete), tipo assim:</p>
+Até agora nós apenas procuramos receber (ou **apanhar**) membros de objetos — podemos também **setar** (atualizar) o valor de membros de objetos simplesmente declarando o membro que queremos setar (usando notação de ponto ou colchete), tipo assim:
 
-<pre class="brush: js notranslate">pessoa.idade = 45;
-pessoa['nome']['ultimo'] = 'Cratchit';</pre>
+```js
+pessoa.idade = 45;
+pessoa['nome']['ultimo'] = 'Cratchit';
+```
 
-<p>Tente escrever as linhas acima e então apanhar seus membros novamente para ver como mudaram. Assim:</p>
+Tente escrever as linhas acima e então apanhar seus membros novamente para ver como mudaram. Assim:
 
-<pre class="brush: js notranslate">pessoa.idade
-pessoa['nome']['ultimo']</pre>
+```js
+pessoa.idade
+pessoa['nome']['ultimo']
+```
 
-<p>Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:</p>
+Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:
 
-<pre class="brush: js notranslate">pessoa['olhos'] = 'castanho'.
-pessoa.despedida = function() { alert( "Adeus a todos!" ); }</pre>
+```js
+pessoa['olhos'] = 'castanho'.
+pessoa.despedida = function() { alert( "Adeus a todos!" ); }
+```
 
-<p>Podemos testar nossos novos membros:</p>
+Podemos testar nossos novos membros:
 
-<pre class="brush: js notranslate">pessoa['olhos'];
-pessoa.despedida();</pre>
+```js
+pessoa['olhos'];
+pessoa.despedida();
+```
 
-<p>Um aspecto útil de notação de colchetes é que ela pode ser usadada não apenas para setar valores dinamicamente, mas também nomes de membros. Vamos dizer que queremos que usuários possam armazenar tipos de valores personalizados em seus dados de 'pessoa', digitando o nome e o valor do membro em dois inputs de texto. Podemos obter esses valores dessa forma:</p>
+Um aspecto útil de notação de colchetes é que ela pode ser usadada não apenas para setar valores dinamicamente, mas também nomes de membros. Vamos dizer que queremos que usuários possam armazenar tipos de valores personalizados em seus dados de 'pessoa', digitando o nome e o valor do membro em dois inputs de texto. Podemos obter esses valores dessa forma:
 
-<pre class="brush: js notranslate">var myDataName = nameInput.value;
-var myDataValue = nameValue.value;</pre>
+```js
+var myDataName = nameInput.value;
+var myDataValue = nameValue.value;
+```
 
-<p>Podemos, então, adicionar esse novo nome e valor ao objeto <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">pessoa</span></font> assim:</p>
+Podemos, então, adicionar esse novo nome e valor ao objeto pessoa assim:
 
-<pre class="brush: js notranslate">pessoa[myDataName] = myDataValue;</pre>
+```js
+pessoa[myDataName] = myDataValue;
+```
 
-<p>Para testar isso, tente adicionar as seguinte linhas em seu código, abaixo do fechamento da chaves do objeto <code>pessoa</code> :</p>
+Para testar isso, tente adicionar as seguinte linhas em seu código, abaixo do fechamento da chaves do objeto `pessoa` :
 
-<pre class="brush: js notranslate">var myDataName = 'altura';
+```js
+var myDataName = 'altura';
 var myDataValue = '1.75m';
-pessoa[myDataName] = myDataValue;</pre>
+pessoa[myDataName] = myDataValue;
+```
 
-<p>Agora tente salvar e atualizar, entrando o seguinte no seu input de texto:</p>
+Agora tente salvar e atualizar, entrando o seguinte no seu input de texto:
 
-<pre class="brush: js notranslate">pessoa.altura</pre>
+```js
+pessoa.altura
+```
 
-<p>Adicionar uma propriedade a um objeto usando o método acima não é possível com a notação ponto, que só aceita um nome de membro literal, não aceita valor de variável apontando para um nome.</p>
+Adicionar uma propriedade a um objeto usando o método acima não é possível com a notação ponto, que só aceita um nome de membro literal, não aceita valor de variável apontando para um nome.
 
-<h2 id="O_que_é_o_this">O que é o "this"?</h2>
+## O que é o "this"?
 
-<p>Você pode ter reparado algo levemente estranho em nossos métodos. Olhe esse aqui, por exemplo:</p>
+Você pode ter reparado algo levemente estranho em nossos métodos. Olhe esse aqui, por exemplo:
 
-<pre class="brush: js notranslate">saudacao: function(){
+```js
+saudacao: function(){
   alert("Oi! Meu nome é " + this.nome.primeiro + ".");
-}</pre>
+}
+```
 
-<p>Você deve estar se perguntando o que é o "this". A palavra-chave <code>this</code> se refere ao objeto atual em que o código está sendo escrito — nesse caso o <code>this</code> se refere a <code>pessoa</code>. Então por que simplesmente não escrever <code>pessoa</code>? Como verá no artigo <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Orientaçã a objeto em JavaScript para iniciantes</a>, quando começamos a criar funções construtoras, etc, o <code>this</code> é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto <code>pessoa</code> podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).</p>
+Você deve estar se perguntando o que é o "this". A palavra-chave `this` se refere ao objeto atual em que o código está sendo escrito — nesse caso o `this` se refere a `pessoa`. Então por que simplesmente não escrever `pessoa`? Como verá no artigo [Orientaçã a objeto em JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS), quando começamos a criar funções construtoras, etc, o `this` é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto `pessoa` podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).
 
-<p>Vamos ilustrar o que queremos dizer com um par de objetos pessoa:</p>
+Vamos ilustrar o que queremos dizer com um par de objetos pessoa:
 
-<pre class="brush: js notranslate">var pessoa1 = {
+```js
+var pessoa1 = {
   nome: 'Chris',
   saudacao: function() {
     alert('Oi! Meu nome é ' + this.nome + '.');
@@ -201,59 +253,62 @@ var pessoa2 = {
   saudacao: function() {
     alert('Oi! Meu nome é ' + this.nome + '.');
   }
-} </pre>
+}
+```
 
-<p>Neste caso, <code>pessoa1.saudacao()</code><strong> </strong>gerará "Oi! Meu nome é Chris."; No entanto, <code>pessoa2.saudacao()</code><strong> </strong>retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o <code>this</code> é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando construtores). Tudo ficará mais claro mais para frente.</p>
+Neste caso, `pessoa1.saudacao()`\*\* **gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()`** \*\*retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando construtores). Tudo ficará mais claro mais para frente.
 
-<h2 id="Você_vem_usando_objetos_o_tempo_todo">Você vem usando objetos o tempo todo</h2>
+## Você vem usando objetos o tempo todo
 
-<p>Enquanto passava por esses exemplos, você provavelmente andou pensando que essa notação de ponto que estamos usando é muito familiar. Isso é porque você vem usando isso durante todo o curso! Todas as vezes que trabalhamos num exemplo que usa uma API interna do navegador ou objetos Javascript, estamos usando objetos, porque esses recursos são construídos usando exatamente o mesmo tipo de estrutura de objetos que vimos aqui, embora mais complexos do que nossos exemplos básicos.</p>
+Enquanto passava por esses exemplos, você provavelmente andou pensando que essa notação de ponto que estamos usando é muito familiar. Isso é porque você vem usando isso durante todo o curso! Todas as vezes que trabalhamos num exemplo que usa uma API interna do navegador ou objetos Javascript, estamos usando objetos, porque esses recursos são construídos usando exatamente o mesmo tipo de estrutura de objetos que vimos aqui, embora mais complexos do que nossos exemplos básicos.
 
-<p>Então quando usamos métodos de strings como:</p>
+Então quando usamos métodos de strings como:
 
-<pre class="brush: js notranslate">minhaString.split(',');</pre>
+```js
+minhaString.split(',');
+```
 
-<p>Estamos usando um método disponível na instância da class <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>. Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de <code>String</code>, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.</p>
+Estamos usando um método disponível na instância da class [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de `String`, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.
 
-<p>Quando você acessa o document object model usando linhas como estas:</p>
+Quando você acessa o document object model usando linhas como estas:
 
-<pre class="brush: js notranslate">var minhaDiv = document.createElement('div');
-var meuVideo = document.querySelector('video');</pre>
+```js
+var minhaDiv = document.createElement('div');
+var meuVideo = document.querySelector('video');
+```
 
-<p>Você está usando métodos disponíveis na instância da class <code><a href="/en-US/docs/Web/API/Document">Document</a></code>. Cada vez que a página é recarrecada, uma instância de <code>Document</code> é criada, chamando <code>document</code>, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.</p>
+Você está usando métodos disponíveis na instância da class [`Document`](/en-US/docs/Web/API/Document). Cada vez que a página é recarrecada, uma instância de `Document` é criada, chamando `document`, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.
 
-<p>O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></code>, etc.</p>
+O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
 
-<p>Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a <a href="/en-US/docs/Web/API/Notifications_API">API de Notificações </a>— que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:</p>
+Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações ](/pt-BR/docs/Web/API/Notifications_API)— que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
 
-<pre class="brush: js notranslate">var minhaNotificacao = new Notification('Hello!');</pre>
+```js
+var minhaNotificacao = new Notification('Hello!');
+```
 
-<p>Novamente, olharemos constructores num artigo mais na frente.</p>
+Novamente, olharemos constructores num artigo mais na frente.
 
-<div class="note">
-<p><strong>Nota</strong>: É útil pensar sobre como os objetos se comunicam <strong>passando mensagens</strong> - quando um objeto precisa de outro objeto para realizar algum tipo de ação, ele freqüentemente enviará uma mensagem para outro objeto através de um de seus métodos e aguardará uma resposta, que reconhecemos como um valor de retorno.</p>
-</div>
+> **Nota:** É útil pensar sobre como os objetos se comunicam **passando mensagens** - quando um objeto precisa de outro objeto para realizar algum tipo de ação, ele freqüentemente enviará uma mensagem para outro objeto através de um de seus métodos e aguardará uma resposta, que reconhecemos como um valor de retorno.
 
-<h2 id="Teste_suas_habilidades_!">Teste suas habilidades !</h2>
+## Teste suas habilidades !
 
-<p>Você chegou ao fim desse artigo,entretanto você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante  — veja  <a href="/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics">Test your skills: Object basics</a>.</p>
+Você chegou ao fim desse artigo,entretanto você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante — veja [Test your skills: Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics).
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>Parabéns, você chegou ao final de nosso primeiro artigo sobre objetos JS - agora você deve ter uma boa ideia de como trabalhar com objetos em Javascript - incluindo criar seus próprio objetos simples. Você também deve perceber que objetos são muito úteis como estruturas para armazenar dados e funcionalidades relacionadas - se tentar rastrear todas as propriedades e métodos do nosso objeto <code>pessoa</code> como variáveis e funções separadas, isso seria ineficiente e frustrante e correríamos o risco de termos outras variáveis e funções com o mesmo nome. Objetos nos permite manter informações guardadas em segurança em seus próprios pacotes, fora de perigo.</p>
+Parabéns, você chegou ao final de nosso primeiro artigo sobre objetos JS - agora você deve ter uma boa ideia de como trabalhar com objetos em Javascript - incluindo criar seus próprio objetos simples. Você também deve perceber que objetos são muito úteis como estruturas para armazenar dados e funcionalidades relacionadas - se tentar rastrear todas as propriedades e métodos do nosso objeto `pessoa` como variáveis e funções separadas, isso seria ineficiente e frustrante e correríamos o risco de termos outras variáveis e funções com o mesmo nome. Objetos nos permite manter informações guardadas em segurança em seus próprios pacotes, fora de perigo.
 
-<p>No próximo artigo vamos começar a ver a teoria de programação orientada a objetos (OOP) e em como suas técnicas podem ser usadas em Javascript.</p>
+No próximo artigo vamos começar a ver a teoria de programação orientada a objetos (OOP) e em como suas técnicas podem ser usadas em Javascript.
 
-<p>{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</p>
+{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
-<h2 id="Nesse_módulo">Nesse módulo</h2>
+## Nesse módulo
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Noções Básicas de Objetos</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Orientação a objetos Javascript para iniciantes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Protótipos de Objetos</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Herança no Javascript</a></li>
- <li><a href="/pt-BR/docs/Aprender/JavaScript/Objetos/JSON">Trabalhando com JSON</a></li>
- <li><a href="/pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice">Prática de construção de Objetos</a></li>
- <li><a href="/pt-BR/docs/Aprender/JavaScript/Objetos/Adding_bouncing_balls_features">Adicionando recursos à nossa demonstração de bolas pulantes</a></li>
-</ul>
+- [Noções Básicas de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
+- [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Protótipos de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
+- [Trabalhando com JSON](/pt-BR/docs/Aprender/JavaScript/Objetos/JSON)
+- [Prática de construção de Objetos](/pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice)
+- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Aprender/JavaScript/Objetos/Adding_bouncing_balls_features)
