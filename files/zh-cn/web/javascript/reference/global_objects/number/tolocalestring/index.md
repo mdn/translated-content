@@ -25,17 +25,17 @@ toLocaleString(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : 缩写语言代码（BCP 47 language tag，例如 cmn-Hans-CN）的字符串或者这些字符串组成的数组。与 `Intl.NumberFormat()` 构造器的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 参数相同。
+  - : 缩写语言代码（BCP 47 language tag）的字符串或者这些字符串组成的数组。与 `Intl.NumberFormat()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 参数相同。
 
     在无 `Intl.NumberFormat` 支持的实现中，往往使用主机的区域设置，这个参数是忽略的。
 
 - `options` {{optional_inline}}
 
-  - : 调整输出格式的对象。与 `Intl.NumberFormat()` 构造器的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数相同。
+  - : 调整输出格式的对象。与 `Intl.NumberFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数相同。
 
     在无 `Intl.NumberFormat` 支持的实现中，这个参数是忽略的。
 
-请查阅 [`Intl.NumberFormat()` 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)以了解这些参数的详细信息，以及如何使用它们。
+请查阅 [`Intl.NumberFormat()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)以了解这些参数的详细信息，以及如何使用它们。
 
 ### 返回值
 
@@ -75,7 +75,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-早于 ES5.1 的实现中，携带非法参数调用 `toLocaleString` 不需要抛出范围异常。在所有宿主环境下，包括那些支持比 ed 5.1 还早的 ECMA-262 的环境，都能有效检测的方法是直接检测 ECMA-402 中的其它特性，它指定 `Number.prototype.toLocaleString` 需要支持地区选项：
+早于 ES5.1 的实现中，携带非法参数调用 `toLocaleString` 不需要抛出范围异常。在所有主机环境下，包括那些支持比 ed 5.1 还早的 ECMA-262 的环境，都能有效检测的方法是直接检测 ECMA-402 中的其它特性，它指定 `Number.prototype.toLocaleString` 需要支持地区选项：
 
 ```js
 function toLocaleStringSupportsOptions() {
