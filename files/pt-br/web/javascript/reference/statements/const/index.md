@@ -38,7 +38,7 @@ Toda constante requer um inicializador, ou seja, é preciso especificar um valor
 
 A declaração **`const`** cria uma referência somente leitura a um valor. Isso **não** significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.
 
-Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
+Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
 
 Uma constante não pode ter o mesmo nome que uma função ou variável que esteja no mesmo escopo.
 

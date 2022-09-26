@@ -231,7 +231,7 @@ Esse artigo apresenta uma lista de eventos que podem ser enviados; alguns são p
 
 | Nome do evento                                                                      | Momento do disparo                                                                                    |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| [`abort`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event) | Uma requisição ao DOM foi cancelada, utilizando {{DOMxRef("AbortController.abort()")}}. |
+| [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) | Uma requisição ao DOM foi cancelada, utilizando {{DOMxRef("AbortController.abort()")}}. |
 
 ## Eventos padrão
 
