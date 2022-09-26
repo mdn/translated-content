@@ -503,7 +503,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### 相容性備註
 

@@ -121,7 +121,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

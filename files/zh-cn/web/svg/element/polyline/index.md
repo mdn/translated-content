@@ -38,7 +38,7 @@ slug: Web/SVG/Element/polyline
 
 ## 浏览器支持
 
-{{Compat("svg.elements.polyline")}}
+{{Compat}}
 
 ## 参见
 

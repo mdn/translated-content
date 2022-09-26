@@ -126,7 +126,7 @@ inner.length; // 0
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## 相关连接
 

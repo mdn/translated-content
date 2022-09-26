@@ -34,7 +34,7 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
 
 ## 浏览器支持
 
-{{Compat("api.Animation.Animation")}}
+{{Compat}}
 
 ## 相关内容
 

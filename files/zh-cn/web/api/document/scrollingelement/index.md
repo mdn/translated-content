@@ -28,4 +28,4 @@ scrollElm.scrollTop = 0;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.scrollingElement")}}
+{{Compat}}

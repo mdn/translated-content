@@ -40,4 +40,4 @@ None.
 
 ## 浏览器兼容性
 
-{{Compat("api.CredentialsContainer")}}
+{{Compat}}

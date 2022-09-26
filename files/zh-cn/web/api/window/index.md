@@ -648,7 +648,7 @@ See [DOM Reference](/zh-CN/docs/DOM/DOM_Reference)
 
 ## 浏览器兼容性
 
-{{Compat("api.Window")}}
+{{Compat}}
 
 ## 参见
 

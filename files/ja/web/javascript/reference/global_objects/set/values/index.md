@@ -2,6 +2,7 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
 **`values()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは  `Set` オブジェクトの各要素の値を挿入順に返します。

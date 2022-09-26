@@ -207,7 +207,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

@@ -30,7 +30,7 @@ console.profileEnd(profileName);
 
 ## 浏览器兼容性
 
-{{Compat("api.Console.profileEnd")}}
+{{Compat}}
 
 ## 参见
 

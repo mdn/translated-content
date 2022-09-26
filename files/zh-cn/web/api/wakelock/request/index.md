@@ -53,7 +53,7 @@ tryKeepScreenAlive(10);
 
 ## 浏览器兼容性
 
-{{Compat("api.WakeLock.request")}}
+{{Compat}}
 
 ## 相关链接
 

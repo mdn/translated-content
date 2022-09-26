@@ -54,7 +54,7 @@ gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.depthFunc")}}
+{{Compat}}
 
 ## 另请参阅
 

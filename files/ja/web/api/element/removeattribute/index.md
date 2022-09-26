@@ -2,6 +2,7 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 {{domxref("Element")}} の **`removeAttribute()`** メソッドは、指定された名前の属性を要素から削除します。

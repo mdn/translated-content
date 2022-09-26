@@ -73,7 +73,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.cookies")}}
+{{Compat}}
 
 ### Edge 不兼容
 

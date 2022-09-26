@@ -60,7 +60,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## 浏览器兼容性
 
-{{Compat("api.PushManager.subscribe")}}
+{{Compat}}
 
 ## 另见
 

@@ -69,7 +69,7 @@ element(#fakeid)                       如果 fakeid 是一个不存在与页面
 
 ## 浏览器兼容性
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## 参阅：
 

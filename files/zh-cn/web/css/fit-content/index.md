@@ -83,4 +83,4 @@ The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argu
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

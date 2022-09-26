@@ -69,7 +69,7 @@ _这个接口不继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.TreeWalker")}}
+{{Compat}}
 
 ## 参见
 

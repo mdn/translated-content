@@ -27,6 +27,6 @@ The `RegisteredContentScript` object represents the scripts that were registered
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

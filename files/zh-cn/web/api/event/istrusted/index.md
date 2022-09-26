@@ -33,4 +33,4 @@ if (e.isTrusted) {
 
 ## 浏览器支持
 
-{{Compat("api.Event.isTrusted")}}
+{{Compat}}

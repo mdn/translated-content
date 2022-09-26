@@ -68,7 +68,7 @@ _`TextDecoder` 接口不继承任何方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ## 相关链接
 

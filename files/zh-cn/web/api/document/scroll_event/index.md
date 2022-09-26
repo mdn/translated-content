@@ -71,7 +71,7 @@ window.addEventListener('scroll', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## 参见
 

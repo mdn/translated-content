@@ -71,7 +71,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.padding-inline-start")}}
+{{Compat}}
 
 ## 也可以看看
 

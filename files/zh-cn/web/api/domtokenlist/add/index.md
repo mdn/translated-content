@@ -57,4 +57,4 @@ span.classList.add("d", "e", "f");
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.add")}}
+{{Compat}}

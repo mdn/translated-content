@@ -74,7 +74,7 @@ p.insertBefore(u, bar);
 
 ## 浏览器兼容性
 
-{{Compat("api.Text.splitText")}}
+{{Compat}}
 
 ## 参见
 

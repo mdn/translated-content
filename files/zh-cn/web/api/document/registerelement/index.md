@@ -47,7 +47,7 @@ mytag.textContent = "I am a my-tag element.";
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.registerElement")}}
+{{Compat}}
 
 ## 另请参阅
 

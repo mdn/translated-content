@@ -69,7 +69,7 @@ console.log(getBrowserId());
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.navigator")}}
+{{Compat}}
 
 ## 参见
 

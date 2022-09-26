@@ -275,7 +275,7 @@ var showBookmark = (function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.location")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -314,7 +314,7 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ## Browser compatibility
 
-{{Compat("html.elements.input")}}
+{{Compat}}
 
 ## Notes
 

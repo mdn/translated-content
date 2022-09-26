@@ -2,6 +2,7 @@
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`sizes`** プロパティによって、メディア条件のリストごとに、画像のレイアウト幅を指定することができます。これにより、様々なメディア条件に合わせて文書の状態が変化したときに、異なる画像（方向やアスペクト比の異なる画像も含む）を自動的に選択する機能が提供されます。

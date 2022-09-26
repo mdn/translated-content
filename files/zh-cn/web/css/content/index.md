@@ -228,7 +228,7 @@ li {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.content")}}
+{{Compat}}
 
 ## 参考
 

@@ -27,7 +27,7 @@ GET /index.html
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.GET")}}
+{{Compat}}
 
 ## 參見
 

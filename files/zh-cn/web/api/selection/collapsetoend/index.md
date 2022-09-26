@@ -23,7 +23,7 @@ sel.collapseToEnd()
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.collapseToEnd")}}
+{{Compat}}
 
 ## 相关链接
 

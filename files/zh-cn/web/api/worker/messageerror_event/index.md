@@ -74,7 +74,7 @@ worker.onmessageerror = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.messageerror_event")}}
+{{Compat}}
 
 ## 另请参阅
 

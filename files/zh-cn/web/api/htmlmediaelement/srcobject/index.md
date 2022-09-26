@@ -26,4 +26,4 @@ HTMLMediaElement.srcObject = mediaStream
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLMediaElement.srcObject")}}
+{{Compat}}

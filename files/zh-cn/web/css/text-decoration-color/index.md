@@ -76,7 +76,7 @@ Color alone should not be used to convey meaning. For example, change of text an
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}
 
 ## 另请参阅
 

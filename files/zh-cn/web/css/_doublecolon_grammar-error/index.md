@@ -23,7 +23,7 @@ slug: Web/CSS/::grammar-error
 
 ## Browser compatibility
 
-{{Compat("css.selectors.grammar-error")}}
+{{Compat}}
 
 ## See also
 

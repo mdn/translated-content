@@ -45,7 +45,7 @@ document.getElementById("container").appendChild(newNode);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.importNode")}}
+{{Compat}}
 
 ## 规范
 

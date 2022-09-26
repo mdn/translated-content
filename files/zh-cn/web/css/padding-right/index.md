@@ -50,7 +50,7 @@ padding-right: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.padding-right")}}
+{{Compat}}
 
 ## See also
 

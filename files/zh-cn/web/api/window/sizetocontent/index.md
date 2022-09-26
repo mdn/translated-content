@@ -27,7 +27,7 @@ window.sizeToContent();
 
 ## 浏览器兼容说明
 
-{{Compat("api.Window.sizeToContent")}}
+{{Compat}}
 
 ## 其他链接
 

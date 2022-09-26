@@ -2,6 +2,7 @@
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat`** オブジェクトは言語に依存の相対時間の書式化を可能にします。

@@ -52,7 +52,7 @@ function displayData() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBCursor.key")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -21,7 +21,7 @@ window.onmessageerror = function() { ... };
 
 ## 浏览器兼容性
 
-{{Compat("api.WindowEventHandlers.onmessageerror")}}
+{{Compat}}
 
 ## See also
 

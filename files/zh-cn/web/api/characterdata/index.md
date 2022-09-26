@@ -43,7 +43,7 @@ _从其父级 {{domxref("Node")}} 继承方法，并且实现了 {{domxref("Chil
 
 ## 浏览器兼容性
 
-{{Compat("api.CharacterData")}}
+{{Compat}}
 
 ## 相关链接
 

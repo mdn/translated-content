@@ -20,4 +20,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/find
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}}

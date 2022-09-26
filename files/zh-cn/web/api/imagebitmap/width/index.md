@@ -13,4 +13,4 @@ slug: Web/API/ImageBitmap/width
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmap.width")}}
+{{Compat}}

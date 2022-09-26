@@ -113,7 +113,7 @@ li::after {
 
 ## 浏览器兼容性
 
-{{Compat("css.types.counter")}}
+{{Compat}}
 
 **另请参阅**
 

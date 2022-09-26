@@ -50,7 +50,7 @@ function handleMessage(e) {
 
 ## Browser compatibility
 
-{{Compat("api.MessageChannel.port2")}}
+{{Compat}}
 
 ## See also
 

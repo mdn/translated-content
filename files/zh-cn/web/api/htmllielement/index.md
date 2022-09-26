@@ -28,7 +28,7 @@ _没有具体方法; 从其父级 {{domxref("HTMLElement")}} 继承属性。_
 
 ## 浏览器兼容性
 
-{{COMPAT( "api.HTMLLIElement")}}
+{{Compat}}
 
 ## 参见
 

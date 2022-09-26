@@ -109,7 +109,7 @@ box.appendChild(newElem);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.srcset")}}
+{{Compat}}
 
 ## See also
 

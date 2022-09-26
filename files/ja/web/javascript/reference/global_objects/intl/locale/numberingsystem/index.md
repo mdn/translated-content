@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.numberingSystem`** プロパティは、ロケールが使用する[命数法](https://en.wikipedia.org/wiki/Numeral_system)を返すアクセサープロパティです。

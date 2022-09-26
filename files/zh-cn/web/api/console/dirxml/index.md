@@ -20,7 +20,7 @@ console.dirxml(object);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.dirxml")}}
+{{Compat}}
 
 ## 相关链接
 

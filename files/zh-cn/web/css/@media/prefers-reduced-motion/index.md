@@ -104,7 +104,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.prefers-reduced-motion")}}
+{{Compat}}
 
 ## 参考
 

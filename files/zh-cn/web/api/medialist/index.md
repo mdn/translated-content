@@ -41,4 +41,4 @@ console.log(stylesheet.media.mediaText);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaList")}}
+{{Compat}}

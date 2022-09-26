@@ -51,4 +51,4 @@ column-fill: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-fill")}}
+{{Compat}}

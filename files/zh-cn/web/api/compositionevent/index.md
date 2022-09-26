@@ -36,7 +36,7 @@ _这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法
 
 ## 浏览器兼容性
 
-{{Compat("api.CompositionEvent")}}
+{{Compat}}
 
 ## 参见
 

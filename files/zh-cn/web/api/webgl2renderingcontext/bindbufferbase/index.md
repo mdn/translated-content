@@ -43,7 +43,7 @@ gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, buffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.bindBufferBase")}}
+{{Compat}}
 
 ## 相关链接
 

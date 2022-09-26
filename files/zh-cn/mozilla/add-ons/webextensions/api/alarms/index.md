@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.alarms")}}
+{{Compat}}
 
 > **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >

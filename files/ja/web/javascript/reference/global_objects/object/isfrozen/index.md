@@ -2,6 +2,7 @@
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
+
 {{JSRef}}
 
 **`Object.isFrozen()`** はオブジェクトが{{jsxref("Object.freeze()", "凍結されている", "", 1)}}かどうかを判定します。

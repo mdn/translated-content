@@ -59,7 +59,7 @@ p::first-letter {  /* 使用:first 来兼容 IE8- */
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## 参见
 

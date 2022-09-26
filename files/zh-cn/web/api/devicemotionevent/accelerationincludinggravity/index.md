@@ -32,7 +32,7 @@ var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}
+{{Compat}}
 
 ## 推荐浏览
 

@@ -30,4 +30,4 @@ var aWebSocket = new WebSocket(url [, protocols]);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.WebSocket")}}
+{{Compat}}

@@ -128,7 +128,7 @@ span[data-descr]:hover::after {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## 相关链接
 

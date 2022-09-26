@@ -59,7 +59,7 @@ gl.deleteProgram(program);
 
 ## 浏览器兼容
 
-{{Compat("api.WebGLProgram")}}
+{{Compat}}
 
 ## 相关链接
 

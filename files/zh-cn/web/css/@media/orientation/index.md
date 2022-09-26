@@ -64,4 +64,4 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.orientation")}}
+{{Compat}}

@@ -42,7 +42,7 @@ animation.currentTime =
 
 ## 浏览器支持
 
-{{Compat("api.Animation.currentTime")}}
+{{Compat}}
 
 ## 相关内容
 

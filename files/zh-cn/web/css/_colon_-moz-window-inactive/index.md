@@ -49,4 +49,4 @@ slug: Web/CSS/:-moz-window-inactive
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-moz-window-inactive")}}
+{{Compat}}

@@ -197,7 +197,7 @@ There are several ways this code can be made better. Most real games would watch
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}
 
 ## Code values
 

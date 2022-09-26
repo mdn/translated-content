@@ -41,7 +41,7 @@ See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## 查看更多
 

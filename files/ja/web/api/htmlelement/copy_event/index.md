@@ -2,6 +2,7 @@
 title: 'HTMLElement: copy イベント'
 slug: Web/API/HTMLElement/copy_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を行おうとした時に発行されます。

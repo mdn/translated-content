@@ -43,7 +43,7 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.clearDepth")}}
+{{Compat}}
 
 ## 另见
 

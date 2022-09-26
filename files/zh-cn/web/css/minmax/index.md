@@ -109,7 +109,7 @@ minmax(auto, 300px)
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## 参考
 

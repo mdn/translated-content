@@ -2,6 +2,7 @@
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`align`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、コンテナーに対して画像をどのように配置するかを示す文字列です。

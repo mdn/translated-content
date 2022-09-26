@@ -49,4 +49,4 @@ column-rule-style: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-rule-style")}}
+{{Compat}}

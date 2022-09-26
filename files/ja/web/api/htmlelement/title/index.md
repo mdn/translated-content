@@ -2,6 +2,7 @@
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.title`** プロパティは、要素のタイトルを表します。 通常、テキストは、マウスがノード上にあるときに「ツールチップ」ポップアップに表示されます。

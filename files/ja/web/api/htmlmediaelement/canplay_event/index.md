@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: canplay イベント'
 slug: Web/API/HTMLMediaElement/canplay_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplay` イベントは、ユーザーエージェントがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには充分なデータが読み込まれていないとみられる場合に発生します。

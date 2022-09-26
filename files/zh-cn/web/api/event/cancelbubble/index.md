@@ -29,7 +29,7 @@ _这个属性的规范并未统一。_ 因为他还有其他标准 W3C 版： [a
 
 ## 浏览器兼容
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}
 
 ## 参考
 

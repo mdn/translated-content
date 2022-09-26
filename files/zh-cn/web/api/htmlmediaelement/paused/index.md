@@ -32,7 +32,7 @@ console.log(obj.paused); // true
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.paused")}}
+{{Compat}}
 
 ## 参考文档
 

@@ -30,7 +30,7 @@ var result = anchor.hash; // Returns:'#youhou'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.hash")}}
+{{Compat}}
 
 ## See also
 

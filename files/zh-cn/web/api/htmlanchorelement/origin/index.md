@@ -32,7 +32,7 @@ var result = window.location.origin; // Returns:'https://developer.mozilla.org'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.origin")}}
+{{Compat}}
 
 ## See also
 

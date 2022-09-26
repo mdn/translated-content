@@ -54,7 +54,7 @@ osc.stop(context.currentTime + 1);
 
 ## Browser compatibility
 
-{{Compat("api.AudioScheduledSourceNode.stop")}}
+{{Compat}}
 
 ## See also
 

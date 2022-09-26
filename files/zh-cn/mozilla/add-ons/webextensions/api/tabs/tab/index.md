@@ -62,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

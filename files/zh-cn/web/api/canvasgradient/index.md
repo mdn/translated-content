@@ -24,7 +24,7 @@ _没有继承的方法_
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasGradient")}}
+{{Compat}}
 
 ## 请参考
 

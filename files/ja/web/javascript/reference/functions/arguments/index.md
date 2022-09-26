@@ -2,6 +2,7 @@
 title: arguments オブジェクト
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。

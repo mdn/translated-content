@@ -28,7 +28,7 @@ element.id = idStr; // Set the id
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.id")}}
+{{Compat}}
 
 ## 参见
 

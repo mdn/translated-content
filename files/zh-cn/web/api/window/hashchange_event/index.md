@@ -58,7 +58,7 @@ window.onhashchange = locationHashChanged;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## 参见
 

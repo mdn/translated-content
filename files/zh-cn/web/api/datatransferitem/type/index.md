@@ -59,7 +59,7 @@ function drop_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransferItem.type")}}
+{{Compat}}
 
 ## 另见
 

@@ -25,7 +25,7 @@ selectElt.setCustomValidity(string);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## 查看更多
 

@@ -49,4 +49,4 @@ slug: Web/CSS/time
 
 ## 浏览器兼容性
 
-{{Compat("css.types.time")}}
+{{Compat}}

@@ -148,7 +148,7 @@ drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.setLineDash")}}
+{{Compat}}
 
 ## 参见
 

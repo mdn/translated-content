@@ -21,7 +21,7 @@ var str = channel.postMessage(object);
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.postMessage")}}
+{{Compat}}
 
 ## 另见
 

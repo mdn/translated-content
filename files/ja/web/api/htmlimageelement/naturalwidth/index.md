@@ -2,6 +2,7 @@
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの

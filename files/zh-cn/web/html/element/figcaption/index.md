@@ -46,7 +46,7 @@ slug: Web/HTML/Element/figcaption
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## 另见
 

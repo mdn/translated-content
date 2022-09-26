@@ -25,7 +25,7 @@ slug: Web/CSS/:required
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## 参见
 

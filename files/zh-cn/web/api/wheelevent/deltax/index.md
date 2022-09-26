@@ -27,7 +27,7 @@ console.log(syntheticEvent.deltaX);
 
 ## 浏览器兼容性
 
-{{Compat("api.WheelEvent.deltaX")}}
+{{Compat}}
 
 ## 另见
 

@@ -76,7 +76,7 @@ See the example in [Using the Resource Timing API](/Web/API/Resource_Timing_API/
 
 ## 浏览器兼容性
 
-{{Compat("api.PerformanceResourceTiming")}}
+{{Compat}}
 
 ## 参考
 

@@ -113,7 +113,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.getFloatFrequencyData")}}
+{{Compat}}
 
 ## See also
 

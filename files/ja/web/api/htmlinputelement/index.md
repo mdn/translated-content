@@ -2,6 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** インターフェイスは {{HtmlElement("input")}} 要素のオプション、レイアウト、表示方法を操作するための特別なプロパティやメソッドを提供します。

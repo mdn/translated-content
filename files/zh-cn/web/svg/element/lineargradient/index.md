@@ -62,7 +62,7 @@ html,body,svg { height:100% }
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.linearGradient")}}
+{{Compat}}
 
 ## 参见
 

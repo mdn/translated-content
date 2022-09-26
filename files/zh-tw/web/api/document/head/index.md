@@ -34,7 +34,7 @@ alert( document.head === document.querySelector("head") ); // true
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## 參見
 

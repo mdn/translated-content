@@ -2,6 +2,7 @@
 title: 厳格モード
 slug: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 ## 厳格モードの概要

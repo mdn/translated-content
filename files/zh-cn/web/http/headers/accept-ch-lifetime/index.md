@@ -28,7 +28,7 @@ Accept-CH-Lifetime: 86400
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Accept-CH-Lifetime")}}
+{{Compat}}
 
 ## 参见
 

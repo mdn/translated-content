@@ -2,6 +2,7 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`innerText`** は {{domxref("HTMLElement")}} のプロパティで、ノードとその子孫の「レンダリングされている」テキスト内容を示します。

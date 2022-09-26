@@ -57,7 +57,7 @@ slug: Web/HTML/Element/rp
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## 另见
 

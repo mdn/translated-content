@@ -41,4 +41,4 @@ scroll-margin-top: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-margin-top")}}
+{{Compat}}

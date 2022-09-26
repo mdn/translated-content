@@ -311,7 +311,7 @@ function onTouch(evt) {
 
 ### `Touch`
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ### Firefox，触摸事件以及多进程（e10s）
 

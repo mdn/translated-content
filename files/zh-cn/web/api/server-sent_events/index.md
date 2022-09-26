@@ -9,7 +9,7 @@ slug: Web/API/Server-sent_events
 
 ## 概念与使用
 
-可以前往我们这篇文章 [《使用 “server-sent events](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)”》学习怎么使用 server-sent events。
+可以前往我们这篇文章 《[使用“server-sent event”](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)》学习怎么使用 server-sent 事件。
 
 ## 接口
 

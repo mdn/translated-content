@@ -3,7 +3,7 @@ title: touchcancel
 slug: Web/API/Element/touchcancel_event
 ---
 
-当触摸点被中断时会触发 `touchcancel` 事件，中断方式基于特定实现而有所不同（例如， 创建了太多的触摸点）。
+当触摸点被中断时会触发 `touchcancel` 事件，中断方式基于特定实现而有所不同（例如，创建了太多的触摸点）。
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ slug: Web/API/Element/touchcancel_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.touchcancel_event")}}
+{{Compat}}
 
 ## 参见
 

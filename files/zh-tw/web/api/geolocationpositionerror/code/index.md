@@ -25,7 +25,7 @@ typeErr = poserr.code
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPositionError.code")}}
+{{Compat}}
 
 ## 請參考
 
