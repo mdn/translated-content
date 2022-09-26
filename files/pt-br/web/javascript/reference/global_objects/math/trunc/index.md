@@ -54,7 +54,7 @@ Math.trunc();         // NaN
 
 ## Polyfill
 
-(um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc `na classe `Math`, ele será criado);
+(um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc` na classe `Math`, ele será criado);
 
 ```js
 Math.trunc = Math.trunc || function(x) {

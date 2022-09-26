@@ -39,7 +39,7 @@ arr.slice([início[,fim]])
 
     Como índice negativo, `fim` indica um deslocamento em relação ao fim do array. `slice(2,-1)` extrai o terceiro elemento através do segundo-para-o-último elemento no array.
 
-    Se `fim` for omitido ou for maior que o tamanho do array, `slice` considerará o último elemento do array como sendo o `fim `(`arr.length`)`.`
+    Se `fim` for omitido ou for maior que o tamanho do array, `slice` considerará o último elemento do array como sendo o `fim` (`arr.length`).
 
 ### Valor de retorno
 
