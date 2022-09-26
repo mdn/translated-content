@@ -20,7 +20,7 @@ translation_of: Web/API/Screen_Capture_API
 
 {{DefaultAPISidebar("Screen Capture API")}}
 
-The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
+L'API Screen Capture ajoute aux APIs Media Capture et Streams la possibilité de laisser l'utilisateur sélectionner l'écran ou une partie de celui-ci (comme une fenêtre) pour obtenir un flux media. Ce flux peut ensuite être enregistré ou partagé sur le réseau.
 
 ## API Screen Capture concepts et utilisation
 
@@ -32,7 +32,7 @@ Pour commencer à capturer une vidéo de l'écran, il faut appeler `getDisplayMe
 captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
-La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.
+La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le média capturé.
 
 Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
 
@@ -43,7 +43,7 @@ L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une mé
 ### Interface MediaDevices
 
 - {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui method creates a promise qui résout un {{domxref("MediaStream")}} contenant la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
+  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode renvoie une promise qui résout un {{domxref("MediaStream")}} contenant la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
 
 ## Ajouts aux dictionnaires actuels
 
@@ -87,7 +87,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 ## Validation de Feature Policy
 
-{{Glossary("User agent", "User agents")}} qui supportent Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle `display-capture`:
+Les {{Glossary("User agent", "User agents")}} qui supportent Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peuvent spécifier le souhait d'utiliser l'API Screen Capture API via la directive Policy Controle `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">
