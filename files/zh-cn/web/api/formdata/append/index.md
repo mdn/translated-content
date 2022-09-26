@@ -23,7 +23,7 @@ formData.append(name, value, filename);
 ### 参数
 
 - `name`
-  - : `value 中包含的数据对应的表单名称。`
+  - : `value` 中包含的数据对应的表单名称。
 - `value`
   - : `表单的值。`可以是{{domxref("USVString")}} 或 {{domxref("Blob")}} (包括子类型，如 {{domxref("File")}})。
 - `filename` {{optional_inline}}

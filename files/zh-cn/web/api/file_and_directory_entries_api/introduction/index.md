@@ -152,7 +152,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 你不能在本地通过 file://来运行你的应用。如果你那么做了，浏览器将抛出错误，或者你的应用会静默地失败。这一限制也同样针对许多其他的文件 API，包括 BlobBuilder 和 FileReader。
 
-出于测试的目的，你可以在 Chrome 中通过在启动时添加`--allow-file-access-from-files 参数来绕开这一限制，这一参数仅用于这个目的。`
+出于测试的目的，你可以在 Chrome 中通过在启动时添加 `--allow-file-access-from-files` 参数来绕开这一限制，这一参数仅用于这个目的。
 
 ## 定义
 

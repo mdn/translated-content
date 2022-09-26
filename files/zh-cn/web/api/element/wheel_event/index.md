@@ -181,11 +181,11 @@ delta 值并不代表默认情况下的实际滚动值，如果用户在滚动�
 - WM_MOUSEHWHEEL (水平方向的滚动事件)
   - : `deltaMode` 值可以是 `DOM_DELTA_LINE` 或 `DOM_DELTA_PAGE`。然而 `Windows` 的滚轮速度设置界面和鼠标驱动工具都没有提供改为 page scroll 的选项。所以这个值通常为 `DOM_DELTA_LINE`.
 - WM_GESTURE (Only when caused by panning)
-  - : `deltaMode` 值总是 `DOM_DELTA_PIXEL。`但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件，WM_GESTURE 事件通常被平板电脑使用。
+  - : `deltaMode` 值总是 `DOM_DELTA_PIXEL`。但请注意大多数笔记本的触摸板都在模拟鼠标滚轮事件而不是调用这个事件，WM_GESTURE 事件通常被平板电脑使用。
 
 在 Mac 下 deltaMode 值由设备决定。如果设备支持高分辨率像素级滚动，`deltaMode`值就是典型的 `DOM_DELTA_PIXEL`. 然而用户可以通过加前缀`"mousewheel.enable_pixel_scrolling"`将其改变为 `DOM_DELTA_LINE` 。如果设备不支持高分辨率滚动，那么 deltaModel 值将一直为 `DOM_DELTA_LINE`.
 
-`在其它平台下，deltaMode 值总是 DOM_DELTA_LINE`.
+在其它平台下，`deltaMode` 值总是 `DOM_DELTA_LINE`。
 
 ### Untrusted events
 
