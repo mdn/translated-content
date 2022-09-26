@@ -17,7 +17,9 @@ La propiedad de acceso **`byteLength`** representa la longitud de {{jsxref("Arra
 
 ## Sintaxis
 
-    arraybuffer.byteLength
+```
+arraybuffer.byteLength
+```
 
 ## Descripción
 

@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/clear
 
 El método **`clear()`** remueve todos los elementos de un objeto `Set`.
 
-## Syntaxis
+## Sintaxis
 
-    mySet.clear();
+```
+mySet.clear();
+```
 
 ### Valor de retorno
 

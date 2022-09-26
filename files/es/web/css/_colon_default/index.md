@@ -11,9 +11,9 @@ translation_of: Web/CSS/:default
 ---
 {{ CSSRef() }}
 
-La [pseudo-clase](es/docs/Web/CSS/Pseudo-classes) **`:default`** de [CSS](es/docs/Web/CSS) representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:default`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
 
-Este selector se puede usar en los elementos {{htmlelement("button")}}, [\<input type="checkbox">](es/docs/Web/HTML/Element/input/checkbox), [\<input type="radio">](es/docs/Web/HTML/Element/input/radio) y {{htmlelement("option")}}.
+Este selector se puede usar en los elementos {{htmlelement("button")}}, [\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox), [\<input type="radio">](/es/docs/Web/HTML/Element/input/radio) y {{htmlelement("option")}}.
 
 ```css
 /* Selecciona cualquier <input> predeterminado */
