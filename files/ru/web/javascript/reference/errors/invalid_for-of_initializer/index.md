@@ -9,41 +9,45 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
+```
+SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
 
 SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_случилось">Что случилось?</h2>
+## Что случилось?
 
-<p>В заголовке цикла<a href="/ru/docs/Web/JavaScript/Reference/Statements/for...of"> for...of</a> инициализируется переменная.  Иными словами, переменная объявляется и получает значение|<code>for (var i = 0 of iterable)</code>|. В подобных циклах это не допускается. Инициализировать переменные можно в циклах <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code>.</p>
+В заголовке цикла[ for...of](/ru/docs/Web/JavaScript/Reference/Statements/for...of) инициализируется переменная. Иными словами, переменная объявляется и получает значение|`for (var i = 0 of iterable)`|. В подобных циклах это не допускается. Инициализировать переменные можно в циклах [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неправильный_цикл_for-of">Неправильный цикл <code>for-of</code></h3>
+### Неправильный цикл `for-of`
 
-<pre class="brush: js example-bad">let iterable = [10, 20, 30];
+```js example-bad
+let iterable = [10, 20, 30];
 
 for (let value = 50 of iterable) {
   console.log(value);
 }
 
 // SyntaxError: a declaration in the head of a for-of loop can't
-// have an initializer</pre>
+// have an initializer
+```
 
-<h3 id="Правильный_цикл_for-of">Правильный цикл <code>for-of</code></h3>
+### Правильный цикл `for-of`
 
-<p>Надо убрать инициализацию (<code>value = 50</code>) в заголовке цикла <code>for-of</code>. Если требуется использовать смещение 50, это можно сделать в теле цикла.</p>
+Надо убрать инициализацию (`value = 50`) в заголовке цикла `for-of`. Если требуется использовать смещение 50, это можно сделать в теле цикла.
 
-<pre class="brush: js example-good">let iterable = [10, 20, 30];
+```js example-good
+let iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 50;
@@ -52,12 +56,10 @@ for (let value of iterable) {
 // 60
 // 70
 // 80
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> – В строгом режиме инициализация тоже не разрешается (<a href="/ru/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">SyntaxError: for-in loop head declarations may not have initializers</a>)</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> – Инициализация во время итерации разрешена.</li>
-</ul>
+- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – В строгом режиме инициализация тоже не разрешается ([SyntaxError: for-in loop head declarations may not have initializers](/ru/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – Инициализация во время итерации разрешена.

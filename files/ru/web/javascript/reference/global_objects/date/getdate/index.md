@@ -9,50 +9,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getDate()</code></strong> возвращает день месяца указанной даты по местному времени.</p>
+Метод **`getDate()`** возвращает день месяца указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getDate()</code></pre>
+```
+dateObj.getDate()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getDate()</code>, является целым числом от 1 до 31.</p>
+Значение, возвращённое методом `getDate()`, является целым числом от 1 до 31.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getDate">Пример: использование метода <code>getDate()</code></h3>
+### Пример: использование метода `getDate()`
 
-<p>Вторая инструкция в примере ниже присваивает значение 25 переменной <code>day</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>.</p>
+Вторая инструкция в примере ниже присваивает значение 25 переменной `day` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
-<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
+```js
+let date = new Date('December 25, 1995 23:15:30');
 let day = date.getDate();
 
 console.log(day); // 25
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<div id="compat-mobile">{{Compat}}</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

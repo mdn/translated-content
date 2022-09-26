@@ -3,79 +3,60 @@ title: WebAssembly.compile()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Функция <strong><code>WebAssembly.compile()</code></strong> компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.</p>
+Функция **`WebAssembly.compile()`** компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Promise&lt;WebAssembly.Module&gt; WebAssembly.compile(bufferSource);</pre>
+```
+Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>bufferSource</em></dt>
- <dd>Типизированный массив <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>, содержащий двоичный код модуля <code>.wasm</code>, который вы хотите скомпилировать.</dd>
-</dl>
+- _bufferSource_
+  - : Типизированный массив [typed array](/ru/docs/Web/JavaScript/Typed_arrays) или [ArrayBuffer](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), содержащий двоичный код модуля `.wasm`, который вы хотите скомпилировать.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Промис (<code>Promise</code>), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.</p>
+Промис (`Promise`), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<ul>
- <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
- <li>Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
-</ul>
+- Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Typed_arrays), генерируется {{jsxref("TypeError")}}.
+- Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем примере выполняется компиляция загруженного <code>simple.wasm</code> байт-кода с использованием функции <code>compile()</code>, а затем отправляется его <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>-работнику, использующему <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>.</p>
+В следующем примере выполняется компиляция загруженного `simple.wasm` байт-кода с использованием функции `compile()`, а затем отправляется его [worker](/ru/docs/Web/API/Web_Workers_API)-работнику, использующему [postMessage()](/ru/docs/Web/API/Worker/postMessage).
 
-<pre class="brush: js">var worker = new Worker("wasm_worker.js");
+```js
+var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.compile(bytes)
-).then(mod =&gt;
+).then(mod =>
   worker.postMessage(mod)
-);</pre>
+);
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем <code>compile()</code>.</p>
-</div>
+> **Примечание:** Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Первоначальное определение проекта.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                               | Коммент                             |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
+| {{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}} | {{Spec2('WebAssembly JS')}} | Первоначальное определение проекта. |
 
-<h2 id="Browser_compatibility">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> обзорная страница</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly концепции</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Использование WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ru/docs/WebAssembly) обзорная страница
+- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)

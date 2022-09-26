@@ -9,137 +9,135 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Конструктор <code><strong>Object</strong></code> создаёт объект-обёртку.</p>
+Конструктор **`Object`** создаёт объект-обёртку.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>// Инициализатор объекта или литерал
-{ [ <var>nameValuePair1</var>[, <var>nameValuePair2</var>[, ...<var>nameValuePairN</var>] ] ] }
+```
+// Инициализатор объекта или литерал
+{ [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
 
 // Вызов в качестве конструктора
-new Object([<var>value</var>])
-</code></pre>
+new Object([value])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>nameValuePair1, nameValuePair2, ... nameValuePair<em>N</em></code></dt>
- <dd>Пары из имён (строки) и значений (любые значения), где имя отделяется от значения двоеточием.</dd>
- <dt><code>value</code></dt>
- <dd>Любое значение.</dd>
-</dl>
+- `nameValuePair1, nameValuePair2, ... nameValuePairN`
+  - : Пары из имён (строки) и значений (любые значения), где имя отделяется от значения двоеточием.
+- `value`
+  - : Любое значение.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Конструктор <code>Object</code> создаёт объект-обёртку для переданного значения. Если значением является {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, создаёт и возвращает пустой объект, в противном случае возвращает объект такого типа, который соответствует переданному значению. Если значение уже является объектом, конструктор вернёт это значение.</p>
+Конструктор `Object` создаёт объект-обёртку для переданного значения. Если значением является {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, создаёт и возвращает пустой объект, в противном случае возвращает объект такого типа, который соответствует переданному значению. Если значение уже является объектом, конструктор вернёт это значение.
 
-<p>При вызове в не-конструктором контексте, <code>Object</code> ведёт себя идентично коду <code>new Object()</code>.</p>
+При вызове в не-конструктором контексте, `Object` ведёт себя идентично коду `new Object()`.
 
-<p>Так же смотрите {{jsxref("Operators/Object_initializer", "синтаксис инициализатора объекта / литеральный синтаксис", "", 1)}}.</p>
+Так же смотрите {{jsxref("Operators/Object_initializer", "синтаксис инициализатора объекта / литеральный синтаксис", "", 1)}}.
 
-<h2 id="Properties">Свойства конструктора <code>Object</code></h2>
+## Свойства конструктора `Object`
 
-<dl>
- <dt><code>Object.length</code></dt>
- <dd>Имеет значение 1.</dd>
- <dt>{{jsxref("Object.prototype")}}</dt>
- <dd>Позволяет добавлять свойства ко всем объектам типа <code>Object</code>.</dd>
-</dl>
+- `Object.length`
+  - : Имеет значение 1.
+- {{jsxref("Object.prototype")}}
+  - : Позволяет добавлять свойства ко всем объектам типа `Object`.
 
-<h2 id="Methods">Методы конструктора <code>Object</code></h2>
+## Методы конструктора `Object`
 
-<dl>
- <dt>{{jsxref("Object.assign()")}}</dt>
- <dd>Создаёт новый объект путём копирования значений всех собственных перечислимых свойств из одного или более исходных объектов в целевой объект.</dd>
- <dt>{{jsxref("Object.create()")}}</dt>
- <dd>Создаёт новый объект с указанными объектом прототипа и свойствами.</dd>
- <dt>{{jsxref("Object.defineProperty()")}}</dt>
- <dd>Добавляет к объекту именованное свойство, описываемое переданным дескриптором.</dd>
- <dt>{{jsxref("Object.defineProperties()")}}</dt>
- <dd>Добавляет к объекту именованные свойства, описываемые переданными дескрипторами.</dd>
- <dt>{{jsxref("Object.freeze()")}}</dt>
- <dd>Замораживает объект: другой код не сможет удалить или изменить никакое свойство.</dd>
- <dt>{{jsxref("Object.getOwnPropertyDescriptor()")}}</dt>
- <dd>Возвращает дескриптор свойства для именованного свойства объекта.</dd>
- <dt>{{jsxref("Object.getOwnPropertyNames()")}}</dt>
- <dd>Возвращает массив, содержащий имена всех переданных объекту <strong>собственных</strong> перечисляемых и неперечисляемых свойств.</dd>
- <dt>{{jsxref("Object.getOwnPropertySymbols()")}}</dt>
- <dd>Возвращает массив всех символьных свойств, найденных непосредственно в переданном объекте.</dd>
- <dt>{{jsxref("Object.getPrototypeOf()")}}</dt>
- <dd>Возвращает прототип указанного объекта.</dd>
- <dt>{{jsxref("Object.is()")}}</dt>
- <dd>Определяет, являются ли два значения различимыми (то есть, одинаковыми)</dd>
- <dt>{{jsxref("Object.isExtensible()")}}</dt>
- <dd>Определяет, разрешено ли расширение объекта.</dd>
- <dt>{{jsxref("Object.isFrozen()")}}</dt>
- <dd>Определяет, был ли объект заморожен.</dd>
- <dt>{{jsxref("Object.isSealed()")}}</dt>
- <dd>Определяет, является ли объект запечатанным (sealed).</dd>
- <dt>{{jsxref("Object.keys()")}}</dt>
- <dd>Возвращает массив, содержащий имена всех <strong>собственных</strong> перечислимых свойств переданного объекта.</dd>
- <dt>{{jsxref("Object.observe()")}}</dt>
- <dd>Асинхронно наблюдает за изменениями в объекте.</dd>
- <dt>{{jsxref("Object.preventExtensions()")}}</dt>
- <dd>Предотвращает любое расширение объекта.</dd>
- <dt>{{jsxref("Object.seal()")}}</dt>
- <dd>Предотвращает удаление свойств объекта другим кодом.</dd>
- <dt>{{jsxref("Object.setPrototypeOf()")}}</dt>
- <dd>Устанавливает прототип (т.е. внутреннее свойство <code>[[Prototype]]</code>)</dd>
-</dl>
+- {{jsxref("Object.assign()")}}
+  - : Создаёт новый объект путём копирования значений всех собственных перечислимых свойств из одного или более исходных объектов в целевой объект.
+- {{jsxref("Object.create()")}}
+  - : Создаёт новый объект с указанными объектом прототипа и свойствами.
+- {{jsxref("Object.defineProperty()")}}
+  - : Добавляет к объекту именованное свойство, описываемое переданным дескриптором.
+- {{jsxref("Object.defineProperties()")}}
+  - : Добавляет к объекту именованные свойства, описываемые переданными дескрипторами.
+- {{jsxref("Object.freeze()")}}
+  - : Замораживает объект: другой код не сможет удалить или изменить никакое свойство.
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+  - : Возвращает дескриптор свойства для именованного свойства объекта.
+- {{jsxref("Object.getOwnPropertyNames()")}}
+  - : Возвращает массив, содержащий имена всех переданных объекту **собственных** перечисляемых и неперечисляемых свойств.
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+  - : Возвращает массив всех символьных свойств, найденных непосредственно в переданном объекте.
+- {{jsxref("Object.getPrototypeOf()")}}
+  - : Возвращает прототип указанного объекта.
+- {{jsxref("Object.is()")}}
+  - : Определяет, являются ли два значения различимыми (то есть, одинаковыми)
+- {{jsxref("Object.isExtensible()")}}
+  - : Определяет, разрешено ли расширение объекта.
+- {{jsxref("Object.isFrozen()")}}
+  - : Определяет, был ли объект заморожен.
+- {{jsxref("Object.isSealed()")}}
+  - : Определяет, является ли объект запечатанным (sealed).
+- {{jsxref("Object.keys()")}}
+  - : Возвращает массив, содержащий имена всех **собственных** перечислимых свойств переданного объекта.
+- {{jsxref("Object.observe()")}}
+  - : Асинхронно наблюдает за изменениями в объекте.
+- {{jsxref("Object.preventExtensions()")}}
+  - : Предотвращает любое расширение объекта.
+- {{jsxref("Object.seal()")}}
+  - : Предотвращает удаление свойств объекта другим кодом.
+- {{jsxref("Object.setPrototypeOf()")}}
+  - : Устанавливает прототип (т.е. внутреннее свойство `[[Prototype]]`)
 
-<h2 id="Object_instances">Экземпляры и прототип объекта <code>Object</code></h2>
+## Экземпляры и прототип объекта `Object`
 
-<p>Все объекты в JavaScript являются потомками <code>Object</code>; все объекты наследуют методы и свойства из прототипа объекта {{jsxref("Object.prototype")}}, хотя они и могут быть переопределены. Например, прототипы других конструкторов переопределяют свойство <code>constructor</code> и предоставляют свои собственные методы <code>toString()</code>. Изменения в объекте прототипа <code>Object</code> распространяются на все объекты до тех пор, пока свойства и методы, учитывающие эти изменения, не переопределяются дальше по цепочке прототипов.</p>
+Все объекты в JavaScript являются потомками `Object`; все объекты наследуют методы и свойства из прототипа объекта {{jsxref("Object.prototype")}}, хотя они и могут быть переопределены. Например, прототипы других конструкторов переопределяют свойство `constructor` и предоставляют свои собственные методы `toString()`. Изменения в объекте прототипа `Object` распространяются на все объекты до тех пор, пока свойства и методы, учитывающие эти изменения, не переопределяются дальше по цепочке прототипов.
 
-<h3 id="Properties_of_Object_instances">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
 
-<h3 id="Methods_of_Object_instances">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example.3A_Using_Object_given_undefined_and_null_types">Пример: использование <code>Object</code> с типами <code>undefined</code> и <code>null</code></h3>
+### Пример: использование `Object` с типами `undefined` и `null`
 
-<p>Следующий пример сохраняет пустой объект <code>Object</code> в переменную <code>o</code>:</p>
+Следующий пример сохраняет пустой объект `Object` в переменную `o`:
 
-<pre class="brush: js">var o = new Object();
-</pre>
+```js
+var o = new Object();
+```
 
-<pre class="brush: js">var o = new Object(undefined);
-</pre>
+```js
+var o = new Object(undefined);
+```
 
-<pre class="brush: js">var o = new Object(null);
-</pre>
+```js
+var o = new Object(null);
+```
 
-<h3 id="Пример_использование_Object_для_создания_объектов_Boolean">Пример: использование <code>Object</code> для создания объектов <code>Boolean</code></h3>
+### Пример: использование `Object` для создания объектов `Boolean`
 
-<p>Следующий пример сохраняет объекты {{jsxref("Global_Objects/Boolean", "Boolean")}} в переменную <code>o</code>:</p>
+Следующий пример сохраняет объекты {{jsxref("Global_Objects/Boolean", "Boolean")}} в переменную `o`:
 
-<pre class="brush: js">// эквивалентно o = new Boolean(true);
+```js
+// эквивалентно o = new Boolean(true);
 var o = new Object(true);
-</pre>
+```
 
-<pre class="brush: js">// эквивалентно o = new Boolean(false);
+```js
+// эквивалентно o = new Boolean(false);
 var o = new Object(Boolean());
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">Инициализатор объекта</a></li>
-</ul>
+- [Инициализатор объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer)

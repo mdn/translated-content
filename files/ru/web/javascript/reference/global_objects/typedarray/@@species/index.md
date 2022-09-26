@@ -1,5 +1,5 @@
 ---
-title: 'get TypedArray[@@species]'
+title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 tags:
   - JavaScript
@@ -7,15 +7,16 @@ tags:
   - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>TypedArray[@@species]</strong></code> - это способ доступа, с помощью которого можно получить конструктор <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">типизированного массива</a>.</p>
+**`TypedArray[@@species]`** - это способ доступа, с помощью которого можно получить конструктор [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>TypedArray</em>[<a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species">Symbol.species</a>]
+```
+TypedArray[Symbol.species]
 
-<em>где TypedArray</em> это один из:
+где TypedArray это один из:
 
 Int8Array
 Uint8Array
@@ -26,39 +27,40 @@ Int32Array
 Uint32Array
 Float32Array
 Float64Array
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство <strong><code>species</code> </strong>возвращает конструктор "по умолчанию" для объектов <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">типизированного массива</a>. Конструкторы подкласса могут его переопределить.</p>
+Свойство **`species` **возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects). Конструкторы подкласса могут его переопределить.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Свойство <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species"><code><strong>species</strong></code> </a>возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">типизированного массива</a>:</p>
+Свойство [**`species`** ](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species)возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects):
 
-<pre class="brush: js">Int8Array[Symbol.species];    // function Int8Array()
+```js
+Int8Array[Symbol.species];    // function Int8Array()
 Uint8Array[Symbol.species];   // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
-</pre>
+```
 
-<p>В производном объекте-массиве (например, вы разработали свой массив <code>MyTypedArray</code>), <code>MyTypedArray</code> определяет свой конструктор. Однако, вы можете захотеть его переопределить, например, возвращать родительский объект из вашего производного класса:</p>
+В производном объекте-массиве (например, вы разработали свой массив `MyTypedArray`), `MyTypedArray` определяет свой конструктор. Однако, вы можете захотеть его переопределить, например, возвращать родительский объект из вашего производного класса:
 
-<pre class="brush: js">class MyTypedArray extends Uint8Array {
+```js
+class MyTypedArray extends Uint8Array {
   //Переопределение вида MyTypedArray на родительский Uint8Array
   static get [Symbol.species]() { return Uint8Array; }
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}
+- {{jsxref("Symbol.species")}}

@@ -5,51 +5,48 @@ tags:
   - геттер
 translation_of: Web/JavaScript/Reference/Functions/get
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>Синтаксис <strong><code>get</code></strong> связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.</p>
+Синтаксис **`get`** связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-getter.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">{get <var>prop</var>() { ... } }
-{get [<var>expression</var>]() { ... } }</pre>
+```
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><var>prop</var></code></dt>
- <dd>Имя свойства для привязывания к заданной функции.</dd>
- <dt><code><var>expression</var></code></dt>
- <dd>Начиная с ECMAScript 6, вы также можете использовать выражения для вычисляемого имени свойства для привязки к заданной функции.</dd>
-</dl>
+- `prop`
+  - : Имя свойства для привязывания к заданной функции.
+- `expression`
+  - : Начиная с ECMAScript 6, вы также можете использовать выражения для вычисляемого имени свойства для привязки к заданной функции.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Иногда желательно разрешить доступ к свойству, которое возвращает динамически вычисляемое значение, или вы можете захотеть отражать состояние внутренней переменной без необходимости использования явных вызовов методов. В JavaScript, это можно реализовать при помощи использования <em>геттера</em>.</p>
+Иногда желательно разрешить доступ к свойству, которое возвращает динамически вычисляемое значение, или вы можете захотеть отражать состояние внутренней переменной без необходимости использования явных вызовов методов. В JavaScript, это можно реализовать при помощи использования _геттера_.
 
-<p>Невозможно сделать так, чтобы геттер был привязан к свойству и одновременно чтобы это свойство действительно содержало значение, хотя можно использовать геттер и сеттер в сочетании, чтобы создать тип псевдо-свойство.</p>
+Невозможно сделать так, чтобы геттер был привязан к свойству и одновременно чтобы это свойство действительно содержало значение, хотя можно использовать геттер и сеттер в сочетании, чтобы создать тип псевдо-свойство.
 
-<p>Учтите следующее при работе с синтаксисом <code>get</code>:</p>
+Учтите следующее при работе с синтаксисом `get`:
 
-<div>
-<ul>
- <li>Он может иметь идентификатор, который является либо числом, либо строкой;</li>
- <li>Он должен иметь ровно 0 параметров (смотрите <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> для доп. информации);</li>
- <li>Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (<code>{ get x() { }, get x() { } }</code> и <code>{ x: ..., get x() { } }</code> запрещены).</li>
-</ul>
-</div>
+- Он может иметь идентификатор, который является либо числом, либо строкой;
+- Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
+- Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (`{ get x() { }, get x() { } }` и `{ x: ..., get x() { } }` запрещены).
 
-<p>Геттер можно удалить при помощи оператора <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator">delete</a></code>.</p>
+Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator").
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Определение_геттера_на_новом_объекте_в_момент_инициализации_этого_объекта">Определение геттера на новом объекте в момент инициализации этого объекта</h3>
+### Определение геттера на новом объекте в момент инициализации этого объекта
 
-<p>Ниже создаётся псевдо-свойство <code>latest</code> для объекта <code>obj</code>, который выведет последний элемент массива в консоль лог.</p>
+Ниже создаётся псевдо-свойство `latest` для объекта `obj`, который выведет последний элемент массива в консоль лог.
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   log: ['example','test'],
   get latest() {
     if (this.log.length === 0) return undefined;
@@ -57,71 +54,75 @@ translation_of: Web/JavaScript/Reference/Functions/get
   }
 }
 console.log(obj.latest); // "test"
-</pre>
+```
 
-<p>Обратите внимание, что попытка присвоить значение <code>latest</code> не изменит его.</p>
+Обратите внимание, что попытка присвоить значение `latest` не изменит его.
 
-<h3 id="Удаление_геттера_оператором_delete">Удаление геттера оператором delete</h3>
+### Удаление геттера оператором delete
 
-<p><code><font face="Open Sans, Arial, sans-serif">Если вы хотите удалить геттер, используйте </font><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>:</p>
+`Если вы хотите удалить геттер, используйте delete`:
 
-<pre class="brush: js">delete <var>obj</var>.latest;</pre>
+```js
+delete obj.latest;
+```
 
-<h3 id="Определение_геттера_на_уже_существующих_объектах_с_помощью_defineProperty">Определение геттера на уже существующих объектах с помощью <code>defineProperty</code></h3>
+### Определение геттера на уже существующих объектах с помощью `defineProperty`
 
-<p>Для добавления геттера к существующему объекту в любое время используйте <a class="external" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" rel="external nofollow">Object.defineProperty()</a>.</p>
+Для добавления геттера к существующему объекту в любое время используйте [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
 
-<pre class="brush: js">const o = {a: 0};
+```js
+const o = {a: 0};
 
 Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
 
 console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
-</pre>
+```
 
-<h3 id="Использование_вычисляемого_именованного_свойства">Использование вычисляемого именованного свойства</h3>
+### Использование вычисляемого именованного свойства
 
-<div class="note">
-<p><strong>Примечание:</strong> Вычисляемые свойства являются экспериментальной технологией, частью предложений спецификации ECMAScript 6, и массовой поддержки браузерами пока нет. Код ниже вызовет синтаксическую ошибку в неподдерживаемых средах.</p>
-</div>
+> **Примечание:** Вычисляемые свойства являются экспериментальной технологией, частью предложений спецификации ECMAScript 6, и массовой поддержки браузерами пока нет. Код ниже вызовет синтаксическую ошибку в неподдерживаемых средах.
 
-<pre class="brush: js">var expr = "foo";
+```js
+var expr = "foo";
 
 var obj = {
   get [expr]() { return "bar"; }
 };
 
-console.log(obj.foo); // "bar"</pre>
+console.log(obj.foo); // "bar"
+```
 
-<h3 id="Умные_самостоятельно_перезаписывающиеся_ленивые_геттеры">Умные / самостоятельно перезаписывающиеся/ ленивые геттеры</h3>
+### Умные / самостоятельно перезаписывающиеся/ ленивые геттеры
 
-<p>Геттеры дают нам возможность определять свойство объекта , но они не вычисляют значение этого свойства до тех пор, пока оно не станет доступно. Геттер откладывает стоимость вычисления значения до тех пор, пока это значение не станет нужно, и если оно никогда не понадобится, то вы никогда не заплатите.</p>
+Геттеры дают нам возможность определять свойство объекта , но они не вычисляют значение этого свойства до тех пор, пока оно не станет доступно. Геттер откладывает стоимость вычисления значения до тех пор, пока это значение не станет нужно, и если оно никогда не понадобится, то вы никогда не заплатите.
 
-<p>Дополнительная техника оптимизации заключается в том, чтобы лениться или откладывать вычисление значения свойства и кешировать его для дальнейшего доступа. Так поступают <strong>умные или <a href="https://en.wikipedia.org/wiki/Memoization">запоминающие</a> геттеры</strong>. Значение вычисляется в первый раз при вызове геттера и затем сохраняется в кеше так, что последующие обращения будут возвращать кешированные значения без его пересчёта. Это полезно в следующих ситуациях:</p>
+Дополнительная техника оптимизации заключается в том, чтобы лениться или откладывать вычисление значения свойства и кешировать его для дальнейшего доступа. Так поступают **умные или [запоминающие](https://en.wikipedia.org/wiki/Memoization) геттеры**. Значение вычисляется в первый раз при вызове геттера и затем сохраняется в кеше так, что последующие обращения будут возвращать кешированные значения без его пересчёта. Это полезно в следующих ситуациях:
 
-<ul>
- <li>Если вычисление значения свойства дорого (занимает много оперативной памяти или процессорного времени, порождает рабочий поток, получает удалённый файл, и т. д.).</li>
- <li>Если сейчас это значение не нужно. Оно будет использоваться позже, или в некоторых случаях оно не используется вообще.</li>
- <li>Если оно используется, к нему будут обращаться несколько раз, и нет необходимости его пересчитывать, так как значение не будет изменено, или не должно пересчитываться.</li>
-</ul>
+- Если вычисление значения свойства дорого (занимает много оперативной памяти или процессорного времени, порождает рабочий поток, получает удалённый файл, и т. д.).
+- Если сейчас это значение не нужно. Оно будет использоваться позже, или в некоторых случаях оно не используется вообще.
+- Если оно используется, к нему будут обращаться несколько раз, и нет необходимости его пересчитывать, так как значение не будет изменено, или не должно пересчитываться.
 
-<p>Значит, вам не нужно использовать ленивый геттер для свойства, значение которого вы собираетесь менять потому, что геттер не будет пересчитывать значение.</p>
+Значит, вам не нужно использовать ленивый геттер для свойства, значение которого вы собираетесь менять потому, что геттер не будет пересчитывать значение.
 
-<p>В следующем примере у объекта есть геттер как собственное свойство. При получении свойства, свойство удаляется из объекта и вновь добавляется, но в этот раз неявно, как свойство с данными. В итоге значение возвращается.</p>
+В следующем примере у объекта есть геттер как собственное свойство. При получении свойства, свойство удаляется из объекта и вновь добавляется, но в этот раз неявно, как свойство с данными. В итоге значение возвращается.
 
-<pre class="brush: js">get notifier() {
+```js
+get notifier() {
   delete this.notifier;
   return this.notifier = document.getElementById("bookmarked-notification-anchor");
-},</pre>
+},
+```
 
-<p>Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>.</p>
+Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
 
-<h3 id="get_и_defineProperty"><code>get</code> и <code>defineProperty</code></h3>
+### `get` и `defineProperty`
 
-<p>Использование ключевого слова <code>get</code> и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("classes")}} между ними есть тонкая разница.</p>
+Использование ключевого слова `get` и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("classes")}} между ними есть тонкая разница.
 
-<p>При использовании <code>get</code> свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref ("Object.defineProperty ()")}} свойство будет определено в экземпляре, к которому применяется.</p>
+При использовании `get` свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref ("Object.defineProperty ()")}} свойство будет определено в экземпляре, к которому применяется.
 
-<pre class="brush: js">class Example {
+```js
+class Example {
   get hello() {
     return 'world';
   }
@@ -133,23 +134,22 @@ console.log(obj.hello);
 console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
 // undefined
 console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
-// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }</pre>
+// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">сеттер</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
- <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Defining Getters and Setters</a> in JavaScript Guide</li>
-</ul>
+- [сеттер](/ru/docs/Web/JavaScript/Reference/Functions/set)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineGetter", "__defineGetter__")}}
+- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

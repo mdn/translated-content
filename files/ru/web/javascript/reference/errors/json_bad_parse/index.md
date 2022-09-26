@@ -7,11 +7,12 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: JSON.parse: unterminated string literal
+```
+SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal
 SyntaxError: JSON.parse: bad Unicode escape
@@ -42,70 +43,77 @@ SyntaxError: JSON.parse: property names must be double-quoted strings
 SyntaxError: JSON.parse: expected property name or '}'
 SyntaxError: JSON.parse: unexpected character
 SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>{{jsxref("JSON.parse()")}} обрабатывает (парсит) строку в формате JSON. Это строка должна соответствовать формату, иначе будет выведена ошибка, что был нарушен синтаксис.</p>
+{{jsxref("JSON.parse()")}} обрабатывает (парсит) строку в формате JSON. Это строка должна соответствовать формату, иначе будет выведена ошибка, что был нарушен синтаксис.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="JSON.parse()_не_допускает_запятые"><code>JSON.parse()</code> не допускает запятые</h3>
+### `JSON.parse()` не допускает запятые
 
-<p>Метод JSON.parse() не разрешает использование, так называемых, trailling запятых.</p>
+Метод JSON.parse() не разрешает использование, так называемых, trailling запятых.
 
-<p>Обе строки выдадут ошибку типа SyntaxError:</p>
+Обе строки выдадут ошибку типа SyntaxError:
 
-<pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4,]');
+```js example-bad
+JSON.parse('[1, 2, 3, 4,]');
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
-</pre>
+```
 
-<p>Необходимо убрать последние запятые в строках и тогда ошибки не будет:</p>
+Необходимо убрать последние запятые в строках и тогда ошибки не будет:
 
-<pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4]');
-JSON.parse('{"foo": 1}');</pre>
+```js example-good
+JSON.parse('[1, 2, 3, 4]');
+JSON.parse('{"foo": 1}');
+```
 
-<h3 id="Названия_свойств_должны_быть_в_двойных_кавычках">Названия свойств должны быть в двойных кавычках</h3>
+### Названия свойств должны быть в двойных кавычках
 
-<p>Вы не можете использовать одинарные кавычки в именах свойств. Например, 'foo'.</p>
+Вы не можете использовать одинарные кавычки в именах свойств. Например, 'foo'.
 
-<pre class="brush: js example-bad">JSON.parse("{'foo': 1}");
+```js example-bad
+JSON.parse("{'foo': 1}");
 // SyntaxError: JSON.parse: expected property name or '}'
-// at line 1 column 2 of the JSON data</pre>
+// at line 1 column 2 of the JSON data
+```
 
-<p>Вместо этого необходимо написать "foo":</p>
+Вместо этого необходимо написать "foo":
 
-<pre class="brush: js example-good">JSON.parse('{"foo": 1}');</pre>
+```js example-good
+JSON.parse('{"foo": 1}');
+```
 
-<h3 id="Незначащие_нули_или_плавающая_точка_без_последующей_цифры">Незначащие нули или плавающая точка без последующей цифры</h3>
+### Незначащие нули или плавающая точка без последующей цифры
 
-<p>Вы не можете использовать незначащие нули, например, 01. Плавающая точка должна всегда сопровождаться хотя бы одной цифрой после неё.</p>
+Вы не можете использовать незначащие нули, например, 01. Плавающая точка должна всегда сопровождаться хотя бы одной цифрой после неё.
 
-<pre class="brush: js example-bad">JSON.parse('{"foo": 01}');
+```js example-bad
+JSON.parse('{"foo": 01}');
 // SyntaxError: JSON.parse: expected ',' or '}' after property value
 // in object at line 1 column 2 of the JSON data
 
 JSON.parse('{"foo": 1.}');
 // SyntaxError: JSON.parse: unterminated fractional number
 // at line 1 column 2 of the JSON data
-</pre>
+```
 
-<p>Вместо этого напишите просто 1 без нуля и используйте хотя бы одну цифру после точки:</p>
+Вместо этого напишите просто 1 без нуля и используйте хотя бы одну цифру после точки:
 
-<pre class="brush: js example-good">JSON.parse('{"foo": 1}');
+```js example-good
+JSON.parse('{"foo": 1}');
 JSON.parse('{"foo": 1.0}');
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("JSON")}}</li>
- <li>{{jsxref("JSON.parse()")}}</li>
- <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON")}}
+- {{jsxref("JSON.parse()")}}
+- {{jsxref("JSON.stringify()")}}

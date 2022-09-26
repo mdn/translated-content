@@ -9,27 +9,27 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
-<div>{{JSRef("Global_Objects", "WeakSet")}}</div>
+{{JSRef("Global_Objects", "WeakSet")}}
 
-<p>Метод <code><strong>add()</strong></code> добавляет новый объект в конец объекта WeakSet.</p>
+Метод **`add()`** добавляет новый объект в конец объекта WeakSet.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>ws</em>.add(value);</code>
-</pre>
+```
+ws.add(value);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>value</dt>
- <dd>Обязателен. Объект, добавляемый в WeakSet.</dd>
-</dl>
+- value
+  - : Обязателен. Объект, добавляемый в WeakSet.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:Using_the_add_method">Использование метода add</h3>
+### Использование метода add
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 
 ws.add(window); // добавляет объект window в WeakSet
 
@@ -38,22 +38,19 @@ ws.has(window); // true
 // Weakset принимает в качестве параметров только объекты
 ws.add(1);
 // результат в Chrome: "TypeError: Invalid value used in weak set"
-// результат в Firefox: "TypeError: 1 is not a non-null object" </pre>
+// результат в Firefox: "TypeError: 1 is not a non-null object"
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
- <li>{{jsxref("WeakSet.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

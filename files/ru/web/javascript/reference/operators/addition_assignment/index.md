@@ -6,55 +6,57 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор сложения с присваиванием (<code>+=</code>) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.</p>
+Оператор сложения с присваиванием (`+=`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><strong>Оператор:</strong> x += y
-<strong>Значение:</strong> x  = x + y</pre>
+```
+Оператор: x += y
+Значение: x  = x + y
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_сложения_с_присваиванием">Использование сложения с присваиванием</h3>
+### Использование сложения с присваиванием
 
-<pre class="brush: js">// Assuming the following variables
+```js
+// Assuming the following variables
 //  foo = 'foo'
 //  bar = 5
 //  baz = true
 
-// Number + Number -&gt; addition
+// Number + Number -> addition
 bar += 2 // 7
 
-// Boolean + Number -&gt; addition
+// Boolean + Number -> addition
 baz += 1 // 2
 
-// Boolean + Boolean -&gt; addition
+// Boolean + Boolean -> addition
 baz += false // 1
 
-// Number + String -&gt; concatenation
+// Number + String -> concatenation
 bar += 'foo' // "5foo"
 
-// String + Boolean -&gt; concatenation
+// String + Boolean -> concatenation
 foo += false // "foofalse"
 
-// String + String -&gt; concatenation
-foo += 'bar' // "foobar"</pre>
+// String + String -> concatenation
+foo += 'bar' // "foobar"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Оператор сложения</a></li>
-</ul>
+- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Оператор сложения](/ru/docs/Web/JavaScript/Reference/Operators/Addition)

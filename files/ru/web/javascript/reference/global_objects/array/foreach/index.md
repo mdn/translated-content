@@ -12,83 +12,78 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<p>Метод <code><strong>forEach()</strong></code> выполняет указанную функцию один раз для каждого элемента в массиве.</p>
+Метод **`forEach()`** выполняет указанную функцию один раз для каждого элемента в массиве.
 
-<div>{{EmbedInteractiveExample("pages/js/array-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><var>arr</var>.forEach(function <var>callback(currentValue, index, array) {
+```
+arr.forEach(function callback(currentValue, index, array) {
     //your iterator
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd><p>Функция, которая будет вызвана для каждого элемента массива. Она принимает от одного до трёх аргументов:</p>
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>Текущий обрабатываемый элемент в массиве.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>Индекс текущего обрабатываемого элемента в массиве.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>Массив, по которому осуществляется проход.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Необязательный параметр. Значение, используемое в качестве <code>this</code> при вызове функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Функция, которая будет вызвана для каждого элемента массива. Она принимает от одного до трёх аргументов:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : Текущий обрабатываемый элемент в массиве.
+    - `index`{{optional_inline}}
+      - : Индекс текущего обрабатываемого элемента в массиве.
+    - `array`{{optional_inline}}
+      - : Массив, по которому осуществляется проход.
 
-<h2 id="Description">Описание</h2>
+- `thisArg`
+  - : Необязательный параметр. Значение, используемое в качестве `this` при вызове функции `callback`.
 
-<p>Метод <code>forEach()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, находящегося в массиве в порядке возрастания. Она не будет вызвана для удалённых или пропущенных элементов массива. Однако, она будет вызвана для элементов, которые присутствуют в массиве и имеют значение {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+### Возвращаемое значение
 
-<p>Функция <code>callback</code> будет вызвана с <strong>тремя аргументами</strong>:</p>
+{{jsxref("undefined")}}.
 
-<ul>
- <li>значение элемента (<strong>value</strong>)</li>
- <li>индекс элемента (<strong>index</strong>)</li>
- <li>массив, по которому осуществляется проход (<strong>array</strong>)</li>
-</ul>
+## Описание
 
-<p>Если в метод <code>forEach()</code> был передан параметр <code>thisArg</code>, при вызове <code>callback</code> он будет использоваться в качестве значения <code>this</code>. В противном случае, в качестве значения <code>this</code> будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение <code>this</code>, наблюдаемое из функции <code>callback</code>, определяется согласно {{jsxref('Operators/this', 'обычным правилам определения <code>this</code>, видимого из функции')}}.</p>
+Метод `forEach()` выполняет функцию `callback` один раз для каждого элемента, находящегося в массиве в порядке возрастания. Она не будет вызвана для удалённых или пропущенных элементов массива. Однако, она будет вызвана для элементов, которые присутствуют в массиве и имеют значение {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<p>Диапазон элементов, обрабатываемых методом <code>forEach()</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>forEach()</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменятся, значения, переданные в функцию <code>callback</code>, будут значениями на тот момент времени, когда метод <code>forEach()</code> посетит их; удалённые элементы посещены не будут. Если уже посещённые элементы удаляются во время итерации (например, с помощью {{jsxref("Array.prototype.shift()", "shift()")}}), последующие элементы будут пропущены. ({{jsxref('Global_Objects/Array/forEach', 'Смотри пример ниже', 'Модификация_массива_во_время_итерации')}})</p>
+Функция `callback` будет вызвана с **тремя аргументами**:
 
-<div class="note">
-<p><strong>Примечание:</strong> Не существует способа остановить или прервать цикл <code>forEach()</code> кроме как выбрасыванием исключения. Если вам необходимо такое поведение, метод <code>forEach()</code> неправильный выбор.</p>
+- значение элемента (**value**)
+- индекс элемента (**index**)
+- массив, по которому осуществляется проход (**array**)
 
-<p>Досрочное прекращение может быть достигнуто с:</p>
+Если в метод `forEach()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае, в качестве значения `this` будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно {{jsxref('Operators/this', 'обычным правилам определения <code>this</code>, видимого из функции')}}.
 
-<ul>
- <li>Простой цикл {{jsxref('Statements/for', 'for')}}</li>
- <li>Циклы {{jsxref('Statements/for...of', 'for...of')}} / {{jsxref('Statements/for...in', 'for...in')}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
+Диапазон элементов, обрабатываемых методом `forEach()`, устанавливается до первого вызова функции `callback`. Элементы, добавленные в массив после начала выполнения метода `forEach()`, не будут посещены функцией `callback`. Если существующие элементы массива изменятся, значения, переданные в функцию `callback`, будут значениями на тот момент времени, когда метод `forEach()` посетит их; удалённые элементы посещены не будут. Если уже посещённые элементы удаляются во время итерации (например, с помощью {{jsxref("Array.prototype.shift()", "shift()")}}), последующие элементы будут пропущены. ({{jsxref('Global_Objects/Array/forEach', 'Смотри пример ниже', 'Модификация_массива_во_время_итерации')}})
 
-<p>Если нужно протестировать элементы массива на условие и нужно вернуть булево значение, вы можете воспользоваться методами {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}} или {{jsxref("Array.prototype.findIndex()", "findIndex()")}}.</p>
+> **Примечание:** Не существует способа остановить или прервать цикл `forEach()` кроме как выбрасыванием исключения. Если вам необходимо такое поведение, метод `forEach()` неправильный выбор.
+>
+> Досрочное прекращение может быть достигнуто с:
+>
+> - Простой цикл {{jsxref('Statements/for', 'for')}}
+> - Циклы {{jsxref('Statements/for...of', 'for...of')}} / {{jsxref('Statements/for...in', 'for...in')}}
+> - {{jsxref("Array.prototype.every()")}}
+> - {{jsxref("Array.prototype.some()")}}
+> - {{jsxref("Array.prototype.find()")}}
+> - {{jsxref("Array.prototype.findIndex()")}}
+>
+> Если нужно протестировать элементы массива на условие и нужно вернуть булево значение, вы можете воспользоваться методами {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}} или {{jsxref("Array.prototype.findIndex()", "findIndex()")}}.
+>
+> Метод `forEach()` выполняет функцию `callback` один раз для каждого элемента массива; в отличие от методов {{jsxref("Array.prototype.every()", "every()")}} и {{jsxref("Array.prototype.some()", "some()")}}, он всегда возвращает значение {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<p>Метод <code>forEach()</code> выполняет функцию <code>callback</code> один раз для каждого элемента массива; в отличие от методов {{jsxref("Array.prototype.every()", "every()")}} и {{jsxref("Array.prototype.some()", "some()")}}, он всегда возвращает значение {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
-</div>
+## Примеры
 
-<h2 id="Examples">Примеры</h2>
+### Нет операции для неинициализированных значений (разреженные массивы)
 
-<h3 id="sparseArray">Нет операции для неинициализированных значений (разреженные массивы)</h3>
-
-<pre class="brush: js">const arraySparse = [1,3,,7]
+```js
+const arraySparse = [1,3,,7]
 let numCallbackRuns = 0
 
-arraySparse.forEach((element) =&gt; {
+arraySparse.forEach((element) => {
   console.log(element)
   numCallbackRuns++
 })
@@ -99,15 +94,17 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 // 3
 // 7
 // numCallbackRuns: 3
-// комментарий: как вы видите пропущенное значение между 3 и 7 не вызывало функцию callback.</pre>
+// комментарий: как вы видите пропущенное значение между 3 и 7 не вызывало функцию callback.
+```
 
-<h3 id="Конвертируем_цикл_for_в_forEach">Конвертируем цикл for в forEach</h3>
+### Конвертируем цикл for в forEach
 
-<pre class="brush:js">const items = ['item1', 'item2', 'item3']
+```js
+const items = ['item1', 'item2', 'item3']
 const copy = []
 
 // до
-for (let i = 0; i &lt; items.length; i++) {
+for (let i = 0; i < items.length; i++) {
   copy.push(items[i])
 }
 
@@ -115,19 +112,18 @@ for (let i = 0; i &lt; items.length; i++) {
 items.forEach(function(item){
   copy.push(item)
 })
-</pre>
+```
 
-<h3 id="Printing_the_contents_of_an_array">Печать содержимого массива</h3>
+### Печать содержимого массива
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> Для отображения содержимого массива в консоли вы можете использовать <a href="/ru/docs/Web/API/Console/table" title="Отображает табличные данные в виде таблицы"><code>console.table()</code></a>, который выводит отформатированную версию массива.</p>
+> **Примечание:** Для отображения содержимого массива в консоли вы можете использовать [`console.table()`](/ru/docs/Web/API/Console/table "Отображает табличные данные в виде таблицы"), который выводит отформатированную версию массива.
+>
+> Следующий пример иллюстрирует альтернативный подход, использующий `forEach()`.
 
-<p>Следующий пример иллюстрирует альтернативный подход, использующий <code>forEach()</code>.</p>
-</div>
+Следующий код выводит каждый элемент массива на новой строке журнала:
 
-<p>Следующий код выводит каждый элемент массива на новой строке журнала:</p>
-
-<pre class="brush: js">function logArrayElements(element, index, array) {
+```js
+function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -137,18 +133,19 @@ items.forEach(function(item){
 // a[0] = 2
 // a[1] = 5
 // a[3] = 9
-</pre>
+```
 
-<h3 id="Использование_thisArg">Использование <code><var>thisArg</var></code></h3>
+### Использование `thisArg`
 
-<p>Следующий (надуманный) пример обновляет свойства объекта, когда перебирает записи массива:</p>
+Следующий (надуманный) пример обновляет свойства объекта, когда перебирает записи массива:
 
-<pre class="brush:js">function Counter() {
+```js
+function Counter() {
   this.sum = 0
   this.count = 0
 }
 Counter.prototype.add = function(array) {
-  array.forEach((entry) =&gt; {
+  array.forEach((entry) => {
     this.sum += entry
     ++this.count
   }, this)
@@ -161,25 +158,24 @@ obj.count
 // 3
 obj.sum
 // 16
-</pre>
+```
 
-<p>Поскольку в <code>forEach()</code>передан параметр <code><var>thisArg</var></code> (<code>this</code>), он затем передаётся в <code><var>callback</var></code> при каждом вызове. И callback использует его в качестве собственного значения <code>this</code>.</p>
+Поскольку в `forEach()`передан параметр `thisArg` (`this`), он затем передаётся в `callback` при каждом вызове. И callback использует его в качестве собственного значения `this`.
 
-<div class="note">
-<p><strong>Примечание:</strong> Если при передаче callback функции используется {{jsxref('Functions/Arrow_functions', 'выражение стрелочной функции')}}, параметр <code><var>thisArg</var></code> может быть опущен, так как все стрелочные функции лексически привязываются к значению{{jsxref("Operators/this", "this")}}.</p>
-</div>
+> **Примечание:** Если при передаче callback функции используется {{jsxref('Functions/Arrow_functions', 'выражение стрелочной функции')}}, параметр `thisArg` может быть опущен, так как все стрелочные функции лексически привязываются к значению{{jsxref("Operators/this", "this")}}.
 
-<h3 id="Breaking_a_loop">Прерывание цикла</h3>
+### Прерывание цикла
 
-<p>Следующий код использует {{jsxref("Array.prototype.every()")}} для логирования содержимого массива и останавливается при превышении значением заданного порогового значения <code>THRESHOLD</code>.</p>
+Следующий код использует {{jsxref("Array.prototype.every()")}} для логирования содержимого массива и останавливается при превышении значением заданного порогового значения `THRESHOLD`.
 
-<pre class="brush: js">var THRESHOLD = 12;
+```js
+var THRESHOLD = 12;
 var v = [5, 2, 16, 4, 3, 18, 20];
 var res;
 
 res = v.every(function(element, index, array) {
   console.log('element:', element);
-  if (element &gt;= THRESHOLD) {
+  if (element >= THRESHOLD) {
     return false;
   }
 
@@ -194,7 +190,7 @@ console.log('res:', res);
 
 res = v.some(function(element, index, array) {
   console.log('element:', element);
-  if (element &gt;= THRESHOLD) {
+  if (element >= THRESHOLD) {
     return true;
   }
 
@@ -206,13 +202,14 @@ console.log('res:', res);
 // element: 2
 // element: 16
 // res: true
-</pre>
+```
 
-<h3 id="An_object_copy_function">Функция копирования объекта</h3>
+### Функция копирования объекта
 
-<p>Следующий код создаёт копию переданного объекта. Существует несколько способов создания копии объекта, и это один из них. Он позволяет понять, каким образом работает <code>Array.prototype.forEach()</code>, используя функции мета-свойств <code>Object.*</code> из ECMAScript 5.</p>
+Следующий код создаёт копию переданного объекта. Существует несколько способов создания копии объекта, и это один из них. Он позволяет понять, каким образом работает `Array.prototype.forEach()`, используя функции мета-свойств `Object.*` из ECMAScript 5.
 
-<pre class="brush: js">function copy(o) {
+```js
+function copy(o) {
   var copy = Object.create(Object.getPrototypeOf(o));
   var propNames = Object.getOwnPropertyNames(o);
 
@@ -226,18 +223,19 @@ console.log('res:', res);
 
 var o1 = { a: 1, b: 2 };
 var o2 = copy(o1); // теперь o2 выглядит также, как и o1
-</pre>
+```
 
-<h3 id="Модификация_массива_во_время_итерации">Модификация массива во время итерации</h3>
+### Модификация массива во время итерации
 
-<p>В следующем примере в лог выводится <code>"one"</code>, <code>"two"</code>, <code>"four"</code>.</p>
+В следующем примере в лог выводится `"one"`, `"two"`, `"four"`.
 
-<p>При достижении записи, содержащей значение <code>'two'</code>, первая запись всего массива удаляется, в результате чего все оставшиеся записи перемещаются на одну позицию вверх. Поскольку элемент <code>'four'</code> теперь находится на более ранней позиции в массиве, <code>'three'</code> будет пропущен.</p>
+При достижении записи, содержащей значение `'two'`, первая запись всего массива удаляется, в результате чего все оставшиеся записи перемещаются на одну позицию вверх. Поскольку элемент `'four'` теперь находится на более ранней позиции в массиве, `'three'` будет пропущен.
 
-<p><code>forEach()</code> не делает копию массива перед итерацией.</p>
+`forEach()` не делает копию массива перед итерацией.
 
-<pre class="brush:js">let words = ['one', 'two', 'three', 'four']
-words.forEach((word) =&gt; {
+```js
+let words = ['one', 'two', 'three', 'four']
+words.forEach((word) => {
   console.log(word)
   if (word === 'two') {
     words.shift()
@@ -246,16 +244,17 @@ words.forEach((word) =&gt; {
 // one
 // two
 // four
-</pre>
+```
 
-<h3 id="Выравнивание_уплощение_массива">Выравнивание (уплощение) массива</h3>
+### Выравнивание (уплощение) массива
 
-<p>Следующий пример приведён только для целей обучения. Если вы хотите выравнять массив с помощью встроенных методов, вы можете использовать {{jsxref("Array.prototype.flat()")}}</p>
+Следующий пример приведён только для целей обучения. Если вы хотите выравнять массив с помощью встроенных методов, вы можете использовать {{jsxref("Array.prototype.flat()")}}
 
-<pre class="brush: js">function flatten(arr) {
+```js
+function flatten(arr) {
   const result = []
 
-  arr.forEach((i) =&gt; {
+  arr.forEach((i) => {
     if (Array.isArray(i)) {
       result.push(...flatten(i))
     } else {
@@ -270,13 +269,14 @@ words.forEach((word) =&gt; {
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
 
 flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>forEach()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>forEach()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
+Метод `forEach()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `forEach()` в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что `callback.call` вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.
 
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.18
+```js
+// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.18
 // Ссылка (en): http://es5.github.io/#x15.4.4.18
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.18
 if (!Array.prototype.forEach) {
@@ -294,7 +294,7 @@ if (!Array.prototype.forEach) {
 
     // 2. Положим lenValue равным результату вызова внутреннего метода Get объекта O с аргументом "length".
     // 3. Положим len равным ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. Если IsCallable(callback) равен false, выкинем исключение TypeError.
     // Смотрите: http://es5.github.com/#x9.11
@@ -303,15 +303,15 @@ if (!Array.prototype.forEach) {
     }
 
     // 5. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Положим k равным 0
     k = 0;
 
-    // 7. Пока k &lt; len, будем повторять
-    while (k &lt; len) {
+    // 7. Пока k < len, будем повторять
+    while (k < len) {
 
       var kValue;
 
@@ -335,26 +335,22 @@ if (!Array.prototype.forEach) {
     // 8. Вернём undefined.
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Set.prototype.forEach()")}}

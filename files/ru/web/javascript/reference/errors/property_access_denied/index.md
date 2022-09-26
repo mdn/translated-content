@@ -8,40 +8,41 @@ tags:
   - Security
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">Error: Permission denied to access property "x"
-</pre>
+```
+Error: Permission denied to access property "x"
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("Error")}}.</p>
+{{jsxref("Error")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p><span class="seoSummary">Была попытка получить доступ к объекту, на который у вас нет разрешения. Вероятно, это элемент {{HTMLElement("iframe")}}, для которого вы нарушили <a href="/en-US/docs/Web/Security/Same-origin_policy">правило ограничения домена</a>.</span></p>
+Была попытка получить доступ к объекту, на который у вас нет разрешения. Вероятно, это элемент {{HTMLElement("iframe")}}, для которого вы нарушили [правило ограничения домена](/ru/docs/Web/Security/Same-origin_policy).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body></body>
+</html>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("iframe")}}</li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-</ul>
+- {{HTMLElement("iframe")}}
+- [Same-origin policy](/ru/docs/Web/Security/Same-origin_policy)

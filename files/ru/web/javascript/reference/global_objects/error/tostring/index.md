@@ -8,15 +8,24 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
-<div>
- {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
-<h2 id="Summary">Сводка</h2>
-<p>Метод <code><strong>toString()</strong></code> возвращает строку, представляющую указанный объект {{jsxref("Error")}}.</p>
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>e</var>.toString()</code></pre>
-<h2 id="Description">Описание</h2>
-<p>Объект {{jsxref("Error")}} переопределяет метод {{jsxref("Object.prototype.toString()")}}, унаследованный всеми объектами. Его семантика следующая (предполагается, что объекты {{jsxref("Object")}} и {{jsxref("String")}} имеют свои изначальные значения):</p>
-<pre class="brush: js">Error.prototype.toString = function() {
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+
+## Сводка
+
+Метод **`toString()`** возвращает строку, представляющую указанный объект {{jsxref("Error")}}.
+
+## Синтаксис
+
+```
+e.toString()
+```
+
+## Описание
+
+Объект {{jsxref("Error")}} переопределяет метод {{jsxref("Object.prototype.toString()")}}, унаследованный всеми объектами. Его семантика следующая (предполагается, что объекты {{jsxref("Object")}} и {{jsxref("String")}} имеют свои изначальные значения):
+
+```js
+Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -39,9 +48,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 
   return name + ': ' + msg;
 };
-</pre>
-<h2 id="Examples">Примеры</h2>
-<pre class="brush: js">var e = new Error('непоправимая ошибка');
+```
+
+## Примеры
+
+```js
+var e = new Error('непоправимая ошибка');
 print(e.toString()); // 'Error: непоправимая ошибка'
 
 e.name = undefined;
@@ -55,14 +67,16 @@ print(e.toString()); // 'Error'
 
 e.name = 'привет';
 print(e.toString()); // 'привет'
-</pre>
-<h2 id="Specifications">Спецификации</h2>
-{{Specifications}}
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<div>
-<p>{{Compat}}</p>
+```
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Error.prototype.toSource()")}}</li>
-</ul>
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Error.prototype.toSource()")}}

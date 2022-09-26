@@ -10,55 +10,52 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
-<div>{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>setYear()</code></strong> устанавливает год указанной даты по местному времени. Поскольку метод <code>setYear()</code> не устанавливает полный год («проблема 2000 года»), он больше не используется и был заменён методом {{jsxref("Date.prototype.setFullYear", "setFullYear()")}}.</p>
+Метод **`setYear()`** устанавливает год указанной даты по местному времени. Поскольку метод `setYear()` не устанавливает полный год («проблема 2000 года»), он больше не используется и был заменён методом {{jsxref("Date.prototype.setFullYear", "setFullYear()")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setYear(<var>yearValue</var>)</code></pre>
+```
+dateObj.setYear(yearValue)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>yearValue</code></dt>
- <dd>Целое число.</dd>
-</dl>
+- `yearValue`
+  - : Целое число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если параметр <code>yearValue</code> является числом в диапазоне от 0 до 99 (включительно), год объекта <code>dateObj</code> устанавливается в <code>1900 + yearValue</code>. В противном случае год объекта <code>dateObj</code> устанавливается в <code>yearValue</code>.</p>
+Если параметр `yearValue` является числом в диапазоне от 0 до 99 (включительно), год объекта `dateObj` устанавливается в `1900 + yearValue`. В противном случае год объекта `dateObj` устанавливается в `yearValue`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_setYear">Пример: использование метода <code>setYear()</code></h3>
+### Пример: использование метода `setYear()`
 
-<p>Первые две строки устанавливают год в 1996. Третья строка устанавливает год в 2000.</p>
+Первые две строки устанавливают год в 1996. Третья строка устанавливает год в 2000.
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);
 theBigDay.setYear(2000);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}

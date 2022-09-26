@@ -7,31 +7,32 @@ tags:
   - Оператор отношения
 translation_of: Web/JavaScript/Reference/Operators/in
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>Оператор <code>in</code></strong> возвращает <code>true</code>, если свойство содержится в указанном объекте или в его цепочке прототипов.</p>
+**Оператор `in`** возвращает `true`, если свойство содержится в указанном объекте или в его цепочке прототипов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>prop</em> in <em>object</em></pre>
+```
+prop in object
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Строка или symbol, представляющий название свойства или индекс массива (non-symbols будут конвертированы в строки).</dd>
-</dl>
+- `prop`
+  - : Строка или symbol, представляющий название свойства или индекс массива (non-symbols будут конвертированы в строки).
 
-<dl>
- <dt><code>object</code></dt>
- <dd>Объект, в котором нужно проверить содержание свойства с заданным именем.</dd>
-</dl>
+<!---->
 
-<h2 id="Описание">Описание</h2>
+- `object`
+  - : Объект, в котором нужно проверить содержание свойства с заданным именем.
 
-<p>В примере ниже показаны некоторые способы использования оператора <code>in</code>.</p>
+## Описание
 
-<pre class="brush:js">// Массивы
+В примере ниже показаны некоторые способы использования оператора `in`.
+
+```js
+// Массивы
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 0 in trees        // true
 3 in trees        // true
@@ -46,63 +47,66 @@ var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 var mycar = {make: "Honda", model: "Accord", year: 1998};
 "make" in mycar  // true
 "model" in mycar // true
-</pre>
+```
 
-<p>Вы должны указать объект справа от оператора <code>in</code>. Например, вы можете указать строку, созданную через конструктор объекта <code>String</code>, но вы не можете указать строковый литерал.</p>
+Вы должны указать объект справа от оператора `in`. Например, вы можете указать строку, созданную через конструктор объекта `String`, но вы не можете указать строковый литерал.
 
-<pre class="brush:js">var color1 = new String("green");
+```js
+var color1 = new String("green");
 "length" in color1 // returns true
 
 var color2 = "coral";
 // сгенерирует ошибку (color2 is not a String object)
 "length" in color2
-</pre>
+```
 
-<h3 id="Использование_оператора_in_с_неопределёнными_или_с_уже_удалёнными_свойствами">Использование оператора <code>in</code> с неопределёнными или с уже удалёнными свойствами</h3>
+### Использование оператора `in` с неопределёнными или с уже удалёнными свойствами
 
-<p>Если вы удалили свойство при помощи оператора <code style="font-style: normal;"><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code>, то оператор <code>in</code> возвратит <code>false</code> для этого свойства.</p>
+Если вы удалили свойство при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete"), то оператор `in` возвратит `false` для этого свойства.
 
-<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
+```js
+var mycar = {make: "Honda", model: "Accord", year: 1998};
 delete mycar.make;
 "make" in mycar;  // false
 
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 delete trees[3];
 3 in trees; // false
-</pre>
+```
 
-<p>Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор <code>in</code> вернёт значение <code>true</code>.</p>
+Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор `in` вернёт значение `true`.
 
-<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
+```js
+var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;
 "make" in mycar;  // true
-</pre>
+```
 
-<pre class="brush:js">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+```js
+var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 trees[3] = undefined;
 3 in trees; // returns true
-</pre>
+```
 
-<h3 id="Наследуемые_свойства">Наследуемые свойства</h3>
+### Наследуемые свойства
 
-<p>Оператор <code>in</code> возвратит <code>true</code> для свойств, которые унаследованы по цепочке прототипов. (Если вы хотите проверить только не наследованные свойства, используйте {{jsxref("Object.prototype.hasOwnProperty()")}}.)</p>
+Оператор `in` возвратит `true` для свойств, которые унаследованы по цепочке прототипов. (Если вы хотите проверить только не наследованные свойства, используйте {{jsxref("Object.prototype.hasOwnProperty()")}}.)
 
-<pre class="brush:js">"toString" in {}; // true
-</pre>
+```js
+"toString" in {}; // true
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Reflect.has()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
-</ul>
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete")
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Reflect.has()")}}
+- [Enumerability and ownership of properties](/ru/docs/Enumerability_and_ownership_of_properties)

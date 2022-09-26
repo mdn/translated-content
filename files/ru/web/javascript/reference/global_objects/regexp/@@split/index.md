@@ -1,67 +1,67 @@
 ---
-title: 'RegExp.prototype[@@split]()'
+title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>[@@split]()</code></strong> метод делит объект {{jsxref("String")}}  в массив строк, путём разбиения строки на подстроки.</p>
+**`[@@split]()`** метод делит объект {{jsxref("String")}} в массив строк, путём разбиения строки на подстроки.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}
 
+## Синтаксис
 
+```
+regexp[Symbol.split](str[, limit])
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.split](str[, <var>limit</var>])</pre>
+- `str`
+  - : Цель разбиения.
+- `limit`
+  - : Необязательное. Целое число ограничивающее кол-во разбиений. `[@@split]()` метод разбивает все совпадения `this` RegExp шаблона, до тех пор пока не достигнет числа `limit` или строка будет короче `this` шаблона.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Цель разбиения.</dd>
- <dt><code>limit</code></dt>
- <dd>
- <p>Необязательное. Целое число ограничивающее кол-во разбиений. <code>[@@split]()</code> метод разбивает все совпадения <code>this</code> RegExp шаблона, до тех пор пока не достигнет числа <code>limit</code> или строка будет короче <code>this</code> шаблона.</p>
- </dd>
-</dl>
+{{jsxref("Array")}} содержит подстроки как элементы.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Описание
 
-<p>{{jsxref("Array")}} содержит подстроки как элементы.</p>
+Этот метод вызывает {{jsxref("String.prototype.split()")}}, если аргумент `separator` объект {{jsxref("RegExp")}}. Для примера, два данных выражения возвращают одинаковый результат.
 
-<h2 id="Описание">Описание</h2>
+```js
+'a-b-c'.split(/-/);
 
-<p>Этот метод вызывает {{jsxref("String.prototype.split()")}}, если аргумент <code>separator</code> объект {{jsxref("RegExp")}}. Для примера, два данных выражения возвращают одинаковый результат.</p>
+/-/[Symbol.split]('a-b-c');
+```
 
-<pre class="brush: js">'a-b-c'.split(/-/);
+Этот метод существует для кастомизации поведения (разбиения) подкласса `RegExp`.
 
-/-/[Symbol.split]('a-b-c');</pre>
+Если аргумент `str` **не** объект типа {{jsxref("RegExp")}}, метод {{jsxref("String.prototype.split()")}} не вызывается, так же не создаётся объект типа {{jsxref("RegExp")}}.
 
-<p>Этот метод существует для кастомизации поведения (разбиения) подкласса <code>RegExp</code>.</p>
+## Примеры
 
-<p>Если аргумент <code>str</code> <strong>не </strong>объект типа {{jsxref("RegExp")}}, метод {{jsxref("String.prototype.split()")}} не вызывается, так же не создаётся объект типа {{jsxref("RegExp")}}.</p>
+### Прямой вызов
 
-<h2 id="Примеры">Примеры</h2>
+Этот метод может быть использован, так же как {{jsxref("String.prototype.split()")}}, кроме случаев когда `this` отличаются и аргументы идут в разном порядке.
 
-<h3 id="Прямой_вызов">Прямой вызов</h3>
-
-<p>Этот метод может быть использован, так же как {{jsxref("String.prototype.split()")}}, кроме случаев когда <code>this</code> отличаются и аргументы идут в разном порядке.</p>
-
-<pre class="brush: js">var re = /-/g;
+```js
+var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Использование_split_в_подклассах">Использование <code>@@split</code> в подклассах</h3>
+### Использование `@@split` в подклассах
 
-<p>Подклассы {{jsxref("RegExp")}} могут переопределить <code>[@@split]()</code> для изменения стандартного поведения.</p>
+Подклассы {{jsxref("RegExp")}} могут переопределить `[@@split]()` для изменения стандартного поведения.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     var result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x =&gt; "(" + x + ")");
+    return result.map(x => "(" + x + ")");
   }
 }
 
@@ -69,45 +69,24 @@ var re = new MyRegExp('-');
 var str = '2016-01-02';
 var result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

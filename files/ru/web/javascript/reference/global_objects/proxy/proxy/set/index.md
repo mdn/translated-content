@@ -7,81 +7,66 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span id="result_box" lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">Метод <strong>handler.set()</strong> является ловушкой для установки </span></span><span lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">значения </span></span><span id="result_box" lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">свойств</span></span><span lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">у</span></span><span lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">.</span></span></p>
+Метод **handler.set()** является ловушкой для установки значения свойству.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   set: function(target, property, value, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Следующие параметры передаются методу <code>set()</code> . <code>this</code> привязан к обработчику</p>
+Следующие параметры передаются методу `set()` . `this` привязан к обработчику
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Исходный объект, который проксируется.</dd>
- <dt><code>property</code></dt>
- <dd>Имя свойства, в которое устанавливается значение <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>Значение, устанавливаемое в свойство <code>property</code>.</dd>
- <dt><code>receiver</code></dt>
- <dd>Объект, которому первоначально было присвоено задание. Обычно это сам прокси. Но обработчик <code>set()</code><span> также может быть вызван косвенно, через цепочку прототипов или различными другими способами.<br>
-      Например, предположим, что скрипт выполняет </span><code><var>obj</var>.name = "jen"</code>, при этом <code><var>obj</var></code> не является прокси и не имеет собственного свойства <code>.name</code>, но имеет прокси в цепочке прототипов. Будет вызван обработчик прокси <code>set()</code> , а <code><var>obj</var></code> будет передан в качестве получателя.</dd>
-</dl>
+- `target`
+  - : Исходный объект, который проксируется.
+- `property`
+  - : Имя свойства, в которое устанавливается значение `value`.
+- `value`
+  - : Значение, устанавливаемое в свойство `property`.
+- `receiver`
+  - : Объект, которому первоначально было присвоено задание. Обычно это сам прокси. Но обработчик `set()` также может быть вызван косвенно, через цепочку прототипов или различными другими способами.
+    Например, предположим, что скрипт выполняет `obj.name = "jen"`, при этом `obj` не является прокси и не имеет собственного свойства `.name`, но имеет прокси в цепочке прототипов. Будет вызван обработчик прокси `set()` , а `obj` будет передан в качестве получателя.
 
-<h3 id="Возвращаемые_результаты">Возвращаемые результаты</h3>
+### Возвращаемые результаты
 
-<p>Метод <code>set</code> должен возвращать boolean значение.</p>
+Метод `set` должен возвращать boolean значение.
 
-<ul>
- <li>Возвращает <code>true</code>, если присвоение выполнено успешно.</li>
- <li>Если метод <code>set()</code> возвращает <code>false</code>, а присваивание произошло в коде строгого режима, то будет выброшена {{jsxref("TypeError")}}.</li>
-</ul>
+- Возвращает `true`, если присвоение выполнено успешно.
+- Если метод `set()` возвращает `false`, а присваивание произошло в коде строгого режима, то будет выброшена {{jsxref("TypeError")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code><strong>handler.set</strong></code> <span id="result_box" lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">является ловушкой для установки </span></span><span lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">значения </span></span><span id="result_box" lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">свойств</span></span><span lang="ru"><span title="The handler.set() method is a trap for setting a property value.
-">у</span></span>.</p>
+Метод **`handler.set`** является ловушкой для установки значения свойству.
 
-<h3 id="Перехват">Перехват</h3>
+### Перехват
 
-<p>Эта ловушка может перехватывать следующие операции:</p>
+Эта ловушка может перехватывать следующие операции:
 
-<ul>
- <li>Установка значения свойству: <code>proxy[foo] = bar</code> and <code>proxy.foo = bar</code></li>
- <li>Установка значения наследованному свойству: <code>Object.create(proxy)[foo] = bar</code></li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+- Установка значения свойству: `proxy[foo] = bar` and `proxy.foo = bar`
+- Установка значения наследованному свойству: `Object.create(proxy)[foo] = bar`
+- {{jsxref("Reflect.set()")}}
 
-<h3 id="Инварианты">Инварианты</h3>
+### Инварианты
 
-<p>Если нарушены следующие инварианты, то proxy выбросит {{jsxref("TypeError")}}:</p>
+Если нарушены следующие инварианты, то proxy выбросит {{jsxref("TypeError")}}:
 
-<ul>
- <li>Невозможно изменить значение свойства так, чтобы оно отличалось от значения соответствующего свойства целевого объекта, если соответствующее свойство целевого объекта не является доступным для записи и не настраиваемым свойством данных.</li>
- <li>Невозможно установить значение свойства, если соответствующее свойство целевого объекта является неконфигурируемым свойством средства доступа, для которого в качестве атрибута [[Set]] указано значение undefined.</li>
- <li>В строгом режиме при возврате из обработчика <code>set()</code> значения <code>false</code>, будет выброшено исключение {{jsxref ("TypeError")}}.</li>
-</ul>
+- Невозможно изменить значение свойства так, чтобы оно отличалось от значения соответствующего свойства целевого объекта, если соответствующее свойство целевого объекта не является доступным для записи и не настраиваемым свойством данных.
+- Невозможно установить значение свойства, если соответствующее свойство целевого объекта является неконфигурируемым свойством средства доступа, для которого в качестве атрибута \[\[Set]] указано значение undefined.
+- В строгом режиме при возврате из обработчика `set()` значения `false`, будет выброшено исключение {{jsxref ("TypeError")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий код перехватывает установку значения свойству.</p>
+Следующий код перехватывает установку значения свойству.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value
     console.log('property set: ' + prop + ' = ' + value)
@@ -94,38 +79,21 @@ console.log('a' in p)  // false
 p.a = 10               // "property set: a = 10"
 console.log('a' in p)  // true
 console.log(p.a)       // 10
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                                     | Статус                       | Комментарий         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.set()")}}

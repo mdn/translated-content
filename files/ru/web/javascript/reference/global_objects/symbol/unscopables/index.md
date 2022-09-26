@@ -8,23 +8,24 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Широко известный символ <strong><code>Symbol.unscopables</code></strong> используется для указания значения объекта, чьи собственные и наследуемые имена свойств исключаются из привязок связанного объекта оператора <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>.</p>
+Широко известный символ **`Symbol.unscopables`** используется для указания значения объекта, чьи собственные и наследуемые имена свойств исключаются из привязок связанного объекта оператора [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Символ </span></font>@@unscopables</code> (<code>Symbol.unscopables</code>)  может быть определён к любому объекту, чтобы исключить имена свойств из-за того, что они отображаются как лексические переменные с привязкой окружения <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>. Обратите внимание: если использовать <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">"Строгий режим"</a>, оператор <code>with</code> будет недоступен и вероятнее всего также не понадобится этот символ.</p>
+`Символ @@unscopables` (`Symbol.unscopables`) может быть определён к любому объекту, чтобы исключить имена свойств из-за того, что они отображаются как лексические переменные с привязкой окружения [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). Обратите внимание: если использовать ["Строгий режим"](/ru/docs/Web/JavaScript/Reference/Strict_mode), оператор `with` будет недоступен и вероятнее всего также не понадобится этот символ.
 
-<p>Если вы зададите свойству значение <code>true</code> в объекте <code>unscopables</code>  сделает его "<em>unscopable</em><em>"</em> и, следовательно, оно не будет задействовано в области лексических переменных. Придав свойству значение <code>false</code>, Вы сделаете его <code>scopable</code> и, как следствие, оно будет задействовано в области лексических переменных.</p>
+Если вы зададите свойству значение `true` в объекте `unscopables` сделает его "_unscopable\_\_"_ и, следовательно, оно не будет задействовано в области лексических переменных. Придав свойству значение `false`, Вы сделаете его `scopable` и, как следствие, оно будет задействовано в области лексических переменных.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод  {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения <code>with</code>, "ключи" будут методом, а не переменной. Вот где теперь встроенные свойства символа {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор <code>with</code>.</p>
+Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения `with`, "ключи" будут методом, а не переменной. Вот где теперь встроенные свойства символа {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор `with`.
 
-<pre class="brush: js">var keys = [];
+```js
+var keys = [];
 
 with (Array.prototype) {
   keys.push('что-то');
@@ -33,11 +34,12 @@ with (Array.prototype) {
 Object.keys(Array.prototype[Symbol.unscopables]);
 // ["copyWithin", "entries", "fill", "find", "findIndex",
 //  "includes", "keys", "values"]
-</pre>
+```
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Вы также можете задать </span></font>unscopables</code> для собственных объектов.</p>
+`Вы также можете задать unscopables` для собственных объектов.
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: 1,
   bar: 2
 };
@@ -51,18 +53,17 @@ with (obj) {
   console.log(foo); // 1
   console.log(bar); // ReferenceError: bar is not defined
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</li>
- <li>оператор <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> (не доступен в <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">режиме Strict</a>)</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- оператор [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) (не доступен в [режиме Strict](/ru/docs/Web/JavaScript/Reference/Strict_mode))

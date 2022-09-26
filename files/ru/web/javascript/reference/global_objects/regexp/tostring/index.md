@@ -10,61 +10,52 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
-<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+{{JSRef("Global_Objects", "RegExp")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>toString()</code></strong> возвращает строковое представление регулярного выражения.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>regexObj</var>.toString()</code></pre>
+Метод **`toString()`** возвращает строковое представление регулярного выражения.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Объект {{jsxref("Global_Objects/RegExp", "RegExp")}} переопределяет метод <code>toString()</code> объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод <code>toString()</code> возвращает строковое представление регулярного выражения.</p>
+```
+regexObj.toString()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_toString">Пример: использование метода <code>toString()</code></h3>
-<p>Следующий пример отображает строковое значение объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}:</p>
-<pre class="brush: js">var myExp = new RegExp('a+b+c');
+Нет.
+
+## Описание
+
+Объект {{jsxref("Global_Objects/RegExp", "RegExp")}} переопределяет метод `toString()` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод `toString()` возвращает строковое представление регулярного выражения.
+
+## Примеры
+
+### Пример: использование метода `toString()`
+
+Следующий пример отображает строковое значение объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}:
+
+```js
+var myExp = new RegExp('a+b+c');
 console.log(myExp.toString());  // отобразит '/a+b+c/'
 
 var foo = new RegExp('bar', 'g');
 console.log(foo.toString());    // отобразит '/bar/g'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.toString()")}}

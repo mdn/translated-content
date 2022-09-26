@@ -1,5 +1,5 @@
 ---
-title: 'RegExp.prototype[@@search]()'
+title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 tags:
   - JavaScript
@@ -10,55 +10,57 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>[@@search]()</code></strong> выполняет поиск совпадения между регулярным выражением <code>this</code> и строкой.</p>
+Метод **`[@@search]()`** выполняет поиск совпадения между регулярным выражением `this` и строкой.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.search](str)</pre>
+```
+regexp[Symbol.search](str)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>str</code></dt>
- <dd>{{jsxref("String")}}, являющийся объектом поиска.</dd>
-</dl>
+- `str`
+  - : {{jsxref("String")}}, являющийся объектом поиска.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>integer</dt>
- <dd>В случае успеха, <code>[@@search]()</code> вернёт индекс первого совпадения регулярного выражения внутри строки. В противном случае, он вернёт -1.</dd>
-</dl>
+- integer
+  - : В случае успеха, `[@@search]()` вернёт индекс первого совпадения регулярного выражения внутри строки. В противном случае, он вернёт -1.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Этот метод вызывается внутреннее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.</p>
+Этот метод вызывается внутреннее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.
 
-<pre class="brush: js">'abc'.search(/a/);
+```js
+'abc'.search(/a/);
 
-/a/[Symbol.search]('abc');</pre>
+/a/[Symbol.search]('abc');
+```
 
-<p>Этот метод существует для настройки поведения поиска в подклассах <code>RegExp</code>.</p>
+Этот метод существует для настройки поведения поиска в подклассах `RegExp`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Прямой_вызов">Прямой вызов</h3>
+### Прямой вызов
 
-<p>Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого <code>this</code> и другого порядка аргументов.</p>
+Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого `this` и другого порядка аргументов.
 
-<pre class="brush: js">var re = /-/g;
+```js
+var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.search](str);
 console.log(result);  // 4
-</pre>
+```
 
-<h3 id="Используя_search_в_подклассах">Используя <code>@@search</code> в подклассах</h3>
+### Используя `@@search` в подклассах
 
-<p>Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода <code>[@@search]()</code> для изменения поведения.</p>
+Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода `[@@search]()` для изменения поведения.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   constructor(str) {
     super(str)
     this.pattern = str;
@@ -72,25 +74,21 @@ var re = new MyRegExp('a+b');
 var str = 'ab a+b';
 var result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.search()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.search()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

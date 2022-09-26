@@ -12,49 +12,47 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Статический метод <strong><code>String.raw()</code></strong> является теговой функцией для <a href="/ru/docs/Web/JavaScript/Reference/template_strings">шаблонных строк</a>; подобно префиксу <code>r</code> в Python или префиксу <code>@</code> в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.</p>
+Статический метод **`String.raw()`** является теговой функцией для [шаблонных строк](/ru/docs/Web/JavaScript/Reference/template_strings); подобно префиксу `r` в Python или префиксу `@` в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>
-String.raw(<var>callSite</var>, <var>...substitutions</var>)
+```
+
+String.raw(callSite, ...substitutions)
 
 String.raw`templateString`
-</code></pre>
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callSite</code></dt>
- <dd>Правильно сформированный объект вызова, например <code>{ raw: 'string' }</code>.</dd>
- <dt><code>...substitutions</code></dt>
- <dd>Значения подстановок.</dd>
- <dt><code>templateString</code></dt>
- <dd><a href="/ru/docs/Web/JavaScript/Reference/template_strings">Шаблонная строка</a>, возможно с подстановками (<code>${...}</code>).</dd>
-</dl>
+- `callSite`
+  - : Правильно сформированный объект вызова, например `{ raw: 'string' }`.
+- `...substitutions`
+  - : Значения подстановок.
+- `templateString`
+  - : [Шаблонная строка](/ru/docs/Web/JavaScript/Reference/template_strings), возможно с подстановками (`${...}`).
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<dl>
- <dt>{{jsxref("Global_Objects/TypeError", "TypeError")}}</dt>
- <dd>Если первый аргумент не является правильно сформированным объектом вызова, выбрасывается исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}.</dd>
-</dl>
+- {{jsxref("Global_Objects/TypeError", "TypeError")}}
+  - : Если первый аргумент не является правильно сформированным объектом вызова, выбрасывается исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>В большинстве случаев метод <code>String.raw()</code> используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим <a href="/ru/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings">теговым функциям</a>.</p>
+В большинстве случаев метод `String.raw()` используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим [теговым функциям](/ru/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings).
 
-<p>Метод <code>String.raw()</code> является единственной встроенной теговой функцией шаблонных строк, выступающей стандартной функцией по объединению их фрагментов. Вы и сами могли бы реализовать подобную функциональность на JavaScript.</p>
+Метод `String.raw()` является единственной встроенной теговой функцией шаблонных строк, выступающей стандартной функцией по объединению их фрагментов. Вы и сами могли бы реализовать подобную функциональность на JavaScript.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_String.raw">Пример: использование метода <code>String.raw()</code></h3>
+### Пример: использование метода `String.raw()`
 
-<pre class="brush: js">String.raw`Привет\n${2+3}!`;
+```js
+String.raw`Привет\n${2+3}!`;
 // 'Привет\n5!', символ после 'Привет' не является символом новой строки,
 // '\' и 'n' - это два символа.
 
@@ -73,20 +71,18 @@ String.raw`Привет\n${name}!`;
 // но никто не запрещает вам делать это:
 String.raw({ raw: 'тест' }, 0, 1, 2);
 // 'т0е1с2т'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/template_strings">Шаблонные строки</a></li>
- <li>{{jsxref("Global_Objects/String", "String")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar">Лексическая грамматика</a></li>
-</ul>
+- [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/template_strings)
+- {{jsxref("Global_Objects/String", "String")}}
+- [Лексическая грамматика](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

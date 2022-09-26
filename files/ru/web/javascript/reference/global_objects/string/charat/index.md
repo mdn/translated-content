@@ -9,28 +9,35 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>charAt()</code></strong> возвращает указанный символ из строки.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.charAt(<var>index</var>)</code></pre>
+Метод **`charAt()`** возвращает указанный символ из строки.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>index</code></dt>
- <dd>Целое число от 0 до длины строки минус 1.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке <code>stringName</code> равен <code>stringName.length - 1</code>. Если предоставленный вами параметр <code>index</code> выходит за пределы этого диапазона, JavaScript вернёт пустую строку.</p>
+```
+str.charAt(index)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Displaying_characters_at_different_locations_in_a_string">Пример: отображение символов из различных позиций строки</h3>
-<p>Следующий пример показывает символы в различных позициях в строке <code>"Дивный новый мир"</code>:</p>
-<pre class="brush: js">var anyString = 'Дивный новый мир';
+- `index`
+  - : Целое число от 0 до длины строки минус 1.
+
+## Описание
+
+Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке `stringName` равен `stringName.length - 1`. Если предоставленный вами параметр `index` выходит за пределы этого диапазона, JavaScript вернёт пустую строку.
+
+## Примеры
+
+### Пример: отображение символов из различных позиций строки
+
+Следующий пример показывает символы в различных позициях в строке `"Дивный новый мир"`:
+
+```js
+var anyString = 'Дивный новый мир';
 
 console.log("Символ по индексу 0   равен '" + anyString.charAt(0)   + "'");
 console.log("Символ по индексу 1   равен '" + anyString.charAt(1)   + "'");
@@ -39,21 +46,27 @@ console.log("Символ по индексу 3   равен '" + anyString.char
 console.log("Символ по индексу 4   равен '" + anyString.charAt(4)   + "'");
 console.log("Символ по индексу 5   равен '" + anyString.charAt(5)   + "'");
 console.log("Символ по индексу 999 равен '" + anyString.charAt(999) + "'");
-</pre>
-<p>Этот код отобразит следующее:</p>
-<pre class="brush: js">Символ по индексу 0   равен 'Д'
+```
+
+Этот код отобразит следующее:
+
+```js
+Символ по индексу 0   равен 'Д'
 Символ по индексу 1   равен 'и'
 Символ по индексу 2   равен 'в'
 Символ по индексу 3   равен 'н'
 Символ по индексу 4   равен 'ы'
 Символ по индексу 5   равен 'й'
 Символ по индексу 999 равен ''
-</pre>
+```
 
-<h3 id="Example:_Getting_whole_characters">Пример: получение целых символов</h3>
-<p>Следующий пример показывает, как обойти строку в цикле, каждый раз гарантированно получая целый символ, даже если строка содержит символы, не помещающиеся на Базовую многоязыковую плоскость (БМП).</p>
-<pre class="brush: js">var str = 'A \uD87E\uDC04 Z'; // Также можно использовать не-БМП символы напрямую
-for (var i = 0, chr; i &lt; str.length; i++) {
+### Пример: получение целых символов
+
+Следующий пример показывает, как обойти строку в цикле, каждый раз гарантированно получая целый символ, даже если строка содержит символы, не помещающиеся на Базовую многоязыковую плоскость (БМП).
+
+```js
+var str = 'A \uD87E\uDC04 Z'; // Также можно использовать не-БМП символы напрямую
+for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
   }
@@ -70,24 +83,24 @@ function getWholeChar(str, i) {
   if (isNaN(code)) {
     return ''; // Позиция не найдена
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return str.charAt(i);
   }
 
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i + 1)) {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i + 1)) {
       throw 'Старшая часть суррогатной пары без следующей младшей';
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'Старшая часть суррогатной пары без следующей младшей';
       }
       return str.charAt(i) + str.charAt(i + 1);
   }
-  // Младшая часть суррогатной пары (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // Младшая часть суррогатной пары (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Младшая часть суррогатной пары без предшествующей старшей';
   }
@@ -95,17 +108,20 @@ function getWholeChar(str, i) {
 
   // (последнее число можно изменить на 0xDB7F, чтобы трактовать старшую
   // часть суррогатной пары в частной плоскости как одиночный символ)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'Младшая часть суррогатной пары без предшествующей старшей';
   }
   // Теперь мы можем пропустить младшую часть суррогатной пары,
   // которую мы уже обработали
   return false;
 }
-</pre>
-<p>В среде, поддерживающей JavaScript 1.7+ (например, в Firefox), который позволяет деструктурирующее присваивание, можно использовать более лаконичную и более гибкую альтернативу в том смысле, что она автоматически увеличивает счётчик (если символ гарантированно является суррогатной парой).</p>
-<pre class="brush: js">var str = 'A\uD87E\uDC04Z'; // Также можно использовать не-БМП символы напрямую
-for (var i = 0, chr; i &lt; str.length; i++) {
+```
+
+В среде, поддерживающей JavaScript 1.7+ (например, в Firefox), который позволяет деструктурирующее присваивание, можно использовать более лаконичную и более гибкую альтернативу в том смысле, что она автоматически увеличивает счётчик (если символ гарантированно является суррогатной парой).
+
+```js
+var str = 'A\uD87E\uDC04Z'; // Также можно использовать не-БМП символы напрямую
+for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Поместите эту строку в самое начало каждого цикла, передавая в функцию строку
   // и текущую итерацию; возвращаемый массив будет содержать отдельный символ и
@@ -120,24 +136,24 @@ function getWholeCharAndI(str, i) {
   if (isNaN(code)) {
     return ''; // Позиция не найдена
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return [str.charAt(i), i]; // Обычный символ, оставляем переменную 'i' неизменной
   }
 
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i + 1)) {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i + 1)) {
       throw 'Старшая часть суррогатной пары без следующей младшей';
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'Старшая часть суррогатной пары без следующей младшей';
       }
       return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
-  // Младшая часть суррогатной пары (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // Младшая часть суррогатной пары (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Младшая часть суррогатной пары без предшествующей старшей';
   }
@@ -145,17 +161,20 @@ function getWholeCharAndI(str, i) {
 
   // (последнее число можно изменить на 0xDB7F, чтобы трактовать старшую
   // часть суррогатной пары в частной плоскости как одиночный символ)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'Младшая часть суррогатной пары без предшествующей старшей';
   }
   // Возвращаем следующий символ (и увеличиваем счётчик)
   return [str.charAt(i + 1), i + 1];
 }
-</pre>
+```
 
-<h3 id="Example:_Fixing_charAt_to_support_non-Basic-Multilingual-Plane_(BMP)_characters">Пример: добавление к методу <code>charAt()</code> поддержки символов не в Базовой многоязыковой плоскости (БМП)</h3>
-<p>В то время как пример выше может быть более полезен тем, кто хочет поддерживать символы не в плоскости БМП (поскольку он не требует от вызывающей стороны знания о том, где может встретиться символ из не-БМП), в случае, если кто-то желает <em>выбирать</em> символы по индексу и трактовать суррогатную пару внутри строки как один символ, он может использовать следующий код:</p>
-<pre class="brush: js">function fixedCharAt(str, idx) {
+### Пример: добавление к методу `charAt()` поддержки символов не в Базовой многоязыковой плоскости (БМП)
+
+В то время как пример выше может быть более полезен тем, кто хочет поддерживать символы не в плоскости БМП (поскольку он не требует от вызывающей стороны знания о том, где может встретиться символ из не-БМП), в случае, если кто-то желает _выбирать_ символы по индексу и трактовать суррогатную пару внутри строки как один символ, он может использовать следующий код:
+
+```js
+function fixedCharAt(str, idx) {
   var ret = '';
   str += '';
   var end = str.length;
@@ -163,62 +182,44 @@ function getWholeCharAndI(str, i) {
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     } else {
       break;
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return '';
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) &amp;&amp; /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
     // Перешагиваем через один, поскольку один «символ» является частью суррогатной пары
     ret += str.charAt(idx + 1);
   }
   return ret;
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                             | Статус                   | Комментарии              |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
+| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. |
+| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                          |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("String.fromCodePoint()")}}

@@ -6,32 +6,29 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}Метод **`Symbol.keyFor(sym)`** получает ключ для заданного символа из глобального реестра символов.
 
-<div> Метод <code><strong>Symbol.keyFor(sym)</strong></code> получает ключ для заданного символа из глобального реестра символов.</div>
+{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
 
-<div> </div>
+## Синтаксис
 
-<p>{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}</p>
+```
+Symbol.keyFor(sym);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><var>Symbol.keyFor(sym)</var>;</pre>
+- sym
+  - : Символ, обязательный. Символ, ключ которого требуется найти
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>sym</dt>
- <dd>Символ, обязательный. Символ, ключ которого требуется найти</dd>
-</dl>
+Строка с ключом заданного символа, если он есть в глобальном реестре символов, либо {{jsxref("undefined")}}, если его там нет.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Строка с ключом заданного символа, если он есть в глобальном реестре символов, либо {{jsxref("undefined")}}, если его там нет.</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: js">var globalSym = Symbol.for("foo"); // Создаёт новый глобальный символ
+```js
+var globalSym = Symbol.for("foo"); // Создаёт новый глобальный символ
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -40,22 +37,16 @@ Symbol.keyFor(localSym); // undefined
 // Известные символы не является символами,
 // которые находятся в глобальном реестре символов
 Symbol.keyFor(Symbol.iterator) // undefined
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Symbol.for()")}}</li>
-</ul>
+- {{jsxref("Symbol.for()")}}

@@ -10,61 +10,62 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Operators/yield
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Ключевое слово <code>yield</code> используется для остановки и возобновления функций-генераторов ({{jsxref("Statements/function*", "function*")}} или <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">legacy generator function</a>).</p>
+Ключевое слово `yield` используется для остановки и возобновления функций-генераторов ({{jsxref("Statements/function*", "function*")}} или [legacy generator function](/ru/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}</p>
+{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"> [<em>rv</em>] = <strong>yield</strong> [[выражение]];</pre>
+```
+ [rv] = yield [[выражение]];
+```
 
-<dl>
- <dt><code>выражение</code></dt>
- <dd>Возвращаемое выражение. Если не указано, то возвращается значение <code>undefined</code>.</dd>
- <dt><code>rv</code></dt>
- <dd>Возвращает необязательное значение, которое передаётся в <code>next()</code> генератора, чтобы возобновить его выполнение.</dd>
-</dl>
+- `выражение`
+  - : Возвращаемое выражение. Если не указано, то возвращается значение `undefined`.
+- `rv`
+  - : Возвращает необязательное значение, которое передаётся в `next()` генератора, чтобы возобновить его выполнение.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Ключевое слово <code>yield</code> вызывает остановку функции-генератора и возвращает текущее значение выражения, указанного после ключевого слова <code>yield</code>. Его можно рассматривать как аналог ключевого слова <code>return</code> в функции-генераторе.</p>
+Ключевое слово `yield` вызывает остановку функции-генератора и возвращает текущее значение выражения, указанного после ключевого слова `yield`. Его можно рассматривать как аналог ключевого слова `return` в функции-генераторе.
 
-<p>На самом деле ключевое слово <code>yield</code>  возвращает объект с двумя параметрами, <code>value</code> и <code>done</code>. При этом, <code>value</code> является результатом вычисления выражения после <code>yield</code>, а <code>done</code> указывает, была ли завершена функция-генератор.</p>
+На самом деле ключевое слово `yield` возвращает объект с двумя параметрами, `value` и `done`. При этом, `value` является результатом вычисления выражения после `yield`, а `done` указывает, была ли завершена функция-генератор.
 
-<p>Во время остановки на операторе <code>yield</code>, выполнение кода в функции-генераторе не возобновится, пока не будет вызван метод <code>next()</code> возвращаемого функцией <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Generator">объекта-генератора</a>. Это предоставляет непосредственный контроль за выполнением генератора и возвратом его значений.</p>
+Во время остановки на операторе `yield`, выполнение кода в функции-генераторе не возобновится, пока не будет вызван метод `next()` возвращаемого функцией [объекта-генератора](/ru/docs/Web/JavaScript/Reference/Global_Objects/Generator). Это предоставляет непосредственный контроль за выполнением генератора и возвратом его значений.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Следующий фрагмент кода содержит определение функции-генератора и вспомогательной функции:</p>
+Следующий фрагмент кода содержит определение функции-генератора и вспомогательной функции:
 
-<pre class="brush: js">function* foo(){
+```js
+function* foo(){
   var index = 0;
-  while(index &lt;= 2) // при достижении 2, done в yield станет true, а value undefined;
+  while(index <= 2) // при достижении 2, done в yield станет true, а value undefined;
     yield index++;
-}</pre>
+}
+```
 
-<p>После того как тело функции-генератора определено, оно может использоваться для получения итератора:</p>
+После того как тело функции-генератора определено, оно может использоваться для получения итератора:
 
-<pre class="brush: js">var iterator = foo();
+```js
+var iterator = foo();
 console.log(iterator.next()); // { value:0, done:false }
 console.log(iterator.next()); // { value:1, done:false }
 console.log(iterator.next()); // { value:2, done:false }
 console.log(iterator.next()); // { value:undefined, done:true }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol">Итераторы</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/function*">Генераторы</a> </li>
-</ul>
+- [Итераторы](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*)

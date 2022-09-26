@@ -8,71 +8,72 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> вызывает переданную ему функцию с указанными аргументами.</p>
+Статический метод **`Reflect`\*\***`.apply()`\*\* вызывает переданную ему функцию с указанными аргументами.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Reflect.apply(target, thisArgument, argumentsList)
-</pre>
+```
+Reflect.apply(target, thisArgument, argumentsList)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>target</dt>
- <dd>Функция, которую необходимо вызвать.</dd>
- <dt>thisArgument</dt>
- <dd>Значение переменной <code>this</code> во время вызова функции <em><code>target</code></em>.</dd>
- <dt>argumentsList</dt>
- <dd>Объект, подобный массиву, содержащий аргументы, с которыми должна быть вызвана функция <em><code>target</code></em>.</dd>
-</dl>
+- target
+  - : Функция, которую необходимо вызвать.
+- thisArgument
+  - : Значение переменной `this` во время вызова функции _`target`_.
+- argumentsList
+  - : Объект, подобный массиву, содержащий аргументы, с которыми должна быть вызвана функция _`target`_.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Возвращается значение, которое вернёт функция <em><code>target</code></em> с указанным значением переменной <code><strong>this</strong></code> и аргументами.</p>
+Возвращается значение, которое вернёт функция _`target`_ с указанным значением переменной **`this`** и аргументами.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>{{jsxref("TypeError")}}, если функция <code><em>target</em></code> не может быть вызвана.</p>
+{{jsxref("TypeError")}}, если функция `target` не может быть вызвана.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>В ES5, обычно используется метод {{jsxref("Function.prototype.apply()")}}, чтобы вызвать функцию с указанным значением переменной <code>this</code> и <code>arguments</code>, переданными как массив (или <a href="/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">массивоподобный объект</a>).</p>
+В ES5, обычно используется метод {{jsxref("Function.prototype.apply()")}}, чтобы вызвать функцию с указанным значением переменной `this` и `arguments`, переданными как массив (или [массивоподобный объект](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
-<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+```js
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
-<p>С использованием <code>Reflect.apply</code> это действие становится более понятным и занимает меньше места в коде.</p>
+С использованием `Reflect.apply` это действие становится более понятным и занимает меньше места в коде.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_Reflect.apply()">Использование <code>Reflect.apply()</code></h3>
+### Использование `Reflect.apply()`
 
-<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
+```js
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /вы/, ['<span class="_Tgc _s8w">превысокомногорассмотрительствующий</span>']).index;
+Reflect.apply(RegExp.prototype.exec, /вы/, ['превысокомногорассмотрительствующий']).index;
 // 4
 
 Reflect.apply(''.charAt, 'пони', [3]);
 // "и"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Reflect")}}
+- {{jsxref("Function.prototype.apply()")}}

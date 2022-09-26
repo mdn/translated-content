@@ -9,45 +9,46 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong>catch()</strong> возвращает промис (<code>Promise(</code>) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.</p>
+Метод **catch()** возвращает промис (`Promise(`) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>p.catch(onRejected)</var>;
+```
+p.catch(onRejected);
 
 p.catch(function(reason) {
    // отказ
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>onRejected</dt>
- <dd>{{jsxref("Function")}} вызывается когда промис отклонен. У этой функции один аргумент:
- <dl>
-  <dt><code>reason</code></dt>
-  <dd><p>Причина отказа.</p>
-  <p>Промис, возвращённый catch (), отклоняется, если onRejected выдаёт ошибку(throw) или возвращает Promise, который был отклонён; В противном случае Promise, возвращаемый catch () имеет статус  выполнено  (fulfilled)</p></dd>
- </dl>
- </dd>
-</dl>
+- onRejected
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : {{jsxref("Function")}} вызывается когда промис отклонен. У этой функции один аргумент:
 
-<p>{{jsxref("Promise")}}.</p>
+    - `reason`
 
-<h2 id="Описание">Описание</h2>
+      - : Причина отказа.
 
-<p>Метод <code>catch может быть полезен для обработки ошибок</code> в вашей структуре промисов.</p>
+        Промис, возвращённый catch (), отклоняется, если onRejected выдаёт ошибку(throw) или возвращает Promise, который был отклонён; В противном случае Promise, возвращаемый catch () имеет статус выполнено (fulfilled)
 
-<h2 id="Примеры">Примеры</h2>
+### Возвращаемое значение
 
-<h3 id="Использование_метода_catch">Использование метода <code>catch</code></h3>
+{{jsxref("Promise")}}.
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+## Описание
+
+Метод `catch может быть полезен для обработки ошибок` в вашей структуре промисов.
+
+## Примеры
+
+### Использование метода `catch`
+
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -85,11 +86,12 @@ p1.then(function(value) {
   // для Promise, возвращённого функцией catch
   console.log('Not fired due to the catch');
 });
-</pre>
+```
 
-<h3 id="Ловим_выброшенные_исключения">Ловим выброшенные исключения</h3>
+### Ловим выброшенные исключения
 
-<pre class="brush: js">// Выкидываемая ошибка вызовет метод catch
+```js
+// Выкидываемая ошибка вызовет метод catch
 var p1 = new Promise(function(resolve, reject) {
   throw 'Uh-oh!';
 });
@@ -117,19 +119,18 @@ var p3 = new Promise(function(resolve, reject) {
 
 p3.catch(function(e) {
    console.log(e); // Никогда не вызовется
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}

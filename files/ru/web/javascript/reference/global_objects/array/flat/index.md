@@ -10,30 +10,31 @@ tags:
   - яваскрипт
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>flat()</strong></code> возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.</p>
+Метод **`flat()`** возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>var newArray = arr</var>.flat(<var>depth</var>);</pre>
+```
+var newArray = arr.flat(depth);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>На сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.</dd>
-</dl>
+- `depth` {{optional_inline}}
+  - : На сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новый массив с объединёнными в него подмассивами.</p>
+Новый массив с объединёнными в него подмассивами.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Упрощение_вложенных_массивов">Упрощение вложенных массивов</h3>
+### Упрощение вложенных массивов
 
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -47,43 +48,49 @@ arr3.flat(2);
 
 var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre>
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
 
-<h3 id="Упрощение_и_дырки_в_массивах">Упрощение и "дырки" в массивах</h3>
+### Упрощение и "дырки" в массивах
 
-<p>Метод flat удаляет пустые слоты из массива:</p>
+Метод flat удаляет пустые слоты из массива:
 
-<pre class="brush: js">var arr4 = [1, 2, , 4, 5];
+```js
+var arr4 = [1, 2, , 4, 5];
 arr4.flat();
 // [1, 2, 4, 5]
-</pre>
+```
 
-<h2 id="Альтернативы">Альтернативы</h2>
+## Альтернативы
 
-<h3 id="reduce_и_concat"><code>reduce</code> и <code>concat</code></h3>
+### `reduce` и `concat`
 
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 // В одномерный массив
-arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
 
 //или
-const flatSingle = arr =&gt; [].concat(...arr);
-</pre>
+const flatSingle = arr => [].concat(...arr);
+```
 
-<pre class="brush: js">// Для развёртывания многомерных массивов используем рекурсию, reduce и concat
+```js
+// Для развёртывания многомерных массивов используем рекурсию, reduce и concat
 const arr = [1, 2, [3, 4, [5, 6]]];
 
 function flatDeep(arr, d = 1) {
-   return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
                 : arr.slice();
 };
 
 flatDeep(arr, Infinity);
-// [1, 2, 3, 4, 5, 6]</pre>
+// [1, 2, 3, 4, 5, 6]
+```
 
-<pre class="brush: js">//не рекурсивное упрощение с использованием стэка
+```js
+//не рекурсивное упрощение с использованием стэка
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 function flatten(input) {
   const stack = [...input];
@@ -102,9 +109,10 @@ function flatten(input) {
   return res.reverse();
 }
 flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-</pre>
+```
 
-<pre class="brush: js">//рекурсивно упрощаем массив
+```js
+//рекурсивно упрощаем массив
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
@@ -115,23 +123,19 @@ function flatten(array) {
   })(array);
   return flattend;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.flatMap()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

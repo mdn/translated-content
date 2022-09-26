@@ -11,69 +11,70 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.cosh()</code></strong> возвращает гиперболический косинус числа, который может быть выражен через {{jsxref("Math.E", "число e", "", 1)}}:</p>
+Метод **`Math.cosh()`** возвращает гиперболический косинус числа, который может быть выражен через {{jsxref("Math.E", "число e", "", 1)}}:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.cosh(<var>x</var>)</code></pre>
+```
+Math.cosh(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>cosh()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.cosh()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `cosh()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.cosh()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.cosh">Пример: использование метода <code>Math.cosh()</code></h3>
+### Пример: использование метода `Math.cosh()`
 
-<pre class="brush: js">Math.cosh(0);  // 1
+```js
+Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод может эмулироваться при помощи двух вызовов метода {{jsxref("Math.exp()")}}:</p>
+Этот метод может эмулироваться при помощи двух вызовов метода {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>либо при помощи только одного вызова метода {{jsxref("Math.exp()")}}:</p>
+либо при помощи только одного вызова метода {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
   return (y + 1 / y) / 2;
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.acosh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.asinh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.atanh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.sinh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.tanh()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}} {{experimental_inline}}
+- {{jsxref("Math.asinh()")}} {{experimental_inline}}
+- {{jsxref("Math.atanh()")}} {{experimental_inline}}
+- {{jsxref("Math.sinh()")}} {{experimental_inline}}
+- {{jsxref("Math.tanh()")}} {{experimental_inline}}

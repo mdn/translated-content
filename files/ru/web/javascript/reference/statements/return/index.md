@@ -6,72 +6,81 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Statements/return
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Оператор <strong><code>return</code> </strong>завершает выполнение текущей функции и возвращает её значение.</p>
+Оператор **`return` **завершает выполнение текущей функции и возвращает её значение.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-return.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">return [[выражение]]; </pre>
+```
+return [[выражение]];
+```
 
-<dl>
- <dt><code><font face="Consolas, Liberation Mono, Courier, monospace">выражение</font></code></dt>
- <dd>Выражение, значение которого будет возвращено. Если не указано, вместо него возвращается <code>undefined</code>.</dd>
-</dl>
+- `выражение`
+  - : Выражение, значение которого будет возвращено. Если не указано, вместо него возвращается `undefined`.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>При вызове оператора <code>return</code> в функции её выполнение прекращается. Указанное значение возвращается в место вызова функции. Например, приведённая ниже функция возвращает возведённое в квадрат значение своего аргумента, <code>x</code> (где <code>x</code> – это число):</p>
+При вызове оператора `return` в функции её выполнение прекращается. Указанное значение возвращается в место вызова функции. Например, приведённая ниже функция возвращает возведённое в квадрат значение своего аргумента, `x` (где `x` – это число):
 
-<pre class="brush: js">function square(x) {
+```js
+function square(x) {
    return x * x;
 }
 var demo = square(3);
 // значение demo будет равняться 9
-</pre>
+```
 
-<p>Если возвращаемое значение не указано, вместо него возвращается <code>undefined</code>.</p>
+Если возвращаемое значение не указано, вместо него возвращается `undefined`.
 
-<p>Следующие выражения всегда прерывают выполнение функции:</p>
+Следующие выражения всегда прерывают выполнение функции:
 
-<pre class="brush: js">return;
+```js
+return;
 return true;
 return false;
 return x;
 return x + y / 3;
-</pre>
+```
 
-<h3 id="Автоматическая_расстановка_точек_с_запятыми">Автоматическая расстановка точек с запятыми</h3>
+### Автоматическая расстановка точек с запятыми
 
-<p>На выражение <code>return</code> влияет <a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">автоматическая расстановка точек с запятыми (ASI)</a>. Разрыв строки не допускается между ключевым словом <code>return</code> и выражением.</p>
+На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
 
-<pre class="brush: js">return
-a + b;</pre>
+```js
+return
+a + b;
+```
 
-<p class="brush: js">трансформируется ASI в:</p>
+трансформируется ASI в:
 
-<pre class="brush: js">return;
-a + b;</pre>
+```js
+return;
+a + b;
+```
 
-<p class="brush: js">В консоли появится предупреждение "unreachable code after return statement".</p>
+В консоли появится предупреждение "unreachable code after return statement".
 
-<div class="note">Начиная с Gecko 40 {{geckoRelease(40)}}, предупреждение в консоли появляется, если обнаружен недостижимый код после <code>return</code>.</div>
+> **Примечание:** Начиная с Gecko 40 {{geckoRelease(40)}}, предупреждение в консоли появляется, если обнаружен недостижимый код после `return`.
 
-<p>Для того, чтобы избежать данной проблемы (предотвратить ASI), можно использовать скобки:</p>
+Для того, чтобы избежать данной проблемы (предотвратить ASI), можно использовать скобки:
 
-<pre class="brush: js">return (
+```js
+return (
   a + b;
-);</pre>
+);
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Прерывание_функции">Прерывание функции</h3>
+### Прерывание функции
 
-<p><font face="Open Sans, Arial, sans-serif">Функция немедленно останавливается в точке, где вызывается </font><code>return</code>.</p>
+Функция немедленно останавливается в точке, где вызывается `return`.
 
-<pre class="brush: js">function counter() {
+```js
+function counter() {
   for (var count = 1; ; count++) {  // бесконечный цикл
     console.log(count + "A"); // до 5
       if (count === 5) {
@@ -94,30 +103,30 @@ counter();
 // 4A
 // 4B
 // 5A
-</pre>
+```
 
-<h3 id="Возвращение_функции">Возвращение функции</h3>
+### Возвращение функции
 
-<p>Смотрите также статью о <a href="/ru/docs/Web/JavaScript/Closures">замыканиях</a>.</p>
+Смотрите также статью о [замыканиях](/ru/docs/Web/JavaScript/Closures).
 
-<pre class="brush: js">function magic(x) {
+```js
+function magic(x) {
   return function calc(x) { return x * 42 };
 }
 
 var answer = magic();
 answer(1337); // 56154
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Functions" title="En/Core_JavaScript_1.5_Reference/Functions">Функции</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Closures">Замыкания</a></li>
-</ul>
+## Смотрите также
+
+- [Функции](/ru/docs/Web/JavaScript/Reference/Functions "En/Core_JavaScript_1.5_Reference/Functions")
+- [Замыкания](/ru/docs/Web/JavaScript/Closures)

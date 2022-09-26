@@ -10,55 +10,53 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>reverse()</strong></code> на месте обращает порядок следования элементов массива. Первый элемент массива становится последним, а последний — первым.</p>
+Метод **`reverse()`** на месте обращает порядок следования элементов массива. Первый элемент массива становится последним, а последний — первым.
 
-<div>{{EmbedInteractiveExample("pages/js/array-reverse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>array</var>.reverse()</code></pre>
+```
+array.reverse()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Перевёрнутый массив</p>
+Перевёрнутый массив
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>reverse()</code> на месте переставляет элементы массива, на котором он был вызван, изменяет массив и возвращает ссылку на него.</p>
+Метод `reverse()` на месте переставляет элементы массива, на котором он был вызван, изменяет массив и возвращает ссылку на него.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Reversing_the_elements_in_an_array">Пример: обращение порядка элементов в массиве</h3>
+### Пример: обращение порядка элементов в массиве
 
-<p>В следующем примере создаётся массив <code>myArray</code>, содержащий три элемента, а затем массив переворачивается.</p>
+В следующем примере создаётся массив `myArray`, содержащий три элемента, а затем массив переворачивается.
 
-<pre class="brush: js">var myArray = ['один', 'два', 'три'];
+```js
+var myArray = ['один', 'два', 'три'];
 myArray.reverse();
 
 console.log(myArray) // ['три', 'два', 'один']
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
+## Совместимость с браузерами
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+{{Compat}}
 
-<div>
-<p>{{Compat}}</p>
-</div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.join()")}}</li>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
- <li>{{jsxref("TypedArray.prototype.reverse()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Array.prototype.sort()")}}
+- {{jsxref("TypedArray.prototype.reverse()")}}

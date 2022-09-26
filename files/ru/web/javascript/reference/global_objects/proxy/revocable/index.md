@@ -8,39 +8,39 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Proxy.revocable()</strong></code> используется, чтобы создать отменяемый {{jsxref("Proxy")}} объект.</p>
+Метод **`Proxy.revocable()`** используется, чтобы создать отменяемый {{jsxref("Proxy")}} объект.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Proxy.revocable(target, handler);
-</pre>
+```
+Proxy.revocable(target, handler);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<div>{{ Page("/docs/Web/JavaScript/Reference/Global_Objects/Proxy", "Parameters") }}</div>
+{{ Page("/docs/Web/JavaScript/Reference/Global_Objects/Proxy", "Parameters") }}
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Создаётся и возвращается отменяемый <code>Proxy</code> объект.</p>
+Создаётся и возвращается отменяемый `Proxy` объект.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Отменяемый <code>Proxy</code> - объект со следующими двумя свойствами <code>{proxy: proxy, revoke: revoke}</code>.</p>
+Отменяемый `Proxy` - объект со следующими двумя свойствами `{proxy: proxy, revoke: revoke}`.
 
-<dl>
- <dt><code>proxy</code></dt>
- <dd>Объект <code>Proxy</code>, созданный с помощью вызова <code>new Proxy(target, handler)</code>.</dd>
- <dt><code>revoke</code></dt>
- <dd>Функция, не принимающая аргументов, которая сделает недействительным (выключит) <code>proxy</code>.</dd>
-</dl>
+- `proxy`
+  - : Объект `Proxy`, созданный с помощью вызова `new Proxy(target, handler)`.
+- `revoke`
+  - : Функция, не принимающая аргументов, которая сделает недействительным (выключит) `proxy`.
 
-<p>Если вызовется функция <code>revoke()</code>, <code>proxy</code> становится неиспользуемым: Любой <code>proxy</code>-перехватчик событий объекта будет вызывать исключение {{jsxref("TypeError")}}. Как только <code>proxy</code> отменена, она останется отменённой и дальше, и может быть собрана сборщиком мусора. Повторный вызов <code>revoke()</code> не будет иметь никакого эффекта.</p>
+Если вызовется функция `revoke()`, `proxy` становится неиспользуемым: Любой `proxy`-перехватчик событий объекта будет вызывать исключение {{jsxref("TypeError")}}. Как только `proxy` отменена, она останется отменённой и дальше, и может быть собрана сборщиком мусора. Повторный вызов `revoke()` не будет иметь никакого эффекта.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var revocable = Proxy.revocable({}, {
+```js
+var revocable = Proxy.revocable({}, {
   get: function(target, name) {
     return "[[" + name + "]]";
   }
@@ -54,17 +54,16 @@ console.log(proxy.foo); // Вызвано исключение TypeError
 proxy.foo = 1           // TypeError снова
 delete proxy.foo;       // Всё ещё TypeError
 typeof proxy            // "object", typeof не вызывает никаких proxy-перехватчиков событий
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузерами">Совместимость браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Proxy")}}

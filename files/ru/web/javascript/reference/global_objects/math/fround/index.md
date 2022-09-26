@@ -11,57 +11,57 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.fround()</code></strong> возвращает ближайшее число с плавающей запятой <a href="https://ru.wikipedia.org/wiki/Число_одинарной_точности">одинарной точности</a>, представляющее указанное число.</p>
+Метод **`Math.fround()`** возвращает ближайшее число с плавающей запятой [одинарной точности](https://ru.wikipedia.org/wiki/Число_одинарной_точности), представляющее указанное число.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.fround(<var>x</var>)</code></pre>
+```
+Math.fround(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>fround()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.fround()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `fround()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.fround()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.fround">Пример: использование метода <code>Math.fround()</code></h3>
+### Пример: использование метода `Math.fround()`
 
-<pre class="brush: js">Math.fround(0);     // 0
+```js
+Math.fround(0);     // 0
 Math.fround(1);     // 1
 Math.fround(1.337); // 1.3370000123977661
 Math.fround(1.5);   // 1.5
 Math.fround(NaN);   // NaN
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Этот метод может эмулироваться следующим образом, при условии, что среда выполнения поддерживает объект {{jsxref("Float32Array")}}:</p>
+Этот метод может эмулироваться следующим образом, при условии, что среда выполнения поддерживает объект {{jsxref("Float32Array")}}:
 
-<pre class="brush: js">Math.fround = Math.fround || function(x) {
+```js
+Math.fround = Math.fround || function(x) {
   return new Float32Array([x])[0];
 };
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- {{jsxref("Math.round()")}}

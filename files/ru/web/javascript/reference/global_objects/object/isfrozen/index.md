@@ -9,30 +9,31 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>Object.isFrozen()</strong></code> определяет, был ли объект заморожен.</p>
+Метод **`Object.isFrozen()`** определяет, был ли объект заморожен.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.isFrozen(<var>obj</var>)</code></pre>
+```
+Object.isFrozen(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Проверяемый объект.</dd>
-</dl>
+- `obj`
+  - : Проверяемый объект.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Объект является замороженным только в том случае, если он не {{jsxref("Object.isExtensible()", "расширяем", "", 1)}}, все его свойства являются не настраиваемыми и все его свойства данных (то есть такие, которые не являются свойствами доступа с функциями сеттера или геттера) являются не записываемыми.</p>
+Объект является замороженным только в том случае, если он не {{jsxref("Object.isExtensible()", "расширяем", "", 1)}}, все его свойства являются не настраиваемыми и все его свойства данных (то есть такие, которые не являются свойствами доступа с функциями сеттера или геттера) являются не записываемыми.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Новый объект является расширяемым, так что он не заморожен.
+```js
+// Новый объект является расширяемым, так что он не заморожен.
 assert(Object.isFrozen({}) === false);
 
 // Пустой не расширяемый объект по определению заморожен.
@@ -92,33 +93,32 @@ assert(Object.isExtensible(frozen) === false);
 
 // Также, по определению, замороженный объект является запечатанным.
 assert(Object.isSealed(frozen) === true);
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться, как простой замороженный объект и метод просто вернёт <code>true</code>.</p>
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться, как простой замороженный объект и метод просто вернёт `true`.
 
-<pre class="brush: js">&gt; Object.isFrozen(1)
+```js
+> Object.isFrozen(1)
 TypeError: 1 is not an object // код ES5
 
-&gt; Object.isFrozen(1)
+> Object.isFrozen(1)
 true                          // код ES6
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

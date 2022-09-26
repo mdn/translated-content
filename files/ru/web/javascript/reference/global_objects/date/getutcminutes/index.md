@@ -9,59 +9,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>getUTCMinutes()</code></strong> возвращает минуты указанной даты по всемирному координированному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCMinutes()</code></pre>
+Метод **`getUTCMinutes()`** возвращает минуты указанной даты по всемирному координированному времени.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h3 id="Returns">Возвращаемое значение</h3>
-<p>Значение, возвращённое методом <code>getUTCMinutes()</code>, является целым числом от 0 до 59.</p>
+```
+dateObj.getUTCMinutes()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_getUTCMinutes">Пример: использование метода <code>getUTCMinutes()</code></h3>
-<p>В следующем примере переменной <code>minutes</code> присваивается количество минут из текущего времени.</p>
-<pre class="brush: js">var today = new Date();
+Нет.
+
+### Возвращаемое значение
+
+Значение, возвращённое методом `getUTCMinutes()`, является целым числом от 0 до 59.
+
+## Примеры
+
+### Пример: использование метода `getUTCMinutes()`
+
+В следующем примере переменной `minutes` присваивается количество минут из текущего времени.
+
+```js
+var today = new Date();
 var minutes = today.getUTCMinutes();
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.21', 'Date.prototype.getUTCMinutes')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализовано в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.21', 'Date.prototype.getUTCMinutes')}}                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

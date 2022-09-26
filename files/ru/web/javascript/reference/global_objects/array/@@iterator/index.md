@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@iterator]()'
+title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
   - Array
@@ -14,54 +14,56 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Начальное значение свойства <strong><code>@@iterator</code></strong> является тем же самым функциональным объектом, что и начальное значение, возвращаемое методом {{jsxref("Array.prototype.values()", "values()")}}.</p>
+Начальное значение свойства **`@@iterator`** является тем же самым функциональным объектом, что и начальное значение, возвращаемое методом {{jsxref("Array.prototype.values()", "values()")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+```
+arr[Symbol.iterator]()
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Iteration_using_for...of_loop">Пример: итерация посредством цикла <code>for...of</code></h3>
+### Пример: итерация посредством цикла `for...of`
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 // ваш браузер должен поддерживать цикл for..of
 // и переменные с областью видимости let в циклах for
 for (let letter of arr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="Example:_Alternative_iteration">Пример: альтернативный способ итерации</h3>
+### Пример: альтернативный способ итерации
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}

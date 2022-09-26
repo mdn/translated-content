@@ -7,43 +7,41 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>then()</strong></code> возвращает {{jsxref("Promise")}}. Метод может принимать два аргумента: колбэк-функции для случаев выполнения и отклонения промиса.</p>
+Метод **`then()`** возвращает {{jsxref("Promise")}}. Метод может принимать два аргумента: колбэк-функции для случаев выполнения и отклонения промиса.
 
-<div class="note">
-<p> Если один или оба аргумента отсутствуют или их значения не функции, то <code>then</code> пропустит их и не выбросит ошибку. Если для <code>Promise</code>, который переходит в состояние <code>выполнен</code> или <code>отклонён</code> вызван метод <code>then</code>, и у данного метода нет нужного обработчика, то в таком случае <code>then</code> просто возвращает промис с состоянием начального <code>Promise</code>, для которого <code>then</code> был вызван.</p>
-</div>
+> **Примечание:** Если один или оба аргумента отсутствуют или их значения не функции, то `then` пропустит их и не выбросит ошибку. Если для `Promise`, который переходит в состояние `выполнен` или `отклонён` вызван метод `then`, и у данного метода нет нужного обработчика, то в таком случае `then` просто возвращает промис с состоянием начального `Promise`, для которого `then` был вызван.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>p.then(onFulfilled[, onRejected])</var>;
+```
+p.then(onFulfilled[, onRejected]);
 
-p.then(value =&gt; {
+p.then(value => {
   // выполнение
-  }, reason =&gt; {
+  }, reason => {
   // отклонение
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>onFulfilled</code> {{optional_inline}}</dt>
- <dd>{{jsxref("Function")}} вызывается, когда <code>Promise</code> выполнен. Эта функция принимает один аргумент, значение с которым промис был выполнен. Если значение onFulfilled не функция, то оно автоматически заменяется на "Identity" функцию (возвращает полученный аргумент)</dd>
- <dt><code>onRejected</code> {{optional_inline}}</dt>
- <dd>{{jsxref("Function")}} вызывается, когда <code>Promise</code>  отклонён. Эта функция принимает один аргумент, значение с которым промис был отклонён. Если значение onRejected не функция, то оно автоматически заменяется на "Thrower" функцию (выбрасывает полученный аргумент как ошибку)</dd>
-</dl>
+- `onFulfilled` {{optional_inline}}
+  - : {{jsxref("Function")}} вызывается, когда `Promise` выполнен. Эта функция принимает один аргумент, значение с которым промис был выполнен. Если значение onFulfilled не функция, то оно автоматически заменяется на "Identity" функцию (возвращает полученный аргумент)
+- `onRejected` {{optional_inline}}
+  - : {{jsxref("Function")}} вызывается, когда `Promise` отклонён. Эта функция принимает один аргумент, значение с которым промис был отклонён. Если значение onRejected не функция, то оно автоматически заменяется на "Thrower" функцию (выбрасывает полученный аргумент как ошибку)
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Так как и метод <code>then</code>, и метод {{jsxref("Promise.prototype.catch()")}} возвращают <code>Promise</code>, их можно вызвать цепочкой — эта операция называется <em>соединение</em>.</p>
+Так как и метод `then`, и метод {{jsxref("Promise.prototype.catch()")}} возвращают `Promise`, их можно вызвать цепочкой — эта операция называется _соединение_.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_then">Использование метода <code>then</code></h3>
+### Использование метода `then`
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve("Успех!");
   // или
   // reject("Ошибка!");
@@ -54,13 +52,14 @@ p1.then(function(value) {
 }, function(reason) {
   console.log(reason); // Ошибка!
 });
-</pre>
+```
 
-<h3 id="Соединение">Соединение</h3>
+### Соединение
 
-<p>Так как метод <code>then</code> возвращает промис (<code>Promise</code>), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из колбэков onFulfilled или onRejected будут автоматически обёрнуты в промис.</p>
+Так как метод `then` возвращает промис (`Promise`), вы можете объединить несколько вызовов `then` в цепочку. Значения возвращаемые из колбэков onFulfilled или onRejected будут автоматически обёрнуты в промис.
 
-<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
+```js
+var p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -74,14 +73,15 @@ p2.then(function(value) {
 p2.then(function(value) {
   console.log(value); // 1
 });
-</pre>
+```
 
-<p>Вы также можете соединить одну функцию, имеющую подобный с промисами API, с другой функцией.</p>
+Вы также можете соединить одну функцию, имеющую подобный с промисами API, с другой функцией.
 
-<pre class="brush: js">function fetch_current_data() {
+```js
+function fetch_current_data() {
   // API функции fetch() возвращает промис. Эта функция
   // имеет аналогичный API, за исключением значения в случае выполнения
-  return fetch("current-data.json").then((response) =&gt; {
+  return fetch("current-data.json").then((response) => {
     if (response.headers.get("content-type") != "application/json") {
       throw new TypeError();
     }
@@ -91,11 +91,12 @@ p2.then(function(value) {
               // передаётся в fetch_current_data().then()
   });
 }
-</pre>
+```
 
-<p>Если onFulfilled возвращает промис, возвращаемое значение может быть выполнено (resolved) / отклонено (rejected) промисом.</p>
+Если onFulfilled возвращает промис, возвращаемое значение может быть выполнено (resolved) / отклонено (rejected) промисом.
 
-<pre class="brush: js">function resolveLater(resolve, reject) {
+```js
+function resolveLater(resolve, reject) {
   setTimeout(function () {
     resolve(10);
   }, 1000);
@@ -127,19 +128,18 @@ p3.then(function(v) {
   console.log("resolved", v);
 }, function(e) {
   console.log("rejected", e); // "rejected", 20
-});</pre>
+});
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.catch()")}}

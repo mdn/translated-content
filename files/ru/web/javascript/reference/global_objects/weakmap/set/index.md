@@ -3,32 +3,33 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>set()</strong></code> добавляет новый элемент с указанными ключом и значением в объект WeakMap.</p>
+Метод **`set()`** добавляет новый элемент с указанными ключом и значением в объект WeakMap.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>wm</em>.set(key, value);</code></pre>
+```
+wm.set(key, value);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>key</dt>
- <dd>Обязателен. Ключ добавляемого в WeakMap объект элемента.</dd>
- <dt>value</dt>
- <dd>Обязателен. Значение добавляемого в WeakMap объект элемента.</dd>
-</dl>
+- key
+  - : Обязателен. Ключ добавляемого в WeakMap объект элемента.
+- value
+  - : Обязателен. Значение добавляемого в WeakMap объект элемента.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект <code>WeakMap.</code></p>
+Объект `WeakMap.`
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_set">Использование метода <code>set</code></h3>
+### Использование метода `set`
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 var obj = {};
 
 // Добавляет новый элемент в объект WeakMap
@@ -36,26 +37,22 @@ wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Обновляет элемент в объекте WeakMap
 wm.set(obj, "baz");
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li>Prior to Firefox 33 {{geckoRelease("33")}}, <code>WeakMap.prototype.set</code> returned <code>undefined</code> and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well (<a href="https://code.google.com/p/v8/issues/detail?id=3410">issue</a>).</li>
-</ul>
+- Prior to Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.prototype.get()")}}</li>
- <li>{{jsxref("WeakMap.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

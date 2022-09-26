@@ -3,51 +3,28 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.split</strong></code> общеизвестный символ определяет метод, который делит строки в индексах, соответствующих регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.split()")}}.</p>
+**`Symbol.split`** общеизвестный символ определяет метод, который делит строки в индексах, соответствующих регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.split()")}}.
 
-<p>Для подробной информации, смотрите {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} и {{jsxref("String.prototype.split()")}}.</p>
+Для подробной информации, смотрите {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} и {{jsxref("String.prototype.split()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
+## Specifications
 
+| Specification                                                                    | Status                       | Comment             |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                     |
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## Browser compatibility
 
-<h2 id="Specifications">Specifications</h2>
+{{Compat}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## See also
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
-
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}

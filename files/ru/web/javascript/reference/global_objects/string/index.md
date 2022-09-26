@@ -8,186 +8,148 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<p>Объект <strong><code>String</code></strong> используется, чтобы представить и конструировать последовательность символов.</p>
+Объект **`String`** используется, чтобы представить и конструировать последовательность символов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<p>Строковые литералы могут быть следующих форм:</p>
+Строковые литералы могут быть следующих форм:
 
-<pre class="syntaxbox"><code>'строка текста'
+```
+'строка текста'
 "строка текста"
 "中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ்"
-</code></pre>
+```
 
-<p>Кроме регулярных печатных символов можно использовать специальные символы, которые можно закодировать, используя нотацию escape-последовательностей:</p>
+Кроме регулярных печатных символов можно использовать специальные символы, которые можно закодировать, используя нотацию escape-последовательностей:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Код</th>
-   <th scope="col">Вывод</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>\0</code></td>
-   <td>нулевой символ (символ NUL)</td>
-  </tr>
-  <tr>
-   <td><code>\'</code></td>
-   <td>одинарная кавычка</td>
-  </tr>
-  <tr>
-   <td><code>\"</code></td>
-   <td>двойная кавычка</td>
-  </tr>
-  <tr>
-   <td><code>\\</code></td>
-   <td>обратный слеш</td>
-  </tr>
-  <tr>
-   <td><code>\n</code></td>
-   <td>новая строка</td>
-  </tr>
-  <tr>
-   <td><code>\r</code></td>
-   <td>возврат каретки</td>
-  </tr>
-  <tr>
-   <td><code>\v</code></td>
-   <td>вертикальная табуляция</td>
-  </tr>
-  <tr>
-   <td><code>\t</code></td>
-   <td>табуляция</td>
-  </tr>
-  <tr>
-   <td><code>\b</code></td>
-   <td>забой</td>
-  </tr>
-  <tr>
-   <td><code>\f</code></td>
-   <td>подача страницы</td>
-  </tr>
-  <tr>
-   <td><code>\uXXXX</code></td>
-   <td>Юникод-символ</td>
-  </tr>
-  <tr>
-   <td><code>\xXX</code></td>
-   <td>символ в кодировке Latin-1</td>
-  </tr>
- </tbody>
-</table>
+| Код      | Вывод                       |
+| -------- | --------------------------- |
+| `\0`     | нулевой символ (символ NUL) |
+| `\'`     | одинарная кавычка           |
+| `\"`     | двойная кавычка             |
+| `\\`     | обратный слеш               |
+| `\n`     | новая строка                |
+| `\r`     | возврат каретки             |
+| `\v`     | вертикальная табуляция      |
+| `\t`     | табуляция                   |
+| `\b`     | забой                       |
+| `\f`     | подача страницы             |
+| `\uXXXX` | Юникод-символ               |
+| `\xXX`   | символ в кодировке Latin-1  |
 
-<p>Либо можно использовать глобальный объект <code>String</code> напрямую:</p>
+Либо можно использовать глобальный объект `String` напрямую:
 
-<pre class="syntaxbox"><code>String(thing)
+```
+String(thing)
 new String(thing)
-</code></pre>
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>thing</code></dt>
- <dd>Всё, что может быть преобразовано в строку.</dd>
-</dl>
+- `thing`
+  - : Всё, что может быть преобразовано в строку.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью <a href="/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">операций строковой конкатенации + и +=</a>, проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.</p>
+Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью [операций строковой конкатенации + и +=](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B), проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.
 
-<h3 id="Character_access">Доступ к символам</h3>
+### Доступ к символам
 
-<p>Существует два способа добраться до конкретного символа в строке. В первом способе используется метод {{jsxref("String.prototype.charAt()", "charAt()")}}:</p>
+Существует два способа добраться до конкретного символа в строке. В первом способе используется метод {{jsxref("String.prototype.charAt()", "charAt()")}}:
 
-<pre class="brush: js">return 'кот'.charAt(1); // вернёт "о"
-</pre>
+```js
+return 'кот'.charAt(1); // вернёт "о"
+```
 
-<p>Другим способом (введённым в ECMAScript 5) является рассмотрение строки как массивоподобного объекта, в котором символы имеют соответствующие числовые индексы:</p>
+Другим способом (введённым в ECMAScript 5) является рассмотрение строки как массивоподобного объекта, в котором символы имеют соответствующие числовые индексы:
 
-<pre class="brush: js">return 'кот'[1]; // вернёт "о"
-</pre>
+```js
+return 'кот'[1]; // вернёт "о"
+```
 
-<p>При доступе к символам посредством нотации с квадратными скобками, попытка удалить символ, или присвоить значение числовому свойству закончится неудачей, поскольку эти свойства являются незаписываемыми и ненастраиваемыми. Смотрите документацию по методу {{jsxref("Object.defineProperty()")}} для дополнительной информации.</p>
+При доступе к символам посредством нотации с квадратными скобками, попытка удалить символ, или присвоить значение числовому свойству закончится неудачей, поскольку эти свойства являются незаписываемыми и ненастраиваемыми. Смотрите документацию по методу {{jsxref("Object.defineProperty()")}} для дополнительной информации.
 
-<h3 id="Comparing_strings">Сравнение строк</h3>
+### Сравнение строк
 
-<p>Разработчики на C имеют для сравнения строк функцию <code>strcmp()</code>. В JavaScript вы просто используете <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F">операторы меньше и больше</a>:</p>
+Разработчики на C имеют для сравнения строк функцию `strcmp()`. В JavaScript вы просто используете [операторы меньше и больше](/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F):
 
-<pre class="brush: js">var a = 'a';
+```js
+var a = 'a';
 var b = 'b';
-if (a &lt; b) { // true
+if (a < b) { // true
   print(a + ' меньше чем ' + b);
-} else if (a &gt; b) {
+} else if (a > b) {
   print(a + ' больше чем ' + b);
 } else {
   print(a + ' и ' + b + ' равны.');
 }
-</pre>
+```
 
-<p>Подобный результат также может быть достигнут путём использования метода {{jsxref("String.prototype.localeCompare()", "localeCompare()")}}, имеющегося у всех экземпляров <code>String</code>.</p>
+Подобный результат также может быть достигнут путём использования метода {{jsxref("String.prototype.localeCompare()", "localeCompare()")}}, имеющегося у всех экземпляров `String`.
 
-<h3 id="Distinction_between_string_primitives_and_String_objects">Разница между строковыми примитивами и объектами <code>String</code></h3>
+### Разница между строковыми примитивами и объектами `String`
 
-<p>Обратите внимание, что JavaScript различает объекты <code>String</code> и значения строкового примитива (то же самое верно и для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} и {{jsxref("Global_Objects/Number", "Number")}}).</p>
+Обратите внимание, что JavaScript различает объекты `String` и значения строкового примитива (то же самое верно и для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} и {{jsxref("Global_Objects/Number", "Number")}}).
 
-<p>Строковые литералы (обозначаемые двойными или одинарными кавычками) и строки, возвращённые вызовом <code>String</code> в неконструкторном контексте (то есть, без использования ключевого слова {{jsxref("Operators/new", "new")}}) являются строковыми примитивами. JavaScript автоматически преобразует примитивы в объекты <code>String</code>, так что на строковых примитивах возможно использовать методы объекта <code>String</code>. В контекстах, когда на примитивной строке вызывается метод или происходит поиск свойства, JavaScript автоматически оборачивает строковый примитив объектом и вызывает на нём метод или ищет в нём свойство.</p>
+Строковые литералы (обозначаемые двойными или одинарными кавычками) и строки, возвращённые вызовом `String` в неконструкторном контексте (то есть, без использования ключевого слова {{jsxref("Operators/new", "new")}}) являются строковыми примитивами. JavaScript автоматически преобразует примитивы в объекты `String`, так что на строковых примитивах возможно использовать методы объекта `String`. В контекстах, когда на примитивной строке вызывается метод или происходит поиск свойства, JavaScript автоматически оборачивает строковый примитив объектом и вызывает на нём метод или ищет в нём свойство.
 
-<pre class="brush: js">var s_prim = 'foo';
+```js
+var s_prim = 'foo';
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // выведет 'string'
 console.log(typeof s_obj);  // выведет 'object'
-</pre>
+```
 
-<p>Строковые примитивы и объекты <code>String</code> также дают разные результаты при использовании глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. Примитивы, передаваемые в <code>eval()</code>, трактуются как исходный код; объекты же <code>String</code> трактуются так же, как и все остальные объекты, а именно: возвращается сам объект. Например:</p>
+Строковые примитивы и объекты `String` также дают разные результаты при использовании глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. Примитивы, передаваемые в `eval()`, трактуются как исходный код; объекты же `String` трактуются так же, как и все остальные объекты, а именно: возвращается сам объект. Например:
 
-<pre class="brush: js">var s1 = '2 + 2';             // создаёт строковый примитив
+```js
+var s1 = '2 + 2';             // создаёт строковый примитив
 var s2 = new String('2 + 2'); // создаёт объект String
 console.log(eval(s1));        // выведет число 4
 console.log(eval(s2));        // выведет строку '2 + 2'
-</pre>
+```
 
-<p>По этим причинам код может сломаться, если он получает объекты <code>String</code>, а ожидает строковые примитивы, хотя в общем случае вам не нужно беспокоиться о различиях между ними.</p>
+По этим причинам код может сломаться, если он получает объекты `String`, а ожидает строковые примитивы, хотя в общем случае вам не нужно беспокоиться о различиях между ними.
 
-<p>Объект <code>String</code> также всегда может быть преобразован в его примитивный аналог при помощи метода {{jsxref("String.prototype.valueOf()", "valueOf()")}}.</p>
+Объект `String` также всегда может быть преобразован в его примитивный аналог при помощи метода {{jsxref("String.prototype.valueOf()", "valueOf()")}}.
 
-<pre class="brush: js">console.log(eval(s2.valueOf())); // выведет число 4
-</pre>
+```js
+console.log(eval(s2.valueOf())); // выведет число 4
+```
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
+{{jsOverrides("Function", "Properties", "prototype")}}
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{jsxref("String.fromCharCode()")}}</dt>
- <dd>Возвращает строку, созданную из указанной последовательности значений Юникода.</dd>
- <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
- <dd>Возвращает строку, созданную из указанной последовательности кодовых точек Юникода.</dd>
- <dt>{{jsxref("String.raw()")}} {{experimental_inline}}</dt>
- <dd>Возвращает строку, созданную из сырой шаблонной строки.</dd>
-</dl>
+- {{jsxref("String.fromCharCode()")}}
+  - : Возвращает строку, созданную из указанной последовательности значений Юникода.
+- {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
+  - : Возвращает строку, созданную из указанной последовательности кодовых точек Юникода.
+- {{jsxref("String.raw()")}} {{experimental_inline}}
+  - : Возвращает строку, созданную из сырой шаблонной строки.
 
-<div>{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint", "raw")}}</div>
+{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint", "raw")}}
 
-<h2 id="String_generic_methods">Общие методы объекта <code>String</code></h2>
+## Общие методы объекта `String`
 
-<p>Методы экземпляров <code>String</code> также доступны в Firefox как часть JavaScript 1.6 (который не является частью стандарта ECMAScript) на объекте <code>String</code>, что позволяет применять эти методы к любому объекту:</p>
+Методы экземпляров `String` также доступны в Firefox как часть JavaScript 1.6 (который не является частью стандарта ECMAScript) на объекте `String`, что позволяет применять эти методы к любому объекту:
 
-<pre class="brush: js">var num = 15;
+```js
+var num = 15;
 console.log(String.replace(num, /5/, '2'));
-</pre>
+```
 
-<p>{{jsxref("Global_Objects/Array", "Общие методы", "#Array_generic_methods", 1)}} также доступны для объекта {{jsxref("Global_Objects/Array", "Array")}}.</p>
+{{jsxref("Global_Objects/Array", "Общие методы", "#Array_generic_methods", 1)}} также доступны для объекта {{jsxref("Global_Objects/Array", "Array")}}.
 
-<p>Следующая прослойка позволяет использовать их во всех браузерах:</p>
+Следующая прослойка позволяет использовать их во всех браузерах:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Предполагаем, что все требуемые методы экземпляров String уже присутствуют
 // (для них так же можно использовать полифилы, если их нет)
 (function() {
@@ -214,37 +176,34 @@ console.log(String.replace(num, /5/, '2'));
       };
     };
 
-  for (i = 0; i &lt; methodCount; i++) {
+  for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
 }());
-</pre>
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_String_conversion">Пример: преобразование в строку</h3>
+### Пример: преобразование в строку
 
-<p>Объект <code>String</code> можно использовать как «безопасную» альтернативу методу {{jsxref("String.prototype.toString()", "toString()")}}, так как хотя он обычно и вызывает соответствующий метод <code>toString()</code>, он также работает и для значений {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}}. Например:</p>
+Объект `String` можно использовать как «безопасную» альтернативу методу {{jsxref("String.prototype.toString()", "toString()")}}, так как хотя он обычно и вызывает соответствующий метод `toString()`, он также работает и для значений {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}}. Например:
 
-<pre class="brush: js">var outputStrings = [];
-for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
+```js
+var outputStrings = [];
+for (var i = 0, n = inputValues.length; i < n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также
 
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("DOMString")}}</li>
- <li><a href="/en-US/docs/Web/API/DOMString/Binary">Двоичные строки</a></li>
-</ul>
+- {{domxref("DOMString")}}
+- [Двоичные строки](/ru/docs/Web/API/DOMString/Binary)

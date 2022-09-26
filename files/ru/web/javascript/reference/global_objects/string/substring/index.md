@@ -10,45 +10,44 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>substring()</code></strong> возвращает подстроку строки между двумя индексами, или от одного индекса и до конца строки.</p>
+Метод **`substring()`** возвращает подстроку строки между двумя индексами, или от одного индекса и до конца строки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.substring(<var>indexA</var>[, <var>indexB</var>])</code></pre>
+```
+str.substring(indexA[, indexB])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>indexA</code></dt>
- <dd>Целое число от <code>0</code> до длины строки, определяющее смещение в строке первого символа, который будет включён в результирующую подстроку.</dd>
- <dt><code>indexB</code></dt>
- <dd>Необязательный параметр. Целое число от <code>0</code> до длины строки, определяющее смещение в строке первого символа, который <strong>не будет</strong> включён в результирующую подстроку.</dd>
-</dl>
+- `indexA`
+  - : Целое число от `0` до длины строки, определяющее смещение в строке первого символа, который будет включён в результирующую подстроку.
+- `indexB`
+  - : Необязательный параметр. Целое число от `0` до длины строки, определяющее смещение в строке первого символа, который **не будет** включён в результирующую подстроку.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>substring()</code> извлекает символы, начиная с индекса <code>indexA</code> до, но не включая, индекс <code>indexB</code>. В частности:</p>
+Метод `substring()` извлекает символы, начиная с индекса `indexA` до, но не включая, индекс `indexB`. В частности:
 
-<ul>
- <li>Если аргумент <code>indexA</code> равен аргументу <code>indexB</code>, метод <code>substring()</code> вернёт пустую строку.</li>
- <li>Если аргумент <code>indexB</code> опущен, метод <code>substring()</code> извлечёт символы до конца строки.</li>
- <li>Если любой из аргументов меньше, либо равен нулю или равен {{jsxref("Global_Objects/NaN", "NaN")}}, он будет трактоваться как равный 0.</li>
- <li>Если любой из аргументов больше, чем <code>stringName.length</code>, он будет трактоваться как равный <code>stringName.length</code>.</li>
-</ul>
+- Если аргумент `indexA` равен аргументу `indexB`, метод `substring()` вернёт пустую строку.
+- Если аргумент `indexB` опущен, метод `substring()` извлечёт символы до конца строки.
+- Если любой из аргументов меньше, либо равен нулю или равен {{jsxref("Global_Objects/NaN", "NaN")}}, он будет трактоваться как равный 0.
+- Если любой из аргументов больше, чем `stringName.length`, он будет трактоваться как равный `stringName.length`.
 
-<p>Если аргумент <code>indexA</code> будет больше аргумента <code>indexB</code>, то метод <code>substring()</code> сработает так, как если бы аргументы были поменяны местами; например, <code><em>str</em>.substring(1, 0) == <em>str</em>.substring(0, 1)</code>.</p>
+Если аргумент `indexA` будет больше аргумента `indexB`, то метод `substring()` сработает так, как если бы аргументы были поменяны местами; например, `str.substring(1, 0) == str.substring(0, 1)`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_substring">Пример: использование метода <code>substring()</code></h3>
+### Пример: использование метода `substring()`
 
-<p>В следующем примере метод <code>substring()</code> используется для отображения символов из строки <code>'Mozilla'</code>:</p>
+В следующем примере метод `substring()` используется для отображения символов из строки `'Mozilla'`:
 
-<pre class="brush: js">var anyString = 'Mozilla';
+```js
+var anyString = 'Mozilla';
 
 // Отобразит 'Moz'
 console.log(anyString.substring(0, 3));
@@ -64,13 +63,14 @@ console.log(anyString.substring(0, 6));
 // Отобразит 'Mozilla'
 console.log(anyString.substring(0, 7));
 console.log(anyString.substring(0, 10));
-</pre>
+```
 
-<h3 id="Example:_Using_substring_with_length_property">Пример: использование метода <code>substring()</code> вместе со свойством <code>length</code></h3>
+### Пример: использование метода `substring()` вместе со свойством `length`
 
-<p>Следующий пример использует метод <code>substring()</code> и свойство {{jsxref("String.length", "length")}} для извлечения последних символов из строки. Этот метод может оказаться легче для запоминания, особенно если учесть, что вам не нужно знать начальный и конечный индексы, как это было в примере выше.</p>
+Следующий пример использует метод `substring()` и свойство {{jsxref("String.length", "length")}} для извлечения последних символов из строки. Этот метод может оказаться легче для запоминания, особенно если учесть, что вам не нужно знать начальный и конечный индексы, как это было в примере выше.
 
-<pre class="brush: js">// Отобразит 'illa' - последние 4 символа
+```js
+// Отобразит 'illa' - последние 4 символа
 var anyString = 'Mozilla';
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);
@@ -79,15 +79,16 @@ console.log(anyString4);
 var anyString = 'Mozilla';
 var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
-</pre>
+```
 
-<h3 id="Example:_Replacing_a_substring_within_a_string">Пример: замена подстроки в строке</h3>
+### Пример: замена подстроки в строке
 
-<p>Следующий пример демонстрирует замену подстроки в строке. Он заменит как отдельные символы, так и целые подстроки. Вызов функции в конце примера изменит строку <code>'Дивный новый мир'</code> на строку <code>'Дивный новый веб'</code>.</p>
+Следующий пример демонстрирует замену подстроки в строке. Он заменит как отдельные символы, так и целые подстроки. Вызов функции в конце примера изменит строку `'Дивный новый мир'` на строку `'Дивный новый веб'`.
 
-<pre class="brush: js">// Заменяет oldS на newS в строке fullS
+```js
+// Заменяет oldS на newS в строке fullS
 function replaceString(oldS, newS, fullS) {
-  for (var i = 0; i &lt; fullS.length; ++i) {
+  for (var i = 0; i < fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
@@ -96,28 +97,27 @@ function replaceString(oldS, newS, fullS) {
 }
 
 replaceString('мир', 'веб', 'Дивный новый мир');
-</pre>
+```
 
-<p>Обратите внимание, что функция может скатиться в бесконечный цикл, если строка <code>oldS</code> сама является подстрокой для <code>newS</code> — например, если вы попытаетесь заменить слово «мир» на слово «другоймир». Лучше использоваться следующий метод для замены строк:</p>
+Обратите внимание, что функция может скатиться в бесконечный цикл, если строка `oldS` сама является подстрокой для `newS` — например, если вы попытаетесь заменить слово «мир» на слово «другоймир». Лучше использоваться следующий метод для замены строк:
 
-<pre class="brush: js">function replaceString(oldS, newS, fullS) {
+```js
+function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS);
 }
-</pre>
+```
 
-<p>Код выше следует рассматривать всего лишь как пример работы с подстроками. Если вам нужно заменить подстроки, скорее всего вы захотите использовать метод {{jsxref("String.prototype.replace()")}}.</p>
+Код выше следует рассматривать всего лишь как пример работы с подстроками. Если вам нужно заменить подстроки, скорее всего вы захотите использовать метод {{jsxref("String.prototype.replace()")}}.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.substr()")}}</li>
- <li>{{jsxref("String.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("String.prototype.substr()")}}
+- {{jsxref("String.prototype.slice()")}}

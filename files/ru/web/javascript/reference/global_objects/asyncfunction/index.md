@@ -3,66 +3,64 @@ title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Конструктор <code>AsyncFunction</code></strong> создаёт новый объект {{jsxref("Statements/async_function", "async function")}}. В JavaScript любая асинхронная функция фактически является объектом AsyncFunction.</p>
+**Конструктор `AsyncFunction`** создаёт новый объект {{jsxref("Statements/async_function", "async function")}}. В JavaScript любая асинхронная функция фактически является объектом AsyncFunction.
 
-<p>Обратите внимание, что AsyncFunction не является глобальным объектом. Её можно получить, выполнив следующий код.</p>
+Обратите внимание, что AsyncFunction не является глобальным объектом. Её можно получить, выполнив следующий код.
 
-<pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
-</pre>
+```js
+Object.getPrototypeOf(async function(){}).constructor
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
+```
+new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Имена, используемые функцией как формальные имена аргументов. Каждое имя должно быть строкой, которая соответствует действительному идентификатору JavaScript или списку таких строк, разделённых запятой; например, "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>". </dd>
- <dt><code>functionBody</code></dt>
- <dd>Строка, содержащая в себе определение функции в исходном коде JavaScript .</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : Имена, используемые функцией как формальные имена аргументов. Каждое имя должно быть строкой, которая соответствует действительному идентификатору JavaScript или списку таких строк, разделённых запятой; например, "`x`", "`theValue`", или "`a,b`".
+- `functionBody`
+  - : Строка, содержащая в себе определение функции в исходном коде JavaScript .
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Объекты {{jsxref("Statements/async_function", "async function")}}, созданные с помощью AsyncFunction constructor  будут распарсены в момент, когда функция создаётся. Это менее эффективно, чем объявлять асинхронную функцию с помощью {{jsxref("Statements/async_function", "async function expression")}} и вызывать её внутри вашего кода, поскольку такие функции анализируются с остальной частью кода.</p>
+Объекты {{jsxref("Statements/async_function", "async function")}}, созданные с помощью AsyncFunction constructor будут распарсены в момент, когда функция создаётся. Это менее эффективно, чем объявлять асинхронную функцию с помощью {{jsxref("Statements/async_function", "async function expression")}} и вызывать её внутри вашего кода, поскольку такие функции анализируются с остальной частью кода.
 
-<p>Все аргументы, переданные функции, рассматриваются как имена идентификаторов параметров в создаваемой функции в том порядке, в котором они передаются.</p>
+Все аргументы, переданные функции, рассматриваются как имена идентификаторов параметров в создаваемой функции в том порядке, в котором они передаются.
 
-<div class="note">
-<p><strong>Обратите внимание:</strong> объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function. </p>
-</div>
+> **Примечание:** **Обратите внимание:** объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function.
 
-<p>Вызов AsyncFunction constructor как функции (без использования оператора new ) имеет тот же эффект, что и вызов его как конструктора.</p>
+Вызов AsyncFunction constructor как функции (без использования оператора new ) имеет тот же эффект, что и вызов его как конструктора.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd>Свойство length AsyncFunction constructor, значение которого равно 1.</dd>
- <dt>{{jsxref("AsyncFunction.prototype")}}</dt>
- <dd>Позволяет добавлять свойства ко всем объектам async function.</dd>
-</dl>
+- **`AsyncFunction.length`**
+  - : Свойство length AsyncFunction constructor, значение которого равно 1.
+- {{jsxref("AsyncFunction.prototype")}}
+  - : Позволяет добавлять свойства ко всем объектам async function.
 
-<h2 id="AsyncFunction_prototype_object"><code>AsyncFunction</code> prototype object</h2>
+## `AsyncFunction` prototype object
 
-<h3 id="Свойства_2">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Properties')}}</div>
+{{page('/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Properties')}}
 
-<h2 id="Экземпляры_AsyncFunction"><code>Экземпляры AsyncFunction</code></h2>
+## `Экземпляры AsyncFunction`
 
-<p>Экземпляры <code>AsyncFunction</code> наследуют методы и свойства от {{jsxref("AsyncFunction.prototype")}}. Как и для всех конструкторов, вы можете изменить объект-прототип конструктора, чтобы внести изменения во все экземпляры <code>AsyncFunction</code>.</p>
+Экземпляры `AsyncFunction` наследуют методы и свойства от {{jsxref("AsyncFunction.prototype")}}. Как и для всех конструкторов, вы можете изменить объект-прототип конструктора, чтобы внести изменения во все экземпляры `AsyncFunction`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Создание_async_function_с_помощью_AsyncFunction_constructor">Создание async function с помощью <code>AsyncFunction</code> constructor</h3>
+### Создание async function с помощью `AsyncFunction` constructor
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -74,26 +72,24 @@ var a = new AsyncFunction('a',
                           'b',
                           'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
 
-a(10, 20).then(v =&gt; {
+a(10, 20).then(v => {
   console.log(v); // напечатает 30 через 4 секунды
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

@@ -8,96 +8,73 @@ tags:
   - URI
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<p>Метод <strong>encodeURI ()</strong> кодирует универсальный идентификатор ресурса (URI), замещая некоторые символы на одну, две, три или четыре управляющие последовательности, представляющие UTF-8 кодировку символа (четыре управляющие последовательности будут использованы только для символов, состоящих из двух «суррогатных» символов).</p>
+Метод **encodeURI ()** кодирует универсальный идентификатор ресурса (URI), замещая некоторые символы на одну, две, три или четыре управляющие последовательности, представляющие UTF-8 кодировку символа (четыре управляющие последовательности будут использованы только для символов, состоящих из двух «суррогатных» символов).
 
+{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
 
+## Синтаксис
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}</p>
+```
+encodeURI(URI)
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><code>encodeURI(<em>URI</em>)</code></pre>
+- `URI`
+  - : Полный {{Glossary("URI")}}.
 
-<h3 id="Parameters">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>URI</code></dt>
- <dd>Полный {{Glossary("URI")}}.</dd>
-</dl>
+Новая строка, представляющая собой строку-параметр, закодированную в виде универсального идентификатора ресурса (URI).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Описание
 
-<p>Новая строка, представляющая собой строку-параметр, закодированную в виде универсального идентификатора ресурса (URI).</p>
+Предполагается, что URI является полным URI, поэтому метод не кодирует зарезервированные символы, имеющие особое значение в URI.
 
-<h2 id="Description">Описание</h2>
+encodeURI заменяет все символы, **кроме** следующих с соответствующими UTF-8 управляющими последовательностями:
 
-<p>Предполагается, что URI является полным URI, поэтому метод не кодирует зарезервированные символы, имеющие особое значение в URI.</p>
+| Тип                       | Включения                                                              |
+| ------------------------- | ---------------------------------------------------------------------- |
+| Зарезервированные символы | `;` `,` `/` `?` `:` `@` `&` `=` `+` `$`                                |
+| Неэкранируемые символы    | латинские буквы, десятичные цифры, `-` `_` `.` `!` `~` `*` `'` `(` `)` |
+| Score                     | `#`                                                                    |
 
-<p>encodeURI заменяет все символы, <strong>кроме</strong> следующих с соответствующими UTF-8 управляющими последовательностями:</p>
+Заметим, что `encodeURI` сам по себе не может сформировать правильные HTTP GET и POST запросы, такие как XMLHTTPRequests, потому, что "&", "+", и "=" не закодированы, которые воспринимаются как специальные символы в GET и POST запросах. {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, однако, кодирует эти символы
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Тип</td>
-   <td class="header">Включения</td>
-  </tr>
-  <tr>
-   <td>Зарезервированные символы</td>
-   <td><code>;</code> <code>,</code> <code>/</code> <code>?</code> <code>:</code> <code>@</code> <code>&amp;</code> <code>=</code> <code>+</code> <code>$</code></td>
-  </tr>
-  <tr>
-   <td>Неэкранируемые символы</td>
-   <td>латинские буквы, десятичные цифры, <code>-</code> <code>_</code> <code>.</code> <code>!</code> <code>~</code> <code>*</code> <code>'</code> <code>(</code> <code>)</code></td>
-  </tr>
-  <tr>
-   <td>Score</td>
-   <td><code>#</code></td>
-  </tr>
- </tbody>
-</table>
+Замечание: {{jsxref("Global_Objects/URIError", "URIError")}} будет брошена, если попытаться закодировать суррогат, который не является частью высоко-низкой пары, например:
 
-<p>Заметим, что <code>encodeURI</code> сам по себе не может сформировать правильные HTTP GET и POST запросы, такие как XMLHTTPRequests, потому, что "&amp;", "+", и "=" не закодированы, которые воспринимаются как специальные символы в GET и POST запросах. {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, однако, кодирует эти символы</p>
-
-<p>Замечание: {{jsxref("Global_Objects/URIError", "URIError")}} будет брошена, если попытаться закодировать суррогат, который не является частью высоко-низкой пары, например:</p>
-
-<pre class="brush: js"><code>// низко-высокая пара - нормально
+```js
+// низко-высокая пара - нормально
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // один высокий суррогат бросит "URIError: malformed URI sequence"
 console.log(encodeURIComponent('\uD800'));
 
 // один низкий суррогат бросит "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uDFFF'));</code></pre>
+console.log(encodeURIComponent('\uDFFF'));
+```
 
-<p>Также заметим, что следуя наиболее свежей <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:</p>
+Также заметим, что следуя наиболее свежей [RFC3986](http://tools.ietf.org/html/rfc3986) для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:
 
-<pre class="brush: js">function fixedEncodeURI (str) {
+```js
+function fixedEncodeURI (str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
-}</pre>
+}
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также
 
-
-
-
-<h2 id="See_Also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("encodeURIComponent", "encodeURIComponent()")}}</li>
- <li>{{jsxref("decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>Base62x</li>
-</ul>
+- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- Base62x

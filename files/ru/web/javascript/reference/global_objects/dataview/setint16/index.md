@@ -9,58 +9,52 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}Метод **`setInt16()`** содержит 16-битное целое (short) значение в байте, смещённым по указанному числу от начала {{jsxref("DataView")}}.{{EmbedInteractiveExample("pages/js/dataview-setint16.html")}}
 
-<div>Метод <strong><code>setInt16()</code></strong> содержит 16-битное целое (short) значение в байте, смещённым по указанному числу от начала {{jsxref("DataView")}}.</div>
+## Синтаксис
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setint16.html")}}</div>
+```
+dataview.setInt16(byteOffset, value [, littleEndian])
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><var>dataview</var>.setInt16(byteOffset, value [, littleEndian])</pre>
+- byteOffset
+  - : Смещение в байтах от старта до этого значения, где будут храниться данные.
+- value
+  - : Устанавливаемое значение.
+- littleEndian
+  - : {{optional_inline}} Указывает, сохранять ли 16-bit целое в {{Glossary("Endianness", "little- or big-endian")}} формате. Если значение false или undefined, записывает значение big-endian.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>byteOffset</dt>
- <dd>Смещение в байтах от старта до этого значения, где будут храниться данные.</dd>
- <dt>value</dt>
- <dd>Устанавливаемое значение.</dd>
- <dt>littleEndian</dt>
- <dd>{{optional_inline}} Указывает, сохранять ли 16-bit целое в {{Glossary("Endianness", "little- or big-endian")}} формате. Если значение false или undefined, записывает значение big-endian.</dd>
-</dl>
+{{jsxref("undefined")}}.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемые ошибки
 
-<p>{{jsxref("undefined")}}.</p>
+- {{jsxref("RangeError")}}
+  - : Выдана, если `byteOffset` установлен так, что целое бы хранилось после конца.
 
-<h3 id="Возвращаемые_ошибки">Возвращаемые ошибки</h3>
+## Примеры
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Выдана, если <code>byteOffset</code> установлен так, что целое бы хранилось после конца.</dd>
-</dl>
+### Использование метода `setInt16`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_метода_setInt16">Использование метода <code>setInt16</code></h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setInt16(1, 3);
 dataview.getInt16(1); // 3
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также </h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

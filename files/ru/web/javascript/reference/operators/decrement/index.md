@@ -6,75 +6,65 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор декремента (<code>--</code>) уменьшает (вычитает единицу) свой операнд и возвращает значение.</p>
+Оператор декремента (`--`) уменьшает (вычитает единицу) свой операнд и возвращает значение.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
 
+## Синтаксис
 
+```
+Operator: x-- or --x
+```
 
+## Описание
 
+Если используется постфикс, с оператором после операнда (например, x--), оператор декремента уменьшает и возвращает значение перед уменьшением.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Если используется префикс, с оператором перед операндом (например, --x), оператор декремента уменьшает и возвращает значение после уменьшения.
 
-<pre class="syntaxbox"><strong>Operator:</strong> <var>x</var>-- or --<var>x</var>
-</pre>
+## Примеры
 
-<h2 id="Описание">Описание</h2>
+### Постфиксный декремент
 
-<p>Если используется постфикс, с оператором после операнда (например, x--), оператор декремента уменьшает и возвращает значение перед уменьшением.</p>
-
-<p>Если используется префикс, с оператором перед операндом (например, --x), оператор декремента уменьшает и возвращает значение после уменьшения.</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Постфиксный_декремент">Постфиксный декремент</h3>
-
-<pre class="brush: js">let x = 3;
+```js
+let x = 3;
 y = x--;
 
 // y = 3
 // x = 2
-</pre>
+```
 
-<h3 id="Префиксный_декремент">Префиксный декремент</h3>
+### Префиксный декремент
 
-<pre class="brush: js">let a = 2;
+```js
+let a = 2;
 b = --a;
 
 // a = 1
 // b = 1
-</pre>
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<p>Спецификация</p>
+Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}}</td>
-  </tr>
- </tbody>
-</table>
+| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
+| ------------------------------------------------------------------------------------------------------------ |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Addition operator](/ru/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/ru/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/ru/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/ru/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/ru/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/ru/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/ru/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Unary negation operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_plus)

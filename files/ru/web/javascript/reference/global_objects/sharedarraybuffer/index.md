@@ -1,139 +1,79 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 tags:
   - Класс
   - JavaScript
   - Разделяемая память
   - SharedArrayBuffer
   - TypedArrays
+translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Объект <strong><code>SharedArrayBuffer</code></strong> подобен ArrayBuffer, то есть это буфер фиксированной длины, использующийся для хранения любых бинарных данных. Главное отличие <code>SharedArrayBuffer</code> от <code>ArrayBuffer</code> заключается в том, что он используется для создания разделяемой области памяти. В отличие от <code>ArrayBuffer</code> <code>SharedArrayBuffer</code> не может быть откреплён от соответствующей ему области памяти.</p>
+Объект **`SharedArrayBuffer`** подобен ArrayBuffer, то есть это буфер фиксированной длины, использующийся для хранения любых бинарных данных. Главное отличие `SharedArrayBuffer` от `ArrayBuffer` заключается в том, что он используется для создания разделяемой области памяти. В отличие от `ArrayBuffer` `SharedArrayBuffer` не может быть откреплён от соответствующей ему области памяти.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<h3 id="Выделение_и_совместное_использование_памяти">Выделение и совместное использование памяти</h3>
+### Выделение и совместное использование памяти
 
-<p>Для совместного использования памяти с помощью объекта {{jsxref("SharedArrayBuffer")}} между одним агентом в кластере и другим (агентом может быть как основная программа страницы сайта, так и один из её веб-воркеров) используются <code><a href="/ru/docs/Web/API/Worker/postMessage">postMessage</a></code> и <a href="/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">алгоритм структурированного клонирования</a>.</p>
+Для совместного использования памяти с помощью объекта {{jsxref("SharedArrayBuffer")}} между одним агентом в кластере и другим (агентом может быть как основная программа страницы сайта, так и один из её веб-воркеров) используются [`postMessage`](/ru/docs/Web/API/Worker/postMessage) и [алгоритм структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-<p>Алгоритм структурированного клонирования принимает <code>SharedArrayBuffers</code> и <code>TypedArrays</code>, отображённый в <code>SharedArrayBuffers</code>. В обоих случаях объект <code>SharedArrayBuffer</code> передаётся получателю, что приводит к появлению нового приватного объекта SharedArrayBuffer внутри агента-получателя (так же как для {{jsxref("ArrayBuffer")}}). Оба объекта <code>SharedArrayBuffer</code> ссылаются на один и тот же блок общих данных, и побочный эффект, изменяющий блок данных в одном из агентов, в итоге проявится в другом агенте.</p>
+Алгоритм структурированного клонирования принимает `SharedArrayBuffers` и `TypedArrays`, отображённый в `SharedArrayBuffers`. В обоих случаях объект `SharedArrayBuffer` передаётся получателю, что приводит к появлению нового приватного объекта SharedArrayBuffer внутри агента-получателя (так же как для {{jsxref("ArrayBuffer")}}). Оба объекта `SharedArrayBuffer` ссылаются на один и тот же блок общих данных, и побочный эффект, изменяющий блок данных в одном из агентов, в итоге проявится в другом агенте.
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
-</pre>
+```
 
-<h3 id="Обновление_и_синхронизация_разделяемой_памяти_с_помощью_атомарных_операций">Обновление и синхронизация разделяемой памяти с помощью атомарных операций</h3>
+### Обновление и синхронизация разделяемой памяти с помощью атомарных операций
 
-<p>Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
+Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .
 
-<h3 id="API_принимающие_объекты_SharedArrayBuffer">API, принимающие объекты <code>SharedArrayBuffer</code></h3>
+### API, принимающие объекты `SharedArrayBuffer`
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/bufferData" title="Метод WebGLRenderingContext.bufferData() WebGL API инициализирует и создает хранилище данных буферного объекта."><code>WebGLRenderingContext.bufferData()</code></a></li>
- <li><a href="/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData" title="Метод WebGLRenderingContext.bufferSubData() WebGL API обновляет подмножество хранилища данных буферного объекта."><code>WebGLRenderingContext.bufferSubData()</code></a></li>
- <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData" title="Метод WebGL2RenderingContext.getBufferSubData() WebGL 2 API считывает данные из привязанной точки буфера и записывает их в ArrayBuffer или SharedArrayBuffer."><code>WebGL2RenderingContext.getBufferSubData()</code></a></li>
-</ul>
+- [`WebGLRenderingContext.bufferData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferData "Метод WebGLRenderingContext.bufferData() WebGL API инициализирует и создает хранилище данных буферного объекта.")
+- [`WebGLRenderingContext.bufferSubData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferSubData "Метод WebGLRenderingContext.bufferSubData() WebGL API обновляет подмножество хранилища данных буферного объекта.")
+- [`WebGL2RenderingContext.getBufferSubData()`](/ru/docs/Web/API/WebGL2RenderingContext/getBufferSubData "Метод WebGL2RenderingContext.getBufferSubData() WebGL 2 API считывает данные из привязанной точки буфера и записывает их в ArrayBuffer или SharedArrayBuffer.")
 
-<h3 id="Требования_безопасности">Требования безопасности</h3>
+### Требования безопасности
 
-<p>Разделяемая память и таймеры высокого разрешения были <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">отключены в начале 2018 года</a> из-за атаки <a href="https://ru.wikipedia.org/wiki/Spectre_(%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C)">Spectre</a>. В 2020 году был стандартизирован новый, безопасный подход, чтобы включить разделяемую память обратно. При следовании следующим мерам безопасности <code><a href="/ru/docs/Web/API/Window/postMessage">postMessage()</a> не будет выкидывать исключение для <code>SharedArrayBuffer</code>, и разделяемая память будет доступна в разных потоках.</p>
+Разделяемая память и таймеры высокого разрешения были [отключены в начале 2018 года](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) из-за атаки [Spectre](<https://ru.wikipedia.org/wiki/Spectre_(%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C)>). В 2020 году был стандартизирован новый, безопасный подход, чтобы включить разделяемую память обратно. При следовании следующим мерам безопасности `postMessage() не будет выкидывать исключение для SharedArrayBuffer, и разделяемая память будет доступна в разных потоках.`
 
-<p>Основное требование — ваш документ должен находиться в <a href="/en-US/docs/Web/Security/Secure_Contexts">безопасном контексте</a></p>
+`Основное требование — ваш документ должен находиться в безопасном контексте
 
-<p>Для документов верхнего уровня нужно устновить два заголовка, чтобы изолировать ваш сайт от других источников (cross-origin):</p>
+Для документов верхнего уровня нужно устновить два заголовка, чтобы изолировать ваш сайт от других источников (cross-origin):
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> со значением <code>same-origin</code> (защищает ваш источник от атаки)</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> со значением <code>require-corp</code> (защищает жертв от вашего источника)</li>
-</ul>
-
-<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Opener-Policy со значением same-origin (защищает ваш источник от атаки)Cross-Origin-Embedder-Policy со значением require-corp (защищает жертв от вашего источника)Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
-</pre>
 
-<p>Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code>, доступное для контекстов окна и воркера:</p>
+Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство crossOriginIsolated, доступное для контекстов окна и воркера:
 
-<pre class="brush: js">if (crossOriginIsolated) {
-  // Начни работу с SharedArrayBuffer
+if (crossOriginIsolated) {
+// Начни работу с SharedArrayBuffer
 } else {
-  // Сделай что-то другое
-}</pre>
+// Сделай что-то другое
+}
 
-<p>Ознакомьтесь с <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes">планируемыми изменениями разделяемой памяти</a>, которые начинают внедряться в браузерах (например, в Firefox 79).</p>
+Ознакомьтесь с планируемыми изменениями разделяемой памяти, которые начинают внедряться в браузерах (например, в Firefox 79).
 
-<h3 id="Всегда_используйте_оператор_new_для_создания_SharedArrayBuffer">Всегда используйте оператор new для создания SharedArrayBuffer</h3>
+Всегда используйте оператор new для создания SharedArrayBuffer
 
-<p>Конструкторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code> вызовет ошибку {{jsxref("TypeError")}}.</p>
+Конструкторы SharedArrayBuffer необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора SharedArrayBuffer как функции без указания new вызовет ошибку {{jsxref("TypeError")}}.
 
-<pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
+var sab = SharedArrayBuffer(1024);
 // TypeError: вызов встроенного конструктора SharedArrayBuffer
-// без new запрещено</pre>
-
-<pre class="brush: js example-good">var sab = new SharedArrayBuffer(1024);</pre>
-
-<h2 id="Конструктор">Конструктор</h2>
-
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer"><code>SharedArrayBuffer()</code></a></dt>
- <dd>Создаёт новый объект <code>SharedArrayBuffer</code>.</dd>
-</dl>
-
-<h3 id="Свойства">Свойства</h3>
-
-<dl>
- <dt>{{jsxref("SharedArrayBuffer.prototype.byteLength")}}</dt>
- <dd>Размер буферного массива в байтах. Задаётся при создании массива и не может быть изменён. <strong>Только для чтения.</strong></dd>
-</dl>
-
-<h2 id="Методы">Методы</h2>
-
-<dl>
- <dt>{{jsxref("SharedArrayBuffer.slice", "SharedArrayBuffer.prototype.slice(begin, end)")}}</dt>
- <dd>Возвращает новый <code>SharedArrayBuffer</code>, чьё содержимое — копия байтов изначального <code>SharedArrayBuffer</code> с <code>begin</code> (начала) включительно до <code>end</code> (конца), но не включая его. Если параметры <code>begin</code> или <code>end</code> отрицательны, метод обращается к индексу массива, начиная с конца, а не с начала.</dd>
-</dl>
-
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Создание_нового_SharedArrayBuffer">Создание нового SharedArrayBuffer</h3>
-
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);</pre>
-
-<h3 id="Нарезание_SharedArrayBuffer">Нарезание SharedArrayBuffer</h3>
-
-<pre class="brush: js">sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }</pre>
-
-<h3 id="Использование_в_буфере_WebGL">Использование в буфере WebGL</h3>
-
-<pre class="brush: js">const canvas = document.querySelector('canvas');
+// без new запрещеноvar sab = new SharedArrayBuffer(1024);КонструкторSharedArrayBuffer()Создаёт новый объект SharedArrayBuffer.Свойства{{jsxref("SharedArrayBuffer.prototype.byteLength")}}Размер буферного массива в байтах. Задаётся при создании массива и не может быть изменён. Только для чтения.Методы{{jsxref("SharedArrayBuffer.slice", "SharedArrayBuffer.prototype.slice(begin, end)")}}Возвращает новый SharedArrayBuffer, чьё содержимое — копия байтов изначального SharedArrayBuffer с begin (начала) включительно до end (конца), но не включая его. Если параметры begin или end отрицательны, метод обращается к индексу массива, начиная с конца, а не с начала.ПримерыСоздание нового SharedArrayBuffervar sab = new SharedArrayBuffer(1024);Нарезание SharedArrayBuffersab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
+sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }Использование в буфере WebGLconst canvas = document.querySelector('canvas');
 const gl = canvas.getContext('webgl');
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);</pre>
+gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);Спецификации{{Specifications}}Поддержка браузерами
 
-<h2 id="Спецификации">Спецификации</h2>
+{{Compat}}
 
-{{Specifications}}
+Смотрите также{{jsxref("Atomics")}}{{jsxref("ArrayBuffer")}}Типизированные массивы JavaScriptВеб-воркерыparlib-simple — простая библиотека, предоставляющая синхронизацию и абстракции для распределённых работ.Разделяемая память — краткая инструкция
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Typed_arrays">Типизированные массивы JavaScript</a></li>
- <li><a href="/ru/docs/Web/API/Web_Workers_API">Веб-воркеры</a></li>
- <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple</a> — простая библиотека, предоставляющая синхронизацию и абстракции для распределённых работ.</li>
- <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Разделяемая память — краткая инструкция</a></li>
- <li>
-  <p><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">Немного о новых примитивах JavaScript для параллелизации работ – Mozilla Hacks</a></p>
- </li>
-</ul>
+Немного о новых примитивах JavaScript для параллелизации работ – Mozilla Hacks`

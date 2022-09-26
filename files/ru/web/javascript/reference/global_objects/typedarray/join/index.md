@@ -8,58 +8,58 @@ tags:
   - Массив
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>join()</strong></code> объединяет все элементы массива в строку. Метод работает по тому же алгоритму, что и  {{jsxref("Array.prototype.join()")}}<em>.</em> <em>TypedArray</em> это один из типизированных массивов: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">типы массивов</a>.</p>
+Метод **`join()`** объединяет все элементы массива в строку. Метод работает по тому же алгоритму, что и {{jsxref("Array.prototype.join()")}}_._ _TypedArray_ это один из типизированных массивов: [типы массивов](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>typedarray</var>.join(<code>[<var>separator</var> = ',']</code>);</code></pre>
+```
+typedarray.join([separator = ',']);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>разделитель</code></dt>
- <dd>Необязательный параметр. Определяет строку, разделяющую элементы массива. Разделитель приводится к строке в случае необходимости. Если он опущен, элементы массива разделяются запятой (",").</dd>
-</dl>
+- `разделитель`
+  - : Необязательный параметр. Определяет строку, разделяющую элементы массива. Разделитель приводится к строке в случае необходимости. Если он опущен, элементы массива разделяются запятой (",").
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Строка, соединяющая все элементы массива.</p>
+Строка, соединяющая все элементы массива.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
+```js
+var uint8 = new Uint8Array([1,2,3]);
 uint8.join();      // '1,2,3'
 uint8.join(' / '); // '1 / 2 / 3'
 uint8.join('');    // '123'
-</pre>
+```
 
-<h2 id="Glossary('Polifill'_'Полифил')">{{Glossary('Polifill', 'Полифил')}}</h2>
+## {{Glossary('Polifill', 'Полифил')}}
 
-<p>Поскольку теперь нет глобального объекта с именем <em>TypedArray</em>, то полифилинг должен быть выполнен "по требованию".</p>
+Поскольку теперь нет глобального объекта с именем _TypedArray_, то полифилинг должен быть выполнен "по требованию".
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
   Object.defineProperty(Uint8Array.prototype, 'join', {
     value: Array.prototype.join
   });
 }
-</pre>
+```
 
-<p>Если вам нужна поддержка устаревшего JavaScript-движка, который не поддерживает свойство <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, то лучше не создавать полифилы новых методов <code>Array.prototype</code>, так как вы не сможете сделать их неперечислимыми.</p>
+Если вам нужна поддержка устаревшего JavaScript-движка, который не поддерживает свойство [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), то лучше не создавать полифилы новых методов `Array.prototype`, так как вы не сможете сделать их неперечислимыми.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("Array.prototype.join()")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}
+- {{jsxref("Array.prototype.join()")}}

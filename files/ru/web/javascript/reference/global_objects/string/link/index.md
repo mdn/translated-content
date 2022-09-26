@@ -10,56 +10,56 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
-<div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>link()</code></strong> создаёт HTML-элемент {{HTMLElement("a")}}, заставляющий строку отображаться в виде ссылки на другой URL.</p>
+Метод **`link()`** создаёт HTML-элемент {{HTMLElement("a")}}, заставляющий строку отображаться в виде ссылки на другой URL.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.link(<var>url</var>)</code></pre>
+```
+str.link(url)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>url</code></dt>
- <dd>Любая строка, определяющая атрибут <code>href</code> тега <code>&lt;a&gt;</code>; она должна содержать допустимый URL (относительный или абсолютный), символы амперсанда <code>&amp;</code> должны быть закодированы в ней как <code>&amp;amp;</code>, а символы кавычки <code>"</code> — как <code>&amp;quot;</code>.</dd>
-</dl>
+- `url`
+  - : Любая строка, определяющая атрибут `href` тега `<a>`; она должна содержать допустимый URL (относительный или абсолютный), символы амперсанда `&` должны быть закодированы в ней как `&amp;`, а символы кавычки `"` — как `&quot;`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>link()</code> используется для создания кусочка HTML со ссылкой в гипертексте. Возвращённая строка затем может быть добавлена в документ при помощи метода {{domxref("document.write()")}} или свойства {{domxref("element.innerHTML")}}</p>
+Метод `link()` используется для создания кусочка HTML со ссылкой в гипертексте. Возвращённая строка затем может быть добавлена в документ при помощи метода {{domxref("document.write()")}} или свойства {{domxref("element.innerHTML")}}
 
-<p>Ссылки, созданные методом <code>link()</code>, становятся элементами в массиве {{domxref("document.links")}}.</p>
+Ссылки, созданные методом `link()`, становятся элементами в массиве {{domxref("document.links")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_link">Пример: использование метода <code>link()</code></h3>
+### Пример: использование метода `link()`
 
-<p>В следующем примере слово «MDN» отображается в виде гипертекстовой ссылки, ведущей на сайт Сети разработчиков Mozilla.</p>
+В следующем примере слово «MDN» отображается в виде гипертекстовой ссылки, ведущей на сайт Сети разработчиков Mozilla.
 
-<pre class="brush: js">var hotText = 'MDN';
+```js
+var hotText = 'MDN';
 var URL = 'https://developer.mozilla.org/';
 
 document.write('Нажмите для возврата на ' + hotText.link(URL));
-</pre>
+```
 
-<p>Этот пример генерирует такой же вывод, как и следующий HTML:</p>
+Этот пример генерирует такой же вывод, как и следующий HTML:
 
-<pre class="brush: html">Нажмите для возврата на &lt;a href="https://developer.mozilla.org/"&gt;MDN&lt;/a&gt;
-</pre>
+```html
+Нажмите для возврата на <a href="https://developer.mozilla.org/">MDN</a>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.anchor()")}}</li>
-</ul>
+- {{jsxref("String.prototype.anchor()")}}

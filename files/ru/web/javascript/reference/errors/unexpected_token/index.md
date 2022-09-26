@@ -7,68 +7,74 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: expected expression, got "x"
+```
+SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"
 SyntaxError: expected rest argument name, got "x"
 SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=&gt;' after argument list, got "x"
-</pre>
+SyntaxError: expected '=>' after argument list, got "x"
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Вместо определённой конструкции языка было использовано что-то другое. Возможно, просто опечатка.</p>
+Вместо определённой конструкции языка было использовано что-то другое. Возможно, просто опечатка.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Ожидаемое_выражение">Ожидаемое выражение</h3>
+### Ожидаемое выражение
 
-<p>Недопустимыми являются, к примеру, запятые после элементов цепочки выражений.</p>
+Недопустимыми являются, к примеру, запятые после элементов цепочки выражений.
 
-<pre class="brush: js example-bad">for (let i = 0; i &lt; 5,; ++i) {
+```js example-bad
+for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
 // SyntaxError: expected expression, got ';'
-</pre>
+```
 
-<p>Правильным вариантом будет убрать запятую или добавить ещё одно выражение:</p>
+Правильным вариантом будет убрать запятую или добавить ещё одно выражение:
 
-<pre class="brush: js example-good">for (let i = 0; i &lt; 5; ++i) {
+```js example-good
+for (let i = 0; i < 5; ++i) {
   console.log(i);
 }
-</pre>
+```
 
-<h3 id="Недостаточно_скобок">Недостаточно скобок</h3>
+### Недостаточно скобок
 
-<p>Иногда можно потерять скобки при использовании <code>if</code>:</p>
+Иногда можно потерять скобки при использовании `if`:
 
-<pre class="brush: js example-bad">function round(n, upperBound, lowerBound){
-  if(n &gt; upperBound) || (n &lt; lowerBound){
+```js example-bad
+function round(n, upperBound, lowerBound){
+  if(n > upperBound) || (n < lowerBound){
     throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
-} // SyntaxError: expected expression, got '||'</pre>
+} // SyntaxError: expected expression, got '||'
+```
 
-<p>На первый взгляд кажется, что скобки расставлены правильно, но обратите внимание, что <code>||</code> находится не в скобках. Необходимо заключить <code>||</code> в скобки:</p>
+На первый взгляд кажется, что скобки расставлены правильно, но обратите внимание, что `||` находится не в скобках. Необходимо заключить `||` в скобки:
 
-<pre class="brush: js example-good">function round(n, upperBound, lowerBound){
-  if((n &gt; upperBound) || (n &lt; lowerBound)){
+```js example-good
+function round(n, upperBound, lowerBound){
+  if((n > upperBound) || (n < lowerBound)){
     throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
 }
-</pre>
+```

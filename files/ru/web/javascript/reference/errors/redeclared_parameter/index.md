@@ -7,55 +7,54 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: redeclaration of formal parameter "x" (Firefox)
+```
+SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Identifier "x" has already been declared (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Одно и то же имя переменной сначала использовано в качестве параметра, а потом объявлено ещё раз в теле функции с помощью оператора присваивания <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code>. В JavaScript не допустимо переопределение переменной в рамках области видимости функции или блока при помощи <code>let</code>.</p>
+Одно и то же имя переменной сначала использовано в качестве параметра, а потом объявлено ещё раз в теле функции с помощью оператора присваивания [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let). В JavaScript не допустимо переопределение переменной в рамках области видимости функции или блока при помощи `let`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В данном случае переменная "arg" переопределяет аргумент:</p>
+В данном случае переменная "arg" переопределяет аргумент:
 
-<pre class="brush: js example-bad">function f(arg) {
+```js example-bad
+function f(arg) {
   let arg = 'foo';
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
-</pre>
+```
 
-<p>Если вы хотите изменить значение переменной "arg" в теле функции, это можно сделать, но для этого не требуется объявлять эту же переменную ещё раз. Иначе говоря, ключевое слово <code>let</code> можно опустить. Если же вы хотите создать новую переменную, необходимо её переименовать, поскольку в противном случае она вступает в конфликт с уже существующим параметром функции.</p>
+Если вы хотите изменить значение переменной "arg" в теле функции, это можно сделать, но для этого не требуется объявлять эту же переменную ещё раз. Иначе говоря, ключевое слово `let` можно опустить. Если же вы хотите создать новую переменную, необходимо её переименовать, поскольку в противном случае она вступает в конфликт с уже существующим параметром функции.
 
-<pre class="brush: js example-good">function f(arg) {
+```js example-good
+function f(arg) {
   arg = 'foo';
 }
 
 function f(arg) {
   let bar = 'foo';
 }
-</pre>
+```
 
-<h2 id="Примечания_о_совместимости">Примечания о совместимости</h2>
+## Примечания о совместимости
 
-<ul>
- <li>В версиях Firefox до Firefox 49 {{geckoRelease(49)}}, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).</li>
-</ul>
+- В версиях Firefox до Firefox 49 {{geckoRelease(49)}}, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code></li>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code></li>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/var">var</a></code></li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления">Объявления переменных</a> в <a href="/ru/docs/Web/JavaScript/Guide">Руководстве по JavaScript</a></li>
-</ul>
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
+- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)

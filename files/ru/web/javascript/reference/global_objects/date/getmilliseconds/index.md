@@ -9,47 +9,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getMilliseconds()</code></strong> возвращает миллисекунды указанной даты по местному времени.</p>
+Метод **`getMilliseconds()`** возвращает миллисекунды указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getMilliseconds()</code></pre>
+```
+dateObj.getMilliseconds()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getMilliseconds()</code>, является целым числом от 0 до 999.</p>
+Значение, возвращённое методом `getMilliseconds()`, является целым числом от 0 до 999.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getMilliseconds">Пример: использование метода <code>getMilliseconds()</code></h3>
+### Пример: использование метода `getMilliseconds()`
 
-<p>В следующем примере переменной <code>milliseconds</code> присваиваются миллисекунды текущего времени:</p>
+В следующем примере переменной `milliseconds` присваиваются миллисекунды текущего времени:
 
-<pre class="brush: js">let today = new Date();
+```js
+let today = new Date();
 let milliseconds = today.getMilliseconds();
 
 console.log(milliseconds); // 709
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

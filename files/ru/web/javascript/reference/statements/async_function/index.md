@@ -3,55 +3,49 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}Объявление **`async function`** определяет _асинхронную функцию_, которая возвращает объект {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.
 
-<div>Объявление <code style="font-style: normal; font-weight: normal;"><strong>async function</strong></code> определяет <em>асинхронную функцию</em>, которая возвращает объект {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</div>
+Вы также можете определить async-функции, используя {{jsxref("Operators/async_function", "выражение async function")}}.
 
-<div class="noinclude">
-<p>Вы также можете  определить async-функции, используя  {{jsxref("Operators/async_function", "выражение async function")}}.</p>
-</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+```
+async function name([param[, param[, ... param]]]) {
+   statements
 }
-</pre>
+```
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя функции.</dd>
-</dl>
+- `name`
+  - : Имя функции.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>Имя аргумента, который будет передан в функцию.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>Выражение, содержащее тело функции.</dd>
-</dl>
+- `param`
+  - : Имя аргумента, который будет передан в функцию.
 
-<h2 id="Описание">Описание</h2>
+<!---->
 
-<p>После вызова функция <code>async</code> возвращает {{jsxref("Promise")}}. Когда результат был получен, <code>Promise</code> завершается, возвращая полученное значение.  Когда функция <code>async </code>выбрасывает исключение, <code>Promise</code> ответит отказом с выброшенным (<code>throws</code>) значением.</p>
+- `statements`
+  - : Выражение, содержащее тело функции.
 
-<p>Функция async может содержать выражение {{jsxref("Operators/await", "await")}}, которое приостанавливает выполнение функции async и ожидает ответа от переданного <code>Promise</code>, затем возобновляя выполнение функции <code>async</code> и возвращая полученное значение.</p>
+## Описание
 
-<p>Ключевое слово <code>await</code> допустимо только в асинхронных функциях. В другом контексте вы получите ошибку <code>SyntaxError</code>.</p>
+После вызова функция `async` возвращает {{jsxref("Promise")}}. Когда результат был получен, `Promise` завершается, возвращая полученное значение. Когда функция `async `выбрасывает исключение, `Promise` ответит отказом с выброшенным (`throws`) значением.
 
-<div class="note">
-<p>Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой  <code>Promises</code>. Точно так же как <code>Promises</code> подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.</p>
-</div>
+Функция async может содержать выражение {{jsxref("Operators/await", "await")}}, которое приостанавливает выполнение функции async и ожидает ответа от переданного `Promise`, затем возобновляя выполнение функции `async` и возвращая полученное значение.
 
-<h2 id="Примеры">Примеры</h2>
+Ключевое слово `await` допустимо только в асинхронных функциях. В другом контексте вы получите ошибку `SyntaxError`.
 
-<h3 id="Простой_пример">Простой пример</h3>
+> **Примечание:** Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой `Promises`. Точно так же как `Promises` подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+## Примеры
+
+### Простой пример
+
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -63,7 +57,7 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v =&gt; {
+add1(10).then(v => {
   console.log(v);  // prints 60 after 4 seconds.
 });
 
@@ -73,59 +67,58 @@ async function add2(x) {
   return x + await a + await b;
 }
 
-add2(10).then(v =&gt; {
+add2(10).then(v => {
   console.log(v);  // prints 60 after 2 seconds.
 });
-</pre>
+```
 
-<div class="warning">
-<h4 id="Не_путайте_await_и_Promise.all">Не путайте await и Promise.all</h4>
+> **Предупреждение:** #### Не путайте await и Promise.allФункция `add1` приостанавливается на 2 секунды для первого `await` и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции `add2` создаются оба и оба же переходят в состояние `await`. В результате функция `add2` завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования `Promise.all`. Если два или более Promise должны разрешаться параллельно, следует использовать `Promise.all`.
 
-<p>Функция <code>add1</code> приостанавливается на 2 секунды для первого <code>await</code> и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции <code>add2</code> создаются оба и оба же переходят в состояние <code>await</code>. В результате функция <code>add2</code> завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования <code>Promise.all</code>. Если два или более Promise должны разрешаться параллельно, следует использовать <code>Promise.all</code>.</p>
-</div>
+### Когда функция `async `выбрасывает исключение
 
-<h3 id="Когда_функция_async_выбрасывает_исключение">Когда функция <code>async </code>выбрасывает исключение</h3>
-
-<pre class="brush: js">async function throwsValue() {
+```js
+async function throwsValue() {
     throw new Error('oops');
 }
 throwsValue()
-    .then((resolve) =&gt; {
+    .then((resolve) => {
             console.log("resolve:" + resolve);
         },
-        (reject) =&gt; {
+        (reject) => {
             console.log("reject:" + reject);
         });
 //prints "reject:Error: oops"
 //or
 throwsValue()
-    .then((resolve) =&gt; {
+    .then((resolve) => {
         console.log("resolve:" + resolve);
     })
-    .catch((reject) =&gt; {
+    .catch((reject) => {
         console.log("reject:" + reject);
     });
 //prints "reject:Error: oops"
-</pre>
+```
 
-<h3 id="Перепись_цепочки_promise_с_использованием_функции_async">Перепись цепочки promise с использованием функции <code>async</code></h3>
+### Перепись цепочки promise с использованием функции `async`
 
-<p>API, которое возвращает {{jsxref("Promise")}}, будет возвращать значение в цепочке, тем самым разбивая функцию на много частей. Рассматривая следующий код:</p>
+API, которое возвращает {{jsxref("Promise")}}, будет возвращать значение в цепочке, тем самым разбивая функцию на много частей. Рассматривая следующий код:
 
-<pre class="brush: js">function getProcessedData(url) {
+```js
+function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e =&gt; {
+    .catch(e => {
       return downloadFallbackData(url) // returns a promise
     })
-    .then(v =&gt; {
+    .then(v => {
       return processDataInWorker(v); // returns a promise
     });
 }
-</pre>
+```
 
-<p>он может быть переписан с одним использованием функции <code>async</code>:</p>
+он может быть переписан с одним использованием функции `async`:
 
-<pre class="brush: js">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -134,24 +127,20 @@ throwsValue()
   }
   return processDataInWorker(v);
 }
-</pre>
+```
 
-<p>Заметьте, что пример выше не содержит <code>await</code> на <code>return</code>, потому что возвращаемое значение функции <code>async</code> неявно обёрнуто в {{jsxref("Promise.resolve")}}.</p>
+Заметьте, что пример выше не содержит `await` на `return`, потому что возвращаемое значение функции `async` неявно обёрнуто в {{jsxref("Promise.resolve")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
-</ul>
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}

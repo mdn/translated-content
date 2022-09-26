@@ -7,58 +7,55 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
-<div>{{JSRef()}}</div>
+{{JSRef()}}
 
-<p>Объект <strong><code>WeakSet</code></strong> - коллекция, элементами которой могут быть только <em>объекты. </em>Ссылки на эти объекты в WeakSet являются слабыми. Каждый объект может быть добавлен в WeakSet только один раз.</p>
+Объект **`WeakSet`** - коллекция, элементами которой могут быть только _объекты._ Ссылки на эти объекты в WeakSet являются слабыми. Каждый объект может быть добавлен в WeakSet только один раз.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"> new WeakSet([iterable]);</pre>
+```
+ new WeakSet([iterable]);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>iterable</dt>
- <dd>При передаче <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of">итерируемого объекта</a>, все его элементы будут добавлены в новый WeakSet. <code>Null</code> обрабатывается как <code>undefined</code>.</dd>
-</dl>
+- iterable
+  - : При передаче [итерируемого объекта](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый WeakSet. `Null` обрабатывается как `undefined`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Объекты <code>WeakSet </code>представляют собой коллекции объектов. Каждый объект в WeakSet встречается только один раз, что обеспечивает его уникальность в рамках коллекции WeakSet.</p>
+Объекты `WeakSet `представляют собой коллекции объектов. Каждый объект в WeakSet встречается только один раз, что обеспечивает его уникальность в рамках коллекции WeakSet.
 
-<p>Главным отличия от объекта {{jsxref("Set")}}:</p>
+Главным отличия от объекта {{jsxref("Set")}}:
 
-<ul>
- <li>WeakSet <strong>содержит только объекты</strong>, тогда как Set - значения любого типа.</li>
- <li>Ссылки на объекты в WeakSet являются слабыми: если на объект, хранимый в WeakSet нет ни одной внешней ссылки, то сборщик мусора удалит этот объект. Также это означает, что WeakSet <strong>не итерируем, </strong>так как нет возможности получить список текущих хранимых в WeakSet объектов.  </li>
-</ul>
+- WeakSet **содержит только объекты**, тогда как Set - значения любого типа.
+- Ссылки на объекты в WeakSet являются слабыми: если на объект, хранимый в WeakSet нет ни одной внешней ссылки, то сборщик мусора удалит этот объект. Также это означает, что WeakSet **не итерируем,** так как нет возможности получить список текущих хранимых в WeakSet объектов.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt><code>WeakSet.length</code></dt>
- <dd>Значение свойства <code>length</code> всегда равно 0.</dd>
- <dt>{{jsxref("WeakSet.prototype")}}</dt>
- <dd>Представляет прототип конструктора Weak<code>Set</code>. Позволяет добавлять свойства  всем объектам типа <code>WeakSet</code>.</dd>
-</dl>
+- `WeakSet.length`
+  - : Значение свойства `length` всегда равно 0.
+- {{jsxref("WeakSet.prototype")}}
+  - : Представляет прототип конструктора Weak`Set`. Позволяет добавлять свойства всем объектам типа `WeakSet`.
 
-<h2 id="Экземпляры_WeakSet"><code>Экземпляры WeakSet</code> </h2>
+## `Экземпляры WeakSet`
 
-<p>Все экземпляры класса <code>WeakSet</code> унаследованы от {{jsxref("WeakSet.prototype")}}.</p>
+Все экземпляры класса `WeakSet` унаследованы от {{jsxref("WeakSet.prototype")}}.
 
-<h3 id="Properties_2">Свойства</h3>
+### Свойства
 
-<p>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}</p>
+{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}
 
-<h3 id="Methods">Методы</h3>
+### Методы
 
-<p>{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}</p>
+{{page('ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:Using_the_WeakSet_object">Использование объекта <code>WeakSet</code> </h3>
+### Использование объекта `WeakSet`
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 var foo = {};
 
@@ -70,22 +67,18 @@ ws.has(foo);    // false, foo не добавлен в WeakSet
 
 ws.delete(window); // удаляет window из WeakSet
 ws.has(window);    // false, window был удалён
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

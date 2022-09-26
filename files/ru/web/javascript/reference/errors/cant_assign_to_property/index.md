@@ -3,50 +3,49 @@ title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств.
 
-<div>Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств. </div>
+## Message
 
-<h2 id="Message">Message</h2>
-
-<pre class="syntaxbox">TypeError: can't assign to property "x" on {y}: not an object> (Firefox)
+```
+TypeError: can't assign to property "x" on {y}: not an object> (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on <a href="/en-US/docs/Glossary/primitive">primitive</a> value such as a <a href="/en-US/docs/Glossary/symbol">symbol</a>, a <a href="/en-US/docs/Glossary/string">string</a>, a <a href="/en-US/docs/Glossary/number">number</a> or a <a href="/en-US/docs/Glossary/boolean">boolean</a>. <a href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
+In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on [primitive](/ru/docs/Glossary/primitive) value such as a [symbol](/ru/docs/Glossary/symbol), a [string](/ru/docs/Glossary/string), a [number](/ru/docs/Glossary/number) or a [boolean](/ru/docs/Glossary/boolean). [Primitive](/ru/docs/Glossary/Primitive) values cannot hold any [property](/ru/docs/Glossary/property/JavaScript).
 
-<p>The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.</p>
+The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
-foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: can't assign to property "bar" on "my string": not an object</span></span></span>
-</pre>
+foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
+```
 
-<h3 id="Fixing_the_issue">Fixing the issue</h3>
+### Fixing the issue
 
-<p>Either fix the code to prevent the <a href="/en-US/docs/Glossary/primitive">primitive</a> from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.</p>
+Either fix the code to prevent the [primitive](/ru/docs/Glossary/primitive) from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 
 var foo = new String("my string");
 foo.bar = {};
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Strict_mode")}}</li>
- <li><a href="/en-US/docs/Glossary/primitive">primitive</a></li>
-</ul>
+- {{jsxref("Strict_mode")}}
+- [primitive](/ru/docs/Glossary/primitive)

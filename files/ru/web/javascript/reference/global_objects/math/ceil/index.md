@@ -9,45 +9,48 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.ceil()</code></strong> - округление вверх. Округляет аргумент до ближайшего большего целого.</p>
+Метод **`Math.ceil()`** - округление вверх. Округляет аргумент до ближайшего большего целого.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+```
+Math.ceil(x)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+- `x`
+  - : Число.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>ceil()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.ceil()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `ceil()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.ceil()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.ceil">Пример: использование метода <code>Math.ceil()</code></h3>
+### Пример: использование метода `Math.ceil()`
 
-<p>Следующий пример показывает использование метода <code>Math.ceil()</code>.</p>
+Следующий пример показывает использование метода `Math.ceil()`.
 
-<pre><code>Math.ceil(.95);    // 1
+```
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
-Math.ceil(-7.004); // -7</code></pre>
+Math.ceil(-7.004); // -7
+```
 
-<h3 id="Decimal_adjustment">Decimal adjustment</h3>
+### Decimal adjustment
 
-<h3 id="Example:_Decimal_adjustment">Пример: корректировка округления десятичных дробей</h3>
+### Пример: корректировка округления десятичных дробей
 
-<pre class="brush: js">// Замыкание
+```js
+// Замыкание
 (function() {
   /**
    * Корректировка округления десятичных дробей.
@@ -65,7 +68,7 @@ Math.ceil(-7.004); // -7</code></pre>
     value = +value;
     exp = +exp;
     // Если значение не является числом, либо степень не является целым числом...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Сдвиг разрядов
@@ -115,22 +118,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.trunc()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxref("Math.trunc()")}} {{experimental_inline}}

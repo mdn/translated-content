@@ -8,45 +8,45 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <strong><code>Reflect.get()</code></strong> работает также, словно если бы мы получали свойство объекта (<code>target[propertyKey]</code>) с помощью функции.</p>
+Статический метод **`Reflect.get()`** работает также, словно если бы мы получали свойство объекта (`target[propertyKey]`) с помощью функции.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Reflect.get(target, propertyKey[, receiver])
-</pre>
+```
+Reflect.get(target, propertyKey[, receiver])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Объект, к свойству которого идёт обращение.</dd>
- <dt><code>propertyKey</code></dt>
- <dd>Название свойства, значение которого необходимо получить.</dd>
- <dt>receiver {{optional_inline}}</dt>
- <dd>Значение, которое получит переменная <code>this</code> при вызове геттера.</dd>
-</dl>
+- `target`
+  - : Объект, к свойству которого идёт обращение.
+- `propertyKey`
+  - : Название свойства, значение которого необходимо получить.
+- receiver {{optional_inline}}
+  - : Значение, которое получит переменная `this` при вызове геттера.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение свойства <code>propertyKey</code>.</p>
+Значение свойства `propertyKey`.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>{{jsxref("TypeError")}}, если <code>target</code> не {{jsxref("Object")}}.</p>
+{{jsxref("TypeError")}}, если `target` не {{jsxref("Object")}}.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code>Reflect.get</code> позволяет получить значение свойства некоторого объекта. Он похож на обычный доступ к значению свойства объекта <a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors">значению свойства объекта</a>, только с синтаксисом функции.</p>
+Метод `Reflect.get` позволяет получить значение свойства некоторого объекта. Он похож на обычный доступ к значению свойства объекта [значению свойства объекта](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), только с синтаксисом функции.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_Reflect.get()">Использование <code>Reflect.get()</code></h3>
+### Использование `Reflect.get()`
 
-<pre class="brush: js">// Объект
+```js
+// Объект
 var obj = { x: 1, y: 2 };
 Reflect.get(obj, 'x'); // 1
 
@@ -59,18 +59,17 @@ var obj = new Proxy(x, {
   get(t, k, r) { return k + 'bar'; }
 });
 Reflect.get(obj, 'foo'); // "foobar"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Reflect")}}
+- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

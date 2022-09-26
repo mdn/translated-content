@@ -14,39 +14,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Reference/Operators/Присваивание
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Простой оператор присваивания (<code>=</code>) используется для присваивания значения переменной. Операция присваивания вычисляется в присваиваемую величину. Присваивание по цепочке (<em>chaining</em>) используется для назначения нескольким переменным одинакового значения.</p>
+Простой оператор присваивания (`=`) используется для присваивания значения переменной. Операция присваивания вычисляется в присваиваемую величину. Присваивание по цепочке (_chaining_) используется для назначения нескольким переменным одинакового значения.
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}</p>
+{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><strong>Оператор:</strong> x = y
-</pre>
+```
+Оператор: x = y
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простое_и_цепное_присваивание">Простое и цепное присваивание</h3>
+### Простое и цепное присваивание
 
-<pre class="brush: js">// Предположим следующие переменные и их значения
+```js
+// Предположим следующие переменные и их значения
 //  x = 5
 //  y = 10
 //  z = 25
 
 x = y     // x будет присвоено значение 10
-x = y = z // x, y и z будут равны 25</pre>
+x = y = z // x, y и z будут равны 25
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
-</ul>
+- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)

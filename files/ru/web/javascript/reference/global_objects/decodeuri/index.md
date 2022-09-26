@@ -6,67 +6,66 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>Метод <code><strong>decodeURI()</strong></code> декодирует <span class="st">унифицированный идентификатор ресурса</span> (URI), созданный при помощи метода {{jsxref("encodeURI")}} или другой подобной процедуры.</p>
+Метод **`decodeURI()`** декодирует унифицированный идентификатор ресурса (URI), созданный при помощи метода {{jsxref("encodeURI")}} или другой подобной процедуры.
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>decodeURI(<em>encodedURI</em>)</code></pre>
+```
+decodeURI(encodedURI)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>Полный закодированный <span class="st">унифицированный идентификатор ресурса</span>.</dd>
-</dl>
+- `encodedURI`
+  - : Полный закодированный унифицированный идентификатор ресурса.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новая строка, представляющая собой незакодированную версию данного <span class="st">унифицированного идентификатора ресурса</span>.</p>
+Новая строка, представляющая собой незакодированную версию данного унифицированного идентификатора ресурса.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when <code><em>encodedURI</em></code> contains invalid character sequences.</p>
+Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when `encodedURI` contains invalid character sequences.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Заменяет каждую управляющую последовательность в закодированном URI соответствующим символом. Не декодирует последовательности, которые невозможно сформировать с помощью {{jsxref("encodeURI")}}. Символ "#" декодированию не подвергается.</p>
+Заменяет каждую управляющую последовательность в закодированном URI соответствующим символом. Не декодирует последовательности, которые невозможно сформировать с помощью {{jsxref("encodeURI")}}. Символ "#" декодированию не подвергается.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Декодирование_кириллического_URL">Декодирование кириллического URL</h3>
+### Декодирование кириллического URL
 
-<pre class="brush: js">decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Catching_errors">Catching errors</h3>
+### Catching errors
 
-<pre><code>try {
+```
+try {
   var a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</code></pre>
+// URIError: malformed URI sequence
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-desktop"> </div>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("decodeURIComponent")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURIComponent")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

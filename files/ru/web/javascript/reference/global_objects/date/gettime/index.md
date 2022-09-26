@@ -9,67 +9,67 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
+Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 
+Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueof", "valueOf()")}}.
 
-<p>Метод <strong><code>getTime()</code></strong> возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.</p>
+{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
 
-<p>Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueof", "valueOf()")}}.</p>
+## Синтаксис
 
-<p>{{EmbedInteractiveExample("pages/js/date-gettime.html")}}</p>
+```
+dateObj.getTime()
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code></pre>
+Нет.
 
-<h3 id="Parameters">Параметры</h3>
+### Возвращаемое значение
 
-<p>Нет.</p>
+Значение, возвращённое методом `getTime()`, является количеством миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+## Примеры
 
-<p>Значение, возвращённое методом <code>getTime()</code>, является количеством миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
+### Пример: использование метода `getTime()` для копирования дат
 
-<h2 id="Examples">Примеры</h2>
+Конструирует новый объект даты с идентичным значением времени.
 
-<h3 id="Example_Using_getTime_for_copying_dates">Пример: использование метода <code>getTime()</code> для копирования дат</h3>
-
-<p>Конструирует новый объект даты с идентичным значением времени.</p>
-
-<pre class="brush: js">let birthday = new Date(2020, 12, 20);
+```js
+let birthday = new Date(2020, 12, 20);
 let copy = new Date();
 copy.setTime(birthday.getTime());
 
 console.log(copy.setTime(birthday.getTime())); // 1611090000000
-</pre>
+```
 
-<h3 id="Example_Measuring_execution_time">Пример: замер времени выполнения</h3>
+### Пример: замер времени выполнения
 
-<p>Вычитанием двух последовательных вызовов метода <code>getTime()</code> на заново сконструированных объектах {{jsxref("Global_Objects/Date", "Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.</p>
+Вычитанием двух последовательных вызовов метода `getTime()` на заново сконструированных объектах {{jsxref("Global_Objects/Date", "Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.
 
-<pre class="brush: js">let end, start;
+```js
+let end, start;
 
 start = new Date();
-for (let i = 0; i &lt; 1000; i++) {
+for (let i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
 console.log('Операция заняла ' + (end.getTime() - start.getTime()) + ' мсек');
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.setTime()")}}</li>
- <li>{{jsxref("Date.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}

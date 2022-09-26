@@ -3,104 +3,105 @@ title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>flatMap()</strong></code> сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив. Это идентично <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> функции, с последующим применением функции <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> с параметром depth ( глубина ) равным 1, но <code>flatMap</code> часто бывает полезным, так как работает немного более эффективно.</p>
+Метод **`flatMap()`** сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив. Это идентично [map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) функции, с последующим применением функции [flat](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth ( глубина ) равным 1, но `flatMap` часто бывает полезным, так как работает немного более эффективно.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
+```
+var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
     // возвращает элемент для new_array
-}</var>[, <var>thisArg</var>])</pre>
+}[, thisArg])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция которая производит элементы нового массива, принимает три аргумента:
- <dl>
-  <dt></dt>
-  <dt><code>currentValue</code></dt>
-  <dd>Текущий обрабатываемый элемент массива.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>Индекс обрабатываемого элемента в массиве.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>Массив по которому осуществляется обход.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>Значение используемое в качестве <code>this</code> при вызове функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Функция которая производит элементы нового массива, принимает три аргумента:
 
-<p>Новый массив, каждый элемент которого является результатом выполнения функции callback и "поднят" на уровень 1.</p>
+    - `currentValue`
 
-<h2 id="Описание">Описание</h2>
+      - : Текущий обрабатываемый элемент массива.
 
-<p>Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод <code>flatMap</code> идентичен методу <code style="letter-spacing: -0.00333rem;"><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code> с последующим вызовом <code style="letter-spacing: -0.00333rem;"><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a></code> с параметром depth 1.</p>
+    - `index`{{optional_inline}}
+      - : Индекс обрабатываемого элемента в массиве.
+    - `array`{{optional_inline}}
+      - : Массив по которому осуществляется обход.
 
-<h2 id="Примеры">Примеры</h2>
+- `thisArg`{{optional_inline}}
+  - : Значение используемое в качестве `this` при вызове функции `callback`.
 
-<h3 id="map_и_flatMap"><code>map</code> и <code>flatMap</code></h3>
+### Возвращаемое значение
 
-<pre class="brush: js">let arr1 = 1, 2, 3, 4];
+Новый массив, каждый элемент которого является результатом выполнения функции callback и "поднят" на уровень 1.
 
-arr1.map(x =&gt; [x * 2]);
+## Описание
+
+Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод `flatMap` идентичен методу [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) с последующим вызовом [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth 1.
+
+## Примеры
+
+### `map` и `flatMap`
+
+```js
+let arr1 = 1, 2, 3, 4];
+
+arr1.map(x => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]);
+arr1.flatMap(x => [x * 2]);
 // [2, 4, 6, 8]
 
 // выравнивается только один уровень
-arr1.flatMap(x =&gt; [[x * 2]]);
+arr1.flatMap(x => [[x * 2]]);
 // [[2], [4], [6], [8]]
-</pre>
+```
 
-<p>Хотя результат полученный в примере выше можно было получить используя просто map, ниже мы рассмотрим пример где <code>flatMap</code> является более эффективным.</p>
+Хотя результат полученный в примере выше можно было получить используя просто map, ниже мы рассмотрим пример где `flatMap` является более эффективным.
 
-<p>Давайте сгенерируем список слов из списка предложений.</p>
+Давайте сгенерируем список слов из списка предложений.
 
-<pre class="brush: js">let arr1 = ["it's Sunny in", "", "California"];
+```js
+let arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x =&gt; x.split(" "));
+arr1.map(x => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x =&gt; x.split(" "));
-// ["it's","Sunny","in", "", "California"]</pre>
+arr1.flatMap(x => x.split(" "));
+// ["it's","Sunny","in", "", "California"]
+```
 
-<p>Обратите внимание, длина списка вывода может отличаться от длины списка ввода.</p>
+Обратите внимание, длина списка вывода может отличаться от длины списка ввода.
 
-<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
+//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-<h2 id="Альтернативное_решение">Альтернативное решение</h2>
+## Альтернативное решение
 
-<h3 id="reduce_and_concat"><code>reduce</code> and <code>concat</code></h3>
+### `reduce` and `concat`
 
-<pre class="brush: js">var arr1 = [1, 2, 3, 4];
-arr1.flatMap(x =&gt; [x * 2]);
+```js
+var arr1 = [1, 2, 3, 4];
+arr1.flatMap(x => [x * 2]);
 // is equivalent to
-arr1.reduce((acc, x) =&gt; acc.concat([x * 2]), []);
+arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 // [2, 4, 6, 8]
-</pre>
+```
 
-<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
+//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="См_так_же">См так же:</h2>
+## См так же:
 
-<ul>
- <li>{{jsxref("Array.prototype.flat()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

@@ -7,74 +7,70 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.</p>
+Статический метод **`Reflect`\*\***`.defineProperty()`\*\* похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
+## Синтаксис
 
+```
+Reflect.defineProperty(target, propertyKey, attributes)
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">Reflect.defineProperty(<em>target</em>, <em>propertyKey</em>, <em>attributes</em>)
-</pre>
+- `target`
+  - : Объект, в котором определяется свойство.
+- `propertyKey`
+  - : Имя определяемого или изменяемого свойства.
+- `attributes`
+  - : Атрибуты для определяемого или изменяемого свойства.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Объект, в котором определяется свойство.</dd>
- <dt><code>propertyKey</code></dt>
- <dd>Имя определяемого или изменяемого свойства.</dd>
- <dt><code>attributes</code></dt>
- <dd>Атрибуты для определяемого или изменяемого свойства.</dd>
-</dl>
+Возвращается значение {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Исключения
 
-<p>Возвращается значение {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.</p>
+Исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
 
-<h3 id="Исключения">Исключения</h3>
+## Описание
 
-<p>Исключение {{jsxref("TypeError")}}, если <code>target</code> не является {{jsxref("Object")}}.</p>
+Метод `Reflect.defineProperty` позволяет точно дополнить или изменить свойство объекта. Для более подробной информации смотрите на аналогичный метод - {{jsxref("Object.defineProperty")}}. `Object.defineProperty` возвращает объект или выбрасывает исключение {{jsxref("TypeError")}}, если свойство не было успешно определено. `Reflect.defineProperty`, в любом случае, просто возвращает {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.
 
-<h2 id="Описание">Описание</h2>
+## Примеры
 
-<p>Метод <code>Reflect.defineProperty</code> позволяет точно дополнить или изменить свойство объекта. Для более подробной информации смотрите на аналогичный метод - {{jsxref("Object.defineProperty")}}. <code>Object.defineProperty</code> возвращает объект или выбрасывает исключение {{jsxref("TypeError")}}, если свойство не было успешно определено. <code>Reflect.defineProperty</code>, в любом случае, просто возвращает {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.</p>
+### Использования `Reflect.defineProperty()`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использования_Reflect.defineProperty()">Использования <code>Reflect.defineProperty()</code></h3>
-
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 Reflect.defineProperty(obj, 'x', {value: 7}); // true
 obj.x; // 7
-</pre>
+```
 
-<h3 id="Проверка_успешно_ли_было_определено_свойство">Проверка успешно ли было определено свойство</h3>
+### Проверка успешно ли было определено свойство
 
-<p>При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что <code>Reflect.defineProperty</code> возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>:</p>
+При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
 
-<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // успех
 } else {
   // неудача
-}</pre>
+}
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.defineProperty()")}}

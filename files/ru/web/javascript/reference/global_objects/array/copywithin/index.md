@@ -12,38 +12,39 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>copyWithin()</strong></code> копирует последовательность элементов массива внутри него в позицию, начинающуюся по индексу <code>target</code>. Копия берётся по индексам, задаваемым вторым и третьим аргументами <code>start</code> и <code>end</code>. Аргумент <code>end</code> является необязательным и по умолчанию равен длине массива.</p>
+Метод **`copyWithin()`** копирует последовательность элементов массива внутри него в позицию, начинающуюся по индексу `target`. Копия берётся по индексам, задаваемым вторым и третьим аргументами `start` и `end`. Аргумент `end` является необязательным и по умолчанию равен длине массива.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.copyWithin(<var>target</var>, <var>start</var>[, <var>end</var> = this.length])</code></pre>
+```
+arr.copyWithin(target, start[, end = this.length])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Начальный индекс позиции цели, куда копировать элементы.</dd>
- <dt><code>start</code></dt>
- <dd>Начальный индекс позиции источника, откуда начинать копировать элементы.</dd>
- <dt><code>end</code></dt>
-  <dd>Необязательный параметр. Конечный индекс позиции источника, где заканчивать копировать элементы, не включая элемент на позиции <code>end</code>.</dd>
-</dl>
+- `target`
+  - : Начальный индекс позиции цели, куда копировать элементы.
+- `start`
+  - : Начальный индекс позиции источника, откуда начинать копировать элементы.
+- `end`
+  - : Необязательный параметр. Конечный индекс позиции источника, где заканчивать копировать элементы, не включая элемент на позиции `end`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Аргументы <code>target</code>, <code>start</code> и <code>end</code> приводятся к {{jsxref("Global_Objects/Number", "Number")}} и обрезаются до целых значений.</p>
+Аргументы `target`, `start` и `end` приводятся к {{jsxref("Global_Objects/Number", "Number")}} и обрезаются до целых значений.
 
-<p>Если аргумент <code>start</code> является отрицательным, он трактуется как <code>length+start</code> где <code>length</code> — это длина массива. Если аргумент <code>end</code> является отрицательным, он трактуется как <code>length+end</code>.</p>
+Если аргумент `start` является отрицательным, он трактуется как `length+start` где `length` — это длина массива. Если аргумент `end` является отрицательным, он трактуется как `length+end`.
 
-<p>Функция <code>copyWithin</code> намеренно является <em>обобщённой</em>, она не требует, чтобы значение <code>this</code> внутри неё было объектом {{jsxref("Global_Objects/Array", "Array")}}, и кроме того, функция <code>copyWithin</code> является <em>изменяющим методом</em>, она изменит объект <code>this</code> и вернёт его, а не просто вернёт копию.</p>
+Функция `copyWithin` намеренно является _обобщённой_, она не требует, чтобы значение `this` внутри неё было объектом {{jsxref("Global_Objects/Array", "Array")}}, и кроме того, функция `copyWithin` является _изменяющим методом_, она изменит объект `this` и вернёт его, а не просто вернёт копию.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(0, 3);
+```js
+[1, 2, 3, 4, 5].copyWithin(0, 3);
 // [4, 5, 3, 4, 5]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3, 4);
@@ -64,11 +65,12 @@ i32a.copyWithin(0, 2);
 // На платформах, которые ещё не совместимы с ES6:
 [].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
 // Int32Array [4, 2, 3, 4, 5]
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">if (!Array.prototype.copyWithin) {
+```js
+if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin = function(target, start/*, end*/) {
     // Шаги 1-2.
     if (this == null) {
@@ -78,27 +80,27 @@ i32a.copyWithin(0, 2);
     var O = Object(this);
 
     // Шаги 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // Шаги 6-8.
-    var relativeTarget = target &gt;&gt; 0;
+    var relativeTarget = target >> 0;
 
-    var to = relativeTarget &lt; 0 ?
+    var to = relativeTarget < 0 ?
       Math.max(len + relativeTarget, 0) :
       Math.min(relativeTarget, len);
 
     // Шаги 9-11.
-    var relativeStart = start &gt;&gt; 0;
+    var relativeStart = start >> 0;
 
-    var from = relativeStart &lt; 0 ?
+    var from = relativeStart < 0 ?
       Math.max(len + relativeStart, 0) :
       Math.min(relativeStart, len);
 
     // Шаги 12-14.
     var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
+    var relativeEnd = end === undefined ? len : end >> 0;
 
-    var final = relativeEnd &lt; 0 ?
+    var final = relativeEnd < 0 ?
       Math.max(len + relativeEnd, 0) :
       Math.min(relativeEnd, len);
 
@@ -108,14 +110,14 @@ i32a.copyWithin(0, 2);
     // Шаги 16-17.
     var direction = 1;
 
-    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
+    if (from < to && to < (from + count)) {
       direction = -1;
       from += count - 1;
       to += count - 1;
     }
 
     // Шаг 18
-    while (count &gt; 0) {
+    while (count > 0) {
       if (from in O) {
         O[to] = O[from];
       } else {
@@ -131,18 +133,16 @@ i32a.copyWithin(0, 2);
     return O;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Global_Objects/Array", "Array")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Array", "Array")}}

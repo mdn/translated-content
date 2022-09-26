@@ -3,57 +3,52 @@ title: WebAssembly
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
-<div>{{JSRef}}{{SeeCompatTable}}</div>
+{{JSRef}}{{SeeCompatTable}}
 
-<p>Объект JavaScript <strong><code>WebAssembly</code></strong> действует как пространство имён для всего <a href="/en-US/docs/WebAssembly">WebAssembly</a>-связанной функциональности.</p>
+Объект JavaScript **`WebAssembly`** действует как пространство имён для всего [WebAssembly](/ru/docs/WebAssembly)-связанной функциональности.
 
-<p>В отличие от большинства других глобальных объектов, <code>WebAssembly</code> не является конструктором (это не объект функции). Можно сравнить его с {{jsxref("Math")}}, который так же является пространством имён констант и функций, или  {{jsxref("Intl")}}, который является пространством имён для конструкторов интернационализации и других языково-чувствительных функций.</p>
+В отличие от большинства других глобальных объектов, `WebAssembly` не является конструктором (это не объект функции). Можно сравнить его с {{jsxref("Math")}}, который так же является пространством имён констант и функций, или {{jsxref("Intl")}}, который является пространством имён для конструкторов интернационализации и других языково-чувствительных функций.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Основное использование <code>WebAssembly</code> следующее:</p>
+Основное использование `WebAssembly` следующее:
 
-<ul>
- <li>Загрузка кода WebAssembly, с помощью функции {{jsxref("WebAssembly.instantiate()")}}.</li>
- <li>Создание новой памяти и таблицы экземпляров с помощью конструкторов {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.</li>
- <li>Обеспечение возможности управлять ошибками, которые появляются в WebAssembly с помощью конструкторов {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.</li>
-</ul>
+- Загрузка кода WebAssembly, с помощью функции {{jsxref("WebAssembly.instantiate()")}}.
+- Создание новой памяти и таблицы экземпляров с помощью конструкторов {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
+- Обеспечение возможности управлять ошибками, которые появляются в WebAssembly с помощью конструкторов {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
- <dd>Основное API для компиляции и создания экземпляра кода WebAssembly, возвращающее <code>Module</code> и его первый <code>Instance</code>.</dd>
- <dt>{{jsxref("WebAssembly.compile()")}}</dt>
- <dd>Компилирует {{jsxref("WebAssembly.Module")}} из бинарного кода WebAssembly, оставляя создание экземпляра отдельным шагом.</dd>
- <dt>{{jsxref("WebAssembly.validate()")}}</dt>
- <dd>Проверяет представленный типизированный массив бинарного кода WebAssembly, возвращая в зависимости от того были ли байты кода WebAssembly валидны (<code>true</code>) или (<code>false</code>).</dd>
-</dl>
+- {{jsxref("WebAssembly.instantiate()")}}
+  - : Основное API для компиляции и создания экземпляра кода WebAssembly, возвращающее `Module` и его первый `Instance`.
+- {{jsxref("WebAssembly.compile()")}}
+  - : Компилирует {{jsxref("WebAssembly.Module")}} из бинарного кода WebAssembly, оставляя создание экземпляра отдельным шагом.
+- {{jsxref("WebAssembly.validate()")}}
+  - : Проверяет представленный типизированный массив бинарного кода WebAssembly, возвращая в зависимости от того были ли байты кода WebAssembly валидны (`true`) или (`false`).
 
-<h2 id="Конструкторы">Конструкторы</h2>
+## Конструкторы
 
-<dl>
- <dt>{{jsxref("WebAssembly.Module()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>Module</code>.</dd>
- <dt>{{jsxref("WebAssembly.Instance()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>Instance</code>.</dd>
- <dt>{{jsxref("WebAssembly.Memory()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>Memory</code>.</dd>
- <dt>{{jsxref("WebAssembly.Table()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>Table</code>.</dd>
- <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>CompileError</code>.</dd>
- <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>LinkError</code>.</dd>
- <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
- <dd>Создаёт новый объект WebAssembly <code>RuntimeError</code>.</dd>
-</dl>
+- {{jsxref("WebAssembly.Module()")}}
+  - : Создаёт новый объект WebAssembly `Module`.
+- {{jsxref("WebAssembly.Instance()")}}
+  - : Создаёт новый объект WebAssembly `Instance`.
+- {{jsxref("WebAssembly.Memory()")}}
+  - : Создаёт новый объект WebAssembly `Memory`.
+- {{jsxref("WebAssembly.Table()")}}
+  - : Создаёт новый объект WebAssembly `Table`.
+- {{jsxref("WebAssembly.CompileError()")}}
+  - : Создаёт новый объект WebAssembly `CompileError`.
+- {{jsxref("WebAssembly.LinkError()")}}
+  - : Создаёт новый объект WebAssembly `LinkError`.
+- {{jsxref("WebAssembly.RuntimeError()")}}
+  - : Создаёт новый объект WebAssembly `RuntimeError`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (<code>result</code>), содержащий скомпилированные <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">Module</a></code> и объекты <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">Instance</a></code>. Мы можем вызвать <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly function</a>, которая была экспортирована через <code>Instance</code>.</p>
+После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (`result`), содержащий скомпилированные [`Module`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) и объекты [`Instance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance). Мы можем вызвать [Exported WebAssembly function](/ru/docs/WebAssembly/Exported_functions), которая была экспортирована через `Instance`.
 
-<pre class="brush: js">var importObject = {
+```js
+var importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -61,30 +56,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
   }
 };
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.instantiate(bytes, importObject)
-).then(result =&gt;
+).then(result =>
   result.instance.exports.exported_func()
-);</pre>
+);
+```
 
-<div class="note">
-<p><strong>Note</strong>: Смотрите пример <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a> на GitHub (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">view it live also</a>), который использует наши <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1">fetchAndInstantiate()</a></code> библиотечные функции.</p>
-</div>
+> **Примечание:** Смотрите пример [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) на GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)), который использует наши [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) библиотечные функции.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> обзорная страница</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly концепции</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Использование WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ru/docs/WebAssembly) обзорная страница
+- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)

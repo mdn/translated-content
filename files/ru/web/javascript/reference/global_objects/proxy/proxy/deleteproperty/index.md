@@ -7,65 +7,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>handler.deleteProperty()</code></strong> является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.</p>
+Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
 
+## Синтаксис
 
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   deleteProperty: function(target, property) {
   }
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Следующие параметры передаются в метод <code>deleteProperty</code>.</p>
+Следующие параметры передаются в метод `deleteProperty`.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Целевой объект.</dd>
- <dt><code>property</code></dt>
- <dd>Имя или {{jsxref("Symbol")}} свойства, которое нужно удалить.</dd>
-</dl>
+- `target`
+  - : Целевой объект.
+- `property`
+  - : Имя или {{jsxref("Symbol")}} свойства, которое нужно удалить.
 
-<p><code>this</code> в момент вызова ссылается на объект handler.</p>
+`this` в момент вызова ссылается на объект handler.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Метод <code>deleteProperty</code> должен возвращать {{jsxref("Boolean")}}. Значение <code>true</code>, если свойство было успешно удалено, в противном случае <code>false</code>.</p>
+Метод `deleteProperty` должен возвращать {{jsxref("Boolean")}}. Значение `true`, если свойство было успешно удалено, в противном случае `false`.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code><strong>handler.deleteProperty()</strong></code> является "ловушкой" для оператора {{jsxref("Operators/delete", "delete")}}.</p>
+Метод **`handler.deleteProperty()`** является "ловушкой" для оператора {{jsxref("Operators/delete", "delete")}}.
 
-<h3 id="Перехваты">Перехваты</h3>
+### Перехваты
 
-<p>Данная "ловушка" может перехватывать следующие операции:</p>
+Данная "ловушка" может перехватывать следующие операции:
 
-<ul>
- <li>Удаление свойства: <code>delete proxy[foo]</code> and <code>delete proxy.foo</code></li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- Удаление свойства: `delete proxy[foo]` and `delete proxy.foo`
+- {{jsxref("Reflect.deleteProperty()")}}
 
-<h3 id="Инварианты">Инварианты</h3>
+### Инварианты
 
-<p>Если следующие инварианты нарушены, то прокси выдаст ошибку {{jsxref("TypeError")}}:</p>
+Если следующие инварианты нарушены, то прокси выдаст ошибку {{jsxref("TypeError")}}:
 
-<ul>
- <li>Свойство не может быть удалено, если оно неконфигурируемое собственное свойство целевого объекта.</li>
-</ul>
+- Свойство не может быть удалено, если оно неконфигурируемое собственное свойство целевого объекта.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий код перехватывает действие оператора {{jsxref("Operators/delete", "delete")}}.</p>
+Следующий код перехватывает действие оператора {{jsxref("Operators/delete", "delete")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   deleteProperty: function(target, prop) {
     if (prop in target){
       delete target[prop]
@@ -90,25 +84,19 @@ console.log('a' in p)  // false
 
 result = delete p.a    // "property not found: a"
 console.log(result)    // false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}
 
+## Смотрите также
 
-<p>{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/delete", "delete")}} operator</li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Reflect.deleteProperty()")}}

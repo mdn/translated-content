@@ -3,64 +3,65 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Выражение <strong><code>do...while</code></strong> создаёт цикл, который выполняет указанное выражение до тех пор, пока условие не станет ложным. Условие проверяется после выполнения выражения, то есть выражение выполнится как минимум один раз.</p>
+Выражение **`do...while`** создаёт цикл, который выполняет указанное выражение до тех пор, пока условие не станет ложным. Условие проверяется после выполнения выражения, то есть выражение выполнится как минимум один раз.
 
-<p>{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">do
-   <em>выражение</em>
-while (<em>условие</em>);
-</pre>
+```
+do
+   выражение
+while (условие);
+```
 
-<dl>
- <dt><code>выражение</code></dt>
- <dd>Выражение, которое выполняется как минимум один раз и выполняется на каждом шаге цикла, пока условие истинно. Выражение может содержать несколько строк, для этого необходимо сгруппировать код в {{jsxref("Statements/block", "блок")}} (<code>{ ... }</code>).</dd>
-</dl>
+- `выражение`
+  - : Выражение, которое выполняется как минимум один раз и выполняется на каждом шаге цикла, пока условие истинно. Выражение может содержать несколько строк, для этого необходимо сгруппировать код в {{jsxref("Statements/block", "блок")}} (`{ ... }`).
 
-<dl>
- <dt><code>условие</code></dt>
- <dd>Выражение, которое вычисляется после каждого шага цикла. Если <code>условие</code> истинно, то <code>выражение</code> выполняется ещё раз. Когда <code>условие</code> ложно, выполняется выражение, следующее после <code>do...while</code>.</dd>
-</dl>
+<!---->
 
-<h2 id="Примеры">Примеры</h2>
+- `условие`
+  - : Выражение, которое вычисляется после каждого шага цикла. Если `условие` истинно, то `выражение` выполняется ещё раз. Когда `условие` ложно, выполняется выражение, следующее после `do...while`.
 
-<h3 id="Использование_do...while">Использование <code>do...while</code></h3>
+## Примеры
 
-<p>В примере, цикл <code>do...while</code> выполняется до тех пор, пока <code>i</code> не перестанет быть меньше 5.</p>
+### Использование `do...while`
 
-<h3 id="HTML">HTML</h3>
+В примере, цикл `do...while` выполняется до тех пор, пока `i` не перестанет быть меньше 5.
 
-<pre class="brush: html">&lt;div id="example"&gt;&lt;/div&gt;</pre>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+```html
+<div id="example"></div>
+```
 
-<pre class="brush: js">var result = '';
+### JavaScript
+
+```js
+var result = '';
 var i = 0;
 do {
    i += 1;
    result += i + ' ';
-} while (i &gt; 0 &amp;&amp; i &lt; 5); // Немотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
-document.getElementById('example').innerHTML = result;</pre>
+} while (i > 0 && i < 5); // Немотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
+document.getElementById('example').innerHTML = result;
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Примеры') }}</p>
+{{ EmbedLiveSample('Примеры') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

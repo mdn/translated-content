@@ -12,57 +12,57 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>Object.defineProperties()</strong></code> определяет новые или изменяет существующие свойства, непосредственно на объекте, возвращая этот объект.</p>
+Метод **`Object.defineProperties()`** определяет новые или изменяет существующие свойства, непосредственно на объекте, возвращая этот объект.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+```
+Object.defineProperties(obj, props)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект, на котором определяются новые или изменяются существующие свойства.</dd>
- <dt><code>props</code></dt>
- <dd>Объект, чьи собственные перечисляемые свойства представляют собой дескрипторы для создаваемых или изменяемых свойств. Дескрипторы свойств обладают следующими дополнительными ключами:
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd>Равен <code>true</code> только в том случае, если тип этого дескриптора свойства может быть изменён и если свойство может быть удалено из содержащего его объекта.<br>
-  <strong>Значение по умолчанию установлено в <code>false</code>.</strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd>Равен <code>true</code> только в том случае, если это свойство можно увидеть через перечисление свойств содержащего его объекта.<br>
-  <strong>Значение по умолчанию установлено в <code>false</code>.</strong></dd>
-  <dt><code>value</code></dt>
-  <dd>Значение, ассоциированное со свойством. Может быть любым допустимым значением JavaScript (числом, объектом, функцией и т.д.).<br>
-  <strong>Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd>Равен <code>true</code> только в том случае, если значение, ассоциированное со свойством, может быть изменено с помощью {{jsxref("Operators/Assignment_Operators", "оператора присваивания", "", 1)}}.<br>
-  <strong>Значение по умолчанию установлено в <code>false</code>.</strong></dd>
-  <dt><code>get</code></dt>
-  <dd>Функция, используемая как геттер свойства, либо {{jsxref("Global_Objects/undefined", "undefined")}}, если свойство не имеет геттера. Возвращаемое значение функции будет использоваться как значение свойства.<br>
-  <strong>Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>Функция, используемая как сеттер свойства, либо {{jsxref("Global_Objects/undefined", "undefined")}}, если свойство не имеет сеттера. Функция принимает единственным аргументом новое значение, присваиваемое свойству.<br>
-  <strong>Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.</strong></dd>
- </dl>
- </dd>
-</dl>
+- `obj`
+  - : Объект, на котором определяются новые или изменяются существующие свойства.
+- `props`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Объект, чьи собственные перечисляемые свойства представляют собой дескрипторы для создаваемых или изменяемых свойств. Дескрипторы свойств обладают следующими дополнительными ключами:
 
-<p>Объект, переданный в функцию.</p>
+    - `configurable`
+      - : Равен `true` только в том случае, если тип этого дескриптора свойства может быть изменён и если свойство может быть удалено из содержащего его объекта.
+        **Значение по умолчанию установлено в `false`.**
+    - `enumerable`
+      - : Равен `true` только в том случае, если это свойство можно увидеть через перечисление свойств содержащего его объекта.
+        **Значение по умолчанию установлено в `false`.**
+    - `value`
+      - : Значение, ассоциированное со свойством. Может быть любым допустимым значением JavaScript (числом, объектом, функцией и т.д.).
+        **Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.**
+    - `writable`
+      - : Равен `true` только в том случае, если значение, ассоциированное со свойством, может быть изменено с помощью {{jsxref("Operators/Assignment_Operators", "оператора присваивания", "", 1)}}.
+        **Значение по умолчанию установлено в `false`.**
+    - `get`
+      - : Функция, используемая как геттер свойства, либо {{jsxref("Global_Objects/undefined", "undefined")}}, если свойство не имеет геттера. Возвращаемое значение функции будет использоваться как значение свойства.
+        **Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.**
+    - `set`
+      - : Функция, используемая как сеттер свойства, либо {{jsxref("Global_Objects/undefined", "undefined")}}, если свойство не имеет сеттера. Функция принимает единственным аргументом новое значение, присваиваемое свойству.
+        **Значение по умолчанию установлено в {{jsxref("Global_Objects/undefined", "undefined")}}.**
 
-<h2 id="Description">Описание</h2>
+### Возвращаемое значение
 
-<p>Метод <code>Object.defineProperties()</code>, по сути, определяет все свойства, соответствующие собственным свойствам объекта <code>props</code>, на объекте <code>obj</code>.</p>
+Объект, переданный в функцию.
 
-<h2 id="Examples">Примеры</h2>
+## Описание
 
-<pre class="brush: js">Object.defineProperties(obj, {
+Метод `Object.defineProperties()`, по сути, определяет все свойства, соответствующие собственным свойствам объекта `props`, на объекте `obj`.
+
+## Примеры
+
+```js
+Object.defineProperties(obj, {
   'property1': {
     value: true,
     writable: true
@@ -73,13 +73,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   }
   // и т.д.
 });
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Предполагается, что среда выполнения осталась нетронутой, все имена и свойства ссылаются на свои изначальные значения. Оригинальный метод <code>Object.defineProperties</code> почти полностью эквивалентен (смотрите комментарий в функции <code>isCallable</code>) следующей реализации на JavaScript:</p>
+Предполагается, что среда выполнения осталась нетронутой, все имена и свойства ссылаются на свои изначальные значения. Оригинальный метод `Object.defineProperties` почти полностью эквивалентен (смотрите комментарий в функции `isCallable`) следующей реализации на JavaScript:
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+```js
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -111,20 +112,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
     if (hasProperty(desc, 'get')) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; g !== 'undefined') {
+      if (!isCallable(g) && g !== 'undefined') {
         throw new TypeError('bad get');
       }
       d.get = g;
     }
     if (hasProperty(desc, 'set')) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; s !== 'undefined') {
+      if (!isCallable(s) && s !== 'undefined') {
         throw new TypeError('bad set');
       }
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &amp;&amp; ('value' in d || 'writable' in d)) {
+    if (('get' in d || 'set' in d) && ('value' in d || 'writable' in d)) {
       throw new TypeError('identity-confused descriptor');
     }
 
@@ -140,30 +141,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++) {
+  for (var i = 0; i < keys.length; i++) {
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
   }
 
-  for (var i = 0; i &lt; descs.length; i++) {
+  for (var i = 0; i < descs.length; i++) {
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
   }
 
   return obj;
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)

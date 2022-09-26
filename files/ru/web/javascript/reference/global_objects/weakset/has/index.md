@@ -9,52 +9,49 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
-<div>{{JSRef("Global_Objects", "WeakSet")}}</div>
+{{JSRef("Global_Objects", "WeakSet")}}
 
-<p>Метод <code><strong>has()</strong></code> определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false. </p>
+Метод **`has()`** определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>ws</em>.has(value);</code></pre>
+```
+ws.has(value);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>value</dt>
- <dd>Обязателен. Искомый объект.</dd>
-</dl>
+- value
+  - : Обязателен. Искомый объект.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>Boolean</dt>
- <dd>Если объект был найден в WeakSet вернёт true, иначе false.</dd>
-</dl>
+- Boolean
+  - : Если объект был найден в WeakSet вернёт true, иначе false.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:Using_the_has_method">Использование метода <code>has</code> </h3>
+### Использование метода `has`
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
 mySet.has(window);  // вернёт true
 mySet.has(obj);     // вернёт false
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.add()")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.delete()")}}

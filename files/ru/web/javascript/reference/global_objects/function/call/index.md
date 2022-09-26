@@ -7,44 +7,43 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
-<div>{{JSRef("Global_Objects", "Function")}}</div>
+{{JSRef("Global_Objects", "Function")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>call()</strong></code> вызывает функцию с указанным значением <code>this</code> и индивидуально предоставленными аргументами.</p>
+Метод **`call()`** вызывает функцию с указанным значением `this` и индивидуально предоставленными аргументами.
 
-<div class="note">
-<p><strong>Примечание:</strong> хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.apply", "apply()")}}, фундаментальное различие между ними заключается в том, что функция <code>call()</code> принимает <strong>список аргументов</strong>, в то время, как функция <code>apply()</code> <strong>- одиночный массив аргументов</strong>.</p>
-</div>
+> **Примечание:** хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.apply", "apply()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает **список аргументов**, в то время, как функция `apply()` **- одиночный массив аргументов**.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>fun</var>.call(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</code></pre>
+```
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>thisArg</code></dt>
- <dd>Значение <code>this</code>, предоставляемое для вызова функции <em><code>fun</code></em>. Обратите внимание, что <code>this</code> может не быть реальным значением, видимым этим методом: если метод является функцией в {{jsxref("Functions_and_function_scope/Strict_mode", "нестрогом режиме", "", 1)}}, значения {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}} будут заменены глобальным объектом, а примитивные значения будут упакованы в объекты.</dd>
- <dt><code>arg1, arg2, ...</code></dt>
- <dd>Аргументы для объекта.</dd>
-</dl>
+- `thisArg`
+  - : Значение `this`, предоставляемое для вызова функции _`fun`_. Обратите внимание, что `this` может не быть реальным значением, видимым этим методом: если метод является функцией в {{jsxref("Functions_and_function_scope/Strict_mode", "нестрогом режиме", "", 1)}}, значения {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}} будут заменены глобальным объектом, а примитивные значения будут упакованы в объекты.
+- `arg1, arg2, ...`
+  - : Аргументы для объекта.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Вы можете присваивать различные объекты <code>this</code> при вызове существующей функции. <code>this</code> ссылается на текущий объект, вызвавший объект. С помощью <code>call</code> вы можете написать метод один раз, а затем наследовать его в других объектах, без необходимости переписывать метод для каждого нового объекта.</p>
+Вы можете присваивать различные объекты `this` при вызове существующей функции. `this` ссылается на текущий объект, вызвавший объект. С помощью `call` вы можете написать метод один раз, а затем наследовать его в других объектах, без необходимости переписывать метод для каждого нового объекта.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_call_to_chain_constructors_for_an_object">Пример: использование <code>call</code> для связи конструкторов объекта в цепочку</h3>
+### Пример: использование `call` для связи конструкторов объекта в цепочку
 
-<p>Вы можете использовать метод <code>call</code> для объединения в цепочку {{jsxref("Operators/new", "конструкторов", "", 1)}} объекта, как в Java. В следующем примере для объекта продукта <code>Product</code> объявлен конструктор с двумя параметрами, названием <code>name</code> и ценой <code>price</code>. Продукт инициализирует свойства <code>name</code> и <code>price</code>, а специализированные функции определяют ещё категорию <code>category</code>.</p>
+Вы можете использовать метод `call` для объединения в цепочку {{jsxref("Operators/new", "конструкторов", "", 1)}} объекта, как в Java. В следующем примере для объекта продукта `Product` объявлен конструктор с двумя параметрами, названием `name` и ценой `price`. Продукт инициализирует свойства `name` и `price`, а специализированные функции определяют ещё категорию `category`.
 
-<pre class="brush: js">function Product(name, price) {
+```js
+function Product(name, price) {
   this.name = name;
   this.price = price;
 
-  if (price &lt; 0) {
+  if (price < 0) {
     throw RangeError('Нельзя создать продукт ' +
                       this.name + ' с отрицательной ценой');
   }
@@ -66,18 +65,19 @@ Toy.prototype = Object.create(Product.prototype);
 
 var cheese = new Food('фета', 5);
 var fun = new Toy('робот', 40);
-</pre>
+```
 
-<h3 id="Example_Using_call_to_invoke_an_anonymous_function">Пример: использование <code>call</code> для вызова анонимной функции</h3>
+### Пример: использование `call` для вызова анонимной функции
 
-<p>В этом чисто искусственном примере, мы создаём анонимную функцию и используем <code>call</code> для вызова её на каждом элементе массива. Главная задача анонимной функции здесь — добавить функцию печати в каждый объект, способную напечатать правильный индекс объекта в массиве. Передача объекта в качестве значения <code>this</code> не является острой необходимостью, но мы делаем это в целях объяснения.</p>
+В этом чисто искусственном примере, мы создаём анонимную функцию и используем `call` для вызова её на каждом элементе массива. Главная задача анонимной функции здесь — добавить функцию печати в каждый объект, способную напечатать правильный индекс объекта в массиве. Передача объекта в качестве значения `this` не является острой необходимостью, но мы делаем это в целях объяснения.
 
-<pre class="brush: js">var animals = [
+```js
+var animals = [
   { species: 'Лев', name: 'Король' },
   { species: 'Кит', name: 'Фэйл' }
 ];
 
-for (var i = 0; i &lt; animals.length; i++) {
+for (var i = 0; i < animals.length; i++) {
   (function(i) {
     this.print = function() {
       console.log('#' + i + ' ' + this.species
@@ -86,19 +86,17 @@ for (var i = 0; i &lt; animals.length; i++) {
     this.print();
   }).call(animals[i], i);
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("Function.prototype.apply()")}}

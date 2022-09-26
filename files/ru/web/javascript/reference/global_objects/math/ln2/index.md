@@ -8,60 +8,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Math.LN2</code></strong> представляет натуральный логарифм из 2, приблизительно равный 0,693:</p>
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0,693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0,693</annotation></semantics></math></p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Math.LN2`** представляет натуральный логарифм из 2, приблизительно равный 0,693:
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку свойство <code>LN2</code> является статическим свойством объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.LN2</code>, а не пытаться создавать экземпляр объекта <code>Math</code> и получать свойство от него (поскольку объект <code>Math</code> не является конструктором).</p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0,693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0,693</annotation></semantics></math>
 
-<h2 id="Examples">Примеры</h2>
+{{js_property_attributes(0, 0, 0)}}
 
-<h3 id="Example:_Using_Math.LN2">Пример: использование свойства <code>Math.LN2</code></h3>
-<p>Следующая функция возвращает натуральный логарифм из 2:</p>
-<pre class="brush: js">function getNatLog2() {
+## Описание
+
+Поскольку свойство `LN2` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.LN2`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.LN2`
+
+Следующая функция возвращает натуральный логарифм из 2:
+
+```js
+function getNatLog2() {
   return Math.LN2;
 }
 
 getNatLog2(); // 0.6931471805599453
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}     | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log2()")}} {{experimental_inline}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}} {{experimental_inline}}

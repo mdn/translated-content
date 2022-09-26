@@ -7,27 +7,30 @@ tags:
   - Расширение
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>Ключевое слово <strong><code>extends</code></strong> используется в  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">объявлении класса</a> или в  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">выражениях класса</a> для создания дочернего класса.</p>
+Ключевое слово **`extends`** используется в [объявлении класса](/ru/docs/Web/JavaScript/Reference/Statements/class) или в [выражениях класса](/ru/docs/Web/JavaScript/Reference/Operators/class) для создания дочернего класса.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">class ChildClass extends ParentClass { ... }</pre>
+```
+class ChildClass extends ParentClass { ... }
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Ключевое слово <strong><code>extends</code></strong> может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта.</p>
+Ключевое слово **`extends`** может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта.
 
-<p>Свойство <strong><code>.prototype</code></strong> родительского класса или объекта должно быть {{jsxref("Object")}} или {{jsxref("null")}}.</p>
+Свойство **`.prototype`** родительского класса или объекта должно быть {{jsxref("Object")}} или {{jsxref("null")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_extends">Использование <code>extends</code></h3>
+### Использование `extends`
 
-<p>В первом примере создаётся дочерний класс с именем <code>Square</code> от класса с именем <code>Polygon</code>. Этот пример был взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+В первом примере создаётся дочерний класс с именем `Square` от класса с именем `Polygon`. Этот пример был взят из [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
     // в который передаётся свойство length в качестве
@@ -44,13 +47,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   get area() {
     return this.height * this.width;
   }
-}</pre>
+}
+```
 
-<h3 id="Расширение_встроенных_объектов_с_помощью_extends">Расширение встроенных объектов с помощью <code>extends</code></h3>
+### Расширение встроенных объектов с помощью `extends`
 
-<p>Этот пример расширяет встроенный объект {{jsxref("Date")}}. Пример взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+Этот пример расширяет встроенный объект {{jsxref("Date")}}. Пример взят из [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-<pre class="brush: js">class myDate extends Date {
+```js
+class myDate extends Date {
   constructor() {
     super();
   }
@@ -64,13 +69,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
       months[this.getMonth()] + '-' +
       this.getFullYear();
   }
-}</pre>
+}
+```
 
-<h3 id="Расширение_null">Расширение <code>null</code></h3>
+### Расширение `null`
 
-<p>Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.</p>
+Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.
 
-<pre class="brush: js">class nullExtends extends null {
+```js
+class nullExtends extends null {
   constructor() {}
 }
 
@@ -78,19 +85,17 @@ Object.getPrototypeOf(nullExtends); // Function.prototype
 Object.getPrototypeOf(nullExtends.prototype) // null
 
 new nullExtends(); //ReferenceError: this is not defined
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></li>
-</ul>
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [super](/ru/docs/Web/JavaScript/Reference/Operators/super)

@@ -9,47 +9,49 @@ tags:
   - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>charCodeAt()</code></strong> возвращает числовое значение Юникода для символа по указанному индексу (за исключением кодовых точек Юникода, больших 0x10000).</p>
+Метод **`charCodeAt()`** возвращает числовое значение Юникода для символа по указанному индексу (за исключением кодовых точек Юникода, больших 0x10000).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.charCodeAt(<var>index</var>)</code></pre>
+```
+str.charCodeAt(index)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Целое число больше, либо равное 0 и меньше длины строки; если параметр не является числом, он устанавливается в 0.</dd>
-</dl>
+- `index`
+  - : Целое число больше, либо равное 0 и меньше длины строки; если параметр не является числом, он устанавливается в 0.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Кодовые точки Юникода простираются в диапазоне от 0 до 1114111 (0x10FFFF). Первые 128 кодовых точек Юникода напрямую отображаются в кодировку ASCII. Информацию по Юникоду смотрите в <a href="/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Руководстве по JavaScript</a>.</p>
+Кодовые точки Юникода простираются в диапазоне от 0 до 1114111 (0x10FFFF). Первые 128 кодовых точек Юникода напрямую отображаются в кодировку ASCII. Информацию по Юникоду смотрите в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode).
 
-<p>Обратите внимание, что метод <code>charCodeAt()</code> всегда возвращает значение, меньшее 65536. Так происходит потому, что большие кодовые точки представляются парой (меньших значений) «суррогатных» псевдо-символов, которые используются для составления настоящего символа. Поэтому для того, чтобы получить полный символ для значений символов от 65536 и выше, необходимо получить не только значение <code>charCodeAt(i)</code>, но также значение <code>charCodeAt(i + 1)</code> (как если бы строка состояла из двух букв). Смотрите второй и третий примеры ниже.</p>
+Обратите внимание, что метод `charCodeAt()` всегда возвращает значение, меньшее 65536. Так происходит потому, что большие кодовые точки представляются парой (меньших значений) «суррогатных» псевдо-символов, которые используются для составления настоящего символа. Поэтому для того, чтобы получить полный символ для значений символов от 65536 и выше, необходимо получить не только значение `charCodeAt(i)`, но также значение `charCodeAt(i + 1)` (как если бы строка состояла из двух букв). Смотрите второй и третий примеры ниже.
 
-<p>Метод <code>charCodeAt()</code> возвращает {{jsxref("Global_Objects/NaN", "NaN")}}, если указанный индекс меньше нуля или больше длины строки.</p>
+Метод `charCodeAt()` возвращает {{jsxref("Global_Objects/NaN", "NaN")}}, если указанный индекс меньше нуля или больше длины строки.
 
-<p>Обратная совместимость: в более старых версиях (например, в JavaScript 1.2) метод <code>charCodeAt()</code> возвращал число из кодировки ISO-Latin-1 по указанному индексу. Диапазон символов в кодировке ISO-Latin-1 простирается от 0 до 255. Первые 127 чисел напрямую отображаются в кодировку ASCII.</p>
+Обратная совместимость: в более старых версиях (например, в JavaScript 1.2) метод `charCodeAt()` возвращал число из кодировки ISO-Latin-1 по указанному индексу. Диапазон символов в кодировке ISO-Latin-1 простирается от 0 до 255. Первые 127 чисел напрямую отображаются в кодировку ASCII.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_charCodeAt">Пример: использование метода <code>charCodeAt()</code></h3>
+### Пример: использование метода `charCodeAt()`
 
-<p>В следующем примере возвращается число 65, значение Unicode для латинского символа «A».</p>
+В следующем примере возвращается число 65, значение Unicode для латинского символа «A».
 
-<pre class="brush: js">'ABC'.charCodeAt(0); // вернёт 65
-</pre>
+```js
+'ABC'.charCodeAt(0); // вернёт 65
+```
 
-<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке неизвестно</h3>
+### Пример: исправление метода `charCodeAt()` для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке неизвестно
 
-<p>Эта версия может использоваться в циклах for, даже когда неизвестно, были ли до указанной позиции символы из не-БМП.</p>
+Эта версия может использоваться в циклах for, даже когда неизвестно, были ли до указанной позиции символы из не-БМП.
 
-<pre class="brush: js">function fixedCharCodeAt(str, idx) {
+```js
+function fixedCharCodeAt(str, idx) {
   // например, fixedCharCodeAt('\uD800\uDC00', 0); // 65536
   // например, fixedCharCodeAt('\uD800\uDC00', 1); // false
   idx = idx || 0;
@@ -59,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
@@ -67,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
     return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
   }
-  if (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF) { // Младшая часть суррогатной пары
+  if (0xDC00 <= code && code <= 0xDFFF) { // Младшая часть суррогатной пары
     // Мы возвращаем false, чтобы цикл пропустил эту итерацию,
     // поскольку суррогатная пара
     // уже обработана в предыдущей итерации
@@ -79,11 +81,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_known">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке известно</h3>
+### Пример: исправление метода `charCodeAt()` для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке известно
 
-<pre class="brush: js">function knownCharCodeAt(str, idx) {
+```js
+function knownCharCodeAt(str, idx) {
   str += '';
   var code,
       end = str.length;
@@ -91,7 +94,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     }
     else {
@@ -99,14 +102,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return NaN;
   }
 
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Перешагиваем через один, поскольку один «символ» является частью суррогатной пары
@@ -114,21 +117,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

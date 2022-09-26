@@ -3,43 +3,40 @@ title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>throw()</strong></code> возобновляет выполнение тела генератора кидая внутри исключение  <code>и возвращает объект со свойствами done и value</code>.</p>
+Метод **`throw()`** возобновляет выполнение тела генератора кидая внутри исключение `и возвращает объект со свойствами done и value`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>gen</var>.throw(exception)</code></pre>
+```
+gen.throw(exception)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>exception</code></dt>
- <dd>Исключение, которое будет брошено. Во время отладки бывает полезно сделать его <code>instanceof</code> {{jsxref("Error")}}.</dd>
-</dl>
+- `exception`
+  - : Исключение, которое будет брошено. Во время отладки бывает полезно сделать его `instanceof` {{jsxref("Error")}}.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект с двумя свойствами:</p>
+Объект с двумя свойствами:
 
-<ul>
- <li><code>done</code> (boolean)
+- `done` (boolean)
 
-  <ul>
-   <li>Имеет значение <code>true</code> если iterator прошёл конец итерируемой последовательности. В этом случае <code>value</code> опционально определяется выражением <em>return value</em> внутри итератора .</li>
-   <li>Имеет значение <code>false</code> если iterator имеет возможность вернуть следующее значение последовательности. Это равносильно когда свойство done не указано.</li>
-  </ul>
- </li>
- <li><code>value</code> - любое JavaScript значение,  возвращённое итератором. Может быть проигнорировано, когда <em><code>done</code> === <code>true</code></em>.</li>
-</ul>
+  - Имеет значение `true` если iterator прошёл конец итерируемой последовательности. В этом случае `value` опционально определяется выражением _return value_ внутри итератора .
+  - Имеет значение `false` если iterator имеет возможность вернуть следующее значение последовательности. Это равносильно когда свойство done не указано.
 
-<h2 id="Примеры">Примеры</h2>
+- `value` - любое JavaScript значение, возвращённое итератором. Может быть проигнорировано, когда _`done` === `true`_.
 
-<h3 id="Использование_throw()">Использование <code>throw()</code></h3>
+## Примеры
 
-<p>В этом примере показан простой генератор и исключение,  которое выбрасывается используя метод <code>throw</code>. Исключение может быть поймано, используя, как обычно, блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>.</p>
+### Использование `throw()`
 
-<pre class="brush: js">function* gen() {
+В этом примере показан простой генератор и исключение, которое выбрасывается используя метод `throw`. Исключение может быть поймано, используя, как обычно, блок [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
+
+```js
+function* gen() {
   while(true) {
     try {
        yield 42;
@@ -55,18 +52,16 @@ g.next();
 g.throw(new Error('Something went wrong'));
 // "Error caught!"
 // { value: 42, done: false }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
-</ul>
+- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)

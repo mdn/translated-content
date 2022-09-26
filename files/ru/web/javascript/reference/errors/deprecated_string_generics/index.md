@@ -6,13 +6,12 @@ tags:
   - предупреждение
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}Поддержка строковых обобщённых методов прекращена с версии Firefox 68. Более старые версии предупреждают об использовании данных методов следующим образом:
 
-<div>Поддержка строковых обобщённых методов прекращена с версии Firefox 68. Более старые версии предупреждают об использовании данных методов следующим образом:</div>
+## Сообщение
 
-<h2 id="Сообщение">Сообщение</h2>
-
-<pre class="syntaxbox">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
+```
+Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead
 Warning: String.contains          is deprecated; use String.prototype.contains          instead
@@ -37,34 +36,38 @@ Warning: String.toUpperCase       is deprecated; use String.prototype.toUpperCas
 Warning: String.trim              is deprecated; use String.prototype.trim              instead
 Warning: String.trimLeft          is deprecated; use String.prototype.trimLeft          instead
 Warning: String.trimRight         is deprecated; use String.prototype.trimRight         instead
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>Предупреждение. Исполнение кода JavaScript не будет остановлено.</p>
+Предупреждение. Исполнение кода JavaScript не будет остановлено.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Нестандартные обобщённые методы {{jsxref("String")}} являются устаревшими, поддержка в Firefox прекращена, начиная с версии 68. Строковые обобщённые методы предоставляют возможность применять методы экземпляров <code>String</code> к любым объектам.</p>
+Нестандартные обобщённые методы {{jsxref("String")}} являются устаревшими, поддержка в Firefox прекращена, начиная с версии 68. Строковые обобщённые методы предоставляют возможность применять методы экземпляров `String` к любым объектам.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Устаревший_синтаксис">Устаревший синтаксис</h3>
+### Устаревший синтаксис
 
-<pre class="brush: js example-bad">var num = 15;
-String.replace(num, /5/, '2');</pre>
+```js example-bad
+var num = 15;
+String.replace(num, /5/, '2');
+```
 
-<h3 id="Стандартный_синтаксис">Стандартный синтаксис</h3>
+### Стандартный синтаксис
 
-<pre class="brush: js example-good">var num = 15;
+```js example-good
+var num = 15;
 String(num).replace(/5/, '2');
-</pre>
+```
 
-<h2 id="Прослойка">Прослойка</h2>
+## Прослойка
 
-<p>Ниже приведён код прослойки, с помощью которой можно добавить поддержку обобщённых методов String в другие браузеры:</p>
+Ниже приведён код прослойки, с помощью которой можно добавить поддержку обобщённых методов String в другие браузеры:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Предполагаем, что все требуемые методы экземпляров String уже присутствуют
 // (если нет, для них так же можно использовать полифилы)
 (function() {
@@ -91,13 +94,12 @@ String(num).replace(/5/, '2');
       };
     };
 
-  for (i = 0; i &lt; methodCount; i++) {
+  for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());</pre>
+}());
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String")}}</li>
-</ul>
+- {{jsxref("String")}}

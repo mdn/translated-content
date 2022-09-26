@@ -8,19 +8,20 @@ tags:
   - Классы
 translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}`constructor` - это специальный метод, служащий для создания и инициализации объектов, созданных с использованием `class`.
 
-<div><code>constructor</code> - это специальный метод, служащий для создания и инициализации объектов, созданных с использованием <code>class</code>.</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+constructor([arguments]) { ... }
+```
 
-<pre class="syntaxbox">constructor([arguments]) { ... }</pre>
+## Описание
 
-<h2 id="Описание">Описание</h2>
+Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы будут вызваны.
 
-<p>Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы будут вызваны.</p>
-
-<pre>class Person {
+```
+class Person {
 
   constructor(name) {
     this.name = name;
@@ -34,21 +35,27 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 const otto = new Person('Отто');
 
-otto.introduce();</pre>
+otto.introduce();
+```
 
-<p>Если вы не определили метод constructor, то будет использован конструктор по умолчанию. Если ваш класс базовый, то конструктор по умолчанию пустой:</p>
+Если вы не определили метод constructor, то будет использован конструктор по умолчанию. Если ваш класс базовый, то конструктор по умолчанию пустой:
 
-<pre>constructor() {}</pre>
+```
+constructor() {}
+```
 
-<p>Если ваш класс является производным классом, конструктор по умолчанию вызывает родительский конструктор, передавая любые аргументы, которые были предоставлены:</p>
+Если ваш класс является производным классом, конструктор по умолчанию вызывает родительский конструктор, передавая любые аргументы, которые были предоставлены:
 
-<pre>constructor(...args) {
+```
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<p>Это позволяет работать следующему коду:</p>
+Это позволяет работать следующему коду:
 
-<pre>class ValidationError extends Error {
+```
+class ValidationError extends Error {
 
   printCustomerMessage() {
     return `Проверка не удалась :-( (подробности: ${this.message})`;
@@ -66,13 +73,15 @@ try {
     console.log('Неизвестная ошибка', error);
     throw error;
   }
-}</pre>
+}
+```
 
-<p><code>ValidationError</code> классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем, конструктор по умолчанию позаботится об инициализации родительского класса <code>Error</code>, переданным ему аргументом.</p>
+`ValidationError` классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем, конструктор по умолчанию позаботится об инициализации родительского класса `Error`, переданным ему аргументом.
 
-<p>Однако, если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
+Однако, если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя `super`. К примеру:
 
-<pre>class ValidationError extends Error {
+```
+class ValidationError extends Error {
 
   constructor(message) {
     super(message);  // вызов конструктора родительского класса
@@ -96,17 +105,19 @@ try {
     console.log('Неизвестная ошибка', error);
     throw error;
   }
-}</pre>
+}
+```
 
-<p>В классе может быть только один метод с именем "<code>constructor</code>". Если класс содержит более одного <code>constructor</code>, будет сгенерировано исключение {{jsxref("SyntaxError")}}.</p>
+В классе может быть только один метод с именем "`constructor`". Если класс содержит более одного `constructor`, будет сгенерировано исключение {{jsxref("SyntaxError")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_constructor">Использование метода <code>constructor</code></h3>
+### Использование метода `constructor`
 
-<p>Данный фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
+Данный фрагмент кода взят из [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
     // в который передаётся length в качестве аргументов,
@@ -124,13 +135,15 @@ try {
   set area(value) {
     this.area = value;
   }
-}</pre>
+}
+```
 
-<h3 id="Другой_пример">Другой пример</h3>
+### Другой пример
 
-<p>Посмотрите на этот отрывок кода.</p>
+Посмотрите на этот отрывок кода.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor() {
     this.name = "Polygon";
   }
@@ -150,35 +163,39 @@ console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //fa
 console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
 
 let newInstance = new Square();
-console.log(newInstance.name); //Polygon</pre>
+console.log(newInstance.name); //Polygon
+```
 
-<p>Здесь прототип <strong>Square</strong> класса изменён, но в то же время constructor предыдущего базового класса <strong>Polygon</strong> вызывается при создании нового экземпляра <strong>Square</strong>.</p>
+Здесь прототип **Square** класса изменён, но в то же время constructor предыдущего базового класса **Polygon** вызывается при создании нового экземпляра **Square**.
 
-<h3 id="Constructors_по_умолчанию.">Constructors по умолчанию.</h3>
+### Constructors по умолчанию.
 
-<p>Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:</p>
+Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:
 
-<pre class="brush: js">constructor() {}</pre>
+```js
+constructor() {}
+```
 
-<p>Для производных классов, constructor по умолчанию:</p>
+Для производных классов, constructor по умолчанию:
 
-<pre class="brush: js">constructor(...args) {
+```js
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/super">super()</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">Object.prototype.constructor</a></li>
-</ul>
+## Смотрите также
+
+- [super()](/ru/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/ru/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [Object.prototype.constructor](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)

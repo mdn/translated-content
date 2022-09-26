@@ -9,81 +9,75 @@ tags:
   - ListFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>Объект <strong><code>Intl.ListFormat</code></strong> представляет собой конструктор объектов, включающих языка-зависимое форматирование списков.</p>
+Объект **`Intl.ListFormat`** представляет собой конструктор объектов, включающих языка-зависимое форматирование списков.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre><code>new Intl.ListFormat([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+```
+new Intl.ListFormat([locales[, options]])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>Необязательный параметр. Строка с языковой меткой BCP 47 или массив таких строк. Описание общей формы и интерпретации аргумента <code>locales</code> смотрите на странице {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.</p>
- </dd>
- <dt><code>options</code></dt>
- <dd>Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
- <ul>
-  <li><code>localeMatcher</code><br>
-   Используемый алгоритм сопоставления локалей. Возможные значения: <code>"lookup"</code> и <code>"best fit"</code>; по умолчанию используется <code>"best fit"</code>. Подробнее см. на странице <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation" rel="nofollow"><code>Intl</code></a>.</li>
-  <li><code>type</code><br>
-   Формат вывода. Возможные значения: <code>"conjunction"</code> для вывода значений через "и" (используется по умолчанию, прим. <code>A, B и C</code>) или <code>"disjunction"</code> для вывода значений через "или" (прим. <code>A, B или C</code>). <code>"unit"</code> для вывода значений с единицами измерений (прим. <code>5 фунтов, 12 унций</code>).</li>
-  <li><code>style</code><br>
-   Стиль форматирования вывода. Возможные значения: <code>"long"</code> (используется по умолчанию, прим. <code>A, B и C</code>); <code>"short"</code> или <code>"narrow"</code> (прим. <code>A, B, C</code>). При использовании <code>narrow</code>, параметр <code>type</code> может принимать только значение <code>unit</code>.</li>
- </ul>
- </dd>
-</dl>
+- `locales`
+  - : Необязательный параметр. Строка с языковой меткой BCP 47 или массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на странице {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
+- `options`
 
-<h2 id="Описание">Описание</h2>
+  - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
 
-<h3 id="Свойства">Свойства</h3>
+    - `localeMatcher`
+      Используемый алгоритм сопоставления локалей. Возможные значения: `"lookup"` и `"best fit"`; по умолчанию используется `"best fit"`. Подробнее см. на странице [`Intl`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
+    - `type`
+      Формат вывода. Возможные значения: `"conjunction"` для вывода значений через "и" (используется по умолчанию, прим. `A, B и C`) или `"disjunction"` для вывода значений через "или" (прим. `A, B или C`). `"unit"` для вывода значений с единицами измерений (прим. `5 фунтов, 12 унций`).
+    - `style`
+      Стиль форматирования вывода. Возможные значения: `"long"` (используется по умолчанию, прим. `A, B и C`); `"short"` или `"narrow"` (прим. `A, B, C`). При использовании `narrow`, параметр `type` может принимать только значение `unit`.
 
-<dl>
- <dt>{{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}</dt>
- <dd>Позволяет добавлять свойства ко всем объектам <code>Intl.ListFormat</code></dd>
-</dl>
+## Описание
 
-<h3 id="Методы">Методы</h3>
+### Свойства
 
-<dl>
- <dt>{{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
- <dd>Возвращает массив, содержащий те из переданных ему локалей, которые поддерживаются без необходимости использовать локаль по умолчанию.</dd>
-</dl>
+- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+  - : Позволяет добавлять свойства ко всем объектам `Intl.ListFormat`
 
-<h2 id="Примеры">Примеры</h2>
+### Методы
 
-<h3 id="Использование_format">Использование <code>format</code></h3>
+- {{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+  - : Возвращает массив, содержащий те из переданных ему локалей, которые поддерживаются без необходимости использовать локаль по умолчанию.
 
-<p>Пример ниже показывает как создать объект <code>ListFormat</code> с поддержкой форматирования на русском языке и получить отформатированную строку с помощью метода <code>format</code>.</p>
+## Примеры
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+### Использование `format`
+
+Пример ниже показывает как создать объект `ListFormat` с поддержкой форматирования на русском языке и получить отформатированную строку с помощью метода `format`.
+
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('ru-RU', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus и Car
+// > Motorcycle, Bus и Car
 
  console.log(new Intl.ListFormat('ru-RU', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus или Car
+// > Motorcycle, Bus или Car
 
  console.log(new Intl.ListFormat('ru-RU', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h3 id="Использование_formatToParts">Использование <code>formatToParts</code></h3>
+### Использование `formatToParts`
 
-<p>Пример ниже показывает как получить отформатированные части объекта <code>ListFormat</code> с помощью метода <code>formatToParts</code>.</p>
+Пример ниже показывает как получить отформатированные части объекта `ListFormat` с помощью метода `formatToParts`.
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
-// &gt; [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
-</pre>
+// > [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

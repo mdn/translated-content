@@ -5,61 +5,64 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
 translation_of: Web/JavaScript/Reference/Errors/No_non-null_object
 ---
-<div>{{JSSidebar("Errors")}}</div>
+{{JSSidebar("Errors")}}
 
-<h2 id="Сообщения">Сообщения</h2>
+## Сообщения
 
-<pre class="syntaxbox">TypeError: недопустимый дескриптор свойства {x} (Edge)
+```
+TypeError: недопустимый дескриптор свойства {x} (Edge)
 TypeError: "x" не является ненулевым объектом (Firefox)
 TypeError: описание свойства должно быть объектом: "x" (Chrome)
 TypeError: недопустимое значение, используемое в слабом наборе (Chrome)
+```
 
-</pre>
+## Тип ошибки
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+{{jsxref("TypeError")}}
 
-<p>{{jsxref("TypeError")}}</p>
+## Что пошло не так?
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+Объект где-то ожидался и не был предоставлен. {{jsxref("null")}} не является объектом и не будет работать. Вы должны обеспечить надлежащий объект в данной ситуации.
 
-<p>Объект где-то ожидался и не был предоставлен. {{jsxref("null")}} не является объектом и не будет работать. Вы должны обеспечить надлежащий объект в данной ситуации.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Ожидается дескриптор свойства
 
-<h3 id="Ожидается_дескриптор_свойства">Ожидается дескриптор свойства</h3>
+Когда такие методы, как {{jsxref("Object.create()")}} или {{jsxref("object.defineProperty()")}} и {{jsxref("object.defineProperties()")}} используются, дополнительный параметр дескриптора ожидает объект дескриптора свойства. Если не указать объект (например, просто число), возникнет ошибка:
 
-<p>Когда такие методы, как {{jsxref("Object.create()")}} или {{jsxref("object.defineProperty()")}} и {{jsxref("object.defineProperties()")}} используются, дополнительный параметр дескриптора ожидает объект дескриптора свойства. Если не указать объект (например, просто число), возникнет ошибка:</p>
-
-<pre class="brush: js example-bad">Object.defineProperty({}, 'key', 1);
+```js example-bad
+Object.defineProperty({}, 'key', 1);
 // TypeError: 1 is not a non-null object
 
 Object.defineProperty({}, 'key', null);
 // TypeError: null is not a non-null object
-</pre>
+```
 
-<p>Допустимый объект дескриптора свойства может выглядеть следующим образом:</p>
+Допустимый объект дескриптора свойства может выглядеть следующим образом:
 
-<pre class="brush: js example-good">Object.defineProperty({}, 'key', { value: 'foo', writable: false });
-</pre>
+```js example-good
+Object.defineProperty({}, 'key', { value: 'foo', writable: false });
+```
 
-<h3 id="СлабаяКарта_и_СлабыйСет_объектов_требуют_ключей_объектов"><code>СлабаяКарта</code> и <code>СлабыйСет</code> объектов требуют ключей объектов</h3>
+### `СлабаяКарта` и `СлабыйСет` объектов требуют ключей объектов
 
-<p>{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} объекты хранят ключи объектов. Вы не можете использовать другие типы ключей.</p>
+{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} объекты хранят ключи объектов. Вы не можете использовать другие типы ключей.
 
-<pre class="brush: js example-bad">var ws = new WeakSet();
+```js example-bad
+var ws = new WeakSet();
 ws.add('foo');
-// TypeError: "foo" is not a non-null object</pre>
+// TypeError: "foo" is not a non-null object
+```
 
-<p>Создание объекта вместо:</p>
+Создание объекта вместо:
 
-<pre class="brush: js example-good">ws.add({foo: 'bar'});
+```js example-good
+ws.add({foo: 'bar'});
 ws.add(window);
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
+- {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}

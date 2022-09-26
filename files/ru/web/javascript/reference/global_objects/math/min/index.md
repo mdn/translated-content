@@ -8,69 +8,70 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.min()</code></strong> возвращает наименьшее из нуля или более чисел.</p>
+Метод **`Math.min()`** возвращает наименьшее из нуля или более чисел.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+```
+Math.min([value1[, value2[, ...]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value1, value2, ...</code></dt>
- <dd>Числа.</dd>
-</dl>
+- `value1, value2, ...`
+  - : Числа.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>min()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.min()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `min()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.min()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<p>При вызове без аргументов результатом вызова будет значение {{jsxref("Global_Objects/Infinity", "Infinity")}}.</p>
+При вызове без аргументов результатом вызова будет значение {{jsxref("Global_Objects/Infinity", "Infinity")}}.
 
-<p>Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
+Если хотя бы один из аргументов не может быть преобразован в число, результатом будет {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.min">Пример: использование метода <code>Math.min()</code></h3>
+### Пример: использование метода `Math.min()`
 
-<p>В этом примере ищется минимум из <code>x</code> и <code>y</code> и присваивается переменной <code>z</code>:</p>
+В этом примере ищется минимум из `x` и `y` и присваивается переменной `z`:
 
-<pre class="brush: js">var x = 10, y = -20;
+```js
+var x = 10, y = -20;
 var z = Math.min(x, y);
-</pre>
+```
 
-<h3 id="Example:_Clipping_a_value_with_Math.min">Пример: обрезание значения при помощи метода <code>Math.min()</code></h3>
+### Пример: обрезание значения при помощи метода `Math.min()`
 
-<p>Метод <code>Math.min()</code> часто используется для обрезания значения таким образом, чтобы оно всегда не превосходило некоторую границу. Например, такое условие</p>
+Метод `Math.min()` часто используется для обрезания значения таким образом, чтобы оно всегда не превосходило некоторую границу. Например, такое условие
 
-<pre class="brush: js">var x = f(foo);
+```js
+var x = f(foo);
 
-if (x &gt; boundary) {
+if (x > boundary) {
   x = boundary;
 }
-</pre>
+```
 
-<p>может быть переписано в виде</p>
+может быть переписано в виде
 
-<pre class="brush: js">var x = Math.min(f(foo), boundary);
-</pre>
+```js
+var x = Math.min(f(foo), boundary);
+```
 
-<p>Подобным образом может использоваться и метод {{jsxref("Math.max()")}} для обрезания значения по нижней границе.</p>
+Подобным образом может использоваться и метод {{jsxref("Math.max()")}} для обрезания значения по нижней границе.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.max()")}}</li>
-</ul>
+- {{jsxref("Math.max()")}}

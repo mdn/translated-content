@@ -14,84 +14,85 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>some()</strong></code> проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.</p>
+Метод **`some()`** проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.
 
-<div class="blockIndicator note">
-<p><strong>Обратите внимание</strong>: метод возвращает <code>false</code> при любом условии для пустого массива.</p>
-</div>
+> **Примечание:** **Обратите внимание**: метод возвращает `false` при любом условии для пустого массива.
 
-<p>{{EmbedInteractiveExample("pages/js/array-some.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-some.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>arr</var>.some(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+```
+arr.some(callback(element[, index[, array]])[, thisArg])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция проверки каждого элемента, принимает три аргумента:
- <dl>
-  <dt><code>element</code></dt>
-  <dd>Текущий обрабатываемый элемент массива.</dd>
-  <dt><code>index</code>{{Optional_inline}}</dt>
-  <dd>Индекс текущего обрабатываемого элемента массива.</dd>
-  <dt><code>array</code>{{Optional_inline}}</dt>
-  <dd>Массив, по которому осуществляется проход.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{Optional_inline}}</dt>
- <dd>Значение, используемое в качестве <code>this</code> при выполнении функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Функция проверки каждого элемента, принимает три аргумента:
 
-<p><code><strong>true</strong></code>, если функция проверки возвращает {{Glossary("truthy")}} значение хотя бы для одного элемента массива. Иначе, <code><strong>false</strong></code>.</p>
+    - `element`
+      - : Текущий обрабатываемый элемент массива.
+    - `index`{{Optional_inline}}
+      - : Индекс текущего обрабатываемого элемента массива.
+    - `array`{{Optional_inline}}
+      - : Массив, по которому осуществляется проход.
 
-<h2 id="Description">Описание</h2>
+- `thisArg`{{Optional_inline}}
+  - : Значение, используемое в качестве `this` при выполнении функции `callback`.
 
-<p>Метод <code>some()</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого <code>callback</code> вернёт <em>истинное</em> значение (значение, становящееся равным <code>true</code> при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод <code>some()</code> немедленно вернёт <code>true</code>. В противном случае, если <code>callback</code> вернёт <code>false</code> для всех элементов массива, метод <code>some()</code> вернёт <code>false</code>. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.</p>
+### Возвращаемое значение
 
-<p>Функция <code>callback</code> вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.</p>
+**`true`**, если функция проверки возвращает {{Glossary("truthy")}} значение хотя бы для одного элемента массива. Иначе, **`false`**.
 
-<p>Если в метод <code>some()</code> был передан параметр <code>thisArg</code>, при вызове <code>callback</code> он будет использоваться в качестве значения <code>this</code>. В противном случае в качестве значения <code>this</code> будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение <code>this</code>, наблюдаемое из функции <code>callback</code>, определяется согласно <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">обычным правилам определения <code>this</code>, видимого из функции</a>.</p>
+## Описание
 
-<p>Метод <code>some()</code> не изменяет массив, для которого он был вызван.</p>
+Метод `some()` вызывает переданную функцию `callback` один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого `callback` вернёт _истинное_ значение (значение, становящееся равным `true` при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод `some()` немедленно вернёт `true`. В противном случае, если `callback` вернёт `false` для всех элементов массива, метод `some()` вернёт `false`. Функция `callback` вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.
 
-<p>Диапазон элементов, обрабатываемых методом <code>some()</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>some()</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменятся, значения, переданные в функцию <code>callback</code>, будут значениями на тот момент времени, когда метод <code>some()</code> посетит их; удалённые элементы посещены не будут.</p>
+Функция `callback` вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.
 
-<h2 id="Examples">Примеры</h2>
+Если в метод `some()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`, видимого из функции](/ru/docs/Web/JavaScript/Reference/Operators/this).
 
-<h3 id="Проверка_значений_элементов_массива">Проверка значений элементов массива</h3>
+Метод `some()` не изменяет массив, для которого он был вызван.
 
-<p>Следующий пример проверяет наличие в массиве элемента, который больше 10.</p>
+Диапазон элементов, обрабатываемых методом `some()`, устанавливается до первого вызова функции `callback`. Элементы, добавленные в массив после начала выполнения метода `some()`, не будут посещены функцией `callback`. Если существующие элементы массива изменятся, значения, переданные в функцию `callback`, будут значениями на тот момент времени, когда метод `some()` посетит их; удалённые элементы посещены не будут.
 
-<pre class="brush: js">function isBiggerThan10(element, index, array) {
-  return element &gt; 10;
+## Примеры
+
+### Проверка значений элементов массива
+
+Следующий пример проверяет наличие в массиве элемента, который больше 10.
+
+```js
+function isBiggerThan10(element, index, array) {
+  return element > 10;
 }
 [2, 5, 8, 1, 4].some(isBiggerThan10);  // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Проверка_значений_элементов_массива', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
+{{ EmbedLiveSample('Проверка_значений_элементов_массива', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
 
-<h3 id="Проверка_элементов_массива_с_использованием_стрелочных_функций">Проверка элементов массива с использованием стрелочных функций</h3>
+### Проверка элементов массива с использованием стрелочных функций
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Стрелочные функции</a> предоставляют более краткий синтаксис для подобных проверок.</p>
+[Стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) предоставляют более краткий синтаксис для подобных проверок.
 
-<pre class="brush: js">[2, 5, 8, 1, 4].some(elem =&gt; elem &gt; 10);  // false
-[12, 5, 8, 1, 4].some(elem =&gt; elem &gt; 10); // true
-</pre>
+```js
+[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
+[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+```
 
-<p>{{ EmbedLiveSample('Проверка_элементов_массива_с_использованием_стрелочных_функций', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
+{{ EmbedLiveSample('Проверка_элементов_массива_с_использованием_стрелочных_функций', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
 
-<h3 id="Проверка_наличия_элемента_в_массиве">Проверка наличия элемента в массиве</h3>
+### Проверка наличия элемента в массиве
 
-<p>Чтобы имитировать функцию метода <code>includes()</code>, эта пользовательская функция возвращает true, если элемент существует в массиве:</p>
+Чтобы имитировать функцию метода `includes()`, эта пользовательская функция возвращает true, если элемент существует в массиве:
 
-<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
+```js
+const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
   return arr.some(function(arrVal) {
@@ -100,26 +101,30 @@ function checkAvailability(arr, val) {
 }
 
 checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true</pre>
+checkAvailability(fruits, 'banana'); // true
+```
 
-<p>{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
+{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
 
-<h3 id="Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции">Проверка наличия элемента в массиве с использованием стрелочной функции</h3>
+### Проверка наличия элемента в массиве с использованием стрелочной функции
 
-<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
+```js
+const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal =&gt; val === arrVal);
+  return arr.some(arrVal => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true</pre>
+checkAvailability(fruits, 'banana'); // true
+```
 
-<p>{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}</p>
+{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}
 
-<h3 id="Приведение_значения_к_логическому_типу">Приведение значения к логическому типу</h3>
+### Приведение значения к логическому типу
 
-<pre class="brush: js">const TRUTHY_VALUES = [true, 'true', 1];
+```js
+const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
   'use strict';
@@ -136,15 +141,17 @@ function getBoolean(value) {
 getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
-getBoolean('true');  // true</pre>
+getBoolean('true');  // true
+```
 
-<p>{{ EmbedLiveSample('Приведение_значения_к_логическому_типу', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
+{{ EmbedLiveSample('Приведение_значения_к_логическому_типу', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>some()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>some()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
+Метод `some()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `some()` в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что `callback.call` вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.
 
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.17
+```js
+// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.17
 // Ссылка (en): http://es5.github.io/#x15.4.4.17
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.17
 if (!Array.prototype.some) {
@@ -160,11 +167,11 @@ if (!Array.prototype.some) {
     }
 
     var t = Object(this);
-    var len = t.length &gt;&gt;&gt; 0;
+    var len = t.length >>> 0;
 
-    var thisArg = arguments.length &gt;= 2 ? arguments[1] : void 0;
-    for (var i = 0; i &lt; len; i++) {
-      if (i in t &amp;&amp; fun.call(thisArg, t[i], i, t)) {
+    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+    for (var i = 0; i < len; i++) {
+      if (i in t && fun.call(thisArg, t[i], i, t)) {
         return true;
       }
     }
@@ -172,21 +179,19 @@ if (!Array.prototype.some) {
     return false;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.some()")}}

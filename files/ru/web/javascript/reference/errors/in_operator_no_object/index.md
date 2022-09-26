@@ -5,67 +5,73 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
 translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщения">Сообщения</h2>
+## Сообщения
 
-<pre class="syntaxbox">TypeError: недопустимый операнд в "in" (edge)
+```
+TypeError: недопустимый операнд в "in" (edge)
 TypeError: правая часть 'in' должна быть объектом, есть 'x' (Firefox)
 TypeError: невозможно использовать оператор 'in' для поиска 'x' в 'y' (Firefox, Chrome)
+```
 
-</pre>
+## Тип ошибки
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+{{jsxref("TypeError")}}
 
-<p>{{jsxref("TypeError")}}</p>
+## Что пошло не так?
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+Оператор in можно использовать только для проверки наличия свойства в объекте. Вы не можете искать в строках, числах или других примитивных типах.
 
-<p>Оператор in можно использовать только для проверки наличия свойства в объекте. Вы не можете искать в строках, числах или других примитивных типах.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Поиск в строках
 
-<h3 id="Поиск_в_строках">Поиск в строках</h3>
+В отличие от других языков программирования (например, Python), поиск в строках с помощью оператора in невозможен.
 
-<p>В отличие от других языков программирования (например, Python), поиск в строках с помощью оператора in невозможен.</p>
+```js example-bad
+"Hello" in "Hello World";
+// TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
+```
 
-<pre class="brush: js example-bad">"Hello" in "Hello World";
-// TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'</pre>
+Вместо этого вам нужно будет использовать{{jsxref("String.prototype.indexOf()")}}или примеры
 
-<p>Вместо этого вам нужно будет использовать{{jsxref("String.prototype.indexOf()")}}или примеры</p>
+```js example-good
+"Hello World".indexOf("Hello") !== -1;
+// true
+```
 
-<pre class="brush: js example-good">"Hello World".indexOf("Hello") !== -1;
-// true</pre>
+### Операнд не может быть`null` или `undefined`
 
-<h3 id="Операнд_не_может_бытьnull_или_undefined">Операнд не может быть<code>null</code> или <code>undefined</code></h3>
+Убедитесь, что объект, который вы осматриваете, на самом деле не {{jsxref("null")}} или {{jsxref("undefined")}}.
 
-<p>Убедитесь, что объект, который вы осматриваете, на самом деле не {{jsxref("null")}} или {{jsxref("undefined")}}.</p>
-
-<pre class="brush: js example-bad">var foo = null;
+```js example-bad
+var foo = null;
 "bar" in foo;
 // TypeError: не удаётся использовать оператор 'in' для поиска 'bar' в 'foo' (Chrome)
 // TypeError: правая часть 'in' должна быть объектом, полученным null (Firefox)
-</pre>
+```
 
-<p>Оператор in всегда ожидает объект.</p>
+Оператор in всегда ожидает объект.
 
-<pre class="brush: js example-good">var foo = { baz: "bar" };
+```js example-good
+var foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
 "pi" in Math; // false
-</pre>
+```
 
-<h3 id="Поиск_в_Массивах">Поиск в Массивах</h3>
+### Поиск в Массивах
 
-<p>Будьте осторожны при использовании оператора для поиска {{jsxref("Array")}} объекты. the <code>in</code> оператор проверяет номер индекса, а не его значение.</p>
+Будьте осторожны при использовании оператора для поиска {{jsxref("Array")}} объекты. the `in` оператор проверяет номер индекса, а не его значение.
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 3 in trees; // true
-"oak" in trees; // false</pre>
+"oak" in trees; // false
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a></li>
-</ul>
+- [`in` operator](/ru/docs/Web/JavaScript/Reference/Operators/in)

@@ -3,59 +3,56 @@ title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>finally()</strong></code> возвращает {{jsxref("Promise")}}. Когда промис был выполнен, вне зависимости успешно или с ошибкой, указанная функция будет выполнена. Это даёт возможность запустить один раз определённый участок кода, который должен выполниться вне зависимости от того, с каким результатом выполнился <code>Promise</code>.</p>
+Метод **`finally()`** возвращает {{jsxref("Promise")}}. Когда промис был выполнен, вне зависимости успешно или с ошибкой, указанная функция будет выполнена. Это даёт возможность запустить один раз определённый участок кода, который должен выполниться вне зависимости от того, с каким результатом выполнился `Promise`.
 
-<p>Это позволяет вам избавиться от дубликации кода в обработчиках {{jsxref("Promise.then", "then()")}} и {{jsxref("Promise.catch", "catch()")}}.</p>
+Это позволяет вам избавиться от дубликации кода в обработчиках {{jsxref("Promise.then", "then()")}} и {{jsxref("Promise.catch", "catch()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>p.finally(onFinally)</var>;
+```
+p.finally(onFinally);
 
 p.finally(function() {
    // завершён (успешно или с ошибкой)
 });
 
-p.finally(() =&gt; {
+p.finally(() => {
 // завершён (успешно или с ошибкой)
-});</pre>
+});
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>onFinally</code></dt>
- <dd>Функция {{jsxref("Function")}} вызываемая когда промис завершен.</dd>
-</dl>
+- `onFinally`
+  - : Функция {{jsxref("Function")}} вызываемая когда промис завершен.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Возвращает {{jsxref("Promise")}} для которого в качестве обработчика <code>finally </code>задана функция <code>onFinally</code>.</p>
+Возвращает {{jsxref("Promise")}} для которого в качестве обработчика `finally `задана функция `onFinally`.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>finally()</code> может быть полезен, если необходимо произвести какие-либо вычисления или очистку, как только <code>Promise</code> (промис) завершено, вне зависимости от результата.</p>
+`finally()` может быть полезен, если необходимо произвести какие-либо вычисления или очистку, как только `Promise` (промис) завершено, вне зависимости от результата.
 
-<p><code>finally()</code> очень схож с вызовом <code>.then(onFinally, onFinally)</code>, однако существует несколько различий:</p>
+`finally()` очень схож с вызовом `.then(onFinally, onFinally)`, однако существует несколько различий:
 
-<ul>
- <li>Использование <code>finally()</code> позволяет избежать двойного объявления одной и той же функции или создания переменной. </li>
- <li><code>finally</code> не получает аргументов, так как не существует способа определить, будет ли промис выполнен успешно или с ошибкой. Данный метод необходимо использовать, если не важна причина ошибки или результат успешного выполнения и, следовательно, нет необходимости её/его передавать.</li>
- <li>В отличие от <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (результатом которого будет resolved-промис, со значением <code>undefined</code>), результатом <code>Promise.resolve(2).finally(() =&gt; {})</code> будет resolved-промис со значением <code>2</code>.</li>
- <li>Аналогично, в отличии от <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (результатом которого будет resolved-промис, со значением <code>undefined</code>), результатом <code>Promise.reject(3).finally(() =&gt; {})</code> будет rejected-промис со значением <code>3</code>.</li>
-</ul>
+- Использование `finally()` позволяет избежать двойного объявления одной и той же функции или создания переменной.
+- `finally` не получает аргументов, так как не существует способа определить, будет ли промис выполнен успешно или с ошибкой. Данный метод необходимо использовать, если не важна причина ошибки или результат успешного выполнения и, следовательно, нет необходимости её/его передавать.
+- В отличие от `Promise.resolve(2).then(() => {}, () => {})` (результатом которого будет resolved-промис, со значением `undefined`), результатом `Promise.resolve(2).finally(() => {})` будет resolved-промис со значением `2`.
+- Аналогично, в отличии от `Promise.reject(3).then(() => {}, () => {})` (результатом которого будет resolved-промис, со значением `undefined`), результатом `Promise.reject(3).finally(() => {})` будет rejected-промис со значением `3`.
 
-<div class="note">
-<p><strong>Note:</strong> A <code>throw</code> (or returning a rejected promise) in the <code>finally</code> callback will reject the new promise with the rejection reason specified when calling <code>throw()</code>.</p>
-</div>
+> **Примечание:** A `throw` (or returning a rejected promise) in the `finally` callback will reject the new promise with the rejection reason specified when calling `throw()`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">let isLoading = true;
+```js
+let isLoading = true;
 
 fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");
-    if(contentType &amp;&amp; contentType.includes("application/json")) {
+    if(contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
@@ -63,20 +60,18 @@ fetch(myRequest).then(function(response) {
   .then(function(json) { /* process your JSON further */ })
   .catch(function(error) { console.log(error); })
   .finally(function() { isLoading = false; });
+```
 
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.catch()")}}

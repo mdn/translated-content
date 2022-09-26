@@ -7,57 +7,60 @@ tags:
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p><strong>Выражения стрелочных функций</strong> имеют более короткий синтаксис по сравнению с <a href="/ru/docs/Web/JavaScript/Reference/Operators/function">функциональными выражениями</a> и лексически привязаны к значению <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a> (но не привязаны к собственному <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a>, <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/super">super</a>, или <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>). Выражение стрелочных функций не позволяют задавать имя, поэтому стрелочные функции <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/name">анонимны</a>, если их ни к чему не присвоить.</p>
+**Выражения стрелочных функций** имеют более короткий синтаксис по сравнению с [функциональными выражениями](/ru/docs/Web/JavaScript/Reference/Operators/function) и лексически привязаны к значению [this](/ru/docs/Web/JavaScript/Reference/Operators/this) (но не привязаны к собственному [this](/ru/docs/Web/JavaScript/Reference/Operators/this), [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments), [super](/ru/docs/Web/JavaScript/Reference/Operators/super), или [new.target](/ru/docs/Web/JavaScript/Reference/Operators/new.target)). Выражение стрелочных функций не позволяют задавать имя, поэтому стрелочные функции [анонимны](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/name), если их ни к чему не присвоить.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Базовый_синтаксис">Базовый синтаксис</h3>
+### Базовый синтаксис
 
-<pre class="brush: js">(param1, param2, …, paramN) =&gt; { statements }
-(param1, param2, …, paramN) =&gt; expression
-// эквивалентно: (param1, param2, …, paramN) =&gt; { return expression; }
+```js
+(param1, param2, …, paramN) => { statements }
+(param1, param2, …, paramN) => expression
+// эквивалентно: (param1, param2, …, paramN) => { return expression; }
 
 // Круглые скобки не обязательны для единственного параметра:
-(singleParam) =&gt; { statements }
-singleParam =&gt; { statements }
+(singleParam) => { statements }
+singleParam => { statements }
 
 // Функция без параметров нуждается в круглых скобках:
-() =&gt; { statements }
-() =&gt; expression
-// Эквивалентно: () =&gt; { return expression; }
-</pre>
+() => { statements }
+() => expression
+// Эквивалентно: () => { return expression; }
+```
 
-<h3 id="Расширенный_синтаксис">Расширенный синтаксис</h3>
+### Расширенный синтаксис
 
-<pre class="brush: js">// Когда возвращаете литеральное выражение объекта, заключите тело в скобки
-params =&gt; ({foo: bar})
+```js
+// Когда возвращаете литеральное выражение объекта, заключите тело в скобки
+params => ({foo: bar})
 
 // Остаточные параметры и параметры по умолчанию поддерживаются
-(param1, param2, ...rest) =&gt; { statements }
-(param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; { statements }
+(param1, param2, ...rest) => { statements }
+(param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
 
 // Деструктуризация тоже поддерживается
-var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
+var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
 f();  // 6
-</pre>
+```
 
-<p>Подробные примеры синтаксиса можно посмотреть <a href="http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax">здесь</a>.</p>
+Подробные примеры синтаксиса можно посмотреть [здесь](http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax).
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Смотрите также <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
+Смотрите также ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
 
-<p>Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика <code>this</code>.</p>
+Два фактора повлияли на появление стрелочных функции: более короткий синтаксис и лексика `this`.
 
-<h3 id="Короткие_функции">Короткие функции</h3>
+### Короткие функции
 
-<p>В некоторых функциональных шаблонах приветствуются более короткие функции. Сравните:</p>
+В некоторых функциональных шаблонах приветствуются более короткие функции. Сравните:
 
-<pre class="brush: js">var elements = [
+```js
+var elements = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -69,31 +72,32 @@ elements.map(function(element) {
 }); // Это выражение вернёт массив [8, 6, 7, 9]
 
 // Функцию выше можно записать как стрелочную функцию:
-elements.map((element) =&gt; {
+elements.map((element) => {
   return element.length;
 }); // [8, 6, 7, 9]
 
 // Если единственным оператором в выражении стрелочной функции является return,
 // можно удалить return и окружающие фигурные скобки
 
-elements.map(element =&gt; element.length); // [8, 6, 7, 9]
+elements.map(element => element.length); // [8, 6, 7, 9]
 
 // В данном случае, поскольку нам нужно только свойство length, мы можем использовать деструктуризированный параметр:
 // Обратите внимание, что строка `"length"` соответствует свойству, которое мы хотим получить,
 // в то время как `lengthFooBArX` это просто имя переменной, которую можно назвать как вы хотите
-elements.map(({ "length": lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
+elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 
 // Это задание деструктуризированного параметра может быть записано, как показано ниже. Тем не менее, обратите внимание,
 // что нет строки `"length"`, чтобы выбрать, какое свойство мы хотим получить. Вместо этого в качестве свойства,
 // которое мы хотим извлечь из объекта, используется само литеральное имя переменной `length`
-elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
-</pre>
+elements.map(({ length }) => length); // [8, 6, 7, 9]
+```
 
-<h3 id="Отсутствие_связывания_с_this">Отсутствие связывания с <code>this</code></h3>
+### Отсутствие связывания с `this`
 
-<p>До появления стрелочных функций, каждая новая функция имела своё значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> (новый объект в случае конструктора, undefined в <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">strict</a> режиме вызова функции, контекст объекта при вызове функции как "метода объекта" и т.д.). Это очень раздражало при использовании объектно-ориентированного стиля программирования.</p>
+До появления стрелочных функций, каждая новая функция имела своё значение [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) (новый объект в случае конструктора, undefined в [strict](/ru/docs/Web/JavaScript/Reference/Strict_mode) режиме вызова функции, контекст объекта при вызове функции как "метода объекта" и т.д.). Это очень раздражало при использовании объектно-ориентированного стиля программирования.
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   // В конструкторе Person() `this` указывает на себя.
   this.age = 0;
 
@@ -106,58 +110,65 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 }
 
 var p = new Person();
-</pre>
+```
 
-<p>В ECMAScript 3/5, данная проблема решалась присваиванием значения <code>this</code> переменной:</p>
+В ECMAScript 3/5, данная проблема решалась присваиванием значения `this` переменной:
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   var that = this;
   that.age = 0;
 
   setInterval(function growUp() {
-    // Функция с обратным вызовом(<a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks">callback</a>) содержит переменную that, которая
+    // Функция с обратным вызовом(callback) содержит переменную that, которая
     // ссылается на требуемый объект this.
     that.age++;
   }, 1000);
-}</pre>
+}
+```
 
-<p>Кроме этого, может быть создана <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">привязанная функция</a>, в которую передаётся требуемое значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> для функции (функция <code>growUp()</code> в примере выше).</p>
+Кроме этого, может быть создана [привязанная функция](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), в которую передаётся требуемое значение [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) для функции (функция `growUp()` в примере выше).
 
-<p>Стрелочные функции не содержат собственный контекст <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, а используют значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> окружающего контекста. Поэтому нижеприведённый код работает как предполагалось:</p>
+Стрелочные функции не содержат собственный контекст [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this), а используют значение [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) окружающего контекста. Поэтому нижеприведённый код работает как предполагалось:
 
-<pre class="brush: js">function Person(){
+```js
+function Person(){
   this.age = 0;
 
-  setInterval(() =&gt; {
+  setInterval(() => {
     this.age++; // `this` указывает на объект Person
   }, 1000);
 }
 
-var p = new Person();</pre>
+var p = new Person();
+```
 
-<h4 id="Строгий_режим_исполнения">Строгий режим исполнения</h4>
+#### Строгий режим исполнения
 
-<p>Поскольку значение <code>this</code> определяется лексикой, правила строгого режима (<a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>) относительно <code>this</code> игнорируются:</p>
+Поскольку значение `this` определяется лексикой, правила строгого режима ([strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)) относительно `this` игнорируются:
 
-<pre class="brush: js">var f = () =&gt; { 'use strict'; return this; };
-f() === window; // или глобальный объект</pre>
+```js
+var f = () => { 'use strict'; return this; };
+f() === window; // или глобальный объект
+```
 
-<p>Все остальные правила строгого режима применяются как обычно.</p>
+Все остальные правила строгого режима применяются как обычно.
 
-<h4 id="Вызов_с_помощью_call_или_apply">Вызов с помощью call или apply</h4>
+#### Вызов с помощью call или apply
 
-<p>Так как значение <code>this</code> определяется лексикой, вызов стрелочных функций с помощью методов <code>call()</code> или <code>apply()</code>, даже если передать аргументы в эти методы, не влияет на значение <code>this</code>:</p>
+Так как значение `this` определяется лексикой, вызов стрелочных функций с помощью методов `call()` или `apply()`, даже если передать аргументы в эти методы, не влияет на значение `this`:
 
-<pre class="brush: js">var adder = {
+```js
+var adder = {
   base : 1,
 
   add : function(a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     return f(a);
   },
 
   addThruCall: function(a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     var b = {
       base : 2
     };
@@ -168,198 +179,209 @@ f() === window; // или глобальный объект</pre>
 
 console.log(adder.add(1));         // Выводит 2
 console.log(adder.addThruCall(1)); // Всё равно выводит 2
-</pre>
+```
 
-<h3 id="Не_имеет_собственного_объекта_arguments">Не имеет собственного объекта arguments</h3>
+### Не имеет собственного объекта arguments
 
-<p>Стрелочные функции не имеют собственного объекта arguments, поэтому в теле стрелочных функций arguments будет ссылаться на переменную в окружающей области.</p>
+Стрелочные функции не имеют собственного объекта arguments, поэтому в теле стрелочных функций arguments будет ссылаться на переменную в окружающей области.
 
-<pre class="brush: js">var arguments = 42;
-var arr = () =&gt; arguments;
+```js
+var arguments = 42;
+var arr = () => arguments;
 
 arr(); // 42
 
 function foo() {
-  var f = (i) =&gt; arguments[0] + i; // Неявное связывание ссылки arguments
+  var f = (i) => arguments[0] + i; // Неявное связывание ссылки arguments
                                    // стрелочной функции f
                                    // c объектом arguments функции foo
   return f(2);
 }
 
-foo(1); // 3</pre>
+foo(1); // 3
+```
 
-<p>В большинстве случаев лучшей заменой объекта arguments в стрелочных функциях являются <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">остаточные параметры</a>:</p>
+В большинстве случаев лучшей заменой объекта arguments в стрелочных функциях являются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters):
 
-<pre class="brush: js">function foo() {
-  var f = (...args) =&gt; args[0];
+```js
+function foo() {
+  var f = (...args) => args[0];
   return f(2);
 }
 
 foo(1); // 2
-</pre>
+```
 
-<h3 id="Использование_стрелочных_функций_как_методов">Использование стрелочных функций как методов</h3>
+### Использование стрелочных функций как методов
 
-<p>Как показано ранее, стрелочные функции лучше всего подходят для функций без методов. Посмотрим, что будет, когда мы попробуем их использовать как методы:</p>
+Как показано ранее, стрелочные функции лучше всего подходят для функций без методов. Посмотрим, что будет, когда мы попробуем их использовать как методы:
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var obj = {
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
 }
 obj.b(); // prints undefined, Window {...} (или глобальный объект)
 obj.c(); // prints 10, Object {...}
-</pre>
+```
 
-<p>Стрелочные функции не объявляют привязку ("bind") их контекста <code>this</code>. Другой пример включает {{jsxref("Object.defineProperty()")}}:</p>
+Стрелочные функции не объявляют привязку ("bind") их контекста `this`. Другой пример включает {{jsxref("Object.defineProperty()")}}:
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var obj = {
   a: 10
 };
 
 Object.defineProperty(obj, 'b', {
-  get: () =&gt; {
+  get: () => {
     console.log(this.a, typeof this.a, this);
     return this.a + 10;
     // представляет глобальный объект 'Window', но 'this.a' возвращает 'undefined'
   }
-});</pre>
+});
+```
 
-<h3 id="Использование_оператора_new">Использование оператора <code>new</code></h3>
+### Использование оператора `new`
 
-<p>Стрелочные функции не могут быть использованы как конструктор и вызовут ошибку при использовании с <code>new</code>:</p>
+Стрелочные функции не могут быть использованы как конструктор и вызовут ошибку при использовании с `new`:
 
-<pre class="brush: js">var a = new (function() {})
+```js
+var a = new (function() {})
 // переменной "a" будет присвоено значение экземпляра анонимной функции
 
-var b = new (() =&gt; {})
+var b = new (() => {})
 // будет выброшено исключение
-// Uncaught TypeError: (intermediate value) is not a constructor</pre>
+// Uncaught TypeError: (intermediate value) is not a constructor
+```
 
-<h3 id="Использование_ключевого_слова_yield">Использование ключевого слова <code>yield</code></h3>
+### Использование ключевого слова `yield`
 
-<p>Ключевое слово <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.</p>
+Ключевое слово [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield) не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.
 
-<h2 id="Тело_функции">Тело функции</h2>
+## Тело функции
 
-<p>Тело стрелочной функции может иметь краткую (concise body) или блочную (block body) форму.</p>
+Тело стрелочной функции может иметь краткую (concise body) или блочную (block body) форму.
 
-<p>Блочная форма не возвращает значение, необходимо явно вернуть значение.</p>
+Блочная форма не возвращает значение, необходимо явно вернуть значение.
 
-<pre class="brush: js">var func = x =&gt; x * x;                  // краткий синтаксис,
+```js
+var func = x => x * x;                  // краткий синтаксис,
                                         // неявно возвращает результат
-var func = (x, y) =&gt; { return x + y; }; // блочный синтаксис,
-                                        // явно возвращает результат</pre>
+var func = (x, y) => { return x + y; }; // блочный синтаксис,
+                                        // явно возвращает результат
+```
 
-<h2 id="Возвращаемые_объектные_строки_литералы">Возвращаемые объектные строки (литералы)</h2>
+## Возвращаемые объектные строки (литералы)
 
-<p>Помните о том, что возвращаемые <a href="/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Литерал_объекта/">объектные строки</a> используют сокращённый синтаксис: <code>params =&gt; {object:literal}</code> будет работать не так, как ожидается.</p>
+Помните о том, что возвращаемые [объектные строки](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Литерал_объекта/) используют сокращённый синтаксис: `params => {object:literal}` будет работать не так, как ожидается.
 
-<pre class="brush: js">var func = () =&gt; { foo: 1 };
+```js
+var func = () => { foo: 1 };
 // Вызов func() возвращает undefined!
 
-var func = () =&gt; { foo: function() {} };
-// SyntaxError: function statement requires a name</pre>
+var func = () => { foo: function() {} };
+// SyntaxError: function statement requires a name
+```
 
-<p>Это происходит потому что код в скобках ({}) распознаётся как цепочка выражений (т.е. <code>foo</code> трактуется как наименование, а не как ключ в объектной строке).</p>
+Это происходит потому что код в скобках ({}) распознаётся как цепочка выражений (т.е. `foo` трактуется как наименование, а не как ключ в объектной строке).
 
-<p>Не забывайте оборачивать скобками объектные строки.</p>
+Не забывайте оборачивать скобками объектные строки.
 
-<pre class="brush: js">var func = () =&gt; ({ foo: 1 });</pre>
+```js
+var func = () => ({ foo: 1 });
+```
 
-<h2 id="Разрывы_строк">Разрывы строк</h2>
+## Разрывы строк
 
-<p>Стрелочная функция не может содержать разрывы строк между параметрами и стрелкой.</p>
+Стрелочная функция не может содержать разрывы строк между параметрами и стрелкой.
 
-<pre class="brush: js">var func = ()
-           =&gt; 1;
-// SyntaxError: expected expression, got '=&gt;'
-</pre>
+```js
+var func = ()
+           => 1;
+// SyntaxError: expected expression, got '=>'
+```
 
-<h2 id="Разбор_порядка_следования">Разбор порядка следования</h2>
+## Разбор порядка следования
 
-<p>Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с <a href="/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence/">приоритетами операторов</a>  иначе, чем в обычных функциях.</p>
+Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с [приоритетами операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence/) иначе, чем в обычных функциях.
 
-<pre class="brush: js">let callback;
+```js
+let callback;
 
 callback = callback || function() {}; // ok
 
-callback = callback || () =&gt; {};
+callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments
 
-callback = callback || (() =&gt; {});    // ok
-</pre>
+callback = callback || (() => {});    // ok
+```
 
-<h2 id="Больше_примеров">Больше примеров</h2>
+## Больше примеров
 
-<pre class="brush: js">// Пустая стрелочная функция возвращает undefined
-let empty = () =&gt; {};
+```js
+// Пустая стрелочная функция возвращает undefined
+let empty = () => {};
 
-(() =&gt; 'foobar')();
+(() => 'foobar')();
 // Вернёт "foobar"
 // (Это Immediately Invoked Function Expression
 // смотри 'IIFE' в справочнике)
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) =&gt; a &gt; b ? a : b;
+let max = (a, b) => a > b ? a : b;
 
 // Удобные операции над массивами: filter, map, ...
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // Более короткие цепочки promise-ов
-promise.then(a =&gt; {
+promise.then(a => {
   // ...
-}).then(b =&gt; {
+}).then(b => {
    // ...
 });
 
 // Стрелочные функции без параметров, которые визуально легче разбирать
-setTimeout( () =&gt; {
+setTimeout( () => {
   console.log('Я буду раньше');
-  setTimeout( () =&gt; {
+  setTimeout( () => {
     // deeper code
     console.log('Я буду позже');
   }, 1);
 }, 1);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+### Замечания для Firefox
 
-<p>{{Compat}}</p>
+- Первоначальная реализация стрелочных функций в Firefox автоматически переводила их в строгий режим. Это поведение было изменено в [Firefox 24](/ru/docs/Mozilla/Firefox/Releases/24). Использование `"use strict";` стало обязательным.
+- Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/en-US/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
+- До [Firefox 39](https://developer.mozilla.org/en-US/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
 
-<h3 id="Замечания_для_Firefox">Замечания для Firefox</h3>
+## See also
 
-<ul>
- <li>Первоначальная реализация стрелочных функций в Firefox автоматически переводила их в строгий режим. Это поведение было изменено в <a href="/en-US/docs/Mozilla/Firefox/Releases/24" title="/en-US/docs/Mozilla/Firefox/Releases/24">Firefox 24</a>. Использование <code>"use strict";</code> стало обязательным.</li>
- <li>Стрелочные функции семантически отличаются от нестандартных <a href="/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures">Expression Closures</a>, добавленных в <a href="/en-US/Firefox/Releases/3">Firefox 3</a> (подробности в <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8">Javascript 1.8</a>); в Expression Closures значение <code>this</code> не привязано лексически.</li>
- <li>До <a href="https://developer.mozilla.org/en-US/Firefox/Releases/39">Firefox 39</a>, перенос строки (<code>\n</code>) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: <code>() \n =&gt; {}</code> теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a></li>
-</ul>
+- ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

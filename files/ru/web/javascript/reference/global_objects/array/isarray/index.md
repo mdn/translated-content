@@ -11,34 +11,35 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>Array.isArray()</strong></code> возвращает <code>true</code>, если объект является массивом и <code>false</code>, если он массивом не является.</p>
+Метод **`Array.isArray()`** возвращает `true`, если объект является массивом и `false`, если он массивом не является.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Array.isArray(<var>obj</var>)</code></pre>
+```
+Array.isArray(obj)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>Объект для проверки.</dd>
-</dl>
+- `obj`
+  - : Объект для проверки.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><code>true</code> если объект является {{jsxref("Array")}}; иначе, <code>false</code>.</p>
+`true` если объект является {{jsxref("Array")}}; иначе, `false`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>За подробностям обращайтесь к статье <a href="http://web.mit.edu/jwalden/www/isArray.html">«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»</a>.</p>
+За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](http://web.mit.edu/jwalden/www/isArray.html).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Все следующие вызовы вернут true
+```js
+// Все следующие вызовы вернут true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -55,13 +56,14 @@ Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
+### `instanceof` vs `isArray`
 
-<p>Когда проверяем экземпляр <code>Array</code>, <code>Array.isArray</code> предпочтительней, чем <code>instanceof</code>, потому что он работает и с <code>iframes</code>.</p>
+Когда проверяем экземпляр `Array`, `Array.isArray` предпочтительней, чем `instanceof`, потому что он работает и с `iframes`.
 
-<pre class="brush: js">var iframe = document.createElement('iframe');
+```js
+var iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
 var arr = new xArray(1,2,3); // [1,2,3]
@@ -70,33 +72,28 @@ var arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // Considered harmful, because doesn't work through iframes
 arr instanceof Array; // false
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Выполнение следующего кода перед любым другим кодом создаст метод <code>Array.isArray()</code>, если он ещё не реализован в браузере.</p>
+Выполнение следующего кода перед любым другим кодом создаст метод `Array.isArray()`, если он ещё не реализован в браузере.
 
-<pre class="brush: js">if (!Array.isArray) {
+```js
+if (!Array.isArray) {
   Array.isArray = function(arg) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Global_Objects/Array", "Array")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Array", "Array")}}

@@ -10,52 +10,49 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>Object.is()</strong></code> определяет, являются ли два значения <a href="/ru/docs/Web/JavaScript/Guide/Sameness">одинаковыми значениями</a>.</p>
+Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>var <var>isSame</var> = Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+```
+var isSame = Object.is(value1, value2);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value1</code></dt>
- <dd>Первое сравниваемое значение.</dd>
- <dt><code>value2</code></dt>
- <dd>Второе сравниваемое значение.</dd>
-</dl>
+- `value1`
+  - : Первое сравниваемое значение.
+- `value2`
+  - : Второе сравниваемое значение.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>Object.is()</code> определяет, являются ли два значения <a href="/ru/docs/Web/JavaScript/Guide/Sameness">одинаковыми значениями</a>. Два значения являются одинаковыми в следующих случаях:</p>
+Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness). Два значения являются одинаковыми в следующих случаях:
 
-<ul>
- <li>оба равны {{jsxref("undefined")}}</li>
- <li>оба равны {{jsxref("null")}}</li>
- <li>оба равны <code>true</code>, либо оба равны <code>false</code></li>
- <li>оба являются строками с одинаковой длиной и одинаковыми символами</li>
- <li>оба являются одним и тем же объектом</li>
- <li>оба являются числами и
-  <ul>
-   <li>оба равны <code>+0</code></li>
-   <li>оба равны <code>-0</code></li>
-   <li>оба равны {{jsxref("NaN")}}</li>
-   <li>либо оба не равны нулю или {{jsxref("NaN")}} и оба имеют одинаковое значение</li>
-  </ul>
- </li>
-</ul>
+- оба равны {{jsxref("undefined")}}
+- оба равны {{jsxref("null")}}
+- оба равны `true`, либо оба равны `false`
+- оба являются строками с одинаковой длиной и одинаковыми символами
+- оба являются одним и тем же объектом
+- оба являются числами и
 
-<p>Поведение этого метода <em>не</em> аналогично оператору {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. Оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} использует приведение типов обоих операндов (если они имеют различный тип) перед проверкой на равенство (в результате получается, что проверка <code>"" == false</code> даёт <code>true</code>), а метод <code>Object.is</code> приведение типов не выполняет.</p>
+  - оба равны `+0`
+  - оба равны `-0`
+  - оба равны {{jsxref("NaN")}}
+  - либо оба не равны нулю или {{jsxref("NaN")}} и оба имеют одинаковое значение
 
-<p>Поведение этого метода <em>не</em> аналогично оператору {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. Оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (также как и оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) считает числовые значения <code>-0</code> и <code>+0</code> равными, а значение {{jsxref("Number.NaN")}} не равным самому себе.</p>
+Поведение этого метода _не_ аналогично оператору {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. Оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} использует приведение типов обоих операндов (если они имеют различный тип) перед проверкой на равенство (в результате получается, что проверка `"" == false` даёт `true`), а метод `Object.is` приведение типов не выполняет.
 
-<h2 id="Examples">Примеры</h2>
+Поведение этого метода _не_ аналогично оператору {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. Оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (также как и оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) считает числовые значения `-0` и `+0` равными, а значение {{jsxref("Number.NaN")}} не равным самому себе.
 
-<pre class="brush: js">Object.is('foo', 'foo');     // true
+## Примеры
+
+```js
+Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -70,13 +67,14 @@ Object.is(null, null);       // true
 Object.is(0, -0);            // false
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>Object.is</code> предложен в дополнение к стандарту ECMA-262; поэтому он может быть недоступен в некоторых браузерах. Это можно обойти, вставив приведённый ниже фрагмент кода в начало ваших скриптов. Он позволит вам использовать метод <code>Object.is</code> в случаях, когда он не имеет родной поддержки браузером.</p>
+Метод `Object.is` предложен в дополнение к стандарту ECMA-262; поэтому он может быть недоступен в некоторых браузерах. Это можно обойти, вставив приведённый ниже фрагмент кода в начало ваших скриптов. Он позволит вам использовать метод `Object.is` в случаях, когда он не имеет родной поддержки браузером.
 
-<pre><code>if (!Object.is) {
+```
+if (!Object.is) {
   Object.is = function(x, y) {
     // SameValue algorithm
     if (x === y) { // Steps 1-5, 7-10
@@ -84,21 +82,20 @@ Object.is(NaN, 0/0);         // true
       return x !== 0 || 1 / x === 1 / y;
     } else {
       // Step 6.a: NaN == NaN
-      return x !== x &amp;&amp; y !== y;
+      return x !== x && y !== y;
     }
   };
-}</code></pre>
+}
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Sameness">Руководство по JavaScript: одинаковость</a> — сравнение всех трёх встроенных способов проверки на одинаковость</li>
-</ul>
+- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Guide/Sameness) — сравнение всех трёх встроенных способов проверки на одинаковость

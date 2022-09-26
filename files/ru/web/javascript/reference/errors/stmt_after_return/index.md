@@ -8,47 +8,46 @@ tags:
   - Предупреждения
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">Warning: unreachable code after return statement (Firefox)
-</pre>
+```
+Warning: unreachable code after return statement (Firefox)
+```
 
-<pre class="syntaxbox">Предупреждение: недоступный код после оператора <code>return </code>(Firefox)
-</pre>
+```
+Предупреждение: недоступный код после оператора return (Firefox)
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>Предупреждение</p>
+Предупреждение
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Недоступный код после оператора <code>return</code> может возникнуть в следующих ситуациях:</p>
+Недоступный код после оператора `return` может возникнуть в следующих ситуациях:
 
-<ul>
- <li>когда в коде программы есть какие-либо выражения после оператора {{jsxref("Statements/return", "return")}}</li>
- <li>когда используется оператор <code>return</code> без точки с запятой, но далее непосредственно за ним следует выражение.</li>
-</ul>
+- когда в коде программы есть какие-либо выражения после оператора {{jsxref("Statements/return", "return")}}
+- когда используется оператор `return` без точки с запятой, но далее непосредственно за ним следует выражение.
 
-<p>Когда присутствует выражение после оператора <code>return</code>, то выдаётся предупреждение о том, что код программы после <code>return</code> недоступен, то есть он никогда не запустится и не выполнится.</p>
+Когда присутствует выражение после оператора `return`, то выдаётся предупреждение о том, что код программы после `return` недоступен, то есть он никогда не запустится и не выполнится.
 
-<p>Почему нужно ставить точку с запятой после оператора <code>return</code>? В случае оператора <code>return</code> без точки с запятой, совсем неясно, хотел ли разработчик вернуть результат, вычисляемый в следующей строке, или же он хочет остановиться сейчас и выйти из подпрограммы. Предупреждение указывает на неопределённость результата работы оператора <code>return</code>.</p>
+Почему нужно ставить точку с запятой после оператора `return`? В случае оператора `return` без точки с запятой, совсем неясно, хотел ли разработчик вернуть результат, вычисляемый в следующей строке, или же он хочет остановиться сейчас и выйти из подпрограммы. Предупреждение указывает на неопределённость результата работы оператора `return`.
 
-<p>Предупреждение не появится для оператора <code>return</code> без точки с запятой, если за данной строкой следуют:</p>
+Предупреждение не появится для оператора `return` без точки с запятой, если за данной строкой следуют:
 
-<ul>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
-</ul>
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/function", "function")}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неверные_варианты">Неверные варианты</h3>
+### Неверные варианты
 
-<pre class="brush: js example-bad">function f() {
+```js example-bad
+function f() {
   var x = 3;
   x += 4;
   return x;   //return завершает функцию немедленно,
@@ -59,11 +58,12 @@ function f() {
   return     //эта строка трактуется как завершение функции оператором `return;`,
     3 + 4;   //поэтому происходит выход из функции, и эта строка не выполнится
 }
-</pre>
+```
 
-<h3 id="Верные_варианты">Верные варианты</h3>
+### Верные варианты
 
-<pre class="brush: js example-good">function f() {
+```js example-good
+function f() {
   var x = 3;
   x += 4;
   x -= 3;
@@ -73,12 +73,8 @@ function f() {
 function f() {
   return 3 + 4  //OK: return без точки с запятой и вычисляемое выражение находятся на одной строке
 }
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/return", "Automatic Semicolon Insertion", "#Automatic_Semicolon_Insertion", 1)}}</li>
-</ul>
-
-<div id="dc_vk_code" class="hidden"> </div>
+- {{jsxref("Statements/return", "Automatic Semicolon Insertion", "#Automatic_Semicolon_Insertion", 1)}}

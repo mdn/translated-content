@@ -8,58 +8,49 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
-<div>{{JSRef("Global_Objects", "Boolean")}}</div>
+{{JSRef("Global_Objects", "Boolean")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <code><strong>valueOf()</strong></code> возвращает примитивное значение объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>bool</var>.valueOf()</code></pre>
+Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>valueOf</code> объекта {{jsxref("Global_Objects/Boolean", "Boolean")}} возвращает примитивное значение объекта или литерала логического типа.</p>
-<p>Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.</p>
+```
+bool.valueOf()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_valueOf">Пример: использование <code>valueOf</code></h3>
-<pre class="brush: js">x = new Boolean();
+Нет.
+
+## Описание
+
+Метод `valueOf` объекта {{jsxref("Global_Objects/Boolean", "Boolean")}} возвращает примитивное значение объекта или литерала логического типа.
+
+Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.
+
+## Примеры
+
+### Пример: использование `valueOf`
+
+```js
+x = new Boolean();
 myVar = x.valueOf(); // присваивает false переменной myVar
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.valueOf()")}}

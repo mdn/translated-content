@@ -12,39 +12,38 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Статический метод <strong><code>String.fromCodePoint()</code></strong> возвращает строку, созданную из указанной последовательности кодовых точек.</p>
+Статический метод **`String.fromCodePoint()`** возвращает строку, созданную из указанной последовательности кодовых точек.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>String.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+```
+String.fromCodePoint(num1[, ...[, numN]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>Последовательность кодовых точек.</dd>
-</dl>
+- `num1, ..., numN`
+  - : Последовательность кодовых точек.
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>Исключение {{jsxref("Global_Objects/RangeError", "RangeError")}} выбрасывается в случае, если методу предоставлена неверная кодовая точка Юникода (например, "RangeError: NaN is not a valid code point").</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : Исключение {{jsxref("Global_Objects/RangeError", "RangeError")}} выбрасывается в случае, если методу предоставлена неверная кодовая точка Юникода (например, "RangeError: NaN is not a valid code point").
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>fromCodePoint()</code> является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как <code>String.fromCodePoint()</code>, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.</p>
+Поскольку метод `fromCodePoint()` является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как `String.fromCodePoint()`, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_fromCharCode">Пример: использование метода <code>fromCodePoint()</code></h3>
+### Пример: использование метода `fromCodePoint()`
 
-<pre class="brush: js">String.fromCodePoint(42);       // "*"
+```js
+String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
 String.fromCodePoint(0x404);    // "\u0404"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
@@ -57,20 +56,22 @@ String.fromCodePoint(-1);       // RangeError
 String.fromCodePoint(3.14);     // RangeError
 String.fromCodePoint(3e-2);     // RangeError
 String.fromCodePoint(NaN);      // RangeError
-</pre>
+```
 
-<pre class="brush: js">// Метод String.fromCharCode() не может вернуть символ по такой большой кодовой точке
+```js
+// Метод String.fromCharCode() не может вернуть символ по такой большой кодовой точке
 // Следующий же метод может вернуть 4-байтный символ так же, как и обычный
 // 2-байтный (то есть, он может вернуть один символ, который на самом деле
 // имеет длину 2, а не 1!)
 console.log(String.fromCodePoint(0x2F804)); // или 194564 в десятичной записи
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>String.fromCodePoint()</code> был добавлен к стандарту ECMAScript в 6-й версии и может поддерживаться ещё не во всех браузерах или окружениях. Используйте код ниже в качестве полифила:</p>
+Метод `String.fromCodePoint()` был добавлен к стандарту ECMAScript в 6-й версии и может поддерживаться ещё не во всех браузерах или окружениях. Используйте код ниже в качестве полифила:
 
-<pre class="brush: js">/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+```js
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
   (function() {
     var defineProperty = (function() {
@@ -78,7 +79,7 @@ if (!String.fromCodePoint) {
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) &amp;&amp; $defineProperty;
+        var result = $defineProperty(object, object, object) && $defineProperty;
       } catch(error) {}
       return result;
     }());
@@ -95,26 +96,26 @@ if (!String.fromCodePoint) {
         return '';
       }
       var result = '';
-      while (++index &lt; length) {
+      while (++index < length) {
         var codePoint = Number(arguments[index]);
         if (
           !isFinite(codePoint) ||       // `NaN`, `+Infinity` или `-Infinity`
-          codePoint &lt; 0 ||              // неверная кодовая точка Юникода
-          codePoint &gt; 0x10FFFF ||       // неверная кодовая точка Юникода
+          codePoint < 0 ||              // неверная кодовая точка Юникода
+          codePoint > 0x10FFFF ||       // неверная кодовая точка Юникода
           floor(codePoint) != codePoint // не целое число
         ) {
           throw RangeError('Invalid code point: ' + codePoint);
         }
-        if (codePoint &lt;= 0xFFFF) { // кодовая точка Базовой многоязыковой плоскости (БМП)
+        if (codePoint <= 0xFFFF) { // кодовая точка Базовой многоязыковой плоскости (БМП)
           codeUnits.push(codePoint);
         } else { // Астральная кодовая точка; делим её на суррогатную пару
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
-          highSurrogate = (codePoint &gt;&gt; 10) + 0xD800;
+          highSurrogate = (codePoint >> 10) + 0xD800;
           lowSurrogate = (codePoint % 0x400) + 0xDC00;
           codeUnits.push(highSurrogate, lowSurrogate);
         }
-        if (index + 1 == length || codeUnits.length &gt; MAX_SIZE) {
+        if (index + 1 == length || codeUnits.length > MAX_SIZE) {
           result += stringFromCharCode.apply(null, codeUnits);
           codeUnits.length = 0;
         }
@@ -132,21 +133,19 @@ if (!String.fromCodePoint) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}

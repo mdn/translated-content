@@ -3,73 +3,63 @@ title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}Метод **`delete()`** удаляет уникальный элемент из объекта `Set`.{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
-<div>Метод <code><strong>delete()</strong></code> удаляет уникальный элемент из объекта <code>Set</code>.</div>
+## Синтаксис
 
+```
+mySet.delete(value);
+```
 
+### Параметры
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
+- value
+  - : Обязательный. Значение элемента для удаления из объекта `Set`.
 
+### Возвращаемое значение
 
+`true`, если элемент был успешно удалён из объекта `Set`, иначе `false`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Примеры
 
-<pre class="syntaxbox"><code><em>mySet</em>.delete(value);</code></pre>
+### Использование метода `delete`
 
-<h3 id="Параметры">Параметры</h3>
-
-<dl>
- <dt>value</dt>
- <dd>Обязательный. Значение элемента для удаления из объекта <code>Set</code>.</dd>
-</dl>
-
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
-
-<p><code>true</code>, если элемент был успешно удалён из объекта <code>Set</code>, иначе <code>false</code>.</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_метода_delete">Использование метода <code>delete</code></h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Вернёт false. Отсутствует элемент "bar" для удаления.
 mySet.delete('foo'); // Вернёт true.  Успешно удалён.
 
 mySet.has('foo');    // Вернёт false. Элемент "foo" больше не присутствует.
-</pre>
+```
 
-<p>Давайте проверим как удалить Object из Set.</p>
+Давайте проверим как удалить Object из Set.
 
-<pre class="brush: js">var setObj = new Set(); // Создаём новый Set.
+```js
+var setObj = new Set(); // Создаём новый Set.
 
 setObj.add({x: 10, y: 20}); // Добавляем объект в набор.
 
 setObj.add({x: 20, y: 30}); // Добавляем объект в набор.
 
-// Удаляем любой point с `x &gt; 10`.
+// Удаляем любой point с `x > 10`.
 setObj.forEach(function(point){
-  if(point.x &gt; 10){
+  if(point.x > 10){
     setObj.delete(point)
   }
 })
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

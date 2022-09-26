@@ -3,67 +3,49 @@ title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>arguments.length</code></strong>  свойство, содержащее число аргументов переданных в функцию.</p>
+**`arguments.length`** свойство, содержащее число аргументов переданных в функцию.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">arguments.length</pre>
+```
+arguments.length
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>arguments.length свойство содержащее число аргументов переданных в функцию. Оно может быть больше или меньше опряденного параметра count (см. {{jsxref("Function.length")}}).</p>
+arguments.length свойство содержащее число аргументов переданных в функцию. Оно может быть больше или меньше опряденного параметра count (см. {{jsxref("Function.length")}}).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_arguments.length"><code>Использование arguments.length</code></h3>
+### `Использование arguments.length`
 
-<p>В этом примере мы определяем функцию, которая может сложить 2 или более чисел вместе.</p>
+В этом примере мы определяем функцию, которая может сложить 2 или более чисел вместе.
 
-<pre class="brush: js">function adder(base /*, n2, ... */) {
+```js
+function adder(base /*, n2, ... */) {
   base = Number(base);
-  for (var i = 1; i &lt; arguments.length; i++) {
+  for (var i = 1; i < arguments.length; i++) {
     base += Number(arguments[i]);
   }
   return base;
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition. Implemented in JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                   | Comment                                           |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                                      | Standard                 | Initial definition. Implemented in JavaScript 1.1 |
+| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                     | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Function.length")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Function.length")}}

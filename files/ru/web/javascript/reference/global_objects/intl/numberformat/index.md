@@ -7,111 +7,101 @@ tags:
   - NumberFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
-<div>{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}</div>
+{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Объект <strong><code>Intl.NumberFormat</code></strong> является конструктором объектов, включающих языка-зависимое форматирование чисел.</p>
+Объект **`Intl.NumberFormat`** является конструктором объектов, включающих языка-зависимое форматирование чисел.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
-Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])
-</code></pre>
+```
+new Intl.NumberFormat([locales[, options]])
+Intl.NumberFormat.call(this[, locales[, options]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента <code>locales</code> смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:</p>
+- `locales`
 
- <dl>
-  <dt><code>nu</code></dt>
-  <dd>Используемая система нумерации. Возможные значения включают в себя: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
- </dl>
- </dd>
- <dt><code>options</code></dt>
- <dd>
- <p>Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:</p>
+  - : Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>Используемый алгоритм сопоставления локалей. Возможными значениями являются <code>"lookup"</code> и <code>"best fit"</code>; значением по умолчанию является <code>"best fit"</code>. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.</dd>
-  <dt><code>style</code></dt>
-  <dd>Используемый стиль форматирования. Возможными значениями являются <code>"decimal"</code> для простого форматирования числа, <code>"currency"</code> для форматирования валюты и <code>"percent"</code> для форматирования процентов; значением по умолчанию является <code>"decimal"</code>.</dd>
-  <dt><code>currency</code></dt>
-  <dd>Валюта, используемая при форматировании валют. Возможными значениями являются коды валют ISO 4217, например, <code>"USD"</code> для доллара США, <code>"EUR"</code> для евро или <code>"CNY"</code> для китайского юаня — смотрите <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">список кодов текущих валют и денежных средств</a>. Свойство не имеет значения по умолчанию; если свойство <code>style</code> равно <code>"currency"</code>, свойство <code>currency</code> также должно присутствовать.</dd>
-  <dt><code>currencyDisplay</code></dt>
-  <dd>Определяет, как отображать валюту при форматировании валют. Возможными значениями являются <code>"symbol"</code> для использования локализованного символа валюты, например € для евро, <code>"code"</code> для использования кода валюты ISO, <code>"name"</code> для использования локализованного названия валюты, например <code>"доллар США"</code> для доллара; значением по умолчанию является <code>"symbol"</code>.</dd>
-  <dt><code>useGrouping</code></dt>
-  <dd>Определяет, использовать ли разделители групп разрядов, например, разделители тысяч или тысяч/лакх/крор. Возможными значениями являются <code>true</code> и <code>false</code>; значением по умолчанию является <code>true</code>.</dd>
- </dl>
+    - `nu`
+      - : Используемая система нумерации. Возможные значения включают в себя: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
 
- <p>Следующие свойства разбиваются на две группы: <code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code> и <code>maximumFractionDigits</code> входят в одну группу, а <code>minimumSignificantDigits</code> и <code>maximumSignificantDigits</code> — в другую. Если определено хотя бы одно свойство из второй группы, свойства первой группы будут проигнорированы.</p>
+- `options`
 
- <dl>
-  <dt><code>minimumIntegerDigits</code></dt>
-  <dd>Минимальное используемое количество цифр целой части числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.</dd>
-  <dt><code>minimumFractionDigits</code></dt>
-  <dd>Минимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого и процентного форматирования является 0; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">списке кодов валют ISO 4217</a> (2, если данный список не предоставляет такой информации).</dd>
-  <dt><code>maximumFractionDigits</code></dt>
-  <dd>Максимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого форматирования является наибольшее значение из <code>minimumFractionDigits</code> и 3; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">списке кодов валют ISO 4217</a> (2, если данный список не предоставляет такой информации); значением по умолчанию для процентного форматирования является наибольшее значение из <code>minimumFractionDigits</code> и 0.</dd>
-  <dt><code>minimumSignificantDigits</code></dt>
-  <dd>Минимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.</dd>
-  <dt><code>maximumSignificantDigits</code></dt>
-  <dd>Максимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является <code>minimumSignificantDigits</code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
 
-<h2 id="Description">Описание</h2>
+    - `localeMatcher`
+      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
+    - `style`
+      - : Используемый стиль форматирования. Возможными значениями являются `"decimal"` для простого форматирования числа, `"currency"` для форматирования валюты и `"percent"` для форматирования процентов; значением по умолчанию является `"decimal"`.
+    - `currency`
+      - : Валюта, используемая при форматировании валют. Возможными значениями являются коды валют ISO 4217, например, `"USD"` для доллара США, `"EUR"` для евро или `"CNY"` для китайского юаня — смотрите [список кодов текущих валют и денежных средств](http://www.currency-iso.org/en/home/tables/table-a1.html). Свойство не имеет значения по умолчанию; если свойство `style` равно `"currency"`, свойство `currency` также должно присутствовать.
+    - `currencyDisplay`
+      - : Определяет, как отображать валюту при форматировании валют. Возможными значениями являются `"symbol"` для использования локализованного символа валюты, например € для евро, `"code"` для использования кода валюты ISO, `"name"` для использования локализованного названия валюты, например `"доллар США"` для доллара; значением по умолчанию является `"symbol"`.
+    - `useGrouping`
+      - : Определяет, использовать ли разделители групп разрядов, например, разделители тысяч или тысяч/лакх/крор. Возможными значениями являются `true` и `false`; значением по умолчанию является `true`.
 
-<h3 id="Properties">Свойства</h3>
+    Следующие свойства разбиваются на две группы: `minimumIntegerDigits`, `minimumFractionDigits` и `maximumFractionDigits` входят в одну группу, а `minimumSignificantDigits` и `maximumSignificantDigits` — в другую. Если определено хотя бы одно свойство из второй группы, свойства первой группы будут проигнорированы.
 
-<dl>
- <dt>{{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}</dt>
- <dd>Позволяет добавлять свойства ко всем объектам.</dd>
-</dl>
+    - `minimumIntegerDigits`
+      - : Минимальное используемое количество цифр целой части числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.
+    - `minimumFractionDigits`
+      - : Минимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого и процентного форматирования является 0; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в [списке кодов валют ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2, если данный список не предоставляет такой информации).
+    - `maximumFractionDigits`
+      - : Максимальное используемое количество цифр дробной части числа. Возможными значениями являются значения от 0 до 20; значением по умолчанию для простого форматирования является наибольшее значение из `minimumFractionDigits` и 3; значением по умолчанию для форматирования валюты является число цифр младших единиц, определяемое в [списке кодов валют ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2, если данный список не предоставляет такой информации); значением по умолчанию для процентного форматирования является наибольшее значение из `minimumFractionDigits` и 0.
+    - `minimumSignificantDigits`
+      - : Минимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является 1.
+    - `maximumSignificantDigits`
+      - : Максимальное используемое количество значащих цифр числа. Возможными значениями являются значения от 1 до 21; значением по умолчанию является `minimumSignificantDigits`.
 
-<h2 id="Methods">Методы</h2>
+## Описание
 
-<dl>
- <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
- <dd>Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.</dd>
-</dl>
+### Свойства
 
-<h2 id="NumberFormat_instances">Экземпляры объекта <code>NumberFormat</code></h2>
+- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
+  - : Позволяет добавлять свойства ко всем объектам.
 
-<h3 id="Properties_of_NumberFormat_instance">Свойства</h3>
+## Методы
 
-<p>Экземпляры <code>NumberFormat</code> наследуют следующие свойства из своего прототипа:</p>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+  - : Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}</div>
+## Экземпляры объекта `NumberFormat`
 
-<h3 id="Methods_of_NumberFormat_instance">Методы</h3>
+### Свойства
 
-<p>Экземпляры <code>NumberFormat</code> наследуют следующие методы из своего прототипа:</p>
+Экземпляры `NumberFormat` наследуют следующие свойства из своего прототипа:
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Properties')}}
 
-<h2 id="Examples">Примеры</h2>
+### Методы
 
-<h3 id="Example_Basic_usage">Пример: базовое использование</h3>
+Экземпляры `NumberFormat` наследуют следующие методы из своего прототипа:
 
-<p>При базовом использовании без определения локали возвращается строка, отформатированная с помощью локали по умолчанию с опциями по умолчанию.</p>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Methods')}}
 
-<pre class="brush: js">var number = 3500;
+## Примеры
+
+### Пример: базовое использование
+
+При базовом использовании без определения локали возвращается строка, отформатированная с помощью локали по умолчанию с опциями по умолчанию.
+
+```js
+var number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
 // → '3,500' в локали US English
-</pre>
+```
 
-<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+### Пример: использование аргумента `locales`
 
-<p>Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
+Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
 
-<pre class="brush: js">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
 console.log(new Intl.NumberFormat('de-DE').format(number));
@@ -137,13 +127,14 @@ console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
-</pre>
+```
 
-<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
+### Пример: использование аргумента `options`
 
-<p>Результат может быть настроен с помощью аргумента <code>options</code>:</p>
+Результат может быть настроен с помощью аргумента `options`:
 
-<pre class="brush: js">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // Запрашиваем формат валюты
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
@@ -159,18 +150,16 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 // Ограничиваем до трёх значащих цифр
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
 // → 1,23,000
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}

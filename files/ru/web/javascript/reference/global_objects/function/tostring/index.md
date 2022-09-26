@@ -8,54 +8,41 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
-<div>{{JSRef("Global_Objects", "Function")}}</div>
+{{JSRef("Global_Objects", "Function")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <code><strong>toString()</strong></code> возвращает строку, представляющую исходный код функции.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>function</var>.toString(indentation)</code></pre>
+Метод **`toString()`** возвращает строку, представляющую исходный код функции.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>indentation</code> {{non-standard_inline}} {{obsolete_inline(17)}}</dt>
- <dd>Количество пробелов для отступов в строковом представлении исходного кода. Если параметр меньше или равен <code>-1</code>, большинство ненужных пробелов будет удалено.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Объект {{jsxref("Global_Objects/Function", "Function")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Function", "Function")}} метод <code>toString</code> возвращает строку, представляющую объект в форме объявления функции. То есть, метод <code>toString</code> декомпилирует функцию и возвращает строку, включающую ключевое слово <code>function</code>, список аргументов, фигурные скобки и исходный код тела функции.</p>
-<p>JavaScript вызывает метод <code>toString</code> автоматически в случае, когда объект {{jsxref("Global_Objects/Function", "Function")}} представляется в качестве текстового значения, то есть, когда функция соединяется со строкой.</p>
+```
+function.toString(indentation)
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+### Параметры
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
+  - : Количество пробелов для отступов в строковом представлении исходного кода. Если параметр меньше или равен `-1`, большинство ненужных пробелов будет удалено.
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+## Описание
+
+Объект {{jsxref("Global_Objects/Function", "Function")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Function", "Function")}} метод `toString` возвращает строку, представляющую объект в форме объявления функции. То есть, метод `toString` декомпилирует функцию и возвращает строку, включающую ключевое слово `function`, список аргументов, фигурные скобки и исходный код тела функции.
+
+JavaScript вызывает метод `toString` автоматически в случае, когда объект {{jsxref("Global_Objects/Function", "Function")}} представляется в качестве текстового значения, то есть, когда функция соединяется со строкой.
+
+## Спецификации
+
+| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                         | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.toString()")}}

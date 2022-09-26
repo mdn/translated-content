@@ -7,64 +7,62 @@ tags:
   - ловушка
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>handler.apply()</code></strong> является ловушкой для вызова функции.</p>
+Метод **`handler.apply()`** является ловушкой для вызова функции.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
-  apply: function(<var>target</var>, <var>thisArg</var>, <var>argumentsList</var>) {
+```
+const p = new Proxy(target, {
+  apply: function(target, thisArg, argumentsList) {
   }
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Методу <code>apply()</code> передаются следующие параметры. <code>this</code> связан с объектом-обработчиком.</p>
+Методу `apply()` передаются следующие параметры. `this` связан с объектом-обработчиком.
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>Исходный объект.</dd>
- <dt><code><var>thisArg</var></code></dt>
- <dd>Аргумент <code>this</code> для вызова.</dd>
- <dt><code><var>argumentsList</var></code></dt>
- <dd>Список аргументов для вызова.</dd>
-</dl>
+- `target`
+  - : Исходный объект.
+- `thisArg`
+  - : Аргумент `this` для вызова.
+- `argumentsList`
+  - : Список аргументов для вызова.
 
-<h3 id="Возврат_значения">Возврат значения</h3>
+### Возврат значения
 
-<p>Метод <code>apply()</code> может возвращать значение.</p>
+Метод `apply()` может возвращать значение.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code><strong>handler.apply()</strong></code> является ловушкой для вызова функции.</p>
+Метод **`handler.apply()`** является ловушкой для вызова функции.
 
-<h3 id="Перехват">Перехват</h3>
+### Перехват
 
-<p>Ловушка может перехватывать следующие операции:</p>
+Ловушка может перехватывать следующие операции:
 
-<ul>
- <li><code><var>proxy</var>(...<var>args</var>)</code></li>
- <li>{{jsxref("Function.prototype.apply()")}} и {{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- `proxy(...args)`
+- {{jsxref("Function.prototype.apply()")}} и {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}
 
-<h3 id="Инварианты">Инварианты</h3>
+### Инварианты
 
-<p>Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}.</p>
+Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}.
 
-<p>Исходный объект <code><var>target</var></code> должен быть самовызываемым. То есть, это должна быть функция-объект.</p>
+Исходный объект `target` должен быть самовызываемым. То есть, это должна быть функция-объект.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Ловушка_для_вызова_функции">Ловушка для вызова функции</h3>
+### Ловушка для вызова функции
 
-<p>Следующий код ловит вызов функции.</p>
+Следующий код ловит вызов функции.
 
-<pre class="brush: js">const p = new Proxy(function() {}, {
+```js
+const p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -73,26 +71,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
                          // 6
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat("javascript.builtins.Proxy.handler.apply")}}
 
+## Смотрите также
 
-<p>{{Compat("javascript.builtins.Proxy.handler.apply")}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Function.prototype.apply()")}}
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}

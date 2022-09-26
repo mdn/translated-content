@@ -12,68 +12,71 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>lastIndexOf()</strong></code> возвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет. Массив просматривается от конца к началу, начиная с индекса <code>fromIndex</code>.</p>
+Метод **`lastIndexOf()`** возвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет. Массив просматривается от конца к началу, начиная с индекса `fromIndex`.
 
-<div>{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var> = arr.length])</code></pre>
+```
+arr.lastIndexOf(searchElement[, fromIndex = arr.length])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>Искомый элемент в массиве.</dd>
- <dt><code>fromIndex</code></dt>
- <dd>Необязательный параметр. Индекс, с которого начинать поиск в обратном направлении. Если индекс больше или равен длине массива, просматривается весь массив. Если индекс является отрицательным числом, он трактуется как смещение с конца массива. Обратите внимание: если индекс отрицателен, массив всё равно просматривается от конца к началу. Если рассчитанный индекс оказывается меньше 0, массив даже не просматривается. Значение по умолчанию равно длине массива, что означает, что просматривается весь массив.</dd>
-</dl>
+- `searchElement`
+  - : Искомый элемент в массиве.
+- `fromIndex`
+  - : Необязательный параметр. Индекс, с которого начинать поиск в обратном направлении. Если индекс больше или равен длине массива, просматривается весь массив. Если индекс является отрицательным числом, он трактуется как смещение с конца массива. Обратите внимание: если индекс отрицателен, массив всё равно просматривается от конца к началу. Если рассчитанный индекс оказывается меньше 0, массив даже не просматривается. Значение по умолчанию равно длине массива, что означает, что просматривается весь массив.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>lastIndexOf()</code> сравнивает искомый элемент <code>searchElement</code> с элементами в массиве, используя <a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">строгое сравнение</a> (тот же метод используется оператором <code>===</code>, тройное равно).</p>
+Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (тот же метод используется оператором `===`, тройное равно).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_lastIndexOf">Пример: использование <code>lastIndexOf()</code></h3>
+### Пример: использование `lastIndexOf()`
 
-<p>В следующем примере метод <code>lastIndexOf()</code> используется для поиска значений в массиве.</p>
+В следующем примере метод `lastIndexOf()` используется для поиска значений в массиве.
 
-<pre class="brush: js">var array = [2, 5, 9, 2];
+```js
+var array = [2, 5, 9, 2];
 array.lastIndexOf(2);     // 3
 array.lastIndexOf(7);     // -1
 array.lastIndexOf(2, 3);  // 3
 array.lastIndexOf(2, 2);  // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
-</pre>
+```
 
-<h3 id="Example:_Finding_all_the_occurrences_of_an_element">Пример: нахождение всех вхождений элемента</h3>
+### Пример: нахождение всех вхождений элемента
 
-<p>В следующем примере метод <code>lastIndexOf()</code> используется для поиска всех индексов элемента в указанном массиве, которые с помощью метода {{jsxref("Array.prototype.push()", "push()")}} добавляются в другой массив.</p>
+В следующем примере метод `lastIndexOf()` используется для поиска всех индексов элемента в указанном массиве, которые с помощью метода {{jsxref("Array.prototype.push()", "push()")}} добавляются в другой массив.
 
-<pre class="brush: js">var indices = [];
+```js
+var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 
 console.log(indices);
 // [4, 2, 0]
-</pre>
+```
 
-<p>Обратите внимание, что мы обрабатываем случай <code>idx == 0</code> отдельно, поскольку элемент всегда будет найден, независимо от параметра <code>fromIndex</code>, если он является первым элементом в массиве. Этим он отличается от метода {{jsxref("Array.prototype.indexOf()", "indexOf()")}}.</p>
+Обратите внимание, что мы обрабатываем случай `idx == 0` отдельно, поскольку элемент всегда будет найден, независимо от параметра `fromIndex`, если он является первым элементом в массиве. Этим он отличается от метода {{jsxref("Array.prototype.indexOf()", "indexOf()")}}.
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>lastIndexOf()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>lastIndexOf()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor()")}}, {{jsxref("Math.abs()")}} и {{jsxref("Math.min()")}} имеют свои первоначальные значения.</p>
+Метод `lastIndexOf()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `lastIndexOf()` в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor()")}}, {{jsxref("Math.abs()")}} и {{jsxref("Math.min()")}} имеют свои первоначальные значения.
 
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.15
+```js
+// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.15
 // Ссылка (en): http://es5.github.io/#x15.4.4.15
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
@@ -86,56 +89,50 @@ if (!Array.prototype.lastIndexOf) {
 
     var n, k,
         t = Object(this),
-        len = t.length &gt;&gt;&gt; 0;
+        len = t.length >>> 0;
     if (len === 0) {
       return -1;
     }
 
     n = len - 1;
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
       }
-      else if (n != 0 &amp;&amp; n != (1 / 0) &amp;&amp; n != -(1 / 0)) {
-        n = (n &gt; 0 || -1) * Math.floor(Math.abs(n));
+      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+        n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
 
-    for (k = n &gt;= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k &gt;= 0; k--) {
-      if (k in t &amp;&amp; t[k] === searchElement) {
+    for (k = n >= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k >= 0; k--) {
+      if (k in t && t[k] === searchElement) {
         return k;
       }
     }
     return -1;
   };
 }
-</pre>
+```
 
-<p>И снова обратите внимание, что данная реализация нацелена на абсолютную совместимость с методом <code>lastIndexOf()</code>, реализованным в Firefox и движке JavaScript SpiderMonkey, включая несколько случаев, которые являются спорными крайними случаями. Если вы используете этот код в реальных приложениях, вы можете вычислять параметр <code>from</code> менее сложным образом, игнорируя эти случаи.</p>
+И снова обратите внимание, что данная реализация нацелена на абсолютную совместимость с методом `lastIndexOf()`, реализованным в Firefox и движке JavaScript SpiderMonkey, включая несколько случаев, которые являются спорными крайними случаями. Если вы используете этот код в реальных приложениях, вы можете вычислять параметр `from` менее сложным образом, игнорируя эти случаи.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Замечания_по_совместимости">Замечания по совместимости</h2>
+## Замечания по совместимости
 
-<ul>
- <li>Начиная с Firefox 47 {{geckoRelease (47)}}, метод больше не будет возвращать <code>-0</code>. Например, <code>[0].lastIndexOf(0, -0)</code> теперь всегда будет возвращать <code>+0</code> ({{bug (1242043)}}).</li>
-</ul>
+- Начиная с Firefox 47 {{geckoRelease (47)}}, метод больше не будет возвращать `-0`. Например, `[0].lastIndexOf(0, -0)` теперь всегда будет возвращать `+0` ({{bug (1242043)}}).
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}

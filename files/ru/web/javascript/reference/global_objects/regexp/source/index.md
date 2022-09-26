@@ -10,38 +10,39 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ---
-<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+{{JSRef("Global_Objects", "RegExp")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Свойство <strong><code>source</code></strong> возвращает {{jsxref("Global_Objects/String", "строку", "", 1)}}, содержащую текст шаблона регулярного выражения без прямых слешей с обеих сторон и без флагов регулярного выражения.</p>
+Свойство **`source`** возвращает {{jsxref("Global_Objects/String", "строку", "", 1)}}, содержащую текст шаблона регулярного выражения без прямых слешей с обеих сторон и без флагов регулярного выражения.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_source">Пример: использование свойства <code>source</code></h3>
+### Пример: использование свойства `source`
 
-<pre class="brush: js">var regex = /fooBar/ig;
+```js
+var regex = /fooBar/ig;
 
 console.log(regex.source); // 'fooBar', не содержит прямые слеши /.../ и флаги 'ig'.
-</pre>
+```
 
-<p>Начиная с ECMAScript 5, свойство <code>source</code> больше не возвращает пустую строку для пустых регулярных выражений. Вместо этого, возвращается строка" (?:)". Кроме того, теперь экранируются символы окончания строк (такие как, "\n").</p>
+Начиная с ECMAScript 5, свойство `source` больше не возвращает пустую строку для пустых регулярных выражений. Вместо этого, возвращается строка" (?:)". Кроме того, теперь экранируются символы окончания строк (такие как, "\n").
 
-<pre>new RegExp().source; // "(?:)"
+```
+new RegExp().source; // "(?:)"
 
 new RegExp('\n').source === '\n';  // true, до появления ES5
-new RegExp('\n').source === '\\n'; // true, начиная с ES5</pre>
+new RegExp('\n').source === '\\n'; // true, начиная с ES5
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("RegExp.prototype.flags")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.flags")}}

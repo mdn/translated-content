@@ -3,65 +3,62 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>forEach()</strong></code> выполняет функцию по одному разу для каждого элемента из <code>Set</code> в порядке их расположения.</p>
+Метод **`forEach()`** выполняет функцию по одному разу для каждого элемента из `Set` в порядке их расположения.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
 
+## Синтаксис
 
+```
+mySet.forEach(callback[, thisArg])
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><em>mySet</em>.forEach(<em>callback</em>[, <var>thisArg</var>]<code>)</code></pre>
+- `callback`
 
-<h3 id="Параметры">Параметры</h3>
+  - : Функция, которая будет выполнена для каждого элемента, принимает три параметра:
 
-<dl>
- <dt><code>callback</code></dt>
- <dd><p>Функция, которая будет выполнена для каждого элемента, принимает три параметра:</p>
- <dl>
-  <dt><code>currentValue</code>, <code>currentKey</code></dt>
-  <dd>Текущий элемент из <code>Set</code>. Т.к. в <code>Set</code> нет ключей,  в каждом будет лежать value.</dd>
-  <dt><code>set</code></dt>
-  <dd>Сам объект <code>Set</code> для которого был вызван <code>forEach()</code>.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Значение, используемое как <code>this</code> в ходе выполнения <code>callback</code>.</dd>
-</dl>
+    - `currentValue`, `currentKey`
+      - : Текущий элемент из `Set`. Т.к. в `Set` нет ключей, в каждом будет лежать value.
+    - `set`
+      - : Сам объект `Set` для которого был вызван `forEach()`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+- `thisArg`
+  - : Значение, используемое как `this` в ходе выполнения `callback`.
 
-<p>{{jsxref("undefined")}}.</p>
+### Возвращаемое значение
 
-<h2 id="Описание">Описание</h2>
+{{jsxref("undefined")}}.
 
-<p>Метод <code>forEach()</code> выполняет <code>callback</code> по одному разу для каждого значения, которое находится в объекте <code>Set</code>. Функция не будет выполняться для значений, которые были удалены. Тем не менее функция выполнится с элементами, значение которых <code>undefined</code>.</p>
+## Описание
 
-<p><code>callback</code> вызывается с <strong>тремя аргументами</strong>:</p>
+Метод `forEach()` выполняет `callback` по одному разу для каждого значения, которое находится в объекте `Set`. Функция не будет выполняться для значений, которые были удалены. Тем не менее функция выполнится с элементами, значение которых `undefined`.
 
-<ul>
- <li><strong>значение элемента</strong></li>
- <li><strong>ключ элемента</strong></li>
- <li><strong><code>Set</code> объект обхода</strong></li>
-</ul>
+`callback` вызывается с **тремя аргументами**:
 
-<p>В объектах типа <code>Set</code> нет ключей, поэтому оба первых аргумента принимают <strong>значение</strong> содержащееся в  {{jsxref("Set")}}. Это делает метод  <code>forEach()</code> для объекта Set совместимым с методами <code>forEach()</code> других объектов, таких как {{jsxref("Map.foreach", "Map")}} и {{jsxref("Array.forEach","Array")}}.</p>
+- **значение элемента**
+- **ключ элемента**
+- **`Set` объект обхода**
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Если аргумент </span></font>thisArg</code> был передан в <code>forEach()</code>, то он будет передан в  <code>callback</code> , во время исполнения, для использование его в качестве <code>this</code>.  Иначе в <code>this</code> будет хранится значение <code>undefined</code>.  Значение <code>this</code> используемое в  <code>callback</code> определено согласно <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">с обычными правилами определения  <code>this</code> используемого функцией</a> </p>
+В объектах типа `Set` нет ключей, поэтому оба первых аргумента принимают **значение** содержащееся в {{jsxref("Set")}}. Это делает метод `forEach()` для объекта Set совместимым с методами `forEach()` других объектов, таких как {{jsxref("Map.foreach", "Map")}} и {{jsxref("Array.forEach","Array")}}.
 
-<p>Каждое значение используется только один раз, исключая те случаи, когда оно было удалено и передобавлено до того, как <code>forEach()</code> завершился. <code>callback</code> не будет выполнена для элементов, которые были удалены до их использования. Новые значения, которые были добавлены до того как <code>forEach()</code> завершился будут использованы.</p>
+`Если аргумент thisArg` был передан в `forEach()`, то он будет передан в `callback` , во время исполнения, для использование его в качестве `this`. Иначе в `this` будет хранится значение `undefined`. Значение `this` используемое в `callback` определено согласно [с обычными правилами определения `this` используемого функцией](/ru/docs/Web/JavaScript/Reference/Operators/this)
 
-<p><code>forEach()</code> выполняет <code>callback</code> однажды для каждого элемента из объекта <code>Set</code>; Он не возвращает никакого значения.</p>
+Каждое значение используется только один раз, исключая те случаи, когда оно было удалено и передобавлено до того, как `forEach()` завершился. `callback` не будет выполнена для элементов, которые были удалены до их использования. Новые значения, которые были добавлены до того как `forEach()` завершился будут использованы.
 
-<h2 id="Примеры">Примеры</h2>
+`forEach()` выполняет `callback` однажды для каждого элемента из объекта `Set`; Он не возвращает никакого значения.
 
-<h3 id="Содержимое_объекта_Set">Содержимое объекта <code>Set</code> </h3>
+## Примеры
 
-<p>Приведённый код показывает состояние каждого элемента в объекте <code>Set</code>:</p>
+### Содержимое объекта `Set`
 
-<pre class="brush:js">function logSetElements(value1, value2, set) {
+Приведённый код показывает состояние каждого элемента в объекте `Set`:
+
+```js
+function logSetElements(value1, value2, set) {
     console.log('s[' + value1 + '] = ' + value2);
 }
 
@@ -71,21 +68,17 @@ new Set(['foo', 'bar', undefined]).forEach(logSetElements);
 // "s[foo] = foo"
 // "s[bar] = bar"
 // "s[undefined] = undefined"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map.prototype.forEach()")}}

@@ -3,83 +3,77 @@ title: Обзор JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
-<div>{{JsSidebar("Introductory")}}</div>
+{{JsSidebar("Introductory")}}
 
-<h2 id="Введение">Введение</h2>
+## Введение
 
-<p>Если HTML определяет структуру и контент веб-страницы, а CSS задаёт формат и внешний вид, то JavaScript добавляет интерактивность и создаёт богатые веб-приложения. </p>
+Если HTML определяет структуру и контент веб-страницы, а CSS задаёт формат и внешний вид, то JavaScript добавляет интерактивность и создаёт богатые веб-приложения.
 
-<p>Однако, под общим термином "JavaScript", в контексте веб-браузера, понимаются несколько очень разных вещей. Одна из них - это базовый язык программирования (ECMAScript), а другая - коллекция Web APIs, включая DOM (Объектно-ориентированная модель документа).</p>
+Однако, под общим термином "JavaScript", в контексте веб-браузера, понимаются несколько очень разных вещей. Одна из них - это базовый язык программирования (ECMAScript), а другая - коллекция Web APIs, включая DOM (Объектно-ориентированная модель документа).
 
-<h2 id="JavaScript_базовый_язык_программирования_(ECMAScript)">JavaScript, базовый язык программирования (ECMAScript)</h2>
+## JavaScript, базовый язык программирования (ECMAScript)
 
-<p>Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием <a href="/en-US/docs/JavaScript/Language_Resources" title="en-US/docs/JavaScript/Language_Resources">ECMAScript</a>.</p>
+Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием [ECMAScript](/ru/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources").
 
-<p>Базовый язык также используется в не-браузерном окружении, например, в <a href="http://nodejs.org/">node.js</a>.</p>
+Базовый язык также используется в не-браузерном окружении, например, в [node.js](http://nodejs.org/).
 
-<h3 id="Что_попадает_под_понятие_ECMAScript">Что попадает под понятие ECMAScript?</h3>
+### Что попадает под понятие ECMAScript?
 
-<p>Кроме прочего, <a href="/en-US/docs/JavaScript/Language_Resources" title="en-US/docs/JavaScript/Language_Resources">ECMAScript</a> определяет:</p>
+Кроме прочего, [ECMAScript](/ru/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources") определяет:
 
-<ul>
- <li>Синтаксис языка (правила парсинга, ключевые слова, порядок выполнения, инициализацию объекта литерала...)</li>
- <li>Механизм обработки ошибок (исключения, try/catch оператор,возможность создавать новые типы  ошибок)</li>
- <li>Типы данных (логические, числа, строки, функции, объекты...)</li>
- <li>Глобальный объект. В браузерах глобальным объектом является <code>window</code>, но ECMAscript определяет только те APIs, которые не являются специфическими для браузера, как <code>parseInt</code>, <code>parseFloat</code>, <code>decodeURI</code>, <code>encodeURI</code>...</li>
- <li>Механизм прототипного наследования</li>
- <li>Встроенные объекты и функции (JSON, Math, Array.prototype методы, методы самоанализа объекта...)</li>
- <li>Строгий режим</li>
-</ul>
+- Синтаксис языка (правила парсинга, ключевые слова, порядок выполнения, инициализацию объекта литерала...)
+- Механизм обработки ошибок (исключения, try/catch оператор,возможность создавать новые типы ошибок)
+- Типы данных (логические, числа, строки, функции, объекты...)
+- Глобальный объект. В браузерах глобальным объектом является `window`, но ECMAscript определяет только те APIs, которые не являются специфическими для браузера, как `parseInt`, `parseFloat`, `decodeURI`, `encodeURI`...
+- Механизм прототипного наследования
+- Встроенные объекты и функции (JSON, Math, Array.prototype методы, методы самоанализа объекта...)
+- Строгий режим
 
-<h3 id="Браузерная_поддержка">Браузерная поддержка</h3>
+### Браузерная поддержка
 
-<p>На октябрь 2016, текущие версии основы веб-браузеров включали <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5.1</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">ECMAScript 2015</a>, но более старые версии (все ещё находящиеся в использовании) реализуют только ECMAScript 5.</p>
+На октябрь 2016, текущие версии основы веб-браузеров включали [ECMAScript 5.1](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) и [ECMAScript 2015](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), но более старые версии (все ещё находящиеся в использовании) реализуют только ECMAScript 5.
 
-<h3 id="Будущее">Будущее</h3>
+### Будущее
 
-<p>Главное 6-ое издание ECMAscript было официально одобрено и опубликовано как стандарт 17 июня 2015 года на собрании ECMA General Assembly. С тех пор выпуски ECMAscript публикуются на ежегодной основе.</p>
+Главное 6-ое издание ECMAscript было официально одобрено и опубликовано как стандарт 17 июня 2015 года на собрании ECMA General Assembly. С тех пор выпуски ECMAscript публикуются на ежегодной основе.
 
-<h3 id="API_по_интернационализации">API по интернационализации</h3>
+### API по интернационализации
 
-<p><a href="http://ecma-international.org/ecma-402/1.0/">Спецификация ECMAScript для API по интернационализации</a> - дополнение к языковой спецификации ECMAScript, также стандартизированной Ecma TC39. API по интернационализации обеспечивает сопоставление (строковое сравнение), форматирование чисел, дат и времени для приложений на JavaScript, позволяя выбирать язык и проектировать функциональность в зависимости от нужд. Начальный стандарт был одобрен в декабре 2012; статус реализации в браузерах ведётся в документации <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Intl"><code>Intl</code> object</a>. Спецификация по интернационализации сейчас также утверждается на ежегодной основе, и браузеры постоянно улучшают её реализацию.</p>
+[Спецификация ECMAScript для API по интернационализации](http://ecma-international.org/ecma-402/1.0/) - дополнение к языковой спецификации ECMAScript, также стандартизированной Ecma TC39. API по интернационализации обеспечивает сопоставление (строковое сравнение), форматирование чисел, дат и времени для приложений на JavaScript, позволяя выбирать язык и проектировать функциональность в зависимости от нужд. Начальный стандарт был одобрен в декабре 2012; статус реализации в браузерах ведётся в документации [`Intl` object](/ru/docs/JavaScript/Reference/Global_Objects/Intl). Спецификация по интернационализации сейчас также утверждается на ежегодной основе, и браузеры постоянно улучшают её реализацию.
 
-<h2 id="DOM_APIs">DOM APIs</h2>
+## DOM APIs
 
-<h3 id="WebIDL">WebIDL</h3>
+### WebIDL
 
-<p><a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/">Спецификация WebIDL </a>является связующим звеном между технологиями DOM и ECMAScript.</p>
+[Спецификация WebIDL ](http://dev.w3.org/2006/webapi/WebIDL/)является связующим звеном между технологиями DOM и ECMAScript.
 
-<h3 id="Ядро_DOM">Ядро DOM</h3>
+### Ядро DOM
 
-<p>Объектно-ориентированная модель документа (DOM) это кросс-платформенное, <strong>языково-независимое соглашение</strong> по представлению объектов и взаимодействию с ними в документах HTML, XHTML и XML. Объект в <strong>DOM-дереве</strong> может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опряденных в DOM, можно также найти:</p>
+Объектно-ориентированная модель документа (DOM) это кросс-платформенное, **языково-независимое соглашение** по представлению объектов и взаимодействию с ними в документах HTML, XHTML и XML. Объект в **DOM-дереве** может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опряденных в DOM, можно также найти:
 
-<ul>
- <li>Структуру документа, древовидную модель, и архитектуру событий DOM в <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">ядре DOM</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
- <li>Менее строгое определение архитектуры событий DOM, также как и определённые <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">события DOM</a>.</li>
- <li>Другие вещи, такие как <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> и <a class="external" href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
-</ul>
+- Структуру документа, древовидную модель, и архитектуру событий DOM в [ядре DOM](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html): `Node`, `Element`, `DocumentFragment`, `Document`, `DOMImplementation`, `Event`, `EventTarget`, …
+- Менее строгое определение архитектуры событий DOM, также как и определённые [события DOM](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html).
+- Другие вещи, такие как [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) и [DOM Range](http://html5.org/specs/dom-range.html).
 
-<p>С точки зрения ECMAScript, объекты определённые в спецификации DOM называются объектами среды исполнения ("host objects").</p>
+С точки зрения ECMAScript, объекты определённые в спецификации DOM называются объектами среды исполнения ("host objects").
 
-<h3 id="HTML_DOM">HTML DOM</h3>
+### HTML DOM
 
-<p><a class="external" href="http://www.whatwg.org/html">HTML</a>, это язык разметки Web, который определён в терминах DOM/ is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the <em>meaning</em> of elements. The HTML DOM includes such things as the <code>className</code> property on HTML elements, or APIs such as {{ domxref("document.body") }}.</p>
+[HTML](http://www.whatwg.org/html), это язык разметки Web, который определён в терминах DOM/ is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as {{ domxref("document.body") }}.
 
-<p>The HTML specification also defines restrictions on documents; for example, it requires all children of a <code>ul</code> element, which represents an unordered list, to be <code>li</code> elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.</p>
+The HTML specification also defines restrictions on documents; for example, it requires all children of a `ul` element, which represents an unordered list, to be `li` elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
 
-<h2 id="Другие_API_заслуживающие_внимания">Другие API, заслуживающие внимания</h2>
+## Другие API, заслуживающие внимания
 
-<ul>
- <li>Функции setTimeout и setInterval впервые были определены в интерфейсе <a class="external" href="http://www.whatwg.org/html/#window">Window</a> в стандарте HTML.</li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> позволяет отправлять асинхронные HTTP запросы.</li>
- <li>Объектная модель <a class="external" href="http://dev.w3.org/csswg/cssom/">CSS</a> абстрагировать CSS-правила как объекты</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a> обеспечивает выполнение параллельных вычислений.</li>
- <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a> обеспечивает низкоуровневое двунаправленное соединение.</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> это API для рисования с помощью элемента {{htmlelement("canvas")}}..</li>
-</ul>
+- Функции setTimeout и setInterval впервые были определены в интерфейсе [Window](http://www.whatwg.org/html/#window) в стандарте HTML.
+- [XMLHttpRequest](http://dev.w3.org/2006/webapi/XMLHttpRequest-2/) позволяет отправлять асинхронные HTTP запросы.
+- Объектная модель [CSS](http://dev.w3.org/csswg/cssom/) абстрагировать CSS-правила как объекты
+- [WebWorkers](http://www.whatwg.org/specs/web-workers/current-work/) обеспечивает выполнение параллельных вычислений.
+- [WebSockets](http://www.whatwg.org/C/#network) обеспечивает низкоуровневое двунаправленное соединение.
+- [Canvas 2D Context](http://www.whatwg.org/html/#2dcontext) это API для рисования с помощью элемента {{htmlelement("canvas")}}..
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>Каждый разработчик сталкивавшийся с DOM понимает как там все <a href="http://ejohn.org/blog/the-dom-is-a-mess/">безнадёжно</a>. Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаются описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеяться что браузеры улучшат свои реализации основываясь на этих спецификациях.</p>
+Каждый разработчик сталкивавшийся с DOM понимает как там все [безнадёжно](http://ejohn.org/blog/the-dom-is-a-mess/). Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаются описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеяться что браузеры улучшат свои реализации основываясь на этих спецификациях.
 
-<p>Наиболее общий, но возможно не самый надёжный способ улучшить кроссбраузерную совместимость это воспользоваться библиотеками JavaScript. Эти библиотеки абстрагируют вас от особенностей реализации DOM в том или ином браузере, и гарантируют, что их API работает одинаково в разных браузерах. Наиболее распространённые из них это <a class="external" href="http://jquery.com/">jQuery</a> и <a class="external" href="http://www.prototypejs.org/">prototype</a>.</p>
+Наиболее общий, но возможно не самый надёжный способ улучшить кроссбраузерную совместимость это воспользоваться библиотеками JavaScript. Эти библиотеки абстрагируют вас от особенностей реализации DOM в том или ином браузере, и гарантируют, что их API работает одинаково в разных браузерах. Наиболее распространённые из них это [jQuery](http://jquery.com/) и [prototype](http://www.prototypejs.org/).

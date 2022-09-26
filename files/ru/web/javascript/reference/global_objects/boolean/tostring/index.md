@@ -8,60 +8,53 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
-<div>{{JSRef("Global_Objects", "Boolean")}}</div>
+{{JSRef("Global_Objects", "Boolean")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <code><strong>toString()</strong></code> возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>bool</var>.toString()</code></pre>
+Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
 
-<h3 id="Parameters">Параметры</h3>
-<p>Нет.</p>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Объект {{jsxref("Global_Objects/Boolean", "Boolean")}} переопределяет метод <code>toString</code> объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} метод <code>toString</code> возвращает строковое представление объекта.</p>
-<p>JavaScript вызывает метод <code>toString</code> автоматически, когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} должен быть представлен в виде текста или когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} находится в контексте строковой конкатенации.</p>
-<p>Для объектов и значений {{jsxref("Global_Objects/Boolean", "Boolean")}} встроенный метод <code>toString</code> возвращает строки «<code>true</code>» или «<code>false</code>» в зависимости от значения логического объекта.</p>
+```
+bool.toString()
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example.3A_Using_toString">Пример: использование <code>toString</code></h3>
-<p>В следующем коде вызов <code>flag.toString()</code> вернёт строку <code>"true"</code>:</p>
-<pre class="brush: js">var flag = new Boolean(true);
+Нет.
+
+## Описание
+
+Объект {{jsxref("Global_Objects/Boolean", "Boolean")}} переопределяет метод `toString` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} метод `toString` возвращает строковое представление объекта.
+
+JavaScript вызывает метод `toString` автоматически, когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} должен быть представлен в виде текста или когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} находится в контексте строковой конкатенации.
+
+Для объектов и значений {{jsxref("Global_Objects/Boolean", "Boolean")}} встроенный метод `toString` возвращает строки «`true`» или «`false`» в зависимости от значения логического объекта.
+
+## Примеры
+
+### Пример: использование `toString`
+
+В следующем коде вызов `flag.toString()` вернёт строку `"true"`:
+
+```js
+var flag = new Boolean(true);
 var myVar = flag.toString();
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}                     | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.toString()")}}

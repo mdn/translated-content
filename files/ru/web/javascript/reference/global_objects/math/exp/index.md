@@ -8,67 +8,55 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>Math.exp()</code></strong> возвращает значение выражения <code>e<sup>x</sup></code>, где <code>x</code> — аргумент метода, а <code>e</code> — {{jsxref("Math.E", "число Эйлера", "", 1)}}, основание натурального логарифма.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>Math.exp(<var>x</var>)</code></pre>
+Метод **`Math.exp()`** возвращает значение выражения `ex`, где `x` — аргумент метода, а `e` — {{jsxref("Math.E", "число Эйлера", "", 1)}}, основание натурального логарифма.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>x</code></dt>
- <dd>Число.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку метод <code>exp()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.exp()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+```
+Math.exp(x)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_Math.exp">Пример: использование метода <code>Math.exp()</code></h3>
-<pre class="brush: js">Math.exp(-1); // 0.36787944117144233
+- `x`
+  - : Число.
+
+## Описание
+
+Поскольку метод `exp()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.exp()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование метода `Math.exp()`
+
+```js
+Math.exp(-1); // 0.36787944117144233
 Math.exp(0);  // 1
 Math.exp(1);  // 2.718281828459045
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.E")}}</li>
- <li>{{jsxref("Math.expm1()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.log1p()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.log2()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.expm1()")}} {{experimental_inline}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}} {{experimental_inline}}
+- {{jsxref("Math.log1p()")}} {{experimental_inline}}
+- {{jsxref("Math.log2()")}} {{experimental_inline}}
+- {{jsxref("Math.pow()")}}

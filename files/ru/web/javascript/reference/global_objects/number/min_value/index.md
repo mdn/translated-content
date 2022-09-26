@@ -7,45 +7,44 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Свойство <strong><code>Number.</code><span style="font-family: consolas,monaco,andale mono,monospace;">MIN_VALUE</span></strong> представляет минимальное положительное числовое значение, представимое в JavaScript.</p>
+Свойство **`Number.`MIN_VALUE** представляет минимальное положительное числовое значение, представимое в JavaScript.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Свойство <code>MIN_VALUE</code> является положительным ближайшим к нулю числом, которое может быть представлено в JavaScript.</p>
+Свойство `MIN_VALUE` является положительным ближайшим к нулю числом, которое может быть представлено в JavaScript.
 
-<p><code>MIN_VALUE</code> имеет значение, приблизительно равное <code>5e-324</code>. Значения, меньшие <code>MIN_VALUE</code>, преобразуются в 0 (так называемое «исчезновение порядка» или «антипереполнение»).</p>
+`MIN_VALUE` имеет значение, приблизительно равное `5e-324`. Значения, меньшие `MIN_VALUE`, преобразуются в 0 (так называемое «исчезновение порядка» или «антипереполнение»).
 
-<p>Поскольку <code>MIN_VALUE</code> является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как <code>Number.MIN_VALUE</code>, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
+Поскольку `MIN_VALUE` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MIN_VALUE`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_MIN_VALUE">Пример: использование <code>MIN_VALUE</code></h3>
+### Пример: использование `MIN_VALUE`
 
-<p>В следующем примере кода производится деление одного значения на другое. Если результат больше или равен <code>MIN_VALUE</code>, вызывается функция <code>func1</code>; в противном случае вызывается функция <code>func2</code>.</p>
+В следующем примере кода производится деление одного значения на другое. Если результат больше или равен `MIN_VALUE`, вызывается функция `func1`; в противном случае вызывается функция `func2`.
 
-<pre class="brush: js">if (num1 / num2 &gt;= Number.MIN_VALUE) {
+```js
+if (num1 / num2 >= Number.MIN_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.MAX_VALUE")}}</li>
-</ul>
+- {{jsxref("Number.MAX_VALUE")}}

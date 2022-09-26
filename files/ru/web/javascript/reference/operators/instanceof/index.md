@@ -10,33 +10,34 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор <strong><code>instanceof</code> </strong>проверяет, принадлежит ли объект к определённому классу. Другими словами, <code>object instanceof constructor</code><em> </em>проверяет, присутствует ли объект <code>constructor.prototype</code> в цепочке прототипов <code>object</code>.</p>
+Оператор **`instanceof` **проверяет, принадлежит ли объект к определённому классу. Другими словами, `object instanceof constructor`\_ \_проверяет, присутствует ли объект `constructor.prototype` в цепочке прототипов `object`.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>object</em> instanceof <em>constructor</em></pre>
+```
+object instanceof constructor
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>object</code></dt>
- <dd>Проверяемый объект.</dd>
-</dl>
+- `object`
+  - : Проверяемый объект.
 
-<dl>
- <dt><code>constructor</code></dt>
- <dd>Функция-конструктор, на которую идёт проверка.</dd>
-</dl>
+<!---->
 
-<h2 id="Описание">Описание</h2>
+- `constructor`
+  - : Функция-конструктор, на которую идёт проверка.
 
-<p>Оператор <code>instanceof</code> проверяет, присутствует ли объект <code>constructor.prototype</code> в цепочке прототипов <code>object</code>.</p>
+## Описание
 
-<pre class="brush: js">// объявляем конструкторы
+Оператор `instanceof` проверяет, присутствует ли объект `constructor.prototype` в цепочке прототипов `object`.
+
+```js
+// объявляем конструкторы
 function C() {}
 function D() {}
 
@@ -63,30 +64,31 @@ D.prototype = new C(); // add C to [[Prototype]] linkage of D
 var o3 = new D();
 o3 instanceof D; // true
 o3 instanceof C; // true, так как C.prototype теперь присутствует в цепочке прототипов o3
-</pre>
+```
 
-<p>Обратите внимание: результат оператора <code>instanceof</code> зависит от свойства <code>constructor.prototype</code>, поэтому результат оператора может поменяться после изменения этого свойства. Также результат может поменяться после изменения прототипа <code>object</code> (или цепочки прототипов) с помощью <code>Object.setPrototypeOf</code> или нестандартного свойства <code>__proto__</code>.</p>
+Обратите внимание: результат оператора `instanceof` зависит от свойства `constructor.prototype`, поэтому результат оператора может поменяться после изменения этого свойства. Также результат может поменяться после изменения прототипа `object` (или цепочки прототипов) с помощью `Object.setPrototypeOf` или нестандартного свойства `__proto__`.
 
-<h3 id="instanceof_и_множественные_контексты_(например_фреймы_или_окна)"><code>instanceof</code> и множественные контексты (например, фреймы или окна)</h3>
+### `instanceof` и множественные контексты (например, фреймы или окна)
 
-<p>Различные контексты имеют разные среды выполнения. Это означает, что они имеют различные built-ins (разный глобальный объект, различные конструкторы и т.д.). Это может давать неожиданные результаты. Например, <code>[] instanceof window.frames[0].Array</code> вернёт <code>false</code>, потому что <code>Array.prototype !== </code><code>window.frames[0].Array</code> а массив наследуется от <code>Array</code>.</p>
+Различные контексты имеют разные среды выполнения. Это означает, что они имеют различные built-ins (разный глобальный объект, различные конструкторы и т.д.). Это может давать неожиданные результаты. Например, `[] instanceof window.frames[0].Array` вернёт `false`, потому что ` Array.prototype !== ``window.frames[0].Array ` а массив наследуется от `Array`.
 
-<p>Это может казаться несущественной проблемой сначала, но при работе с несколькими фреймами или окнами, и передачи объектов из одного контекста в другой с помощью функций, это может стать серьёзной проблемой. С другой стороны, безопасно проверить, является ли некоторый объект массивом можно используя <code>Array.isArray(myObj)</code>.</p>
+Это может казаться несущественной проблемой сначала, но при работе с несколькими фреймами или окнами, и передачи объектов из одного контекста в другой с помощью функций, это может стать серьёзной проблемой. С другой стороны, безопасно проверить, является ли некоторый объект массивом можно используя `Array.isArray(myObj)`.
 
-<p>Например, для проверки того, что <a href="/ru/docs/Web/API/Node">Node</a> является <a href="/ru/docs/Web/API/SVGElement">SVGElement</a> в разных контекстах можно использовать <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
+Например, для проверки того, что [Node](/ru/docs/Web/API/Node) является [SVGElement](/ru/docs/Web/API/SVGElement) в разных контекстах можно использовать `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 
-<div class="note"><strong>Замечания для разработчиков Mozilla:</strong><br>
-Использование XPCOM <code>instanceof</code> в коде имеет специальный эффект: <code>obj instanceof </code><em><code>xpcomInterface</code></em> (например <code>Components.interfaces.nsIFile</code>) вызывает <code>obj.QueryInterface(<em>xpcomInterface</em>)</code> и возвращает <code>true</code> если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства <em><code>xpcomInterface</code></em> на <code>obj</code> после успешной проверки с помощью <code>instanceof</code>. В отличии от стандартных глобальных JavaScript типов, проверка <code>obj instanceof xpcomInterface</code> работает как ожидается, даже если <code>obj</code> относится к другому контексту.</div>
+> **Примечание:** **Замечания для разработчиков Mozilla:**
+> Использование XPCOM `instanceof` в коде имеет специальный эффект: `obj instanceof `_`xpcomInterface`_ (например `Components.interfaces.nsIFile`) вызывает `obj.QueryInterface(xpcomInterface)` и возвращает `true` если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства _`xpcomInterface`_ на `obj` после успешной проверки с помощью `instanceof`. В отличии от стандартных глобальных JavaScript типов, проверка `obj instanceof xpcomInterface` работает как ожидается, даже если `obj` относится к другому контексту.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Показывает_что_String_и_Date_имеют_тип_Object_и_граничные_случаи">Показывает, что <code>String</code> и <code>Date</code> имеют тип <code>Object</code> и граничные случаи</h3>
+### Показывает, что `String` и `Date` имеют тип `Object` и граничные случаи
 
-<p>Следующий код использует <code>instanceof</code>, чтобы показать что объекты <code>String</code> и <code>Date</code> также имеют тип <code>Object</code> (они являются наследниками <code>Object</code>).</p>
+Следующий код использует `instanceof`, чтобы показать что объекты `String` и `Date` также имеют тип `Object` (они являются наследниками `Object`).
 
-<p>Однако, объекты, созданные с помощью литералов, являются исключениями — хотя их prototype равен <code>undefined</code>, выражение <code>instanceof Object</code> возвращает <code>true</code>.</p>
+Однако, объекты, созданные с помощью литералов, являются исключениями — хотя их prototype равен `undefined`, выражение `instanceof Object` возвращает `true`.
 
-<pre class="brush: js">var simpleStr = 'Это обычная строка';
+```js
+var simpleStr = 'Это обычная строка';
 var myString  = new String();
 var newStr    = new String('Строка, созданная с помощью конструктора');
 var myDate    = new Date();
@@ -105,13 +107,14 @@ myString instanceof Date;   // возвращает false
 myDate instanceof Date;     // возвращает true
 myDate instanceof Object;   // возвращает true
 myDate instanceof String;   // возвращает false
-</pre>
+```
 
-<h3 id="Показывает_что_mycar_имеет_тип_Car_и_тип_Object">Показывает, что <code>mycar</code> имеет тип <code>Car</code> и тип <code>Object</code></h3>
+### Показывает, что `mycar` имеет тип `Car` и тип `Object`
 
-<p>Следующий код создаёт тип <code>Car</code> и экземпляр этого типа, <code>mycar</code>. Оператор <code>instanceof</code> показывает, что объект <code>mycar</code> имеет тип <code>Car</code> и тип <code>Object</code>.</p>
+Следующий код создаёт тип `Car` и экземпляр этого типа, `mycar`. Оператор `instanceof` показывает, что объект `mycar` имеет тип `Car` и тип `Object`.
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -119,19 +122,17 @@ myDate instanceof String;   // возвращает false
 var mycar = new Car('Honda', 'Accord', 1998);
 var a = mycar instanceof Car;    // возвращает true
 var b = mycar instanceof Object; // возвращает true
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Operators/typeof" title="/en-US/docs/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
- <li>{{jsxref("Symbol.hasInstance")}}</li>
-</ul>
+- [`typeof`](/ru/docs/Web/JavaScript/Reference/Operators/typeof "/en-US/docs/JavaScript/Reference/Operators/typeof")
+- {{jsxref("Symbol.hasInstance")}}

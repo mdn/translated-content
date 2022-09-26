@@ -13,208 +13,128 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>reduce()</strong></code> применяет функцию <strong>reducer</strong> к каждому элементу массива (слева-направо), возвращая одно результирующее значение.</p>
+Метод **`reduce()`** применяет функцию **reducer** к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>array</var>.reduce(<var>callback</var>[, <var>initialValue</var>])</code></pre>
+```
+array.reduce(callback[, initialValue])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция, выполняющаяся для каждого элемента массива, принимает четыре аргумента:
- <dl>
-  <dt><code>accumulator</code></dt>
-  <dd>Аккумулятор, аккумулирующий значение, которое возвращает функция <strong>callback </strong>после посещения очередного элемента, либо значение <code>initialValue</code>, если оно предоставлено (смотрите пояснения ниже).</dd>
-  <dt><code>currentValue</code></dt>
-  <dd>Текущий обрабатываемый элемент массива.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>Индекс текущего обрабатываемого элемента массива.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>Массив, для которого была вызвана функция <code>reduce</code>.</dd>
- </dl>
- </dd>
- <dt><code>initialValue</code>{{optional_inline}}</dt>
- <dd>Необязательный параметр. Объект, используемый в качестве первого аргумента при первом вызове функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h2 id="Description">Описание</h2>
+  - : Функция, выполняющаяся для каждого элемента массива, принимает четыре аргумента:
 
-<p>Метод <code>reduce()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова <code>callback</code>), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.</p>
+    - `accumulator`
+      - : Аккумулятор, аккумулирующий значение, которое возвращает функция **callback** после посещения очередного элемента, либо значение `initialValue`, если оно предоставлено (смотрите пояснения ниже).
+    - `currentValue`
+      - : Текущий обрабатываемый элемент массива.
+    - `index`{{optional_inline}}
+      - : Индекс текущего обрабатываемого элемента массива.
+    - `array`{{optional_inline}}
+      - : Массив, для которого была вызвана функция `reduce`.
 
-<p>При первом вызове функции, параметры <code>accumulator</code> и <code>currentValue</code> могут принимать одно из двух значений. Если при вызове <code>reduce()</code> передан аргумент <code>initialValue</code>, то значение <code>accumulator</code> будет равным значению <code>initialValue</code>, а значение <code>currentValue</code> будет равным первому значению в массиве. Если аргумент <code>initialValue</code> не задан, то значение <code>accumulator</code> будет равным первому значению в массиве, а значение <code>currentValue</code> будет равным второму значению в массиве.</p>
+- `initialValue`{{optional_inline}}
+  - : Необязательный параметр. Объект, используемый в качестве первого аргумента при первом вызове функции `callback`.
 
-<p>Если массив пустой и аргумент <code>initialValue</code> не указан, будет брошено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. Если массив состоит только из одного элемента (независимо от его положения в массиве) и аргумент <code>initialValue</code> не указан, или если аргумент <code>initialValue</code> указан, но массив пустой, то будет возвращено одно это значение, без вызова функции <code>callback</code>.</p>
+## Описание
 
-<p>Предположим, что <code>reduce()</code> используется следующим образом:</p>
+Метод `reduce()` выполняет функцию `callback` один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова `callback`), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+При первом вызове функции, параметры `accumulator` и `currentValue` могут принимать одно из двух значений. Если при вызове `reduce()` передан аргумент `initialValue`, то значение `accumulator` будет равным значению `initialValue`, а значение `currentValue` будет равным первому значению в массиве. Если аргумент `initialValue` не задан, то значение `accumulator` будет равным первому значению в массиве, а значение `currentValue` будет равным второму значению в массиве.
+
+Если массив пустой и аргумент `initialValue` не указан, будет брошено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. Если массив состоит только из одного элемента (независимо от его положения в массиве) и аргумент `initialValue` не указан, или если аргумент `initialValue` указан, но массив пустой, то будет возвращено одно это значение, без вызова функции `callback`.
+
+Предположим, что `reduce()` используется следующим образом:
+
+```js
+[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;
 });
-</pre>
+```
 
-<p>Колбэк-функция будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:</p>
+Колбэк-функция будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col"><code>previousValue</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">возвращаемое значение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">первый вызов</th>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">второй вызов</th>
-   <td><code>1</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <th scope="row">третий вызов</th>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <th scope="row">четвёртый вызов</th>
-   <td><code>6</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
-</table>
+|                 | `previousValue` | `currentValue` | `index` | `array`           | возвращаемое значение |
+| --------------- | --------------- | -------------- | ------- | ----------------- | --------------------- |
+| первый вызов    | `0`             | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `1`                   |
+| второй вызов    | `1`             | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `3`                   |
+| третий вызов    | `3`             | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `6`                   |
+| четвёртый вызов | `6`             | `4`            | `4`     | `[0, 1, 2, 3, 4]` | `10`                  |
 
-<p>Значение, возвращённое методом <code>reduce()</code> будет равным последнему результату выполнения колбэк-функции — <code>10</code>.</p>
+Значение, возвращённое методом `reduce()` будет равным последнему результату выполнения колбэк-функции — `10`.
 
-<p>Если же вы зададите начальное значение <code>initialValue</code>, результат будет выглядеть так:</p>
+Если же вы зададите начальное значение `initialValue`, результат будет выглядеть так:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, index, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 }, 10);
-</pre>
+```
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col"><code>accumulator</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">возвращаемое значение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">первый вызов</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">второй вызов</th>
-   <td><code>10</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <th scope="row">третий вызов</th>
-   <td><code>11</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>13</code></td>
-  </tr>
-  <tr>
-   <th scope="row">четвёртый вызов</th>
-   <td><code>13</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <th scope="row">пятый вызов</th>
-   <td><code>16</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
-</table>
+|                 | `accumulator` | `currentValue` | `index` | `array`           | возвращаемое значение |
+| --------------- | ------------- | -------------- | ------- | ----------------- | --------------------- |
+| первый вызов    | `10`          | `0`            | `0`     | `[0, 1, 2, 3, 4]` | `10`                  |
+| второй вызов    | `10`          | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `11`                  |
+| третий вызов    | `11`          | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `13`                  |
+| четвёртый вызов | `13`          | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `16`                  |
+| пятый вызов     | `16`          | `4`            | `4`     | `[0, 1, 2, 3, 4]` | `20`                  |
 
-<p>Значение, возвращённое методом <code>reduce()</code> на этот раз, конечно же, будет равным <code>20</code>.</p>
+Значение, возвращённое методом `reduce()` на этот раз, конечно же, будет равным `20`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Sum_up_all_values_within_an_array">Суммирование всех значений в массиве</h3>
+### Суммирование всех значений в массиве
 
-<pre class="brush: js">var total = [0, 1, 2, 3].reduce(function(a, b) {
+```js
+var total = [0, 1, 2, 3].reduce(function(a, b) {
   return a + b;
 });
 // total == 6
-</pre>
+```
 
-<h3 id="Суммирование_значений_в_массиве_объектов">Суммирование значений в массиве объектов</h3>
+### Суммирование значений в массиве объектов
 
-<p>Чтобы суммировать значения, содержащиеся в массиве объектов, вы <strong>должны</strong> указать <code>initialValue</code>, чтобы каждый элемент смог пройти через <code>callback</code>.</p>
+Чтобы суммировать значения, содержащиеся в массиве объектов, вы **должны** указать `initialValue`, чтобы каждый элемент смог пройти через `callback`.
 
-<pre class="brush: js">var initialValue = 0;
+```js
+var initialValue = 0;
 var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.x;
 }, initialValue)
 // sum == 6
-</pre>
+```
 
-<p>Тоже самое, но со стрелочной функцией: </p>
+Тоже самое, но со стрелочной функцией:
 
-<pre class="brush: js">var initialValue = 0;
+```js
+var initialValue = 0;
 var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) =&gt; accumulator + currentValue.x,
+    (accumulator, currentValue) => accumulator + currentValue.x,
     initialValue
 );
 // sum == 6
-</pre>
+```
 
-<h3 id="Example_Flatten_an_array_of_arrays">Разворачивание массива массивов</h3>
+### Разворачивание массива массивов
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+```js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
   return a.concat(b);
 });
 // flattened равен [0, 1, 2, 3, 4, 5]
-</pre>
+```
 
-<h3 id="Example_Flatten_an_array_of_arrays">Пример: склеивание массивов, содержащихся в объектах массива, с использованием оператора расширения и initialValue</h3>
+### Пример: склеивание массивов, содержащихся в объектах массива, с использованием оператора расширения и initialValue
 
-<pre class="brush: js">// friends - список из объектов(друзей)
+```js
+// friends - список из объектов(друзей)
 // где поле "books" - список любимых книг друга
 var friends = [
 { name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
@@ -230,13 +150,14 @@ var allbooks = friends.reduce(function(prev, curr) {
 
 // allbooks = ["Alphabet", "Bible", "Harry Potter", "War and peace",
 // "Romeo and Juliet", "The Lord of the Rings", "The Shining"]
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>Array.prototype.reduce()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>reduce()</code> в реализациях, которые не поддерживают этот метод.</p>
+Метод `Array.prototype.reduce()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `reduce()` в реализациях, которые не поддерживают этот метод.
 
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.21
+```js
+// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.21
 // Ссылка (en): http://es5.github.io/#x15.4.4.21
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.21
 if (!Array.prototype.reduce) {
@@ -248,19 +169,19 @@ if (!Array.prototype.reduce) {
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' is not a function');
     }
-    var t = Object(this), len = t.length &gt;&gt;&gt; 0, k = 0, value;
-    if (arguments.length &gt;= 2) {
+    var t = Object(this), len = t.length >>> 0, k = 0, value;
+    if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k &lt; len &amp;&amp; ! (k in t)) {
+      while (k < len && ! (k in t)) {
         k++;
       }
-      if (k &gt;= len) {
+      if (k >= len) {
         throw new TypeError('Reduce of empty array with no initial value');
       }
       value = t[k++];
     }
-    for (; k &lt; len; k++) {
+    for (; k < len; k++) {
       if (k in t) {
         value = callback(value, t[k], k, t);
       }
@@ -268,20 +189,16 @@ if (!Array.prototype.reduce) {
     return value;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reduceRight()")}}

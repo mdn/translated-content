@@ -9,49 +9,56 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>slice()</code></strong> извлекает часть строки и возвращает новую строку без изменения оригинальной строки.</p>
+Метод **`slice()`** извлекает часть строки и возвращает новую строку без изменения оригинальной строки.
 
-<p>{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}</p>
+{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</code></pre>
+```
+str.slice(beginIndex[, endIndex])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em><code>beginIndex</code></em></dt>
- <dd><p>Индекс, с которого начинать извлечение (нумерация начинается с нуля). Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>beginIndex</em></code> (например, если <em><code>beginIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если <em><code>beginIndex</code></em>  не является числом при проверке {{jsxref('Number', 'Number(<var>beginIndex</var>)')}}, он трактуется как <code>0</code>.</p>
- <p>Если <code><em>beginIndex</em></code> больше или равен <code><em>str</em>.length</code>, возвращается пустая строка.</p></dd>
- <dt><em><code>endIndex</code></em></dt>
- <dd><p>Индекс, <em>перед</em> которым заканчивать извлечение (нумерация начинается с нуля). Символ по этому индексу не будет включён.</p>
- <p>Если <em><code>endIndex</code> </em>опущен или является <code>undefined</code> или больше чем <code><em>str</em>.length</code>, <code>slice()</code> извлечёт всё до конца строки. Если аргумент отрицателен, то трактуется как <code><em>str</em>.length + <em>endIndex</em></code><em> </em>(например, если <em><code>endIndex</code></em> равен <code>-3</code>, то он трактуется как <code><em>str</em>.length - 3</code>). Если аргумент не <code>undefined</code> и не является числом при проверке {{jsxref('Number', 'Number(<var>endIndex</var>)')}}, возвращается пустая строка.</p>
- <p>Если <em><code>endIndex</code></em> указан и меньше <em><code>startIndex</code></em>, то возвращается пустая строка (например, <code>slice(-1, -3)</code> или <code>slice(3, 1)</code> вернут <code>""</code>).</p></dd>
-</dl>
+- _`beginIndex`_
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Индекс, с которого начинать извлечение (нумерация начинается с нуля). Если аргумент отрицателен, то трактуется как `str.length + beginIndex` (например, если _`beginIndex`_ равен `-3`, то он трактуется как `str.length - 3`). Если _`beginIndex`_ не является числом при проверке {{jsxref('Number', 'Number(<var>beginIndex</var>)')}}, он трактуется как `0`.
 
-<p>Новая строка, содержащая извлечённую часть строки.</p>
+    Если `beginIndex` больше или равен `str.length`, возвращается пустая строка.
 
-<h2 id="Description">Описание</h2>
+- _`endIndex`_
 
-<p>Метод <code>slice()</code> извлекает текст из одной строки и возвращает новую строку. Изменения текста в одной строке не влияют на другую строку.</p>
+  - : Индекс, _перед_ которым заканчивать извлечение (нумерация начинается с нуля). Символ по этому индексу не будет включён.
 
-<p>Метод <code>slice()</code> извлекает все символы до индекса <em><code>endIndex</code></em>, не включая сам этот индекс. Вызов <code><em>str</em>.slice(1, 4)</code> извлечёт символы со второго по четвёртый (символы под индексами <code>1</code>, <code>2</code> и <code>3</code>).</p>
+    Если *`endIndex` *опущен или является `undefined` или больше чем `str.length`, `slice()` извлечёт всё до конца строки. Если аргумент отрицателен, то трактуется как `str.length + endIndex`\_ _(например, если _`endIndex`\_ равен `-3`, то он трактуется как `str.length - 3`). Если аргумент не `undefined` и не является числом при проверке {{jsxref('Number', 'Number(<var>endIndex</var>)')}}, возвращается пустая строка.
 
-<p>К примеру, вызов <code>str.slice(2, -1)</code> извлечёт символы с третьего по второй с конца строки.</p>
+    Если _`endIndex`_ указан и меньше _`startIndex`_, то возвращается пустая строка (например, `slice(-1, -3)` или `slice(3, 1)` вернут `""`).
 
-<h2 id="Examples">Примеры</h2>
+### Возвращаемое значение
 
-<h3 id="Example_Using_slice_to_create_a_new_string">Пример: использование метода <code>slice()</code> для создания новой строки</h3>
+Новая строка, содержащая извлечённую часть строки.
 
-<p>В следующем примере метод <code>slice()</code> используется для создания новой строки.</p>
+## Описание
 
-<pre class="brush: js">let str1 = 'Приближается утро.';
+Метод `slice()` извлекает текст из одной строки и возвращает новую строку. Изменения текста в одной строке не влияют на другую строку.
+
+Метод `slice()` извлекает все символы до индекса _`endIndex`_, не включая сам этот индекс. Вызов `str.slice(1, 4)` извлечёт символы со второго по четвёртый (символы под индексами `1`, `2` и `3`).
+
+К примеру, вызов `str.slice(2, -1)` извлечёт символы с третьего по второй с конца строки.
+
+## Примеры
+
+### Пример: использование метода `slice()` для создания новой строки
+
+В следующем примере метод `slice()` используется для создания новой строки.
+
+```js
+let str1 = 'Приближается утро.';
 let str2 = str1.slice(1, 8);
 let str3 = str1.slice(4, -2);
 let str4 = str1.slice(12);
@@ -61,42 +68,47 @@ console.log(str2); // ВЫВОД: риближа
 console.log(str3); // ВЫВОД: лижается утр
 console.log(str4); // ВЫВОД:  утро.
 console.log(str5); // ВЫВОД: ""
-</pre>
+```
 
-<h3 id="Example_Using_slice_with_negative_indexes">Пример: использование метода <code>slice()</code> с отрицательными индексами</h3>
+### Пример: использование метода `slice()` с отрицательными индексами
 
-<p>В следующем примере метод <code>slice()</code> используется вместе с отрицательными индексами.</p>
+В следующем примере метод `slice()` используется вместе с отрицательными индексами.
 
-<pre class="brush: js">let str = 'Приближается утро.';
+```js
+let str = 'Приближается утро.';
 str.slice(-3);     // вернёт 'ро.'
 str.slice(-3, -1); // вернёт 'ро'
 str.slice(0, -1);  // вернёт 'Приближается утро'
-</pre>
+```
 
-<p>В этом примере начальным индексом считается <code>11</code>-й символ с конца строки, а конечным - <code>16</code>-й с начала.</p>
+В этом примере начальным индексом считается `11`-й символ с конца строки, а конечным - `16`-й с начала.
 
-<pre class="brush: js">str.slice(-11, 16); // вернёт 'ается утр'</pre>
+```js
+str.slice(-11, 16); // вернёт 'ается утр'
+```
 
-<p>Здесь начальным индексом считается <code>6</code>-й символ от начала строки, а конечным - <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>-й с конца.</p>
+Здесь начальным индексом считается `6`-й символ от начала строки, а конечным - 7-й с конца.
 
-<pre class="brush: js">str.slice(6, -7); // вернёт 'жаетс'</pre>
+```js
+str.slice(6, -7); // вернёт 'жаетс'
+```
 
-<p>В этом примере оба индекса считаются с конца строки: <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">5</span></font>-й для начального индекса, <code>1</code>-й для конечного.</p>
+В этом примере оба индекса считаются с конца строки: 5-й для начального индекса, `1`-й для конечного.
 
-<pre class="brush: js">str.slice(-5, -1); // вернёт 'утро'</pre>
+```js
+str.slice(-5, -1); // вернёт 'утро'
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.substr()")}}</li>
- <li>{{jsxref("String.prototype.substring()")}}</li>
- <li>{{jsxref("Array.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("String.prototype.substr()")}}
+- {{jsxref("String.prototype.substring()")}}
+- {{jsxref("Array.prototype.slice()")}}

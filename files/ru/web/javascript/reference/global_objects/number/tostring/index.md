@@ -8,45 +8,44 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>toString()</code></strong> возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
+Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Number", "Number")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>numObj</var>.toString([<var>radix</var>])</code></pre>
+```
+numObj.toString([radix])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>radix</code></dt>
- <dd>Необязательный параметр. Целое число между 2 и 36, определяющее основание системы счисления, используемой для представления числового значения.</dd>
-</dl>
+- `radix`
+  - : Необязательный параметр. Целое число между 2 и 36, определяющее основание системы счисления, используемой для представления числового значения.
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>Если в метод <code>toString()</code> передано основание не в диапазоне от 2 до 36, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : Если в метод `toString()` передано основание не в диапазоне от 2 до 36, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Объект {{jsxref("Global_Objects/Number", "Number")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Number", "Number")}} метод <code>toString()</code> возвращает строку, представляющую объект в определённой системе счисления.</p>
+Объект {{jsxref("Global_Objects/Number", "Number")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Number", "Number")}} метод `toString()` возвращает строку, представляющую объект в определённой системе счисления.
 
-<p>Метод <code>toString()</code> разбирает свой первый аргумент и пытается вернуть строковое представление в системе счисления с указанным основанием. Для оснований, больших 10, при обозначении цифр, больших 9, используются буквы латинского алфавита. Например, для шестнадцатеричных чисел (основание 16), используются буквы с <code>a</code> по <code>f</code>.</p>
+Метод `toString()` разбирает свой первый аргумент и пытается вернуть строковое представление в системе счисления с указанным основанием. Для оснований, больших 10, при обозначении цифр, больших 9, используются буквы латинского алфавита. Например, для шестнадцатеричных чисел (основание 16), используются буквы с `a` по `f`.
 
-<p>Если параметр <code>radix</code> не указан, предпочитаемое основание предполагается равным 10.</p>
+Если параметр `radix` не указан, предпочитаемое основание предполагается равным 10.
 
-<p>Если число <code>numObj</code> отрицательно, его знак сохраняется. Это правило действует даже если основание равно 2; возвращённая строка является двоичным представлением положительного числа <code>numObj</code>, перед которым ставится знак <code>-</code>, а <strong>не</strong> дополнительным кодом числа <code>numObj</code>.</p>
+Если число `numObj` отрицательно, его знак сохраняется. Это правило действует даже если основание равно 2; возвращённая строка является двоичным представлением положительного числа `numObj`, перед которым ставится знак `-`, а **не** дополнительным кодом числа `numObj`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_toString">Пример: использование <code>toString</code></h3>
+### Пример: использование `toString`
 
-<pre class="brush: js">var count = 10;
+```js
+var count = 10;
 
 console.log(count.toString());    // Выведет '10'
 console.log((17).toString());     // Выведет '17'
@@ -58,20 +57,18 @@ console.log((254).toString(16));  // Выведет 'fe'
 
 console.log((-10).toString(2));   // Выведет '-1010'
 console.log((-0xff).toString(2)); // Выведет '-11111111'
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}

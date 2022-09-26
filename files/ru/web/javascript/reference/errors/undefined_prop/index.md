@@ -8,36 +8,39 @@ tags:
   - Строгий режим
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
-</pre>
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>(только в Firefox) Предупреждение {{jsxref("ReferenceError")}}, возникает, только если значение настройки <code>javascript.options.strict</code> равно <code>true</code>.</p>
+(только в Firefox) Предупреждение {{jsxref("ReferenceError")}}, возникает, только если значение настройки `javascript.options.strict` равно `true`.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Совершена попытка обращения к свойству объекта, которое не определено. Существует два способа обращения к свойствам: обратитесь к странице справочника {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}} для более подробной информации.</p>
+Совершена попытка обращения к свойству объекта, которое не определено. Существует два способа обращения к свойствам: обратитесь к странице справочника {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}} для более подробной информации.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Случаи_возникновения_ошибки">Случаи возникновения ошибки</h3>
+### Случаи возникновения ошибки
 
-<p>В данном примере свойство <code>bar</code> не определено, поэтому возникнет ошибка <code>ReferenceError</code>.</p>
+В данном примере свойство `bar` не определено, поэтому возникнет ошибка `ReferenceError`.
 
-<pre class="brush: js example-bad">var foo = {};
+```js example-bad
+var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
-</pre>
+```
 
-<h3 id="Правильный_код">Правильный код</h3>
+### Правильный код
 
-<p>Чтобы избежать ошибки, потребуется либо задать для объекта свойство <code>bar</code>, либо проверить существование данного свойства, прежде чем обращаться к нему. Одним из способов это сделать является использование метода {{jsxref("Object.prototype.hasOwnProperty()")}}:</p>
+Чтобы избежать ошибки, потребуется либо задать для объекта свойство `bar`, либо проверить существование данного свойства, прежде чем обращаться к нему. Одним из способов это сделать является использование метода {{jsxref("Object.prototype.hasOwnProperty()")}}:
 
-<pre class="brush: js example-good">var foo = {};
+```js example-good
+var foo = {};
 
 // Задать свойство bar
 
@@ -48,10 +51,9 @@ console.log(foo.bar); // "moon"
 
 if (foo.hasOwnProperty('bar')) {
   console.log(foo.bar);
-}</pre>
+}
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}</li>
-</ul>
+- {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}

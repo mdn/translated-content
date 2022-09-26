@@ -3,46 +3,41 @@ title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Свойство unicode указывает, используется ли флаг «u» с регулярным выражением. Свойство unicode доступно только для чтения конкретного экземпляра регулярного выражения.</p>
+Свойство unicode указывает, используется ли флаг «u» с регулярным выражением. Свойство unicode доступно только для чтения конкретного экземпляра регулярного выражения.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+## Описание
 
-<h2 id="Описание">Описание</h2>
+Значение unicode является {{jsxref ("Boolean")}}. True, если используется флаг u, или false - противном случае. Флаг «u» позволяет использовать различные функции, связанные с Unicode. С флагом «u» любые escape-последовательности кода Unicode будут интерпретироваться как таковые, например.
 
-<p>Значение unicode является {{jsxref ("Boolean")}}. True, если используется флаг u, или false - противном случае. Флаг «u» позволяет использовать различные функции, связанные с Unicode. С флагом «u» любые escape-последовательности кода Unicode будут интерпретироваться как таковые, например.</p>
+Вы не можете напрямую изменить это свойство. Оно доступно только для чтения.
 
-<p>Вы не можете напрямую изменить это свойство. Оно доступно только для чтения.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Использование свойства `unicode`
 
-<h3 id="Использование_свойства_unicode">Использование свойства <code>unicode</code></h3>
-
-<pre class="brush: js">var regex = new RegExp('\u{61}', 'u');
+```js
+var regex = new RegExp('\u{61}', 'u');
 
 console.log(regex.unicode); // true
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

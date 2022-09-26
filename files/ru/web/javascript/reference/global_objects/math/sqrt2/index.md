@@ -8,59 +8,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Math.SQRT2</code></strong> представляет квадратный корень из 2, приблизительно равный 1,414:</p>
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1,414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1,414</annotation></semantics></math></p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Math.SQRT2`** представляет квадратный корень из 2, приблизительно равный 1,414:
 
-<h2 id="Description">Описание</h2>
-<p>Поскольку свойство <code>SQRT2</code> является статическим свойством объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.SQRT2</code>, а не пытаться создавать экземпляр объекта <code>Math</code> и получать свойство от него (поскольку объект <code>Math</code> не является конструктором).</p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1,414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1,414</annotation></semantics></math>
 
-<h2 id="Examples">Примеры</h2>
+{{js_property_attributes(0, 0, 0)}}
 
-<h3 id="Example:_Using_Math.SQRT2">Пример: использование свойства <code>Math.SQRT2</code></h3>
-<p>Следующая функция возвращает квадратный корень из двух:</p>
-<pre class="brush: js">function getRoot2() {
+## Описание
+
+Поскольку свойство `SQRT2` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.SQRT2`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование свойства `Math.SQRT2`
+
+Следующая функция возвращает квадратный корень из двух:
+
+```js
+function getRoot2() {
   return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                         | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}} | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

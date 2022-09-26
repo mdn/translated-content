@@ -9,53 +9,46 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>toJSON()</code></strong> возвращает представление объекта {{jsxref("Global_Objects/Date", "Date")}} в виде {{Glossary("JSON")}}.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.toJSON()</code></pre>
+Метод **`toJSON()`** возвращает представление объекта {{jsxref("Global_Objects/Date", "Date")}} в виде {{Glossary("JSON")}}.
 
-<h2 id="Description">Описание</h2>
-<p>Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода <code>toJSON()</code> вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Global_Objects/Date", "Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Global_Objects/Date", "Date")}} в JSON.</p>
+## Синтаксис
 
-<h2 id="Examples">Примеры</h2>
+```
+dateObj.toJSON()
+```
 
-<h3 id="Example:_Using_toJSON">Пример: использование метода <code>toJSON()</code></h3>
-<pre class="brush:js">var jsonDate = (new Date()).toJSON();
+## Описание
+
+Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода `toJSON()` вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Global_Objects/Date", "Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Global_Objects/Date", "Date")}} в JSON.
+
+## Примеры
+
+### Пример: использование метода `toJSON()`
+
+```js
+var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log('Сериализованный объект даты: ' + jsonDate);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                         | Статус                   | Комментарии                                              |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}                 | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ES6')}}     |                                                          |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

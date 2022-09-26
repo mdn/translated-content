@@ -3,36 +3,35 @@ title: await
 slug: Web/JavaScript/Reference/Operators/await
 translation_of: Web/JavaScript/Reference/Operators/await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Оператор <code>await</code> используется для ожидания окончания {{jsxref("Promise")}}. Может быть использован только внутри {{jsxref("Statements/async_function", "async function")}}.</p>
+Оператор `await` используется для ожидания окончания {{jsxref("Promise")}}. Может быть использован только внутри {{jsxref("Statements/async_function", "async function")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">[<em>rv</em>] = await <em>expression</em>;</pre>
+```
+[rv] = await expression;
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>{{jsxref("Promise")}} или любое другое значение для ожидания разрешения.</dd>
- <dt><code>rv</code></dt>
- <dd>
- <p>Возвращает полученное из <code>Promise</code> значение, либо само значение, если оно не является <code>Promise.</code></p>
- </dd>
-</dl>
+- `expression`
+  - : {{jsxref("Promise")}} или любое другое значение для ожидания разрешения.
+- `rv`
+  - : Возвращает полученное из `Promise` значение, либо само значение, если оно не является `Promise.`
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Оператор <code>await</code> заставляет функцию, объявленную с использованием оператора <code>async</code>, ждать выполнения <code>Promise</code> и продолжать выполнение после возвращения <code>Promise</code> значения. Впоследствии возвращает полученное из  <code>Promise</code> значение. Если типом значения, к которому был применён оператор <code>await</code>, является не <code>Promise</code>, то значение приводится к успешно выполненному <code>Promise</code>.</p>
+Оператор `await` заставляет функцию, объявленную с использованием оператора `async`, ждать выполнения `Promise` и продолжать выполнение после возвращения `Promise` значения. Впоследствии возвращает полученное из `Promise` значение. Если типом значения, к которому был применён оператор `await`, является не `Promise`, то значение приводится к успешно выполненному `Promise`.
 
-<p>Если <code>Promise</code> отклоняется, то <code>await</code> генерирует исключение с отклонённым значением.</p>
+Если `Promise` отклоняется, то `await` генерирует исключение с отклонённым значением.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p><code>await</code> ожидает разрешения <code>Promise</code> и возвращает полученное значение.</p>
+`await` ожидает разрешения `Promise` и возвращает полученное значение.
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -43,46 +42,48 @@ async function f1() {
   console.log(x); // 10
 }
 f1();
-</pre>
+```
 
-<p>Если типом значения является не <code>Promise</code>, значение преобразуется к успешно выполненному <code>Promise</code>.</p>
+Если типом значения является не `Promise`, значение преобразуется к успешно выполненному `Promise`.
 
-<pre class="brush: js">async function f2() {
+```js
+async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
 f2();
-</pre>
+```
 
-<p>Если <code>Promise</code> отклонён, то выбрасывается исключение с переданным значением.</p>
+Если `Promise` отклонён, то выбрасывается исключение с переданным значением.
 
-<pre class="brush: js">async function f3() {
+```js
+async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
     console.log(e); // 30
   }
 }
-f3();</pre>
+f3();
+```
 
-<p>Обработка отклонённого <code>Promise</code> без <code>try/catch</code> блока.</p>
+Обработка отклонённого `Promise` без `try/catch` блока.
 
-<pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.log(err); });
+```js
+var response = await promisedFunction().catch((err) => { console.log(err); });
 // response получит значение undefined, если Promise будет отклонён
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object

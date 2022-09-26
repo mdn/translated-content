@@ -8,18 +8,16 @@ tags:
   - свойства BigInt
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>BigInt</code></strong> это встроенный объект, который предоставляет способ представлять целые числа больше 2<sup>53</sup> - 1, наибольшего числа, которое JavaScript может надёжно представить с {{JSxRef("Number")}} примитивом. Это максимальное значение можно получить, обратившись к {{JSxRef("Number.MAX_SAFE_INTEGER")}}.</p>
+**`BigInt`** это встроенный объект, который предоставляет способ представлять целые числа больше 253 - 1, наибольшего числа, которое JavaScript может надёжно представить с {{JSxRef("Number")}} примитивом. Это максимальное значение можно получить, обратившись к {{JSxRef("Number.MAX_SAFE_INTEGER")}}.
 
-<dl>
-</dl>
+## Описание
 
-<h2 id="Описание">Описание</h2>
+`BigInt` создаётся путём добавления `n` в конец целочисленного литерала — `10n` — или вызовом функции `BigInt()`.
 
-<p><code>BigInt</code> создаётся путём добавления <code>n</code> в конец целочисленного литерала — <code>10n</code> — или вызовом функции <code>BigInt()</code>.</p>
-
-<pre class="brush: js">const theBiggestInt = 9007199254740991n;
+```js
+const theBiggestInt = 9007199254740991n;
 
 const alsoHuge = BigInt(9007199254740991);
 // ↪ 9007199254740991n
@@ -32,38 +30,39 @@ const hugeHex = BigInt("0x1fffffffffffff");
 
 const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
 // ↪ 9007199254740991n
-</pre>
+```
 
-<p>В некотором смысле он похож на {{JSxRef ("Number")}}, но отличается в некоторых ключевых моментах — его нельзя использовать с методами во встроенном объекте {{JSxRef ("Math")}} и нельзя смешивать в операциях с любыми экземплярами Number.</p>
+В некотором смысле он похож на {{JSxRef ("Number")}}, но отличается в некоторых ключевых моментах — его нельзя использовать с методами во встроенном объекте {{JSxRef ("Math")}} и нельзя смешивать в операциях с любыми экземплярами Number.
 
-<div class="blockIndicator warning">
-<p>{{JSxRef("Number")}} и <code>BigInt</code> нельзя смешивать в операциях — они должны быть приведены к тому же типу.</p>
+> **Предупреждение:** {{JSxRef("Number")}} и `BigInt` нельзя смешивать в операциях — они должны быть приведены к тому же типу.
+>
+> Будьте осторожны приводя значения туда и обратно, так как точность BigInt может быть потеряна при приведении к числу (`Number)`.
 
-<p>Будьте осторожны приводя значения туда и обратно,  так как точность BigInt может быть потеряна при приведении к числу (<code>Number)</code>.</p>
-</div>
+### Тип
 
-<h3 id="Тип">Тип</h3>
+При проверке с использованием оператора `typeof`, `BigInt` выдаёт тип `"bigint"`:
 
-<p>При проверке с использованием оператора <code>typeof</code>, <code>BigInt</code> выдаёт тип <code>"bigint"</code>:</p>
-
-<pre class="brush: js">typeof 1n === 'bigint'; // true
+```js
+typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true
-</pre>
+```
 
-<p>При оборачивании в объект, BigInt будет представлен как обычный объект:</p>
+При оборачивании в объект, BigInt будет представлен как обычный объект:
 
-<pre class="brush: js">typeof Object(1n) === 'object'; // true
-</pre>
+```js
+typeof Object(1n) === 'object'; // true
+```
 
-<h3 id="Операторы">Операторы</h3>
+### Операторы
 
-<p>Следующие операторы могут использоваться с <code>BigInt</code> (или объектом-обёрткой <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
+Следующие операторы могут использоваться с `BigInt` (или объектом-обёрткой `BigInt`): `+`, `*`, `-`, `**`, `%`.
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовые операции</a> также поддерживаются, кроме <code>&gt;&gt;&gt;</code> (сдвиг вправо с заполнением нулями).</p>
+[Побитовые операции](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) также поддерживаются, кроме `>>>` (сдвиг вправо с заполнением нулями).
 
-<p>Не поддерживаемый унарный оператор (<code>+</code>) <a href="https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs">больше не ломает asm.js</a>.</p>
+Не поддерживаемый унарный оператор (`+`) [больше не ломает asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
-<pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+```js
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
 // ↪ 9007199254740991n
 
 const maxPlusOne = previousMaxSafe + 1n;
@@ -86,78 +85,81 @@ const bigN = 2n ** 54n;
 
 bigN * -1n
 // ↪ –18014398509481984n
-</pre>
+```
 
-<p>Оператор <code>/</code> также работает, как и ожидалось, с целыми числами. Однако, поскольку это BigInt, эта операция будет округляться в меньшую сторону, то есть она не будет возвращать какие-либо дробные цифры.</p>
+Оператор `/` также работает, как и ожидалось, с целыми числами. Однако, поскольку это BigInt, эта операция будет округляться в меньшую сторону, то есть она не будет возвращать какие-либо дробные цифры.
 
-<div class="blockIndicator warning">
-<p>Результат операции с дробным результатом будет округлён в <strong><u>меньшую</u></strong> сторону при использовании  <code>BigInt</code>.</p>
-</div>
+> **Предупреждение:** Результат операции с дробным результатом будет округлён в \***\*меньшую\*\*** сторону при использовании `BigInt`.
 
-<pre class="brush: js">const expected = 4n / 2n;
+```js
+const expected = 4n / 2n;
 // ↪ 2n
 
 const rounded = 5n / 2n;
 // ↪ 2n, not 2.5n
+```
 
-</pre>
+### Сравнения
 
-<h3 id="Сравнения">Сравнения</h3>
+`BigInt` равен {{JSxRef ("Number")}} только при нестрогом сравнении.
 
-<p><code>BigInt</code> равен {{JSxRef ("Number")}} только при нестрогом сравнении.</p>
-
-<pre class="brush: js">0n === 0
+```js
+0n === 0
 // ↪ false
 
 0n == 0
-// ↪ true</pre>
+// ↪ true
+```
 
-<p>{{JSxRef("Global_Objects/Number", "Обычные числа")}} и <code>BigInt</code> можно сравнивать как обычно.</p>
+{{JSxRef("Global_Objects/Number", "Обычные числа")}} и `BigInt` можно сравнивать как обычно.
 
-<pre class="brush: js">1n &lt; 2
+```js
+1n < 2
 // ↪ true
 
-2n &gt; 1
+2n > 1
 // ↪ true
 
-2 &gt; 2
+2 > 2
 // ↪ false
 
-2n &gt; 2
+2n > 2
 // ↪ false
 
-2n &gt;= 2
-// ↪ true</pre>
+2n >= 2
+// ↪ true
+```
 
-<p>Они могут быть смешаны в массивах и отсортированы:</p>
+Они могут быть смешаны в массивах и отсортированы:
 
-<pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
+```js
+const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
 
 mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
-</pre>
+```
 
-<p>Обратите внимание, что сравнения с <code>обьектом</code>-обёрткой <code>BigInt</code> действуют как с другими объектами, указывая на равенство только когда сравнивается идентичный экземпляр объекта:</p>
+Обратите внимание, что сравнения с `обьектом`-обёрткой `BigInt` действуют как с другими объектами, указывая на равенство только когда сравнивается идентичный экземпляр объекта:
 
-<pre class="brush: js">0n === Object(0n); // false
+```js
+0n === Object(0n); // false
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
 o === o // true
-</pre>
+```
 
-<h3 id="Условные_выражения">Условные выражения</h3>
+### Условные выражения
 
-<p><code>BigInt</code> ведёт себя как {{JSxRef("Global_Objects/Number", "обычное число")}} в следующих случаях:</p>
+`BigInt` ведёт себя как {{JSxRef("Global_Objects/Number", "обычное число")}} в следующих случаях:
 
-<ul>
- <li>Преобразуется в {{JSxRef("Global_Objects/Boolean", "Boolean")}} через функцию {{JSxRef("Global_Objects/Boolean", "Boolean")}}</li>
- <li>Используется с логическими операторами {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} <code>||</code>, <code>&amp;&amp;</code> и <code>!</code></li>
- <li>В условном тесте, таком как {{JSxRef("Statements/if...else", "if statement")}}.</li>
-</ul>
+- Преобразуется в {{JSxRef("Global_Objects/Boolean", "Boolean")}} через функцию {{JSxRef("Global_Objects/Boolean", "Boolean")}}
+- Используется с логическими операторами {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&` и `!`
+- В условном тесте, таком как {{JSxRef("Statements/if...else", "if statement")}}.
 
-<pre class="brush: js">if (0n) {
+```js
+if (0n) {
   console.log('Привет из if!');
 } else {
   console.log('Привет из else!');
@@ -168,7 +170,7 @@ o === o // true
 0n || 12n
 // ↪ 12n
 
-0n &amp;&amp; 12n
+0n && 12n
 // ↪ 0n
 
 Boolean(0n)
@@ -182,65 +184,62 @@ Boolean(12n)
 
 !0n
 // ↪ true
-</pre>
+```
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt">BigInt()</a></code></dt>
- <dd>Создаёт объект {{jsxref("BigInt")}}.</dd>
-</dl>
+- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+  - : Создаёт объект {{jsxref("BigInt")}}.
 
-<h2 id="Статические_методы">Статические методы</h2>
+## Статические методы
 
-<dl>
- <dt>{{JSxRef("BigInt.asIntN()")}}</dt>
- <dd>Оборачивает BigInt в пределах от -2<sup>width-1</sup> до 2<sup>width-1</sup>-1</dd>
- <dt>{{JSxRef("BigInt.asUintN()")}}</dt>
- <dd>Оборачивает a BigInt в пределах от 0 до 2<sup>width</sup>-1</dd>
-</dl>
+- {{JSxRef("BigInt.asIntN()")}}
+  - : Оборачивает BigInt в пределах от -2width-1 до 2width-1-1
+- {{JSxRef("BigInt.asUintN()")}}
+  - : Оборачивает a BigInt в пределах от 0 до 2width-1
 
-<h2 id="Методы_экземпляра">Методы экземпляра</h2>
+## Методы экземпляра
 
-<dl>
- <dt>{{JSxRef("BigInt.prototype.toLocaleString()")}}</dt>
- <dd>Возвращает строку с языкозависимым представлением числа. Переопределяет метод {{JSxRef("Object.prototype.toLocaleString()")}}.</dd>
- <dt>{{JSxRef("BigInt.prototype.toString()")}}</dt>
- <dd>Возвращает строку, представляющую указанный объект по указанному основанию системы счисления. Переопределяет метод {{JSxRef("Object.prototype.toString()")}}.</dd>
- <dt>{{JSxRef("BigInt.prototype.valueOf()")}}</dt>
- <dd>Возвращает примитивное значение указанного объекта. Переопределяет метод {{JSxRef("Object.prototype.valueOf()")}}.</dd>
-</dl>
+- {{JSxRef("BigInt.prototype.toLocaleString()")}}
+  - : Возвращает строку с языкозависимым представлением числа. Переопределяет метод {{JSxRef("Object.prototype.toLocaleString()")}}.
+- {{JSxRef("BigInt.prototype.toString()")}}
+  - : Возвращает строку, представляющую указанный объект по указанному основанию системы счисления. Переопределяет метод {{JSxRef("Object.prototype.toString()")}}.
+- {{JSxRef("BigInt.prototype.valueOf()")}}
+  - : Возвращает примитивное значение указанного объекта. Переопределяет метод {{JSxRef("Object.prototype.valueOf()")}}.
 
-<h2 id="Рекомендации_по_использованию">Рекомендации по использованию</h2>
+## Рекомендации по использованию
 
-<h3 id="Приведение">Приведение</h3>
+### Приведение
 
-<p>Поскольку приведение между {{JSxRef("Number")}} и <code>BigInt</code> может привести к потере точности, рекомендуется использовать<code> BigInt</code> только тогда, когда разумно ожидаются значения, превышающие 2<sup>53</sup> и не приводить между двумя типами.</p>
+Поскольку приведение между {{JSxRef("Number")}} и `BigInt` может привести к потере точности, рекомендуется использовать` BigInt` только тогда, когда разумно ожидаются значения, превышающие 253 и не приводить между двумя типами.
 
-<h3 id="Криптография">Криптография</h3>
+### Криптография
 
-<p>Операции поддерживаемые <code>BigInt</code> не постоянны во времени. <code>BigInt</code> следовательно <a href="https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html">не пригоден для использования в криптографии</a>.</p>
+Операции поддерживаемые `BigInt` не постоянны во времени. `BigInt` следовательно [не пригоден для использования в криптографии](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html).
 
-<h3 id="Использование_вместе_с_JSON">Использование вместе с JSON</h3>
+### Использование вместе с JSON
 
-<p>Использование {{jsxref("JSON.stringify()")}} с любым значением типа <code>BigInt</code> приведёт к <code>TypeError</code>, поскольку значения <code>BigInt</code> не преобразуется в JSON по умолчанию, однако вы можете реализовать свой собственный метод <code>toJSON</code>, если вам необходимо:</p>
+Использование {{jsxref("JSON.stringify()")}} с любым значением типа `BigInt` приведёт к `TypeError`, поскольку значения `BigInt` не преобразуется в JSON по умолчанию, однако вы можете реализовать свой собственный метод `toJSON`, если вам необходимо:
 
-<pre class="brush: js">BigInt.prototype.toJSON = function() { return this.toString() }
-</pre>
+```js
+BigInt.prototype.toJSON = function() { return this.toString() }
+```
 
-<p>Теперь вместо ошибки, <code>JSON.stringify</code> будет создавать строку:</p>
+Теперь вместо ошибки, `JSON.stringify` будет создавать строку:
 
-<pre class="brush: js">JSON.stringify(BigInt(1))
+```js
+JSON.stringify(BigInt(1))
 // '"1"'
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Расчёт_простых_чисел">Расчёт простых чисел</h3>
+### Расчёт простых чисел
 
-<pre class="brush: js">// Возвращает true, если BigInt — простое число
+```js
+// Возвращает true, если BigInt — простое число
 function isPrime(p) {
-  for (let i = 2n; i * i &lt;= p; i++) {
+  for (let i = 2n; i * i <= p; i++) {
     if (p % i === 0n) return false;
   }
   return true;
@@ -251,7 +250,7 @@ function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;
 
-  while (nth &gt;= 0n) {
+  while (nth >= 0n) {
     if (isPrime(maybePrime)) {
       nth--;
       prime = maybePrime;
@@ -263,23 +262,18 @@ function nthPrime(nth) {
 }
 
 nthPrime(20n)
-// ↪ 73n</pre>
+// ↪ 73n
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{JSxRef("Number")}}</li>
- <li>{{JSxRef("Number.MAX_SAFE_INTEGER")}}</li>
-</ul>
+- {{JSxRef("Number")}}
+- {{JSxRef("Number.MAX_SAFE_INTEGER")}}

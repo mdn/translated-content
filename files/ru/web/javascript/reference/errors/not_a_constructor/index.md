@@ -7,11 +7,12 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">TypeError: Object doesn't support this action (Edge)
+```
+TypeError: Object doesn't support this action (Edge)
 TypeError: "x" is not a constructor
 
 TypeError: Math is not a constructor
@@ -21,25 +22,26 @@ TypeError: Reflect is not a constructor
 TypeError: Intl is not a constructor
 TypeError: SIMD is not a constructor
 TypeError: Atomics is not a constructor
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}}  или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, чтобы получить больше информации о том, что такое конструктор.</p>
+Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}} или [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new), чтобы получить больше информации о том, что такое конструктор.
 
-<p>Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием <code>new</code>. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.</p>
+Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием `new`. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Функции-генераторы</a> также не могут быть использованы как конструкторы.</p>
+[Функции-генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*) также не могут быть использованы как конструкторы.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Неправильное_использование">Неправильное использование</h3>
+### Неправильное использование
 
-<pre class="brush: js example-bad">var Car = 1;
+```js example-bad
+var Car = 1;
 new Car();
 // TypeError: Car is not a constructor
 
@@ -52,45 +54,48 @@ new Symbol();
 function* f() {};
 var obj = new f;
 // TypeError: f is not a constructor
-</pre>
+```
 
-<h3 id="Конструктор_car_(автомобиль)">Конструктор "car" (автомобиль)</h3>
+### Конструктор "car" (автомобиль)
 
-<p>Представьте, что вы хотите создать тип объекта для автомобилей. Вы хотите, чтобы этот тип объектов назывался <code>car</code>, и вы хотите, чтобы были свойства для производителя, модели и года выпуска. Чтобы сделать это, вы должны написать следующую функцию:</p>
+Представьте, что вы хотите создать тип объекта для автомобилей. Вы хотите, чтобы этот тип объектов назывался `car`, и вы хотите, чтобы были свойства для производителя, модели и года выпуска. Чтобы сделать это, вы должны написать следующую функцию:
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
-</pre>
+```
 
-<p>Теперь вы можете создать объект, который называется <code>mycar</code> (мой автомобиль) следующим образом:</p>
+Теперь вы можете создать объект, который называется `mycar` (мой автомобиль) следующим образом:
 
-<pre class="brush: js">var mycar = new Car('Лада', 'Самара', 1993);</pre>
+```js
+var mycar = new Car('Лада', 'Самара', 1993);
+```
 
-<h3 id="В_Промисах">В Промисах</h3>
+### В Промисах
 
-<p>В случае, когда возвращается незамедлительно разрешённый или незамедлительно отклонённый промис, вам не нужно создавать новый промис <em>new Promise(...)</em> и работать с ним.</p>
+В случае, когда возвращается незамедлительно разрешённый или незамедлительно отклонённый промис, вам не нужно создавать новый промис _new Promise(...)_ и работать с ним.
 
-<p>Это неправильно (<a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor">конструктор Promise</a> вызывается неправильно) и будет вызывать исключение <code>TypeError: this is not a constructor</code>:</p>
+Это неправильно ([конструктор Promise](/ru/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) вызывается неправильно) и будет вызывать исключение `TypeError: this is not a constructor`:
 
-<pre class="brush: js example-bad">return new Promise.resolve(true);
-</pre>
+```js example-bad
+return new Promise.resolve(true);
+```
 
-<p>Вместо этого используйте <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods">статические методы</a> - <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve()</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> :</p>
+Вместо этого используйте [статические методы](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>) - [Promise.resolve()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) или [Promise.reject()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) :
 
-<pre class="brush: js">// Это допустимо, но слишком длинно, в этом нет необходимости:
-return new Promise((resolve, reject) =&gt; { resolve(true); })
+```js
+// Это допустимо, но слишком длинно, в этом нет необходимости:
+return new Promise((resolve, reject) => { resolve(true); })
 
 // Вместо этого, возвращайте статический метод:
 return Promise.resolve(true);
 return Promise.reject(false);
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Glossary("constructor")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a></li>
-</ul>
+- {{Glossary("constructor")}}
+- [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new)

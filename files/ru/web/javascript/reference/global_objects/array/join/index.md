@@ -11,68 +11,69 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>join()</strong></code> объединяет все элементы массива (или <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">массивоподобного объекта</a>) в строку.</p>
+Метод **`join()`** объединяет все элементы массива (или [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) в строку.
 
-<p>{{EmbedInteractiveExample("pages/js/array-join.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-join.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.join(<var>[separator]</var>)</code></pre>
+```
+arr.join([separator])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>separator</code> {{optional_inline}}</dt>
- <dd>Определяет строку, разделяющую элементы массива. В случае необходимости тип разделителя приводится к типу Строка. Если он не задан, элементы массива разделяются запятой '<strong>,</strong>'. Если разделитель - пустая строка, элементы массива ничем не разделяются в возвращаемой строке.</dd>
-</dl>
+- `separator` {{optional_inline}}
+  - : Определяет строку, разделяющую элементы массива. В случае необходимости тип разделителя приводится к типу Строка. Если он не задан, элементы массива разделяются запятой '**,**'. Если разделитель - пустая строка, элементы массива ничем не разделяются в возвращаемой строке.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Строка, содержащая все элементы массива. Если <em><code>arr.length</code></em> == <code>0</code>,  то будет возвращена пустая строка.</p>
+Строка, содержащая все элементы массива. Если _`arr.length`_ == `0`, то будет возвращена пустая строка.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Преобразует все элементы массива в строки и объединяет их в одну большую строку. Элемент массива с типом <code>undefined</code> или <code>null </code>преобразуется в пустую строку.</p>
+Преобразует все элементы массива в строки и объединяет их в одну большую строку. Элемент массива с типом `undefined` или `null `преобразуется в пустую строку.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Joining_an_array_three_different_ways">Соединение массива четырьмя различными способами</h3>
+### Соединение массива четырьмя различными способами
 
-<p>В следующем примере создаётся массив <code>a</code> с тремя элементами, затем они четыре раза объединяются в строку: с использованием разделителя по умолчанию, запятой с пробелом, плюса, окружённого пробелами, и пустой строки.</p>
+В следующем примере создаётся массив `a` с тремя элементами, затем они четыре раза объединяются в строку: с использованием разделителя по умолчанию, запятой с пробелом, плюса, окружённого пробелами, и пустой строки.
 
-<pre class="brush: js">var a = ['Ветер', 'Дождь', 'Огонь'];
+```js
+var a = ['Ветер', 'Дождь', 'Огонь'];
 var myVar1 = a.join();      // присвоит 'Ветер,Дождь,Огонь' переменной myVar1
 var myVar2 = a.join(', ');  // присвоит 'Ветер, Дождь, Огонь' переменной myVar2
 var myVar3 = a.join(' + '); // присвоит 'Ветер + Дождь + Огонь' переменной myVar3
 var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь' переменной myVar4
-</pre>
+```
 
-<h3 id="Соединение_элементов_массивоподобного_объекта">Соединение элементов массивоподобного объекта</h3>
+### Соединение элементов массивоподобного объекта
 
-<p>В следующем примере соединяется массивоподобный объект (в данном случае список <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments">аргументов</a> функции) с использованием вызова {{jsxref("Function.prototype.call")}} <code>для Array.prototype.join</code>.</p>
+В следующем примере соединяется массивоподобный объект (в данном случае список [аргументов](/ru/docs/Web/JavaScript/Reference/Functions/arguments) функции) с использованием вызова {{jsxref("Function.prototype.call")}} `для Array.prototype.join`.
 
-<pre class="brush: js">function f(a, b, c) {
+```js
+function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);</pre>
+f(1, 'a', true);
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
- <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.join()")}}

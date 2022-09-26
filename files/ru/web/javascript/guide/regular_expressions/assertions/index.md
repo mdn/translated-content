@@ -3,58 +3,23 @@ title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
-<p>{{jsSidebar("JavaScript Guide")}}</p>
+{{jsSidebar("JavaScript Guide")}}
 
-<p>Проверка (assertion) задаёт возможность совпадения одним из указанных способов. Проверка может содержать условные выражения, опережающие (look-ahead) и ретроспективные (look-behind) проверки.</p>
+Проверка (assertion) задаёт возможность совпадения одним из указанных способов. Проверка может содержать условные выражения, опережающие (look-ahead) и ретроспективные (look-behind) проверки.
 
-<h2 id="Типы">Типы</h2>
+## Типы
 
-<div class="blockIndicator note">
-<p>Символ <code>?</code> также может быть использован как обычный квантификатор.</p>
-</div>
+> **Примечание:** Символ `?` также может быть использован как обычный квантификатор.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Выражение</th>
-   <th scope="col">Что означает</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>x(?=y)</td>
-   <td>
-    <p><strong>Опережающая проверка: </strong><code><em>x</em></code> подходит только когда за <code><em>x</em></code> следует <code><em>y</em></code>. Например, /<code>Jack(?=Sprat)/</code> сработает для "Jack"  только когда за ним будет "Sprat".<br>
-     <code>/Jack(?=Sprat|Frost)/</code> подойдёт для "Jack" только когда за ним будет "Sprat" или "Frost". Следует заметить, что ни "Sprat" ни "Frost" не будут выданы как часть проверки.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>x(?!y)</td>
-   <td>
-    <p><strong>Отрицательная опережающая проверка: </strong><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> подходит только когда за </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> не следует </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>y</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">.</span> Например, <code style="font-size: 1rem; letter-spacing: -0.00278rem;">/\d+(?!\.)/</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> сработает для числа в том случае, если за ним не стоит точка. Выполнение кода </span><code>/\d+(?!\.)/.exec('3.141')</code> выдаст только число "141", поскольку за "3" следует точка.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>(?&lt;=y)x</td>
-   <td>
-    <p><strong>Ретроспективная проверка: </strong><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> подходит только когда </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> предшествует </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>y</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">.</span> Например, <code style="font-size: 1rem; letter-spacing: -0.00278rem;">/(?&lt;=Jack)Sprat/</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> сработает для "Sprat" только если перед ним есть "Jack". </span><code>/(?&lt;=Jack|Tom)Sprat/</code> подойдёт для "Sprat" если перед ним будут "Jack" или "Tom". Заметим, что ни "Jack" ни "Tom" не будут выданы.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>(?&lt;!y)x</td>
-   <td>
-    <p><strong>Отрицательная ретроспективная проверка: </strong><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> подходит только когда </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>x</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> не предшествует </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;"><em>y</em></code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">.</span> Например, <code style="font-size: 1rem; letter-spacing: -0.00278rem;">/(?&lt;!-)\d+/</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> сработает для числа в том случае, если перед ним не стоит знак минус. Выполнение кода </span><code>/(?&lt;!-)\d+/.exec('3')</code> выдаст "3". Код <code>/(?&lt;!-)\d+/.exec('-3')</code> ничего не найдёт, т.к. перед числом есть знак минус.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Выражение | Что означает                                                                                                                                                                                                                                                                                                                            |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| x(?=y)    | **Опережающая проверка:** `x` подходит только когда за `x` следует `y`. Например, /`Jack(?=Sprat)/` сработает для "Jack" только когда за ним будет "Sprat". `/Jack(?=Sprat\|Frost)/` подойдёт для "Jack" только когда за ним будет "Sprat" или "Frost". Следует заметить, что ни "Sprat" ни "Frost" не будут выданы как часть проверки. |
+| x(?!y)    | **Отрицательная опережающая проверка:** `x` подходит только когда за `x` не следует `y`. Например, `/\d+(?!\.)/` сработает для числа в том случае, если за ним не стоит точка. Выполнение кода `/\d+(?!\.)/.exec('3.141')` выдаст только число "141", поскольку за "3" следует точка.                                                   |
+| (?<=y)x   | **Ретроспективная проверка:** `x` подходит только когда `x` предшествует `y`. Например, `/(?<=Jack)Sprat/` сработает для "Sprat" только если перед ним есть "Jack". `/(?<=Jack\|Tom)Sprat/` подойдёт для "Sprat" если перед ним будут "Jack" или "Tom". Заметим, что ни "Jack" ни "Tom" не будут выданы.                                |
+| (?\<!y)x  | **Отрицательная ретроспективная проверка:** `x` подходит только когда `x` не предшествует `y`. Например, `/(?<!-)\d+/` сработает для числа в том случае, если перед ним не стоит знак минус. Выполнение кода `/(?<!-)\d+/.exec('3')` выдаст "3". Код `/(?<!-)\d+/.exec('-3')` ничего не найдёт, т.к. перед числом есть знак минус.      |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p> </p>
+## Browser support
 
-<h2 id="Browser_support">Browser support</h2>
-
-<p> </p>
-
-<h2 id="See_also">See also</h2>
+## See also

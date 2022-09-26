@@ -3,57 +3,52 @@ title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>has()</strong></code> возвращает булевое значение, которое указывает на то существует элемент с таким ключом в объекте WeakMap или нет.</p>
+Метод **`has()`** возвращает булевое значение, которое указывает на то существует элемент с таким ключом в объекте WeakMap или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>wm</em>.has(key);</code></pre>
+```
+wm.has(key);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>key</dt>
- <dd>Обязателен. Ключ элемента, существование которого необходимо проверить в объекте WeakMap.</dd>
-</dl>
+- key
+  - : Обязателен. Ключ элемента, существование которого необходимо проверить в объекте WeakMap.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>Boolean</dt>
- <dd>Возвращает <code>true</code> если элемент с указанным ключом существует в объекте WeakMap, если нет — false.</dd>
-</dl>
+- Boolean
+  - : Возвращает `true` если элемент с указанным ключом существует в объекте WeakMap, если нет — false.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_has">Использование метода <code>has</code></h3>
+### Использование метода `has`
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // возвращает true
 wm.has("baz");  // возвращает false
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li>Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the <code>key</code> parameter was not an object. This has been fixed in version 38 and later to return <code>false</code> as per latest ES6 standard ({{bug(1127827)}}).</li>
-</ul>
+- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ({{bug(1127827)}}).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.prototype.set()")}}</li>
- <li>{{jsxref("WeakMap.prototype.get()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.get()")}}

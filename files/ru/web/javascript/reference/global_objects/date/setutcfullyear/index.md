@@ -9,66 +9,55 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setUTCFullYear()</code></strong> устанавливает полный год указанной даты по всемирному координированному времени.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setUTCFullYear(<var>yearValue</var>[, <var>monthValue</var>[, <var>dayValue</var>]])</code></pre>
+Метод **`setUTCFullYear()`** устанавливает полный год указанной даты по всемирному координированному времени.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>yearValue</code></dt>
- <dd>Целое число, определяющее значение года, например, 1995.</dd>
- <dt><code>monthValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 11, представляющее месяцы от января до декабря.</dd>
- <dt><code>dayValue</code></dt>
- <dd>Необязательный параметр. Целое число от 1 до 31, представляющее день месяца. Если вы определите параметр <code>dayValue</code>, вы также должны определить параметр <code>monthValue</code>.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Если вы не определите значения параметров <code>monthValue</code> и <code>dayValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} и {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}}.</p>
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setUTCFullYear()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>monthValue</code> передать значение 15, год увеличится на 1 (<code>yearValue + 1</code>), а в качестве месяца будет использоваться значение 3.</p>
+```
+dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_setUTCFullYear">Пример: использование метода <code>setUTCFullYear()</code></h3>
-<pre class="brush: js">var theBigDay = new Date();
+- `yearValue`
+  - : Целое число, определяющее значение года, например, 1995.
+- `monthValue`
+  - : Необязательный параметр. Целое число от 0 до 11, представляющее месяцы от января до декабря.
+- `dayValue`
+  - : Необязательный параметр. Целое число от 1 до 31, представляющее день месяца. Если вы определите параметр `dayValue`, вы также должны определить параметр `monthValue`.
+
+## Описание
+
+Если вы не определите значения параметров `monthValue` и `dayValue`, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} и {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}}.
+
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setUTCFullYear()` попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `monthValue` передать значение 15, год увеличится на 1 (`yearValue + 1`), а в качестве месяца будет использоваться значение 3.
+
+## Примеры
+
+### Пример: использование метода `setUTCFullYear()`
+
+```js
+var theBigDay = new Date();
 theBigDay.setUTCFullYear(1997);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                                             | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}                         | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

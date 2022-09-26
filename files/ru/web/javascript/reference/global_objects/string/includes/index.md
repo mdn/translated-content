@@ -9,101 +9,97 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>includes()</code></strong> проверяет, содержит ли строка заданную подстроку, и возвращает, соответственно <code>true</code> или <code>false</code>.</p>
+Метод **`includes()`** проверяет, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</code></pre>
+```
+str.includes(searchString[, position])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>searchString</code></dt>
- <dd>Строка для поиска в данной строке.</dd>
- <dt><code>position</code> {{optional_inline}}</dt>
- <dd>Позиция в строке, с которой начинать поиск строки  <code>searchString</code>, по умолчанию 0.</dd>
-</dl>
+- `searchString`
+  - : Строка для поиска в данной строке.
+- `position` {{optional_inline}}
+  - : Позиция в строке, с которой начинать поиск строки `searchString`, по умолчанию 0.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><strong><code>true</code></strong>, если искомая строка была найдена в данной строке; иначе <strong><code>false</code></strong>.</p>
+**`true`**, если искомая строка была найдена в данной строке; иначе **`false`**.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Этот метод позволяет вам определять, содержит ли строка другую строку.</p>
+Этот метод позволяет вам определять, содержит ли строка другую строку.
 
-<h3 id="Чувствительность_к_регистру_символов">Чувствительность к регистру символов</h3>
+### Чувствительность к регистру символов
 
-<p>Метод <code>includes()</code> является регистрозависимым. Например, следующее выражение вернёт <code>false</code>:</p>
+Метод `includes()` является регистрозависимым. Например, следующее выражение вернёт `false`:
 
-<pre class="brush: js">'Синий кит'.includes('синий'); // вернёт false
-</pre>
+```js
+'Синий кит'.includes('синий'); // вернёт false
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_includes()">Использование <code>includes()</code></h3>
+### Использование `includes()`
 
-<pre class="brush: js">var str = 'Быть или не быть вот в чём вопрос.';
+```js
+var str = 'Быть или не быть вот в чём вопрос.';
 
 console.log(str.includes('Быть'));       // true
 console.log(str.includes('вопрос'));    // true
 console.log(str.includes('несуществующий')); // false
 console.log(str.includes('Быть', 1));    // false
 console.log(str.includes('БЫТЬ'));       // false
-</pre>
+```
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Этот метод был добавлен в спецификации ECMAScript 2015 и может быть недоступен в некоторых реализациях JavaScript. Однако, можно легко эмулировать этот метод:</p>
+Этот метод был добавлен в спецификации ECMAScript 2015 и может быть недоступен в некоторых реализациях JavaScript. Однако, можно легко эмулировать этот метод:
 
-<pre class="brush: js">if (!String.prototype.includes) {
+```js
+if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
     if (typeof start !== 'number') {
       start = 0;
     }
 
-    if (start + search.length &gt; this.length) {
+    if (start + search.length > this.length) {
       return false;
     } else {
       return this.indexOf(search, start) !== -1;
     }
   };
 }
+```
 
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="String.prototype.contains">String.prototype.contains</h2>
+## String.prototype.contains
 
-<p> </p>
+В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании {{bug(1102219)}} по следующей причине:
 
-<p>В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании {{bug(1102219)}} по следующей причине:</p>
+Как было [сообщено](https://bugzilla.mozilla.org/show_bug.cgi?id=789036), некоторые сайты, использующие MooTools 1.2, ломаются в Firefox 17. Эта версия MooTools проверяет существование метода `String.prototype.contains()` и, если он не существует, добавляет свой собственный. С введением этого метода в Firefox 17, поведение этой проверки изменилось таким образом, что реализация `String.prototype.contains()`, основанная на MooTools, сломалась. В результате это изменение было [отключено](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) в Firefox 17. Метод `String.prototype.contains()` доступен в следующей версии Firefox — Firefox 18.
 
-<p>Как было <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036">сообщено</a>, некоторые сайты, использующие MooTools 1.2, ломаются в Firefox 17. Эта версия MooTools проверяет существование метода <code>String.prototype.contains()</code> и, если он не существует, добавляет свой собственный. С введением этого метода в Firefox 17, поведение этой проверки изменилось таким образом, что реализация <code>String.prototype.contains()</code>, основанная на MooTools, сломалась. В результате это изменение было <a href="https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8">отключено</a> в Firefox 17. Метод <code>String.prototype.contains()</code> доступен в следующей версии Firefox — Firefox 18.</p>
+MooTools 1.3 принудительно использует свою собственную версию метода `String.prototype.contains()`, так что использующие его веб-сайты не должны ломаться. Тем не менее, следует отметить, что [сигнатура метода в MooTools 1.3](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) отличается от сигнатуры метода в ECMAScript 2015 (во втором аргументе). [В MooTools 1.5+ сигнатура изменена для соответствия стандарту ES2015.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
 
-<p>MooTools 1.3 принудительно использует свою собственную версию метода <code>String.prototype.contains()</code>, так что использующие его веб-сайты не должны ломаться. Тем не менее, следует отметить, что <a href="http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains">сигнатура метода в MooTools 1.3</a> отличается от сигнатуры метода в ECMAScript 2015 (во втором аргументе). <a href="https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note">В MooTools 1.5+ сигнатура изменена для соответствия стандарту ES2015.</a></p>
+В Firefox 48, метод `String.prototype.contains()` был удалён. Следует использовать только `String.prototype.includes()`.
 
-<p> </p>
+## Смотрите также
 
-<p>В Firefox 48, метод <code>String.prototype.contains()</code> был удалён. Следует использовать только <code>String.prototype.includes()</code>.</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.includes()")}} {{experimental_inline}}</li>
- <li>{{jsxref("TypedArray.prototype.includes()")}} {{experimental_inline}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.startsWith()")}}</li>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.includes()")}} {{experimental_inline}}
+- {{jsxref("TypedArray.prototype.includes()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.endsWith()")}}

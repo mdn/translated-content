@@ -3,30 +3,30 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>values()</strong></code> возвращает новый <code>Итератор</code>, который содержит значения для каждого элемента в объекте <code>Set</code> в порядке их добавления.</p>
+Метод **`values()`** возвращает новый `Итератор`, который содержит значения для каждого элемента в объекте `Set` в порядке их добавления.
 
-<p>Метод <strong><code>keys()</code></strong> является синонимом этого метода (для схожести с объектами {{jsxref("Map")}}). Он ведёт себя точно так же и возвращает <strong>значения</strong> элементов <code>Set</code>.</p>
+Метод **`keys()`** является синонимом этого метода (для схожести с объектами {{jsxref("Map")}}). Он ведёт себя точно так же и возвращает **значения** элементов `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
+## Синтаксис
 
+```
+mySet.values();
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Возвращаемое значение
 
-<pre class="syntaxbox"><code><em>mySet</em>.values();
-</code></pre>
+Новый **`Итератор`**, содержащий значения для каждого элемента `Set`, в порядке их добавления.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Новый <code><strong>Итератор</strong></code>, содержащий значения для каждого элемента <code>Set</code>, в порядке их добавления.</p>
+### Использование `values()`
 
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Использование_values()">Использование <code>values()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -35,20 +35,17 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}

@@ -9,53 +9,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>setDate()</code></strong> устанавливает день месяца указанной даты по местному времени.</p>
+Метод **`setDate()`** устанавливает день месяца указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setDate(<var>dayValue</var>)</code></pre>
+```
+dateObj.setDate(dayValue)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>dayValue</code></dt>
- <dd>Целое число, представляющее номер дня в месяце.</dd>
-</dl>
+- `dayValue`
+  - : Целое число, представляющее номер дня в месяце.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>В результате выполнения функция setDate() изменяет текущий объект ({{jsxref("Date")}}) и возвращает количество миллисекунд от начала эпохи (1 января 1970 00:00:00 UTC) для полученного значения объекта.</p>
+В результате выполнения функция setDate() изменяет текущий объект ({{jsxref("Date")}}) и возвращает количество миллисекунд от начала эпохи (1 января 1970 00:00:00 UTC) для полученного значения объекта.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если значение параметра <code>dayValue</code> будет выходить за пределы количества дней для месяца, метод <code>setDate()</code> соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>dayValue</code> передать значение 0, дата будет установлена в последний день предыдущего месяца.</p>
+Если значение параметра `dayValue` будет выходить за пределы количества дней для месяца, метод `setDate()` соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `dayValue` передать значение 0, дата будет установлена в последний день предыдущего месяца.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_setDate">Пример: использование метода <code>setDate()</code></h3>
+### Пример: использование метода `setDate()`
 
-<pre class="brush: js">var theBigDay = new Date(1962, 6, 7); // 1962-07-07
+```js
+var theBigDay = new Date(1962, 6, 7); // 1962-07-07
 theBigDay.setDate(24);  // 1962-07-24
 theBigDay.setDate(32);  // 1962-08-01
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div> </div>
+{{Compat}}
 
-<div id="compat-mobile">{{Compat}}</div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getDate()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

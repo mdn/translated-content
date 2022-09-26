@@ -10,23 +10,30 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Нестандартное свойство <strong><code>stack</code></strong> объекта {{jsxref("Error")}} возвращает трассировку стека вызываемых функций в порядке их выполнения, вместе с номерами строк, именами файлов и аргументами. Строка со стеком заполняется от самых недавних вызовов до вызова из глобальной области видимости.</p>
+## Сводка
 
-<h2 id="Description">Описание</h2>
-<p>Каждый шаг находится на отдельной строке; первая часть строки содержит имя функции (если это не вызов из глобальной области видимости), затем знак собаки (<code>@</code>), местоположение файла (кроме случая, когда функция является конструктором ошибки, которую она выбрасывает), двоеточие и, если есть местоположение файла, номер строки. Обратите внимание, что объект {{jsxref("Error")}} также обладает свойствами <code>fileName</code>, <code>lineNumber</code> и <code>columnNumber</code>, позволяющими извлечь имя файла, номер строки и столбца из выброшенной ошибки (но только самой ошибки, а не всего стека вызовов).</p>
-<p>Обратите внимание, что такой формат используется в Firefox. Нет никакого «стандартного формата». Однако, Safari 6+ и Opera 12- используют очень похожий формат. С другой стороны, браузеры, использующие движок JavaScript V8 (например, Chrome, Opera 15+, Браузер Android) и IE10+, используют другой формат (смотрите эту статью по <a class="external" href="http://msdn.microsoft.com/ru-ru/library/windows/apps/hh699850.aspx"><code>error.stack</code></a> в MSDN).</p>
-<p><strong>Значения аргументов в стеке</strong>: до Firefox 14 ({{bug("744842")}}) за именем функции и прямо перед знаком собаки (<code>@</code>) в круглых скобках следовали значения аргументов, преобразованные в строки. Хотя объекты (или массивы и прочее) преобразовывались в форму <code>"[object Object]"</code>, и, таким образом, невозможно было узнать их содержимое, скалярные значения могли быть извлечены (это всё ещё можно использовать в Firefox 14 — однако проще для получения аргументов использовать <code>arguments.callee.caller.arguments</code>, а для получения имени функции — <code>arguments.callee.caller.name</code>). Значение <code>"undefined"</code> показывалось как <code>"(void 0)"</code>. Обратите внимание, что если строковые аргументы содержали значения, включающие символы <code>"@"</code>, <code>"("</code>, <code>")"</code> (или если они включали имена файлов), вам не так то просто было разбить строку на составные части. Таким образом, в Firefox 14 и более поздних версиях это перестало быть проблемой.</p>
+Нестандартное свойство **`stack`** объекта {{jsxref("Error")}} возвращает трассировку стека вызываемых функций в порядке их выполнения, вместе с номерами строк, именами файлов и аргументами. Строка со стеком заполняется от самых недавних вызовов до вызова из глобальной области видимости.
 
-<h2 id="Examples">Примеры</h2>
-<p>Следующая разметка HTML демонстрирует использование свойства <code>stack</code>.</p>
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;Пример трассировки стека&lt;/title&gt;
-&lt;body&gt;
-&lt;script&gt;
+## Описание
+
+Каждый шаг находится на отдельной строке; первая часть строки содержит имя функции (если это не вызов из глобальной области видимости), затем знак собаки (`@`), местоположение файла (кроме случая, когда функция является конструктором ошибки, которую она выбрасывает), двоеточие и, если есть местоположение файла, номер строки. Обратите внимание, что объект {{jsxref("Error")}} также обладает свойствами `fileName`, `lineNumber` и `columnNumber`, позволяющими извлечь имя файла, номер строки и столбца из выброшенной ошибки (но только самой ошибки, а не всего стека вызовов).
+
+Обратите внимание, что такой формат используется в Firefox. Нет никакого «стандартного формата». Однако, Safari 6+ и Opera 12- используют очень похожий формат. С другой стороны, браузеры, использующие движок JavaScript V8 (например, Chrome, Opera 15+, Браузер Android) и IE10+, используют другой формат (смотрите эту статью по [`error.stack`](http://msdn.microsoft.com/ru-ru/library/windows/apps/hh699850.aspx) в MSDN).
+
+**Значения аргументов в стеке**: до Firefox 14 ({{bug("744842")}}) за именем функции и прямо перед знаком собаки (`@`) в круглых скобках следовали значения аргументов, преобразованные в строки. Хотя объекты (или массивы и прочее) преобразовывались в форму `"[object Object]"`, и, таким образом, невозможно было узнать их содержимое, скалярные значения могли быть извлечены (это всё ещё можно использовать в Firefox 14 — однако проще для получения аргументов использовать `arguments.callee.caller.arguments`, а для получения имени функции — `arguments.callee.caller.name`). Значение `"undefined"` показывалось как `"(void 0)"`. Обратите внимание, что если строковые аргументы содержали значения, включающие символы `"@"`, `"("`, `")"` (или если они включали имена файлов), вам не так то просто было разбить строку на составные части. Таким образом, в Firefox 14 и более поздних версиях это перестало быть проблемой.
+
+## Примеры
+
+Следующая разметка HTML демонстрирует использование свойства `stack`.
+
+```html
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<title>Пример трассировки стека</title>
+<body>
+<script>
 function trace() {
   try {
     throw new Error('Моя ошибка');
@@ -42,35 +49,51 @@ function a() {
   b(3, 4, '\n\n', undefined, {});
 }
 a('первый вызов, первый аргумент');
-&lt;/script&gt;
-</pre>
-<p>Предполагается, что разметка выше сохранена как <code>C:\example.html</code> в файловой системе Windows. Она выводит  следующий текст в диалоговом окне:</p>
-<p>Начиная с Firefox 30 и более поздних версий, вывод содержит номер колонки ({{bug("762556")}}):</p>
-<pre><samp>trace@file:///C:/example.html:9:17
+</script>
+```
+
+Предполагается, что разметка выше сохранена как `C:\example.html` в файловой системе Windows. Она выводит следующий текст в диалоговом окне:
+
+Начиная с Firefox 30 и более поздних версий, вывод содержит номер колонки ({{bug("762556")}}):
+
+```
+trace@file:///C:/example.html:9:17
 b@file:///C:/example.html:16:13
 a@file:///C:/example.html:19:13
-@file:///C:/example.html:21:9</samp></pre>
-<p>с Firefox 14 по Firefox 29:</p>
-<pre><samp>trace@file:///C:/example.html:9
+@file:///C:/example.html:21:9
+```
+
+с Firefox 14 по Firefox 29:
+
+```
+trace@file:///C:/example.html:9
 b@file:///C:/example.html:16
 a@file:///C:/example.html:19
-@file:///C:/example.html:21</samp></pre>
-<p>Firefox 13 и более ранние версии выводят следующий текст:</p>
-<pre><samp>Error("Моя ошибка")@:0
+@file:///C:/example.html:21
+```
+
+Firefox 13 и более ранние версии выводят следующий текст:
+
+```
+Error("Моя ошибка")@:0
 trace()@file:///C:/example.html:9
 b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
 a("первый вызов, первый аргумент")@file:///C:/example.html:19
-@file:///C:/example.html:21</samp></pre>
+@file:///C:/example.html:21
+```
 
-<h3 id="Stack_of_eval'ed_code">Стек кода в функции <code>eval()</code></h3>
-<p>Начиная с Firefox 30 {{geckoRelease("30")}}, стек вызовов кода в вызовах <code>Function()</code> и <code>eval()</code> даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы <code>Function</code> обозначаются <code>"&gt; Function"</code>, а вызовы <code>eval()</code> обозначаются <code>"&gt; eval"</code>. Смотрите {{bug("332176")}}.</p>
-<pre class="brush: js">try {
+### Стек кода в функции `eval()`
+
+Начиная с Firefox 30 {{geckoRelease("30")}}, стек вызовов кода в вызовах `Function()` и `eval()` даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы `Function` обозначаются `"> Function"`, а вызовы `eval()` обозначаются `"> eval"`. Смотрите {{bug("332176")}}.
+
+```js
+try {
   new Function('throw new Error()')();
 } catch (e) {
   console.log(e.stack);
 }
 
-// anonymous@file:///C:/example.html line 7 &gt; Function:1:1
+// anonymous@file:///C:/example.html line 7 > Function:1:1
 // @file:///C:/example.html:7:6
 
 
@@ -80,22 +103,24 @@ try {
   console.log(x.stack);
 }
 
-// @file:///C:/example.html line 7 &gt; eval line 1 &gt; eval:1:1
-// @file:///C:/example.html line 7 &gt; eval:1:1
+// @file:///C:/example.html line 7 > eval line 1 > eval:1:1
+// @file:///C:/example.html line 7 > eval:1:1
 // @file:///C:/example.html:7:6
-</pre>
-<p>Также для именования исходного кода в функции <code>eval()</code> вы можете использовать директиву <code>//# sourceURL</code>. Смотрите раздел <a href="/ru/docs/Tools/Debugger/How_to/Debug_eval_sources">Отладка исходных кодов в функции <code>eval()</code></a> в документации по <a href="/ru/docs/Tools/Debugger">отладчику</a>, а также эту <a href="http://fitzgeraldnick.com/weblog/59/">запись в блоге</a> (на английском).</p>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какой-либо спецификации. Не стандартно.</p>
+Также для именования исходного кода в функции `eval()` вы можете использовать директиву `//# sourceURL`. Смотрите раздел [Отладка исходных кодов в функции `eval()`](/ru/docs/Tools/Debugger/How_to/Debug_eval_sources) в документации по [отладчику](/ru/docs/Tools/Debugger), а также эту [запись в блоге](http://fitzgeraldnick.com/weblog/59/) (на английском).
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Спецификации
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li><a href="/ru/docs/Components.stack">Components.stack</a></li>
- <li>Внешние проекты: <a class="link-https" href="https://github.com/csnover/TraceKit/">TraceKit</a> и <a class="link-https" href="https://github.com/eriwen/javascript-stacktrace">javascript-stacktrace</a></li>
- <li>MSDN: документация по <a class="external" href="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a></li>
- <li><a href="https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi">Обзор API трассировки стека в движке JavaScript V8</a></li>
-</ul>
+Не является частью какой-либо спецификации. Не стандартно.
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- [Components.stack](/ru/docs/Components.stack)
+- Внешние проекты: [TraceKit](https://github.com/csnover/TraceKit/) и [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
+- MSDN: документация по [error.stack](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)
+- [Обзор API трассировки стека в движке JavaScript V8](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi)

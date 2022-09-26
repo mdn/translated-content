@@ -8,36 +8,37 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод<strong> Promise.race(iterable)</strong> возвращает выполненный или отклонённый промис, в зависимости от того, с каким результатом завершится первый из переданных промисов, со значением или причиной отклонения этого промиса.</p>
+Метод **Promise.race(iterable)** возвращает выполненный или отклонённый промис, в зависимости от того, с каким результатом завершится первый из переданных промисов, со значением или причиной отклонения этого промиса.
 
-<p>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</p>
+{{EmbedInteractiveExample("pages/js/promise-race.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><var>Promise.race(iterable)</var>;</pre>
+```js
+Promise.race(iterable);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
-</dl>
+- `iterable`
+  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Guide/iterable).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Выполненный или отклонённый {{jsxref("Promise")}} в зависимости от результата первого завершённого из переданных в итерируемом объекте промисов.</p>
+Выполненный или отклонённый {{jsxref("Promise")}} в зависимости от результата первого завершённого из переданных в итерируемом объекте промисов.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Метод <code>race</code>  возвращает <code>Promise</code> с результатом, первого завершённого из переданных промисов. Т.е. возвратит resolve или reject, в зависимости от того, что случится первым.</p>
+Метод `race` возвращает `Promise` с результатом, первого завершённого из переданных промисов. Т.е. возвратит resolve или reject, в зависимости от того, что случится первым.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_Promise.race_–_пример_с_setTimeout">Использование <code>Promise.race</code> – пример с <code>setTimeout</code></h3>
+### Использование `Promise.race` – пример с `setTimeout`
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, "один");
 });
 var p2 = new Promise(function(resolve, reject) {
@@ -76,19 +77,16 @@ Promise.race([p5, p6]).then(function(value) {
   console.log(reason); // "шесть"
   // p6 быстрее, выводится его rejects
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

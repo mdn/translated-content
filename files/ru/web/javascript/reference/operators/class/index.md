@@ -3,25 +3,26 @@ title: class expression
 slug: Web/JavaScript/Reference/Operators/class
 translation_of: Web/JavaScript/Reference/Operators/class
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
+**Class expression** это способ определения класса в ECMAScript 2015 (ES6). Схожий с [function expressions](/ru/docs/Web/JavaScript/Reference/Operators/function), class expressions может быть именованным либо не иметь имени. Если он именованный, то его имя доступно только внутри класса. JavaScript классы используют прототипно-ориентирование наследование.
 
+## Синтаксис
 
-<p><strong>Class expression</strong> это способ определения класса в ECMAScript 2015 (ES6). Схожий с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expressions</a>, class expressions может быть именованным либо не иметь имени. Если он именованный, то его имя доступно только внутри класса. JavaScript классы используют прототипно-ориентирование наследование.</p>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="syntaxbox">var MyClass = class <em>[className]</em> [extends] {
+```
+var MyClass = class [className] [extends] {
   // тело класса
-};</pre>
+};
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Class expression имеет схожий синтаксис с {{jsxref("Statements/class", "class declaration (statement)", "", "true")}}. Однако в class expression можно опустить имя класса ("binding identifier"), что не допустимо с {{jsxref("Statements/class", "class declaration", "", "true")}}. Также class expression позволяет повторно объявить уже существующий класс и это <strong>не приведёт к ошибке типа</strong>, как при использовании {{jsxref("Statements/class", "class declaration", "", "true")}}. Свойство конструктора является опциональным. Результатом вызова оператора {{jsxref("Operators/typeof", "typeof")}} на классах, сгенерированных при помощи class expression, всегда будет "function".</p>
+Class expression имеет схожий синтаксис с {{jsxref("Statements/class", "class declaration (statement)", "", "true")}}. Однако в class expression можно опустить имя класса ("binding identifier"), что не допустимо с {{jsxref("Statements/class", "class declaration", "", "true")}}. Также class expression позволяет повторно объявить уже существующий класс и это **не приведёт к ошибке типа**, как при использовании {{jsxref("Statements/class", "class declaration", "", "true")}}. Свойство конструктора является опциональным. Результатом вызова оператора {{jsxref("Operators/typeof", "typeof")}} на классах, сгенерированных при помощи class expression, всегда будет "function".
 
-<p>Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.</p>
+Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var Foo = class {}; // свойство конструктора опционально
 var Foo = class {}; // повторное объявление разрешено
 
@@ -31,15 +32,16 @@ typeof class {}; // возвращает "function"
 Foo instanceof Object; // true
 Foo instanceof Function; // true
 class Foo {}; // Throws TypeError, doesn't allow re-declaration
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_class_expression">Простой class expression</h3>
+### Простой class expression
 
-<p>Простой анонимный class expression, на который можно сослаться с помощью переменной "Foo".</p>
+Простой анонимный class expression, на который можно сослаться с помощью переменной "Foo".
 
-<pre class="brush: js">var Foo = class {
+```js
+var Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -49,13 +51,14 @@ class Foo {}; // Throws TypeError, doesn't allow re-declaration
 var instance = new Foo();
 instance.bar(); // "Hello World!"
 Foo.name; // "Foo"
-</pre>
+```
 
-<h3 id="Именованный_class_expression">Именованный class expression</h3>
+### Именованный class expression
 
-<p>Если вы хотите сослаться на конкретный класс внутри тела класса, вы можете создать именованный class expression. Это имя будет доступно только внутри области видимости самого class expression.</p>
+Если вы хотите сослаться на конкретный класс внутри тела класса, вы можете создать именованный class expression. Это имя будет доступно только внутри области видимости самого class expression.
 
-<pre class="brush: js">var Foo = class NamedFoo {
+```js
+var Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;
@@ -65,38 +68,21 @@ var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo is not defined
 Foo.name; // "NamedFoo"
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                       | Комментарий                |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Первоначальное определение |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                            |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function"><code>function</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> statement</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`function` expression](/ru/docs/Web/JavaScript/Reference/Operators/function)
+- [`class` statement](/ru/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)

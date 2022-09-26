@@ -12,82 +12,83 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>every()</strong></code> проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.</p>
+Метод **`every()`** проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.
 
-<div class="note">
-<p><strong>Обратите внимание</strong>: метод возвращает <code>true</code> при любом условии для пустого массива.</p>
-</div>
+> **Примечание:** **Обратите внимание**: метод возвращает `true` при любом условии для пустого массива.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">arr.every(callback(currentValue[, index[, array]])[, thisArg])</pre>
+```
+arr.every(callback(currentValue[, index[, array]])[, thisArg])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция проверки каждого элемента, принимает три аргумента:
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>Текущий обрабатываемый элемент массива.</dd>
-  <dt><code>index</code>{{Optional_inline}}</dt>
-  <dd>Индекс текущего обрабатываемого элемента массива.</dd>
-  <dt><code>array</code>{{Optional_inline}}</dt>
-  <dd>Массив, по которому осуществляется проход.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{Optional_inline}}</dt>
- <dd>Необязательный параметр. Значение, используемое в качестве <code>this</code> при выполнении функции <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Функция проверки каждого элемента, принимает три аргумента:
 
-<p><code><strong>true</strong></code> если функция проверки возвращает {{Glossary("truthy")}} значение для каждого элемента массива. Иначе, <code><strong>false</strong></code>.</p>
+    - `currentValue`
+      - : Текущий обрабатываемый элемент массива.
+    - `index`{{Optional_inline}}
+      - : Индекс текущего обрабатываемого элемента массива.
+    - `array`{{Optional_inline}}
+      - : Массив, по которому осуществляется проход.
 
-<h2 id="Description">Описание</h2>
+- `thisArg`{{Optional_inline}}
+  - : Необязательный параметр. Значение, используемое в качестве `this` при выполнении функции `callback`.
 
-<p>Метод <code>every()</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого <code>callback</code> вернёт <em>ложное</em> значение (значение, становящееся равным <code>false</code> при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод <code>every()</code> немедленно вернёт <code>false</code>. В противном случае, если <code>callback</code> вернёт <code>true</code> для всех элементов массива, метод <code>every()</code> вернёт <code>true</code>. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.</p>
+### Возвращаемое значение
 
-<p>Функция <code>callback</code> вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.</p>
+**`true`** если функция проверки возвращает {{Glossary("truthy")}} значение для каждого элемента массива. Иначе, **`false`**.
 
-<p>Если в метод <code>every()</code> был передан параметр <code>thisArg</code>, при вызове <code>callback</code> он будет использоваться в качестве значения <code>this</code>. В противном случае в качестве значения <code>this</code> будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение <code>this</code>, наблюдаемое из функции <code>callback</code>, определяется согласно <a href="/ru/docs/Web/JavaScript/Reference/Operators/this">обычным правилам определения <code>this</code>, видимого из функции</a>.</p>
+## Описание
 
-<p>Метод <code>every()</code> не изменяет массив, для которого он был вызван.</p>
+Метод `every()` вызывает переданную функцию `callback` один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого `callback` вернёт _ложное_ значение (значение, становящееся равным `false` при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод `every()` немедленно вернёт `false`. В противном случае, если `callback` вернёт `true` для всех элементов массива, метод `every()` вернёт `true`. Функция `callback` вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.
 
-<p>Диапазон элементов, обрабатываемых методом <code>every()</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>every()</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменятся, значения, переданные в функцию <code>callback</code>, будут значениями на тот момент времени, когда метод <code>every()</code> посетит их; удалённые элементы посещены не будут.</p>
+Функция `callback` вызывается с тремя аргументами: значением элемента, индексом элемента и массивом, по которому осуществляется проход.
 
-<p>Метод <code>every()</code> действует подобно квантору всеобщности в математике. В частности, он вернёт <code>true</code> для пустого массива. Это так называемая <a href="http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics">бессодержательная истина (vacuously true)</a> — все элементы <a href="http://ru.wikipedia.org/wiki/Пустое_множество">пустого множества</a> (<a href="http://en.wikipedia.org/wiki/Empty_set#Common_problems">англ.</a>) удовлетворяют любому заданному условию.</p>
+Если в метод `every()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение {{jsxref("Global_Objects/undefined", "undefined")}}. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`, видимого из функции](/ru/docs/Web/JavaScript/Reference/Operators/this).
 
-<h2 id="Examples">Примеры</h2>
+Метод `every()` не изменяет массив, для которого он был вызван.
 
-<h3 id="Example:_Testing_size_of_all_array_elements">Пример: проверка размера всех элементов массива</h3>
+Диапазон элементов, обрабатываемых методом `every()`, устанавливается до первого вызова функции `callback`. Элементы, добавленные в массив после начала выполнения метода `every()`, не будут посещены функцией `callback`. Если существующие элементы массива изменятся, значения, переданные в функцию `callback`, будут значениями на тот момент времени, когда метод `every()` посетит их; удалённые элементы посещены не будут.
 
-<p>Следующий пример проверяет, являются ли все элементы массива числами, большими 10.</p>
+Метод `every()` действует подобно квантору всеобщности в математике. В частности, он вернёт `true` для пустого массива. Это так называемая [бессодержательная истина (vacuously true)](http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics) — все элементы [пустого множества](http://ru.wikipedia.org/wiki/Пустое_множество) ([англ.](http://en.wikipedia.org/wiki/Empty_set#Common_problems)) удовлетворяют любому заданному условию.
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+## Примеры
+
+### Пример: проверка размера всех элементов массива
+
+Следующий пример проверяет, являются ли все элементы массива числами, большими 10.
+
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="Example:_Using_arrow_functions">Пример: использование стрелочных функций</h3>
+### Пример: использование стрелочных функций
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Стрелочные функции</a> предоставляют более краткий синтаксис для подобных проверок.</p>
+[Стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) предоставляют более краткий синтаксис для подобных проверок.
 
-<pre class="brush: js">[12, 5, 8, 130, 44].every(elem =&gt; elem &gt;= 10);   // false
-[12, 54, 18, 130, 44].every(elem =&gt; elem &gt;= 10); // true
-</pre>
+```js
+[12, 5, 8, 130, 44].every(elem => elem >= 10);   // false
+[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<p>Метод <code>every()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>every()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
+Метод `every()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `every()` в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что `callback.call` вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.
 
-<pre class="brush: js">if (!Array.prototype.every) {
+```js
+if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -103,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     // 2. Положим lenValue равным результату вызова внутреннего метода Get
     //    объекта O с аргументом "length".
     // 3. Положим len равным ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. Если IsCallable(callbackfn) равен false, выкинем исключение TypeError.
     if (typeof callbackfn !== 'function') {
@@ -111,15 +112,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     }
 
     // 5. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Положим k равным 0.
     k = 0;
 
-    // 7. Пока k &lt; len, будем повторять
-    while (k &lt; len) {
+    // 7. Пока k < len, будем повторять
+    while (k < len) {
 
       var kValue;
 
@@ -150,23 +151,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<div id="compat-mobile">{{Compat}}</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

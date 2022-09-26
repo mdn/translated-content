@@ -9,62 +9,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setTime()</code></strong> устанавливает время объекта {{jsxref("Global_Objects/Date", "Date")}} в значение, представляемое количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setTime(<var>timeValue</var>)</code></pre>
+Метод **`setTime()`** устанавливает время объекта {{jsxref("Global_Objects/Date", "Date")}} в значение, представляемое количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>timeValue</code></dt>
- <dd>Целое число, представляющее количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Используя метод <code>setTime()</code>, можно присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}.</p>
+```
+dateObj.setTime(timeValue)
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_setTime">Пример: использование метода <code>setTime()</code></h3>
-<pre class="brush: js">var theBigDay = new Date('July 1, 1999');
+- `timeValue`
+  - : Целое число, представляющее количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.
+
+## Описание
+
+Используя метод `setTime()`, можно присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}.
+
+## Примеры
+
+### Пример: использование метода `setTime()`
+
+```js
+var theBigDay = new Date('July 1, 1999');
 var sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                         | Статус                   | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}             | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getTime()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

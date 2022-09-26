@@ -1,5 +1,5 @@
 ---
-title: 'String.prototype[@@iterator]()'
+title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 tags:
   - ECMAScript6
@@ -14,31 +14,35 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>[@@iterator]()</code></strong> возвращает новый объект итератора <code>Iterator</code>, который проходит по кодовым точкам строкового значения, возвращая каждую кодовую точку в виде строкового значения.</p>
+Метод **`[@@iterator]()`** возвращает новый объект итератора `Iterator`, который проходит по кодовым точкам строкового значения, возвращая каждую кодовую точку в виде строкового значения.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>string</var>[Symbol.iterator]</code></pre>
+```
+string[Symbol.iterator]
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_.5B.40.40iterator.5D">Пример: использование метода <code>[@@iterator]()</code></h3>
+### Пример: использование метода `[@@iterator]()`
 
-<pre class="brush:js">var string = 'A\uD835\uDC68';
+```js
+var string = 'A\uD835\uDC68';
 
 var strIter = string[Symbol.iterator]();
 
 console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
-</pre>
+```
 
-<h3 id="Example_Using_.5B.40.40iterator.5D_with_for..of">Пример: использование метода <code>[@@iterator]()</code> вместе с циклом <code>for..of</code></h3>
+### Пример: использование метода `[@@iterator]()` вместе с циклом `for..of`
 
-<pre class="brush:js">var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+```js
+var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of string) {
   console.log(v);
@@ -49,12 +53,12 @@ for (var v of string) {
 // "\uD835\uDC69"
 // "C"
 // "\uD835\uDC6A"
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

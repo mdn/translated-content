@@ -9,68 +9,70 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
-<div>{{JSRef}}{{SeeCompatTable}}</div>
+{{JSRef}}{{SeeCompatTable}}
 
-<p>Метод <strong><code>padStart()</code></strong> заполняет текущую строку другой строкой (несколько раз, если нужно) так, что итоговая строка достигает заданной длины. Заполнение осуществляется в начале (слева) текущей строки.</p>
+Метод **`padStart()`** заполняет текущую строку другой строкой (несколько раз, если нужно) так, что итоговая строка достигает заданной длины. Заполнение осуществляется в начале (слева) текущей строки.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+```
+str.padStart(targetLength [, padString])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>Длина итоговой строки после дополнения текущей строки. Если значение меньше, чем длина текущей строки, текущая строка будет возвращена без изменений.</dd>
- <dt><code>padString</code> {{optional_inline}}</dt>
- <dd>Строка для заполнения текущей строки. Если эта строка слишком длинная для заданной длины, она будет обрезана. Значение по умолчанию - " " (U+0020).</dd>
-</dl>
+- `targetLength`
+  - : Длина итоговой строки после дополнения текущей строки. Если значение меньше, чем длина текущей строки, текущая строка будет возвращена без изменений.
+- `padString` {{optional_inline}}
+  - : Строка для заполнения текущей строки. Если эта строка слишком длинная для заданной длины, она будет обрезана. Значение по умолчанию - " " (U+0020).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("String")}} заданной длины с заполнением строкой, выполненное в начале.</p>
+{{jsxref("String")}} заданной длины с заполнением строкой, выполненное в начале.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">'abc'.padStart(10);         // "       abc"
+```js
+'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"</pre>
+'abc'.padStart(1);          // "abc"
+```
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Запуск данного кода перед любым другим кодом будет создавать <code>String.prototype.padStart()</code>, если он нативно не поддерживается.</p>
+Запуск данного кода перед любым другим кодом будет создавать `String.prototype.padStart()`, если он нативно не поддерживается.
 
-<pre class="brush: js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+```js
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
     String.prototype.padStart = function padStart(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
+        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
         padString = String(padString || ' ');
-        if (this.length &gt; targetLength) {
+        if (this.length > targetLength) {
             return String(this);
         }
         else {
             targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
+            if (targetLength > padString.length) {
                 padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
             }
             return padString.slice(0,targetLength) + String(this);
         }
     };
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("String.prototype.padEnd()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("String.prototype.padEnd()")}}

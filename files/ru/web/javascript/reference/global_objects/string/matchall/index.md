@@ -10,36 +10,35 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <strong><code>matchAll()</code></strong> возвращает итератор по всем результатам при сопоставлении <em>строки с регулярным выражением</em>.</p>
+Метод **`matchAll()`** возвращает итератор по всем результатам при сопоставлении _строки с регулярным выражением_.
 
-<div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
+## Синтаксис
 
+```
+str.matchAll(regexp)
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+- `regexp`
+  - : Объект регулярного выражения. Если передано значение, не являющееся объектом регулярного выражения, оно неявно преобразуется в {{jsxref("RegExp")}} используя `new RegExp(obj)`.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>regexp</code></dt>
- <dd>Объект регулярного выражения. Если передано значение, не являющееся объектом регулярного выражения, оно неявно преобразуется в {{jsxref("RegExp")}} используя <code>new RegExp(obj)</code>.</dd>
-</dl>
+Возвращается [iterator](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators) (не перезапускаемый).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+## Примеры
 
-<p>Возвращается <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a> (не перезапускаемый).</p>
+### Regexp.exec() и matchAll()
 
-<h2 id="Примеры">Примеры</h2>
+До добавления метода `matchAll` в JavaScript, можно было использовать метод [regexp.exec](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (и регулярные выражения с флагом `/g` ) в цикле для получения доступа к совпадениям:
 
-<h3 id="Regexp.exec_и_matchAll">Regexp.exec() и matchAll()</h3>
-
-<p>До добавления метода <code>matchAll</code> в JavaScript, можно было использовать метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a> (и регулярные выражения с флагом <code>/g</code> ) в цикле для получения доступа к совпадениям:</p>
-
-<pre class="brush: js">const regexp = RegExp('foo*','g');
+```js
+const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 
 while ((matches = regexp.exec(str)) !== null) {
@@ -47,12 +46,13 @@ while ((matches = regexp.exec(str)) !== null) {
   // expected output: "Found foo. Next starts at 9."
   // expected output: "Found foo. Next starts at 19."
 }
-</pre>
+```
 
-<p>С появлением <code>matchAll</code>, нет необходимости использовать цикл <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> и метод <code>exec</code> с флагом <code>/g</code>.<br>
- Используя вместо этого метод <code>matchAll</code>, вы получаете итератор, который вы можете использовать более удобно с конструкциями <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">array spread</a>, или {{jsxref("Array.from()")}} :</p>
+С появлением `matchAll`, нет необходимости использовать цикл [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) и метод `exec` с флагом `/g`.
+Используя вместо этого метод `matchAll`, вы получаете итератор, который вы можете использовать более удобно с конструкциями [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), или {{jsxref("Array.from()")}} :
 
-<pre class="brush: js">const regexp = RegExp('foo*','g');
+```js
+const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 let matches = str.matchAll(regexp);
 
@@ -66,41 +66,43 @@ for (const match of matches) {
 // Для создания нового итератора вызовите matchAll повторно
 matches = str.matchAll(regexp);
 
-Array.from(matches, m =&gt; m[0]);
+Array.from(matches, m => m[0]);
 // Array [ "foo", "foo" ]
-</pre>
+```
 
-<h3 id="Улучшенный_доступ_к_группам_захвата">Улучшенный доступ к группам захвата</h3>
+### Улучшенный доступ к группам захвата
 
-<p>Ещё одна веская причина использовать <code>matchAll</code> это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match()</a></code> с глобальным флагом <code>/g</code>:</p>
+Ещё одна веская причина использовать `matchAll` это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) с глобальным флагом `/g`:
 
-<pre class="brush: js">var regexp = /t(e)(st(\d?))/g;
+```js
+var regexp = /t(e)(st(\d?))/g;
 var str = 'test1test2';
 
 str.match(regexp);
-// Array ['test1', 'test2']</pre>
+// Array ['test1', 'test2']
+```
 
-<p>С <code>matchAll</code> у вас появляется к ним доступ:</p>
+С `matchAll` у вас появляется к ним доступ:
 
-<pre class="brush: js">let array = [...str.matchAll(regexp)];
+```js
+let array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
 array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

@@ -8,48 +8,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Math.pow()</code></strong> возвращает <code>основание</code>, возведённое в степень <code>показатель</code>, то есть, значение выражения <code>основание<sup>показатель</sup></code>.</p>
+Метод **`Math.pow()`** возвращает `основание`, возведённое в степень `показатель`, то есть, значение выражения `основаниепоказатель`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Math.pow(<var>base</var>, <var>exponent</var>)</code></pre>
+```
+Math.pow(base, exponent)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>base</code></dt>
- <dd>Основание степени.</dd>
- <dt><code>exponent</code></dt>
- <dd>Показатель степени, в которую возводится основание <code>base</code>.</dd>
-</dl>
+- `base`
+  - : Основание степени.
+- `exponent`
+  - : Показатель степени, в которую возводится основание `base`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Поскольку метод <code>pow()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.pow()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
+Поскольку метод `pow()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.pow()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_Math.pow">Пример: использование метода <code>Math.pow()</code></h3>
+### Пример: использование метода `Math.pow()`
 
-<pre class="brush: js">Math.pow(7, 2); // 49</pre>
+```js
+Math.pow(7, 2); // 49
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}} {{experimental_inline}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.sqrt()")}}

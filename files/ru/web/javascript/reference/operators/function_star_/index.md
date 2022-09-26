@@ -9,58 +9,57 @@ tags:
   - Функция
 translation_of: Web/JavaScript/Reference/Operators/function*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Ключевое слово <strong><code>function*</code></strong> может использоваться для объявления функции-генератора внутри выражения.</p>
+Ключевое слово **`function*`** может использоваться для объявления функции-генератора внутри выражения.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">function* [<em>имя</em>]([параметр<em>1</em>[, <em>параметр2[</em>, ..., <em>параметрN</em>]]]) {
-   <em>инструкции</em>
-}</pre>
+```
+function* [имя]([параметр1[, параметр2[, ..., параметрN]]]) {
+   инструкции
+}
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>имя</code></dt>
- <dd>Имя функции. Может быть опущено, в этом случае функция будет <em>анонимной</em>. Имя локально для тела функции.</dd>
- <dt><code>параметрN</code></dt>
- <dd>Имя аргумента, передаваемого в функцию. Функция может иметь до 255 аргументов.</dd>
- <dt><code>инструкции</code></dt>
- <dd>Инструкции, составляющие тело функции.</dd>
-</dl>
+- `имя`
+  - : Имя функции. Может быть опущено, в этом случае функция будет _анонимной_. Имя локально для тела функции.
+- `параметрN`
+  - : Имя аргумента, передаваемого в функцию. Функция может иметь до 255 аргументов.
+- `инструкции`
+  - : Инструкции, составляющие тело функции.
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Выражение<code> function*</code>  очень похоже на объявление {{jsxref('Statements/function*', 'function*')}}, и имеет почти такой же синтаксис. Основная разница между выражением <code>function*</code> и объявлением <code>function*</code> – в <em>имени функции,</em> которое может быть опущено в выражениях <code>function*</code> для создания <em>анонимных</em> функций. Смотрите главу о <a href="/ru/docs/Web/JavaScript/Reference/Functions">функциях</a> для получения более подробной информации.</p>
+Выражение` function*` очень похоже на объявление {{jsxref('Statements/function*', 'function*')}}, и имеет почти такой же синтаксис. Основная разница между выражением `function*` и объявлением `function*` – в _имени функции,_ которое может быть опущено в выражениях `function*` для создания _анонимных_ функций. Смотрите главу о [функциях](/ru/docs/Web/JavaScript/Reference/Functions) для получения более подробной информации.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем примере определяется безымянная функция-генератор и присваивается переменной <code>x</code>. Функция возвращает квадрат своего аргумента:</p>
+В следующем примере определяется безымянная функция-генератор и присваивается переменной `x`. Функция возвращает квадрат своего аргумента:
 
-<pre class="brush: js">var x = function*(y) {
+```js
+var x = function*(y) {
    yield y * y;
 };
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>Объект {{jsxref("GeneratorFunction")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols#Протокол_Итератор">Протоколы перебора: Итератор</a></li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
- <li>Объект {{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions", "Функции")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function* statement")}}
+- Объект {{jsxref("GeneratorFunction")}}
+- [Протоколы перебора: Итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#Протокол_Итератор)
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+- Объект {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions", "Функции")}}

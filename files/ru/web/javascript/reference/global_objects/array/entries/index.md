@@ -12,39 +12,40 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>entries()</strong></code> возвращает новый объект итератора массива <code><strong>Array Iterator</strong></code>, содержащий пары ключ / значение для каждого индекса в массиве.</p>
+Метод **`entries()`** возвращает новый объект итератора массива **`Array Iterator`**, содержащий пары ключ / значение для каждого индекса в массиве.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.entries()</code></pre>
+```
+arr.entries()
+```
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();
 
 console.log(eArr.next().value); // [0, 'a']
 console.log(eArr.next().value); // [1, 'b']
 console.log(eArr.next().value); // [2, 'c']
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

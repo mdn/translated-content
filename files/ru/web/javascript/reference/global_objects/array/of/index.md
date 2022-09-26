@@ -11,49 +11,53 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>Array.of()</strong></code> создаёт новый экземпляр массива <code>Array</code> из произвольного числа аргументов, вне зависимости от числа или типа аргумента.</p>
+Метод **`Array.of()`** создаёт новый экземпляр массива `Array` из произвольного числа аргументов, вне зависимости от числа или типа аргумента.
 
-<p>Разница между <code><strong>Array.of()</strong></code> и конструктором <code><strong>Array</strong></code> заключается в обработке целочисленных аргументов: <code><strong>Array.of(7)</strong></code> создаёт массив с одним элементом <code>7</code>, а <code><strong>Array(7)</strong></code> создаёт пустой массив со значением свойства <code>length</code> равным 7 (<strong>Замечание:</strong> подразумевается 7 пустых слотов, а не слоты со значением <code>undefined</code>).</p>
+Разница между **`Array.of()`** и конструктором **`Array`** заключается в обработке целочисленных аргументов: **`Array.of(7)`** создаёт массив с одним элементом `7`, а **`Array(7)`** создаёт пустой массив со значением свойства `length` равным 7 (**Замечание:** подразумевается 7 пустых слотов, а не слоты со значением `undefined`).
 
-<pre class="brush: js">Array.of(7);       // [7]
+```js
+Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
 Array(7);          // массив с 7 пустыми слотами
-Array(1, 2, 3);    // [1, 2, 3]</pre>
+Array(1, 2, 3);    // [1, 2, 3]
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</code></pre>
+```
+Array.of(element0[, element1[, ...[, elementN]]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>Элементы, из которых создаётся массив.</dd>
-</dl>
+- `elementN`
+  - : Элементы, из которых создаётся массив.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новый массив {{jsxref("Array")}}.</p>
+Новый массив {{jsxref("Array")}}.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Эта функция является частью стандарта ECMAScript 6. Для дополнительной информации смотрите <a href="https://gist.github.com/rwaldron/1074126">предложение по Array.of и Array.from</a> и <a href="https://gist.github.com/rwaldron/3186576">полифил для Array.of</a>.</p>
+Эта функция является частью стандарта ECMAScript 6. Для дополнительной информации смотрите [предложение по Array.of и Array.from](https://gist.github.com/rwaldron/1074126) и [полифил для Array.of](https://gist.github.com/rwaldron/3186576).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Compatibility">Полифил</h2>
+## Полифил
 
-<p>Выполнение следующего кода перед любым другим кодом создаст метод <code>Array.of()</code>, если он ещё не реализован в браузере.</p>
+Выполнение следующего кода перед любым другим кодом создаст метод `Array.of()`, если он ещё не реализован в браузере.
 
-<pre class="brush: js">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
     // Or
@@ -62,20 +66,19 @@ Array.of(undefined); // [undefined]
         vals.push(arguments[prop])
     }
     return vals.slice()
-}</pre>
+}
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

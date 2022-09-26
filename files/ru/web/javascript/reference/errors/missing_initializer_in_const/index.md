@@ -3,52 +3,56 @@ title: 'SyntaxError: missing = in const declaration'
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: missing = in const declaration (Firefox)
+```
+SyntaxError: missing = in const declaration (Firefox)
 SyntaxError: Missing initializer in const declaration (Chrome)
-</pre>
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Константа это значение, которое не может быть изменено программой в процессе своего выполнения. Оно не может меняться посредством повторного назначения, и не может быть переопределено. В JavaScript константы объявляются с использованием ключевого слова <code>const</code>. Инициализация для константы является обязательной; то есть вы должны указать значение сразу же при её объявлении (что имеет смысл, учитывая, что оно не может быть изменено позже).</p>
+Константа это значение, которое не может быть изменено программой в процессе своего выполнения. Оно не может меняться посредством повторного назначения, и не может быть переопределено. В JavaScript константы объявляются с использованием ключевого слова `const`. Инициализация для константы является обязательной; то есть вы должны указать значение сразу же при её объявлении (что имеет смысл, учитывая, что оно не может быть изменено позже).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Отсутствие_инициализатора_константы">Отсутствие инициализатора константы</h3>
+### Отсутствие инициализатора константы
 
-<p>В отличие от <code>var</code> или <code>let</code>, вы должны указать значение при объявлении <code>const</code>. В противном случае возникнет ошибка:</p>
+В отличие от `var` или `let`, вы должны указать значение при объявлении `const`. В противном случае возникнет ошибка:
 
-<pre class="brush: js example-bad">const COLUMNS;
-// SyntaxError: missing = in const declaration</pre>
+```js example-bad
+const COLUMNS;
+// SyntaxError: missing = in const declaration
+```
 
-<h3 id="Исправление_ошибки">Исправление ошибки</h3>
+### Исправление ошибки
 
-<p>Существует несколько вариантов исправления этой ошибки. Проверьте, что должно быть достигнуто с помощью данной константы.</p>
+Существует несколько вариантов исправления этой ошибки. Проверьте, что должно быть достигнуто с помощью данной константы.
 
-<h4 id="Добавление_значения_константы">Добавление значения константы</h4>
+#### Добавление значения константы
 
-<p>Укажите значение константы при её объявлении.</p>
+Укажите значение константы при её объявлении.
 
-<pre class="brush: js example-good">const COLUMNS = 80;</pre>
+```js example-good
+const COLUMNS = 80;
+```
 
-<h4 id="const_let_или_var"><code>const</code>, <code>let</code> или <code>var</code>?</h4>
+#### `const`, `let` или `var`?
 
-<p>Не используйте <code>const</code>, если вы не хотели объявить константу. Возможно, вы подразумевали объявление переменную с блочной областью видимости с помощью <code>let</code> или глобальную переменную с помощью <code>var</code>. Оба варианта не требуют начального значения.</p>
+Не используйте `const`, если вы не хотели объявить константу. Возможно, вы подразумевали объявление переменную с блочной областью видимости с помощью `let` или глобальную переменную с помощью `var`. Оба варианта не требуют начального значения.
 
-<pre class="brush: js example-good">let columns;
-</pre>
+```js example-good
+let columns;
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code></li>
-</ul>
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)

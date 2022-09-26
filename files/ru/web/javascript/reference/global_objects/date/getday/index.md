@@ -9,63 +9,61 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getDay()</code></strong> возвращает порядковый номер дня недели указанной даты по местному времени, где 0 соответствует воскресенью.</p>
+Метод **`getDay()`** возвращает порядковый номер дня недели указанной даты по местному времени, где 0 соответствует воскресенью.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
+```
+dateObj.getDay()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getDay()</code>, является целым числом, соответствующим дню недели: 0 соответствует воскресенью, 1 — понедельнику, 2 — вторнику и так далее.</p>
+Значение, возвращённое методом `getDay()`, является целым числом, соответствующим дню недели: 0 соответствует воскресенью, 1 — понедельнику, 2 — вторнику и так далее.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getDay">Пример: использование метода <code>getDay()</code></h3>
+### Пример: использование метода `getDay()`
 
-<p>Вторая инструкция в примере ниже присваивает значение 1 переменной <code>weekday</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>. 25 декабря 1995 года было понедельником.</p>
+Вторая инструкция в примере ниже присваивает значение 1 переменной `weekday` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`. 25 декабря 1995 года было понедельником.
 
-<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
+```js
+let date = new Date('December 25, 1995 23:15:30');
 let weekday = date.getDay();
 
 console.log(weekday); // 1
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> При необходимости полное название дня (например, "<code>Понедельник</code>") можно получить, используя {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} с параметром <code>options</code> parameter. С помощью этого метода упрощается интернационализация:</p>
+> **Примечание:** При необходимости полное название дня (например, "`Понедельник`") можно получить, используя {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} с параметром `options` parameter. С помощью этого метода упрощается интернационализация:
+>
+> ```js
+> let options = { weekday: 'long'};
+>
+> console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+> // Monday
+>
+> console.log(new Intl.DateTimeFormat('ru-RU', options).format(date));
+> // понедельник
+> ```
 
-<pre class="brush: js">let options = { weekday: 'long'};
-
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
-// Monday
-
-console.log(new Intl.DateTimeFormat('ru-RU', options).format(date));
-// понедельник
-</pre>
-</div>
-
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<div id="compat-mobile">{{Compat}}</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

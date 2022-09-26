@@ -9,71 +9,63 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>setHours()</code></strong> устанавливает часы указанной даты по местному времени и возвращает количество миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC до времени, представляемого обновлённым экземпляром {{jsxref("Global_Objects/Date", "Date")}}.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>dateObj</var>.setHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</code></pre>
+Метод **`setHours()`** устанавливает часы указанной даты по местному времени и возвращает количество миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC до времени, представляемого обновлённым экземпляром {{jsxref("Global_Objects/Date", "Date")}}.
 
-<h3 id="Версия_до_JavaScript_1.3">Версия до JavaScript 1.3</h3>
-<pre class="syntaxbox"><code><var>dateObj</var>.setHours(<var>hoursValue</var>)</code></pre>
+## Синтаксис
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>hoursValue</code></dt>
- <dd>Целое число от 0 до 23, представляющее часы.</dd>
- <dt><code>minutesValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 59, представляющее минуты.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 59, представляющее секунды. Если вы определите параметр <code>secondsValue</code>, вы также должны определить параметр <code>minutesValue</code>.</dd>
- <dt><code>msValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 999, представляющее миллисекунды. Если вы определите параметр <code>msValue</code>, вы также должны определить параметры <code>minutesValue</code> и <code>secondsValue</code>.</dd>
-</dl>
+```
+dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+```
 
-<h2 id="Description">Описание</h2>
-<p>Если вы не определите значения параметров <code>minutesValue</code>, <code>secondsValue</code> и <code>msValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} и {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.</p>
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setHours()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>secondsValue</code> передать значение 100, минуты увеличатся на 1 (<code>minutesValue + 1</code>), а в качестве секунд будет использоваться значение 40.</p>
+### Версия до JavaScript 1.3
 
-<h2 id="Examples">Примеры</h2>
+```
+dateObj.setHours(hoursValue)
+```
 
-<h3 id="Example:_Using_setHours">Пример: использование метода <code>setHours()</code></h3>
-<pre class="brush: js">var theBigDay = new Date();
+### Параметры
+
+- `hoursValue`
+  - : Целое число от 0 до 23, представляющее часы.
+- `minutesValue`
+  - : Необязательный параметр. Целое число от 0 до 59, представляющее минуты.
+- `secondsValue`
+  - : Необязательный параметр. Целое число от 0 до 59, представляющее секунды. Если вы определите параметр `secondsValue`, вы также должны определить параметр `minutesValue`.
+- `msValue`
+  - : Необязательный параметр. Целое число от 0 до 999, представляющее миллисекунды. Если вы определите параметр `msValue`, вы также должны определить параметры `minutesValue` и `secondsValue`.
+
+## Описание
+
+Если вы не определите значения параметров `minutesValue`, `secondsValue` и `msValue`, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} и {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.
+
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setHours()` попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `secondsValue` передать значение 100, минуты увеличатся на 1 (`minutesValue + 1`), а в качестве секунд будет использоваться значение 40.
+
+## Примеры
+
+### Пример: использование метода `setHours()`
+
+```js
+var theBigDay = new Date();
 theBigDay.setHours(7);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                                             | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

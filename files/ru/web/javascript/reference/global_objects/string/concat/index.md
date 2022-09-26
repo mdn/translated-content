@@ -9,67 +9,57 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>concat()</code></strong> объединяет текст из двух или более строк и возвращает новую строку.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>str</var>.concat(<var>string2</var>, <var>string3</var>[, ..., <var>stringN</var>])</code></pre>
+Метод **`concat()`** объединяет текст из двух или более строк и возвращает новую строку.
 
-<h3 id="Parameters">Параметры</h3>
-<dl>
- <dt><code>string2...string<em>N</em></code></dt>
- <dd>Строки, объединяемые в эту строку.</dd>
-</dl>
+## Синтаксис
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>concat()</code> объединяет текст из двух или более строк и возвращает новую строку. Изменения в тексте в одной строке не затрагивают остальные строки.</p>
+```
+str.concat(string2, string3[, ..., stringN])
+```
 
-<h2 id="Examples">Примеры</h2>
+### Параметры
 
-<h3 id="Example:_Using_concat">Пример: использование метода <code>concat()</code></h3>
-<p>В следующем примере несколько строк объединяются в одну.</p>
-<pre class="brush: js">var hello = 'Привет, ';
+- `string2...stringN`
+  - : Строки, объединяемые в эту строку.
+
+## Описание
+
+Метод `concat()` объединяет текст из двух или более строк и возвращает новую строку. Изменения в тексте в одной строке не затрагивают остальные строки.
+
+## Примеры
+
+### Пример: использование метода `concat()`
+
+В следующем примере несколько строк объединяются в одну.
+
+```js
+var hello = 'Привет, ';
 console.log(hello.concat('Кевин', ', удачного дня.'));
 
 /* Привет, Кевин, удачного дня. */
-</pre>
+```
 
-<h2 id="Performance">Производительность</h2>
-<p>Настоятельно рекомендуется вместо метода <code>concat()</code> использовать {{jsxref("Operators/Assignment_Operators", "операторы присваивания", "", 1)}} (<code>+</code>, <code>+=</code>). Смотрите это <a href="http://jsperf.com/concat-vs-plus-vs-join">сравнение производительности</a>.</p>
+## Производительность
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Настоятельно рекомендуется вместо метода `concat()` использовать {{jsxref("Operators/Assignment_Operators", "операторы присваивания", "", 1)}} (`+`, `+=`). Смотрите это [сравнение производительности](http://jsperf.com/concat-vs-plus-vs-join).
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Спецификации
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Operators/Assignment_Operators", "Операторы присваивания", "", 1)}}</li>
-</ul>
+| Спецификация                                                                                             | Статус                   | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}     |                                                        |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Operators/Assignment_Operators", "Операторы присваивания", "", 1)}}

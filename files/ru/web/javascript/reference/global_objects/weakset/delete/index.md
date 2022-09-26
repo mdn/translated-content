@@ -9,30 +9,31 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
-<div>{{JSRef("Global_Objects", "WeakSet")}}</div>
+{{JSRef("Global_Objects", "WeakSet")}}
 
-<p>Метод <code><strong>delete()</strong></code> удаляет указанный элемент из объекта <code>WeakSet</code>.</p>
+Метод **`delete()`** удаляет указанный элемент из объекта `WeakSet`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>ws</em>.delete(value);</code></pre>
+```
+ws.delete(value);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>value</dt>
- <dd>Обязателен. Объект, удаляемый из  WeakSet.</dd>
-</dl>
+- value
+  - : Обязателен. Объект, удаляемый из WeakSet.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Если объект был успешно удалён, возвращается true, иначе false.</p>
+Если объект был успешно удалён, возвращается true, иначе false.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:Testing_size_of_all_array_elements">Использование метода <code>delete</code> </h3>
+### Использование метода `delete`
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 
 ws.add(window);
@@ -41,19 +42,17 @@ ws.delete(obj);    // Вернёт false. Удаляемый объект не �
 ws.delete(window); // Вернёт true.  Объект успешно удалён.
 
 ws.has(window);    // Вернёт false. Объект window был удалён из WeakSet.
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.clear()")}}

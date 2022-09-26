@@ -9,40 +9,40 @@ tags:
   - this
 translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>Глобальное свойство <code><strong>globalThis</strong></code> содержит значение глобального <code>this</code>, который является глобальным объектом.</p>
+Глобальное свойство **`globalThis`** содержит значение глобального `this`, который является глобальным объектом.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
 
+## Синтаксис
 
+```
+globalThis
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Описание
 
-<pre class="syntaxbox">globalThis
-</pre>
+Исторически, для доступа к глобальному объекту использовался разный синтаксис в разных средах JavaScript. В вебе вы могли использовать {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} или {{domxref("Window.frames", "frames")}}, но в [Worker ](/ru/docs/Web/API/Worker)можно использовать только `self`. В Node.js ничего из этого не работает, поэтому вы должны использовать `global`.
 
-<h2 id="Описание">Описание</h2>
+Ключевое слово `this` можно использовать внутри функций в нестрогом режиме. Но в строгом режиме внутри функций и в Модулях `this` равняется `undefined`. Вы можете использовать `Function('return this')()`, но среды, которые отключают {{jsxref("eval", "eval()")}}, такие как {{Glossary('CSP')}} в браузерах, препятствуют использованию {{jsxref("Function")}} таким способом.
 
-<p>Исторически, для доступа к глобальному объекту использовался разный синтаксис в разных средах JavaScript. В вебе вы могли использовать {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} или {{domxref("Window.frames", "frames")}}, но в <a href="/ru/docs/Web/API/Worker">Worker </a>можно использовать только <code>self</code>. В Node.js ничего из этого не работает, поэтому вы должны использовать <code>global</code>.</p>
+Свойство `globalThis` даёт возможность стандартного доступа к глобальному значению `this` (и как следствие, к глобальному объекту) вне зависимости от окружения. В отличии от похожих свойств, таких как `window` и `self`, оно гарантирует работу как в среде, где есть `window`, так и в среде, где его нет. Таким образом вы можете получить доступ к глобальному объекту даже не зная в какой среде будет запущен код. Чтобы помочь запомнить название, просто запомните, что глобальное значение `this` равно `globalThis`.
 
-<p>Ключевое слово <code>this</code> можно использовать внутри функций в нестрогом режиме. Но в строгом режиме внутри функций и в Модулях <code>this</code> равняется <code>undefined</code>. Вы можете использовать <code>Function('return this')()</code>, но среды, которые отключают {{jsxref("eval", "eval()")}}, такие как {{Glossary('CSP')}} в браузерах, препятствуют использованию {{jsxref("Function")}} таким способом.</p>
+### HTML и WindowProxy
 
-<p>Свойство <code>globalThis</code> даёт возможность стандартного доступа к глобальному значению <code>this</code> (и как следствие, к глобальному объекту) вне зависимости от окружения. В отличии от похожих свойств, таких как <code>window</code> и <code>self</code>, оно гарантирует работу как в среде, где есть <code>window</code>, так и в среде, где его нет. Таким образом вы можете получить доступ к глобальному объекту даже не зная в какой среде будет запущен код. Чтобы помочь запомнить название, просто запомните, что глобальное значение <code>this</code> равно <code>globalThis</code>.</p>
+Во многих движках `globalThis` будет ссылкой на фактический глобальный объект, но в веб-браузерах из-за соображений безопасности iframe и cross-window он ссылается на {{jsxref ("Proxy")}} вокруг фактического глобального объекта (который вы не можете получить прямым доступом). Это различие редко актуально в обычном использовании, но его важно знать.
 
-<h3 id="HTML_и_WindowProxy">HTML и WindowProxy</h3>
+### Название
 
-<p>Во многих движках <code>globalThis</code> будет ссылкой на фактический глобальный объект, но в веб-браузерах из-за соображений безопасности iframe и cross-window он ссылается на {{jsxref ("Proxy")}} вокруг фактического глобального объекта (который вы не можете получить прямым доступом). Это различие редко актуально в обычном использовании, но его важно знать.</p>
+Некоторые другие популярные имена, такие как `self` и `global` были исключены из рассмотрения из-за того, что они могут нарушать совместимость с существующим кодом. Смотрите [документ по планированию именования](https://github.com/tc39/proposal-global/blob/master/NAMING.md) для большей информации.
 
-<h3 id="Название">Название</h3>
+## Примеры
 
-<p>Некоторые другие популярные имена, такие как <code>self</code> и <code>global</code> были исключены из рассмотрения из-за того, что они могут нарушать совместимость с существующим кодом. Смотрите <a href="https://github.com/tc39/proposal-global/blob/master/NAMING.md">документ по планированию именования</a> для большей информации.</p>
+До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
 
-<h2 id="Примеры">Примеры</h2>
-
-<p>До <code>globalThis</code> единственным кросс-платформенным путём получения глобального объекта в любой среде было <code>Function('return this')()</code>. Однако, это нарушает <a href="/ru/docs/Web/HTTP/CSP">CSP</a> в некоторых случаях. Например, <a href="https://github.com/paulmillr/es6-shim">es6-shim</a> делает такую проверку:</p>
-
-<pre class="brush: js">var getGlobal = function () {
+```js
+var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
   if (typeof window !== 'undefined') { return window; }
   if (typeof global !== 'undefined') { return global; }
@@ -54,18 +54,20 @@ var globals = getGlobal();
 if (typeof globals.setTimeout !== 'function') {
   // в данном окружении не существует setTimeout!
 }
-</pre>
+```
 
-<p>С <code>globalThis</code> дополнительный поиск глобального объекта в разных средах больше не нужен:</p>
+С `globalThis` дополнительный поиск глобального объекта в разных средах больше не нужен:
 
-<pre class="brush: js">if (typeof globalThis.setTimeout !== 'function') {
+```js
+if (typeof globalThis.setTimeout !== 'function') {
 // в данном окружении не существует setTimeout!
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

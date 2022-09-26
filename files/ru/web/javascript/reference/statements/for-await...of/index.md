@@ -7,34 +7,34 @@ tags:
   - Асинхронность
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Выражение <strong><code>for await...of</code> </strong>создаёт цикл, проходящий через асинхронные итерируемые объекты, а также синхронные итерируемые сущности, включающие: встроенные {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-подобные объекты (например., {{jsxref("Functions/arguments", "arguments")}} или {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, а также определяемые пользователем асинхронные/синхронные сущности. Он вызывает пользовательский итерационный хук с инструкциями, которые должны быть выполнены для значения каждого отдельного свойства объекта.</p>
+Выражение **`for await...of` **создаёт цикл, проходящий через асинхронные итерируемые объекты, а также синхронные итерируемые сущности, включающие: встроенные {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-подобные объекты (например., {{jsxref("Functions/arguments", "arguments")}} или {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, а также определяемые пользователем асинхронные/синхронные сущности. Он вызывает пользовательский итерационный хук с инструкциями, которые должны быть выполнены для значения каждого отдельного свойства объекта.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">for await (<em>variable</em> of <em>iterable</em>) {
-  <em>statement
-</em>}
-</pre>
+```
+for await (variable of iterable) {
+  statement
+}
+```
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>На каждой итерации значение другого свойства присваивается <em>variable</em>. <em>variable</em> может быть объявлена с помощью ключевых слов <code>const</code>, <code>let</code>, or <code>var</code>.</dd>
- <dt><code>iterable</code></dt>
- <dd>Объект, чьи итерируемые свойства будут повторяться.</dd>
-</dl>
+- `variable`
+  - : На каждой итерации значение другого свойства присваивается _variable_. _variable_ может быть объявлена с помощью ключевых слов `const`, `let`, or `var`.
+- `iterable`
+  - : Объект, чьи итерируемые свойства будут повторяться.
 
-<h3 id="Итерирование_по_асинхронным_переменным">Итерирование по асинхронным переменным</h3>
+### Итерирование по асинхронным переменным
 
-<p>Вы также можете перебрать объект, который явно реализует асинхронный итерируемый протокол.</p>
+Вы также можете перебрать объект, который явно реализует асинхронный итерируемый протокол.
 
-<pre class="brush:js">var asyncIterable = {
+```js
+var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -53,15 +53,16 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Итерирование_по_асинхронным_генераторам.">Итерирование по асинхронным генераторам</h3>
+### Итерирование по асинхронным генераторам
 
-<p>Поскольку асинхронные генераторы реализуют асинхронный протокол Iterator, по ним можно пройти циклом с помощью <code>for await... of</code></p>
+Поскольку асинхронные генераторы реализуют асинхронный протокол Iterator, по ним можно пройти циклом с помощью `for await... of`
 
-<pre class="brush: js">async function* asyncGenerator() {
+```js
+async function* asyncGenerator() {
   var i = 0;
-  while (i &lt; 3) {
+  while (i < 3) {
     yield i++;
   }
 }
@@ -73,11 +74,13 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 })();
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<p>Для более конкретного примера перебора асинхронного генератора с помощью <code>for await... of</code>, рассмотрим перебор данных из API.  В этом примере сначала создаётся асинхронный итератор для потока данных, а затем он используется для определения размера ответа от API.</p>
+Для более конкретного примера перебора асинхронного генератора с помощью `for await... of`, рассмотрим перебор данных из API. В этом примере сначала создаётся асинхронный итератор для потока данных, а затем он используется для определения размера ответа от API.
 
-<pre class="brush: js">async function* streamAsyncIterator(stream) {
+```js
+async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -106,18 +109,17 @@ async function getResponseSize(url) {
   // expected output: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Statements/for...of")}}</li>
-</ul>
+- {{jsxref("Statements/for...of")}}

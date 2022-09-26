@@ -3,42 +3,41 @@ title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>Метод <code><strong>Promise.allSettled()</strong></code> возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.</p>
+Метод **`Promise.allSettled()`** возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>promise</em>.allSettled(<em>iterable</em>);</pre>
+```
+promise.allSettled(iterable);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Любой <a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">итерируемый</a> объект, такой как {{jsxref("Array")}}, в котором каждый элемент является <code>Promise</code>.</dd>
-</dl>
+- `iterable`
+  - : Любой [итерируемый](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) объект, такой как {{jsxref("Array")}}, в котором каждый элемент является `Promise`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который будет выполнен после завершения каждого промиса, вне зависимости от того выполнился он успешно или был отклонён. В то же время, в возвращаемый обработчик промиса передаётся массив, который содержит результат каждого промиса в исходном наборе промисов.</p>
+{{jsxref("Promise")}}, который будет выполнен после завершения каждого промиса, вне зависимости от того выполнился он успешно или был отклонён. В то же время, в возвращаемый обработчик промиса передаётся массив, который содержит результат каждого промиса в исходном наборе промисов.
 
-<p>Объект каждого результата содержит свойство <code>status</code>. Если <code>status</code> имеет значение <code>fulfilled</code> (выполнено), то объект будет содержать свойство <code>value</code>. Если <code>status</code> имеет значение <code>rejected</code> (отклонено), то объект будет содержать свойство <code>reason</code>. Свойство <code>value</code> (или <code>reason</code>) будет содержать значение с которым был выполнен (или отклонён) промис.</p>
+Объект каждого результата содержит свойство `status`. Если `status` имеет значение `fulfilled` (выполнено), то объект будет содержать свойство `value`. Если `status` имеет значение `rejected` (отклонено), то объект будет содержать свойство `reason`. Свойство `value` (или `reason`) будет содержать значение с которым был выполнен (или отклонён) промис.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Using_promises">Использование промисов</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with promises</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+## Смотрите также
+
+- [Promises](/ru/docs/Archive/Add-ons/Techniques/Promises)
+- [Использование промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
+- [Graceful asynchronous programming with promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

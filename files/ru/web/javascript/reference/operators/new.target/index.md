@@ -6,40 +6,42 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}Свойство **`new.target`** позволяет определить была ли функция или конструктор вызваны с помощью оператора [new](/ru/docs/Web/JavaScript/Reference/Operators/new). В конструкторах и функциях инстанциированных с помощью оператора [new](/ru/docs/Web/JavaScript/Reference/Operators/new), `new.target` возвращает ссылку на конструктор или функцию. При обычном вызове функции `new.target` имеет значение {{jsxref("undefined")}}.
 
-<div>Свойство <strong><code>new.target</code></strong> позволяет определить была ли функция или конструктор вызваны с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>. В конструкторах и функциях инстанциированных с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>,  <code>new.target</code> возвращает ссылку на конструктор или функцию. При обычном вызове функции <code>new.target</code> имеет значение {{jsxref("undefined")}}.</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+new.target
+```
 
-<pre class="syntaxbox">new.target</pre>
+## Описание
 
-<h2 id="Описание">Описание</h2>
+Синтаксис `new.target` состоит из ключевого слова`"new`", точки, и свойства` "target"`. Обычно "`new."` служит контекстом для доступа к свойству, но здесь `"new."` не совсем объект. Однако при вызове конструктора, `new.target` ссылается на конструктор вызванный с помощью `new` и таким образом "`new.`" становится виртуальным контекстом.
 
-<p>Синтаксис <code>new.target</code> состоит из ключевого слова<code>"new</code>", точки, и свойства<code> "target"</code>. Обычно "<code>new."</code> служит контекстом для доступа к свойству, но здесь <code>"new."</code> не совсем объект. Однако при вызове конструктора, <code>new.target</code> ссылается на конструктор вызванный с помощью <code>new</code> и таким образом "<code>new.</code>" становится виртуальным контекстом.</p>
+Свойство `new.target` это мета свойство которое доступно во всех функциях. В [стрелочных функция](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` ссылается на `new.target` внешней функции.
 
-<p>Свойство <code>new.target</code> это мета свойство которое доступно во всех функциях. В <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочных функция</a>, <code>new.target</code> ссылается на <code>new.target</code> внешней функции.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### new\.target в вызове функции
 
-<h3 id="new.target_в_вызове_функции">new.target в вызове функции</h3>
+При обычном вызове функции (в противоположность вызову в качестве конструктора), `new.target` имеет значение {{jsxref("undefined")}}. Это позволяет определить была ли вызвана функция как конструктор через [new](/ru/docs/Web/JavaScript/Reference/Operators/new) или нет.
 
-<p>При обычном вызове функции (в противоположность вызову в качестве конструктора), <code>new.target</code> имеет значение {{jsxref("undefined")}}. Это позволяет определить была ли вызвана функция как конструктор через <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> или нет.</p>
-
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   if (!new.target) throw "Foo() must be called with new";
   console.log("Foo instantiated with new");
 }
 
 new Foo(); // выведет "Foo instantiated with new"
 Foo(); // ошибка "Foo() must be called with new"
-</pre>
+```
 
-<h3 id="new.target_в_конструкторе">new.target в конструкторе</h3>
+### new\.target в конструкторе
 
-<p>В конструкторе класса, <code>new.target</code> ссылается на конструктор, который был непосредственно вызван <code>new</code>. Это верно и для случая, когда <code>new.target</code> находится в конструкторе родительского класса, а тот в свою очередь вызывается из конструктора дочернего класса.</p>
+В конструкторе класса, `new.target` ссылается на конструктор, который был непосредственно вызван `new`. Это верно и для случая, когда `new.target` находится в конструкторе родительского класса, а тот в свою очередь вызывается из конструктора дочернего класса.
 
-<pre class="brush: js">class A {
+```js
+class A {
   constructor() {
     console.log(new.target.name);
   }
@@ -49,21 +51,19 @@ class B extends A { constructor() { super(); } }
 
 var a = new A(); // вернёт "A"
 var b = new B(); // вернёт "B"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></li>
-</ul>
+- [Functions](/ru/docs/Web/JavaScript/Reference/Functions)
+- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)

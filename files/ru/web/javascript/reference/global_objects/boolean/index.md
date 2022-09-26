@@ -9,121 +9,123 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
-<div>{{JSRef()}}</div>
+{{JSRef()}}
 
-<p>Объект <strong><code>Boolean</code></strong> является объектом-обёрткой над примитивом логического типа.</p>
+Объект **`Boolean`** является объектом-обёрткой над примитивом логического типа.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>new Boolean([<var>value</var>])</code></pre>
+```
+new Boolean([value])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Необязательный параметр. Начальное значение объекта <code>Boolean</code>.</dd>
-</dl>
+- `value`
+  - : Необязательный параметр. Начальное значение объекта `Boolean`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Значение, переданное первым параметром, при необходимости преобразуется в логическое значение. Если значение опущено или равно <code>0</code>, <code>-0</code>, {{jsxref("Global_Objects/null", "null")}}, <code>false</code>, {{jsxref("Global_Objects/NaN", "NaN")}}, {{jsxref("Global_Objects/undefined", "undefined")}} или пустой строке (<code>""</code>), объект имеет начальное значение, равное <code>false</code>. Все остальные значения, включая любые объекты или строку <code>"false"</code>, создают объект с начальным значением, равным <code>true</code>.</p>
+Значение, переданное первым параметром, при необходимости преобразуется в логическое значение. Если значение опущено или равно `0`, `-0`, {{jsxref("Global_Objects/null", "null")}}, `false`, {{jsxref("Global_Objects/NaN", "NaN")}}, {{jsxref("Global_Objects/undefined", "undefined")}} или пустой строке (`""`), объект имеет начальное значение, равное `false`. Все остальные значения, включая любые объекты или строку `"false"`, создают объект с начальным значением, равным `true`.
 
-<p>Не путайте примитивные значения <code>true</code> и <code>false</code> логического типа со значениями <code>true</code> и <code>false</code> объекта <code>Boolean</code>.</p>
+Не путайте примитивные значения `true` и `false` логического типа со значениями `true` и `false` объекта `Boolean`.
 
-<p>Любой объект, чьё значение не является равным {{jsxref("Global_Objects/undefined", "undefined")}} или {{jsxref("Global_Objects/null", "null")}}, включая сам объект <code>Boolean</code> со значением, равным <code>false</code>, вычисляется в <code>true</code> при передаче его в условное выражение. Например, условие в следующей инструкции {{jsxref("Statements/if...else", "if")}} вычисляется в <code>true</code>:</p>
+Любой объект, чьё значение не является равным {{jsxref("Global_Objects/undefined", "undefined")}} или {{jsxref("Global_Objects/null", "null")}}, включая сам объект `Boolean` со значением, равным `false`, вычисляется в `true` при передаче его в условное выражение. Например, условие в следующей инструкции {{jsxref("Statements/if...else", "if")}} вычисляется в `true`:
 
-<pre class="brush: js">var x = new Boolean(false);
+```js
+var x = new Boolean(false);
 if (x) {
   // этот код будет выполнен
 }
-</pre>
+```
 
-<p>Это поведение не применяется к примитивам логического типа. Например, условие в следующей инструкции {{jsxref("Statements/if...else", "if")}} вычисляется в <code>false </code>:</p>
+Это поведение не применяется к примитивам логического типа. Например, условие в следующей инструкции {{jsxref("Statements/if...else", "if")}} вычисляется в `false `:
 
-<pre class="brush: js">var x = false;
+```js
+var x = false;
 if (x) {
   // этот код не будет выполнен
 }
-</pre>
+```
 
-<p>Не используйте объект <code>Boolean</code> для преобразования нелогического значения в логическое значение. Вместо этого используйте <code>Boolean</code> в качестве функции:</p>
+Не используйте объект `Boolean` для преобразования нелогического значения в логическое значение. Вместо этого используйте `Boolean` в качестве функции:
 
-<pre class="brush: js">var x = Boolean(expression);     // предпочтительно
+```js
+var x = Boolean(expression);     // предпочтительно
 var x = new Boolean(expression); // не используйте
-</pre>
+```
 
-<p>Если вы определите любой объект, включая объект <code>Boolean</code> со значением <code>false</code>, в качестве начального значения объекта <code>Boolean</code>, новый объект <code>Boolean</code> будет иметь значение <code>true</code>.</p>
+Если вы определите любой объект, включая объект `Boolean` со значением `false`, в качестве начального значения объекта `Boolean`, новый объект `Boolean` будет иметь значение `true`.
 
-<pre class="brush: js">var myFalse = new Boolean(false);    // начальное значение равно false
+```js
+var myFalse = new Boolean(false);    // начальное значение равно false
 var g = new Boolean(myFalse);        // начальное значение равно true
 var myString = new String('Привет'); // строковый объект
 var s = new Boolean(myString);       // начальное значение равно true
-</pre>
+```
 
-<p>Не используйте объект <code>Boolean</code> вместо примитива логического типа.</p>
+Не используйте объект `Boolean` вместо примитива логического типа.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt><code>Boolean.length</code></dt>
- <dd>Свойство <code>length</code> логического значения равно 1.</dd>
- <dt>{{jsxref("Boolean.prototype")}}</dt>
- <dd>Представляет прототип конструктора объекта <code>Boolean</code>.</dd>
-</dl>
+- `Boolean.length`
+  - : Свойство `length` логического значения равно 1.
+- {{jsxref("Boolean.prototype")}}
+  - : Представляет прототип конструктора объекта `Boolean`.
 
-<p>{{jsOverrides("Function", "Properties", "prototype")}}</p>
+{{jsOverrides("Function", "Properties", "prototype")}}
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<p>Глобальный объект <code>Boolean</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:</p>
+Глобальный объект `Boolean` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:
 
-<div>{{jsOverrides("Function", "Methods")}}</div>
+{{jsOverrides("Function", "Methods")}}
 
-<h2 id="Boolean_instances">Экземпляры объекта <code>Boolean</code></h2>
+## Экземпляры объекта `Boolean`
 
-<p>Все экземпляры объекта <code>Boolean</code> наследуются от {{jsxref("Boolean.prototype")}}. Как и все конструкторы, объект прототипа предоставляет экземплярам свойства и методы.</p>
+Все экземпляры объекта `Boolean` наследуются от {{jsxref("Boolean.prototype")}}. Как и все конструкторы, объект прототипа предоставляет экземплярам свойства и методы.
 
-<h3 id="Properties_2">Свойства</h3>
+### Свойства
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
 
-<h3 id="Methods_2">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_false">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>false</code></h3>
+### Пример: создание объектов `Boolean` с начальным значением, равным `false`
 
-<pre class="brush: js">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="Example:_Creating_Boolean_objects_with_an_initial_value_of_true">Пример: создание объектов <code>Boolean</code> с начальным значением, равным <code>true</code></h3>
+### Пример: создание объектов `Boolean` с начальным значением, равным `true`
 
-<pre class="brush: js">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Су Лин');
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Boolean.prototype")}}</li>
- <li>{{Glossary("Boolean")}}</li>
- <li><a href="https://ru.wikipedia.org/wiki/Логический_тип">Логический тип данных (Википедия)</a></li>
-</ul>
+- {{jsxref("Boolean.prototype")}}
+- {{Glossary("Boolean")}}
+- [Логический тип данных (Википедия)](https://ru.wikipedia.org/wiki/Логический_тип)

@@ -9,47 +9,48 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>getMinutes()</code></strong> возвращает минуты указанной даты по местному времени.</p>
+Метод **`getMinutes()`** возвращает минуты указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getMinutes()</code></pre>
+```
+dateObj.getMinutes()
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение, возвращённое методом <code>getMinutes()</code>, является целым числом от 0 до 59.</p>
+Значение, возвращённое методом `getMinutes()`, является целым числом от 0 до 59.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_getMinutes">Пример: использование метода <code>getMinutes()</code></h3>
+### Пример: использование метода `getMinutes()`
 
-<p>Вторая инструкция в примере ниже присваивает значение 15 переменной <code>minutes</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>.</p>
+Вторая инструкция в примере ниже присваивает значение 15 переменной `minutes` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
-<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
+```js
+let date = new Date('December 25, 1995 23:15:30');
 let minutes = date.getMinutes();
 
 console.log(minutes); // 15
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+- {{jsxref("Date.prototype.setMinutes()")}}

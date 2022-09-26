@@ -9,36 +9,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>isPrototypeOf()</strong></code> проверяет, входит ли объект в цепочку прототипов другого объекта.</p>
+Метод **`isPrototypeOf()`** проверяет, входит ли объект в цепочку прототипов другого объекта.
 
-<div class="note">
-<p><strong>Обратите внимание:</strong> метод <code>isPrototypeOf()</code> отличается от оператора {{jsxref("Operators/instanceof", "instanceof")}}. Выражение "<code>object instanceof AFunction</code>" проверяет, присутствует ли в цепочке прототипов объекта <code>object</code> объект <code>AFunction.prototype</code>, а не сам объект <code>AFunction</code>.</p>
-</div>
+> **Примечание:** **Обратите внимание:** метод `isPrototypeOf()` отличается от оператора {{jsxref("Operators/instanceof", "instanceof")}}. Выражение "`object instanceof AFunction`" проверяет, присутствует ли в цепочке прототипов объекта `object` объект `AFunction.prototype`, а не сам объект `AFunction`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</code></pre>
+```
+prototypeObj.isPrototypeOf(object)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>prototypeObj</code></dt>
- <dd>Объект, проверяемый на каждую ссылку в цепочке прототипов аргумента <strong>object</strong>.</dd>
- <dt><code>object</code></dt>
- <dd>Объект, в чьей цепочке прототипов производится поиск.</dd>
-</dl>
+- `prototypeObj`
+  - : Объект, проверяемый на каждую ссылку в цепочке прототипов аргумента **object**.
+- `object`
+  - : Объект, в чьей цепочке прототипов производится поиск.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>isPrototypeOf()</code> позволяет вам проверять, существует ли объект в цепочке прототипов другого объекта.</p>
+Метод `isPrototypeOf()` позволяет вам проверять, существует ли объект в цепочке прототипов другого объекта.
 
-<p>Например, рассмотрим следующую цепочку прототипов:</p>
+Например, рассмотрим следующую цепочку прототипов:
 
-<pre class="brush: js">function Fee() {
+```js
+function Fee() {
   // ...
 }
 
@@ -56,33 +55,32 @@ function Fum() {
   // ...
 }
 Fum.prototype = new Fo();
-</pre>
+```
 
-<p>Если позже вы создадите экземпляр объекта <code>Fum</code> и захотите проверить, что прототип <code>Fi</code> существует в цепочке прототипов <code>Fum</code>, вы можете сделать следующее:</p>
+Если позже вы создадите экземпляр объекта `Fum` и захотите проверить, что прототип `Fi` существует в цепочке прототипов `Fum`, вы можете сделать следующее:
 
-<pre class="brush: js">var fum = new Fum();
+```js
+var fum = new Fum();
 // ...
 
 if (Fi.prototype.isPrototypeOf(fum)) {
   // здесь безопасно что-то делать
 }
-</pre>
+```
 
-<p>Таким образом, вместе с оператором {{jsxref("Operators/instanceof", "instanceof")}}, это особенно пригождается, если у вас есть код, который может работать только с объектами, имеющими определённую цепочку прототипов, к примеру, чтобы он мог гарантировать, что в объекте присутствуют определённые методы или свойства.</p>
+Таким образом, вместе с оператором {{jsxref("Operators/instanceof", "instanceof")}}, это особенно пригождается, если у вас есть код, который может работать только с объектами, имеющими определённую цепочку прототипов, к примеру, чтобы он мог гарантировать, что в объекте присутствуют определённые методы или свойства.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

@@ -8,36 +8,37 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>unshift()</strong></code> добавляет один или более элементов в начало массива и возвращает новую длину массива.</p>
+Метод **`unshift()`** добавляет один или более элементов в начало массива и возвращает новую длину массива.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.unshift(<var>element1</var>[, ...[, <var>elementN</var>]])</code></pre>
+```
+arr.unshift(element1[, ...[, elementN]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>element1, ..., element<em>N</em></code></dt>
- <dd>Элементы, добавляемые в начало массива.</dd>
-</dl>
+- `element1, ..., elementN`
+  - : Элементы, добавляемые в начало массива.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новое свойство {{jsxref("Array.length", "length")}} объекта, над которым был вызван метод <code>unshift</code>.</p>
+Новое свойство {{jsxref("Array.length", "length")}} объекта, над которым был вызван метод `unshift`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>unshift</code> вставляет переданные значения в начало массивоподобного объекта.</p>
+Метод `unshift` вставляет переданные значения в начало массивоподобного объекта.
 
-<p>Метод <code>unshift</code> не является привязанным к типу; этот метод может быть {{jsxref("Function.call", "вызван", "", 1)}} или {{jsxref("Function.apply", "применён", "", 1)}} к объектам, напоминающим массив. Объекты, не содержащие свойство <code>length</code>, отражающее последний элемент в серии последовательных числовых, начинающихся с нуля, свойств, могут повести себя неправильным образом.</p>
+Метод `unshift` не является привязанным к типу; этот метод может быть {{jsxref("Function.call", "вызван", "", 1)}} или {{jsxref("Function.apply", "применён", "", 1)}} к объектам, напоминающим массив. Объекты, не содержащие свойство `length`, отражающее последний элемент в серии последовательных числовых, начинающихся с нуля, свойств, могут повести себя неправильным образом.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var arr = [1, 2];
+```js
+var arr = [1, 2];
 
 arr.unshift(0); // результат вызова равен 3, новой длине массива
 // arr равен [0, 1, 2]
@@ -47,20 +48,18 @@ arr.unshift(-2, -1); // = 5
 
 arr.unshift([-3]);
 // arr равен[[-3], -2, -1, 0, 1, 2]
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.pop()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}

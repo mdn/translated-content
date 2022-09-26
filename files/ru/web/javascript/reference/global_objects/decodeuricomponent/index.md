@@ -6,67 +6,66 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>Метод <code><strong>decodeURIComponent()</strong></code> декодирует управляющие последовательности символов в компоненте Uniform Resource Identifier (URI), созданные с помощью метода {{jsxref("encodeURIComponent")}} или другой подобной процедуры.</p>
+Метод **`decodeURIComponent()`** декодирует управляющие последовательности символов в компоненте Uniform Resource Identifier (URI), созданные с помощью метода {{jsxref("encodeURIComponent")}} или другой подобной процедуры.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>decodeURIComponent(<em>encodedURI</em>)</code></pre>
+```
+decodeURIComponent(encodedURI)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>Строка, содержащая закодированный компонент Uniform Resource Identifier.</dd>
-</dl>
+- `encodedURI`
+  - : Строка, содержащая закодированный компонент Uniform Resource Identifier.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новая строка, представляющая собой декодированную версию компонента Uniform Resource Identifier (URI), переданного в качестве параметра.</p>
+Новая строка, представляющая собой декодированную версию компонента Uniform Resource Identifier (URI), переданного в качестве параметра.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>При неправильном использовании выдаёт исключение {{jsxref("URIError")}} ("неверный формат последовательности URI").</p>
+При неправильном использовании выдаёт исключение {{jsxref("URIError")}} ("неверный формат последовательности URI").
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Заменяет каждую управляющую последовательность в закодированном компоненте URI соответствующим ей символом.</p>
+Заменяет каждую управляющую последовательность в закодированном компоненте URI соответствующим ей символом.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Декодирование_компонента_кириллического_URL">Декодирование компонента кириллического URL</h3>
+### Декодирование компонента кириллического URL
 
-<pre class="brush: js">decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Перехват_ошибок">Перехват ошибок</h3>
+### Перехват ошибок
 
-<pre class="brush: js">try {
+```js
+try {
   var a = decodeURIComponent('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_Also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

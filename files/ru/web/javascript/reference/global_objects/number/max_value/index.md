@@ -7,58 +7,46 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Свойство <strong><code>Number.MAX_VALUE</code></strong> представляет максимальное числовое значение, представимое в JavaScript.</p>
+## Сводка
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Свойство **`Number.MAX_VALUE`** представляет максимальное числовое значение, представимое в JavaScript.
 
-<h2 id="Description">Описание</h2>
-<p>Свойство <code>MAX_VALUE</code> имеет значение, приблизительно равное <code>1.79E+308</code>. Значения, большие <code>MAX_VALUE</code> представляются как «бесконечность».</p>
-<p>Поскольку <code>MAX_VALUE</code> является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как <code>Number.MAX_VALUE</code>, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Examples">Примеры</h2>
+## Описание
 
-<h3 id="Example:_Using_MAX_VALUE">Пример: использование <code>MAX_VALUE</code></h3>
-<p>В следующем примере кода производится умножение двух значений. Если результат меньше или равен <code>MAX_VALUE</code>, вызывается функция <code>func1</code>; в противном случае вызывается функция <code>func2</code>.</p>
-<pre class="brush: js">if (num1 * num2 &lt;= Number.MAX_VALUE) {
+Свойство `MAX_VALUE` имеет значение, приблизительно равное `1.79E+308`. Значения, большие `MAX_VALUE` представляются как «бесконечность».
+
+Поскольку `MAX_VALUE` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MAX_VALUE`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
+
+## Примеры
+
+### Пример: использование `MAX_VALUE`
+
+В следующем примере кода производится умножение двух значений. Если результат меньше или равен `MAX_VALUE`, вызывается функция `func1`; в противном случае вызывается функция `func2`.
+
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+| Спецификация                                                                         | Статус                   | Комментарии                                            |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}         | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Number.MIN_VALUE")}}

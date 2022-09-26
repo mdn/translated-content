@@ -12,48 +12,49 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Метод <code><strong>fill()</strong></code> заполняет все элементы массива от начального до конечного индексов одним значением.</p>
+Метод **`fill()`** заполняет все элементы массива от начального до конечного индексов одним значением.
 
-<div>{{EmbedInteractiveExample("pages/js/array-fill.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>arr</var>.fill(<var>value</var>[, <var>start<var> = 0[, <var>end</var> = this.length]])</var></var></code></pre>
+```
+arr.fill(value[, start = 0[, end = this.length]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Значение, заполняющее массив.</dd>
- <dt><code>start</code></dt>
- <dd>Необязательный параметр. Начальный индекс.</dd>
- <dt><code>end</code></dt>
- <dd>Необязательный параметр. Конечный индекс.</dd>
-</dl>
+- `value`
+  - : Значение, заполняющее массив.
+- `start`
+  - : Необязательный параметр. Начальный индекс.
+- `end`
+  - : Необязательный параметр. Конечный индекс.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Изменённый массив.</p>
+Изменённый массив.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Элементы заполняются в полузакрытом интервале [<code>start</code>, <code>end</code>).</p>
+Элементы заполняются в полузакрытом интервале \[`start`, `end`).
 
-<p>Метод <strong><code>fill</code></strong> принимает до трёх аргументов — <code>value</code>, <code>start</code> и <code>end</code>. Аргументы <code>start</code> и <code>end</code> являются необязательными со значениями по умолчанию, равными <code>0</code> и <code>length</code> объекта <code>this</code> соответственно.</p>
+Метод **`fill`** принимает до трёх аргументов — `value`, `start` и `end`. Аргументы `start` и `end` являются необязательными со значениями по умолчанию, равными `0` и `length` объекта `this` соответственно.
 
-<p>Если аргумент <code>start</code> является отрицательным, он трактуется как <code>length+start</code>, где <code>length</code> — это длина массива. Если аргумент <code>end</code> является отрицательным, он трактуется как <code>length+end</code>.</p>
+Если аргумент `start` является отрицательным, он трактуется как `length+start`, где `length` — это длина массива. Если аргумент `end` является отрицательным, он трактуется как `length+end`.
 
-<p>Метод <code><strong>fill</strong></code> намеренно является <em>обобщённым</em>, он не требует, чтобы значение <code>this</code> внутри него было объектом <code>Array</code>.</p>
+Метод **`fill`** намеренно является _обобщённым_, он не требует, чтобы значение `this` внутри него было объектом `Array`.
 
-<p>Метод <code><strong>fill</strong></code> является <em>изменяющим методом</em>, он изменит объект <code>this</code> и вернёт его, а не просто вернёт копию.</p>
+Метод **`fill`** является _изменяющим методом_, он изменит объект `this` и вернёт его, а не просто вернёт копию.
 
-<p>Если аргумент <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">value</span></font>​​​​​ является объектом, то метод <code><strong>fill</strong></code> заполнит массив ссылками на этот объект.</p>
+Если аргумент value​​​​​ является объектом, то метод **`fill`** заполнит массив ссылками на этот объект.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre><code>[1, 2, 3].fill(4);               // [4, 4, 4]
+```
+[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
@@ -66,11 +67,13 @@ Array(3).fill(4);                // [4, 4, 4]
 
 // Объекты заполняются по ссылке.
 var arr = Array(3).fill({}) // [{}, {}, {}];
-arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
+arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre><code>if (!Array.prototype.fill) {
+```
+if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
     value: function(value) {
 
@@ -82,29 +85,29 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
       var O = Object(this);
 
       // Шаги 3-5.
-      var len = O.length &gt;&gt;&gt; 0;
+      var len = O.length >>> 0;
 
       // Шаги 6-7.
       var start = arguments[1];
-      var relativeStart = start &gt;&gt; 0;
+      var relativeStart = start >> 0;
 
       // Шаг 8.
-      var k = relativeStart &lt; 0 ?
+      var k = relativeStart < 0 ?
         Math.max(len + relativeStart, 0) :
         Math.min(relativeStart, len);
 
       // Шаги 9-10.
       var end = arguments[2];
       var relativeEnd = end === undefined ?
-        len : end &gt;&gt; 0;
+        len : end >> 0;
 
       // Шаг 11.
-      var final = relativeEnd &lt; 0 ?
+      var final = relativeEnd < 0 ?
         Math.max(len + relativeEnd, 0) :
         Math.min(relativeEnd, len);
 
       // Шаг 12.
-      while (k &lt; final) {
+      while (k < final) {
         O[k] = value;
         k++;
       }
@@ -113,23 +116,20 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
       return O;
     }
   });
-}</code></pre>
+}
+```
 
-<p>Если вам нужно поддерживать действительно устаревшие движки JavaScript, которые не поддерживают <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>, то лучше вообще не использовать полифилы для методов <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Array.prototype</span></font>, так как вы не можете сделать их не перечисляемыми.</p>
+Если вам нужно поддерживать действительно устаревшие движки JavaScript, которые не поддерживают [Object.defineProperty](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), то лучше вообще не использовать полифилы для методов Array.prototype, так как вы не можете сделать их не перечисляемыми.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.fill()")}}

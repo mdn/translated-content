@@ -9,57 +9,56 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>setFullYear()</code></strong> устанавливает полный год указанной даты по местному времени.</p>
+Метод **`setFullYear()`** устанавливает полный год указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setFullYear(<var>yearValue</var>[, <var>monthValue</var>[, <var>dayValue</var>]])</code></pre>
+```
+dateObj.setFullYear(yearValue[, monthValue[, dayValue]])
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>yearValue</code></dt>
- <dd>Целое число, определяющее значение года, например, 1995.</dd>
- <dt><code>monthValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 11, представляющее месяцы от января до декабря.</dd>
- <dt><code>dayValue</code></dt>
- <dd>Необязательный параметр. Целое число от 1 до 31, представляющее день месяца. Если вы определите параметр <code>dayValue</code>, вы также должны определить параметр <code>monthValue</code>.</dd>
-</dl>
+- `yearValue`
+  - : Целое число, определяющее значение года, например, 1995.
+- `monthValue`
+  - : Необязательный параметр. Целое число от 0 до 11, представляющее месяцы от января до декабря.
+- `dayValue`
+  - : Необязательный параметр. Целое число от 1 до 31, представляющее день месяца. Если вы определите параметр `dayValue`, вы также должны определить параметр `monthValue`.
 
-<h3 id="Returns" style="line-height: 24px; font-size: 1.71428571428571rem;">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Текущее время в миллисекундах для нового значения даты — такое же значение как и у метода {{jsxref("Date.prototype.getTime()", "getTime()")}} для текущего объекта <strong>после</strong> вызова <code style="font-style: normal;">setFullYear()</code>.</p>
+Текущее время в миллисекундах для нового значения даты — такое же значение как и у метода {{jsxref("Date.prototype.getTime()", "getTime()")}} для текущего объекта **после** вызова `setFullYear()`.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если вы не определите значения параметров <code>monthValue</code> и <code>dayValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getMonth()", "getMonth()")}} и {{jsxref("Date.prototype.getDate()", "getDate()")}}.</p>
+Если вы не определите значения параметров `monthValue` и `dayValue`, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getMonth()", "getMonth()")}} и {{jsxref("Date.prototype.getDate()", "getDate()")}}.
 
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setFullYear()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>monthValue</code> передать значение 15, год увеличится на 1 (<code>yearValue + 1</code>), а в качестве месяца будет использоваться значение 3.</p>
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setFullYear()` попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `monthValue` передать значение 15, год увеличится на 1 (`yearValue + 1`), а в качестве месяца будет использоваться значение 3.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_setFullYear">Пример: использование метода <code>setFullYear()</code></h3>
+### Пример: использование метода `setFullYear()`
 
-<pre class="brush:js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setFullYear(1997);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}
+- {{jsxref("Date.prototype.setYear()")}}

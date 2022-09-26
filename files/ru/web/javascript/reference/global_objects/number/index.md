@@ -7,143 +7,139 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<p>Объект <strong><code>Number</code></strong> является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект <code>Number</code> создаётся через конструктор <code>Number()</code>.</p>
+Объект **`Number`** является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект `Number` создаётся через конструктор `Number()`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre>new Number(<em>value</em>);
-var <em>a</em> = new Number('123'); // a === 123 is false
-var <em>b</em> = Number('123'); // b === 123 is true
-<em>a</em> instanceof Number; // is true
-<em>b</em> instanceof Number; // is false</pre>
+```
+new Number(value);
+var a = new Number('123'); // a === 123 is false
+var b = Number('123'); // b === 123 is true
+a instanceof Number; // is true
+b instanceof Number; // is false
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Числовое значение, которое примет объект после создания.</dd>
-</dl>
+- `value`
+  - : Числовое значение, которое примет объект после создания.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Несколько замечаний относительно использования объекта <code>Number</code>:</p>
+Несколько замечаний относительно использования объекта `Number`:
 
-<ul>
- <li>Если аргумент не может быть преобразован в число, возвращается {{jsxref("Global_Objects/NaN", "NaN")}}.</li>
- <li>В неконструкторном контексте (то есть, без оператора {{jsxref("Operators/new", "new")}}), объект <code>Number</code> может использоваться для проведения преобразования типов.</li>
-</ul>
+- Если аргумент не может быть преобразован в число, возвращается {{jsxref("Global_Objects/NaN", "NaN")}}.
+- В неконструкторном контексте (то есть, без оператора {{jsxref("Operators/new", "new")}}), объект `Number` может использоваться для проведения преобразования типов.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{jsxref("Number.EPSILON")}} {{experimental_inline}}</dt>
- <dd>Наименьший интервал между двумя представимыми числами.</dd>
- <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}} {{experimental_inline}}</dt>
- <dd>Максимальное целое число, которое можно безопасно использовать в JavaScript (<code>2<sup>53</sup> - 1</code>).</dd>
- <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
- <dd>Наибольшее представимое положительное число.</dd>
- <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}} {{experimental_inline}}</dt>
- <dd>Минимальное целое число, которое можно безопасно использовать в (<code>-(2<sup>53</sup> - 1)</code>).</dd>
- <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
- <dd>Наименьшее представимое положительное число — то есть, самое близкое к нулю положительное число (которое ещё не является нулём).</dd>
- <dt>{{jsxref("Number.NaN")}}</dt>
- <dd>Специальное значение для представления «не числа».</dd>
- <dt>{{jsxref("Number.NEGATIVE_INFINITY")}}</dt>
- <dd>Специальное значение для представления отрицательной бесконечности; возвращается при переполнении.</dd>
- <dt>{{jsxref("Number.POSITIVE_INFINITY")}}</dt>
- <dd>Специальное значение для представления положительной бесконечности; возвращается при переполнении.</dd>
- <dt>{{jsxref("Number.prototype")}}</dt>
- <dd>Позволяет добавлять свойства к объекту <code>Number</code>.</dd>
-</dl>
+- {{jsxref("Number.EPSILON")}} {{experimental_inline}}
+  - : Наименьший интервал между двумя представимыми числами.
+- {{jsxref("Number.MAX_SAFE_INTEGER")}} {{experimental_inline}}
+  - : Максимальное целое число, которое можно безопасно использовать в JavaScript (`253 - 1`).
+- {{jsxref("Number.MAX_VALUE")}}
+  - : Наибольшее представимое положительное число.
+- {{jsxref("Number.MIN_SAFE_INTEGER")}} {{experimental_inline}}
+  - : Минимальное целое число, которое можно безопасно использовать в (`-(253 - 1)`).
+- {{jsxref("Number.MIN_VALUE")}}
+  - : Наименьшее представимое положительное число — то есть, самое близкое к нулю положительное число (которое ещё не является нулём).
+- {{jsxref("Number.NaN")}}
+  - : Специальное значение для представления «не числа».
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+  - : Специальное значение для представления отрицательной бесконечности; возвращается при переполнении.
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+  - : Специальное значение для представления положительной бесконечности; возвращается при переполнении.
+- {{jsxref("Number.prototype")}}
+  - : Позволяет добавлять свойства к объекту `Number`.
 
-<div>{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}</div>
+{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{jsxref("Number.isNaN()")}} {{experimental_inline}}</dt>
- <dd>Определяет, является ли переданное значение значением {{jsxref("Global_Objects/NaN", "NaN")}}.</dd>
- <dt>{{jsxref("Number.isFinite()")}} {{experimental_inline}}</dt>
- <dd>Определяет, является ли переданное значение конечным числом.</dd>
- <dt>{{jsxref("Number.isInteger()")}} {{experimental_inline}}</dt>
- <dd>Определяет, является ли тип переданного значения «числом», а само число — целым значением.</dd>
- <dt>{{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}</dt>
- <dd>Определяет, является ли переданное значение безопасным целым числом (числом в диапазоне от <code>-(2<sup>53</sup> - 1)</code> до <code>2<sup>53</sup> - 1</code>).</dd>
- <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
- <dd><s class="obsoleteElement">Использовался для вычисления переданного значения и преобразования его в целое число (или бесконечность {{jsxref("Global_Objects/Infinity", "Infinity")}}), но был удалён.</s></dd>
- <dt>{{jsxref("Number.parseFloat()")}} {{experimental_inline}}</dt>
- <dd>Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseFloat", "parseFloat")}} глобального объекта.</dd>
- <dt>{{jsxref("Number.parseInt()")}} {{experimental_inline}}</dt>
- <dd>Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseInt", "parseInt")}} глобального объекта.</dd>
-</dl>
+- {{jsxref("Number.isNaN()")}} {{experimental_inline}}
+  - : Определяет, является ли переданное значение значением {{jsxref("Global_Objects/NaN", "NaN")}}.
+- {{jsxref("Number.isFinite()")}} {{experimental_inline}}
+  - : Определяет, является ли переданное значение конечным числом.
+- {{jsxref("Number.isInteger()")}} {{experimental_inline}}
+  - : Определяет, является ли тип переданного значения «числом», а само число — целым значением.
+- {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
+  - : Определяет, является ли переданное значение безопасным целым числом (числом в диапазоне от `-(253 - 1)` до `253 - 1`).
+- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+  - : ~~Использовался для вычисления переданного значения и преобразования его в целое число (или бесконечность {{jsxref("Global_Objects/Infinity", "Infinity")}}), но был удалён.~~
+- {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
+  - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseFloat", "parseFloat")}} глобального объекта.
+- {{jsxref("Number.parseInt()")}} {{experimental_inline}}
+  - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseInt", "parseInt")}} глобального объекта.
 
-<div>{{jsOverrides("Function", "methods", "isNaN")}}</div>
+{{jsOverrides("Function", "methods", "isNaN")}}
 
-<h2 id="Number_instances">Экземпляры объекта <code>Number</code></h2>
+## Экземпляры объекта `Number`
 
-<p>Все экземпляры объекта <code>Number</code> наследуются от {{jsxref("Number.prototype")}}. Объект прототипа конструктора <code>Number</code> может быть изменён, чтобы затронуть все экземпляры объекта <code>Number</code>.</p>
+Все экземпляры объекта `Number` наследуются от {{jsxref("Number.prototype")}}. Объект прототипа конструктора `Number` может быть изменён, чтобы затронуть все экземпляры объекта `Number`.
 
-<h3 id="Methods_of_Number_instance">Методы</h3>
+### Методы
 
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}</div>
+{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example_Using_the_Number_object_to_assign_values_to_numeric_variables">Пример: использование объекта <code>Number</code> для присваивания значений числовым переменным</h3>
+### Пример: использование объекта `Number` для присваивания значений числовым переменным
 
-<p>В следующем примере для присваивания значений числовым переменным используются свойства объекта <code>Number</code>:</p>
+В следующем примере для присваивания значений числовым переменным используются свойства объекта `Number`:
 
-<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
+```js
+var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
-</pre>
+```
 
-<h3 id="Example_Using_Number_to_convert_a_Date_object">Пример: целочисленный диапазон для объекта <code>Number</code></h3>
+### Пример: целочисленный диапазон для объекта `Number`
 
-<p>Следующий пример показывает, какие минимальное и максимальное целочисленные значения может представить объект <code>Number</code> (за подробностями обращайтесь к стандарту EcmaScript, главе <em>8.5 Тип Number</em>):</p>
+Следующий пример показывает, какие минимальное и максимальное целочисленные значения может представить объект `Number` (за подробностями обращайтесь к стандарту EcmaScript, главе _8.5 Тип Number_):
 
-<pre class="brush: js">var biggestInt = 9007199254740992;
+```js
+var biggestInt = 9007199254740992;
 var smallestInt = -9007199254740992;
-</pre>
+```
 
-<p>При разборе данных, сериализованных в JSON, можно ожидать, что целые значения, выпадающие из этого диапазона будут повреждены, когда парсер JSON приведёт их к типу <code>Number</code>. Возможным обходным путём может быть использование объекта {{jsxref("Global_Objects/String", "String")}}.</p>
+При разборе данных, сериализованных в JSON, можно ожидать, что целые значения, выпадающие из этого диапазона будут повреждены, когда парсер JSON приведёт их к типу `Number`. Возможным обходным путём может быть использование объекта {{jsxref("Global_Objects/String", "String")}}.
 
-<h3 id="Example_Using_Number_to_convert_a_Date_object">Пример: использование <code>Number</code> для преобразования объекта <code>Date</code></h3>
+### Пример: использование `Number` для преобразования объекта `Date`
 
-<p>В следующем примере объект {{jsxref("Global_Objects/Date", "Date")}} преобразуется в числовое значение с использование объекта <code>Number</code> в качестве функции:</p>
+В следующем примере объект {{jsxref("Global_Objects/Date", "Date")}} преобразуется в числовое значение с использование объекта `Number` в качестве функции:
 
-<pre class="brush: js">var d = new Date('December 17, 1995 03:24:00');
+```js
+var d = new Date('December 17, 1995 03:24:00');
 console.log(Number(d));
-</pre>
+```
 
-<p>Пример выведет "819199440000".</p>
+Пример выведет "819199440000".
 
-<h3 id="Example_Convert_numeric_strings_to_numbers">Пример: преобразование строк с числами в числа</h3>
+### Пример: преобразование строк с числами в числа
 
-<pre class="brush: js">Number('123')     // 123
+```js
+Number('123')     // 123
 Number('')        // 0
 Number('0x11')    // 17
 Number('0b11')    // 3
 Number('0o11')    // 9
 Number('foo')     // NaN
 Number('100a')    // NaN
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>
- <li>Глобальный объект {{jsxref("Global_Objects/Math", "Math")}}</li>
-</ul>
+- {{jsxref("Global_Objects/NaN", "NaN")}}
+- Глобальный объект {{jsxref("Global_Objects/Math", "Math")}}

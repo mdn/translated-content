@@ -6,51 +6,50 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.construct()</code></strong> работает как <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>. Он эквивалентен <code>new target(...args)</code>. Это также даёт дополнительную возможность указать другой прототип.</p>
+Статический метод **`Reflect`\*\***`.construct()`\*\* работает как [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new). Он эквивалентен `new target(...args)`. Это также даёт дополнительную возможность указать другой прототип.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 
+## Синтаксис
 
+```
+Reflect.construct(target, argumentsList[, newTarget])
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">Reflect.construct(target, argumentsList[, newTarget])
-</pre>
+- `target`
+  - : Целевая функция для вызова.
+- `argumentsList`
+  - : Массивоподобный объект указывающий аргументы, с которыми `target` должна вызываться.
+- `newTarget` {{optional_inline}}
+  - : Конструктор, чей прототип должен быть использован. Смотрите также [`new.target`](/ru/docs/Web/JavaScript/Reference/Operators/new.target) оператор. Если `newTarget` не указан, то используется `target`.
 
-<h3 id="Параметры">Параметры</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Целевая функция для вызова.</dd>
- <dt><code>argumentsList</code></dt>
- <dd>Массивоподобный объект указывающий аргументы, с которыми <code>target</code> должна вызываться.</dd>
- <dt><code>newTarget</code> {{optional_inline}}</dt>
- <dd>Конструктор, чей прототип должен быть использован. Смотрите также <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target"><code>new.target</code></a> оператор. Если <code>newTarget</code> не указан, то используется <code>target</code>.</dd>
-</dl>
+Новый экземпляр `target` (или `newTarget`, если указан), инициализируется `target` как конструктор с заданными аргументами.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Исключения
 
-<p>Новый экземпляр <code>target</code> (или <code>newTarget</code>, если указан), инициализируется <code>target</code> как конструктор с заданными аргументами.</p>
+Исключение {{jsxref("TypeError")}}, если `target` или `newTarget` не являются конструкторами.
 
-<h3 id="Исключения">Исключения</h3>
+## Описание
 
-<p>Исключение {{jsxref("TypeError")}}, если <code>target</code> или <code>newTarget</code> не являются конструкторами.</p>
+`Reflect.construct()` позволяет вам вызывать конструктор с любым числом аргументов (что также возможно с использованием [spread syntax](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax) вместе с [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new)).
 
-<h2 id="Описание">Описание</h2>
-
-<p><code>Reflect.construct()</code> позволяет вам вызывать конструктор с любым числом аргументов (что также возможно с использованием <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> вместе с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>).</p>
-
-<pre class="brush: js">var obj = new Foo(...args);
+```js
+var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args);
-</pre>
+```
 
-<h3 id="Reflect.construct()_против_Object.create()"><code>Reflect.construct()</code> против <code>Object.create()</code></h3>
+### `Reflect.construct()` против `Object.create()`
 
-<p>До появления <code>Reflect</code>, объекты могли быть созданы с использованием произвольной комбинации из конструктора и прототипа при помощи {{jsxref("Object.create()")}}.</p>
+До появления `Reflect`, объекты могли быть созданы с использованием произвольной комбинации из конструктора и прототипа при помощи {{jsxref("Object.create()")}}.
 
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     this.name = 'one';
 }
 
@@ -73,13 +72,14 @@ console.log(obj2 instanceof OneClass); // false
 
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
-</pre>
+```
 
-<p>В любом случае, пока конечный результат один и тот же, существует одно важное отличие в этом процессе. При использовании <code>Object.create()</code> и {{jsxref("Function.prototype.apply()")}}, оператор <code>new.target</code> будет указывать на <code>undefined</code> внутри функции используемой в качестве конструктора, пока ключевое слово <code>new</code> не будет использовано для создания объекта.</p>
+В любом случае, пока конечный результат один и тот же, существует одно важное отличие в этом процессе. При использовании `Object.create()` и {{jsxref("Function.prototype.apply()")}}, оператор `new.target` будет указывать на `undefined` внутри функции используемой в качестве конструктора, пока ключевое слово `new` не будет использовано для создания объекта.
 
-<p>С другой стороны, в случае вызова <code>Reflect.construct()</code>, оператор <code>new.target</code> будет указывать на параметр <code>newTarget</code> если он задан, или <code>target</code> в отличном случае.</p>
+С другой стороны, в случае вызова `Reflect.construct()`, оператор `new.target` будет указывать на параметр `newTarget` если он задан, или `target` в отличном случае.
 
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     console.log('OneClass');
     console.log(new.target);
 }
@@ -103,31 +103,28 @@ OneClass.apply(obj3, args);
 // Вывод:
 //     OneClass
 //     undefined
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использования_Reflect.construct()">Использования <code>Reflect.construct()</code></h3>
+### Использования `Reflect.construct()`
 
-<pre class="brush: js">var d = Reflect.construct(Date, [1776, 6, 4]);
+```js
+var d = Reflect.construct(Date, [1776, 6, 4]);
 d instanceof Date; // true
 d.getFullYear(); // 1776
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target"><code>new.target</code></a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new)
+- [`new.target`](/ru/docs/Web/JavaScript/Reference/Operators/new.target)

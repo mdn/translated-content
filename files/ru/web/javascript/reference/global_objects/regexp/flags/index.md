@@ -14,27 +14,29 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
-<div>{{JSRef("Global_Objects", "RegExp")}}</div>
+{{JSRef("Global_Objects", "RegExp")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Свойство <strong><code>flags</code></strong> возвращает строку, состоящую из флагов текущего регулярного выражения.</p>
+Свойство **`flags`** возвращает строку, состоящую из флагов текущего регулярного выражения.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Флаги в свойстве <code>flags</code> упорядочены по алфавиту (слева направо, то есть <code>"gimuy"</code>).</p>
+Флаги в свойстве `flags` упорядочены по алфавиту (слева направо, то есть `"gimuy"`).
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_flags">Пример: использование свойства <code>flags</code></h3>
+### Пример: использование свойства `flags`
 
-<pre class="brush: js">/foo/ig.flags;   // "gi"
+```js
+/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
-</pre>
+```
 
-<h2 id="Polyfill">Полифил</h2>
+## Полифил
 
-<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
+```js
+if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {
@@ -42,18 +44,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.source")}}

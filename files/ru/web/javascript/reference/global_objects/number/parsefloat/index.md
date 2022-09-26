@@ -8,38 +8,36 @@ tags:
   - Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>Number.parseFloat()</code></strong> разбирает строковый аргумент и возвращает число с плавающей запятой. Этот метод ведёт себя идентично глобальной функции {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} и является частью ECMAScript 6 (его целью является модуляризация глобальных сущностей).</p>
+Метод **`Number.parseFloat()`** разбирает строковый аргумент и возвращает число с плавающей запятой. Этот метод ведёт себя идентично глобальной функции {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} и является частью ECMAScript 6 (его целью является модуляризация глобальных сущностей).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>Number.parseFloat(<var>string</var>)</code></pre>
+```
+Number.parseFloat(string)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>string</code></dt>
- <dd>Строка, представляющая значение, которое вы хотите разобрать.</dd>
-</dl>
+- `string`
+  - : Строка, представляющая значение, которое вы хотите разобрать.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Пожалуйста, обратитесь к документации по глобальной функции {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} для просмотра подробного описания и примеров.</p>
+Пожалуйста, обратитесь к документации по глобальной функции {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} для просмотра подробного описания и примеров.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.</li>
- <li>Глобальная функция {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.</li>
-</ul>
+- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.
+- Глобальная функция {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.

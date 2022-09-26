@@ -9,60 +9,61 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>setMinutes()</code></strong> устанавливает минуты указанной даты по местному времени.</p>
+Метод **`setMinutes()`** устанавливает минуты указанной даты по местному времени.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setMinutes(<var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]])</code></pre>
+```
+dateObj.setMinutes(minutesValue[, secondsValue[, msValue]])
+```
 
-<h3 id="Версия_до_JavaScript_1.3">Версия до JavaScript 1.3</h3>
+### Версия до JavaScript 1.3
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setMinutes(<var>minutesValue</var>)</code></pre>
+```
+dateObj.setMinutes(minutesValue)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>minutesValue</code></dt>
- <dd>Целое число от 0 до 59, представляющее минуты.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 59, представляющее секунды. Если вы определите параметр <code>secondsValue</code>, вы также должны определить параметр <code>minutesValue</code>.</dd>
- <dt><code>msValue</code></dt>
- <dd>Необязательный параметр. Целое число от 0 до 999, представляющее миллисекунды. Если вы определите параметр <code>msValue</code>, вы также должны определить параметры <code>minutesValue</code> и <code>secondsValue</code>.</dd>
-</dl>
+- `minutesValue`
+  - : Целое число от 0 до 59, представляющее минуты.
+- `secondsValue`
+  - : Необязательный параметр. Целое число от 0 до 59, представляющее секунды. Если вы определите параметр `secondsValue`, вы также должны определить параметр `minutesValue`.
+- `msValue`
+  - : Необязательный параметр. Целое число от 0 до 999, представляющее миллисекунды. Если вы определите параметр `msValue`, вы также должны определить параметры `minutesValue` и `secondsValue`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Количество миллисекунд между 1 января 1970 00:00:00 UTC и обновлённой датой.</p>
+Количество миллисекунд между 1 января 1970 00:00:00 UTC и обновлённой датой.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Если вы не определите значения параметров <code>secondsValue</code> и <code>msValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} и {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.</p>
+Если вы не определите значения параметров `secondsValue` и `msValue`, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} и {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.
 
-<p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setMinutes()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>secondsValue</code> передать значение 100, минуты увеличатся на 1 (<code>minutesValue + 1</code>), а в качестве секунд будет использоваться значение 40.</p>
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setMinutes()` попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `secondsValue` передать значение 100, минуты увеличатся на 1 (`minutesValue + 1`), а в качестве секунд будет использоваться значение 40.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Example:_Using_setMinutes">Пример: использование метода <code>setMinutes()</code></h3>
+### Пример: использование метода `setMinutes()`
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMinutes(45);
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

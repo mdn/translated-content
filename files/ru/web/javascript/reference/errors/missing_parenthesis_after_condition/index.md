@@ -8,63 +8,68 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: missing ) after condition
-</pre>
+```
+SyntaxError: missing ) after condition
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Произошла ошибка в написании условия if. В любом языке программирования код принимает решение выполнять действия в зависимости от входных параметров. Оператор if выполняет действия, если условие истинно. В JavaScript это условие должно заключаться в скобки после ключевого слова if, например:</p>
+Произошла ошибка в написании условия if. В любом языке программирования код принимает решение выполнять действия в зависимости от входных параметров. Оператор if выполняет действия, если условие истинно. В JavaScript это условие должно заключаться в скобки после ключевого слова if, например:
 
-<pre class="brush: js">if (condition) {
+```js
+if (condition) {
   // сделать что-то если условие истинно
-}</pre>
+}
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Это может быть просто недосмотр, внимательно проверьте все скобки в коде.</p>
+Это может быть просто недосмотр, внимательно проверьте все скобки в коде.
 
-<pre class="brush: js example-bad">if (3 &gt; Math.PI {
+```js example-bad
+if (3 > Math.PI {
   console.log("Что?");
 }
 
 // SyntaxError: missing ) after condition
-</pre>
+```
 
-<p>Чтобы исправить ошибку вы должны поставить закрывающую скобку после условия.</p>
+Чтобы исправить ошибку вы должны поставить закрывающую скобку после условия.
 
-<pre class="brush: js example-good">if (3 &gt; Math.PI) {
+```js example-good
+if (3 > Math.PI) {
   console.log("Что?");
-}</pre>
+}
+```
 
-<p>Если вы пришли из других языков программирования, то можете случайно использовать ключевые слова, которые в JavaScript обозначают что-то другое или вообще не имеют смысла.</p>
+Если вы пришли из других языков программирования, то можете случайно использовать ключевые слова, которые в JavaScript обозначают что-то другое или вообще не имеют смысла.
 
-<pre class="brush: js example-bad">if (done is true) {
+```js example-bad
+if (done is true) {
  console.log("мы сделали!");
 }
 
 // SyntaxError: missing ) after condition
-</pre>
+```
 
-<p>Вместо этого используйте нужный <a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения">оператор сравнения</a>. Для примера:</p>
+Вместо этого используйте нужный [оператор сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения). Для примера:
 
-<pre class="brush: js example-good">if (done === true) {
+```js example-good
+if (done === true) {
  console.log("мы сделали!");
-}</pre>
+}
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code></li>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения">Операторы сравнения</a></li>
- <li>
-  <p><a href="/ru/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></p>
- </li>
-</ul>
+- [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Операторы сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения)
+- [Making decisions in your code — conditionals](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)

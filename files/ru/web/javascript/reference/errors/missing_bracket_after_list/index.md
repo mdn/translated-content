@@ -7,26 +7,28 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Сообщение">Сообщение</h2>
+## Сообщение
 
-<pre class="syntaxbox">SyntaxError: missing ] after element list
-</pre>
+```
+SyntaxError: missing ] after element list
+```
 
-<h2 id="Тип_ошибки">Тип ошибки</h2>
+## Тип ошибки
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Ошибка в синтаксисе инициализации массива. Скорее всего, пропущена закрывающая квадратная скобка ("<code>]</code>") или запятая ("<code>,</code>").</p>
+Ошибка в синтаксисе инициализации массива. Скорее всего, пропущена закрывающая квадратная скобка ("`]`") или запятая ("`,`").
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Незавершённый_инициализатор_массива">Незавершённый инициализатор массива</h3>
+### Незавершённый инициализатор массива
 
-<pre class="brush: js example-bad">var list = [1, 2,
+```js example-bad
+var list = [1, 2,
 
 var instruments = [
   'Укулеле',
@@ -35,11 +37,12 @@ var instruments = [
 };
 
 var data = [{foo: 'bar'} {bar: 'foo'}];
-</pre>
+```
 
-<p>Правильные варианты:</p>
+Правильные варианты:
 
-<pre class="brush: js example-good">var list = [1, 2];
+```js example-good
+var list = [1, 2];
 
 var instruments = [
  'Укулеле',
@@ -47,10 +50,9 @@ var instruments = [
  'Пианино'
 ];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];</pre>
+var data = [{foo: 'bar'}, {bar: 'foo'}];
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}
