@@ -33,11 +33,11 @@ translation_of: Web/API/Document/readyState
 
 <p>При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.</p>
 
-<h2 id="Примеры"><span>Примеры</span></h2>
+<h2 id="Примеры">Примеры</h2>
 
 <h3 id="Разные_состояния_загрузки_страницы">Разные состояния загрузки страницы</h3>
 
-<pre class="brush: js"><span>switch (document.readyState) {
+<pre class="brush: js">switch (document.readyState) {
   case "loading":
     // Страница все ещё загружается
     break;
@@ -51,7 +51,7 @@ translation_of: Web/API/Document/readyState
     // Страница загружена вместе с дополнительными ресурсами.
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
-}</span>
+}
 </pre>
 
 <h3 id="readystatechange_как_альтернатива_событию_DOMContentLoaded">readystatechange как альтернатива событию DOMContentLoaded</h3>
