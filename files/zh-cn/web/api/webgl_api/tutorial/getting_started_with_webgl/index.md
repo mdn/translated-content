@@ -9,7 +9,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 本文将向您介绍 WebGL 的基本用法。此处假定您对三维图形方面的数学知识已经有一定的理解，本文也不会试图向您教授 3D 图像概念本身。
 
-本文的代码也可以在这里下载 [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples) 。
+本文的代码也可以在这里下载 [GitHub 上的 webgl-examples 文件夹](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial)。
 
 [THREE.js](https://threejs.org/)和[BABYLON.js](https://www.babylonjs.com/)等很多框架封装了 WebGL，提供了各个平台之间的兼容性。使用这些框架而非原生的 WebGL 可以更容易地开发 3D 应用和游戏。
 
