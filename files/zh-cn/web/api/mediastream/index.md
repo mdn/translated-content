@@ -47,7 +47,7 @@ slug: Web/API/MediaStream
   - : 返回流中 kind 属性为"video"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。
 
 - {{domxref("MediaStream.removeTrack()")}}
-  - : 移除作为参数传入的 {{domxref("MediaStreamTrack")}}。如果这个轨道不在`MediaStream 对象中什么也不会发生；`
+  - : 移除作为参数传入的 {{domxref("MediaStreamTrack")}}。如果这个轨道不在 `MediaStream` 对象中什么也不会发生；
     如果目标轨道为“完成”状态，一个 INVALID_STATE_RAISE 异常会产生。
 
 ## 规范

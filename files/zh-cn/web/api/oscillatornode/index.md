@@ -48,7 +48,7 @@ _继承自父类_ _{{domxref("AudioScheduledSourceNode")}}，并添加下列属�
 - {{domxref("OscillatorNode.detune")}}
   - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是 cent 音分） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`).。默认值是 0。
 - {{domxref("OscillatorNode.type")}}
-  - : 一个字符串，决定 `OscillatorNode 播放的声音的周期波形`; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。基础值有 `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. 默认值是`"sine"。`
+  - : 一个字符串，决定 `OscillatorNode 播放的声音的周期波形`; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。基础值有 `"sine"`、`"square"`、`"sawtooth"`、`"triangle"` 和 `"custom"`。默认值是 `"sine"`。
 
 ## 方法
 
