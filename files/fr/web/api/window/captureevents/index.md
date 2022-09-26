@@ -9,6 +9,7 @@ tags:
   - Non-standard
 translation_of: Web/API/Window/captureEvents
 ---
+
 {{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}
 
 La méthode **`Window.captureEvents()`** enregistre la fenêtre pour capturer tous les événements du type spécifié.

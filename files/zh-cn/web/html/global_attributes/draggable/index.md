@@ -2,6 +2,7 @@
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **draggable** 是一个枚举类型的属性，用于标识元素是否允许使用 [拖放操作 API](/zh-CN/docs/DragDrop/Drag_and_Drop) 拖动。它的取值如下：

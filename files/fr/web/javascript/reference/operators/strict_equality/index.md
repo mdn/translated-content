@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'égalité stricte (`===`) vérifie si ses deux opérandes sont égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality), l'opérateur d'égalité stricte considère toujours des opérandes de types différents comme étant différents.

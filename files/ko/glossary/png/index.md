@@ -1,13 +1,6 @@
 ---
 title: PNG
 slug: Glossary/PNG
-tags:
-  - Beginner
-  - Composing
-  - Glossary
-  - Images
-  - PNG
-translation_of: Glossary/PNG
 ---
 **PNG**(Portable Network Graphics)는 무손실 데이터 압축을 지원하는 그래픽 파일 형식입니다.
 

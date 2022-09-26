@@ -1,15 +1,6 @@
 ---
 title: '-webkit-transform-2d'
 slug: Web/CSS/@media/-webkit-transform-2d
-tags:
-  - '@media'
-  - CSS
-  - 標準外
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-transform-2d
-translation_of: Web/CSS/@media/-webkit-transform-2d
 ---
 {{ Non-standard_header }}
 

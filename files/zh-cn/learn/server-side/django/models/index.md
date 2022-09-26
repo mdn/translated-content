@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 3: 使用模型'
 slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
 
 <table class="learn-box standard-table">
@@ -9,7 +10,7 @@ slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>

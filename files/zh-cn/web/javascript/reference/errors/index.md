@@ -2,6 +2,7 @@
 title: JavaScript 错误参考
 slug: Web/JavaScript/Reference/Errors
 ---
+
 {{jsSidebar("Errors")}}
 
 下面列出了 JavaScript 抛出的错误。这些错误是有用的调试帮助，但报告的问题并不总是十分明了。下面的页面提供有关这些错误的详细信息。每个错误都是基于 {{jsxref("Error")}} 的对象，并且具有名称和消息。

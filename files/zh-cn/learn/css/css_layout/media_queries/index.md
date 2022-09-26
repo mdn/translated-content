@@ -2,6 +2,7 @@
 title: 媒体查询入门指南
 slug: Learn/CSS/CSS_layout/Media_queries
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
 **CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其它条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
@@ -11,12 +12,12 @@ slug: Learn/CSS/CSS_layout/Media_queries
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础知识（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础知识（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），对 CSS 工作方式的大致了解（学习<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
-        >和<a href="/en-US/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
           >CSS building blocks</a
         >）
       </td>

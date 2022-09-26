@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Scroll_Snap_Points
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **_CSS Scroll Snap Points_** (ou **points d'accroche CSS**) est un module CSS qui introduit les positions d'accroche. Il définit les propriétés qui gèrent les « points d'accroche » utilisés lors du défilement des éléments.

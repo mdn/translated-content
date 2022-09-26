@@ -4,6 +4,7 @@ slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
 browser-compat: api.IDBIndex.locale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`locale`**, rattachée à l'interface [`IDBIndex`](/fr/docs/Web/API/IDBIndex), fournit la locale de l'index (par exemple `en-US`, ou `pl`) si une valeur `locale` a été fournie lors sa création (voir [le paramètre d'options pour `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#parametresindexoptionnel)). On notera que cette propriété renvoie toujours la locale courante utilisée par l'index. Autrement dit, elle ne renvoie jamais `"auto"`.

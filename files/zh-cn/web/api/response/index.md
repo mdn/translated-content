@@ -2,6 +2,7 @@
 title: Response
 slug: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 `Response` 接口呈现了对一次请求的响应数据。

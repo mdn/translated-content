@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.

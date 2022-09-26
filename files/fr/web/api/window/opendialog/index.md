@@ -4,6 +4,7 @@ slug: Web/API/Window/openDialog
 translation_of: Web/API/Window/openDialog
 browser-compat: api.Window.openDialog
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 La méthode `window.openDialog()` est une extension de [`window.open()`](/fr/docs/Web/API/Window/open). Elle se comporte de la même façon mais possède plus de paramètres et traite le paramètre `windowFeatures` différemment.

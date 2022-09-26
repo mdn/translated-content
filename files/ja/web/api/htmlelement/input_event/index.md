@@ -2,6 +2,7 @@
 title: 'HTMLElement: input イベント'
 slug: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 **`input`** イベントは、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} の各要素の値 (`value`) が変更されたときに発生します。

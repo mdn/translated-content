@@ -2,6 +2,7 @@
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 ---
+
 {{JSRef}}
 
 **`format()`** メソッドは、リストの言語固有の表現を文字列で返します。

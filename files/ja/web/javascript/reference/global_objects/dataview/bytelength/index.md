@@ -2,6 +2,7 @@
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは、このビューの {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の先頭から長さを (バイト単位で) 表します。

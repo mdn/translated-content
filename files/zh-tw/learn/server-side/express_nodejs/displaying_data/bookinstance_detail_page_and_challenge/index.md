@@ -3,6 +3,7 @@ title: 書本實例詳情頁面與自我挑戰
 slug: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
+
 ## 書本實例詳情頁面
 
 `BookInstance` 詳情頁面，需要呈現每一個 `BookInstance` 的信息，用 `_id` 欄位字段值（自動產生）做識別。它包含了 `Book` 名稱 (也是一個連結，連到 *書本細節*頁面)，接著是紀錄中的其它的信息。

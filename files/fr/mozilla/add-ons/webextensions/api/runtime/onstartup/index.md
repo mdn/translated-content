@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
+
 {{AddonSidebar()}}
 
 Lancé quand un profil ayant cette extension installée démarre une session. Cet événement n'est pas déclenché lorsqu'une navigation privée / profil privé est démarré, même si cette extension fonctionne en mode de navigation privée 'split'.

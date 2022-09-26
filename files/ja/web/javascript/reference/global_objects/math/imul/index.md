@@ -2,6 +2,7 @@
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
+
 {{JSRef}}
 
 **`Math.imul()`** 関数は、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。

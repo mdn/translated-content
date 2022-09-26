@@ -2,6 +2,7 @@
 title: 介绍 CSS 布局
 slug: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Introduction
       <th scope="row">前提条件：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >”), 并且理解 CSS 的工作原理 (学习“<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >”).
       </td>

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.deleteRenderbuffer()
 slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.deleteRenderbuffer()`** 方法用来删除给定的 {{domxref("WebGLRenderbuffer")}} 对象。如果渲染缓冲区已被删除，则此方法无效。
@@ -41,7 +42,7 @@ gl.deleteRenderbuffer(renderbuffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteRenderbuffer")}}
+{{Compat}}
 
 ## 另见
 

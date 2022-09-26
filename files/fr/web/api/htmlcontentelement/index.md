@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 L'interface **`HTMLContentElement`** represente un élément HTML {{HTMLElement("content")}}, utilisé dans le [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM).

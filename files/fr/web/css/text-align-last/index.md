@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-align-last
 ---
+
 {{CSSRef}}
 
 La propriété **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemtype
 original_slug: Web/HTML/Attributs_universels/itemtype
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/is
 ---
+
 {{JSRef}}
 
 La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_JavaScript).

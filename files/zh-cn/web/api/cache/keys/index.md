@@ -2,6 +2,7 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`keys()`** 方法返回一个 {{jsxref("Promise")}} ，这个 {{jsxref("Promise")}} 将解析为一个{{domxref("Cache")}} 键的数组。
@@ -53,7 +54,7 @@ caches.open('v1').then(function(cache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.keys")}}
+{{Compat}}
 
 ## 参见
 

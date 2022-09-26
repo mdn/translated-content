@@ -3,6 +3,7 @@ title: 'HTML: 为无障碍提供一个良好的基础'
 slug: Learn/Accessibility/HTML
 original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 在网页开发的过程中，用正确的 HTML 标签来表达正确的意图，可以提升网页的无障碍。这篇文章将会详细介绍如何最大化地提升网页的无障碍。
@@ -13,8 +14,8 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
       <th scope="row">前提：</th>
       <td>
         有一定的 HTML 基础 (可参阅
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
+        >)，理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>

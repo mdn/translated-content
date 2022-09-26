@@ -2,6 +2,7 @@
 title: EventSource
 slug: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 **`EventSource`** 是服务器推送的一个网络事件接口。一个 EventSource 实例会对 HTTP 服务开启一个持久化的连接，以`text/event-stream` 格式发送事件，会一直保持开启直到被要求关闭。
@@ -119,7 +120,7 @@ To listen to named events, you'll require a listener for each type of event sent
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## 参见
 

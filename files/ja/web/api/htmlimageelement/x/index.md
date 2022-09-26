@@ -2,6 +2,7 @@
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`x`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の左端の x 座標を示します。

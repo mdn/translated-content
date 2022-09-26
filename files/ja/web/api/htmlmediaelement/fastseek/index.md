@@ -2,6 +2,7 @@
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
 ---
+
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
 **`HTMLMediaElement.fastSeek()`** メソッドは、精度と引き換えにで新しい時間へのメディアを迅速にシークします。

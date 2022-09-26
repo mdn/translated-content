@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
   sourceCommit: 8eef3c0803bdbd1e911761742c0e05fa42b5395b
 ---
+
 {{JSRef}}
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数の項目の集合を単一の変数名の下に格納](/ja/docs/Learn/JavaScript/First_steps/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
@@ -14,11 +15,11 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 
 - **JavaScript の配列はリサイズ可能**であり、**異なる[データ型](/ja/docs/Web/JavaScript/Data_structures)を交ぜて格納することができます**。（これらの性質が望ましくない場合は、代わりに[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を使用してください）。
 
-- **JavaScript の配列は連想配列ではありません**。[配列の要素は添字として文字列を使用してアクセスすることができません](#メモ)。非負の整数（またはそれぞれの文字列表現）を添字として使用してアクセスする必要があります。
+- **JavaScript の配列は連想配列ではありません**。[配列の要素は添字として任意の文字列を使用してアクセスすることができません](#メモ)。非負の整数（またはそれぞれの文字列表現）を添字として使用してアクセスする必要があります。
 
-- **JavaScript の配列は[ゼロオリジン](https://ja.wikipedia.org/wiki/オリジン)です**。配列の最初の要素は `0` の位置にあり、 2 番目の要素は `1` の位置にあるといった具合です。そして、最後の要素は配列の {{jsxref("Array.length", "length")}} プロパティの値から `1` を引いた位置になります。
+- **JavaScript の配列は[ゼロオリジン](https://ja.wikipedia.org/wiki/オリジン)です**。配列の最初の要素は `0` の位置にあり、 2 番目の要素は `1` の位置にあるといった具合です。そして、最後の要素は配列の {{jsxref("Array/length", "length")}} プロパティの値から `1` を引いた位置になります。
 
-- **JavaScript の[複製操作](#配列の複製)は[浅い複製](/ja/docs/Glossary/Shallow_copy)を生成します**。（あらゆる JavaScript オブジェクトに対する標準の組み込みの複製操作はすべて、[深い複製](/ja/docs/Glossary/Deep_copy)ではなく浅い複製を生成します。）
+- **JavaScript の[コピー操作](#配列のコピー)は[シャローコピー](/ja/docs/Glossary/Shallow_copy)を生成します**。（あらゆる JavaScript オブジェクトに対する標準の組み込みのコピー操作はすべて、[ディープコピー](/ja/docs/Glossary/Deep_copy)ではなくシャローコピーを生成します。）
 
 ## コンストラクター
 
@@ -55,7 +56,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 配列内で配列内の連続した要素を複写します。
 - {{jsxref("Array.prototype.entries()")}}
-  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
+  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
   - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
@@ -63,11 +64,11 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 - {{jsxref("Array.prototype.filter()")}}
   - : 指定したフィルタリング関数が `true` を返す、配列中の要素を格納した新しい配列を生成します。
 - {{jsxref("Array.prototype.find()")}}
-  - : 指定されたたテスト関数を満たす、配列の最初の要素の値を返します。適切な要素が見つからない場合は `undefined` を返します。
+  - : 指定されたたテスト関数を満たす、配列の最初の要素の値を返します。適切な要素が見つからなかった場合は `undefined` を返します。
 - {{jsxref("Array.prototype.findIndex()")}}
   - : 指定されたテスト関数を満たす、配列の最初の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
 - {{jsxref("Array.prototype.findLast()")}}
-  - : 指定されたたテスト関数を満たす、配列の最後の要素の値を返します。適切な要素が見つからない場合は `undefined` を返します。
+  - : 指定されたたテスト関数を満たす、配列の最後の要素の値を返します。適切な要素が見つからなかった場合は `undefined` を返します。
 - {{jsxref("Array.prototype.findLastIndex()")}}
   - : 指定されたテスト関数を満たす、配列の最後の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
 - {{jsxref("Array.prototype.flat()")}}
@@ -83,11 +84,11 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 - {{jsxref("Array.prototype.includes()")}}
   - : この配列が特定の要素を含むかどうか判定し、その結果を `true` または `false` で返します。
 - {{jsxref("Array.prototype.indexOf()")}}
-  - : 指定された値と等しい値を持つ最初の (添字の一番小さい) 要素の添字を返します。見つからない場合、`-1` を返します。
+  - : 指定された値と等しい値を持つ最初の（添字の一番小さい）要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.join()")}}
   - : 配列のすべての要素を結合した文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
+  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 指定された値と等しい値を持つ最後の (添字の一番大きい) 要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.map()")}}
@@ -131,7 +132,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 
 ### 配列の作成
 
-ここでは、新しい配列を作る 3 通りの方法を示しています。最初のものは[配列リテラル記法](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation)を使用したもので、次は [`Array()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) コンストラクターを使用して、最後は [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使用して文字列から配列を構築しています。
+ここでは、新しい配列を作る 3 通りの方法を示しています。最初のものは[配列リテラル記法](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#配列リテラル記法)を使用したもので、次は [`Array()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) コンストラクターを使用して、最後は [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使用して文字列から配列を構築しています。
 
 ```js
 // 'fruits' 配列が配列リテラル記法で作成されています。
@@ -214,9 +215,9 @@ fruits.indexOf('さくらんぼ') !== -1; // false
 
 ```js
 const fruits = ['りんご', 'バナナ'];
-const newLength = fruits.push('Orange');
+const newLength = fruits.push('みかん');
 console.log(fruits);
-// ["りんご", "バナナ", "Orange"]
+// ["りんご", "バナナ", "みかん"]
 console.log(newLength);
 // 3
 ```
@@ -226,12 +227,12 @@ console.log(newLength);
 この例では、 [`pop()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) メソッドを使用して配列 `fruits` から最後の項目を取り除いています。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'Orange'];
+const fruits = ['りんご', 'バナナ', 'みかん'];
 const removedItem = fruits.pop();
 console.log(fruits);
 // ["りんご", "バナナ"]
 console.log(removedItem);
-// Orange
+// みかん
 ```
 
 > **Note:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
@@ -402,33 +403,33 @@ console.log(moreFruits);
 // ["マンゴー", "さくらんぼ"]
 ```
 
-### 配列の複製
+### 配列のコピー
 
 この例では、既存の配列 `fruits` から新しい配列を生成する方法を 3 通り示します。最初のものは[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用するもので、次は [`from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from) メソッドを使用するもの、その次は [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 円そっどを使用するものです。
 
 ```js
 const fruits = ['いちご', 'マンゴー'];
 
-// スプレッド構文で複製を作成します。
+// スプレッド構文でコピーを作成します。
 const fruitsCopy = [...fruits];
 // ["いちご", "マンゴー"]
 
-// from() メソッドで複製を作成します。
+// from() メソッドでコピーを作成します。
 const fruitsCopy2 = Array.from(fruits);
 // ["いちご", "マンゴー"]
 
-// slice() メソッドで複製を作成します。
+// slice() メソッドでコピーを作成します。
 const fruitsCopy3 = fruits.slice();
 // ["いちご", "マンゴー"]
 ```
 
-組み込みの配列複製操作（[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)）はすべて、[浅い複製](/ja/docs/Glossary/Shallow_copy)を生成します。配列の[深い複製](/ja/docs/Glossary/Deep_copy)を得る場合は、 {{jsxref("JSON.stringify()")}} で配列を JSON 文字列に変換し、 {{jsxref("JSON.parse()")}} でその文字列を新しい配列に戻せば、元の配列から完全に独立した新しい配列ができます。
+組み込みの配列コピー操作（[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)）はすべて、[シャローコピー](/ja/docs/Glossary/Shallow_copy)を生成します。配列の[ディープコピー](/ja/docs/Glossary/Deep_copy)を得る場合は、 {{jsxref("JSON.stringify()")}} で配列を JSON 文字列に変換し、 {{jsxref("JSON.parse()")}} でその文字列を新しい配列に戻せば、元の配列から完全に独立した新しい配列ができます。
 
 ```js
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用して深い複製を作成することもできます。これは、ソース内の{{Glossary("transferable objects", "転送可能オブジェクト")}}を、複製するのではなく、新しい複製に転送できる利点があります。
+また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の{{Glossary("transferable objects", "転送可能オブジェクト")}}を、コピーするのではなく、新しいコピーに転送できる利点があります。
 
 最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
 
@@ -473,17 +474,17 @@ console.log(result.vegetables);
 // 期待される出力: Array [Object { name: "アスパラガス", type: "vegetables" }]
 ```
 
-返されたオブジェクトは、元の配列と*同じ*要素を参照していることに注意してください（深い複製ではありません）。
+返されたオブジェクトは、元の配列と*同じ*要素を参照していることに注意してください（ディープコピーではありません）。
 これらの要素の内部構造を変更すると、元の配列と返されたオブジェクトの両方に反映されます。
 
 例えば、グループ化する情報が変更される可能性のあるオブジェクトに関連する場合など、キーとして文字列を使用できない場合は、代わりに {{jsxref("Array.prototype.groupToMap()")}} を使用することができます。
-これは `group` と非常に似ていますが、配列の要素を、任意の値（{{Glossary("object", "オブジェクト")}}または{{Glossary("primitive", "プリミティブ")}}）をキーとして使用できる {{jsxref("Map")}} にグループ化する点が異なります。
+これは `group` ととても似ていますが、配列の要素を、任意の値（{{Glossary("object", "オブジェクト")}}または{{Glossary("primitive", "プリミティブ")}}）をキーとして使用できる {{jsxref("Map")}} にグループ化する点が異なります。
 
 ## その他の例
 
 ### 二次元配列の生成
 
-以下では、文字列の二次元配列としてチェス盤を生成しています。最初の動きは `'p'` を `board[6][4]` から `board[4][4]` に複製することで行います。古い位置 `[6][4]` は空白にします。
+以下では、文字列の二次元配列としてチェス盤を生成しています。最初の動きは `'p'` を `board[6][4]` から `board[4][4]` にコピーすることで行います。古い位置 `[6][4]` は空白にします。
 
 ```js
 const board = [
@@ -557,7 +558,7 @@ console.table(values);
 
 ## メモ
 
-`Array` オブジェクトは要素の添字として任意の文字列を（[連想配列](https://en.wikipedia.org/wiki/Associative_array)のように）使用することはできません。非負の整数（またはその文字列形式）を使用しなければなりません。整数以外の値で設定したりアクセスしたりすると、配列のリスト自体の要素を設定したり取り出したりすることはできませんが、その配列の [オブジェクトプロパティの集合](/ja/docs/Web/JavaScript/Data_structures#プロパティ)に関連する変数を設定したりアクセスしたりすることができます。配列のオブジェクトプロパティと配列要素のリストは別個のものであり、配列の[探索や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#array_methods)はこれらの名前付きプロパティに適用することができません。
+`Array` オブジェクトは要素の添字として任意の文字列を（[連想配列](https://en.wikipedia.org/wiki/Associative_array)のように）使用することはできません。非負の整数（またはその文字列形式）を使用しなければなりません。整数以外の値で設定したりアクセスしたりすると、配列のリスト自体の要素を設定したり取り出したりすることはできませんが、その配列の[オブジェクトプロパティの集合](/ja/docs/Web/JavaScript/Data_structures#プロパティ)に関連する変数を設定したりアクセスしたりすることができます。配列のオブジェクトプロパティと配列要素のリストは別個のものであり、配列の[探索や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列のメソッド)はこれらの名前付きプロパティに適用することができません。
 
 `toString` が一つのプロパティであるのと同様に（ただし厳密には `toString()` はメソッドですが）、配列における配列要素はオブジェクトのプロパティです。しかし、次のように配列にアクセスしようとすると、プロパティ名が妥当でないため、構文エラーが発生します。
 
@@ -577,11 +578,11 @@ console.log(years['2'] !== years['02']);
 
 ### length と数値プロパティとの関係
 
-JavaScript の配列の {{jsxref("Array.length", "length")}} プロパティと数値プロパティは関連しています。
+JavaScript の配列の {{jsxref("Array/length", "length")}} プロパティと数値プロパティは関連しています。
 
-配列の一部の組込みメソッド（例えば {{jsxref("Array.join", "join()")}}, {{jsxref("Array.slice", "slice()")}}, {{jsxref("Array.indexOf", "indexOf()")}}, など）は、配列の {{jsxref("Array.length", "length")}} プロパティの値はメソッドの呼び出し時の値を考慮します。
+配列の一部の組込みメソッド（例えば {{jsxref("Array/join", "join()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, など）は、配列の {{jsxref("Array/length", "length")}} プロパティの値はメソッドの呼び出し時の値を考慮します。
 
-他にも（例えば {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, など）、結果として配列の {{jsxref("Array.length", "length")}} プロパティを更新するメソッドがあります。
+他にも（例えば {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}}, など）、結果として配列の {{jsxref("Array/length", "length")}} プロパティを更新するメソッドがあります。
 
 ```js
 const fruits = [];
@@ -589,7 +590,7 @@ fruits.push('バナナ', 'りんご', 'もも');
 console.log(fruits.length); // 3
 ```
 
-JavaScript の配列で、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array.length", "length")}} プロパティを更新します。
+JavaScript の配列で、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array/length", "length")}} プロパティを更新します。
 
 ```js
 fruits[5] = 'マンゴー';
@@ -598,7 +599,7 @@ console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
 console.log(fruits.length);        // 6
 ```
 
-{{jsxref("Array.length", "length")}} を増加させてみます。
+{{jsxref("Array/length", "length")}} を増加させてみます。
 
 ```js
 fruits.length = 10;
@@ -608,7 +609,7 @@ console.log(fruits.length);       // 10
 console.log(fruits[8]);           // undefined
 ```
 
-一方、 {{jsxref("Array.length", "length")}} プロパティの数を減らすと、要素が削除されます。
+一方、 {{jsxref("Array/length", "length")}} プロパティの数を減らすと、要素が削除されます。
 
 ```js
 fruits.length = 2;
@@ -616,7 +617,7 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length);       // 2
 ```
 
-これらについては {{jsxref("Array.length")}} のページで詳しく解説します。
+これらについては {{jsxref("Array/length")}} のページで詳しく解説します。
 
 ### 照合結果を使用して配列を作成
 

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
+
 {{ SeeCompatTable }}
 
 ## Résumé

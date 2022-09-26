@@ -11,6 +11,7 @@ tags:
   - find
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
+
 {{AddonSidebar()}}
 
 Recherche du texte dans un onglet.

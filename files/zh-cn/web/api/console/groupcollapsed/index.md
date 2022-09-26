@@ -2,6 +2,7 @@
 title: console.groupCollapsed
 slug: Web/API/Console/groupCollapsed
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -28,7 +29,7 @@ console.groupCollapsed();
 
 ## 浏览器
 
-{{Compat("api.console.groupCollapsed")}}
+{{Compat}}
 
 ## 相关链接
 

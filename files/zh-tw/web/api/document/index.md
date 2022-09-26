@@ -2,6 +2,7 @@
 title: Document
 slug: Web/API/Document
 ---
+
 {{APIRef}}
 
 **`Document`** 介面代表所有在瀏覽器中載入的網頁，也是作為網頁內容 [DOM 樹](/zh-TW/docs/Using_the_W3C_DOM_Level_1_Core)（包含如 {{HTMLElement("body")}}、{{HTMLElement("table")}} 與其它的{{domxref("Element", "元素")}}）的進入點。`Document` 提供了網頁文件所需的通用函式，例如取得頁面 URL 或是建立網頁文件中新的元素節點等。

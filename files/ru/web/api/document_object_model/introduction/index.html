@@ -7,7 +7,7 @@ translation_of: Web/API/Document_Object_Model/Introduction
 original_slug: DOM/DOM_Reference/Введение
 ---
 <div>
-<p><span style="line-height: 1.5;">Этот раздел представляет краткое знакомство с Объектной Моделью Документа (DOM) - что такое DOM, каким образом предоставляются структуры HTML и XML документов, и как взаимодействовать с ними. Данный раздел содержит справочную информацию и примеры.</span></p>
+<p>Этот раздел представляет краткое знакомство с Объектной Моделью Документа (DOM) - что такое DOM, каким образом предоставляются структуры HTML и XML документов, и как взаимодействовать с ними. Данный раздел содержит справочную информацию и примеры.</p>
 
 <h2 id="Что_такое_Объектная_Модель_Документа_DOM">Что такое Объектная Модель Документа (DOM)?</h2>
 
@@ -19,10 +19,10 @@ original_slug: DOM/DOM_Reference/Введение
 
 <p>Например: стандарт DOM описывает, что метод <code>getElementsByTagName </code>в коде, указанном ниже, должен возвращать список всех элементов &lt;p&gt; в документе.</p>
 
-<pre class="brush: js  language-js" style="font-size: 14px;"><code class="language-js">paragraphs <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName<span class="punctuation token">(</span></span><span class="string token">"P"</span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token">
+<pre class="brush: js">paragraphs = document.getElementsByTagName("P");
 // paragraphs[0] это первый &lt;p&gt; элемент
-</span><span class="comment token">// paragraphs[1] это второй &lt;p&gt; элемент и т.д.
-</span><span class="function token">alert<span class="punctuation token">(</span></span>paragraphs<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>nodeName<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+// paragraphs[1] это второй &lt;p&gt; элемент и т.д.
+alert(paragraphs[0].nodeName);</pre>
 
 <p>Все свойства, методы и события, доступные для управления и создания новых страниц, организованы в виде объектов. Например, объект <code>document</code>, который представляет сам документ, объект <code>table</code>, который реализует специальный интерфейс DOM<code style="font-style: normal; line-height: 1.5;"> HTMLTableElement,</code> необходимый для доступа к HTML-таблицам, и так далее. Данная документация даёт справку об объектах DOM, реализованных Gecko-подобных браузерах.</p>
 
@@ -37,11 +37,11 @@ original_slug: DOM/DOM_Reference/Введение
 <p>DOM спроектирован таким образом, чтобы быть независимым от любого конкретного языка программирования, обеспечивая структурное представление документа согласно единому и последовательному API. Хотя мы всецело сфокусированы на JavaScript в этой справочной документации, реализация DOM может быть построена для любого языка, как в следующем примере на Python:</p>
 </div>
 
-<pre class="brush: python  language-html"><code class="language-html"># Пример DOM на языке Python
+<pre class="brush: python"># Пример DOM на языке Python
 import xml.dom.minidom as m
 doc = m.parse("C:\\Projects\\Py\\chap1.xml");
 doc.nodeName # Свойство объекта документа DOM;
-p_list = doc.getElementsByTagName("para");</code></pre>
+p_list = doc.getElementsByTagName("para");</pre>
 
 <p>Для подробной информации о том, какие технологии участвуют в написании JavaScript для веб, смотрите обзорную статью <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview" style="line-height: 1.5;">JavaScript technologies overview.</a></p>
 
@@ -51,28 +51,28 @@ p_list = doc.getElementsByTagName("para");</code></pre>
 
 <p>При создании сценария с использованием элемента &lt;script&gt;, либо включая в веб страницу инструкцию для загрузки скрипта, вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы <code><a href="https://developer.mozilla.org/en-US/docs/DOM/document">document</a> </code>или <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window">window</a></code> для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице. Ваше программирование DOM может быть чем-то простым, например, вывод сообщения с использованием функции <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window.alert">alert()</a></code> объекта <code><a href="https://developer.mozilla.org/en-US/docs/DOM/window">window</a></code>, или использовать более сложные методы DOM, которые создают новое содержимое, как показано в следующем примере:</p>
 
-<pre class="language-html">&lt;body onload="window.alert('добро пожаловать на мою домашнюю страницу!');"&gt;
+<pre class="brush:html">&lt;body onload="window.alert('добро пожаловать на мою домашнюю страницу!');"&gt;
 </pre>
 
 <p>В следующем примере внутри элемента <code>&lt;script&gt;</code> определён код JavaScript, данный код устанавливает функцию при загрузке документа (когда весь DOM доступен для использования). Эта функция создаёт новый элемент H1, добавляет текст в данный элемент, а затем добавляет H1 в дерево документа:</p>
 
-<pre class="brush: html  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="script token"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span>
-   <span class="comment token"> // запуск данной функции при загрузке документа
-</span>       window<span class="punctuation token">.</span>onload <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="comment token"> // создание нескольких элементов
-</span>   <span class="comment token"> // в пустой HTML странице
-</span>       heading <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement<span class="punctuation token">(</span></span><span class="string token">"h1"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-       heading_text <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createTextNode<span class="punctuation token">(</span></span><span class="string token">"Big Head!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-       heading<span class="punctuation token">.</span><span class="function token">appendChild<span class="punctuation token">(</span></span>heading_text<span class="punctuation token">)</span><span class="punctuation token">;</span>
-       document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild<span class="punctuation token">(</span></span>heading<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+    // запуск данной функции при загрузке документа
+       window.onload = function() {
+    // создание нескольких элементов
+    // в пустой HTML странице
+       heading = document.createElement("h1");
+       heading_text = document.createTextNode("Big Head!");
+       heading.appendChild(heading_text);
+       document.body.appendChild(heading);
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <h2 id="Важные_типы_данных">Важные типы данных</h2>
 
@@ -174,46 +174,46 @@ table.summary = "note: increased border";</pre>
 
 <p>Вы можете использовать эту тестовую страницу или похожую для проверки интерфейсов DOM, которые вас интересуют и просмотра того, как они работают в браузерах. Вы можете обновить содержимое функции <code>test()</code> при необходимости, создать больше кнопок или добавить элементы при необходимости.</p>
 
-<pre><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>DOM Tests<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-    <span class="keyword token">function</span> <span class="function token">setBodyAttr</span><span class="punctuation token">(</span>attr<span class="punctuation token">,</span> value<span class="punctuation token">)</span><span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>document<span class="punctuation token">.</span>body<span class="punctuation token">)</span> <span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">'document.body.'</span><span class="operator token">+</span>attr<span class="operator token">+</span><span class="string token">'="'</span><span class="operator token">+</span>value<span class="operator token">+</span><span class="string token">'"'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">else</span> <span class="function token">notSupported</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">.5</span>in<span class="punctuation token">;</span> <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">400</span><span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>text<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>black<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>black
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>darkblue<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>darkblue
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>bgColor<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>bgColor<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>white<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>white
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>lightgrey<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>gray
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>link<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>link<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>blue<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>blue
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>green<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>green
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>small</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.brownhen.com/dom_api_top.html<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>sample<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-        (sample link)<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>small</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>version<span class="punctuation token">"</span></span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>ver()<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;DOM Tests&lt;/title&gt;
+    &lt;script type="application/javascript"&gt;
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div style="margin: .5in; height: 400;"&gt;
+      &lt;p&gt;&lt;b&gt;&lt;tt&gt;text&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;form&gt;
+        &lt;select onChange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="black"&gt;black
+          &lt;option value="darkblue"&gt;darkblue
+        &lt;/select&gt;
+        &lt;p&gt;&lt;b&gt;&lt;tt&gt;bgColor&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;select onChange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="white"&gt;white
+          &lt;option value="lightgrey"&gt;gray
+        &lt;/select&gt;
+        &lt;p&gt;&lt;b&gt;&lt;tt&gt;link&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);"&gt;
+          &lt;option value="blue"&gt;blue
+          &lt;option value="green"&gt;green
+        &lt;/select&gt;  &lt;small&gt;
+        &lt;a href="http://www.brownhen.com/dom_api_top.html" id="sample"&gt;
+        (sample link)&lt;/a&gt;&lt;/small&gt;&lt;br&gt;
+      &lt;/form&gt;
+      &lt;form&gt;
+        &lt;input type="button" value="version" onclick="ver()" /&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p>Чтобы протестировать много интерфейсов на одной странице, набор свойств, которые изменяют цвета веб-страницы, можно создать похожую веб-страницу с целой "консолью" кнопок, текстовых полей и других элементов. Следующий скриншот даёт идею, как интерфейсы могут быть сгруппированы вместе для тестирования</p>
 

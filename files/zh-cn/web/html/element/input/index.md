@@ -2,6 +2,7 @@
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Element/Input
 ---
+
 {{HTMLRef}}
 
 **HTML `<input>` 元素**用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。
@@ -12,7 +13,7 @@ slug: Web/HTML/Element/Input
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/HTML/Content_categories">内容分类</a>
       </th>
       <td>
         流式元素；短语元素；交互元素（若 type 属性不处于隐藏
@@ -941,17 +942,17 @@ Firefox uses the following heuristics to determine the locale to validate the us
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >. If the
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/input#attr-type">type</a></code
         >
         is not <code>hidden</code>, then labelable element, palpable content.
       </td>
@@ -960,7 +961,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted content</th>
       <td>
         None, it is an
-        <a href="/en-US/docs/Glossary/empty_element">empty element</a>.
+        <a href="/zh-CN/docs/Glossary/empty_element">empty element</a>.
       </td>
     </tr>
     <tr>
@@ -971,7 +972,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -1055,7 +1056,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     <tr>
       <th scope="row">DOM interface</th>
       <td>
-        <a href="/en-US/docs/Web/API/HTMLInputElement"
+        <a href="/zh-CN/docs/Web/API/HTMLInputElement"
           ><code>HTMLInputElement</code></a
         >
       </td>

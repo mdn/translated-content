@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.

@@ -9,6 +9,7 @@ tags:
   - Type
 translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 La propriété en lecture seule **Event.type** retourne une chaîne de caractères (_string_) contenant le type de l'événement. Le type est défini lors de la construction de l'événement et est le nom d'usage pour se référer à celui-ci, tel que  `click`, `load` ou `error`.

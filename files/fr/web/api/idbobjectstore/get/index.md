@@ -4,6 +4,7 @@ slug: Web/API/IDBObjectStore/get
 translation_of: Web/API/IDBObjectStore/get
 browser-compat: api.IDBObjectStore.get
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`get()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) et, dans un <i lang="en">thread</i> séparé, renvoie le magasin d'objets sélectionné avec la clé indiqué. Cette méthode est conçue pour récupérer des enregistrements spécifiques d'un magasin d'objets.

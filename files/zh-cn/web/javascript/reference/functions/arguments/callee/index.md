@@ -2,6 +2,7 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.callee`** 属性包含当前正在执行的函数。

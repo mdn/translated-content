@@ -2,6 +2,7 @@
 title: DOM 概述
 slug: Web/API/Document_Object_Model/Introduction
 ---
+
 {{APIRef}}本节提供了一个简单的概念性的 DOM 介绍：DOM 是什么，它是如何组织 [HTML](/zh-CN/docs/HTML) 及 [XML](/zh-CN/docs/XML) 文档，你要如何访问它，这个 API 提供了哪些参考信息和实例。
 
 ## 什么是 DOM?
@@ -92,7 +93,7 @@ p_list = doc.getElementsByTagName("para");
         <code><strong>ownerDocument</strong></code> 属性返回它所属于
         <code>document</code> ) ，这个对象就是 root
         <code>document</code> 对象本身。
-        <a href="/en-US/docs/DOM/document"
+        <a href="/zh-CN/docs/DOM/document"
           >DOM <code>document</code> Reference</a
         >
         一章对 <code>document</code> 对象进行了描述。

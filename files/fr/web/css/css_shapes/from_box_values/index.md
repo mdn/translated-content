@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Shapes/From_box_values
 original_slug: Web/CSS/CSS_Shapes/Créer_formes_boîtes
 ---
+
 {{CSSRef}}
 
 Une méthode permettant de créer des formes consiste à utiliser les valeurs provenant du modèle de boîte CSS. Dans cet article, nous verrons comment les utiliser.

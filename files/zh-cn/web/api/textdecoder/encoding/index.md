@@ -2,6 +2,7 @@
 title: TextDecoder.encoding
 slug: Web/API/TextDecoder/encoding
 ---
+
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 只读属性 **`TextDecoder.encoding`** 返回一个字符串，其中包含了指定的 decoder 解码算法的名称。

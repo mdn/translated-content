@@ -12,6 +12,7 @@ tags:
   - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/Add-ons/WebExtensions/manifest.json/theme#colors).

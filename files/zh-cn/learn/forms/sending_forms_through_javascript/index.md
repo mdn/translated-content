@@ -3,6 +3,7 @@ title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
 
 正如在[前面的文章](/zh-CN/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。

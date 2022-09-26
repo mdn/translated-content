@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 original_slug: Web/JavaScript/Reference/Objets_globaux/decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`decodeURIComponent()`** permet de décoder un composant d'un Uniform Resource Identifier (URI) précédemment créé par {{jsxref("encodeURIComponent")}} ou par une méthode similaire.

@@ -2,6 +2,7 @@
 title: JavaScript — 動態的客戶端指令
 slug: Learn/JavaScript
 ---
+
 {{LearnSidebar}}
 
 {{Glossary("JavaScript")}} 程式語言可讓你在網頁上建構複雜的事物。當網頁不僅僅呆板呈現給你靜態的內容（像是即時的內容更新，互動式地圖、2D/3D 動畫、滑鼠操控影片播放…等等），你可以大膽猜測 JavaScript 已經參與其中。

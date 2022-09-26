@@ -3,6 +3,7 @@ title: React 入门
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 本文会引导我们进入一段 React 学习之旅。我们将逐步了解有关它的背景和用例的一些细节，在自己的电脑上建起基本的 React 工具链，创建并使用一个简单的入门应用程序，以学习一些关于 React 在此过程中如何工作的知识。
@@ -13,12 +14,12 @@ slug: >-
       <th scope="row">先决条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/en-US/docs/Learn/HTML">HTML</a>，<a
-            href="/en-US/docs/Learn/CSS"
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
+            href="/zh-CN/docs/Learn/CSS"
             >CSS</a
           >
-          和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >。
         </p>

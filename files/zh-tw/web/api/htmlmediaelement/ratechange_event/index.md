@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: ratechange'
 slug: Web/API/HTMLMediaElement/ratechange_event
 ---
+
 `ratechange` 事件將在播放速度改變時被觸發
 
 ## 基本資訊

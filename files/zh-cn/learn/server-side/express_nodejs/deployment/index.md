@@ -2,6 +2,7 @@
 title: 'Express 教程 7: 部署到生产环境'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 现在你已经创建（并测试）了一个不错的 [本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">预备知识：</th>
       <td>
         完成前面所有的指南主题，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>

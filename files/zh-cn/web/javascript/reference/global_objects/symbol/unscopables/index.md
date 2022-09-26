@@ -2,6 +2,7 @@
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 **`Symbol.unscopables`** 指用于指定对象值，其对象自身和继承的从关联对象的 with 环境绑定中排除的属性名称。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 
 ## 描述
 
-可以在任何对象上定义 `@@unscopables` symbol (`Symbol.unscopables`)，用于排除属性名称并与 `with` 环境绑定在一起作为词法变量公开。 请注意，如果使用 [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)，语句将不可用，并且可能也不需要 symbol。
+可以在任何对象上定义 `@@unscopables` symbol (`Symbol.unscopables`)，用于排除属性名称并与 `with` 环境绑定在一起作为词法变量公开。 请注意，如果使用 [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，语句将不可用，并且可能也不需要 symbol。
 
 在 `unscopables` 对象上设置属性为 true，将使其 _unscopable_ 并且因此该属性也将不会在词法环境变量中出现。 如果设置属性为 `false` ，则将使其可 `scopable` 并且该属性会出现在词法环境变量中。
 
@@ -62,4 +63,4 @@ with(obj) {
 ## 相关链接
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))

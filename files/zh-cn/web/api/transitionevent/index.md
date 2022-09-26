@@ -2,6 +2,7 @@
 title: TransitionEvent
 slug: Web/API/TransitionEvent
 ---
+
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
 TransitonEvent 接口指那些提供了与 [transition](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions) 有关信息的事件。
@@ -35,7 +36,7 @@ _同时也继承了父类 {{domxref("Event")}}_ 的属性.
 
 ## Browser compatibility
 
-{{Compat("api.TransitionEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Request.credentials
 slug: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 **`credentials`** 是{{domxref("Request")}}接口的只读属性，用于表示用户代理是否应该在跨域请求的情况下从其他域发送 cookies。这与 XHR 的 withCredentials 标志相似，不同的是有三个可选值（后者是两个）：

@@ -2,6 +2,7 @@
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tFoot`** プロパティは、 {{HTMLElement("table")}} にある {{HTMLElement("tfoot")}} 要素を表します。そのような要素がない場合は、この値は `null` になります。

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.setTransform()`** 是 Canvas 2D API 使用单位矩阵重新设置（覆盖）当前的变换并调用变换的方法，此变换由方法的变量进行描述。
@@ -102,7 +103,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.setTransform")}}
+{{Compat}}
 
 ## 参见
 

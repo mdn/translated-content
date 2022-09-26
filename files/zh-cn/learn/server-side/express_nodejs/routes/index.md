@@ -2,6 +2,7 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 本节将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。
@@ -12,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">预备知识：</th>
       <td>
         回顾
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（<a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
         >
         等）。了解服务器端编程，了解正则表达式。

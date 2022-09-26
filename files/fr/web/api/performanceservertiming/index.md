@@ -9,6 +9,7 @@ tags:
   - Resource Timing API
 translation_of: Web/API/PerformanceServerTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 
 L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing) dans l'en-tête HTTP.

@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 Renvoie le nom de l'étiquette de l'élément sur lequel elle est appelée. Si l'élément est une {{HTMLElement("img")}}, sa propriété `tagName` est `"IMG"` (pour les documents HTML, elle peut être différente pour les documents XML et XHTML).

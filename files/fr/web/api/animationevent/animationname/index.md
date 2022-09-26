@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/AnimationEvent/animationName
 ---
+
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
 
 La propriété en lecture seule **`AnimationEvent.animationName`** est une {{domxref("DOMString")}} contenant la valeur de la propriété CSS {{cssxref("animation-name")}} associée à la transition.

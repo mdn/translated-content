@@ -2,6 +2,7 @@
 title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 特性检测包括计算浏览器是否支持一个特定块中的代码，基于是否可以运行来运行不同的代码，以使所有的浏览器都可以正常工作，而不是在某些浏览器中崩溃或出错。本文列举了如何写出一个你自己的简单的特性检测，如何使用库来加速实现，以及对于特性间的的原生特性，如 `@supports`。
@@ -165,7 +166,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         Create an element in memory using
         {{domxref("Document.createElement()")}} and then check if a
         property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
+        <a href="/zh-CN/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
       </td>
       <td>
         <code

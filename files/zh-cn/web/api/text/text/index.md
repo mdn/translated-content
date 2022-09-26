@@ -2,6 +2,7 @@
 title: Text()
 slug: Web/API/Text/Text
 ---
+
 {{ Apiref("DOM")}}{{seeCompatTable}}
 
 **`Text()`** 构造方法返回一个最新创建的{{domxref("Text")}} 对象，该对象带有可选参数 {{domxref("DOMString")}} 作为文本节点的文本内容(textual content)。
@@ -25,7 +26,7 @@ text = new Text("Test");
 
 ## Browser compatibility
 
-{{Compat("api.Text.Text")}}
+{{Compat}}
 
 ## See also
 

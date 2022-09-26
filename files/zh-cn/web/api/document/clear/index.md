@@ -2,6 +2,7 @@
 title: Document.clear()
 slug: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 这个方法用来在早期版本的 Mozilla 中清除整个指定文档。

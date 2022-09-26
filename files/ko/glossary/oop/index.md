@@ -1,7 +1,6 @@
 ---
 title: OOP
 slug: Glossary/OOP
-translation_of: Glossary/OOP
 ---
 **OOP** (객체 지향적 프로그래밍) 는 데이터가 **{{glossary("object","객체")}}** 내에 캡슐화되고 구성 요소 부분이 아닌 객체 자체가 운용되는 프로그래밍 방식이다
 

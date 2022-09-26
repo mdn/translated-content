@@ -2,6 +2,7 @@
 title: 'Assessment: DIY Django mini blog'
 slug: Learn/Server-side/Django/django_assessment_blog
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 在這個評估中，您將使用您在 [Django Web Framework (Python)](/zh-TW/docs/Learn/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。

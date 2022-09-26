@@ -2,6 +2,7 @@
 title: document.currentScript
 slug: Web/API/Document/currentScript
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.currentScript`** 属性返回当前正在运行的脚本所属的 {{HTMLElement("script")}} 元素。调用此属性的脚本[不能是 JavaScript 模块](https://github.com/whatwg/html/issues/997)，模块应当使用 {{JSxRef("Statements/import%2Emeta", "import.meta")}} 对象。
@@ -34,7 +35,7 @@ if (document.currentScript.async) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## 相关链接
 

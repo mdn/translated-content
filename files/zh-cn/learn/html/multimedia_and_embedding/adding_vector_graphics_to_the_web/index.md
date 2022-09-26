@@ -2,6 +2,7 @@
 title: 在网页中添加矢量图形
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为您呈现如何在网页中添加矢量图形。
@@ -12,11 +13,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
       <th scope="row">前提：</th>
       <td>
         你需要了解
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 的基本知识</a
         >
         并且知道如何
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >在你的文档中插入图片</a
         >.
       </td>

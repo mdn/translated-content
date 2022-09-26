@@ -12,6 +12,7 @@ tags:
   - highlightResults
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
+
 {{AddonSidebar()}}
 
 Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.

@@ -2,6 +2,7 @@
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBObjectStore`** 接口表示数据库中的 一个 [对象库 (object store)](/zh-CN/IndexedDB#gloss_object_store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。
@@ -76,7 +77,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>
@@ -393,7 +394,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

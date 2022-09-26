@@ -3,6 +3,7 @@ title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在上、右、下、左设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
@@ -15,15 +16,15 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
       <th scope="row">先决条件：</th>
       <td>
         计算机基础知识，基本软件（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >），文件管理的基本知识（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >），HTML 基础（HTML 学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >）以及 CSS 基础（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>

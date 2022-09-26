@@ -3,6 +3,7 @@ title: 什么文本编辑器比较好用？
 slug: Learn/Common_questions/Available_text_editors
 original_slug: Learn/Common_questions/实用文本编辑器
 ---
+
 在这篇文章中我们强调了关于 web 开发者安装文本编辑器的一些考虑事项。
 
 <table class="learn-box nostripe standard-table">
@@ -10,7 +11,7 @@ original_slug: Learn/Common_questions/实用文本编辑器
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        你应该已经知晓了<a href="/en-US/Learn/What_software_do_I_need">
+        你应该已经知晓了<a href="/zh-CN/Learn/What_software_do_I_need">
           为了建立一个网站所需的各种软件</a
         >。
       </td>

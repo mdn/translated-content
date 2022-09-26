@@ -1,22 +1,8 @@
 ---
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Comparison
-  - Equality
-  - Intermediate
-  - JS
-  - JavaScript
-  - NaN
-  - SameValue
-  - SameValueZero
-  - Sameness
-  - 中級者
-  - 同値
-  - 比較
-  - 等価性
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015 には、4 種類の等価性アルゴリズムがあります。

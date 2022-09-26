@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 2: 创建网站的地基'
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 [Django 教程](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings， urls，模型 (models)，视图 (views) 和模板 (templates)。
@@ -11,11 +12,11 @@ slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
           >创建 Django 的开发环境</a
         >。复习
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Django 教程</a
         >。
       </td>

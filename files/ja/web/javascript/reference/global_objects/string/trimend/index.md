@@ -2,6 +2,7 @@
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
+
 {{JSRef}}
 
 **`trimEnd()`** メソッドは、文字列の末尾のホワイトスペースを削除します。 `trimRight()` はこのメソッドのエイリアスです。

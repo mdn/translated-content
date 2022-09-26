@@ -1,14 +1,6 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.hover
-translation_of: Web/CSS/@media/hover
 ---
 {{CSSRef}}
 

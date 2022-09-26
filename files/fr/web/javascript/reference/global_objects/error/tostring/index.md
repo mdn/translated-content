@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Error")}} sous la forme d'une chaine de caractères.

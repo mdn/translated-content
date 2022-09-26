@@ -3,6 +3,7 @@ title: overflow
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.

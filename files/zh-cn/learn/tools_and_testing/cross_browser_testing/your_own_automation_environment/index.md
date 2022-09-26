@@ -2,6 +2,7 @@
 title: Setting up your own test automation environment
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 在这篇文章中，我们将教会您如何安装自己的自动化测试环境，并使用 Selenium/WebDriver，和一种测试库（比如：selenium-webdriver for Node）运行自己的测试。我们还将着眼于如何将本地测试环境与上一篇文章中讨论的商业工具集成在一起。
@@ -11,16 +12,16 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
+        Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high level
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >principles of cross browser testing</a
         >, and
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
           >automated testing</a
         >.
       </td>

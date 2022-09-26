@@ -2,6 +2,7 @@
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 {{domxref("PushMessageData")}} 接口的 **`json()`**方法将推送消息数据提取为 一个 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象。
@@ -36,7 +37,7 @@ self.addEventListener('push', function(event) {
 
 ## Browser Compatibility
 
-{{Compat("api.PushMessageData.json")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`self`** 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 `WorkerGlobalScope` 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope 。

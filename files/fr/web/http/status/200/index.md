@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/200
 translation_of: Web/HTTP/Status/200
 browser-compat: http.status.200
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`200 OK`** indique la réussite d'une requête. Une réponse 200 peut être mise en cache par défaut.

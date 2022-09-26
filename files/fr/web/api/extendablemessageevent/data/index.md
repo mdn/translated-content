@@ -9,6 +9,7 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent/data
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La propriété **`data`** est une propriété en lecture seule rattachée à l'interface {{domxref("ExtendableMessageEvent")}} et qui permet d'accéder aux données de l'évènement. Il peut s'agir de n'importe quel type de donnée.

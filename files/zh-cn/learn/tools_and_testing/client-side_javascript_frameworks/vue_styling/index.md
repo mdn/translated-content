@@ -2,6 +2,7 @@
 title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。
@@ -12,11 +13,11 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
       <th scope="row">先决条件：</th>
       <td>
         <p>
-          熟悉核心<a href="/en-US/docs/Learn/HTML">HTML</a>，<a
-            href="/en-US/docs/Learn/CSS"
+          熟悉核心<a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
+            href="/zh-CN/docs/Learn/CSS"
             >CSS</a
-          >和<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>语言，了解<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          >和<a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>语言，了解<a
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >。
         </p>

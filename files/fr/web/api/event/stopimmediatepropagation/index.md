@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`stopImmediatePropagation()`**, rattachée à l'interface {{domxref("Event")}}, empêche les gestionnaires d'évènement, associés à ce même évènement, d'être appelés.

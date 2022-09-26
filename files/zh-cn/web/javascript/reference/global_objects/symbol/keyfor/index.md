@@ -2,6 +2,7 @@
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
+
 {{JSRef("Global_Objects", "Symbol")}}
 
 ## 概述

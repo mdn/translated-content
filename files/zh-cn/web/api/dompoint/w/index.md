@@ -2,6 +2,7 @@
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** 的 w 属性表示该点的空间透视值。
@@ -22,7 +23,7 @@ var perspective = DOMPoint.w;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.w")}}
+{{Compat}}
 
 ## 相关链接
 

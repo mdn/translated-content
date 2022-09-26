@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.transform()`** 是 Canvas 2D API 使用矩阵多次叠加当前变换的方法，矩阵由方法的参数进行描述。你可以缩放、旋转、移动和倾斜上下文。
@@ -103,7 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.transform")}}
+{{Compat}}
 
 ## 参见
 

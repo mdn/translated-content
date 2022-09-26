@@ -3,6 +3,7 @@ title: 如何撰写和引用一个词汇表中的条目
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编码的术语、行话和缩写的地方。对词汇表做出贡献是使 Web 更易于理解的简单方法。您不需要高水平的技术技能来编写词汇表条目，因为它们应该保持简单直接。

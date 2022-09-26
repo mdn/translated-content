@@ -2,6 +2,7 @@
 title: 第三方 API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 到目前为止我们已经介绍的 API 是内置在浏览器中的，但并不是所有的 API 都是。许多大型网站和服务（例如 Google 地图，Twitter，Facebook，PayPal 等）提供的 API 允许开发者使用他们的数据（例如在博客上显示您的 Twitter 流）或服务（例如在您的网站上显示自定义 Google 地图，或者使用 Facebook 登录来登录你的用户）。本文着眼于浏览器 API 和第三方 API 的区别，并展示了后者的一些典型用途。
@@ -12,13 +13,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
       <th scope="row">先决条件：</th>
       <td>
         JavaScript 基础知识 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">first steps</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
         the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >basics of Client-side APIs</a
         >
       </td>

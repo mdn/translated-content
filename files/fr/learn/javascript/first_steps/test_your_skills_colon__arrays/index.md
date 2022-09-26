@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 original_slug: Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux
 ---
+
 {{learnsidebar}}
 
 L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn/JavaScript/First_steps/Arrays).

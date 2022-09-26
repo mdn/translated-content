@@ -2,6 +2,7 @@
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}} 接口中的 **`add()`** 方法返回一个 {{domxref("IDBRequest")}} 对象，在单独的线程中创建一个结构（[structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone)）化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录。

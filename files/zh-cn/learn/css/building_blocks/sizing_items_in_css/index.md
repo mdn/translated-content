@@ -2,6 +2,7 @@
 title: 在 CSS 中调整大小
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
 在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。 在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
@@ -12,15 +13,15 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
       <th scope="row">前提：</th>
       <td>
         基本的电脑知识，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了必要的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识 , HTML 基础（学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >），理解 CSS 如何工作（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >），理解 CSS 如何工作（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>

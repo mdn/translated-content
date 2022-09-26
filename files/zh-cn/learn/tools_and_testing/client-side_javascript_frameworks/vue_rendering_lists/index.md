@@ -2,6 +2,7 @@
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
@@ -12,12 +13,12 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>

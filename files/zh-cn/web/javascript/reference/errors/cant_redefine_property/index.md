@@ -2,6 +2,7 @@
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -41,7 +42,7 @@ Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
 Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
 ```
 
-## 相关内容
+## 参见
 
-- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#Properties)
+- [\[\[Configurable\]\]](/zh-CN/docs/Web/JavaScript/Data_structures#属性)
 - {{jsxref("Object.defineProperty()")}}

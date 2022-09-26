@@ -1,13 +1,8 @@
 ---
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Data_structures
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - Types
-translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。また可能である場合は、他のプログラミング言語におけるデータ構造との対比も行います。

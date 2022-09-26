@@ -2,6 +2,7 @@
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
+
 {{JSRef}}
 
 **`findIndex()`** 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 **index**（索引）。如果沒有符合的對象，將返回 -1 。
@@ -139,7 +140,7 @@ if (!Array.prototype.findIndex) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+{{Compat}}
 
 ## 參見
 

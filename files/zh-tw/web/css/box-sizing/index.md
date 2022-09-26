@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
@@ -61,7 +62,7 @@ box-sizing: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## See also
 

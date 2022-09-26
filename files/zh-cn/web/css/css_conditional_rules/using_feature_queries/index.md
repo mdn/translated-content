@@ -2,6 +2,7 @@
 title: 使用特性查询
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
 ---
+
 {{CSSRef}}
 
 **特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。

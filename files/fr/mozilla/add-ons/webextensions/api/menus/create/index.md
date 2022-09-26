@@ -13,6 +13,7 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
+
 {{AddonSidebar()}}
 
 Crée un nouvel élément de menu, avec un objet d'options définissant les propriétés de l'élément.

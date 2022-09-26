@@ -2,6 +2,7 @@
 title: fit-content()
 slug: Web/CSS/fit-content
 ---
+
 {{CSSRef}}
 
 **`fit-content()`** [CSS](/zh-CN/docs/Web/CSS) 函数将给定大小夹紧为可用大小 根据公式 `min(maximum size, max(minimum size, argument))`.
@@ -82,4 +83,4 @@ The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argu
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

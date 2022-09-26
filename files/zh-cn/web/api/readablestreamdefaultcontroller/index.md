@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 [流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的 **`ReadableStreamDefaultController`** 接口是一个控制器，该控制器允许控制 {{domxref("ReadableStream")}} 的状态和内部队列。 默认控制器用于不是字节流的流。

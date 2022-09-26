@@ -2,6 +2,7 @@
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 ### 概述

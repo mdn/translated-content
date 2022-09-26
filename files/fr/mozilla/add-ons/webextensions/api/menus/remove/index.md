@@ -13,6 +13,7 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/remove
 ---
+
 {{AddonSidebar()}}
 
 Supprime un élément de menu.

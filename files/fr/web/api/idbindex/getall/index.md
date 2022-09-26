@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`getAll()`** de l'interface {{domxref("IDBIndex")}} fait une requête ({{domxref("IDBRequest")}}) qui renvoie un tableau ordonné suivant les clés, des clones structurés des enregistrements de l'index relié ({{domxref("IDBIndex")}}). On peut limiter le nombre d'enregistrements en les filtrant suivant leurs clés ou en paramétrant le compteur.

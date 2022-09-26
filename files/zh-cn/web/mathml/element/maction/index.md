@@ -2,6 +2,7 @@
 title: <maction>
 slug: Web/MathML/Element/maction
 ---
+
 {{MathMLRef}}
 
 MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具有某种特定行为的可能性。具体行为方式由 **`actiontype`** 属性的取值来确定。也可以使用 **`selection`** 属性来手动指定该行为作用在哪个子元素上。
@@ -17,7 +18,7 @@ MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具
     - `tooltip`: 当指针指向表达式时触发，会在表达式附近显示一个提示框。语法如下：`<maction actiontype="tooltip"> expression message </maction>`。
 
 - class, id, style
-  - : 供[样式表](/en-US/docs/CSS)使用。
+  - : 供[样式表](/zh-CN/docs/CSS)使用。
 - href
   - : 用来设置标签点击后跳转的链接。
 - mathbackground

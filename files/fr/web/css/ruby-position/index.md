@@ -8,6 +8,7 @@ tags:
   - Ruby
 translation_of: Web/CSS/ruby-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`ruby-position`** définit la position d'un élément ruby par rapport à son élément de base. L'élément ruby peut ainsi être positionné au-dessus de l'élément (`over`), en-dessous (`under`) ou entre les caractères, sur leur droite (`inter-character`).

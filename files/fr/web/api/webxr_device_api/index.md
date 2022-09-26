@@ -11,6 +11,7 @@ tags:
   - WebXR API
 translation_of: Web/API/WebXR_Device_API
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 **WebXR** est un ensemble de standards utilisés pour supporter le rendu de scènes 3D vers du matériel conçu pour présenter des mondes virtuels (**Réalité Virtuelle**, ou **VR**), ou pour ajouter des contenus graphiques dans le monde réel, (**Réalité Augmentée**, ou **AR**).

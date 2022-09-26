@@ -2,6 +2,7 @@
 title: 如何确保你的网站正常运行？
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
+
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
 <table class="learn-box standard-table">
@@ -9,7 +10,7 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
     <tr>
       <th scope="row">前提 :</th>
       <td>
-        你需要知道怎么<a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+        你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a
         >。
       </td>
@@ -142,6 +143,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
 ^C
 --- mozilla.org ping statistics ---
+
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```

@@ -2,6 +2,7 @@
 title: 'Express 教程 6: 使用表单'
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 在此教程中我们会教你如何使用 Express 并且结合 Pug 来实现 HTML 表单，并且如何从数据库中创建，更新和删除文档。
@@ -13,7 +14,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
       <td>
         <p>
           完成前面所有的教程，包括
-          <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
+          <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
             >Express 教程第 5 章：展示图书馆数据</a
           >
         </p>

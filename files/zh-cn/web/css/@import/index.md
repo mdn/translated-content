@@ -2,6 +2,7 @@
 title: '@import'
 slug: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -45,4 +46,4 @@ slug: Web/CSS/@import
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

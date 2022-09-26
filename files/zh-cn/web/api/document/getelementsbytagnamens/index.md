@@ -2,6 +2,7 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{ ApiRef("DOM") }}
 
 ```

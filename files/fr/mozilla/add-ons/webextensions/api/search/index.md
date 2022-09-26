@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search
 ---
+
 {{AddonSidebar}}
 
 Récupère les moteurs de recherche et lance une recherche avec un moteur de recherche spécifique

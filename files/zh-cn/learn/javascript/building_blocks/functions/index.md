@@ -2,6 +2,7 @@
 title: 函数 - 可复用代码块
 slug: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
       <th scope="row">前提条件：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >（JS 的入门）。
       </td>
@@ -310,72 +311,72 @@ function greeting() {
 
 5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`，`b()`所以他们看起来像这样：
 
-```js
-function a() {
-  var y = 2;
-  output(y);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(y);
+    }
 
-function b() {
-  var z = 3;
-  output(z);
-}
-```
+    function b() {
+      var z = 3;
+      output(z);
+    }
+    ```
 
-保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
+    保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
+    您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
 
-6.现在尝试更新您的代码，如下所示：
+6. 现在尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(x);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(x);
+    }
 
-function b() {
-  var z = 3;
-  output(x);
-}
-```
+    function b() {
+      var z = 3;
+      output(x);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+7. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
+    函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
 
-7.最后，尝试更新您的代码，如下所示：
+8. 最后，尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(z);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(z);
+    }
 
-function b() {
-  var z = 3;
-  output(y);
-}
-```
+    function b() {
+      var z = 3;
+      output(y);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+9. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+    这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 

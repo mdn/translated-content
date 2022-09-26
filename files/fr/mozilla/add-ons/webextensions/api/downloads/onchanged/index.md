@@ -14,6 +14,7 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
+
 {{AddonSidebar()}}
 
 L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).

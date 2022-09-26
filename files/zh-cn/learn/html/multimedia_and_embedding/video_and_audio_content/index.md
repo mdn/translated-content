@@ -2,6 +2,7 @@
 title: 视频和音频内容
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 现在我们可以轻松的为一个网页添加简单的图像，下一步我们开始为 HTML 文档添加音频和视频播放器。在这篇文章中，我们会使用 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素来做到这件事；然后我们还会看看如何为你的视频添加字幕。
@@ -201,7 +202,7 @@ mediaElem.load();
 
 ### 音轨增删事件
 
-你可以监控媒体元素中的音频轨道，当音轨被添加或删除时，你可以通过监听相关事件来侦测到。具体来说，通过监听 {{domxref("AudioTrackList")}} 对象的 {{event("addtrack")}} 事件（即 {{domxref("HTMLMediaElement.audioTracks")}} 对象），你可以及时对音轨的增加做出响应。
+你可以监控媒体元素中的音频轨道，当音轨被添加或删除时，你可以通过监听相关事件来侦测到。具体来说，通过监听 {{domxref("AudioTrackList")}} 对象的 `addtrack` 事件（即 {{domxref("HTMLMediaElement.audioTracks")}} 对象），你可以及时对音轨的增加做出响应。
 
 ```js
 const mediaElem = document.querySelector("video");

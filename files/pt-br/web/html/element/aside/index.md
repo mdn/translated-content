@@ -20,10 +20,10 @@ O elemento \_HTML `<aside>` \_representa uma seção de uma página que consiste
 >
 > - **Não use** o elemento `<aside>` para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.
 
-- _[Categoria de conteudo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), conteudo de secionamento, conteudo palpavel.
-- _Conteudo permitido_[Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _[Categoria de conteudo](/pt-BR/docs/HTML/Content_categories)_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), conteudo de secionamento, conteudo palpavel.
+- _Conteudo permitido_[Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _Omissao de tag_ Nenhuma, ambas as tags de início e fim são obrigatórias.
-- \_Elementos pai permitidos_Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
+- \_Elementos pai permitidos_Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
@@ -52,6 +52,6 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attri
 ## Veja também
 
 - Outros elementos de seçao relacionados: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Seçoes e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
+- [Seçoes e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
 {{HTMLRef}}

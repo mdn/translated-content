@@ -2,6 +2,7 @@
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>预备知识：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
             >Introduction to CSS</a
           >.)
         </p>

@@ -15,10 +15,10 @@ O _Elemento HTML Article_ (\<article>) representa uma composição independente 
 
 ## Contexto de uso
 
-| Conteúdo permitido       | [Flow content](</en/HTML/Content_categories#Flow content> "en/HTML/Content categories#Flow content")                                                                                                                                                                             |
+| Conteúdo permitido       | [Flow content](</en/HTML/Content_categories#Flow content>)                                                                                                                                                                             |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag           | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                      |
-| Elementos pai permitidos | Qualquer elemento que aceita [flow content](/en/HTML/Content_categories#flow_content "https://developer.mozilla.org/en/HTML/Content_categories#flow_content"). Note-se que um elemento `<article>` não pode ser descendente de um elemento {{ HTMLElement("address") }}. |
+| Elementos pai permitidos | Qualquer elemento que aceita [flow content](/en/HTML/Content_categories#flow_content). Note-se que um elemento `<article>` não pode ser descendente de um elemento {{ HTMLElement("address") }}. |
 | Documento normativo      | [HTML5, section 4.4.4](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element)                                                                                                                                                            |
 
 ## Atributos
@@ -27,7 +27,7 @@ Este elemento não possui outros elementos se não os [global attributes](/en/HT
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLElement`](/en/DOM/element "en/DOM/element") .
+Este elemento implementa a interface [`HTMLElement`](/en/DOM/element) .
 
 ## Exemplos
 
@@ -55,4 +55,4 @@ Lotes de texto incrível.
 ## Veja também
 
 - Outros elementos de seção relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }}
-- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
+- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document).

@@ -2,6 +2,7 @@
 title: CSS 的值与单位
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上的任何属性页将帮助您理解对任何特定属性有效的值。在本节课中，我们将学习一些最常用的值和单位。
@@ -12,16 +13,16 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
       <th scope="row">预备知识：</th>
       <td>
         基本的计算机知识，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基本的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >文件处理</a
         >基本知识，HTML 基础知识 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >学习 HTML 入门</a
         >)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步
-        <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)
       </td>
     </tr>
     <tr>

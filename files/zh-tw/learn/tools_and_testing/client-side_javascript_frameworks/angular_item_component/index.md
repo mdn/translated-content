@@ -3,6 +3,7 @@ title: 建立一個 item 元件
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 元件可以用來幫助你組織你的應用程式。這篇文章會引導你建立一個元件，用來管理清單列表中的個別項目，包含加入核取方塊、編輯和刪除功能。這邊也會介紹 Angular 事件模型。

@@ -2,6 +2,7 @@
 title: 使用 JSON
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。您会经常遇到它，所以在本文中，我们向您提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
@@ -12,11 +13,11 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
       <th scope="row">前提：</th>
       <td>
         计算机基础知识，HTML 和 CSS 基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> and
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >) 和 JS 面向对象基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >)。
       </td>

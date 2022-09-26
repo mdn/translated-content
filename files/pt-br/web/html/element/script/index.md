@@ -85,11 +85,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - {{htmlattrdef("integrity")}}
   - : Contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/pt-BR/docs/Web/Security/Subresource_Integrity).
 - {{htmlattrdef("nomodule")}} {{experimental_inline}}
-  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support[ ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
+  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - {{htmlattrdef("src")}}
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document. If a `script` element has a `src` attribute specified, it should not have a script embedded inside its tags.
 - {{htmlattrdef("text")}}
-  - : Like the `textContent `attribute, this attribute sets the text content of the element. Unlike the `textContent `attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
+  - : Like the `textContent`attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - {{htmlattrdef("type")}}
 
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
