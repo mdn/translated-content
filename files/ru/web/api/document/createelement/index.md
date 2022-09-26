@@ -68,5 +68,3 @@ var my_div = newDiv = null;
 ### Спецификации
 
 [DOM 2 Модуль: createElement](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-2141741547)
-
-{{ languages( { "fr": "fr/DOM/document.createElement", "it": "it/DOM/document.createElement", "pl": "pl/DOM/document.createElement" } ) }}

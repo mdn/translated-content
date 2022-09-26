@@ -40,5 +40,3 @@ for(var i = 0; i < images.length; i++) {
 ### Спецификация
 
 [DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
-
-{{ languages( { "en": "en/DOM/document.images", "fr": "fr/DOM/document.images", "pl": "pl/DOM/document.images","ru":"ru/DOM/document.images" } ) }}

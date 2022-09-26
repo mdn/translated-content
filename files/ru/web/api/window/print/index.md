@@ -30,5 +30,3 @@ window.print()
 - [Printing](/en/Printing "en/Printing")
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}
-
-{{ languages( { "ja": "ja/DOM/window\.print", "it": "it/DOM/window\.print" , "zh-cn": "zh-cn/DOM/window\.print" } ) }}

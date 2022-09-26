@@ -57,5 +57,3 @@ Specified by the WHATWG's [Web Applications 1.0 working draft](http://whatwg.org
 - [Web Application APIs - Custom scheme and content handlers - Whitelisted schemes](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme)
 - [Register a webmail service as mailto handler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window) shows how to do `registerProtocolHandler` from XPCOM scope.
 - [XPCOM Interface Reference > nsIWebContentHandlerRegistrar > registerContentHandler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#registerProtocolHandler) - This shows how to use this function XPCOM scope
-
-{{ languages( { "es": "es/DOM/window\.navigator.registerProtocolHandler", "fr": "fr/DObrM/window\.navigator.registerProtocolHandler", "ja": "ja/DOM/window\.navigator.registerProtocolHandler", "pl": "pl/DOM/window\.navigator.registerProtocolHandler", "ko": "ko/DOM/window\.navigator.registerProtocolHandler" } ) }}
