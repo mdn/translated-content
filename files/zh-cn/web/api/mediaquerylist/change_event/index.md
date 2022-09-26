@@ -19,7 +19,7 @@ onchange = event => { };
 
 ## 事件类型
 
-{{domxref("MediaQueryListEvent")}} 类型。 继承自 {{domxref("Event")}}。
+{{domxref("MediaQueryListEvent")}} 类型。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 

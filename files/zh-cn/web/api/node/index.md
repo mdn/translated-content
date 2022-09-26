@@ -20,7 +20,7 @@ slug: Web/API/Node
 从其父类型 _{{DOMxRef("EventTarget")}}_\[1] 继承属性。
 
 - {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
-  - : 返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。 在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
+  - : 返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
 - {{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}
   - : (不适用于网页内容) 只读的 `nsIURI` 对象表示元素的 base URI.
 - {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
@@ -57,11 +57,11 @@ slug: Web/API/Node
 - {{DOMxRef("Node.nodeValue")}}
   - : 返回或设置当前节点的值。
 - {{DOMxRef("Node.ownerDocument")}} {{readonlyInline}}
-  - : 返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有 Document 对象与之关联，返回 null。
+  - : 返回这个元素属于的 {{DOMxRef("Document")}}对象。如果没有 Document 对象与之关联，返回 null。
 - {{DOMxRef("Node.parentNode")}} {{readonlyInline}}
-  - : 返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。
+  - : 返回一个当前节点 {{DOMxRef("Node")}}的父节点。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中，这个属性返回 null。
 - {{DOMxRef("Node.parentElement")}} {{readonlyInline}}
-  - : 返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。
+  - : 返回一个当前节点的父节点 {{DOMxRef("Element")}} 。如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。
 - {{DOMxRef("Node.previousSibling")}} {{readonlyInline}}
   - : 返回一个当前节点同辈的前一个节点 ( {{DOMxRef("Node")}}) ，或者返回 null（如果不存在这样的一个节点的话）。
 - {{DOMxRef("Node.textContent")}}
@@ -79,7 +79,7 @@ slug: Web/API/Node
 
   - : 该节点命名空间的`URL`，如果没有命名空间则为`null`。
 
-    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树 ，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
+    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
 
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Deprecated_Inline}}
   - : 返回节点优先级 `nsIPrincipal` 。
@@ -116,7 +116,7 @@ slug: Web/API/Node
 - {{DOMxRef("Node.lookupPrefix()")}}
   - : 返回包含参数 URI 所对应的命名空间前缀的 {{DOMxRef("DOMString")}}，若不存在则返回 null。如果存在多个可匹配的前缀，则返回结果和浏览器具体实现有关。
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
-  - : 接受一个前缀，并返回前缀所对应节点命名空间 URI 。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。
+  - : 接受一个前缀，并返回前缀所对应节点命名空间 URI。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。
 - {{DOMxRef("Node.normalize()")}}
   - : 对该元素下的所有文本子节点进行整理，合并相邻的文本节点并清除空文本节点。
 - {{DOMxRef("Node.removeChild()")}}
