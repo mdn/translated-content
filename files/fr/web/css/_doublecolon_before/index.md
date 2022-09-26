@@ -47,7 +47,7 @@ q::before {
   color: blue;
 }
 q::after {
-  content: '»';
+  content: "»";
   color: red;
 }
 ```
