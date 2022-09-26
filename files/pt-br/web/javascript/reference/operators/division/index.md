@@ -49,12 +49,12 @@ Math.floor(3 / 2) // 1
 
 ## Veja também
 
-- [ Operador de adição](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [ Operador de subtração ](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [ Operador de multiplicação ](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [ Operador restante ](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [ Operador de exponenciação ](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [ Operador de incremento ](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [ Operador de decremento](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [ Operador de negação unário ](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [ Operador unário plus ](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [ Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
+- [ Operador de subtração ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [ Operador de multiplicação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [ Operador restante ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [ Operador de exponenciação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [ Operador de incremento ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
+- [ Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [ Operador de negação unário ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [ Operador unário plus ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
