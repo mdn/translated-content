@@ -1,8 +1,8 @@
 ---
 title: 共有メモリーに関する変更予定
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
 ---
-
 {{JSRef}}
 
 開発者が [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) オブジェクトを再び作成できるように、標準化作業が進行中ですが、スレッドをまたがってこれらを使用するために変更が必要です (例えば、 `postMessage()` で `SharedArrayBuffer` オブジェクトを使用すると、既定で例外が発生します）。これらの変更により、サイト間の分離がさらに進み、共有メモリーで作成できる高解像度タイマーを使った攻撃の影響を軽減するのに役立ちます。
