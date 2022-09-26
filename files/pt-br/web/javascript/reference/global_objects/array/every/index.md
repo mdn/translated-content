@@ -40,13 +40,13 @@ arr.every(callback[, thisArg])
 
 ## Descrição
 
-O método `every `executa a função `callback `fornecida uma vez para cada elemento presente no array, até encontrar algum elemento em que a função retorne um valor false (valor que se torna false quando convertido para boolean). Se esse elemento é encontrado, o método `every `imediatamente retorna false. Caso contrário, se a função `callback `retornar true para todos elementos, o método retorna true. A função `callback` é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.
+O método `every` executa a função `callback` fornecida uma vez para cada elemento presente no array, até encontrar algum elemento em que a função retorne um valor false (valor que se torna false quando convertido para boolean). Se esse elemento é encontrado, o método `every` imediatamente retorna false. Caso contrário, se a função `callback` retornar true para todos elementos, o método retorna true. A função `callback` é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.
 
 A função `callback` é chamada com três argumentos: o valor do elemento corrente, o índice do elemento corrente e o array original que está sendo percorrido.
 
-Se o parâmetro `thisArg` foi passado para o método `every`, ele será repassado para a função `callback` no momento da chamada para ser utilizado como o `this`. Caso contrário, o valor `undefined `será repassado para uso como o _`this`_. O valor do `this` a ser repassado para o `callback` é determinado de acordo com as [regras usuais para determinar o this visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
+Se o parâmetro `thisArg` foi passado para o método `every`, ele será repassado para a função `callback` no momento da chamada para ser utilizado como o `this`. Caso contrário, o valor `undefined` será repassado para uso como o _`this`_. O valor do `this` a ser repassado para o `callback` é determinado de acordo com as [regras usuais para determinar o this visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
-O método `every `não modifica o array original.
+O método `every`não modifica o array original.
 
 A lista de elementos que serão processados pelo `every` é montada antes da primeira chamada da função `callback`. Se um elemento for acrescentado ao array original após a chamada ao `every` , ele não será visível para o callback. Se os elementos existentes forem modificados, os valores que serão repassados serão os do momento em que o método `every` chamar o `callback`. Elementos removidos não serão considerados.
 
@@ -77,7 +77,7 @@ function isBigEnough(element, index, array) {
 
 ## Polyfill
 
-`every` foi adicionado ao padrão ECMA-262 na 5ª edição; como tal, pode não estar presente em outras implementações do padrão. Você pode contornar isso adicionando o seguinte código no começo dos seus scripts, permitindo o uso de every em implementações que não o suportam nativamente. Esse algoritimo é exatamente o mesmo especificado no ECMA-262, 5ª edição, assumindo que ` Object e ``TypeError tem os seus valores originais e que ` `callbackfn.call retorna o valor original de `{{jsxref("Function.prototype.call")}}
+`every` foi adicionado ao padrão ECMA-262 na 5ª edição; como tal, pode não estar presente em outras implementações do padrão. Você pode contornar isso adicionando o seguinte código no começo dos seus scripts, permitindo o uso de every em implementações que não o suportam nativamente. Esse algoritimo é exatamente o mesmo especificado no ECMA-262, 5ª edição, assumindo que `Object` e `TypeError` tem os seus valores originais e que `callbackfn.call` retorna o valor original de {{jsxref("Function.prototype.call")}}
 
 ```js
 if (!Array.prototype.every) {

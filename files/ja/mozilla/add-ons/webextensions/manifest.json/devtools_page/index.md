@@ -2,6 +2,7 @@
 title: devtools_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -16,7 +16,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 
 <p>Свойство <code><strong>CanvasRenderingContext2D.lineDashOffset</strong></code> в Canvas 2D API устанавливает смещение штрихов, или «фаза».</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание:</strong> Линии нарисованы вызовом метода  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.</p>
 </div>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[15]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([4, 16]);

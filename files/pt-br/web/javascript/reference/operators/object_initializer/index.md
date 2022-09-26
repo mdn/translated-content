@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Operators/Inicializador_Objeto
 ---
 {{JsSidebar("Operadores")}}
 
-Objetos podem ser inicializados utilizando [`new Object()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object),` Object.create()`, ou a notação _literal_. Um inicializador de objetos é uma lista de zero ou mais pares de _propriedade: valor_, separados por vírgula e fechado por um par de chaves (`{}`).
+Objetos podem ser inicializados utilizando [`new Object()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, ou a notação _literal_. Um inicializador de objetos é uma lista de zero ou mais pares de _propriedade: valor_, separados por vírgula e fechado por um par de chaves (`{}`).
 
 ## Sintaxe
 

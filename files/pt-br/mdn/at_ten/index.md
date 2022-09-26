@@ -25,6 +25,6 @@ Por dez anos a comunidade do MDN tem documentado a Web livre. Desde corrigir peq
 
 ## Subnav
 
-1.  [10 anos de MDN](/pt-BR/docs/MDN_at_ten/)
-2.  [A história do MDN](/pt-BR/docs/MDN_at_ten/History_of_MDN)
-3.  [Contribuindo com o MDN](/pt-BR/docs/MDN_at_ten/Contributing_to_MDN)
+1. [10 anos de MDN](/pt-BR/docs/MDN_at_ten/)
+2. [A história do MDN](/pt-BR/docs/MDN_at_ten/History_of_MDN)
+3. [Contribuindo com o MDN](/pt-BR/docs/MDN_at_ten/Contributing_to_MDN)

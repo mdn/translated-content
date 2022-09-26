@@ -3,6 +3,7 @@ title: continue 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/continue_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/continue_Statement
 ---
+
 ### continue 文
 
 `continue` 文は `while` 文、`do-while` 文、`for` 文、`label` 文をリスタートさせるために用います。

@@ -32,7 +32,7 @@ var p = new Proxy(target, handler);
 ## Métodos
 
 - {{jsxref("Proxy.revocable()")}}
-  - : Cria um objeto `Proxy `revogável.
+  - : Cria um objeto `Proxy` revogável.
 
 ## Métodos para manipular objetos
 
@@ -44,7 +44,7 @@ O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
 ### Exemplo básico
 
-Neste exemplo simples, o número `37 `é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador [`get`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
+Neste exemplo simples, o número `37` é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador [`get`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
 
 ```js
 var handler = {
@@ -110,7 +110,7 @@ person.age = 300; // Lança uma exceção
 
 ### Construtor de extensão
 
-Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores [`construct `](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)e [`apply`](/pt-BR/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply).
+Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores [`construct`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) e [`apply`](/pt-BR/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply).
 
 ```js
 function extend(sup, base) {
@@ -190,7 +190,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 ### Correção de valor e uma propriedade extra
 
-O objeto de proxy `produtos `avalia o valor passado e converte-o em uma matriz, se necessário. O objeto também suporta uma propriedade adicional chamada `latestBrowser `tanto em getters como em setters.
+O objeto de proxy `produtos` avalia o valor passado e converte-o em uma matriz, se necessário. O objeto também suporta uma propriedade adicional chamada `latestBrowser` tanto em getters como em setters.
 
 ```js
 let products = new Proxy({
@@ -299,7 +299,7 @@ console.log(products.number); // 3
 
 ### Um exemplo completo de lista de `traps`
 
-Agora, para criar uma lista completa de amostra de `traps`, para fins didáticos, tentaremos propor um objeto _não nativo_ que seja particularmente adequado para este tipo de operação: o objeto global `docCookies` criado por [a "little framework" publicada na página`document.cookie`](/pt-BR/docs/Web/API/Document/cookie/Simple_document.cookie_framework "https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support").
+Agora, para criar uma lista completa de amostra de `traps`, para fins didáticos, tentaremos propor um objeto _não nativo_ que seja particularmente adequado para este tipo de operação: o objeto global `docCookies` criado por [a "little framework" publicada na página`document.cookie`](/pt-BR/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
 
 ```js
 /*
@@ -379,4 +379,4 @@ console.log(docCookies.my_cookie1);
 
 ## `Nota de licença`
 
-Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki ](http://wiki.ecmascript.org/doku.php)que contém à licença de conteúdo [CC 2.0 BY-NC-SA ](http://creativecommons.org/licenses/by-nc-sa/2.0/).
+Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki](http://wiki.ecmascript.org/doku.php) que contém à licença de conteúdo [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/).

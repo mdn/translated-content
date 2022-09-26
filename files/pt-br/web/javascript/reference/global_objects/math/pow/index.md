@@ -76,4 +76,4 @@ Math.pow(-7, 1/3); // NaN
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Operador Exponencial](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation "Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/).") {{experimental_inline}}
+- [Operador Exponencial](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}

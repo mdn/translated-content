@@ -122,7 +122,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     request.responseType = 'text';
     ```
 
-8. 从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件 — 当{{event("onload")}} 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
+8. 从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件——当 [`load`](/zh-CN/docs/Web/API/XMLHttpRequest/load_event) 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
 
     在后面添加以下内容。 你会看到，在 `onload` 事件处理程序中，我们将 `poemDisplay` ( {{htmlelement("pre")}} 元素 ) 的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。
 

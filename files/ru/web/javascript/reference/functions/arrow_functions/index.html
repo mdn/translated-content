@@ -36,11 +36,11 @@ singleParam =&gt; { statements }
 <pre class="brush: js">// Когда возвращаете литеральное выражение объекта, заключите тело в скобки
 params =&gt; ({foo: bar})
 
-// <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Остаточные параметры</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> поддерживаются
+// Остаточные параметры и параметры по умолчанию поддерживаются
 (param1, param2, ...rest) =&gt; { statements }
 (param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; { statements }
 
-// <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Деструктуризация</a> тоже поддерживается
+// Деструктуризация тоже поддерживается
 var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
 f();  // 6
 </pre>
@@ -275,7 +275,7 @@ var func = () =&gt; { foo: function() {} };
 
 <p>Стрелочная функция не может содержать разрывы строк между параметрами и стрелкой.</p>
 
-<pre class="brush: js line-numbers  language-js">var func = ()
+<pre class="brush: js">var func = ()
            =&gt; 1;
 // SyntaxError: expected expression, got '=&gt;'
 </pre>
@@ -302,7 +302,7 @@ let empty = () =&gt; {};
 (() =&gt; 'foobar')();
 // Вернёт "foobar"
 // (Это Immediately Invoked Function Expression
-// смотри '<a href="https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/IIFE">IIFE</a>' в справочнике)
+// смотри 'IIFE' в справочнике)
 
 var simple = a =&gt; a &gt; 15 ? 15 : a;
 simple(16); // 15

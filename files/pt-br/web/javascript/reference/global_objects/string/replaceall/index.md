@@ -32,7 +32,7 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
 - `regexp` (padrão)
   - : Uma {{jsxref ("RegExp")}} ou literal com o sinalizador (flag) global. As ocorrências serão substituídas por _`newSubstr`_ ou pelo valor retornado da _`function`_ (função) especificada.
-- `substr`\_ \_(padrão)
+- `substr` (padrão)
   - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
 - `newSubstr` (substituição)
 
