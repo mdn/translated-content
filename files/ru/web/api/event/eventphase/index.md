@@ -141,5 +141,3 @@ var phase = event.eventPhase;
 ### Спецификация
 
 [DOM Level 2 Events: Event.eventPhase](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-eventPhase)
-
-{{ languages( { "pl": "pl/DOM/event.eventPhase" } ) }}
