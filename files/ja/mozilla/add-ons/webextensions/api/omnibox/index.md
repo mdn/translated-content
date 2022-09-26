@@ -2,6 +2,7 @@
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
+
 {{AddonSidebar}}
 
 拡張機能に、ユーザーがアドレスバーに入力した時のカスタマイズされた振る舞いを有効にします。

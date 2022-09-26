@@ -2,6 +2,7 @@
 title: StorageEvent
 slug: Web/API/StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
 `StorageEvent` は、ストレージエリアが変化したときに window へ送信されます。

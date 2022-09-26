@@ -2,6 +2,7 @@
 title: Firefox 60 for developers
 slug: Mozilla/Firefox/Releases/60
 ---
+
 Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました。このページでは、開発者に影響する Firefox 60 の変更点をまとめています。
 
 ## Android 版 Firefox 60 に Stylo を導入

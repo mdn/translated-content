@@ -2,6 +2,7 @@
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
+
 {{AddonSidebar()}}
 
 ブックマークのインポートが開始した際に発火します。

@@ -2,6 +2,7 @@
 title: 設定ページを実装する
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
+
 {{AddonSidebar}}
 
 設定ページは、ユーザーに拡張機能の設定を確認して変える方法を与えます(「プリファレンス」や「オプション」とも呼ばれます)。

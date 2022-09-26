@@ -2,6 +2,7 @@
 title: ResizeObserverEntry.devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`devicePixelContentBoxSize`** は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバック実行時に、監視されている要素のデバイスピクセル単位のサイズを含む配列を返します。

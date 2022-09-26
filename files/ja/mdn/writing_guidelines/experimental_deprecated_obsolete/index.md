@@ -3,6 +3,7 @@ title: MDN の慣習と定義
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
+
 {{MDNSidebar}}
 
 この記事では MDN で使用されている慣習や定義、特に文書化する際に人によっては忘れがちなものを紹介します。
