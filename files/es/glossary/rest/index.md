@@ -22,5 +22,5 @@ Como {{Glossary("HTTP")}}, el protocolo estandar de la {{glossary("World Wide We
 
 ### Conocimientos generales
 
-- [REST](https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional) on Wikipedia
+- [REST](https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional) en Wikipedia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)
