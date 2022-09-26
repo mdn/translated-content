@@ -35,4 +35,4 @@ The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEven
 
 ## 浏览器兼容性
 
-{{Compat("api.DragEvent.DragEvent")}}
+{{Compat}}

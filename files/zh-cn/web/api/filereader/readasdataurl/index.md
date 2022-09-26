@@ -100,7 +100,7 @@ function previewFiles() {
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.readAsDataURL")}}
+{{Compat}}
 
 ## 参见
 

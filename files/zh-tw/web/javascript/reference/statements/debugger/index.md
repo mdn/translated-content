@@ -34,7 +34,7 @@ function potentiallyBuggyCode() {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.debugger")}}
+{{Compat}}
 
 ## 參見
 

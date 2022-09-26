@@ -54,7 +54,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.drawArrays")}}
+{{Compat}}
 
 ## 另见
 

@@ -32,7 +32,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## 参见
 

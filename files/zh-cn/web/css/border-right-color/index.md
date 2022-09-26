@@ -77,7 +77,7 @@ The `border-right-color` property is specified as a single value.
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-right-color")}}
+{{Compat}}
 
 ## See also
 

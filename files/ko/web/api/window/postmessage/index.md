@@ -130,7 +130,7 @@ window.addEventListener("message", receiveMessage, false);
 
 비동기로 전달된 스크립트(타임아웃, 유저 생성 이벤트)에서, `postMessage`의 호출자의 판별이 불가능할 때, `postMessage`에 의해 보내진 이벤트를 기다리는 이벤트 핸들러는 예외를 발생시킵니다.
 
-`postMessage()`는 _보류 중인 모든 실행 컨텍스트가 완료된 후에만_ {{domxref("MessageEvent")}}을 발송하도록 스케줄합니다. 예를 들어, 이벤트 핸들러에서 `postMessage()`가 호출되는 경우, {{domxref("MessageEvent")}}가 발송되기 전에 해당 이벤트에 대한 나머지 핸들러와 마찬가지로 이벤트 핸들러는 완료까지 실행된다.
+`postMessage()`는 _보류 중인 모든 실행 컨텍스트가 완료된 후에만_ {{domxref("MessageEvent")}}을 발송하도록 스케줄합니다. 예를 들어, 이벤트 핸들러에서 `postMessage()`가 호출되는 경우, {{domxref("MessageEvent")}}가 발송되기 전에 해당 이벤트에 대한 나머지 핸들러와 마찬가지로 이벤트 핸들러는 완료까지 실행됩니다.
 
 전달된 이벤트의 `origin` 프로퍼티의 값은 호출하는 윈도우의 `document.domain` 현재 값에 영향을 받지 않습니다.
 

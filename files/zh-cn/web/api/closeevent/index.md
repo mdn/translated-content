@@ -58,7 +58,7 @@ _该接口也继承了其父类 {{domxref("Event")}} 的属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.CloseEvent")}}
+{{Compat}}
 
 ## 参考
 

@@ -42,7 +42,7 @@ req.send();
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.overrideMimeType")}}
+{{Compat}}
 
 ## See also
 

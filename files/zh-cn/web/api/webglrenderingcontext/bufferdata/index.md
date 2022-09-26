@@ -98,7 +98,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## 更多
 

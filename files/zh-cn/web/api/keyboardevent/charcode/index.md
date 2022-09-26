@@ -65,4 +65,4 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

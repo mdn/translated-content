@@ -48,7 +48,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.createProgram")}}
+{{Compat}}
 
 ## 相关资料
 

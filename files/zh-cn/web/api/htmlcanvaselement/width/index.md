@@ -37,7 +37,7 @@ console.log(canvas.width); // 300
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.width")}}
+{{Compat}}
 
 ## 查看更多
 

@@ -155,7 +155,7 @@ dropzone.addEventListener("drop", function(event) {
 
 ## 浏览器兼容性
 
-{{COMPAT("api.DataTransferItem.webkitGetAsEntry")}}
+{{Compat}}
 
 ## 也可以看看
 

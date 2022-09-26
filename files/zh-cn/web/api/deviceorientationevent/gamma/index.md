@@ -19,7 +19,7 @@ var gamma = orientationEvent.gamma;
 
 ## Browser compatibility
 
-{{Compat("api.DeviceOrientationEvent.gamma")}}
+{{Compat}}
 
 ## See also
 

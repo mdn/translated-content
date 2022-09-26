@@ -34,7 +34,7 @@ gl.bindVertexArray(vao);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLVertexArrayObject")}}
+{{Compat}}
 
 ## 相关链接
 

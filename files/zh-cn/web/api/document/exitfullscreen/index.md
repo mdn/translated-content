@@ -34,7 +34,7 @@ document.onclick = function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## 参阅
 

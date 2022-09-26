@@ -470,7 +470,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -91,7 +91,7 @@ text-decoration-thickness: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-decoration-thickness")}}
+{{Compat}}
 
 ## 相关链接
 

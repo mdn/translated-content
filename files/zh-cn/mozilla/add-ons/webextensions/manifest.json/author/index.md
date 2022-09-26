@@ -32,4 +32,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

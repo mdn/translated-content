@@ -275,7 +275,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## 相关内容
 

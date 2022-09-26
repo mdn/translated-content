@@ -109,7 +109,7 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 以下是 CSS [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性的兼容数据表。
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 下一步
 

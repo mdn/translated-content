@@ -34,7 +34,7 @@ slug: Web/Guide/Mobile
 
 ### 移动 APIs
 
-最后，你可以利用移动设备提供的新可能性， 例如 [orientation](/zh-CN/Detecting_device_orientation) 和 [geolocation](/En/Using_geolocation)。
+最后，你可以利用移动设备提供的新可能性，例如 [orientation](/zh-CN/Detecting_device_orientation) 和 [geolocation](/En/Using_geolocation)。
 
 ## 跨浏览器开发
 
@@ -50,7 +50,7 @@ slug: Web/Guide/Mobile
 
 请查看 [list of Gecko-specific properties](/zh-CN/CSS/CSS_Reference/Mozilla_Extensions) 以及 [WebKit-specific properties](/zh-CN/CSS/CSS_Reference/Webkit_Extensions) 这两个针对 Gecko 和 Webkit 浏览器的特殊前缀列表，以及这个由 Peter Beverloo 整理的 [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 
-使用诸如 [CSS Lint](http://csslint.net/) 这样的工具可以帮助你查找这些问题， 诸如 [SASS](http://sass-lang.com/) 和 [LESS](http://lesscss.org/) 之类的预处理器可以帮助你处理这样的跨浏览器样式。
+使用诸如 [CSS Lint](http://csslint.net/) 这样的工具可以帮助你查找这些问题，诸如 [SASS](http://sass-lang.com/) 和 [LESS](http://lesscss.org/) 之类的预处理器可以帮助你处理这样的跨浏览器样式。
 
 ### 注意用户代理嗅探
 

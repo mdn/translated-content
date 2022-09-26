@@ -59,4 +59,4 @@ slug: Web/API/Animation
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation")}}
+{{Compat}}

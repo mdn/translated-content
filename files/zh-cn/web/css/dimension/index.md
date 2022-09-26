@@ -39,4 +39,4 @@ CSS 使用度量值来描述距离 ({{CSSxRef("&lt;length&gt;")}})，时间 ({{C
 
 ## 浏览器兼容性
 
-{{Compat("css.types.dimension")}}
+{{Compat}}

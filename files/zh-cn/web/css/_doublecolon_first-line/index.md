@@ -104,7 +104,7 @@ p::first-line { text-indent: 20px }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.first-line")}}
+{{Compat}}
 
 ## 参见
 

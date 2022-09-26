@@ -86,7 +86,7 @@ test.addEventListener("mouseout", function( event ) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mouseout_event")}}
+{{Compat}}
 
 ## 参见
 

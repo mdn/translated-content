@@ -81,7 +81,7 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.outline-color")}}
+{{Compat}}
 
 ## 相关链接
 

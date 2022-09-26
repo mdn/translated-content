@@ -43,4 +43,4 @@ function switchCameras(track，camera){
 
 ## 浏览器兼容性
 
-{{COMPAT( "api.MediaStreamTrack.getConstraints")}}
+{{Compat}}

@@ -136,7 +136,7 @@ h1 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.line-height")}}
+{{Compat}}
 
 ## 参见
 

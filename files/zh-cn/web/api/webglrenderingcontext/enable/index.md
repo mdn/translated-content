@@ -58,7 +58,7 @@ gl.isEnabled(gl.DITHER);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.enable")}}
+{{Compat}}
 
 ## 另见
 

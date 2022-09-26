@@ -29,7 +29,7 @@ _Also inherits methods from: {{DOMxRef("Document")}}_
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLDocument")}}
+{{Compat}}
 
 ## 另请参见
 

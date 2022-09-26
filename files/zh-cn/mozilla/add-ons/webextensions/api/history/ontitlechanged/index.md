@@ -37,7 +37,7 @@ Events have three functions:
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.history.onTitleChanged")}}
+{{Compat}}
 
 ## Examples
 

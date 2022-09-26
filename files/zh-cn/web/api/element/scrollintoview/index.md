@@ -54,7 +54,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## 相关内容
 

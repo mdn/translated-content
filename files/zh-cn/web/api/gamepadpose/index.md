@@ -38,7 +38,7 @@ TBD.
 
 ## Browser compatibility
 
-{{Compat("api.GamepadPose")}}
+{{Compat}}
 
 ## See also
 

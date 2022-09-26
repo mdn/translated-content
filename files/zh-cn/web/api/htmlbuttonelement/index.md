@@ -179,7 +179,7 @@ _从父对象{{domxref("HTMLElement")}}继承的方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLButtonElement")}}
+{{Compat}}
 
 ## 另见
 

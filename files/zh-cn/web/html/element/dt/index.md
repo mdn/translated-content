@@ -27,7 +27,7 @@ slug: Web/HTML/Element/dt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## 相关内容
 

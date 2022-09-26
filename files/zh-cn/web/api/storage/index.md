@@ -69,7 +69,7 @@ function setStyles() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## 相关链接
 

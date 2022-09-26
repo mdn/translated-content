@@ -40,4 +40,4 @@ A new {{domxref("AudioBufferSourceNode")}} object instance.
 
 ## Browser Compatibility
 
-{{Compat("api.AudioBufferSourceNode.AudioBufferSourceNode")}}
+{{Compat}}

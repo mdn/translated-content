@@ -42,9 +42,9 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
 
 <p>prompt диалог содержит однострочное текстовое поле, кнопку Cancel и кнопку OK, и возвращает (возможно пустой) текст введённый пользователем в текстовое поле.</p>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.confirm and DOM:window.alert</span>Диалоговые окна являются модальными; они блокируют доступ пользователя к остальному интерфейсу программы, пока диалоговое окно не будет закрыто. По этой причине вы не должны злоупотреблять функциями, которые создают диалоговое окно (или модальное окно).</p>
+<p>The following text is shared between this article, DOM:window.confirm and DOM:window.alertДиалоговые окна являются модальными; они блокируют доступ пользователя к остальному интерфейсу программы, пока диалоговое окно не будет закрыто. По этой причине вы не должны злоупотреблять функциями, которые создают диалоговое окно (или модальное окно).</p>
 
-<p>Пожалуйста, обратите внимание, что результатом является строка. Это значит, что вы должны определять значение заданное пользователем. Например, если ответ должен быть Number, вы должны привести значение к Number: <span style="background-color: #f6f6f2; font-family: courier new,andale mono,monospace; font-size: 12px; line-height: normal;">var aNumber = Number(window.prompt("Type a number", "")); </span></p>
+<p>Пожалуйста, обратите внимание, что результатом является строка. Это значит, что вы должны определять значение заданное пользователем. Например, если ответ должен быть Number, вы должны привести значение к Number: var aNumber = Number(window.prompt("Type a number", "")); </p>
 
 <p>Пользователи <a href="/Mozilla/Firefox" title="Firefox">Mozilla Firefox</a> (например, расширений Firefox) должны использовать методы <code>nsIPromptService</code>.</p>
 

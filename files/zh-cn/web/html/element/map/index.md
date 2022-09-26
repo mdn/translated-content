@@ -68,7 +68,7 @@ _For the `right.html` link_
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 另见
 

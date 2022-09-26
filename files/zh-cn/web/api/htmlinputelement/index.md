@@ -306,7 +306,7 @@ slug: Web/API/HTMLInputElement
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -27,7 +27,7 @@ A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on
 
 ## Browser compatibility
 
-{{Compat("api.Selection.deleteFromDocument")}}
+{{Compat}}
 
 ## See also
 

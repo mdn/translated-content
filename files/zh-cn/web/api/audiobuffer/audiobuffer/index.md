@@ -38,4 +38,4 @@ _继承参数自 {{domxref("AudioNodeOptions")}} 字典_.
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.AudioBuffer")}}
+{{Compat}}

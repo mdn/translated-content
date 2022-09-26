@@ -27,7 +27,7 @@ array.includes(searchElement[, fromIndex])
 - `searchElement`
   - : O elemento a buscar
 - `fromIndex`
-  - : Opcional. A posição no array de onde a busca pelo `searchElement `se iniciará. Por padrão, 0.
+  - : Opcional. A posição no array de onde a busca pelo `searchElement` se iniciará. Por padrão, 0.
 
 ## Exemplos
 

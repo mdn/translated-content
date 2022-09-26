@@ -108,7 +108,7 @@ A better way to track changes to the user's selection is to watch for the {{domx
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 参见
 

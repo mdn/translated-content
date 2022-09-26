@@ -43,7 +43,7 @@ slug: Web/SVG/Element/altGlyph
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.altGlyph")}}
+{{Compat}}
 
 ## 参见
 

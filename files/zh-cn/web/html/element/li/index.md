@@ -93,7 +93,7 @@ slug: Web/HTML/Element/li
 
 ## 浏览兼容性
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 另见
 

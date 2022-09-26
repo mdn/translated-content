@@ -48,4 +48,4 @@ This method is not part of a specification.
 
 ## 浏览器兼容性
 
-{{Compat("api.BeforeInstallPromptEvent.prompt")}}
+{{Compat}}

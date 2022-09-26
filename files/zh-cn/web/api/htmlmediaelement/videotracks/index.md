@@ -27,7 +27,7 @@ var videoTracks = mediaElement.videoTracks;
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.videoTracks")}}
+{{Compat}}
 
 ## See also
 

@@ -94,7 +94,7 @@ _There are no inherited methods._
 
 ## 瀏覽器相容性
 
-{{Compat("api.Range")}}
+{{Compat}}
 
 ## 參見
 

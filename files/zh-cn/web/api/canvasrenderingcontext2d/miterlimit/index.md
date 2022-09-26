@@ -82,7 +82,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.miterLimit")}}
+{{Compat}}
 
 ## 参见
 

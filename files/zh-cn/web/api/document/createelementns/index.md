@@ -80,7 +80,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## 相关链接
 

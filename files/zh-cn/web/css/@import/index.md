@@ -46,4 +46,4 @@ slug: Web/CSS/@import
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

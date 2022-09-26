@@ -19,7 +19,7 @@ var alpha = instanceOfDeviceOrientationEvent.alpha;
 
 ## Browser compatibility
 
-{{Compat("api.DeviceOrientationEvent.alpha")}}
+{{Compat}}
 
 ## See also
 

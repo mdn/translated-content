@@ -80,7 +80,7 @@ body {
 
 ## Browser compatibility
 
-{{Compat("css.properties.overscroll-behavior")}}
+{{Compat}}
 
 ## See also
 

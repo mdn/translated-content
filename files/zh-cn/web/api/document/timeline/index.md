@@ -30,7 +30,7 @@ var thisMoment = pageTimeline.currentTime;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.timeline")}}
+{{Compat}}
 
 ## 参见
 

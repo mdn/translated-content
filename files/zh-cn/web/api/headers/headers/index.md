@@ -53,7 +53,7 @@ secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inheri
 
 ## Browser compatibility
 
-{{Compat("api.Headers.Headers")}}
+{{Compat}}
 
 ## See also
 

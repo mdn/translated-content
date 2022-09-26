@@ -59,7 +59,7 @@ This is second paragraph of text. This is second paragraph of text. This is seco
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 參照 （see also)
 

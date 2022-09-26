@@ -50,7 +50,7 @@ image-orientation: inherit
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.image-orientation")}}
+{{Compat}}
 
 ## 相关链接
 

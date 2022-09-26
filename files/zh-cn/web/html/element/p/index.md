@@ -42,7 +42,7 @@ slug: Web/HTML/Element/p
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## 另请参阅
 

@@ -117,7 +117,7 @@ scriptError.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.error_event")}}
+{{Compat}}
 
 ## 相关事件
 

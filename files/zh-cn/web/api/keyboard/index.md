@@ -45,4 +45,4 @@ if (navigator.keyboard) {
 
 ## Browser compatibility
 
-{{Compat("api.Keyboard")}}
+{{Compat}}

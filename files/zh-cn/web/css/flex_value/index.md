@@ -24,7 +24,7 @@ slug: Web/CSS/flex_value
 
 ## 浏览器兼容性
 
-{{Compat("css.types.flex")}}
+{{Compat}}
 
 ## See also
 

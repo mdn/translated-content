@@ -53,7 +53,7 @@ console.log(up_forms[0].tagName); // returns "FORM"
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.getElementsByName")}}
+{{Compat}}
 
 ## 参阅
 

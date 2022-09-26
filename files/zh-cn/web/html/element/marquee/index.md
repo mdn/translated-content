@@ -72,4 +72,4 @@ HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}

@@ -43,7 +43,7 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.canPlayType")}}
+{{Compat}}
 
 ## 其他
 

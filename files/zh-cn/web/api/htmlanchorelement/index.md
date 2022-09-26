@@ -83,7 +83,7 @@ The `blur()` and `focus()` methods are inherited from {{domxref("HTMLElement")}}
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement")}}
+{{Compat}}
 
 ## See also
 

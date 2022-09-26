@@ -205,7 +205,7 @@ var result = mapped.map(function(el){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## 參見
 

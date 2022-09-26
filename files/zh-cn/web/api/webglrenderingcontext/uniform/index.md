@@ -62,7 +62,7 @@ gl.uniform1f(u_alpha, 0.8);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.uniform1f")}}
+{{Compat}}
 
 ## 另见
 

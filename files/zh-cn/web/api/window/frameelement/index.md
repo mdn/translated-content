@@ -39,4 +39,4 @@ if (frameEl)
 
 ### 浏览器兼容性
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}

@@ -36,7 +36,7 @@ window.addEventListener('devicemotion', function(event) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## 參見
 

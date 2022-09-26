@@ -115,7 +115,7 @@ Firefox 14 开始支持层叠 keyframes。
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## 参见
 

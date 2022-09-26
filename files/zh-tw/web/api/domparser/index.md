@@ -112,7 +112,7 @@ See article here: [nsIDOMParser](/zh-TW/docs/nsIDOMParser)
 
 ## 瀏覽器相容性
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## 參考資料
 

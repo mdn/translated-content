@@ -54,7 +54,7 @@ theTree.constructor is function Tree(name) {
 
 ### Exemplo: Mudando o construtor de um objeto
 
-O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas `true`, `1` e `"test" `não serão afetados sendo que eles tem `construtores `_read-only_ nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade `constructor` de um objeto.
+O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas `true`, `1` e `"test"` não serão afetados sendo que eles tem `construtores` _read-only_ nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade `constructor` de um objeto.
 
 ```js
 function Type () {}

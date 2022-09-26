@@ -40,7 +40,7 @@ gl.isBuffer(buffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isBuffer")}}
+{{Compat}}
 
 ## 另见
 

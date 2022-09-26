@@ -73,12 +73,11 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
 <pre class="brush: js">(function(e){
  e.closest = e.closest || function(css){
    var node = this;
- <code class="language-javascript"><span class="keyword token">
-   while</span> <span class="punctuation token">(</span>node<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-<span class="keyword token">      if</span> <span class="punctuation token">(</span>node<span class="punctuation token">.</span><span class="function token">matches</span><span class="punctuation token">(</span>css<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="keyword token">return</span> node<span class="punctuation token">;</span>
-      <span class="keyword token">else</span> node <span class="operator token">=</span> node<span class="punctuation token">.</span>parentElement<span class="punctuation token">;</span>
-   <span class="punctuation token">}</span>
-<span class="keyword token">   return</span> <span class="keyword token">null</span><span class="punctuation token">;</span></code>
+   while (node) {
+      if (node.matches(css)) return node;
+      else node = node.parentElement;
+   }
+   return null;
  }
 })(Element.prototype);</pre>
 

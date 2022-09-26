@@ -78,7 +78,7 @@ navigator.credentials.create({ publicKey })
 
 ## 浏览器兼容性
 
-{{Compat("api.AuthenticatorResponse")}}
+{{Compat}}
 
 ## 参见
 

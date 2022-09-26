@@ -47,4 +47,4 @@ span.textContent = 'classList length = ' + length;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.length")}}
+{{Compat}}

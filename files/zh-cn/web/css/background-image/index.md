@@ -101,7 +101,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-image")}}
+{{Compat}}
 
 \[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
 

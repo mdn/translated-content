@@ -700,7 +700,7 @@ gl.getParameter(gl.VIEWPORT);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getParameter")}}
+{{Compat}}
 
 ## 另请参阅
 

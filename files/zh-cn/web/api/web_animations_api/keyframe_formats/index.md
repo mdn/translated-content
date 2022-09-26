@@ -106,7 +106,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## 相关推荐
 

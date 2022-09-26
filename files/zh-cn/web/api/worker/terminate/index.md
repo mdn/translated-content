@@ -37,7 +37,7 @@ myWorker.terminate();
 
 ## Browser compatibility
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## See also
 

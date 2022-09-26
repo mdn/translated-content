@@ -42,7 +42,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.KeyboardEvent")}}
+{{Compat}}
 
 ## 参考
 

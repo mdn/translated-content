@@ -100,7 +100,7 @@ baselines.forEach(function (baseline, index) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.textBaseline")}}
+{{Compat}}
 
 ## 参见
 

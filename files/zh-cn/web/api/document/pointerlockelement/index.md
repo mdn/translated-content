@@ -23,7 +23,7 @@ An {{domxref("Element")}} or `null`.
 
 ## 浏览器兼容
 
-{{Compat("api.Document.pointerLockElement")}}
+{{Compat}}
 
 ## 相关链接
 

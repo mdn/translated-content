@@ -100,7 +100,7 @@ window.addEventListener('hashchange', locationHashChanged);
 
 ## 浏览器兼容性
 
-{{Compat("api.HashChangeEvent")}}
+{{Compat}}
 
 ## 相关事件
 

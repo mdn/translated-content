@@ -72,7 +72,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioWorkletNode")}}
+{{Compat}}
 
 ## See also
 

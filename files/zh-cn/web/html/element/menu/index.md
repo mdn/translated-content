@@ -161,7 +161,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 参见
 

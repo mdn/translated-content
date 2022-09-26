@@ -81,7 +81,7 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## See also
 

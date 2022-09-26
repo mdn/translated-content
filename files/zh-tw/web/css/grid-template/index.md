@@ -113,7 +113,7 @@ footer {
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template")}}
+{{Compat}}
 
 ## See also
 

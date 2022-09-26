@@ -64,7 +64,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## 另请参见
 

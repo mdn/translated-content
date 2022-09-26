@@ -55,7 +55,7 @@ myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
 
 ## Browser compatibility
 
-{{Compat("api.Headers.get")}}
+{{Compat}}
 
 ## See also
 

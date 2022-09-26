@@ -52,7 +52,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerRegistration.pushManager")}}
+{{Compat}}
 
 ## 参见
 

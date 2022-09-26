@@ -57,4 +57,4 @@ svg|a {}
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

@@ -118,7 +118,7 @@ for (var i=0;i<6;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 

@@ -108,7 +108,7 @@ This next line opens up a transaction on the Database, then opens an object stor
 
 ## Browser compatibility
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## 閱讀更多
 

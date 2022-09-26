@@ -35,4 +35,4 @@ slug: Web/API/DataTransferItem
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransferItem")}}
+{{Compat}}

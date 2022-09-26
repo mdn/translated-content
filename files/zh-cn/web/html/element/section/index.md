@@ -153,7 +153,7 @@ slug: Web/HTML/Element/section
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## 参见
 

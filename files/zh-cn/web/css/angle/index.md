@@ -38,4 +38,4 @@ slug: Web/CSS/angle
 
 ## 浏览器兼容性
 
-{{Compat("css.types.angle")}}
+{{Compat}}

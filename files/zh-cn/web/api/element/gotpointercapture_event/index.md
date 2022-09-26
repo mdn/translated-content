@@ -39,7 +39,7 @@ function init() {
 
 ## Browser compatibility
 
-{{Compat("api.GlobalEventHandlers.ongotpointercapture")}}
+{{Compat}}
 
 ## See also
 

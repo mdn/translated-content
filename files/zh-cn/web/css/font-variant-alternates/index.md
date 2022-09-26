@@ -105,4 +105,4 @@ p {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.font-variant-alternates")}}
+{{Compat}}

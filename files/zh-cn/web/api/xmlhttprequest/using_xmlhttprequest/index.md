@@ -773,7 +773,7 @@ oReq.send(null);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 参考资料
 

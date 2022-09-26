@@ -23,7 +23,7 @@ _无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSpanElement")}}
+{{Compat}}
 
 ## 另请参阅
 
