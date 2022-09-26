@@ -4,70 +4,76 @@ slug: Learn/HTML/Howto/Use_data_attributes
 translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Web/Guide/HTML/Using_data_attributes
 ---
-<p>O <a href="/en-US/docs/Web/Guide/HTML/HTML5" title="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido.  <a href="/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset">Atributos data-* </a>nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como <a href="/en-US/docs/Web/API/Element.classList">classList</a>, atributos fora do padrão, propriedades extras no DOM ou o método depreciado <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a>.</p>
+O [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\* ](/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset)nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element.classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
 
-<h2 id="Sintaxe_HTML">Sintaxe HTML</h2>
+## Sintaxe HTML
 
-<p>A sintaxe é simples. Qualquer atributo de qualquer elemento no qual o nome do atributo inicia com <code>data-</code> é um atributo data. Digamos que você possui um article e quer armazenar informações extras que não possuem nenhuma representação visual. Use atributos data para isso:</p>
+A sintaxe é simples. Qualquer atributo de qualquer elemento no qual o nome do atributo inicia com `data-` é um atributo data. Digamos que você possui um article e quer armazenar informações extras que não possuem nenhuma representação visual. Use atributos data para isso:
 
-<pre class="brush: html">&lt;article
+```html
+<article
   id="electriccars"
   data-columns="3"
   data-index-number="12314"
-  data-parent="cars"&gt;
+  data-parent="cars">
 ...
-&lt;/article&gt;</pre>
+</article>
+```
 
-<h2 id="Acesso_no_JavaScript">Acesso no JavaScript</h2>
+## Acesso no JavaScript
 
-<p>Ler os valores destes atributos via <a href="/en-US/docs/Web/JavaScript" title="/en-US/docs/Web/JavaScript">JavaScript</a> é muito simples também. Você pode lê-los usando {{domxref("Element.getAttribute", "getAttribute()")}} com o nome html completo, mas a forma padrão provê uma alternativa mais simples: um {{domxref("DOMStringMap")}} pode ser lido através da propriedade {{domxref("HTMLElement.dataset", "dataset")}}.</p>
+Ler os valores destes atributos via [JavaScript](/pt-BR/docs/Web/JavaScript) é muito simples também. Você pode lê-los usando {{domxref("Element.getAttribute", "getAttribute()")}} com o nome html completo, mas a forma padrão provê uma alternativa mais simples: um {{domxref("DOMStringMap")}} pode ser lido através da propriedade {{domxref("HTMLElement.dataset", "dataset")}}.
 
-<p>Para obter o atributo data através do objeto <code>dataset</code>, acesse a propriedade utilizando a parte do nome do atributo após o prefixo <code>data-</code> (note que o hífen é convertido para camelCase).</p>
+Para obter o atributo data através do objeto `dataset`, acesse a propriedade utilizando a parte do nome do atributo após o prefixo `data-` (note que o hífen é convertido para camelCase).
 
-<pre class="brush: js">var article = document.getElementById('electriccars');
+```js
+var article = document.getElementById('electriccars');
 
 article.dataset.columns // "3"
 article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"</pre>
+article.dataset.parent // "cars"
+```
 
-<p>Cada propriedade é uma String e pode ser lida e escrita. No exemplo acima a atribuição <code>article.dataset.columns = 5</code> iria alterar esse atributo para "5".</p>
+Cada propriedade é uma String e pode ser lida e escrita. No exemplo acima a atribuição `article.dataset.columns = 5` iria alterar esse atributo para "5".
 
-<h2 id="Acesso_no_CSS">Acesso no CSS</h2>
+## Acesso no CSS
 
-<p>Note que os atributos data são atributos em HTML puro, e você pode inclusive acessá-los via <a href="/en-US/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a>. Por exemplo, para mostrar o elemento pai em um artigo, você pode usar <a href="/en-US/docs/Web/CSS/content" title="/en-US/docs/Web/CSS/content">conteúdo gerado</a> em CSS com a função {{cssxref("attr")}}:</p>
+Note que os atributos data são atributos em HTML puro, e você pode inclusive acessá-los via [CSS](/pt-BR/docs/Web/CSS). Por exemplo, para mostrar o elemento pai em um artigo, você pode usar [conteúdo gerado](/pt-BR/docs/Web/CSS/content) em CSS com a função {{cssxref("attr")}}:
 
-<pre class="brush: css">article::before {
+```css
+article::before {
   content: attr(data-parent);
-}</pre>
+}
+```
 
-<p>Pode-se também usar os <a href="/en-US/docs/Web/CSS/Attribute_selectors" title="/en-US/docs/Web/CSS/Attribute_selectors">seletores de atributos</a> em CSS para alterar estilos de acordo com o atributo data:</p>
+Pode-se também usar os [seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) em CSS para alterar estilos de acordo com o atributo data:
 
-<pre class="brush: css">article[data-columns='3'] {
+```css
+article[data-columns='3'] {
   width: 400px;
 }
 article[data-columns='4'] {
   width: 600px;
-}</pre>
+}
+```
 
-<p>Pode-se tudo isso em funcionamento neste <a href="http://jsbin.com/ujiday/2/edit">exemplo JSBin</a>.</p>
+Pode-se tudo isso em funcionamento neste [exemplo JSBin](http://jsbin.com/ujiday/2/edit).
 
-<p>Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja <a href="http://www.youtube.com/watch?v=On_WyUB1gOk">esta tela</a> para um exemplo utilizando conteúdo gerado e transições CSS (<a href="http://jsbin.com/atawaz/3/edit">exemplo JSBin</a>).</p>
+Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](http://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](http://jsbin.com/atawaz/3/edit)).
 
-<p><span style="line-height: 16.7999992370605px;">Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.</span></p>
+Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.
 
-<h2 id="Issues">Issues</h2>
+## Issues
 
-<p>Não armazene conteúdo que deve estar visível e acessível nos atributos data porque tecnologias assistivas podem não acessá-los. Além disso, motores de busca podem não indexar os valores dos atributos data. </p>
+Não armazene conteúdo que deve estar visível e acessível nos atributos data porque tecnologias assistivas podem não acessá-los. Além disso, motores de busca podem não indexar os valores dos atributos data.
 
-<p>Os principais issues a serem considerados são com suporte e performance no Internet Explorer. O Internet Explorer 11+ provê suporte para o padrão, mas todas as versões anteriores <a href="http://caniuse.com/#feat=dataset">não suportam <code>dataset</code></a>. Para suporte ao IE 10 e anteriores, deve-se acessar atributos data através de {{domxref("Element.getAttribute", "getAttribute()")}} . E ainda, a <a href="http://jsperf.com/data-dataset">performance de leitura dos atributos data</a> é ruim, comparada com o armazenamento em um data warehouse JS. O uso de <code>dataset</code> é até pior que a leitura dos dados com <code>getAttribute()</code>.</p>
+Os principais issues a serem considerados são com suporte e performance no Internet Explorer. O Internet Explorer 11+ provê suporte para o padrão, mas todas as versões anteriores [não suportam `dataset`](http://caniuse.com/#feat=dataset). Para suporte ao IE 10 e anteriores, deve-se acessar atributos data através de {{domxref("Element.getAttribute", "getAttribute()")}} . E ainda, a [performance de leitura dos atributos data](http://jsperf.com/data-dataset) é ruim, comparada com o armazenamento em um data warehouse JS. O uso de `dataset` é até pior que a leitura dos dados com `getAttribute()`.
 
-<p>Apesar do que foi colocado, para metadados customizados associados a elementos, eles são uma ótima solução.</p>
+Apesar do que foi colocado, para metadados customizados associados a elementos, eles são uma ótima solução.
 
-<p>No Firefox 49.0.2 (e talvez em versões anteriores/posteriores), os atributos data que excederem 1022 caracteres não serão lidos pelo Javascript (EcmaScript 4).</p>
+No Firefox 49.0.2 (e talvez em versões anteriores/posteriores), os atributos data que excederem 1022 caracteres não serão lidos pelo Javascript (EcmaScript 4).
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Este artigo é uma adaptação de <a href="https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/">Usando atributos data em JavaScript e CSS no hacks.mozilla.org</a>.</li>
- <li><a href="http://www.sitepoint.com/use-html5-data-attributes/">Como usar atributos data em HTML5</a> (Sitepoint)</li>
-</ul>
+- Este artigo é uma adaptação de [Usando atributos data em JavaScript e CSS no hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
+- [Como usar atributos data em HTML5](http://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

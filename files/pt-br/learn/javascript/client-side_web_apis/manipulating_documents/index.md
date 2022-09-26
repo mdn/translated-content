@@ -5,55 +5,59 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 translation_of_original: Web/Guide/CSS/Getting_started/JavaScript
 original_slug: Web/CSS/Getting_Started/JavaScript
 ---
-<p>Esta é a primeira sessão da Parte II do <a href="/en/CSS/Getting_Started" title="https://developer.mozilla.org/en/CSS/Getting_Started">Tutorial de CSS</a>. A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.</p>
-<p>Cada página da Parte II ilustra como o CSS interage com outras tecnologias. Essas páginas não destinam-se a ensiná-lo como usar outras tecnologias. Para aprender sobre elas com detalhes, vá para os outros tutoriais.</p>
-<p>Em vez disso, estas páginas são usadas para ilustrar os diversos usos do CSS. Para usar estas páginas, você deve ter algum conhecimento de CSS, mas você não precisa de nenhum conhecimento de outras tecnologias.</p>
-<p>Sessão Anterior (da Parte I): <a href="/en/CSS/Getting_Started/Media" title="https://developer.mozilla.org/en/CSS/Getting_Started/Media">Media</a><br>
-  Próxima sessão: <a href="/en/CSS/Getting_Started/SVG_graphics" title="https://developer.mozilla.org/en/CSS/Getting_Started/SVG_graphics">SVG</a></p>
-<h3 id="Information:_JavaScript" name="Information:_JavaScript">Informação: JavaScript</h3>
-<p>JavaScript é uma <em>linguagem de programação</em>. JavaScript é largamente utilizado para promover interatividade em web sites e aplicações.</p>
-<p>JavaScript pode interagir com stylesheets, permitindo a você criar programas que mudam o estilo de um documento de forma dinâmica</p>
-<p>Há três formas de fazer isso:</p>
-<ul>
-  <li>Trabalhando com lista de documentos de stylesheets — por exemplo: adicionando, removendo ou adicionando um stylesheet.</li>
-  <li>Trabalhando com as regras em uma stylesheet — por exemplo: adicionando, removendo ou modificando uma regra.</li>
-  <li>Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.</li>
-</ul>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
-  <caption>
-    Mais detalhes</caption>
-  <tbody style="color: #000000;">
-    <tr>
-      <td>Para mais informações sobre JavaScript, veja a página <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> nesta wiki.</td>
-    </tr>
-  </tbody>
-</table>
-<h3 id="Action:_A_JavaScript_demonstration" name="Action:_A_JavaScript_demonstration">Ação: Uma demonstração de JavaScript</h3>
-<p>Faça um novo documento em HTML, <code>doc5.html</code>. Copie e cole o conteúdo daqui, tenha certeza de rolar para copiar todo o código:</p>
-<div style="width: 48em;">
-  <pre class="brush:html;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+Esta é a primeira sessão da Parte II do [Tutorial de CSS](/en/CSS/Getting_Started "https://developer.mozilla.org/en/CSS/Getting_Started"). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
 
-&lt;head&gt;
-&lt;title&gt;Mozilla CSS Getting Started - JavaScript demonstration&lt;/title&gt;
-&lt;link rel="stylesheet" type="text/css" href="style5.css" /&gt;
-&lt;script type="text/javascript" src="script5.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
+Cada página da Parte II ilustra como o CSS interage com outras tecnologias. Essas páginas não destinam-se a ensiná-lo como usar outras tecnologias. Para aprender sobre elas com detalhes, vá para os outros tutoriais.
 
-&lt;body&gt;
-&lt;h1&gt;JavaScript sample&lt;/h1&gt;
+Em vez disso, estas páginas são usadas para ilustrar os diversos usos do CSS. Para usar estas páginas, você deve ter algum conhecimento de CSS, mas você não precisa de nenhum conhecimento de outras tecnologias.
 
-&lt;div id="square"&gt;&lt;/div&gt;
+Sessão Anterior (da Parte I): [Media](/en/CSS/Getting_Started/Media "https://developer.mozilla.org/en/CSS/Getting_Started/Media")
+Próxima sessão: [SVG](/en/CSS/Getting_Started/SVG_graphics "https://developer.mozilla.org/en/CSS/Getting_Started/SVG_graphics")
 
-&lt;button type="button" onclick="doDemo(this);"&gt;Click Me&lt;/button&gt;
+### Informação: JavaScript
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
-<p>Crie um novo arquivo CSS, <code>style5.css</code>. Copie e cole o conteúdo daqui:</p>
-<div style="width: 48em;">
-  <pre class="brush:css;">/*** JavaScript demonstration ***/
+JavaScript é uma _linguagem de programação_. JavaScript é largamente utilizado para promover interatividade em web sites e aplicações.
+
+JavaScript pode interagir com stylesheets, permitindo a você criar programas que mudam o estilo de um documento de forma dinâmica
+
+Há três formas de fazer isso:
+
+- Trabalhando com lista de documentos de stylesheets — por exemplo: adicionando, removendo ou adicionando um stylesheet.
+- Trabalhando com as regras em uma stylesheet — por exemplo: adicionando, removendo ou modificando uma regra.
+- Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
+
+| Para mais informações sobre JavaScript, veja a página [JavaScript](/en/JavaScript "en/JavaScript") nesta wiki. |
+| -------------------------------------------------------------------------------------------------------------- |
+
+### Ação: Uma demonstração de JavaScript
+
+Faça um novo documento em HTML, `doc5.html`. Copie e cole o conteúdo daqui, tenha certeza de rolar para copiar todo o código:
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mozilla CSS Getting Started - JavaScript demonstration</title>
+<link rel="stylesheet" type="text/css" href="style5.css" />
+<script type="text/javascript" src="script5.js"></script>
+</head>
+
+<body>
+<h1>JavaScript sample</h1>
+
+<div id="square"></div>
+
+<button type="button" onclick="doDemo(this);">Click Me</button>
+
+</body>
+</html>
+```
+
+Crie um novo arquivo CSS, `style5.css`. Copie e cole o conteúdo daqui:
+
+```css
+/*** JavaScript demonstration ***/
 #square {
   width: 20em;
   height: 20em;
@@ -64,11 +68,12 @@ original_slug: Web/CSS/Getting_Started/JavaScript
 button {
   padding: .5em 2em;
 }
-</pre>
-</div>
-<p>Crie um novo arquivo de texto, <code>script5.js</code>. Copie e cole o conteúdo daqui:</p>
-<div style="width: 48em;">
-  <pre class="brush:js;">// JavaScript demonstration
+```
+
+Crie um novo arquivo de texto, `script5.js`. Copie e cole o conteúdo daqui:
+
+```js
+// JavaScript demonstration
 function doDemo (button) {
   var square = document.getElementById("square");
   square.style.backgroundColor = "#fa4";
@@ -81,15 +86,17 @@ function clearDemo (button) {
   square.style.backgroundColor = "transparent";
   button.removeAttribute("disabled");
 }
-</pre>
-</div>
-<p>Abra o documento no seu Browser e pressione o botão.</p>
-<p>Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar uma demonstração aqui. parece algo assim, antes e depois de você pressionar o botão:</p>
+```
+
+Abra o documento no seu Browser e pressione o botão.
+
+Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar uma demonstração aqui. parece algo assim, antes e depois de você pressionar o botão:
+
 <table>
   <tbody>
     <tr>
       <td>
-        <table style="border: 2px outset #36b; padding: 0 1em .5em .5em;">
+        <table style="border: 2px outset #36b; padding: 0 1em 0.5em 0.5em">
           <tbody>
             <tr>
               <td>
@@ -100,7 +107,7 @@ function clearDemo (button) {
         </table>
       </td>
       <td>
-        <table style="border: 2px outset #36b; padding: 0 1em .5em .5em;">
+        <table style="border: 2px outset #36b; padding: 0 1em 0.5em 0.5em">
           <tbody>
             <tr>
               <td>
@@ -113,28 +120,21 @@ function clearDemo (button) {
     </tr>
   </tbody>
 </table>
-<div class="note">
-  <strong>Notas importantes </strong>sobre esta demonstração:
-  <ul>
-    <li>O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.</li>
-    <li>O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.</li>
-    <li>Em JavaScript, <code>document.getElementById("square")</code> é similar em função ao seletor CSS <code>#square</code>.</li>
-    <li>Em JavaScript, <code>backgroundColor</code> corresponde à propriedade CSS<span style="line-height: 1.5em;"> </span><code style="font-size: 14px;">background-color</code><span style="line-height: 1.5em;">. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.</span></li>
-    <li>Seu browser tem uma regra built-in CSS para<span style="line-height: 1.5em;"> </span><code style="font-size: 14px;">button{{ mediawiki.external('disabled=\"true\"') }}</code><span style="line-height: 1.5em;"> ela muda a aparência dos botões quando está disabilitado.</span></li>
-  </ul>
-</div>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: .5em;">
-  <caption>
-    Desafio</caption>
-  <tbody style="color: #000000;">
-    <tr>
-      <td>
-        <p>Altere o script para que o <span style="line-height: inherit;">quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base.</span></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p><a href="/en/CSS/Getting_Started/Challenge_solutions#JavaScript" title="https://developer.mozilla.org/en/CSS/Getting_Started/Challenge_solutions#JavaScript">Veja a solução deste desafio.</a></p>
-<p><span style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 1.428em; line-height: inherit;">O que vem agora?</span></p>
-<p>Se você teve dificuldade para entender esta página, ou se tem algum comentário sobre ela, por favor, contribua nesta página de <a href="/Talk:en/CSS/Getting_Started/JavaScript" title="Talk:en/CSS/Getting_Started/JavaScript">Discussão</a>.</p>
-<p>Nesta demonstração, o documento HTML é vinculado ao script, embora apenas o elemento botão o utilize. ozilla estende CSS para permitir que você associe código JavaScript (assim como conteúdo e outras folhas de estilo) com elementos selecionados. A próxima página demonstra isso: </span><strong style="line-height: inherit;"><a href="/en/CSS/Getting_Started/XBL_bindings" title="en/CSS/Getting_Started/XBL_bindings">Ligações XBL</a></strong></p>
+
+> **Nota:** **Notas importantes** sobre esta demonstração:- O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
+>
+> - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.
+> - Em JavaScript, `document.getElementById("square")` é similar em função ao seletor CSS `#square`.
+> - Em JavaScript, `backgroundColor` corresponde à propriedade CSS `background-color`. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.
+> - Seu browser tem uma regra built-in CSS para `button{{ mediawiki.external('disabled=\"true\"') }}` ela muda a aparência dos botões quando está disabilitado.
+
+| Altere o script para que o quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base. |
+| --------------------------------------------------------------------------------------------------------------------------------- |
+
+[Veja a solução deste desafio.](/en/CSS/Getting_Started/Challenge_solutions#JavaScript "https://developer.mozilla.org/en/CSS/Getting_Started/Challenge_solutions#JavaScript")
+
+O que vem agora?
+
+Se você teve dificuldade para entender esta página, ou se tem algum comentário sobre ela, por favor, contribua nesta página de [Discussão](/Talk:en/CSS/Getting_Started/JavaScript "Talk:en/CSS/Getting_Started/JavaScript").
+
+Nesta demonstração, o documento HTML é vinculado ao script, embora apenas o elemento botão o utilize. ozilla estende CSS para permitir que você associe código JavaScript (assim como conteúdo e outras folhas de estilo) com elementos selecionados. A próxima página demonstra isso: **[Ligações XBL](/en/CSS/Getting_Started/XBL_bindings "en/CSS/Getting_Started/XBL_bindings")**

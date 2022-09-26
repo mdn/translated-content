@@ -14,111 +14,93 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
-<div class="summary">
-<p>Uma vez que você tenha acabado de escrever seu código e organizar os arquivos que compõem seu site, você precisa disponibilizar tudo isso online para que as pessoas possam achá-lo.  Este artigo mostra como colocar online seu código de amostra simples com o mínimo de esforço.</p>
-</div>
+Uma vez que você tenha acabado de escrever seu código e organizar os arquivos que compõem seu site, você precisa disponibilizar tudo isso online para que as pessoas possam achá-lo. Este artigo mostra como colocar online seu código de amostra simples com o mínimo de esforço.
 
-<h2 id="Quais_são_as_opções">Quais são as opções?</h2>
+## Quais são as opções?
 
-<p>Publicar um site não é um tópico simples, principalmente porque há muitas maneiras diferentes de fazê-lo. Nesse artigo, nós não pretendemos documentar todos os métodos possíveis. Em vez disso, nós discutiremos os prós e contras de três estratégias do ponto de vista de um iniciante, e então o guiaremos por um método que irá funcionar por enquanto.</p>
+Publicar um site não é um tópico simples, principalmente porque há muitas maneiras diferentes de fazê-lo. Nesse artigo, nós não pretendemos documentar todos os métodos possíveis. Em vez disso, nós discutiremos os prós e contras de três estratégias do ponto de vista de um iniciante, e então o guiaremos por um método que irá funcionar por enquanto.
 
-<h3 id="Conseguindo_uma_hospedagem_e_um_nome_de_domínio">Conseguindo uma hospedagem e um nome de domínio</h3>
+### Conseguindo uma hospedagem e um nome de domínio
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">Para ter mais controle sobre o conteúdo e a aparência do site, a maioria das pessoas escolhe comprar hospedagem na web e um nome de domínio:</span></span></p>
+Para ter mais controle sobre o conteúdo e a aparência do site, a maioria das pessoas escolhe comprar hospedagem na web e um nome de domínio:
 
-<ul>
- <li>Hospedagem é um espaço para arquivos alugado no <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server">servidor</a> de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.</li>
- <li>Um <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name">nome de domínio</a> é o endereço único onde pessoas encontram seu site, como <code>http://www.mozilla.org</code>, ou <code>http://www.bbc.co.uk</code>. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um <strong>registrador de domínio</strong>.</li>
-</ul>
+- Hospedagem é um espaço para arquivos alugado no [servidor](/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server) de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.
+- Um [nome de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name) é o endereço único onde pessoas encontram seu site, como `http://www.mozilla.org`, ou `http://www.bbc.co.uk`. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um **registrador de domínio**.
 
-<p>Muitos sites profissionais ficam online dessa maneira.</p>
+Muitos sites profissionais ficam online dessa maneira.
 
-<p>Você vai precisar ainda de um programa de  {{Glossary("FTP", "Protocolo de Transferência de Arquivos (FTP)")}} (veja <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web#Software">Quanto custa: software</a> para mais detalhes) para transferir os arquivos do site ao servidor. Programas FTP variam, mas geralmente você tem que logar no servidor usando detalhes fornecidos por sua empresa de hospedagem (ex. nome de usuário, senha, nome de host). Então, o programa mostra para você os arquivos locais e do servidor em duas janelas, para que você possa transferí-los ao servidor e de volta para o computador:</p>
+Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Transferência de Arquivos (FTP)")}} (veja [Quanto custa: software](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web#Software) para mais detalhes) para transferir os arquivos do site ao servidor. Programas FTP variam, mas geralmente você tem que logar no servidor usando detalhes fornecidos por sua empresa de hospedagem (ex. nome de usuário, senha, nome de host). Então, o programa mostra para você os arquivos locais e do servidor em duas janelas, para que você possa transferí-los ao servidor e de volta para o computador:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9469/ftp.jpg" style="display: block; height: 487px; margin: 0px auto; width: 800px;"></p>
+![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
 
-<h4 id="Dicas_para_encontrar_hospedagem_e_domínios">Dicas para encontrar hospedagem e domínios</h4>
+#### Dicas para encontrar hospedagem e domínios
 
-<ul>
- <li>Nós não promovemos empresas de hospedagem comercial ou para registro de nome de domínio. Para encontrar empresas de hospedagem e registradores de domínio, basta procurar por "hospedagem web" e "nomes de domínio". Todos os registradores terão um recurso para permitir que você verifique se o nome de domínio desejado está disponível.</li>
- <li>Seu {{Glossary("ISP", "provedor de serviço de internet")}} local ou empresarial pode fornecer uma hospedagem limitada para um site pequeno. O conjunto de recursos disponíveis será limitado, mas pode ser perfeito para seus primeiros experimentos — entre em contato com eles e pergunte!</li>
- <li>Há alguns serviços disponíveis gratuitamente, como <a href="https://neocities.org/">Neocities</a>, <a href="https://www.blogger.com">Blogspot</a> e <a href="https://wordpress.com/">Wordpress</a>. <span class="tlid-translation translation" lang="pt"><span title="">Às vezes, você recebe o que paga, mas às vezes esses recursos são bons o suficiente para suas experiências iniciais</span></span>.</li>
- <li>Muitas empresas fornecem hospedagem e registro de domínio.</li>
-</ul>
+- Nós não promovemos empresas de hospedagem comercial ou para registro de nome de domínio. Para encontrar empresas de hospedagem e registradores de domínio, basta procurar por "hospedagem web" e "nomes de domínio". Todos os registradores terão um recurso para permitir que você verifique se o nome de domínio desejado está disponível.
+- Seu {{Glossary("ISP", "provedor de serviço de internet")}} local ou empresarial pode fornecer uma hospedagem limitada para um site pequeno. O conjunto de recursos disponíveis será limitado, mas pode ser perfeito para seus primeiros experimentos — entre em contato com eles e pergunte!
+- Há alguns serviços disponíveis gratuitamente, como [Neocities](https://neocities.org/), [Blogspot](https://www.blogger.com) e [Wordpress](https://wordpress.com/). Às vezes, você recebe o que paga, mas às vezes esses recursos são bons o suficiente para suas experiências iniciais.
+- Muitas empresas fornecem hospedagem e registro de domínio.
 
-<h3 id="Usando_uma_ferramenta_online_como_Github_ou_Google_App_Engine">Usando uma ferramenta online como Github ou Google App Engine</h3>
+### Usando uma ferramenta online como Github ou Google App Engine
 
-<p>Algumas ferramentas permitem que você publique seu site online:</p>
+Algumas ferramentas permitem que você publique seu site online:
 
-<ul>
- <li><a href="https://github.com/">Github</a> é um site de "codificação social". Ele permite que você faça upload de repositórios de código para armazenamento no <strong>sistema de controle de versão</strong> <a href="http://git-scm.com/">Git</a><strong>. </strong>Você pode então colaborar em projetos de código, e o sistema é open-source por padrão, o que significa que todo mundo pode encontrar seu código Github, usá-lo, aprender com ele e se aprimorar. O Gitub tem um recurso muito útil chamado <a href="https://pages.github.com/">GitHub Pages</a>, que permite expor o código do site ao vivo na web.</li>
- <li>O <a href="https://cloud.google.com/appengine/">Google App Engine</a> é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_voce_hospeda_seu_site_Google_App_Engine">Como você hospeda seu website no Google App Engine?</a> Para maiores informações.</li>
-</ul>
+- [Github](https://github.com/) é um site de "codificação social". Ele permite que você faça upload de repositórios de código para armazenamento no **sistema de controle de versão** [Git](http://git-scm.com/)**.** Você pode então colaborar em projetos de código, e o sistema é open-source por padrão, o que significa que todo mundo pode encontrar seu código Github, usá-lo, aprender com ele e se aprimorar. O Gitub tem um recurso muito útil chamado [GitHub Pages](https://pages.github.com/), que permite expor o código do site ao vivo na web.
+- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn/Common_questions/Como_voce_hospeda_seu_site_Google_App_Engine) Para maiores informações.
 
-<p>Diferente da maioria das hospedagens, essas ferramentas geralmentre são gratuitas, mas você tem um conjunto limitado de recursos.</p>
+Diferente da maioria das hospedagens, essas ferramentas geralmentre são gratuitas, mas você tem um conjunto limitado de recursos.
 
-<h3 id="Usando_uma_IDE_baseada_na_web_como_o_CodePen">Usando uma IDE baseada na web como o CodePen</h3>
+### Usando uma IDE baseada na web como o CodePen
 
-<p>Há um número grande de web apps que emulam um ambiente de desenvolvimento de site, permitindo a você escrever HTML, CSS e JavaScript e então expor o resultado renderizado como em um site — tudo em uma aba do navegador! Falando de forma genérica, essas ferramentas são fáceis, boas para aprender e gratuitas (para recursos básicos), e elas geralmente hospedam sua página em um endereço único na web. No entanto, os recursos são limitados e esses aplicativos  geralmente não provêem espaço de hospedagem para recursos (como imagens).</p>
+Há um número grande de web apps que emulam um ambiente de desenvolvimento de site, permitindo a você escrever HTML, CSS e JavaScript e então expor o resultado renderizado como em um site — tudo em uma aba do navegador! Falando de forma genérica, essas ferramentas são fáceis, boas para aprender e gratuitas (para recursos básicos), e elas geralmente hospedam sua página em um endereço único na web. No entanto, os recursos são limitados e esses aplicativos geralmente não provêem espaço de hospedagem para recursos (como imagens).
 
-<p>Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para você:</p>
+Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para você:
 
-<ul>
- <li><a href="http://jsfiddle.net/">JSFiddle</a></li>
- <li><a href="https://thimble.mozilla.org/pt-BR/">Thimble</a></li>
- <li><a href="http://jsbin.com/">JSBin</a></li>
- <li><a href="https://codepen.io/">CodePen</a></li>
-</ul>
+- [JSFiddle](http://jsfiddle.net/)
+- [Thimble](https://thimble.mozilla.org/pt-BR/)
+- [JSBin](http://jsbin.com/)
+- [CodePen](https://codepen.io/)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9471/jsbin-screen.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></p>
+![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
 
-<h2 id="Publicando_via_Github">Publicando via Github</h2>
+## Publicando via Github
 
-<p>Agora vamos mostrar como publicar seu site facilmente por meio das páginas do GitHub.</p>
+Agora vamos mostrar como publicar seu site facilmente por meio das páginas do GitHub.
 
-<ol>
- <li>Primeiro de tudo, <a href="https://github.com">inscreva-se no GitHub</a> e verifique seu e-mail.</li>
- <li>Em seguida, você precisa <a href="https:/github.com/new">criar um repositório</a> para colocar seus arquivos.</li>
- <li>Nesta página, na caixa <em>Repository name</em> (nome do repositório), digite username.github.io, onde <em>username</em> é o seu nome de usuário. Então, por exemplo, nosso amigo bobsmith entraria em bobsmith.github.io. Além disso, marque <em>Initialize this repository with a README </em>(inicializar este repositório com um README) e então clique em <em>Create repository</em> (Criar repositório).</li>
- <li><img alt="" src="https://mdn.mozillademos.org/files/9479/github-create-repo.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></li>
- <li><p>Arraste e solte o conteúdo da pasta do site no seu repositório e clique em <em>Commit changes</em> (confirmar alterações).</p>
-  <div class="blockIndicator note">
-   <p>Nota: Certifique-se que sua pasta possui um arquivo <code>index.html</code>.</p>
-  </div>
- <li>Navegue em seu navegador até <em>username</em>.github.io para ver seu site online. Por exemplo, para o usuário <em>chrisdavidmills</em>, vá para <a href="http://chrisdavidmills.github.io/"><em>chrisdavidmills</em>.github.io</a>.</li>
-</ol>
+1.  Primeiro de tudo, [inscreva-se no GitHub](https://github.com) e verifique seu e-mail.
+2.  Em seguida, você precisa [criar um repositório](https:/github.com/new) para colocar seus arquivos.
+3.  Nesta página, na caixa _Repository name_ (nome do repositório), digite username.github.io, onde _username_ é o seu nome de usuário. Então, por exemplo, nosso amigo bobsmith entraria em bobsmith.github.io. Além disso, marque _Initialize this repository with a README_ (inicializar este repositório com um README) e então clique em _Create repository_ (Criar repositório).
+4.  ![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+5.  Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
-<div class="blockIndicator note">
-<p>Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.</p>
-</div>
+    > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
 
-<p>Para aprender mais, consulte a <a href="https://help.github.com/en/categories/github-pages-basics">Ajuda do Github Pages</a> (em inglês).</p>
+6.  Navegue em seu navegador até _username_.github.io para ver seu site online. Por exemplo, para o usuário _chrisdavidmills_, vá para [_chrisdavidmills_.github.io](http://chrisdavidmills.github.io/).
 
-<h2 id="Leitura_complementar">Leitura complementar</h2>
+> **Nota:** Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.
 
-<ul>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server">O que é um servidor web</a></li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name">Entendendo nomes de domínio</a></li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web">Quanto custa fazer algo na web?</a></li>
- <li><a href="https://www.codecademy.com/learn/deploy-a-website">Publicar um site</a>: Um bom tutorial da Codecademy que vai um pouco além e mostra algumas técnicas adicionais.</li>
- <li><a href="https://alignedleft.com/resources/cheap-web-hosting">Hospedagem baratas ou gratuitas de sites estáticos</a>, por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.</li>
-</ul>
+Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/en/categories/github-pages-basics) (em inglês).
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</p>
+## Leitura complementar
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+- [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name)
+- [Quanto custa fazer algo na web?](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web)
+- [Publicar um site](https://www.codecademy.com/learn/deploy-a-website): Um bom tutorial da Codecademy que vai um pouco além e mostra algumas técnicas adicionais.
+- [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.
 
-<ul>
- <li id="Installing_basic_software"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos">Instalando os programas básicos</a></li>
- <li id="What_will_your_website_look_like"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer">Comp será o seu site?</a></li>
- <li id="Dealing_with_files"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos">Lidando com arquivos</a></li>
- <li id="HTML_basics"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico">HTML básico</a></li>
- <li id="CSS_basics"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">CSS básico</a></li>
- <li id="JavaScript_basics"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico">JavaScript básico</a></li>
- <li id="Publishing_your_website"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site">Publicando seu website</a></li>
- <li id="How_the_web_works"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona">Como a web funciona</a></li>
-</ul>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+
+## Neste módulo
+
+- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
+- [Comp será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
+- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
+- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
+- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
+- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
+- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
+- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

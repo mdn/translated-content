@@ -4,94 +4,89 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
-<p>{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<p class="summary">Com o que você aprendeu nas últimas lições, você deve perceber que pode formatar simples documentos de texto utilizando CSS, implementado seu próprio estilo neles. Esta avaliação lhe dá a oportunidade de fazer exatamente isto.</p>
+Com o que você aprendeu nas últimas lições, você deve perceber que pode formatar simples documentos de texto utilizando CSS, implementado seu próprio estilo neles. Esta avaliação lhe dá a oportunidade de fazer exatamente isto.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Antes de tentar esta avaliação você deve ter passado pelo resto do módulo básico de CSS, além de também possuir uma compreensão básica de HTML (estude <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introdução ao HTML</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Trabalhar um pouco de CSS e testar seus novos conhecimentos.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Antes de tentar esta avaliação você deve ter passado pelo resto do
+        módulo básico de CSS, além de também possuir uma compreensão básica de
+        HTML (estude
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introdução ao HTML</a
+        >).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>Trabalhar um pouco de CSS e testar seus novos conhecimentos.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Ponto_de_partida">Ponto de partida</h2>
+## Ponto de partida
 
-<p>Você pode trabalhar com editor ao vivo abaixo, ou pode fazer o <a href="https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/">download do ponto de partida</a> para trabalhar em seu próprio editor de texto. Esta é uma única página de HTML, além do ponto de partida no head do documento. Se preferir, você pode transferir este CSS para um arquivo separado quando criar o exemplo no seu computador. Ou ainda, você pode utilizar uma ferramenta online como por exemplo, o <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, ou <a href="https://glitch.com/" rel="noopener">Glitch</a> para realizar estas tarefas..</p>
+Você pode trabalhar com editor ao vivo abaixo, ou pode fazer o [download do ponto de partida](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) para trabalhar em seu próprio editor de texto. Esta é uma única página de HTML, além do ponto de partida no head do documento. Se preferir, você pode transferir este CSS para um arquivo separado quando criar o exemplo no seu computador. Ou ainda, você pode utilizar uma ferramenta online como por exemplo, o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar estas tarefas..
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Se ficar emperrado,  nos procure por ajuda — veja a seção <a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge#Assessment_or_further_help">Assessment or further help</a> no final da página.</p>
-</div>
+> **Nota:** Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge#Assessment_or_further_help) no final da página.
 
-<h2 id="Trabalhando_com_CSS">Trabalhando com CSS</h2>
+## Trabalhando com CSS
 
-<p>O seguite exemplo mostra uma biografia, o qual foi estilizado com CSS. As propriedades CSS que eu usei foram as mencionadas abaixo — cada uma está lincada a sua página de propriedades em MDN, a qual dará mais exemplos do uso dela.</p>
+O seguite exemplo mostra uma biografia, o qual foi estilizado com CSS. As propriedades CSS que eu usei foram as mencionadas abaixo — cada uma está lincada a sua página de propriedades em MDN, a qual dará mais exemplos do uso dela.
 
-<ul>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("border-bottom")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
-</ul>
+- {{cssxref("font-family")}}
+- {{cssxref("color")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("font-size")}}
+- {{cssxref("text-decoration")}}
 
-<p>Eu usei uma mistura de seletores, estilizando elementos como h1 e h2, mas também criando uma classe para o título da profissão e estilizando ela.</p>
+Eu usei uma mistura de seletores, estilizando elementos como h1 e h2, mas também criando uma classe para o título da profissão e estilizando ela.
 
-<p>Use CSS para mudar como esta biografia aparece, alterando valores das propriedades que eu utilizei.</p>
+Use CSS para mudar como esta biografia aparece, alterando valores das propriedades que eu utilizei.
 
-<ol>
- <li>Faça o cabeçalho rosa, usando a chave de cor CSS <code>hotpink</code>.</li>
- <li>Dê ao cabeçalho um pontilhado de tamanho 10px {{cssxref("border-bottom")}} e que utiliza a chave de cor CSS  <code>purple</code>.</li>
- <li>Faça o cabeçalho nível 2 em itálico.</li>
- <li>Dê ao <code>ul</code> usado para informações de contato uma {{cssxref("background-color")}} <code>#eeeeee</code>, e uma {{cssxref("border")}}  roxa sólida com de tamanho 5px. Implemente um {{cssxref("padding")}} para empurrar o conteúdo para longe da borda.</li>
- <li>Torne os links <code>verdes</code> ao passar o mouse por cima deles.</li>
-</ol>
+1.  Faça o cabeçalho rosa, usando a chave de cor CSS `hotpink`.
+2.  Dê ao cabeçalho um pontilhado de tamanho 10px {{cssxref("border-bottom")}} e que utiliza a chave de cor CSS `purple`.
+3.  Faça o cabeçalho nível 2 em itálico.
+4.  Dê ao `ul` usado para informações de contato uma {{cssxref("background-color")}} `#eeeeee`, e uma {{cssxref("border")}} roxa sólida com de tamanho 5px. Implemente um {{cssxref("padding")}} para empurrar o conteúdo para longe da borda.
+5.  Torne os links `verdes` ao passar o mouse por cima deles.
 
-<p>Você deve acabar com algo parecido com esta imagem.</p>
+Você deve acabar com algo parecido com esta imagem.
 
-<p><img alt="Screenshot of how the example should look after completing the assessment." src="https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png" style="height: 1199px; width: 1104px;"></p>
+![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
 
-<p>Após isto, tente pesquisar algumas propriedades não mencionadas nesta página em <a href="/en-US/docs/Web/CSS/Reference">MDN CSS referências</a> e se aventure!</p>
+Após isto, tente pesquisar algumas propriedades não mencionadas nesta página em [MDN CSS referências](/pt-BR/docs/Web/CSS/Reference) e se aventure!
 
-<p>Lembre-se de que não há resosta errada aqui — neste momento de seu aprendizado, você pode se dar ao luxo de de se divertir um pouco.</p>
+Lembre-se de que não há resosta errada aqui — neste momento de seu aprendizado, você pode se dar ao luxo de de se divertir um pouco.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}} </p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de ajuda:</p>
+Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de ajuda:
 
-<ol>
- <li>Coloque seu trabalho num editor de texto compartilhado online tal como o <a href="https://codepen.io/" rel="noopener">CodePen</a>, <a href="https://jsfiddle.net/" rel="noopener">jsFiddle</a>, ou <a href="https://glitch.com/" rel="noopener">Glitch</a>.</li>
- <li>Escreva um post perguntando por avaliação e/ou ajuda em <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Seu post deve incluir:
-  <ul>
-   <li>Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".</li>
-   <li>Detalhes do que você já tentou, e o que gostaria que  ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.</li>
-   <li>Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.</li>
-   <li>Um link para a atual págia de tarefa ou avaliaçãopara que possamos ver a questão que você está com dúvida.</li>
-  </ul>
- </li>
-</ol>
+1.  Coloque seu trabalho num editor de texto compartilhado online tal como o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
+2.  Escreva um post perguntando por avaliação e/ou ajuda em [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
-<h2 id="O_que_vem_a_seguir">O que vem a seguir?</h2>
+    - Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".
+    - Detalhes do que você já tentou, e o que gostaria que ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.
+    - Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.
+    - Um link para a atual págia de tarefa ou avaliaçãopara que possamos ver a questão que você está com dúvida.
 
-<p>Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>, iremos dar uma olhada com mais profundidade em várias áreas chave.</p>
+## O que vem a seguir?
 
-<p>{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
+Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks), iremos dar uma olhada com mais profundidade em várias áreas chave.
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-<ol>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS">O que é CSS?</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started">Começando com CSS</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Como o CSS é estruturado</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Como o CSS funciona</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Utilizando seu novo conhecimento</a></li>
-</ol>
+## Neste módulo
+
+1.  [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
+3.  [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4.  [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
+5.  [Utilizando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

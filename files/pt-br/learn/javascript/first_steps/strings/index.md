@@ -3,44 +3,43 @@ title: Trabalhando com texto — strings em JavaScript
 slug: Learn/JavaScript/First_steps/Strings
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</div>
-
-<p class="summary">Agora vamos dar atenção às strings - isto é como é chamado em programação qualquer parte de texto. Neste artigo nós veremos tudo que você realmente deve saber sobre strings quando está aprendendo JavaScript. Como criar, fazer citações e como juntar strings.</p>
+Agora vamos dar atenção às strings - isto é como é chamado em programação qualquer parte de texto. Neste artigo nós veremos tudo que você realmente deve saber sobre strings quando está aprendendo JavaScript. Como criar, fazer citações e como juntar strings.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Computação básica, um entendimento básico de HTML e CSS, e sobre o que é JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Ganhar familiaridade com o básico de strings em JavaScript.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Computação básica, um entendimento básico de HTML e CSS, e sobre o que é
+        JavaScript.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>Ganhar familiaridade com o básico de strings em JavaScript.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="O_poder_das_palavras">O poder das palavras</h2>
+## O poder das palavras
 
-<p>Palavras são muito importante para humanos - elas são uma grande parte de como nos comunicamos. Desde que a Web é largamente baseada em texto, projetada para permitir humanos a comunicar e compartilhar infomação, isto é útil para nós termos controle sobre como apresentar isso. {{glossary("HTML")}} fornece estrutura e significado para nosso texto, {{glossary("CSS")}} nos permite estilizar precisamente ele, e JavaScript contem um número de funcionalidades para manipular strings, criar mensagens de boas-vindas customizadas, mostrando rótulos quando preciso, sorteando termos de acordo como desejado e muito mais.</p>
+Palavras são muito importante para humanos - elas são uma grande parte de como nos comunicamos. Desde que a Web é largamente baseada em texto, projetada para permitir humanos a comunicar e compartilhar infomação, isto é útil para nós termos controle sobre como apresentar isso. {{glossary("HTML")}} fornece estrutura e significado para nosso texto, {{glossary("CSS")}} nos permite estilizar precisamente ele, e JavaScript contem um número de funcionalidades para manipular strings, criar mensagens de boas-vindas customizadas, mostrando rótulos quando preciso, sorteando termos de acordo como desejado e muito mais.
 
-<p>Muitos dos programas que temos visto até agora no curso está envolvido em alguma parte com manipulação de string.</p>
+Muitos dos programas que temos visto até agora no curso está envolvido em alguma parte com manipulação de string.
 
-<h2 id="Strings_—_O_básico">Strings — O básico</h2>
+## Strings — O básico
 
-<p>Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir isto no console</a> em uma guia ou janela separada, ou usar o  <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console do navegador</a> se você preferir).</p>
+Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também [abrir isto no console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma guia ou janela separada, ou usar o [console do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você preferir).
 
-<div class="hidden">
-<h6 id="Código_oculto">Código oculto</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;JavaScript console&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -88,14 +87,14 @@ translation_of: Learn/JavaScript/First_steps/Strings
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -103,12 +102,12 @@ translation_of: Learn/JavaScript/First_steps/Strings
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class','input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length &gt; 1) {
+      if(document.querySelectorAll('div').length > 1) {
         inputForm.focus();
       }
 
@@ -138,147 +137,188 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
-</div>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-<h3 id="Criando_uma_string">Criando uma string</h3>
+### Criando uma string
 
-<ol>
- <li>Para começar, digite as linhas seguintes:
-  <pre class="brush: js">var string = 'The revolution will not be televised.';
-string;</pre>
-  Como fizemos com números, nós declaramos uma variável, inicializando-a com um valor string, e então retornamos o valor. A única diferença aqui é que quando escrevemos uma string, você precisa colocá-la entre aspas.</li>
- <li>Se você não fez isso, ou esqueceu uma das aspas, você recebeu um erro. Experimente digitar as linhas seguintes:
-  <pre class="brush: js example-bad">var badString = This is a test;
-var badString = 'This is a test;
-var badString = This is a test';</pre>
-  Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um é erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.</li>
- <li>O seguinte funcionará se você definiu previamente a variável <code>string</code> - tente isto agora:
-  <pre class="brush: js">var badString = string;
-badString;</pre>
-  <code>badString</code> é agora definido para ter o mesmo valor de <code>string</code>.</li>
-</ol>
+1.  Para começar, digite as linhas seguintes:
 
-<h3 id="Aspas_simples_x_aspas_duplas">Aspas simples x aspas duplas</h3>
+    ```js
+    var string = 'The revolution will not be televised.';
+    string;
+    ```
 
-<ol>
- <li>Em JavaScript, você pode escolher aspas simples ou duplas para envolver suas strings. Ambas linhas abaixo funcionará bem:
-  <pre class="brush: js">var sgl = 'Single quotes.';
-var dbl = "Double quotes";
-sgl;
-dbl;</pre>
- </li>
- <li>Há poucas diferenças entre as duas, e qual você usar é de preferência pessoal. Você deve escolher uma e permanecer nela, entretanto; diferentes aspas no código pode ser confuso, especialmente se você usa diferentes aspas na mesma string! O seguinte retornará erro:
-  <pre class="brush: js example-bad">var badQuotes = 'What on earth?";</pre>
- </li>
- <li>O navegador interpretará como a string não tivesse fechada, porque o outro tipo de aspas pode aparecer dentro da sua string. Por exemplo, ambos exemplos abaixo são okay:
-  <pre class="brush: js">var sglDbl = 'Would you eat a "fish supper"?';
-var dblSgl = "I'm feeling blue.";
-sglDbl;
-dblSgl;</pre>
- </li>
- <li>Entretanto, você não pode incluir o mesmo tipo de aspas dentro da sua string, se você usa para conter seu texto. O seguinte será um erro, como é confuso para o navegador onde a string termina:
-  <pre class="brush: js example-bad">var bigmouth = 'I've got no right to take my place...';</pre>
-  Isto nos leva muito bem ao nosso próximo assunto.</li>
-</ol>
+    Como fizemos com números, nós declaramos uma variável, inicializando-a com um valor string, e então retornamos o valor. A única diferença aqui é que quando escrevemos uma string, você precisa colocá-la entre aspas.
 
-<h3 id="Caracteres_de_escape_na_string">Caracteres de escape na string</h3>
+2.  Se você não fez isso, ou esqueceu uma das aspas, você recebeu um erro. Experimente digitar as linhas seguintes:
 
-<p>Para corrigir o problema anterior, nós precisamos escapar o problema da aspa. Caracteres de escape significa que nós fazemos algo para ter certeza que eles são reconhecidos como texto, não parte do código. Em JavaScript, nós fazemos isso colocando uma barra invertida logo antes do caracter.Tente isso:</p>
+    ```js example-bad
+    var badString = This is a test;
+    var badString = 'This is a test;
+    var badString = This is a test';
+    ```
 
-<pre class="brush: js">var bigmouth = 'I\'ve got no right to take my place...';
-bigmouth;</pre>
+    Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um é erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.
 
-<p>Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: <code>\"</code>,  e há alguns códigos especiais também. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notação de escape</a> para mais detalhes.</p>
+3.  O seguinte funcionará se você definiu previamente a variável `string` - tente isto agora:
 
-<h2 id="Concatenando_strings">Concatenando strings</h2>
+    ```js
+    var badString = string;
+    badString;
+    ```
 
-<ol>
- <li>Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente. Vamos tentar este exemplo no console.
-  <pre class="brush: js">var one = 'Hello, ';
-var two = 'how are you?';
-var joined = one + two;
-joined;</pre>
-  O resultado disso é uma variável chamada <code>joined</code>, que contém o valor "Hello, how are you?".</li>
- <li>No último exemplo, nós somente juntamos duas strings, mas você pode fazer quantas quiser, contanto que inclua um <code>+</code> entre cada uma.Experimente isso:
-  <pre class="brush: js">var multiple = one + one + one + one + two;
-multiple;</pre>
- </li>
- <li>Você pore usar um mix de variáveis e strings reais. Tente isso:
-  <pre class="brush: js">var response = one + 'I am fine — ' + two;
-response;</pre>
- </li>
-</ol>
+    `badString` é agora definido para ter o mesmo valor de `string`.
 
-<div class="note">
-<p><strong>Nota</strong>: Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma <strong>string literal</strong>.</p>
-</div>
+### Aspas simples x aspas duplas
 
-<h3 id="Concatenação_em_contexto">Concatenação em contexto</h3>
+1.  Em JavaScript, você pode escolher aspas simples ou duplas para envolver suas strings. Ambas linhas abaixo funcionará bem:
 
-<p>Vamos dar uma olhada na concatenação em ação — aqui está um exemplo do curso anterior:</p>
+    ```js
+    var sgl = 'Single quotes.';
+    var dbl = "Double quotes";
+    sgl;
+    dbl;
+    ```
 
-<pre class="brush: html">&lt;button&gt;Pressione-me&lt;/button&gt;</pre>
+2.  Há poucas diferenças entre as duas, e qual você usar é de preferência pessoal. Você deve escolher uma e permanecer nela, entretanto; diferentes aspas no código pode ser confuso, especialmente se você usa diferentes aspas na mesma string! O seguinte retornará erro:
 
-<pre class="brush: js">var button = document.querySelector('button');
+    ```js example-bad
+    var badQuotes = 'What on earth?";
+    ```
+
+3.  O navegador interpretará como a string não tivesse fechada, porque o outro tipo de aspas pode aparecer dentro da sua string. Por exemplo, ambos exemplos abaixo são okay:
+
+    ```js
+    var sglDbl = 'Would you eat a "fish supper"?';
+    var dblSgl = "I'm feeling blue.";
+    sglDbl;
+    dblSgl;
+    ```
+
+4.  Entretanto, você não pode incluir o mesmo tipo de aspas dentro da sua string, se você usa para conter seu texto. O seguinte será um erro, como é confuso para o navegador onde a string termina:
+
+    ```js example-bad
+    var bigmouth = 'I've got no right to take my place...';
+    ```
+
+    Isto nos leva muito bem ao nosso próximo assunto.
+
+### Caracteres de escape na string
+
+Para corrigir o problema anterior, nós precisamos escapar o problema da aspa. Caracteres de escape significa que nós fazemos algo para ter certeza que eles são reconhecidos como texto, não parte do código. Em JavaScript, nós fazemos isso colocando uma barra invertida logo antes do caracter.Tente isso:
+
+```js
+var bigmouth = 'I\'ve got no right to take my place...';
+bigmouth;
+```
+
+Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"`, e há alguns códigos especiais também. Veja [Notação de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) para mais detalhes.
+
+## Concatenando strings
+
+1.  Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente. Vamos tentar este exemplo no console.
+
+    ```js
+    var one = 'Hello, ';
+    var two = 'how are you?';
+    var joined = one + two;
+    joined;
+    ```
+
+    O resultado disso é uma variável chamada `joined`, que contém o valor "Hello, how are you?".
+
+2.  No último exemplo, nós somente juntamos duas strings, mas você pode fazer quantas quiser, contanto que inclua um `+` entre cada uma.Experimente isso:
+
+    ```js
+    var multiple = one + one + one + one + two;
+    multiple;
+    ```
+
+3.  Você pore usar um mix de variáveis e strings reais. Tente isso:
+
+    ```js
+    var response = one + 'I am fine — ' + two;
+    response;
+    ```
+
+> **Nota:** Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
+
+### Concatenação em contexto
+
+Vamos dar uma olhada na concatenação em ação — aqui está um exemplo do curso anterior:
+
+```html
+<button>Pressione-me</button>
+```
+
+```js
+var button = document.querySelector('button');
 
 button.onclick = function() {
   var nome = prompt('Qual é o seu nome?');
   alert('Olá ' + nome + ', prazer em conhecê-lo!');
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
 
-<p>Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")}} na linha 4, a qual pergunta ao usuário para responder uma questão via uma caixa de diálogo, então armazena o texto em uma variável — neste caso <code>nome</code>. Nós então usamos uma função {{domxref("Window.alert()", "Window.alert()")}} na linha 5 para mostrar outra caixa de diálogo contendo nossa string montada de duas strings literais e a variável <code>name</code>,via concatenação.</p>
+Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")}} na linha 4, a qual pergunta ao usuário para responder uma questão via uma caixa de diálogo, então armazena o texto em uma variável — neste caso `nome`. Nós então usamos uma função {{domxref("Window.alert()", "Window.alert()")}} na linha 5 para mostrar outra caixa de diálogo contendo nossa string montada de duas strings literais e a variável `name`,via concatenação.
 
-<h3 id="Números_x_strings">Números x strings</h3>
+### Números x strings
 
-<ol>
- <li>Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
-  <pre class="brush: js">'Front ' + 242;
-</pre>
-  Você pode esperar um erro disto, mas funciona correto. Tentando representar  uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.</li>
- <li>Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador <code>typeof</code> para checar o que a variável é, se um número ou string):
-  <pre class="brush: js">var myDate = '19' + '67';
-typeof myDate;</pre>
- </li>
- <li>Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
-  <ul>
-   <li>O objeto {{jsxref("Number")}} converterá qualquer coisa passada em um número, se for possível. Tente o seguinte:
-    <pre class="brush: js">var myString = '123';
-var myNum = Number(myString);
-typeof myNum;</pre>
-   </li>
-   <li>Por outro lado, todo número tem um método chamado <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> que converterá para a string equivalente. Tente isto:
-    <pre class="brush: js">var myNum = 123;
-var myString = myNum.toString();
-typeof myString;</pre>
-   </li>
-  </ul>
-  Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do <code>Number()</code> para poder manipular.Nós fizemos exatamente isto no nosso <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61">Number Guessing Game, in line 61</a>.</li>
-</ol>
+1.  Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
 
-<h2 id="Conclusão">Conclusão</h2>
+    ```js
+    'Front ' + 242;
+    ```
 
-<p>Então isto é o basico sobre strings em JavaScript. No próximo artigo nós iremos continuar daqui, vendo alguns métodos de construção de strings disponíveis em JavaScript e como nós podemos usá-los para manipular nossa string da forma como quisermos.</p>
+    Você pode esperar um erro disto, mas funciona correto. Tentando representar uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</p>
+2.  Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador `typeof` para checar o que a variável é, se um número ou string):
 
+    ```js
+    var myDate = '19' + '67';
+    typeof myDate;
+    ```
 
+3.  Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+    - O objeto {{jsxref("Number")}} converterá qualquer coisa passada em um número, se for possível. Tente o seguinte:
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">O que é JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">Um primeiro mergulho em JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">O que deu errado? Solução de erros em JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Armazenando a informação que você precisa — Variáveis</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Matemática básica em JavaScript — números e operadores</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Manipulando texto — strings em JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos úteis de strings</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Avaliação: gerador de história boba</a></li>
-</ul>
+      ```js
+      var myString = '123';
+      var myNum = Number(myString);
+      typeof myNum;
+      ```
+
+    - Por outro lado, todo número tem um método chamado [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que converterá para a string equivalente. Tente isto:
+
+      ```js
+      var myNum = 123;
+      var myString = myNum.toString();
+      typeof myString;
+      ```
+
+    Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 61](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61).
+
+## Conclusão
+
+Então isto é o basico sobre strings em JavaScript. No próximo artigo nós iremos continuar daqui, vendo alguns métodos de construção de strings disponíveis em JavaScript e como nós podemos usá-los para manipular nossa string da forma como quisermos.
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+
+## Neste módulo
+
+- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Um primeiro mergulho em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [O que deu errado? Solução de erros em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Armazenando a informação que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
+- [Matemática básica em JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
+- [Manipulando texto — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
+- [Métodos úteis de strings](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
+- [Avaliação: gerador de história boba](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

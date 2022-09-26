@@ -11,230 +11,234 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-<div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</div>
+HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.
 
-<div class="summary">
-<p>HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.</p>
-</div>
+## Então, o que é HTML?
 
-<h2 id="Então_o_que_é_HTML">Então, o que é HTML?</h2>
+HTML não é uma linguagem de programação; é uma _linguagem de marcação_, usada para definir a estrutura do seu conteúdo. HTML consiste de uma série de **{{Glossary("element", "elementos")}}**, que você usa para delimitar ou agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. As {{Glossary ("tag", "tags")}} anexas podem transformar uma palavra ou imagem num hiperlink, pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante. Por exemplo, veja a seguinte linha de conteúdo:
 
-<p>HTML não é uma linguagem de programação; é uma <em>linguagem de marcação</em>, usada para definir a estrutura do seu conteúdo. HTML consiste de uma série de <strong>{{Glossary("element", "elementos")}}</strong>, que você usa para delimitar ou agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. As {{Glossary ("tag", "tags")}} anexas podem transformar uma palavra ou imagem num hiperlink, pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante. Por exemplo, veja a seguinte linha de conteúdo:</p>
+```
+Meu gatinho é muito mal humorado
+```
 
-<pre class="notranslate">Meu gatinho é muito mal humorado</pre>
+Se quiséssemos que a linha permanecesse por si só, poderíamos especificar que é um parágrafo colocando-a em uma tag de parágrafo:
 
-<p>Se quiséssemos que a linha permanecesse por si só, poderíamos especificar que é um parágrafo colocando-a em uma tag de parágrafo:</p>
+```html
+<p>Meu gatinho é muito mal humorado</p>
+```
 
-<pre class="brush: html notranslate">&lt;p&gt;Meu gatinho é muito mal humorado&lt;/p&gt;</pre>
+### Anatomia de um elemento HTML
 
-<h3 id="Anatomia_de_um_elemento_HTML">Anatomia de um elemento HTML</h3>
+Vamos explorar esse parágrafo mais profundamente.
 
-<p>Vamos explorar esse parágrafo mais profundamente.</p>
+![Imagem mostrando como funciona a tag P](./gato-rabujento-pequeno.png)
 
-<p><img alt="Imagem mostrando como funciona a tag P" src="./gato-rabujento-pequeno.png" style="height: 255px; width: 821px;"></p>
+As principais partes de um elemento são:
 
-<p>As principais partes de um elemento são:</p>
+1.  A **tag de abertura**: Consiste no nome do elemento (no caso, p), envolvido em **parênteses angulares** de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.
+2.  A **tag de fechamento**: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.
+3.  O **conteúdo**: Esse é o conteúdo do elemento, que nesse caso é apenas texto.
+4.  O **elemento**: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.
 
-<ol>
- <li>A<strong> tag de abertura</strong>: Consiste no nome do elemento (no caso, p), envolvido em <strong>parênteses angulares</strong> de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.</li>
- <li>A <strong>tag de fechamento</strong>: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
- <li>O <strong>conteúdo</strong>: Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
- <li>O <strong>elemento</strong>: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
-</ol>
+Elementos também podem ter atributos, que parecem assim:
 
-<p>Elementos também podem ter atributos, que parecem assim:</p>
+![Imagem mostrando elemento na tag P](./gato-rabujento-atributo-pequeno.png)
 
-<p><img alt="Imagem mostrando elemento na tag P" src="./gato-rabujento-atributo-pequeno.png" style="display: block; height: 156px; margin: 0px auto; width: 1287px;"></p>
+Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui, `class` é o nome do atributo e `editor-note` é o valor do atributo. O atributo `class` permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.
 
-<p>Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui, <code>class</code> é o nome do atributo e <code>editor-note</code> é o valor do atributo. O atributo <code>class</code> permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.</p>
+Um atributo sempre deve ter:
 
-<p>Um atributo sempre deve ter:</p>
+1.  Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).
+2.  O nome do atributo, seguido por um sinal de igual.
+3.  Aspas de abertura e fechamento, envolvendo todo o valor do atributo.
 
-<ol>
- <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).</li>
- <li>O nome do atributo, seguido por um sinal de igual.</li>
- <li>Aspas de abertura e fechamento, envolvendo todo o valor do atributo.</li>
-</ol>
+> **Nota:** Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres <code>"</code> <code>'</code> <code>`</code> <code>=</code> <code>&lt;</code> <code>&gt;</code>) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.</p>
-</div>
+### Aninhando elementos
 
-<h3 id="Aninhando_elementos">Aninhando elementos</h3>
+Você pode colocar elementos dentro de outros elementos também — isso é chamado de **aninhamento**. Se quiséssemos afirmar que nosso gato é **muito** mal-humorado, poderíamos envolver a palavra "muito" em um elemento {{htmlelement ("strong")}}, o que significa que a palavra deve ser fortemente enfatizada:
 
-<p>Você pode colocar elementos dentro de outros elementos também — isso é chamado de <strong>aninhamento</strong>. Se quiséssemos afirmar que nosso gato é <strong>muito </strong>mal-humorado, poderíamos envolver a palavra "muito" em um elemento {{htmlelement ("strong")}}, o que significa que a palavra deve ser fortemente enfatizada:</p>
+```html
+<p>Meu gatinho é <strong>muito</strong> mal humorado.</p>
+```
 
-<pre class="brush: html notranslate">&lt;p&gt;Meu gatinho é &lt;strong&gt;muito&lt;/strong&gt; mal humorado.&lt;/p&gt;</pre>
+Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento {{htmlelement ("p")}}, depois o elemento {{htmlelement ("strong")}}; portanto, temos que fechar primeiro o elemento {{htmlelement ("strong")}}, depois o elemento {{htmlelement ("p")}}. O código abaixo está incorreto:
 
-<p>Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento {{htmlelement ("p")}}, depois o elemento {{htmlelement ("strong")}}; portanto, temos que fechar primeiro o elemento {{htmlelement ("strong")}}, depois o elemento {{htmlelement ("p")}}. O código abaixo está incorreto:</p>
+```html example-bad
+<p>Meu gatinho é <strong>muito mal humorado.</p></strong>
+```
 
-<pre class="example-bad brush: html notranslate">&lt;p&gt;Meu gatinho é &lt;strong&gt;muito mal humorado.&lt;/p&gt;&lt;/strong&gt;</pre>
+Os elementos precisam ser abertos e fechados corretamente para que eles estejam claramente visíveis dentro ou fora um do outro. Se eles se sobrepuserem conforme mostrado acima, seu navegador tentará adivinhar o que você estava tentando dizer, o que pode levar a resultados inesperados. Então não faça isso!
 
-<p>Os elementos precisam ser abertos e fechados corretamente para que eles estejam claramente visíveis dentro ou fora um do outro. Se eles se sobrepuserem conforme mostrado acima, seu navegador tentará adivinhar o que você estava tentando dizer, o que pode levar a resultados inesperados. Então não faça isso!</p>
+### Elementos vazios
 
-<h3 id="Elementos_vazios">Elementos vazios</h3>
+Alguns elementos não possuem conteúdo e são chamados de **elementos vazios**. Considere o elemento {{htmlelement("img")}} que temos na nossa página HTML:
 
-<p>Alguns elementos não possuem conteúdo e são chamados de <strong>elementos vazios</strong>. Considere o elemento {{htmlelement("img")}} que temos na nossa página HTML:</p>
+```html
+<img src="imagens/firefox-icon.png" alt="Minha imagem de teste">
+```
 
-<pre class="brush: html notranslate">&lt;img src="imagens/firefox-icon.png" alt="Minha imagem de teste"&gt;</pre>
+Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.
 
-<p>Ele contém dois atributos, mas não há tag <code>&lt;/img&gt;</code> de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.</p>
+### Anatomia de um documento HTML
 
-<h3 id="Anatomia_de_um_documento_HTML">Anatomia de um documento HTML</h3>
+Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)):
 
-<p>Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de <code>index.html</code> (que vimos no artigo <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos">Lidando com arquivos</a>):</p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minha página de teste</title>
+  </head>
+  <body>
+    <img src="imagens/firefox-icon.png" alt="minha página de teste">
+  </body>
+</html>
+```
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Minha página de teste&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;img src="imagens/firefox-icon.png" alt="minha página de teste"&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+Aqui nós temos:
 
-<p>Aqui nós temos:</p>
+- `<!DOCTYPE html>` — o doctype. É a parte inicial obrigatória do documento. Nas névoas do tempo, quando o HTML era novo (por volta de 1991/2), doctypes eram criados para agir como links para um conjunto de regras que a página HTML tinha que seguir para ser considerada um bom HTML, o que poderia significar checagem automática de erros e outras coisas úteis. No entanto, atualmente, eles não fazem muito sentido e são basicamente necessários apenas para garantir que o documento se comporte corretamente. Isso é tudo que você precisa saber agora.
+- `<html></html>` — o elemento {{htmlelement("html")}}. Esse elemento envolve todo o conteúdo da página e às vezes é conhecido como o elemento raiz.
+- `<head></head>` — o elemento {{htmlelement("head")}}. Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que _não é_ o conteúdo que você quer mostrar para quem vê sua página. Isso inclui coisas como {{Glossary("keyword", "palavras-chave")}} e uma descrição que você quer que apareça nos resultados de busca, CSS para dar estilo ao conteúdo, declarações de conjuntos de caracteres e etc.
+- `<meta charset="utf-8">` — esse elemento define o conjunto de caracteres que seu documento deve usar para o UTF-8, que inclui praticamente todos os caracteres da grande maioria dos idiomas escritos. Essencialmente, agora ele pode manipular qualquer conteúdo textual que você possa colocar. Não há razão para não definir isso e assim pode ajudar a evitar alguns problemas no futuro.
+- `<title></title>` — o elemento {{htmlelement ("title")}}. Ele define o título da sua página, que é o título que aparece na guia do navegador onde sua página é carregada. Ele também é usado para descrever a página quando você a adiciona aos favoritos.
+- `<body></body>` — o elemento {{htmlelement("body")}}. Contém _todo_ o conteúdo que você quer mostrar ao público que visita sua página, seja texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis ou qualquer outra coisa.
+
+## Imagens
+
+Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:
+
+```html
+<img src="imagens/firefox-icon.png" alt="Minha imagem de teste">
+```
+
+Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo `src` (_source_), que contém o caminho para nosso arquivo de imagem.
+
+Incluímos também um atributo `alt` (_alternative_). Neste atributo, você especifica um texto descritivo para usuários que não podem ver a imagem, possivelmente devido aos seguintes motivos:
+
+1.  Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.
+2.  Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo `src` para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:
+
+![](https://i.imgur.com/35Rirpx.png)
+
+As palavras-chave para o texto alternativo são "texto descritivo". O texto alternativo que você escreve deve fornecer ao leitor informações suficientes para ter uma boa ideia do que a imagem mostra. Neste exemplo, nosso texto "Minha imagem teste" não é bom para todos. Uma alternativa muito melhor para o nosso logotipo do Firefox seria "A logo do Firefox: uma raposa em chamas envolvendo a Terra."
+
+Tente criar um texto alternativo melhor para sua imagem agora.
+
+> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Acessibilidade)
+
+## Marcando o texto
+
+Essa seção abordará alguns dos elementos HTML essenciais que você usará para marcar o texto.
+
+### Cabeçalhos
+
+Os elementos de cabeçalhos permitem especificar que certas partes do seu conteúdo são títulos ou subtítulos. Da mesma forma que um livro tem o título principal e os capítulos possuem títulos e subtítulos, um documento HTML também tem. HTML contém 6 níveis de título, {{htmlelement ("h1")}} - {{htmlelement ("h6")}}, embora você normalmente só use de 3 a 4:
+
+```html
+<h1>Meu título principal</h1>
+<h2>Meu título de alto nível</h2>
+<h3>Meu subtítulo</h3>
+<h4>Meu segundo subtítulo</h4>
+```
+
+Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
+
+> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para [acessibilidade](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura) e [outros motivos, como SEO](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+
+### Parágrafo
+
+Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parágrafos de texto; você os usará com frequência ao marcar um conteúdo de texto regular:
+
+```html
+<p>Este é um parágrafo simples</p>
+```
+
+Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
+
+### Listas
+
+Muito do conteúdo da web é de listas e o HTML tem elementos especiais para elas. Listas de marcação sempre consistem em pelo menos 2 elementos. Os tipos mais comuns de lista são ordenadas e não ordenadas:
+
+1.  **Listas não ordenadas** são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.
+2.  **Listas Ordenadas** são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.
+
+Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).
+
+Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista:
+
+```html
+<p>Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores trabalhando juntos ... </p>
+```
+
+Nós podemos fazer assim:
+
+```html
+<p>Na Mozilla, somos uma comunidade global de</p>
 
 <ul>
- <li><code>&lt;!DOCTYPE html&gt;</code> — o doctype. É a parte inicial obrigatória do documento. Nas névoas do tempo, quando o HTML era novo (por volta de 1991/2), doctypes eram criados para agir como links para um conjunto de regras que a página HTML tinha que seguir para ser considerada um bom HTML, o que poderia significar checagem automática de erros e outras coisas úteis. No entanto, atualmente, eles não fazem muito sentido e são basicamente necessários apenas para garantir que o documento se comporte corretamente. Isso é tudo que você precisa saber agora.</li>
- <li><code>&lt;html&gt;&lt;/html&gt;</code> — o elemento {{htmlelement("html")}}. Esse elemento envolve todo o conteúdo da página e às vezes é conhecido como o elemento raiz.</li>
- <li><code>&lt;head&gt;&lt;/head&gt;</code> — o elemento {{htmlelement("head")}}. Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que <em>não é</em> o conteúdo que você quer mostrar para quem vê sua página. Isso inclui coisas como {{Glossary("keyword", "palavras-chave")}} e uma descrição que você quer que apareça nos resultados de busca, CSS para dar estilo ao conteúdo, declarações de conjuntos de caracteres e etc.</li>
- <li><code>&lt;meta charset="utf-8"&gt;</code> — esse elemento define o conjunto de caracteres que seu documento deve usar para o UTF-8, que inclui praticamente todos os caracteres da grande maioria dos idiomas escritos. Essencialmente, agora ele pode manipular qualquer conteúdo textual que você possa colocar. Não há razão para não definir isso e assim pode ajudar a evitar alguns problemas no futuro.</li>
- <li><code>&lt;title&gt;&lt;/title&gt;</code> — o elemento {{htmlelement ("title")}}. Ele define o título da sua página, que é o título que aparece na guia do navegador onde sua página é carregada. Ele também é usado para descrever a página quando você a adiciona aos favoritos.</li>
- <li><code>&lt;body&gt;&lt;/body&gt;</code> — o elemento {{htmlelement("body")}}. Contém <em>todo</em> o conteúdo que você quer mostrar ao público que visita sua página, seja texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis ou qualquer outra coisa.</li>
+  <li>tecnólogos</li>
+  <li>pensadores</li>
+  <li>construtores</li>
 </ul>
 
-<h2 id="Imagens">Imagens</h2>
+<p>trabalhando juntos ... </p>
+```
 
-<p>Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:</p>
+Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.
 
-<pre class="brush: html notranslate">&lt;img src="imagens/firefox-icon.png" alt="Minha imagem de teste"&gt;</pre>
+## Links
 
-<p>Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo <code>src</code> (<em>source</em>), que contém o caminho para nosso arquivo de imagem.</p>
+Links são muito importantes — eles são o que faz da web ser de fato uma REDE! Para adicionar um link, precisamos usar um elemento simples — {{htmlelement ("a")}} — "a" é a forma abreviada de "âncora". Para transformar o texto do seu parágrafo em um link, siga estas etapas:
 
-<p>Incluímos também um atributo <code>alt</code> (<em>alternative</em>). Neste atributo, você especifica um texto descritivo para usuários que não podem ver a imagem, possivelmente devido aos seguintes motivos:</p>
+1.  Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".
+2.  Envolva o texto em um elemento {{htmlelement("a")}} , assim:
 
-<ol>
- <li>Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.</li>
- <li>Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo <code>src</code> para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:</li>
-</ol>
+    ```html
+    <a>Mozilla Manifesto</a>
+    ```
 
-<p><img alt="" src="https://i.imgur.com/35Rirpx.png" style="display: block; height: 38px; margin: 0px auto; width: 191px;"></p>
+3.  Dê ao elemento \<a> um atributo href, assim:
 
-<p>As palavras-chave para o texto alternativo são "texto descritivo". O texto alternativo que você escreve deve fornecer ao leitor informações suficientes para ter uma boa ideia do que a imagem mostra. Neste exemplo, nosso texto "Minha imagem teste" não é bom para todos. Uma alternativa muito melhor para o nosso logotipo do Firefox seria "A logo do Firefox: uma raposa em chamas envolvendo a Terra."</p>
+    ```html
+    <a href="">Mozilla Manifesto</a>
+    ```
 
-<p>Tente criar um texto alternativo melhor para sua imagem agora.</p>
+4.  Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
 
-<div class="note">
-<p><strong>Nota</strong>: Saiba mais sobre acessibilidade em <a href="https://developer.mozilla.org/pt-BR/docs/Web/Acessibilidade">módulo de aprendizagem sobre acessibilidade.</a></p>
-</div>
+    ```html
+    <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
+    ```
 
-<h2 id="Marcando_o_texto">Marcando o texto</h2>
+Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
 
-<p>Essa seção abordará alguns dos elementos HTML essenciais que você usará para marcar o texto.</p>
+> **Nota:** `href` pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa _**h**ypertext **ref**erence_. (referência em hipertexto)
 
-<h3 id="Cabeçalhos">Cabeçalhos</h3>
+Adicione um link em sua página agora, se ainda não tiver feito isso.
 
-<p>Os elementos de cabeçalhos permitem especificar que certas partes do seu conteúdo são títulos ou subtítulos. Da mesma forma que um livro tem o título principal e os capítulos possuem títulos e subtítulos, um documento HTML também tem. HTML contém 6 níveis de título, {{htmlelement ("h1")}} - {{htmlelement ("h6")}}, embora você normalmente só use de 3 a 4:</p>
+## Conclusão
 
-<pre class="brush: html notranslate">&lt;h1&gt;Meu título principal&lt;/h1&gt;
-&lt;h2&gt;Meu título de alto nível&lt;/h2&gt;
-&lt;h3&gt;Meu subtítulo&lt;/h3&gt;
-&lt;h4&gt;Meu segundo subtítulo&lt;/h4&gt;</pre>
+Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](http://mdn.github.io/beginner-html-site/)):
 
-<p>Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.</p>
+![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura">acessibilidade</a> e <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura">outros motivos, como SEO</a>. Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.</p>
-</div>
+Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código de exemplo finalizado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) no Github.
 
-<h3 id="Parágrafo">Parágrafo</h3>
+Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Aprender/HTML).
 
-<p>Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parágrafos de texto; você os usará com frequência ao marcar um conteúdo de texto regular:</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-<pre class="brush: html notranslate">&lt;p&gt;Este é um parágrafo simples&lt;/p&gt;</pre>
+## Neste módulo
 
-<p>Adicione seu texto de exemplo (você o obteve em <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer"><em>Como será o seu site?</em></a>) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.</p>
-
-<h3 id="Listas">Listas</h3>
-
-<p>Muito do conteúdo da web é de listas e o HTML tem elementos especiais para elas. Listas de marcação sempre consistem em pelo menos 2 elementos. Os tipos mais comuns de lista são ordenadas e não ordenadas:</p>
-
-<ol>
- <li><strong>Listas não ordenadas</strong> são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.</li>
- <li><strong>Listas Ordenadas</strong> são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.</li>
-</ol>
-
-<p>Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).</p>
-
-<p>Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista: </p>
-
-<pre class="brush: html notranslate">&lt;p&gt;Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores trabalhando juntos ... &lt;/p&gt;</pre>
-
-<p>Nós podemos fazer assim:</p>
-
-<pre class="brush: html notranslate">&lt;p&gt;Na Mozilla, somos uma comunidade global de&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tecnólogos&lt;/li&gt;
-  &lt;li&gt;pensadores&lt;/li&gt;
-  &lt;li&gt;construtores&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;trabalhando juntos ... &lt;/p&gt;</pre>
-
-<p>Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.</p>
-
-<h2 id="Links">Links</h2>
-
-<p>Links são muito importantes — eles são o que faz da web ser de fato uma REDE! Para adicionar um link, precisamos usar um elemento simples — {{htmlelement ("a")}} — "a" é a forma abreviada de "âncora". Para transformar o texto do seu parágrafo em um link, siga estas etapas:</p>
-
-<ol>
- <li>Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".</li>
- <li>Envolva o texto em um elemento {{htmlelement("a")}} , assim:
-  <pre class="brush: html notranslate">&lt;a&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
- <li>Dê ao elemento &lt;a&gt; um atributo href, assim:
-  <pre class="brush: html notranslate">&lt;a href=""&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
- <li>Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
-  <pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/pt-BR/about/manifesto/"&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
-</ol>
-
-<p>Você pode obter resultados inesperados se omitir a parte <code>https://</code> ou o <code>http://</code>, o chamado <em>protocolo</em>, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.</p>
-
-<div class="note">
-<p><code>href</code> pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa <em><strong>h</strong>ypertext <strong>ref</strong>erence</em>. (referência em hipertexto)</p>
-</div>
-
-<p>Adicione um link em sua página agora, se ainda não tiver feito isso.</p>
-
-<h2 id="Conclusão">Conclusão</h2>
-
-<p>Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode <a href="http://mdn.github.io/beginner-html-site/">vê-la aqui</a>):<br>
- <br>
- <img alt="A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text" src="https://mdn.mozillademos.org/files/9351/finished-test-page-small.png" style="display: block; height: 838px; margin: 0px auto; width: 716px;"></p>
-
-<p>Se você ficar emperrado, pode sempre comparar seu trabalho com nosso <a href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html">código de exemplo finalizado</a> no Github.</p>
-
-<p>Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML">Estruturando a web com HTML</a>.</p>
-
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</p>
-
-<h2 id="Neste_módulo">Neste módulo</h2>
-
-<ul>
- <li id="Installing_basic_software"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos">Instalando os programas básicos</a></li>
- <li id="What_will_your_website_look_like"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer">Como será o seu site?</a></li>
- <li id="Dealing_with_files"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos">Lidando com arquivos</a></li>
- <li id="HTML_basics"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico">HTML básico</a></li>
- <li id="CSS_basics"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">CSS básico</a></li>
- <li id="JavaScript_basics"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico">Javascript básico</a></li>
- <li id="Publishing_your_website"><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site">Publicando seu website</a></li>
- <li id="How_the_web_works"><a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona">Como a web funciona</a></li>
-</ul>
+- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
+- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
+- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
+- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
+- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
+- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
+- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
+- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

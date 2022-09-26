@@ -4,51 +4,45 @@ slug: Learn/JavaScript/First_steps/Variables
 translation_of: Learn/JavaScript/First_steps/Variables
 original_slug: Learn/JavaScript/First_steps/Variáveis
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}</div>
+Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript, o que ele pode fazer para você, como você usa isso junto com outras tecnologias da web e as características principais de alto nível. Neste artigo, iremos ao básico, vendo como trabalhar com a maioria dos blocos de construção básicos de JavaScript - Variáveis.
 
-<p class="summary">Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript, o que ele pode fazer para você, como você usa isso junto com outras tecnologias da web e as características principais de alto nível. Neste artigo, iremos ao básico, vendo como trabalhar com a maioria dos blocos de construção básicos de JavaScript - Variáveis.</p>
+| Pré-requisitos: | Conhecimento básico em informática, uma compreensão básica de HTML e CSS, uma compreensão do que é o JavaScript. |
+| --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Objetivo:       | Familiarizar-se com o básico de variáveis em JavaScript.                                                         |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimento básico em informática, uma compreensão básica de HTML e CSS, uma compreensão do que é o JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Familiarizar-se com o básico de variáveis em JavaScript.</td>
-  </tr>
- </tbody>
-</table>
+## Ferramentas que você precisa
 
-<h2 id="Ferramentas_que_você_precisa">Ferramentas que você precisa</h2>
+Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador) para mais informações sobre como acessar essa ferramenta).
 
-<p>Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo <a href="/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador">O que são as ferramentas de desenvolvimento do navegador</a> para mais informações sobre como acessar essa ferramenta).</p>
+No entanto, nós também providenciamos um simples console JavaScript incorporado à página logo abaixo para que você inserir o código, caso não esteja usando um navegador com um console JavaScript facilmente disponível, ou se achar o console incorporado mais confortável.
 
-<p>No entanto, nós também providenciamos um simples console JavaScript incorporado à página logo abaixo para que você inserir o código, caso não esteja usando um navegador com um console JavaScript facilmente disponível, ou se achar o console incorporado mais confortável.</p>
+## O que é uma variável?
 
-<h2 id="O_que_é_uma_variável">O que é uma variável?</h2>
+Uma variável é um container para um valor, como um número que podemos usar em uma operação de adição, ou uma sequência de texto que possamos usar como parte de uma oração. Mas uma coisa especial a respeito das variáveis é que seu conteúdo pode mudar. Vamos ver um exemplo simples:
 
-<p>Uma variável é um container para um valor, como um número que podemos usar em uma operação de adição, ou uma sequência de texto que possamos usar como parte de uma oração. Mas uma coisa especial a respeito das variáveis é que seu conteúdo pode mudar. Vamos ver um exemplo simples:</p>
+```html
+<button>Aperte-me</button>
+```
 
-<pre class="brush: html notranslate">&lt;button&gt;Aperte-me&lt;/button&gt;</pre>
-
-<pre class="brush: js notranslate">var button = document.querySelector('button');
+```js
+var button = document.querySelector('button');
 
 button.onclick = function() {
   var nome = prompt('Qual é o seu nome?');
   alert('Olá ' + nome + ', é um prazer te ver!');
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('O_que_é_uma_variável', '100%', 50, "", "", "hide-codepen-jsfiddle" ) }}</p>
+{{ EmbedLiveSample('O_que_é_uma_variável', '100%', 50, "", "", "hide-codepen-jsfiddle" ) }}
 
-<p>Nesse exemplo, apertar o botão executa algumas linhas de código. A primeira linha exibe uma caixa pop-up na tela que pede ao leitor para inserir o seu nome, e então armazena o valor na variável. A segunda linha exibe uma mensagem de boas vindas que inclui seu nome, obtido do valor da variável.</p>
+Nesse exemplo, apertar o botão executa algumas linhas de código. A primeira linha exibe uma caixa pop-up na tela que pede ao leitor para inserir o seu nome, e então armazena o valor na variável. A segunda linha exibe uma mensagem de boas vindas que inclui seu nome, obtido do valor da variável.
 
-<p>Para entender porque isso é útil, vamos pensar sobre como nós escreveríamos esse exemplo sem usar uma variável. Iria acabar se parecendo com algo do tipo:</p>
+Para entender porque isso é útil, vamos pensar sobre como nós escreveríamos esse exemplo sem usar uma variável. Iria acabar se parecendo com algo do tipo:
 
-<pre class="example-bad notranslate">var nome = prompt('Qual é o seu nome?');
+```plain example-bad
+var nome = prompt('Qual é o seu nome?');
 
 if (nome === 'Adão') {
   alert('Olá Adão, é um prazer te ver!');
@@ -62,75 +56,83 @@ if (nome === 'Adão') {
   alert('Olá Chris, é um prazer te ver !');
 }
 
-// ... e assim por diante ...</pre>
+// ... e assim por diante ...
+```
 
-<p>Você talvez não entenda totalmente a sintaxe que estamos usando (ainda!), mas deve ter pegado a ideia — se nós não tivermos variáveis disponíveis teríamos que implementar um bloco de código gigantesco para conferir qual era o nome inserido, e então exibir a mensagem apropriada para aquele nome. Isso é obviamente muito ineficiente (o código é muito maior, mesmo para apenas quatro opções de nome), e simplesmente não funcionaria — você não poderia armazenar todas as possíveis opções de nome.</p>
+Você talvez não entenda totalmente a sintaxe que estamos usando (ainda!), mas deve ter pegado a ideia — se nós não tivermos variáveis disponíveis teríamos que implementar um bloco de código gigantesco para conferir qual era o nome inserido, e então exibir a mensagem apropriada para aquele nome. Isso é obviamente muito ineficiente (o código é muito maior, mesmo para apenas quatro opções de nome), e simplesmente não funcionaria — você não poderia armazenar todas as possíveis opções de nome.
 
-<p>Variáveis simplesmente fazem sentido, e a medida que você for aprendendo mais sobre JavaScript elas começarão a se tornar uma coisa natural.</p>
+Variáveis simplesmente fazem sentido, e a medida que você for aprendendo mais sobre JavaScript elas começarão a se tornar uma coisa natural.
 
-<p>Outra coisa especial sobra as variáveis é que elas podem conter praticamente qualquer coisa — não apenas cadeias de texto e números. Variáveis também podem conter dados complexos e até mesmo funções completas para fazer coisas incríveis. Você irá aprender mais sobre isso a medida que continuarmos.</p>
+Outra coisa especial sobra as variáveis é que elas podem conter praticamente qualquer coisa — não apenas cadeias de texto e números. Variáveis também podem conter dados complexos e até mesmo funções completas para fazer coisas incríveis. Você irá aprender mais sobre isso a medida que continuarmos.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..</p>
-</div>
+> **Nota:** Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13506/boxes.png" style="display: block; height: 436px; margin: 0px auto; width: 1052px;"></p>
+![](https://mdn.mozillademos.org/files/13506/boxes.png)
 
-<h2 id="Declarando_uma_variável">Declarando uma variável</h2>
+## Declarando uma variável
 
-<p>Para usar uma variável primeiro tem que criá-la — mais precisamente, chamamos isso de declarar a variável. Para fazê-lo digitamos a palavra chave <code>var</code> seguido do nome que desejamos dar à variável:</p>
+Para usar uma variável primeiro tem que criá-la — mais precisamente, chamamos isso de declarar a variável. Para fazê-lo digitamos a palavra chave `var` seguido do nome que desejamos dar à variável:
 
-<pre class="brush: js notranslate">var meuNome;
-var minhaIdade;</pre>
+```js
+var meuNome;
+var minhaIdade;
+```
 
-<p>Aqui, estamos criando duas variáveis chamadas <code>meuNome</code> e <code>minhaIdade</code>. Tente agora digitar essas linhas no console do seu navegador. Depois disso, tente criar uma variável (ou duas) com suas próprias escolhas de nomes.</p>
+Aqui, estamos criando duas variáveis chamadas `meuNome` e `minhaIdade`. Tente agora digitar essas linhas no console do seu navegador. Depois disso, tente criar uma variável (ou duas) com suas próprias escolhas de nomes.
 
-<div class="note">
-<p><strong>Nota</strong>: No JavaScript, todas as intruções em código deve terminar com um ponto e vírgula (<code>;</code>) — seu código pode até funcionar sem o ponto e vírgula em linhas únicas, mas provavelmente não irá funcionar quando estiver escrevendo várias linhas de código juntas. Tente pegar o hábito de sempre incluir o ponto e vírgula.</p>
-</div>
+> **Nota:** No JavaScript, todas as intruções em código deve terminar com um ponto e vírgula (`;`) — seu código pode até funcionar sem o ponto e vírgula em linhas únicas, mas provavelmente não irá funcionar quando estiver escrevendo várias linhas de código juntas. Tente pegar o hábito de sempre incluir o ponto e vírgula.
 
-<p>Você pode testar se os valores agora existem no ambiente de execução digitando apenas os nomes das variáveis, ex.:</p>
+Você pode testar se os valores agora existem no ambiente de execução digitando apenas os nomes das variáveis, ex.:
 
-<pre class="brush: js notranslate">meuNome;
-minhaidade;</pre>
+```js
+meuNome;
+minhaidade;
+```
 
-<p>Elas atualmente não possuem valor; são containers vazios. Quando você insere o nome de uma variável, você deve obter em retorno ou um valor <code>undefined</code> (indefinido), ou se a variável não existir, você recebe uma mensagem de erro — tente digitar:</p>
+Elas atualmente não possuem valor; são containers vazios. Quando você insere o nome de uma variável, você deve obter em retorno ou um valor `undefined` (indefinido), ou se a variável não existir, você recebe uma mensagem de erro — tente digitar:
 
-<pre class="brush: js notranslate">scoobyDoo;</pre>
+```js
+scoobyDoo;
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Não confunda uma variável que existe mas não tenho valor definido com uma variável que não existe — são coisas bem diferentes.</p>
-</div>
+> **Nota:** Não confunda uma variável que existe mas não tenho valor definido com uma variável que não existe — são coisas bem diferentes.
 
-<h2 id="Inicializando_uma_variável">Inicializando uma variável</h2>
+## Inicializando uma variável
 
-<p>Uma vez que você declarou uma variável, você pode inicializá-la com um valor. Você faz isso digitando o nome da variável, seguido do sinal de igual (<code>=</code>) e o valor que deseja atribuir a ela. Por exemplo:</p>
+Uma vez que você declarou uma variável, você pode inicializá-la com um valor. Você faz isso digitando o nome da variável, seguido do sinal de igual (`=`) e o valor que deseja atribuir a ela. Por exemplo:
 
-<pre class="brush: js notranslate">meuNome = 'Chris';
-minhaIdade = 37;</pre>
+```js
+meuNome = 'Chris';
+minhaIdade = 37;
+```
 
-<p>Tente voltar ao console agora e digitar essas linhas acima. Você deve ver o valor que atribuiu à variável retornado no console confirmando-o, em cada caso. De novo, você pode retornar os valores de suas variáveis simplesmente digitando seus nomes no console — tente isso novamente:</p>
+Tente voltar ao console agora e digitar essas linhas acima. Você deve ver o valor que atribuiu à variável retornado no console confirmando-o, em cada caso. De novo, você pode retornar os valores de suas variáveis simplesmente digitando seus nomes no console — tente isso novamente:
 
-<pre class="brush: js notranslate">meuNome;
-minhaIdade;</pre>
+```js
+meuNome;
+minhaIdade;
+```
 
-<p>Você pode declarar e inicializar uma variável ao mesmo tempo, assim:</p>
+Você pode declarar e inicializar uma variável ao mesmo tempo, assim:
 
-<pre class="brush: js notranslate">var meuNome = 'Chris';</pre>
+```js
+var meuNome = 'Chris';
+```
 
-<p>Isso provavelmente é como irá fazer na maioria das vezes, já que é mais rápido do que fazer as duas ações em duas linhas separadas.</p>
+Isso provavelmente é como irá fazer na maioria das vezes, já que é mais rápido do que fazer as duas ações em duas linhas separadas.
 
-<h2 id="A_diferença_entre_var_e_let">A diferença entre var e let</h2>
+## A diferença entre var e let
 
-<p>Agora você pode estar pensando "por que precisamos de duas palavras-chave para definir variáveis? Por que <code>var</code> <em>e</em> <code>let</code>?".</p>
+Agora você pode estar pensando "por que precisamos de duas palavras-chave para definir variáveis? Por que `var` _e_ `let`?".
 
-<p>As razões são um tanto históricas. Quando o JavaScript foi criado, havia apenas <code>var</code>. Isso funciona basicamente bem na maioria dos casos, mas tem alguns problemas na maneira como funciona — seu design pode ser confuso ou totalmente irritante. Portanto, <code>let</code> foi criada nas versões modernas de JavaScript, uma nova palavra-chave para criar variáveis que funcionam de maneira um pouco diferente para  <code>var</code>, corrigindo seus problemas no processo.</p>
+As razões são um tanto históricas. Quando o JavaScript foi criado, havia apenas `var`. Isso funciona basicamente bem na maioria dos casos, mas tem alguns problemas na maneira como funciona — seu design pode ser confuso ou totalmente irritante. Portanto, `let` foi criada nas versões modernas de JavaScript, uma nova palavra-chave para criar variáveis que funcionam de maneira um pouco diferente para `var`, corrigindo seus problemas no processo.
 
-<p>Algumas diferenças simples são explicadas abaixo. Não abordaremos todas as diferenças agora, mas você começará a descobri-las à medida que aprender mais sobre JavaScript (se realmente quiser ler sobre elas agora, fique à vontade para conferir nossa <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/let">página de referência let</a>).</p>
+Algumas diferenças simples são explicadas abaixo. Não abordaremos todas as diferenças agora, mas você começará a descobri-las à medida que aprender mais sobre JavaScript (se realmente quiser ler sobre elas agora, fique à vontade para conferir nossa [página de referência let](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)).
 
-<p>Para começar, se você escrever um programa JavaScript de várias linhas que declare e inicialize uma variável, poderá realmente declarar uma variável com <code>var</code> depois de inicializá-la e ainda funcionará. Por exemplo:</p>
+Para começar, se você escrever um programa JavaScript de várias linhas que declare e inicialize uma variável, poderá realmente declarar uma variável com `var` depois de inicializá-la e ainda funcionará. Por exemplo:
 
-<pre class="brush: js notranslate">meuNome = 'Chris';
+```js
+meuNome = 'Chris';
 
 function logNome() {
   console.log(meuNome);
@@ -138,73 +140,79 @@ function logNome() {
 
 logNome();
 
-var meuNome;</pre>
+var meuNome;
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web.</p>
-</div>
+> **Nota:** Isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web.
 
-<p>Isso funciona por causa do <strong>hoisting</strong> — leia <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> pra mais detalhes.</p>
+Isso funciona por causa do **hoisting** — leia [var hoisting](/pt-BR/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pra mais detalhes.
 
-<p>Hoisting não funciona mais com <code>let</code>. Se mudássemos de <code>var</code> para <code>let</code> no exemplo acima, teríamos um erro. Isso é bom — declarar uma variável depois que você a inicializa resulta em código confuso e difícil de entender.</p>
+Hoisting não funciona mais com `let`. Se mudássemos de `var` para `let` no exemplo acima, teríamos um erro. Isso é bom — declarar uma variável depois que você a inicializa resulta em código confuso e difícil de entender.
 
-<p>E depois, ao usar <code>var</code>, você pode declarar a mesma variável quantas vezes quiser, mas com <code>let</code> você não consegue. Isso pode funcionar:</p>
+E depois, ao usar `var`, você pode declarar a mesma variável quantas vezes quiser, mas com `let` você não consegue. Isso pode funcionar:
 
-<pre class="brush: js notranslate">var meuNome = 'Chris';
-var meuNome = 'Bob';</pre>
+```js
+var meuNome = 'Chris';
+var meuNome = 'Bob';
+```
 
-<p>Mas isso geraria um erro na segunda linha:</p>
+Mas isso geraria um erro na segunda linha:
 
-<pre class="brush: js notranslate">let meuNome = 'Chris';
-let meuNome = 'Bob';</pre>
+```js
+let meuNome = 'Chris';
+let meuNome = 'Bob';
+```
 
-<p>Você precisaria fazer assim:</p>
+Você precisaria fazer assim:
 
-<pre class="brush: js notranslate">let meuNome = 'Chris';
-meuNome = 'Bob';</pre>
+```js
+let meuNome = 'Chris';
+meuNome = 'Bob';
+```
 
-<p>Novamente, essa é uma decisão sensata da linguagem. Não há razão para redeclarar variáveis — isso apenas torna as coisas mais confusas.</p>
+Novamente, essa é uma decisão sensata da linguagem. Não há razão para redeclarar variáveis — isso apenas torna as coisas mais confusas.
 
-<p>Por esses motivos e mais, recomendamos que você use <code>let</code> o máximo possível em seu código, em vez de <code>var</code>. Não há motivo para usar <code>var</code>, a menos que você precise oferecer suporte para versões antigas do Internet Explorer com seu código (ele não suporta <code>let</code> até a versão 11; o navegador mais moderno do Windows, o Edge, suporta <code>let</code>).</p>
+Por esses motivos e mais, recomendamos que você use `let` o máximo possível em seu código, em vez de `var`. Não há motivo para usar `var`, a menos que você precise oferecer suporte para versões antigas do Internet Explorer com seu código (ele não suporta `let` até a versão 11; o navegador mais moderno do Windows, o Edge, suporta `let`).
 
-<h2 id="Atualizando_uma_variável">Atualizando uma variável</h2>
+## Atualizando uma variável
 
-<p>Uma vez que uma tenha um valor atribuido, você pode atualizar esse valor simplesmente dando a ela um valor diferente. Tente inserir as seguintes linhas no seu console:</p>
+Uma vez que uma tenha um valor atribuido, você pode atualizar esse valor simplesmente dando a ela um valor diferente. Tente inserir as seguintes linhas no seu console:
 
-<pre class="brush: js notranslate">meuNome = 'Bob';
-minhaIdade = 40;</pre>
+```js
+meuNome = 'Bob';
+minhaIdade = 40;
+```
 
-<h3 id="Um_adendo_sobre_regras_de_nomeação_de_variáveis">Um adendo sobre regras de nomeação de variáveis</h3>
+### Um adendo sobre regras de nomeação de variáveis
 
-<p>Você pode chamar uma variável praticamente qualquer nome que queira, mas há limitações. Geralmente você deve se limitar a utilizar somente caracteres latinos (0-9, a-z, A-Z) e o caractere underline ( _ ).</p>
+Você pode chamar uma variável praticamente qualquer nome que queira, mas há limitações. Geralmente você deve se limitar a utilizar somente caracteres latinos (0-9, a-z, A-Z) e o caractere underline ( \_ ).
 
-<ul>
- <li>Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.</li>
- <li>Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.</li>
- <li>Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.</li>
- <li>Uma conveção segura e se ater é a chamada <a href="https://pt.wikipedia.org/wiki/CamelCase">"lower camel case"</a>, onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.</li>
- <li>Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.</li>
- <li>As variáveis diferenciam letras maiúsculas e minúsculas — então <code>minhaidade</code> é uma variável diferente de <code>minhaIdade</code>.</li>
- <li>Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como <code>var</code>, <code>function</code>, <code>let</code> e <code>for</code> como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.</li>
-</ul>
+- Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.
+- Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.
+- Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.
+- Uma conveção segura e se ater é a chamada ["lower camel case"](https://pt.wikipedia.org/wiki/CamelCase), onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.
+- Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.
+- As variáveis diferenciam letras maiúsculas e minúsculas — então `minhaidade` é uma variável diferente de `minhaIdade`.
+- Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como `var`, `function`, `let` e `for` como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode encontrar uma lista bem completa de palavras reservadas para evitar em <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Palavras-chave">Gramática léxica — Palavras-chave</a>.</p>
-</div>
+> **Nota:** Você pode encontrar uma lista bem completa de palavras reservadas para evitar em [Gramática léxica — Palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Palavras-chave).
 
-<p>Exemplos de bons nomes:</p>
+Exemplos de bons nomes:
 
-<pre class="example-good notranslate">idade
+```plain example-good
+idade
 minhaIdade
 inicio
 corInicial
 valorFinalDeSaida
 audio1
-audio2</pre>
+audio2
+```
 
-<p>Exemplos ruins de nomes:</p>
+Exemplos ruins de nomes:
 
-<pre class="example-bad notranslate">1
+```plain example-bad
+1
 a
 _12
 minhaidade
@@ -213,121 +221,143 @@ var
 Document
 skjfndskjfnbdskjfb
 esseeumnomedevariavelbemlongoeestupido
-</pre>
+```
 
-<p>Tente criar mais  algumas variáveis agora, com a orientação acima em mente.</p>
+Tente criar mais algumas variáveis agora, com a orientação acima em mente.
 
-<h2 id="Tipos_de_variáveis">Tipos de variáveis</h2>
+## Tipos de variáveis
 
-<p>Existem alguns diferentes tipos de dados que podemos armazenar em variáveis. Nessa seção iremos descrevê-los brevemente, e então em artigos futuros você aprenderá sobre eles em mais detalhes.</p>
+Existem alguns diferentes tipos de dados que podemos armazenar em variáveis. Nessa seção iremos descrevê-los brevemente, e então em artigos futuros você aprenderá sobre eles em mais detalhes.
 
-<p>Até agora nós vimos os dois primeiros, mas há outros.</p>
+Até agora nós vimos os dois primeiros, mas há outros.
 
-<h3 id="Números">Números</h3>
+### Números
 
-<p>Você pode armazenar números em variáveis, tanto números inteiros, como por exemplo 30 (também chamados de <em>integers</em>) como números decimais, por exemplo 2.456 (também chamados de <em>floats</em> ou <em>floating point numbers</em>). Você não precisa declarar tipos de variáveis no JavaScript, diferentemente de outras linguagens de programação. Quando você atribui a uma variável o valor em número, você não inclui as aspas:</p>
+Você pode armazenar números em variáveis, tanto números inteiros, como por exemplo 30 (também chamados de _integers_) como números decimais, por exemplo 2.456 (também chamados de _floats_ ou _floating point numbers_). Você não precisa declarar tipos de variáveis no JavaScript, diferentemente de outras linguagens de programação. Quando você atribui a uma variável o valor em número, você não inclui as aspas:
 
-<pre class="brush: js notranslate">var minhaIdade = 17;</pre>
+```js
+var minhaIdade = 17;
+```
 
-<h3 id="Strings_cadeias_de_texto"><em>Strings</em> (cadeias de texto)</h3>
+### _Strings_ (cadeias de texto)
 
-<p><em>Strings</em> são sequências de texto. Quando você dá a uma variável um valor em texto (<em>string</em>), você precisa envolver o texto em aspas simples ou duplas; caso contrário, o JavaScript vai tentar interpretá-lo como sendo outro nome de variável.</p>
+_Strings_ são sequências de texto. Quando você dá a uma variável um valor em texto (_string_), você precisa envolver o texto em aspas simples ou duplas; caso contrário, o JavaScript vai tentar interpretá-lo como sendo outro nome de variável.
 
-<pre class="brush: js notranslate">var despedidaGolfinho = 'Até logo e obrigado por todos os peixes!';</pre>
+```js
+var despedidaGolfinho = 'Até logo e obrigado por todos os peixes!';
+```
 
-<h3 id="Booleans_boleanos"><em>Booleans</em> (boleanos)</h3>
+### _Booleans_ (boleanos)
 
-<p><em>Booleans</em> são valores verdadeiro/falso (<em>true/false</em>) — eles podem ter dois valores, <code>true</code> (verdadeiro) ou <code>false</code> (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:</p>
+_Booleans_ são valores verdadeiro/falso (_true/false_) — eles podem ter dois valores, `true` (verdadeiro) ou `false` (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:
 
-<pre class="brush: js notranslate">var estouVivo = true;</pre>
+```js
+var estouVivo = true;
+```
 
-<p>Enquanto na realidade seria utlizado mais da seguinte forma:</p>
+Enquanto na realidade seria utlizado mais da seguinte forma:
 
-<pre class="brush: js notranslate">var teste = 6 &lt; 3;</pre>
+```js
+var teste = 6 < 3;
+```
 
-<p>Esse exemplo está usando o operador "menor que" (<code>&lt;</code>) para testar se 6 é menor que 3. Como você pode esperar, irá retornar <code>false</code> (falso), porque 6 não é menor que 3! Você aprenderá mais sobre tais operadores mais tarde no curso.</p>
+Esse exemplo está usando o operador "menor que" (`<`) para testar se 6 é menor que 3. Como você pode esperar, irá retornar `false` (falso), porque 6 não é menor que 3! Você aprenderá mais sobre tais operadores mais tarde no curso.
 
-<h3 id="Arrays"><em>Arrays</em></h3>
+### _Arrays_
 
-<p>Um array é um único objeto que contém valores múltiplos inseridos entre colchetes e separados por vírgulas. Tente inserir as seguintes linhas de código no seu console:</p>
+Um array é um único objeto que contém valores múltiplos inseridos entre colchetes e separados por vírgulas. Tente inserir as seguintes linhas de código no seu console:
 
-<pre class="brush: js notranslate">var meuNomeArray = ['Chris', 'Bob', 'Jim'];
-var meuNumeroArray = [10,15,40];</pre>
+```js
+var meuNomeArray = ['Chris', 'Bob', 'Jim'];
+var meuNumeroArray = [10,15,40];
+```
 
-<p>Uma vez que esses arrays estejam definidos, você pode acessar cada um de seus valores através de sua localização dentro do array. Tente essas linhas:</p>
+Uma vez que esses arrays estejam definidos, você pode acessar cada um de seus valores através de sua localização dentro do array. Tente essas linhas:
 
-<pre class="brush: js notranslate">meuNomeArray[0]; // deve retornar 'Chris'
-meuNumeroArray[2]; // deve retornar 40</pre>
+```js
+meuNomeArray[0]; // deve retornar 'Chris'
+meuNumeroArray[2]; // deve retornar 40
+```
 
-<p>Os colchetes especificam um valor do índice correspondente à posição do valor que você deseja retornado. Você talvez tenha notado que os arrays em JavaScript são indexados a partir do zero: o primeiro elemento está na posíção 0 do índice.</p>
+Os colchetes especificam um valor do índice correspondente à posição do valor que você deseja retornado. Você talvez tenha notado que os arrays em JavaScript são indexados a partir do zero: o primeiro elemento está na posíção 0 do índice.
 
-<p>Você aprenderá mais sobre arrays em um artigo futuro.</p>
+Você aprenderá mais sobre arrays em um artigo futuro.
 
-<h3 id="Objetos">Objetos</h3>
+### Objetos
 
-<p>Em programação, um objeto é uma estrutura de código que representa um objeto da vida real. Você pode ter um simples objeto que representa um estacionamento de carro contendo informações sobre sobre sua largura e comprimento, ou você poderia ter um objeto que representa uma pessoa, e contém dados sobre seu nome, altura, peso, que idioma ela fala, como dizer olá a ela, e mais.</p>
+Em programação, um objeto é uma estrutura de código que representa um objeto da vida real. Você pode ter um simples objeto que representa um estacionamento de carro contendo informações sobre sobre sua largura e comprimento, ou você poderia ter um objeto que representa uma pessoa, e contém dados sobre seu nome, altura, peso, que idioma ela fala, como dizer olá a ela, e mais.
 
-<p>Tente inserir a seguinte linha em seu console:</p>
+Tente inserir a seguinte linha em seu console:
 
-<pre class="brush: js notranslate">var cachorro = { nome : 'Totó', raca : 'Dálmata' };</pre>
+```js
+var cachorro = { nome : 'Totó', raca : 'Dálmata' };
+```
 
-<p>Para obter a informação armazenada no objeto, você pode usar a seguinte sintaxe:</p>
+Para obter a informação armazenada no objeto, você pode usar a seguinte sintaxe:
 
-<pre class="brush: js notranslate">cachorro.nome</pre>
+```js
+cachorro.nome
+```
 
-<p>Nós não iremos ver mais sobre objetos por agora — você pode aprender mais sobre eles em um artigo futuro.</p>
+Nós não iremos ver mais sobre objetos por agora — você pode aprender mais sobre eles em um artigo futuro.
 
-<h2 id="Digitação_permissiva">Digitação permissiva</h2>
+## Digitação permissiva
 
-<p>JavaScript é uma "dynamically typed language", o que significa que, diferente de outras linguagens, você não precisa especificar que tipo de dados uma variável irá conter (ex.: números, cadeias de texto, arrays, etc).</p>
+JavaScript é uma "dynamically typed language", o que significa que, diferente de outras linguagens, você não precisa especificar que tipo de dados uma variável irá conter (ex.: números, cadeias de texto, arrays, etc).
 
-<p>Por exemplo, se você declarar uma variável e dar a ela um valor encapsulado em aspas, o navegador irá tratar a variável como sendo uma <em>string</em> (cadeia de texto):</p>
+Por exemplo, se você declarar uma variável e dar a ela um valor encapsulado em aspas, o navegador irá tratar a variável como sendo uma _string_ (cadeia de texto):
 
-<pre class="brush: js notranslate">var minhaString = 'Olá';</pre>
+```js
+var minhaString = 'Olá';
+```
 
-<p>Irá continuar sendo uma <em>string</em>, mesmo que dentro das apas contenha um número, então seja cuidadoso:</p>
+Irá continuar sendo uma _string_, mesmo que dentro das apas contenha um número, então seja cuidadoso:
 
-<pre class="brush: js notranslate">var meuNumero = '500'; // opa, isso continua sendo uma string
+```js
+var meuNumero = '500'; // opa, isso continua sendo uma string
 typeof(meuNumero);
 meuNumero = 500; // bem melhor — agora isso é um número
-typeof(meuNumero);</pre>
+typeof(meuNumero);
+```
 
-<p>Tente inserir as quatro linhas acima em seu console uma por uma, e veja quais são os resultados. Você notará que estamos usando uma função especial chamada <code>typeof()</code> — ela irá retornar o tipo de dado da variável que você passar. Da primeira vez que for executada, deve retornar <code>string</code>, como naquele ponto a variável <code>meuNumero</code> contém uma <em>string</em>, <code>'500'</code>. Dê uma olhada e veja o que é retornado da segunda vez que você a utilizar.</p>
+Tente inserir as quatro linhas acima em seu console uma por uma, e veja quais são os resultados. Você notará que estamos usando uma função especial chamada `typeof()` — ela irá retornar o tipo de dado da variável que você passar. Da primeira vez que for executada, deve retornar `string`, como naquele ponto a variável `meuNumero` contém uma _string_, `'500'`. Dê uma olhada e veja o que é retornado da segunda vez que você a utilizar.
 
-<h2 id="Constants_em_JavaScript">Constants em JavaScript</h2>
+## Constants em JavaScript
 
-<p>Muitas linguagens de programação têm o conceito de <em>constant</em> —  um valor que uma vez declarado não pode ser alterado. Há muitas razões pelas quais você deseja fazer isso, desde segurança (se um script de terceiros alterou esses valores, poderia causar problemas)  até a depuração e a compreensão do código (é mais difícil alterar acidentalmente valores que não devem ser alterados e bagunçar as coisas).</p>
+Muitas linguagens de programação têm o conceito de _constant_ — um valor que uma vez declarado não pode ser alterado. Há muitas razões pelas quais você deseja fazer isso, desde segurança (se um script de terceiros alterou esses valores, poderia causar problemas) até a depuração e a compreensão do código (é mais difícil alterar acidentalmente valores que não devem ser alterados e bagunçar as coisas).
 
-<p>Nos primeiros dias do JavaScript, não existiam <em>constants</em>. No JavaScript moderno, temos a palavra-chave <code>const</code>, que nos permite armazenar valores que nunca podem ser alterados:</p>
+Nos primeiros dias do JavaScript, não existiam _constants_. No JavaScript moderno, temos a palavra-chave `const`, que nos permite armazenar valores que nunca podem ser alterados:
 
-<pre class="brush: js">const diasNaSemana = 7;
-const horasNoDia = 24;</pre>
+```js
+const diasNaSemana = 7;
+const horasNoDia = 24;
+```
 
-<p><code>const</code> funciona exatamente da mesma maneira que <code>let</code>, exceto que você não pode atribuir um novo valor a <code>const</code>. No exemplo a seguir, a segunda linha geraria um erro:</p>
+`const` funciona exatamente da mesma maneira que `let`, exceto que você não pode atribuir um novo valor a `const`. No exemplo a seguir, a segunda linha geraria um erro:
 
-<pre class="brush: js">const diasNaSemana = 7;
-diasNaSemana = 8;</pre>
+```js
+const diasNaSemana = 7;
+diasNaSemana = 8;
+```
 
-<h2 id="Teste_suas_habilidades!">Teste suas habilidades!</h2>
+## Teste suas habilidades!
 
-<p>Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja <a href="/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis">Teste suas habilidades: variáveis</a>.</p>
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis).
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.</p>
+Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
 
-<h2 id="Neste_módulo">Neste módulo</h2>
+## Neste módulo
 
-<ul>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript">O que é JavaScript?</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash">Um primeiro mergulho no JavaScript</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong">O que deu errado? Resolvendo problemas no JavaScript</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis">Armazenando as informações que você precisa — Variáveis</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Matematica">Matemática básica no JavaScript — números e operadores</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Strings">Trabalhando com textos — strings em JavaScript</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos úteis de string</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas">Avaliação: Gerador de histórias bobas</a></li>
-</ul>
+- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript)
+- [Um primeiro mergulho no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [O que deu errado? Resolvendo problemas no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis)
+- [Matemática básica no JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Matematica)
+- [Trabalhando com textos — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
+- [Métodos úteis de string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
+- [Avaliação: Gerador de histórias bobas](/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas)

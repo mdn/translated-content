@@ -4,225 +4,216 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</div>
-
-<div class="summary">
-<p>Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.</p>
-</div>
+Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>You should know the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">insert an image into your document</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn how to embed an SVG (vector) image into a webpage.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        You should know the
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
+        and how to
+        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+          >insert an image into your document</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>Learn how to embed an SVG (vector) image into a webpage.</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note</strong>: This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.</p>
-</div>
+> **Nota:** This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
 
-<h2 id="O_que_são_vetores_gráficos">O que são vetores gráficos?</h2>
+## O que são vetores gráficos?
 
-<p>Na web, você pode trabalhar com dois tipos de imagem — <strong>raster images</strong>, and <strong>vector images</strong>:</p>
+Na web, você pode trabalhar com dois tipos de imagem — **raster images**, and **vector images**:
 
-<ul>
- <li><strong>Imagens Raster</strong> são definidos usando uma grade de pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
- <li><strong>Imagens vetoriais</strong> são definidas usando algoritmos — um arquivo de imagem vetorial contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.</li>
-</ul>
+- **Imagens Raster** são definidos usando uma grade de pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`.)
+- **Imagens vetoriais** são definidas usando algoritmos — um arquivo de imagem vetorial contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.
 
-<p>To give you an idea of the difference between the two, let's look at an example. You can find this example live on our Github repo as <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — it shows two seemingly identical images side by side, of a red star with a  black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.</p>
+To give you an idea of the difference between the two, let's look at an example. You can find this example live on our Github repo as [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — it shows two seemingly identical images side by side, of a red star with a black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.
 
-<p>The difference becomes apparent when you zoom in the page — the PNG image becomes pixellated as you zoom in because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is simply increased in size to fill multiple pixels on screen, so the image starts to look blocky. The vector image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values simply being scaled as it gets bigger.</p>
+The difference becomes apparent when you zoom in the page — the PNG image becomes pixellated as you zoom in because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is simply increased in size to fill multiple pixels on screen, so the image starts to look blocky. The vector image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values simply being scaled as it gets bigger.
 
-<p><img alt="Two star images" src="https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png" style="display: block; height: 112px; margin: 0px auto; width: 223px;"></p>
+![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
 
-<p><img alt="Two star images zoomed in, one crisp and the other blurry" src="https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png" style="display: block; height: 328px; margin: 0px auto; width: 677px;"></p>
+![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
 
-<div class="note">
-<p><strong>Note</strong>: The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> demo for a real example!</p>
-</div>
+> **Nota:** The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
 
-<p>Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.</p>
+Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.
 
-<h2 id="What_is_SVG">What is SVG?</h2>
+## What is SVG?
 
-<p><a href="/en-US/docs/Web/SVG">SVG</a> is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)</p>
+[SVG](/pt-BR/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)
 
-<p>As a simple example, the following code creates a circle and a rectangle:</p>
+As a simple example, the following code creates a circle and a rectangle:
 
-<pre class="brush: html notranslate">&lt;svg version="1.1"
+```html
+<svg version="1.1"
      baseProfile="full"
      width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect width="100%" height="100%" fill="black" /&gt;
-  &lt;circle cx="150" cy="100" r="90" fill="blue" /&gt;
-&lt;/svg&gt;</pre>
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="150" cy="100" r="90" fill="blue" />
+</svg>
+```
 
-<p>This creates the following output:</p>
+This creates the following output:
 
-<p>{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}
 
-<p>From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like <a href="https://inkscape.org/en/">Inkscape</a> or <a href="https://en.wikipedia.org/wiki/Adobe_Illustrator">Illustrator</a>. These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)</p>
+From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like [Inkscape](https://inkscape.org/en/) or [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)
 
-<p>SVG has some additional advantages besides those described so far:</p>
+SVG has some additional advantages besides those described so far:
 
-<ul>
- <li>Text in vector images remains accessible (which also benefits your {{glossary("SEO")}}).</li>
- <li>SVGs lend themselves well to styling/scripting, because each component of the image is an element that can be styled via CSS or scripted via JavaScript.</li>
-</ul>
+- Text in vector images remains accessible (which also benefits your {{glossary("SEO")}}).
+- SVGs lend themselves well to styling/scripting, because each component of the image is an element that can be styled via CSS or scripted via JavaScript.
 
-<p>So why would anyone want to use raster graphics over SVG? Well, SVG does have some disadvantages:</p>
+So why would anyone want to use raster graphics over SVG? Well, SVG does have some disadvantages:
 
-<ul>
- <li>SVG can get complicated very quickly, meaning that file sizes can grow; complex SVGs can also take significant processing time in the browser.</li>
- <li>SVG can be harder to create than raster images, depending on what kind of image you are trying to create.</li>
- <li>SVG is not supported in older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site (SVG started being supported as of IE9.)</li>
-</ul>
+- SVG can get complicated very quickly, meaning that file sizes can grow; complex SVGs can also take significant processing time in the browser.
+- SVG can be harder to create than raster images, depending on what kind of image you are trying to create.
+- SVG is not supported in older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site (SVG started being supported as of IE9.)
 
-<p>Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.</p>
+Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
-<div class="note">
-<p><strong>Note</strong>: In Inkscape, save your files as Plain SVG to save space. Also, please refer to this <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">article describing how to prepare SVGs for the Web</a>.</p>
-</div>
+> **Nota:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
-<h2 id="Adding_SVG_to_your_pages">Adding SVG to your pages</h2>
+## Adding SVG to your pages
 
-<p>In this section we'll go through the different ways in which you can add SVG vector graphics to your web pages.</p>
+In this section we'll go through the different ways in which you can add SVG vector graphics to your web pages.
 
-<h3 id="The_quick_way_htmlelementimg">The quick way: {{htmlelement("img")}}</h3>
+### The quick way: {{htmlelement("img")}}
 
-<p>To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a <code>height</code> or a <code>width</code> attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a>.</p>
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
-<pre class="brush: html notranslate">&lt;img
+```html
+<img
     src="equilateral.svg"
     alt="triangle with all three sides equal"
     height="87"
-    width="100" /&gt;</pre>
+    width="100" />
+```
 
-<h4 id="Pros">Pros</h4>
+#### Pros
 
-<ul>
- <li>Quick, familiar image syntax with built-in text equivalent available in the <code>alt</code> attribute.</li>
- <li>You can make the image into a hyperlink easily by nesting the <code>&lt;img&gt;</code> inside an {{htmlelement("a")}} element.</li>
- <li>The SVG file can be cached by the browser, resulting in faster loading times for any page that uses the image loaded in the future.</li>
-</ul>
+- Quick, familiar image syntax with built-in text equivalent available in the `alt` attribute.
+- You can make the image into a hyperlink easily by nesting the `<img>` inside an {{htmlelement("a")}} element.
+- The SVG file can be cached by the browser, resulting in faster loading times for any page that uses the image loaded in the future.
 
-<h4 id="Cons">Cons</h4>
+#### Cons
 
-<ul>
- <li>You cannot manipulate the image with JavaScript.</li>
- <li>If you want to control the SVG content with CSS, you must include inline CSS styles in your SVG code. (External stylesheets invoked from the SVG file take no effect.)</li>
- <li>You cannot restyle the image with CSS pseudoclasses (like <code>:focus</code>).</li>
-</ul>
+- You cannot manipulate the image with JavaScript.
+- If you want to control the SVG content with CSS, you must include inline CSS styles in your SVG code. (External stylesheets invoked from the SVG file take no effect.)
+- You cannot restyle the image with CSS pseudoclasses (like `:focus`).
 
-<h3 id="Troubleshooting_and_cross-browser_support">Troubleshooting and cross-browser support</h3>
+### Troubleshooting and cross-browser support
 
-<p>For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your <code>src</code> attribute and use a {{htmlattrxref("srcset", "img")}} attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:</p>
+For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a {{htmlattrxref("srcset", "img")}} attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
-<pre class="brush: html notranslate">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
+```html
+<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+```
 
-<p>You can also use SVGs as CSS background images, as shown below. In the below code, older browsers will stick with the PNG that they understand, while newer browsers will load the SVG:</p>
+You can also use SVGs as CSS background images, as shown below. In the below code, older browsers will stick with the PNG that they understand, while newer browsers will load the SVG:
 
-<pre class="brush: css notranslate"><code>background: url("fallback.png") no-repeat center;</code>
-<code>background-image: url("image.svg");
-background-size: contain;</code></pre>
+```css
+background: url("fallback.png") no-repeat center;
+background-image: url("image.svg");
+background-size: contain;
+```
 
-<p>Like the <code>&lt;img&gt;</code> method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.</p>
+Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-<p>If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this <a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">article will point you in the right direction</a>.</p>
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers).
 
-<h3 id="How_to_include_SVG_code_inside_your_HTML">How to include SVG code inside your HTML</h3>
+### How to include SVG code inside your HTML
 
-<p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <strong>SVG inline</strong>, or <strong>inlining SVG</strong>. Make sure your SVG code snippet begins and ends with the <code><a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:</p>
+You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your **SVG inline**, or **inlining SVG**. Make sure your SVG code snippet begins and ends with the [`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg) tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:
 
-<pre class="brush: html notranslate">&lt;svg width="300" height="200"&gt;
-    &lt;rect width="100%" height="100%" fill="green" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="300" height="200">
+    <rect width="100%" height="100%" fill="green" />
+</svg>
+```
 
-<h4 id="Pros_2">Pros</h4>
+#### Pros
 
-<ul>
- <li>Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.</li>
- <li>You can assign <code>class</code>es and <code>id</code>s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any <a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">SVG presentation attribute </a>as a CSS property.</li>
- <li>Inlining SVG is the only approach that lets you use CSS interactions (like <code>:focus</code>) and CSS animations on your SVG image (even in your regular stylesheet.)</li>
- <li>You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.</li>
-</ul>
+- Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
+- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute ](/pt-BR/docs/Web/SVG/Attribute#Presentation_attributes)as a CSS property.
+- Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
+- You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.
 
-<h4 id="Cons_2">Cons</h4>
+#### Cons
 
-<ul>
- <li>This method is only suitable if you're using the SVG in only one place. Duplication makes for resource-intensive maintenance.</li>
- <li>Extra SVG code increases the size of your HTML file.</li>
- <li>The browser cannot cache inline SVG as it would cache regular image assets, so pages that include the image will not load faster after the first page containing the image is loaded.</li>
- <li>You may include fallback in a {{svgelement("foreignObject")}} element, but browsers that support SVG still download any fallback images. You need to weigh whether the extra overhead is really worthwhile, just to support obsolescent browsers.</li>
-</ul>
+- This method is only suitable if you're using the SVG in only one place. Duplication makes for resource-intensive maintenance.
+- Extra SVG code increases the size of your HTML file.
+- The browser cannot cache inline SVG as it would cache regular image assets, so pages that include the image will not load faster after the first page containing the image is loaded.
+- You may include fallback in a {{svgelement("foreignObject")}} element, but browsers that support SVG still download any fallback images. You need to weigh whether the extra overhead is really worthwhile, just to support obsolescent browsers.
 
-<ul>
-</ul>
+<!---->
 
-<h3 id="How_to_embed_an_SVG_with_an_htmlelementiframe">How to embed an SVG with an {{htmlelement("iframe")}}</h3>
+### How to embed an SVG with an {{htmlelement("iframe")}}
 
-<p>You can open SVG images in your browser just like webpages. So embedding an SVG document with an <code>&lt;iframe&gt;</code> is done just like we studied in <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a>.</p>
+You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 
-<p>Here's a quick review:</p>
+Here's a quick review:
 
-<pre class="brush: html notranslate">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
-    &lt;img src="triangle.png" alt="Triangle with three unequal sides" /&gt;
-&lt;/iframe&gt;</pre>
+```html
+<iframe src="triangle.svg" width="500" height="500" sandbox>
+    <img src="triangle.png" alt="Triangle with three unequal sides" />
+</iframe>
+```
 
-<p>This is definitely not the best method to choose:</p>
+This is definitely not the best method to choose:
 
-<h4 id="Cons_3">Cons</h4>
+#### Cons
 
-<ul>
- <li><code>iframe</code>s do have a fallback mechanism, as you can see, but browsers only display the fallback if they lack support for <code>iframe</code>s altogether.</li>
- <li>Moreover, unless the SVG and your current webpage have the same {{glossary('origin')}}, you cannot use JavaScript on your main webpage to manipulate the SVG.</li>
-</ul>
+- `iframe`s do have a fallback mechanism, as you can see, but browsers only display the fallback if they lack support for `iframe`s altogether.
+- Moreover, unless the SVG and your current webpage have the same {{glossary('origin')}}, you cannot use JavaScript on your main webpage to manipulate the SVG.
 
-<h2 id="Active_Learning_Playing_with_SVG">Active Learning: Playing with SVG</h2>
+## Active Learning: Playing with SVG
 
-<p>In this active learning section we'd like you to simply have a go at playing with some SVG for fun. In the <em>Input</em> section below you'll see that we've already provided you with some samples to get you started. You can also go to the <a href="/en-US/docs/Web/SVG/Element">SVG Element Reference</a>, find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.</p>
+In this active learning section we'd like you to simply have a go at playing with some SVG for fun. In the _Input_ section below you'll see that we've already provided you with some samples to get you started. You can also go to the [SVG Element Reference](/pt-BR/docs/Web/SVG/Element), find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.
 
-<p>If you get stuck and can't get your code working, you can always reset it using the <em>Reset</em> button.</p>
+If you get stuck and can't get your code working, you can always reset it using the _Reset_ button.
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+```html hidden
+<h2>Live output</h2>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="width: 95%;min-height: 200px;"&gt;
-  &lt;svg width="100%" height="100%"&gt;
-    &lt;rect width="100%" height="100%" fill="red" /&gt;
-    &lt;circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" /&gt;
-    &lt;polygon points="120,0 240,225 0,225" fill="green"/&gt;
-    &lt;text x="50" y="100" font-family="Verdana" font-size="55"
-          fill="white" stroke="black" stroke-width="2"&gt;
+<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
+  <svg width="100%" height="100%">
+    <rect width="100%" height="100%" fill="red" />
+    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+    <polygon points="120,0 240,225 0,225" fill="green"/>
+    <text x="50" y="100" font-family="Verdana" font-size="55"
+          fill="white" stroke="black" stroke-width="2">
             Hello!
-    &lt;/text&gt;
-  &lt;/svg&gt;
-&lt;/textarea&gt;
+    </text>
+  </svg>
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution" disabled&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution" disabled>
+</div>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -240,9 +231,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+```js hidden
+const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -318,36 +311,32 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>This article has provided you with a quick tour of what vector graphics and SVG are, why they are useful to know about, and how to include SVG inside your webpages. It was never intended to be a full guide to learning SVG, just a pointer so you know what SVG is if you meet it in your travels around the Web. So don't worry if you don't feel like you are an SVG expert yet. We've included some links below that might help you if you wish to go and find out more about how it works.</p>
+This article has provided you with a quick tour of what vector graphics and SVG are, why they are useful to know about, and how to include SVG inside your webpages. It was never intended to be a full guide to learning SVG, just a pointer so you know what SVG is if you meet it in your travels around the Web. So don't worry if you don't feel like you are an SVG expert yet. We've included some links below that might help you if you wish to go and find out more about how it works.
 
-<p>In the last article of this module we will explore responsive images in detail, looking at the tools HTML has to allow you to make your images work better across different devices.</p>
+In the last article of this module we will explore responsive images in detail, looking at the tools HTML has to allow you to make your images work better across different devices.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
- <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Quick tips for responsive SVGs</a></li>
- <li><a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Sara Soueidan's tutorial on responsive SVG images</a></li>
- <li><a href="https://www.w3.org/TR/SVG-access/">Accessibility benefits of SVG</a></li>
- <li><a href="https://css-tricks.com/scale-svg/">How to scale SVGs </a>(it's not as simple as raster graphics!)</li>
-</ul>
+- [SVG tutorial](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started) on MDN
+- [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
+- [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
+- [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
+- [How to scale SVGs ](https://css-tricks.com/scale-svg/)(it's not as simple as raster graphics!)
 
-<p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</p>
+{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
-</ul>
+- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Adding vector graphics to the Web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla splash page](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

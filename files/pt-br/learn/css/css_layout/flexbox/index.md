@@ -16,271 +16,289 @@ tags:
   - ordenação
 translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
-<div>
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</p>
-</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-<p class="summary">Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Flexbox está se tornando apto para uso geral. Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS. Este artigo explica todos os seus fundamentos.</p>
+Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Flexbox está se tornando apto para uso geral. Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS. Este artigo explica todos os seus fundamentos.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>HTML básico (estude <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introdução a HTML</a>), e uma ideia de como CSS funciona (estude <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Aprender como usar o sistema de Flexbox layout para criar web layouts.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        HTML básico (estude
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introdução a HTML</a
+        >), e uma ideia de como CSS funciona (estude
+        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a
+        >.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Aprender como usar o sistema de Flexbox layout para criar web layouts.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Por_quê_Flexbox">Por quê <em>Flexbox</em>?</h2>
+## Por quê _Flexbox_?
 
-<p>Por um longo tempo, as únicas ferramentas compatíveis entre browsers disponíveis para criação de layouts CSS eram coisas como <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> e <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">posicionamento</a>. Estas são boas e funcionam, mas em alguns casos também são limitadas e frustrantes.</p>
+Por um longo tempo, as únicas ferramentas compatíveis entre browsers disponíveis para criação de layouts CSS eram coisas como [floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) e [posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning). Estas são boas e funcionam, mas em alguns casos também são limitadas e frustrantes.
 
-<p>Os requisitos de layouts a seguir são difíceis ou impossíveis de se conseguir com estas ferramentas, em qualquer tipo conveniente e flexível:</p>
+Os requisitos de layouts a seguir são difíceis ou impossíveis de se conseguir com estas ferramentas, em qualquer tipo conveniente e flexível:
 
-<ul>
- <li>Centralizar um bloco de conteúdo verticalmente dentro de seu pai.</li>
- <li>Fazer com que os filhos de um container ocupe uma quantidade igual de largura/altura disponível, independente da quantidade de largura/altura disponível.</li>
- <li>Fazer todas as colunas de um layout com múltiplas colunas adotem a mesma altura, mesmo que contenham uma quantidade diferente de conteúdo.</li>
-</ul>
+- Centralizar um bloco de conteúdo verticalmente dentro de seu pai.
+- Fazer com que os filhos de um container ocupe uma quantidade igual de largura/altura disponível, independente da quantidade de largura/altura disponível.
+- Fazer todas as colunas de um layout com múltiplas colunas adotem a mesma altura, mesmo que contenham uma quantidade diferente de conteúdo.
 
-<p>Como você verá nas seções subsequentes, <em>flexbox</em> faz muitas tarefas de layouts de maneira mais fácil. Vamos nos aprofundar!</p>
+Como você verá nas seções subsequentes, _flexbox_ faz muitas tarefas de layouts de maneira mais fácil. Vamos nos aprofundar!
 
-<h2 id="Introduzindo_um_exemplo_simples">Introduzindo um exemplo simples</h2>
+## Introduzindo um exemplo simples
 
-<p>Neste artigo nós vamos trabalhar uma série de exercícios para ajudá-lo a entender como o flexbox funciona. Para começar, você deve fazer uma cópia local do arquivo inicial — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> do nosso repositório no github — carregue-o em um navegador moderno (como Firefox ou Chrome), e abra o arquivo no seu editor de código. Você pode <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">ver a página aqui</a> também.</p>
+Neste artigo nós vamos trabalhar uma série de exercícios para ajudá-lo a entender como o flexbox funciona. Para começar, você deve fazer uma cópia local do arquivo inicial — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) do nosso repositório no github — carregue-o em um navegador moderno (como Firefox ou Chrome), e abra o arquivo no seu editor de código. Você pode [ver a página aqui](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) também.
 
-<p>Você verá que temos um elemento {{HTMLElement("header")}} com um cabeçalho no nível superior dentro dele, e um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}s. Nós vamos usá-los para criar um layout padrão de três colunas.</p>
+Você verá que temos um elemento {{HTMLElement("header")}} com um cabeçalho no nível superior dentro dele, e um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}s. Nós vamos usá-los para criar um layout padrão de três colunas.
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example1.png)
 
-<h2 id="Especificando_os_elementos_a_serem_definidos_como_caixas_flex">Especificando os elementos a serem definidos como caixas <em>flex</em></h2>
+## Especificando os elementos a serem definidos como caixas _flex_
 
-<p>Para iniciar, vamos definir quais elementos serão flexible boxes. Para isto, temos que definir um valor especial de {{cssxref("display")}} no elemento pai dos elementos que queremos afetar. neste caso são os elementos {{HTMLElement("article")}}, portanto vamos definir o valor no elemento {{HTMLElement("section")}} (que se torna um flex container):</p>
+Para iniciar, vamos definir quais elementos serão flexible boxes. Para isto, temos que definir um valor especial de {{cssxref("display")}} no elemento pai dos elementos que queremos afetar. neste caso são os elementos {{HTMLElement("article")}}, portanto vamos definir o valor no elemento {{HTMLElement("section")}} (que se torna um flex container):
 
-<pre class="brush: css">section {
+```css
+section {
   display: flex;
-}</pre>
+}
+```
 
-<p>O resultado disso deve ser algo assim:</p>
+O resultado disso deve ser algo assim:
 
-<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example2.png)
 
-<p>Então, esta única declaração nos dá tudo que precisamos — incrivel, certo? Nós temos um layout de múltiplas com tamanhos iguais, e todas as colunas tem a mesma altura. Isto porque o valor padrão dado aos flex items (os filhos do flex container) são configurados para resolver problemas comuns, como este. Voltaremos a este assunto depois.</p>
+Então, esta única declaração nos dá tudo que precisamos — incrivel, certo? Nós temos um layout de múltiplas com tamanhos iguais, e todas as colunas tem a mesma altura. Isto porque o valor padrão dado aos flex items (os filhos do flex container) são configurados para resolver problemas comuns, como este. Voltaremos a este assunto depois.
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode definir também ao {{cssxref("display")}} o valor <code>inline-flex</code> se quiser colocar os items em linha como flexible boxes.</p>
-</div>
+> **Nota:** Você pode definir também ao {{cssxref("display")}} o valor `inline-flex` se quiser colocar os items em linha como flexible boxes.
 
-<h2 id="Um_aparte_no_modelo_flex">Um aparte no modelo <em>flex</em></h2>
+## Um aparte no modelo _flex_
 
-<p>Quando os elementos são definidos como flexibles boxes, eles são dispostos ao longo de dois eixos:</p>
+Quando os elementos são definidos como flexibles boxes, eles são dispostos ao longo de dois eixos:
 
-<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
+![flex_terms.png](flex_terms.png)
 
-<ul>
- <li>O <em><strong>main axis</strong></em> é o eixo que corre na direção em que os flex items estão dispostos (por exemplo, as linhas da página, ou colunas abaixo da página.) O início e o fim do eixo é chamado <em><strong>main start</strong></em> e <em><strong>main end</strong></em>.</li>
- <li>O <em><strong>cross axis</strong></em> é o eixo perpendicular que corre na direção em que os flex items são dispostos. O início e o fim deste eixo são chamados de <em><strong>cross start</strong></em> e <em><strong>cross end</strong></em>.</li>
- <li>O elemento pai que possui <code>display: flex</code> configurado ( {{HTMLElement("section")}} em nosso exemplo) é chamado de <em><strong>flex container</strong></em>.</li>
- <li>Os itens iniciados como flexible boxes dentro do flex container são chamados <em><strong>flex items</strong></em> (o {{HTMLElement("article")}} em nosso caso).</li>
-</ul>
+- O _**main axis**_ é o eixo que corre na direção em que os flex items estão dispostos (por exemplo, as linhas da página, ou colunas abaixo da página.) O início e o fim do eixo é chamado _**main start**_ e _**main end**_.
+- O _**cross axis**_ é o eixo perpendicular que corre na direção em que os flex items são dispostos. O início e o fim deste eixo são chamados de _**cross start**_ e _**cross end**_.
+- O elemento pai que possui `display: flex` configurado ( {{HTMLElement("section")}} em nosso exemplo) é chamado de _**flex container**_.
+- Os itens iniciados como flexible boxes dentro do flex container são chamados _**flex items**_ (o {{HTMLElement("article")}} em nosso caso).
 
-<p>Tenha esta terminologia em mente à medida que passar para as seções subsequentes. Você pode voltar a esta referência se ficar confuso quanto aos termos usados inicialmente.</p>
+Tenha esta terminologia em mente à medida que passar para as seções subsequentes. Você pode voltar a esta referência se ficar confuso quanto aos termos usados inicialmente.
 
-<h2 id="Colunas_ou_linhas">Colunas ou linhas?</h2>
+## Colunas ou linhas?
 
-<p>Flexbox possui uma propriedade chamada {{cssxref("flex-direction")}} que especifica a direção do eixo principal (em qual direção os filhos da <em>flexbox</em> estarão arranjados) — que por padrão seu valor é <code>row</code> (linha), que faz com que eles fiquem arranjados numa linha na direção que o seu navegador está configurado de acordo com a direção de leitura do seu idioma (da esquerda para a direita, no caso do inglês ou português).</p>
+Flexbox possui uma propriedade chamada {{cssxref("flex-direction")}} que especifica a direção do eixo principal (em qual direção os filhos da _flexbox_ estarão arranjados) — que por padrão seu valor é `row` (linha), que faz com que eles fiquem arranjados numa linha na direção que o seu navegador está configurado de acordo com a direção de leitura do seu idioma (da esquerda para a direita, no caso do inglês ou português).
 
-<p>Experimente adicionar a seguinte declaração na seção de sua regra:</p>
+Experimente adicionar a seguinte declaração na seção de sua regra:
 
-<pre class="brush: css">flex-direction: column;</pre>
+```css
+flex-direction: column;
+```
 
-<p>Você verá que isso organiza os elementos no layout de coluna, assim como eles estavam antes de adicionarmos qualquer regra CSS. Antes de você seguir, remova essa declaração do seu exemplo.</p>
+Você verá que isso organiza os elementos no layout de coluna, assim como eles estavam antes de adicionarmos qualquer regra CSS. Antes de você seguir, remova essa declaração do seu exemplo.
 
-<div class="note">
-<p><strong>Nota</strong>: Você também pode arranjar itens flexíveis em direção reversa usando os valores <code>row-reverse</code> e <code>column-reverse</code>. Experimente usar esses valores no seu exemplo também!</p>
-</div>
+> **Nota:** Você também pode arranjar itens flexíveis em direção reversa usando os valores `row-reverse` e `column-reverse`. Experimente usar esses valores no seu exemplo também!
 
-<h2 id="Embrulhamento">Embrulhamento</h2>
+## Embrulhamento
 
-<p>Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos <em>flexbox</em> irão sobrepor seu elemento pai (<em>container</em>), quebrando o layout. Dê uma olhada no nosso exemplo <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a>, e experimente <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">visualizá-lo online</a> (tenha uma cópia local desse arquivo no seu computador se você quiser continuar acompanhando os exemplos):</p>
+Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos _flexbox_ irão sobrepor seu elemento pai (_container_), quebrando o layout. Dê uma olhada no nosso exemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html), e experimente [visualizá-lo online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (tenha uma cópia local desse arquivo no seu computador se você quiser continuar acompanhando os exemplos):
 
-<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example3.png)
 
-<p>Aqui vemos que os filhos estão de fato saindo fora do elemento recipiente (<em>container</em>). Uma maneira de consertar isso é adicionando a seguinte declaração na seção de sua regra CSS:</p>
+Aqui vemos que os filhos estão de fato saindo fora do elemento recipiente (_container_). Uma maneira de consertar isso é adicionando a seguinte declaração na seção de sua regra CSS:
 
-<pre class="brush: css">flex-wrap: wrap;</pre>
+```css
+flex-wrap: wrap;
+```
 
-<p>Experimente isso agora; você verá que o layout parece muito melhor agora com essa regra:</p>
+Experimente isso agora; você verá que o layout parece muito melhor agora com essa regra:
 
-<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">Agora temos várias linhas — tantos elementos filhos <em>flexbox</em> estão encaixados em cada linha quantos fazem sentido, e qualquer sobreposição é movida para a próxima linha. A declaração <code>flex: 200px</code> configurada nos elementos {{htmlelement("article")}} significa que cada um terá pelo menos 200 pixels de largura; discutiremos essa propriedade mais detalhadamente mais tarde. Você também deve notar que os últimos filhos na última linha estão mais largos para que a linha inteira possa ser preenchida.</p>
+![](flexbox-example4.png)Agora temos várias linhas — tantos elementos filhos _flexbox_ estão encaixados em cada linha quantos fazem sentido, e qualquer sobreposição é movida para a próxima linha. A declaração `flex: 200px` configurada nos elementos {{htmlelement("article")}} significa que cada um terá pelo menos 200 pixels de largura; discutiremos essa propriedade mais detalhadamente mais tarde. Você também deve notar que os últimos filhos na última linha estão mais largos para que a linha inteira possa ser preenchida.
 
-<p>Mas ainda tem mais para fazermos com isso. Primeiro, experimente mudar sua propriedade {{cssxref("flex-direction")}} para o valor <code>row-reverse</code> — agora você verá que ainda tem um layout com várias linhas, mas ele começa no canto oposto da janela do navegador e segue na direção reversa.</p>
+Mas ainda tem mais para fazermos com isso. Primeiro, experimente mudar sua propriedade {{cssxref("flex-direction")}} para o valor `row-reverse` — agora você verá que ainda tem um layout com várias linhas, mas ele começa no canto oposto da janela do navegador e segue na direção reversa.
 
-<h2 id="Forma_abreviada_flex-flow">Forma abreviada: <em>flex-flow</em></h2>
+## Forma abreviada: _flex-flow_
 
-<p>A esta altura vale ressaltar que existe uma abreviação para as regras {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}: a {{cssxref("flex-flow")}}. Logo, você pode substituir as seguintes regras</p>
+A esta altura vale ressaltar que existe uma abreviação para as regras {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}: a {{cssxref("flex-flow")}}. Logo, você pode substituir as seguintes regras
 
-<pre class="brush: css">flex-direction: row;
-flex-wrap: wrap;</pre>
+```css
+flex-direction: row;
+flex-wrap: wrap;
+```
 
-<p>por</p>
+por
 
-<pre class="brush: css">flex-flow: row wrap;</pre>
+```css
+flex-flow: row wrap;
+```
 
-<h2 id="Dimensionamento_flexível_de_elementos_flex">Dimensionamento flexível de elementos <em>flex</em></h2>
+## Dimensionamento flexível de elementos _flex_
 
-<p>Vamos agora voltar ao nosso primeiro exemplo, e ver como podemos controlar qual a proporção de espaço os elementos <em>flex</em> pode tomar. Localize sua cópia local do arquivo <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a>, ou tenha uma cópia de <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html">flexbox1.html</a> como um novo ponto de partida (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html">veja online</a>).</p>
+Vamos agora voltar ao nosso primeiro exemplo, e ver como podemos controlar qual a proporção de espaço os elementos _flex_ pode tomar. Localize sua cópia local do arquivo [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), ou tenha uma cópia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como um novo ponto de partida ([veja online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
-<p>Primeiro adicione a seguinte regra no final do seu CSS:</p>
+Primeiro adicione a seguinte regra no final do seu CSS:
 
-<pre class="brush: css">article {
+```css
+article {
   flex: 1;
-}</pre>
+}
+```
 
-<p>Esse é um valor relativo sem unidade que define quanto de espaço disponível pelo eixo principal cada elemento <em>flex</em> pode ter. Neste caso, estamos dando para cada elemento {{HTMLElement("article")}} o valor de 1, que significa que eles terão uma quantidade igual de espaço restante depois de coisas como preenchimento ({{cssxref("padding")}}) e margem ({{cssxref("margin")}})<em> </em>forem definidos. É uma proporção, o que significa que dado que mesmo que você coloque o valor de "400000", para cada elemento <em>flex</em>, terá o mesmo efeito que o valor "1" previamente colocado.</p>
+Esse é um valor relativo sem unidade que define quanto de espaço disponível pelo eixo principal cada elemento _flex_ pode ter. Neste caso, estamos dando para cada elemento {{HTMLElement("article")}} o valor de 1, que significa que eles terão uma quantidade igual de espaço restante depois de coisas como preenchimento ({{cssxref("padding")}}) e margem ({{cssxref("margin")}})\_ _forem definidos. É uma proporção, o que significa que dado que mesmo que você coloque o valor de "400000", para cada elemento \_flex_, terá o mesmo efeito que o valor "1" previamente colocado.
 
-<p>Agora, adicione a seguinte regra abaixo da última:</p>
+Agora, adicione a seguinte regra abaixo da última:
 
-<pre class="brush: css">article:nth-of-type(3) {
+```css
+article:nth-of-type(3) {
   flex: 2;
-}</pre>
+}
+```
 
-<p>Assim que você atualizar a página, você verá que o terceiro elemento {{HTMLElement("article")}} ocupa duas vezes mais do espaço disponível que os outros dois — existe agora quatro unidades na proporção total disponível. Os dois primeiros elementos <em>flex</em> tem uma unidade cada, dessa proporção, logo cada um deles ocupam 1/4 do espaço disponível. O terceiro tem 2 unidades, logo ele ocupa 2/4 (ou metade, 1/2) do espaço disponível. </p>
+Assim que você atualizar a página, você verá que o terceiro elemento {{HTMLElement("article")}} ocupa duas vezes mais do espaço disponível que os outros dois — existe agora quatro unidades na proporção total disponível. Os dois primeiros elementos _flex_ tem uma unidade cada, dessa proporção, logo cada um deles ocupam 1/4 do espaço disponível. O terceiro tem 2 unidades, logo ele ocupa 2/4 (ou metade, 1/2) do espaço disponível.
 
-<p>Você também pode especificar um valor de tamanho mínimo para a regra <em>flex</em>. Experimente atualizar a regra para o {{HTMLElement("article")}} existente para que fique assim:</p>
+Você também pode especificar um valor de tamanho mínimo para a regra _flex_. Experimente atualizar a regra para o {{HTMLElement("article")}} existente para que fique assim:
 
-<pre class="brush: css">article {
+```css
+article {
   flex: 1 200px;
 }
 
 article:nth-of-type(3) {
   flex: 2 200px;
-}</pre>
+}
+```
 
-<p>Isso basicamente diz o seguinte: "Para cada elemento <em>flex</em> primeiro será dado 200px do espaço disponível. Depois, o restante do espaço disponível será distribuído entre os elementos, de acordo com a unidade de proporção definida.". Atualize a página e você verá a diferença de como o espaço é distribuído.</p>
+Isso basicamente diz o seguinte: "Para cada elemento _flex_ primeiro será dado 200px do espaço disponível. Depois, o restante do espaço disponível será distribuído entre os elementos, de acordo com a unidade de proporção definida.". Atualize a página e você verá a diferença de como o espaço é distribuído.
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+![](flexbox-example1.png)
 
-<p>O valor real de cada caixa <em>flex</em> pode ser visto pela sua flexibilidade/responsividade — se você redimensionar a janela do navegador, ou adicionar outro elemento {{HTMLElement("article")}}, o layout continua funcionando sem quebrar.</p>
+O valor real de cada caixa _flex_ pode ser visto pela sua flexibilidade/responsividade — se você redimensionar a janela do navegador, ou adicionar outro elemento {{HTMLElement("article")}}, o layout continua funcionando sem quebrar.
 
-<h2 id="flex_Forma_abreviada_ou_forma_normal"><em>flex</em>: Forma abreviada ou forma normal?</h2>
+## _flex_: Forma abreviada ou forma normal?
 
-<p>{{cssxref("flex")}} é uma propriedade abreviada que pode especificar até três valores diferentes:</p>
+{{cssxref("flex")}} é uma propriedade abreviada que pode especificar até três valores diferentes:
 
-<ul>
- <li>O valor de proporção sem unidade que falamos sobre ele acima. Ele também pode ser especificado individualmente usando a regra {{cssxref("flex-grow")}}.</li>
- <li>Um segundo valor de proporção sem unidade — {{cssxref("flex-shrink")}} — que convém ser usado quando os elementos <em>flex</em> estão sobrepondo a elemento recipiente (<em>container</em>). Este especifica qual a quantidade será retirada do tamanho de cada elemento <em>flex</em>, para que ele não ultrapasse o valor do elemento recipiente (<em>container</em>). Esta é uma funcionalidade bem avançada do <em>flexbox</em>, e não será abordada neste artigo.</li>
- <li>O valor mínimo para o tamanho que discutimos acima. Este pode ser especificado individualmente usando a regra {{cssxref("flex-basis")}}.</li>
-</ul>
+- O valor de proporção sem unidade que falamos sobre ele acima. Ele também pode ser especificado individualmente usando a regra {{cssxref("flex-grow")}}.
+- Um segundo valor de proporção sem unidade — {{cssxref("flex-shrink")}} — que convém ser usado quando os elementos _flex_ estão sobrepondo a elemento recipiente (_container_). Este especifica qual a quantidade será retirada do tamanho de cada elemento _flex_, para que ele não ultrapasse o valor do elemento recipiente (_container_). Esta é uma funcionalidade bem avançada do _flexbox_, e não será abordada neste artigo.
+- O valor mínimo para o tamanho que discutimos acima. Este pode ser especificado individualmente usando a regra {{cssxref("flex-basis")}}.
 
-<p>Aconselhamos usar sempre a forma abreviada a menos que você precise usar a regra normal (por exemplo para sobrescrever algum valor pré-definido). As regras normais, isto é não abreviadas, geram muito mais código e podem gerar confusão.</p>
+Aconselhamos usar sempre a forma abreviada a menos que você precise usar a regra normal (por exemplo para sobrescrever algum valor pré-definido). As regras normais, isto é não abreviadas, geram muito mais código e podem gerar confusão.
 
-<h2 id="Alinhamento_Horizontal_e_Vertical">Alinhamento Horizontal e Vertical</h2>
+## Alinhamento Horizontal e Vertical
 
-<p>Você também pode usar as funcionalidade do <em>flexbox</em> para alinhar elementos no eixo principal ou no eixo transversal (relembre esse assunto na seção <a href="/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Um_aparte_no_modelo_flex">Um aparte no modelo flex</a>). Vamos explorar isso olhando para um outro exemplo — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">veja online</a>) — o qual vamos transformá-lo num botão/barra de ferramentas bem feito e flexível. Neste momento você verá uma barra de menu horizontal, com alguns botões expremidos no canto superior esquerdo:</p>
+Você também pode usar as funcionalidade do _flexbox_ para alinhar elementos no eixo principal ou no eixo transversal (relembre esse assunto na seção [Um aparte no modelo flex](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Um_aparte_no_modelo_flex)). Vamos explorar isso olhando para um outro exemplo — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([veja online](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)) — o qual vamos transformá-lo num botão/barra de ferramentas bem feito e flexível. Neste momento você verá uma barra de menu horizontal, com alguns botões expremidos no canto superior esquerdo:
 
-<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+![](flexbox-example5.png)
 
-<p>Primeiro, tenha uma cópia local desse exemplo.</p>
+Primeiro, tenha uma cópia local desse exemplo.
 
-<p>Agora, adicione o seguinte trecho ao final do CSS no arquivo do exemplo:</p>
+Agora, adicione o seguinte trecho ao final do CSS no arquivo do exemplo:
 
-<pre class="brush: css">div {
+```css
+div {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}</pre>
+}
+```
 
-<p>Atualize a página e você verá que os botões estão agora bem arranjados no centro, horizontalmente e verticalmente. Fizemos isso através de duas novas propriedades.</p>
+Atualize a página e você verá que os botões estão agora bem arranjados no centro, horizontalmente e verticalmente. Fizemos isso através de duas novas propriedades.
 
-<div class="note">
-<p><strong>Nota</strong>: Nesse exemplo, o eixo principal é representado horizontalmente e o eixo transversal é o vertical.</p>
-</div>
+> **Nota:** Nesse exemplo, o eixo principal é representado horizontalmente e o eixo transversal é o vertical.
 
-<p>{{cssxref("align-items")}} controla onde os elementos <em>flex</em> ficam no eixo transversal:</p>
+{{cssxref("align-items")}} controla onde os elementos _flex_ ficam no eixo transversal:
 
-<ul>
- <li>Por padrão, seu valor é <code>stretch</code>, que estica todos os elementos <em>flex</em> para preencher o elemento pai na direção do eixo transversal. Se o elemento pai não tem largura fixa na direção do eixo transversal, então todos os elementos <em>flex</em> esticarão até o mais comprido dos elementos <em>flex</em>. Foi assim que o nosso primeiro exemplo ficou com colunas de mesma altura por padrão.</li>
- <li>O valor <code>center</code> que usamos no exemplo acima, faz com que os elementos mantenham suas dimensões intrínsecas, mas que seja centralizados ao longo do eixo transversal. É por isso que os botões do nosso exemplo atual estão centralizados verticalmente.</li>
- <li>Você também pode colocar valores como <code>flex-start</code> e <code>flex-end</code>, os quais alinharão todos os elementos no início ou fim do eixo transversal, respectivamente. Veja {{cssxref("align-items")}} para maiores detalhes.</li>
-</ul>
+- Por padrão, seu valor é `stretch`, que estica todos os elementos _flex_ para preencher o elemento pai na direção do eixo transversal. Se o elemento pai não tem largura fixa na direção do eixo transversal, então todos os elementos _flex_ esticarão até o mais comprido dos elementos _flex_. Foi assim que o nosso primeiro exemplo ficou com colunas de mesma altura por padrão.
+- O valor `center` que usamos no exemplo acima, faz com que os elementos mantenham suas dimensões intrínsecas, mas que seja centralizados ao longo do eixo transversal. É por isso que os botões do nosso exemplo atual estão centralizados verticalmente.
+- Você também pode colocar valores como `flex-start` e `flex-end`, os quais alinharão todos os elementos no início ou fim do eixo transversal, respectivamente. Veja {{cssxref("align-items")}} para maiores detalhes.
 
-<p>Você pode sobrescrever o comportamento de {{cssxref("align-items")}} para elementos individuais, usando a regra {{cssxref("align-self")}} nesses elementos. Por exemplo, experimente adicionar o seguinte trecho no seu CSS:</p>
+Você pode sobrescrever o comportamento de {{cssxref("align-items")}} para elementos individuais, usando a regra {{cssxref("align-self")}} nesses elementos. Por exemplo, experimente adicionar o seguinte trecho no seu CSS:
 
-<pre class="brush: css">button:first-child {
+```css
+button:first-child {
   align-self: flex-end;
-}</pre>
+}
+```
 
-<p>Veja qual efeito isso dá, e remova novamente quando terminar.</p>
+Veja qual efeito isso dá, e remova novamente quando terminar.
 
-<p>{{cssxref("justify-content")}} controla onde os elementos <em>flex</em> ficam no eixo principal.</p>
+{{cssxref("justify-content")}} controla onde os elementos _flex_ ficam no eixo principal.
 
-<ul>
- <li>O valor padrão é <code>flex-start</code>, que faz com que todos os elementos estejam no início do eixo principal.</li>
- <li>Você pode usar <code>flex-end</code> para que eles fiquem no final.</li>
- <li><code>center</code> também é um valor para {{cssxref("justify-content")}}, e fará com que os elementos <em>flex</em> fiquem no centro do eixo principal.</li>
- <li>O valor que usamos acima, <code>space-around</code>, é útil pois ele distribui todos os elementos igualmente pelo eixo principal, com um pouquinho de espaço no final.</li>
- <li>Existe um outro valor, <code>space-between</code>, o qual é muito similar ao <code>space-around</code>, exceto que ele não deixa nenhum espaço no final.</li>
-</ul>
+- O valor padrão é `flex-start`, que faz com que todos os elementos estejam no início do eixo principal.
+- Você pode usar `flex-end` para que eles fiquem no final.
+- `center` também é um valor para {{cssxref("justify-content")}}, e fará com que os elementos _flex_ fiquem no centro do eixo principal.
+- O valor que usamos acima, `space-around`, é útil pois ele distribui todos os elementos igualmente pelo eixo principal, com um pouquinho de espaço no final.
+- Existe um outro valor, `space-between`, o qual é muito similar ao `space-around`, exceto que ele não deixa nenhum espaço no final.
 
-<p>Nós sugerimos que você brinque um pouco mais com essas regras e seus valores para ver como funcionam ainda mais, antes de seguir nos estudos.</p>
+Nós sugerimos que você brinque um pouco mais com essas regras e seus valores para ver como funcionam ainda mais, antes de seguir nos estudos.
 
-<h2 id="Ordenação_de_elementos_flex">Ordenação de elementos <em>flex</em></h2>
+## Ordenação de elementos _flex_
 
-<p>O <em>flexbox</em> também tem uma funcionalidade para alteração da ordem dos elementos <em>flex</em> no layout, sem afetar a ordem no código fonte HTML. Esta é mais uma coisa que é impossível fazer nos métodos tradicionais de esquema de layouts.</p>
+O _flexbox_ também tem uma funcionalidade para alteração da ordem dos elementos _flex_ no layout, sem afetar a ordem no código fonte HTML. Esta é mais uma coisa que é impossível fazer nos métodos tradicionais de esquema de layouts.
 
-<p>O código para fazer isso é bem simples: experimente adicionar o seguinte CSS ao final do código do exemplo da barra de botões:</p>
+O código para fazer isso é bem simples: experimente adicionar o seguinte CSS ao final do código do exemplo da barra de botões:
 
-<pre class="brush: css">button:first-child {
+```css
+button:first-child {
   order: 1;
-}</pre>
+}
+```
 
-<p>Atualize seu navegador, você verá que o botão "<em>Smile</em>" foi movido para o final do eixo principal. Vamos falar sobre como isso funciona com mais detalhes:</p>
+Atualize seu navegador, você verá que o botão "_Smile_" foi movido para o final do eixo principal. Vamos falar sobre como isso funciona com mais detalhes:
 
-<ul>
- <li>Por padrão, todos os elementos <em>flex</em> possuem uma propriedade {{cssxref("order")}} com valor 0 (zero).</li>
- <li>Elementos <em>flex</em> com valores maiores de {{cssxref("order")}}, aparecerão depois na tela, do que elementos com valores menores, os quais aparecem antes.</li>
- <li>Elementos <em>flex</em> com o mesmo valor aparecerão de acordo com a ordem que possuem no documento HTML. Logo, se você tiver quatro elementos com os seguintes valores para {{cssxref("order")}}: 2, 1, 1 e 0, eles aparecerão na tela na seguinte ordem: 4º, 2º, 3º e 1º elemento, respectivamente.</li>
- <li>O 3º elemento aparece depois do 2º pois ele tem o mesmo valor para {{cssxref("order")}} mas está definido depois no documento fonte.</li>
-</ul>
+- Por padrão, todos os elementos _flex_ possuem uma propriedade {{cssxref("order")}} com valor 0 (zero).
+- Elementos _flex_ com valores maiores de {{cssxref("order")}}, aparecerão depois na tela, do que elementos com valores menores, os quais aparecem antes.
+- Elementos _flex_ com o mesmo valor aparecerão de acordo com a ordem que possuem no documento HTML. Logo, se você tiver quatro elementos com os seguintes valores para {{cssxref("order")}}: 2, 1, 1 e 0, eles aparecerão na tela na seguinte ordem: 4º, 2º, 3º e 1º elemento, respectivamente.
+- O 3º elemento aparece depois do 2º pois ele tem o mesmo valor para {{cssxref("order")}} mas está definido depois no documento fonte.
 
-<p>Você também pode usar valores negativos para fazer elementos aparecerem antes do(s) elemento(s) definidos com {{cssxref("order")}} 0 (zero). Por exemplo, Você poderia fazer com que o botão "<em>Blush</em>" aparecesse no começo do eixo principal (horizontal), usando a seguinte regra:</p>
+Você também pode usar valores negativos para fazer elementos aparecerem antes do(s) elemento(s) definidos com {{cssxref("order")}} 0 (zero). Por exemplo, Você poderia fazer com que o botão "_Blush_" aparecesse no começo do eixo principal (horizontal), usando a seguinte regra:
 
-<pre class="brush: css">button:last-child {
+```css
+button:last-child {
   order: -1;
-}</pre>
+}
+```
 
-<h2 id="Elementos_flex_aninhados">Elementos <em>flex</em> aninhados</h2>
+## Elementos _flex_ aninhados
 
-<p>É possível criar layouts bem complexos com <em>flexbox</em>. É perfeitamente aceitável configurar um elemento <em>flex</em> para também ser um <em>container</em>, para que seus filhos também se comportem como caixas <em>flex</em>. Dê uma olhada em <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">veja também online</a>).</p>
+É possível criar layouts bem complexos com _flexbox_. É perfeitamente aceitável configurar um elemento _flex_ para também ser um _container_, para que seus filhos também se comportem como caixas _flex_. Dê uma olhada em [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([veja também online](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
-<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](flexbox-example7.png)
 
-<p>O HTML desse exemplo é relativamente simples. Temos um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}. O terceiro desses {{HTMLElement("article")}} contém três elementos {{HTMLElement("div")}}:</p>
+O HTML desse exemplo é relativamente simples. Temos um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}. O terceiro desses {{HTMLElement("article")}} contém três elementos {{HTMLElement("div")}}:
 
-<pre>section - article
+```
+section - article
           article
           article - div - button
                     div   button
                     div   button
                           button
-                          button</pre>
+                          button
+```
 
-<p>Vamos dar uma olhada no código que usamos no layout.</p>
+Vamos dar uma olhada no código que usamos no layout.
 
-<p>Primeiro, configuramos para que os filhos da {{HTMLElement("section")}} se arranjem como elementos <em>flex</em>.</p>
+Primeiro, configuramos para que os filhos da {{HTMLElement("section")}} se arranjem como elementos _flex_.
 
-<pre class="brush: css">section {
+```css
+section {
   display: flex;
-}</pre>
+}
+```
 
-<p>Em seguida, configuramos alguns valores <em>flex</em> nos próprios elementos {{HTMLElement("article")}}. Veja especialmente a segunda regra aqui — estamos configurando para que o terceiro {{HTMLElement("article")}} tenha seus filhos arranjados como elementos <em>flex</em> também, mas desta vez eles estarão dispostos em coluna.</p>
+Em seguida, configuramos alguns valores _flex_ nos próprios elementos {{HTMLElement("article")}}. Veja especialmente a segunda regra aqui — estamos configurando para que o terceiro {{HTMLElement("article")}} tenha seus filhos arranjados como elementos _flex_ também, mas desta vez eles estarão dispostos em coluna.
 
-<pre class="brush: css">article {
+```css
+article {
   flex: 1 200px;
 }
 
@@ -289,54 +307,54 @@ article:nth-of-type(3) {
   display: flex;
   flex-flow: column;
 }
-</pre>
+```
 
-<p>Depois, selecionamos o primeiro elemento {{HTMLElement("div")}}. Primeiro usamos <code>flex:1 100px;</code> para efetivamente dar a ele a altura de 100px, depois configuramos para que seus filhos (os elementos {{HTMLElement("button")}}) se arranjem como elementos <em>flex</em>. Aqui, nós os arranjamos em uma linha que os envolvem, e os alinhamos no centro do espaço disponível, como fizemos no exemplo do botão individual que vimos anteriormente:</p>
+Depois, selecionamos o primeiro elemento {{HTMLElement("div")}}. Primeiro usamos `flex:1 100px;` para efetivamente dar a ele a altura de 100px, depois configuramos para que seus filhos (os elementos {{HTMLElement("button")}}) se arranjem como elementos _flex_. Aqui, nós os arranjamos em uma linha que os envolvem, e os alinhamos no centro do espaço disponível, como fizemos no exemplo do botão individual que vimos anteriormente:
 
-<pre class="brush: css">article:nth-of-type(3) div:first-child {
+```css
+article:nth-of-type(3) div:first-child {
   flex:1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-}</pre>
+}
+```
 
-<p>Finalmente, configuramos alguns tamanhos no botão, mas o mais interessante é que demos a ele o valor 1 para a propriedade <em>flex</em>. Isso dá um resultado interessante, que você verá se redimensionar a largura da janela do seu navegador. Esses botões tomarão o máximo de espaço que puderem e ficarão ao máximo na mesma linha, se puderem, mas quando não puderem mais caber na mesma linha, os que estão muito apertados irão para novas linhas de forma que o layout não quebre e o conteúdo ainda esteja legível ao usuário.</p>
+Finalmente, configuramos alguns tamanhos no botão, mas o mais interessante é que demos a ele o valor 1 para a propriedade _flex_. Isso dá um resultado interessante, que você verá se redimensionar a largura da janela do seu navegador. Esses botões tomarão o máximo de espaço que puderem e ficarão ao máximo na mesma linha, se puderem, mas quando não puderem mais caber na mesma linha, os que estão muito apertados irão para novas linhas de forma que o layout não quebre e o conteúdo ainda esteja legível ao usuário.
 
-<pre class="brush: css">button {
+```css
+button {
   flex: 1;
   margin: 5px;
   font-size: 18px;
   line-height: 1.5;
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>O suporte a f<em>lexbox</em> está disponível nos navegadores mais novos — Firefox, Chrome, Opera, Microsoft Edge e IE 11, nas versões mais novas do Android e iOS, etc.<br>
- Contudo você deve estar ciente que ainda existem navegadores antigos em uso que não suportam a regra <em>flexbox</em> (ou até suportam, mas numa versão desatualizada).</p>
+O suporte a f*lexbox* está disponível nos navegadores mais novos — Firefox, Chrome, Opera, Microsoft Edge e IE 11, nas versões mais novas do Android e iOS, etc.
+Contudo você deve estar ciente que ainda existem navegadores antigos em uso que não suportam a regra _flexbox_ (ou até suportam, mas numa versão desatualizada).
 
-<p>Enquanto você está apenas aprendendo ou testando, a compatibilidade entre navegadores não importa muito; no entanto se você pretende usar o <em>flexbox</em> num site de verdade, você precisa fazer testes e certificar que a experiência do usuário é aceitável em qualquer navegador possível.</p>
+Enquanto você está apenas aprendendo ou testando, a compatibilidade entre navegadores não importa muito; no entanto se você pretende usar o _flexbox_ num site de verdade, você precisa fazer testes e certificar que a experiência do usuário é aceitável em qualquer navegador possível.
 
-<p><em>Flexbox</em> é um pouco mais ardiloso que algumas propriedades CSS. Por exemplo, se o suporte a sombras de CSS falta num browser, é muito menos provável de comprometer a usabilidade, afinal apenas as sombras dos elementos que não estarão aparecendo. Contudo, a falta de suporte à propriedade <em>flexbox</em> pode quebrar o layout do seu site, e comprometer a sua usabilidade.</p>
+_Flexbox_ é um pouco mais ardiloso que algumas propriedades CSS. Por exemplo, se o suporte a sombras de CSS falta num browser, é muito menos provável de comprometer a usabilidade, afinal apenas as sombras dos elementos que não estarão aparecendo. Contudo, a falta de suporte à propriedade _flexbox_ pode quebrar o layout do seu site, e comprometer a sua usabilidade.
 
-<p>Iremos discutir estratégias para contornar problemas complicados de compatibilidade entre navegadores num módulo futuro.</p>
+Iremos discutir estratégias para contornar problemas complicados de compatibilidade entre navegadores num módulo futuro.
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>Isso conclui nosso tour sobre o básico de <em>flexbox</em>. Esperamos que você tenha aproveitado, e que você continue aproveitando enquanto avança com seu aprendizado.<br>
- No próximo tópico, veremos outro aspecto importante dos Esquemas em CSS: os sistemas de <em>grid, </em>como você pode ver nesse artigo sobre <a href="https://blog.alura.com.br/criando-layouts-com-css-grid-layout/">CSS grid layout</a>.</p>
+Isso conclui nosso tour sobre o básico de _flexbox_. Esperamos que você tenha aproveitado, e que você continue aproveitando enquanto avança com seu aprendizado.
+No próximo tópico, veremos outro aspecto importante dos Esquemas em CSS: os sistemas de _grid,_ como você pode ver nesse artigo sobre [CSS grid layout](https://blog.alura.com.br/criando-layouts-com-css-grid-layout/).
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</div>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-<div>
-<h2 id="Neste_módulo">Neste módulo</h2>
+## Neste módulo
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introdução a Esquemas CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Flutuando Elementos com "float"</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Posicionamento de elementos</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Exemplos práticos de posicionamento</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grids</a></li>
-</ul>
-</div>
+- [Introdução a Esquemas CSS](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
+- [Flutuando Elementos com "float"](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
+- [Posicionamento de elementos](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
+- [Exemplos práticos de posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
+- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)

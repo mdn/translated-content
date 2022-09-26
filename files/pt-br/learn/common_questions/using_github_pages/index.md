@@ -3,99 +3,99 @@ title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Using_Github_pages
 translation_of: Learn/Common_questions/Using_Github_pages
 ---
-<p><a href="https://github.com/">GitHub</a> is a "social coding" site. It allows you to upload code repositories for
- storage in thecelio <a href="http://git-scm.com/">Git</a> <strong>version control system. </strong>You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.</p>
+[GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for
+storage in thecelio [Git](http://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
 
-<h2 id="Publishing_content">Publishing content</h2>
+## Publishing content
 
-<p>GitHub is a very important and useful community to get involved in, and Git/GitHub is a very popular <a href="http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">version control system</a> — most tech companies now use it in their workflow. GitHub has a very useful feature called <a href="https://pages.github.com/">GitHub Pages</a>, which allows you to publish website code live on the Web.</p>
+GitHub is a very important and useful community to get involved in, and Git/GitHub is a very popular [version control system](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) — most tech companies now use it in their workflow. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to publish website code live on the Web.
 
-<h3 id="Basic_Github_setup">Basic Github setup</h3>
+### Basic Github setup
 
-<ol>
- <li>First of all, <a href="http://git-scm.com/downloads">install Git</a> on your machine. This is the underlying version control system software that GitHub works on top of.</li>
- <li>Next, <a href="https://github.com/join">sign up for a GitHub account</a>. It's simple and easy.</li>
- <li>Once you've signed up, log in to <a href="https://github.com">github.com</a> with your username and password.</li>
-</ol>
+1.  First of all, [install Git](http://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2.  Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
+3.  Once you've signed up, log in to [github.com](https://github.com) with your username and password.
 
-<h3 id="Preparing_your_code_for_upload">Preparing your code for upload</h3>
+### Preparing your code for upload
 
-<p>You can store any code you like in a Github repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g. with the primary entry point being an HTML file called <code>index.html</code>.</p>
+You can store any code you like in a Github repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g. with the primary entry point being an HTML file called `index.html`.
 
-<p>The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:</p>
+The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-<ol>
- <li>Point the command line to your <code>test-site</code> directory (or whatever you called the directory containing your website). For this, use the <code>cd</code> command (i.e. "<em>c</em>hange <em>d</em>irectory"). Here's what you'd type if you've put your website in a directory called <code>test-site</code> on your desktop:
+1.  Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "\_c_hange \_d_irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
-  <pre class="brush: bash">cd Desktop/test-site</pre>
- </li>
- <li>When the command line is pointing inside your website directory, type the following command, which tells the <code>git</code> tool to turn the directory into a git repository:
-  <pre class="brush: bash">git init</pre>
- </li>
-</ol>
+    ```bash
+    cd Desktop/test-site
+    ```
 
-<h4 id="An_aside_on_command_line_interfaces">An aside on command line interfaces</h4>
+2.  When the command line is pointing inside your website directory, type the following command, which tells the `git` tool to turn the directory into a git repository:
 
-<p>The best way to upload your code to Github is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:</p>
+    ```bash
+    git init
+    ```
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9483/command-line.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;"></p>
+#### An aside on command line interfaces
 
-<div class="note">
-<p><strong>Note</strong>: You could also consider using a <a href="http://git-scm.com/downloads/guis">Git graphical user interface</a> to do the same work, if you feel uncomfortable with the command line.</p>
-</div>
+The best way to upload your code to Github is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
 
-<p><span id="command-line">Every operating system comes with a command line tool:</span></p>
+![](https://mdn.mozillademos.org/files/9483/command-line.png)
 
-<ul>
- <li><strong>Windows</strong>: <strong>Command Prompt</strong> can be accessed by pressing the Windows key, typing <em>Command Prompt</em>, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and OS X, so the commands below may vary on your machine.</li>
- <li><strong>OS X</strong>: <strong>Terminal</strong> can be found in <em>Applications &gt; Utilities</em>.</li>
- <li><strong>Linux</strong>: Usually you can pull up a terminal with <em>Ctrl + Alt + T</em>. If that doesn't work, look for <strong>Terminal </strong>in an app bar or menu.</li>
-</ul>
+> **Nota:** You could also consider using a [Git graphical user interface](http://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
-<p>This may seem a bit scary at first, but don't worry — you'll soon get the hang of the basics. You tell the computer to do something in the terminal by typing in a command and hitting Enter, as seen above.</p>
+Every operating system comes with a command line tool:
 
-<h3 id="Creating_a_repo_for_your_code">Creating a repo for your code</h3>
+- **Windows**: **Command Prompt** can be accessed by pressing the Windows key, typing _Command Prompt_, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and OS X, so the commands below may vary on your machine.
+- **OS X**: **Terminal** can be found in _Applications > Utilities_.
+- **Linux**: Usually you can pull up a terminal with _Ctrl + Alt + T_. If that doesn't work, look for **Terminal** in an app bar or menu.
 
-<ol>
- <li>Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose <em>New Repository</em>.</li>
- <li>On this page, in the <em>Repository name</em> box, enter a name for your code repository, for example <em>my-repository</em>.</li>
- <li>Also fill in a description to say what your repository is going to contain. Your screen should look like this:<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12143/create-new-repo.png" style="display: block; height: 548px; margin: 0px auto; width: 800px;"></li>
- <li>Click <em>Create repository</em>; this should bring you to the following page: <br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12141/github-repo.png" style="display: block; height: 520px; margin: 0px auto; width: 800px;"></li>
-</ol>
+This may seem a bit scary at first, but don't worry — you'll soon get the hang of the basics. You tell the computer to do something in the terminal by typing in a command and hitting Enter, as seen above.
 
-<h3 id="Uploading_your_files_to_GitHub">Uploading your files to GitHub</h3>
+### Creating a repo for your code
 
-<ol>
- <li>On the current page, you are interested in the section <em>…or push an existing repository from the command line</em>. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
+1.  Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
+2.  On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
+3.  Also fill in a description to say what your repository is going to contain. Your screen should look like this:
+    ![](https://mdn.mozillademos.org/files/12143/create-new-repo.png)
+4.  Click _Create repository_; this should bring you to the following page:
+    ![](https://mdn.mozillademos.org/files/12141/github-repo.png)
 
-  <pre>git remote add origin https://github.com/chrisdavidmills/my-repository.git</pre>
- </li>
- <li>Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
-  <pre class="brush: bash">git add --all
-git commit -m 'adding my files to my repository'</pre>
- </li>
- <li>Finally, push the code up to GitHub by going to the GitHub web page you're on and entering into the terminal the second of the two commands we saw the <em>…or push an existing repository from the command line</em> section:
-  <pre class="brush: bash">git push -u origin master</pre>
- </li>
- <li>Now you need to create a gh-pages branch of your repo; refresh the current page and you'll see a repository page something like the one below. You need to press the button that says <em>Branch: <strong>master</strong></em>, type <em>gh-pages</em> in the text input, then press the blue button that says <em>Create branch: gh-pages</em>. This creates a special code branch called gh-pages that is published at a special location. It's URL takes the form <em>username.github.io/my-repository-name</em>, so in my example's case, the URL would be <em>https://chrisdavidmills.github.io/my-repository</em>. The page shown is the index.html page.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12145/repo-site.png" style="display: block; margin: 0 auto;"></li>
- <li>Navigate to your GitHub Pages' web address in a new browser tab, and you should see your site online! Email it to your friends and show off your mastery.</li>
-</ol>
+### Uploading your files to GitHub
 
-<div class="note">
-<p><strong>Note</strong>: If you get stuck, the <a href="https://pages.github.com/">GitHub Pages homepage</a> is also really helpful.</p>
-</div>
+1.  On the current page, you are interested in the section _…or push an existing repository from the command line_. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
 
-<h3 id="Further_GitHub_knowledge">Further GitHub knowledge</h3>
+    ```
+    git remote add origin https://github.com/chrisdavidmills/my-repository.git
+    ```
 
-<p>If you want to make more changes to your test site and upload those to GitHub, you simply need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:</p>
+2.  Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
 
-<pre>git add --all
+    ```bash
+    git add --all
+    git commit -m 'adding my files to my repository'
+    ```
+
+3.  Finally, push the code up to GitHub by going to the GitHub web page you're on and entering into the terminal the second of the two commands we saw the _…or push an existing repository from the command line_ section:
+
+    ```bash
+    git push -u origin master
+    ```
+
+4.  Now you need to create a gh-pages branch of your repo; refresh the current page and you'll see a repository page something like the one below. You need to press the button that says _Branch: **master**_, type _gh-pages_ in the text input, then press the blue button that says _Create branch: gh-pages_. This creates a special code branch called gh-pages that is published at a special location. It's URL takes the form _username.github.io/my-repository-name_, so in my example's case, the URL would be _https\://chrisdavidmills.github.io/my-repository_. The page shown is the index.html page.
+    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
+5.  Navigate to your GitHub Pages' web address in a new browser tab, and you should see your site online! Email it to your friends and show off your mastery.
+
+> **Nota:** If you get stuck, the [GitHub Pages homepage](https://pages.github.com/) is also really helpful.
+
+### Further GitHub knowledge
+
+If you want to make more changes to your test site and upload those to GitHub, you simply need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:
+
+```
+git add --all
 git commit -m 'another commit'
-git push</pre>
+git push
+```
 
-<p>You can replace <em>another commit</em> with a more suitable message to describe what change you just made.</p>
+You can replace _another commit_ with a more suitable message to describe what change you just made.
 
-<p>We have barely scratched the surface of Git. To learn more, start off with the <a href="https://help.github.com/index.html">GitHub Help site</a>.</p>
+We have barely scratched the surface of Git. To learn more, start off with the [GitHub Help site](https://help.github.com/index.html).
