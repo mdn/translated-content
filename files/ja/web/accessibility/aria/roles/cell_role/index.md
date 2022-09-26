@@ -121,7 +121,7 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 
 データ表構造には、{{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, などのみを使用してください。 CSS などを使用して、表のネイティブな意味論を削除しなくてはならない場合は、 ARIA ロールを追加してアクセシビリティを確保できます。 ARIA の表 (`table`) ロールの関連するユースケースは、[display: grid など、CSS の display プロパティ](/ja/docs/Web/CSS/display#accessibility_concerns)によって表のネイティブな意味論が上書きされる場合です。 この場合、ARIA の表 (`table`) ロールを使用して意味論を戻すことができます。
 
-```
+```html
 <table
   role="table"
   aria-label="意味論的な要素"
