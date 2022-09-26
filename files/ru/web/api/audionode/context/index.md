@@ -3,23 +3,24 @@ title: AudioNode.context
 slug: Web/API/AudioNode/context
 translation_of: Web/API/AudioNode/context
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>Свойство интерфейса {{ domxref("AudioNode") }} возвращающее связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.<strong><em>(только для чтения)</em></strong></p>
-</div>
+Свойство интерфейса {{ domxref("AudioNode") }} возвращающее связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.**_(только для чтения)_**
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>aContext</em> = <em>anAudioNode</em>.context;</pre>
+```
+var aContext = anAudioNode.context;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{ domxref("AudioContext") }}.</p>
+Объект {{ domxref("AudioContext") }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -30,18 +31,16 @@ oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 oscillator.context;
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Использование Web Audio API</a></li>
-</ul>
+- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

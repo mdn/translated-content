@@ -10,43 +10,39 @@ tags:
   - ServiceWorker
 translation_of: Web/API/CacheStorage/open
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p><strong><code>open()</code></strong> метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим <code>cacheName (именем тега кеша)</code>.</p>
+**`open()`** метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим `cacheName (именем тега кеша)`.
 
-<div class="note">
-<p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new cache is created with that <code>cacheName</code>.</p>
-</div>
+> **Примечание:** If the specified {{domxref("Cache")}} does not exist, a new cache is created with that `cacheName`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+```
+caches.open(cacheName).then(function(cache) {
   //обрабатываем кеш например: cache.AddAll(filesToCache); где filesToCache = ['/mypic.png', ...]
 });
-</pre>
+```
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p>{{jsxref("Promise")}} который резолвится в запрашиваемый {{domxref("Cache")}} объект.</p>
+{{jsxref("Promise")}} который резолвится в запрашиваемый {{domxref("Cache")}} объект.
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>cacheName</dt>
- <dd>Имя (тег) кеша заданное заранее которое необходимо открыть.</dd>
-</dl>
+- cacheName
+  - : Имя (тег) кеша заданное заранее которое необходимо открыть.
 
-<h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
+## Примеры
 
-<p>This code snippet is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>). Here we wait for a {{domxref("FetchEvent")}} to fire. Then we construct a custom response like so:</p>
+This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)). Here we wait for a {{domxref("FetchEvent")}} to fire. Then we construct a custom response like so:
 
-<ol>
- <li>Check whether a match for the request is found in the {{domxref("CacheStorage")}} using {{domxref("CacheStorage.match")}}. If so, serve that.</li>
- <li>If not, open the <code>v1</code> cache using {{domxref("CacheStorage.open")}}, put the default network request in the cache using {{domxref("Cache.put")}} and return a clone of the default network request using <code>return response.clone()</code> — necessary because <code>put()</code> consumes the response body.</li>
- <li>If this fails (e.g., because the network is down), return a fallback response.</li>
-</ol>
+1.  Check whether a match for the request is found in the {{domxref("CacheStorage")}} using {{domxref("CacheStorage.match")}}. If so, serve that.
+2.  If not, open the `v1` cache using {{domxref("CacheStorage.open")}}, put the default network request in the cache using {{domxref("Cache.put")}} and return a clone of the default network request using `return response.clone()` — necessary because `put()` consumes the response body.
+3.  If this fails (e.g., because the network is down), return a fallback response.
 
-<pre class="brush: js">var response;
+```js
+var response;
 var cachedResponse = caches.match(event.request).catch(function() {
   return fetch(event.request);
 }).then(function(r) {
@@ -57,33 +53,21 @@ var cachedResponse = caches.match(event.request).catch(function() {
   return response.clone();
 }).catch(function() {
   return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                               | Comment             |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

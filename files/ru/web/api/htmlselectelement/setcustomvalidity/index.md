@@ -3,30 +3,28 @@ title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Метод <code><strong>HTMLSelectElement.setCustomValidity()</strong></code> устанавливает  специальное сообщение для  выбранного элемента. Если элемент не имеет пользовательской ошибки в параметре укажите пустую строку.</p>
+Метод **`HTMLSelectElement.setCustomValidity()`** устанавливает специальное сообщение для выбранного элемента. Если элемент не имеет пользовательской ошибки в параметре укажите пустую строку.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush:js">selectElt.setCustomValidity(string);</pre>
+```js
+selectElt.setCustomValidity(string);
+```
 
-<h3 id="Параметр">Параметр</h3>
+### Параметр
 
-<ul>
- <li><em>Строка</em> {{domxref("DOMString")}}  содержащая сообщение об ошибке.</li>
-</ul>
+- _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+## Поддержка браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Проверка(валидация) форм.</a></li>
-</ul>
+- [Проверка(валидация) форм.](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)

@@ -3,56 +3,49 @@ title: Element.classList
 slug: Web/API/Element/classList
 translation_of: Web/API/Element/classList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство<strong> <code>classList</code></strong> возвращает псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы элемента.</p>
+Свойство** `classList`** возвращает псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы элемента.
 
-<div class="note">
-<p>У <strong>classList </strong>есть примитивная альтернатива - свойство <strong>className, </strong>которое содержит значение атрибута <strong>class</strong> элемента.</p>
-</div>
+> **Примечание:** У **classList** есть примитивная альтернатива - свойство **className,** которое содержит значение атрибута **class** элемента.
 
-<h2 id="Syntax"> </h2>
+##
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>elementClasses</var> = elem.classList;
-</pre>
+```
+var elementClasses = elem.classList;
+```
 
-<ul>
- <li>Результат - псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы узла<strong> elem</strong></li>
-</ul>
+- Результат - псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы узла **elem**
 
-<p> </p>
+## Методы
 
-<h2 id="Методы">Методы</h2>
+**ClassList** является геттером. Возвращаемый им объект имеет несколько методов:
 
-<p><strong>ClassList </strong>является геттером. Возвращаемый им объект имеет несколько методов:</p>
+- add( String **\[,String] )**
+  - : Добавляет элементу указанные классы
+- **remove**( String \[,String] **)**
+  - : \***\*Удаляет у элемента указанные классы**item** ( Number )
+    Результат аналогичен вызову **`сlassList[Number]`\*\*
+    **toggle** ( String \[, Boolean])
+    Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
+    Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.
+    **contains** ( String )
+    Проверяет, есть ли данный класс у элемента (вернёт true или false)
 
-<dl>
- <dt>     add( String<strong> [,String] )</strong>    </dt>
- <dd>   Добавляет элементу указанные классы</dd>
- <dt><strong>     remove</strong>( String [,String]<strong> )</strong></dt>
- <dd><strong>    </strong>Удаляет у элемента указанные классы<strong>item</strong> ( Number )<br>
-     Результат аналогичен вызову <code><strong>сlassList[Number]</strong></code>
-     <strong>toggle</strong> ( String [, Boolean])<br>
-     Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
-         Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.
-         <strong>contains</strong> ( String )<br>
-     Проверяет, есть ли данный класс у элемента (вернёт true или false)</dd>
-</dl>
+> **Примечание:** И, конечно же, у **ClassList** есть заветное свойство **length**, которое возвращает количество классов у элемента.
 
-<div class="note">
-<p>И, конечно же, у <strong>ClassList</strong> есть заветное свойство<strong> length</strong>, которое возвращает количество классов у элемента.</p>
-</div>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+```js
+<div id="clock" class="example for you"> </div>
+```
 
-<pre class="brush: js">&lt;div id="clock" class="example for you"&gt; &lt;/div&gt;
-</pre>
-
-<pre class="brush: js">var elem = document.querySelector("#clock")
+```js
+var elem = document.querySelector("#clock")
 
 //Выведем классы
 console.log(elem.classList); //DOMTokenList ["example", "for", "you"]
@@ -72,24 +65,22 @@ console.log(elem.classList.contains("lol")); //false
 
 //И удалим классы
 elem.classList.remove("example", "for", "understand", "he");
-console.log(elem.classList); //DOMTokenList ["ok"]</pre>
+console.log(elem.classList); //DOMTokenList ["ok"]
+```
 
-<p dir="rtl"> </p>
+> **Предупреждение:** В Firefox 25- в методах add, remove и toggle возможно указать только один аргумент. Смотрите: <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
-<div class="warning">
-<p>В Firefox 25- в методах add, remove и toggle возможно указать только один аргумент. Смотрите: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a> </p>
-</div>
+## Полифил
 
-<h2 id="Полифил">Полифил</h2>
-
-<pre class="brush:js">// Источник: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
+```js
+// Источник: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
 ;(function() {
     // helpers
     var regExp = function(name) {
         return new RegExp('(^| )'+ name +'( |$)');
     };
     var forEach = function(list, fn, scope) {
-        for (var i = 0; i &lt; list.length; i++) {
+        for (var i = 0; i < list.length; i++) {
             fn.call(scope, list[i]);
         }
     };
@@ -136,31 +127,23 @@ console.log(elem.classList); //DOMTokenList ["ok"]</pre>
     }
 
     // replace() support for others
-    if (window.DOMTokenList &amp;&amp; DOMTokenList.prototype.replace == null) {
+    if (window.DOMTokenList && DOMTokenList.prototype.replace == null) {
         DOMTokenList.prototype.replace = ClassList.prototype.replace;
     }
 })();
-</pre>
+```
 
-<p> </p>
+## Поддержка браузерами
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+{{Compat}}
 
-<p> </p>
+##
 
-<p>{{Compat}}</p>
+## Спецификация
 
-<h2 id="sect1"> </h2>
+- <http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist>
+- <https://dom.spec.whatwg.org/#interface-domtokenlist>
 
-<h2 id="Спецификация">Спецификация</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist">http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist</a></li>
- <li><a href="https://dom.spec.whatwg.org/#interface-domtokenlist">https://dom.spec.whatwg.org/#interface-domtokenlist</a></li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/element.className" title="DOM/element.className">element.className</a></li>
-</ul>
+- [element.className](/ru/docs/DOM/element.className "DOM/element.className")

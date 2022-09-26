@@ -3,63 +3,44 @@ title: History.state
 slug: Web/API/History/state
 translation_of: Web/API/History/state
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}Свойство **`History.state`** возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события {{event("popstate")}}.
 
-<div>Свойство <strong><code>History.state</code></strong> возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события {{event("popstate")}}.</div>
+## Синтаксис
 
+```
+const currentState = history.state
+```
 
+### Значение
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Последнее состояние стека истории. Значение равно {{jsxref("null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.
 
-<pre class="syntaxbox">const <em>currentState</em> = history.state</pre>
+## Примеры
 
-<h3 id="Значение">Значение</h3>
+Код, приведённый ниже, выводит в консоль значение `history.state` до и после применения метода {{domxref("History.pushState","pushState()")}}, который записывает значение в историю.
 
-<p>Последнее состояние стека истории. Значение равно {{jsxref("null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<p>Код, приведённый ниже, выводит в консоль значение <code>history.state</code> до и после применения метода {{domxref("History.pushState","pushState()")}}, который записывает значение в историю.</p>
-
-<pre class="brush: js">// Выведет null потому что мы пока не изменяли стек истории
+```js
+// Выведет null потому что мы пока не изменяли стек истории
 console.log(`History.state before pushState: ${history.state}`);
 
 // Теперь запишем какое-нибудь значение в стек
 history.pushState({name: 'Example'}, "pushState example", 'page3.html');
 
 // Выведет значение history.state, которое было записано в предыдущей строке
-console.log(`History.state after pushState: ${history.state}`);</pre>
+console.log(`History.state after pushState: ${history.state}`);
+```
 
-<h2 id="СпецификацииE">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-history-state", "History.state")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "browsers.html#dom-history-state", "History.state")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                  |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| {{SpecName("HTML WHATWG", "#dom-history-state", "History.state")}}                 | {{Spec2("HTML WHATWG")}} |                          |
+| {{SpecName("HTML5 W3C", "browsers.html#dom-history-state", "History.state")}} | {{Spec2("HTML5 W3C")}}     | Изначальное определение. |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
-</ul>
+- [Working with the History API](/ru/docs/Web/API/History_API/Working_with_the_History_API)

@@ -3,89 +3,63 @@ title: Document.importNode()
 slug: Web/API/Document/importNode
 translation_of: Web/API/Document/importNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>importNode()</strong></code>объекта {{domxref("Document")}} создаёт копию {{domxref("Node")}} или {{domxref("DocumentFragment")}} из другого документа, для последующей вставки в текущий документ.</p>
+Метод **`importNode()`**объекта {{domxref("Document")}} создаёт копию {{domxref("Node")}} или {{domxref("DocumentFragment")}} из другого документа, для последующей вставки в текущий документ.
 
-<p>Импортированный узел пока ещё не включён в дерево документов. Чтобы добавить его, вам необходимо вызвать один из методов вставки, например,  {{domxref("Node.appendChild", "appendChild()")}} или {{domxref("Node.insertBefore", "insertBefore()")}} с узлом, который <em>находится</em> в дереве документов.</p>
+Импортированный узел пока ещё не включён в дерево документов. Чтобы добавить его, вам необходимо вызвать один из методов вставки, например, {{domxref("Node.appendChild", "appendChild()")}} или {{domxref("Node.insertBefore", "insertBefore()")}} с узлом, который _находится_ в дереве документов.
 
-<p>В отличие от {{domxref("document.adoptNode()")}}, исходный узел не удаляется из исходного документа. Импортированный узел является клоном оригинала.</p>
+В отличие от {{domxref("document.adoptNode()")}}, исходный узел не удаляется из исходного документа. Импортированный узел является клоном оригинала.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>node</var> = <var>document</var>.importNode(<var>externalNode</var>, <var>deep</var>);
-</pre>
+```
+var node = document.importNode(externalNode, deep);
+```
 
-<dl>
- <dt><var>node</var></dt>
- <dd>Копируемый узел из области видимости импортируемого документа . Свойство {{domxref("Node.parentNode")}} узла = <code>null</code>, до тех пор, пока он не будет вставлен в дерево документа.</dd>
- <dt><var>externalNode</var></dt>
- <dd>Внешний <code>Node</code> или <code>DocumentFragment</code>, который импортируется в настоящий документ.</dd>
- <dt><var>deep</var></dt>
- <dd>Булеан, контролирующий, необходимо ли импортировать всё DOM поддерево узла  <var>externalNode</var>.
- <ul>
-  <li>Если <em>deep </em>установлен в <code>true</code>, <var>узел externalNode</var> и все его потомки будут скопированы.</li>
-  <li>Если <em>deep </em>установлен в <code>false</code>, импортируется только <var>externalNode</var>  — новый узел не будет содержать потомков.</li>
- </ul>
- </dd>
-</dl>
+- _node_
+  - : Копируемый узел из области видимости импортируемого документа . Свойство {{domxref("Node.parentNode")}} узла = `null`, до тех пор, пока он не будет вставлен в дерево документа.
+- _externalNode_
+  - : Внешний `Node` или `DocumentFragment`, который импортируется в настоящий документ.
+- _deep_
 
-<div class="note">
-<p><strong>Note:</strong> In the DOM4 specification, <var>deep</var> was an optional argument with a default value of <code>true</code>.</p>
+  - : Булеан, контролирующий, необходимо ли импортировать всё DOM поддерево узла _externalNode_.
 
-<p>This default has changed in the latest spec — the new default value is <strong><code>false</code></strong>. Though it's still an optional argument, you should always provide the <code>deep</code> argument for backward <em>and</em> forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}, the console warns developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.</p>
-</div>
+    - Если _deep_ установлен в `true`, _узел externalNode_ и все его потомки будут скопированы.
+    - Если _deep_ установлен в `false`, импортируется только _externalNode_ — новый узел не будет содержать потомков.
 
-<h2 id="Example">Example</h2>
+> **Примечание:** In the DOM4 specification, _deep_ was an optional argument with a default value of `true`.
+>
+> This default has changed in the latest spec — the new default value is **`false`**. Though it's still an optional argument, you should always provide the `deep` argument for backward _and_ forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}, the console warns developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.
 
-<pre class="brush: js">var iframe = document.querySelector("iframe");
+## Example
+
+```js
+var iframe = document.querySelector("iframe");
 var oldNode = iframe.contentWindow.document.getElementById("myNode");
 var newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
+Nodes from external documents should be cloned using [`document.importNode()`](/ru/docs/Web/API/Document/importNode "The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later.") (or adopted using [`document.adoptNode()`](/ru/docs/Web/API/Document/adoptNode "Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document.")) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ru/docs/Web/API/Node/ownerDocument "The Node.ownerDocument read-only property returns the top-level document object for this node.") issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
+Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 
-<p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode" title="The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later."><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode" title="Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document."><code>document.adoptNode()</code></a>) before they can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument" title="The Node.ownerDocument read-only property returns the top-level document object for this node."><code>Node.ownerDocument</code></a> issues, see the <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+## Specifications
 
-<p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.</p>
+| Specification                                                                                                        | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}             | {{Spec2("DOM WHATWG")}} |                    |
+| {{SpecName("DOM2 Core", "core.html#Core-Document-importNode", "document.importNode()")}} | {{Spec2("DOM2 Core")}}     | Initial definition |
 
+## Browser compatibility
 
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## See also
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#Core-Document-importNode", "document.importNode()")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
-
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("document.adoptNode()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
-</ul>
+- {{domxref("document.adoptNode()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}

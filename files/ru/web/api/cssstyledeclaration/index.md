@@ -12,49 +12,44 @@ tags:
   - TopicStub
 translation_of: Web/API/CSSStyleDeclaration
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>Интерфейс <strong><code>CSSStyleDeclaration</code></strong> представляет объект, являющийся блоком объявления CSS, и предоставляет информацию о стиле и различные связанные со стилем методы и свойства.</p>
+Интерфейс **`CSSStyleDeclaration`** представляет объект, являющийся блоком объявления CSS, и предоставляет информацию о стиле и различные связанные со стилем методы и свойства.
 
-<p>Объект <code>CSSStyleDeclaration</code> может быть представлен с помощью трёх различных API:</p>
+Объект `CSSStyleDeclaration` может быть представлен с помощью трёх различных API:
 
-<ul>
- <li>Через {{domxref ("HTMLElement.style")}}, который имеет дело с встроенными стилями одного элемента (например, &lt;div style="..."&gt;).</li>
- <li>Через API {{domxref("CSSStyleSheet")}}. Например, <code>document.styleSheets[0].cssRules[0].style</code> возвращает объект <code>CSSStyleDeclaration</code> для первого правила CSS в первой таблице стилей документа.</li>
- <li>Через {{domxref ("Window.getComputedStyle ()")}}, который предоставляет объект <code>CSSStyleDeclaration</code> в качестве интерфейса только для чтения.</li>
-</ul>
+- Через {{domxref ("HTMLElement.style")}}, который имеет дело с встроенными стилями одного элемента (например, \<div style="...">).
+- Через API {{domxref("CSSStyleSheet")}}. Например, `document.styleSheets[0].cssRules[0].style` возвращает объект `CSSStyleDeclaration` для первого правила CSS в первой таблице стилей документа.
+- Через {{domxref ("Window.getComputedStyle ()")}}, который предоставляет объект `CSSStyleDeclaration` в качестве интерфейса только для чтения.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Текстовое представление блока объявления. Установка этого атрибута изменяет стиль.</dd>
- <dt>{{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}</dt>
- <dd>Количество свойств. Смотри ниже метод {{domxref("CSSStyleDeclaration.item()", 'item()')}} .</dd>
- <dt>{{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}</dt>
- <dd>Содержащееся {{domxref("CSSRule")}}.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.cssText")}}
+  - : Текстовое представление блока объявления. Установка этого атрибута изменяет стиль.
+- {{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}
+  - : Количество свойств. Смотри ниже метод {{domxref("CSSStyleDeclaration.item()", 'item()')}} .
+- {{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}
+  - : Содержащееся {{domxref("CSSRule")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>Возвращает необязательный приоритет "important".</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>Возвращает значение свойства, заданное именем свойства.</dd>
- <dt>{{domxref("CSSStyleDeclaration.item()")}}</dt>
- <dd>Возвращает имя свойства.</dd>
- <dt>{{domxref("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>Удаляет свойство из блока объявления CSS.</dd>
- <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}</dt>
- <dd>Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или <code>null</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">для сокращённых свойств.</a></dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.getPropertyPriority()")}}
+  - : Возвращает необязательный приоритет "important".
+- {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
+  - : Возвращает значение свойства, заданное именем свойства.
+- {{domxref("CSSStyleDeclaration.item()")}}
+  - : Возвращает имя свойства.
+- {{domxref("CSSStyleDeclaration.removeProperty()")}}
+  - : Удаляет свойство из блока объявления CSS.
+- {{domxref("CSSStyleDeclaration.setProperty()")}}
+  - : Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+  - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/Shorthand_properties)
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">var styleObj = document.styleSheets[0].cssRules[0].style;
+```js
+var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
 for (var i = styleObj.length; i--;) {
@@ -62,38 +57,20 @@ for (var i = styleObj.length; i--;) {
   styleObj.removeProperty(nameString);
 }
 
-console.log(styleObj.cssText);</pre>
+console.log(styleObj.cssText);
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment                 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                         |
+| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Изначальное определение |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference" title="/en-US/docs/Web/CSS/CSS_Properties_Reference">DOM CSS Properties</a></li>
-</ul>
+- [DOM CSS Properties](/ru/docs/Web/CSS/CSS_Properties_Reference)
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}

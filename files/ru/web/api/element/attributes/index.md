@@ -3,35 +3,39 @@ title: Element.attributes
 slug: Web/API/Element/attributes
 translation_of: Web/API/Element/attributes
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Свойство <strong><code>Element.attributes</code></strong> возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. Это {{domxref("NamedNodeMap")}}, то есть полученные данные не являются массивом <code>Array</code>, не содержат {{jsxref("Array")}} методы и {{domxref("Attr")}} индекс узлов может отличаться в различных браузерах. Если сказать более точно, атрибуты <strong>(</strong><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">attributes</strong><strong>)</strong> это строка, пара ключ/значение которая представляет собой информацию относительно этого атрибута.</p>
+Свойство **`Element.attributes`** возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. Это {{domxref("NamedNodeMap")}}, то есть полученные данные не являются массивом `Array`, не содержат {{jsxref("Array")}} методы и {{domxref("Attr")}} индекс узлов может отличаться в различных браузерах. Если сказать более точно, атрибуты **(\*\***attributes\***\*)** это строка, пара ключ/значение которая представляет собой информацию относительно этого атрибута.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
-</pre>
+```
+var attr = element.attributes;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<h3 id="Базовые_примеры">Базовые примеры</h3>
+### Базовые примеры
 
-<pre class="brush: js">// Получить первый элемент &lt;p&gt; содержащийся в документе
+```js
+// Получить первый элемент <p> содержащийся в документе
 var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;</pre>
+var atts = para.attributes;
+```
 
-<h3 id="Notes">Перечисление атрибутов элементов</h3>
+### Перечисление атрибутов элементов
 
-<p>Числовое индексирование полезно для прохождения всех атрибутов элемента.<br>
- Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута. </p>
+Числовое индексирование полезно для прохождения всех атрибутов элемента.
+Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
+<html>
 
- &lt;head&gt;
-  &lt;title&gt;Attributes example&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+ <head>
+  <title>Attributes example</title>
+  <script type="text/javascript">
    function listAttributes() {
      var paragraph = document.getElementById("paragraph");
      var result = document.getElementById("result");
@@ -40,68 +44,44 @@ var atts = para.attributes;</pre>
      if (paragraph.hasAttributes()) {
        var attrs = paragraph.attributes;
        var output = "";
-       for(var i = attrs.length - 1; i &gt;= 0; i--) {
-         output += attrs[i].name + "-&gt;" + attrs[i].value;
+       for(var i = attrs.length - 1; i >= 0; i--) {
+         output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;
      } else {
        result.value = "No attributes to show";
      }
    }
-  &lt;/script&gt;
- &lt;/head&gt;
+  </script>
+ </head>
 
-&lt;body&gt;
- &lt;p id="paragraph" style="color: green;"&gt;Sample Paragraph&lt;/p&gt;
- &lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();"&gt;
-    &lt;input id="result" type="text" value=""&gt;
-  &lt;/p&gt;
- &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body>
+ <p id="paragraph" style="color: green;">Sample Paragraph</p>
+ <form action="">
+  <p>
+    <input type="button" value="Show first attribute name and value"
+      onclick="listAttributes();">
+    <input id="result" type="text" value="">
+  </p>
+ </form>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment                                                                                                    |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}} | {{Spec2('DOM WHATWG')}} | From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}} |
+| {{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                                                            |
+| {{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM2 Core')}}     | No change from {{SpecName('DOM1')}}                                                                |
+| {{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}} | {{Spec2('DOM1')}}         | Initial definition.                                                                                        |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NamedNodeMap")}}, the interface of the returned object</li>
- <li>Cross-browser compatibility considerations: on <a class="external" href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
-</ul>
+- {{domxref("NamedNodeMap")}}, the interface of the returned object
+- Cross-browser compatibility considerations: on [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)

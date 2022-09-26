@@ -3,67 +3,63 @@ title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 ---
-<h2 id="Summary">Общая информация</h2>
+## Общая информация
 
-<p>Возвращает список типа <a href="/ru/docs/Web/API/NodeList">NodeList</a>, состоящий из всех элементов, которые являются потомками для элемента, над которым была выполнена функция и удовлетворяющим условию выборки.</p>
+Возвращает список типа [NodeList](/ru/docs/Web/API/NodeList), состоящий из всех элементов, которые являются потомками для элемента, над которым была выполнена функция и удовлетворяющим условию выборки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);
-</pre>
+```
+elementList = baseElement.querySelectorAll(selectors);
+```
 
-<p>где</p>
+где
 
-<ul>
- <li><code>elementList —</code> результирующий список объектов типа <a href="/ru/docs/Web/API/Element">element</a> (результаты).</li>
- <li><code>baseElement —</code> <a href="/ru/docs/Web/API/Element">элемент</a>, над которым выполняется функция.</li>
- <li><code>selectors —</code> <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">текст селектора</a> для выбора нужных элементов.</li>
-</ul>
+- `elementList —` результирующий список объектов типа [element](/ru/docs/Web/API/Element) (результаты).
+- `baseElement —` [элемент](/ru/docs/Web/API/Element), над которым выполняется функция.
+- `selectors —` [текст селектора](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для выбора нужных элементов.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<p>Этот пример возвращает список всех элементов с тегом p, которые находятся в теле документа:</p>
+Этот пример возвращает список всех элементов с тегом p, которые находятся в теле документа:
 
-<pre class="brush: js">var matches = document.body.querySelectorAll('p');
-</pre>
+```js
+var matches = document.body.querySelectorAll('p');
+```
 
-<p>Этот пример возвращает список всех элементов с тегом p, которые находятся непосредственно в элементах-контейнерах с тегом div, имеющих класс 'highlighted', которые в свою очередь находятся внутри элемента с идентификатором 'test':</p>
+Этот пример возвращает список всех элементов с тегом p, которые находятся непосредственно в элементах-контейнерах с тегом div, имеющих класс 'highlighted', которые в свою очередь находятся внутри элемента с идентификатором 'test':
 
-<pre class="brush:js">var el = document.querySelector('#test');
-var matches = el.querySelectorAll('div.highlighted &gt; p');
-</pre>
+```js
+var el = document.querySelector('#test');
+var matches = el.querySelectorAll('div.highlighted > p');
+```
 
-<p>Этот пример возвращает список всех элементов iframe, которые имеют атрибут "data-src":</p>
+Этот пример возвращает список всех элементов iframe, которые имеют атрибут "data-src":
 
-<pre class="brush: js">var matches = el.querySelectorAll('iframe[data-src]');
-</pre>
+```js
+var matches = el.querySelectorAll('iframe[data-src]');
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Функция выбрасывает исключение SYNTAX_ERR, если текст селектора неправильный.</p>
+Функция выбрасывает исключение SYNTAX_ERR, если текст селектора неправильный.
 
-<p>querySelectorAll() был представлен как часть WebApps API.</p>
+querySelectorAll() был представлен как часть WebApps API.
 
-<p>Строка указанная в качестве текста селектора, должна соответствовать синтаксису CSS.</p>
+Строка указанная в качестве текста селектора, должна соответствовать синтаксису CSS.
 
-<p>Помните, что возвращённый в качестве результата список <a href="/ru/docs/Web/API/NodeList">NodeList</a> не рекомендуется для использования в циклах (например, в for(...)) в качестве массива, т.к., это не массив в «традиционном» понятии Javascript, а объект типа <a href="/ru/docs/Web/API/NodeList">NodeList</a>, который, хоть и схож по свойствам с массивом, но не является таковым в полной мере (не поддерживает все методы, доступные массиву), так что будьте осторожны.</p>
+Помните, что возвращённый в качестве результата список [NodeList](/ru/docs/Web/API/NodeList) не рекомендуется для использования в циклах (например, в for(...)) в качестве массива, т.к., это не массив в «традиционном» понятии Javascript, а объект типа [NodeList](/ru/docs/Web/API/NodeList), который, хоть и схож по свойствам с массивом, но не является таковым в полной мере (не поддерживает все методы, доступные массиву), так что будьте осторожны.
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Ссылки на спецификации
 
-<p>{{Compat}}</p>
+- [Selectors API](http://www.w3.org/TR/selectors-api/)
 
-<h2 id="Specification">Ссылки на спецификации</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
-</ul>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/Document.querySelectorAll" title="DOM/document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelector" title="DOM/document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="Code_snippets/QuerySelector">Сниппеты для <code>querySelector</code></a></li>
-</ul>
+- [`document.querySelectorAll`](/ru/docs/DOM/Document.querySelectorAll "DOM/document.querySelectorAll")
+- [`document.querySelector`](/ru/docs/DOM/Document.querySelector "DOM/document.querySelector")
+- [Сниппеты для `querySelector`](/ru/docs/Code_snippets/QuerySelector "Code_snippets/QuerySelector")

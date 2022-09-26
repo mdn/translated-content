@@ -15,44 +15,41 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</p>
+Интерфейс **`MediaDevices`** предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойство родителя {{domxref("EventTarget")}}.</em></p>
+_Наследует свойство родителя {{domxref("EventTarget")}}._
 
-<h3 id="Handlers">Обработчики событий</h3>
+### Обработчики событий
 
-<dl>
- <dt>{{ domxref("MediaDevices.ondevicechange") }}</dt>
- <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
-</dl>
+- {{ domxref("MediaDevices.ondevicechange") }}
+  - : Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект `MediaDevices` когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Наследуемый метод родителя {{domxref("EventTarget")}}.</em></p>
+_Наследуемый метод родителя {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
- <dd>Регистрирует обработчик событий для определённого типа событий.</dd>
- <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
- <dd>Получает массив информации о медиа-устройстве ввода-вывода.</dd>
- <dt>{{domxref("MediaDevices.getSupportedConstraints()")}}</dt>
- <dd>Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.</dd>
- <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
- <dd>С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку. </dd>
-</dl>
+- {{ domxref("EventTarget.addEventListener()") }}
+  - : Регистрирует обработчик событий для определённого типа событий.
+- {{ domxref("MediaDevices.enumerateDevices()") }}
+  - : Получает массив информации о медиа-устройстве ввода-вывода.
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.
+- {{ domxref("MediaDevices.getUserMedia()") }}
+  - : С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку.
 
-<dl>
- <dt>{{ domxref("EventTarget.removeEventListener()") }}</dt>
- <dd>Удаляет обработчик событий.</dd>
-</dl>
+<!---->
 
-<h2 id="Пример">Пример</h2>
+- {{ domxref("EventTarget.removeEventListener()") }}
+  - : Удаляет обработчик событий.
 
-<pre class="brush:js">'use strict';
+## Пример
+
+```js
+'use strict';
 
 // Помещаем переменные в глобальную область видимости, чтобы сделать их доступными для консоли браузера
 var video = document.querySelector('video');
@@ -86,25 +83,24 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  errorElement.innerHTML += '<p>' + msg + '</p>';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: API, частью которого является этот интерфейс.</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект <code>MediaDevices</code>, который можно использовать для доступа к устройствам.</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 захват и воспроизведение видео с помощью <code>MediaDevices</code> и MediaStream Recording API (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">исходный код на GitHub</a>)</li>
-</ul>
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API): API, частью которого является этот интерфейс.
+- [WebRTC API](/ru/docs/Web/API/WebRTC_API)
+- {{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект `MediaDevices`, который можно использовать для доступа к устройствам.
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 захват и воспроизведение видео с помощью `MediaDevices` и MediaStream Recording API ([исходный код на GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))

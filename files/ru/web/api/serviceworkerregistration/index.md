@@ -14,68 +14,59 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
-<div>
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
-</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>Интерфейс <code>ServiceWorkerRegistration</code> ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.</p>
+Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
 
-<p>The lifetime of a service worker registration is beyond that of the <code>ServiceWorkerRegistration</code> objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active <code>ServiceWorkerRegistration</code> objects.</p>
+The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
 
-<div class="note">
-<p><strong>Эта функция доступна в</strong> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** **Эта функция доступна в** [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Also implements properties from its parent interface, </em>{{domxref("EventTarget")}}.</p>
+_Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}</dt>
- <dd>Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.installing")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
- <dd>Returns a service worker whose state is <code>installing</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.waiting")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
- <dd>Returns a service worker whose state is <code>waiting</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.active")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
- <dd>Returns a service worker whose state is either <code>activating</code> or <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
- <dt>{{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}</dt>
- <dd>Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.</dd>
- <dt>{{domxref("serviceWorkerRegistration.periodicSync")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.sync")}} <strong style="font-weight: bold; line-height: 19.0909080505371px;">{{non-standard_inline}} </strong>{{readonlyinline}} </dt>
- <dd>Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
+  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
+- {{domxref("ServiceWorkerRegistration.installing")}} **{{readonlyinline}}**
+  - : Returns a service worker whose state is `installing`. This is initially set to `null`.
+- {{domxref("ServiceWorkerRegistration.waiting")}} **{{readonlyinline}}**
+  - : Returns a service worker whose state is `waiting`. This is initially set to `null`.
+- {{domxref("ServiceWorkerRegistration.active")}} **{{readonlyinline}}**
+  - : Returns a service worker whose state is either `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
+- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
+  - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
+- {{domxref("serviceWorkerRegistration.periodicSync")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes.
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
+- {{domxref("ServiceWorkerRegistration.sync")}} **{{non-standard_inline}}** {{readonlyinline}}
+  - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}</dt>
- <dd>An <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" title="This method is called whenever an event occurs of the type for which the EventListener interface was registered."><code>EventListener</code></a> property called whenever an event of type <code>updatefound</code> is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
+  - : An [`EventListener`](/ru/docs/Web/API/EventListener "This method is called whenever an event occurs of the type for which the EventListener interface was registered.") property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Also implements methods from its parent interface, </em>{{domxref("EventTarget")}}.</p>
+_Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration.getNotifications()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.showNotification()")}}</dt>
- <dd>Displays the notification with the requested title.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.update()")}}</dt>
- <dd>Checks the server for an updated version of the service worker without consulting caches.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.unregister()")}}</dt>
- <dd>Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration.getNotifications()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
+- {{domxref("ServiceWorkerRegistration.showNotification()")}}
+  - : Displays the notification with the requested title.
+- {{domxref("ServiceWorkerRegistration.update()")}}
+  - : Checks the server for an updated version of the service worker without consulting caches.
+- {{domxref("ServiceWorkerRegistration.unregister()")}}
+  - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and <code>updatefound</code> event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the <code>updatefound</code> event will not be fired.</p>
+In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
   .then(function(registration) {
     registration.addEventListener('updatefound', function() {
@@ -94,24 +85,21 @@ translation_of: Web/API/ServiceWorkerRegistration
   });
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)

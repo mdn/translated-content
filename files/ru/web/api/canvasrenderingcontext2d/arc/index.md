@@ -10,71 +10,71 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong> метод Canvas 2D API добавляет дугу к пути с центром <em>(x, y)</em> и с радиусом <em>r</em>  с началом в <em>startAngle</em> и с концом <em>endAngle</em> и с направлением против часовой стрелки (по умолчанию по часовой стрелке).</p>
+**`CanvasRenderingContext2D`\*\***`.arc()`\*\* метод Canvas 2D API добавляет дугу к пути с центром _(x, y)_ и с радиусом _r_ с началом в _startAngle_ и с концом _endAngle_ и с направлением против часовой стрелки (по умолчанию по часовой стрелке).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arc(x, y, radius, startAngle, endAngle, anticlockwise);</var>
-</pre>
+```
+void ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>X координата центра дуги.</dd>
- <dt><code>y</code></dt>
- <dd>Y координата центра дуги.</dd>
- <dt><code>radius</code></dt>
- <dd>Радиус.</dd>
- <dt><code>startAngle</code></dt>
- <dd>Угол начала дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
- <dt><code>endAngle</code></dt>
- <dd>Угол завершения дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
- <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>Необязательный {{jsxref("Boolean")}}. Задаёт направление рисования дуги.<br>
- Если <code>true</code> - против часовой, <code>false</code> - по часовой.</dd>
-</dl>
+- `x`
+  - : X координата центра дуги.
+- `y`
+  - : Y координата центра дуги.
+- `radius`
+  - : Радиус.
+- `startAngle`
+  - : Угол начала дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.
+- `endAngle`
+  - : Угол завершения дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.
+- `anticlockwise` {{optional_inline}}
+  - : Необязательный {{jsxref("Boolean")}}. Задаёт направление рисования дуги.
+    Если `true` - против часовой, `false` - по часовой.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Using_the_arc_method">Использование метода <code>arc</code></h3>
+### Использование метода `arc`
 
-<p>Ниже приведён пример простого кода который рисует круг.</p>
+Ниже приведён пример простого кода который рисует круг.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени (убедитесь, что вы используете браузер, поддерживающий данное свойство - смотрите таблицу совместимости):</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени (убедитесь, что вы используете браузер, поддерживающий данное свойство - смотрите таблицу совместимости):
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -97,30 +97,25 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="Different_shapes_demonstrated">Демонстрация разных форм дуг</h3>
+### Демонстрация разных форм дуг
 
-<p>В этом примере нарисованные разные формы чтобы показать возможности метода <code>arc()</code>.</p>
+В этом примере нарисованные разные формы чтобы показать возможности метода `arc()`.
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+```html hidden
+<canvas id="canvas" width="150" height="200"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
-
-<h6 id="JavaScript_2">JavaScript</h6>
-</div>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Draw shapes
-for (i=0;i&lt;4;i++){
-  for(j=0;j&lt;3;j++){
+for (i=0;i<4;i++){
+  for(j=0;j<3;j++){
     ctx.beginPath();
     var x              = 25+j*50;               // x coordinate
     var y              = 25+i*50;               // y coordinate
@@ -131,35 +126,32 @@ for (i=0;i&lt;4;i++){
 
     ctx.arc(x,y,radius,startAngle,endAngle, anticlockwise);
 
-    if (i&gt;1){
+    if (i>1){
       ctx.fill();
     } else {
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Примечания_относительно_Gecko">Примечания относительно Gecko</h2>
+## Примечания относительно Gecko
 
-<p>Начиная с Gecko 2.0 {{geckoRelease("2.0")}}:</p>
+Начиная с Gecko 2.0 {{geckoRelease("2.0")}}:
 
-<ul>
- <li>Параметр <code>anticlockwise</code> опциональный,</li>
- <li>Указывание отрицательного радиуса теперь приводит к ошибке {{domxref("DOMError", "IndexSizeError")}} error ("Index or size is negative or greater than the allowed amount").</li>
-</ul>
+- Параметр `anticlockwise` опциональный,
+- Указывание отрицательного радиуса теперь приводит к ошибке {{domxref("DOMError", "IndexSizeError")}} error ("Index or size is negative or greater than the allowed amount").
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс <code>Canvas</code>, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- Интерфейс `Canvas`, {{domxref("CanvasRenderingContext2D")}}

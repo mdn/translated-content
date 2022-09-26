@@ -3,66 +3,66 @@ title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство<strong> </strong><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeStyle</code></strong>, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение <code>#000</code> (чёрный цвет).</p>
+Свойство** \*\***`CanvasRenderingContext2D`\***\*`.strokeStyle`**, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение `#000` (чёрный цвет).
 
-<p>Смотрите также главу <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> в <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
+Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>ctx</em>.strokeStyle = color;
-</var><var><em>ctx</em>.strokeStyle = gradient;
-</var><var><em>ctx</em>.strokeStyle = pattern;</var>
-</pre>
+```
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>color</code></dt>
- <dd>{{domxref("DOMString")}} строка содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).</dd>
- <dt><code>gradient</code></dt>
- <dd>Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).</dd>
- <dt><code>pattern</code></dt>
- <dd>Объект класса {{domxref("CanvasPattern")}} (повторяющееся изображение).</dd>
-</dl>
+- `color`
+  - : {{domxref("DOMString")}} строка содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
+- `gradient`
+  - : Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).
+- `pattern`
+  - : Объект класса {{domxref("CanvasPattern")}} (повторяющееся изображение).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Using_the_strokeStyle_property">Использование <code>strokeStyle</code> с цветом</h3>
+### Использование `strokeStyle` с цветом
 
-<p>Ниже представлен простой фрагмент кода, использующий <code>strokeStyle</code> с цветом.</p>
+Ниже представлен простой фрагмент кода, использующий `strokeStyle` с цветом.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -85,18 +85,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="A_strokeStyle_example">Использование <code>strokeStyle </code>в циклах<code> for</code></h3>
+### Использование `strokeStyle `в циклах` for`
 
-<p>В этом примере свойство <code>strokeStyle</code> используется для рисования границ фигур. Мы используем метод {{domxref("CanvasRenderingContext2D.arc", "arc()")}} для рисования кругов.</p>
+В этом примере свойство `strokeStyle` используется для рисования границ фигур. Мы используем метод {{domxref("CanvasRenderingContext2D.arc", "arc()")}} для рисования кругов.
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
-for (var i=0;i&lt;6;i++){
-  for (var j=0;j&lt;6;j++){
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
+for (var i=0;i<6;i++){
+  for (var j=0;j<6;j++){
     ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
                       Math.floor(255-42.5*j) + ')';
     ctx.beginPath();
@@ -104,41 +104,37 @@ for (var i=0;i&lt;6;i++){
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p>Результат выглядит так:</p>
+Результат выглядит так:
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Особенности_WebKitBlink">Особенности WebKit/Blink</h2>
+## Особенности WebKit/Blink
 
-<ul>
- <li>В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод <code>ctx.setStrokeColor()</code>.
+- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setStrokeColor()`.
 
-  <pre class="brush: js">setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
-setStrokeColor(r, g, b, a);
-setStrokeColor(c, m, y, k, a);
-</pre>
- </li>
-</ul>
+  ```js
+  setStrokeColor(color, optional alpha);
+  setStrokeColor(grayLevel, optional alpha);
+  setStrokeColor(r, g, b, a);
+  setStrokeColor(c, m, y, k, a);
+  ```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- Интерфейс предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

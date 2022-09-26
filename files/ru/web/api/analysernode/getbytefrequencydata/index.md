@@ -3,42 +3,42 @@ title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>Метод <strong><code>getByteFrequencyData()</code></strong> интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{domxref("Uint8Array")}} (unsigned byte array).</p>
+Метод **`getByteFrequencyData()`** интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{domxref("Uint8Array")}} (unsigned byte array).
 
-<p>Данные частоты состоят из целых чисел по шкале от 0 до 255.</p>
+Данные частоты состоят из целых чисел по шкале от 0 до 255.
 
-<p>Каждый элемент в массиве представляет собой значение в децибелах для определённой частоты. Частоты распределены линейно от 0 до 1/2 частоты дискретизации. Например, для частоты дискретизации <code>48000</code> последний элемент массива будет представлять значение в децибелах для <code>24000</code> Гц.</p>
+Каждый элемент в массиве представляет собой значение в децибелах для определённой частоты. Частоты распределены линейно от 0 до 1/2 частоты дискретизации. Например, для частоты дискретизации `48000` последний элемент массива будет представлять значение в децибелах для `24000` Гц.
 
-<p>Если в массиве меньше элементов, чем в {{domxref("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.</p>
+Если в массиве меньше элементов, чем в {{domxref("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array должен иметь такой же размер, что и frequencyBinCount
 
-void <em>analyser</em>.getByteFrequencyData(dataArray); // заполняет Uint8Array данными, полученными из getByteFrequencyData()
-</pre>
+void analyser.getByteFrequencyData(dataArray); // заполняет Uint8Array данными, полученными из getByteFrequencyData()
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>array</code></dt>
- <dd>{{domxref("Uint8Array")}} , в который будут скопированы данные частотной области. Для любого образца, который не содержит данных, значение равно <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.<br>
- Если в массиве меньше элементов, чем в {{domxref ("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.</dd>
-</dl>
+- `array`
+  - : {{domxref("Uint8Array")}} , в который будут скопированы данные частотной области. Для любого образца, который не содержит данных, значение равно `-Infinity`.
+    Если в массиве меньше элементов, чем в {{domxref ("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>None.</p>
+None.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример показывает базовое использование {{domxref ("AudioContext")}} для создания AnalyserNode, затем {{domxref ("window.requestAnimationFrame ()", "requestAnimationFrame")}} и {{htmlelement ("canvas" )}} для повторения сбора частотных данных и вывода в стиле гистограммы winamp для текущего аудиовхода. Для получения дополнительных примеров / информации ознакомьтесь с нашей демонстрацией <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> (см. соответствующий код в строках <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> ).</p>
+Следующий пример показывает базовое использование {{domxref ("AudioContext")}} для создания AnalyserNode, затем {{domxref ("window.requestAnimationFrame ()", "requestAnimationFrame")}} и {{htmlelement ("canvas" )}} для повторения сбора частотных данных и вывода в стиле гистограммы winamp для текущего аудиовхода. Для получения дополнительных примеров / информации ознакомьтесь с нашей демонстрацией [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (см. соответствующий код в строках [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) ).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -62,7 +62,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -72,40 +72,24 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Параметры_2">Параметры</h2>
+## Параметры
 
-<dl>
- <dt>array</dt>
- <dd>{{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.</dd>
-</dl>
+- array
+  - : {{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-analysernode-getbytefrequencydata', 'getByteFrequencyData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#dom-analysernode-getbytefrequencydata', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

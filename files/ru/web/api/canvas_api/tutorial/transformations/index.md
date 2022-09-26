@@ -3,36 +3,31 @@ title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}Ранее в этом уроке мы узнали о [сетке холста](https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=ru&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=ru&u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg) и **координатном пространстве** . До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
 
-<div class="summary">Ранее в этом уроке мы узнали о  <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a> и <strong>координатном пространстве</strong> .  До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
+## Сохранение и восстановление состояния
 
-<h2 id="Saving_and_restoring_state">Сохранение и восстановление состояния</h2>
+Прежде чем перейти к методам преобразования, давайте рассмотрим два других метода, которые необходимы, когда вы начинаете создавать все более сложные рисунки.
 
-<p>Прежде чем перейти к методам преобразования, давайте рассмотрим два других метода, которые необходимы, когда вы начинаете создавать все более сложные рисунки.</p>
+- {{domxref("CanvasRenderingContext2D.save", "save()")}}
+  - : Сохраняет все состояние холста.
+- {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
+  - : Восстанавливает последнее сохранённое состояние холста.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.save", "save()")}}</dt>
- <dd>Сохраняет все состояние холста.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.restore", "restore()")}}</dt>
- <dd>Восстанавливает последнее сохранённое состояние холста.</dd>
-</dl>
+Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод `save()`, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:
 
-<p>Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод <code>save()</code>, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:</p>
+- Трансформации, которые были применены (например, `translate`, `rotate` and `scale` – см. ниже).
+- Текущее значение следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- Текущее значение границ вырезанного холста ([clipping path](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)), которые будут рассматриваться в следующем разделе.
 
-<ul>
- <li>Трансформации, которые были применены (например, <code>translate</code>, <code>rotate</code> and <code>scale</code> – см. ниже).</li>
- <li>Текущее значение следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.</li>
- <li>Текущее значение границ вырезанного холста (<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths">clipping path</a>), которые будут рассматриваться в следующем разделе.</li>
-</ul>
+Вы можете вызывать метод `save()` столько раз, сколько захотите. В то же время, при вызове метода `restore()` последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.
 
-<p>Вы можете вызывать метод <code>save()</code> столько раз, сколько захотите. В то же время, при вызове метода <code>restore()</code> последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.</p>
+### Пример сохранения и восстановления состояния холста
 
-<h3 id="A_save_and_restore_canvas_state_example">Пример сохранения и восстановления состояния холста</h3>
+Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.
 
-<p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
-
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // рисуем прямоугольник с настройками по умолчанию
@@ -51,43 +46,45 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
   ctx.restore();                  // возвращаемся к начальным настройкам
   ctx.fillRect(60, 60, 30, 30);   // рисуем прямоугольник с изначальными настройками
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>Сначала рисуется большой прямоугольник с настройками по умолчанию. Затем мы сохраняем состояние холста, после чего изменяем цвет заливки. Затем рисуем второй синий прямоугольник меньшего размера и опять сохраняем состояние. Снова изменяем какие-то настройки и рисуем третий полупрозрачный белый прямоугольник.</p>
+Сначала рисуется большой прямоугольник с настройками по умолчанию. Затем мы сохраняем состояние холста, после чего изменяем цвет заливки. Затем рисуем второй синий прямоугольник меньшего размера и опять сохраняем состояние. Снова изменяем какие-то настройки и рисуем третий полупрозрачный белый прямоугольник.
 
-<p>До сих пор наши действия ничем не отличались от тех, что мы делали в предыдущем разделе. Однако, как только мы сделали первый вызов <code>restore(),</code> последнее сохранённое состояние отрисовки было восстановлено из стека, вернув все сохранённые настройки. Если бы мы не сохранили предыдущее состояние, используя <code>save()</code>, нам бы пришлось менять цвет заливки и настройки прозрачности вручную для возврата к предыдущему состоянию. Для каких-нибудь двух простых свойств это, может быть, сделать не так сложно. Но если таких свойств гораздо больше, это чревато очень быстрым разрастанием кода.</p>
+До сих пор наши действия ничем не отличались от тех, что мы делали в предыдущем разделе. Однако, как только мы сделали первый вызов `restore(),` последнее сохранённое состояние отрисовки было восстановлено из стека, вернув все сохранённые настройки. Если бы мы не сохранили предыдущее состояние, используя `save()`, нам бы пришлось менять цвет заливки и настройки прозрачности вручную для возврата к предыдущему состоянию. Для каких-нибудь двух простых свойств это, может быть, сделать не так сложно. Но если таких свойств гораздо больше, это чревато очень быстрым разрастанием кода.
 
-<p>Когда второй вызов <code>restore()</code> сделан, изначальное состояние (то самое, которое было сделано перед первым вызовом <code>save</code>) восстанавливается и последний нарисованный прямоугольник вновь становится чёрным.</p>
+Когда второй вызов `restore()` сделан, изначальное состояние (то самое, которое было сделано перед первым вызовом `save`) восстанавливается и последний нарисованный прямоугольник вновь становится чёрным.
 
-<p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
 
-<h2 id="Translating">Трансляция (смещение)</h2>
+## Трансляция (смещение)
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">Первый метод для трансформирования холста <code>translate()</code>. Он используется для перемещения холста в любую точку нашей сетки.</p>
+![](https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png)Первый метод для трансформирования холста `translate()`. Он используется для перемещения холста в любую точку нашей сетки.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
- <dd>Перемещение холста на сетке. <code>x</code> и <code>y</code> - смещение по горизонтали и вертикали соответственно.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
+  - : Перемещение холста на сетке. `x` и `y` - смещение по горизонтали и вертикали соответственно.
 
-<p>Неплохая идея - сохранять <code>canvas state</code> перед использованием любых трансформаций. Обычно удобнее использовать метод <code>restore</code>, чем выполнять обратные преобразования, чтобы вернуться к начальному состоянию. Кроме того, если вы выполняете преобразования внутри цикла не используя <code>save</code> и <code>restore</code>, вы рискуете потерять часть рисунка, потому что он был нарисован за пределами края холста.</p>
+Неплохая идея - сохранять `canvas state` перед использованием любых трансформаций. Обычно удобнее использовать метод `restore`, чем выполнять обратные преобразования, чтобы вернуться к начальному состоянию. Кроме того, если вы выполняете преобразования внутри цикла не используя `save` и `restore`, вы рискуете потерять часть рисунка, потому что он был нарисован за пределами края холста.
 
-<h3 id="A_translate_example">Пример использования <code>translate</code></h3>
+### Пример использования `translate`
 
-<p>Этот пример демонстрирует некоторые преимущества при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
+Этот пример демонстрирует некоторые преимущества при использовании смещения холста. Без использования метода `translate()` все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод `translate()` даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции `fillRect()`. Это может дать некоторое упрощение для понимания и использования.
 
-<p>Внутри функции <code>draw()</code> мы вызываем <code>fillRect()</code> девять раз, используя два цикла <code>for</code>. Каждый раз мы сохраняем состояние холста, смещаем его, рисуем прямоугольник, а затем восстанавливаем исходное состояние. Заметьте, что <code>fillRect()</code> всегда использует одни и те же параметры, а изменение позиции фигуры осуществляется с помощью <code>translate()</code>.</p>
+Внутри функции `draw()` мы вызываем `fillRect()` девять раз, используя два цикла `for`. Каждый раз мы сохраняем состояние холста, смещаем его, рисуем прямоугольник, а затем восстанавливаем исходное состояние. Заметьте, что `fillRect()` всегда использует одни и те же параметры, а изменение позиции фигуры осуществляется с помощью `translate()`.
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &lt; 3; i++) {
-    for (var j = 0; j &lt; 3; j++) {
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
       ctx.save();
       ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
       ctx.translate(10 + j * 50, 10 + i * 50);
@@ -96,36 +93,35 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
     }
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}</p>
+{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
 
-<h2 id="Rotating">Поворот</h2>
+## Поворот
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">Второй метод трансформации <code>rotate()</code>. Он используется для поворота нашего холста.</p>
+![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)Второй метод трансформации `rotate()`. Он используется для поворота нашего холста.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
- <dd>Поворачивает наш холст по часовой стрелке вокруг начальной точки на угол <code>anglе</code> в радианах.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
+  - : Поворачивает наш холст по часовой стрелке вокруг начальной точки на угол `anglе` в радианах.
 
-<p>Центр поворота - всегда начало координат. Для изменения координат центра мы должны сместить холст, используя метод <code>translate()</code>.</p>
+Центр поворота - всегда начало координат. Для изменения координат центра мы должны сместить холст, используя метод `translate()`.
 
-<h3 id="A_rotate_example">Пример использования<code>rotate</code></h3>
+### Пример использования`rotate`
 
-<p>В этом примере мы сначала используем <code>rotate()</code> для поворота прямоугольника относительно начала координат, а затем, используя <code>translate()</code> совместно с <code>rotate()</code> поворачиваем прямоугольник относительно его центра.</p>
+В этом примере мы сначала используем `rotate()` для поворота прямоугольника относительно начала координат, а затем, используя `translate()` совместно с `rotate()` поворачиваем прямоугольник относительно его центра.
 
-<div class="note">
-<p><strong>Памятка</strong>: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: <code>radians = (Math.PI/180)*degrees</code>.</p>
-</div>
+> **Примечание:** **Памятка**: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
@@ -154,36 +150,37 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
   ctx.fillStyle = '#4D4E53';
   ctx.fillRect(150, 30, 100, 100);
 }
-</pre>
+```
 
-<p>Для поворота прямоугольника относительно его центра мы сначала смещаем начало координат, выполняем поворот, а затем выполняем обратное смещение к точке 0,0, и наконец рисуем прямоугольник.</p>
+Для поворота прямоугольника относительно его центра мы сначала смещаем начало координат, выполняем поворот, а затем выполняем обратное смещение к точке 0,0, и наконец рисуем прямоугольник.
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="200"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="200"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}</p>
+{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
 
-<h2 id="Scaling">Масштабирование</h2>
+## Масштабирование
 
-<p>Следующий метод трансформации холста - scaling. Он используется для растяжения, сжатия и отражения координатной сетки. Он может использоваться для отрисовки растянутых или сжатых по осям фигур и изображений.</p>
+Следующий метод трансформации холста - scaling. Он используется для растяжения, сжатия и отражения координатной сетки. Он может использоваться для отрисовки растянутых или сжатых по осям фигур и изображений.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.scale", "scale(x, y)")}}</dt>
- <dd>Масштабирует координатную сетку холста по горизонтали и вертикали. Оба параметра - вещественные числа. Значения меньше 1.0 уменьшают, а больше 1.0 увеличивают масштаб сетки. Значение 1.0 не изменяет его.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.scale", "scale(x, y)")}}
+  - : Масштабирует координатную сетку холста по горизонтали и вертикали. Оба параметра - вещественные числа. Значения меньше 1.0 уменьшают, а больше 1.0 увеличивают масштаб сетки. Значение 1.0 не изменяет его.
 
-<p>Используя отрицательные значения вы можете зеркально отразить направление осей. Например, используя <code>translate(0,canvas.height); scale(1,-1);</code> вы получите хорошо известную декартову систему координат с началом в нижнем левом углу.</p>
+Используя отрицательные значения вы можете зеркально отразить направление осей. Например, используя `translate(0,canvas.height); scale(1,-1);` вы получите хорошо известную декартову систему координат с началом в нижнем левом углу.
 
-<p>По умолчанию единица координатной сетки точно соответствует одному пикселю. Если же вы, например, зададите масштабный коэффициент 0.5, то единица сетки будет равна половине пикселя, и нарисованная фигура будет иметь размер в два раза меньше оригинала. Наоборот, если задать масштабный коэффициент 2.0, единица сетки будет соответствовать двум пикселям, а нарисованная фигура станет в два раза больше.</p>
+По умолчанию единица координатной сетки точно соответствует одному пикселю. Если же вы, например, зададите масштабный коэффициент 0.5, то единица сетки будет равна половине пикселя, и нарисованная фигура будет иметь размер в два раза меньше оригинала. Наоборот, если задать масштабный коэффициент 2.0, единица сетки будет соответствовать двум пикселям, а нарисованная фигура станет в два раза больше.
 
-<h3 id="A_scale_example">Пример использования <code>scale</code></h3>
+### Пример использования `scale`
 
-<p>В этом примере мы нарисуем прямоугольники, используя разные масштабные коэффициенты.</p>
+В этом примере мы нарисуем прямоугольники, используя разные масштабные коэффициенты.
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // рисуем масштабированный прямоугольник.
@@ -197,59 +194,58 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
   ctx.font = '48px serif';
   ctx.fillText('MDN', -135, 120);
 }
+```
 
-</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```js hidden
+draw();
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
 
-<p>{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}</p>
+## Матричное преобразование
 
-<h2 id="Transforms">Матричное преобразование</h2>
+В заключении рассмотрим метод, который вызывает изменения в соответствии с матрицей преобразования.
 
-<p>В заключении рассмотрим метод, который вызывает изменения в соответствии с матрицей преобразования.</p>
+- {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}</dt>
- <dd><p>Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
+  - : Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
- <p>If any of the arguments are <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> the transformation matrix must be marked as infinite instead of the method throwing an exception.</p>
-</dl>
+    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity") the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
-<p>Параметры функции:</p>
+Параметры функции:
 
-<dl>
- <dt><code>a (m11)</code></dt>
- <dd>Horizontal scaling.</dd>
- <dt><em><code>b (m12)</code></em></dt>
- <dd>Horizontal skewing.</dd>
- <dt><code>c (m21)</code></dt>
- <dd>Vertical skewing.</dd>
- <dt><code>d (m22)</code></dt>
- <dd>Vertical scaling.</dd>
- <dt><code>e (dx)</code></dt>
- <dd>Horizontal moving.</dd>
- <dt><code>f (dy)</code></dt>
- <dd>Vertical moving.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}</dt>
- <dd>Сбрасывает текущую матрицу преобразования, а затем вызывает<code>transform()</code> в соответствии с аргументами.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}</dt>
- <dd>Сбрасывает текущую матрицу преобразования к значению по умолчанию. Аналогично вызову <code>ctx.setTransform(1, 0, 0, 1, 0, 0);</code></dd>
-</dl>
+- `a (m11)`
+  - : Horizontal scaling.
+- _`b (m12)`_
+  - : Horizontal skewing.
+- `c (m21)`
+  - : Vertical skewing.
+- `d (m22)`
+  - : Vertical scaling.
+- `e (dx)`
+  - : Horizontal moving.
+- `f (dy)`
+  - : Vertical moving.
+- {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
+  - : Сбрасывает текущую матрицу преобразования, а затем вызывает`transform()` в соответствии с аргументами.
+- {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
+  - : Сбрасывает текущую матрицу преобразования к значению по умолчанию. Аналогично вызову `ctx.setTransform(1, 0, 0, 1, 0, 0);`
 
-<h3 id="Пример_использования_transform_и_setTransform">Пример использования <code>transform</code> и <code>setTransform</code></h3>
+### Пример использования `transform` и `setTransform`
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
-  for (var i = 0; i &lt;= 12; i++) {
+  for (var i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
     ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
     ctx.fillRect(0, 0, 100, 10);
@@ -260,14 +256,16 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
   ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
   ctx.fillRect(0, 50, 100, 100);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="200" height="250"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="200" height="250"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("Пример_использования_transform_и_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}</p>
+{{EmbedLiveSample("Пример_использования_transform_и_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

@@ -11,66 +11,61 @@ tags:
   - Ссылка
 translation_of: Web/API/Worker/Worker
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>Конструктор <code><strong>Worker()</strong></code> создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника (<a href="/en/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>).</p>
+Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript")).
 
-<p>Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа <code>SECURITY_ERR</code>.</p>
+Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
 
-<div class="note">
-<p><strong>Замечание</strong>: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.</p>
-</div>
+> **Примечание:** **Замечание**: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var myWorker = new Worker(<em>aURL</em>, <em>options</em>);</pre>
+```js
+var myWorker = new Worker(aURL, options);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>aURL</em></dt>
- <dd>{{domxref("USVString")}}, представляющая URL-адрес скрипта который будет выполняться <code>worker</code>. Он должен подчиняться политике одного источника.</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>An object containing option properties that can be set when creating the object instance. Available properties are as follows:
- <ul>
-  <li><code>type</code>: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be <code>classic</code> or <code>module</code>. If not specified, the default used is <code>classic</code>.</li>
-  <li><code>credentials</code>: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be<dfn> <code>omit</code></dfn>, <code><dfn>same-origin</dfn></code>, or <dfn><code>include</code>. If not specified, or if type is <code>classic</code>, the default used is <code>omit</code> (no credentials required).</dfn></li>
-  <li><dfn><code>name</code>: A </dfn>{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.</li>
- </ul>
- </dd>
-</dl>
+- _aURL_
+  - : {{domxref("USVString")}}, представляющая URL-адрес скрипта который будет выполняться `worker`. Он должен подчиняться политике одного источника.
+- _options_ {{optional_inline}}
 
-<h3 id="Исключения">Исключения</h3>
+  - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 
-<ul>
- <li>A <code>SecurityError</code> is raised if the document is not allowed to start workers.</li>
- <li>A <code>NetworkError</code> is raised if the MIME type of one of the script is <code>text/csv</code>, <code>image/*</code>, <code>video/*</code>, or <code>audio/*</code>. It should always be <code>text/javacript.</code></li>
- <li>A <code>SyntaxError</code> is raised if <em>aUR</em><em>L</em> cannot be parsed.</li>
-</ul>
+    - `type`: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
+    - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be* `omit`*, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
+    - _`name`: A _{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
 
-<h2 id="Пример">Пример</h2>
+### Исключения
 
-<p>Следующий фрагмент кода показывает создание объекта {{domxref ("Worker")}} с помощью конструктора <code>Worker()</code> и его последующее использование:</p>
+- A `SecurityError` is raised if the document is not allowed to start workers.
+- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javacript.`
+- A `SyntaxError` is raised if _aUR\_\_L_ cannot be parsed.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+## Пример
+
+Следующий фрагмент кода показывает создание объекта {{domxref ("Worker")}} с помощью конструктора `Worker()` и его последующее использование:
+
+```js
+var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>Больше примеров можно найти здесь: <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<p>Интерфейс {{domxref("Worker")}}</p>
+Интерфейс {{domxref("Worker")}}

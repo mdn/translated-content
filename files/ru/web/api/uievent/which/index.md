@@ -10,29 +10,27 @@ tags:
 translation_of: Web/API/KeyboardEvent/which
 original_slug: Web/API/KeyboardEvent/which
 ---
-<div>{{APIRef ("События DOM")}} {{Deprecated_header}}<br>
-Свойство which только для чтения интерфейса {{domxref ("KeyboardEvent")}} возвращает числовой код клавиши нажатой клавиши или код символа (charCode) для нажатой буквенно-цифровой клавиши.</div>
+{{APIRef ("События DOM")}} {{Deprecated_header}}
+Свойство which только для чтения интерфейса {{domxref ("KeyboardEvent")}} возвращает числовой код клавиши нажатой клавиши или код символа (charCode) для нажатой буквенно-цифровой клавиши.
 
+## Синтаксис
 
+```
+var keyResult = event.which;
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">var <em>keyResult</em> = <em>event</em>.which;
-</pre>
+- `keyResult содержит числовой код для конкретной нажатой клавиши, в зависимости от того, была ли нажата буквенно-цифровая или не буквенно-цифровая клавиша. Пожалуйста, смотрите {{domxref ("KeyboardEvent.charCode")}} и {{domxref ("KeyboardEvent.keyCode")}} для получения дополнительной информации.`
 
-<h3 id="Параметры">Параметры</h3>
+## Примеры
 
-<ul>
- <li><code>keyResult содержит числовой код для конкретной нажатой клавиши, в зависимости от того, была ли нажата буквенно-цифровая или не буквенно-цифровая клавиша. Пожалуйста, смотрите {{domxref ("KeyboardEvent.charCode")}} и {{domxref ("KeyboardEvent.keyCode")}} для получения дополнительной информации.</code></li>
-</ul>
+```html
+<html>
+<head>
+<title>charCode/keyCode/which example</title>
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;charCode/keyCode/which example&lt;/title&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showKeyPress(evt) {
 alert("onkeypress handler: \n"
@@ -52,32 +50,28 @@ alert("onkeydown handler: \n"
      );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body
+<body
  onkeypress="showKeyPress(event);"
  onkeydown="keyDown(event);"
-&gt;
+>
 
-&lt;p&gt;Please press any key.&lt;/p&gt;
+<p>Please press any key.</p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("KeyboardEvent")}}, the interface this property belongs too.</li>
-</ul>
+- {{domxref("KeyboardEvent")}}, the interface this property belongs too.

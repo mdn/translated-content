@@ -1,32 +1,34 @@
 ---
 title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
-translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 tags:
-- API
-- Experimental
-- HTMLCanvasElement
-- Method
-- OffscreenCanvas
-- Reference
+  - API
+  - Experimental
+  - HTMLCanvasElement
+  - Method
+  - OffscreenCanvas
+  - Reference
+translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p><code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
-    передаёт управление объекту {{domxref("OffscreenCanvas")}}, который может использоваться либо в основном потоке, либо в {{domxref("Worker")}}.</p>
+**`HTMLCanvasElement`\*\***`.transferControlToOffscreen()`\*\*
+передаёт управление объекту {{domxref("OffscreenCanvas")}}, который может использоваться либо в основном потоке, либо в {{domxref("Worker")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre
-        class="brush: js">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
+```js
+OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+```
 
-<h3 id="Return_value">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект {{domxref("OffscreenCanvas")}}.</p>
+Объект {{domxref("OffscreenCanvas")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var htmlCanvas = document.createElement('canvas');
+```js
+var htmlCanvas = document.createElement('canvas');
 var offscreen = htmlCanvas.transferControlToOffscreen();
 var gl = offscreen.getContext('webgl');
 
@@ -34,20 +36,18 @@ var gl = offscreen.getContext('webgl');
 
 // Возвращаем кадры в исходный HTMLCanvasElement
 gl.commit();
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-    <li>Интерфейс, определяющий метод: {{domxref("HTMLCanvasElement")}}</li>
-    <li>{{domxref("OffscreenCanvas")}}</li>
-    <li>{{domxref("WebGLRenderingContext.commit()")}}</li>
-</ul>
+- Интерфейс, определяющий метод: {{domxref("HTMLCanvasElement")}}
+- {{domxref("OffscreenCanvas")}}
+- {{domxref("WebGLRenderingContext.commit()")}}

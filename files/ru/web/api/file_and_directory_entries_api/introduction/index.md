@@ -4,228 +4,189 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 translation_of: Web/API/File_and_Directory_Entries_API/Introduction
 original_slug: Web/API/File_and_Directory_Entries_API/Введение
 ---
-<div>{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}</div>
+{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
 
-<p>API файлов и каталогов эмулирует для веб-приложений локальную файловую систему. У вас есть возможность создания приложений, которые могут читать, записывать и создавать файлы и директории в изолированной виртуальной файловой системе.</p>
+API файлов и каталогов эмулирует для веб-приложений локальную файловую систему. У вас есть возможность создания приложений, которые могут читать, записывать и создавать файлы и директории в изолированной виртуальной файловой системе.
 
-<p>API файлов и каталогов взаимодействует с другими API. Оно было создано на основе File Writer API, который в свою очередь использует File API. Каждое API реализует разную функциональность. Данные программные интерфейсы являются огромным эволюционным скачком для веб-приложений, которые теперь могут кешировать и обрабатывать большие объёмы данных. </p>
+API файлов и каталогов взаимодействует с другими API. Оно было создано на основе File Writer API, который в свою очередь использует File API. Каждое API реализует разную функциональность. Данные программные интерфейсы являются огромным эволюционным скачком для веб-приложений, которые теперь могут кешировать и обрабатывать большие объёмы данных.
 
-<h2 id="Об_этом_документе">Об этом документе</h2>
+## Об этом документе
 
-<p>В данном документе приведены основные концепции и терминология API файлов и каталогов, которые должны показать общую картину и ключевые идеи. Также описаны <a href="#Ограничения">ограничения</a>, несоблюдение которых может привести к появлению ошибок безопасности. Используемая терминология описана в разделе <a href="#Определения">Определений</a>.</p>
+В данном документе приведены основные концепции и терминология API файлов и каталогов, которые должны показать общую картину и ключевые идеи. Также описаны [ограничения](#Ограничения), несоблюдение которых может привести к появлению ошибок безопасности. Используемая терминология описана в разделе [Определений](#Определения).
 
-<p>Ссылки на страницы данного API приведены в <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem">Ссылочном справочнике</a>.</p>
+Ссылки на страницы данного API приведены в [Ссылочном справочнике](/ru/docs/Web/API/FileSystem).
 
-<p>Спецификация находится на стадии разработки и будет изменяться в будущем.</p>
+Спецификация находится на стадии разработки и будет изменяться в будущем.
 
-<h2 id="Обзор">Обзор</h2>
+## Обзор
 
-<p>Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. Асинхронное API может быть использовано в тех случаях, когда нежелательно, чтобы длительные вычисления блокировали весь пользовательский интерфейс. В свою очередь синхронное API предлагает более простую модель программирования, однако оно должно использоваться только с объектами <a href="https://developer.mozilla.org/En/Using_web_workers">WebWorkers</a>.</p>
+Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. Асинхронное API может быть использовано в тех случаях, когда нежелательно, чтобы длительные вычисления блокировали весь пользовательский интерфейс. В свою очередь синхронное API предлагает более простую модель программирования, однако оно должно использоваться только с объектами [WebWorkers](https://developer.mozilla.org/En/Using_web_workers).
 
-<h3 id="Применимость_API">Применимость API</h3>
+### Применимость API
 
-<p>API файлов и каталогов является важным программным интерфейсом по следующим причинам:</p>
+API файлов и каталогов является важным программным интерфейсом по следующим причинам:
 
-<ul>
- <li>Благодаря ему у приложений могут быть автономные (offline) функции, а также функции хранения, позволяющие обрабатывать большие наборы двоичных данных.</li>
- <li>У приложений появляется возможность предварительной загрузки и кеширования ресурсов, что повышает из производительность.</li>
- <li>У пользователя приложения появляется возможность напрямую редактировать файлы, расположенные у него на компьютере.</li>
- <li>Пользователям предоставляется интерфейс работы с файловым хранилищем, который схож с файловой системой.</li>
-</ul>
+- Благодаря ему у приложений могут быть автономные (offline) функции, а также функции хранения, позволяющие обрабатывать большие наборы двоичных данных.
+- У приложений появляется возможность предварительной загрузки и кеширования ресурсов, что повышает из производительность.
+- У пользователя приложения появляется возможность напрямую редактировать файлы, расположенные у него на компьютере.
+- Пользователям предоставляется интерфейс работы с файловым хранилищем, который схож с файловой системой.
 
-<p>Примеры таких приложений приведены в разделе <a href="#Примеры использования">Примеры использования</a>.</p>
+Примеры таких приложений приведены в разделе [Примеры использования](<#Примеры использования>).
 
-<h3 id="API_файлов_и_каталогов_и_другие_программные_интерфейсы_хранения_данных">API файлов и каталогов и другие программные интерфейсы хранения данных</h3>
+### API файлов и каталогов и другие программные интерфейсы хранения данных
 
-<p>API файлов и каталогов является альтернативой для других интерфейсов хранения данных, таких как <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL (признано устаревшим с 18 ноября 2010 г.) и AppCache. Тем не менее данное API является более хорошим выбором для приложений, обрабатывающим большие объёмы данных, по следующим причинам:</p>
+API файлов и каталогов является альтернативой для других интерфейсов хранения данных, таких как [IndexedDB](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (признано устаревшим с 18 ноября 2010 г.) и AppCache. Тем не менее данное API является более хорошим выбором для приложений, обрабатывающим большие объёмы данных, по следующим причинам:
 
-<ul>
- <li>Данное API предлагает возможность хранения данных на стороне клиента в вариантах использования, которые не могут быть решены с помощью баз данных. Например, данное API является намного более производительным в случае хранения и обработки больших файлов.</li>
- <li>Firefox поддерживает хранение бинарных данных в IndexedDB, в то время как в Chrome эта функция по-прежнему находится на стадии разработки. Если Chrome является одним из целевых браузеров для вашего приложения и у вас есть необходимость хранения бинарных данных, то вы можете использовать только либо данное API, либо AppCache. В свою очередь хранилище AppCache не предоставляет возможности локальных изменений, а также тонкой настройки на стороне клиента.</li>
- <li>В Chrome у вас есть возможность использования данного API вместе с программным интерфейсом управления квотами, позволяющее управлять квотами хранилища.</li>
-</ul>
+- Данное API предлагает возможность хранения данных на стороне клиента в вариантах использования, которые не могут быть решены с помощью баз данных. Например, данное API является намного более производительным в случае хранения и обработки больших файлов.
+- Firefox поддерживает хранение бинарных данных в IndexedDB, в то время как в Chrome эта функция по-прежнему находится на стадии разработки. Если Chrome является одним из целевых браузеров для вашего приложения и у вас есть необходимость хранения бинарных данных, то вы можете использовать только либо данное API, либо AppCache. В свою очередь хранилище AppCache не предоставляет возможности локальных изменений, а также тонкой настройки на стороне клиента.
+- В Chrome у вас есть возможность использования данного API вместе с программным интерфейсом управления квотами, позволяющее управлять квотами хранилища.
 
-<h3 id="sample" name="sample"><a id="Примеры использования"></a>Примеры использования</h3>
+### Примеры использования
 
-<p>Далее приведены лишь некоторые случаи, в которых можно использовать API файлов и каталогов:</p>
+Далее приведены лишь некоторые случаи, в которых можно использовать API файлов и каталогов:
 
-<ul>
- <li>Приложения с постоянной загрузкой.
-  <ul>
-   <li>Когда файл или каталог выбран для загрузки на сервер, есть возможность скопировать файлы в локальную песочницу и начать их поочерёдную загрузку. </li>
-   <li>Приложение может продолжить загрузку после закрытия или аварийного сбоя браузера, прерывание связи или завершения работы компьютера.</li>
-  </ul>
- </li>
- <li>Видеоигры или другие приложения с большим количеством медиа ресурсов.
-  <ul>
-   <li>Приложение скачивает один или несколько больших архивов с ресурсами и локально его распаковывает.</li>
-   <li>Приложение осуществляет предварительную фоновую загрузку ресурсов, благодаря чему у пользователя нет необходимости ожидать их загрузки для начала следующего уровня.</li>
-  </ul>
- </li>
- <li>Аудио- или фоторедактор с возможностью автономной работы или локальным кешем.
-  <ul>
-   <li>Приложение может редактировать файлы без полной их перезаписи (например, ID3/EXIF теги).</li>
-  </ul>
- </li>
- <li>Offline видеопроигрыватель.
-  <ul>
-   <li>Приложение может загружать большие (&gt; 1 ГБ) файлы.</li>
-   <li>Приложение может начать воспроизведение частично загруженного файла.</li>
-  </ul>
- </li>
- <li>Offline клиент электронной почты.
-  <ul>
-   <li>Возможность загрузки и локального хранения прикреплений.</li>
-   <li>Возможность кеширования прикреплений для более поздней отправки.</li>
-  </ul>
- </li>
-</ul>
+- Приложения с постоянной загрузкой.
 
-<h2 id="concepts">Big concepts</h2>
+  - Когда файл или каталог выбран для загрузки на сервер, есть возможность скопировать файлы в локальную песочницу и начать их поочерёдную загрузку.
+  - Приложение может продолжить загрузку после закрытия или аварийного сбоя браузера, прерывание связи или завершения работы компьютера.
 
-<p>Before you start using the File and Directory Entries API, you need to understand a few concepts:</p>
+- Видеоигры или другие приложения с большим количеством медиа ресурсов.
 
-<ul>
- <li><a href="#virtual">The File and Directory Entries API is a virtual representation of a file system</a></li>
- <li><a href="#storage">The File and Directory Entries API can use different storage types</a></li>
- <li><a href="#quota">Browsers impose storage quota</a></li>
- <li><a href="#versions">The File and Directory Entries API has asynchronous and synchronous versions</a></li>
- <li><a href="#errorcallbacks">When using the asynchronous API, always use the error callbacks</a></li>
- <li><a href="#interfaces">The File and Directory Entries API interacts with other APIs</a></li>
- <li><a href="#case">The File and Directory Entries API is case-sensitive</a></li>
-</ul>
+  - Приложение скачивает один или несколько больших архивов с ресурсами и локально его распаковывает.
+  - Приложение осуществляет предварительную фоновую загрузку ресурсов, благодаря чему у пользователя нет необходимости ожидать их загрузки для начала следующего уровня.
 
-<h3 id="virtual">The File and Directory Entries API is a virtual representation of a file system</h3>
+- Аудио- или фоторедактор с возможностью автономной работы или локальным кешем.
 
-<p>The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser. </p>
+  - Приложение может редактировать файлы без полной их перезаписи (например, ID3/EXIF теги).
 
-<p>What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.</p>
+- Offline видеопроигрыватель.
 
-<h3 id="storage">The File and Directory Entries API can use different storage types</h3>
+  - Приложение может загружать большие (> 1 ГБ) файлы.
+  - Приложение может начать воспроизведение частично загруженного файла.
 
-<p>An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.</p>
+- Offline клиент электронной почты.
 
-<p>Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.</p>
+  - Возможность загрузки и локального хранения прикреплений.
+  - Возможность кеширования прикреплений для более поздней отправки.
 
-<h3 id="quota">Browsers impose storage quotas</h3>
+## Big concepts
 
-<p>To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.</p>
+Before you start using the File and Directory Entries API, you need to understand a few concepts:
 
-<p>How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html">Managing HTML5 Offline Storage</a>.</p>
+- [The File and Directory Entries API is a virtual representation of a file system](#virtual)
+- [The File and Directory Entries API can use different storage types](#storage)
+- [Browsers impose storage quota](#quota)
+- [The File and Directory Entries API has asynchronous and synchronous versions](#versions)
+- [When using the asynchronous API, always use the error callbacks](#errorcallbacks)
+- [The File and Directory Entries API interacts with other APIs](#interfaces)
+- [The File and Directory Entries API is case-sensitive](#case)
 
-<h3 id="version">The File and Directory Entries API has asynchronous and synchronous versions</h3>
+### The File and Directory Entries API is a virtual representation of a file system
 
-<p>The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.</p>
+The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser.
 
-<ul>
- <li><strong>WebWorkers.</strong> The asynchronous API can be used in either the document or <a href="/En/Using_web_workers" rel="internal" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers</a> context, while the synchronous API is for use with WebWorkers only. </li>
- <li><strong>Callbacks</strong>. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.</li>
- <li><strong>Global methods of the asynchronous and synchronous APIs</strong>. The asynchronous API has the following global methods: <code>requestFileSystem()</code> and <code>resolveLocalFileSystemURL()</code>. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods:  <code>requestFileSystemSync()</code> and  <code>resolveLocalFileSystemSyncURL()</code>. These synchronous methods are members of the worker's global scope only, not the window object.</li>
-</ul>
+What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.
 
-<p>The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.</p>
+### The File and Directory Entries API can use different storage types
 
-<h3 id="errorcallbacks">When using the asynchronous API, always use the error callbacks</h3>
+An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.
 
-<p>When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.</p>
+Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.
 
-<h3 id="interfaces">The File and Directory Entries API interacts with other APIs</h3>
+### Browsers impose storage quotas
 
-<p>The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:</p>
+To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-<ul>
- <li>XMLHttpRequest (such as the <code>send()</code> method for file and blob objects)</li>
- <li>Drag and Drop API</li>
- <li>Web Workers (for the synchronous version of the File and Directory Entries API)</li>
- <li>The <code>input</code> element (to programmatically obtain a list of files from the element)</li>
-</ul>
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](http://code.google.com/chrome/whitepapers/storage.html).
 
-<h3 id="case">The File and Directory Entries API is case sensitive</h3>
+### The File and Directory Entries API has asynchronous and synchronous versions
 
-<div>The filesystem API is case-sensitive, and case-preserving. </div>
+The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
 
-<p> </p>
+- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/En/Using_web_workers "https://developer.mozilla.org/En/Using_web_workers") context, while the synchronous API is for use with WebWorkers only.
+- **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
+- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
-<h2 id="restrictions" name="restrictions"><a id="Ограничения"></a>Ограничения</h2>
+The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
 
-<p>For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.</p>
+### When using the asynchronous API, always use the error callbacks
 
-<ul>
- <li><a href="#origin">The File and Directory Entries API adheres to the same-origin policy</a></li>
- <li><a href="#execute">The File and Directory Entries API does not let you create and rename executable files</a></li>
- <li><a href="#sandbox">The file system is sandboxed</a></li>
- <li><a href="#file">You cannot run your app from file://</a></li>
-</ul>
+When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.
 
-<h3 id="origin">The File and Directory Entries API adheres to the same-origin policy</h3>
+### The File and Directory Entries API interacts with other APIs
 
-<p>An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.</p>
+The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
 
-<p>The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in <a href="http://www.example.com/app/" rel="external" title="http://www.example.com/app/">http://www.example.com/app/</a> can access files from <a href="http://www.example.com/dir/" rel="external" title="http://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve files from <a href="http://www.example.com:8080/dir/" rel="external">http://www.example.com:8080/dir/</a> (different port) or <a href="https://www.example.com/dir/" rel="external">https://www.example.com/dir/</a> (different protocol).</p>
+- XMLHttpRequest (such as the `send()` method for file and blob objects)
+- Drag and Drop API
+- Web Workers (for the synchronous version of the File and Directory Entries API)
+- The `input` element (to programmatically obtain a list of files from the element)
 
-<h3 id="execute">The File and Directory Entries API does not let you create and rename executable files</h3>
+### The File and Directory Entries API is case sensitive
 
-<p>To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API. </p>
+The filesystem API is case-sensitive, and case-preserving.
 
-<h3 id="sandbox">The file system is sandboxed</h3>
+## Ограничения
 
-<p>Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.</p>
+For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
 
-<h3 id="file">You cannot run your app from file://</h3>
+- [The File and Directory Entries API adheres to the same-origin policy](#origin)
+- [The File and Directory Entries API does not let you create and rename executable files](#execute)
+- [The file system is sandboxed](#sandbox)
+- [You cannot run your app from file://](#file)
 
-<p>You cannot run your app locally from <code>file://</code>. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.</p>
+### The File and Directory Entries API adheres to the same-origin policy
 
-<p>For testing purposes, you can bypass the restriction on Chrome by starting the browser with the <code>--allow-file-access-from-files</code> flag. Use this flag only for this purpose.</p>
+An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
 
-<h2 id="definitions" name="definitions"><a id="Определения"></a>Определения</h2>
+The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in <http://www.example.com/app/> can access files from <http://www.example.com/dir/>, because they have the same origin, it cannot retrieve files from <http://www.example.com:8080/dir/> (different port) or <https://www.example.com/dir/> (different protocol).
 
-<p>This section defines and explains terms used in the File and Directory Entries API.</p>
+### The File and Directory Entries API does not let you create and rename executable files
 
-<dl>
- <dt><a name="gloss_blob">blob</a></dt>
- <dd>Stands for binary large object. A blob is a set of binary data that is stored a single object. It is a general-purpose way to reference binary data in web applications. A blob can be an image or an audio file.</dd>
- <dt><a name="gloss_Blob">Blob</a></dt>
- <dd>Blob—with a capital B—is a data structure that is immutable, which means that binary data referenced by a Blob cannot be modified directly. This makes Blobs act predictably when they are passed to asynchronous APIs.</dd>
- <dt><a name="gloss_persistent_storage">persistent storage</a></dt>
- <dd>Persistent storage is storage that stays in the browser unless the user expunges it or the app deletes it. </dd>
- <dt><a name="gloss_temporary_storage">temporary storage</a></dt>
- <dd>Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.</dd>
-</dl>
+To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API.
 
-<h2 id="Specifications">Specifications</h2>
+### The file system is sandboxed
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File System API')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td>Draft of proposed API</td>
-  </tr>
- </tbody>
-</table>
+Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.
 
-<p>This API has no official W3C or WHATWG specification.</p>
+### You cannot run your app from file://
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
 
-<h3 id="FileSystem"><code>FileSystem</code></h3>
+For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
 
-<p>{{Compat}}</p>
+## Определения
 
-<h3 id="FileSystemSync_property"><code>FileSystemSync</code> property</h3>
+This section defines and explains terms used in the File and Directory Entries API.
 
-<p>{{Compat("api.FileSystemSync", 0)}}</p>
+- blob
+  - : Stands for binary large object. A blob is a set of binary data that is stored a single object. It is a general-purpose way to reference binary data in web applications. A blob can be an image or an audio file.
+- Blob
+  - : Blob—with a capital B—is a data structure that is immutable, which means that binary data referenced by a Blob cannot be modified directly. This makes Blobs act predictably when they are passed to asynchronous APIs.
+- persistent storage
+  - : Persistent storage is storage that stays in the browser unless the user expunges it or the app deletes it.
+- temporary storage
+  - : Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.
 
-<h2 id="See_also">See also</h2>
+## Specifications
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a class="external" href="http://www.html5rocks.com/en/tutorials/file/filesystem/">Exploring the FileSystem APIs</a> (HTML5 Rocks)</li>
-</ul>
+| Specification                            | Status                               | Comment               |
+| ---------------------------------------- | ------------------------------------ | --------------------- |
+| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
+
+This API has no official W3C or WHATWG specification.
+
+## Browser compatibility
+
+### `FileSystem`
+
+{{Compat}}
+
+### `FileSystemSync` property
+
+{{Compat("api.FileSystemSync", 0)}}
+
+## See also
+
+- [File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API)
+- [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)

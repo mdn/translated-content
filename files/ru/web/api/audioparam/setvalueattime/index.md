@@ -3,32 +3,33 @@ title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 translation_of: Web/API/AudioParam/setValueAtTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p class="summary"><code>setValueAtTime()</code> метод интерфейса {{domxref("AudioParam")}} позволяющий мгновенно точно по времени изменять значение <code>AudioParam</code> , сравнивая с {{domxref("AudioContext.currentTime")}}. Новое значение даётся в значении параметра.</p>
+`setValueAtTime()` метод интерфейса {{domxref("AudioParam")}} позволяющий мгновенно точно по времени изменять значение `AudioParam` , сравнивая с {{domxref("AudioContext.currentTime")}}. Новое значение даётся в значении параметра.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
+```
+var AudioParam = AudioParam.setValueAtTime(value, startTime)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>value</dt>
- <dd>Число с плавающей точкой представляет значение AudioParam изменяемое в данное время.</dd>
- <dt>startTime</dt>
- <dd>A double representing the time (in seconds) after the {{domxref("AudioContext")}} was first created that the change in value will happen. A {{jsxref("TypeError")}} is thrown if this value is negative.</dd>
-</dl>
+- value
+  - : Число с плавающей точкой представляет значение AudioParam изменяемое в данное время.
+- startTime
+  - : A double representing the time (in seconds) after the {{domxref("AudioContext")}} was first created that the change in value will happen. A {{jsxref("TypeError")}} is thrown if this value is negative.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A reference to this <code>AudioParam</code> object. In some browsers older implementations of this interface return void.</p>
+A reference to this `AudioParam` object. In some browsers older implementations of this interface return void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This simple example features a media element source with two control buttons (see our <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html">webaudio-examples repo</a> for the source code, or <a href="https://mdn.github.io/webaudio-examples/audio-param/">view the example live</a>). When the buttons are pressed, the <code>currGain</code> variable is incremented/decremented by 0.25, then the <code>setValueAtTime()</code> method is used to set the gain value equal to <code>currGain</code>, one second from now (<code>audioCtx.currentTime + 1</code>.)</p>
+This simple example features a media element source with two control buttons (see our [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is incremented/decremented by 0.25, then the `setValueAtTime()` method is used to set the gain value equal to `currGain`, one second from now (`audioCtx.currentTime + 1`.)
 
-<pre class="brush: js;">// create audio context
+```js
+// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -65,33 +66,19 @@ targetAtTimePlus.onclick = function() {
 targetAtTimeMinus.onclick = function() {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audioparam-setvalueattime', 'setValueAtTime')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                               | Comment |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#dom-audioparam-setvalueattime', 'setValueAtTime')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

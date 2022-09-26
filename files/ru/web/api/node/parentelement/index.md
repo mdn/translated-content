@@ -3,38 +3,36 @@ title: Node.parentElement
 slug: Web/API/Node/parentElement
 translation_of: Web/API/Node/parentElement
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.parentElement</strong></code> только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или <code>null</code> если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.</p>
+Свойство **`Node.parentElement`** только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или `null` если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>parentElement</em> = <em>node</em>.parentElement</pre>
+```
+parentElement = node.parentElement
+```
 
-<p><code>parentElement</code> это родительский элемент текущего узла. Это всегда объект DOM {{domxref("Element")}}, или <code>null</code>.</p>
+`parentElement` это родительский элемент текущего узла. Это всегда объект DOM {{domxref("Element")}}, или `null`.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">if (node.parentElement) {
+```js
+if (node.parentElement) {
     node.parentElement.style.color = "red";
-}</pre>
+}
+```
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>В некоторых браузерах, свойство <code>parentElement</code> определено только для узлов, которые сами {{domxref("Element")}}. В частности, не определено для текстовых узлов.</p>
+В некоторых браузерах, свойство `parentElement` определено только для узлов, которые сами {{domxref("Element")}}. В частности, не определено для текстовых узлов.
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li>{{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}</li>
-</ul>
+- {{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Node.parentNode")}}</li>
-</ul>
+- {{domxref("Node.parentNode")}}

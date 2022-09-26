@@ -3,33 +3,37 @@ title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
 translation_of: Web/API/Gamepad/mapping
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>Gamepad.mapping</strong></code> интерфейса {{domxref("Gamepad")}} возвращает строковый индикатор, указывающий, изменил ли браузер элементы управления на уже известный шаблон</p>
+Свойство **`Gamepad.mapping`** интерфейса {{domxref("Gamepad")}} возвращает строковый индикатор, указывающий, изменил ли браузер элементы управления на уже известный шаблон
 
-<p>На данный момент существует один поддерживаемый шаблон - <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping">standard gamepad</a>. Если браузер позволяет поменять элементы управления в данном шаблоне, свойство  <code>mapping</code> будет установлено строка <code>"standard"</code>.</p>
+На данный момент существует один поддерживаемый шаблон - [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping). Если браузер позволяет поменять элементы управления в данном шаблоне, свойство `mapping` будет установлено строка `"standard"`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute DOMString           mapping;</pre>
+```
+readonly    attribute DOMString           mapping;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
-console.log(gp.mapping);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.mapping);
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>A {{domxref("string")}}.</p>
+A {{domxref("string")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

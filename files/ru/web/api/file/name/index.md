@@ -9,45 +9,48 @@ tags:
   - Reference
 translation_of: Web/API/File/name
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>Возвращает имя файла представленного объектом типа {{domxref("File")}}. По соображениям безопасности не содержит пути к файлу.</p>
+Возвращает имя файла представленного объектом типа {{domxref("File")}}. По соображениям безопасности не содержит пути к файлу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var name = <em>file</em>.name;</pre>
+```
+var name = file.name;
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Строка, содержащая имя файла без пути, например, "My Resume.rtf".</p>
+Строка, содержащая имя файла без пути, например, "My Resume.rtf".
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;input type="file" multiple onchange="processSelectedFiles(this)"&gt;
-</pre>
+```html
+<input type="file" multiple onchange="processSelectedFiles(this)">
+```
 
-<pre class="brush: js">function processSelectedFiles(fileInput) {
+```js
+function processSelectedFiles(fileInput) {
   var files = fileInput.files;
 
-  for (var i = 0; i &lt; files.length; i++) {
+  for (var i = 0; i < files.length; i++) {
     alert("Filename " + files[i].name);
   }
-}</pre>
+}
+```
 
-<p>Проверьте результаты ниже:</p>
+Проверьте результаты ниже:
 
-<p>{{ EmbedLiveSample('Пример', 300, 50) }}</p>
+{{ EmbedLiveSample('Пример', 300, 50) }}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Using_files_from_web_applications">Использование файлов в веб приложениях</a></li>
-</ul>
+- [Использование файлов в веб приложениях](/ru/docs/Using_files_from_web_applications)

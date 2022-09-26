@@ -3,43 +3,41 @@ title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
 translation_of: Web/API/URLSearchParams/delete
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Метод <strong><code>delete()</code> </strong>интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.</p>
+Метод **`delete()` **интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">URLSearchParams.delete(<em>name</em>)</pre>
+```
+URLSearchParams.delete(name)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>name</dt>
- <dd>Название удаляемого параметра.</dd>
-</dl>
+- name
+  - : Название удаляемого параметра.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Void</p>
+Void
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2&amp;foo=3');
+```js
+let url = new URL('https://example.com?foo=1&bar=2&foo=3');
 let params = new URLSearchParams(url.search.slice(1));
 
 // Удалить параметр foo.
-params.delete('foo'); //Строка запроса теперь: 'bar=2'</pre>
+params.delete('foo'); //Строка запроса теперь: 'bar=2'
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимые_браузеры">Совместимые браузеры</h2>
+## Совместимые браузеры
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

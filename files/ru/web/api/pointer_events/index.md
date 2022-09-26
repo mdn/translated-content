@@ -3,165 +3,111 @@ title: События указателя
 slug: Web/API/Pointer_events
 translation_of: Web/API/Pointer_events
 ---
-<p>{{DefaultAPISidebar("Pointer Events")}}</p>
+{{DefaultAPISidebar("Pointer Events")}}
 
-<p>Бо́льшая часть современного веб-контента предполагает, что указывающим устройством пользователя является мышь. Но поскольку многие устройства поддерживают другие типы указателей, таких как перо/стилус или сенсорная поверхность, возникает необходимость в расширении существующих событий указывающих устройств. Эту потребность удовлетворяют <em><a href="#term_pointer_event">События указателя</a></em>.</p>
+Бо́льшая часть современного веб-контента предполагает, что указывающим устройством пользователя является мышь. Но поскольку многие устройства поддерживают другие типы указателей, таких как перо/стилус или сенсорная поверхность, возникает необходимость в расширении существующих событий указывающих устройств. Эту потребность удовлетворяют _[События указателя](#term_pointer_event)_.
 
-<p>События указателя – это события DOM, которые вызываются для указывающего устройства. Они предназначены для создания единой модели обработки действий мыши, пера/стилуса или касания (одним или несколькими пальцами).</p>
+События указателя – это события DOM, которые вызываются для указывающего устройства. Они предназначены для создания единой модели обработки действий мыши, пера/стилуса или касания (одним или несколькими пальцами).
 
-<p><em><a href="#term_pointer">Указывающее устройство</a> – </em>это устройство, способное нацеливаться на определённый набор координат экрана. Наличие единой модели событий для указывающих устройств позволяет разработчикам проще создавать веб-сайты и приложения, а пользователям обеспечивает удобство использования вне зависимости от устройства.</p>
+_[Указывающее устройство](#term_pointer) –_ это устройство, способное нацеливаться на определённый набор координат экрана. Наличие единой модели событий для указывающих устройств позволяет разработчикам проще создавать веб-сайты и приложения, а пользователям обеспечивает удобство использования вне зависимости от устройства.
 
-<p>События, необходимые для обработки общего ввода указывающих устройств, аналогичны {{domxref("MouseEvent","событиям мыши")}} (<code>mousedown</code>/<code>pointerdown</code>, <code>mousemove</code>/<code>pointermove</code>, и так далее.). Следовательно, типы событий указывающих устройств намеренно похожи на события мыши.</p>
+События, необходимые для обработки общего ввода указывающих устройств, аналогичны {{domxref("MouseEvent","событиям мыши")}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, и так далее.). Следовательно, типы событий указывающих устройств намеренно похожи на события мыши.
 
-<p>В дополнение к обычным свойствам, представленным и в событиях мыши (координаты, целевой элемент, состояния кнопок и так далее) события ввода у разных указывающих устройств содержат и уникальные свойства: степень давления, форма области контакта, наклон и так далее. На самом деле, интерфейс {{domxref("PointerEvent")}} наследует все свойства {{domxref("MouseEvent")}}, облегчая так образом перенос содержимого из событий мыши в события указывающего устройства.</p>
+В дополнение к обычным свойствам, представленным и в событиях мыши (координаты, целевой элемент, состояния кнопок и так далее) события ввода у разных указывающих устройств содержат и уникальные свойства: степень давления, форма области контакта, наклон и так далее. На самом деле, интерфейс {{domxref("PointerEvent")}} наследует все свойства {{domxref("MouseEvent")}}, облегчая так образом перенос содержимого из событий мыши в события указывающего устройства.
 
-<h2 id="Терминология">Терминология</h2>
+## Терминология
 
-<dl>
- <dt>Состояние активных кнопок</dt>
- <dd>Ситуация, когда <em><a href="#term_pointer">указывающее устройство</a> </em>имеет ненулевое значение свойства <code>buttons</code>. Например, в случае с пером, это ситуация, когда перо физически контактирует с сенсорной поверхностью. или хотя бы одна кнопка нажата при наведении курсора.</dd>
- <dt>Активное указывающее устройство</dt>
- <dd>Любое <em><a href="#term_pointer">указывающее</a></em> устройство ввода, которое может производить события. Указывающее устройство считается активным, пока может производить события. Например, перо, которым коснулись экрана, считается активным, поскольку может производить дополнительные события при поднятии или перемещении.</dd>
- <dt id="term_digitizer">Графический планшет (диджитайзер)</dt>
- <dd>Устройство с чувствительным покрытием, которое может фиксировать контакт. Чаще всего, это устройство с сенсорным экраном, который может распознавать касания указывающего устройства, такого как перо, стилус или палец. Некоторые сенсорные устройства могут определять приближение указателя и представлять это состояние как наведение мыши.</dd>
- <dt id="term_hit_test">Тест попадания (hit test)</dt>
- <dd>Процесс, который браузер использует при определении целевого элемента для события указывающего устройства. Обычно заключается в сопоставлении позиции указателя и визуальной области элементов на экране.</dd>
- <dt id="term_pointer">Указатель (указывающее устройство)</dt>
- <dd>Представление устройства ввода, которое может нацеливаться на определённую координату (или набор координат) на экране. Примером указателя может быть мышь, перо/стилус и прикосновение.</dd>
- <dt>Захват указателя</dt>
- <dd>Захват указателя позволяет событиям этого указателя быть перенаправленными на элемент, отличный обычного результата проверки попадания (hit test)</dd>
- <dt id="term_pointer_event">Событие указателя</dt>
- <dd>{{domxref("PointerEvent","Событие")}} DOM , вызванное для <em><a href="#term_pointer">указателя</a></em>.</dd>
-</dl>
+- Состояние активных кнопок
+  - : Ситуация, когда *[указывающее устройство](#term_pointer) *имеет ненулевое значение свойства `buttons`. Например, в случае с пером, это ситуация, когда перо физически контактирует с сенсорной поверхностью. или хотя бы одна кнопка нажата при наведении курсора.
+- Активное указывающее устройство
+  - : Любое _[указывающее](#term_pointer)_ устройство ввода, которое может производить события. Указывающее устройство считается активным, пока может производить события. Например, перо, которым коснулись экрана, считается активным, поскольку может производить дополнительные события при поднятии или перемещении.
+- Графический планшет (диджитайзер)
+  - : Устройство с чувствительным покрытием, которое может фиксировать контакт. Чаще всего, это устройство с сенсорным экраном, который может распознавать касания указывающего устройства, такого как перо, стилус или палец. Некоторые сенсорные устройства могут определять приближение указателя и представлять это состояние как наведение мыши.
+- Тест попадания (hit test)
+  - : Процесс, который браузер использует при определении целевого элемента для события указывающего устройства. Обычно заключается в сопоставлении позиции указателя и визуальной области элементов на экране.
+- Указатель (указывающее устройство)
+  - : Представление устройства ввода, которое может нацеливаться на определённую координату (или набор координат) на экране. Примером указателя может быть мышь, перо/стилус и прикосновение.
+- Захват указателя
+  - : Захват указателя позволяет событиям этого указателя быть перенаправленными на элемент, отличный обычного результата проверки попадания (hit test)
+- Событие указателя
+  - : {{domxref("PointerEvent","Событие")}} DOM , вызванное для _[указателя](#term_pointer)_.
 
-<h2 id="Интерфейсы">Интерфейсы</h2>
+## Интерфейсы
 
-<p>Основным интерфейсом является {{domxref("PointerEvent")}}, который имеет {{domxref("PointerEvent.PointerEvent","constructor")}} плюс несколько типов событий и связанные с ними глобальные обработчики событий.</p>
+Основным интерфейсом является {{domxref("PointerEvent")}}, который имеет {{domxref("PointerEvent.PointerEvent","constructor")}} плюс несколько типов событий и связанные с ними глобальные обработчики событий.
 
-<p>Стандарт также включает некоторые расширения для интерфейсов {{domxref("Element")}} и {{domxref("Navigator")}}.</p>
+Стандарт также включает некоторые расширения для интерфейсов {{domxref("Element")}} и {{domxref("Navigator")}}.
 
-<p>Следующие подразделы содержат краткое описание каждого интерфейса и свойства.</p>
+Следующие подразделы содержат краткое описание каждого интерфейса и свойства.
 
-<h3 id="Интерфейс_PointerEvent">Интерфейс PointerEvent</h3>
+### Интерфейс PointerEvent
 
-<p>Интерфейс {{domxref("PointerEvent")}} расширяет интерфейс {{domxref("MouseEvent")}} и имеет следующие свойства. Все следующие свойства доступны {{readonlyInline}}.</p>
+Интерфейс {{domxref("PointerEvent")}} расширяет интерфейс {{domxref("MouseEvent")}} и имеет следующие свойства. Все следующие свойства доступны {{readonlyInline}}.
 
-<dl>
- <dt>{{ domxref('PointerEvent.pointerId','pointerId')}}</dt>
- <dd>Уникальный идентификатор указателя, вызвавшего событие</dd>
- <dt>{{ domxref('PointerEvent.width','width')}}</dt>
- <dd>Ширина (величина по оси X) в пикселях CSS области контакта указателя с сенсорной поверхностью.</dd>
- <dt>{{ domxref('PointerEvent.height','height')}}</dt>
- <dd>Высота (величина по оси Y) в пикселях CSS области контакта указателя с сенсорной поверхностью.</dd>
- <dt>{{ domxref('PointerEvent.pressure','pressure')}}</dt>
- <dd>Степень давления указателя в диапазоне от <code>0</code> до <code>1</code>, где <code>0</code> – минимальное, а <code>1</code> – максимальное значение давления, которое способно обработать устройство.</dd>
- <dt>{{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}}</dt>
- <dd>Степень тангенциального давления в диапазоне от <code>0</code> до <code>1</code>, где <code>0</code> – минимальное, а <code>1</code> – максимальное значение давления, которое способно обработать устройство..</dd>
- <dt>{{ domxref('PointerEvent.tiltX','tiltX')}}</dt>
- <dd>Угол (в градуса, в диапазоне от <code>-90</code> до <code>90</code>) между плоскостью Y-Z и плоскостью, содержащей как ось указателя (например, пера\стилуса), так и ось Y</dd>
- <dt>{{ domxref('PointerEvent.tiltY','tiltY')}}</dt>
- <dd>Угол (в градуса, в диапазоне от <code>-90</code> до <code>90</code>) между плоскостью X-Z и плоскостью, содержащей как ось указателя (например, пера\стилуса), так и ось X</dd>
- <dt>{{ domxref('PointerEvent.twist','twist')}}</dt>
- <dd>Поворот указывающего устройства (например, пера или стилуса) по часовой стрелке вокруг основной оси в градусах в диапазоне от<code> </code>0 до <code>359</code></dd>
- <dt>{{ domxref('PointerEvent.pointerType','pointerType')}}</dt>
- <dd>Указывает на тип устройства, которое вызвало событие (мышь, перо, касание и т.д)</dd>
- <dt>{{ domxref('PointerEvent.isPrimary','isPrimary')}}</dt>
- <dd>Указывает, является ли указывающее устройство основным для данного типа</dd>
-</dl>
+- {{ domxref('PointerEvent.pointerId','pointerId')}}
+  - : Уникальный идентификатор указателя, вызвавшего событие
+- {{ domxref('PointerEvent.width','width')}}
+  - : Ширина (величина по оси X) в пикселях CSS области контакта указателя с сенсорной поверхностью.
+- {{ domxref('PointerEvent.height','height')}}
+  - : Высота (величина по оси Y) в пикселях CSS области контакта указателя с сенсорной поверхностью.
+- {{ domxref('PointerEvent.pressure','pressure')}}
+  - : Степень давления указателя в диапазоне от `0` до `1`, где `0` – минимальное, а `1` – максимальное значение давления, которое способно обработать устройство.
+- {{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}}
+  - : Степень тангенциального давления в диапазоне от `0` до `1`, где `0` – минимальное, а `1` – максимальное значение давления, которое способно обработать устройство..
+- {{ domxref('PointerEvent.tiltX','tiltX')}}
+  - : Угол (в градуса, в диапазоне от `-90` до `90`) между плоскостью Y-Z и плоскостью, содержащей как ось указателя (например, пера\стилуса), так и ось Y
+- {{ domxref('PointerEvent.tiltY','tiltY')}}
+  - : Угол (в градуса, в диапазоне от `-90` до `90`) между плоскостью X-Z и плоскостью, содержащей как ось указателя (например, пера\стилуса), так и ось X
+- {{ domxref('PointerEvent.twist','twist')}}
+  - : Поворот указывающего устройства (например, пера или стилуса) по часовой стрелке вокруг основной оси в градусах в диапазоне от` `0 до `359`
+- {{ domxref('PointerEvent.pointerType','pointerType')}}
+  - : Указывает на тип устройства, которое вызвало событие (мышь, перо, касание и т.д)
+- {{ domxref('PointerEvent.isPrimary','isPrimary')}}
+  - : Указывает, является ли указывающее устройство основным для данного типа
 
-<h3 id="Типы_событий_и_Глобальные_Обработчики_Событий">Типы событий и Глобальные Обработчики Событий</h3>
+### Типы событий и Глобальные Обработчики Событий
 
-<p>События указателя имеют 10 типов, 7 из которых похожи на аналогичные события мыши (<code>down</code>, <code>up</code>, <code>move</code>, <code>over</code>, <code>out</code>, <code>enter</code> и <code>leave</code>).</p>
+События указателя имеют 10 типов, 7 из которых похожи на аналогичные события мыши (`down`, `up`, `move`, `over`, `out`, `enter` и `leave`).
 
-<p>Ниже представлено короткое описание для каждого типа события и связанный {{domxref("GlobalEventHandlers","Глобальный обработчик события")}}.</p>
+Ниже представлено короткое описание для каждого типа события и связанный {{domxref("GlobalEventHandlers","Глобальный обработчик события")}}.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Событие</th>
-   <th scope="col">Обработчик события</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{event('pointerover')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}</td>
-   <td>Вызывается, когда указатель появляется в пределах элемента (его <a href="#term_hit_test">теста попадания</a>).</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerenter')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}</td>
-   <td>Вызывается, когда указатель перемещается в пределы элемента (его <a href="#term_hit_test">теста попадания</a>) или одного из его потомков, в том числе в результате события <code>pointerdown</code> с устройства, которе не поддерживает наведение "hover" (смотрите <code>pointerdown</code>).</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerdown')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}</td>
-   <td>Вызывается, когда указатель принимает состояние активных кнопок.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointermove')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}</td>
-   <td>Вызывается, когда изменяются координаты указателя. Это событие также используется, если изменение состояния указателя нельзя сообщить с помощью других событий.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerup')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}</td>
-   <td>Вызывается, когда указатель теряет состояние <em>активных кнопок</em>.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointercancel')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}</td>
-   <td>Браузер вызывает это событие, если приходит к выводу, что указывающее устройство больше не сможет генерировать события (например, если устройство деактивировано).</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerout')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его <a href="#term_hit_test">теста попадания</a>); запуск события pointerup для устройства, которое не поддерживает наведение "hover"; после запуска события <code>pointercancel</code>; когда перо покидает область обнаружения планшетом наведения указателя.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerleave')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}</td>
-   <td>Вызывается, когда указывающее устройство перемещается за пределы элемента (его <a href="#term_hit_test">теста попадания</a>). Для устройств, подобных перу, это событие вызывается, когда перо покидает область обнаружения планшетом наведения указателя.</td>
-  </tr>
-  <tr>
-   <td>{{event('gotpointercapture')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}</td>
-   <td>Вызывается, когда элемент получает захват указывающего устройства.</td>
-  </tr>
-  <tr>
-   <td>{{event('lostpointercapture')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}</td>
-   <td>Запускается после того, как указывающее устройство потеряло захват.</td>
-  </tr>
- </tbody>
-</table>
+| Событие                                  | Обработчик события                                                                                       | Описание                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{event('pointerover')}}         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}                     | Вызывается, когда указатель появляется в пределах элемента (его [теста попадания](#term_hit_test)).                                                                                                                                                                                                                                                      |
+| {{event('pointerenter')}}         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}                 | Вызывается, когда указатель перемещается в пределы элемента (его [теста попадания](#term_hit_test)) или одного из его потомков, в том числе в результате события `pointerdown` с устройства, которе не поддерживает наведение "hover" (смотрите `pointerdown`).                                                                                          |
+| {{event('pointerdown')}}         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}                     | Вызывается, когда указатель принимает состояние активных кнопок.                                                                                                                                                                                                                                                                                         |
+| {{event('pointermove')}}         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}                     | Вызывается, когда изменяются координаты указателя. Это событие также используется, если изменение состояния указателя нельзя сообщить с помощью других событий.                                                                                                                                                                                          |
+| {{event('pointerup')}}             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}                         | Вызывается, когда указатель теряет состояние _активных кнопок_.                                                                                                                                                                                                                                                                                          |
+| {{event('pointercancel')}}     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}             | Браузер вызывает это событие, если приходит к выводу, что указывающее устройство больше не сможет генерировать события (например, если устройство деактивировано).                                                                                                                                                                                       |
+| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                     | Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)); запуск события pointerup для устройства, которое не поддерживает наведение "hover"; после запуска события `pointercancel`; когда перо покидает область обнаружения планшетом наведения указателя. |
+| {{event('pointerleave')}}         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}                 | Вызывается, когда указывающее устройство перемещается за пределы элемента (его [теста попадания](#term_hit_test)). Для устройств, подобных перу, это событие вызывается, когда перо покидает область обнаружения планшетом наведения указателя.                                                                                                          |
+| {{event('gotpointercapture')}} | {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}     | Вызывается, когда элемент получает захват указывающего устройства.                                                                                                                                                                                                                                                                                       |
+| {{event('lostpointercapture')}} | {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}} | Запускается после того, как указывающее устройство потеряло захват.                                                                                                                                                                                                                                                                                      |
 
-<h3 id="Расширения_элемента">Расширения элемента</h3>
+### Расширения элемента
 
-<p>Существует три расширения интерфейса {{domxref("Element")}}:</p>
+Существует три расширения интерфейса {{domxref("Element")}}:
 
-<dl>
- <dt>{{domxref("Element.setPointerCapture()","setPointerCapture()")}}</dt>
- <dd>Определяет определённый элемент в качестве цели захвата для будущих событий указателя.</dd>
- <dt>{{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}</dt>
- <dd>Этот метод освобождает (прекращает) захватывание указывающим устройством, которое ранее было установлено для определённого события указателя.</dd>
-</dl>
+- {{domxref("Element.setPointerCapture()","setPointerCapture()")}}
+  - : Определяет определённый элемент в качестве цели захвата для будущих событий указателя.
+- {{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}
+  - : Этот метод освобождает (прекращает) захватывание указывающим устройством, которое ранее было установлено для определённого события указателя.
 
-<h3 id="Расширение_навигатора">Расширение навигатора</h3>
+### Расширение навигатора
 
-<p>Свойство {{domxref("Navigator.maxTouchPoints")}} используется для определения максимального количества одновременных точек касания, которые поддерживаются в каждый момент времени.</p>
+Свойство {{domxref("Navigator.maxTouchPoints")}} используется для определения максимального количества одновременных точек касания, которые поддерживаются в каждый момент времени.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Этот раздел содержит примеры базового использования интерфейсов событий указывающего устройства.</p>
+Этот раздел содержит примеры базового использования интерфейсов событий указывающего устройства.
 
-<h3 id="Назначение_обработчиков_событий">Назначение обработчиков событий</h3>
+### Назначение обработчиков событий
 
-<p>В этом примере определённому элементу назначаются обработчики каждого типа события.</p>
+В этом примере определённому элементу назначаются обработчики каждого типа события.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function over_handler(event) { }
     function enter_handler(event) { }
     function down_handler(event) { }
@@ -187,19 +133,20 @@ translation_of: Web/API/Pointer_events
       el.gotpointercapture = gotcapture_handler;
       el.lostpointercapture = lostcapture_handler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h3 id="Свойства_события">Свойства события</h3>
+### Свойства события
 
-<p>Этот пример демонстрирует доступ ко всем свойствам события касания.</p>
+Этот пример демонстрирует доступ ко всем свойствам события касания.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     var id = -1;
 
     function process_id(event) {
@@ -247,7 +194,7 @@ translation_of: Web/API/Pointer_events
       }
 
       // Вызвать обработчик наклона
-      if (ev.tiltX != 0 &amp;&amp; ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
 
       // Вызвать обработчик давления
       process_pressure(ev.pressure);
@@ -261,92 +208,49 @@ translation_of: Web/API/Pointer_events
       // Назначение обработчика события "pointerdown"
       el.onpointerdown = down_handler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h2 id="Определение_Основного_Указателя">Определение Основного Указателя</h2>
+## Определение Основного Указателя
 
-<p>В некоторых сценариях может быть несколько указывающих устройств (например, устройство с сенсорным экраном и мышкой) или указывающее устройство, поддерживающее несколько контактных точек (например, сенсорный экран, который поддерживает касания несколькими пальцами). Приложение может использовать свойство {{domxref("PointerEvent.isPrimary","isPrimary")}} для определения главного указателя среди набора активных точек каждого указателя. Если будет решено поддерживать только основной указатель, в приложении можно игнорировать все события указателя, не являющегося главным.</p>
+В некоторых сценариях может быть несколько указывающих устройств (например, устройство с сенсорным экраном и мышкой) или указывающее устройство, поддерживающее несколько контактных точек (например, сенсорный экран, который поддерживает касания несколькими пальцами). Приложение может использовать свойство {{domxref("PointerEvent.isPrimary","isPrimary")}} для определения главного указателя среди набора активных точек каждого указателя. Если будет решено поддерживать только основной указатель, в приложении можно игнорировать все события указателя, не являющегося главным.
 
-<p>У мышки может только один указатель, поэтому он всегда будет главным. Для сенсорного ввода указатель считается главным, если при этом нет других активных касаний. Для ввода пером или стилусом, указатель считается главным, если при этом нет касаний другими перьями.</p>
+У мышки может только один указатель, поэтому он всегда будет главным. Для сенсорного ввода указатель считается главным, если при этом нет других активных касаний. Для ввода пером или стилусом, указатель считается главным, если при этом нет касаний другими перьями.
 
-<h2 id="Определение_состояний_кнопок">Определение состояний кнопок</h2>
+## Определение состояний кнопок
 
-<p>Некоторые указывающие устройства, такие как мышь или перо, поддерживают несколько кнопок, и эти кнопки могут нажиматься одновременно. Например, нажатие кнопки, когда другая кнопка на устройстве уже нажата.</p>
+Некоторые указывающие устройства, такие как мышь или перо, поддерживают несколько кнопок, и эти кнопки могут нажиматься одновременно. Например, нажатие кнопки, когда другая кнопка на устройстве уже нажата.
 
-<p>Для определения состояния нажатия кнопки, события указателя используют свойства {{domxref("MouseEvent.button","button")}} и {{domxref("MouseEvent.buttons","buttons")}} интерфейса {{domxref("MouseEvent")}}, от которого наследуется от{{domxref("PointerEvent")}}.</p>
+Для определения состояния нажатия кнопки, события указателя используют свойства {{domxref("MouseEvent.button","button")}} и {{domxref("MouseEvent.buttons","buttons")}} интерфейса {{domxref("MouseEvent")}}, от которого наследуется от{{domxref("PointerEvent")}}.
 
-<p>В следующей таблице приведены значения <code>button</code> и <code>buttons</code> для различных состояний кнопок устройства.</p>
+В следующей таблице приведены значения `button` и `buttons` для различных состояний кнопок устройства.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Состояние кнопок устройства</th>
-   <th scope="col">button</th>
-   <th scope="col">buttons</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>С последнего события не было ни нажатия кнопок, ни касания пера</td>
-   <td><code>-1</code></td>
-   <td>—</td>
-  </tr>
-  <tr>
-   <td>Мышь перемещается без нажатых кнопок.<br>
-    Перо перемещается над планшетом в режиме "hover" без нажатых кнопок</td>
-   <td>—</td>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <td>Левая кнопка мыши, Касание пальцем, Касание пером</td>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td>Средняя кнопка мыши</td>
-   <td><code>1</code></td>
-   <td><code>4</code></td>
-  </tr>
-  <tr>
-   <td>Правая кнопка мыши, Кнопка пера</td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td>Кнопка мыши X1 (назад)</td>
-   <td><code>3</code></td>
-   <td><code>8</code></td>
-  </tr>
-  <tr>
-   <td>Кнопка мыши X2 (вперёд)</td>
-   <td><code>4</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <td>Кнопка пера "ластик"</td>
-   <td><code>5</code></td>
-   <td><code>32</code></td>
-  </tr>
- </tbody>
-</table>
+| Состояние кнопок устройства                                                                               | button | buttons |
+| --------------------------------------------------------------------------------------------------------- | ------ | ------- |
+| С последнего события не было ни нажатия кнопок, ни касания пера                                           | `-1`   | —       |
+| Мышь перемещается без нажатых кнопок. Перо перемещается над планшетом в режиме "hover" без нажатых кнопок | —      | `0`     |
+| Левая кнопка мыши, Касание пальцем, Касание пером                                                         | `0`    | `1`     |
+| Средняя кнопка мыши                                                                                       | `1`    | `4`     |
+| Правая кнопка мыши, Кнопка пера                                                                           | `2`    | `2`     |
+| Кнопка мыши X1 (назад)                                                                                    | `3`    | `8`     |
+| Кнопка мыши X2 (вперёд)                                                                                   | `4`    | `16`    |
+| Кнопка пера "ластик"                                                                                      | `5`    | `32`    |
 
-<div class="note">
-<p><strong>Примечание:</strong> Свойство <code>button</code> указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.</p>
-</div>
+> **Примечание:** Свойство `button` указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.
 
-<h2 id="Pointer_capture">Pointer capture</h2>
+## Pointer capture
 
-<p>Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal <a href="#term_hit_test">hit test</a> at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).</p>
+Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal [hit test](#term_hit_test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).
 
-<p>The following example shows pointer capture being set on an element.</p>
+The following example shows pointer capture being set on an element.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;script&gt;
+```html
+<html>
+<script>
   function downHandler(ev) {
     let el = document.getElementById("target");
     // Element 'target' will receive/capture further events
@@ -357,17 +261,18 @@ translation_of: Web/API/Pointer_events
     let el = document.getElementById("target");
     el.onpointerdown = downHandler;
   }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-  &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+  <div id="target"> Touch me ... </div>
+</body>
+</html>
+```
 
-<p>The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.</p>
+The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function downHandler(ev) {
       let el = document.getElementById("target");
       // Element "target" will receive/capture further events
@@ -386,115 +291,87 @@ translation_of: Web/API/Pointer_events
       el.onpointerdown = downHandler;
       el.onpointercancel = cancelHandler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h2 id="touch-action_CSS_property">touch-action CSS property</h2>
+## touch-action CSS property
 
-<p>The {{cssxref("touch-action")}} CSS property is used to specify whether or not the browser should apply its default (<em>native</em>) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.</p>
+The {{cssxref("touch-action")}} CSS property is used to specify whether or not the browser should apply its default (_native_) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
 
-<p>A value of <code>auto</code> means the browser is free to apply its default touch behavior (to the specified region) and the value of <code>none</code> disables the browser's default touch behavior for the region. The values <code>pan-x</code> and <code>pan-y</code>, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value <code>manipulation</code> means the browser may consider touches that begin on the element are only for scrolling and zooming.</p>
+A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
 
-<p>In the following example, the browser's default touch behavior is disabled for the <code>div</code> element.</p>
+In the following example, the browser's default touch behavior is disabled for the `div` element.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;body&gt;
-    &lt;div style="touch-action:none;"&gt;Can't touch this ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+  <body>
+    <div style="touch-action:none;">Can't touch this ... </div>
+  </body>
+</html>
+```
 
-<p>In the following example, default touch behavior is disabled for some <code>button</code> elements.</p>
+In the following example, default touch behavior is disabled for some `button` elements.
 
-<pre class="brush: css">button#tiny {
+```css
+button#tiny {
   touch-action: none;
 }
-</pre>
+```
 
-<p>In the following example, when the <code>target</code> element is touched, it will only pan in the horizontal direction.</p>
+In the following example, when the `target` element is touched, it will only pan in the horizontal direction.
 
-<pre class="brush: css">#target {
+```css
+#target {
   touch-action: pan-x;
 }
-</pre>
+```
 
-<h2 id="Compatibility_with_mouse_events">Compatibility with mouse events</h2>
+## Compatibility with mouse events
 
-<p>Although the pointer event interfaces enable applications to create enhanced user experiences on pointer enabled devices, the reality is the vast majority of today's web content is designed to only work with mouse input. Consequently, even if a browser supports pointer events, the browser must still process mouse events so content that assumes mouse-only input will work as is without direct modification. Ideally, a pointer enabled application does not need to explicitly handle mouse input. However, because the browser must process mouse events, there may be some compatibility issues that need to be handled. This section contains information about pointer event and mouse event interaction and the ramifications for application developers.</p>
+Although the pointer event interfaces enable applications to create enhanced user experiences on pointer enabled devices, the reality is the vast majority of today's web content is designed to only work with mouse input. Consequently, even if a browser supports pointer events, the browser must still process mouse events so content that assumes mouse-only input will work as is without direct modification. Ideally, a pointer enabled application does not need to explicitly handle mouse input. However, because the browser must process mouse events, there may be some compatibility issues that need to be handled. This section contains information about pointer event and mouse event interaction and the ramifications for application developers.
 
-<p>The browser <em>may map generic pointer input to mouse events for compatibility with mouse-based content</em>. This mapping of events is called <em>compatibility mouse events</em>. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:</p>
+The browser _may map generic pointer input to mouse events for compatibility with mouse-based content_. This mapping of events is called _compatibility mouse events_. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:
 
-<ul>
- <li>Mouse events can only be prevented when the pointer is down.</li>
- <li>Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.</li>
- <li>The <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code>, and <code>mouseleave</code> events are never prevented (even if the pointer is down).</li>
-</ul>
+- Mouse events can only be prevented when the pointer is down.
+- Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.
+- The `mouseover`, `mouseout`, `mouseenter`, and `mouseleave` events are never prevented (even if the pointer is down).
 
-<h2 id="Best_practices">Best practices</h2>
+## Best practices
 
-<p>Here are some <em>best practices</em> to consider when using pointer events:</p>
+Here are some _best practices_ to consider when using pointer events:
 
-<ul>
- <li>Minimize the amount of work performed in event handlers.</li>
- <li>Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).</li>
- <li>The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.</li>
-</ul>
+- Minimize the amount of work performed in event handlers.
+- Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).
+- The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 3')}}</td>
-   <td>{{Spec2('Pointer Events 3')}}</td>
-   <td>Added new APIs for <code>getCoalescedEvent</code> and <code>getPredictedEvents</code>, new <code>pointerrawupdate</code> event, additional <code>touch-action</code> property values <code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Adds <code>hasPointerCapture</code> method and clarifies more edge cases and dynamic scenarios. </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment                                                                                                                                                                                 |
+| -------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Pointer Events 3')}} | {{Spec2('Pointer Events 3')}} | Added new APIs for `getCoalescedEvent` and `getPredictedEvents`, new `pointerrawupdate` event, additional `touch-action` property values `pan-left`, `pan-right`, `pan-up`, `pan-down`. |
+| {{SpecName('Pointer Events 2')}} | {{Spec2('Pointer Events 2')}} | Adds `hasPointerCapture` method and clarifies more edge cases and dynamic scenarios.                                                                                                    |
+| {{SpecName('Pointer Events')}}     | {{Spec2('Pointer Events')}}     | Initial definition.                                                                                                                                                                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.PointerEvent")}}</p>
+{{Compat("api.PointerEvent")}}
 
-<p>Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.</p>
+Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
 
-<h2 id="Demos_and_examples">Demos and examples</h2>
+## Demos and examples
 
-<ul>
- <li><a href="http://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
-</ul>
+- [Touch/pointer tests and demos (by Patrick H. Lauke)](http://patrickhlauke.github.io/touch/)
 
-<h2 id="Community">Community</h2>
+## Community
 
-<ul>
- <li><a href="https://github.com/w3c/pointerevents">Pointer Events Working Group</a></li>
- <li><a href="http://lists.w3.org/Archives/Public/public-pointer-events/">Mail list</a></li>
- <li><a href="irc://irc.w3.org:6667/">W3C #pointerevents IRC channel</a></li>
-</ul>
+- [Pointer Events Working Group](https://github.com/w3c/pointerevents)
+- [Mail list](http://lists.w3.org/Archives/Public/public-pointer-events/)
+- [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
-<h2 id="Related_topics_and_resources">Related topics and resources</h2>
+## Related topics and resources
 
-<ul>
- <li><a href="http://www.w3.org/TR/touch-events/">Touch Events Standard</a></li>
-</ul>
+- [Touch Events Standard](http://www.w3.org/TR/touch-events/)

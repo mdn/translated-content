@@ -3,70 +3,58 @@ title: Document.registerElement()
 slug: Web/API/Document/registerElement
 translation_of: Web/API/Document/registerElement
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>Document.registerElement()</strong></code> регистрирует новый кастомный элемент (<a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>) в браузере и возвращает конструктор для этого нового элемента.</p>
+Метод **`Document.registerElement()`** регистрирует новый кастомный элемент ([custom element](/ru/docs/Web/Web_Components/Custom_Elements)) в браузере и возвращает конструктор для этого нового элемента.
 
-<div class="note">
-<p><strong>Примечание:</strong> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
-</div>
-<div class="note">
-<p><strong>Примечание:</strong> Устарело. Используйте интерфейс <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry</a> и его метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">define()</a>, чтобы зарегистрировать новый Тег.</p>
-</div>
+> **Примечание:** Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: [Enabling Web Components in Firefox](/ru/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
 
-<h2 id="Syntax">Syntax</h2>
+> **Примечание:** Устарело. Используйте интерфейс [CustomElementRegistry](/ru/docs/Web/API/CustomElementRegistry) и его метод [define()](/ru/docs/Web/API/CustomElementRegistry/define), чтобы зарегистрировать новый Тег.
 
-<pre class="syntaxbox">var <em>constructor</em> = document.registerElement(<em>tag-name</em>, <em>options</em>);</pre>
+## Syntax
 
-<h3 id="Parameters">Parameters</h3>
+```
+var constructor = document.registerElement(tag-name, options);
+```
 
-<dl>
- <dt><em>tag-name</em></dt>
- <dd>Имя кастомного элемента. Имя должно содержать символ дефиса (-), например: <code>my-tag</code>.</dd>
- <dt><em>options {{optional_inline}}</em></dt>
- <dd>An object that names the prototype to base the custom element on, and an existing tag to extend. Both of these are optional.</dd>
-</dl>
+### Parameters
 
-<h2 id="Example">Example</h2>
+- _tag-name_
+  - : Имя кастомного элемента. Имя должно содержать символ дефиса (-), например: `my-tag`.
+- _options {{optional_inline}}_
+  - : An object that names the prototype to base the custom element on, and an existing tag to extend. Both of these are optional.
 
-<p>Here is a very simple example:</p>
+## Example
 
-<pre class="brush: js">var Mytag = document.registerElement('my-tag');
-</pre>
+Here is a very simple example:
 
-<p>Now the new tag is registered in the browser. The <code>Mytag</code> variable holds a constructor that you can use to create a <code>my-tag</code> element in the document as follows:</p>
+```js
+var Mytag = document.registerElement('my-tag');
+```
 
-<pre class="brush: js">document.body.appendChild(new Mytag());</pre>
+Now the new tag is registered in the browser. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
 
-<p>This inserts an empty <code>my-tag</code> element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:</p>
+```js
+document.body.appendChild(new Mytag());
+```
 
-<pre class="brush: js">var mytag = document.getElementsByTagName("my-tag")[0];
+This inserts an empty `my-tag` element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:
+
+```js
+var mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Custom Elements')}}</td>
-   <td>{{Spec2('Custom Elements')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment            |
+| ---------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Custom Elements')}} | {{Spec2('Custom Elements')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">CustomElementRegistry.define</a></li>
-</ul>
+- Метод [CustomElementRegistry.define](/ru/docs/Web/API/CustomElementRegistry/define)

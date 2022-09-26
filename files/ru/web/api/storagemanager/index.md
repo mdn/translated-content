@@ -14,27 +14,23 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
-<p><strong><code>StorageManager</code></strong> является частью <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> и предоставляет интерфейс для управления правами на хранение данных и для получения объёма данных, доступного для хранения. Доступ к интерфейсу можно получить через {{domxref("navigator.storage")}} или через {{domxref("WorkerNavigator.storage")}}.</p>
+**`StorageManager`** является частью [Storage API](/ru/docs/Web/API/Storage_API) и предоставляет интерфейс для управления правами на хранение данных и для получения объёма данных, доступного для хранения. Доступ к интерфейсу можно получить через {{domxref("navigator.storage")}} или через {{domxref("WorkerNavigator.storage")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("StorageManager.estimate()")}} {{securecontext_inline}}</dt>
- <dd>Возвращает объект {{domxref("StorageEstimate")}}, который содержит используемый и максимальный объем данных (квоту) для вашего сайта.</dd>
- <dt>{{domxref("StorageManager.persist()")}} {{securecontext_inline}}</dt>
- <dd>Возвращает {{jsxref('Promise')}}, который принимает значение <code>true</code> в случае, когда браузер имеет возможность хранить данные вашего сайта.</dd>
- <dt>{{domxref("StorageManager.persisted()")}} {{securecontext_inline}}</dt>
- <dd>Возвращает {{jsxref('Promise')}}, который принимает значение <code>true</code> в случае, когда сайт получил возможность хранить данные в браузере.</dd>
-</dl>
+- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
+  - : Возвращает объект {{domxref("StorageEstimate")}}, который содержит используемый и максимальный объем данных (квоту) для вашего сайта.
+- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
+  - : Возвращает {{jsxref('Promise')}}, который принимает значение `true` в случае, когда браузер имеет возможность хранить данные вашего сайта.
+- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
+  - : Возвращает {{jsxref('Promise')}}, который принимает значение `true` в случае, когда сайт получил возможность хранить данные в браузере.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

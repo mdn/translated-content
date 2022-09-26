@@ -12,35 +12,32 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>Интерфейс <code>WindowClient</code> <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.</p>
+Интерфейс `WindowClient` [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em><code>WindowClient</code> наследует методы от своего родительского интерфейса {{domxref("Client")}}.</em></p>
+_`WindowClient` наследует методы от своего родительского интерфейса {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focus()")}}</dt>
- <dd>Фокусирует пользователя на текущем окне.</dd>
- <dt>{{domxref("WindowClient.navigate()")}}</dt>
- <dd>Загружает указанный URL-адрес на управляемую клиентскую страницу.</dd>
-</dl>
+- {{domxref("WindowClient.focus()")}}
+  - : Фокусирует пользователя на текущем окне.
+- {{domxref("WindowClient.navigate()")}}
+  - : Загружает указанный URL-адрес на управляемую клиентскую страницу.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em><code>WindowClient</code> наследует методы от своего родительского интерфейса {{domxref("Client")}}.</em></p>
+_`WindowClient` наследует методы от своего родительского интерфейса {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focused")}} {{readonlyInline}}</dt>
- <dd>Логическое значение, указывающее, находится ли текущая страница в фокусе.</dd>
- <dt>{{domxref("WindowClient.visibilityState")}} {{readonlyInline}}</dt>
- <dd>Указывает, отображается ли текущая страница. Это значение может быть одним из <code>"hidden" (скрыта)</code>, <code>"visible" (отображена)</code> или <code>"prerender" (предварительно отрисована)</code>.</dd>
-</dl>
+- {{domxref("WindowClient.focused")}} {{readonlyInline}}
+  - : Логическое значение, указывающее, находится ли текущая страница в фокусе.
+- {{domxref("WindowClient.visibilityState")}} {{readonlyInline}}
+  - : Указывает, отображается ли текущая страница. Это значение может быть одним из `"hidden" (скрыта)`, `"visible" (отображена)` или `"prerender" (предварительно отрисована)`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -49,9 +46,9 @@ translation_of: Web/API/WindowClient
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         client.focus();
         break;
       }
@@ -59,27 +56,22 @@ translation_of: Web/API/WindowClient
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис-воркеров</a></li>
- <li><a href="https://github.com/mdn/sw-test">Пример базового кода сервис-воркеров</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование веб-воркеров</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a></li>
-</ul>
+- [Использование сервис-воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Пример базового кода сервис-воркеров](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Использование веб-воркеров](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Channel Messaging API](/ru/docs/Web/API/Channel_Messaging_API)

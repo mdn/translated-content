@@ -9,66 +9,61 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/putImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
+**`CanvasRenderingContext2D`\*\***`.putImageData()`\*\* метод Canvas 2D API рисует данные из заданного {{domxref("ImageData")}} объекта на холст. На этот метод не влияет матрица преобразования холста.
 
+> **Примечание:** Данные изображения могут быть получены с холста с помощью метода {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}}.
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.putImageData()</code></strong> метод Canvas 2D API рисует данные из заданного {{domxref("ImageData")}} объекта на холст. На этот метод не влияет матрица преобразования холста.</p>
+Вы можете найти больше информации о `putImageData()` и общих манипуляциях с содержимым холста в статье [Пиксельные манипуляции с холстом](/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
-<div class="note">
-<p><strong>Примечание:</strong> Данные изображения могут быть получены с холста с помощью метода {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}}.</p>
-</div>
+## Синтаксис
 
-<p>Вы можете найти больше информации о <code>putImageData()</code> и общих манипуляциях с содержимым холста в статье <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Пиксельные манипуляции с холстом</a>.</p>
+```
+void ctx.putImageData(imageData, dx, dy);
+void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Параметры
 
-<pre class="syntaxbox">void <em>ctx</em>.putImageData(<em>imageData</em>, <em>dx</em>, <em>dy</em>);
-void <em>ctx</em>.putImageData(<em>imageData</em>, <em>dx</em>, <em>dy</em>, <em>dirtyX</em>, <em>dirtyY</em>, <em>dirtyWidth</em>, <em>dirtyHeight</em>);
-</pre>
+- `imageData`
+  - : Объект {{domxref("ImageData")}}, содержащий массив значений пикселей..
+- `dx`
+  - : Горизонтальная позиция (координата x), в которой необходимо разместить данные изображения на целевом холсте.
+- `dy`
+  - : Вертикальная позиция (координата y), в которой необходимо разместить данные изображения на целевом холсте.
+- `dirtyX`{{optional_inline}}
+  - : Горизонтальная позиция (координата x) верхнего левого угла, из которого будут извлечены данные изображения. По умолчанию 0.
+- `dirtyY` {{optional_inline}}
+  - : Вертикальная позиция (координата y) верхнего левого угла, из которого будут извлечены данные изображения. По умолчанию 0.
+- `dirtyWidth` {{optional_inline}}
+  - : Ширина прямоугольника для рисования. По умолчанию ширина данных изображения.
+- `dirtyHeight` {{optional_inline}}
+  - : Высота прямоугольника для рисования. По умолчанию высота данных изображения.
 
-<h3 id="Параметры">Параметры</h3>
+### Ошибки
 
-<dl>
- <dt><code>imageData</code></dt>
- <dd>Объект {{domxref("ImageData")}}, содержащий массив значений пикселей..</dd>
- <dt><code>dx</code></dt>
- <dd>Горизонтальная позиция (координата x), в которой необходимо разместить данные изображения на целевом холсте.</dd>
- <dt><code>dy</code></dt>
- <dd>Вертикальная позиция (координата y), в которой необходимо разместить данные изображения на целевом холсте.</dd>
- <dt><code>dirtyX</code>{{optional_inline}}</dt>
- <dd>Горизонтальная позиция (координата x) верхнего левого угла, из которого будут извлечены данные изображения. По умолчанию 0.</dd>
- <dt><code>dirtyY</code> {{optional_inline}}</dt>
- <dd>Вертикальная позиция (координата y) верхнего левого угла, из которого будут извлечены данные изображения. По умолчанию 0.</dd>
- <dt><code>dirtyWidth</code> {{optional_inline}}</dt>
- <dd>Ширина прямоугольника для рисования. По умолчанию ширина данных изображения.</dd>
- <dt><code>dirtyHeight</code> {{optional_inline}}</dt>
- <dd>Высота прямоугольника для рисования. По умолчанию высота данных изображения.</dd>
-</dl>
+- `NotSupportedError`
+  - : Выбрасывается, если любой из аргументов бесконечен.
+- `InvalidStateError`
+  - : Выбрасывается, если данные объекта ImageData были отделены.
 
-<h3 id="Ошибки">Ошибки</h3>
+## Примеры
 
-<dl>
- <dt><code>NotSupportedError</code></dt>
- <dd>Выбрасывается, если любой из аргументов бесконечен.</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd>Выбрасывается, если данные объекта ImageData были отделены.</dd>
-</dl>
+### Понимание putImageData
 
-<h2 id="Примеры">Примеры</h2>
+Чтобы понять, что этот алгоритм делает под капотом, вот реализация сверху {{domxref("CanvasRenderingContext2D.fillRect()")}}.
 
-<h3 id="Понимание_putImageData">Понимание putImageData</h3>
+#### HTML
 
-<p>Чтобы понять, что этот алгоритм делает под капотом, вот реализация сверху {{domxref("CanvasRenderingContext2D.fillRect()")}}.</p>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="HTML">HTML</h4>
+#### JavaScript
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">let canvas = document.getElementById('canvas');
+```js
+let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 
 function putImageData(ctx, imageData, dx, dy,
@@ -82,8 +77,8 @@ function putImageData(ctx, imageData, dx, dy,
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
   let limitBottom = dirtyY + dirtyHeight;
   let limitRight = dirtyX + dirtyWidth;
-  for (let y = dirtyY; y &lt; limitBottom; y++) {
-    for (let x = dirtyX; x &lt; limitRight; x++) {
+  for (let y = dirtyY; y < limitBottom; y++) {
+    for (let x = dirtyX; x < limitRight; x++) {
       var pos = y * width + x;
       ctx.fillStyle = 'rgba(' + data[pos*4+0]
                         + ',' + data[pos*4+1]
@@ -100,21 +95,20 @@ ctx.fillRect(0, 0, 100, 100);
 let imagedata = ctx.getImageData(0, 0, 100, 100);
 // используйте функцию putImageData, которая иллюстрирует, как работает putImageData
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Понимание_putImageData', '', '', '', 'Web/API/CanvasRenderingContext2D/putImageData',800) }}</p>
+{{ EmbedLiveSample('Понимание_putImageData', '', '', '', 'Web/API/CanvasRenderingContext2D/putImageData',800) }}
 
-<h3 id="Потеря_данных_из-за_оптимизации_браузера">Потеря данных из-за оптимизации браузера</h3>
+### Потеря данных из-за оптимизации браузера
 
-<div class="blockIndicator warning">
-<p> Из-за характера потерь при преобразовании в и из предварительно умноженных значений альфа-цвета пиксели, которые были только что установлены с помощью <code>putImageData()</code>, могут быть возвращены в эквивалентный <code>getImageData()</code> в качестве различных значений.</p>
-</div>
+> **Предупреждение:** Из-за характера потерь при преобразовании в и из предварительно умноженных значений альфа-цвета пиксели, которые были только что установлены с помощью `putImageData()`, могут быть возвращены в эквивалентный `getImageData()` в качестве различных значений.
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.createElement("canvas");
+```js
+const canvas = document.createElement("canvas");
 canvas.width = 1;
 canvas.height = 1;
 const context = canvas.getContext("2d");
@@ -130,35 +124,32 @@ console.log("before:", pixels);
 context.putImageData(imgData, 0, 0);
 const imgData2 = context.getImageData(0, 0, canvas.width, canvas.height);
 const pixels2 = imgData2.data;
-console.log("after:", pixels2);</pre>
+console.log("after:", pixels2);
+```
 
-<p>Вывод может выглядеть так:</p>
+Вывод может выглядеть так:
 
-<pre>before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
-after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]</pre>
+```
+before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
+after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузера">Совместимость с браузера</h2>
+## Совместимость с браузера
 
+{{Compat}}
 
+### Специфичные для Gecko заметки
 
-<p>{{Compat}}</p>
+- Начиная с Gecko 10.0 {{ geckoRelease("10.0") }}, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов `putImageData()` будет игнорироваться, а не вызывать исключение.
+- To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}}, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).
 
-<h3 id="Специфичные_для_Gecko_заметки">Специфичные для Gecko заметки</h3>
+## Смотрите также
 
-<ul>
- <li>Начиная с Gecko 10.0 {{ geckoRelease("10.0") }}, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов <code>putImageData()</code> будет игнорироваться, а не вызывать исключение.</li>
- <li>To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}}, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("ImageData")}} объект</li>
- <li>{{domxref("CanvasRenderingContext2D.getImageData()")}}</li>
- <li><a href="/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Пиксельные манипуляции с холстом</a></li>
-</ul>
+- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("ImageData")}} объект
+- {{domxref("CanvasRenderingContext2D.getImageData()")}}
+- [Пиксельные манипуляции с холстом](/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

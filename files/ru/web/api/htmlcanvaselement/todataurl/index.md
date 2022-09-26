@@ -2,89 +2,90 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Method
-- Reference
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Method
+  - Reference
 translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> — метод, который возвращает <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a> изображения в
-	формате, заданном параметром <code>type</code> (по умолчанию <a href="https://ru.wikipedia.org/wiki/PNG">PNG</a>). Возвращаемое изображение имеет
-	разрешение 96 dpi.</p>
+**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) изображения в
+формате, заданном параметром `type` (по умолчанию [PNG](https://ru.wikipedia.org/wiki/PNG)). Возвращаемое изображение имеет
+разрешение 96 dpi.
 
-<ul>
-	<li>Если высота или ширина холста равна <code>0</code> или больше <a href="/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size">максимального размера холста</a>,
-		возвращается строка <code>"data:,"</code>.</li>
-	<li>Если запрошенный тип отличается от <code>image/png</code>, но возвращаемое значение начинается с <code>data:image/png</code>, то запрошенный тип не поддерживается.</li>
-	<li>Chrome также поддерживает тип <code>image/webp</code>.</li>
-</ul>
+- Если высота или ширина холста равна `0` или больше [максимального размера холста](/ru/docs/Web/HTML/Element/canvas#maximum_canvas_size),
+  возвращается строка `"data:,"`.
+- Если запрошенный тип отличается от `image/png`, но возвращаемое значение начинается с `data:image/png`, то запрошенный тип не поддерживается.
+- Chrome также поддерживает тип `image/webp`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><em>canvas</em>.toDataURL(<em>type</em>, <em>encoderOptions</em>);
-</pre>
+```js
+canvas.toDataURL(type, encoderOptions);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
-	<dt><code>type</code> {{optional_inline}}</dt>
-	<dd>Строка ({{domxref("DOMString")}}), указывающая формат изображения. По умолчанию — <code>image/png</code>.</dd>
-	<dt><code>encoderOptions</code> {{optional_inline}}</dt>
-	<dd>Число (типа {{jsxref("Number")}}) между <code>0</code> и <code>1</code>, указывающее качество изображения для форматов, использующих сжатие с потерями, таких как
-		<code>image/jpeg</code>	и <code>image/webp</code>.<br>
-		Если передан невалидный аргумент, то используется значение по умолчанию <code>0.92</code>. Остальные аргументы игнорируются.</dd>
-</dl>
+- `type` {{optional_inline}}
+  - : Строка ({{domxref("DOMString")}}), указывающая формат изображения. По умолчанию — `image/png`.
+- `encoderOptions` {{optional_inline}}
+  - : Число (типа {{jsxref("Number")}}) между `0` и `1`, указывающее качество изображения для форматов, использующих сжатие с потерями, таких как
+    `image/jpeg` и `image/webp`.
+    Если передан невалидный аргумент, то используется значение по умолчанию `0.92`. Остальные аргументы игнорируются.
 
-<h3 id="Return_value">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Строка ({{domxref("DOMString")}}), содержащая запрошенный <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a>.</p>
+Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<h3 id="Exceptions">Исключения</h3>
+### Исключения
 
-<dl>
-	<dt><code>SecurityError</code></dt>
-	<dd>Растровое изображение холста не соответствует источнику; по крайней мере часть его содержимого могла быть загружена с сайта, отличного от того, с которого был загружен
-		сам документ.</dd>
-</dl>
+- `SecurityError`
+  - : Растровое изображение холста не соответствует источнику; по крайней мере часть его содержимого могла быть загружена с сайта, отличного от того, с которого был загружен
+    сам документ.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Возьмём следующий {{HTMLElement("canvas")}} элемент:</p>
+Возьмём следующий {{HTMLElement("canvas")}} элемент:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="5" height="5"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="5" height="5"></canvas>
+```
 
-<p>Вы можете получить его data-URL следующим образом:</p>
+Вы можете получить его data-URL следующим образом:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
-</pre>
+```
 
-<h3 id="Setting_image_quality_with_jpegs">Настройка качества изображения с помощью jpegs</h3>
+### Настройка качества изображения с помощью jpegs
 
-<pre class="brush: js">var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+```js
+var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
 var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
-</pre>
+```
 
-<h3 id="Example_Dynamically_change_images">Пример: Динамическое изменение изображений</h3>
+### Пример: Динамическое изменение изображений
 
-<p>Вы можете использовать эту технику вместе с событиями мыши, чтобы динамически изменять изображения (оттенки серого или цвет в этом примере):</p>
+Вы можете использовать эту технику вместе с событиями мыши, чтобы динамически изменять изображения (оттенки серого или цвет в этом примере):
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img class="grayscale" src="myPicture.png" alt="Описание моей картинки" /&gt;</pre>
+```html
+<img class="grayscale" src="myPicture.png" alt="Описание моей картинки" />
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">window.addEventListener('load', removeColors);
+```js
+window.addEventListener('load', removeColors);
 
 function showColorImg() {
   this.style.display = 'none';
@@ -101,7 +102,7 @@ function removeColors() {
       nImgsLen = aImages.length,
       oCanvas = document.createElement('canvas'),
       oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId &lt; nImgsLen; nImgId++) {
+  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -111,7 +112,7 @@ function removeColors() {
     oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
     aPix = oImgData.data;
     nPixLen = aPix.length;
-    for (nPixel = 0; nPixel &lt; nPixLen; nPixel += 4) {
+    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
       aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
@@ -123,19 +124,18 @@ function removeColors() {
     oColorImg.style.display = "none";
     oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-	<li>Интерфейс {{domxref("HTMLCanvasElement")}}.</li>
-	<li>Статья о <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URIs</a> в разделе <a href="/ru/docs/Web/HTTP">HTTP</a>.</li>
-</ul>
+- Интерфейс {{domxref("HTMLCanvasElement")}}.
+- Статья о [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) в разделе [HTTP](/ru/docs/Web/HTTP).

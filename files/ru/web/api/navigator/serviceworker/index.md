@@ -3,30 +3,29 @@ title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
 translation_of: Web/API/Navigator/serviceWorker
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>Свойство только-для-чтения <strong>Navigator.serviceWorker </strong>возвращает объект {{domxref("ServiceWorkerContainer")}}, который предоставляет доступ к регистрации, удалению, обновлению и взаимодействию с объектами {{domxref("ServiceWorker")}} для <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">соответствующего документа</a>.</p>
+Свойство только-для-чтения **Navigator.serviceWorker** возвращает объект {{domxref("ServiceWorkerContainer")}}, который предоставляет доступ к регистрации, удалению, обновлению и взаимодействию с объектами {{domxref("ServiceWorker")}} для [соответствующего документа](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 
-<h2 id="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox" style="font-size: 14px;">var <var>workerContainerInstance</var> = navigator.serviceWorker;
-</pre>
+```
+var workerContainerInstance = navigator.serviceWorker;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{domxref("ServiceWorkerContainer")}}.</p>
+Объект {{domxref("ServiceWorkerContainer")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами" style="line-height: 30px; font-size: 2.14285714285714rem;">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
-</ul>
+- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
+- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)

@@ -3,35 +3,33 @@ title: Element.matches()
 slug: Web/API/Element/matches
 translation_of: Web/API/Element/matches
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Метод <strong><code>Element.matches()</code></strong> вернёт <code>true</code> или false, в зависимости от того, соответствует ли элемент указанному css-селектору.</p>
+Метод **`Element.matches()`** вернёт `true` или false, в зависимости от того, соответствует ли элемент указанному css-селектору.
 
-<div class="warning">
-<p>В некоторых браузерах данный метод имеет нестандартное название - <code>matchesSelector()</code>.</p>
-</div>
+> **Предупреждение:** В некоторых браузерах данный метод имеет нестандартное название - `matchesSelector()`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var result</em> = <em>element</em>.matches(selectorString)
-</pre>
+```
+var result = element.matches(selectorString)
+```
 
-<ul>
- <li><code>Результат выполнения - <strong>true</strong> или <strong>false</strong>.</code></li>
- <li><strong><code>selectorString</code></strong> - строка, содержащая любой css-селектор, к примеру:<em> <strong>"div"</strong></em>,<em> <strong>"*"</strong></em>,<em> <strong>"#id"</strong></em> и прочие.</li>
-</ul>
+- `Результат выполнения - true или false.`
+- **`selectorString`** - строка, содержащая любой css-селектор, к примеру:_ **"div"**_,_ **"\*"**_,_ **"#id"**_ и прочие.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;div id="one"&gt;Первый подопытный&lt;/div&gt;
-&lt;div class="someClass" id="two"&gt;Второй подопытный&lt;/div&gt;
+```html
+<div id="one">Первый подопытный</div>
+<div class="someClass" id="two">Второй подопытный</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
   var coll = document.querySelectorAll("div");
-  for (var i = 0, len = coll.length; i &lt; len; i++) {
+  for (var i = 0, len = coll.length; i < len; i++) {
     if (coll[i].matches(".someClass")) {
       alert(coll[i].id+": Я выжил!");
     }else{
@@ -39,23 +37,22 @@ translation_of: Web/API/Element/matches
     }
   }
 
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Вызов alert сработает только для второго элемента div, которому присвоен класс "someClass".</p>
+Вызов alert сработает только для второго элемента div, которому присвоен класс "someClass".
 
-<h2 id="Исключения">Исключения</h2>
+## Исключения
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>Указанный css-селектор не является допустимым<em> ("/=22=1", "&amp;@*#", "%%''23" и т.п приведут к ошибке).</em></dd>
-</dl>
+- `SYNTAX_ERR`
+  - : Указанный css-селектор не является допустимым _("/=22=1", "&@\*#", "%%''23" и т.п приведут к ошибке)._
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Полифил будет работать только в браузерах, поддерживающих метод document.queryselectorAll.</p>
+Полифил будет работать только в браузерах, поддерживающих метод document.queryselectorAll.
 
-<pre class="brush: js">;(function(e) {
+```js
+;(function(e) {
     var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
     !matches ? (e.matches = e.matchesSelector = function matches(selector) {
         var matches = document.querySelectorAll(selector);
@@ -64,14 +61,15 @@ translation_of: Web/API/Element/matches
             return e === th;
         });
     }) : (e.matches = e.matchesSelector = matches);
-})(Element.prototype);</pre>
+})(Element.prototype);
+```
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

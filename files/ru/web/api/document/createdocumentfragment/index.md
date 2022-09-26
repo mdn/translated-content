@@ -3,26 +3,28 @@ title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Создаёт новый пустой {{domxref("DocumentFragment")}}.</p>
+Создаёт новый пустой {{domxref("DocumentFragment")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>fragment</var> = document.createDocumentFragment();
-</pre>
+```
+var fragment = document.createDocumentFragment();
+```
 
-<p><code>fragment</code> это ссылка на пустой объект {{domxref("DocumentFragment")}}.</p>
+`fragment` это ссылка на пустой объект {{domxref("DocumentFragment")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>DocumentFragment</code>s являются DOM нодами. Они, при этом, не являются частями основного дерева DOM. Обычно используются для создания фрагмента документа, добавления в него новых элементов/нод, а затем присоединения этого фрагмента к основному дереву. В основном дереве фрагмент буден заменён собственными дочерними элементами.</p>
+`DocumentFragment`s являются DOM нодами. Они, при этом, не являются частями основного дерева DOM. Обычно используются для создания фрагмента документа, добавления в него новых элементов/нод, а затем присоединения этого фрагмента к основному дереву. В основном дереве фрагмент буден заменён собственными дочерними элементами.
 
-<p>Поскольку фрагмент документа хранится <strong>в памяти</strong> и не является частью основного дерева, добавление в него дочерних элементов не вызывает <a href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a> (вычисление геометрии и позиций элементов). В следствие этого, использование фрагментов документа часто <a href="http://ejohn.org/blog/dom-documentfragments/">увеличивает производительность</a>.</p>
+Поскольку фрагмент документа хранится **в памяти** и не является частью основного дерева, добавление в него дочерних элементов не вызывает [reflow](https://developers.google.com/speed/articles/reflow?csw=1) (вычисление геометрии и позиций элементов). В следствие этого, использование фрагментов документа часто [увеличивает производительность](http://ejohn.org/blog/dom-documentfragments/).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var element  = document.getElementById('ul'); // assuming ul exists
+```js
+var element  = document.getElementById('ul'); // assuming ul exists
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
@@ -34,54 +36,23 @@ browsers.forEach(function(browser) {
 });
 
 element.appendChild(fragment);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Clarifies that the node document of the created document fragment is the context object.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | No change                                                                                |
+| {{SpecName('DOM4', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}         | {{Spec2('DOM4')}}         | Clarifies that the node document of the created document fragment is the context object. |
+| {{SpecName('DOM3 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}                     | {{Spec2('DOM3 Core')}}     | No change                                                                                |
+| {{SpecName('DOM2 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}                     | {{Spec2('DOM2 Core')}}     | No change                                                                                |
+| {{SpecName('DOM1', 'level-one-core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}             | {{Spec2('DOM1')}}         | Initial definition                                                                       |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
- <li>{{domxref("documentFragment")}}</li>
-</ul>
+- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
+- {{domxref("documentFragment")}}

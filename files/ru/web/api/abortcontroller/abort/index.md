@@ -3,35 +3,34 @@ title: AbortController.abort()
 slug: Web/API/AbortController/abort
 translation_of: Web/API/AbortController/abort
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>Метод<strong> </strong><code style=""><strong>abort()</strong></code> интерфейса {{domxref("AbortController")}} прерывает DOM запрос (например Fetch запрос) до его завершения. Это позволяет прервать <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запросы</a>, использование любого ответа {{domxref("Body")}} и потоков.</p>
+Метод** \*\***`abort()`\*\* интерфейса {{domxref("AbortController")}} прерывает DOM запрос (например Fetch запрос) до его завершения. Это позволяет прервать [fetch запросы](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), использование любого ответа {{domxref("Body")}} и потоков.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">controller.abort();</pre>
+```js
+controller.abort();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Отсутствуют.</p>
+Отсутствуют.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Не возвращает.</p>
+Не возвращает.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p> </p>
+В следующем фрагменте мы будем загружать видео используя [Fetch API](/ru/docs/Web/API/Fetch_API).
 
-<p>В следующем фрагменте мы будем загружать видео используя <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-<p>Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
+Когда [fetch запрос](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
 
-<p>Когда <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запрос</a> инициируется, мы передаём <code>AbortSignal</code> в качестве опции внутрь объекта параметров запроса (см. <code>{signal}</code> ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.</p>
-
-<p> </p>
-
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -51,26 +50,21 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Ошибка загрузки: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> промис отклоняется с <code>AbortError</code>.</p>
-</div>
+> **Примечание:** Когда `abort()` вызывается, `fetch()` промис отклоняется с `AbortError`.
 
-<p>Вы можете найти полный работающий пример на GitHub — см. <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">увидеть работу в живую</a>).</p>
+Вы можете найти полный работающий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([увидеть работу в живую](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/ru/docs/Web/API/Fetch_API)

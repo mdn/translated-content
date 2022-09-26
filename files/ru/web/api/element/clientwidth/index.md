@@ -3,57 +3,40 @@ title: Element.clientWidth
 slug: Web/API/Element/clientWidth
 translation_of: Web/API/Element/clientWidth
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Element.clientWidth</strong></code> равно 0 для инлайн элементов и элементов без CSS; для всех остальных равняется ширине элемента в пикселях, включая padding, но исключая ширину рамки (border), внешние отступы (margin), и вертикальную полосу прокрутки (если она есть).</p>
+Свойство **`Element.clientWidth`** равно 0 для инлайн элементов и элементов без CSS; для всех остальных равняется ширине элемента в пикселях, включая padding, но исключая ширину рамки (border), внешние отступы (margin), и вертикальную полосу прокрутки (если она есть).
 
-<div class="note">
-<p><strong>Note:</strong> Это свойство округляет реальное значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Примечание:** Это свойство округляет реальное значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>intElemClientWidth</var> = <var>element</var>.clientWidth;</pre>
+```
+var intElemClientWidth = element.clientWidth;
+```
 
-<p><code><var>intElemClientWidth</var></code> - целое число, соответствующее значению <code>clientWidth</code> элемента <code><var>element</var></code> в пикселях. Свойство <code>clientWidth</code> только для чтения.</p>
+`intElemClientWidth` - целое число, соответствующее значению `clientWidth` элемента `element` в пикселях. Свойство `clientWidth` только для чтения.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p><img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
+![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                           | Комментарий |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}} | {{Spec2("CSSOM View")}} |             |
 
-<h3 id="Примечание">Примечание</h3>
+### Примечание
 
-<p><code>clientWidth</code> был впервые представлен в объектной модели MS IE DHTML.</p>
+`clientWidth` был впервые представлен в объектной модели MS IE DHTML.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("HTMLElement.offsetWidth")}}</li>
- <li>{{domxref("Element.scrollWidth")}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("Element.scrollWidth")}}
+- [Determining the dimensions of elements](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

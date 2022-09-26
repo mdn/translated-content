@@ -8,35 +8,34 @@ tags:
   - метод
 translation_of: Web/API/Document/getElementsByTagName
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+Возвращает {{domxref("HTMLCollection")}} элементов с указанным именем тега. Поиск осуществляется по всему документу, включая корневой узел. Возвращаемая HTMLCollection живая, это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с DOM деревом без необходимости вызова document.getElementByTagName() снова.
 
-<p>Возвращает {{domxref("HTMLCollection")}} элементов с указанным именем тега. Поиск осуществляется по всему документу, включая корневой узел. Возвращаемая HTMLCollection живая, это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с DOM деревом без необходимости вызова document.getElementByTagName() снова.</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+var elements = document.getElementsByTagName(name);
+```
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<em>name</em>);</pre>
+- `elements` это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.
+- `name` строка представляющая собой имя элемента. Специальная строка "\*" позволяет получить все элементы.
 
-<ul>
- <li><code>elements</code> это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.</li>
- <li><code>name</code> строка представляющая собой имя элемента. Специальная строка "*" позволяет получить все элементы.</li>
-</ul>
+> **Примечание:** [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. {{bug(14869)}} для большей информации.
 
-<div class="note"><strong>Примечание:</strong> <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">Последняя W3C спецификация</a> говорит что <code>elements</code> является <code>HTMLCollection</code>; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. {{bug(14869)}} для большей информации.</div>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+В следующем примере, getElementByTagName() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по DOM начиная с родительского элемента просматривая дочерние элементы на соответствие тегов параметру name.
 
-<p>В следующем примере, getElementByTagName() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по DOM начиная с родительского элемента просматривая  дочерние элементы на соответствие тегов параметру name.</p>
+Отметим что когда узел в котором `getElementsByTagName()` был вызван не является узлом `document`, по факту используется метод {{domxref("element.getElementsByTagName()")}}.
 
-<p>Отметим что когда узел в котором <code>getElementsByTagName()</code> был вызван не является узлом <code>document</code>, по факту используется метод {{domxref("element.getElementsByTagName()")}}.</p>
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;getElementsByTagName example&lt;/title&gt;
-  &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>getElementsByTagName example</title>
+  <script>
     function getAllParaElems() {
       var allParas = document.getElementsByTagName("p");
       var num = allParas.length;
@@ -56,48 +55,46 @@ translation_of: Web/API/Document/getElementsByTagName
       var num = div2Paras.length;
       alert("There are " + num + " paragraph in #div2");
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body style="border: solid green 3px"&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  </script>
+</head>
+<body style="border: solid green 3px">
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+    <div id="div2" style="border: solid red 3px">
+      <p>Some div2 text</p>
+      <p>Some div2 text</p>
+    </div>
+  </div>
 
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;button onclick="getAllParaElems();"&gt;
-    show all p elements in document&lt;/button&gt;&lt;br /&gt;
+  <button onclick="getAllParaElems();">
+    show all p elements in document</button><br />
 
-  &lt;button onclick="div1ParaElems();"&gt;
-    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+  <button onclick="div1ParaElems();">
+    show all p elements in div1 element</button><br />
 
-  &lt;button onclick="div2ParaElems();"&gt;
-    show all p elements in div2 element&lt;/button&gt;
+  <button onclick="div2ParaElems();">
+    show all p elements in div2 element</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.</p>
+Когда вызывается на HTML document, `getElementsByTagName()` переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.
 
-<p><code>document.getElementsByTagName()</code> подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.</p>
+`document.getElementsByTagName()` подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094">DOM Level 2 Core: Document.getElementsByTagName</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: Document.getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

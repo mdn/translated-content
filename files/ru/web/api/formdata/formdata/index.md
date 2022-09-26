@@ -3,31 +3,32 @@ title: FormData()
 slug: Web/API/FormData/FormData
 translation_of: Web/API/FormData/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Конструктор <code><strong>FormData()</strong></code> создаёт новые объект {{domxref("FormData")}}, если проще - HTML-форму<strong>.</strong></p>
+Конструктор **`FormData()`** создаёт новые объект {{domxref("FormData")}}, если проще - HTML-форму**.**
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>var formData = new FormData(</code><code>form</code><code>)</code></pre>
+```js
+var formData = new FormData(form)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>form </code>{{optional_inline}}</dt>
- <dd>Существующая HTML-форма, на основе которой будет создана новая. Если ничего не указано, будет создана пустая форма.</dd>
-</dl>
+- `form `{{optional_inline}}
+  - : Существующая HTML-форма, на основе которой будет создана новая. Если ничего не указано, будет создана пустая форма.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;form name="test"&gt;
-  &lt;input type="text" name="code" value="12345"&gt;
-  &lt;input type="submit" value="Отправить"&gt;
-&lt;/form&gt;</pre>
+```html
+<form name="test">
+  <input type="text" name="code" value="12345">
+  <input type="submit" value="Отправить">
+</form>
+```
 
-
-
-<pre class="brush: js">var
+```js
+var
     oldForm = document.forms.test,
     formData = new FormData(oldForm)
 ;
@@ -36,41 +37,46 @@ console.log(
     formData.get("code"),
     formData === oldForm
 );
+```
 
-</pre>
+### Методы
 
-<h3 id="Методы">Методы</h3>
+> **Примечание:** Подробнее о каждом методе можно прочитать, выбрав его в колонке слева.
 
-<div class="note">
-<p>Подробнее о каждом методе можно прочитать, выбрав его в колонке слева.</p>
-</div>
+Добавление нового текстового поля в форму:
 
-<p>Добавление нового текстового поля в форму:</p>
+```js
+formData.append(name, value, filename);
+```
 
-<pre class="brush: js">formData.append(name, value, filename);
-</pre>
+Удаление элемента формы:
 
-<p>Удаление элемента формы:</p>
+```js
+formData.delete(name);
+```
 
-<pre class="brush: js">formData.delete(name);</pre>
+Получение значения элемента формы:
 
-<p>Получение значения элемента формы:</p>
+```js
+formData.get(name);
+```
 
-<pre class="brush: js">formData.get(name);
-</pre>
+Проверка на наличие определённого элемента формы:
 
-<p>Проверка на наличие определённого элемента формы:</p>
+```js
+formData.has(name);
+```
 
-<pre class="brush: js">formData.has(name);</pre>
+Изменение существующего элемента:
 
-<p>Изменение существующего элемента:</p>
+```js
+formData.set(name, value, filename);
+```
 
-<pre class="brush: js">formData.set(name, value, filename);</pre>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}

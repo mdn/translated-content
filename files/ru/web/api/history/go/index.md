@@ -9,62 +9,68 @@ tags:
   - метод
 translation_of: Web/API/History/go
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>Метод <strong><code>History.go()</code></strong> выполняет переход на определённую страницу в истории текущей сессии. С его помощью можно перемещаться как вперёд, так и назад, в зависимости от значения параметра.</p>
+Метод **`History.go()`** выполняет переход на определённую страницу в истории текущей сессии. С его помощью можно перемещаться как вперёд, так и назад, в зависимости от значения параметра.
 
-<p>Данный метод является {{glossary("asynchronous", "асинхронным")}}. Добавьте обработчик для события {{event("popstate")}}, чтобы определить, когда переход закончен.</p>
+Данный метод является {{glossary("asynchronous", "асинхронным")}}. Добавьте обработчик для события {{event("popstate")}}, чтобы определить, когда переход закончен.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">history.go([<em>delta</em>])</pre>
+```
+history.go([delta])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>delta</code> {{optional_inline}}</dt>
- <dd>Относительное положение в истории, куда вы хотите переместиться. Отрицательные значения перемещают назад, а положительные -- вперёд. Например, <code>history.go(2)</code> перемещает вперёд на 2 страницы, а <code>history.go(-2)</code> перемещает на 2 страницы назад. Если метод вызван без параметра или же <code>delta</code> равна 0, результат выполнения будет такой же, как у <code>location.reload()</code>.</dd>
-</dl>
+- `delta` {{optional_inline}}
+  - : Относительное положение в истории, куда вы хотите переместиться. Отрицательные значения перемещают назад, а положительные -- вперёд. Например, `history.go(2)` перемещает вперёд на 2 страницы, а `history.go(-2)` перемещает на 2 страницы назад. Если метод вызван без параметра или же `delta` равна 0, результат выполнения будет такой же, как у `location.reload()`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Перемещение на 1 страницу назад (аналог вызова {{domxref("History.back", "back()")}}):</p>
+Перемещение на 1 страницу назад (аналог вызова {{domxref("History.back", "back()")}}):
 
-<pre class="brush: js">history.go(-1)</pre>
+```js
+history.go(-1)
+```
 
-<p>Перемещение на страницу вперёд, как {{domxref("History.forward", "forward()")}}:</p>
+Перемещение на страницу вперёд, как {{domxref("History.forward", "forward()")}}:
 
-<pre class="brush: js">history.go(1)</pre>
+```js
+history.go(1)
+```
 
-<p>Перемещение на 2 страницы вперёд:</p>
+Перемещение на 2 страницы вперёд:
 
-<pre class="brush: js">history.go(2);</pre>
+```js
+history.go(2);
+```
 
-<p>Перемещение на 2 страницы назад:</p>
+Перемещение на 2 страницы назад:
 
-<pre class="brush: js">history.go(-2);</pre>
+```js
+history.go(-2);
+```
 
-<p>Также, оба этих вызова перезагрузят страницу:</p>
+Также, оба этих вызова перезагрузят страницу:
 
-<pre class="brush: js">history.go();
-history.go(0);</pre>
+```js
+history.go();
+history.go(0);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("History")}}</li>
- <li>{{DOMxRef("History.back","back()")}}</li>
- <li>{{DOMxRef("History.forward","forward()")}}</li>
- <li>{{event("popstate")}} event</li>
- <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
-</ul>
+- {{domxref("History")}}
+- {{DOMxRef("History.back","back()")}}
+- {{DOMxRef("History.forward","forward()")}}
+- {{event("popstate")}} event
+- [Working with the History API](/ru/docs/Web/API/History_API/Working_with_the_History_API)

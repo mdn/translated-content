@@ -4,26 +4,28 @@ slug: Web/API/Element/scroll_event
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Обработчик для события скролла.</p>
+Обработчик для события скролла.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">element.onscroll = <var>functionReference</var>
-</pre>
+```
+element.onscroll = functionReference
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code>functionReference</code> is a reference to a function to be executed when <code>element</code> is scrolled.</p>
+`functionReference` is a reference to a function to be executed when `element` is scrolled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <style>
   #container {
     position: absolute;
     height: auto;
@@ -42,40 +44,28 @@ original_slug: Web/API/GlobalEventHandlers/onscroll
     display: block;
   }
 
-  &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="container"&gt;
-      &lt;div id="foo"&gt;&lt;/div&gt;
-    &lt;/div&gt;
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="foo"></div>
+    </div>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
       document.getElementById('container').onscroll = function() {
         console.log("scrolling");
       };
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The <code>scroll</code> event is raised when the user scrolls the contents of an element. <code>Element.onscroll</code> is equivalent to <code>element.addEventListener("scroll" ... )</code>.</p>
+The `scroll` event is raised when the user scrolls the contents of an element. `Element.onscroll` is equivalent to `element.addEventListener("scroll" ... )`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment            |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Initial definition |

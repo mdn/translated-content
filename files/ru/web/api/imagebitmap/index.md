@@ -11,43 +11,33 @@ tags:
   - Ссылка
 translation_of: Web/API/ImageBitmap
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>Интерфейс <code><strong>ImageBitmap</strong></code> представляет собой bitmap изображение которое может быть нарисовано на {{HTMLElement("canvas")}} без чрезмерной задержки. Создать его можно несколькими способами используя {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}}. <code>ImageBitmap</code> предоставляет асинхронный и ресурсоэффективный метод подготовки текстур для рендеринга в WebGL.</p>
+Интерфейс **`ImageBitmap`** представляет собой bitmap изображение которое может быть нарисовано на {{HTMLElement("canvas")}} без чрезмерной задержки. Создать его можно несколькими способами используя {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}}. `ImageBitmap` предоставляет асинхронный и ресурсоэффективный метод подготовки текстур для рендеринга в WebGL.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("ImageBitmap.height")}} {{readonlyInline}}</dt>
- <dd>Высота  <code>ImageData</code> в CSS пикселях типа <code>unsigned</code> <code>long</code>.</dd>
- <dt>{{domxref("ImageBitmap.width")}} {{readonlyInline}}</dt>
- <dd>Ширина  <code>ImageData</code> в CSS пикселях типа <code>unsigned</code> <code>long</code>.</dd>
-</dl>
+- {{domxref("ImageBitmap.height")}} {{readonlyInline}}
+  - : Высота `ImageData` в CSS пикселях типа `unsigned` `long`.
+- {{domxref("ImageBitmap.width")}} {{readonlyInline}}
+  - : Ширина `ImageData` в CSS пикселях типа `unsigned` `long`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("ImageBitmap.close()")}}</dt>
- <dd>
- <p>Удаляет все графические ресурсы связанные с <code>ImageBitmap</code>.</p>
- </dd>
-</dl>
+- {{domxref("ImageBitmap.close()")}}
+  - : Удаляет все графические ресурсы связанные с `ImageBitmap`.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
+{{Compat}}
 
+## Полезные ссылки
 
-<p>{{Compat}}</p>
-
-<h2 id="Полезные_ссылки">Полезные ссылки</h2>
-
-<ul>
- <li>{{domxref("ImageBitmapFactories.createImageBitmap()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("OffScreenCanvas.transferToImageBitmap()")}}</li>
-</ul>
+- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}

@@ -3,66 +3,48 @@ title: Element.clientLeft
 slug: Web/API/Element/clientLeft
 translation_of: Web/API/Element/clientLeft
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.
 
-<div>Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.</div>
+`clientLeft` не включает в себя ни левый padding ни margin с той же стороны. `clientLeft` только для чтения.
 
-<p><code>clientLeft</code> не включает в себя ни левый padding ни margin с той же стороны. <code>clientLeft</code> только для чтения.</p>
+[Gecko](en/Gecko)-based applications support `clientLeft` starting with Gecko 1.9 ([Firefox 3](en/Firefox_3), implemented in {{ Bug(111207) }}). This property is not supported in Firefox 2 and earlier.
 
-<p><a href="en/Gecko">Gecko</a>-based applications support <code>clientLeft</code> starting with Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, implemented in {{ Bug(111207) }}). This property is not supported in Firefox 2 and earlier.</p>
+Когда [`layout.scrollbar.side` ](http://kb.mozillazine.org/Layout.scrollbar.side)значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
 
-<p>Когда <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code> </a>значение установлено от 1 до 3 и направление текста справа налево, <strong>то вертикальный scrollbar будет спозиционирован слева</strong> и как следствие будет вычислен clientLeft.</p>
+> **Примечание:** **Внимание:** Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
 
-<div class="note">
-<p><strong>Внимание:</strong> Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+var left = element.clientLeft;
+```
 
-<pre class="syntaxbox">var <var>left</var> = <var>element</var>.clientLeft;
-</pre>
+## Example
 
-<h2 id="Example">Example</h2>
+padding-top
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+padding-bottom
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
-</div>
-<strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;">Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-element-clientleft', 'clientLeft')}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('CSSOM View', '#dom-element-clientleft', 'clientLeft')}} | {{Spec2("CSSOM View")}} |         |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Notes
 
-<p>{{Compat}}</p>
+`clientLeft` был впервые введён MS IE DHTML object model.
 
-<h2 id="Notes">Notes</h2>
+Расположение вертикального scrollbar для письма справа налево применённого для элемента будет назначаются следующим свойством [`layout.scrollbar.side` preference](http://kb.mozillazine.org/Layout.scrollbar.side)
 
-<p><code>clientLeft</code> был впервые введён MS IE DHTML object model.</p>
-
-<p>Расположение вертикального scrollbar для письма справа налево применённого для элемента будет назначаются следующим свойством <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code> preference</a></p>
-
-<p>Когда установлены стили элемента <code>display: inline</code>, то <code>clientLeft</code> вернёт <code>0</code> несмотря на границы элемента.</p>
+Когда установлены стили элемента `display: inline`, то `clientLeft` вернёт `0` несмотря на границы элемента.

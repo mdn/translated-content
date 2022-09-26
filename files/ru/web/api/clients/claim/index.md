@@ -3,47 +3,48 @@ title: Clients.claim()
 slug: Web/API/Clients/claim
 translation_of: Web/API/Clients/claim
 ---
-<p>{{APIRef("Service Worker Clients")}}</p>
+{{APIRef("Service Worker Clients")}}
 
-<p>Метод <strong><code>claim()</code></strong> интерфейса {{domxref("Clients")}} позволяет активному сервис-воркеру установить себя {{domxref("ServiceWorkerContainer.controller", "контролирующим воркером")}} для всех клиентских страниц в своей {{domxref("ServiceWorkerRegistration.scope", "области видимости")}}. Вызывает событие "<code>controllerchange</code>" на {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} всех клиентских страниц, контролируемых сервис-воркером.</p>
+Метод **`claim()`** интерфейса {{domxref("Clients")}} позволяет активному сервис-воркеру установить себя {{domxref("ServiceWorkerContainer.controller", "контролирующим воркером")}} для всех клиентских страниц в своей {{domxref("ServiceWorkerRegistration.scope", "области видимости")}}. Вызывает событие "`controllerchange`" на {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} всех клиентских страниц, контролируемых сервис-воркером.
 
-<p>После регистрации сервис-воркера страницы не начнут использовать его, пока не загрузятся вновь. Метод <code>claim()</code> позволяет установить контроль над страницами немедленно. Имейте в виду, что в этом случае ваш сервис-воркер будет контролировать все загружаемые по сети страницы этого origin, в т. ч. из других сервис-воркеров.</p>
+После регистрации сервис-воркера страницы не начнут использовать его, пока не загрузятся вновь. Метод `claim()` позволяет установить контроль над страницами немедленно. Имейте в виду, что в этом случае ваш сервис-воркер будет контролировать все загружаемые по сети страницы этого origin, в т. ч. из других сервис-воркеров.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">await clients.claim();
-</pre>
+```js
+await clients.claim();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:">Promise</a></code> с <code>undefined</code>.</p>
+[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:") с `undefined`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В примере ниже внутри обработчика события "<code>activate</code>" сервис-воркера используется метод <code>claim()</code>, что позволяет клиентской странице, загруженной в той же области видимости, обходиться без перезагрузки для использования сервис-воркером.</p>
+В примере ниже внутри обработчика события "`activate`" сервис-воркера используется метод `claim()`, что позволяет клиентской странице, загруженной в той же области видимости, обходиться без перезагрузки для использования сервис-воркером.
 
-<pre class="brush: js">self.addEventListener('activate', event =&gt; {
+```js
+self.addEventListener('activate', event => {
   event.waitUntil(clients.claim());
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers">Использование Service Worker</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle">The service worker lifecycle</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise", "Promises")}}</li>
- <li>{{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} — переключайте состояние ожидания сервис-воркера</li>
-</ul>
+- [Использование Service Worker](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [The service worker lifecycle](https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise", "Promises")}}
+- {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} — переключайте состояние ожидания сервис-воркера

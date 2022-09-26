@@ -11,46 +11,46 @@ tags:
   - Источник
 translation_of: Web/API/Document/scroll_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Событие <strong><code>scroll</code></strong> возникает при прокрутке области просмотра документа или элемента.</p>
+Событие **`scroll`** возникает при прокрутке области просмотра документа или элемента.
 
 <table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>Всплытие</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th>Отменяемый</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th>Интерфейс</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Свойство обработчика событий</th>
-   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-  </tr>
- </tbody>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <th>Всплытие</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th>Отменяемый</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Интерфейс</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Свойство обработчика событий</th>
+      <td>
+        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Примечание:</strong> В iOS UIWebViews события <code>scroll</code> не срабатывают во время самого прокручивания, только по его завершении. См. <a href="https://github.com/twbs/bootstrap/issues/16202">issue в Bootstrap #16202</a>. Safari и WKWebViews не подвержены этому багу.</p>
-</div>
+> **Примечание:** В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пропуск_тактов_события_прокрутки">Пропуск тактов события прокрутки</h3>
+### Пропуск тактов события прокрутки
 
-<p>Поскольку события прокрутки могут запускаться с высокой скоростью, обработчик событий не должен выполнять вычислительно-ёмкие операции, такие как модификации DOM. Вместо этого рекомендуется пропускать такты события, используя {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} или {{DOMxRef("CustomEvent")}}, как показано ниже.</p>
+Поскольку события прокрутки могут запускаться с высокой скоростью, обработчик событий не должен выполнять вычислительно-ёмкие операции, такие как модификации DOM. Вместо этого рекомендуется пропускать такты события, используя {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} или {{DOMxRef("CustomEvent")}}, как показано ниже.
 
-<p>Обратите внимание, однако, что входные события и кадры анимации запускаются примерно с одинаковой скоростью, и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие <code>scroll</code> для <code>requestAnimationFrame</code>:</p>
+Обратите внимание, однако, что входные события и кадры анимации запускаются примерно с одинаковой скоростью, и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие `scroll` для `requestAnimationFrame`:
 
-<pre class="brush: js">// Источник: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// Источник: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -70,20 +70,19 @@ window.addEventListener('scroll', function(e) {
 
     ticking = true;
   }
-});</pre>
+});
+```
 
-<p>Больше похожих примеров можно найти на странице события <code><a href="/ru/docs/Web/API/Window/resize_event">resize</a></code>.</p>
+Больше похожих примеров можно найти на странице события [`resize`](/ru/docs/Web/API/Window/resize_event).
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: событие <code>scroll</code></a></li>
-</ul>
+- [Element: событие `scroll`](/ru/docs/Web/API/Element/scroll_event)

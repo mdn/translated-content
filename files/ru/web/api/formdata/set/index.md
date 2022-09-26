@@ -3,75 +3,62 @@ title: FormData.set()
 slug: Web/API/FormData/set
 translation_of: Web/API/FormData/set
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Метод set() из интерфейса {{domxref("FormData")}} присваивает новое значение существующему ключу внутри объекта <code>FormData </code>, или добавляет ключ/значение если до этого они не были установлены.</p>
+Метод set() из интерфейса {{domxref("FormData")}} присваивает новое значение существующему ключу внутри объекта `FormData `, или добавляет ключ/значение если до этого они не были установлены.
 
-<p>Разница между <code>set()</code> и {{domxref("FormData.append")}} в том, что если заданный ключ уже существует, <code>set()</code> заменит данные в нем на новые, а {{domxref("FormData.append")}}  добавит новое значение к остальным в конец.</p>
+Разница между `set()` и {{domxref("FormData.append")}} в том, что если заданный ключ уже существует, `set()` заменит данные в нем на новые, а {{domxref("FormData.append")}} добавит новое значение к остальным в конец.
 
-<div class="note">
-<p><strong>Примечание</strong>: Данный метод также доступен в <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Данный метод также доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<p>Существует две формы использования данной функции: с двумя и тремя параметрами:</p>
+Существует две формы использования данной функции: с двумя и тремя параметрами:
 
-<pre class="brush: js">formData.set(name, value);
-formData.set(name, value, filename);</pre>
+```js
+formData.set(name, value);
+formData.set(name, value, filename);
+```
 
-<h4 id="append_Parameters">Параметры</h4>
+#### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя поля, которому будет присвоен value.</dd>
- <dt><code>value</code></dt>
- <dd>Значение, присваиваемое полю. В варианте с двумя параметрами, это <a class="new" href="https://developer.mozilla.org/ru/docs/Web/API/USVString" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>USVString</code></a>, если нет, то оно будет конвертировано. В варианте с тремя параметрами это может быть <a href="https://developer.mozilla.org/ru/docs/Web/API/Blob" title="Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя."><code>Blob</code></a>, <a href="https://developer.mozilla.org/ru/docs/Web/API/File" title="Интерфейс File представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту."><code>File</code></a>, или <a class="new" href="https://developer.mozilla.org/ru/docs/Web/API/USVString" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>USVString</code></a>, И снова, если ни один из них не указан в значении то оно будет конвертировано в строку.</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>Имя файла, которое будет отправлено серверу (<a class="new" href="https://developer.mozilla.org/ru/docs/Web/API/USVString" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>USVString</code></a>), когда <a href="https://developer.mozilla.org/ru/docs/Web/API/Blob" title="Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя."><code>Blob</code></a> или <a href="https://developer.mozilla.org/ru/docs/Web/API/File" title="Интерфейс File представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту."><code>File</code></a> прошёл проверку как второй параметр. Стандартное имя файла для <a href="https://developer.mozilla.org/ru/docs/Web/API/Blob" title="Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя."><code>Blob</code></a> объектов это "blob".</dd>
-</dl>
+- `name`
+  - : Имя поля, которому будет присвоен value.
+- `value`
+  - : Значение, присваиваемое полю. В варианте с двумя параметрами, это [`USVString`](/ru/docs/Web/API/USVString "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"), если нет, то оно будет конвертировано. В варианте с тремя параметрами это может быть [`Blob`](/ru/docs/Web/API/Blob "Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя."), [`File`](/ru/docs/Web/API/File "Интерфейс File представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту."), или [`USVString`](/ru/docs/Web/API/USVString "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"), И снова, если ни один из них не указан в значении то оно будет конвертировано в строку.
+- `filename `{{optional_inline}}
+  - : Имя файла, которое будет отправлено серверу ([`USVString`](/ru/docs/Web/API/USVString "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!")), когда [`Blob`](/ru/docs/Web/API/Blob "Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя.") или [`File`](/ru/docs/Web/API/File "Интерфейс File представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту.") прошёл проверку как второй параметр. Стандартное имя файла для [`Blob`](/ru/docs/Web/API/Blob "Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя.") объектов это "blob".
 
-<div class="note">
-<p><strong>Примечание:</strong> Если вы укажете <a href="https://developer.mozilla.org/ru/docs/Web/API/Blob" title="Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя."><code>Blob</code></a> в качестве данных для включения в объект <code>FormData</code>, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.</p>
-</div>
+> **Примечание:** Если вы укажете [`Blob`](/ru/docs/Web/API/Blob "Объект Blob представляет из себя объект наподобие файла с неизменяемыми, сырыми данными. Blob-ы представляют данные, которые могут быть не в родном формате JavaScript. Интерфейс File основан на Blob, наследует функциональность Blob и расширяет его для поддержки файлов на системе пользователя.") в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код создаёт пустой <code>FormData</code> объект:</p>
+Следующий код создаёт пустой `FormData` объект:
 
-<pre class="brush: js">var formData = new FormData(); // Сейчас пустой</pre>
+```js
+var formData = new FormData(); // Сейчас пустой
+```
 
-<p>Вы можете установить для него пару ключ/значение, используя {{domxref("FormData.set")}}:</p>
+Вы можете установить для него пару ключ/значение, используя {{domxref("FormData.set")}}:
 
-<pre class="brush: js">formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.set('username', 'Chris');
+formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                               | Comment |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

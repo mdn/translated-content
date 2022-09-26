@@ -3,102 +3,57 @@ title: Node.nodeName
 slug: Web/API/Node/nodeName
 translation_of: Web/API/Node/nodeName
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.nodeName</strong></code> только для чтения, возвращающие имя текущего узла в виде строки.</p>
+Свойство **`Node.nodeName`** только для чтения, возвращающие имя текущего узла в виде строки.
 
-<p>Возвращаемое значение для различных типов узлов:</p>
+Возвращаемое значение для различных типов узлов:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Интерфейс</th>
-   <th>значение nodeName</th>
-  </tr>
-  <tr>
-   <td>{{domxref("Attr")}}</td>
-   <td>Значение {{domxref("Attr.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("CDATASection")}}</td>
-   <td><code>"#cdata-section"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Comment")}}</td>
-   <td><code>"#comment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Document")}}</td>
-   <td><code>"#document"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentFragment")}}</td>
-   <td><code>"#document-fragment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentType")}}</td>
-   <td>Значение {{domxref("DocumentType.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Element")}}</td>
-   <td>Значение {{domxref("Element.tagName")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Entity")}}</td>
-   <td>имя сущности</td>
-  </tr>
-  <tr>
-   <td>{{domxref("EntityReference")}}</td>
-   <td>Имя сущности ссылки</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Notation")}}</td>
-   <td>Название обозначения</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ProcessingInstruction")}}</td>
-   <td>
-    <p>Значение {{domxref("ProcessingInstruction.target")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{domxref("Text")}}</td>
-   <td><code>"#text"</code></td>
-  </tr>
- </tbody>
-</table>
+| Интерфейс                                        | значение nodeName                                                 |
+| ------------------------------------------------ | ----------------------------------------------------------------- |
+| {{domxref("Attr")}}                         | Значение {{domxref("Attr.name")}}                         |
+| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                |
+| {{domxref("Comment")}}                     | `"#comment"`                                                      |
+| {{domxref("Document")}}                 | `"#document"`                                                     |
+| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                            |
+| {{domxref("DocumentType")}}             | Значение {{domxref("DocumentType.name")}}             |
+| {{domxref("Element")}}                     | Значение {{domxref("Element.tagName")}}                 |
+| {{domxref("Entity")}}                     | имя сущности                                                      |
+| {{domxref("EntityReference")}}         | Имя сущности ссылки                                               |
+| {{domxref("Notation")}}                 | Название обозначения                                              |
+| {{domxref("ProcessingInstruction")}} | Значение {{domxref("ProcessingInstruction.target")}} |
+| {{domxref("Text")}}                         | `"#text"`                                                         |
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>str</em> = <em>node</em>.nodeName;
-</pre>
+```
+var str = node.nodeName;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Учитывая следующую разметку:</p>
+Учитывая следующую разметку:
 
-<pre class="brush:html">&lt;div id="d1"&gt;hello world&lt;/div&gt;
-&lt;input type="text" id="t"/&gt;
-</pre>
+```html
+<div id="d1">hello world</div>
+<input type="text" id="t"/>
+```
 
-<p>и следующий скрипт:</p>
+и следующий скрипт:
 
-<pre class="brush:js">var div1 = document.getElementById("d1");
+```js
+var div1 = document.getElementById("d1");
 var text_field = document.getElementById("t");
 
 text_field.value = div1.nodeName;
-</pre>
+```
 
-<p>В XHTML (или любых других форматов XML), значение <code>text_field</code> будет прочитано как "div". Тем не менее, в HTML, значение <code>text_field</code> будет прочитано  как "DIV", потому что <code>nodeName</code> и <code>tagName</code> возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше <a href="http://ejohn.org/blog/nodename-case-sensitivity/">деталей о чувствительности регистра nodeName в различных браузерах.</a></p>
+В XHTML (или любых других форматов XML), значение `text_field` будет прочитано как "div". Тем не менее, в HTML, значение `text_field` будет прочитано как "DIV", потому что `nodeName` и `tagName` возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше [деталей о чувствительности регистра nodeName в различных браузерах.](http://ejohn.org/blog/nodename-case-sensitivity/)
 
-<p>Обратите внимание, что свойство <code><a href="/en-US/docs/DOM/element.tagName" title="DOM/element.tagName">tagName</a></code> можно было бы использовать вместо него, поскольку <code>nodeName</code> имеет тоже значение что и <code>tagName</code> для элемента. Однако имейте в виду, что <code>nodeName</code> будет возвращать <code>#text</code> для текстово узла, в то время как <code>tagName</code> будет возвращать <code>undefined</code>.</p>
+Обратите внимание, что свойство [`tagName`](/en-US/docs/DOM/element.tagName "DOM/element.tagName") можно было бы использовать вместо него, поскольку `nodeName` имеет тоже значение что и `tagName` для элемента. Однако имейте в виду, что `nodeName` будет возвращать `#text` для текстово узла, в то время как `tagName` будет возвращать `undefined`.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095">DOM Level 2 Core: Node.nodeName</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095">DOM Level 3 Core: Node.nodeName</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
+- [DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

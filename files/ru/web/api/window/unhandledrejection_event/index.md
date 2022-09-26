@@ -4,47 +4,46 @@ slug: Web/API/Window/unhandledrejection_event
 translation_of: Web/API/Window/unhandledrejection_event
 original_slug: Web/Events/unhandledrejection
 ---
-<p>Событие <strong><code>unhandledrejection</code></strong> происходит, когда {{jsxref("Promise")}} завершён с ошибкой, но на данную ошибку не установлен обработчик.</p>
+Событие **`unhandledrejection`** происходит, когда {{jsxref("Promise")}} завершён с ошибкой, но на данную ошибку не установлен обработчик.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>Всплытие</td>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <td>Возможность отмены</td>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <td>Target objects</td>
-   <td>defaultView</td>
-  </tr>
-  <tr>
-   <td>Интерфейс</td>
-   <td>{{domxref("PromiseRejectionEvent")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Всплытие</td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td>Возможность отмены</td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td>Target objects</td>
+      <td>defaultView</td>
+    </tr>
+    <tr>
+      <td>Интерфейс</td>
+      <td>{{domxref("PromiseRejectionEvent")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js;">window.addEventListener("unhandledrejection", function (event) {
+```js
+window.addEventListener("unhandledrejection", function (event) {
   console.warn("Внимание: Необработанная ошибка Promise. Позор вам! Причина: "
                + event.reason);
 });
-</pre>
+```
 
-<h2 id="Inheritance">Inheritance</h2>
+## Inheritance
 
-<p>Событие <code>unhandledrejection</code> реализует {{domxref("PromiseRejectionEvent")}} интерфейс, который наследуется от {{domxref("Event")}}. Вы можете использовать свойства и методы, определённые в данных интерфейсах.</p>
+Событие `unhandledrejection` реализует {{domxref("PromiseRejectionEvent")}} интерфейс, который наследуется от {{domxref("Event")}}. Вы можете использовать свойства и методы, определённые в данных интерфейсах.
 
-<p>{{InheritanceDiagram('','','', 'PromiseRejectionEvent')}}</p>
+{{InheritanceDiagram('','','', 'PromiseRejectionEvent')}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Event("rejectionhandled")}}</li>
- <li>{{domxref("PromiseRejectionEvent")}}</li>
- <li>{{domxref("Promise")}}</li>
-</ul>
+- {{Event("rejectionhandled")}}
+- {{domxref("PromiseRejectionEvent")}}
+- {{domxref("Promise")}}

@@ -8,82 +8,40 @@ tags:
   - Сенсоры
 translation_of: Web/API/Window/deviceorientation_event
 ---
-<p>Событие <code>deviceorientation</code> срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в <a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">Ориентация и объяснение данных движения</a>.</p>
+Событие `deviceorientation` срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в [Ориентация и объяснение данных движения](/ru/docs/DOM/Orientation_and_motion_data_explained).
 
-<h2 id="Общая_информация">Общая информация</h2>
+## Общая информация
 
-<dl>
- <dt>Спецификация</dt>
- <dd>Событие <a href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation</a></dd>
- <dt>Определение</dt>
- <dd>DeviceOrientationEvent</dd>
- <dt>Всплывает</dt>
- <dd>Нет</dd>
- <dt>Отменяемо</dt>
- <dd>Нет</dd>
- <dt>Целевой элемент</dt>
- <dd>По умолчанию (<code>window</code>)</dd>
- <dt>Действие по умолчанию </dt>
- <dd>Нет</dd>
-</dl>
+- Спецификация
+  - : Событие [DeviceOrientation](http://www.w3.org/TR/orientation-event/#deviceorientation)
+- Определение
+  - : DeviceOrientationEvent
+- Всплывает
+  - : Нет
+- Отменяемо
+  - : Нет
+- Целевой элемент
+  - : По умолчанию (`window`)
+- Действие по умолчанию
+  - : Нет
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not?</td>
-  </tr>
-  <tr>
-   <td><code>alpha</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Z axis; that is, how far the device is rotated around a line perpendicular to the device.</td>
-  </tr>
-  <tr>
-   <td><code>beta</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the X axis; that is, how far the device is tipped forward or backward.</td>
-  </tr>
-  <tr>
-   <td><code>gamma</code> {{readonlyInline}}</td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Y axis; that is, how far the device is turned left or right.</td>
-  </tr>
-  <tr>
-   <td><code>absolute</code> {{readonlyInline}}</td>
-   <td>{{jsxref("boolean")}}</td>
-   <td>This value is <code>true</code> if the orientation is provided as a difference between the device coordinate frame and the Earth coordinate frame; if the device can't detect the Earth coordinate frame, this value is <code>false</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                                                                                                                                                                                           |
+| ------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                                                                                |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                                                                                                                                                                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not                                                                                                                                                                             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not?                                                                                                                                                                              |
+| `alpha` {{readonlyInline}}      | double (float)                       | The current orientation of the device around the Z axis; that is, how far the device is rotated around a line perpendicular to the device.                                                                            |
+| `beta` {{readonlyInline}}       | double (float)                       | The current orientation of the device around the X axis; that is, how far the device is tipped forward or backward.                                                                                                   |
+| `gamma` {{readonlyInline}}      | double (float)                       | The current orientation of the device around the Y axis; that is, how far the device is turned left or right.                                                                                                         |
+| `absolute` {{readonlyInline}}   | {{jsxref("boolean")}}         | This value is `true` if the orientation is provided as a difference between the device coordinate frame and the Earth coordinate frame; if the device can't detect the Earth coordinate frame, this value is `false`. |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">if (window.DeviceOrientationEvent) {
+```js
+if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
         // alpha: rotation around z-axis
         var rotateDegrees = event.alpha;
@@ -99,24 +57,20 @@ translation_of: Web/API/Window/deviceorientation_event
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
     // Сделайте что-нибудь необычное здесь
 };
-</pre>
+```
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Похожие_события">Похожие события</h2>
+## Похожие события
 
-<ul>
- <li><a href="/en-US/docs/Web/Events/devicemotion"><code>devicemotion</code></a></li>
-</ul>
+- [`devicemotion`](/ru/docs/Web/Events/devicemotion)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>{{domxref("window.ondeviceorientation")}}</li>
- <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Определение ориентации устройства</a></li>
- <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Ориентация и объяснение данных о движении</a></li>
- <li>Имитация события смены ориентации в настольный браузерах с помощью <a href="http://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>
-</ul>
+- {{domxref("DeviceMotionEvent")}}
+- {{domxref("window.ondeviceorientation")}}
+- [Определение ориентации устройства](/ru/docs/Web/API/Detecting_device_orientation)
+- [Ориентация и объяснение данных о движении](/ru/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
+- Имитация события смены ориентации в настольный браузерах с помощью [orientation-devtool](http://louisremi.github.com/orientation-devtool/)

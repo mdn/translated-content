@@ -1,65 +1,65 @@
 ---
 title: 'HTMLCanvasElement: событие webglcontextlost'
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
-translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 tags:
-- Event
-- Reference
-- WebGL
+  - Event
+  - Reference
+  - WebGL
+translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <code><strong>webglcontextlost</strong></code> <a href="/ru/docs/Web/API/WebGL_API">WebGL API</a> вызывается когда {{Glossary("User agent")}}
-    обнаруживает, что буфер, связанный с {{domxref("WebGLRenderingContext")}}, потерян.</p>
+Событие **`webglcontextlost`** [WebGL API](/ru/docs/Web/API/WebGL_API) вызывается когда {{Glossary("User agent")}}
+обнаруживает, что буфер, связанный с {{domxref("WebGLRenderingContext")}}, потерян.
 
 <table class="properties">
-    <tbody>
+  <tbody>
     <tr>
-        <th scope="row">Всплытие</th>
-        <td>Да</td>
+      <th scope="row">Всплытие</th>
+      <td>Да</td>
     </tr>
     <tr>
-        <th scope="row">Отменяемое</th>
-        <td>Да</td>
+      <th scope="row">Отменяемое</th>
+      <td>Да</td>
     </tr>
     <tr>
-        <th scope="row">Интерфейс</th>
-        <td>{{domxref("WebGLContextEvent")}}</td>
+      <th scope="row">Интерфейс</th>
+      <td>{{domxref("WebGLContextEvent")}}</td>
     </tr>
     <tr>
-        <th scope="row">Свойство для обработки события</th>
-        <td>Нет</td>
+      <th scope="row">Свойство для обработки события</th>
+      <td>Нет</td>
     </tr>
-    </tbody>
+  </tbody>
 </table>
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Вы можете эмулировать <code>webglcontextlost</code> событие с помощью расширения {{domxref("WEBGL_lose_context")}}:</p>
+Вы можете эмулировать `webglcontextlost` событие с помощью расширения {{domxref("WEBGL_lose_context")}}:
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', (event) =&gt; {
+canvas.addEventListener('webglcontextlost', (event) => {
   console.log(event);
 });
 
 gl.getExtension('WEBGL_lose_context').loseContext();
 
-// будет выведено "webglcontextlost".</pre>
+// будет выведено "webglcontextlost".
+```
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-    <li>{{domxref("WebGLContextEvent")}}</li>
-    <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
-    <li>{{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}</li>
-</ul>
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}

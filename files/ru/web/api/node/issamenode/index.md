@@ -3,40 +3,37 @@ title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 translation_of: Web/API/Node/isSameNode
 ---
-<div>{{APIRef("DOM")}} {{ Obsolete_header }}</div>
+{{APIRef("DOM")}} {{ Obsolete_header }}
 
-<p>The <code><strong>Node.isSameNode()</strong></code> проверяет ссылаются ли два узла на один и тот же объект.</p>
+The **`Node.isSameNode()`** проверяет ссылаются ли два узла на один и тот же объект.
 
-<div class="note">
-<p><strong>Предупреждение:</strong> Данный метод больше не реализуется в последних браузерах.</p>
+> **Примечание:** **Предупреждение:** Данный метод больше не реализуется в последних браузерах.
+>
+> ```js
+> // Instead of using
+> node1.isSameNode(node2)
+>
+> // use
+> node1 === node2 // or
+> node1 == node2
+> ```
 
-<pre class="brush:js">// Instead of using
-node1.isSameNode(node2)
+## Синтаксис
 
-// use
-node1 === node2 // or
-node1 == node2</pre>
-</div>
+```
+var isSameNode = node.isSameNode(other);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+- `other` узел для проверки.
 
-<pre class="syntaxbox">var <em>isSameNode</em> = <em>node</em>.isSameNode(<em>other</em>);
-</pre>
-
-<ul>
- <li><code>other</code> узел для проверки.</li>
-</ul>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Node.isEqualNode()")}}</li>
-</ul>
+- {{domxref("Node.isEqualNode()")}}

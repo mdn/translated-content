@@ -3,29 +3,28 @@ title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
 translation_of: Web/API/Element/requestPointerLock
 ---
-<p>{{ APIRef("DOM") }}{{ seeCompatTable }}</p>
+{{ APIRef("DOM") }}{{ seeCompatTable }}
 
-<p>Метод <strong><code>Element.requestPointerLock()</code></strong> позволяет асинхронно запросить блокировку курсора для заданного элемента.</p>
+Метод **`Element.requestPointerLock()`** позволяет асинхронно запросить блокировку курсора для заданного элемента.
 
-<p>Чтобы отследить успех или ошибку запроса, необходимо обрабатывать события {{event("pointerlockchange")}} и {{event("pointerlockerror")}} на уровне {{domxref("Document")}}.</p>
+Чтобы отследить успех или ошибку запроса, необходимо обрабатывать события {{event("pointerlockchange")}} и {{event("pointerlockerror")}} на уровне {{domxref("Document")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>instanceOfElement</em>.requestPointerLock();
-</pre>
+```
+instanceOfElement.requestPointerLock();
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("Document.pointerLockElement") }}</li>
- <li>{{ domxref("Document.exitPointerLock()") }}</li>
- <li><a href="/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
-</ul>
+- {{ domxref("Document.pointerLockElement") }}
+- {{ domxref("Document.exitPointerLock()") }}
+- [Pointer Lock](/Web/API/Pointer_Lock_API)

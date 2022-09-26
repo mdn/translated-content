@@ -3,60 +3,42 @@ title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 translation_of: Web/API/Element/clientHeight
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code><strong>Element.clientHeight</strong></code> - свойство, доступное только для чтения. Для элементов без CSS-стилей, или элементов каркаса строчной разметки - значение равно нулю. Для остальных элементов - значение равно внутренней высоте элемента в пикселах, включая пространство между содержимым элемента и его границей (padding), но исключая высоту полосы горизонтальной прокрутки, и ширину отступа от границы элемента до родительского элемента (margin).</p>
+**`Element.clientHeight`** - свойство, доступное только для чтения. Для элементов без CSS-стилей, или элементов каркаса строчной разметки - значение равно нулю. Для остальных элементов - значение равно внутренней высоте элемента в пикселах, включая пространство между содержимым элемента и его границей (padding), но исключая высоту полосы горизонтальной прокрутки, и ширину отступа от границы элемента до родительского элемента (margin).
 
-<p><code>Значение <strong>clientHeight</strong></code><strong> </strong>может быть вычислено по формуле CSS <code>height</code> + CSS <code>padding</code> - высота горизонтального скролла (если присутствует).</p>
+`Значение clientHeight`\*\* \*\*может быть вычислено по формуле CSS `height` + CSS `padding` - высота горизонтального скролла (если присутствует).
 
-<div class="note">
-<p><strong>Внимание:</strong> При вычислении значения свойства, результат округляется до ближайшего целого. Если требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Примечание:** **Внимание:** При вычислении значения свойства, результат округляется до ближайшего целого. Если требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax_and_values">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>h</var> = <var>element</var>.clientHeight;</pre>
+```
+var h = element.clientHeight;
+```
 
-<p><code><var>h</var></code> - целочисленное значение высоты элемента в пикселях.</p>
+`h` - целочисленное значение высоты элемента в пикселях.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p> </p>
+![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-<p>              <img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
+## Спецификация
 
+| Спецификация                                                                                     | Статус                           | Примечание |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('CSSOM View', '#dom-element-clientheight', 'clientHeight')}} | {{Spec2('CSSOM View')}} |            |
 
-<h2 id="Specification">Спецификация</h2>
+### К сведению
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Примечание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-element-clientheight', 'clientHeight')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Свойство `clientHeight` впервые было представлено в объектной модели Internet Explorer.
 
-<h3 id="Notes">К сведению</h3>
+## Совместимость с браузерами
 
-<p>Свойство <code>clientHeight</code> впервые было представлено в объектной модели Internet Explorer.</p>
+{{Compat}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_Also">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("HTMLElement.offsetHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("Element.scrollHeight")}}
+- [Determining the dimensions of elements](/ru/docs/Determining_the_dimensions_of_elements)

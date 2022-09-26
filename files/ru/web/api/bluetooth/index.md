@@ -8,50 +8,47 @@ tags:
   - Экспериментальное
 translation_of: Web/API/Bluetooth
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>Объект <strong><code>Bluetooth</code></strong> интерфейса <a href="/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> возвращает объект {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с указанными параметрами.</p>
+Объект **`Bluetooth`** интерфейса [Web Bluetooth API](/Web/API/Web_Bluetooth_API) возвращает объект {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с указанными параметрами.
 
-<h2 id="Интерфейс">Интерфейс</h2>
+## Интерфейс
 
-<pre class="syntaxbox">interface Bluetooth : EventTarget {
-  [SecureContext] Promise&lt;boolean&gt; getAvailability();
+```
+interface Bluetooth : EventTarget {
+  [SecureContext] Promise<boolean> getAvailability();
   [SecureContext] attribute EventHandler onavailabilitychanged;
   [SecureContext, SameObject] readonly attribute BluetoothDevice? referringDevice;
-  [SecureContext] Promise&lt;BluetoothDevice&gt; requestDevice(optional RequestDeviceOptions options);
+  [SecureContext] Promise<BluetoothDevice> requestDevice(optional RequestDeviceOptions options);
 };
 Bluetooth implements BluetoothDeviceEventHandlers;
 Bluetooth implements CharacteristicEventHandlers;
-Bluetooth implements ServiceEventHandlers;</pre>
+Bluetooth implements ServiceEventHandlers;
+```
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителя {{domxref("EventTarget")}}.</em></p>
+_Наследует свойства от родителя {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("Bluetooth.referringDevice")}} {{readonlyinline}}</dt>
- <dd>Возвращает ссылку на устройство, если таковое имеется, из которого пользователь открыл страницу. Например, Eddystone beacon может найти URL - адрес, который позволяет открыть строка агента адреса. Устройство Bluetooth предоставляет маяк, который будет доступен через <code>navigator.bluetooth.referringDevice</code>.</dd>
-</dl>
+- {{domxref("Bluetooth.referringDevice")}} {{readonlyinline}}
+  - : Возвращает ссылку на устройство, если таковое имеется, из которого пользователь открыл страницу. Например, Eddystone beacon может найти URL - адрес, который позволяет открыть строка агента адреса. Устройство Bluetooth предоставляет маяк, который будет доступен через `navigator.bluetooth.referringDevice`.
 
-<h3 id="События">События</h3>
+### События
 
-<dl>
- <dt>{{domxref("Bluetooth.onavailabilitychanged")}}</dt>
- <dd>Обработчик событий, который запускается при возникновении события типа {{event("availabilitychanged")}}.</dd>
-</dl>
+- {{domxref("Bluetooth.onavailabilitychanged")}}
+  - : Обработчик событий, который запускается при возникновении события типа {{event("availabilitychanged")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Bluetooth.getAvailability()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который возвращает {{jsxref("Boolean")}}, указывая, поддерживает ли браузер Bluetooth. Некоторые браузеры дают возможность управлять возвращаемым значением этого метода.</dd>
- <dt>{{domxref("Bluetooth.requestDevice()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с переданными параметрами.</dd>
-</dl>
+- {{domxref("Bluetooth.getAvailability()")}}
+  - : Возвращает {{jsxref("Promise")}}, который возвращает {{jsxref("Boolean")}}, указывая, поддерживает ли браузер Bluetooth. Некоторые браузеры дают возможность управлять возвращаемым значением этого метода.
+- {{domxref("Bluetooth.requestDevice()")}}
+  - : Возвращает {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с переданными параметрами.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
+
+{{Compat}}

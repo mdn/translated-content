@@ -9,60 +9,57 @@ tags:
   - Response
 translation_of: Web/API/Response/Response
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>Конструктор <code><strong>Response()</strong></code> создаёт новый объект {{domxref("Response")}}.</p>
+Конструктор **`Response()`** создаёт новый объект {{domxref("Response")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>myResponse</var> = new Response(<var>body</var>, <var>init</var>);</pre>
+```
+var myResponse = new Response(body, init);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>body</em> {{optional_inline}}</dt>
- <dd>Объект, который определяет тело запроса. Может быть <code>null</code> (является значением по умолчанию), или:
- <ul>
-  <li>{{domxref("Blob")}}</li>
-  <li>{{domxref("BufferSource")}}</li>
-  <li>{{domxref("FormData")}}</li>
-  <li>{{domxref("ReadableStream")}}</li>
-  <li>{{domxref("URLSearchParams")}}</li>
-  <li>{{domxref("USVString")}}</li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
- <ul>
-  <li><code>status</code>: The status code for the reponse, e.g., <code>200</code>.</li>
-  <li><code>statusText</code>: The status message associated with the status code, e.g., <code>OK</code>.</li>
-  <li><code>headers</code>: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> for a reference).</li>
- </ul>
- </dd>
-</dl>
+- _body_ {{optional_inline}}
 
-<h2 id="Примеры">Примеры</h2>
+  - : Объект, который определяет тело запроса. Может быть `null` (является значением по умолчанию), или:
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response example</a> (see <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new <code>Response</code> object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom <code>status</code> and <code>statusText</code>:</p>
+    - {{domxref("Blob")}}
+    - {{domxref("BufferSource")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{domxref("USVString")}}
 
-<pre class="brush: js">var myBlob = new Blob();
+- _init_ {{optional_inline}}
+
+  - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
+
+    - `status`: The status code for the reponse, e.g., `200`.
+    - `statusText`: The status message associated with the status code, e.g., `OK`.
+    - `headers`: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see [HTTP headers](/ru/docs/Web/HTTP/Headers) for a reference).
+
+## Примеры
+
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
+
+```js
+var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);</pre>
+var myResponse = new Response(myBlob,init);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
+{{Compat}}
 
+## Читай также
 
-<p>{{Compat}}</p>
-
-<h2 id="Читай_также">Читай также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ru/docs/Web/HTTP)

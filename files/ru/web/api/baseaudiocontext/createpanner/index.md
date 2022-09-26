@@ -4,33 +4,33 @@ slug: Web/API/BaseAudioContext/createPanner
 translation_of: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>Метод <code>createPanner()</code> интерфейса {{ domxref("AudioContext") }} применяется для создания нового {{domxref("PannerNode")}}, который используется для размещения аудиопотока в виртуальном 3D пространстве.</p>
-</div>
+Метод `createPanner()` интерфейса {{ domxref("AudioContext") }} применяется для создания нового {{domxref("PannerNode")}}, который используется для размещения аудиопотока в виртуальном 3D пространстве.
 
-<p>The panner node is spatialized in relation to the AudioContext's {{domxref("AudioListener") }} (defined by the {{domxref("AudioContext.listener") }} attribute), which represents the position and orientation of the person listening to the audio.</p>
+The panner node is spatialized in relation to the AudioContext's {{domxref("AudioListener") }} (defined by the {{domxref("AudioContext.listener") }} attribute), which represents the position and orientation of the person listening to the audio.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();</pre>
+```js
+var audioCtx = new AudioContext();
+var panner = audioCtx.createPanner();
+```
 
-<h3 id="Возврат">Возврат</h3>
+### Возврат
 
-<p>A {{domxref("PannerNode")}}.</p>
+A {{domxref("PannerNode")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
+Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода `createPanner()` для управления пространством объёмного звука. Обычно определяется положение в трёхмерном пространстве, изначально занимаемое обработчиком (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями `moveRight()`, `moveLeft()`, и т.п., которые устанавливают новые значения для положения паннера через функцию `PositionPanner()`.
 
-<p>Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода <code>createPanner()</code> для управления пространством объёмного звука. Обычно определяется положение в трёхмерном пространстве, изначально занимаемое обработчиком (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями <code>moveRight()</code>, <code>moveLeft()</code>, и т.п., которые устанавливают новые значения для положения паннера через функцию <code>PositionPanner()</code>.</p>
+Чтобы увидеть полную реализацию ознакомьтесь с нашим [примером panner-node](https://mdn.github.io/webaudio-examples/panner-node/) ([просмотрите весь список примеров](https://mdn.github.io/webaudio-examples/)) — эта демонстрация перенесёт вас в 2.5D "Room of metal" (2,5-мерную "металлическую комнату"), где можно проиграть трек на бумбоксе и затем походить вокруг него и посмотреть как изменяется звук!
 
-<p>Чтобы увидеть полную реализацию ознакомьтесь с нашим <a href="https://mdn.github.io/webaudio-examples/panner-node/">примером panner-node</a> (<a href="https://mdn.github.io/webaudio-examples/">просмотрите весь список примеров</a>) — эта демонстрация перенесёт вас в 2.5D "Room of metal" (2,5-мерную "металлическую комнату"), где можно проиграть трек на бумбоксе и затем походить вокруг него и посмотреть как изменяется звук!</p>
+Note how we have used some feature detection to either give the browser the newer property values (like {{domxref("AudioListener.forwardX")}}) for setting position, etc. if it supports those, or older methods (like {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the new properties.
 
-<p>Note how we have used some feature detection to either give the browser the newer property values (like {{domxref("AudioListener.forwardX")}}) for setting position, etc. if it supports those, or older methods (like {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the new properties.</p>
-
-<pre class="brush: js">// set up listener and panner position information
+```js
+// set up listener and panner position information
 // установка сведений обработчика и положении panner'а
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
@@ -114,35 +114,21 @@ function positionPanner() {
     panner.setPosition(xPos,yPos,zPos);
   }
   pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
-}</pre>
+}
+```
 
-<div class="note">
-<p>In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of fiddly math involved, but you will soon get used to it with a bit of experimentation.</p>
-</div>
+> **Примечание:** In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of fiddly math involved, but you will soon get used to it with a bit of experimentation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createPanner-PannerNode', 'createPanner()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createPanner-PannerNode', 'createPanner()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

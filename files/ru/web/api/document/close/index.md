@@ -9,31 +9,31 @@ tags:
   - метод
 translation_of: Web/API/Document/close
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Метод <code>document.close()</code> завершает запись в документ, открытый с помощью <a href="/en/DOM/document.open" title="en/DOM/document.open">document.open()</a>.</p>
+Метод `document.close()` завершает запись в документ, открытый с помощью [document.open()](/en/DOM/document.open "en/DOM/document.open").
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">document.close();
-</pre>
+```
+document.close();
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre>// открытие документа для записи в него.
+```
+// открытие документа для записи в него.
 // запись содержимого документа.
 // закрытие документа.
 document.open();
-document.write("&lt;p&gt;The one and only content.&lt;/p&gt;");
+document.write("<p>The one and only content.</p>");
 document.close();
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

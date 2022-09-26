@@ -3,30 +3,31 @@ title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
 translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderingContext.getShaderInfoLog</strong> возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.</p>
+**WebGLRenderingContext.getShaderInfoLog** возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">gl.getShaderInfoLog(shader);</pre>
+```
+gl.getShaderInfoLog(shader);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>shader</dt>
- <dd>Шейдер {{domxref("WebGLShader")}} чьи логи мы запрашиваем.</dd>
-</dl>
+- shader
+  - : Шейдер {{domxref("WebGLShader")}} чьи логи мы запрашиваем.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.</p>
+{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Проверить_сообщения_компиляции">Проверить сообщения компиляции</h3>
+### Проверить сообщения компиляции
 
-<pre class="brush: js">/* Загружаем исходный код программы. */
+```js
+/* Загружаем исходный код программы. */
 gl.shaderSource(shader, shaderCode);
 
 /* Компилируем программу. */
@@ -35,23 +36,21 @@ gl.compileShader(shader);
 /* Получаем список сообщений */
 var message = gl.getShaderInfoLog(shader);
 
-if (message.length &gt; 0) {
+if (message.length > 0) {
   /* Сообщение может быть ошибкой или предупреждением */
   throw message;
 }
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с <code>gl.COMPILE_STATUS</code> для проверки ошибок компиляции.</li>
- <li>{{domxref("WebGLRenderingContext.getError()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с `gl.COMPILE_STATUS` для проверки ошибок компиляции.
+- {{domxref("WebGLRenderingContext.getError()")}}

@@ -3,67 +3,36 @@ title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
 translation_of: Web/API/HTMLHeadingElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLHeadingElement</code></strong> интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.</p>
+**`HTMLHeadingElement`** интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства родителя, {{domxref("HTMLElement")}}.</em></p>
+_Наследует свойства родителя, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLHeadingElement.align")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
-</dl>
+- {{domxref("HTMLHeadingElement.align")}} {{obsolete_inline}}
+  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Нет специфичных методов; наследует методы родителя, {{domxref("HTMLElement")}}.</em></p>
+_Нет специфичных методов; наследует методы родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlheadingelement", "HTMLHeadingElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements", "HTMLHeadingElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The <code>align</code> property is now obsolete.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-43345119', 'HTMLHeadingElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-43345119', 'HTMLHeadingElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                | Status                           | Comment                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------- |
+| {{SpecName('HTML WHATWG', "#htmlheadingelement", "HTMLHeadingElement")}}                                             | {{Spec2('HTML WHATWG')}} |                                       |
+| {{SpecName('HTML5 W3C', "sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements", "HTMLHeadingElement")}} | {{Spec2('HTML5 W3C')}}     | The `align` property is now obsolete. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-43345119', 'HTMLHeadingElement')}}                                             | {{Spec2('DOM2 HTML')}}     | No change                             |
+| {{SpecName('DOM1', 'level-one-html.html#ID-43345119', 'HTMLHeadingElement')}}                                     | {{Spec2('DOM1')}}         | Initial definition                    |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.

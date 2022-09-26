@@ -11,40 +11,39 @@ tags:
   - Ссылки
 translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.globalAlpha</code></strong> Canvas 2D API определяет альфа-(прозрачность) значение, которое будет применено к фигурам и картинкам до того как они будут отрисованы на холсте.</p>
+Свойство **`CanvasRenderingContext2D`\*\***`.globalAlpha`\*\* Canvas 2D API определяет альфа-(прозрачность) значение, которое будет применено к фигурам и картинкам до того как они будут отрисованы на холсте.
 
-<div class="note">
-<p>Смотрите также <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> в <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
-</div>
+> **Примечание:** Смотрите также [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.globalAlpha = <em>value</em>;
-</pre>
+```
+ctx.globalAlpha = value;
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Число между <code>0.0</code> (полная прозрачность) и <code>1.0</code> (полная непрозрачность), включительно. Дефолтное значение <code>1.0</code>. Значение, не входящее в указанный диапазон, включая {{jsxref("Infinity")}} и {{jsxref("NaN")}}, не будут применены, и <code>globalAlpha</code> сохранит предыдущее значение или значение по умолчанию.</dd>
-</dl>
+- `value`
+  - : Число между `0.0` (полная прозрачность) и `1.0` (полная непрозрачность), включительно. Дефолтное значение `1.0`. Значение, не входящее в указанный диапазон, включая {{jsxref("Infinity")}} и {{jsxref("NaN")}}, не будут применены, и `globalAlpha` сохранит предыдущее значение или значение по умолчанию.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Отрисовка_полупрозрачных_фигур">Отрисовка полупрозрачных фигур</h3>
+### Отрисовка полупрозрачных фигур
 
-<p>В этом примере используется свойство <code>globalAlpha</code> для отрисовки двух полупрозрачных прямоугольников.</p>
+В этом примере используется свойство `globalAlpha` для отрисовки двух полупрозрачных прямоугольников.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.globalAlpha = 0.5;
@@ -54,23 +53,24 @@ ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Отрисовка_полупрозрачных_фигур', 700, 180) }}</p>
+{{ EmbedLiveSample('Отрисовка_полупрозрачных_фигур', 700, 180) }}
 
-<h3 id="Наложение_прозрачных_фигур">Наложение прозрачных фигур</h3>
+### Наложение прозрачных фигур
 
-<p>Этот пример демонстрирует эффект наложения нескольких прозрачных фигур друг на друга. Мы начнём с отрисовки непрозрачного фона, состоящего из четырёх разноцветных квадратов. Далее мы устанавливаем свойство <code>globalAlpha</code> равное <code>0.2</code> (20% прозрачности); Уровень прозрачности будет применён ко всем прозрачным фигурам. Затем мы используем цикл <code>for</code> для отрисовки нескольких кругов с увеличивающимися радиусами.</p>
+Этот пример демонстрирует эффект наложения нескольких прозрачных фигур друг на друга. Мы начнём с отрисовки непрозрачного фона, состоящего из четырёх разноцветных квадратов. Далее мы устанавливаем свойство `globalAlpha` равное `0.2` (20% прозрачности); Уровень прозрачности будет применён ко всем прозрачным фигурам. Затем мы используем цикл `for` для отрисовки нескольких кругов с увеличивающимися радиусами.
 
-<p>Для каждого нового круга прозрачность кругов, находящихся под ним,  уменьшается. Если вы увеличите количество шагов, тем самым увеличив количество кругов, фон в конечном итоге полностью исчезнет в центре изображения.</p>
+Для каждого нового круга прозрачность кругов, находящихся под ним, уменьшается. Если вы увеличите количество шагов, тем самым увеличив количество кругов, фон в конечном итоге полностью исчезнет в центре изображения.
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Рисуем фон
@@ -88,53 +88,34 @@ ctx.fillStyle = '#FFF';
 ctx.globalAlpha = 0.2;
 
 // Рисуем круги
-for (let i = 0; i &lt; 7; i++) {
+for (let i = 0; i < 7; i++) {
   ctx.beginPath();
   ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
   ctx.fill();
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Наложение_прозрачных_фигур", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+{{EmbedLiveSample("Наложение_прозрачных_фигур", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+### Gecko-specific notes
 
-<p>{{Compat}}</p>
+- Starting with Gecko 5.0, specifying invalid values for `globalAlpha` no longer throws a `SYNTAX_ERR` exception; these are now correctly silently ignored.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<ul>
- <li>Starting with Gecko 5.0, specifying invalid values for <code>globalAlpha</code> no longer throws a <code>SYNTAX_ERR</code> exception; these are now correctly silently ignored.</li>
-</ul>
+- In WebKit- and Blink-based browsers, a non-standard and deprecated method `ctx.setAlpha()` is implemented in addition to this property.
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+## Читайте также
 
-<ul>
- <li>In WebKit- and Blink-based browsers, a non-standard and deprecated method <code>ctx.setAlpha()</code> is implemented in addition to this property.</li>
-</ul>
-
-<h2 id="Читайте_также">Читайте также</h2>
-
-<ul>
- <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}

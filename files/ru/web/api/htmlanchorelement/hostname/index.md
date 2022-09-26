@@ -10,32 +10,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.hostname</code></strong> – это {{domxref("USVString")}}, содержащий домен.</p>
+Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{domxref("USVString")}}, содержащий домен.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hostname;
-<em>object.</em>hostname = <em>string</em>;
-</pre>
+```
+string = object.hostname;
+object.hostname = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.hostname"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.hostname">
 var anchor = document.getElementByID("myAnchor");
-var result = anchor.hostname; // Вернёт: 'developer.mozilla.org'</pre>
+var result = anchor.hostname; // Вернёт: 'developer.mozilla.org'
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

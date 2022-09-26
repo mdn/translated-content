@@ -3,38 +3,37 @@ title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong>CSSStyleDeclaration.getPropertyValue()</strong> интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.</p>
+**CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>value</em> = <em>style</em>.getPropertyValue(<em>property</em>);</pre>
+```
+var value = style.getPropertyValue(property);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><em><code>property</code></em> - это {{domxref('DOMString')}} представляющий имя свойства, которое должно быть обработано.</li>
-</ul>
+- _`property`_ - это {{domxref('DOMString')}} представляющий имя свойства, которое должно быть обработано.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<ul>
- <li><code><em>value</em></code> - это {{domxref('DOMString')}} содержащий значение свойства. Если не задано, возвращается пустая строка.</li>
-</ul>
+- `value` - это {{domxref('DOMString')}} содержащий значение свойства. Если не задано, возвращается пустая строка.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий JavaScript-код проверяет отмечен ли margin как important в CSS-правиле селектора:</p>
+Следующий JavaScript-код проверяет отмечен ли margin как important в CSS-правиле селектора:
 
-<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
+```js
+var declaration = document.styleSheets[0].rules[0].style;
 var value = declaration.getPropertyValue('margin'); // "1px 2px"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p><strong>Браузерная совместимость</strong></p>
+**Браузерная совместимость**
 
-<p>{{Compat}}</p>
+{{Compat}}

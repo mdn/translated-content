@@ -6,44 +6,36 @@ tags:
   - SVG
 translation_of: Web/API/SVGGraphicsElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>Интерфейс <strong><code>SVGGraphicsElement</code></strong> представляет элементы SVG, основной целью которых является прямое отображение графики в группу.</p>
+Интерфейс **`SVGGraphicsElement`** представляет элементы SVG, основной целью которых является прямое отображение графики в группу.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<div class="note">
-<p><strong>Note:</strong> Этот интерфейс был введён в SVG 2 и заменяет интерфейсы  {{domxref("SVGLocatable")}} и {{domxref("SVGTransformable")}} из SVG 1.1.</p>
-</div>
+> **Примечание:** Этот интерфейс был введён в SVG 2 и заменяет интерфейсы {{domxref("SVGLocatable")}} и {{domxref("SVGTransformable")}} из SVG 1.1.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот элемент наследует свойства от своего родителя, {{domxref("SVGElement")}}.</em></p>
+_Этот элемент наследует свойства от своего родителя, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот элемент наследует методы своего родителя, {{domxref("SVGElement")}}.</em></p>
+_Этот элемент наследует методы своего родителя, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.getBBox()")}}</dt>
- <dd>Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.</dd>
- <dt>{{domxref("SVGGraphicsElement.getCTM()")}}</dt>
- <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.</dd>
- <dt>{{domxref("SVGGraphicsElement.getScreenCTM()")}}</dt>
- <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.getBBox()")}}
+  - : Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.
+- {{domxref("SVGGraphicsElement.getCTM()")}}
+  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.
+- {{domxref("SVGGraphicsElement.getScreenCTM()")}}
+  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

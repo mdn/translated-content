@@ -3,28 +3,27 @@ title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
 translation_of: Web/API/AudioNode/channelCount
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><code>channelCount</code> свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> соединений для любого входа узла.</p>
-</div>
+`channelCount` свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) соединений для любого входа узла.
 
-<p><code>Использование и точное значение channelCount</code>'s зависит от {{domxref("AudioNode.channelCountMode")}}:</p>
+`Использование и точное значение channelCount`'s зависит от {{domxref("AudioNode.channelCountMode")}}:
 
-<ul>
- <li>Игнорируется если значение <code>channelCountMode</code> равно <code>max</code>.</li>
- <li>Используется в качестве максимального значения, если значение <code>channelCountMode</code> равно <code>clamped-max</code>.</li>
- <li>Используется в качестве точного значения, если значение <code>channelCountMode</code> указано явно.</li>
-</ul>
+- Игнорируется если значение `channelCountMode` равно `max`.
+- Используется в качестве максимального значения, если значение `channelCountMode` равно `clamped-max`.
+- Используется в качестве точного значения, если значение `channelCountMode` указано явно.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js;">var oscillator = audioCtx.createOscillator();
-var channels = oscillator.channelCount;</pre>
+```js
+var oscillator = audioCtx.createOscillator();
+var channels = oscillator.channelCount;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -35,22 +34,20 @@ oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 oscillator.channelCount;
-</pre>
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Целое.</p>
+Целое.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Использование Web Audio API</a></li>
-</ul>
+- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

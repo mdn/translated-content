@@ -8,102 +8,97 @@ tags:
   - метод
 translation_of: Web/API/EventTarget/removeEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.</p>
+Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>options</em>]);
-</code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);
-</pre>
+```
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(type, listener[, useCapture]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Строка, описывающая тип события, которое нужно удалить.</dd>
- <dt><code>listener</code></dt>
- <dd>{{ domxref("EventListener") }} функция, которую нужно удалить с элемента.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Объект опций, описывающий характеристики обработчика события. Доступные опции:
- <ul>
-  <li><code>capture</code>: {{jsxref("Boolean")}}. Указывает на то, что события этого типа отправляются данному обработчику до того, как происходит их передача любым <code>EventTarget</code>, находящимся ниже него в дереве DOM.</li>
-  <li><code>passive</code>: {{jsxref("Boolean")}}. Указывает на то, что <code>listener</code> никогда не будет вызывать <code>preventDefault()</code>. В противном случае (если <code>listener</code> вызовет <code>preventDefault()</code> ), user agent проигнорирует вызов и сгенерирует предупреждение в консоли.</li>
- </ul>
- </dd>
- <dt><code>useCapture</code> {{optional_inline}}</dt>
- <dd><p>Указывает, был ли удаляемый {{domxref("EventListener")}}зарегистрирован как перехватывающий обработчик, или нет. Если этот параметр отсутствует, предполагается значение по умолчанию:<code>false</code>.</p>
- <p>Если обработчик был зарегистрирован дважды, один раз с перехватом (с <code>capture</code>) и один - без, каждый из них должен быть удалён по отдельности. Удаление перехватывающего обработчика никак не затрагивает неперехватывающую версию этого же обработчика, и наоборот.</p></dd>
-</dl>
+- `type`
+  - : Строка, описывающая тип события, которое нужно удалить.
+- `listener`
+  - : {{ domxref("EventListener") }} функция, которую нужно удалить с элемента.
+- options {{optional_inline}}
 
-<div class="note"><strong>Примечание:</strong> <code>useCapture</code> требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр <code>useCapture</code>.</div>
+  - : Объект опций, описывающий характеристики обработчика события. Доступные опции:
 
-<h3 id="Return_value">Возвращаемое значение</h3>
+    - `capture`: {{jsxref("Boolean")}}. Указывает на то, что события этого типа отправляются данному обработчику до того, как происходит их передача любым `EventTarget`, находящимся ниже него в дереве DOM.
+    - `passive`: {{jsxref("Boolean")}}. Указывает на то, что `listener` никогда не будет вызывать `preventDefault()`. В противном случае (если `listener` вызовет `preventDefault()` ), user agent проигнорирует вызов и сгенерирует предупреждение в консоли.
 
-<p><code>undefined</code>.</p>
+- `useCapture` {{optional_inline}}
 
-<h3 id="Поиск_обработчика_при_удалении">Поиск обработчика при удалении</h3>
+  - : Указывает, был ли удаляемый {{domxref("EventListener")}}зарегистрирован как перехватывающий обработчик, или нет. Если этот параметр отсутствует, предполагается значение по умолчанию:`false`.
 
-<p>В большинстве браузеров помимо типа события и функции важно лишь совпадение значений параметра <code>useCapture</code> / <code>options.capture</code>, но так как это поведение не закреплено стандартом, наилучшим способом будет указание для <code>removeEventListener()</code> в точности тех же параметров, что были переданы в <code>addEventListener()</code>.</p>
+    Если обработчик был зарегистрирован дважды, один раз с перехватом (с `capture`) и один - без, каждый из них должен быть удалён по отдельности. Удаление перехватывающего обработчика никак не затрагивает неперехватывающую версию этого же обработчика, и наоборот.
 
-<h2 id="Compatibility">Примечания</h2>
+> **Примечание:** `useCapture` требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр `useCapture`.
 
-<p>Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.</p>
+### Возвращаемое значение
 
-<p>Вызов <code>removeEventListener()</code> с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в <code>EventTarget</code>, не имеет никакого эффекта.</p>
+`undefined`.
 
-<h2 id="Пример">Пример</h2>
+### Поиск обработчика при удалении
 
-<p>Это пример добавления и последующего удаления обработчика событий.</p>
+В большинстве браузеров помимо типа события и функции важно лишь совпадение значений параметра `useCapture` / `options.capture`, но так как это поведение не закреплено стандартом, наилучшим способом будет указание для `removeEventListener()` в точности тех же параметров, что были переданы в `addEventListener()`.
 
-<pre class="brush: js">var div = document.getElementById('div');
+## Примечания
+
+Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.
+
+Вызов `removeEventListener()` с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в `EventTarget`, не имеет никакого эффекта.
+
+## Пример
+
+Это пример добавления и последующего удаления обработчика событий.
+
+```js
+var div = document.getElementById('div');
 var listener = function (event) {
   /* do something here */
 };
 div.addEventListener('click', listener, false);
 div.removeEventListener('click', listener, false);
-</pre>
+```
 
-<h2 id="Browser_Compatibility">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko_примечания">Gecko примечания</h3>
+### Gecko примечания
 
-<ul>
- <li>В версиях Firefox младше версии 6 браузер бросает исключение, если параметр <code>useCapture</code> не был явно указан как false. В Gecko младше 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> бросает исключение, если параметр <code>listener</code> равен <code>null</code>; в настоящее время метод отрабатывает без ошибки, но при этом не производит никаких действий.</li>
-</ul>
+- В версиях Firefox младше версии 6 браузер бросает исключение, если параметр `useCapture` не был явно указан как false. В Gecko младше 9.0 {{ geckoRelease("9.0") }}, `addEventListener()` бросает исключение, если параметр `listener` равен `null`; в настоящее время метод отрабатывает без ошибки, но при этом не производит никаких действий.
 
-<h3 id="Opera_примечания">Opera примечания</h3>
+### Opera примечания
 
-<ul>
- <li>В Opera 12.00 параметр <code>useCapture</code> - опциональный (<a class="external" href="http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition">source</a>).</li>
-</ul>
+- В Opera 12.00 параметр `useCapture` - опциональный ([source](http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition)).
 
-<h3 id="WebKit_примечания">WebKit примечания</h3>
+### WebKit примечания
 
-<ul>
- <li>Несмотря на то, что WebKit явно добавил "<code>[optional]</code>" к параметру <code>useCapture</code> в Safari 5.1 и Chrome 13, это работало и до изменений.</li>
-</ul>
+- Несмотря на то, что WebKit явно добавил "`[optional]`" к параметру `useCapture` в Safari 5.1 и Chrome 13, это работало и до изменений.
 
-<h3 id="Specification">Спецификация</h3>
+### Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener">removeEventListener </a></li>
-</ul>
+- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
 
-<h2 id="Полифилы_для_поддержки_старых_браузеров">Полифилы для поддержки старых браузеров</h2>
+## Полифилы для поддержки старых браузеров
 
-<p><code>addEventListener()</code> и <code>removeEventListener()</code> отсутствуют в старых браузерах. Это ограничение можно обойти, вставив следующий код в начале ваших скриптов, что позволяет использовать <code>addEventListener()</code> и <code>removeEventListener()</code> в версиях, не поддерживающих эти методы нативно. Тем не менее, этот метод не работает в Internet Explorer версии 7 и ниже, так как расширение Element.prototype не поддерживалось в более ранних версиях Internet Explorer ранее 8.</p>
+`addEventListener()` и `removeEventListener()` отсутствуют в старых браузерах. Это ограничение можно обойти, вставив следующий код в начале ваших скриптов, что позволяет использовать `addEventListener()` и `removeEventListener()` в версиях, не поддерживающих эти методы нативно. Тем не менее, этот метод не работает в Internet Explorer версии 7 и ниже, так как расширение Element.prototype не поддерживалось в более ранних версиях Internet Explorer ранее 8.
 
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -111,7 +106,7 @@ div.removeEventListener('click', listener, false);
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -124,7 +119,7 @@ div.removeEventListener('click', listener, false);
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -137,19 +132,18 @@ div.removeEventListener('click', listener, false);
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("EventTarget.addEventListener()")}}.</li>
- <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.</li>
-</ul>
+- {{domxref("EventTarget.addEventListener()")}}.
+- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.

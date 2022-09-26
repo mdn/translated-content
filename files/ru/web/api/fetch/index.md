@@ -8,83 +8,67 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>Метод <code><strong>fetch()</strong></code> , относящийся к миксину {{domxref("WindowOrWorkerGlobalScope")}}, запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).</p>
+Метод **`fetch()`** , относящийся к миксину {{domxref("WindowOrWorkerGlobalScope")}}, запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).
 
-<p><code>WorkerOrGlobalScope</code> относится к {{domxref("Window")}} и {{domxref("WorkerGlobalScope")}} сразу. Это означает, что метод <code>fetch()</code> доступен практически в любом контексте, в котором бы вы не захотели получить ресурсы.</p>
+`WorkerOrGlobalScope` относится к {{domxref("Window")}} и {{domxref("WorkerGlobalScope")}} сразу. Это означает, что метод `fetch()` доступен практически в любом контексте, в котором бы вы не захотели получить ресурсы.
 
-<p>Промис {{domxref("WindowOrWorkerGlobalScope.fetch","Fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения <code>fetch()</code> достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение <code>true</code>. HTTP статус 404 не является сетевой ошибкой.</p>
+Промис {{domxref("WindowOrWorkerGlobalScope.fetch","Fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения `fetch()` достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение `true`. HTTP статус 404 не является сетевой ошибкой.
 
-<p>Метод <code>fetch()</code> контролируется директивой <code>connect-src</code> directive of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> (политика безопасности контента), а не директивой ресурсов, которые извлекает.</p>
+Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
 
-<div class="note">
-<p><strong>На Заметку</strong>: Аргументы метода <code>fetch()</code> идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.</p>
-</div>
+> **Примечание:** **На Заметку**: Аргументы метода `fetch()` идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Promise&lt;Response&gt; fetch(input[, init]);</pre>
+```
+Promise<Response> fetch(input[, init]);
+```
 
-<h3 id="Аргументы">Аргументы</h3>
+### Аргументы
 
-<dl>
- <dt><em>input</em></dt>
- <dd>Определяет желаемый для получения ресурс. Это может быть:
- <ul>
-  <li>{{domxref("USVString")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают <code>blob:</code> и <code>data:</code> , как схемы.</li>
-  <li>{{domxref("Request")}} объект (объект ответа).</li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
- <ul>
-  <li><code>method</code>: Метод запроса, например, <code>GET</code>, <code>POST</code>.</li>
-  <li><code>headers</code>: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).</li>
-  <li><code>body</code>: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{domxref("USVString")}} объектами. Обратите внимание, что <code>GET</code> или <code>HEAD</code> запрос не может иметь тела.</li>
-  <li><code>mode</code>: Режим, например, <code>cors</code>, <code>no-cors</code> или <code>same-origin</code>.</li>
-  <li><code>credentials</code>: Полномочия: <code>omit</code>, <code>same-origin</code> или <code>include</code>. Для автоматической отправки куки для текущего домена, эта опция должна быть указана. Начиная с Chrome 50, это свойство также принимает экземпляр класса {{domxref("FederatedCredential")}} или  {{domxref("PasswordCredential")}}.</li>
-  <li><code>cache</code>: Режим кеширования запроса <code>default</code>, <code>no-store</code>, <code>reload</code>, <code>no-cache</code>, <code>force-cache</code> или <code>only-if-cached</code>.</li>
-  <li><code>redirect</code>: Режим редиректа: <code>follow</code> (автоматически переадресовывать), <code>error</code> (прерывать перенаправление ошибкой) или <code>manual</code> (управлять перенаправлениями вручную). В Chrome по дефолту стоит <code>follow</code> (ранее, в Chrome 47, стояло <code>manual</code>).</li>
-  <li><code>referrer</code>: {{domxref("USVString")}}, определяющая <code>no-referrer</code>, <code>client</code> или a URL. Дефолтное значение - <code>client</code>.</li>
-  <li><code>referrerPolicy</code>: Определяет значение HTTP заголовка реферера. Может быть: <code>no-referrer</code>, <code>no-referrer-when-downgrade</code>, <code>origin</code>, <code>origin-when-cross-origin</code>, <code>unsafe-url</code>.</li>
-  <li><code>integrity</code>: Содержит значение целостности субресурсов (<a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a>) запроса (например, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
-  <li><code>keepalive</code>: Эта опция может быть использована, чтобы разрешить запросу "пережить" страницу. Получение ресурсов с флагом <code>keepalive</code> - это альтернатива {{domxref("Navigator.sendBeacon()")}} API. </li>
-  <li><code>signal</code>: Экземпляр объекта {{domxref("AbortSignal")}}; позволяет коммуницировать с fetch запросом и, если нужно, отменять его с помощью {{domxref("AbortController")}}.</li>
- </ul>
- </dd>
-</dl>
+- _input_
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Определяет желаемый для получения ресурс. Это может быть:
 
-<p>{{domxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).</p>
+    - {{domxref("USVString")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают `blob:` и `data:` , как схемы.
+    - {{domxref("Request")}} объект (объект ответа).
 
-<h3 id="Исключения">Исключения</h3>
+- _init_ {{optional_inline}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Тип</strong></th>
-   <th scope="col"><strong>Описание</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>AbortError</code></td>
-   <td>Запрос был отменён (используя {{domxref("AbortController.abort()")}}).</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>Начиная с версии <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>, <code>fetch()</code> завершится ошибкой <code>TypeError</code>, если URL имеет такие полномочия, как <code>http://user:password@example.com</code>.</td>
-  </tr>
- </tbody>
-</table>
+  - : Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
 
-<h2 id="Пример">Пример</h2>
+    - `method`: Метод запроса, например, `GET`, `POST`.
+    - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).
+    - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{domxref("USVString")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
+    - `mode`: Режим, например, `cors`, `no-cors` или `same-origin`.
+    - `credentials`: Полномочия: `omit`, `same-origin` или `include`. Для автоматической отправки куки для текущего домена, эта опция должна быть указана. Начиная с Chrome 50, это свойство также принимает экземпляр класса {{domxref("FederatedCredential")}} или {{domxref("PasswordCredential")}}.
+    - `cache`: Режим кеширования запроса `default`, `no-store`, `reload`, `no-cache`, `force-cache` или `only-if-cached`.
+    - `redirect`: Режим редиректа: `follow` (автоматически переадресовывать), `error` (прерывать перенаправление ошибкой) или `manual` (управлять перенаправлениями вручную). В Chrome по дефолту стоит `follow` (ранее, в Chrome 47, стояло `manual`).
+    - `referrer`: {{domxref("USVString")}}, определяющая `no-referrer`, `client` или a URL. Дефолтное значение - `client`.
+    - `referrerPolicy`: Определяет значение HTTP заголовка реферера. Может быть: `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `unsafe-url`.
+    - `integrity`: Содержит значение целостности субресурсов ([subresource integrity](/ru/docs/Web/Security/Subresource_Integrity)) запроса (например, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `keepalive`: Эта опция может быть использована, чтобы разрешить запросу "пережить" страницу. Получение ресурсов с флагом `keepalive` - это альтернатива {{domxref("Navigator.sendBeacon()")}} API.
+    - `signal`: Экземпляр объекта {{domxref("AbortSignal")}}; позволяет коммуницировать с fetch запросом и, если нужно, отменять его с помощью {{domxref("AbortController")}}.
 
-<p>В нашем <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) мы создаём новый объект {{domxref("Request")}} (запроса), используя релевантный конструктор, а затем получаем его вызовом <code>fetch()</code>. Так как запрашиваемый ресурс - изображение, для того, чтобы присвоить ему подходящий MIME тип и обработать должным образом, мы применяем к ответу метод {{domxref("Body.blob()")}}, после чего создаём для него Object URL и передаём её в элемент {{htmlelement("img")}}.</p>
+### Возвращаемое значение
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+{{domxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).
+
+### Исключения
+
+| **Тип**      | **Описание**                                                                                                                                                                            |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AbortError` | Запрос был отменён (используя {{domxref("AbortController.abort()")}}).                                                                                                    |
+| `TypeError`  | Начиная с версии [Firefox 43](/ru/docs/Mozilla/Firefox/Releases/43), `fetch()` завершится ошибкой `TypeError`, если URL имеет такие полномочия, как `http://user:password@example.com`. |
+
+## Пример
+
+В нашем [Fetch Request примере](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (см. [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) мы создаём новый объект {{domxref("Request")}} (запроса), используя релевантный конструктор, а затем получаем его вызовом `fetch()`. Так как запрашиваемый ресурс - изображение, для того, чтобы присвоить ему подходящий MIME тип и обработать должным образом, мы применяем к ответу метод {{domxref("Body.blob()")}}, после чего создаём для него Object URL и передаём её в элемент {{htmlelement("img")}}.
+
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -93,11 +77,13 @@ fetch(myRequest).then(function(response) {
 }).then(function(response) {
   var objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>В нашем <a href="https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html">Fetch with init then Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-with-init-then-request/">Fetch Request init live</a>) мы делаем тоже самое, за исключением того, что передаём в качестве аргумента для <code>fetch()</code> объект init:</p>
+В нашем [Fetch with init then Request примере](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (см. [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) мы делаем тоже самое, за исключением того, что передаём в качестве аргумента для `fetch()` объект init:
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -111,15 +97,19 @@ var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest,myInit).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>Обратите внимание, что объект init в качестве аргумента можно передать и в конструктор <code>Request</code> для получения аналогичного результата, например:</p>
+Обратите внимание, что объект init в качестве аргумента можно передать и в конструктор `Request` для получения аналогичного результата, например:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg', myInit);</pre>
+```js
+var myRequest = new Request('flowers.jpg', myInit);
+```
 
-<p>Допустимо использования объекта литерала в качестве <code>headers</code> в <code>init</code>.</p>
+Допустимо использования объекта литерала в качестве `headers` в `init`.
 
-<pre class="brush: js">var myInit = { method: 'GET',
+```js
+var myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
@@ -127,20 +117,19 @@ fetch(myRequest,myInit).then(function(response) {
                cache: 'default' };
 
 var myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+## Смотрите также
+
+- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ru/docs/Web/HTTP)

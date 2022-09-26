@@ -11,38 +11,42 @@ tags:
   - метод
 translation_of: Web/API/Worker/terminate
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>Метод <code><strong>terminate()</strong></code> интерфейса {{domxref("Worker")}} немедленно завершает работу <code>worker</code>. Работнику не даётся возможность завершить свою работу, он останавливается сразу.</p>
+Метод **`terminate()`** интерфейса {{domxref("Worker")}} немедленно завершает работу `worker`. Работнику не даётся возможность завершить свою работу, он останавливается сразу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">myWorker.terminate();</pre>
+```js
+myWorker.terminate();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Void.</p>
+Void.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.</p>
+В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 myWorker.terminate();
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<p>Интерфейс {{domxref("Worker")}}.</p>
+## Смотрите также
+
+Интерфейс {{domxref("Worker")}}.

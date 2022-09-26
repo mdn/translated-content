@@ -3,52 +3,49 @@ title: TouchEvent.changedTouches
 slug: Web/API/TouchEvent/changedTouches
 translation_of: Web/API/TouchEvent/changedTouches
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>{{ domxref("TouchList") }} список точек касания (объекта {{domxref("Touch")}}), смысл которых зависит от типа события:</p>
+{{ domxref("TouchList") }} список точек касания (объекта {{domxref("Touch")}}), смысл которых зависит от типа события:
 
-<ul>
- <li>Для события <code>touchstart</code>, это список точек касания, в которых появилось взаимодействие с поверхностью экрана.</li>
- <li>Для события <code>touchmove</code>,  это список точек касания, которые изменились с момента последнего события.</li>
- <li>Для события <code>touchend</code>, это список точек касания, на которых прекратилось взаимодействие с поверхностью экрана (т. е. набор точек,  где прервалось касание пальцами).</li>
-</ul>
+- Для события `touchstart`, это список точек касания, в которых появилось взаимодействие с поверхностью экрана.
+- Для события `touchmove`, это список точек касания, которые изменились с момента последнего события.
+- Для события `touchend`, это список точек касания, на которых прекратилось взаимодействие с поверхностью экрана (т. е. набор точек, где прервалось касание пальцами).
 
-<p>Это свойство предназначено {{readonlyInline}}.</p>
+Это свойство предназначено {{readonlyInline}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var <em>changes</em> = <em>touchEvent</em>.changedTouches;
-</pre>
+```
+var changes = touchEvent.changedTouches;
+```
 
-<h3 id="Return_Value">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>changes</code></dt>
- <dd>Список {{ domxref("TouchList") }} объекта {{ domxref("Touch") }} в котором содержатся все точки касания для данного события.</dd>
-</dl>
+- `changes`
+  - : Список {{ domxref("TouchList") }} объекта {{ domxref("Touch") }} в котором содержатся все точки касания для данного события.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта  {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.</p>
+Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.
 
-<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.</p>
+В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка `changedTouches` и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.
 
-<pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
+```js
+someElement.addEventListener('touchmove', function(e) {
    // Iterate through the list of touch points that changed
    // since the last event and print each touch point's identifier.
-   for (var i=0; i &lt; e.changedTouches.length; i++) {
+   for (var i=0; i < e.changedTouches.length; i++) {
      console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
    }
 }, false);
+```
 
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

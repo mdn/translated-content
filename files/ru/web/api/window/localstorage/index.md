@@ -13,69 +13,69 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Свойство <strong><code>localStorage</code></strong> позволяет получить доступ к {{domxref("Storage")}} объекту. <code>localStorage</code> аналогично свойству <code><a href="/en-US/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>. Разница только в том, что свойство <code>sessionStorage </code>хранит данные в течение сеанса (до закрытия браузера), в отличие от данных,  находящихся в свойстве <code>localStorage</code>, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript.</p>
+Свойство **`localStorage`** позволяет получить доступ к {{domxref("Storage")}} объекту. `localStorage` аналогично свойству [`sessionStorage`](/en-US/docs/Web/API/Window.sessionStorage). Разница только в том, что свойство `sessionStorage `хранит данные в течение сеанса (до закрытия браузера), в отличие от данных, находящихся в свойстве `localStorage`, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript.
 
-<p>Следует отметить, что данные, сохранённые как в <code>localStorage</code>, так и в <code>sessionStorage</code>, являться специфичными для протокола страницы.</p>
+Следует отметить, что данные, сохранённые как в `localStorage`, так и в `sessionStorage`, являться специфичными для протокола страницы.
 
-<p>Ключи и значения <strong>всегда строки</strong> (так же, как и объекты, целочисленные ключи автоматически будут преобразованы в строки).</p>
+Ключи и значения **всегда строки** (так же, как и объекты, целочисленные ключи автоматически будут преобразованы в строки).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
+```js
+myStorage = window.localStorage;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{DOMxRef("Storage")}}, который используется для доступа к текущему локальному хранилищу.</p>
+Объект {{DOMxRef("Storage")}}, который используется для доступа к текущему локальному хранилищу.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>Запрос к хранилищу нарушает разрешение политик, либо источник для хранения <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">не является корректной комбинацией схема/хост/порт</a> (такое может произойти, если источником для хранения является <code>file:</code> или <code>data:</code> схемы, например). Как ещё один пример появления ошибки, пользователь через конфигурацию браузера запретил хранение данных для некоторых источников.</dd>
-</dl>
+- `SecurityError`
+  - : Запрос к хранилищу нарушает разрешение политик, либо источник для хранения [не является корректной комбинацией схема/хост/порт](/ru/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (такое может произойти, если источником для хранения является `file:` или `data:` схемы, например). Как ещё один пример появления ошибки, пользователь через конфигурацию браузера запретил хранение данных для некоторых источников.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код показывает пример доступа к локальному объекту {{DOMxRef("Storage")}} для текущего домена и добавляет данные в него с помощью {{DOMxRef("Storage.setItem()")}}.</p>
+Следующий код показывает пример доступа к локальному объекту {{DOMxRef("Storage")}} для текущего домена и добавляет данные в него с помощью {{DOMxRef("Storage.setItem()")}}.
 
-<pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
+```js
+localStorage.setItem('myCat', 'Tom');
+```
 
-<p>Считывать данные из localStorage для определённого ключа, можно следующим образом:</p>
+Считывать данные из localStorage для определённого ключа, можно следующим образом:
 
-<pre class="brush: js">let cat = localStorage.getItem('myCat');
-</pre>
+```js
+let cat = localStorage.getItem('myCat');
+```
 
-<p>Удалять данные можно так:</p>
+Удалять данные можно так:
 
-<pre class="brush: js">localStorage.removeItem('myCat'); // вернёт undefined
-</pre>
+```js
+localStorage.removeItem('myCat'); // вернёт undefined
+```
 
-<p>Для удаления всех записей, то есть полной очистки <code>localStorage</code>, используйте:</p>
+Для удаления всех записей, то есть полной очистки `localStorage`, используйте:
 
-<pre class="brush: js">localStorage.clear();</pre>
+```js
+localStorage.clear();
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Пожалуйста, обратитесь к статье <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> для более подробных примеров.</p>
-</div>
+> **Примечание:** Пожалуйста, обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) для более подробных примеров.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+Все браузеры имеют различный уровень объёма для `localStorage` и `sessionStorage`. Здесь [подробное описание объёма хранилищ для разных браузеров](http://dev-test.nemikor.com/web-storage/support-test/).
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p>Все браузеры имеют различный уровень объёма для <code>localStorage</code> и <code>sessionStorage</code>. Здесь <a href="http://dev-test.nemikor.com/web-storage/support-test/">подробное описание объёма хранилищ для разных браузеров</a>.</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Использование Web Storage API</a></li>
- <li>Локальное хранилище с <a href="/en-US/docs/Web/API/Web_Storage_API/Local_storage">Window.localStorage</a></li>
- <li>{{DOMxRef("Window.sessionStorage")}}</li>
-</ul>
+- [Использование Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- Локальное хранилище с [Window.localStorage](/ru/docs/Web/API/Web_Storage_API/Local_storage)
+- {{DOMxRef("Window.sessionStorage")}}

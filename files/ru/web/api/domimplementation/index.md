@@ -8,41 +8,35 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Интерфейс <code><strong>DOMImplementation</strong></code> представляет собой объект, предоставляющий методы, которые не зависят от какого-либо конкретного документа. Такой объект возвращается свойством {{domxref("Document.implementation")}}.</p>
+Интерфейс **`DOMImplementation`** представляет собой объект, предоставляющий методы, которые не зависят от какого-либо конкретного документа. Такой объект возвращается свойством {{domxref("Document.implementation")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс не имеет определённого свойства и не наследует его.</em></p>
+_Этот интерфейс не имеет определённого свойства и не наследует его._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Нет унаследованного метода.</em></p>
+_Нет унаследованного метода._
 
-<dl>
- <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>Создаёт и возвращает {{domxref("XMLDocument")}}.</dd>
- <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>Создаёт и возвращает {{domxref("DocumentType")}}.</dd>
- <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>Создаёт и возвращает HTML {{domxref("Document")}}.</dd>
- <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>Возвращает {{domxref("Boolean")}}, указывающий, поддерживается ли данная функция или нет. Эта функция ненадёжна и сохраняется только для целей совместимости: за исключением запросов, связанных с SVG, она всегда возвращает true. Старые браузеры очень непоследовательны в своём поведении.</dd>
-</dl>
+- {{domxref("DOMImplementation.createDocument()")}}
+  - : Создаёт и возвращает {{domxref("XMLDocument")}}.
+- {{domxref("DOMImplementation.createDocumentType()")}}
+  - : Создаёт и возвращает {{domxref("DocumentType")}}.
+- {{domxref("DOMImplementation.createHTMLDocument()")}}
+  - : Создаёт и возвращает HTML {{domxref("Document")}}.
+- {{domxref("DOMImplementation.hasFeature()")}}
+  - : Возвращает {{domxref("Boolean")}}, указывающий, поддерживается ли данная функция или нет. Эта функция ненадёжна и сохраняется только для целей совместимости: за исключением запросов, связанных с SVG, она всегда возвращает true. Старые браузеры очень непоследовательны в своём поведении.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/ru/docs/DOM/DOM_Reference)

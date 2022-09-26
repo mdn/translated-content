@@ -8,65 +8,35 @@ tags:
   - Ссылка
 translation_of: Web/API/XMLHttpRequest/readyState
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>Свойство XMLHttpRequest.readyState</strong> возвращает текущее состояние объекта XMLHttpRequest. Объект <abbr title="XMLHttpRequest">XHR</abbr> может иметь следующие состояния:</p>
+**Свойство XMLHttpRequest.readyState** возвращает текущее состояние объекта XMLHttpRequest. Объект XHR может иметь следующие состояния:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Значение</td>
-   <td class="header">Состояние</td>
-   <td class="header">Описание</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>UNSENT</code></td>
-   <td>Объект был создан. Метод <code>open()</code> ещё не вызывался.</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>OPENED</code></td>
-   <td><code>Метод open()</code> был вызван.</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>HEADERS_RECEIVED</code></td>
-   <td><code>Метод send()</code> был вызван, доступны заголовки (headers) и статус.</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td><code>LOADING</code></td>
-   <td>Загрузка; <code>responseText</code> содержит частичные данные.</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td><code>DONE</code></td>
-   <td>Операция полностью завершена.</td>
-  </tr>
- </tbody>
-</table>
+| Значение | Состояние          | Описание                                                          |
+| -------- | ------------------ | ----------------------------------------------------------------- |
+| `0`      | `UNSENT`           | Объект был создан. Метод `open()` ещё не вызывался.               |
+| `1`      | `OPENED`           | `Метод open()` был вызван.                                        |
+| `2`      | `HEADERS_RECEIVED` | `Метод send()` был вызван, доступны заголовки (headers) и статус. |
+| `3`      | `LOADING`          | Загрузка; `responseText` содержит частичные данные.               |
+| `4`      | `DONE`             | Операция полностью завершена.                                     |
 
-<dl>
- <dt>UNSENT</dt>
- <dd>Объект XMLHttpRequest был создан, но метод <code>open()</code> ещё не вызывался.</dd>
- <dt>OPENED</dt>
- <dd>Был вызван метод open(). На этом этапе методом <a href="/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a> могут быть установлены заголовки запроса (request headers), после чего для начала выполнения запроса может быть вызван метод <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> .</dd>
- <dt>HEADERS_RECEIVED</dt>
- <dd>Был вызван метод send() и получены заголовки ответа (response headers) .</dd>
- <dt>LOADING</dt>
- <dd>Получена часть ответа. Если <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code>  - это пустая строка или имеет значение "text", <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> будет содержать загруженную порцию текста ответа.</dd>
- <dt>DONE</dt>
- <dd>Операция доставки данных завершена. Это может означать как то, что передача данных полностью завершена успешно, так и то, что произошла ошибка.</dd>
-</dl>
+- UNSENT
+  - : Объект XMLHttpRequest был создан, но метод `open()` ещё не вызывался.
+- OPENED
+  - : Был вызван метод open(). На этом этапе методом [setRequestHeader()](/ru/docs/Web/API/XMLHttpRequest/setRequestHeader) могут быть установлены заголовки запроса (request headers), после чего для начала выполнения запроса может быть вызван метод [send()](/ru/docs/Web/API/XMLHttpRequest/send) .
+- HEADERS_RECEIVED
+  - : Был вызван метод send() и получены заголовки ответа (response headers) .
+- LOADING
+  - : Получена часть ответа. Если [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) - это пустая строка или имеет значение "text", [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) будет содержать загруженную порцию текста ответа.
+- DONE
+  - : Операция доставки данных завершена. Это может означать как то, что передача данных полностью завершена успешно, так и то, что произошла ошибка.
 
-<div class="note">
-<p>Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> и <code>DONE, используются названия READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) и <code>READYSTATE_COMPLETE</code> (4).</p>
-</div>
+> **Примечание:** Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` и `DONE, используются названия READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) и `READYSTATE_COMPLETE` (4).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState будет равно 0
 
 xhr.open('GET', '/api', true);
@@ -81,12 +51,12 @@ xhr.onload = function () {
 };
 
 xhr.send(null);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}

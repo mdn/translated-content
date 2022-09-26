@@ -3,176 +3,79 @@ title: mouseleave
 slug: Web/API/Element/mouseleave_event
 translation_of: Web/API/Element/mouseleave_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p class="summary">Событие <code>mouseleave</code> срабатывает, когда курсор манипулятора (обычно мыши) перемещается за границы элемента.</p>
+Событие `mouseleave` срабатывает, когда курсор манипулятора (обычно мыши) перемещается за границы элемента.
 
-<p><code>mouseleave</code> <code>и</code> {{event('mouseout')}} схожи, но отличаются тем, что <code>mouseleave</code> не всплывает, а <code>mouseout</code> всплывает.<br>
- Это значит, что <code>mouseleave</code> срабатывает, когда курсор выходит за границы элемента <em>и</em> всех его дочерних элементов, в то время как <code>mouseout</code> срабатывает, когда курсор покидает границы элемента <em>или</em> одного из его дочерних элементов (даже если курсор все ещё находится в пределах элемента).</p>
+`mouseleave` `и` {{event('mouseout')}} схожи, но отличаются тем, что `mouseleave` не всплывает, а `mouseout` всплывает.
+Это значит, что `mouseleave` срабатывает, когда курсор выходит за границы элемента _и_ всех его дочерних элементов, в то время как `mouseout` срабатывает, когда курсор покидает границы элемента _или_ одного из его дочерних элементов (даже если курсор все ещё находится в пределах элемента).
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><img alt="mouseenter.png" src="/@api/deki/files/5910/=mouseleave.png"></td>
-   <td><img alt="mouseover.png" src="/@api/deki/files/5911/=mouseout.png"></td>
-  </tr>
-  <tr>
-   <td>Одно <code>mouseleave</code> событие шлётся каждому элементу в иерархии в момент выхода курсора за их границы. Здесь 4 события рассылаются четырём элементам в иерархии когда курсор передвигается от текста к области за границей самого внешнего div элемента представленного на картинке.</td>
-   <td>Одно единственное <code>mouseout</code> событие шлётся самому глубоколежащему элементу в DOM дереве, затем оно поднимается вверх по иерархии пока не будет отменено обработчиком или не достигнет корня.</td>
-  </tr>
- </tbody>
-</table>
+| ![mouseenter.png](/@api/deki/files/5910/=mouseleave.png)                                                                                                                                                                                                                          | ![mouseover.png](/@api/deki/files/5911/=mouseout.png)                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Одно `mouseleave` событие шлётся каждому элементу в иерархии в момент выхода курсора за их границы. Здесь 4 события рассылаются четырём элементам в иерархии когда курсор передвигается от текста к области за границей самого внешнего div элемента представленного на картинке. | Одно единственное `mouseout` событие шлётся самому глубоколежащему элементу в DOM дереве, затем оно поднимается вверх по иерархии пока не будет отменено обработчиком или не достигнет корня. |
 
-<h2 id="Общая_информация">Общая информация</h2>
+## Общая информация
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseleave">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref('MouseEvent')}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отменяемое</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Цель</dt>
- <dd style="margin: 0 0 0 120px;">{{cssxref('Element')}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
-</dl>
+- Спецификация
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseleave)
+- Интерфейс
+  - : {{domxref('MouseEvent')}}
+- Bubbles
+  - : Нет
+- Отменяемое
+  - : Нет
+- Цель
+  - : {{cssxref('Element')}}
+- Действие по умолчанию
+  - : Нет
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Свойство</th>
-   <th scope="col">Тип</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Целевой элемент события (вышележащий элемент в DOM дереве).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Тип события.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>Boolean</td>
-   <td>
-    <p>Поднимается ли событие вверх как принято или нет</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><code>Boolean</code></td>
-   <td>Является ли событие отменяемым или нет?</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("document.defaultView")}} (<code>window</code> объекта document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Целевой узел (элемент), который используется обработчиком события.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Для <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> и <code>mouseleave</code> событий: цель дополнительного события (<code>mouseleave</code> цель в случае наступления <code>mouseenter</code> события). <code>null</code> иначе.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>X координата указателя мыши в глобальных (относительно экрана) координатах.</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>Y координата указателя мыши в глобальных (относительно экрана) координатах.</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>X координата указателя мыши в локальных (относительно DOM содержимого) координатах.</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>Y координата указателя мыши в локальных (относительно DOM содержимого) координатах.</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>Всегда 0, так как нажатие любой кнопки не может произвести это событие (mouse movement does).</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The buttons depressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are depressed, returns the logical sum of the values. E.g., if Left button and Right button are depressed, returns 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">More info</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the control key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the shift key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the alt key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
- </tbody>
-</table>
+| Свойство                                 | Тип                                  | Описание                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | Целевой элемент события (вышележащий элемент в DOM дереве).                                                                                                                                                                                                                                                                                                                                                          |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | Тип события.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `bubbles` {{readonlyInline}}       | Boolean                              | Поднимается ли событие вверх как принято или нет                                                                                                                                                                                                                                                                                                                                                                     |
+| `cancelable` {{readonlyInline}}    | `Boolean`                            | Является ли событие отменяемым или нет?                                                                                                                                                                                                                                                                                                                                                                              |
+| `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (`window` объекта document)                                                                                                                                                                                                                                                                                                                                         |
+| `detail` {{readonlyInline}}        | `long` (`float`)                     | 0.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | Целевой узел (элемент), который используется обработчиком события.                                                                                                                                                                                                                                                                                                                                                   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | Для `mouseover`, `mouseout`, `mouseenter` и `mouseleave` событий: цель дополнительного события (`mouseleave` цель в случае наступления `mouseenter` события). `null` иначе.                                                                                                                                                                                                                                          |
+| `screenX` {{readonlyInline}}       | long                                 | X координата указателя мыши в глобальных (относительно экрана) координатах.                                                                                                                                                                                                                                                                                                                                          |
+| `screenY` {{readonlyInline}}       | long                                 | Y координата указателя мыши в глобальных (относительно экрана) координатах.                                                                                                                                                                                                                                                                                                                                          |
+| `clientX` {{readonlyInline}}       | long                                 | X координата указателя мыши в локальных (относительно DOM содержимого) координатах.                                                                                                                                                                                                                                                                                                                                  |
+| `clientY` {{readonlyInline}}       | long                                 | Y координата указателя мыши в локальных (относительно DOM содержимого) координатах.                                                                                                                                                                                                                                                                                                                                  |
+| `button` {{readonlyInline}}        | unsigned short                       | Всегда 0, так как нажатие любой кнопки не может произвести это событие (mouse movement does).                                                                                                                                                                                                                                                                                                                        |
+| `buttons` {{readonlyInline}}       | unsigned short                       | The buttons depressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are depressed, returns the logical sum of the values. E.g., if Left button and Right button are depressed, returns 3 (=1 \| 2). [More info](/ru/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                       |
+| `ctrlKey` {{readonlyInline}}       | boolean                              | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                      |
+| `shiftKey` {{readonlyInline}}      | boolean                              | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                        |
+| `altKey` {{readonlyInline}}        | boolean                              | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                          |
+| `metaKey` {{readonlyInline}}       | boolean                              | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout#Example"><code>mouseout</code> </a>documentation has an example illustrating the difference between <code>mouseout</code> and <code>mouseleave</code>.</p>
+The [`mouseout` ](/ru/docs/Web/Events/mouseout#Example)documentation has an example illustrating the difference between `mouseout` and `mouseleave`.
 
-<p>The following example illustrates how to use <code>mouseout</code>, to simulate the principle of event delegation for the mouseleave event.</p>
+The following example illustrates how to use `mouseout`, to simulate the principle of event delegation for the mouseleave event.
 
-<pre class="brush: html">&lt;ul id="test"&gt;
-  &lt;li&gt;
-    &lt;ul class="leave-sensitive"&gt;
-      &lt;li&gt;item 1-1&lt;/li&gt;
-      &lt;li&gt;item 1-2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;ul class="leave-sensitive"&gt;
-      &lt;li&gt;item 2-1&lt;/li&gt;
-      &lt;li&gt;item 2-2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul id="test">
+  <li>
+    <ul class="leave-sensitive">
+      <li>item 1-1</li>
+      <li>item 1-2</li>
+    </ul>
+  </li>
+  <li>
+    <ul class="leave-sensitive">
+      <li>item 2-1</li>
+      <li>item 2-2</li>
+    </ul>
+  </li>
+</ul>
 
-&lt;script&gt;
+<script>
   var delegationSelector = ".leave-sensitive";
 
   document.getElementById("test").addEventListener("mouseout", function( event ) {
@@ -181,7 +84,7 @@ translation_of: Web/API/Element/mouseleave_event
         match;
 
     // search for a parent node matching the delegation selector
-    while ( target &amp;&amp; target != document &amp;&amp; !( match = matches( target, delegationSelector ) ) ) {
+    while ( target && target != document && !( match = matches( target, delegationSelector ) ) ) {
         target = target.parentNode;
     }
 
@@ -189,7 +92,7 @@ translation_of: Web/API/Element/mouseleave_event
     if ( !match ) { return; }
 
     // loop through the parent of the related target to make sure that it's not a child of the target
-    while ( related &amp;&amp; related != target &amp;&amp; related != document ) {
+    while ( related && related != target && related != document ) {
         related = related.parentNode;
     }
 
@@ -214,23 +117,22 @@ translation_of: Web/API/Element/mouseleave_event
     // the matchesSelector is prefixed in most (if not all) browsers
     return elem.matchesSelector( selector );
   };
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Event("mousedown")}}</li>
- <li>{{Event("mouseup")}}</li>
- <li>{{Event("mousemove")}}</li>
- <li>{{Event("click")}}</li>
- <li>{{Event("dblclick")}}</li>
- <li>{{Event("mouseover")}}</li>
- <li>{{Event("mouseout")}}</li>
- <li>{{Event("mouseenter")}}</li>
- <li>{{Event("mouseleave")}}</li>
- <li>{{Event("contextmenu")}}</li>
-</ul>
+- {{Event("mousedown")}}
+- {{Event("mouseup")}}
+- {{Event("mousemove")}}
+- {{Event("click")}}
+- {{Event("dblclick")}}
+- {{Event("mouseover")}}
+- {{Event("mouseout")}}
+- {{Event("mouseenter")}}
+- {{Event("mouseleave")}}
+- {{Event("contextmenu")}}

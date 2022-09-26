@@ -6,43 +6,44 @@ tags:
 translation_of: Web/API/BaseAudioContext/decodeAudioData
 original_slug: Web/API/AudioContext/decodeAudioData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>decodeAudioData()</code> method of the {{ domxref("AudioContext") }} Interface is used to asynchronously decode audio file data contained in an {{domxref("ArrayBuffer")}}. In this case the <code>ArrayBuffer</code> is usually loaded from an {{domxref("XMLHttpRequest")}}'s <code>response</code> attribute after setting the <code>responseType</code> to <code>arraybuffer</code>. The decoded AudioBuffer is resampled to the AudioContext's sampling rate, then passed to a callback or promise.</p>
-</div>
+The `decodeAudioData()` method of the {{ domxref("AudioContext") }} Interface is used to asynchronously decode audio file data contained in an {{domxref("ArrayBuffer")}}. In this case the `ArrayBuffer` is usually loaded from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`. The decoded AudioBuffer is resampled to the AudioContext's sampling rate, then passed to a callback or promise.
 
-<p>This is the preferred method of creating an audio source for Web Audio API from an audio track.</p>
+This is the preferred method of creating an audio source for Web Audio API from an audio track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Older callback syntax:</p>
+Older callback syntax:
 
-<pre class="syntaxbox">audioCtx.decodeAudioData(audioData, function(decodedData) {
+```
+audioCtx.decodeAudioData(audioData, function(decodedData) {
   // use the dec​oded data here
-});</pre>
+});
+```
 
-<p>Newer promise-based syntax:</p>
+Newer promise-based syntax:
 
-<pre class="syntaxbox">audioCtx.decodeAudioData(audioData).then(function(decodedData) {
+```
+audioCtx.decodeAudioData(audioData).then(function(decodedData) {
   // use the decoded data here
-});</pre>
+});
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this section we will first cover the older callback-based system and then the newer promise-based syntax.</p>
+In this section we will first cover the older callback-based system and then the newer promise-based syntax.
 
-<h3 id="Older_callback_syntax">Older callback syntax</h3>
+### Older callback syntax
 
-<p>In this example, the <code>getData()</code> function uses XHR to load an audio track, setting the <code>responseType</code> of the request to <code>arraybuffer</code> so that it returns an array buffer as its <code>response</code> that we then store in the <code>audioData</code> variable . We then pass this buffer into a <code>decodeAudioData()</code> function; the success callback takes the successfully decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using {{ domxref("AudioContext.createBufferSource()") }}, connects the source to the {{domxref("AudioContext.destination") }} and sets it to loop.</p>
+In this example, the `getData()` function uses XHR to load an audio track, setting the `responseType` of the request to `arraybuffer` so that it returns an array buffer as its `response` that we then store in the `audioData` variable . We then pass this buffer into a `decodeAudioData()` function; the success callback takes the successfully decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using {{ domxref("AudioContext.createBufferSource()") }}, connects the source to the {{domxref("AudioContext.destination") }} and sets it to loop.
 
-<p>The buttons in the example simply run <code>getData()</code> to load the track and start it playing, and stop it playing, respectively. When the <code>stop()</code> method is called on the source, the source is cleared out.</p>
+The buttons in the example simply run `getData()` to load the track and start it playing, and stop it playing, respectively. When the `stop()` method is called on the source, the source is cleared out.
 
-<div class="note">
-<p><strong>Note</strong>: You can <a href="http://mdn.github.io/decode-audio-data/">run the example live</a> (or <a href="https://github.com/mdn/decode-audio-data">view the source</a>.)</p>
-</div>
+> **Примечание:** You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
-<pre class="brush: js">// define variables
+```js
+// define variables
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
@@ -98,52 +99,40 @@ stop.onclick = function() {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<h3 id="New_promise-based_syntax">New promise-based syntax</h3>
+### New promise-based syntax
 
-<pre class="brush: js">ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
+```js
+ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
  // use the decoded data here
-});</pre>
+});
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt>ArrayBuffer</dt>
- <dd>An ArrayBuffer containing the audio data to be decoded, usually grabbed from an {{domxref("XMLHttpRequest")}}'s <code>response</code> attribute after setting the <code>responseType</code> to <code>arraybuffer</code>.</dd>
- <dt>DecodeSuccessCallback</dt>
- <dd>A callback function to be invoked when the decoding successfully finishes. The single argument to this callback is an AudioBuffer representing the decoded PCM audio data. Usually you'll want to put the decoded data into an {{domxref("AudioBufferSourceNode")}}, from which it can be played and manipulated how you want.</dd>
- <dt>DecodeErrorCallback</dt>
- <dd>An optional error callback, to be invoked if an error occurs when the audio data is being decoded.</dd>
-</dl>
+- ArrayBuffer
+  - : An ArrayBuffer containing the audio data to be decoded, usually grabbed from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`.
+- DecodeSuccessCallback
+  - : A callback function to be invoked when the decoding successfully finishes. The single argument to this callback is an AudioBuffer representing the decoded PCM audio data. Usually you'll want to put the decoded data into an {{domxref("AudioBufferSourceNode")}}, from which it can be played and manipulated how you want.
+- DecodeErrorCallback
+  - : An optional error callback, to be invoked if an error occurs when the audio data is being decoded.
 
-<h2 id="Returns">Returns</h2>
+## Returns
 
-<p>An {{domxref("AudioBuffer") }} representing the decoded PCM audio data.</p>
+An {{domxref("AudioBuffer") }} representing the decoded PCM audio data.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback', 'decodeAudioData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                                                                                                                                    | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback', 'decodeAudioData()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

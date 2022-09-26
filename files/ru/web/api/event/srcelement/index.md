@@ -3,24 +3,22 @@ title: Event.srcElement
 slug: Web/API/Event/srcElement
 translation_of: Web/API/Event/srcElement
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>Event.srcElement</code></strong> это проприетарный синоним стандартного свойства {{domxref("Event.target")}}. Специфичен для старых версий Microsoft Internet Explorer.</p>
+**`Event.srcElement`** это проприетарный синоним стандартного свойства {{domxref("Event.target")}}. Специфичен для старых версий Microsoft Internet Explorer.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>Не является частью каких-либо спецификаций.</p>
+Не является частью каких-либо спецификаций.
 
-<p>Имеет <a href="https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx">описание от Microsoft на MSDN</a>.</p>
+Имеет [описание от Microsoft на MSDN](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>).
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Window.event")}}</li>
-</ul>
+- {{domxref("Window.event")}}

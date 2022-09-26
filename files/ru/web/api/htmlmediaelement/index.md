@@ -14,279 +14,237 @@ tags:
   - Ссылка
 translation_of: Web/API/HTMLMediaElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Интерфейс HTMLMediaElement добавляет к {{domxref ("HTMLElement")}} свойства и методы, необходимые для поддержки базовых мультимедийных возможностей, общих для аудио и видео. Элементы {{domxref ("HTMLVideoElement")}} и {{domxref ("HTMLAudioElement")}} наследуют этот интерфейс.</p>
+Интерфейс HTMLMediaElement добавляет к {{domxref ("HTMLElement")}} свойства и методы, необходимые для поддержки базовых мультимедийных возможностей, общих для аудио и видео. Элементы {{domxref ("HTMLVideoElement")}} и {{domxref ("HTMLAudioElement")}} наследуют этот интерфейс.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс также наследует свойства от своих предков {{domxref ("HTMLElement")}}, {{domxref ("Element")}}, {{domxref ("Node")}} и {{domxref ("EventTarget") }}.</em></p>
+_Этот интерфейс также наследует свойства от своих предков {{domxref ("HTMLElement")}}, {{domxref ("Element")}}, {{domxref ("Node")}} и {{domxref ("EventTarget") }}._
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.audioTracks")}}</dt>
- <dd>{{Domxref ("AudioTrackList")}}, в котором перечислены объекты {{domxref ("AudioTrack")}}, содержащиеся в элементе.</dd>
- <dt>{{domxref("HTMLMediaElement.autoplay")}}</dt>
- <dd>{{Jsxref ("Boolean")}}, который отражает атрибут HTML {{htmlattrxref ("autoplay", "video")}}, указывающий, должно ли воспроизведение начинаться автоматически, как только будет доступно достаточно медиафайлов, чтобы сделать это без прерывания.
- <div class="note"><strong>Примечание. Сайты, которые автоматически воспроизводят аудио (или видео с аудиодорожкой), могут быть неприятными для пользователей, поэтому их следует по возможности избегать. Если вы должны предлагать функцию автозапуска, вы должны включить её (требуется, чтобы пользователь специально включил её). Однако это может быть полезно при создании элементов мультимедиа, источник которых будет установлен позднее под контролем пользователя.</strong></div>
- </dd>
- <dt>{{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}</dt>
- <dd>Возвращает объект {{domxref ("TimeRanges")}}, который указывает диапазоны медиаисточника, который браузер буферизировал (если есть) в момент обращения к свойству <code>buffered</code>.</dd>
- <dt>{{domxref("HTMLMediaElement.controller")}}</dt>
- <dd>Объект {{domxref ("MediaController")}}, представляющий медиа-контроллер, назначенный элементу, либо <code>null</code>, если ни один не назначен.</dd>
- <dt>{{domxref("HTMLMediaElement.controls")}}</dt>
- <dd>Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("controls", "video")}}, указывающий, должны ли отображаться элементы пользовательского интерфейса для управления ресурсом.</dd>
- <dt>{{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{domxref ("DOMTokenList")}}, который помогает агенту пользователя выбирать элементы управления для отображения на элементе мультимедиа всякий раз, когда агент пользователя показывает свой собственный набор элементов управления. DOMTokenList принимает одно или несколько из трёх возможных значений: nodownload, nofullscreen и noremoteplayback.</dd>
- <dt>{{domxref("HTMLMediaElement.crossOrigin")}}</dt>
- <dd>{{Domxref ("DOMString")}}, указывающий настройку CORS для этого медиаэлемента.</dd>
- <dt>{{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{domxref ("DOMString")}} с абсолютным URL-адресом выбранного медиа-ресурса.</dd>
- <dt>{{domxref("HTMLMediaElement.currentTime")}}</dt>
- <dd>Двойное значение, обозначающее текущее время воспроизведения в секундах. Установка этого значения ищет носитель в новое время.</dd>
- <dt>{{domxref("HTMLMediaElement.defaultMuted")}}</dt>
- <dd>Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("muted", "video")}}, который указывает, должен ли звук вывода медиа-элемента по умолчанию отключаться.</dd>
- <dt>{{domxref("HTMLMediaElement.defaultPlaybackRate")}}</dt>
- <dd>Двойное значение, обозначающее скорость воспроизведения по умолчанию для мультимедиа.</dd>
- <dt>{{domxref("HTMLMediaElement.disableRemotePlayback")}}</dt>
- <dd>{{Jsxref ('Boolean')}}, который устанавливает или возвращает состояние удалённого воспроизведения, указывая, разрешено ли медиаэлементу иметь удалённый пользовательский интерфейс воспроизведения.</dd>
- <dt>{{domxref("HTMLMediaElement.duration")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение типа double, указывающее длину носителя в секундах, или 0, если данные носителя отсутствуют.</dd>
- <dt>{{domxref("HTMLMediaElement.ended")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{jsxref ('Boolean')}}, который указывает, закончил ли воспроизведение медиа-элемент.</dd>
- <dt>{{domxref("HTMLMediaElement.error")}} {{readonlyinline}}</dt>
- <dd>Возвращает объект {{domxref ("MediaError")}} для самой последней ошибки или <code>null</code>, если ошибки не было.</dd>
- <dt>{{domxref("HTMLMediaElement.loop")}}</dt>
- <dd>Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("loop", "video")}}, который указывает, должен ли медиа-элемент начинаться сначала, когда он достигает конца.</dd>
- <dt>{{domxref("HTMLMediaElement.mediaGroup")}}</dt>
- <dd>Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("mediagroup", "video")}}, который указывает имя группы элементов, к которой он принадлежит. Группа медиа-элементов имеет общий {{domxref ('MediaController')}}.</dd>
- <dt>{{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Возвращает объект {{domxref ("MediaKeys")}} или ноль. MediaKeys - это набор ключей, которые связанный HTMLMediaElement может использовать для дешифрования мультимедийных данных во время воспроизведения.</dd>
- <dt>{{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}</dt>
- <dd>Возвращает {{jsxref ('Boolean')}}. Связанный с захватом аудиопотока.</dd>
- <dt>{{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}</dt>
- <dd>Двойник, обеспечивающий доступ к времени окончания фрагмента, если медиа-элемент имеет URI-фрагмент для currentSrc, в противном случае он равен продолжительности медиа.</dd>
- <dt>{{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>
- <p>Это unsigned long, который указывает число выборок, которые будут возвращены в кадровом буфере каждого события MozAudioAvailable. Это число является общим для всех каналов, и по умолчанию установлено количество каналов * 1024 (например, 2 канала * 1024 выборок = всего 2048).</p>
+- {{domxref("HTMLMediaElement.audioTracks")}}
+  - : {{Domxref ("AudioTrackList")}}, в котором перечислены объекты {{domxref ("AudioTrack")}}, содержащиеся в элементе.
+- {{domxref("HTMLMediaElement.autoplay")}}
 
- <p>Для свойства mozFrameBufferLength может быть установлено новое значение для более низкой задержки, больших объёмов данных и т. Д. Указанный размер должен быть числом от 512 до 16384. Использование любого другого размера приводит к возникновению исключения. Лучшее время для установки новой длины - после того, как сработало событие загруженных метаданных, когда известна аудиоинформация, но до того, как аудио началось, или события MozAudioAvailable начали срабатывать.</p>
- </dd>
- <dt>{{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Возвращает двойное число, представляющее количество семплов в секунду, которые будут воспроизведены. Например, 44100 выборок в секунду - это частота дискретизации, используемая аудио CD.</dd>
- <dt>{{domxref("HTMLMediaElement.muted")}}</dt>
- <dd>{{Jsxref ('Boolean')}}, определяющий, отключён ли звук. true, если звук отключён, и false в противном случае.</dd>
- <dt>{{domxref("HTMLMediaElement.networkState")}} {{readonlyinline}}</dt>
- <dd>Возвращает unsigned short (перечисление), указывающее текущее состояние выборки мультимедиа по сети.</dd>
- <dt>{{domxref("HTMLMediaElement.paused")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{jsxref ('Boolean')}}, который указывает, приостановлен ли медиа-элемент.</dd>
- <dt>{{domxref("HTMLMediaElement.playbackRate")}}</dt>
- <dd>Двойное число, указывающее скорость воспроизведения мультимедиа.</dd>
- <dt>{{domxref("HTMLMediaElement.played")}} {{readonlyinline}}</dt>
- <dd>Возвращает объект {{domxref ('TimeRanges')}}, который содержит диапазоны медиаисточников, которые воспроизводил браузер, если таковые имеются.</dd>
- <dt>{{domxref("HTMLMediaElement.preload")}}</dt>
- <dd>Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("preload", "video")}}, указывающий, какие данные должны быть предварительно загружены, если таковые имеются. Возможные значения: <code>none</code>, <code>metadata</code>, <code>auto</code>.</dd>
- <dt>{{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}</dt>
- <dd>Является {{jsxref ('Boolean')}}, который определяет, будет ли сохранена высота звука. Если установлено значение false, высота звука будет регулироваться в зависимости от скорости звука. Это реализовано с помощью префиксов в Firefox (mozPreservedPitch) и WebKit (webkitPreservedPitch).</dd>
- <dt>{{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}</dt>
- <dd>Возвращает <code>unsigned short</code> (перечисление), указывающее состояние готовности носителя.</dd>
- <dt>{{domxref("HTMLMediaElement.seekable")}} {{readonlyinline}}</dt>
- <dd>Возвращает объект {{domxref ('TimeRanges')}}, который содержит временные диапазоны, к которым пользователь может обращаться, если таковые имеются.</dd>
- <dt>{{domxref("HTMLMediaElement.seeking")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{jsxref ('Boolean')}}, который указывает, находится ли медиа в процессе поиска новой позиции.</dd>
- <dt>{{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Возвращает {{domxref ("DOMString")}}, который является уникальным идентификатором аудиоустройства, предоставляющего выходные данные, или пустую строку, если используется пользовательский агент по умолчанию. Этот идентификатор должен быть одним из значений MediaDeviceInfo.deviceid, возвращаемых из {{domxref ("MediaDevices.enumerateDevices ()")}}, id-multimedia или id-communications.</dd>
- <dt>{{domxref("HTMLMediaElement.src")}}</dt>
- <dd>Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("src", "video")}}, который содержит URL-адрес используемого медиа-ресурса.</dd>
- <dt>{{domxref("HTMLMediaElement.srcObject")}}</dt>
- <dd>{{Domxref ('MediaStream')}}, представляющий медиафайл для воспроизведения или воспроизведённый в текущем HTMLMediaElement, или null, если не назначен.</dd>
- <dt>{{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}</dt>
- <dd>Возвращает список объектов {{domxref ("TextTrack")}}, содержащихся в элементе.</dd>
- <dt>{{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}</dt>
- <dd>Возвращает список объектов {{domxref ("VideoTrack")}}, содержащихся в элементе.
- <div class="note">
- <p>Gecko поддерживает воспроизведение только одной дорожки, а разбор метаданных дорожек доступен только для носителей с форматом контейнера Ogg.</p>
- </div>
- </dd>
- <dt>{{domxref("HTMLMediaElement.volume")}}</dt>
- <dd>Двойной показатель громкости звука, от 0,0 (тихий) до 1,0 (самый громкий).</dd>
-</dl>
+  - : {{Jsxref ("Boolean")}}, который отражает атрибут HTML {{htmlattrxref ("autoplay", "video")}}, указывающий, должно ли воспроизведение начинаться автоматически, как только будет доступно достаточно медиафайлов, чтобы сделать это без прерывания.
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+    > **Примечание:** **Примечание. Сайты, которые автоматически воспроизводят аудио (или видео с аудиодорожкой), могут быть неприятными для пользователей, поэтому их следует по возможности избегать. Если вы должны предлагать функцию автозапуска, вы должны включить её (требуется, чтобы пользователь специально включил её). Однако это может быть полезно при создании элементов мультимедиа, источник которых будет установлен позднее под контролем пользователя.**
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.onencrypted")}}</dt>
- <dd>Устанавливает {{domxref ('Event Handler')}}, вызываемый, когда носитель зашифрован.</dd>
- <dt>{{domxref("HTMLMediaElement.onwaitingforkey")}}</dt>
- <dd>Устанавливает {{domxref ('EventHandler')}}, вызываемый, когда воспроизведение заблокировано во время ожидания ключа шифрования.</dd>
-</dl>
+- {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
+  - : Возвращает объект {{domxref ("TimeRanges")}}, который указывает диапазоны медиаисточника, который браузер буферизировал (если есть) в момент обращения к свойству `buffered`.
+- {{domxref("HTMLMediaElement.controller")}}
+  - : Объект {{domxref ("MediaController")}}, представляющий медиа-контроллер, назначенный элементу, либо `null`, если ни один не назначен.
+- {{domxref("HTMLMediaElement.controls")}}
+  - : Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("controls", "video")}}, указывающий, должны ли отображаться элементы пользовательского интерфейса для управления ресурсом.
+- {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
+  - : Возвращает {{domxref ("DOMTokenList")}}, который помогает агенту пользователя выбирать элементы управления для отображения на элементе мультимедиа всякий раз, когда агент пользователя показывает свой собственный набор элементов управления. DOMTokenList принимает одно или несколько из трёх возможных значений: nodownload, nofullscreen и noremoteplayback.
+- {{domxref("HTMLMediaElement.crossOrigin")}}
+  - : {{Domxref ("DOMString")}}, указывающий настройку CORS для этого медиаэлемента.
+- {{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}
+  - : Возвращает {{domxref ("DOMString")}} с абсолютным URL-адресом выбранного медиа-ресурса.
+- {{domxref("HTMLMediaElement.currentTime")}}
+  - : Двойное значение, обозначающее текущее время воспроизведения в секундах. Установка этого значения ищет носитель в новое время.
+- {{domxref("HTMLMediaElement.defaultMuted")}}
+  - : Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("muted", "video")}}, который указывает, должен ли звук вывода медиа-элемента по умолчанию отключаться.
+- {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
+  - : Двойное значение, обозначающее скорость воспроизведения по умолчанию для мультимедиа.
+- {{domxref("HTMLMediaElement.disableRemotePlayback")}}
+  - : {{Jsxref ('Boolean')}}, который устанавливает или возвращает состояние удалённого воспроизведения, указывая, разрешено ли медиаэлементу иметь удалённый пользовательский интерфейс воспроизведения.
+- {{domxref("HTMLMediaElement.duration")}} {{readonlyinline}}
+  - : Возвращает значение типа double, указывающее длину носителя в секундах, или 0, если данные носителя отсутствуют.
+- {{domxref("HTMLMediaElement.ended")}} {{readonlyinline}}
+  - : Возвращает {{jsxref ('Boolean')}}, который указывает, закончил ли воспроизведение медиа-элемент.
+- {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
+  - : Возвращает объект {{domxref ("MediaError")}} для самой последней ошибки или `null`, если ошибки не было.
+- {{domxref("HTMLMediaElement.loop")}}
+  - : Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("loop", "video")}}, который указывает, должен ли медиа-элемент начинаться сначала, когда он достигает конца.
+- {{domxref("HTMLMediaElement.mediaGroup")}}
+  - : Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("mediagroup", "video")}}, который указывает имя группы элементов, к которой он принадлежит. Группа медиа-элементов имеет общий {{domxref ('MediaController')}}.
+- {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
+  - : Возвращает объект {{domxref ("MediaKeys")}} или ноль. MediaKeys - это набор ключей, которые связанный HTMLMediaElement может использовать для дешифрования мультимедийных данных во время воспроизведения.
+- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}
+  - : Возвращает {{jsxref ('Boolean')}}. Связанный с захватом аудиопотока.
+- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
+  - : Двойник, обеспечивающий доступ к времени окончания фрагмента, если медиа-элемент имеет URI-фрагмент для currentSrc, в противном случае он равен продолжительности медиа.
+- {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
 
-<h2 id="Устаревшие_атрибуты">Устаревшие атрибуты</h2>
+  - : Это unsigned long, который указывает число выборок, которые будут возвращены в кадровом буфере каждого события MozAudioAvailable. Это число является общим для всех каналов, и по умолчанию установлено количество каналов \* 1024 (например, 2 канала \* 1024 выборок = всего 2048).
 
-<p>Эти атрибуты устарели и не должны использоваться, даже если браузер все ещё поддерживает их.</p>
+    Для свойства mozFrameBufferLength может быть установлено новое значение для более низкой задержки, больших объёмов данных и т. Д. Указанный размер должен быть числом от 512 до 16384. Использование любого другого размера приводит к возникновению исключения. Лучшее время для установки новой длины - после того, как сработало событие загруженных метаданных, когда известна аудиоинформация, но до того, как аудио началось, или события MozAudioAvailable начали срабатывать.
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Возвращает значение типа double, указывающее начальную позицию воспроизведения в секундах.</dd>
- <dt>{{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Возвращает значение типа double, представляющее количество каналов в аудиоресурсе (например, 2 для стерео).</dd>
-</dl>
+- {{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Возвращает двойное число, представляющее количество семплов в секунду, которые будут воспроизведены. Например, 44100 выборок в секунду - это частота дискретизации, используемая аудио CD.
+- {{domxref("HTMLMediaElement.muted")}}
+  - : {{Jsxref ('Boolean')}}, определяющий, отключён ли звук. true, если звук отключён, и false в противном случае.
+- {{domxref("HTMLMediaElement.networkState")}} {{readonlyinline}}
+  - : Возвращает unsigned short (перечисление), указывающее текущее состояние выборки мультимедиа по сети.
+- {{domxref("HTMLMediaElement.paused")}} {{readonlyinline}}
+  - : Возвращает {{jsxref ('Boolean')}}, который указывает, приостановлен ли медиа-элемент.
+- {{domxref("HTMLMediaElement.playbackRate")}}
+  - : Двойное число, указывающее скорость воспроизведения мультимедиа.
+- {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
+  - : Возвращает объект {{domxref ('TimeRanges')}}, который содержит диапазоны медиаисточников, которые воспроизводил браузер, если таковые имеются.
+- {{domxref("HTMLMediaElement.preload")}}
+  - : Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("preload", "video")}}, указывающий, какие данные должны быть предварительно загружены, если таковые имеются. Возможные значения: `none`, `metadata`, `auto`.
+- {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
+  - : Является {{jsxref ('Boolean')}}, который определяет, будет ли сохранена высота звука. Если установлено значение false, высота звука будет регулироваться в зависимости от скорости звука. Это реализовано с помощью префиксов в Firefox (mozPreservedPitch) и WebKit (webkitPreservedPitch).
+- {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
+  - : Возвращает `unsigned short` (перечисление), указывающее состояние готовности носителя.
+- {{domxref("HTMLMediaElement.seekable")}} {{readonlyinline}}
+  - : Возвращает объект {{domxref ('TimeRanges')}}, который содержит временные диапазоны, к которым пользователь может обращаться, если таковые имеются.
+- {{domxref("HTMLMediaElement.seeking")}} {{readonlyinline}}
+  - : Возвращает {{jsxref ('Boolean')}}, который указывает, находится ли медиа в процессе поиска новой позиции.
+- {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
+  - : Возвращает {{domxref ("DOMString")}}, который является уникальным идентификатором аудиоустройства, предоставляющего выходные данные, или пустую строку, если используется пользовательский агент по умолчанию. Этот идентификатор должен быть одним из значений MediaDeviceInfo.deviceid, возвращаемых из {{domxref ("MediaDevices.enumerateDevices ()")}}, id-multimedia или id-communications.
+- {{domxref("HTMLMediaElement.src")}}
+  - : Это {{domxref ("DOMString")}}, который отражает атрибут HTML {{htmlattrxref ("src", "video")}}, который содержит URL-адрес используемого медиа-ресурса.
+- {{domxref("HTMLMediaElement.srcObject")}}
+  - : {{Domxref ('MediaStream')}}, представляющий медиафайл для воспроизведения или воспроизведённый в текущем HTMLMediaElement, или null, если не назначен.
+- {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
+  - : Возвращает список объектов {{domxref ("TextTrack")}}, содержащихся в элементе.
+- {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
 
-<h3 id="Устаревшие_обработчики_событий">Устаревшие обработчики событий</h3>
+  - : Возвращает список объектов {{domxref ("VideoTrack")}}, содержащихся в элементе.
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Устанавливает {{domxref ("EventHandler")}}, вызываемый, когда медиа-элемент прерывается из-за менеджера аудио-каналов. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.</dd>
- <dt>{{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Устанавливает {{domxref ('Event Handler')}}, вызываемый при завершении прерывания. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.</dd>
-</dl>
+    > **Примечание:** Gecko поддерживает воспроизведение только одной дорожки, а разбор метаданных дорожек доступен только для носителей с форматом контейнера Ogg.
 
-<h2 id="Методы">Методы</h2>
+- {{domxref("HTMLMediaElement.volume")}}
+  - : Двойной показатель громкости звука, от 0,0 (тихий) до 1,0 (самый громкий).
 
-<p><em>Этот интерфейс также наследует методы от своих предков {{domxref ("HTMLElement")}}, {{domxref ("Element")}}, {{domxref ("Node")}} и {{domxref ("EventTarget") }}.</em></p>
+### Обработчики событий
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.addTextTrack()")}}</dt>
- <dd>Добавляет текстовую дорожку (например, дорожку для субтитров) к элементу мультимедиа.</dd>
- <dt>{{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}</dt>
- <dd>Возвращает {{domxref ("MediaStream")}}, захватывает поток медиа-контента.</dd>
- <dt>{{domxref("HTMLMediaElement.canPlayType()")}}</dt>
- <dd>Определяет, может ли указанный тип носителя воспроизводиться.</dd>
- <dt>{{domxref("HTMLMediaElement.fastSeek()")}}</dt>
- <dd>Прямо стремится к данному времени.</dd>
- <dt>{{domxref("HTMLMediaElement.load()")}}</dt>
- <dd>Сбрасывает носитель в начало и выбирает наилучший из доступных источников из источников, предоставленных с использованием атрибута {{htmlattrxref ("src", "video")}} или элемента {{HTMLElement ("source")}}.</dd>
- <dt>{{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}</dt>
- <dd>[введите описание]</dd>
- <dt>{{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}</dt>
- <dd>[введите описание]</dd>
- <dt>{{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}</dt>
- <dd>Возвращает {{jsxref ('Object')}}, который содержит свойства, которые представляют метаданные из воспроизводимого медиаресурса в виде пар {key: value}. Отдельная копия данных возвращается каждый раз, когда вызывается метод. Этот метод должен вызываться после возникновения события загруженных метаданных.</dd>
- <dt>{{domxref("HTMLMediaElement.pause()")}}</dt>
- <dd>Пауза воспроизведения мультимедиа.</dd>
- <dt>{{domxref("HTMLMediaElement.play()")}}</dt>
- <dd>Начинается воспроизведение мультимедиа.</dd>
- <dt>{{domxref("HTMLMediaElement.seekToNextFrame()")}} {{non-standard_inline}} {{experimental_inline}}</dt>
- <dd>Стремится к следующему кадру в медиа. Этот нестандартный экспериментальный метод позволяет вручную управлять считыванием и воспроизведением мультимедиа с настраиваемой скоростью или перемещаться по мультимедиа покадрово для выполнения фильтрации или других операций.</dd>
- <dt>{{domxref("HTMLMediaElement.setMediaKeys()")}} {{experimental_inline}}</dt>
- <dd>Возвращает {{jsxref ("Промис")}}. Устанавливает клавиши {{domxref ("MediaKeys")}}, используемые при дешифровании медиафайлов во время воспроизведения.</dd>
- <dt>{{domxref("HTMLMediaElement.setSinkId()")}} {{experimental_inline}}</dt>
- <dd>Устанавливает идентификатор аудиоустройства, которое будет использоваться для вывода, и возвращает {{jsxref ("Promise")}}. Это работает только тогда, когда приложение имеет право использовать указанное устройство.</dd>
-</dl>
+- {{domxref("HTMLMediaElement.onencrypted")}}
+  - : Устанавливает {{domxref ('Event Handler')}}, вызываемый, когда носитель зашифрован.
+- {{domxref("HTMLMediaElement.onwaitingforkey")}}
+  - : Устанавливает {{domxref ('EventHandler')}}, вызываемый, когда воспроизведение заблокировано во время ожидания ключа шифрования.
 
-<h2 id="Устаревшие_методы">Устаревшие методы</h2>
+## Устаревшие атрибуты
 
-<p>Эти методы устарели и не должны использоваться, даже если браузер все ещё поддерживает их.</p>
+Эти атрибуты устарели и не должны использоваться, даже если браузер все ещё поддерживает их.
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Этот метод, доступный только в реализации Mozilla, загружает данные из другого медиа-элемента. Это работает аналогично load () за исключением того, что вместо обычного алгоритма выбора ресурса для источника просто устанавливается значение currentSrc другого элемента. Это оптимизировано, так что этот элемент получает доступ ко всем кешированным и буферизованным данным другого элемента; фактически эти два элемента совместно используют загруженные данные, поэтому данные, загруженные любым из этих элементов, доступны обоим.</dd>
-</dl>
+- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}
+  - : Возвращает значение типа double, указывающее начальную позицию воспроизведения в секундах.
+- {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Возвращает значение типа double, представляющее количество каналов в аудиоресурсе (например, 2 для стерео).
 
-<h2 id="События">События </h2>
+### Устаревшие обработчики событий
 
-<p><em>Наследует методы от своего родителя {{domxref ("HTMLElement")}}, определённого в миксине {{domxref ('GlobalEventHandlers')}}. Обработайте эти события, используя addEventListener () или назначив обработчик событий свойству oneventname этого интерфейса.</em></p>
+- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{obsolete_inline}}
+  - : Устанавливает {{domxref ("EventHandler")}}, вызываемый, когда медиа-элемент прерывается из-за менеджера аудио-каналов. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.
+- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{obsolete_inline}}
+  - : Устанавливает {{domxref ('Event Handler')}}, вызываемый при завершении прерывания. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.
 
-<dl>
- <dt>{{domxref("HTMLMediaElement.abort_event", 'abort')}}</dt>
- <dd>Срабатывает, когда ресурс загружен не полностью, но не в результате ошибки.</dd>
- <dt>{{domxref("HTMLMediaElement.canplay_event", 'canplay')}}</dt>
- <dd>Запускается, когда пользовательский агент может воспроизводить мультимедиа, но оценивает, что загружено недостаточно данных для воспроизведения мультимедиа до его конца без необходимости остановки для дальнейшей буферизации контента.</dd>
- <dt>{{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}</dt>
- <dd>Запускается, когда пользовательский агент может воспроизводить мультимедиа, и оценивает, что было загружено достаточно данных для воспроизведения мультимедиа до его конца, без необходимости остановки для дальнейшей буферизации контента.</dd>
- <dt>{{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}</dt>
- <dd>Запускается, когда атрибут продолжительности был обновлён.</dd>
- <dt>{{domxref("HTMLMediaElement.emptied_event", 'emptied')}}</dt>
- <dd>Запускается, когда носитель становится пустым; например, когда носитель уже загружен (или частично загружен), и для его перезагрузки вызывается метод {{domxref ("HTMLMediaElement.load ()")}}.</dd>
- <dt>{{domxref("HTMLMediaElement.ended_event", 'ended')}}</dt>
- <dd>Срабатывает, когда воспроизведение останавливается, когда достигнут конец носителя (&lt;audio&gt; или &lt;video&gt;) или если дальнейшие данные недоступны.</dd>
- <dt>{{domxref("HTMLMediaElement.error_event", 'error')}}</dt>
- <dd>Срабатывает, когда ресурс не может быть загружен из-за ошибки.</dd>
- <dt>{{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}</dt>
- <dd>Запускается, когда первый кадр носителя завершил загрузку.</dd>
- <dt>{{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}</dt>
- <dd>Запускается, когда метаданные были загружены</dd>
- <dt>{{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}</dt>
- <dd>Запускается, когда браузер начал загружать ресурс.</dd>
- <dt>{{domxref("HTMLMediaElement.pause_event", 'pause')}}</dt>
- <dd>Вызывается, когда обрабатывается запрос на приостановку воспроизведения, и действие переходит в состояние паузы, чаще всего это происходит, когда вызывается медиа {{domxref ("HTMLMediaElement.pause ()")}}.</dd>
- <dt>{{domxref("HTMLMediaElement.play_event", 'play')}}</dt>
- <dd>Срабатывает, когда свойство paused изменяется с true на false, в результате использования метода {{domxref ("HTMLMediaElement.play ()")}} или атрибута autoplay</dd>
- <dt>{{domxref("HTMLMediaElement.playing_event", "playing")}}</dt>
- <dd>Запускается, когда воспроизведение готово начать после приостановки или задержки из-за отсутствия данных.</dd>
- <dt>{{domxref("HTMLMediaElement.progress_event", "progress")}}</dt>
- <dd>Периодически запускается, когда браузер загружает ресурс.</dd>
- <dt>{{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}</dt>
- <dd>Запускается, когда скорость воспроизведения изменилась.</dd>
- <dt>{{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}</dt>
- <dd>Запускается, когда скорость воспроизведения изменилась.</dd>
- <dt>{{domxref("HTMLMediaElement.seeking_event", 'seeking')}}</dt>
- <dd>Запускается, когда начинается операция поиска</dd>
- <dt>{{domxref("HTMLMediaElement.stalled_event", 'stalled')}}</dt>
- <dd>Запускается, когда пользовательский агент пытается извлечь данные мультимедиа, но данные неожиданно не поступают.</dd>
- <dt>{{domxref("HTMLMediaElement.suspend_event", 'suspend')}}</dt>
- <dd>Запускается, когда загрузка медиа-данных была приостановлена.</dd>
- <dt>{{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}</dt>
- <dd>Запускается, когда время, указанное атрибутом currentTime, было обновлено.</dd>
- <dt>{{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}</dt>
- <dd>Запускается при изменении громкости.</dd>
- <dt>{{domxref("HTMLMediaElement.waiting_event", 'waiting')}}</dt>
- <dd>Срабатывает, когда воспроизведение остановлено из-за временной нехватки данных</dd>
-</dl>
+## Методы
 
-<h2 id="Характеристики">Характеристики</h2>
+_Этот интерфейс также наследует методы от своих предков {{domxref ("HTMLElement")}}, {{domxref ("Element")}}, {{domxref ("Node")}} и {{domxref ("EventTarget") }}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристики</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Добавляет <code>sinkId</code> и <code>setSinkId()</code>, и <code>captureStream()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}</td>
-   <td>{{Spec2('EME')}}</td>
-   <td>Добавляет {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, {{domxref("setMediaKeys")}}, {{domxref("onencrypted")}}, и {{domxref("onwaitingforkey")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Без изменений {{SpecName ('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("HTMLMediaElement.addTextTrack()")}}
+  - : Добавляет текстовую дорожку (например, дорожку для субтитров) к элементу мультимедиа.
+- {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
+  - : Возвращает {{domxref ("MediaStream")}}, захватывает поток медиа-контента.
+- {{domxref("HTMLMediaElement.canPlayType()")}}
+  - : Определяет, может ли указанный тип носителя воспроизводиться.
+- {{domxref("HTMLMediaElement.fastSeek()")}}
+  - : Прямо стремится к данному времени.
+- {{domxref("HTMLMediaElement.load()")}}
+  - : Сбрасывает носитель в начало и выбирает наилучший из доступных источников из источников, предоставленных с использованием атрибута {{htmlattrxref ("src", "video")}} или элемента {{HTMLElement ("source")}}.
+- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
+  - : \[введите описание]
+- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
+  - : \[введите описание]
+- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
+  - : Возвращает {{jsxref ('Object')}}, который содержит свойства, которые представляют метаданные из воспроизводимого медиаресурса в виде пар {key: value}. Отдельная копия данных возвращается каждый раз, когда вызывается метод. Этот метод должен вызываться после возникновения события загруженных метаданных.
+- {{domxref("HTMLMediaElement.pause()")}}
+  - : Пауза воспроизведения мультимедиа.
+- {{domxref("HTMLMediaElement.play()")}}
+  - : Начинается воспроизведение мультимедиа.
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{non-standard_inline}} {{experimental_inline}}
+  - : Стремится к следующему кадру в медиа. Этот нестандартный экспериментальный метод позволяет вручную управлять считыванием и воспроизведением мультимедиа с настраиваемой скоростью или перемещаться по мультимедиа покадрово для выполнения фильтрации или других операций.
+- {{domxref("HTMLMediaElement.setMediaKeys()")}} {{experimental_inline}}
+  - : Возвращает {{jsxref ("Промис")}}. Устанавливает клавиши {{domxref ("MediaKeys")}}, используемые при дешифровании медиафайлов во время воспроизведения.
+- {{domxref("HTMLMediaElement.setSinkId()")}} {{experimental_inline}}
+  - : Устанавливает идентификатор аудиоустройства, которое будет использоваться для вывода, и возвращает {{jsxref ("Promise")}}. Это работает только тогда, когда приложение имеет право использовать указанное устройство.
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Устаревшие методы
 
-<p>{{Compat}}</p>
+Эти методы устарели и не должны использоваться, даже если браузер все ещё поддерживает их.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+- {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Этот метод, доступный только в реализации Mozilla, загружает данные из другого медиа-элемента. Это работает аналогично load () за исключением того, что вместо обычного алгоритма выбора ресурса для источника просто устанавливается значение currentSrc другого элемента. Это оптимизировано, так что этот элемент получает доступ ко всем кешированным и буферизованным данным другого элемента; фактически эти два элемента совместно используют загруженные данные, поэтому данные, загруженные любым из этих элементов, доступны обоим.
 
-<ul>
- <li>Рекомендации
-  <ul>
-   <li>{{HTMLElement("video")}} и {{HTMLElement("audio")}} HTML-элементы.</li>
-   <li>{{domxref("HTMLVideoElement")}} и {{domxref("HTMLAudioElement")}} интерфейсы, полученные из HTMLMediaElement.</li>
-  </ul>
- </li>
- <li>Статьи
-  <ul>
-   <li><a class="internal" href="/en-US/docs/Using_HTML5_audio_and_video">Использование HTML5 аудио и видео</a></li>
-   <li><a class="internal" href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">Медиа форматы, поддерживаемые аудио и видео элементами</a></li>
-   <li><a href="/en-US/docs/Web_Audio_API">API веб-аудио</a></li>
-  </ul>
- </li>
-</ul>
+## События
+
+_Наследует методы от своего родителя {{domxref ("HTMLElement")}}, определённого в миксине {{domxref ('GlobalEventHandlers')}}. Обработайте эти события, используя addEventListener () или назначив обработчик событий свойству oneventname этого интерфейса._
+
+- {{domxref("HTMLMediaElement.abort_event", 'abort')}}
+  - : Срабатывает, когда ресурс загружен не полностью, но не в результате ошибки.
+- {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+  - : Запускается, когда пользовательский агент может воспроизводить мультимедиа, но оценивает, что загружено недостаточно данных для воспроизведения мультимедиа до его конца без необходимости остановки для дальнейшей буферизации контента.
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+  - : Запускается, когда пользовательский агент может воспроизводить мультимедиа, и оценивает, что было загружено достаточно данных для воспроизведения мультимедиа до его конца, без необходимости остановки для дальнейшей буферизации контента.
+- {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+  - : Запускается, когда атрибут продолжительности был обновлён.
+- {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+  - : Запускается, когда носитель становится пустым; например, когда носитель уже загружен (или частично загружен), и для его перезагрузки вызывается метод {{domxref ("HTMLMediaElement.load ()")}}.
+- {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+  - : Срабатывает, когда воспроизведение останавливается, когда достигнут конец носителя (\<audio> или \<video>) или если дальнейшие данные недоступны.
+- {{domxref("HTMLMediaElement.error_event", 'error')}}
+  - : Срабатывает, когда ресурс не может быть загружен из-за ошибки.
+- {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+  - : Запускается, когда первый кадр носителя завершил загрузку.
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+  - : Запускается, когда метаданные были загружены
+- {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+  - : Запускается, когда браузер начал загружать ресурс.
+- {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+  - : Вызывается, когда обрабатывается запрос на приостановку воспроизведения, и действие переходит в состояние паузы, чаще всего это происходит, когда вызывается медиа {{domxref ("HTMLMediaElement.pause ()")}}.
+- {{domxref("HTMLMediaElement.play_event", 'play')}}
+  - : Срабатывает, когда свойство paused изменяется с true на false, в результате использования метода {{domxref ("HTMLMediaElement.play ()")}} или атрибута autoplay
+- {{domxref("HTMLMediaElement.playing_event", "playing")}}
+  - : Запускается, когда воспроизведение готово начать после приостановки или задержки из-за отсутствия данных.
+- {{domxref("HTMLMediaElement.progress_event", "progress")}}
+  - : Периодически запускается, когда браузер загружает ресурс.
+- {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+  - : Запускается, когда скорость воспроизведения изменилась.
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
+  - : Запускается, когда скорость воспроизведения изменилась.
+- {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+  - : Запускается, когда начинается операция поиска
+- {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+  - : Запускается, когда пользовательский агент пытается извлечь данные мультимедиа, но данные неожиданно не поступают.
+- {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+  - : Запускается, когда загрузка медиа-данных была приостановлена.
+- {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+  - : Запускается, когда время, указанное атрибутом currentTime, было обновлено.
+- {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+  - : Запускается при изменении громкости.
+- {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+  - : Срабатывает, когда воспроизведение остановлено из-за временной нехватки данных
+
+## Характеристики
+
+| Характеристики                                                                                                           | Статус                               | Комментарий                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Добавляет `sinkId` и `setSinkId()`, и `captureStream()`.                                                                                                                                                          |
+| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Добавляет {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, {{domxref("setMediaKeys")}}, {{domxref("onencrypted")}}, и {{domxref("onwaitingforkey")}}. |
+| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Без изменений {{SpecName ('HTML5 W3C')}}                                                                                                                                                                |
+| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Начальное определение.                                                                                                                                                                                            |
+
+## Совместимость браузера
+
+{{Compat}}
+
+## Смотрите также
+
+- Рекомендации
+
+  - {{HTMLElement("video")}} и {{HTMLElement("audio")}} HTML-элементы.
+  - {{domxref("HTMLVideoElement")}} и {{domxref("HTMLAudioElement")}} интерфейсы, полученные из HTMLMediaElement.
+
+- Статьи
+
+  - [Использование HTML5 аудио и видео](/ru/docs/Using_HTML5_audio_and_video)
+  - [Медиа форматы, поддерживаемые аудио и видео элементами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements)
+  - [API веб-аудио](/ru/docs/Web_Audio_API)

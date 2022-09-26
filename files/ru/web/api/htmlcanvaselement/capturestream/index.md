@@ -3,36 +3,34 @@ title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p><code><strong>HTMLCanvasElement</strong></code><strong><code>.captureStream()</code></strong> метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.</p>
+**`HTMLCanvasElement`\*\***`.captureStream()`\*\* метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>MediaStream</var> = <var>canvas</var>.captureStream(<var>frameRate</var>);
-</pre>
+```
+MediaStream = canvas.captureStream(frameRate);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>frameRate</code> {{optional_inline}}</dt>
- <dd>Число двойной точности с плавающей точкой, указывающее частоту захвата каждого фрейма. Если не установлено, новый фрейм будет захватываться каждый раз, как canvas изменится; <code>если установлено в 0</code>, будет захвачен один фрейм.</dd>
-</dl>
+- `frameRate` {{optional_inline}}
+  - : Число двойной точности с плавающей точкой, указывающее частоту захвата каждого фрейма. Если не установлено, новый фрейм будет захватываться каждый раз, как canvas изменится; `если установлено в 0`, будет захвачен один фрейм.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Ссылка на {{domxref("MediaStream")}} объект.</p>
+Ссылка на {{domxref("MediaStream")}} объект.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><strong>NotSupportedError</strong></dt>
- <dd>Параметр <code>frameRate</code> имеет отрицательное значение.</dd>
-</dl>
+- **NotSupportedError**
+  - : Параметр `frameRate` имеет отрицательное значение.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">// Поиск элемента canvas для захвата
+```js
+// Поиск элемента canvas для захвата
 var canvasElt = document.querySelector("canvas");
 
 // Получение потока
@@ -42,21 +40,19 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 // например, отправить что-то другому компьютеру, используя RTCPeerConnection
 //      pc это RTCPeerConnection, созданное где-то ещё
 pc.addStream(stream);
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("CanvasCaptureMediaStream")}}, the interface it belongs to.</li>
- <li>{{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream from a media element.</li>
- <li>{{domxref("MediaStream")}}</li>
- <li>{{domxref("Media Capture and Streams API")}}</li>
-</ul>
+- {{domxref("CanvasCaptureMediaStream")}}, the interface it belongs to.
+- {{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream from a media element.
+- {{domxref("MediaStream")}}
+- {{domxref("Media Capture and Streams API")}}

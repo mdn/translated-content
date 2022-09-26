@@ -10,28 +10,28 @@ tags:
   - screenX
 translation_of: Web/API/Window/screenX
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>Window.screenX</strong></code> только для чтения возвращает горизонтальное расстояние в пикселях CSS левой границы окна просмотра браузера пользователя до левой части экрана.</p>
+Свойство **`Window.screenX`** только для чтения возвращает горизонтальное расстояние в пикселях CSS левой границы окна просмотра браузера пользователя до левой части экрана.
 
-<div class="note">
-<p><strong>Примечание</strong>: Псевдоним <code>screenX</code> был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.</p>
-</div>
+> **Примечание:** Псевдоним `screenX` был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>leftWindowPos</em> = window.screenX
-</pre>
+```
+leftWindowPos = window.screenX
+```
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p>Число, равное количеству пикселей CSS от левого края окна просмотра браузера до левого края экрана.</p>
+Число, равное количеству пикселей CSS от левого края окна просмотра браузера до левого края экрана.
 
-<h2 id="Specifications">Пример</h2>
+## Пример
 
-<p>В нашем примере <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> вы увидите холст, на котором нарисован круг. В этом примере мы используем {{domxref ("Window.screenLeft")}}/{{domxref ("Window.screenTop")}} плюс {{domxref("Window.requestAnimationFrame ()")}}, чтобы постоянно перерисовывать круг в том же физическом положении на экране, даже если позиция окна перемещается.</p>
+В нашем примере [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) вы увидите холст, на котором нарисован круг. В этом примере мы используем {{domxref ("Window.screenLeft")}}/{{domxref ("Window.screenTop")}} плюс {{domxref("Window.requestAnimationFrame ()")}}, чтобы постоянно перерисовывать круг в том же физическом положении на экране, даже если позиция окна перемещается.
 
-<pre class="brush: js">initialLeft = window.screenLeft + canvasElem.offsetLeft;
+```js
+initialLeft = window.screenLeft + canvasElem.offsetLeft;
 initialTop = window.screenTop + canvasElem.offsetTop;
 
 function positionElem() {
@@ -53,28 +53,29 @@ function positionElem() {
   window.requestAnimationFrame(positionElem);
 }
 
-window.requestAnimationFrame(positionElem);</pre>
+window.requestAnimationFrame(positionElem);
+```
 
-<p>Они работают точно так же, как <code>screenX</code> / <code>screenY</code>.</p>
+Они работают точно так же, как `screenX` / `screenY`.
 
-<p>Также в код мы включили фрагмент, который определяет, поддерживается ли <code>screenLeft</code>, и, если нет, заполняет поли в <code>screenLeft</code> / <code>screenTop</code>, используя <code>screenX</code> / <code>screenY</code>.</p>
+Также в код мы включили фрагмент, который определяет, поддерживается ли `screenLeft`, и, если нет, заполняет поли в `screenLeft` / `screenTop`, используя `screenX` / `screenY`.
 
-<pre class="brush: js">if(!window.screenLeft) {
+```js
+if(!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("window.screenLeft")}}</li>
- <li>{{domxref("Window.screenY")}}</li>
-</ul>
+- {{domxref("window.screenLeft")}}
+- {{domxref("Window.screenY")}}

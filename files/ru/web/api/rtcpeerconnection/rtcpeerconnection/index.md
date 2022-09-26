@@ -3,44 +3,40 @@ title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>Конструктор <strong><code>RTCPeerConnection()</code></strong> возвращает  новый экземпляр объекта {{domxref("RTCPeerConnection")}}, который представляет соединение между локальным устройством и удалённым пиром (участником соединения)</p>
+Конструктор **`RTCPeerConnection()`** возвращает новый экземпляр объекта {{domxref("RTCPeerConnection")}}, который представляет соединение между локальным устройством и удалённым пиром (участником соединения)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">pc = new RTCPeerConnection([<em>configuration</em>]);</pre>
+```
+pc = new RTCPeerConnection([configuration]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>configuration</code> {{optional_inline}}</dt>
- <dd>Объект класса <a href="#RTCConfiguration_dictionary"><code>RTCConfiguration</code> </a>, предоставляющий свойства для конфигурации нового экземпляра соединения.</dd>
-</dl>
+- `configuration` {{optional_inline}}
+  - : Объект класса [`RTCConfiguration` ](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
 
-<h3 id="Объект_конфигурации_RTCConfiguration">Объект конфигурации RTCConfiguration</h3>
+### Объект конфигурации RTCConfiguration
 
-<p>{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}</p>
+{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Экземпляр класса {{domxref("RTCPeerConnection")}} , сконфигурированный по свойствам параметра <code>configuration</code>, если используется, иначе сконфигурированный по умолчанию.</p>
+Экземпляр класса {{domxref("RTCPeerConnection")}} , сконфигурированный по свойствам параметра `configuration`, если используется, иначе сконфигурированный по умолчанию.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Сигнализированные и видеовызов</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Architecture">Обзор архитектуры WebRTC</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Жизненный цикл сессии WebRTC</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- [Сигнализированные и видеовызов](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Architecture)
+- [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}

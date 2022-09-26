@@ -9,70 +9,70 @@ tags:
   - Текст
 translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение <code>textAlign</code> равно <code>"center"</code>, то текст будет прорисован в <code>x - (width / 2)</code>.</p>
+Свойство **`CanvasRenderingContext2D`\*\***`.textAlign`\*\* Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение `textAlign` равно `"center"`, то текст будет прорисован в `x - (width / 2)`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>ctx</em>.textAlign = "left" || "right" || "center" || "start" || "end";</var>
-</pre>
+```
+ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Выравнивание текста по левому краю.</dd>
- <dt><code>right</code></dt>
- <dd>Выравнивание текста по правому краю.</dd>
- <dt><code>center</code></dt>
- <dd>Текст отцентрирован.</dd>
- <dt><code>start</code></dt>
- <dd>Выравнивание текста в обычном начале строки (левостороннее выравнивание для языков, направленных слева направо, правостороннее - для направленных справа налево).</dd>
- <dt><code>end</code></dt>
- <dd>Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево</dd>
-</dl>
+- `left`
+  - : Выравнивание текста по левому краю.
+- `right`
+  - : Выравнивание текста по правому краю.
+- `center`
+  - : Текст отцентрирован.
+- `start`
+  - : Выравнивание текста в обычном начале строки (левостороннее выравнивание для языков, направленных слева направо, правостороннее - для направленных справа налево).
+- `end`
+  - : Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево
 
-<p>По умолчанию значение <code>textAlign </code>установлено как "start".</p>
+По умолчанию значение `textAlign `установлено как "start".
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Using_the_textAlign_property">Использование значения <code>textAlign</code></h3>
+### Использование значения `textAlign`
 
-<p>Довольно простой сниппет использования значения <code>textAlign </code>для изменения выравнивания текста.</p>
+Довольно простой сниппет использования значения `textAlign `для изменения выравнивания текста.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.textAlign = 'left';
 ctx.strokeText('Hello world', 0, 100);
-</pre>
+```
 
-<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:</p>
+Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = '48px serif';
 ctx.textAlign = 'left';
-ctx.strokeText('Hello world', 0, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText('Hello world', 0, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -95,23 +95,18 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий данный метод {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- Интерфейс, предоставляющий данный метод {{domxref("CanvasRenderingContext2D")}}.

@@ -7,39 +7,36 @@ tags:
   - Веб-консоль
 translation_of: Web/API/Console/dir
 ---
-<p>{{ APIRef("Console API") }}{{Non-standard_header}}</p>
+{{ APIRef("Console API") }}{{Non-standard_header}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Отображает список свойств указанного JavaScript объекта. Вывод представлен в виде иерархического списка с  возможностью просмотра содержимого дочерних объектов.</p>
+Отображает список свойств указанного JavaScript объекта. Вывод представлен в виде иерархического списка с возможностью просмотра содержимого дочерних объектов.
 
-<p>Console.dir это способ посмотреть в консоли свойства заданного javascript объекта.</p>
+Console.dir это способ посмотреть в консоли свойства заданного javascript объекта.
 
-<p><img alt="console-dir.png" class="default internal" src="/@api/deki/files/6081/=console-dir.png"></p>
+![console-dir.png](/@api/deki/files/6081/=console-dir.png)
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.dir(<em>object</em>);
-</pre>
+```
+console.dir(object);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><code>object</code></dt>
- <dd>JavaScript-объект свойства которого нужно вывести.</dd>
-</dl>
+- `object`
+  - : JavaScript-объект свойства которого нужно вывести.
 
-<h3 id="Specification">Спецификация</h3>
+### Спецификация
 
-<p><a href="https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject">Console Object API</a></p>
+[Console Object API](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject)
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

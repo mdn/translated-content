@@ -3,39 +3,41 @@ title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
 translation_of: Web/API/CanvasRenderingContext2D/save
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.save()</code></strong> - метод Canvas 2D API. Сохраняет все состояния и добавляет текущее состояние в стек.</p>
+**`CanvasRenderingContext2D`\*\***`.save()`\*\* - метод Canvas 2D API. Сохраняет все состояния и добавляет текущее состояние в стек.
 
-<h3 id="Состояние_чертежа">Состояние чертежа</h3>
+### Состояние чертежа
 
-<p>Состояние чертежа, которое сохраняется в стеке, состоит из:</p>
+Состояние чертежа, которое сохраняется в стеке, состоит из:
 
-<ul>
- <li>Текущая матрица преобразования.</li>
- <li>Текущая область отсечения.</li>
- <li>The current dash list.</li>
- <li>Текущие значения следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.</li>
-</ul>
+- Текущая матрица преобразования.
+- Текущая область отсечения.
+- The current dash list.
+- Текущие значения следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <em>ctx</em>.save();</pre>
+```
+void ctx.save();
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Сохранение_состояния_чертежа">Сохранение состояния чертежа</h3>
+### Сохранение состояния чертежа
 
-<p>Этот пример использует метод <code>save()</code> для сохранения состояния по умолчанию, и метод <code>restore()</code> для восстановления состояния позже, чтобы позже можно было нарисовать прямоугольник с состоянием по умолчанию.</p>
+Этот пример использует метод `save()` для сохранения состояния по умолчанию, и метод `restore()` для восстановления состояния позже, чтобы позже можно было нарисовать прямоугольник с состоянием по умолчанию.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre><code>const canvas = document.getElementById('canvas');
+```
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Сохранение состояния по умолчанию
@@ -47,25 +49,22 @@ ctx.fillRect(10, 10, 100, 100);
 // Восстановление состояния по умолчанию
 ctx.restore();
 
-ctx.fillRect(150, 40, 100, 100);</code></pre>
+ctx.fillRect(150, 40, 100, 100);
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Сохранение_состояния_чертежа', 700, 180) }}</p>
+{{ EmbedLiveSample('Сохранение_состояния_чертежа', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.restore()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.restore()")}}

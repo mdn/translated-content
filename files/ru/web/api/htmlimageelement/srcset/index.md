@@ -3,65 +3,72 @@ title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 translation_of: Web/API/HTMLImageElement/srcset
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("HTMLImageElement")}} свойство <code><strong>srcset</strong></code> это строка, которая определяет один или несколько <strong>строк с источниками изображений</strong>, разделённые запятыми (<code>,</code>) и условия для их использования. Каждая строка предлагаемого изображения содержит <strong>URL</strong> картинки и опциональные <strong>ширину</strong> или <strong>пиксельную плотность</strong> которые указывают при каких условия это изображение должно быть использовано вместо основной картинки обозначенной свойством {{domxref("HTMLImageElement.src", "src")}}.</p>
+{{domxref("HTMLImageElement")}} свойство **`srcset`** это строка, которая определяет один или несколько **строк с источниками изображений**, разделённые запятыми (`,`) и условия для их использования. Каждая строка предлагаемого изображения содержит **URL** картинки и опциональные **ширину** или **пиксельную плотность** которые указывают при каких условия это изображение должно быть использовано вместо основной картинки обозначенной свойством {{domxref("HTMLImageElement.src", "src")}}.
 
-<p>Свойство <code>srcset</code>, вместе с {{domxref("HTMLImageElement.sizes", "sizes")}}, критически важный атрибут при разработке адаптивных веб-сайтов, ведь они могут использоваться вместе для создания адаптивных страниц, использующих подходящие изображения при определённых условиях.</p>
+Свойство `srcset`, вместе с {{domxref("HTMLImageElement.sizes", "sizes")}}, критически важный атрибут при разработке адаптивных веб-сайтов, ведь они могут использоваться вместе для создания адаптивных страниц, использующих подходящие изображения при определённых условиях.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>htmlImageElement</em>.srcset = <em>imageCandidateStrings</em>;
-let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
-</pre>
+```
+htmlImageElement.srcset = imageCandidateStrings;
+let srcset = htmlImageElement.srcset;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>A {{domxref("USVString")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the <code>HTMLImageElement</code><em>.</em></p>
+A {{domxref("USVString")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the `HTMLImageElement`_._
 
-<p>Each image candidate string must begin with a valid URL referencing a non-interactive graphic resource. This is followed by a comma (<code>,</code>) character and then a condition descriptor that indicates the circumstances in which the indicated image should be used. Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.</p>
+Each image candidate string must begin with a valid URL referencing a non-interactive graphic resource. This is followed by a comma (`,`) character and then a condition descriptor that indicates the circumstances in which the indicated image should be used. Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.
 
-<p>If the condition descriptor is not provided (in other words, the image candidate provides only a URL), the candidate is used as the fallback if none of the other candidates match. Otherwise, the condition descriptor may take one of two forms:</p>
+If the condition descriptor is not provided (in other words, the image candidate provides only a URL), the candidate is used as the fallback if none of the other candidates match. Otherwise, the condition descriptor may take one of two forms:
 
-<ul>
- <li>To indicate that the image resource specified by the image candidate string should be used when the image is being rendered with a particular width in pixels, provide a <strong>width descriptor</strong> comprised the number giving that width in pixels followed by the lower case letter "w". For example, to provide an image resource to be used when the renderer needs a 450 pixel wide image, use the width descriptor string <code>450w</code>. The specified width must be a positive, non-zero, integer, and <em>must</em> match the intrinsic width of the referenced image.</li>
- <li>Alternatively, you can use a <strong>pixel density descriptor</strong>, which specifies the condition in which th corresponding image resource should be used as the display's pixel density. This is written by stating the pixel density as a positive, non-zero floating-point value followed by the lower-case letter "x". As an example, to state that the corresponding  image should be used when the pixel density is double the standard density, you can give the pixel density descriptor <code>2x</code> or <code>2.0x</code>.</li>
-</ul>
+- To indicate that the image resource specified by the image candidate string should be used when the image is being rendered with a particular width in pixels, provide a **width descriptor** comprised the number giving that width in pixels followed by the lower case letter "w". For example, to provide an image resource to be used when the renderer needs a 450 pixel wide image, use the width descriptor string `450w`. The specified width must be a positive, non-zero, integer, and _must_ match the intrinsic width of the referenced image.
+- Alternatively, you can use a **pixel density descriptor**, which specifies the condition in which th corresponding image resource should be used as the display's pixel density. This is written by stating the pixel density as a positive, non-zero floating-point value followed by the lower-case letter "x". As an example, to state that the corresponding image should be used when the pixel density is double the standard density, you can give the pixel density descriptor `2x` or `2.0x`.
 
-<p>You may mix and match the two types of descriptor. You must not, however, provide multiple image candidate strings that specify the same descriptor. All of the following are valid image candidate strings:</p>
+You may mix and match the two types of descriptor. You must not, however, provide multiple image candidate strings that specify the same descriptor. All of the following are valid image candidate strings:
 
-<pre>"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"</pre>
+```
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+```
 
-<p>This string provides versions of an image to be used at the standard pixel density (<code>1x</code>) as well as double that pixel density (<code>2x</code>). Also available is a version of the image for use at a width of 2048 pixels (<code>2048w</code>).</p>
+This string provides versions of an image to be used at the standard pixel density (`1x`) as well as double that pixel density (`2x`). Also available is a version of the image for use at a width of 2048 pixels (`2048w`).
 
-<pre>"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"</pre>
+```
+"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
+```
 
-<p>This string provides versions of a header image to use when the {{Glossary("user agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An additional, fallback image candidate is provided without any condition at all, to be used for any other width.</p>
+This string provides versions of a header image to use when the {{Glossary("user agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An additional, fallback image candidate is provided without any condition at all, to be used for any other width.
 
-<pre>"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x icon-ultra.png 3x icon.svg"</pre>
+```
+"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x icon-ultra.png 3x icon.svg"
+```
 
-<p>Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel densities of 2x and 3x. A fallback image is provided as an SVG file that should be used in all other cases. Notice that the candidates may use different image types.</p>
+Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel densities of 2x and 3x. A fallback image is provided as an SVG file that should be used in all other cases. Notice that the candidates may use different image types.
 
-<p>For more information on what image formats are available for use in the {{HTMLElement("img")}} element, see <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a>.</p>
+For more information on what image formats are available for use in the {{HTMLElement("img")}} element, see [Image file type and format guide](/ru/docs/Web/Media/Formats/Image_types).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML below indicates that the default image is the 200 pixel wide version of the clock image we use in several places throughout our documentation. Also specified by the <code>srcset</code> attribute is that the 200-pixel version should be used for 1x displays while the 400-pixel version should be used for 2x displays.</p>
+The HTML below indicates that the default image is the 200 pixel wide version of the clock image we use in several places throughout our documentation. Also specified by the `srcset` attribute is that the 200-pixel version should be used for 1x displays while the 400-pixel version should be used for 2x displays.
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;img src="/files/16797/clock-demo-200px.png"
+```html
+<div class="box">
+  <img src="/files/16797/clock-demo-200px.png"
        alt="Clock"
-       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x"&gt;
-&lt;/div&gt;
-</pre>
+       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x">
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The CSS simply specifies that the image and its surrounding box should be 200 pixels square and should have a simple border around it. Also provided is the {{cssxref("word-break")}} attribute, using the <code>break-all</code> value to tell the browser to wrap the string within the width available regardless of where in the string the wrap must occur.</p>
+The CSS simply specifies that the image and its surrounding box should be 200 pixels square and should have a simple border around it. Also provided is the {{cssxref("word-break")}} attribute, using the `break-all` value to tell the browser to wrap the string within the width available regardless of where in the string the wrap must occur.
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 200px;
   border: 2px solid rgba(150, 150, 150, 255);
   padding: 0.5em;
@@ -70,42 +77,40 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 
 .box img {
   width: 200px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event.  It uses the image's  {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the <code>srcset</code>.</p>
+The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event. It uses the image's {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the `srcset`.
 
-<pre class="brush: js">let box = document.querySelector(".box");
+```js
+let box = document.querySelector(".box");
 let image = box.querySelector("img");
 
 let newElem = document.createElement("p");
-newElem.innerHTML = `Image: &lt;code&gt;${image.currentSrc}&lt;/code&gt;`;
+newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
 box.appendChild(newElem);
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>In the displayed output below, the selected URL will correspond with whether your display results in selecting the 1x or the 2x version of the image. If you happen to have both standard and high density displays, try moving this window between them and reloading the page to see the results change.</p>
+In the displayed output below, the selected URL will correspond with whether your display results in selecting the 1x or the 2x version of the image. If you happen to have both standard and high density displays, try moving this window between them and reloading the page to see the results change.
 
-<p>{{EmbedLiveSample("Пример", 640, 320)}}</p>
+{{EmbedLiveSample("Пример", 640, 320)}}
 
-<p>For additional examples, see our guide to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive images</a>.</p>
+For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Браузерная поддержка</h2>
+## Браузерная поддержка
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></li>
-</ul>
+- [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format guide](/ru/docs/Web/Media/Formats/Image_types)

@@ -4,33 +4,31 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/GlobalEventHandlers/onselect
 original_slug: Web/API/GlobalEventHandlers/onselect
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Обработчик события select окна браузера.</p>
+Обработчик события select окна браузера.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.onselect = <em>funcRef</em>;
-</pre>
+```
+window.onselect = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> - функция</li>
-</ul>
+- `funcRef` - функция
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
+```html
+<html>
+<head>
 
-&lt;title&gt;onselect test&lt;/title&gt;
+<title>onselect test</title>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 .text1 { border: 2px solid red; }
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 window.onselect = selectText;
 
@@ -38,36 +36,25 @@ function selectText()
 {
  alert("select event detected!");
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;textarea class="text1" cols="30" rows="3"&gt;
+<body>
+<textarea class="text1" cols="30" rows="3">
 Highlight some of this text
 with the mouse pointer
 to fire the onselect event.
-&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</textarea>
+</body>
+</html>
+```
 
-<h2 id="Notes">Замечание</h2>
+## Замечание
 
-<p>Событие select происходит только, когда текст выделяют в поле input с type='text' или в поле textarea. Событие происходит только после того, как текст будет выделен.</p>
+Событие select происходит только, когда текст выделяют в поле input с type='text' или в поле textarea. Событие происходит только после того, как текст будет выделен.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}} | {{Spec2('HTML WHATWG')}} |         |

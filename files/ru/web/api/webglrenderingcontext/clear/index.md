@@ -3,66 +3,65 @@ title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>Метод <strong><code>WebGLRenderingContext.clear()</code> </strong>из библиотеки <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> очищает буфер заданными значениями.</p>
+Метод **`WebGLRenderingContext.clear()` **из библиотеки [WebGL API](/ru/docs/Web/API/WebGL_API) очищает буфер заданными значениями.
 
-<p>Заданные значения могут быть установлены {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} или {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.</p>
+Заданные значения могут быть установлены {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} или {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
 
-<p>The scissor box, dithering, and buffer writemasks can affect the <code>clear()</code> method.</p>
+The scissor box, dithering, and buffer writemasks can affect the `clear()` method.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>gl</var>.clear(<var>mask</var>);
-</pre>
+```
+void gl.clear(mask);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>mask</code></dt>
- <dd>Побитовая маска ИЛИ {{domxref("GLbitfield")}} указывает какие конкретно буферы нужно очистить. Возможные значения:
- <ul>
-  <li><code>gl.COLOR_BUFFER_BIT</code></li>
-  <li><code>gl.DEPTH_BUFFER_BIT</code></li>
-  <li><code>gl.STENCIL_BUFFER_BIT</code></li>
- </ul>
- </dd>
-</dl>
+- `mask`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : Побитовая маска ИЛИ {{domxref("GLbitfield")}} указывает какие конкретно буферы нужно очистить. Возможные значения:
 
-<p>Ничего.</p>
+    - `gl.COLOR_BUFFER_BIT`
+    - `gl.DEPTH_BUFFER_BIT`
+    - `gl.STENCIL_BUFFER_BIT`
 
-<h3 id="Исключения">Исключения</h3>
+### Возвращаемое значение
 
-<p>Если <em>mask</em> не является ни одним из перечисленных значений, то генерируется ошибка <code>gl.INVALID_ENUM</code>.</p>
+Ничего.
 
-<h2 id="Примеры">Примеры</h2>
+### Исключения
 
-<p>Метод <code>clear()</code> принимает несколько значений.</p>
+Если _mask_ не является ни одним из перечисленных значений, то генерируется ошибка `gl.INVALID_ENUM`.
 
-<pre class="brush: js">gl.clear(gl.DEPTH_BUFFER_BIT);
+## Примеры
+
+Метод `clear()` принимает несколько значений.
+
+```js
+gl.clear(gl.DEPTH_BUFFER_BIT);
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
-</pre>
+```
 
-<p>Чтобы получить текущее значение очистки буфера, нужно воспользоваться следующими константами: <code>COLOR_CLEAR_VALUE</code>, <code>DEPTH_CLEAR_VALUE</code>, и <code>STENCIL_CLEAR_VALUE</code>.</p>
+Чтобы получить текущее значение очистки буфера, нужно воспользоваться следующими константами: `COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE`, и `STENCIL_CLEAR_VALUE`.
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+## Смотрите также
+
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

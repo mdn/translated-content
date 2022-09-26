@@ -3,30 +3,34 @@ title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 translation_of: Web/API/CanvasRenderingContext2D/restore
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.restore()</code></strong> восстанавливает предварительно сохранённое состояние канваса из стека. Если состояние ранее не сохранялось, то метод ничего не делает.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.restore()`\*\* восстанавливает предварительно сохранённое состояние канваса из стека. Если состояние ранее не сохранялось, то метод ничего не делает.
 
-<p>Fore more information about the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state">drawing state</a>, see {{domxref("CanvasRenderingContext2D.save()")}}.</p>
+Fore more information about the [drawing state](/ru/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <em>ctx</em>.restore();</pre>
+```
+void ctx.restore();
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Restoring_a_saved_state">Restoring a saved state</h3>
+### Restoring a saved state
 
-<p>This example uses the <code>save()</code> method to save the default state and <code>restore()</code> to restore it later, so that you are able to draw a rect with the default state later.</p>
+This example uses the `save()` method to save the default state and `restore()` to restore it later, so that you are able to draw a rect with the default state later.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Save the default state
@@ -39,25 +43,21 @@ ctx.fillRect(10, 10, 100, 100);
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Restoring_a_saved_state', 700, 180) }}</p>
+{{ EmbedLiveSample('Restoring_a_saved_state', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.save()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.save()")}}

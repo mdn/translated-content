@@ -3,65 +3,59 @@ title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
 translation_of: Web/API/WebGLRenderingContext/canvas
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code>Свойство <strong>WebGLRenderingContext.canvas</strong></code> доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или  {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("null")}}.</p>
+`Свойство WebGLRenderingContext.canvas` доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("null")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var><em>gl</em></var>.canvas;</pre>
+```
+gl.canvas;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or {{jsxref("null")}}.</p>
+Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or {{jsxref("null")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Canvas_element">Canvas element</h3>
+### Canvas element
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>You can get back a reference to it from the <code>WebGLRenderingContext</code> using the <code>canvas</code> property:</p>
+You can get back a reference to it from the `WebGLRenderingContext` using the `canvas` property:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.canvas; // HTMLCanvasElement
-</pre>
+```
 
-<h3 id="Offscreen_canvas">Offscreen canvas</h3>
+### Offscreen canvas
 
-<p>Example using the experimental {{domxref("OffscreenCanvas")}} object.</p>
+Example using the experimental {{domxref("OffscreenCanvas")}} object.
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext('webgl');
-gl.canvas; // OffscreenCanvas</pre>
+gl.canvas; // OffscreenCanvas
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                   | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}} | {{Spec2('WebGL')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.canvas")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
-</ul>
+## See also
+
+- {{domxref("CanvasRenderingContext2D.canvas")}}
+- {{domxref("OffscreenCanvas")}}

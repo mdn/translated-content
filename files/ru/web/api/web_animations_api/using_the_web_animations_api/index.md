@@ -5,34 +5,35 @@ tags:
   - Анимация
 translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
-<p>{{DefaultAPISidebar("Web Animations")}}</p>
+{{DefaultAPISidebar("Web Animations")}}
 
-<p class="summary">Web Animations API позволяет нам создать анимацию и управлять её воспроизведением с помощью JavaScript. Эта статья будет правильным руководством для старта c весёлыми демками и уроками с Алисой в Стране Чудес.</p>
+Web Animations API позволяет нам создать анимацию и управлять её воспроизведением с помощью JavaScript. Эта статья будет правильным руководством для старта c весёлыми демками и уроками с Алисой в Стране Чудес.
 
-<h2 id="Встречайте_Web_Animations_API">Встречайте Web Animations API</h2>
+## Встречайте Web Animations API
 
-<p>В <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> открывает анимацию на движке браузеров для разработчиков и манипуляции через (с помощью) JavaScript.<br>
- Этот API был разработан в основе реализации <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> и <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>, и оставлял свободу движений для будущих анимационных эффектов. Это один из самых эффективных способов анимации, поддерживаемой в Интернете, позволяя браузеру сделать свою собственную внутреннюю оптимизацию без хаков, принуждения, или {{domxref("Window.requestAnimationFrame()")}}.</p>
+В [Web Animations API](/ru/docs/Web/API/Web_Animations_API) открывает анимацию на движке браузеров для разработчиков и манипуляции через (с помощью) JavaScript.
+Этот API был разработан в основе реализации [CSS Animations](/ru/docs/Web/CSS/CSS_Animations) и [CSS Transitions](/ru/docs/Web/CSS/CSS_Transitions), и оставлял свободу движений для будущих анимационных эффектов. Это один из самых эффективных способов анимации, поддерживаемой в Интернете, позволяя браузеру сделать свою собственную внутреннюю оптимизацию без хаков, принуждения, или {{domxref("Window.requestAnimationFrame()")}}.
 
-<p>С Web Animations API, мы можем управлять интерактивной анимацией со стилями  JavaScript, отделяя представление от действия. Нам больше не нужно полагаться  на DOM-heavy методики написания CSS-свойств и обзорных классов для элементов контроля воспроизведения направления. И в отличии от чисто декларативного CSS, JavaScript также позволяет устанавливать динамические значения свойств и их продолжительность. Для создания пользовательских библиотек и интерактивной анимации Web Animations API может стать прекрасным инструментом в работе. Давайте посмотрим, что он может сделать!</p>
+С Web Animations API, мы можем управлять интерактивной анимацией со стилями JavaScript, отделяя представление от действия. Нам больше не нужно полагаться на DOM-heavy методики написания CSS-свойств и обзорных классов для элементов контроля воспроизведения направления. И в отличии от чисто декларативного CSS, JavaScript также позволяет устанавливать динамические значения свойств и их продолжительность. Для создания пользовательских библиотек и интерактивной анимации Web Animations API может стать прекрасным инструментом в работе. Давайте посмотрим, что он может сделать!
 
-<h2 id="Поддержка_Браузеров">Поддержка Браузеров</h2>
+## Поддержка Браузеров
 
-<p>Основы и компоненты Web Animations API, описанные в этой статье доступны в Firefox 48+ и Chrome 36+. Webkit и Edge перешли на  API соответственно, но пока нет полной поддержки во всех браузерах, есть удобная служба проверки <a href="https://github.com/web-animations/web-animations-js">handy maintained polyfill</a> которая тестирует и добавляет её при необходимости.</p>
+Основы и компоненты Web Animations API, описанные в этой статье доступны в Firefox 48+ и Chrome 36+. Webkit и Edge перешли на API соответственно, но пока нет полной поддержки во всех браузерах, есть удобная служба проверки [handy maintained polyfill](https://github.com/web-animations/web-animations-js) которая тестирует и добавляет её при необходимости.
 
-<h2 id="Написание_CSS_Animations_вместе_с_Web_Animations_API">Написание CSS Animations вместе с Web Animations API</h2>
+## Написание CSS Animations вместе с Web Animations API
 
-<p>Самый простой способ в обучении Web Animations API это начать с чего начинало большинство веб-разработчиков: CSS Animations. В CSS Animations есть знакомый синтаксис, который хорошо раскрывает структуры демонстрационных примеров.</p>
+Самый простой способ в обучении Web Animations API это начать с чего начинало большинство веб-разработчиков: CSS Animations. В CSS Animations есть знакомый синтаксис, который хорошо раскрывает структуры демонстрационных примеров.
 
-<h3 id="CSS_версия">CSS версия</h3>
+### CSS версия
 
-<p>Вот такая анимация написана в CSS, показывающая, как Алиса падает в кроличью нору, которая ведёт в страну чудес (см. полный код на<a href="http://codepen.io/rachelnabors/pen/QyOqqW"> Codepen</a>):</p>
+Вот такая анимация написана в CSS, показывающая, как Алиса падает в кроличью нору, которая ведёт в страну чудес (см. полный код на[ Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
 
-<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+[![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 
-<p>Заметьте, что фон двигается, Алиса крутится и её цвет меняется при вращении. Мы собираемся сосредоточиться только на Алисе в этом уроке. Вот упрощённый код CSS, который управляет движением Алисы.</p>
+Заметьте, что фон двигается, Алиса крутится и её цвет меняется при вращении. Мы собираемся сосредоточиться только на Алисе в этом уроке. Вот упрощённый код CSS, который управляет движением Алисы.
 
-<pre class="brush: css">#alice {
+```css
+#alice {
   animation: aliceTumbling infinite 3s linear;
 }
 
@@ -48,66 +49,70 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
     color: #000;
     transform: rotate(360deg) translate3D(-50%, -50%, 0);
   }
-}</pre>
+}
+```
 
-<p>Изменение цвета Алисы и её вращение в течение 3 секунд при постоянной (линейной) скорости и бесконечном цикле. В <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> блоке мы видим, что 30%  из всего цикла (около 9 секунд), цвет Алисы меняется от чёрного до насыщенного бордового, а потом снова в чёрный к концу цикла.</p>
+Изменение цвета Алисы и её вращение в течение 3 секунд при постоянной (линейной) скорости и бесконечном цикле. В [@keyframes](/ru/docs/Web/CSS/@keyframes) блоке мы видим, что 30% из всего цикла (около 9 секунд), цвет Алисы меняется от чёрного до насыщенного бордового, а потом снова в чёрный к концу цикла.
 
-<h3 id="Движение_в_JavaScript">Движение в JavaScript</h3>
+### Движение в JavaScript
 
-<p>Теперь давайте попробуем создать такую же анимацию с Web Animations API.</p>
+Теперь давайте попробуем создать такую же анимацию с Web Animations API.
 
-<h4 id="Представляя_кадры">Представляя кадры</h4>
+#### Представляя кадры
 
-<p>В первую очередь мы должны создать <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Object</a> соответствующего нашему CSS <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> блоку:</p>
+В первую очередь мы должны создать [Keyframe Object](/ru/docs/Web/API/Web_Animations_API/Keyframe_Formats) соответствующего нашему CSS [@keyframes](/ru/docs/Web/CSS/@keyframes) блоку:
 
-<pre class="brush: js">var aliceTumbling = [
+```js
+var aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
   { color: '#431236', offset: 0.333},
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-];</pre>
+];
+```
 
-<p>Здесь мы используем массив, содержащий несколько объектов. Каждый объект представляет собой код от оригинального CSS. Однако, в отличие от CSS, Web Animations API не нужно назначать точные проценты по анимации для каждого открывающего кода. Он автоматически разделит анимацию на равные части в соответствии с количеством кодов, которые вы ему даёте. Это означает, что объект Keyframe с тремя кодами будет воспроизводить средний код 50% времени через каждый цикл анимации если не указано иное.</p>
+Здесь мы используем массив, содержащий несколько объектов. Каждый объект представляет собой код от оригинального CSS. Однако, в отличие от CSS, Web Animations API не нужно назначать точные проценты по анимации для каждого открывающего кода. Он автоматически разделит анимацию на равные части в соответствии с количеством кодов, которые вы ему даёте. Это означает, что объект Keyframe с тремя кодами будет воспроизводить средний код 50% времени через каждый цикл анимации если не указано иное.
 
-<p>Если мы хотим, чтобы определённый набор кода смещался относительного другого кода, мы можем указать смещение непосредственно на объекте который будет меняться, отделив значение запятой. В приведённом выше примере видно, чтобы цвет Алисы менялся на 30%, а не на 50% всего цикла, мы задаём смещение: 0,333.</p>
+Если мы хотим, чтобы определённый набор кода смещался относительного другого кода, мы можем указать смещение непосредственно на объекте который будет меняться, отделив значение запятой. В приведённом выше примере видно, чтобы цвет Алисы менялся на 30%, а не на 50% всего цикла, мы задаём смещение: 0,333.
 
-<p>Там должно быть как минимум два кадра (представляющих начало и конец анимации). Если в вашем списке keyframe только одна запись, {{domxref("Element.animate()")}} то анимация выполняться не будет, вы получите ошибку NotSupportedError exception.</p>
+Там должно быть как минимум два кадра (представляющих начало и конец анимации). Если в вашем списке keyframe только одна запись, {{domxref("Element.animate()")}} то анимация выполняться не будет, вы получите ошибку NotSupportedError exception.
 
-<p>И так повторим, код равномерно распределён по умолчанию, если не указано смещение. Удобно, не так ли?</p>
+И так повторим, код равномерно распределён по умолчанию, если не указано смещение. Удобно, не так ли?
 
-<h4 id="Представление_свойства_времени.">Представление свойства времени.</h4>
+#### Представление свойства времени.
 
-<p>Мы также должны создать объекту временные свойства (an {{domxref("AnimationEffectTimingProperties")}} object) соответствующие значению анимации Алисы:</p>
+Мы также должны создать объекту временные свойства (an {{domxref("AnimationEffectTimingProperties")}} object) соответствующие значению анимации Алисы:
 
-<pre class="brush: js">var aliceTiming = {
+```js
+var aliceTiming = {
   duration: 3000,
   iterations: Infinity
-}</pre>
+}
+```
 
-<p>Вы увидите здесь несколько отличий того, как соответствующие значения представлены в CSS:</p>
+Вы увидите здесь несколько отличий того, как соответствующие значения представлены в CSS:
 
-<ul>
- <li>Во-первых, длительность в миллисекундах, в отличии от секунд - 3000, а не 3с. Как {{domxref("WindowTimers.setTimeout()")}} и {{domxref("Window.requestAnimationFrame()")}}, Web Animations API использует только миллисекунды.</li>
- <li>Во-вторых, что вы заметили, что он итерационный (повторяется), а не счётчик повторений.</li>
-</ul>
+- Во-первых, длительность в миллисекундах, в отличии от секунд - 3000, а не 3с. Как {{domxref("WindowTimers.setTimeout()")}} и {{domxref("Window.requestAnimationFrame()")}}, Web Animations API использует только миллисекунды.
+- Во-вторых, что вы заметили, что он итерационный (повторяется), а не счётчик повторений.
 
-<div class="note">
-<p>Существует ряд небольших различий между терминологией, используемой в анимации CSS и терминологии, которая используется в веб-анимации. Например, веб-анимации не используется строка "бесконечное", а вместо этого использует JavaScript-код бесконечность. И вместо временной-функции мы используем ослабление. Мы не будем перечислять здесь значение ослабления, потому что, в отличие от CSS-анимации, где по умолчанию <a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a> это просто, в веб-анимации API для ослабления по умолчанию используется линейная зависимость - которые мы используем здесь</p>
-</div>
+> **Примечание:** Существует ряд небольших различий между терминологией, используемой в анимации CSS и терминологии, которая используется в веб-анимации. Например, веб-анимации не используется строка "бесконечное", а вместо этого использует JavaScript-код бесконечность. И вместо временной-функции мы используем ослабление. Мы не будем перечислять здесь значение ослабления, потому что, в отличие от CSS-анимации, где по умолчанию [animation-timing-function](/ru/docs/Web/CSS/animation-timing-function) это просто, в веб-анимации API для ослабления по умолчанию используется линейная зависимость - которые мы используем здесь
 
-<h4 id="Собираем_части_вместе.">Собираем части вместе.</h4>
+#### Собираем части вместе.
 
-<p>Сейчас соберём все части вместе используя {{domxref("Element.animate()")}} метод:</p>
+Сейчас соберём все части вместе используя {{domxref("Element.animate()")}} метод:
 
-<pre class="brush: js">document.getElementById("alice").animate(
+```js
+document.getElementById("alice").animate(
   aliceTumbling,
   aliceTiming
-)</pre>
+)
+```
 
-<p>И вуаля, анимация работает(смотрите готовый вариант на <a href="http://codepen.io/rachelnabors/pen/rxpmJL">version on Codepen</a>).</p>
+И вуаля, анимация работает(смотрите готовый вариант на [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
 
-<p>The <code>animate()</code> метод может быть применён на любой DOM-элемент, который может быть анимирован с помощью CSS. И он может быть записан несколькими способами. Вместо того, чтобы делить объекты на ключевые кадры и временные характеристики, мы могли бы просто передать свои значения непосредственно вот так:</p>
+The `animate()` метод может быть применён на любой DOM-элемент, который может быть анимирован с помощью CSS. И он может быть записан несколькими способами. Вместо того, чтобы делить объекты на ключевые кадры и временные характеристики, мы могли бы просто передать свои значения непосредственно вот так:
 
-<pre class="brush: js">document.getElementById("alice").animate(
+```js
+document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
     { color: '#431236', offset: 0.333},
@@ -116,30 +121,34 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
     duration: 3000,
     iterations: Infinity
   }
-);</pre>
+);
+```
 
-<p>Более того, если мы хотели указать только длительность анимации, а не её повторение (по умолчанию анимации повторяется один раз), мы могли бы пройтись только по миллисекундам:</p>
+Более того, если мы хотели указать только длительность анимации, а не её повторение (по умолчанию анимации повторяется один раз), мы могли бы пройтись только по миллисекундам:
 
-<pre class="brush: js">document.getElementById("alice").animate(
+```js
+document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
     { color: '#431236', offset: 0.333},
     { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], 3000);</pre>
+  ], 3000);
+```
 
-<h2 id="Управление_воспроизведением_с_помощью_play_pause_reverse_and_playbackRate">Управление воспроизведением с помощью play(), pause(), reverse() and playbackRate</h2>
+## Управление воспроизведением с помощью play(), pause(), reverse() and playbackRate
 
-<p>Хотя мы можем писать CSS-анимацию с Web Animations API, где API действительно хорошо подходит в качестве воздействия для воспроизведения анимации. Web Animations API обеспечивает несколько удобных методов для контроля воспроизведения анимации. Давайте посмотрим на паузу и воспроизведение анимации в росте/уменьшении Алисы в игре (проверить полный код можно на сайте <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
+Хотя мы можем писать CSS-анимацию с Web Animations API, где API действительно хорошо подходит в качестве воздействия для воспроизведения анимации. Web Animations API обеспечивает несколько удобных методов для контроля воспроизведения анимации. Давайте посмотрим на паузу и воспроизведение анимации в росте/уменьшении Алисы в игре (проверить полный код можно на сайте [full code on Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)):
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+[![Playing the growing and shrinking game with Alice.](https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
-<p>В этой игре Алиса меняется в росте, она то растёт, то уменьшается, а контролируем мы этот процесс с помощью  бутылки и кекса. Каждый из них имеют свою анимацию.</p>
+В этой игре Алиса меняется в росте, она то растёт, то уменьшается, а контролируем мы этот процесс с помощью бутылки и кекса. Каждый из них имеют свою анимацию.
 
-<h3 id="Пауза_и_проигрывание_анимации.">Пауза и проигрывание анимации.</h3>
+### Пауза и проигрывание анимации.
 
-<p>Мы поговорим об анимации Алисы позже, а сейчас посмотрим поближе на анимации кекса:</p>
+Мы поговорим об анимации Алисы позже, а сейчас посмотрим поближе на анимации кекса:
 
-<pre class="brush: js">var nommingCake = document.getElementById('eat-me_sprite').animate(
+```js
+var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -147,19 +156,25 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   fill: 'forwards',
   easing: 'steps(4, end)',
   duration: aliceChange.effect.timing.duration / 2
-});</pre>
+});
+```
 
-<p>Метод {{domxref("Element.animate()")}} будет выполняться сразу же как начнётся игра. Чтобы предотвратить автоматическое поедание кекса до того, как пользователь на него нажмёт, мы вызываем {{domxref("Animation.pause()")}} сразу же как игра открывается, например так:</p>
+Метод {{domxref("Element.animate()")}} будет выполняться сразу же как начнётся игра. Чтобы предотвратить автоматическое поедание кекса до того, как пользователь на него нажмёт, мы вызываем {{domxref("Animation.pause()")}} сразу же как игра открывается, например так:
 
-<pre class="brush: js">nommingCake.pause();</pre>
+```js
+nommingCake.pause();
+```
 
-<p>Теперь мы можем запустить метод {{domxref("Animation.play()")}} когда будем готовы:</p>
+Теперь мы можем запустить метод {{domxref("Animation.play()")}} когда будем готовы:
 
-<pre class="brush: js">nommingCake.play();</pre>
+```js
+nommingCake.play();
+```
 
-<p>Нам необходимо связать его с анимацией Алисы, чтобы она росла всякий раз, когда съедала кекс. Мы можем сделать это с помощью функции:</p>
+Нам необходимо связать его с анимацией Алисы, чтобы она росла всякий раз, когда съедала кекс. Мы можем сделать это с помощью функции:
 
-<pre class="brush: js">var growAlice = function() {
+```js
+var growAlice = function() {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -167,80 +182,92 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   // Play the cake's animation.
   nommingCake.play();
 
-}</pre>
+}
+```
 
-<p>Когда пользователь поместит указатель мыши вниз или нажимает пальцем на торт на сенсорном экране, мы можем вызвать growAlice, чтобы выполнить все анимации:</p>
+Когда пользователь поместит указатель мыши вниз или нажимает пальцем на торт на сенсорном экране, мы можем вызвать growAlice, чтобы выполнить все анимации:
 
-<pre class="brush: js">cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);</pre>
+```js
+cake.addEventListener("mousedown", growAlice, false);
+cake.addEventListener("touchstart", growAlice, false);
+```
 
-<h3 id="Другие_полезные_методы.">Другие полезные методы.</h3>
+### Другие полезные методы.
 
-<p>Помимо паузы и воспроизведения, мы можем использовать следующие методы анимации:</p>
+Помимо паузы и воспроизведения, мы можем использовать следующие методы анимации:
 
-<ul>
- <li>{{domxref("Animation.finish()")}} перейти в конец анимации.</li>
- <li>{{domxref("Animation.cancel()")}} прервать анимацию и удалить её эффект.</li>
- <li>{{domxref("Animation.reverse()")}} устанавливать скорость анимации если установить ({{domxref("Animation.playbackRate")}} отрицательное значение, то анимация пойдёт в обратном порядке.</li>
-</ul>
+- {{domxref("Animation.finish()")}} перейти в конец анимации.
+- {{domxref("Animation.cancel()")}} прервать анимацию и удалить её эффект.
+- {{domxref("Animation.reverse()")}} устанавливать скорость анимации если установить ({{domxref("Animation.playbackRate")}} отрицательное значение, то анимация пойдёт в обратном порядке.
 
-<p>Давайте посмотрим на первый playbackRate— отрицательное значение будет запускать анимацию в обратном направлении. Когда Алиса пьёт из бутылки, она становится меньше. Это происходит потому, что бутылка изменяет её анимацию playbackRate от 1 до -1:</p>
+Давайте посмотрим на первый playbackRate— отрицательное значение будет запускать анимацию в обратном направлении. Когда Алиса пьёт из бутылки, она становится меньше. Это происходит потому, что бутылка изменяет её анимацию playbackRate от 1 до -1:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
 
 bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
+bottle.addEventListener("touchstart", shrinkAlice, false);
+```
 
-<p>В <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Алиса путешествует по миру, где должна бежать, чтобы оставаться на месте и бежать в двое быстрее, чтобы двигаться вперёд. Например в гонке с Красной королевой, Алиса и Красная королева бегут, чтобы оставаться на месте (проверить полный код можно на <a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
+В [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Алиса путешествует по миру, где должна бежать, чтобы оставаться на месте и бежать в двое быстрее, чтобы двигаться вперёд. Например в гонке с Красной королевой, Алиса и Красная королева бегут, чтобы оставаться на месте (проверить полный код можно на [full code on Codepen](http://codepen.io/rachelnabors/pen/PNGGaV)):
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif" style="display: block; height: 342px; margin-left: auto; margin-right: auto; width: 640px;"></a></p>
+[![Alice and the Red Queen race to get to the next square in this game.](https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
 
-<p>Так как маленькие дети легко устают, в отличии от шахматных фигур, Алиса постоянно замедляется. Мы отобразили это в коде путём ослабления (уменьшения скорости) playbackRate анимации.</p>
+Так как маленькие дети легко устают, в отличии от шахматных фигур, Алиса постоянно замедляется. Мы отобразили это в коде путём ослабления (уменьшения скорости) playbackRate анимации.
 
-<pre class="brush: js">setInterval( function() {
+```js
+setInterval( function() {
 
   // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate &gt; .4) {
+  if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.playbackRate *= .9;
   }
 
-}, 3000);</pre>
+}, 3000);
+```
 
-<p>Но постоянно нажимая на них мышью, мы заставляем их ускориться путём умножения playbackRate (скорости анимации)</p>
+Но постоянно нажимая на них мышью, мы заставляем их ускориться путём умножения playbackRate (скорости анимации)
 
-<pre class="brush: js">var goFaster = function() {
+```js
+var goFaster = function() {
 
   redQueen_alice.playbackRate *= 1.1;
 
 }
 
 document.addEventListener("click", goFaster);
-document.addEventListener("touchstart", goFaster);</pre>
+document.addEventListener("touchstart", goFaster);
+```
 
-<p>Фон также ускоряется при щелчках мыши или касаниях. Что же происходит, когда вы заставляете Алису и Красную королеву бежать в два раза быстрее? Что происходит, когда они тормозят?</p>
+Фон также ускоряется при щелчках мыши или касаниях. Что же происходит, когда вы заставляете Алису и Красную королеву бежать в два раза быстрее? Что происходит, когда они тормозят?
 
-<h2 id="Получение_информации_из_анимации">Получение информации из анимации</h2>
+## Получение информации из анимации
 
-<p>Представьте, что мы могли бы использовать playbackRate, как улучшения доступности сайта для пользователей с вестибулярными расстройствами, позволяя им замедлить анимацию на всех страницах сайта. Это невозможно сделать с помощью CSS без пересчёта длительности в каждом правиле CSS, но с веб-анимации API, мы могли бы использовать в будущем (пока не поддерживается в браузерах!) Метод {{domxref("document.getAnimations()")}} систему циклов по каждой анимации на странице и сократить скорость анимации вот так:</p>
+Представьте, что мы могли бы использовать playbackRate, как улучшения доступности сайта для пользователей с вестибулярными расстройствами, позволяя им замедлить анимацию на всех страницах сайта. Это невозможно сделать с помощью CSS без пересчёта длительности в каждом правиле CSS, но с веб-анимации API, мы могли бы использовать в будущем (пока не поддерживается в браузерах!) Метод {{domxref("document.getAnimations()")}} систему циклов по каждой анимации на странице и сократить скорость анимации вот так:
 
-<pre class="brush: js">document.getAnimations().forEach(
+```js
+document.getAnimations().forEach(
   function (animation) {
     animation.playbackRate *= .5;
   }
-);</pre>
+);
+```
 
-<p>С Web Animations API нужно изменить только одно свойство.</p>
+С Web Animations API нужно изменить только одно свойство.
 
-<p>Другое дело, что это трудно делать только с CSS Animations, создавать зависимости от значения предусмотренные для других анимации. В примере игры про рост и уменьшение Алисы, вы можете заметить некоторые странности у кекса:</p>
+Другое дело, что это трудно делать только с CSS Animations, создавать зависимости от значения предусмотренные для других анимации. В примере игры про рост и уменьшение Алисы, вы можете заметить некоторые странности у кекса:
 
-<pre class="brush: js">duration: aliceChange.effect.timing.duration / 2</pre>
+```js
+duration: aliceChange.effect.timing.duration / 2
+```
 
-<p>Чтобы понять, что здесь происходит, давайте посмотрим на анимацию Алисы:</p>
+Чтобы понять, что здесь происходит, давайте посмотрим на анимацию Алисы:
 
-<pre class="brush: js">var aliceChange = document.getElementById('alice').animate(
+```js
+var aliceChange = document.getElementById('alice').animate(
   [
     { transform: 'translate(-50%, -50%) scale(.5)' },
     { transform: 'translate(-50%, -50%) scale(2)' }
@@ -248,25 +275,33 @@ document.addEventListener("touchstart", goFaster);</pre>
     duration: 8000,
     easing: 'ease-in-out',
     fill: 'both'
-  });</pre>
+  });
+```
 
-<p>Изменение размера Алисы в два раза происходит за 8 секунд. Затем мы останавливаем её:</p>
+Изменение размера Алисы в два раза происходит за 8 секунд. Затем мы останавливаем её:
 
-<pre class="brush: js">aliceChange.pause();</pre>
+```js
+aliceChange.pause();
+```
 
-<p>Если бы оставили её на паузе в начале анимации , то Алиса увеличилась бы в два раза, когда выпила бы всю бутылку. Мы хотим остановить её анимацию "воспроизведение" в середине, когда она уже на половину выполнена. Мы могли бы это сделать, установив {{domxref("Animation.currentTime")}} 4 секунды, вот так:</p>
+Если бы оставили её на паузе в начале анимации , то Алиса увеличилась бы в два раза, когда выпила бы всю бутылку. Мы хотим остановить её анимацию "воспроизведение" в середине, когда она уже на половину выполнена. Мы могли бы это сделать, установив {{domxref("Animation.currentTime")}} 4 секунды, вот так:
 
-<pre class="brush: js">aliceChange.currentTime = 4000;</pre>
+```js
+aliceChange.currentTime = 4000;
+```
 
-<p>Но во время работы над этой анимацией мы можем сильно увеличить её продолжительность. Разве не лучше установить динамическое изменение времени (currentTime), тогда нам не придётся делать два обновления за один раз. Мы можем это сделать с помощью ссылки на изменение свойства размера Алисы (aliceChange) {{domxref("Animation.effect")}} который возвращает все детали и действующие эффекты, содержащиеся в объекте, на Алису:</p>
+Но во время работы над этой анимацией мы можем сильно увеличить её продолжительность. Разве не лучше установить динамическое изменение времени (currentTime), тогда нам не придётся делать два обновления за один раз. Мы можем это сделать с помощью ссылки на изменение свойства размера Алисы (aliceChange) {{domxref("Animation.effect")}} который возвращает все детали и действующие эффекты, содержащиеся в объекте, на Алису:
 
-<pre class="brush: js">aliceChange.currentTime = aliceChange.effect.timing.duration / 2;</pre>
+```js
+aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
+```
 
-<p>эффекты позволяют нам получить доступ к анимации keyframe (кадров) и синхронности объектов - aliceChange.effect.timing , указывающий на время Алисиных элементов (которые имеют тип {{domxref("AnimationEffectTimingReadOnly")}}) — в этом содержится её {{domxref("AnimationEffectTimingReadOnly.duration")}}. Мы можем распределить её длительность на два раза, чтобы получить среднюю точку во временной шкале для установки нормального роста.</p>
+эффекты позволяют нам получить доступ к анимации keyframe (кадров) и синхронности объектов - aliceChange.effect.timing , указывающий на время Алисиных элементов (которые имеют тип {{domxref("AnimationEffectTimingReadOnly")}}) — в этом содержится её {{domxref("AnimationEffectTimingReadOnly.duration")}}. Мы можем распределить её длительность на два раза, чтобы получить среднюю точку во временной шкале для установки нормального роста.
 
-<p>Теперь мы можем запустить её в обратном порядке и играться анимацией в любом направлении, чтобы заставить её расти или уменьшаться</p>
+Теперь мы можем запустить её в обратном порядке и играться анимацией в любом направлении, чтобы заставить её расти или уменьшаться
 
-<pre class="brush: js">var drinking = document.getElementById('liquid').animate(
+```js
+var drinking = document.getElementById('liquid').animate(
 [
   { height: '100%' },
   { height: '0' }
@@ -274,15 +309,17 @@ document.addEventListener("touchstart", goFaster);</pre>
   fill: 'forwards',
   duration: aliceChange.effect.timing.duration / 2
 });
-drinking.pause();</pre>
+drinking.pause();
+```
 
-<p>И мы можем сделать тоже самое при установки длительности анимации на кексе или бутылке.</p>
+И мы можем сделать тоже самое при установки длительности анимации на кексе или бутылке.
 
-<p>Теперь все три анимации связаны только с одной продолжительности, и мы можем легко переходить из одного места.</p>
+Теперь все три анимации связаны только с одной продолжительности, и мы можем легко переходить из одного места.
 
-<p>Мы также можем использовать веб-анимации API, чтобы выяснить Текущее время анимации. Игра заканчивается, когда вы бежите от съеденного торта или выпитой бутылки. Изображение у игрока будет зависеть от анимации Алисы. Стала ли она слишком большой на фоне крошечной двери и не может в неё пройти или слишком маленькой и не может достать ключ, чтобы открыть дверь. Мы можем выяснить, стала она большой или маленький в конце её анимация, получая текущее время её анимации <code><a href="/en-US/docs/Web/API/Animation/currentTime">currentTime</a></code> и разделив её на activeDuration:</p>
+Мы также можем использовать веб-анимации API, чтобы выяснить Текущее время анимации. Игра заканчивается, когда вы бежите от съеденного торта или выпитой бутылки. Изображение у игрока будет зависеть от анимации Алисы. Стала ли она слишком большой на фоне крошечной двери и не может в неё пройти или слишком маленькой и не может достать ключ, чтобы открыть дверь. Мы можем выяснить, стала она большой или маленький в конце её анимация, получая текущее время её анимации [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) и разделив её на activeDuration:
 
-<pre class="brush: js">var endGame = function() {
+```js
+var endGame = function() {
 
   // get Alice's timeline's playhead location
   var alicePlayhead = aliceChange.currentTime;
@@ -294,11 +331,11 @@ drinking.pause();</pre>
   // depending on which third it falls into
   var aliceHeight = alicePlayhead/aliceTimeline;
 
-  if (aliceHeight &lt;= .333){
+  if (aliceHeight <= .333){
     // Alice got smaller!
     ...
 
-  } else if (aliceHeight &gt;= .666) {
+  } else if (aliceHeight >= .666) {
     // Alice got bigger!
     ...
 
@@ -308,46 +345,38 @@ drinking.pause();</pre>
 
   }
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Примечание:</strong> <code>getAnimations()</code> и эффект не полностью поддерживаются на момент написания этой статьи, но polyfill  поддерживает их уже сегодня.</p>
-</div>
+> **Примечание:** `getAnimations()` и эффект не полностью поддерживаются на момент написания этой статьи, но polyfill поддерживает их уже сегодня.
 
-<h2 id="Колбэки_и_промисы">Колбэки и промисы</h2>
+## Колбэки и промисы
 
-<p>CSS Animations и Transitions (переходы) имеют свои события и они также могут быть воспроизведены и в Web Animations API:</p>
+CSS Animations и Transitions (переходы) имеют свои события и они также могут быть воспроизведены и в Web Animations API:
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> это обработчик события завершения анимации, он может быть запущен вручную с помощью метода <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> это обработчик события отмены анимации, он может быть запущен вручную с помощью метода <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
-</ul>
+- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) это обработчик события завершения анимации, он может быть запущен вручную с помощью метода [`finish()`](/en-US/docs/Web/API/Animation/finish).
+- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) это обработчик события отмены анимации, он может быть запущен вручную с помощью метода [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
 
-<p>Здесь мы устанавливаем колбэк для бутылки, кекса и Алисы, чтобы запустить функцию endGame.</p>
+Здесь мы устанавливаем колбэк для бутылки, кекса и Алисы, чтобы запустить функцию endGame.
 
-<pre class="brush: js">// When the cake or runs out...
+```js
+// When the cake or runs out...
 nommingCake.onfinish = endGame;
 drinking.onfinish = endGame;
 
 // ...or Alice reaches the end of her animation
 aliceChange.onfinish = endGame;
+```
 
-</pre>
+Нравится перспектива? Web Animations API также даёт две перспективы: [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) и [`oncancel`](/en-US/docs/Web/API/Animation/oncancel).
 
-<p>Нравится перспектива? Web Animations API также даёт две перспективы: <code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> и <code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code>.</p>
+> **Примечание:** Эти промисы не полностью поддерживаются в настоящий момент.
 
-<div class="note">
-<p>Эти промисы не полностью поддерживаются в настоящий момент.</p>
-</div>
+## Заключение
 
-<h2 id="Заключение">Заключение</h2>
+Таковы основные особенности веб-анимации API, большинство из которых уже поддерживается в последних версиях Firefox и Chrome. К этому моменту вы должны быть готовы к "прыжку в кроличью нору" анимации в браузере и готовы написать свои собственные эксперименты в анимации! Если вы используете API и хотите поделиться, попробуйте использовать хештег #WAAPI. Мы будем следить и писать другие учебники, чтобы охватить будущие дополнительные функции, в виде поддержки распространяя!
 
-<p>Таковы основные особенности веб-анимации API, большинство из которых уже поддерживается в последних версиях Firefox и Chrome. К этому моменту вы должны быть готовы к "прыжку в кроличью нору" анимации в браузере и готовы написать свои собственные эксперименты в анимации! Если вы используете API и хотите поделиться, попробуйте использовать хештег #WAAPI. Мы будем следить и писать другие учебники, чтобы охватить будущие дополнительные функции, в виде поддержки распространяя!</p>
+## Посмотрите также
 
-<h2 id="Посмотрите_также">Посмотрите также</h2>
-
-<ul>
- <li><a href="http://codepen.io/collection/bpEza/">Полный набор Алиса в Стране Чудес демки</a> на сайт codepen для вас, чтобы играть, развиваться и делиться</li>
- <li><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — отличная статья, чтобы прочитать, где объясняется больше на фоне веб-анимации API, и поэтому он является более эффективным, чем другие методы веб-анимации</li>
- <li><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
-</ul>
+- [Полный набор Алиса в Стране Чудес демки](http://codepen.io/collection/bpEza/) на сайт codepen для вас, чтобы играть, развиваться и делиться
+- [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — отличная статья, чтобы прочитать, где объясняется больше на фоне веб-анимации API, и поэтому он является более эффективным, чем другие методы веб-анимации
+- [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

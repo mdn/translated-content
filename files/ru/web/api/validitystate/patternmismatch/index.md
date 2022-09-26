@@ -9,50 +9,50 @@ tags:
   - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
-<p>Доступное только для чтения свойство <strong><code>patternMismatch</code></strong> объекта  <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>.</p>
+Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
 
-<p>Если поле поддерживает атрибут <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, это значит, что {{HTMLElement("input")}} содержит <code>type</code> {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, свойство <code>patternMismatch</code> будет <code>true</code>.</p>
+Если поле поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), это значит, что {{HTMLElement("input")}} содержит `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), свойство `patternMismatch` будет `true`.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Учитывая следующее:</p>
+Учитывая следующее:
 
-<pre class="brush: html">&lt;p&gt;
- &lt;label&gt;Enter your phone number in the format (123)456-7890
-  (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
-   &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
-   &lt;input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/&gt;
- &lt;/label&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+ <label>Enter your phone number in the format (123)456-7890
+  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
+   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
+   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
+ </label>
+</p>
+```
 
-<p>Здесь у нас есть 3 поля для номера телефона северной Америки, помещённых внутрь <code>label</code>. В каждом поле, как определено в атрибуте <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, ожидается ввод 3, 3 и 4 символов соответственно.</p>
+Здесь у нас есть 3 поля для номера телефона северной Америки, помещённых внутрь `label`. В каждом поле, как определено в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), ожидается ввод 3, 3 и 4 символов соответственно.
 
-<p>Если значения слишком длинные, слишком короткие или содержат не цифровые символы, <code>patternMismatch</code> будет <code>true</code>. Если <code>true</code>, элемент соответствует CSS-псевдоклассу{{cssxref(":invalid")}}.</p>
+Если значения слишком длинные, слишком короткие или содержат не цифровые символы, `patternMismatch` будет `true`. Если `true`, элемент соответствует CSS-псевдоклассу{{cssxref(":invalid")}}.
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   border: red solid 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 300, 40)}}</p>
+{{EmbedLiveSample("Examples", 300, 40)}}
 
-<p>Обратите внимание, что в данном примере мы получаем значение свойства <code>patternMismatch</code>, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута <code>pattern</code>. Если бы вместо него использовались атрибуты <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> и <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>, для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.</p>
+Обратите внимание, что в данном примере мы получаем значение свойства `patternMismatch`, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута `pattern`. Если бы вместо него использовались атрибуты [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength), для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.
 
-<div class="notecard note">
-<p>Примечание: Если атрибут <code>pattern</code> не используется, поле <code>{{HTMLElement("input/email", "email")}}</code> требует, соответствия значения хотя бы формату <code>x@y</code>, а поле <code>{{HTMLElement("input/url", "url")}}</code> — хотя бы формату <code>x:</code>. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет <code>true</code>, если не используется атрибут <code>pattern</code>.</p>
-</div>
+> **Примечание:** Примечание: Если атрибут `pattern` не используется, поле `{{HTMLElement("input/email", "email")}}` требует, соответствия значения хотя бы формату `x@y`, а поле `{{HTMLElement("input/url", "url")}}` — хотя бы формату `x:`. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет `true`, если не используется атрибут `pattern`.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Также смотрите</h2>
+## Также смотрите
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
- <li><a href="/ru/docs/Learn/Forms/Form_validation">Формы: Валидация форм</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">Регулярные выражения</a></li>
-</ul>
+- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Формы: Валидация форм](/ru/docs/Learn/Forms/Form_validation)
+- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)

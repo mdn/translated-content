@@ -7,80 +7,62 @@ tags:
   - Files
 translation_of: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/DragDrop/DataTransfer "DragDrop/DataTransfer") для детального понимания как это использовать.
 
-<div>Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из <code>&lt;input type="file"&gt;</code>. Также используется для получения списка файлов, брошенных в область веб-контента (<strong>Web content</strong>) по средствам drag and drop API. Смотрите <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer">DataTransfer</a> для детального понимания как это использовать.</div>
+> **Примечание:** До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.
 
-<div class="note">
-<p><strong>Примечание:</strong> До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.</p>
-</div>
+## Использование FileList
 
-<h2 id="Using_the_file_list">Использование FileList</h2>
+Все `<input>` элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:
 
-<p>Все <code>&lt;input&gt;</code> элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:</p>
+```
+<input id="fileItem" type="file">
+```
 
-<pre>&lt;input id="fileItem" type="file"&gt;
-</pre>
+`Этот код извлекает первый File` object из списка:
 
-<p><code>Этот код извлекает первый <a href="/en-US/docs/DOM/File" title="DOM/File">File</a></code> object из списка:</p>
+```js
+var file = document.getElementById('fileItem').files[0];
+```
 
-<pre class="brush: js">var file = document.getElementById('fileItem').files[0];
-</pre>
+## Обзор методов
 
-<h2 id="Method_overview">Обзор методов</h2>
+| `File item(index);` |
+| ------------------- |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>File <a href="#item ()">item</a>(index);</code></td>
-  </tr>
- </tbody>
-</table>
+## Свойства
 
-<h2 id="Attributes">Свойства</h2>
+| Атрибут  | Тип       | Описание                                                           |
+| -------- | --------- | ------------------------------------------------------------------ |
+| `length` | `integer` | Количество файлов в списке, свойство только для чтения (read-only) |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Атрибут</td>
-   <td class="header">Тип</td>
-   <td class="header">Описание</td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td><code>integer</code></td>
-   <td>Количество файлов в списке, свойство только для чтения (read-only)</td>
-  </tr>
- </tbody>
-</table>
+## Методы
 
-<h2 id="Methods">Методы</h2>
+### item()
 
-<h3 id="item()">item()</h3>
+Возвращает [`File`](/ru/docs/DOM/File "DOM/File") объект по его индексу в списке.
 
-<p>Возвращает <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> объект по его индексу в списке.</p>
-
-<pre> File item(
+```
+ File item(
    index
  );
-</pre>
+```
 
-<h6 id="Parameters">Параметр</h6>
+###### Параметр
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Отсчитываемый от нуля индекс файла для извлечения из списка.</dd>
-</dl>
+- `index`
+  - : Отсчитываемый от нуля индекс файла для извлечения из списка.
 
-<h6 id="Return_value">Возвращаемое значение</h6>
+###### Возвращаемое значение
 
-<p><code>Тип <a href="/en-US/docs/DOM/File" title="DOM/File">File</a>, соотвествует запрашиваемому файлу.</code></p>
+`Тип File, соотвествует запрашиваемому файлу.`
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<p>Этот пример выполняет перебор всех файлов, выбранных пользователем, используя элемент Input:</p>
+Этот пример выполняет перебор всех файлов, выбранных пользователем, используя элемент Input:
 
-<pre class="brush:js">// fileInput это HTML input элемент: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput это HTML input элемент: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files это FileList объект (похож на NodeList)
@@ -88,7 +70,7 @@ var files = fileInput.files;
 var file;
 
 // обходит файлы используя цикл
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
 
     // получаем сам файл
     file = files.item(i);
@@ -97,22 +79,23 @@ for (var i = 0; i &lt; files.length; i++) {
 
     alert(file.name);
 }
-</pre>
+```
 
-<p>Здесь пример посложнее.</p>
+Здесь пример посложнее.
 
-<pre class="brush:html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;!--атрибут multiple позволяет выбрать сразу несколько файлов--&gt;
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<!--атрибут multiple позволяет выбрать сразу несколько файлов-->
 
-&lt;input id="myfiles" multiple type="file"&gt;
+<input id="myfiles" multiple type="file">
 
-&lt;/body&gt;
+</body>
 
-&lt;script&gt;
+<script>
 
 var pullfiles=function(){
     // выбираем файловые инпуты на странице
@@ -122,7 +105,7 @@ var pullfiles=function(){
     var fl=files.length;
     var i=0;
 
-    while ( i &lt; fl) {
+    while ( i < fl) {
         // локализуем файловую переменную в цикле
         var file = files[i];
         alert(file.name);
@@ -134,20 +117,17 @@ var pullfiles=function(){
 document.querySelector("#myfiles").onchange=pullfiles;
 
 //a.t
-&lt;/script&gt;
+</script>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML5 working draft)</li>
-</ul>
+- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
- <li><code><a href="/en-US/docs/DOM/File" title="DOM/File">File</a></code></li>
- <li><code><a href="/en-US/docs/DOM/FileReader" title="DOM/FileReader">FileReader</a></code></li>
-</ul>
+- [Using files from web applications](/ru/docs/Using_files_from_web_applications "Using files from web applications")
+- [`File`](/en-US/docs/DOM/File "DOM/File")
+- [`FileReader`](/en-US/docs/DOM/FileReader "DOM/FileReader")

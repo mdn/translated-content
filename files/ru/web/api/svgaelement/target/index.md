@@ -3,54 +3,46 @@ title: SVGAElement.target
 slug: Web/API/SVGAElement/target
 translation_of: Web/API/SVGAElement/target
 ---
-<p>{{APIRef("SVGAElement")}}</p>
+{{APIRef("SVGAElement")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>Свойство <code><strong>SVGAElement.target</strong></code>  только для чтения. {{domxref("SVGAElement")}} возвращает объект {{domxref("SVGAnimatedString")}}, указывающий часть целевого окна, фрейма, панели, в которой откроется при активации ссылки.</p>
+Свойство **`SVGAElement.target`** только для чтения. {{domxref("SVGAElement")}} возвращает объект {{domxref("SVGAnimatedString")}}, указывающий часть целевого окна, фрейма, панели, в которой откроется при активации ссылки.
 
-<p>Это свойство используется, когда существует множество возможных целей для конечного ресурса, например, когда родительский документ является документом HTML или HTML-документом multi-frame.</p>
+Это свойство используется, когда существует множество возможных целей для конечного ресурса, например, когда родительский документ является документом HTML или HTML-документом multi-frame.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre><code><em>myLink</em>.target = '<em>value</em>';</code></pre>
+```
+myLink.target = 'value';
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{Domxref ("SVGAnimatedString")}}, укажет конечную цель ресурса для открытия документа при активации ссылки.<br>
- Примеры значений можно найти <a href="https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute">здесь</a>.</p>
+{{Domxref ("SVGAnimatedString")}}, укажет конечную цель ресурса для открытия документа при активации ссылки.
+Примеры значений можно найти [здесь](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Код взят из <a href="/en-US/docs/Web/API/SVGAElement#Example">«Пример кода SVGAElement»</a>.</p>
+Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#Example).
 
-<pre class="brush: js">...
+```js
+...
 var linkRef = document.querySelector('a');
 linkRef.target ='_blank';
-...</pre>
+...
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Спецификация</td>
-   <td>Статус</td>
-   <td>Коммент</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                   | Коммент |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
+| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{SVGAttr("target")}}</li>
-</ul>
+## Смотрите также
+
+- {{SVGAttr("target")}}

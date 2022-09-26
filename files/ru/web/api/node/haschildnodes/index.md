@@ -3,35 +3,33 @@ title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
 translation_of: Web/API/Node/hasChildNodes
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>Node.hasChildNodes()</strong></code> возвращает {{jsxref("Boolean")}} значение показывающее имеет ли текущий {{domxref("Node")}} <a href="/en-US/docs/Web/API/Node.childNodes" title="DOM/Node.childNodes">дочерние узлы </a>или нет.</p>
+Метод **`Node.hasChildNodes()`** возвращает {{jsxref("Boolean")}} значение показывающее имеет ли текущий {{domxref("Node")}} [дочерние узлы ](/ru/docs/Web/API/Node.childNodes "DOM/Node.childNodes")или нет.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>node.hasChildNodes()</code></pre>
+```
+node.hasChildNodes()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Следующий пример удаляет первый дочерний узел внутри элемента с id <code>"foo"</code>, если foo имеет дочерние узлы.</p>
+Следующий пример удаляет первый дочерний узел внутри элемента с id `"foo"`, если foo имеет дочерние узлы.
 
-<pre class="brush:js;">var foo = document.getElementById("foo");
+```js
+var foo = document.getElementById("foo");
 
 if ( foo.hasChildNodes() ) {
   foo.removeChild( foo.childNodes[0] );
-}</pre>
+}
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187">hasChildNodes</a></li>
-</ul>
+- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Node.childNodes")}}</li>
- <li>{{domxref("Node.hasAttributes")}}</li>
-</ul>
+- {{domxref("Node.childNodes")}}
+- {{domxref("Node.hasAttributes")}}

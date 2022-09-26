@@ -10,21 +10,17 @@ tags:
   - Справочник
 browser-compat: api.ValidityState.tooLong
 ---
-<div></div>
+Доступное только для чтения свойство **`tooLong`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, превышает ли длина значения {{HTMLElement("input")}} или {{HTMLElement("textarea")}}, после редактирования пользователем, заданный в атрибуте [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) максимум.
 
-<p>Доступное только для чтения свойство <strong><code>tooLong</code></strong> объекта <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, превышает ли длина значения {{HTMLElement("input")}} или {{HTMLElement("textarea")}}, после редактирования пользователем, заданный в атрибуте <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> максимум.</p>
-
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
- <li><a href="/ru/docs/Learn/Forms/Form_validation">Валидация форм на стороне клиента</a></li>
-</ul>
+- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)

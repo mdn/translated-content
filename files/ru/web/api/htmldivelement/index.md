@@ -3,39 +3,31 @@ title: HTMLDivElement
 slug: Web/API/HTMLDivElement
 translation_of: Web/API/HTMLDivElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
+Интерфейс **HTMLDivElement** предоставляет специальные свойства (не входящее в интерфейс {{domxref("HTMLElement")}} ) для манипулирования DIV элементов.
 
+{{InheritanceDiagram(600,120)}}
 
-<p>Интерфейс <strong>HTMLDivElement</strong> предоставляет специальные свойства (не входящее в интерфейс {{domxref("HTMLElement")}} ) для манипулирования DIV элементов. </p>
+## Свойства
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+_Наследует свойства родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Свойства">Свойства</h2>
+- {{domxref("HTMLDivElement.align")}} {{obsolete_inline}}
+  - : Свойство типа {{domxref("DOMString")}} указывающее выравнивание содержимого элемента относительно окружающего контекста. Принимает следующие значения `"left"`, `"right"`, `"justify"`, `"center"`.
 
-<p><em>Наследует свойства родителя, {{domxref("HTMLElement")}}.</em></p>
+## Методы
 
-<dl>
- <dt>{{domxref("HTMLDivElement.align")}} {{obsolete_inline}}</dt>
- <dd>Свойство типа {{domxref("DOMString")}} указывающее выравнивание содержимого элемента относительно окружающего контекста. Принимает следующие значения <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, <code>"center"</code>.</dd>
-</dl>
+_Не имеет специальных методов; Наследует методы родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Методы">Методы</h2>
-
-<p><em>Не имеет специальных методов; Наследует методы родителя, {{domxref("HTMLElement")}}.</em></p>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{ HTMLElement("div") }}.</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{ HTMLElement("div") }}.

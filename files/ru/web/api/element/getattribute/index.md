@@ -8,42 +8,40 @@ tags:
   - метод
 translation_of: Web/API/Element/getAttribute
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p><code>getAttribute()</code> возвращает значение указанного атрибута элемента. Если элемент не содержит данный атрибут, могут быть возвращены <code>null</code> или <code>""</code> (пустая строка); подробнее <a href="#notes">Notes</a>.</p>
+`getAttribute()` возвращает значение указанного атрибута элемента. Если элемент не содержит данный атрибут, могут быть возвращены `null` или `""` (пустая строка); подробнее [Notes](#notes).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>var attribute</em> = element.getAttribute(<em>attributeName</em>);
-</pre>
+```
+var attribute = element.getAttribute(attributeName);
+```
 
-<p>где</p>
+где
 
-<ul>
- <li><code><em>attribute</em></code> - переменная, которой будет присвоено значение <code><em>attributeName</em></code>.</li>
- <li><code><em>attributeName</em></code> - имя атрибута, значение которого необходимо получить.</li>
-</ul>
+- `attribute` - переменная, которой будет присвоено значение `attributeName`.
+- `attributeName` - имя атрибута, значение которого необходимо получить.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">var div1 = document.getElementById("div1");
+```
+var div1 = document.getElementById("div1");
 var align = div1.getAttribute("align");
 alert(align); // отобразит значение атрибута align элемента с id="div1"
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Когда метод <code>getAttribute</code> вызывается применительно к HTML-элементу, в DOM HTML-документа, значение аргумента приводится к нижнему регистру.</p>
+Когда метод `getAttribute` вызывается применительно к HTML-элементу, в DOM HTML-документа, значение аргумента приводится к нижнему регистру.
 
-<p>В действительности все браузеры (Firefox, Internet Explorer, последние версии Opera, Safari, Konqueror, iCab и т.д.) возвращают <code>null</code>, когда выбранный элемент не содержит атрибута с переданным именем. Спецификация DOM определяет, что корректное возвращаемое значение в данном случае - <em>пустая строка</em> и некоторые реализации DOM придерживаются такого поведения. Реализация getAttribute в XUL (Gecko) в настоящее время следует спецификации и возвращает пустую строку. Следовательно, имеет смысл использовать <a href="/en/DOM/element.hasAttribute" title="en/DOM/element.hasAttribute">hasAttribute</a>, чтобы проверять наличие атрибутов перед вызовом <code>getAttribute()</code>, если может быть такое, что выбранный элемент не будет содержать искомого атрибута.</p>
+В действительности все браузеры (Firefox, Internet Explorer, последние версии Opera, Safari, Konqueror, iCab и т.д.) возвращают `null`, когда выбранный элемент не содержит атрибута с переданным именем. Спецификация DOM определяет, что корректное возвращаемое значение в данном случае - _пустая строка_ и некоторые реализации DOM придерживаются такого поведения. Реализация getAttribute в XUL (Gecko) в настоящее время следует спецификации и возвращает пустую строку. Следовательно, имеет смысл использовать [hasAttribute](/en/DOM/element.hasAttribute "en/DOM/element.hasAttribute"), чтобы проверять наличие атрибутов перед вызовом `getAttribute()`, если может быть такое, что выбранный элемент не будет содержать искомого атрибута.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (представлено в <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (представлено в [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

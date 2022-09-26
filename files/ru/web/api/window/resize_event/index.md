@@ -7,82 +7,48 @@ tags:
   - события
 translation_of: Web/API/Window/resize_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Событие <strong><code>resize</code></strong> срабатывает при изменении размера представления документа (окна).</p>
+Событие **`resize`** срабатывает при изменении размера представления документа (окна).
 
-<p>В некоторых более ранних браузерах можно было зарегистрировать обработчики событий <code>resize</code> на любом HTML-элементе. По-прежнему можно установить атрибуты <code>onresize</code> или использовать {{domxref("EventTarget.addEventListener", "addEventListener()")}} чтобы установить обработчик для любого элемента. Однако, событие <code>resize</code>  запускается только на объекте {{domxref("Window", "window")}}. Только обработчики, зарегистрированные на объекте window, будут получать события <code>resize</code> .</p>
+В некоторых более ранних браузерах можно было зарегистрировать обработчики событий `resize` на любом HTML-элементе. По-прежнему можно установить атрибуты `onresize` или использовать {{domxref("EventTarget.addEventListener", "addEventListener()")}} чтобы установить обработчик для любого элемента. Однако, событие `resize` запускается только на объекте {{domxref("Window", "window")}}. Только обработчики, зарегистрированные на объекте window, будут получать события `resize` .
 
-<p>Существует предложение разрешить всем элементам получать уведомления об изменениях размера. См. раздел <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a>, чтобы ознакомиться с проектом документа, и <a href="https://github.com/WICG/ResizeObserver/issues">GitHub вопросы</a>, чтобы ознакомиться с текущими обсуждениями.</p>
+Существует предложение разрешить всем элементам получать уведомления об изменениях размера. См. раздел [Resize Observer](https://wicg.github.io/ResizeObserver/), чтобы ознакомиться с проектом документа, и [GitHub вопросы](https://github.com/WICG/ResizeObserver/issues), чтобы ознакомиться с текущими обсуждениями.
 
-<h2 id="Основная_информация">Основная информация</h2>
+## Основная информация
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификации</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize">DOM L3</a>, <a href="http://www.w3.org/TR/cssom-view/#resizing-viewports">CSSOM View</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">UIEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отмена</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Цель</dt>
- <dd style="margin: 0 0 0 120px;">вид по умолчанию (window)</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
-</dl>
+- Спецификации
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+- Интерфейс
+  - : UIEvent
+- Bubbles
+  - : Нет
+- Отмена
+  - : Нет
+- Цель
+  - : вид по умолчанию (window)
+- Действие по умолчанию
+  - : Нет
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a class="new" href="/en-US/docs/Web/API/WindowProxy" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                                                                                                                                         | Description                                                                                                                                                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget "EventTarget is an interface implemented by objects that can receive events and may have listeners for them.")  | The event target (the topmost target in the DOM tree).                                                                                                                                                             |
+| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") | The type of event.                                                                                                                                                                                                 |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Whether the event normally bubbles or not.                                                                                                                                                                         |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Whether the event is cancellable or not.                                                                                                                                                                           |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy "The documentation about this has not yet been written; please consider contributing!")                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                             | 0.                                                                                                                                                                                                                 |
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Так как события изменения размера могут срабатывать с высокой скоростью, обработчик событий не должен выполнять дорогостоящие операции, такие как модификации DOM. Вместо этого рекомендуется регулировать событие, используя requestAnimationFrame, setTimeout или customEvent *, следующим образом:</p>
+Так как события изменения размера могут срабатывать с высокой скоростью, обработчик событий не должен выполнять дорогостоящие операции, такие как модификации DOM. Вместо этого рекомендуется регулировать событие, используя requestAnimationFrame, setTimeout или customEvent \*, следующим образом:
 
-<p><strong>* ВАЖНО:</strong> Обратите внимание, что для работы в IE11 необходимо, чтобы <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill">customEvent</a> заполнялся в функцию правильно.</p>
+**\* ВАЖНО:** Обратите внимание, что для работы в IE11 необходимо, чтобы [customEvent](/ru/docs/Web/API/CustomEvent/CustomEvent#Polyfill) заполнялся в функцию правильно.
 
-<h3 id="requestAnimationFrame_customEvent">requestAnimationFrame + customEvent</h3>
+### requestAnimationFrame + customEvent
 
-<pre class="brush: js">(function() {
+```js
+(function() {
     var throttle = function(type, name, obj) {
         obj = obj || window;
         var running = false;
@@ -105,11 +71,12 @@ translation_of: Web/API/Window/resize_event
 window.addEventListener("optimizedResize", function() {
     console.log("Resource conscious resize callback!");
 });
-</pre>
+```
 
-<h3 id="requestAnimationFrame">requestAnimationFrame</h3>
+### requestAnimationFrame
 
-<pre class="brush: js">var optimizedResize = (function() {
+```js
+var optimizedResize = (function() {
 
     var callbacks = [],
         running = false;
@@ -163,11 +130,12 @@ window.addEventListener("optimizedResize", function() {
 optimizedResize.add(function() {
     console.log('Resource conscious resize callback!')
 });
-</pre>
+```
 
-<h3 id="setTimeout">setTimeout</h3>
+### setTimeout
 
-<pre class="brush: js">(function() {
+```js
+(function() {
 
   window.addEventListener("resize", resizeThrottler, false);
 
@@ -189,4 +157,5 @@ optimizedResize.add(function() {
     ...
   }
 
-}());</pre>
+}());
+```

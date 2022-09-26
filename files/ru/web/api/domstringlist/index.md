@@ -3,26 +3,22 @@ title: DOMStringList
 slug: Web/API/DOMStringList
 translation_of: Web/API/DOMStringList
 ---
-<p>{{APIRef("DOM")}}{{Obsolete_header}}</p>
+{{APIRef("DOM")}}{{Obsolete_header}}
 
-<p>Тип возвращаемый некоторыми API, который содержит список <a class="internal" href="/En/DOM/DOMString" title="En/DOM/DOMString">DOMString</a> (строки).</p>
+Тип возвращаемый некоторыми API, который содержит список [DOMString](/En/DOM/DOMString "En/DOM/DOMString") (строки).
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("DOMStringList.length")}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает длину списка.</dd>
-</dl>
+- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
+  - : Возвращает длину списка.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("DOMStringList.item()")}}</dt>
- <dd>Возвращает {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("DOMStringList.contains()")}}</dt>
- <dd>Возвращает {{jsxref("Boolean")}} с указанием, есть ли данная строка в списке.</dd>
-</dl>
+- {{domxref("DOMStringList.item()")}}
+  - : Возвращает {{domxref("DOMString")}}.
+- {{domxref("DOMStringList.contains()")}}
+  - : Возвращает {{jsxref("Boolean")}} с указанием, есть ли данная строка в списке.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

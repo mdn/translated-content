@@ -3,72 +3,77 @@ title: keyup
 slug: Web/API/Element/keyup_event
 translation_of: Web/API/Element/keyup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong><code>keyup</code></strong> срабатывает, когда клавиша была отпущена.</p>
+Событие **`keyup`** срабатывает, когда клавиша была отпущена.
 
 <table class="properties">
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}</td>
-  </tr>
- </tbody>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>События <code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code> и <code>keyup</code> показывают то, что клавиша была нажата, в то время как <code>keypress</code> показывает то, какой символ был введён. Например, прописную "a" <code>keydown</code> и <code>keyup</code> сообщат как 65, а <code>keypress</code> сообщит как 97. Заглавную же "A" все события сообщают как 65.</p>
+События [`keydown`](/en-US/docs/Web/API/Element/keydown_event) и `keyup` показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Примеры_addEventListener_keyup">Примеры addEventListener keyup</h3>
+### Примеры addEventListener keyup
 
-<p>Этот пример отображает значение {{domxref("KeyboardEvent.code")}} всякий раз, когда вы отпускаете клавишу внутри {{HtmlElement("input")}} элемента.</p>
+Этот пример отображает значение {{domxref("KeyboardEvent.code")}} всякий раз, когда вы отпускаете клавишу внутри {{HtmlElement("input")}} элемента.
 
-<pre class="brush: html">&lt;input placeholder="Кликните здесь, затем нажмите и отпустите клавишу." size="40"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Кликните здесь, затем нажмите и отпустите клавишу." size="40">
+<p id="log"></p>
+```
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('keyup', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Примеры_addEventListener_keyup")}}</p>
+{{EmbedLiveSample("Примеры_addEventListener_keyup")}}
 
-<h3 id="Аналог_onkeyup">Аналог onkeyup</h3>
+### Аналог onkeyup
 
-<pre class="brush: js">input.onkeyup = logKey;</pre>
+```js
+input.onkeyup = logKey;
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keypress_event">keypress</a></code></li>
- <li><a href="/en-US/docs/Web/API/Document/keyup_event">Document <code>keyup</code> event</a></li>
-</ul>
+- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
+- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
+- [Document `keyup` event](/ru/docs/Web/API/Document/keyup_event)

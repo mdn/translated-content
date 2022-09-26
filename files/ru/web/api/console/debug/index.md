@@ -3,39 +3,34 @@ title: Console.debug()
 slug: Web/API/Console/debug
 translation_of: Web/API/Console/debug
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Выводит сообщение в веб.консоль Сообщение отображается только если консоль настроена на показ сообщений уровня отладки.</p>
+Выводит сообщение в веб.консоль Сообщение отображается только если консоль настроена на показ сообщений уровня отладки.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.debug(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.debug(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.debug(obj1 [, obj2, ..., objN]);
+console.debug(msg [, subst1, ..., substN]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся. </dd>
- <dt><code>msg</code></dt>
- <dd>Строка JavaScript, содержащая 0 и более подстановочных символов для замены (см. <code>subst1</code> ... <code>substN</code>).</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в <code>msg</code>. Это даст вам дополнительный контроль над форматом вывода. (см. {{SectionOnPage("/ru/docs/Web/API/Console", "Преобразование строк с использованием масок")}}).</dd>
-</dl>
+- `obj1` ... `objN`
+  - : Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся.
+- `msg`
+  - : Строка JavaScript, содержащая 0 и более подстановочных символов для замены (см. `subst1` ... `substN`).
+- `subst1` ... `substN`
+  - : JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в `msg`. Это даст вам дополнительный контроль над форматом вывода. (см. {{SectionOnPage("/ru/docs/Web/API/Console", "Преобразование строк с использованием масок")}}).
 
-<p>Читайте <a href="/ru/docs/Web/API/Console#Outputting_text_to_the_console">Вывод текста в консоль</a> в документации {{domxref("console")}} для получения дополнительной информации.</p>
+Читайте [Вывод текста в консоль](/ru/docs/Web/API/Console#Outputting_text_to_the_console) в документации {{domxref("console")}} для получения дополнительной информации.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

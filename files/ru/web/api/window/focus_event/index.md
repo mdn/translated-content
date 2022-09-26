@@ -4,27 +4,28 @@ slug: Web/API/Window/focus_event
 translation_of: Web/API/GlobalEventHandlers/onfocus
 original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Свойство <strong>onfocus</strong> устанавливает обработчик события onFocus на данный элемент.</p>
+Свойство **onfocus** устанавливает обработчик события onFocus на данный элемент.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.onfocus = выполняемый код при сработке события
-</pre>
+```
+element.onfocus = выполняемый код при сработке события
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Событие фокуса (focus) вызывается когда пользователь устанавливает фокус на данный элемент.</p>
+Событие фокуса (focus) вызывается когда пользователь устанавливает фокус на данный элемент.
 
-<p>Чтобы вызвать событие <strong><code>onfocus</code></strong> на элементах, отличных от полей ввода <strong>input, </strong>им необходимо предварительно добавить атрибут {{htmlattrxref("tabindex")}} (см. <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a> для подробностей).</p>
+Чтобы вызвать событие **`onfocus`** на элементах, отличных от полей ввода **input,** им необходимо предварительно добавить атрибут {{htmlattrxref("tabindex")}} (см. [Building keyboard accessibility back in](/ru/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in) для подробностей).
 
-<p>В отличие от браузеров IE, в которых практически на всех элементах можно вызвать событие фокуса, браузеры, написанные на движке <strong>Gecko (Mozilla Firefox), </strong>не поддерживают это событие<strong>.</strong></p>
+В отличие от браузеров IE, в которых практически на всех элементах можно вызвать событие фокуса, браузеры, написанные на движке **Gecko (Mozilla Firefox),** не поддерживают это событие**.**
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,42 +3,39 @@ title: Document.createComment()
 slug: Web/API/Document/createComment
 translation_of: Web/API/Document/createComment
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<h2 id="Summary">Основное</h2>
+## Основное
 
-<p><code>createComment()</code> создаёт новый комментарий и возвращает его.</p>
+`createComment()` создаёт новый комментарий и возвращает его.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>CommentNode</em> = document.createComment(data)
-</pre>
+```
+CommentNode = document.createComment(data)
+```
 
-<h3 id="Parameters">Аргументы</h3>
+### Аргументы
 
-<dl>
- <dt><code>data</code></dt>
- <dd>Строка, которая будет внутри комментария</dd>
-</dl>
+- `data`
+  - : Строка, которая будет внутри комментария
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml");
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml");
 var comment = docu.createComment('Это комментарий на странице');
 
 docu.getElementsByTagName('xml')[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
-// Выведет: &lt;xml&gt;&lt;!--Это комментарий на странице--&gt;&lt;/xml&gt;</pre>
+// Выведет: <xml><!--Это комментарий на странице--></xml>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<ul>
- <li>Вернёт <strong><code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code></strong>,  если "--" есть в содержимом тега.</li>
-</ul>
+- Вернёт **`NS_ERROR_DOM_INVALID_CHARACTER_ERR`**, если "--" есть в содержимом тега.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment">createComment</a></li>
-</ul>
+- [createComment](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)

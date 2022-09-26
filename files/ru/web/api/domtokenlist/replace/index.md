@@ -3,42 +3,43 @@ title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 translation_of: Web/API/DOMTokenList/replace
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>replace()</strong></code> интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то <code>replace()</code> сразу же возвращает <code>false</code>, без добавления нового класса в список классов.</p>
+Метод **`replace()`** интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то `replace()` сразу же возвращает `false`, без добавления нового класса в список классов.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
+```
+tokenList.replace(oldToken, newToken);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><var>oldToken</var></code></dt>
- <dd>{{domxref("DOMString")}} - класс, который вы хотите заменить.</dd>
- <dt><code><var>newToken</var></code></dt>
- <dd>{{domxref("DOMString")}} класс, которым вы хотите заменить класс <code><var>oldToken</var></code>.</dd>
-</dl>
+- `oldToken`
+  - : {{domxref("DOMString")}} - класс, который вы хотите заменить.
+- `newToken`
+  - : {{domxref("DOMString")}} класс, которым вы хотите заменить класс `oldToken`.
 
-<h3 id="Возвращает_значение">Возвращает значение</h3>
+### Возвращает значение
 
-<p>Boolean, которое будет <code>true</code>, если <code><var>oldToken</var></code> был успешно заменён, или <code>false</code> в противном случае.</p>
+Boolean, которое будет `true`, если `oldToken` был успешно заменён, или `false` в противном случае.
 
-<div class="note">
-<p><strong>Примечание</strong>: В старых браузерах <code>replace()</code> возвращает void.</p>
-</div>
+> **Примечание:** В старых браузерах `replace()` возвращает void.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем примере мы получаем список классов, установленных в элементе {{htmlelement("span")}} как <code>DOMTokenList</code>, используя {{domxref("Element.classList")}}. Затем мы заменяем класс в списке и записываем список в {{domxref("Node.textContent")}}, принадлежащий <code>&lt;span&gt;</code>.</p>
+В следующем примере мы получаем список классов, установленных в элементе {{htmlelement("span")}} как `DOMTokenList`, используя {{domxref("Element.classList")}}. Затем мы заменяем класс в списке и записываем список в {{domxref("Node.textContent")}}, принадлежащий `<span>`.
 
-<p>В HTML:</p>
+В HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>В JavaScript:</p>
+В JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 
 let result = classes.replace("c", "z");
@@ -48,33 +49,32 @@ if (result) {
   span.textContent = classes;
 } else {
   span.textContent = 'token not replaced successfully';
-}</pre>
+}
+```
 
-<p>Результат выглядит так:</p>
+Результат выглядит так:
 
-<p>{{ EmbedLiveSample('Примеры', '100%', 60) }}</p>
+{{ EmbedLiveSample('Примеры', '100%', 60) }}
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Следующий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
+Следующий полифил добавит метод replace в класс `DOMTokenList`. Следующий код будет работать только с **IE10-11**. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}
 
-<pre class="brush: js"><code>DOMTokenList.prototype.replace = function (a, b) {
+```js
+DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
         this.add(b);
         this.remove(a);
         return true;
     }
     return false;
-}</code></pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

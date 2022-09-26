@@ -3,22 +3,24 @@ title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 translation_of: Web/API/KeyboardEvent/altKey
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>KeyboardEvent.altKey</code></strong> свойство только для чтения, возвращает  {{jsxref("Boolean")}}, если клавиша  <kbd>alt</kbd> (<kbd>Option</kbd> или <kbd>⌥</kbd> на OS X) была нажата (<code>true</code>) или не нажата (<code>false</code>), когда событие произошло.</p>
+**`KeyboardEvent.altKey`** свойство только для чтения, возвращает {{jsxref("Boolean")}}, если клавиша <kbd>alt</kbd> (<kbd>Option</kbd> или <kbd>⌥</kbd> на OS X) была нажата (`true`) или не нажата (`false`), когда событие произошло.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>altKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.altKey
-</pre>
+```
+var altKeyPressed = instanceOfKeyboardEvent.altKey
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;altKey example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>altKey example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e){
   alert(
@@ -28,27 +30,26 @@ function showChar(e){
   );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;
-Нажмите любую клавишу с зажатой клавишей ALT или без неё&lt;br /&gt;
+<body onkeypress="showChar(event);">
+<p>
+Нажмите любую клавишу с зажатой клавишей ALT или без неё<br />
 Вы можете также использовать SHIFT вместе с ALT.
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</p>
+</body>
+</html>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

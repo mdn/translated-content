@@ -3,55 +3,55 @@ title: 'Элемент: mouseup событие'
 slug: Web/API/Element/mouseup_event
 translation_of: Web/API/Element/mouseup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong><code>mouseup</code></strong> возникает на {{domxref("Element")}}, когда кнопка на аппаратном манипуляторе курсора (на мыши или трекпаде) отпущена, в то время как указатель находится на элементе. Событие mouseup является противоположным {{domxref("Element.mousedown_event", "mousedown")}} событию.</p>
+Событие **`mouseup`** возникает на {{domxref("Element")}}, когда кнопка на аппаратном манипуляторе курсора (на мыши или трекпаде) отпущена, в то время как указатель находится на элементе. Событие mouseup является противоположным {{domxref("Element.mousedown_event", "mousedown")}} событию.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Отменяемое </th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">Отменяемое</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>{{page("/en-US/docs/Web/API/Element/mousemove_event", "Examples")}}</p>
+{{page("/en-US/docs/Web/API/Element/mousemove_event", "Examples")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{Event("mousedown")}}</li>
- <li>{{Event("mouseup")}}</li>
- <li>{{Event("mousemove")}}</li>
- <li>{{Event("click")}}</li>
- <li>{{Event("dblclick")}}</li>
- <li>{{Event("mouseover")}}</li>
- <li>{{Event("mouseout")}}</li>
- <li>{{Event("mouseenter")}}</li>
- <li>{{Event("mouseleave")}}</li>
- <li>{{Event("contextmenu")}}</li>
-</ul>
+- [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events)
+- {{Event("mousedown")}}
+- {{Event("mouseup")}}
+- {{Event("mousemove")}}
+- {{Event("click")}}
+- {{Event("dblclick")}}
+- {{Event("mouseover")}}
+- {{Event("mouseout")}}
+- {{Event("mouseenter")}}
+- {{Event("mouseleave")}}
+- {{Event("contextmenu")}}

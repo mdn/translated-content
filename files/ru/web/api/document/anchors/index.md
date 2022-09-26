@@ -10,43 +10,42 @@ tags:
   - Якоря
 translation_of: Web/API/Document/anchors
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>anchors</code></strong> возвращает массив всех якорей в документе.</p>
+**`anchors`** возвращает массив всех якорей в документе.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>nodeList</var> = document.anchors;
-</pre>
+```
+nodeList = document.anchors;
+```
 
-<p> </p>
+### Значение
 
-<h3 id="Значение">Значение</h3>
+{{domxref("HTMLCollection")}}.
 
-<p>{{domxref("HTMLCollection")}}.</p>
+## Пример
 
-<p> </p>
-
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:js">if ( document.anchors.length &gt;= 5 ) {
+```js
+if ( document.anchors.length >= 5 ) {
   dump("найдено слишком много якорей");
   window.location = "http://www.google.com";
 }
-</pre>
+```
 
-<p>Следующий пример автоматически генерирует список якорей из заглавий блоков, имеющихся на странице:</p>
+Следующий пример автоматически генерирует список якорей из заглавий блоков, имеющихся на странице:
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Test&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test</title>
+<script>
 function init() {
   var toc = document.getElementById("toc");
   var i, li, newAnchor;
-  for (i = 0; i &lt; document.anchors.length; i++) {
+  for (i = 0; i < document.anchors.length; i++) {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
@@ -55,47 +54,43 @@ function init() {
     toc.appendChild(li);
   }
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
+</head>
+<body onload="init()">
 
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;h2&gt;&lt;a name="contents"&gt;Contents&lt;/a&gt;&lt;/h2&gt;
-&lt;ul id="toc"&gt;&lt;/ul&gt;
+<h1>Title</h1>
+<h2><a name="contents">Contents</a></h2>
+<ul id="toc"></ul>
 
-&lt;h2&gt;&lt;a name="plants"&gt;Plants&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Apples&lt;/li&gt;
-    &lt;li&gt;Oranges&lt;/li&gt;
-    &lt;li&gt;Pears&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="plants">Plants</a></h2>
+<ol>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+</ol>
 
-&lt;h2&gt;&lt;a name="veggies"&gt;Veggies&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Carrots&lt;/li&gt;
-    &lt;li&gt;Celery&lt;/li&gt;
-    &lt;li&gt;Beats&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="veggies">Veggies</a></h2>
+<ol>
+    <li>Carrots</li>
+    <li>Celery</li>
+    <li>Beats</li>
+</ol>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/S4yNp">Посмотреть на JSFiddle</a></p>
+[Посмотреть на JSFiddle](https://jsfiddle.net/S4yNp)
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>По причине обратной совместимости возвращаемый массив якорей включает в себя лишь якоря, созданные с помощью атрибута <strong>name</strong>, а не а <strong>id</strong>.</p>
+По причине обратной совместимости возвращаемый массив якорей включает в себя лишь якоря, созданные с помощью атрибута **name**, а не а **id**.
 
-<p> </p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

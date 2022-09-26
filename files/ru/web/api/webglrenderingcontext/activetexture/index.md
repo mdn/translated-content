@@ -3,59 +3,59 @@ title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
 translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.activeTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> указывает какую текстуру сделать активной.</p>
+**`WebGLRenderingContext.activeTexture()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) указывает какую текстуру сделать активной.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>void gl</em>.activeTexture</var><var>(texture);</var>
-</pre>
+```
+void gl.activeTexture(texture);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>texture</code></dt>
- <dd>Номер текстуры которую необходимо активировать. Значение <code>gl.TEXTURE<em>I</em></code> где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
-</dl>
+- `texture`
+  - : Номер текстуры которую необходимо активировать. Значение `gl.TEXTUREI` где _I_ значение в диапазоне от 0 до `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>None.</p>
+None.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>Если <em>texture</em> не относится к <code>gl.TEXTURE<em>I</em></code>, где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, то получаем исключение <code>gl.INVALID_ENUM</code> .</p>
+Если _texture_ не относится к `gl.TEXTUREI`, где _I_ значение в диапазоне от 0 до `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, то получаем исключение `gl.INVALID_ENUM` .
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Вызов со значением <code>gl.TEXTURE1</code> выберет текстуру в качестве текущей. Последующие вызовы будут изменять эту текстуру.</p>
+Вызов со значением `gl.TEXTURE1` выберет текстуру в качестве текущей. Последующие вызовы будут изменять эту текстуру.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
-</pre>
+```js
+gl.activeTexture(gl.TEXTURE1);
+```
 
-<p>Количество текстур зависит от реализации, вы можете получить количество текстур с помощью константы <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code>. Согласно спецификации не менее 8.</p>
+Количество текстур зависит от реализации, вы можете получить количество текстур с помощью константы `MAX_COMBINED_TEXTURE_IMAGE_UNITS`. Согласно спецификации не менее 8.
 
-<pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
-</pre>
+```js
+gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+```
 
-<p>чтобы получить текущую активную текстуру вызовите <code>gl.getParameter</code> с константой <code>ACTIVE_TEXTURE</code>.</p>
+чтобы получить текущую активную текстуру вызовите `gl.getParameter` с константой `ACTIVE_TEXTURE`.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
+```js
+gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);
 // вернёт "33984" (0x84C0, gl.TEXTURE0 enum value)
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getParameter()")}}

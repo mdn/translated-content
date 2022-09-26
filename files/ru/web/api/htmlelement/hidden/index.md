@@ -3,83 +3,84 @@ title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 translation_of: Web/API/HTMLElement/hidden
 ---
-<div>
-<div>HTMLElement Свойство <strong><code>hidden</code></strong> является {{jsxref("Boolean")}} типом данных , который принимает значение true , если содержимое спрятано, в противном случае значение будет false. Это свойство совершенно отличается от использования CSS-свойства {{cssxref("display")}} , чтобы контролировать отображение элемента.Свойство <code>hidden</code> применимо ко всем режимам  представления и не должно использоваться для скрытия содержимого предназначенного для прямого доступа к пользователю. Соответствующие варианты использования включают:</div>
-</div>
+HTMLElement Свойство **`hidden`** является {{jsxref("Boolean")}} типом данных , который принимает значение true , если содержимое спрятано, в противном случае значение будет false. Это свойство совершенно отличается от использования CSS-свойства {{cssxref("display")}} , чтобы контролировать отображение элемента.Свойство `hidden` применимо ко всем режимам представления и не должно использоваться для скрытия содержимого предназначенного для прямого доступа к пользователю. Соответствующие варианты использования включают:
 
-<ul>
- <li> Содержимое, которое не является особенно важным, но может быть необходимо позже</li>
- <li>Содержимое, которое было раньше необходимо, но больше нет в нем необходимости</li>
- <li>Содержимое, которое повторно используется другими частями страницы по шаблону</li>
- <li>Создание заставного холста в качестве буфера рисования</li>
-</ul>
+- Содержимое, которое не является особенно важным, но может быть необходимо позже
+- Содержимое, которое было раньше необходимо, но больше нет в нем необходимости
+- Содержимое, которое повторно используется другими частями страницы по шаблону
+- Создание заставного холста в качестве буфера рисования
 
-<p>Неуместные варианты использования включают:</p>
+Неуместные варианты использования включают:
 
-<ul>
- <li>Скрытие панелей в диалоговом окне с вкладками</li>
- <li>Скрытие содержимого в одной презентации, предполагая, что оно будет видимым в других</li>
-</ul>
+- Скрытие панелей в диалоговом окне с вкладками
+- Скрытие содержимого в одной презентации, предполагая, что оно будет видимым в других
 
-<div class="note">
-<p>Элементы, которые не hidden не должны ссылаться на элементы которые hidden.</p>
-</div>
+> **Примечание:** Элементы, которые не hidden не должны ссылаться на элементы которые hidden.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>isHidden</em> = <em>HTMLElement</em>.hidden;
+```
+isHidden = HTMLElement.hidden;
 
 
-<em>HTMLElement</em>.hidden = true | false;</pre>
+HTMLElement.hidden = true | false;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Если элемент спрятан, то значение <em><strong>true</strong></em>, в противном случае <em><strong>false</strong></em>;  </p>
+Если элемент спрятан, то значение _**true**_, в противном случае _**false**_;
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Пример, где скрытый блок используется для хранения "thank you" сообщения, которое отображается после того, как пользователь соглашается с необычным запросом.</p>
+Пример, где скрытый блок используется для хранения "thank you" сообщения, которое отображается после того, как пользователь соглашается с необычным запросом.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("okButton")
+```js
+document.getElementById("okButton")
         .addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
   document.getElementById("awesome").hidden = false;
-}, false);</pre>
+}, false);
+```
 
-<p>Этот код устанавливает обработчика для кнопки "OK", которая скрывает панель приветствия и делает The follow-up panel панель с необычным именем "awesome" - видимой в этом месте.</p>
+Этот код устанавливает обработчика для кнопки "OK", которая скрывает панель приветствия и делает The follow-up panel панель с необычным именем "awesome" - видимой в этом месте.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>HTML-код для двух boxes показанных здесь.</p>
+HTML-код для двух boxes показанных здесь.
 
-<h4 id="Welcome_panel">Welcome panel</h4>
+#### Welcome panel
 
-<pre class="brush: html">&lt;div id="welcome" class="panel"&gt;
-  &lt;h1&gt;Welcome to Foobar.com!&lt;/h1&gt;
-  &lt;p&gt;By clicking "OK" you agree to be awesome every day!&lt;/p&gt;
-  &lt;button class="button" id="okButton"&gt;OK&lt;/button&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="welcome" class="panel">
+  <h1>Welcome to Foobar.com!</h1>
+  <p>By clicking "OK" you agree to be awesome every day!</p>
+  <button class="button" id="okButton">OK</button>
+</div>
+```
 
-<p>Этот  HTML создаёт панель, которая приветствует пользователей на сайте и рассказывает им о том с чем они соглашаются нажимая на кнопку OK.</p>
+Этот HTML создаёт панель, которая приветствует пользователей на сайте и рассказывает им о том с чем они соглашаются нажимая на кнопку OK.
 
-<h4 id="The_follow-up_panel">The follow-up panel</h4>
+#### The follow-up panel
 
-<p>После того, как пользователь нажимает OK в welcome panel, JavaScript-код меняет две панели изменяя их значения hidden. Следующая The follow-up panel представлена в этом HMTL:</p>
+После того, как пользователь нажимает OK в welcome panel, JavaScript-код меняет две панели изменяя их значения hidden. Следующая The follow-up panel представлена в этом HMTL:
 
-<pre class="brush: html">&lt;div id="awesome" class="panel" hidden&gt;
-  &lt;h1&gt;Thanks!&lt;/h1&gt;
-  &lt;p&gt;Thank you &lt;strong&gt;so&lt;/strong&gt; much for agreeing to be
+```html
+<div id="awesome" class="panel" hidden>
+  <h1>Thanks!</h1>
+  <p>Thank you <strong>so</strong> much for agreeing to be
   awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!&lt;/p&gt;
-&lt;/div&gt;</pre>
+  awesomely to make the world more awesome!</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>Стилизованное содержимое использует CSS представленное внизу.</p>
+Стилизованное содержимое использует CSS представленное внизу.
 
-<pre class="brush: css">.panel {
+```css
+.panel {
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border: 1px solid #22d;
   padding: 12px;
@@ -95,46 +96,26 @@ translation_of: Web/API/HTMLElement/hidden
 h1 {
   margin-top: 0;
   font-size: 175%;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Example', 560, 200) }}</p>
+{{ EmbedLiveSample('Example', 560, 200) }}
 
-<h2 id="Технические_требования">Технические требования</h2>
+## Технические требования
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}     | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}     | {{Spec2('HTML5.1')}}     |         |
+| {{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}} | {{Spec2('HTML5 W3C')}}     |         |
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.hidden")}}</li>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{domxref("Element.hidden")}}
+- {{cssxref("display")}}

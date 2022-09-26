@@ -3,28 +3,29 @@ title: Document.hidden
 slug: Web/API/Document/hidden
 translation_of: Web/API/Document/hidden
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Доступное только для чтения свойство <code><strong>Document.hidden</strong></code> возвращает булево значение, показывающее является ли страница скрытой или нет.</p>
+Доступное только для чтения свойство **`Document.hidden`** возвращает булево значение, показывающее является ли страница скрытой или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>boolean</em> = document.hidden</pre>
+```
+var boolean = document.hidden
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:js;">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.hidden );
   // Modify behavior...
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

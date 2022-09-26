@@ -3,84 +3,40 @@ title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 translation_of: Web/API/Node/nodeValue
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.nodeValue</strong></code> возвращает или устанавливает значение текущего узла.</p>
+Свойство **`Node.nodeValue`** возвращает или устанавливает значение текущего узла.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>value</var> = <var>node</var>.nodeValue;
-</pre>
+```
+value = node.nodeValue;
+```
 
-<p><code>value</code> это строка содержащая значение текущего узла, если таковой имеется.</p>
+`value` это строка содержащая значение текущего узла, если таковой имеется.
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Для самого документа, <code>nodeValue</code> возвращает <code>null</code>. Для текста, комментария и CDATA узлов, <code>nodeValue</code> возвращает содержимое узла. Для узла атрибута, вернётся значение атрибута.</p>
+Для самого документа, `nodeValue` возвращает `null`. Для текста, комментария и CDATA узлов, `nodeValue` возвращает содержимое узла. Для узла атрибута, вернётся значение атрибута.
 
-<p>Следующая таблица, показывает возвращаемые значения различных элементов:</p>
+Следующая таблица, показывает возвращаемые значения различных элементов:
 
-<table>
- <thead>
-  <tr>
-   <th>Attr</th>
-   <th>Значение атрибута</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>CDATASection</td>
-   <td>Содержимое секции CDATA</td>
-  </tr>
-  <tr>
-   <td>Comment</td>
-   <td>Содержимое комментария</td>
-  </tr>
-  <tr>
-   <td>Document</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>DocumentFragment</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>DocumentType</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>Element</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>NamedNodeMap</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>EntityReference</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>Notation</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>ProcessingInstruction</td>
-   <td>Все содержимое исключая цель</td>
-  </tr>
-  <tr>
-   <td>Text</td>
-   <td>Содержимое текстового узла</td>
-  </tr>
- </tbody>
-</table>
+| Attr                  | Значение атрибута            |
+| --------------------- | ---------------------------- |
+| CDATASection          | Содержимое секции CDATA      |
+| Comment               | Содержимое комментария       |
+| Document              | null                         |
+| DocumentFragment      | null                         |
+| DocumentType          | null                         |
+| Element               | null                         |
+| NamedNodeMap          | null                         |
+| EntityReference       | null                         |
+| Notation              | null                         |
+| ProcessingInstruction | Все содержимое исключая цель |
+| Text                  | Содержимое текстового узла   |
 
-<p>Когда <code>nodeValue</code> равно <code>null</code>, установки не имеют эффекта.</p>
+Когда `nodeValue` равно `null`, установки не имеют эффекта.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080">DOM Level 2 Core: Node.nodeValue</a></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeValue](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080)

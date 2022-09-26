@@ -10,68 +10,63 @@ tags:
   - метод
 translation_of: Web/API/Console/log
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Выводит сообщение в веб-консоль.</p>
+Выводит сообщение в веб-консоль.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.log(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.log(obj1 [, obj2, ..., objN]);
+console.log(msg [, subst1, ..., substN]);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся. Пожалуйста, обратите внимание, что если вы логируете объекты в последних версиях Chrome и Firefox, то что вы вывели в консоль, <em>является ссылкой на объект</em>, и не обязательно является его "значением" на момент вызова <code>console.log()</code>, это значение объекта в тот момент, когда вы кликаете по нему, чтобы открыть.</dd>
- <dt><code>msg</code></dt>
- <dd>Строка JavaScript, содержащая 0 и более <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочных символов</a> для замены (см. <code>subst1</code> ... <code>substN</code>).</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в <code>msg</code>. Это даст вам дополнительный контроль над форматом вывода.</dd>
-</dl>
+- `obj1` ... `objN`
+  - : Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся. Пожалуйста, обратите внимание, что если вы логируете объекты в последних версиях Chrome и Firefox, то что вы вывели в консоль, _является ссылкой на объект_, и не обязательно является его "значением" на момент вызова `console.log()`, это значение объекта в тот момент, когда вы кликаете по нему, чтобы открыть.
+- `msg`
+  - : Строка JavaScript, содержащая 0 и более [подстановочных символов](/ru/docs/Web/API/console#Using_string_substitutions) для замены (см. `subst1` ... `substN`).
+- `subst1` ... `substN`
+  - : JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в `msg`. Это даст вам дополнительный контроль над форматом вывода.
 
-<p>Больше подробностей смотрите в разделе <a href="/ru/docs/DOM/console#Outputting_text_to_the_console">Вывод текста в консоль </a>документации {{domxref("console")}}.</p>
+Больше подробностей смотрите в разделе [Вывод текста в консоль ](/ru/docs/DOM/console#Outputting_text_to_the_console)документации {{domxref("console")}}.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Отличия_от_console.dir()">Отличия от console.dir()</h2>
+## Отличия от console.dir()
 
-<p>Вы можете спросить какая разница между console.dir() и console.log(). Это полезное отличие.</p>
+Вы можете спросить какая разница между console.dir() и console.log(). Это полезное отличие.
 
-<p><img src="http://i.imgur.com/DozDcYR.png"></p>
+![](http://i.imgur.com/DozDcYR.png)
 
-<p>Примечание:</p>
+Примечание:
 
-<ul>
- <li><code>console.log</code> выводит элемент как HTML-дерево</li>
- <li><code>console.dir</code> выводит элемент как JSON-объект</li>
-</ul>
+- `console.log` выводит элемент как HTML-дерево
+- `console.dir` выводит элемент как JSON-объект
 
-<p>А именно, <code>console.log</code> даёт специальное обращение к DOM-элементам, тогда как <code>console.dir</code> - нет. Это особенно полезно, когда нужно видеть полное представление DOM JS-объектов.</p>
+А именно, `console.log` даёт специальное обращение к DOM-элементам, тогда как `console.dir` - нет. Это особенно полезно, когда нужно видеть полное представление DOM JS-объектов.
 
-<p>Больше информации об этой и других функциях в <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a>.</p>
+Больше информации об этой и других функциях в [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject).
 
-<h2 id="Логирование_объектов">Логирование объектов</h2>
+## Логирование объектов
 
-<p>Не используйте <code>console.log(obj);</code>,<br>
- Используйте <code>console.log(JSON.parse(JSON.stringify(obj)));</code>.</p>
+Не используйте `console.log(obj);`,
+Используйте `console.log(JSON.parse(JSON.stringify(obj)));`.
 
-<p>Так вы можете быть уверены, что видите значение <code>obj</code> в момент, его логирования.</p>
+Так вы можете быть уверены, что видите значение `obj` в момент, его логирования.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug поддерживает дополнительные возможности реализации console.log(), такие как <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug поддерживает дополнительные возможности реализации console.log(), такие как [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)

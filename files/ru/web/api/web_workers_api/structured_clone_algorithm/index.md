@@ -3,113 +3,55 @@ title: Алгоритм структурированного клонирова�
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-<p>Алгоритм структурированного клонирования — это новый алгоритм, <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">определённый спецификацией HTML5</a> для сериализации комплексных JavaScript объектов. Он более функционален, чем <a href="/en/JSON" title="en/JSON">JSON</a> в том что способен поддерживать сериализацию объектов содержащих циклические графы — первичные объекты, которые ссылаются на другие объекты у которых есть ссылка на первичные объекты в том же графе. В дополнение, в некоторых других случаях алгоритм структурированного клонирования может быть более эффективен, чем JSON.</p>
+Алгоритм структурированного клонирования — это новый алгоритм, [определённый спецификацией HTML5](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data) для сериализации комплексных JavaScript объектов. Он более функционален, чем [JSON](/en/JSON "en/JSON") в том что способен поддерживать сериализацию объектов содержащих циклические графы — первичные объекты, которые ссылаются на другие объекты у которых есть ссылка на первичные объекты в том же графе. В дополнение, в некоторых других случаях алгоритм структурированного клонирования может быть более эффективен, чем JSON.
 
-<p>Алгоритм, по существу, перебирает все поля оригинального объекта, дублируя значения каждого поля в новый объект. Если поле представляет из себя объект с собственными полями, то эти дочерние поля также перебираются рекурсивно, пока каждое поле и все дочерние поля не будут продублированы в новый объект.</p>
+Алгоритм, по существу, перебирает все поля оригинального объекта, дублируя значения каждого поля в новый объект. Если поле представляет из себя объект с собственными полями, то эти дочерние поля также перебираются рекурсивно, пока каждое поле и все дочерние поля не будут продублированы в новый объект.
 
-<h2 id="Преимущества_перед_JSON">Преимущества перед JSON</h2>
+## Преимущества перед JSON
 
-<p>Вот основные преимущества структурированного клонирования перед JSON:</p>
+Вот основные преимущества структурированного клонирования перед JSON:
 
-<ul>
- <li>Структурированные клоны могут копировать <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> объекты.</li>
- <li>Структурированные клоны могут копировать {{ domxref("Blob") }}, {{ domxref("File") }}, и {{ domxref("FileList") }} объекты.</li>
- <li>Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{ domxref("CanvasPixelArray") }} will match the original and have a duplicate of the same pixel data.</li>
- <li>Structured clones can correctly duplicate objects containing cyclic graphs of references.</li>
-</ul>
+- Структурированные клоны могут копировать [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp "en/JavaScript/Reference/Global Objects/regexp") объекты.
+- Структурированные клоны могут копировать {{ domxref("Blob") }}, {{ domxref("File") }}, и {{ domxref("FileList") }} объекты.
+- Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{ domxref("CanvasPixelArray") }} will match the original and have a duplicate of the same pixel data.
+- Structured clones can correctly duplicate objects containing cyclic graphs of references.
 
-<h2 id="Исключения_не_работающие_со_структурированными_клонами">Исключения, не работающие со структурированными клонами</h2>
+## Исключения, не работающие со структурированными клонами
 
-<ul>
- <li><a href="/en/JavaScript/Reference/Global_Objects/Error" title="en/JavaScript/Reference/Global Objects/Error"><code>Error</code></a> and <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/JavaScript/Reference/Global Objects/Function"><code>Function</code></a> objects cannot be duplicated by the structured clone algorithm; attempting to do so will throw a <code>DATA_CLONE_ERR</code> exception.</li>
- <li>Attempting to clone DOM nodes will likewise throw a <code>DATA_CLONE_ERR</code> exception.</li>
- <li>Certain parameters of objects are not preserved:
-  <ul>
-   <li>The <code>lastIndex</code> field of <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> objects is not preserved.</li>
-   <li>Property descriptors, setters, and getters (as well as similar metadata-like features) are not duplicated. For example, if an object is marked read-only using a property descriptor, it will be read-write in the duplicate, since that's the default condition.</li>
-   <li>The prototype chain does not get walked and duplicated.</li>
-  </ul>
- </li>
-</ul>
+- [`Error`](/en/JavaScript/Reference/Global_Objects/Error "en/JavaScript/Reference/Global Objects/Error") and [`Function`](/en/JavaScript/Reference/Global_Objects/Function "en/JavaScript/Reference/Global Objects/Function") objects cannot be duplicated by the structured clone algorithm; attempting to do so will throw a `DATA_CLONE_ERR` exception.
+- Attempting to clone DOM nodes will likewise throw a `DATA_CLONE_ERR` exception.
+- Certain parameters of objects are not preserved:
 
-<h2 id="Поддерживаемые_типы">Поддерживаемые типы</h2>
+  - The `lastIndex` field of [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp "en/JavaScript/Reference/Global Objects/regexp") objects is not preserved.
+  - Property descriptors, setters, and getters (as well as similar metadata-like features) are not duplicated. For example, if an object is marked read-only using a property descriptor, it will be read-write in the duplicate, since that's the default condition.
+  - The prototype chain does not get walked and duplicated.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Object type</th>
-   <th scope="col">Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Data_structures#Primitive_values">All primitive types</a></td>
-   <td>However not symbols</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> object</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>String object</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></td>
-   <td>The <code>lastIndex</code> field is not preserved.</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("Blob") }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ domxref("File") }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ domxref("FileList") }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/ArrayBuffer">ArrayBuffer</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a></td>
-   <td>This basically means all <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> like Int32Array etc.</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("ImageData") }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></td>
-   <td>This just includes plain objects (e.g. from object literals)</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Поддерживаемые типы
 
-<h2 id="Другой_вариант_вложенное_копирование‎">Другой вариант: вложенное копирование‎</h2>
+| Object type                                                                     | Notes                                                                                              |
+| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [All primitive types](/ru/docs/Web/JavaScript/Data_structures#Primitive_values) | However not symbols                                                                                |
+| [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) object      |                                                                                                    |
+| String object                                                                   |                                                                                                    |
+| [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)                   |                                                                                                    |
+| [RegExp](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)               | The `lastIndex` field is not preserved.                                                            |
+| {{ domxref("Blob") }}                                                    |                                                                                                    |
+| {{ domxref("File") }}                                                    |                                                                                                    |
+| {{ domxref("FileList") }}                                                |                                                                                                    |
+| [ArrayBuffer](/ru/docs/Web/API/ArrayBuffer)                                     |                                                                                                    |
+| [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView)                             | This basically means all [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) like Int32Array etc. |
+| {{ domxref("ImageData") }}                                            |                                                                                                    |
+| [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)                 |                                                                                                    |
+| [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)               | This just includes plain objects (e.g. from object literals)                                       |
+| [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)                     |                                                                                                    |
+| [Set](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)                     |                                                                                                    |
 
-<p>Если вы хотите сделать вложенную копию объекта (т.е рекурсивно копировать все вложенные свойства, проходя по прототипной цепи),  вы должны использовать другой подход. Ниже приведён возможный пример.</p>
+## Другой вариант: вложенное копирование‎
 
-<pre class="brush: js">function clone(objectToBeCloned) {
+Если вы хотите сделать вложенную копию объекта (т.е рекурсивно копировать все вложенные свойства, проходя по прототипной цепи), вы должны использовать другой подход. Ниже приведён возможный пример.
+
+```js
+function clone(objectToBeCloned) {
   // Basis.
   if (!(objectToBeCloned instanceof Object)) {
     return objectToBeCloned;
@@ -138,16 +80,14 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 
   return objectClone;
 }
-</pre>
+```
 
-<div class="note"><strong>  Note:</strong> Этот алгоритм  реализован  только для  <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="RegExp"><code>RegExp</code></a>, <a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a>, и <a href="/en/JavaScript/Reference/Global_Objects/Date" title="Date"><code>Date</code></a> специальных объектов. Вы можете реализовать другие условия, удовлетворяющие вашим потребностям.</div>
+> **Примечание:** Этот алгоритм реализован только для [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp "RegExp"), [`Array`](/en/JavaScript/Reference/Global_Objects/Array "Array"), и [`Date`](/en/JavaScript/Reference/Global_Objects/Date "Date") специальных объектов. Вы можете реализовать другие условия, удовлетворяющие вашим потребностям.
 
-<h2 id="Ещё_по_теме">Ещё по теме</h2>
+## Ещё по теме
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML5 Specification: Safe passing of structured data</a></li>
- <li>{{ domxref("window.history") }}</li>
- <li>{{ domxref("window.postMessage()") }}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li><a href="/en-US/docs/Components.utils.cloneInto">Components.utils.cloneInto</a></li>
-</ul>
+- [HTML5 Specification: Safe passing of structured data](http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
+- {{ domxref("window.history") }}
+- {{ domxref("window.postMessage()") }}
+- [Web Workers](/ru/docs/Web/API/Web_Workers_API)
+- [Components.utils.cloneInto](/ru/docs/Components.utils.cloneInto)

@@ -3,38 +3,37 @@ title: Event.initEvent()
 slug: Web/API/Event/initEvent
 translation_of: Web/API/Event/initEvent
 ---
-<div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
-<p>The <strong><code>Event.initEvent()</code></strong> method is used to initialize the value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()") }}.</p>
+The **`Event.initEvent()`** method is used to initialize the value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()") }}.
 
-<p>Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.</p>
+Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.
 
-<div class="note">
-<p><strong>Не используйте этот метод, т.к. он устаревший. (deprecated)</strong></p>
+> **Примечание:** **Не используйте этот метод, т.к. он устаревший. (deprecated)**
+>
+> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
 
-<p>Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> даст больше информации о возможностях использования.</p>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+event.initEvent(type, bubbles, cancelable);
+```
 
-<pre class="syntaxbox"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
+- _`type`_
+  - : {{domxref("DOMString")}}, определяющая тип события.
+- _`bubbles`_
+  - : Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.
+- _`cancelable`_
+  - : Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.
 
-<dl>
- <dt><em><code>type</code></em></dt>
- <dd>{{domxref("DOMString")}}, определяющая тип события.</dd>
- <dt><em><code>bubbles</code></em></dt>
- <dd>Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.</dd>
- <dt><em><code>cancelable</code></em></dt>
- <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
-</dl>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre><code>// Create the event.
+```
+// Create the event.
 var event = document.createEvent('Event');
-</code>
+
 // Create a click event that bubbles up and
-// cannot be canceled <code>
+// cannot be canceled
 event.initEvent('click', true, false);
 
 // Listen for the event.
@@ -42,37 +41,20 @@ elem.addEventListener('click', function (e) {
   // e.target matches elem
 }, false);
 
-elem.dispatchEvent(event);</code>
-</pre>
+elem.dispatchEvent(event);
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Начиная с {{SpecName('DOM2 Events')}} - deprecated, заменено на event constructors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                         | Статус                           | Комментарий                                                                                  |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Начиная с {{SpecName('DOM2 Events')}} - deprecated, заменено на event constructors. |
+| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Начальное определение.                                                                       |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.</li>
-</ul>
+- The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.

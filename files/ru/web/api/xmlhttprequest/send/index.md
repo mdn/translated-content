@@ -12,69 +12,46 @@ tags:
   - запрос
 translation_of: Web/API/XMLHttpRequest/send
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Метод <code><strong>XMLHttpRequest.send()</strong></code> отправляет запрос. Если запрос асинхронный (каким он является по умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод <code>send()</code> принимает необязательные аргументы в тело запросов. Если метод запроса <code>GET</code> или <code>HEAD</code>, то аргументы игнорируются и тело запроса устанавливается в null.</p>
+Метод **`XMLHttpRequest.send()`** отправляет запрос. Если запрос асинхронный (каким он является по умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод `send()` принимает необязательные аргументы в тело запросов. Если метод запроса `GET` или `HEAD`, то аргументы игнорируются и тело запроса устанавливается в null.
 
-<p>Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение <code>Accept</code> по умолчанию <code>*/*</code>.</p>
+Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение `Accept` по умолчанию `*/*`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">XMLHttpRequest.send(<em>body</em>)
-</pre>
+```
+XMLHttpRequest.send(body)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>
- <p><em>body</em> {{optional_inline}}</p>
- </dt>
- <dd>
- <p>Данные из параметра body оправляются в запросе через XHR. Это могут быть:</p>
+- _body_ {{optional_inline}}
 
- <ul>
-  <li>{{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.</li>
-  <li><code>BodyInit</code>, которые, согласно спецификации <a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch </a>могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.</li>
- </ul>
- </dd>
-</dl>
+  - : Данные из параметра body оправляются в запросе через XHR. Это могут быть:
 
-<p>Лучший способ передать двоичные данные (например при загрузке файлов) - это использование <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> или <a href="/en-US/docs/Web/API/Blob">Blobs</a> в сочетании с методом<code>send()</code>.</p>
+    - {{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.
+    - `BodyInit`, которые, согласно спецификации [Fetch ](https://fetch.spec.whatwg.org/#bodyinit)могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
 
-<p>Если никакого значения не определено в качестве <em>body</em>, то будет использовано значение по умолчанию: <code>null</code>.</p>
+Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView) или [Blobs](/ru/docs/Web/API/Blob) в сочетании с методом`send()`.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+Если никакого значения не определено в качестве _body_, то будет использовано значение по умолчанию: `null`.
 
+### Возвращаемое значение
 
+`undefined`.
 
-<p><code>undefined</code>.</p>
+### Исключения
 
-<h3 id="Исключения">Исключения</h3>
+| Исключение          | Описание                                                    |
+| ------------------- | ----------------------------------------------------------- |
+| `InvalidStateError` | `send()` уже был вызван для запроса, и/или запрос завершён. |
+| `NetworkError`      | Тип запрошенного ресурса - Blob, но метод запроса не `GET`. |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Исключение</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td><code>send()</code> уже был вызван для запроса, и/или запрос завершён.</td>
-  </tr>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>Тип запрошенного ресурса - Blob, но метод запроса не <code>GET</code>.</td>
-  </tr>
- </tbody>
-</table>
+## Пример: GET
 
-
-
-<h2 id="Пример_GET">Пример: GET</h2>
-
-<pre><code>var xhr = new XMLHttpRequest();
+```
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -83,44 +60,43 @@ xhr.onload = function () {
 
 xhr.send(null);
 // xhr.send('string');
-</code>// <code>xhr.send(new Blob());
+// xhr.send(new Blob());
 // xhr.send(new Int8Array());
 // xhr.send({ form: 'data' });
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Пример_POST">Пример: POST</h2>
+## Пример: POST
 
-<pre><code>var xhr = new XMLHttpRequest();
+```
+var xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //Передаёт правильный заголовок в запросе
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
-    if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) {
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
         // Запрос завершён. Здесь можно обрабатывать результат.
     }
 }
-xhr.send("foo=bar&amp;lorem=ipsum");
+xhr.send("foo=bar&lorem=ipsum");
 // xhr.send('string');
-</code>// <code>xhr.send(new Blob());
+// xhr.send(new Blob());
 // xhr.send(new Int8Array());
 // xhr.send({ form: 'data' });
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
-</ul>
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

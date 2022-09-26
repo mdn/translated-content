@@ -3,87 +3,70 @@ title: Cache.add()
 slug: Web/API/Cache/add
 translation_of: Web/API/Cache/add
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>Метод <strong><code>add()</code></strong> интерфейса {{domxref("Cache")}} принимает в качестве параметра URL, загружает его и добавляет полученный объект ответа в заданный кеш. Метод <code>add()</code> функционально эквивалентен следующему коду:</p>
+Метод **`add()`** интерфейса {{domxref("Cache")}} принимает в качестве параметра URL, загружает его и добавляет полученный объект ответа в заданный кеш. Метод `add()` функционально эквивалентен следующему коду:
 
-<pre class="brush: js">fetch(url).then(function (response) {
+```js
+fetch(url).then(function (response) {
   if (!response.ok) {
     throw new TypeError('bad response status');
   }
   return cache.put(url, response);
-})</pre>
+})
+```
 
-<p>Для более сложных операций, вам нужно использовать {{domxref("Cache.put","Cache.put()")}}.</p>
+Для более сложных операций, вам нужно использовать {{domxref("Cache.put","Cache.put()")}}.
 
-<div class="note">
-<p><strong>Замечание</strong>: <code>add()</code> перезапишет любую пару ключ/значение, сохранённую ранее в кеше, соответствующем запросу.</p>
-</div>
+> **Примечание:** **Замечание**: `add()` перезапишет любую пару ключ/значение, сохранённую ранее в кеше, соответствующем запросу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>cache</em>.add(<em>request</em>).then(function() {
+```
+cache.add(request).then(function() {
   //запрос был добавлен в кеш
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>request</dt>
- <dd>Запрос, который вы хотите добавить в кеш. Это может быть объект  {{domxref("Request")}}, либо URL.</dd>
-</dl>
+- request
+  - : Запрос, который вы хотите добавить в кеш. Это может быть объект {{domxref("Request")}}, либо URL.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который разрешается с пустым значением void.</p>
+{{jsxref("Promise")}}, который разрешается с пустым значением void.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Исключение</strong></th>
-   <th scope="col"><strong>Когда происходит</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>
-    <p>Схема URL не <code>http</code> или <code>https</code>.</p>
+| **Исключение** | **Когда происходит**                                                                                                                                                                                                                           |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TypeError`    | Схема URL не `http` или `https`.Статус ответа не из диапазона 200 (т.е., ответ не успешен). Это случается если запрос не выполняется успешно, а также, если запрос является _cross-origin no-cors_ запросом (в таком случае, статус всегда 0). |
 
-    <p>Статус ответа не из диапазона 200 (т.е., ответ не успешен). Это случается если запрос не выполняется успешно, а также, если запрос является <em>cross-origin no-cors</em> запросом (в таком случае, статус всегда 0).</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+Этот блок кода ожидает старта события {{domxref("InstallEvent")}} , а затем запускает {{domxref("ExtendableEvent.waitUntil","waitUntil")}} для обработки процесса установки приложения. Этот процесс состоит из вызова {{domxref("CacheStorage.open")}} для создания нового кеша, и использования {{domxref("Cache.add")}} для добавления ресурсов в этот кеш.
 
-<p>Этот блок кода ожидает старта события {{domxref("InstallEvent")}} , а затем запускает  {{domxref("ExtendableEvent.waitUntil","waitUntil")}} для обработки процесса установки приложения. Этот процесс состоит из вызова  {{domxref("CacheStorage.open")}} для создания нового кеша, и использования {{domxref("Cache.add")}} для добавления ресурсов в этот кеш.</p>
-
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.add('/sw-test/index.html');
     })
   );
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис воркеров</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

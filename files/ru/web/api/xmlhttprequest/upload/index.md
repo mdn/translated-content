@@ -3,53 +3,26 @@ title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 translation_of: Web/API/XMLHttpRequest/upload
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Свойство <strong>XMLHttpRequest.upload</strong> возвращает объект {{domxref("XMLHttpRequestUpload")}}, представляющий процесс загрузки. Это непрозрачный объект, но так как он является {{domxref("XMLHttpRequestEventTarget")}}, к нему можно добавить обработчики событий.</p>
+Свойство **XMLHttpRequest.upload** возвращает объект {{domxref("XMLHttpRequestUpload")}}, представляющий процесс загрузки. Это непрозрачный объект, но так как он является {{domxref("XMLHttpRequestEventTarget")}}, к нему можно добавить обработчики событий.
 
-<p>Обработчики событий, которые можно добавить к объекту загрузки:</p>
+Обработчики событий, которые можно добавить к объекту загрузки:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Обработчик</td>
-   <td class="header">Событие</td>
-  </tr>
-  <tr>
-   <td><code>onloadstart</code></td>
-   <td>Начало запроса</td>
-  </tr>
-  <tr>
-   <td><code>onprogress</code></td>
-   <td>Происходит передача данных</td>
-  </tr>
-  <tr>
-   <td><code>onabort</code></td>
-   <td>Запрос был отменён</td>
-  </tr>
-  <tr>
-   <td><code>onerror</code></td>
-   <td>При запросе произошла ошибка</td>
-  </tr>
-  <tr>
-   <td><code>onload</code></td>
-   <td>Запрос завершился</td>
-  </tr>
-  <tr>
-   <td><code>ontimeout</code></td>
-   <td>Запрос не завершился ко времени, указанному автором</td>
-  </tr>
-  <tr>
-   <td><code>onloadend</code></td>
-   <td>Запрос завершился (успешно или с ошибкой)</td>
-  </tr>
- </tbody>
-</table>
+| Обработчик    | Событие                                             |
+| ------------- | --------------------------------------------------- |
+| `onloadstart` | Начало запроса                                      |
+| `onprogress`  | Происходит передача данных                          |
+| `onabort`     | Запрос был отменён                                  |
+| `onerror`     | При запросе произошла ошибка                        |
+| `onload`      | Запрос завершился                                   |
+| `ontimeout`   | Запрос не завершился ко времени, указанному автором |
+| `onloadend`   | Запрос завершился (успешно или с ошибкой)           |
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

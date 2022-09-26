@@ -5,48 +5,37 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRStageParameters/sizeY
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Свойство (параметр) <strong>sizeY</strong> только для чтения интерфейса {{domxref ("VRStageParameters")}} возвращает глубину границ игровой площадки в метрах.</p>
+Свойство (параметр) **sizeY** только для чтения интерфейса {{domxref ("VRStageParameters")}} возвращает глубину границ игровой площадки в метрах.
 
-<p>В целях безопасности границы определяются как прямоугольник, ориентированный по оси на полу.. Контент (содержимое) не должен требовать от пользователя выхода за эти пределы; однако пользователь может игнорировать границы, что приводит к значениям положения вне этого прямоугольника. Центр прямоугольника находится в точке (0,0,0) в координатах замкнутого пространства.</p>
+В целях безопасности границы определяются как прямоугольник, ориентированный по оси на полу.. Контент (содержимое) не должен требовать от пользователя выхода за эти пределы; однако пользователь может игнорировать границы, что приводит к значениям положения вне этого прямоугольника. Центр прямоугольника находится в точке (0,0,0) в координатах замкнутого пространства.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mySizeY = vrStageParametersInstance.<code>sizeY</code>;</pre>
+```js
+var mySizeY = vrStageParametersInstance.sizeY;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Параметр типа <strong>float</strong>, представляющий глубину в метрах.</p>
+Параметр типа **float**, представляющий глубину в метрах.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>{{page("/Web/API/VRStageParameters", "Examples")}}</p>
+{{page("/Web/API/VRStageParameters", "Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizey', 'sizeY')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizey', 'sizeY')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демонстрационные материалы,загружаемые и другие ресурсы команды Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демонстрационные материалы,загружаемые и другие ресурсы команды Mozilla VR team.

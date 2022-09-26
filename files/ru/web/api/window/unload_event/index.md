@@ -4,33 +4,32 @@ slug: Web/API/Window/unload_event
 translation_of: Web/API/WindowEventHandlers/onunload
 original_slug: Web/API/WindowEventHandlers/onunload
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Событие <code>unload</code> возникает когда window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит <em>после</em> возникновения события <code>unload</code>.</p>
+Событие `unload` возникает когда window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит _после_ возникновения события `unload`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">window.onunload = <em>funcRef</em>;
-</pre>
+```
+window.onunload = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> ссылка на функцию.</li>
-</ul>
+- `funcRef` ссылка на функцию.
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите <a href="/En/Using_Firefox_1.5_caching" title="En/Using_Firefox_1.5_caching">Использование кеширования в  Firefox 1.5</a> для получения более детальной информации.</p>
+Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите [Использование кеширования в Firefox 1.5](/En/Using_Firefox_1.5_caching "En/Using_Firefox_1.5_caching") для получения более детальной информации.
 
-<p>Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода <code>window.open()</code> внутри функции обработчика события <code>onunload</code>.</p>
+Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода `window.open()` внутри функции обработчика события `onunload`.
 
-<p>You <em>can</em> and <em>should</em> handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("unload")}} event. More documentation is available there.</p>
+You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("unload")}} event. More documentation is available there.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h3 id="Поддержка_браузерами">Поддержка браузерами</h3>
+### Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

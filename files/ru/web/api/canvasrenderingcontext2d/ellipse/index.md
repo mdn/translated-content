@@ -9,52 +9,53 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.ellipse()</code></strong> - метод Canvas 2D API, который добавляет эллиптическую дугу к текущему подпространству.</p>
+**`CanvasRenderingContext2D`\*\***`.ellipse()`\*\* - метод Canvas 2D API, который добавляет эллиптическую дугу к текущему подпространству.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
-</pre>
+```
+void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, anticlockwise]);
+```
 
-<p><code>ellipse()</code> - метод, который создаёт эллиптическую дугу с центром в точках <code>(x, y)</code> с радиусом <code>radiusX</code> и <code>radiusY</code>. Путь начинается от точки <code>startAngle</code> и заканчивается в точке <code>endAngle</code>, идёт по направлению, казанному в параметре (по часовой стрелке или против неё) <code>anticlockwise</code> .</p>
+`ellipse()` - метод, который создаёт эллиптическую дугу с центром в точках `(x, y)` с радиусом `radiusX` и `radiusY`. Путь начинается от точки `startAngle` и заканчивается в точке `endAngle`, идёт по направлению, казанному в параметре (по часовой стрелке или против неё) `anticlockwise` .
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Координата центра эллипса по оси x (горизонтальная).</dd>
- <dt><code>y</code></dt>
- <dd>Координата центра эллипса по оси y (вертикальная).</dd>
- <dt><code>radiusX</code></dt>
- <dd>Радиус оси x эллипса. Должен быть неотрицательным.</dd>
- <dt><code>radiusY</code></dt>
- <dd>Радиус оси y эллипса. Должен быть неотрицательным.</dd>
- <dt><code>rotation</code></dt>
- <dd>Вращение эллипса, выраженное в радианах.</dd>
- <dt><code>startAngle</code></dt>
- <dd>Угол, под которым начинается эллипс, измеряется по часовой стрелке от положительной оси x и выражается в радианах.</dd>
- <dt><code>endAngle</code></dt>
- <dd>Угол, под которым эллипс заканчивается, измеряется по часовой стрелке от положительной оси x и выражается в радианах.</dd>
- <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>Опция {{jsxref("Boolean")}}, которая при <code>true</code>, рисует эллипс против часовой стрелки (counter-clockwise). Значение по умолчанию равно <code>false</code>  - рисование по часовой стрелке (clockwise).</dd>
-</dl>
+- `x`
+  - : Координата центра эллипса по оси x (горизонтальная).
+- `y`
+  - : Координата центра эллипса по оси y (вертикальная).
+- `radiusX`
+  - : Радиус оси x эллипса. Должен быть неотрицательным.
+- `radiusY`
+  - : Радиус оси y эллипса. Должен быть неотрицательным.
+- `rotation`
+  - : Вращение эллипса, выраженное в радианах.
+- `startAngle`
+  - : Угол, под которым начинается эллипс, измеряется по часовой стрелке от положительной оси x и выражается в радианах.
+- `endAngle`
+  - : Угол, под которым эллипс заканчивается, измеряется по часовой стрелке от положительной оси x и выражается в радианах.
+- `anticlockwise` {{optional_inline}}
+  - : Опция {{jsxref("Boolean")}}, которая при `true`, рисует эллипс против часовой стрелки (counter-clockwise). Значение по умолчанию равно `false` - рисование по часовой стрелке (clockwise).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Рисование_полного_эллипса">Рисование полного эллипса</h3>
+### Рисование полного эллипса
 
-<p>Этот пример рисует эллипс под углом π / 4 Радианы (45°). Чтобы сделать полный эллипс, дуга начинается под углом 0 радианов (0°) и заканчивается под углом 2π радианов (360°).</p>
+Этот пример рисует эллипс под углом π / 4 Радианы (45°). Чтобы сделать полный эллипс, дуга начинается под углом 0 радианов (0°) и заканчивается под углом 2π радианов (360°).
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="200" height="200"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="200" height="200"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Рисование эллипса
@@ -68,24 +69,26 @@ ctx.setLineDash([5, 5]);
 ctx.moveTo(0, 200);
 ctx.lineTo(200, 0);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Рисование_полного_эллипса', 700, 250) }}</p>
+{{ EmbedLiveSample('Рисование_полного_эллипса', 700, 250) }}
 
-<h3 id="Различные_эллиптические_дуги">Различные эллиптические дуги</h3>
+### Различные эллиптические дуги
 
-<p>В этом примере создаются три эллиптических контура с различными свойствами.</p>
+В этом примере создаются три эллиптических контура с различными свойствами.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'red';
@@ -102,25 +105,21 @@ ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.ellipse(240, 75, 50, 30, Math.PI * .25, 0, Math.PI, true);
 ctx.fill();
-</pre>
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Различные_эллиптические_дуги', 700, 180) }}</p>
+{{ EmbedLiveSample('Различные_эллиптические_дуги', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
+{{Compat}}
 
+## Изучите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Изучите_также">Изучите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий этот метод:{{domxref("CanvasRenderingContext2D")}}</li>
- <li>Используйте {{domxref("CanvasRenderingContext2D.arc()")}}, чтобы нарисовать дугу окружности</li>
-</ul>
+- Интерфейс, определяющий этот метод:{{domxref("CanvasRenderingContext2D")}}
+- Используйте {{domxref("CanvasRenderingContext2D.arc()")}}, чтобы нарисовать дугу окружности

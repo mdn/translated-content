@@ -3,22 +3,24 @@ title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>Свойство <strong><code>pushManager</code></strong> интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к статусу разрешений на push-уведомления.</p>
+Свойство **`pushManager`** интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к статусу разрешений на push-уведомления.
 
-<h2 id="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox" style="font-size: 14px;">myPushManager = ServiceWorker.pushManager
-</pre>
+```
+myPushManager = ServiceWorker.pushManager
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{domxref("PushManager")}}.</p>
+Объект {{domxref("PushManager")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // Отсюда можно записывать данные в IndexedDB, отправлять их в любое
   // открытое окно, отображать уведомление и т. д.
@@ -40,20 +42,17 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [Push API](/ru/docs/Web/API/Push_API)

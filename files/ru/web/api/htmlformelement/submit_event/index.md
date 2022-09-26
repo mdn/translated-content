@@ -4,25 +4,25 @@ slug: Web/API/HTMLFormElement/submit_event
 translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Обработчик события отправки формы</p>
+Обработчик события отправки формы
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">window.onsubmit = <em>funcRef</em>;
-</pre>
+```
+window.onsubmit = funcRef;
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>funcRef</code> – ссылка на функцию.</li>
-</ul>
+- `funcRef` – ссылка на функцию.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="eval">&lt;html&gt;
-&lt;script&gt;
+```
+<html>
+<script>
 function reg() {
   window.captureEvents(Event.SUBMIT);
   window.onsubmit = hit;
@@ -31,23 +31,23 @@ function reg() {
 function hit() {
   console.log('hit');
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="reg();"&gt;
-&lt;form&gt;
-  &lt;input type="submit" value="submit" /&gt;
-&lt;/form&gt;
-&lt;div id="d"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="reg();">
+<form>
+  <input type="submit" value="submit" />
+</form>
+<div id="d"> </div>
+</body>
+</html>
+```
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<p>Событие <code>submit</code> возникает, когда пользователь кликает на кнопку "Отправить" в форме (<code>&lt;input type="submit"/&gt;</code>)</p>
+Событие `submit` возникает, когда пользователь кликает на кнопку "Отправить" в форме (`<input type="submit"/>`)
 
-<p>Событие <code>submit</code> не возникает, когда пользователь вызывает функцию <code>form.submit()</code> напрямую</p>
+Событие `submit` не возникает, когда пользователь вызывает функцию `form.submit()` напрямую
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

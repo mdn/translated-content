@@ -3,51 +3,47 @@ title: Gyroscope
 slug: Web/API/Gyroscope
 translation_of: Web/API/Gyroscope
 ---
-<div>{{APIRef("Gyroscope")}}</div>
+{{APIRef("Gyroscope")}}
 
-<p><strong><code>Gyroscope</code></strong> интерфейс <a href="/docs/Web/API/Sensor_APIs">Sensor API</a> даёт возможность считать позицию устройства по всем трём осям.</p>
+**`Gyroscope`** интерфейс [Sensor API](/docs/Web/API/Sensor_APIs) даёт возможность считать позицию устройства по всем трём осям.
 
-<p>Для использования того сенсора пользователю нужно предоставить доступ устройства к <code>'gyroscope'</code> через {{domxref('Permissions')}} API.</p>
+Для использования того сенсора пользователю нужно предоставить доступ устройства к `'gyroscope'` через {{domxref('Permissions')}} API.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("Gyroscope.Gyroscope()")}}</dt>
- <dd>Создание нового <code>Gyroscope</code> объекта.</dd>
-</dl>
+- {{domxref("Gyroscope.Gyroscope()")}}
+  - : Создание нового `Gyroscope` объекта.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref('Gyroscope.x')}} {{readonlyinline}}</dt>
- <dd>Возвращает угловое отклонение устройства по оси X.</dd>
- <dt>{{domxref('Gyroscope.y')}} {{readonlyinline}}</dt>
- <dd>Возвращает угловое отклонение устройства по оси Y.</dd>
- <dt>{{domxref('Gyroscope.z')}} {{readonlyinline}}</dt>
- <dd>Возвращает угловое отклонение устройства по оси Z.</dd>
-</dl>
+- {{domxref('Gyroscope.x')}} {{readonlyinline}}
+  - : Возвращает угловое отклонение устройства по оси X.
+- {{domxref('Gyroscope.y')}} {{readonlyinline}}
+  - : Возвращает угловое отклонение устройства по оси Y.
+- {{domxref('Gyroscope.z')}} {{readonlyinline}}
+  - : Возвращает угловое отклонение устройства по оси Z.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Гироскоп обычно использует {{domxref('Sensor.onreading')}} событие для вызова колбэк-функции. В примере ниже функция вызывается 6 раз в секунду.</p>
+Гироскоп обычно использует {{domxref('Sensor.onreading')}} событие для вызова колбэк-функции. В примере ниже функция вызывается 6 раз в секунду.
 
-<pre class="brush: js">let gyroscope = new Gyroscope({frequency: 60});
+```js
+let gyroscope = new Gyroscope({frequency: 60});
 
-gyroscope.addEventListener('reading', e =&gt; {
+gyroscope.addEventListener('reading', e => {
   console.log("Angular velocity along the X-axis " + gyroscope.x);
   console.log("Angular velocity along the Y-axis " + gyroscope.y);
   console.log("Angular velocity along the Z-axis " + gyroscope.z);
 });
-gyroscope.start();</pre>
+gyroscope.start();
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

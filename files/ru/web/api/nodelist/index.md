@@ -8,76 +8,72 @@ tags:
   - NodeList
 translation_of: Web/API/NodeList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Объект <strong>NodeList </strong>— это коллекция узлов, возвращаемая такими методами, как {{domxref("Node.childNodes")}} и {{domxref("document.querySelectorAll")}}.</p>
+Объект **NodeList** — это коллекция узлов, возвращаемая такими методами, как {{domxref("Node.childNodes")}} и {{domxref("document.querySelectorAll")}}.
 
-<div class="note">
-<p>Несмотря на то, что <code>NodeList</code> не является массивом ( <code>Array</code> ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в <code>Array</code> при помощи {{jsxref("Array.from()")}}</p>
+> **Примечание:** Несмотря на то, что `NodeList` не является массивом ( `Array` ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в `Array` при помощи {{jsxref("Array.from()")}}
+>
+> Однако некоторые старые браузеры на данный момент все ещё не поддерживают `NodeList.forEach()` или `Array.from()`. Данные ограничения можно обойти, используя {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} ( больше информации на этой странице ).
 
-<p>Однако некоторые старые браузеры на данный момент все ещё не поддерживают <code>NodeList.forEach()</code> или <code>Array.from()</code>. Данные ограничения можно обойти, используя {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} ( больше информации на этой странице ).</p>
-</div>
+## Свойства
 
-<h2 id="Свойства">Свойства</h2>
+- `length`
+  - : Количество элементов в NodeList.
 
-<dl>
- <dt><code>length</code></dt>
- <dd>Количество элементов в NodeList.</dd>
-</dl>
+## Методы
 
-<h2 id="Методы">Методы</h2>
+- `item ( idx )`
+  - : Возвращает элемент из списка по его индексу или `null`, если индекс выходит за границы допустимого диапазона. Может быть использован как альтернатива `nodeList[idx]`, возвращающему `undefined` при недопустимом `idx.`
+- `entries()`
+  - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все пары ключ/значение, содержащиеся в объекте.
+- `forEach()`
+  - : Выполняет указанную функцию один раз для каждого элемента `NodeList`
+- keys()
+  - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все ключи каждой пары ключ/значение, содержащейся в объекте.
+- `values()`
+  - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все значения каждой пары ключ/значение, содержащейся в объекте.
 
-<dl>
- <dt><code><a href="/en-US/docs/DOM/NodeList.item" title="DOM/NodeList.item">item</a> ( idx )</code></dt>
- <dd>Возвращает элемент из списка по его индексу или <code>null</code>, если индекс выходит за границы допустимого диапазона. Может быть использован как альтернатива <code>nodeList[idx]</code>, возвращающему <code>undefined</code> при недопустимом <code>idx.</code></dd>
- <dt><code>entries()</code></dt>
- <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все пары ключ/значение, содержащиеся в объекте.</dd>
- <dt><code>forEach()</code></dt>
- <dd>Выполняет указанную функцию один раз для каждого элемента <code>NodeList</code></dd>
- <dt>keys()</dt>
- <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все ключи каждой пары ключ/значение, содержащейся в объекте.</dd>
- <dt><code>values()</code></dt>
- <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все значения каждой пары ключ/значение, содержащейся в объекте.</dd>
-</dl>
+## Описание
 
-<h2 id="Описание">Описание</h2>
+### Динамическая коллекция
 
-<h3 id="Динамическая_коллекция">Динамическая коллекция</h3>
+В определённых случаях `NodeList` может являться _динамической коллекцией_. Это означает, что любые изменения в DOM тут же отражаются на коллекции. Примером подобной коллекции является {{domxref("Node.childNodes")}}:
 
-<p>В определённых случаях <code>NodeList</code> может являться <em>динамической коллекцией</em>. Это означает, что любые изменения в DOM тут же отражаются на коллекции. Примером подобной коллекции является {{domxref("Node.childNodes")}}:</p>
-
-<pre class="brush: js">var parent = document.getElementById('parent');
+```js
+var parent = document.getElementById('parent');
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // пусть равно "2"
 parent.appendChild(document.createElement('div'));
 console.log(child_nodes.length); // выведет "3"
-</pre>
+```
 
-<p>В других случаях <code>NodeList</code> является <em>статической коллекцией</em>. Это означает, что любые изменения в DOM не отражаются на его содержании. К примеру, {{domxref("document.querySelectorAll")}} возвращает статический <code>NodeList</code>.</p>
+В других случаях `NodeList` является _статической коллекцией_. Это означает, что любые изменения в DOM не отражаются на его содержании. К примеру, {{domxref("document.querySelectorAll")}} возвращает статический `NodeList`.
 
-<p>Данное деление необходимо иметь в виду при выборе способа обхода элементов <code>NodeList</code>, а также сохранении длины списка в переменную.</p>
+Данное деление необходимо иметь в виду при выборе способа обхода элементов `NodeList`, а также сохранении длины списка в переменную.
 
-<h3 id="Отличия_NodeList_от_Array">Отличия <code>NodeList</code> от <code>Array</code></h3>
+### Отличия `NodeList` от `Array`
 
-<p><code>NodeList</code> используется подобно массивам, и потому может возникнуть закономерное желание использовать в нём методы, предоставляемые <code>Array.prototype</code>. Однако <code>NodeList</code> не реализует методы, подобные таковым у <code>Array</code>.</p>
+`NodeList` используется подобно массивам, и потому может возникнуть закономерное желание использовать в нём методы, предоставляемые `Array.prototype`. Однако `NodeList` не реализует методы, подобные таковым у `Array`.
 
-<p>В JavaScript существует механизм наследования, основанный на прототипах, применяемый как к встроенным («native») (таким как <code>Array</code>), так и «host»-объектам, предоставляемым средой исполнения (таким как <code>NodeList</code>) . Экземпляры класса <code>Array</code> получают свои методы (к примеру, <code>forEach </code>и <code>map</code>) из следующей цепочки наследования:</p>
+В JavaScript существует механизм наследования, основанный на прототипах, применяемый как к встроенным («native») (таким как `Array`), так и «host»-объектам, предоставляемым средой исполнения (таким как `NodeList`) . Экземпляры класса `Array` получают свои методы (к примеру, `forEach `и `map`) из следующей цепочки наследования:
 
-<p><code>myArray --&gt; Array.prototype --&gt; Object.prototype --&gt; null</code> (Цепочка прототипов объекта может быть получена рекурсивным вызовом Object.getPrototypeOf)</p>
+`myArray --> Array.prototype --> Object.prototype --> null` (Цепочка прототипов объекта может быть получена рекурсивным вызовом Object.getPrototypeOf)
 
-<p><code>forEach</code>, <code>map</code>, ровно как и все остальные свойства принадлежат <code>Array.prototype</code>.</p>
+`forEach`, `map`, ровно как и все остальные свойства принадлежат `Array.prototype`.
 
-<p>Цепочка же прототипов <code>NodeList</code> выглядит следующим образом:</p>
+Цепочка же прототипов `NodeList` выглядит следующим образом:
 
-<p><code>myNodeList --&gt; NodeList.prototype --&gt; Object.prototype --&gt; null</code></p>
+`myNodeList --> NodeList.prototype --> Object.prototype --> null`
 
-<p><code>NodeList.prototype</code> содержит метод <code>item</code>, но никак не остальные методы <code>Array.prototype</code>, поэтому они и не могут быть использованы с <code>NodeLists</code>.</p>
+`NodeList.prototype` содержит метод `item`, но никак не остальные методы `Array.prototype`, поэтому они и не могут быть использованы с `NodeLists`.
 
-<h4 id="Обходные_пути">Обходные пути</h4>
+#### Обходные пути
 
-<p>Один из способов решения данной проблемы — это копирование методов из <code>Array.prototype в </code><code>NodeList.prototype</code>. Однако необходимо отдавать себе отчёт в том, что <a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)</a>.</p>
+Один из способов решения данной проблемы — это копирование методов из ` Array.prototype в ``NodeList.prototype `. Однако необходимо отдавать себе отчёт в том, что [расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)](http://perfectionkills.com/whats-wrong-with-extending-the-dom/).
 
-<pre class="brush: js">var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
+```js
+var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
 
 arrayMethods.forEach( attachArrayMethodsToNodeList );
 
@@ -93,11 +89,13 @@ var firstDiv = divs[ 0 ];
 
 firstDiv.childNodes.forEach(function( divChild ){
   divChild.parentNode.style.color = '#0F0';
-});</pre>
+});
+```
 
-<p>Другой подход — расширение непосредственно объектов DOM:</p>
+Другой подход — расширение непосредственно объектов DOM:
 
-<pre class="brush: js">var forEach = Array.prototype.forEach;
+```js
+var forEach = Array.prototype.forEach;
 
 var divs = document.getElementsByTagName( 'div' );
 var firstDiv = divs[ 0 ];
@@ -105,39 +103,40 @@ var firstDiv = divs[ 0 ];
 forEach.call(firstDiv.childNodes, function( divChild ){
   divChild.parentNode.style.color = '#0F0';
 });
-</pre>
+```
 
-<div class="note">
-<p>Стоит отметить, что передача объектов среды (такого как <code>NodeList</code>) через <code>this</code> native-методу (такому как <code>forEach</code>) гарантированно работает не во всех браузерах и точно не работает в некоторых.</p>
-</div>
+> **Примечание:** Стоит отметить, что передача объектов среды (такого как `NodeList`) через `this` native-методу (такому как `forEach`) гарантированно работает не во всех браузерах и точно не работает в некоторых.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Элементы в <code>NodeList</code>, можно обработать следующим образом:</p>
+Элементы в `NodeList`, можно обработать следующим образом:
 
-<pre class="brush: js">for (var i = 0; i &lt; myNodeList.length; ++i) {
+```js
+for (var i = 0; i < myNodeList.length; ++i) {
   var item = myNodeList[i];  // Вызов myNodeList.item(i) необязателен в JavaScript
 }
-</pre>
+```
 
-<p>Не следует использовать конструкции <code><a href="/en-US/docs/JavaScript/Reference/Statements/for...in" title="JavaScript/ Reference/Statements/for...in">for...in</a></code> или <code><a href="/en-US/docs/JavaScript/Reference/Statements/for_each...in" title="JavaScript/ Reference/Statements/for each...in">for each...in</a></code> для перечисления элементов списка. Эти способы также перечислят и свойства <code>length</code> и <code>item</code>, что приведёт к логическим ошибкам в случае, если скрипт ожидает  только объекты {{domxref("node")}}. Также <code>for..in</code> может перечислять свойства в любом порядке.</p>
+Не следует использовать конструкции [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in "JavaScript/ Reference/Statements/for...in") или [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in "JavaScript/ Reference/Statements/for each...in") для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
 
-<p>Циклы <code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of" title="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> корректно перечисляют все объекты внутри <code>NodeList</code> в браузерах, в которых поддерживается <code>for...of </code>(например, Firefox 13 или выше):</p>
+Циклы [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of "/en-US/docs/JavaScript/Reference/Statements/for...of") корректно перечисляют все объекты внутри `NodeList` в браузерах, в которых поддерживается `for...of `(например, Firefox 13 или выше):
 
-<pre class="brush: js">var list = document.querySelectorAll( 'input[type=checkbox]' );
+```js
+var list = document.querySelectorAll( 'input[type=checkbox]' );
 for (var item of list) {
   item.checked = true;
-}</pre>
+}
+```
 
-<h2 id="Конвертирование_NodeList_в_Array">Конвертирование <code>NodeList</code> в <code>Array</code></h2>
+## Конвертирование `NodeList` в `Array`
 
-<p>Иногда удобнее работать с содержимым <code>NodeList</code>, используя методы <code>Array</code>. Ниже приведена техника преобразования <code>NodeList</code> к <code>Array</code>:</p>
+Иногда удобнее работать с содержимым `NodeList`, используя методы `Array`. Ниже приведена техника преобразования `NodeList` к `Array`:
 
-<pre class="brush: js">var div_list = document.querySelectorAll('div'); // returns NodeList
-var div_array = Array.prototype.slice.call(div_list); // преобразует NodeList в Array</pre>
+```js
+var div_list = document.querySelectorAll('div'); // returns NodeList
+var div_array = Array.prototype.slice.call(div_list); // преобразует NodeList в Array
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177">DOM Level 3</a></li>
-</ul>
+- [DOM Level 3](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177)

@@ -3,27 +3,28 @@ title: Window.length
 slug: Web/API/Window/length
 translation_of: Web/API/Window/length
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p>Возвращает кол-во фреймов (например {{HTMLElement("frame")}} или {{HTMLElement("iframe")}}) в текущем окне.</p>
+Возвращает кол-во фреймов (например {{HTMLElement("frame")}} или {{HTMLElement("iframe")}}) в текущем окне.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>framesCount</em> = window.length;
-</pre>
+```
+framesCount = window.length;
+```
 
-<ul>
- <li><code>framesCount</code> - кол-во фреймов на странице.</li>
-</ul>
+- `framesCount` - кол-во фреймов на странице.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">if (window.length) {
+```js
+if (window.length) {
   // Этот документ содержит фреймы
-}</pre>
+}
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}

@@ -9,57 +9,54 @@ tags:
   - WebAPI
 translation_of: Web/API/Node/appendChild
 ---
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p><code><strong>Node.appendChild()</strong></code> добавляет узел в конец списка дочерних элементов указанного родительского узла. Если данный дочерний элемент является ссылкой на существующий узел в документе, то функция <code>appendChild()</code> перемещает его из текущей позиции в новую позицию (нет необходимости удалять узел из родительского узла перед добавлением его к какому-либо другому узлу).</p>
+**`Node.appendChild()`** добавляет узел в конец списка дочерних элементов указанного родительского узла. Если данный дочерний элемент является ссылкой на существующий узел в документе, то функция `appendChild()` перемещает его из текущей позиции в новую позицию (нет необходимости удалять узел из родительского узла перед добавлением его к какому-либо другому узлу).
 
-<p>Это означает, что узел не может находиться в двух точках документа одновременно. Поэтому, если у узла уже есть родитель, он сначала удаляется, а затем добавляется в новую позицию. {{domxref("Node.cloneNode()")}} можно использовать для создания копии узла перед добавлением его в новый родительский элемент. Обратите внимание, что копии, сделанные с помощью <code>cloneNode</code> , не будут автоматически синхронизироваться.</p>
+Это означает, что узел не может находиться в двух точках документа одновременно. Поэтому, если у узла уже есть родитель, он сначала удаляется, а затем добавляется в новую позицию. {{domxref("Node.cloneNode()")}} можно использовать для создания копии узла перед добавлением его в новый родительский элемент. Обратите внимание, что копии, сделанные с помощью `cloneNode` , не будут автоматически синхронизироваться.
 
-<p>Если данный дочерний элемент является {{domxref("DocumentFragment")}}, то все содержимое {{domxref("DocumentFragment")}} перемещается в дочерний список указанного родительского узла.</p>
+Если данный дочерний элемент является {{domxref("DocumentFragment")}}, то все содержимое {{domxref("DocumentFragment")}} перемещается в дочерний список указанного родительского узла.
 
-<div class="note">
-<p><strong>Доступен новый API!</strong><br>
- <a href="https://developer.mozilla.org/ru/docs/Web/API/ParentNode/append"><code>ParentNode.append()</code></a> поддерживает несколько аргументов и добавляемые строки.</p>
-</div>
+> **Примечание:** **Доступен новый API!** > [`ParentNode.append()`](/ru/docs/Web/API/ParentNode/append) поддерживает несколько аргументов и добавляемые строки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var child = <em>element</em>.appendChild(<em>child</em>);</pre>
+```
+var child = element.appendChild(child);
+```
 
-<ul>
- <li><code>element</code> родительский <a href="/en-US/docs/DOM/element" title="/en-US/docs/DOM/element">элемент</a>.</li>
- <li><code>child</code> это элемент вставляется в конец <code>element</code>.</li>
-</ul>
+- `element` родительский [элемент](/ru/docs/DOM/element).
+- `child` это элемент вставляется в конец `element`.
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Возвращается дочерний элемент (<code><var>aChild</var></code>), кроме тех случаев, когда <code><var>child</var></code> это {{domxref("DocumentFragment")}}, в таком случае возвращается пустой {{domxref("DocumentFragment")}}.</p>
+Возвращается дочерний элемент (`aChild`), кроме тех случаев, когда `child` это {{domxref("DocumentFragment")}}, в таком случае возвращается пустой {{domxref("DocumentFragment")}}.
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Цепочка может работать не так, как ожидалось, из-за того, что <code>appendChild()</code> возвращает дочерний элемент:</p>
+Цепочка может работать не так, как ожидалось, из-за того, что `appendChild()` возвращает дочерний элемент:
 
-<pre class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+```js
+let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+```
 
-<p>Присваивает переменной <code>aBlock</code> элемент <code>&lt;b&gt;&lt;/b&gt;</code>, а не <code>&lt;block&gt;&lt;/block&gt;</code>, как вы могли ожидать.</p>
+Присваивает переменной `aBlock` элемент `<b></b>`, а не `<block></block>`, как вы могли ожидать.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">// Создаём новый элемент параграфа, и вставляем в конец document body
+```js
+// Создаём новый элемент параграфа, и вставляем в конец document body
 var p = document.createElement("p");
-document.body.appendChild(p);</pre>
+document.body.appendChild(p);
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107">DOM Level 3 Core: appendChild</a></li>
-</ul>
+- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.insertBefore")}}</li>
- <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("Node.replaceChild")}}
+- {{domxref("Node.insertBefore")}}
+- {{domxref("Node.hasChildNodes")}}

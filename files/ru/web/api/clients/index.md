@@ -16,48 +16,46 @@ tags:
   - Workers
 translation_of: Web/API/Clients
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>Интерфейс <code>Clients</code> <a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers API</a> представляет собой контейнер со списком объектов {{domxref("Client")}}.</p>
+Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/ServiceWorker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Clients.get()")}}</dt>
- <dd>Получает клиента сервис воркера, соответствующего данному <code>id,</code> и возвращает его в {{jsxref("Promise")}}.</dd>
- <dt>{{domxref("Clients.matchAll()")}}</dt>
- <dd>Получает список клиентов сервис воркера и возвращает их в {{jsxref("Promise")}}. Включает параметр <code>options</code> для возврата всех клиентов сервис воркера, чьи источники являются теми же источниками, что и у связанного источника сервис воркера. Если <code>options</code> не включены, метод возвращает только тех клиентов сервис воркера, которых тот контролирует. </dd>
- <dt>{{domxref("Clients.openWindow()")}}</dt>
- <dd>Открывает {{domxref("Client")}} сервис воркера в новом окне браузера.</dd>
- <dt>{{domxref("Clients.claim()")}}</dt>
- <dd>Позволяет активному Сервис Воркеру установить себя, как активного воркера для клиентской страницы, когда воркер и страница находятся в одной области. </dd>
-</dl>
+- {{domxref("Clients.get()")}}
+  - : Получает клиента сервис воркера, соответствующего данному `id,` и возвращает его в {{jsxref("Promise")}}.
+- {{domxref("Clients.matchAll()")}}
+  - : Получает список клиентов сервис воркера и возвращает их в {{jsxref("Promise")}}. Включает параметр `options` для возврата всех клиентов сервис воркера, чьи источники являются теми же источниками, что и у связанного источника сервис воркера. Если `options` не включены, метод возвращает только тех клиентов сервис воркера, которых тот контролирует.
+- {{domxref("Clients.openWindow()")}}
+  - : Открывает {{domxref("Client")}} сервис воркера в новом окне браузера.
+- {{domxref("Clients.claim()")}}
+  - : Позволяет активному Сервис Воркеру установить себя, как активного воркера для клиентской страницы, когда воркер и страница находятся в одной области.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">clients.matchAll(options).then(function(clients) {
-  for (i = 0 ; i &lt; clients.length ; i++) {
+```js
+clients.matchAll(options).then(function(clients) {
+  for (i = 0 ; i < clients.length ; i++) {
     if (clients[i] === 'index.html') {
       clients.openWindow(clients[i]);
       // или сделать что-то другое, с учётом подошедшего клиента
     }
   }
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)

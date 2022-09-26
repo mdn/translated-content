@@ -10,45 +10,43 @@ tags:
   - Reference
 translation_of: Web/API/Node/textContent
 ---
-<p>{{ApiRef}}</p>
+{{ApiRef}}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Позволяет задавать или получать текстовое содержимое элемента и его потомков.</p>
+Позволяет задавать или получать текстовое содержимое элемента и его потомков.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>text</em> = element.textContent;
+```
+var text = element.textContent;
 element.textContent = "Это просто текст";
-</pre>
+```
 
-<h2 id="Notes">Описание</h2>
+## Описание
 
-<ul>
- <li><code>textContent</code> возвращает <code>null,</code> <em> </em>если узел является <a href="/en-US/docs/DOM/document" title="DOM/Document">документом</a>, типом документа, или его описанием<em>.</em> Для получения <em>всего</em> текста и CDATA-данных во всём документе можно использовать <code> <a href="/en-US/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
- <li>Если узел является CDATA, комментарием, инструкцией, или текстовым элементом, <code>textContent</code> возвращает текст внутри узла в виде строки (т.н. <a href="/en-US/docs/DOM/Node.nodeValue" title="DOM/Node/NodeValue/Node.nodeValue">nodeValue</a>).</li>
- <li>Для узлов других типов <code>textContent</code> возвращает конкатенацию свойств <code>textContent</code> всех дочерних узлов, исключая комментарии и строки кода. Если узел не имеет дочерних узлов, будет возвращена пустая строка.</li>
- <li>Установка данного значения удаляет все дочерние узлы и заменяет их единичным текстовым узлом с указанным значением.</li>
-</ul>
+- `textContent` возвращает `null,` \__если узел является [документом](/ru/docs/DOM/document "DOM/Document"), типом документа, или его описанием_.* Для получения *всего\_ текста и CDATA-данных во всём документе можно использовать `document.documentElement.textContent`.
+- Если узел является CDATA, комментарием, инструкцией, или текстовым элементом, `textContent` возвращает текст внутри узла в виде строки (т.н. [nodeValue](/ru/docs/DOM/Node.nodeValue "DOM/Node/NodeValue/Node.nodeValue")).
+- Для узлов других типов `textContent` возвращает конкатенацию свойств `textContent` всех дочерних узлов, исключая комментарии и строки кода. Если узел не имеет дочерних узлов, будет возвращена пустая строка.
+- Установка данного значения удаляет все дочерние узлы и заменяет их единичным текстовым узлом с указанным значением.
 
-<h3 id="Отличие_от_innerText">Отличие от <code>innerText</code></h3>
+### Отличие от `innerText`
 
-<p><code>element.innerText</code> был введён Internet Explorer-ом. Работает по тому же принципу за небольшими исключениями:</p>
+`element.innerText` был введён Internet Explorer-ом. Работает по тому же принципу за небольшими исключениями:
 
-<ul>
- <li><code>textContent</code> получает содержимое <em>всех</em> элементов, включая  {{HTMLElement("script")}} и {{HTMLElement("style")}}, тогда как <code>innerText</code> этого не делает.</li>
- <li><code>innerText</code> умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как <code>textContent</code> этого не делает.</li>
- <li>Метод <code>innerText</code> позволяет получить CSS, а <code>textContent</code> — нет.</li>
-</ul>
+- `textContent` получает содержимое _всех_ элементов, включая {{HTMLElement("script")}} и {{HTMLElement("style")}}, тогда как `innerText` этого не делает.
+- `innerText` умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как `textContent` этого не делает.
+- Метод `innerText` позволяет получить CSS, а `textContent` — нет.
 
-<h3 id="Отличие_от_innerHTML">Отличие от <code>innerHTML</code></h3>
+### Отличие от `innerHTML`
 
-<p><code>innerHTML</code>, как можно понять из его названия, возвращает HTML. Довольно часто <code>innerHTML</code> используется для получения или записи текста в элемент. Тем не менее, вместо него желательно использовать <code>textContent</code>: этот метод потребляет гораздо меньше ресурсов, так как текст парсится как текст, а не HTML. Кроме того, это защищает от XSS атак.</p>
+`innerHTML`, как можно понять из его названия, возвращает HTML. Довольно часто `innerHTML` используется для получения или записи текста в элемент. Тем не менее, вместо него желательно использовать `textContent`: этот метод потребляет гораздо меньше ресурсов, так как текст парсится как текст, а не HTML. Кроме того, это защищает от XSS атак.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">// Дан следующий фрагмент:
-//   &lt;div id="block"&gt;Это — &lt;span&gt;просто&lt;/span&gt; текст&lt;/div&gt;
+```js
+// Дан следующий фрагмент:
+//   <div id="block">Это — <span>просто</span> текст</div>
 
 // Достаём текстовое содержимое:
 var text = document.getElementById("block").textContent;
@@ -57,21 +55,17 @@ var text = document.getElementById("block").textContent;
 // Меняем текст:
 document.getElementById("block").textContent = "Это — просто текст";
 // Теперь наш фрагмент выглядит так:
-//   &lt;div id="block"&gt;Это — просто текст&lt;/div&gt;
-</pre>
+//   <div id="block">Это — просто текст</div>
+```
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent">textContent</a></li>
-</ul>
+- [textContent](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">Подробнее о различиях <code>innerText</code> и <code>textContent</code></a> (пост в блоге)</li>
-</ul>
+- [Подробнее о различиях `innerText` и `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (пост в блоге)

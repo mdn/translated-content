@@ -3,29 +3,29 @@ title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
 translation_of: Web/API/Navigator/cookieEnabled
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p>Возвращает логическое значение (Boolean), показывающее включены ли куки или нет.(свойство только для чтения.</p>
+Возвращает логическое значение (Boolean), показывающее включены ли куки или нет.(свойство только для чтения.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var cookieEnabled = navigator.cookieEnabled;
-</pre>
+```
+var cookieEnabled = navigator.cookieEnabled;
+```
 
-<ul>
- <li><code>cookieEnabled</code> is a Boolean <code>true</code> or <code>false</code>.</li>
-</ul>
+- `cookieEnabled` is a Boolean `true` or `false`.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">if (!navigator.cookieEnabled) {
+```js
+if (!navigator.cookieEnabled) {
   // пусть пользователь знает, что включённые куки делают страницу более полезной.
-</pre>
+```
 
-<h2 id="Совместимость_в_браузере">Совместимость в браузере</h2>
+## Совместимость в браузере
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p>HTML WHATWG</p>
+HTML WHATWG

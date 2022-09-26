@@ -4,8 +4,10 @@ slug: Web/API/FileReader/abort_event
 translation_of: Web/API/FileReader/onabort
 original_slug: Web/API/FileReader/onabort
 ---
-<p>Значением свойства <strong><code>FileReader.onabort</code></strong> является функция которая вызывается в случае если срабатывает событие <a href="/ru/docs/Web/Events/abort">abort</a>, например когда процесс чтения файла прерывается по каким-либо причинам.  </p>
+Значением свойства **`FileReader.onabort`** является функция которая вызывается в случае если срабатывает событие [abort](/ru/docs/Web/Events/abort), например когда процесс чтения файла прерывается по каким-либо причинам.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">reader.onabort = function() { ... };</pre>
+```js
+reader.onabort = function() { ... };
+```

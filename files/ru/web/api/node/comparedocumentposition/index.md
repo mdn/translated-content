@@ -3,87 +3,59 @@ title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 translation_of: Web/API/Node/compareDocumentPosition
 ---
-<p>{{ ApiRef() }}</p>
-<h2 id="Summary">Аннотация</h2>
-<p>Сравнивает позицию текущего узла и другого узла в любом другом документе.</p>
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox">node.compareDocumentPosition( otherNode )
-</pre>
-<ul>
- <li><code>node</code> это узел, который сравнивается</li>
- <li><code>otherNode</code> это узел, с которым идёт сравнение.</li>
-</ul>
-<p>Возвращаемое значение вычисляется как отношение, которое имеется между <code>otherNode</code> и <code>node</code>.</p>
-<h2 id="Notes">Примечание</h2>
-<p>Возвращаемое значение - это битовая маска со следующими значениями:</p>
-<table>
- <thead>
-  <tr>
-   <th scope="col">Имя</th>
-   <th scope="col">Значение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
-   <td>2</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
-   <td>16</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
-   <td>32</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Example">Пример</h2>
-<pre class="brush:js">var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
+{{ ApiRef() }}
+
+## Аннотация
+
+Сравнивает позицию текущего узла и другого узла в любом другом документе.
+
+## Синтаксис
+
+```
+node.compareDocumentPosition( otherNode )
+```
+
+- `node` это узел, который сравнивается
+- `otherNode` это узел, с которым идёт сравнение.
+
+Возвращаемое значение вычисляется как отношение, которое имеется между `otherNode` и `node`.
+
+## Примечание
+
+Возвращаемое значение - это битовая маска со следующими значениями:
+
+| Имя                                         | Значение |
+| ------------------------------------------- | -------- |
+| `DOCUMENT_POSITION_DISCONNECTED`            | 1        |
+| `DOCUMENT_POSITION_PRECEDING`               | 2        |
+| `DOCUMENT_POSITION_FOLLOWING`               | 4        |
+| `DOCUMENT_POSITION_CONTAINS`                | 8        |
+| `DOCUMENT_POSITION_CONTAINED_BY`            | 16       |
+| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32       |
+
+## Пример
+
+```js
+var head = document.getElementsByTagName('head').item(0);
+if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log("well-formed document");
 } else {
-  console.log("&lt;head&gt; is not before &lt;body&gt;");
+  console.log("<head> is not before <body>");
 }
-</pre>
-<div class="note">
- <p><strong>Замечание:</strong> <em>Из-за того, что результат, возвращаемый </em><code>compareDocumentPosition</code>, является битовой маской, <a href="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators">побитовый оператор и</a> должен использоваться для осмысленных значений.</p>
-</div>
-<h2 id="Specification">Спецификации</h2>
-<table>
- <tbody>
-  <tr>
-   <td>Спецификация</td>
-   <td>Статус</td>
-   <td>Комментарий</td>
-  </tr>
-  <tr>
-   <td><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition">DOM Level 3</a></td>
-   <td>Рекомендация</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="http://dom.spec.whatwg.org/#dom-node-comparedocumentposition">DOM Standard</a></td>
-   <td>Живой стандарт</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Смотрите_также">Смотрите также</h2>
-<ul>
- <li><code><a href="/en-US/docs/DOM/Node.contains" title="/en-US/docs/DOM/Node.contains">Node.contains</a></code></li>
- <li><a href="http://ejohn.org/blog/comparing-document-position/">John Resig - Comparing Document Position</a></li>
-</ul>
-<p>{{ languages( {"ru-ru": "ru-ru/DOM/Node.compareDocumentPosition" } ) }}</p>
+```
+
+> **Примечание:** **Замечание:** _Из-за того, что результат, возвращаемый_ `compareDocumentPosition`, является битовой маской, [побитовый оператор и](/ru/docs/JavaScript/Reference/Operators/Bitwise_Operators) должен использоваться для осмысленных значений.
+
+## Спецификации
+
+| Спецификация                                                                                 | Статус         | Комментарий |
+| -------------------------------------------------------------------------------------------- | -------------- | ----------- |
+| [DOM Level 3](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition) | Рекомендация   |             |
+| [DOM Standard](http://dom.spec.whatwg.org/#dom-node-comparedocumentposition)                 | Живой стандарт |             |
+
+## Смотрите также
+
+- [`Node.contains`](/en-US/docs/DOM/Node.contains "/en-US/docs/DOM/Node.contains")
+- [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)
+
+{{ languages( {"ru-ru": "ru-ru/DOM/Node.compareDocumentPosition" } ) }}

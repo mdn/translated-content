@@ -3,51 +3,38 @@ title: Window.console
 slug: Web/API/Window/console
 translation_of: Web/API/Window/console
 ---
-<p>{{ APIRef }}</p>
+{{ APIRef }}
 
-<p>Свойство <strong><code>window.console</code></strong> даёт доступ к интерфейсу {{domxref("Console")}}, предоставляющий методы для вывода информации в консоль браузера. Данные методы предназначены для отладки приложения, и не должны использоваться конечными пользователями.</p>
+Свойство **`window.console`** даёт доступ к интерфейсу {{domxref("Console")}}, предоставляющий методы для вывода информации в консоль браузера. Данные методы предназначены для отладки приложения, и не должны использоваться конечными пользователями.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var consoleObj</em> = <em>window</em>.console;
-</pre>
+```
+var consoleObj = window.console;
+```
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h3 id="Вывод_текста_в_консоль">Вывод текста в консоль</h3>
+### Вывод текста в консоль
 
-<p>Первый пример просто выведет текст в консоль:</p>
+Первый пример просто выведет текст в консоль:
 
-<pre class="brush: js">console.log("An error occurred while loading the content");
-</pre>
+```js
+console.log("An error occurred while loading the content");
+```
 
-<p>Следующий пример выведет объект в консоль, с возможностью раскрытия отдельных полей:</p>
+Следующий пример выведет объект в консоль, с возможностью раскрытия отдельных полей:
 
-<pre class="brush: js">console.dir(someObject);</pre>
+```js
+console.dir(someObject);
+```
 
-<p>Примеры можно посмотреть по ссылке: {{SectionOnPage("/ru/docs/Web/API/Console", "Usage")}}</p>
+Примеры можно посмотреть по ссылке: {{SectionOnPage("/ru/docs/Web/API/Console", "Usage")}}
 
-<p> </p>
+## Specifications
 
-<p> </p>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Console API')}}</td>
-   <td>{{Spec2('Console API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-<p>Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.</p>
-</div>
+> **Примечание:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

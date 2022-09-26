@@ -10,40 +10,39 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<div> </div>
+Свойство обработчика событий для события клика правой кнопкой мыши внутри элемента window.
 
-<p>Свойство обработчика событий для события клика правой кнопкой мыши внутри элемента window. </p>
+Если стандартное поведение не будет предотвращено, то активируется контекстное меню браузера (В IE8 есть ошибка, связанная с тем что контекстное меню не будет активировано если определён обработчик события contextmenu).
 
-<p>Если стандартное поведение не будет предотвращено, то активируется контекстное меню браузера (В IE8 есть ошибка, связанная с тем что контекстное меню не будет активировано если определён обработчик события contextmenu). </p>
+Обратите внимание что это событие будет происходить вместе с другими событиями right-click и не зависит от ["contextmenu" атрибута](http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/) элемента.
 
-<p>Обратите внимание что это событие будет происходить вместе с другими событиями right-click и не зависит от <a href="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">"contextmenu" атрибута</a> элемента.</p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+window.oncontextmenu = funcRef;
+//funcRef - ссылка на функцию, которая будет вызвана в ответ на событие "oncontextmenu", происходящее при клике правой кнопкой мыши внутри объекта window.
+```
 
-<pre class="syntaxbox">window.oncontextmenu = funcRef;
-//funcRef - ссылка на функцию, которая будет вызвана в ответ на событие "oncontextmenu", происходящее при клике правой кнопкой мыши внутри объекта window.</pre>
+## Пример
 
-<h2 id="Example">Пример</h2>
+Код в этом примере меняет стандартное поведение браузера, отключая клик правой кнопкой мыши.
 
-<p>Код в этом примере меняет стандартное поведение браузера, отключая клик правой кнопкой мыши.</p>
-
-<pre class="brush:js;">document.oncontextmenu = function () { // Используйте объект "document" вместо "window" для совместимости с IE8.
+```js
+document.oncontextmenu = function () { // Используйте объект "document" вместо "window" для совместимости с IE8.
    return false;
 };
 
 window.addEventListener('contextmenu', function (e) { // Не совместимо с IE младше 9 версии
     e.preventDefault();
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

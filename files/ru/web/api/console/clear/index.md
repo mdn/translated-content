@@ -6,33 +6,30 @@ tags:
   - консоль
 translation_of: Web/API/Console/clear
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Очищает консоль.</p>
+Очищает консоль.
 
-<p>Содержимое консоли заменяется на информационное сообщение, которое может быть следующим: "Консоль очищена".</p>
+Содержимое консоли заменяется на информационное сообщение, которое может быть следующим: "Консоль очищена".
 
-<p>Примечание для Google Chrome, от функции <code>console.clear()</code> не будет никакого эффекта, если у пользователя установлена надстройка "Preserve log upon navigation" в <a href="https://developer.chrome.com/devtools/docs/settings#preserve-log%20upon%20navigation">настройках</a>.</p>
+Примечание для Google Chrome, от функции `console.clear()` не будет никакого эффекта, если у пользователя установлена надстройка "Preserve log upon navigation" в [настройках](https://developer.chrome.com/devtools/docs/settings#preserve-log%20upon%20navigation).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.clear();
-</pre>
+```
+console.clear();
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="https://developer.chrome.com/devtools/docs/console#assertions">Chrome Developer Tools: Using the Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)

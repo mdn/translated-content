@@ -7,53 +7,45 @@ tags:
   - Отладка
 translation_of: Web/API/Console_API
 ---
-<div>{{DefaultAPISidebar("Console API")}}</div>
+{{DefaultAPISidebar("Console API")}}Console API обеспечивает функциональность, которая позволяет разработчикам выполнять задачи по отладке, такие как логирование сообщений или значений переменных в определённых местах кода, измерение времени, требуемое на выполнение задачи
 
-<div>Console API обеспечивает функциональность, которая позволяет разработчикам выполнять задачи по отладке, такие как логирование сообщений или значений переменных в определённых местах кода, измерение времени, требуемое на выполнение задачи</div>
+## Понятие и использование
 
-<h2 id="Понятие_и_использование">Понятие и использование</h2>
+Console API изначально было собственным API с различной браузерной реализацией. [Спецификация Console API](https://console.spec.whatwg.org) была создана, чтобы согласовать поведение. Сейчас все современные браузеры используют эту реализацию. Хотя некоторые реализации имеют свои собственные функции. Узнать больше можно здесь:
 
-<p>Console API изначально было собственным API с различной браузерной реализацией. <a href="https://console.spec.whatwg.org">Спецификация Console API</a> была создана, чтобы согласовать поведение. Сейчас все современные браузеры используют эту реализацию. Хотя некоторые реализации имеют свои собственные функции. Узнать больше можно здесь:</p>
+- [Google Chrome DevTools implementation](https://developers.google.com/chrome-developer-tools/docs/console-api)
+- [Safari DevTools implementation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
-<ul>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Google Chrome DevTools implementation</a></li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html">Safari DevTools implementation</a></li>
-</ul>
+Использование крайне простое — объект {{domxref("console")}} ({{domxref("window.console")}} в браузерах или {{domxref("WorkerGlobalScope.console")}} в Web Worker) содержит множество методов, которые вы можете вызвать для выполнения отладки. В основном используется для вывода [веб-консоль](/ru/docs/Tools/Web_Console) различных значений.
 
-<p>Использование крайне простое — объект {{domxref("console")}} ({{domxref("window.console")}} в браузерах или {{domxref("WorkerGlobalScope.console")}} в Web Worker) содержит множество методов, которые вы можете вызвать для выполнения отладки. В основном используется для вывода <a href="/ru/docs/Tools/Web_Console">веб-консоль</a> различных значений.</p>
+Один из самых часто используемых методов {{domxref("console.log")}}, который используют для вывода текущего значения переменной.
 
-<p>Один из самых часто используемых методов {{domxref("console.log")}}, который используют для вывода текущего значения переменной.</p>
+## Интерфейсы
 
-<h2 id="Интерфейсы">Интерфейсы</h2>
+- {{domxref("console")}}
+  - : Обеспечивает простую функциональность для отладки. Включает в себя логирование, трассировку, таймеры и счётчики.
 
-<dl>
- <dt>{{domxref("console")}}</dt>
- <dd>Обеспечивает простую функциональность для отладки. Включает в себя логирование, трассировку, таймеры и счётчики.</dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: js">let myString = 'Hello world';
+```js
+let myString = 'Hello world';
 
 // Вывод "Hello world" в консоль
-console.log(myString)</pre>
+console.log(myString)
+```
 
-<p>Смотрите больше примеров на странице <a href="/ru/docs/Web/API/Console#Usage">Console</a>.</p>
+Смотрите больше примеров на странице [Console](/ru/docs/Web/API/Console#Usage).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications("api.console")}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat("api.console")}}
 
+## Смотрите также
 
-<p>{{Compat("api.console")}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Tools" title="Tools">Инструменты разработчика</a></li>
- <li><a href="/ru/docs/Tools/Web_Console" title="Web Console">Веб-консоль</a> — как Веб-консоль в Firefox работает с вызовами Console API</li>
- <li><a href="/en-US/docs/Tools/Remote_Debugging">Отладка удалённых скриптов</a> — как увидеть консоль, когда выполняется отладка на мобильных устройствах</li>
-</ul>
+- [Инструменты разработчика](/ru/docs/Tools "Tools")
+- [Веб-консоль](/ru/docs/Tools/Web_Console "Web Console") — как Веб-консоль в Firefox работает с вызовами Console API
+- [Отладка удалённых скриптов](/ru/docs/Tools/Remote_Debugging) — как увидеть консоль, когда выполняется отладка на мобильных устройствах

@@ -3,86 +3,88 @@ title: 'Element: mouseenter event'
 slug: Web/API/Element/mouseenter_event
 translation_of: Web/API/Element/mouseenter_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong><code>mouseenter</code></strong> вызывается в {{domxref("Element")}} когда указательное устройство (обычно мышь) изначально перемещается так, что его горячая точка находится в пределах элемента, в котором было запущено событие.</p>
+Событие **`mouseenter`** вызывается в {{domxref("Element")}} когда указательное устройство (обычно мышь) изначально перемещается так, что его горячая точка находится в пределах элемента, в котором было запущено событие.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Всплывающее</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Отменяемое</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Свойство обработчика события</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Всплывающее</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Отменяемое</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Интерфейс</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Свойство обработчика события</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примечания_по_использованию">Примечания по использованию</h2>
+## Примечания по использованию
 
-<p>Хотя <code>mouseenter</code> похоже на {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> отличается тем, что он не является <a href="/ru/docs/Web/API/Event/bubbles">bubble</a> и не отправляется никаким потомкам, когда указатель перемещается из физического пространства одного из его потомков в его собственное физическое пространство.</p>
+Хотя `mouseenter` похоже на {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` отличается тем, что он не является [bubble](/ru/docs/Web/API/Event/bubbles) и не отправляется никаким потомкам, когда указатель перемещается из физического пространства одного из его потомков в его собственное физическое пространство.
 
-<div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-Одно событие  <code>mouseenter</code> отправляется каждому элементу иерархии при их вводе. Здесь 4 события отправляются четырём элементам иерархии, когда указатель достигает текста.
+![mouseenter.png](/@api/deki/files/5908/=mouseenter.png)Одно событие `mouseenter` отправляется каждому элементу иерархии при их вводе. Здесь 4 события отправляются четырём элементам иерархии, когда указатель достигает текста.![mouseover.png](/@api/deki/files/5909/=mouseover.png)Одиночное событие наведения мыши `mouseover` отправляется в самый глубокий элемент дерева DOM, затем оно всплывает в иерархии, пока не будет отменено обработчиком или не достигнет корня.
 
-<div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-Одиночное событие наведения мыши <code>mouseover</code> отправляется в самый глубокий элемент дерева DOM, затем оно всплывает в иерархии, пока не будет отменено обработчиком или не достигнет корня.</div>
+При наличии глубокой иерархии количество отправляемых событий `mouseover` может быть довольно большим и вызывать значительные проблемы с производительностью. В таких случаях лучше обрабатывать события `mouseenter`.
 
-<p>При наличии глубокой иерархии количество отправляемых событий <code>mouseover</code> может быть довольно большим и вызывать значительные проблемы с производительностью. В таких случаях лучше обрабатывать события <code>mouseenter</code>.</p>
+В сочетании с соответствующим событием `mouseleave` (которое запускается в элементе, когда мышь покидает область содержимого), событие `mouseenter` действует очень похоже на псевдокласс CSS {{cssxref(':hover')}}.
 
-<p>В сочетании с соответствующим событием <code>mouseleave</code> (которое запускается в элементе, когда мышь покидает область содержимого), событие <code>mouseenter</code> действует очень похоже на псевдокласс CSS {{cssxref(':hover')}}.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+В документации по [`mouseover`](/ru/docs/Web/Events/mouseover#Example) есть пример иллюстрирующий различия между `mouseover` и `mouseenter`.
 
-<p>В документации по <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code></a> есть пример иллюстрирующий различия между <code>mouseover</code> и <code>mouseenter</code>.</p>
+### mouseenter
 
-<h3 id="mouseenter">mouseenter</h3>
+В следующем тривиальном примере событие `mouseenter` используется для изменения границы элемента `div`, когда мышь входит в выделенное ему пространство. Затем он добавляет элемент в список с номером события `mouseenter` или `mouseleave`.
 
-<p>В следующем тривиальном примере событие <code>mouseenter</code> используется для изменения границы элемента <code>div</code>, когда мышь входит в выделенное ему пространство. Затем он добавляет элемент в список с номером события <code>mouseenter</code> или <code>mouseleave</code>.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<div id='mouseTarget'>
+ <ul id="unorderedList">
+  <li>No events yet!</li>
+ </ul>
+</div>
+```
 
-<pre class="brush: html">&lt;div id='mouseTarget'&gt;
- &lt;ul id="unorderedList"&gt;
-  &lt;li&gt;No events yet!&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;</pre>
+#### CSS
 
-<h4 id="CSS">CSS</h4>
+Стилизация `div` чтобы сделать его более заметным.
 
-<p>Стилизация <code>div</code> чтобы сделать его более заметным.</p>
-
-<pre class="brush: css">#mouseTarget {
+```css
+#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var enterEventCount = 0;
+```js
+var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
-mouseTarget.addEventListener('mouseenter', e =&gt; {
+mouseTarget.addEventListener('mouseenter', e => {
   mouseTarget.style.border = '5px dotted orange';
   enterEventCount++;
   addListItem('This is mouseenter event ' + enterEventCount + '.');
 });
 
-mouseTarget.addEventListener('mouseleave', e =&gt; {
+mouseTarget.addEventListener('mouseleave', e => {
   mouseTarget.style.border = '1px solid #333';
   leaveEventCount++;
   addListItem('This is mouseleave event ' + leaveEventCount + '.');
@@ -100,32 +102,31 @@ function addListItem(text) {
 
   // Добавить вновь созданный элемент списка в список
   unorderedList.appendChild(newListItem);
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('mouseenter')}}</p>
+{{EmbedLiveSample('mouseenter')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

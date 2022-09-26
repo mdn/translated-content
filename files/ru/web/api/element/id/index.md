@@ -9,65 +9,38 @@ tags:
   - Reference
 translation_of: Web/API/Element/id
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}Свойство **`id`** представляет идентификатор элемента, отражая глобальный атрибут **[id](/ru/docs/Web/HTML/Global_attributes/id)**.
 
-<div>Свойство <code><strong>id</strong></code> представляет идентификатор элемента, отражая глобальный атрибут <strong><a href="/ru/docs/Web/HTML/Global_attributes/id">id</a></strong>.</div>
+Если значение **`id`** не пустое, то оно должно быть уникально в документе.
 
+**`id`** часто используется с {{domxref("document.getElementById", "getElementById")}}, чтобы получить нужный элемент. Часто применяют [ID как селектор](/ru/docs/Web/CSS/ID_selectors "Web/CSS/ID_selectors"), для стилизации документа, с помощью [CSS](<r u/docs/Web/CSS> "CSS").
 
+> **Примечание:** **Замечание**: идентификаторы чувствительны к регистру, но вам следует избегать создание id, которых различает регистр (смотрите [Чувствительность к регистру в классах и идентификаторов](/ru/docs/Case_Sensitivity_in_class_and_id_Names "Case_Sensitivity_in_class_and_id_Names")).
 
-<p>Если значение <code><strong>id</strong></code> не пустое, то оно должно быть уникально в документе.</p>
+## Синтаксис
 
-<p><code><strong>id</strong></code> часто используется с {{domxref("document.getElementById", "getElementById")}}, чтобы получить нужный элемент. Часто применяют <a href="/ru/docs/Web/CSS/ID_selectors" title="Web/CSS/ID_selectors">ID как селектор</a>, для стилизации документа, с помощью <a href="r u/docs/Web/CSS" title="CSS">CSS</a>.</p>
+```
+var idStr = element.id; // Получаем id.
+```
 
-<div class="note">
-<p><strong>Замечание</strong>: идентификаторы чувствительны к регистру, но вам следует избегать создание id, которых различает регистр (смотрите <a href="/ru/docs/Case_Sensitivity_in_class_and_id_Names" title="Case_Sensitivity_in_class_and_id_Names">Чувствительность к регистру в классах и идентификаторов</a>).</p>
-</div>
+```
+element.id = idStr; // Применяем id
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+_`idStr`_ - идентификатор элемента
 
-<pre>var <em>idStr</em> = <em>element</em>.id; // Получаем id.
-</pre>
+## Спецификации
 
-<pre><em>element</em>.id = <em>idStr</em>;<em> // Применяем id</em>
-</pre>
+| Спецификации                                                                     | Статус                           | Комментарий                                        |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | Нет изменений от {{SpecName('DOM2 HTML')}}. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | Нет отличий от {{SpecName('DOM1')}}.       |
+| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Изначальное определение.                           |
 
-<p><em><code>idStr</code></em> - идентификатор элемента</p>
+## Поддержка браузерами
 
-<h2 id="Specification">Спецификации</h2>
+{{Compat}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Нет изменений от {{SpecName('DOM2 HTML')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Нет отличий от {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+## Смотрите также
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Глобальный атрибут <a href="/ru/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a></li>
-</ul>
+- Глобальный атрибут [**id**](/ru/docs/Web/HTML/Global_attributes/id)

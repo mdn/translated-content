@@ -12,34 +12,35 @@ tags:
   - openWindow
 translation_of: Web/API/Clients/openWindow
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Метод <strong><code>openWindow()</code></strong> интерфейса {{domxref("Clients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, <code>openWindow()</code> выдаст <code>InvalidAccessError</code>.</p>
+Метод **`openWindow()`** интерфейса {{domxref("Clients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, `openWindow()` выдаст `InvalidAccessError`.
 
-<p>В Firefox этому методу разрешено отображать всплывающие окна только при вызове события клике по уведомлению.</p>
+В Firefox этому методу разрешено отображать всплывающие окна только при вызове события клике по уведомлению.
 
-<p>В Chrome для Android этот метод может открыть URL-адрес в существующем контексте просмотра, предоставляемым автономным веб-приложением (<a href="/en-US/docs/Web/Progressive_web_apps">standalone web app</a>), ранее добавленным на главный экран пользователя. С недавнего времени это также работает в Chrome для Windows.</p>
+В Chrome для Android этот метод может открыть URL-адрес в существующем контексте просмотра, предоставляемым автономным веб-приложением ([standalone web app](/ru/docs/Web/Progressive_web_apps)), ранее добавленным на главный экран пользователя. С недавнего времени это также работает в Chrome для Windows.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">self.clients.openWindow(<em>url</em>).then(function(<em>windowClient</em>) {
+```
+self.clients.openWindow(url).then(function(windowClient) {
   // Do something with your WindowClient
-});</pre>
+});
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>url</code></dt>
- <dd>{{domxref("USVString")}} - URL-адрес клиента, который вы хотите открыть. Обычно это значение должно быть URL из того же источника, что и вызывающий скрипт.</dd>
-</dl>
+- `url`
+  - : {{domxref("USVString")}} - URL-адрес клиента, который вы хотите открыть. Обычно это значение должно быть URL из того же источника, что и вызывающий скрипт.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который преобразуется в объект {{domxref("WindowClient")}}, если URL-адрес исходит из того же источника, что и сервис-воркер, иначе {{Glossary("null", "null value")}} .</p>
+{{jsxref("Promise")}}, который преобразуется в объект {{domxref("WindowClient")}}, если URL-адрес исходит из того же источника, что и сервис-воркер, иначе {{Glossary("null", "null value")}} .
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Отправить уведомление в OS, если возможно
+```js
+// Отправить уведомление в OS, если возможно
 if (self.Notification.permission === 'granted') {
   const notificationObject = {
     body: 'Click here to view your messages.',
@@ -50,27 +51,23 @@ if (self.Notification.permission === 'granted') {
 }
 
 // Обработчик события клика по уведомлению
-self.addEventListener('notificationclick', e =&gt; {
+self.addEventListener('notificationclick', e => {
   // Закрываем всплывающее окно с уведомлением
   e.notification.close();
   // Получите все клиенты Windows
-  e.waitUntil(clients.matchAll({ type: 'window' }).then(clientsArr =&gt; {
+  e.waitUntil(clients.matchAll({ type: 'window' }).then(clientsArr => {
     // Если вкладка, соответствующая целевому URL-адресу, уже существует, сфокусируйтесь на ней;
-    const hadWindowToFocus = clientsArr.some(windowClient =&gt; windowClient.url === e.notification.data.url ? (windowClient.focus(), true) : false);
+    const hadWindowToFocus = clientsArr.some(windowClient => windowClient.url === e.notification.data.url ? (windowClient.focus(), true) : false);
     // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте её.
-    if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient =&gt; windowClient ? windowClient.focus() : null);
+    if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
   }));
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

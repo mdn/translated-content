@@ -9,34 +9,32 @@ tags:
   - WebAPI
 translation_of: Web/API/Node/insertBefore
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
+
+Метод **`Node.insertBefore()`** добавляет элемент в список дочерних элементов родителя перед указанным элементом.
+
+## Синтаксис
+
+```
+var insertedElement = parentElement.insertBefore(newElement, referenceElement);
+```
+
+В Mozilla Firefox, если referenceElement не задан или равен null, newElement вставляется в конец списка дочерних элементов. В IE, referenceElement равный undefined, сгенерируется исключение "Invalid argument", в то время как Chrome сгенерирует исключение "Uncaught TypeError", ожидая 2 аргумента.
+
+- `insertedElement` Вставленный элемент.
+- `parentElement` Родитель для нового элемента.
+- `newElement` Элемент для вставки.
+- `referenceElement` Элемент, перед которым будет вставлен `newElement`.
+
+## Пример
+
+```html
+<div id="parentElement">
+  <span id="childElement">foo bar</span>
 </div>
 
-<p>Метод <code><strong>Node.insertBefore()</strong></code> добавляет элемент в  список дочерних элементов родителя перед указанным элементом.</p>
-
-<h2 id="Syntax">Синтаксис</h2>
-
-<pre class="syntaxbox">var <em>insertedElement</em> = <em>parentElement</em>.insertBefore(<em>newElement</em>, <em>referenceElement</em>);
-</pre>
-
-<p>В Mozilla Firefox, если referenceElement не задан или равен null, newElement вставляется в конец списка дочерних элементов. В IE, referenceElement равный undefined, сгенерируется исключение "Invalid argument", в то время как Chrome сгенерирует исключение  "Uncaught TypeError", ожидая 2 аргумента.</p>
-
-<ul>
- <li><code>insertedElement</code> Вставленный элемент.</li>
- <li><code>parentElement</code> Родитель для нового элемента.</li>
- <li><code>newElement</code> Элемент для вставки.</li>
- <li><code>referenceElement</code> Элемент, перед которым будет вставлен <code>newElement</code>.</li>
-</ul>
-
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:html">&lt;div id="parentElement"&gt;
-  &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-// Создаём новый &lt;span&gt;
+<script>
+// Создаём новый <span>
 var sp1 = document.createElement("span");
 
 // Получаем ссылку на элемент, перед которым мы хотим вставить sp1
@@ -46,22 +44,25 @@ var parentDiv = sp2.parentNode;
 
 // Вставляем sp1 перед sp2
 parentDiv.insertBefore(sp1, sp2);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с <code style="font-style: normal;"><a href="/en-US/docs/DOM/Node.nextSibling" title="DOM/Node.nextSibling">nextSibling</a></code>.</p>
+Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/en-US/docs/DOM/Node.nextSibling "DOM/Node.nextSibling").
 
-<p>В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:</p>
+В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:
 
-<pre><code>parentDiv.insertBefore(sp1, sp2.nextSibling);</code></pre>
+```
+parentDiv.insertBefore(sp1, sp2.nextSibling);
+```
 
-<p>Если sp2 не имеет следующего элемента, то он будет последним дочерним элементом,  <code style="font-style: normal;">sp2.nextSibling вернёт </code>null, а <code style="font-style: normal;">sp1</code> вставится в конец дочернего узла (сразу после sp2).</p>
+Если sp2 не имеет следующего элемента, то он будет последним дочерним элементом, `sp2.nextSibling вернёт `null, а `sp1` вставится в конец дочернего узла (сразу после sp2).
 
-<h2 id="Example2">Пример 2</h2>
+## Пример 2
 
-<p>Вставка элемента перед первым дочерним элементом с помощью <a href="/en-US/docs/DOM/Node.firstChild" title="Node.firstChild">firstChild</a>.</p>
+Вставка элемента перед первым дочерним элементом с помощью [firstChild](/ru/docs/DOM/Node.firstChild "Node.firstChild").
 
-<pre class="brush:js">// Получаем ссылку на элемент в который мы хотим добавить новый элемент
+```js
+// Получаем ссылку на элемент в который мы хотим добавить новый элемент
 var parentElement = document.getElementById('parentElement');
 // Получаем ссылку на первый дочерний элемент
 var theFirstChild = parentElement.firstChild;
@@ -71,16 +72,14 @@ var newElement = document.createElement("div");
 
 // Вставляем новый элемент перед первым дочерним элементом
 parentElement.insertBefore(newElement, theFirstChild);
-</pre>
+```
 
-<p>Когда у родителя нет первого дочернего элемента, <code>firstChild</code> вернёт <code>null</code>. Новый элемент всё равно будет выставляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемента, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.</p>
+Когда у родителя нет первого дочернего элемента, `firstChild` вернёт `null`. Новый элемент всё равно будет выставляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемента, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727">insertBefore</a></li>
-</ul>
+- [insertBefore](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)

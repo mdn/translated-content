@@ -3,58 +3,49 @@ title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>Метод <code><strong>importScripts()</strong></code> интерфейса {{domxref("WorkerGlobalScope")}} синхронно импортирует один или несколько скриптов, добавляя их в область видимости сервис-воркера.</p>
+Метод **`importScripts()`** интерфейса {{domxref("WorkerGlobalScope")}} синхронно импортирует один или несколько скриптов, добавляя их в область видимости сервис-воркера.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);</pre>
+```js
+self.importScripts('foo.js');
+self.importScripts('foo.js', 'bar.js', ...);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Разделённый запятыми объект {{domxref("DOMString")}} скриптов, которые должны быть импортированы. Пути к скриптам указываются относительно URL HTML документа.</p>
+Разделённый запятыми объект {{domxref("DOMString")}} скриптов, которые должны быть импортированы. Пути к скриптам указываются относительно URL HTML документа.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><em>Нет.</em></p>
+_Нет._
 
-<h3 id="Выбрасываемые_исключения">Выбрасываемые исключения</h3>
+### Выбрасываемые исключения
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Исключение</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>Добавленные скрипты имеют неверные MIME тип (то есть не <code>text/javascript</code>).</td>
-  </tr>
- </tbody>
-</table>
+| Исключение     | Описание                                                                    |
+| -------------- | --------------------------------------------------------------------------- |
+| `NetworkError` | Добавленные скрипты имеют неверные MIME тип (то есть не `text/javascript`). |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Если вы хотите использовать некоторую функциональность, определённую файлом <code>foo.js</code>, необходимо сделать следующее:</p>
+Если вы хотите использовать некоторую функциональность, определённую файлом `foo.js`, необходимо сделать следующее:
 
-<pre class="brush: js">importScripts('foo.js');</pre>
+```js
+importScripts('foo.js');
+```
 
-<p><code>importScripts()</code> и <code>self.importScripts()</code> по сути эквивалентны — и то и другое вызывает функцию <code>importScripts()</code> в области видимости воркера.</p>
+`importScripts()` и `self.importScripts()` по сути эквивалентны — и то и другое вызывает функцию `importScripts()` в области видимости воркера.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите Также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_Также">Смотрите Также</h2>
-
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

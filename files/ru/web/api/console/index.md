@@ -12,175 +12,163 @@ tags:
   - Справочник по DOM Gecko
 translation_of: Web/API/Console
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Объект <strong>Console</strong> служит для доступа к средствам отладки браузера (например, <a href="/ru/docs/Tools/Web_Console">Web Console (Веб-консоль)</a> в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.</p>
+Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](/ru/docs/Tools/Web_Console) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.
 
-<p>Доступ к <strong>Console </strong>можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в <code>workers </code>это специальный способ доступа через свойство <code>console</code>. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "<code>console</code>".</p>
+Доступ к **Console** можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в `workers `это специальный способ доступа через свойство `console`. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "`console`".
 
-<pre class="brush: js">console.log("Failed to open the specified link")</pre>
+```js
+console.log("Failed to open the specified link")
+```
 
-<p>Ниже описаны <a href="#Methods">методы</a>, доступные в объекте Console и приведены несколько примеров их <a href="#Usage">использования</a>.</p>
+Ниже описаны [методы](#Methods), доступные в объекте Console и приведены несколько примеров их [использования](#Usage).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("console.assert()")}}</dt>
- <dd>Выводит в консоль (имеется ввиду веб-консоль) сообщение и стек вызова метода, если первый аргумент <code>false</code>.</dd>
- <dt>{{domxref("console.clear()")}}</dt>
- <dd>Очистка консоли.</dd>
- <dt>{{domxref("console.count()")}}</dt>
- <dd>Выводит количество вызовов метода с определённой меткой (передаётся в параметре метода)</dd>
-</dl>
+- {{domxref("console.assert()")}}
+  - : Выводит в консоль (имеется ввиду веб-консоль) сообщение и стек вызова метода, если первый аргумент `false`.
+- {{domxref("console.clear()")}}
+  - : Очистка консоли.
+- {{domxref("console.count()")}}
+  - : Выводит количество вызовов метода с определённой меткой (передаётся в параметре метода)
 
-<dl>
- <dt>{{domxref("console.countReset()")}}</dt>
- <dd>Обнуляет значение счётчика с заданным значением.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("console.debug()")}}</dt>
- <dd>Синоним для <code>log()</code></dd>
- <dt>{{domxref("console.dir()")}} {{Non-standard_inline}}</dt>
- <dd>Отображает интерактивный список свойств указанного объекта JavaScript. Этот список позволит вам посмотреть дочерние объекты и их свойства.</dd>
- <dt>{{domxref("console.dirxml()")}} {{Non-standard_inline}}</dt>
- <dd>
- <p>Отображает представление указанного объекта в XML/HTML-виде, если это возможно. Если нет - в виде JavaScript-объекта (как в виде "console.dir()").</p>
- </dd>
- <dt>{{domxref("console.error()")}}</dt>
- <dd>Выводит сообщение об ошибке. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Синоним для <code>error();</code></dd>
- <dt>{{domxref("console.group()")}}</dt>
- <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку</a> сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
- <dt>{{domxref("console.groupCollapsed()")}}</dt>
- <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку </a>сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от <code>group()</code> вывод происходи в свёрнутую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группу</a>, требующую раскрыть её вручную по кнопке. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
- <dt>{{domxref("console.groupEnd()")}}</dt>
- <dd>Выход из текущей <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы</a>.</dd>
- <dt>{{domxref("console.info()")}}</dt>
- <dd>Информационное сообщение. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("console.log()")}}</dt>
- <dd>Общий метод вывода информации. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("console.profile()")}} {{Non-standard_inline}}</dt>
- <dd>Запускает профайлер, встроенный в браузер (например, <a href="/ru/docs/Tools/Производительность">Firefox performance tool</a>). Вы можете указать метку профиля (по желанию).</dd>
- <dt>{{domxref("console.profileEnd()")}} {{Non-standard_inline}}</dt>
- <dd>Останавливает профайлер.Вы можете посмотреть результат в инструментах анализа производительности браузера (например, <a href="/ru/docs/Tools/Производительность">Firefox performance tool</a>).</dd>
- <dt>{{domxref("console.table()")}}</dt>
- <dd>Отображает табличные данные в виде таблицы.</dd>
- <dt>{{domxref("console.time()")}}</dt>
- <dd>Запускает <a href="/ru/docs/Web/API/console#Timers">таймер</a> с именем из переданного параметра. Можно запустить одновременно до 10,000 таймеров на странице.</dd>
- <dt>{{domxref("console.timeEnd()")}}</dt>
- <dd>Останавливает указанный <a href="/ru/docs/Web/API/console#Timers">таймер</a> и записывает в лог, сколько прошло секунд от его старта.</dd>
- <dt>{{domxref("console.timeStamp()")}} {{Non-standard_inline}}</dt>
- <dd>Ставит маркер в браузерном инструменте измерения производительности <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> или <a href="/ru/docs/Tools/Производительность/Waterfall">Waterfall</a>.</dd>
- <dt>{{domxref("console.trace()")}}</dt>
- <dd>Вывод <a href="/ru/docs/Web/API/console#Stack_traces">трассировки стека</a>.</dd>
- <dt>{{domxref("console.warn()")}}</dt>
- <dd>Выводит предупреждающее сообщение. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
-</dl>
+- {{domxref("console.countReset()")}}
+  - : Обнуляет значение счётчика с заданным значением.
 
+<!---->
 
-<h2 id="Usage">Использование</h2>
+- {{domxref("console.debug()")}}
+  - : Синоним для `log()`
+- {{domxref("console.dir()")}} {{Non-standard_inline}}
+  - : Отображает интерактивный список свойств указанного объекта JavaScript. Этот список позволит вам посмотреть дочерние объекты и их свойства.
+- {{domxref("console.dirxml()")}} {{Non-standard_inline}}
+  - : Отображает представление указанного объекта в XML/HTML-виде, если это возможно. Если нет - в виде JavaScript-объекта (как в виде "console.dir()").
+- {{domxref("console.error()")}}
+  - : Выводит сообщение об ошибке. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+- {{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+  - : Синоним для `error();`
+- {{domxref("console.group()")}}
+  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения [группы ](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
+- {{domxref("console.groupCollapsed()")}}
+  - : Создаёт новую [группировку ](/ru/docs/Web/API/console#Using_groups_in_the_console)сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от `group()` вывод происходи в свёрнутую [группу](/ru/docs/Web/API/console#Using_groups_in_the_console), требующую раскрыть её вручную по кнопке. Для завершения [группы ](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
+- {{domxref("console.groupEnd()")}}
+  - : Выход из текущей [группы](/ru/docs/Web/API/console#Using_groups_in_the_console).
+- {{domxref("console.info()")}}
+  - : Информационное сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+- {{domxref("console.log()")}}
+  - : Общий метод вывода информации. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
+- {{domxref("console.profile()")}} {{Non-standard_inline}}
+  - : Запускает профайлер, встроенный в браузер (например, [Firefox performance tool](/ru/docs/Tools/Производительность)). Вы можете указать метку профиля (по желанию).
+- {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
+  - : Останавливает профайлер.Вы можете посмотреть результат в инструментах анализа производительности браузера (например, [Firefox performance tool](/ru/docs/Tools/Производительность)).
+- {{domxref("console.table()")}}
+  - : Отображает табличные данные в виде таблицы.
+- {{domxref("console.time()")}}
+  - : Запускает [таймер](/ru/docs/Web/API/console#Timers) с именем из переданного параметра. Можно запустить одновременно до 10,000 таймеров на странице.
+- {{domxref("console.timeEnd()")}}
+  - : Останавливает указанный [таймер](/ru/docs/Web/API/console#Timers) и записывает в лог, сколько прошло секунд от его старта.
+- {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
+  - : Ставит маркер в браузерном инструменте измерения производительности [Timeline](https://developer.chrome.com/devtools/docs/timeline) или [Waterfall](/ru/docs/Tools/Производительность/Waterfall).
+- {{domxref("console.trace()")}}
+  - : Вывод [трассировки стека](/ru/docs/Web/API/console#Stack_traces).
+- {{domxref("console.warn()")}}
+  - : Выводит предупреждающее сообщение. Для форматирования вы можете использовать [подстановочные символы (маски)](/ru/docs/Web/API/console#Using_string_substitutions) с дополнительными параметрами.
 
-<h3 id="Outputting_text_to_the_console" name="Outputting_text_to_the_console"><a id="Outputting_text_to_the_console">Вывод текста в консоль</a></h3>
+## Использование
 
-<p>Чаще всего Консоль используется для вывода строк текста и других типов данных. Существует четыре категории вывода, которые вы можете создавать, используя функции {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}. Их вывод стилизован по-разному, и вы можете использовать фильтры, предоставляемые браузером, чтобы видеть только интересующие вас вещи.</p>
+### Вывод текста в консоль
 
-<p>Есть два пути использования функций вывода; можно просто передать список объектов, чьё строковое представление сольётся в одну строку, после чего выведется в консоль, или вы можете использовать строку с подстановочными символами и списком объектов-параметров для подстановки в них.</p>
+Чаще всего Консоль используется для вывода строк текста и других типов данных. Существует четыре категории вывода, которые вы можете создавать, используя функции {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}. Их вывод стилизован по-разному, и вы можете использовать фильтры, предоставляемые браузером, чтобы видеть только интересующие вас вещи.
 
-<h4 id="Вывод_одного_объекта">Вывод одного объекта</h4>
+Есть два пути использования функций вывода; можно просто передать список объектов, чьё строковое представление сольётся в одну строку, после чего выведется в консоль, или вы можете использовать строку с подстановочными символами и списком объектов-параметров для подстановки в них.
 
-<p>Простейший способ для вывода одного объекта:</p>
+#### Вывод одного объекта
 
-<pre class="brush: js">var someObject = { str: "Some text", id: 5 };
+Простейший способ для вывода одного объекта:
+
+```js
+var someObject = { str: "Some text", id: 5 };
 console.log(someObject);
-</pre>
+```
 
-<p>Вывод будет таким:</p>
+Вывод будет таким:
 
-<pre>[09:27:13.475] ({str:"Some text", id:5})</pre>
+```
+[09:27:13.475] ({str:"Some text", id:5})
+```
 
-<h4 id="Вывод_нескольких_объектов">Вывод нескольких объектов</h4>
+#### Вывод нескольких объектов
 
-<p>Вы можете выводить несколько объектов, просто перечисляя их в вызываемой функции:</p>
+Вы можете выводить несколько объектов, просто перечисляя их в вызываемой функции:
 
-<pre class="brush: js">var car = "Dodge Charger";
+```js
+var car = "Dodge Charger";
 var someObject = {str:"Some text", id:5};
-console.info("My first car was a", car, ". The object is: ", someObject);</pre>
+console.info("My first car was a", car, ". The object is: ", someObject);
+```
 
-<p>Вывод будет таким:</p>
+Вывод будет таким:
 
-<pre>[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
-</pre>
+```
+[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+```
 
-<h4 id="Преобразование_строк_с_использованием_масок"><a id="Using_string_substitutions">Преобразование строк с использованием масок</a></h4>
+#### Преобразование строк с использованием масок
 
-<p>Gecko 9.0 {{geckoRelease("9.0")}} ввёл поддержку подстановочных символов (масок). При передаче строки одному из методов вы можете использовать следующие символы:</p>
+Gecko 9.0 {{geckoRelease("9.0")}} ввёл поддержку подстановочных символов (масок). При передаче строки одному из методов вы можете использовать следующие символы:
 
-<table class="standard-table" style="width: auto;">
- <tbody>
-  <tr>
-   <td class="header">Подстановочный символ</td>
-   <td class="header">Описание</td>
-  </tr>
-  <tr>
-   <td>%o или %O</td>
-   <td>Выводит ссылку на JavaScript-объект. Нажатие на ссылку приведёт к открытию инспектора кода.</td>
-  </tr>
-  <tr>
-   <td>%d или %i</td>
-   <td>Выведет целое число. Поддерживается форматирование, например, console.log("АБВГД %.2d", 1.1) выведет число как две значащих цифры с лидирующим нулём: АБВГД 01</td>
-  </tr>
-  <tr>
-   <td>%s</td>
-   <td>Выводит строку.</td>
-  </tr>
-  <tr>
-   <td>%f</td>
-   <td>Выводит число с плавающей точкой. Поддерживается форматирование, например, console.log("АБВГД %.2f", 1.1) выведет число до двух знаков после запятой: АБВГД 1.10</td>
-  </tr>
- </tbody>
-</table>
+| Подстановочный символ | Описание                                                                                                                                                         |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| %o или %O             | Выводит ссылку на JavaScript-объект. Нажатие на ссылку приведёт к открытию инспектора кода.                                                                      |
+| %d или %i             | Выведет целое число. Поддерживается форматирование, например, console.log("АБВГД %.2d", 1.1) выведет число как две значащих цифры с лидирующим нулём: АБВГД 01   |
+| %s                    | Выводит строку.                                                                                                                                                  |
+| %f                    | Выводит число с плавающей точкой. Поддерживается форматирование, например, console.log("АБВГД %.2f", 1.1) выведет число до двух знаков после запятой: АБВГД 1.10 |
 
-<p>Каждая из масок выбирает следующий аргумент из списка параметров. Пример:</p>
+Каждая из масок выбирает следующий аргумент из списка параметров. Пример:
 
-<pre>for (var i=0; i&lt;5; i++) {
+```
+for (var i=0; i<5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
-</pre>
+```
 
-<p>Вывод будет таким:</p>
+Вывод будет таким:
 
-<pre>[13:14:13.481] Hello, Bob. You've called me 1 times.
+```
+[13:14:13.481] Hello, Bob. You've called me 1 times.
 [13:14:13.483] Hello, Bob. You've called me 2 times.
 [13:14:13.485] Hello, Bob. You've called me 3 times.
 [13:14:13.487] Hello, Bob. You've called me 4 times.
 [13:14:13.488] Hello, Bob. You've called me 5 times.
-</pre>
+```
 
-<h4 id="Стилизация_вывода_консоли">Стилизация вывода консоли</h4>
+#### Стилизация вывода консоли
 
-<p>Можно  использовать директиву <code>"%c"</code> для применения стилей CSS при выводе в консоль. Часть текста до директивы не затрагивается стилем, а часть после - будет стилизована:</p>
+Можно использовать директиву `"%c"` для применения стилей CSS при выводе в консоль. Часть текста до директивы не затрагивается стилем, а часть после - будет стилизована:
 
-<pre class="brush: js">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");</pre>
+```js
+console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");
+```
 
-<div><img alt="" src="https://mdn.mozillademos.org/files/12527/CSS-styling.png" style="display: block; margin: 0 auto;"></div>
+![](https://mdn.mozillademos.org/files/12527/CSS-styling.png)
 
-<div class="note">
-<p><strong>Note</strong>: Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.</p>
-</div>
+> **Примечание:** Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.
 
-<h3>Группирование вывода в консоли</h3>
+### Группирование вывода в консоли
 
-<p>Вы можете использовать вложенные группы для организации вывода, визуально комбинируя связанный материал. Для создания вложенного блока вызовите <code>console.group()</code>. Метод <code>console.groupCollapsed()</code> похожий, но создаёт новый блок свёрнутым, что потребует нажать на кнопку, для своего раскрытия для чтения.</p>
+Вы можете использовать вложенные группы для организации вывода, визуально комбинируя связанный материал. Для создания вложенного блока вызовите `console.group()`. Метод `console.groupCollapsed()` похожий, но создаёт новый блок свёрнутым, что потребует нажать на кнопку, для своего раскрытия для чтения.
 
-<div class="note"><strong>Note:</strong> Свёрнутые группы не поддерживаются пока в Gecko; в настоящее время <code>метод groupCollapsed()</code> работает так же как и <code>group()</code>.</div>
+> **Примечание:** Свёрнутые группы не поддерживаются пока в Gecko; в настоящее время `метод groupCollapsed()` работает так же как и `group()`.
 
-<p>Для выхода из текущей группы просто вызовите <code>console.groupEnd()</code>. Пример:</p>
+Для выхода из текущей группы просто вызовите `console.groupEnd()`. Пример:
 
-<pre class="brush: js">console.log("This is the outer level");
+```js
+console.log("This is the outer level");
 console.group();
 console.log("Level 2");
 console.group();
@@ -190,36 +178,38 @@ console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
 console.debug("Back to the outer level");
-</pre>
+```
 
-<p>Вывод будет таким:</p>
+Вывод будет таким:
 
-<p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
+![nesting.png](/@api/deki/files/6082/=nesting.png)
 
-<h3>Таймеры</h3>
+### Таймеры
 
-<p>Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте <code>console</code>. Для запуска таймера вызовите функцию <code>console.time</code><code>(),</code> при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите <code>console.timeEnd()</code>, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.</p>
+Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте `console`. Для запуска таймера вызовите функцию ` console.time``(), ` при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите `console.timeEnd()`, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.
 
-<p>Рассмотрим пример:</p>
+Рассмотрим пример:
 
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>этот код запишет в веб-консоль время необходимое пользователю для того, чтобы закрыть окно <code>alert</code>:</p>
+этот код запишет в веб-консоль время необходимое пользователю для того, чтобы закрыть окно `alert`:
 
-<p><img alt="timerresult.png" class="default internal" src="/@api/deki/files/6084/=timerresult.png"></p>
+![timerresult.png](/@api/deki/files/6084/=timerresult.png)
 
-<p>Заметьте, что имя таймера отображено и при старте таймера и при его остановке.</p>
+Заметьте, что имя таймера отображено и при старте таймера и при его остановке.
 
-<div class="note"><strong>Заметьте:</strong> Это важно: если вы используете таймер для записи таймингов сетевого трафика, то таймер отобразит общее время для операции, в то время как время, отображаемое в панели "Сеть" это только время, требуемое для заголовка. Если у вас включено логирование времени тела ответа, то время ответа для заголовка и для тела должно соответствовать времени, которое вы у видите в консоли.</div>
+> **Примечание:** **Заметьте:** Это важно: если вы используете таймер для записи таймингов сетевого трафика, то таймер отобразит общее время для операции, в то время как время, отображаемое в панели "Сеть" это только время, требуемое для заголовка. Если у вас включено логирование времени тела ответа, то время ответа для заголовка и для тела должно соответствовать времени, которое вы у видите в консоли.
 
-<h3 id="Трассировка_стека_вызова">Трассировка стека вызова</h3>
+### Трассировка стека вызова
 
-<p>Консоль также поддерживает вывод трассировки стека; она покажет вам весь путь вызовов функций, пройденный до момента, когда вы вызвали {{domxref("console.trace()")}}. Например, такой код:</p>
+Консоль также поддерживает вывод трассировки стека; она покажет вам весь путь вызовов функций, пройденный до момента, когда вы вызвали {{domxref("console.trace()")}}. Например, такой код:
 
-<pre>foo();
+```
+foo();
 
 function foo() {
   function bar() {
@@ -227,35 +217,29 @@ function foo() {
   }
   bar();
 }
-</pre>
+```
 
-<p>Вывод в консоль будет похож на этот:</p>
+Вывод в консоль будет похож на этот:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7167/api-trace2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<ul>
- <li>По крайней мере в Firefox, если страница определяет свой объект <code>console</code>, то этот объект переопределяет объект <code>console</code>, встроенный в Firefox.</li>
- <li>До {{Gecko("12.0")}}, методы объекта <code>console</code> работали только, если открыта панель "Веб-консоль" (Web Console). Начиная с {{Gecko("12.0")}}, вывод кешируется до тех пор, пока панель Веб-консоль не откроется, и сразу отобразится в ней.</li>
- <li>Стоит отметить, что встроенный в Firefox объект <code>console</code> совместим с таким же объектом, предоставляемым плагином <a class="external" href="http://getfirebug.com/">Firebug</a>.</li>
-</ul>
+- По крайней мере в Firefox, если страница определяет свой объект `console`, то этот объект переопределяет объект `console`, встроенный в Firefox.
+- До {{Gecko("12.0")}}, методы объекта `console` работали только, если открыта панель "Веб-консоль" (Web Console). Начиная с {{Gecko("12.0")}}, вывод кешируется до тех пор, пока панель Веб-консоль не откроется, и сразу отобразится в ней.
+- Стоит отметить, что встроенный в Firefox объект `console` совместим с таким же объектом, предоставляемым плагином [Firebug](http://getfirebug.com/).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Tools" title="Tools">Tools</a></li>
- <li><a href="/ru/docs/Tools/Web_Console" title="Web Console">Веб-консоль</a> - как Веб-консоль в Firefox обрабатывает вызовы API-консоли</li>
- <li><a href="/ru/docs/Tools/Remote_Debugging">Удалённая отладка </a>- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве</li>
- <li><a href="/ru/Firefox_OS/Using_the_App_Manager">Отладка приложений в Firefox OS</a> - использование Менеджера приложений для отладки приложений, запущенных на Firefox OS</li>
- <li><a href="/ru/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging" title="/ru/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a> - как сделать логирование на устройствах на Firefox OS</li>
-</ul>
+- [Tools](/ru/docs/Tools "Tools")
+- [Веб-консоль](/ru/docs/Tools/Web_Console "Web Console") - как Веб-консоль в Firefox обрабатывает вызовы API-консоли
+- [Удалённая отладка ](/ru/docs/Tools/Remote_Debugging)- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве
+- [Отладка приложений в Firefox OS](/ru/Firefox_OS/Using_the_App_Manager) - использование Менеджера приложений для отладки приложений, запущенных на Firefox OS
+- [On-device console logging](/ru/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - как сделать логирование на устройствах на Firefox OS
 
-<h3 id="Реализации_в_браузерах">Реализации в браузерах</h3>
+### Реализации в браузерах
 
-<ul>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Google Chrome DevTools</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug</a></li>
- <li><a href="http://msdn.microsoft.com/ru/library/hh772173(v=vs.85).aspx">Internet Explorer</a></li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html">Safari</a></li>
-</ul>
+- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
+- [Firebug](http://getfirebug.com/wiki/index.php/Console_API)
+- [Internet Explorer](<http://msdn.microsoft.com/ru/library/hh772173(v=vs.85).aspx>)
+- [Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

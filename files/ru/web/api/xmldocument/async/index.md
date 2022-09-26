@@ -4,15 +4,16 @@ slug: Web/API/XMLDocument/async
 translation_of: Web/API/XMLDocument/async
 original_slug: Web/API/Document/async
 ---
-<p>{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
 
-<p><code>document.async</code> может быть установлен, для того, чтобы определить, что вызов {{domxref("document.load")}} должен быть выполнен синхронно или не синхронно. <code>true</code> - стандартное значение, определяющее, асинхронно ли должны быть загружены документы.</p>
+`document.async` может быть установлен, для того, чтобы определить, что вызов {{domxref("document.load")}} должен быть выполнен синхронно или не синхронно. `true` - стандартное значение, определяющее, асинхронно ли должны быть загружены документы.
 
-<p>(Загружать документы синхронно стало возможно с версии 1.4 alpha.)</p>
+(Загружать документы синхронно стало возможно с версии 1.4 alpha.)
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">function loadXMLData(e) {
+```js
+function loadXMLData(e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
 }
 
@@ -20,17 +21,14 @@ var xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');</pre>
+xmlDoc.load('querydata.xml');
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a></li>
-</ul>
+- [DOM Level 3 Load & Save module](http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/XML_in_Mozilla" title="XML_in_Mozilla">XML in Mozilla</a></li>
- <li>{{domxref("document.load")}}</li>
-</ul>
+- [XML in Mozilla](/ru/docs/XML_in_Mozilla "XML_in_Mozilla")
+- {{domxref("document.load")}}

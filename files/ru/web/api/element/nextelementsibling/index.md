@@ -4,55 +4,63 @@ slug: Web/API/Element/nextElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>NonDocumentTypeChildNode.nextElementSibling</strong></code> свойство только для чтения, возвращающее последующий элемент перед текущим, или <code>null</code>, если элемент является последним в своём родительском узле.</p>
+**`NonDocumentTypeChildNode.nextElementSibling`** свойство только для чтения, возвращающее последующий элемент перед текущим, или `null`, если элемент является последним в своём родительском узле.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>nextNode</em> = elementNodeReference.nextElementSibling; </pre>
+```
+var nextNode = elementNodeReference.nextElementSibling;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Это div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Это div-02&lt;/div&gt;
+```html
+<div id="div-01">Это div-01</div>
+<div id="div-02">Это div-02</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var el = document.getElementById('div-01').nextElementSibling;
   console.log('Сосед div-01:');
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Этот пример выведет в консоль следующее:</p>
+Этот пример выведет в консоль следующее:
 
-<pre>Сосед div-01:
+```
+Сосед div-01:
 DIV
-SCRIPT</pre>
+SCRIPT
+```
 
-<h2 id="Полифил_для_IE8">Полифил для IE8</h2>
+## Полифил для IE8
 
-<p>Данное свойство не поддерживается до IE9. Используйте следующий полифил, чтобы обойти этот недостаток:</p>
+Данное свойство не поддерживается до IE9. Используйте следующий полифил, чтобы обойти этот недостаток:
 
-<pre class="brush: js">// Источник: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
+```js
+// Источник: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
 if (!('nextElementSibling' in document.documentElement)) {
     Object.defineProperty(Element.prototype, 'nextElementSibling', {
         get: function() {
             var e = this.nextSibling;
-            while (e &amp;&amp; 1 !== e.nodeType) {
+            while (e && 1 !== e.nodeType) {
                 e = e.nextSibling;
             }
             return e;
         }
     });
-}</pre>
+}
+```
 
-<h2 id="Полифил_для_IE9_и_Safari">Полифил для IE9+ и Safari</h2>
+## Полифил для IE9+ и Safari
 
-<pre class="brush: js">// Источник: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
+```js
+// Источник: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
 (function(arr) {
     arr.forEach(function(item) {
         if (item.hasOwnProperty('nextElementSibling')) {
@@ -73,38 +81,21 @@ if (!('nextElementSibling' in document.documentElement)) {
             set: undefined
         });
     });
-})([Element.prototype, CharacterData.prototype]);</pre>
+})([Element.prototype, CharacterData.prototype]);
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-nextelementsibling', 'ChildNodenextElementSibling')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Split the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former.<br>
-    The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#attribute-nextElementSibling', 'ElementTraversal.nextElementSibling')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added its initial definition to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-nextelementsibling', 'ChildNodenextElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Split the `ElementTraversal` interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former. The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface. |
+| {{SpecName('Element Traversal', '#attribute-nextElementSibling', 'ElementTraversal.nextElementSibling')}}     | {{Spec2('Element Traversal')}} | Added its initial definition to the `ElementTraversal` pure interface and use it on {{domxref("Element")}}.                                                                                                                                                                                                                     |
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Чистый интерфейс {{domxref("ChildNode")}}.</li>
- <li>Типы объектов, реализующих этот чистый интерфейс: {{domxref("CharacterData")}}, {{domxref("Element")}}, и {{domxref("DocumentType")}}. </li>
-</ul>
+- Чистый интерфейс {{domxref("ChildNode")}}.
+- Типы объектов, реализующих этот чистый интерфейс: {{domxref("CharacterData")}}, {{domxref("Element")}}, и {{domxref("DocumentType")}}.

@@ -3,84 +3,53 @@ title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
 translation_of: Web/API/Document/createAttribute
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>Метод <code><strong>Document.createAttribute()</strong></code> создаёт новый атрибут узла и возвращает его.  Созданный объект узла реализует {{domxref("Attr")}} интерфейс . DOM не указывает, какие атрибуты могут быть добавлены к определённому элементу таким способом.</p>
+Метод **`Document.createAttribute()`** создаёт новый атрибут узла и возвращает его. Созданный объект узла реализует {{domxref("Attr")}} интерфейс . DOM не указывает, какие атрибуты могут быть добавлены к определённому элементу таким способом.
 
-<div class="note">
-<p>Строка, заданная в параметре, преобразуется в нижний регистр.</p>
-</div>
+> **Примечание:** Строка, заданная в параметре, преобразуется в нижний регистр.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>attribute</em> = document.createAttribute(name)
-</pre>
+```
+attribute = document.createAttribute(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>name</code> строка, содержащая имя атрибута.</li>
-</ul>
+- `name` строка, содержащая имя атрибута.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Attr")}} node.</p>
+A {{domxref("Attr")}} node.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li><code>INVALID_CHARACTER_ERR</code> если параметр содержит недопустимые символы для атрибута XML.</li>
-</ul>
+- `INVALID_CHARACTER_ERR` если параметр содержит недопустимые символы для атрибута XML.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var node = document.getElementById("div1");
+```js
+var node = document.getElementById("div1");
 var a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
-</pre>
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Точное поведение с прописными символами</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                           | Comment                                 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
+| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Точное поведение с прописными символами |
+| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | No change.                              |
+| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | No change.                              |
+| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Первоначальное определение.             |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Document.createElement()")}}</li>
-</ul>
+- {{domxref("Document.createElement()")}}

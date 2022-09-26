@@ -11,56 +11,50 @@ tags:
   - Экспериментальное
 translation_of: Web/API/BluetoothRemoteGATTServer
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>Интерфейс <code><strong>BluetoothRemoteGATTServer</strong></code>, относящийся к <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a>, представляет сервер GATT на удалённом устройстве.</p>
+Интерфейс **`BluetoothRemoteGATTServer`**, относящийся к [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API), представляет сервер GATT на удалённом устройстве.
 
-<div class="note">
-<p>Данная страница описывает Web Bluetooth API от W3C Community Group. <a href="/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer"><code>BluetoothGattServer</code> (Firefox OS)</a> - Bluetooth API в Firefox OS.</p>
-</div>
+> **Примечание:** Данная страница описывает Web Bluetooth API от W3C Community Group. [`BluetoothGattServer` (Firefox OS)](/ru/docs/Archive/B2G_OS/API/BluetoothGattServer) - Bluetooth API в Firefox OS.
 
-<h2 id="Интерфейс">Интерфейс</h2>
+## Интерфейс
 
-<pre class="syntaxbox">interface BluetoothRemoteGATTServer {
+```
+interface BluetoothRemoteGATTServer {
   readonly attribute BluetoothDevice device;
   readonly attribute boolean connected;
 
-  Promise&lt;BluetoothRemoteGATTServer&gt; connect();
+  Promise<BluetoothRemoteGATTServer> connect();
   void disconnect();
-  Promise&lt;BluetoothRemoteGATTService&gt; getPrimaryService(BluetoothServiceUUID service);
-  Promise&lt;sequence&lt;BluetoothRemoteGATTService&gt;&gt; getPrimaryServices(optional BluetoothServiceUUID service);
-};</pre>
+  Promise<BluetoothRemoteGATTService> getPrimaryService(BluetoothServiceUUID service);
+  Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices(optional BluetoothServiceUUID service);
+};
+```
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}</dt>
- <dd>Двоичное значение, равное <code>true</code>, если устройство <code>this.device</code> подключено. It can be false while the user agent is physically connected.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}</dt>
- <dd>{{DOMxRef("BluetoothDevice")}}, на котором работает сервер.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}
+  - : Двоичное значение, равное `true`, если устройство `this.device` подключено. It can be false while the user agent is physically connected.
+- {{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}
+  - : {{DOMxRef("BluetoothDevice")}}, на котором работает сервер.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.connect()")}}</dt>
- <dd>Подключение к устройству <code>this.device</code>.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}}</dt>
- <dd>Отключение от устройства <code>this.device</code>.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}</dt>
- <dd>Returns a promise to the primary {{DOMxRef("BluetoothGATTService")}} offered by the bluetooth device for a specified <code>BluetoothServiceUUID</code>.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}</dt>
- <dd>Returns a promise to a list of primary {{DOMxRef("BluetoothGATTService")}} objects offered by the bluetooth device for a specified <code>BluetoothServiceUUID</code>.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}}
+  - : Подключение к устройству `this.device`.
+- {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}}
+  - : Отключение от устройства `this.device`.
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}
+  - : Returns a promise to the primary {{DOMxRef("BluetoothGATTService")}} offered by the bluetooth device for a specified `BluetoothServiceUUID`.
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}
+  - : Returns a promise to a list of primary {{DOMxRef("BluetoothGATTService")}} objects offered by the bluetooth device for a specified `BluetoothServiceUUID`.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
+{{Compat}}
 
-
-<p>{{Compat}}</p>
-
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

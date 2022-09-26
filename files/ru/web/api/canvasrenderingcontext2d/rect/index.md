@@ -9,63 +9,63 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rect()</code></strong>, предоставляемый Canvas 2D API, создаёт контур прямоугольника в позиции <em>(x, y)</em>, размеры которого устанавливаются аргументами <em>width</em> и <em>height</em>. Четыре точки прямоугольника соединяются прямыми линиями, и получившийся фрагмент контура отмечается как замкнутый, так что вы можете выполнить его заливку или обрисовать контур.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.rect()`\*\*, предоставляемый Canvas 2D API, создаёт контур прямоугольника в позиции _(x, y)_, размеры которого устанавливаются аргументами _width_ и _height_. Четыре точки прямоугольника соединяются прямыми линиями, и получившийся фрагмент контура отмечается как замкнутый, так что вы можете выполнить его заливку или обрисовать контур.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rect(x, y, width, height);</var>
-</pre>
+```
+void ctx.rect(x, y, width, height);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Координата начальной точки прямоугольника по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата начальной точки прямоугольника по оси y.</dd>
- <dt><code>width</code></dt>
- <dd>Ширина прямоугольника.</dd>
- <dt><code>height</code></dt>
- <dd>Высота прямоугольника.</dd>
-</dl>
+- `x`
+  - : Координата начальной точки прямоугольника по оси x.
+- `y`
+  - : Координата начальной точки прямоугольника по оси y.
+- `width`
+  - : Ширина прямоугольника.
+- `height`
+  - : Высота прямоугольника.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_rect">Использование метода <code>rect</code></h3>
+### Использование метода `rect`
 
-<p>Ниже представлен простой фрагмент кода, использующий метод <code>rect</code> для создания контура. Для того чтобы нарисовать контур на холсте вы можете воспользоваться методами {{domxref("CanvasRenderingContext2D.fill", "fill()")}} или {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Обратите внимание так же на методы {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} и {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} которые могут сделать тоже самое за один раз .</p>
+Ниже представлен простой фрагмент кода, использующий метод `rect` для создания контура. Для того чтобы нарисовать контур на холсте вы можете воспользоваться методами {{domxref("CanvasRenderingContext2D.fill", "fill()")}} или {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Обратите внимание так же на методы {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} и {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} которые могут сделать тоже самое за один раз .
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,25 +88,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fill()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- {{domxref("CanvasRenderingContext2D.fill()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

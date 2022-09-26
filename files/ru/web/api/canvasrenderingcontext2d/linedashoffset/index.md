@@ -10,40 +10,37 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
+Свойство **`CanvasRenderingContext2D.lineDashOffset`** в Canvas 2D API устанавливает смещение штрихов, или «фаза».
 
+> **Примечание:** Линии нарисованы вызовом метода {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.
 
-<p>Свойство <code><strong>CanvasRenderingContext2D.lineDashOffset</strong></code> в Canvas 2D API устанавливает смещение штрихов, или «фаза».</p>
+## Синтаксис
 
-<div class="note">
-<p><strong>Примечание:</strong> Линии нарисованы вызовом метода  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.</p>
-</div>
+```
+ctx.lineDashOffset = value;
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+- `value`
+  - : Число с плавающей запятой, определяющее величину смещения штрихов линии. Значением по умолчанию является 0,0.
 
-<pre class="syntaxbox"><em>ctx</em>.lineDashOffset = <em>value</em>;
-</pre>
+## Примеры
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Число с плавающей запятой, определяющее величину смещения штрихов линии. Значением по умолчанию является 0,0.</dd>
-</dl>
+### Смещение штрихов
 
-<h2 id="Примеры">Примеры</h2>
+Этот пример рисует две пунктирные линии. Первая не имеет смещения. Вторая имеет смещение 4.
 
-<h3 id="Смещение_штрихов">Смещение штрихов</h3>
+#### HTML
 
-<p>Этот пример рисует две пунктирные линии. Первая не имеет смещения. Вторая имеет смещение 4.</p>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="HTML">HTML</h4>
+#### JavaScript
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([4, 16]);
@@ -61,38 +58,37 @@ ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>Линия со смещением будет нарисована красным цветом.</p>
+Линия со смещением будет нарисована красным цветом.
 
-<p>{{ EmbedLiveSample('Смещение_штрихов', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}</p>
+{{ EmbedLiveSample('Смещение_штрихов', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}
 
-<h3 id="Эффект_марширующих_муравьёв">Эффект марширующих муравьёв</h3>
+### Эффект марширующих муравьёв
 
-<p><a href="https://en.wikipedia.org/wiki/Marching_ants">Эффект марширующих муравьёв</a> - это техника анимации, часто встречающаяся в инструментах выбора программ компьютерной графики. Это помогает пользователю отличить границу выделения от фона изображения, анимируя границу..</p>
+[Эффект марширующих муравьёв](https://en.wikipedia.org/wiki/Marching_ants) - это техника анимации, часто встречающаяся в инструментах выбора программ компьютерной графики. Это помогает пользователю отличить границу выделения от фона изображения, анимируя границу..
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
-</div>
-
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let offset = 0;
 
-const draw = () =&gt; {
+const draw = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
   ctx.strokeRect(10, 10, 100, 100);
 }
 
-const march = () =&gt; {
+const march = () => {
   offset++;
-  if (offset &gt; 16) {
+  if (offset > 16) {
     offset = 0;
   }
   draw();
@@ -100,37 +96,29 @@ const march = () =&gt; {
 }
 
 march();
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Эффект_марширующих_муравьёв', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}</p>
+{{ EmbedLiveSample('Эффект_марширующих_муравьёв', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+### Специфичные для Gecko заметки
 
-<p>{{Compat}}</p>
+- `mozDashOffset` свойство будет объявлено устаревшим и будет удалено в будущем, смотрите {{bug(931643)}}. Вместо него используйте `lineDashOffset`.
 
-<h3 id="Специфичные_для_Gecko_заметки">Специфичные для Gecko заметки</h3>
+### Специфичные для WebKit заметки
 
-<ul>
- <li><code>mozDashOffset</code>  свойство будет объявлено устаревшим и будет удалено в будущем, смотрите {{bug(931643)}}. Вместо него используйте <code>lineDashOffset</code>.</li>
-</ul>
+- В браузерах на основе WebKit (например, Safari) помимо этого метода реализовано нестандартное и устаревшее свойство `webkitLineDashOffset`. Вместо него используйте `lineDashOffset`.
 
-<h3 id="Специфичные_для_WebKit_заметки">Специфичные для WebKit заметки</h3>
+## Смотрите также
 
-<ul>
- <li>В браузерах на основе WebKit (например, Safari) помимо этого метода реализовано нестандартное и устаревшее свойство <code>webkitLineDashOffset</code>. Вместо него используйте <code>lineDashOffset</code>.</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Применение стилей и цвета</a></li>
-</ul>
+- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
+- [Применение стилей и цвета](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

@@ -5,65 +5,36 @@ tags:
   - Комментарии
 translation_of: Web/API/Comment
 ---
-<p>Интерфейс <code><strong>Comment</strong></code> представляет собой текстовые записи в разметке; хотя, в основном, они не отображаются, такие комментарии доступны для чтения в исходном коде. Комментарии  представляются в  HTML и XML как контент, заключённый между  '<code>&lt;!--</code>' и '<code>--&gt;</code>'. В XML, последовательность символов '<code>--</code>' может не использоваться в комментариях.</p>
+Интерфейс **`Comment`** представляет собой текстовые записи в разметке; хотя, в основном, они не отображаются, такие комментарии доступны для чтения в исходном коде. Комментарии представляются в HTML и XML как контент, заключённый между '`<!--`' и '`-->`'. В XML, последовательность символов '`--`' может не использоваться в комментариях.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>У этого интерфейса нет конкретных свойств, но он наследует свойства родителя {{domxref("CharacterData")}}, и частично {{domxref("Node")}}.</em></p>
+_У этого интерфейса нет конкретных свойств, но он наследует свойства родителя {{domxref("CharacterData")}}, и частично {{domxref("Node")}}._
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}</dt>
- <dd>Возвращает объект <code>Comment</code> с параметрами в качестве его текстового содержимого.</dd>
-</dl>
+- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
+  - : Возвращает объект `Comment` с параметрами в качестве его текстового содержимого.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>У этого интерфейса нет конкретных методов, но он наследует методы родителя {{domxref("CharacterData")}}, и частично {{domxref("Node")}}.</em></p>
+_У этого интерфейса нет конкретных методов, но он наследует методы родителя {{domxref("CharacterData")}}, и частично {{domxref("Node")}}._
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#comment', 'Comment')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Добавлен конструктор</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Нет изменений по сравнению с {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Нет изменений по сравнению с {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Первое определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                           | Комментарий                                                   |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#comment', 'Comment')}}                             | {{Spec2('DOM WHATWG')}} | Добавлен конструктор                                          |
+| {{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM3 Core')}}     | Нет изменений по сравнению с {{SpecName('DOM2 Core')}} |
+| {{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM2 Core')}}     | Нет изменений по сравнению с {{SpecName('DOM1')}}     |
+| {{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}} | {{Spec2('DOM1')}}         | Первое определение                                            |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")

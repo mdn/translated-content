@@ -8,36 +8,31 @@ tags:
   - профилировщик
 translation_of: Web/API/Console/profile
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Запускает профайлер, встроенный в браузер (например, <a href="https://developer.mozilla.org/ru/docs/Tools/%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Firefox performance tool</a>).</p>
+Запускает профайлер, встроенный в браузер (например, [Firefox performance tool](/ru/docs/Tools/%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C)).
 
-<p>Вы можете указать аргумент, чтобы назвать профиль, это позволит вам остановить только этот профиль, если записывается несколько профилей. Смотрите {{domxref("Console.profileEnd()")}} чтобы понять, как этот аргумент интерпретируется.</p>
+Вы можете указать аргумент, чтобы назвать профиль, это позволит вам остановить только этот профиль, если записывается несколько профилей. Смотрите {{domxref("Console.profileEnd()")}} чтобы понять, как этот аргумент интерпретируется.
 
-<p>Останавливает профайлер {{domxref("Console.profileEnd()")}}.</p>
+Останавливает профайлер {{domxref("Console.profileEnd()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.profile(<em>profileName</em>);
-</pre>
+```
+console.profile(profileName);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>Вы можете указать метку профиля (по желанию).</dd>
-</dl>
+- `profileName`
+  - : Вы можете указать метку профиля (по желанию).
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Console.profileEnd()")}}</li>
-</ul>
+- {{domxref("Console.profileEnd()")}}

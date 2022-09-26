@@ -9,43 +9,41 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D.canvas</strong></code> является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.</p>
+Свойство **`CanvasRenderingContext2D.canvas`** является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.canvas;</pre>
+```
+ctx.canvas;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Создадим элемент {{HTMLElement("canvas")}}:</p>
+Создадим элемент {{HTMLElement("canvas")}}:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>Вы можете получить ссылку на этот элемент из объекта <code>CanvasRenderingContext2D,</code> используя свойство <code>canvas</code>:</p>
+Вы можете получить ссылку на этот элемент из объекта `CanvasRenderingContext2D,` используя свойство `canvas`:
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.canvas // HTMLCanvasElement
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}}
+- [Canvas API](/ru/docs/Web/API/Canvas_API)

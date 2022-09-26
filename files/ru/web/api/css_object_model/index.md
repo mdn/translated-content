@@ -6,168 +6,123 @@ tags:
   - CSSOM
 translation_of: Web/API/CSS_Object_Model
 ---
-<div>{{DefaultAPISidebar('CSSOM')}}</div>
+{{DefaultAPISidebar('CSSOM')}}
 
-<p class="summary"><strong>CSS Object Model</strong> представляет собой набор API-интерфейсов, позволяющих манипулировать CSS из JavaScript. Это очень похоже на DOM, но для CSS, а не HTML. Это позволяет пользователям динамически читать и изменять стиль CSS.</p>
+**CSS Object Model** представляет собой набор API-интерфейсов, позволяющих манипулировать CSS из JavaScript. Это очень похоже на DOM, но для CSS, а не HTML. Это позволяет пользователям динамически читать и изменять стиль CSS.
 
-<h2 id="Ссылки">Ссылки</h2>
+## Ссылки
 
-<div class="index">
-<ul>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>{{domxref("CaretPosition")}}</li>
- <li>{{domxref("CSS")}}</li>
- <li>{{domxref("CSSCharsetRule")}}</li>
- <li>{{domxref("CSSConditionRule")}}</li>
- <li>{{domxref("CSSCounterStyleRule")}}</li>
- <li>{{domxref("CSSFontFaceRule")}}</li>
- <li>{{domxref("CSSFontFeatureValuesMap")}}</li>
- <li>{{domxref("CSSFontFeatureValuesRule")}}</li>
- <li>{{domxref("CSSGroupingRule")}}</li>
- <li>{{domxref("CSSImportRule")}}</li>
- <li>{{domxref("CSSKeyframeRule")}}</li>
- <li>{{domxref("CSSKeyframesRule")}}</li>
- <li>{{domxref("CSSMarginRule")}}</li>
- <li>{{domxref("CSSMediaRule")}}</li>
- <li>{{domxref("CSSNamespaceRule")}}</li>
- <li>{{domxref("CSSPageRule")}}</li>
- <li>{{domxref("CSSRule")}}</li>
- <li>{{domxref("CSSRuleList")}}</li>
- <li>{{domxref("CSSStyleDeclaration")}}</li>
- <li>{{domxref("CSSStyleSheet")}}</li>
- <li>{{domxref("CSSStyleRule")}}</li>
- <li>{{domxref("CSSSupportsRule")}}</li>
- <li>{{domxref("CSSVariablesMap")}}</li>
- <li>{{domxref("CSSViewportRule")}}</li>
- <li>{{domxref("ElementCSSInlineStyle")}}</li>
- <li>{{DOMxRef("FontFace")}}</li>
- <li>{{DOMxRef("FontFaceSet")}}</li>
- <li>{{DOMxRef("FontFaceSetLoadEvent")}}</li>
- <li>{{domxref("GeometryUtils")}}</li>
- <li>{{domxref("GetStyleUtils")}}</li>
- <li>{{domxref("LinkStyle")}}</li>
- <li>{{domxref("MediaList")}}</li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
- <li>{{DOMxRef("MediaQueryListListener")}}</li>
- <li>{{domxref("PseudoElement")}}</li>
- <li>{{domxref("Screen")}}</li>
- <li>{{domxref("StyleSheet")}}</li>
- <li>{{domxref("StyleSheetList")}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
-</div>
+- {{domxref("AnimationEvent")}}
+- {{domxref("CaretPosition")}}
+- {{domxref("CSS")}}
+- {{domxref("CSSCharsetRule")}}
+- {{domxref("CSSConditionRule")}}
+- {{domxref("CSSCounterStyleRule")}}
+- {{domxref("CSSFontFaceRule")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
+- {{domxref("CSSFontFeatureValuesRule")}}
+- {{domxref("CSSGroupingRule")}}
+- {{domxref("CSSImportRule")}}
+- {{domxref("CSSKeyframeRule")}}
+- {{domxref("CSSKeyframesRule")}}
+- {{domxref("CSSMarginRule")}}
+- {{domxref("CSSMediaRule")}}
+- {{domxref("CSSNamespaceRule")}}
+- {{domxref("CSSPageRule")}}
+- {{domxref("CSSRule")}}
+- {{domxref("CSSRuleList")}}
+- {{domxref("CSSStyleDeclaration")}}
+- {{domxref("CSSStyleSheet")}}
+- {{domxref("CSSStyleRule")}}
+- {{domxref("CSSSupportsRule")}}
+- {{domxref("CSSVariablesMap")}}
+- {{domxref("CSSViewportRule")}}
+- {{domxref("ElementCSSInlineStyle")}}
+- {{DOMxRef("FontFace")}}
+- {{DOMxRef("FontFaceSet")}}
+- {{DOMxRef("FontFaceSetLoadEvent")}}
+- {{domxref("GeometryUtils")}}
+- {{domxref("GetStyleUtils")}}
+- {{domxref("LinkStyle")}}
+- {{domxref("MediaList")}}
+- {{domxref("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}
+- {{DOMxRef("MediaQueryListListener")}}
+- {{domxref("PseudoElement")}}
+- {{domxref("Screen")}}
+- {{domxref("StyleSheet")}}
+- {{domxref("StyleSheetList")}}
+- {{domxref("TransitionEvent")}}
 
-<p> </p>
+Несколько других интерфейсов также расширены спецификациями, связанными с CSSOM:
 
-<p dir="ltr" id="tw-target-text">Несколько других интерфейсов также расширены спецификациями, связанными с CSSOM:</p>
+{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.
 
-<p dir="ltr">{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.</p>
+### CSS Typed Object Model {{experimental_inline}}
 
-<h3 id="CSS_Typed_Object_Model">CSS Typed Object Model {{experimental_inline}}</h3>
+{{SeeCompatTable}}
 
-<p>{{SeeCompatTable}}</p>
+- {{DOMxRef("CSSImageValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSKeywordValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathInvert")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathMax")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathMin")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathNegate")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathProduct")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathSum")}} {{experimental_inline}}
+- {{DOMxRef("CSSMathValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSMatrixComponent")}} {{experimental_inline}}
+- {{DOMxRef("CSSNumericArray")}} {{experimental_inline}}
+- {{DOMxRef("CSSNumericValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSPerspective")}} {{experimental_inline}}
+- {{DOMxRef("CSSPositionValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSRotate")}} {{experimental_inline}}
+- {{DOMxRef("CSSScale")}} {{experimental_inline}}
+- {{DOMxRef("CSSSkew")}} {{experimental_inline}}
+- {{DOMxRef("CSSSkewX")}} {{experimental_inline}}
+- {{DOMxRef("CSSSkewY")}} {{experimental_inline}}
+- {{DOMxRef("CSSStyleValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSTransformComponent")}} {{experimental_inline}}
+- {{DOMxRef("CSSTransformValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSTranslate")}} {{experimental_inline}}
+- {{DOMxRef("CSSUnitValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSUnparsedValue")}} {{experimental_inline}}
+- {{DOMxRef("CSSVariableReferenceValue")}} {{experimental_inline}}
+- {{DOMxRef("StylePropertyMap")}} {{experimental_inline}}
+- {{DOMxRef("StylePropertyMapReadOnly")}} {{experimental_inline}}
 
-<div class="index">
-<ul>
- <li>{{DOMxRef("CSSImageValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSKeywordValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathInvert")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathMax")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathMin")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathNegate")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathProduct")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathSum")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMathValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSMatrixComponent")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSNumericArray")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSNumericValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSPerspective")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSPositionValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSRotate")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSScale")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSSkew")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSSkewX")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSSkewY")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSStyleValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSTransformComponent")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSTransformValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSTranslate")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSUnitValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSUnparsedValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("CSSVariableReferenceValue")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("StylePropertyMap")}} {{experimental_inline}}</li>
- <li>{{DOMxRef("StylePropertyMapReadOnly")}} {{experimental_inline}}</li>
-</ul>
-</div>
+### Устаревшие CSSOM interfaces {{obsolete_inline}}
 
-<h3 id="Obsolete_CSSOM_interfaces">Устаревшие CSSOM interfaces {{obsolete_inline}}</h3>
+{{obsolete_header}}
 
-<p>{{obsolete_header}}</p>
+- {{DOMxRef("CSSPrimitiveValue")}} {{obsolete_inline}}
+- {{DOMxRef("CSSValue")}} {{obsolete_inline}}
+- {{DOMxRef("CSSValueList")}} {{obsolete_inline}}
 
-<div class="index">
-<ul>
- <li>{{DOMxRef("CSSPrimitiveValue")}} {{obsolete_inline}}</li>
- <li>{{DOMxRef("CSSValue")}} {{obsolete_inline}}</li>
- <li>{{DOMxRef("CSSValueList")}} {{obsolete_inline}}</li>
-</ul>
-</div>
+## Уроки
 
-<h2 id="Уроки">Уроки</h2>
+- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
+- [Управление ориентацией экрана](/ru/docs/WebAPI/Managing_screen_orientation)
 
-<ul>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Определение размеров элементов</a> (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).</li>
- <li><a href="/en-US/docs/WebAPI/Managing_screen_orientation">Управление ориентацией экрана</a></li>
-</ul>
+## Спецификации
 
-<h2 id="Спецификации">Спецификации</h2>
+| Specification                                                                                               |
+| ----------------------------------------------------------------------------------------------------------- |
+| [CSS Object Model (CSSOM)](https://drafts.csswg.org/cssom/)                                                 |
+| [CSSOM View Module](https://drafts.csswg.org/cssom-view/)                                                   |
+| [CSS Fonts Module # object-model](https://drafts.csswg.org/css-fonts/#object-model)                         |
+| [CSS Animations # interface-dom](https://drafts.csswg.org/css-animations/#interface-dom)                    |
+| [CSS Conditional Rules Module # apis](https://drafts.csswg.org/css-conditional/#apis)                       |
+| [CSS Custom Properties for Cascading Variables Module # apis](https://drafts.csswg.org/css-variables/#apis) |
+| [CSS Counter Styles # apis](https://drafts.csswg.org/css-counter-styles/#apis)                              |
+| [CSS Device Adaptation Module # cssom](https://drafts.csswg.org/css-device-adapt/#cssom)                    |
+| [CSS Painting API # paint-worklet](https://drafts.css-houdini.org/css-paint-api/#paint-worklet)             |
+| [CSS Typed OM](https://drafts.css-houdini.org/css-typed-om/)                                                |
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://drafts.csswg.org/cssom/">CSS Object Model (CSSOM)</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/cssom-view/">CSSOM View Module</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-fonts/#object-model">CSS Fonts Module # object-model</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-animations/#interface-dom">CSS Animations # interface-dom</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-conditional/#apis">CSS Conditional Rules Module # apis</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-variables/#apis">CSS Custom Properties for Cascading Variables Module # apis</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-counter-styles/#apis">CSS Counter Styles # apis</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.csswg.org/css-device-adapt/#cssom">CSS Device Adaptation Module # cssom</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.css-houdini.org/css-paint-api/#paint-worklet">CSS Painting API # paint-worklet</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.css-houdini.org/css-typed-om/">CSS Typed OM</a></td>
-    </tr>
-  </tbody>
-</table>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+Все эти функции постепенно добавлялись в разные браузеры постепенно: это был довольно сложный процесс, который не может быть сведён в простую таблицу. Пожалуйста, обратитесь к конкретным интерфейсам для его доступности.
 
-<p>Все эти функции постепенно добавлялись в разные браузеры постепенно: это был довольно сложный процесс, который не может быть сведён в простую таблицу. Пожалуйста, обратитесь к конкретным интерфейсам для его доступности.</p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM)</a></li>
-</ul>
+- [Document Object Model (DOM)](/ru/docs/Web/API/Document_Object_Model)

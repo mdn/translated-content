@@ -3,24 +3,27 @@ title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
 translation_of: Web/API/MediaDevices/enumerateDevices
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>Метод <strong><code>MediaDevices.enumerateDevices()</code></strong> собирает информацию о медиа-устройствах ввода и вывода, доступных в системе.</p>
+Метод **`MediaDevices.enumerateDevices()`** собирает информацию о медиа-устройствах ввода и вывода, доступных в системе.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">navigator.mediaDevices.enumerateDevices()
-.then(function(MediaDeviceInfo) { ... })</pre>
+```
+navigator.mediaDevices.enumerateDevices()
+.then(function(MediaDeviceInfo) { ... })
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Возвращает {{ domxref("Promise") }} который, если выполнится успешно, вернёт массив экземпляров {{domxref("MediaDeviceInfo")}} , которые содержат информацию о доступных медиа-устройствах ввода и вывода.</p>
+Возвращает {{ domxref("Promise") }} который, если выполнится успешно, вернёт массив экземпляров {{domxref("MediaDeviceInfo")}} , которые содержат информацию о доступных медиа-устройствах ввода и вывода.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Ниже, пример, использующий метод <code>mediaDevices.enumerateDevices()</code>.</p>
+Ниже, пример, использующий метод `mediaDevices.enumerateDevices()`.
 
-<pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+```js
+if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() не поддерживается.");
   return;
 }
@@ -37,50 +40,52 @@ navigator.mediaDevices.enumerateDevices()
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<p>результат перечисления в цикле:</p>
+результат перечисления в цикле:
 
-<pre>videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```
+videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
-</pre>
+```
 
-<p>или, если один или более объектов {{domxref("MediaStream")}} активны,  или получены постоянные разрешения:</p>
+или, если один или более объектов {{domxref("MediaStream")}} активны, или получены постоянные разрешения:
 
-<pre>videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```
+videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
-</pre>
+```
 
-<h2 id="Разрешения">Разрешения</h2>
+## Разрешения
 
-<p>Что бы использовать метод  <code>enumerateDevices()</code> в устанавливаемом приложении  (к примеру в  <a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS приложение</a>), необходимо указать оба поля внутри файла манифеста приложения:</p>
+Что бы использовать метод `enumerateDevices()` в устанавливаемом приложении (к примеру в [Firefox OS приложение](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), необходимо указать оба поля внутри файла манифеста приложения:
 
-<pre class="brush: js">"permissions": {
+```js
+"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
   "video-capture": {
     "description": "Required to capture video using getUserMedia()"
   }
-}</pre>
+}
+```
 
-<p>Смотрите также : <a href="/en-US/Apps/Developing/App_permissions#audio-capture">разрешение: аудио захват</a> and <a href="/en-US/Apps/Developing/App_permissions#video-capture">разрешение : видео захват</a> в продолжение темы.</p>
+Смотрите также : [разрешение: аудио захват](/en-US/Apps/Developing/App_permissions#audio-capture) and [разрешение : видео захват](/en-US/Apps/Developing/App_permissions#video-capture) в продолжение темы.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" title="mediaDevices.getUserMedia">navigator.mediaDevices.getUserMedia</a></li>
- <li><a href="/en-US/docs/WebRTC" title="WebRTC">WebRTC</a> - the introductory page to the API</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API" title="WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos" title="WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
-</ul>
+- [navigator.mediaDevices.getUserMedia](/ru/docs/Web/API/MediaDevices/getUserMedia "mediaDevices.getUserMedia")
+- [WebRTC](/ru/docs/WebRTC "WebRTC") - the introductory page to the API
+- [MediaStream API](/ru/docs/WebRTC/MediaStream_API "WebRTC/MediaStream_API") - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos "WebRTC/taking_webcam_photos") - a tutorial on using `getUserMedia() for taking photos rather than video.`

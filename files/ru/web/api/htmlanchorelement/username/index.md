@@ -10,33 +10,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.username</code></strong> – это {{domxref("USVString")}}, содержащий имя пользователя, указанное перед именем домена.</p>
+Свойство **`HTMLHyperlinkElementUtils.username`** – это {{domxref("USVString")}}, содержащий имя пользователя, указанное перед именем домена.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.username;
-<em>object</em>.username = <em>string</em>;
-</pre>
+```
+string = object.username;
+object.username = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Вернёт: 'anonymous'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

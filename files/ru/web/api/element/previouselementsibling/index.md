@@ -4,65 +4,69 @@ slug: Web/API/Element/previousElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>NonDocumentTypeChildNode.previousElementSibling</strong></code> только для чтения возвращает  {{domxref("Element")}} элемент стоящий перед применяемым, из списка дочерних элементов родителя или возвращает null, если таковых не имеется.</p>
+Свойство **`NonDocumentTypeChildNode.previousElementSibling`** только для чтения возвращает {{domxref("Element")}} элемент стоящий перед применяемым, из списка дочерних элементов родителя или возвращает null, если таковых не имеется.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>prevNode</var> = elementNodeReference.previousElementSibling;
-</pre>
+```
+prevNode = elementNodeReference.previousElementSibling;
+```
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
-&lt;li&gt;This is a list item&lt;/li&gt;
-&lt;li&gt;This is another list item&lt;/li&gt;
-&lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
+<li>This is a list item</li>
+<li>This is another list item</li>
+<div id="div-03">Here is div-03</div>
 
-&lt;script&gt;
+<script>
   var el = document.getElementById('div-03').previousElementSibling;
-  document.write('&lt;p&gt;Siblings of div-03&lt;/p&gt;&lt;ol&gt;');
+  document.write('<p>Siblings of div-03</p><ol>');
   while (el) {
-    document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+    document.write('<li>' + el.nodeName + '</li>');
     el = el.previousElementSibling;
   }
-  document.write('&lt;/ol&gt;');
-&lt;/script&gt;
-</pre>
+  document.write('</ol>');
+</script>
+```
 
-<p>Этот пример выводит следующие элементы на страницу при загрузке:</p>
+Этот пример выводит следующие элементы на страницу при загрузке:
 
-<pre>Соседи div-03
+```
+Соседи div-03
 
    1. LI
    2. LI
    3. DIV
    4. DIV
-</pre>
+```
 
-<h2 id="Полифил_для_Internet_Explorer_8">Полифил для Internet Explorer 8</h2>
+## Полифил для Internet Explorer 8
 
-<p>Это свойство поддерживается начиная с версии IE9, поэтому следующий фрагмент поддерживается, и может использоваться для IE8:</p>
+Это свойство поддерживается начиная с версии IE9, поэтому следующий фрагмент поддерживается, и может использоваться для IE8:
 
-<pre class="brush: js">// Ресурс: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
+```js
+// Ресурс: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
 if(!("previousElementSibling" in document.documentElement)){
     Object.defineProperty(Element.prototype, "previousElementSibling", {
         get: function(){
             var e = this.previousSibling;
-            while(e &amp;&amp; 1 !== e.nodeType)
+            while(e && 1 !== e.nodeType)
                 e = e.previousSibling;
             return e;
         }
     });
-}</pre>
+}
+```
 
-<h2 id="Specification">Полифил для  Internet Explorer 9+ и Safari</h2>
+## Полифил для Internet Explorer 9+ и Safari
 
-<pre class="brush: js">// Ресурс: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/previousElementSibling/previousElementSibling.md
+```js
+// Ресурс: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/previousElementSibling/previousElementSibling.md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('previousElementSibling')) {
@@ -83,38 +87,21 @@ if(!("previousElementSibling" in document.documentElement)){
       set: undefined
     });
   });
-})([Element.prototype, CharacterData.prototype]);</pre>
+})([Element.prototype, CharacterData.prototype]);
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling', 'NonDocumentTypeChildNode.previousElementSibling')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Splitted the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former.<br>
-    The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#attribute-previousElementSibling', 'ElementTraversal.previousElementSibling')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added its initial definition to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                                                                     | Статус                                   | Комментарии                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling', 'NonDocumentTypeChildNode.previousElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Splitted the `ElementTraversal` interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former. The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface. |
+| {{SpecName('Element Traversal', '#attribute-previousElementSibling', 'ElementTraversal.previousElementSibling')}}                         | {{Spec2('Element Traversal')}} | Added its initial definition to the `ElementTraversal` pure interface and use it on {{domxref("Element")}}.                                                                                                                                                                                                                        |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li> {{domxref("NonDocumentTypeChildNode")}} чистый интерфейс.</li>
- <li>Типы объектов реализующие чистый интерфейс: {{domxref("CharacterData")}}, и {{domxref("Element")}}.</li>
-</ul>
+- {{domxref("NonDocumentTypeChildNode")}} чистый интерфейс.
+- Типы объектов реализующие чистый интерфейс: {{domxref("CharacterData")}}, и {{domxref("Element")}}.

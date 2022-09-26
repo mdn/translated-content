@@ -3,64 +3,53 @@ title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 translation_of: Web/API/ANGLE_instanced_arrays
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>Расширение <strong>ANGLE_instanced_arrays</strong> является частью API WebGL и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, если они используют одни и те же данные вершин, количество примитивов и тип.</p>
+Расширение **ANGLE_instanced_arrays** является частью API WebGL и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, если они используют одни и те же данные вершин, количество примитивов и тип.
 
-<p>Доступ к WebGL расширениям можно получить с помощью метода {{domxref("WebGLRenderingContext.getExtension()")}}. Для получения дополнительной информации см. также в <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Использование расширений</a> в  <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL руководстве</a>.</p>
+Доступ к WebGL расширениям можно получить с помощью метода {{domxref("WebGLRenderingContext.getExtension()")}}. Для получения дополнительной информации см. также в [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [WebGL руководстве](/ru/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Доступность:</strong> Это расширение доступно только для {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} контекстов. В {{domxref ("WebGL2RenderingContext", "WebGL2", "", 1)}}, функциональность этого расширения доступна в контексте WebGL2 по умолчанию, а константы и методы доступны без суффикса " <code>ANGLE</code> ".</p>
+> **Примечание:** **Доступность:** Это расширение доступно только для {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} контекстов. В {{domxref ("WebGL2RenderingContext", "WebGL2", "", 1)}}, функциональность этого расширения доступна в контексте WebGL2 по умолчанию, а константы и методы доступны без суффикса " `ANGLE` ".
+>
+> Несмотря на название " ANGLE ", это расширение работает на любом устройстве, если аппаратное обеспечение поддерживает его, а не только на Windows при использовании библиотеки ANGLE . " ANGLE " просто указывает, что это расширение было написано авторами библиотеки ANGLE.
 
-<p>Несмотря на название " ANGLE ", это расширение работает на любом устройстве, если аппаратное обеспечение поддерживает его, а не только на Windows при использовании библиотеки ANGLE . " ANGLE " просто указывает, что это расширение было написано авторами библиотеки ANGLE.</p>
-</div>
+## Константы
 
-<h2 id="Константы">Константы</h2>
+Это расширение предоставляет одну новую константу, которую можно использовать в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} методе:
 
-<p>Это расширение предоставляет одну новую константу, которую можно использовать в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} методе:</p>
+- `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
+  - : Возвращает {{domxref("GLint")}} , описывающий частотный делитель, используемый для упомянутого перевода в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} в качестве параметра `pname`.
 
-<dl>
- <dt><code>ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE</code></dt>
- <dd>Возвращает {{domxref("GLint")}} , описывающий частотный делитель, используемый для упомянутого перевода в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} в качестве параметра <code>pname</code>.</dd>
-</dl>
+## Методы
 
-<h2 id="Методы">Методы</h2>
+Это расширение предоставляет три новых метода:
 
-<p>Это расширение предоставляет три новых метода:</p>
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+  - : Behaves identically to {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} except that multiple instances of the range of elements are executed, and the instance advances for each iteration.
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+  - : Ведёт себя идентично {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} за исключением того, что выполняется несколько экземпляров набора элементов и экземпляр перемещается между каждым набором
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
+  - : Изменяет скорость продвижения общих атрибутов вершин при визуализации нескольких экземпляров примитивов с помощью {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} и {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.
 
-<dl>
- <dt>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}</dt>
- <dd>
- <p>Behaves identically to {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} except that multiple instances of the range of elements are executed, and the instance advances for each iteration.</p>
- </dd>
- <dt>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}</dt>
- <dd>Ведёт себя идентично {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} за исключением того, что выполняется несколько экземпляров набора элементов и экземпляр перемещается между каждым набором</dd>
- <dt>{{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}</dt>
- <dd>
- <p>Изменяет скорость продвижения общих атрибутов вершин при визуализации нескольких экземпляров примитивов с помощью {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} и {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.</p>
- </dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+Включение расширения:
 
-<p>Включение расширения:</p>
+```js
+var ext = gl.getExtension('ANGLE_instanced_arrays');
+```
 
-<pre class="brush: js">var ext = gl.getExtension('ANGLE_instanced_arrays');
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

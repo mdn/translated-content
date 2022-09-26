@@ -3,40 +3,42 @@ title: GamepadEvent.gamepad
 slug: Web/API/GamepadEvent/gamepad
 translation_of: Web/API/GamepadEvent/gamepad
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>GamepadEvent.gamepad</strong></code>, интерфейса <strong>{{domxref("GamepadEvent")}},</strong> возвращает объект {{domxref("Gamepad")}}, предоставляющий доступ к данным геймпада для событий <code><a href="/ru/docs/Web/Events/gamepadconnected">gamepadconnected</a></code> и <code><a href="/ru/docs/Web/Events/gamepaddisconnected">gamepaddisconnected</a></code>.</p>
+Свойство **`GamepadEvent.gamepad`**, интерфейса **{{domxref("GamepadEvent")}},** возвращает объект {{domxref("Gamepad")}}, предоставляющий доступ к данным геймпада для событий [`gamepadconnected`](/ru/docs/Web/Events/gamepadconnected) и [`gamepaddisconnected`](/ru/docs/Web/Events/gamepaddisconnected).
 
-<div class="note">
-<p><strong>Примечание</strong>: Эти события не возникают Chrome, только в Firefox. В Chrome вы должны использовать {{domxref("Navigator.getGamepads")}} для доступа к объекту {{domxref("Gamepad")}}.</p>
-</div>
+> **Примечание:** Эти события не возникают Chrome, только в Firefox. В Chrome вы должны использовать {{domxref("Navigator.getGamepads")}} для доступа к объекту {{domxref("Gamepad")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute Gamepad gamepad;</pre>
+```
+readonly    attribute Gamepad gamepad;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Свойство <code>gamepad</code> будет передано при возникновении события <code><a href="/ru/docs/Web/Events/gamepadconnected">Window.gamepadconnected</a></code>.</p>
+Свойство `gamepad` будет передано при возникновении события [`Window.gamepadconnected`](/ru/docs/Web/Events/gamepadconnected).
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Объект {{domxref("Gamepad")}}.</p>
+Объект {{domxref("Gamepad")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

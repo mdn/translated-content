@@ -7,74 +7,59 @@ tags:
   - Текст
 translation_of: Web/API/Text
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>Интерфейс <strong><code>Text</code></strong> представляет собой текстовое содержание (элемента) {{domxref("Element")}} или {{domxref("Attr")}}.  Если элемент не имеет разметки внутри собственного содержимого, то он интерпретируется как a single child (implementing) <code>Text</code> ,который содержит текст элемента.  Однако, если элемент содержит разметку, он разбивается на information items и <code>Text</code> nodes ,которые образуют его дочерние элементы.</p>
+Интерфейс **`Text`** представляет собой текстовое содержание (элемента) {{domxref("Element")}} или {{domxref("Attr")}}. Если элемент не имеет разметки внутри собственного содержимого, то он интерпретируется как a single child (implementing) `Text` ,который содержит текст элемента. Однако, если элемент содержит разметку, он разбивается на information items и `Text` nodes ,которые образуют его дочерние элементы.
 
-<p>Новые документы имеют единственный(одиночный) <code>Text</code> node для каждого блока текста. Со временем, могут быть созданы новые <code>Text</code> nodes, по мере того, как изменяется содержимое документа.  Метод {{domxref("Node.normalize()")}} производит слияние смежных объектов <code>Text </code>обратно в a single node для каждого блока текста.</p>
+Новые документы имеют единственный(одиночный) `Text` node для каждого блока текста. Со временем, могут быть созданы новые `Text` nodes, по мере того, как изменяется содержимое документа. Метод {{domxref("Node.normalize()")}} производит слияние смежных объектов `Text `обратно в a single node для каждого блока текста.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Methods">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("Text.Text", "Text()")}} {{experimental_inline}}</dt>
- <dd>Возвращает <code>Text</code> node с параметром, который представляет собой его текстовое содержимое.</dd>
-</dl>
+- {{domxref("Text.Text", "Text()")}} {{experimental_inline}}
+  - : Возвращает `Text` node с параметром, который представляет собой его текстовое содержимое.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Inherits properties from its parent, {{domxref("CharacterData")}}.</em></p>
+_Inherits properties from its parent, {{domxref("CharacterData")}}._
 
-<dl>
- <dt>{{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}</dt>
- <dd>
- <p>Возвращает флаг {{domxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).</p>
- </dd>
- <dt>{{domxref("Text.wholeText")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}}, который содержит все <code>Text</code> nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.</dd>
- <dt>{{domxref("Text.assignedSlot")}} {{readonlyinline}}</dt>
- <dd>Возвращает объект {{domxref("HTMLSlotElement")}}, связанный с этим элементом.</dd>
-</dl>
+- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}
+  - : Возвращает флаг {{domxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).
+- {{domxref("Text.wholeText")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}}, который содержит все `Text` nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.
+- {{domxref("Text.assignedSlot")}} {{readonlyinline}}
+  - : Возвращает объект {{domxref("HTMLSlotElement")}}, связанный с этим элементом.
 
-<h3 id="Свойства_(included)_от_Slotable">Свойства (included) от Slotable</h3>
+### Свойства (included) от Slotable
 
-<p><em>Интерфейс <code>Text</code>включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}} .</em></p>
+_Интерфейс `Text`включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}} ._
 
-<dl>
- <dt>{{domxref("Slotable.assignedSlot")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("HTMLSlotElement")}}, представляющий {{htmlelement("slot")}}, в который вставлен данный узел.</dd>
-</dl>
+- {{domxref("Slotable.assignedSlot")}} {{readonlyInline}}
+  - : Возвращает {{domxref("HTMLSlotElement")}}, представляющий {{htmlelement("slot")}}, в который вставлен данный узел.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Наследует родительские методы, {{domxref("CharacterData")}}.</em></p>
+_Наследует родительские методы, {{domxref("CharacterData")}}._
 
-<dl>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}</dt>
- <dd>Заменяет текст текущего узла и  всех логически прилегающих узлов указанным текстом(with the specified text).</dd>
-</dl>
+- {{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}
+  - : Заменяет текст текущего узла и всех логически прилегающих узлов указанным текстом(with the specified text).
 
-<dl>
- <dt>{{domxref("Text.splitText")}}</dt>
- <dd>Разбивает узел на два узла с заданным отступом.</dd>
-</dl>
+<!---->
 
-<h2 id="Спецификации">Спецификации</h2>
+- {{domxref("Text.splitText")}}
+  - : Разбивает узел на два узла с заданным отступом.
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотри(те) также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотри(те)_также">Смотри(те) также</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
-</ul>
+- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference).

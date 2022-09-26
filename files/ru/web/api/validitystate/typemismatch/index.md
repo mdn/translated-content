@@ -9,76 +9,60 @@ tags:
   - Справочник
 browser-compat: api.ValidityState.typeMismatch
 ---
-<p>Доступное только для чтения свойство <strong><code>typeMismatch</code></strong> объекта <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута <code><a href="/ru/docs/Web/HTML/Element/input#input_types">type</a></code>.</p>
+Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Element/input#input_types).
 
-<p>Если атрибут <code>type</code> получает типы вроде {{HTMLElement("input/email", "email")}} или {{HTMLElement("input/url", "url")}}, а значение не соответствует ограничениям данного типа, свойство <code>typeMismatch</code> будет true.</p>
+Если атрибут `type` получает типы вроде {{HTMLElement("input/email", "email")}} или {{HTMLElement("input/url", "url")}}, а значение не соответствует ограничениям данного типа, свойство `typeMismatch` будет true.
 
-<p>Тип {{HTMLElement("input/email", "email")}} допускает ввод одного или нескольких email-адресов, в зависимости от наличия атрибута <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code>. Валидный email-адрес включает префикс электронной почты и домен, с доменом верхнего уровня или без него. Если значение поля email-адреса не является пустой строкой, одним или несколькими email-адресами, разделёнными запятой (если присутствует атрибут <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code>), то это <code>typeMismatch</code>.</p>
+Тип {{HTMLElement("input/email", "email")}} допускает ввод одного или нескольких email-адресов, в зависимости от наличия атрибута [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple). Валидный email-адрес включает префикс электронной почты и домен, с доменом верхнего уровня или без него. Если значение поля email-адреса не является пустой строкой, одним или несколькими email-адресами, разделёнными запятой (если присутствует атрибут [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)), то это `typeMismatch`.
 
-<p>Тип {{HTMLElement("input/url", "url")}} допускает ввода одного или нескольких url-адресов, в зависимости от наличия атрибута <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code>. Валидный URL-адрес включает протокол с IP-адресом или комбинацией поддоменом, домена и домен верхнего уровня. Если значение поля URL не ялвяется пустой строкой, одним или несколькими URL-адресами, разделёнными запятой (если присутствует атрибут <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code>), то это <code>typeMismatch</code>.</p>
+Тип {{HTMLElement("input/url", "url")}} допускает ввода одного или нескольких url-адресов, в зависимости от наличия атрибута [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple). Валидный URL-адрес включает протокол с IP-адресом или комбинацией поддоменом, домена и домен верхнего уровня. Если значение поля URL не ялвяется пустой строкой, одним или несколькими URL-адресами, разделёнными запятой (если присутствует атрибут [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)), то это `typeMismatch`.
 
-<table class="standard-table">
- <caption>Соответствие атрибуту <code>type</code></caption>
- <thead>
-  <tr>
-   <th>Тип input</th>
-   <th>Значение</th>
-   <th>Ожидаемое значение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("input/email", "email")}}</td>
-   <td><code>x@y</code> или <code>x@y.z</code></td>
-   <td>Email-адрес с или без <a href="/en-US/docs/Glossary/TLD">TLD</a></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/url", "url")}}</td>
-   <td><code>x:</code> или <code>x://y.z</code></td>
-   <td>Протокол или полный URL с протоколом</td>
-  </tr>
- </tbody>
-</table>
+| Тип input                                            | Значение           | Ожидаемое значение                                 |
+| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{HTMLElement("input/email", "email")}} | `x@y` или `x@y.z`  | Email-адрес с или без [TLD](/ru/docs/Glossary/TLD) |
+| {{HTMLElement("input/url", "url")}}     | `x:` или `x://y.z` | Протокол или полный URL с протоколом               |
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Учитывая следующее:</p>
+Учитывая следующее:
 
-<pre class="brush: html">&lt;p&gt;
- &lt;label&gt;
+```html
+<p>
+ <label>
     Enter an email address:
-    &lt;input type="email" value="example.com"/&gt;
- &lt;/label&gt;
-&lt;/p&gt;
-&lt;p&gt;
- &lt;label&gt;
+    <input type="email" value="example.com"/>
+ </label>
+</p>
+<p>
+ <label>
      Enter a URL:
-     &lt;input type="url" value="example.com"/&gt;
-  &lt;/label&gt;
-&lt;/p&gt;</pre>
+     <input type="url" value="example.com"/>
+  </label>
+</p>
+```
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   border: red solid 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 300, 40)}}</p>
+{{EmbedLiveSample("Examples", 300, 40)}}
 
-<p>В примере выше в обоих полях происходит <code>typeMismatch</code>, потому что email-адрес является просто доменом, а URL не содержит протокол</p>
+В примере выше в обоих полях происходит `typeMismatch`, потому что email-адрес является просто доменом, а URL не содержит протокол
 
-<p><code>typeMismatch</code> происходит при несоответствии <code><a href="/en-US/docs/Web/HTML/Attributes/value">значения</a></code>, заданного в атрибуте <code><a href="/ru/docs/Web/HTML/Element/input#%3cinput%3e_types">type</a></code> и содержимым поля. <code>typeMismatch</code> является лишь одной из возможных ошибок и возможна только для полей {{HTMLElement("input/email", "email")}} и {{HTMLElement("input/url", "url")}}. Когда введённое значение не соответствует ожидаемому для других полей ввода, в зависимости от типа поля будут возникать разные ошибки. Например, если в поле {{HTMLElement("input/number", "number")}} ввести значение не являющееся числом с плавающей запятой, <code>badInput</code> будет <code>true</code>. Если <code><a href="/en-US/docs/Web/HTML/Attributes/required">обязательное</a> поле email не заполнено</code>, {{domxref('ValidityState.valueMissing','valueMissing')}} будет <code>true</code>.</p>
+`typeMismatch` происходит при несоответствии [`значения`](/en-US/docs/Web/HTML/Attributes/value), заданного в атрибуте [`type`](/ru/docs/Web/HTML/Element/input#%3cinput%3e_types) и содержимым поля. `typeMismatch` является лишь одной из возможных ошибок и возможна только для полей {{HTMLElement("input/email", "email")}} и {{HTMLElement("input/url", "url")}}. Когда введённое значение не соответствует ожидаемому для других полей ввода, в зависимости от типа поля будут возникать разные ошибки. Например, если в поле {{HTMLElement("input/number", "number")}} ввести значение не являющееся числом с плавающей запятой, `badInput` будет `true`. Если `обязательное поле email не заполнено`, {{domxref('ValidityState.valueMissing','valueMissing')}} будет `true`.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
- <li><a href="/ru/docs/Learn/Forms/Form_validation">Валидация форм на стороне клиента</a></li>
- <li><a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">Регулярные выражения</a></li>
-</ul>
+- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)
+- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)

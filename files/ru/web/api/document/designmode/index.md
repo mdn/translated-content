@@ -11,36 +11,35 @@ tags:
   - editor
 translation_of: Web/API/Document/designMode
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p><code>document.designMode</code> переключает режим редактирования для всего документа. Допустимые значения: "on" и "off". В соответствии со спецификацией, это свойство по умолчанию имеет значение "off". Firefox следует этому стандарту. В более ранних версии Chrome и IE это свойство по умолчанию имеет значение "inherit". Начиная с Chrome 43 значение по умолчанию "off", а значение "inherit" более не поддерживается. В IE6-10 значение должно быть указанно с большой буквы ("On" и "Off") </p>
+`document.designMode` переключает режим редактирования для всего документа. Допустимые значения: "on" и "off". В соответствии со спецификацией, это свойство по умолчанию имеет значение "off". Firefox следует этому стандарту. В более ранних версии Chrome и IE это свойство по умолчанию имеет значение "inherit". Начиная с Chrome 43 значение по умолчанию "off", а значение "inherit" более не поддерживается. В IE6-10 значение должно быть указанно с большой буквы ("On" и "Off")
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre><code>var mode = document.designMode;
-document.designMode = "on" </code>|| "off";</pre>
+```
+var mode = document.designMode;
+document.designMode = "on" || "off";
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Включить режим редактирования для {{HTMLElement("iframe")}} :</p>
+Включить режим редактирования для {{HTMLElement("iframe")}} :
 
-<pre><code>iframeNode</code>.contentDocument.designMode = "on";
-</pre>
+```
+iframeNode.contentDocument.designMode = "on";
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами" style="font-size: 2.14285714285714rem;">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## Смотрите также
 
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing в Mozilla</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li><a href="https://msdn.microsoft.com/ru-ru/library/ms533720(v=vs.85).aspx">Свойство designMode</a> на MSDN</li>
-</ul>
+- [Rich-Text Editing в Mozilla](/ru/docs/Rich-Text_Editing_in_Mozilla)
+- {{domxref("HTMLElement.contentEditable")}}
+- [Свойство designMode](<https://msdn.microsoft.com/ru-ru/library/ms533720(v=vs.85).aspx>) на MSDN

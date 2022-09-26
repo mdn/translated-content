@@ -3,51 +3,50 @@ title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 translation_of: Web/API/MouseEvent/ctrlKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Свойство только для чтения <strong><code>MouseEvent.ctrlKey</code></strong> возвращает true, когда клавиша Ctrl была нажата, а если нет - false.</p>
+Свойство только для чтения **`MouseEvent.ctrlKey`** возвращает true, когда клавиша Ctrl была нажата, а если нет - false.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>ctrlKeyPressed</em> = <em>instanceOfMouseEvent</em>.ctrlKey
-</pre>
+```
+var ctrlKeyPressed = instanceOfMouseEvent.ctrlKey
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Boolean</p>
+Boolean
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Пример с ctrlKey&lt;/title&gt;
+```js
+<html>
+<head>
+<title>Пример с ctrlKey</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 document.addEventListener('click', function(e) {
   console.log('Нажата клавиша Ctrl?', e.ctrlKey);
 })
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p&gt;
+<body>
+<p>
 Кликните в любое место на странице и откройте консоль разработчика, чтобы узнать - нажата ли клавиша Ctrl?
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</p>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузеров</h2>
+## Поддержка браузеров
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

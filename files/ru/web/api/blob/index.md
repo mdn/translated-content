@@ -3,96 +3,92 @@ title: Blob
 slug: Web/API/Blob
 translation_of: Web/API/Blob
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>Объект <code>Blob</code> представляет из себя подобный файлу объект с неизменяемыми, необработанными данными; они могут читаться как текст или двоичные данные, либо могут быть преобразованы в {{DOMxRef("ReadableStream")}}, таким образом, его методы могут быть использованы для обработки данных.</p>
+Объект `Blob` представляет из себя подобный файлу объект с неизменяемыми, необработанными данными; они могут читаться как текст или двоичные данные, либо могут быть преобразованы в {{DOMxRef("ReadableStream")}}, таким образом, его методы могут быть использованы для обработки данных.
 
-<p>Blob-ы могут представлять данные, которые не обязательно должны быть в родном для JavaScript формате. Интерфейс {{domxref("File")}} основан на <code>Blob</code>, наследует функциональность <code>Blob</code> и расширяет его для поддержки файлов на стороне пользователя.</p>
+Blob-ы могут представлять данные, которые не обязательно должны быть в родном для JavaScript формате. Интерфейс {{domxref("File")}} основан на `Blob`, наследует функциональность `Blob` и расширяет его для поддержки файлов на стороне пользователя.
 
-<h2 id="Использование_Blob">Использование Blob</h2>
+## Использование Blob
 
-<p>Для создания <code>Blob</code> не из объектов и данных blob, используйте конструктор {{domxref("Blob.Blob", "Blob()")}} . Чтобы создать blob из подмножества данных из другого blob, используйте метод {{domxref("Blob.slice()", "slice()")}}. Чтобы получить объект <code>Blob</code> для файла на файловой системе пользователя, смотрите документацию на {{domxref("File")}}.</p>
+Для создания `Blob` не из объектов и данных blob, используйте конструктор {{domxref("Blob.Blob", "Blob()")}} . Чтобы создать blob из подмножества данных из другого blob, используйте метод {{domxref("Blob.slice()", "slice()")}}. Чтобы получить объект `Blob` для файла на файловой системе пользователя, смотрите документацию на {{domxref("File")}}.
 
-<p>API, принимающие объекты <code>Blob</code>, также перечислены в документации на {{domxref("File")}}.</p>
+API, принимающие объекты `Blob`, также перечислены в документации на {{domxref("File")}}.
 
-<div class="note">
-<p><strong>Примечание:</strong> Метод <code>slice()</code> имеет изначально задаваемую длину как второй аргумент, что используется для указания числа байт копируемых в новый <code>Blob.</code> Если указать такие параметры <code>start + length</code>, которые превышают размер исходного <code>Blob</code>, то возвращаемый <code>Blob</code> будет содержать данные от начального индекса (start index) до конца исходного <code>Blob.</code></p>
-</div>
+> **Примечание:** Метод `slice()` имеет изначально задаваемую длину как второй аргумент, что используется для указания числа байт копируемых в новый `Blob.` Если указать такие параметры `start + length`, которые превышают размер исходного `Blob`, то возвращаемый `Blob` будет содержать данные от начального индекса (start index) до конца исходного `Blob.`
 
-<div class="note"><strong>Примечание:</strong>  Следует помнить ,что метод <code>slice()</code> имеет сторонние префиксы в некоторых браузерах: <code>blob.mozSlice()</code> для Firefox 12 и ранее,  так же <code>blob.webkitSlice()</code> в Safari. Старая версия метода <code>slice()</code>, без сторонних приставок, имеет другой алгоритм и устарела. Поддержка <code>blob.mozSlice()</code> была убрана в Firefox 30.</div>
+> **Примечание:** Следует помнить ,что метод `slice()` имеет сторонние префиксы в некоторых браузерах: `blob.mozSlice()` для Firefox 12 и ранее, так же `blob.webkitSlice()` в Safari. Старая версия метода `slice()`, без сторонних приставок, имеет другой алгоритм и устарела. Поддержка `blob.mozSlice()` была убрана в Firefox 30.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("Blob.Blob", "Blob(blobParts[, options])")}}</dt>
- <dd>Возвращает создаваемый объект Blob, который содержит соединение всех данных в массиве, переданном в конструктор.</dd>
-</dl>
+- {{domxref("Blob.Blob", "Blob(blobParts[, options])")}}
+  - : Возвращает создаваемый объект Blob, который содержит соединение всех данных в массиве, переданном в конструктор.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("Blob.isClosed")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Логическое значение, показывающее, вызывался ли метод {{domxref("Blob.close()")}} у blob. Закрытый blob не может быть прочитан.</dd>
- <dt>{{domxref("Blob.size")}} {{readonlyinline}}</dt>
- <dd>Размер данных, содержащихся в объекте <code>Blob</code>, в байтах.</dd>
- <dt>{{domxref("Blob.type")}} {{readonlyinline}}</dt>
- <dd>Строка с MIME-типом данных, содержащихся в <code>Blob</code>. Если тип неизвестен, строка пуста.</dd>
-</dl>
+- {{domxref("Blob.isClosed")}} {{readonlyinline}} {{experimental_inline}}
+  - : Логическое значение, показывающее, вызывался ли метод {{domxref("Blob.close()")}} у blob. Закрытый blob не может быть прочитан.
+- {{domxref("Blob.size")}} {{readonlyinline}}
+  - : Размер данных, содержащихся в объекте `Blob`, в байтах.
+- {{domxref("Blob.type")}} {{readonlyinline}}
+  - : Строка с MIME-типом данных, содержащихся в `Blob`. Если тип неизвестен, строка пуста.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Blob.close()")}} {{experimental_inline}}</dt>
- <dd>Закрывает Blob объект, по возможности освобождая занятые им ресурсы.</dd>
- <dt>{{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}</dt>
- <dd>Возвращает новый <code>Blob</code> объект, содержащий данные в указанном диапазоне байтов исходного <code>Blob</code>.</dd>
- <dt>{{DOMxRef("Blob.stream()")}}</dt>
- <dd>Возвращает {{DOMxRef("ReadableStream")}}, который может использоваться для чтения содержимого <code>Blob</code>.</dd>
- <dt>{{DOMxRef("Blob.text()")}}</dt>
- <dd>Возвращает promise, который исполняется с {{DOMxRef("USVString")}}, содержащей всё содержимое <code>Blob</code>, интерпретируемое как текст UTF-8.</dd>
-</dl>
+- {{domxref("Blob.close()")}} {{experimental_inline}}
+  - : Закрывает Blob объект, по возможности освобождая занятые им ресурсы.
+- {{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}
+  - : Возвращает новый `Blob` объект, содержащий данные в указанном диапазоне байтов исходного `Blob`.
+- {{DOMxRef("Blob.stream()")}}
+  - : Возвращает {{DOMxRef("ReadableStream")}}, который может использоваться для чтения содержимого `Blob`.
+- {{DOMxRef("Blob.text()")}}
+  - : Возвращает promise, который исполняется с {{DOMxRef("USVString")}}, содержащей всё содержимое `Blob`, интерпретируемое как текст UTF-8.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Создание_Blob">Создание Blob</h3>
+### Создание Blob
 
-<p>Конструктор {{domxref("Blob.Blob", "Blob() constructor")}} может создавать объекты blob из других объектов. Например, чтобы сконструировать blob из строки JSON:</p>
+Конструктор {{domxref("Blob.Blob", "Blob() constructor")}} может создавать объекты blob из других объектов. Например, чтобы сконструировать blob из строки JSON:
 
-<pre class="brush: js">const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});</pre>
+```js
+const obj = {hello: 'world'};
+const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+```
 
-<div class="warning">
-<p>До того как конструктор Blob стал доступен, это могло быть выполнено через устаревший API {{domxref("BlobBuilder")}}:</p>
+> **Предупреждение:** До того как конструктор Blob стал доступен, это могло быть выполнено через устаревший API {{domxref("BlobBuilder")}}:
+>
+> ```js
+> var builder = new BlobBuilder();
+> var fileParts = ['<a id="a"><b id="b">hey!</b></a>'];
+> builder.append(fileParts[0]);
+> var myBlob = builder.getBlob('text/xml');
+> ```
 
-<pre class="brush: js">var builder = new BlobBuilder();
-var fileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;'];
-builder.append(fileParts[0]);
-var myBlob = builder.getBlob('text/xml');
-</pre>
-</div>
+### Создание URL для содержимого типизированного массива
 
-<h3 id="Создание_URL_для_содержимого_типизированного_массива">Создание URL для содержимого типизированного массива</h3>
+Следующий код создаёт типизированный массив JavaScript и создаёт новый `Blob`, содержащий данные типизированного массива. Затем вызывается {{DOMxRef("URL.createObjectURL()")}} для преобразования blob в {{glossary("URL")}}.
 
-<p>Следующий код создаёт типизированный массив JavaScript и создаёт новый <code>Blob</code>, содержащий данные типизированного массива. Затем вызывается {{DOMxRef("URL.createObjectURL()")}} для преобразования blob в {{glossary("URL")}}.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;p&gt;This example creates a typed array containing the ASCII codes
+```html
+<p>This example creates a typed array containing the ASCII codes
    for the space character through the letter Z, then converts it
    to an object URL. A link to open that object URL is created.
-   Click the link to see the decoded object URL.&lt;/p&gt;</pre>
+   Click the link to see the decoded object URL.</p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>Основной частью этого кода для примера является функция <code>typedArrayToURL()</code>, которая создаёт <code>Blob</code> из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута {{htmlattrxref("src", "img")}} элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).</p>
+Основной частью этого кода для примера является функция `typedArrayToURL()`, которая создаёт `Blob` из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута {{htmlattrxref("src", "img")}} элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).
 
-<pre class="brush: js">function typedArrayToURL(typedArray, mimeType) {
+```js
+function typedArrayToURL(typedArray, mimeType) {
   return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
 }
 
 const bytes = new Uint8Array(59);
 
-for(let i = 0; i &lt; 59; i++) {
+for(let i = 0; i < 59; i++) {
   bytes[i] = 32 + i;
 }
 
@@ -102,64 +98,68 @@ const link = document.createElement('a');
 link.href = url;
 link.innerText = 'Open the array URL';
 
-document.body.appendChild(link);</pre>
+document.body.appendChild(link);
+```
 
-<p>
- </p><h3 id="Другой_пример">Другой пример</h3>
+### Другой пример
 
-
-<pre class="brush: js">var typedArray = GetTheTypedArraySomehow();
+```js
+var typedArray = GetTheTypedArraySomehow();
 var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // pass a useful mime type here
 var url = URL.createObjectURL(blob);
 // url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
-</pre>
+```
 
-<h3 id="Извлечение_данных_из_Blob">Извлечение данных из Blob</h3>
+### Извлечение данных из Blob
 
-<p>Один из способов прочесть содержимое <code>Blob</code> – это использовать {{domxref("FileReader")}}. Следующий код читает содержимое <code>Blob</code> как типизированный массив.</p>
+Один из способов прочесть содержимое `Blob` – это использовать {{domxref("FileReader")}}. Следующий код читает содержимое `Blob` как типизированный массив.
 
-<pre class="brush: js">var reader = new FileReader();
+```js
+var reader = new FileReader();
 reader.addEventListener("loadend", function() {
    // reader.result contains the contents of blob as a typed array
 });
-reader.readAsArrayBuffer(blob);</pre>
+reader.readAsArrayBuffer(blob);
+```
 
-<p>Другой способ прочитать содержимое из <code>Blob</code> – это использовать {{domxref("Response")}}. Следующий код читает содержимое <code>Blob</code> как текст:</p>
+Другой способ прочитать содержимое из `Blob` – это использовать {{domxref("Response")}}. Следующий код читает содержимое `Blob` как текст:
 
-<pre class="brush: js">const text = await (new Response(blob)).text();
-</pre>
+```js
+const text = await (new Response(blob)).text();
+```
 
-<p>Или можно использовать {{DOMxRef("Blob.text()")}}:</p>
+Или можно использовать {{DOMxRef("Blob.text()")}}:
 
-<pre class="brush: js">const text = await blob.text();</pre>
+```js
+const text = await blob.text();
+```
 
-<p>Используя другие методы {{domxref("FileReader")}}, возможно прочесть содержимое объекта Blob как строку или как URL.</p>
+Используя другие методы {{domxref("FileReader")}}, возможно прочесть содержимое объекта Blob как строку или как URL.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Замечания_Gecko_доступность_в_привилегированном_коде">Замечания Gecko: доступность в привилегированном коде</h2>
+## Замечания Gecko: доступность в привилегированном коде
 
-<p>Для использования в коде chrome, JSM и Bootstrap scope, вы должны импортировать его следующим образом:</p>
+Для использования в коде chrome, JSM и Bootstrap scope, вы должны импортировать его следующим образом:
 
-<pre class="brush: js">Cu.importGlobalProperties(['Blob']);
-</pre>
+```js
+Cu.importGlobalProperties(['Blob']);
+```
 
-<p><code>Blob</code> доступен в Worker scopes.</p>
+`Blob` доступен в Worker scopes.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("BlobBuilder")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{domxref("File")}}</li>
- <li>{{domxref("URL.createObjectURL")}}</li>
- <li><a href="/ru/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
- <li><a href="/ru/docs/Web/API/File/Using_files_from_web_applications">Использование файлов в веб-приложениях</a></li>
-</ul>
+- {{domxref("BlobBuilder")}}
+- {{DOMxRef("FileReader")}}
+- {{domxref("File")}}
+- {{domxref("URL.createObjectURL")}}
+- [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
+- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File/Using_files_from_web_applications)

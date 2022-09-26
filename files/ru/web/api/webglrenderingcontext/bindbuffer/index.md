@@ -3,116 +3,81 @@ title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>ebGLRenderingContext.bindBuffer()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).</p>
+**`ebGLRenderingContext.bindBuffer()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>gl</var>.bindBuffer(<var>target</var>, <var>buffer</var>);
-</pre>
+```
+void gl.bindBuffer(target, buffer);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>target</dt>
- <dd>{{domxref("GLenum")}} определяет точку связывания (target). Возможные значения:
- <ul>
-  <li><code>gl.ARRAY_BUFFER</code>: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.</li>
-  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: Буфер использующий для индексирования элементов.</li>
-  <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-   <ul>
-    <li><code>gl.COPY_READ_BUFFER</code>: Buffer for copying from one buffer object to another.</li>
-    <li><code>gl.COPY_WRITE_BUFFER</code>: Buffer for copying from one buffer object to another.</li>
-    <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback operations.</li>
-    <li><code>gl.UNIFORM_BUFFER</code>: Buffer used for storing uniform blocks.</li>
-    <li><code>gl.PIXEL_PACK_BUFFER</code>: Buffer used for pixel transfer operations.</li>
-    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: Buffer used for pixel transfer operations.</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>buffer</dt>
- <dd>{{domxref("WebGLBuffer")}} с которым осуществляется связывание.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : {{domxref("GLenum")}} определяет точку связывания (target). Возможные значения:
 
-<p>Нет.</p>
+    - `gl.ARRAY_BUFFER`: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.
+    - `gl.ELEMENT_ARRAY_BUFFER`: Буфер использующий для индексирования элементов.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object to another.
+      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object to another.
+      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.
+      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
+      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer operations.
+      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer operations.
 
-<p>Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt to bind the buffer to another target will throw an <code>INVALID_OPERATION</code> error and the current buffer binding will remain the same.</p>
+- buffer
+  - : {{domxref("WebGLBuffer")}} с которым осуществляется связывание.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<h3 id="Binding_a_buffer_to_a_target">Binding a buffer to a target</h3>
+Нет.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+### Exceptions
+
+Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt to bind the buffer to another target will throw an `INVALID_OPERATION` error and the current buffer binding will remain the same.
+
+## Examples
+
+### Binding a buffer to a target
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-</pre>
+```
 
-<h3 id="Getting_current_bindings">Getting current bindings</h3>
+### Getting current bindings
 
-<p>To check the current buffer bindings, query the <code>ARRAY_BUFFER_BINDING</code> and <code>ELEMENT_ARRAY_BUFFER_BINDING</code> constants.</p>
+To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING` and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
 
-<pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
+```js
+gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.5", "bindBuffer")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition for WebGL.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Man page of the (similar) OpenGL ES 2 API.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}</td>
-   <td>{{Spec2('WebGL2')}}</td>
-   <td>
-    <p>Updated definition for WebGL 2.</p>
+| Specification                                                                            | Status                               | Comment                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('WebGL', "#5.14.5", "bindBuffer")}}                             | {{Spec2('WebGL')}}             | Initial definition for WebGL.                                                                                                                                                                                  |
+| {{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}} | {{Spec2('OpenGL ES 2.0')}} | Man page of the (similar) OpenGL ES 2 API.                                                                                                                                                                     |
+| {{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}                             | {{Spec2('WebGL2')}}             | Updated definition for WebGL 2.Adds new `target` buffers: `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` |
+| {{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}} | {{Spec2('OpenGL ES 3.0')}} | Man page of the (similar) OpenGL ES 3 API.                                                                                                                                                                     |
 
-    <p>Adds new <code>target</code> buffers:<br>
-     <code>gl.COPY_READ_BUFFER</code>,<br>
-     <code>gl.COPY_WRITE_BUFFER</code>,<br>
-     <code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>
-     <code>gl.UNIFORM_BUFFER</code>,<br>
-     <code>gl.PIXEL_PACK_BUFFER</code>,<br>
-     <code>gl.PIXEL_UNPACK_BUFFER</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>Man page of the (similar) OpenGL ES 3 API.</td>
-  </tr>
- </tbody>
-</table>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

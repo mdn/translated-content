@@ -10,19 +10,21 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/host
 original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.host</code></strong> – это {{domxref("USVString")}}, содержащий хост, а именно <em>имя хоста</em> и, если <em>порт</em> не пустой, <code>':'</code> и <em>порт</em>.</p>
+Свойство **`HTMLHyperlinkElementUtils.host`** – это {{domxref("USVString")}}, содержащий хост, а именно _имя хоста_ и, если _порт_ не пустой, `':'` и _порт_.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.host;
-<em>object.<code>host</code></em> = <em>string</em>;
-</pre>
+```
+string = object.host;
+object.host = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var anchor = document.createElement("a");
+```js
+var anchor = document.createElement("a");
 
 anchor.href = "https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.host"
 anchor.host == "developer.mozilla.org"
@@ -33,18 +35,16 @@ anchor.host == "developer.mozilla.org"
 
 anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLHyperlinkElementUtils.host"
 anchor.host == "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

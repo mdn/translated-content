@@ -8,63 +8,66 @@ tags:
 translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
-<p>Geolocation API позволяет пользователю предоставлять своё местоположение web-приложению, если пользователь согласится предоставить его. Из соображений конфиденциальности, у пользователя будет запрошено разрешение на предоставление информации о местоположении.</p>
+Geolocation API позволяет пользователю предоставлять своё местоположение web-приложению, если пользователь согласится предоставить его. Из соображений конфиденциальности, у пользователя будет запрошено разрешение на предоставление информации о местоположении.
 
-<h2 id="Объект_геолокации">Объект геолокации</h2>
+## Объект геолокации
 
-<p><a href="ru/docs/Web/API/Geolocation">API геолокации</a> доступен через объект {{domxref("navigator.geolocation")}}.</p>
+[API геолокации](ru/docs/Web/API/Geolocation) доступен через объект {{domxref("navigator.geolocation")}}.
 
-<p>Если объект существует, функции определения местоположения доступны. Вы можете проверить это следующим образом:</p>
+Если объект существует, функции определения местоположения доступны. Вы можете проверить это следующим образом:
 
-<pre class="brush: js">if ("geolocation" in navigator) {
+```js
+if ("geolocation" in navigator) {
   /* местоположение доступно */
 } else {
   /* местоположение НЕ доступно */
 }
-</pre>
+```
 
-<h3 id="Получение_текущего_местоположения">Получение текущего местоположения</h3>
+### Получение текущего местоположения
 
-<p>Чтобы получить текущее местоположение пользователя, вы должны вызвать метод {{domxref("geolocation.getCurrentPosition()","getCurrentPosition()")}}. Это инициирует асинхронный запрос для обнаружения местоположения пользователя, и запрашивает аппаратные средства позиционирования, чтобы получить последнюю актуальную информацию. Когда местоположение определено, выполняется callback. По желанию вы можете указать вторую callback функцию для обработки ошибки, которая запустится в случае ошибки. Третий, опциональный параметр - объект с опциями, где вы можете настроить максимальное значение возвращаемых данных, время ожидания ответа на запрос, и, при желании, точность возвращаемых данных.</p>
+Чтобы получить текущее местоположение пользователя, вы должны вызвать метод {{domxref("geolocation.getCurrentPosition()","getCurrentPosition()")}}. Это инициирует асинхронный запрос для обнаружения местоположения пользователя, и запрашивает аппаратные средства позиционирования, чтобы получить последнюю актуальную информацию. Когда местоположение определено, выполняется callback. По желанию вы можете указать вторую callback функцию для обработки ошибки, которая запустится в случае ошибки. Третий, опциональный параметр - объект с опциями, где вы можете настроить максимальное значение возвращаемых данных, время ожидания ответа на запрос, и, при желании, точность возвращаемых данных.
 
-<div class="note">
-<p><strong>Note:</strong> По умолчанию {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} пытается вернуть результат так быстро, как это возможно, за счёт чего даёт не очень точный результат. Это может быть полезно, если вам нужно быстро получить ответ, при этом не важна точность. Устройства с GPS, например, могут пытаться скорректировать данные GPS около минуты и даже больше, поэтому в самом начале могут вернуться менее точные данные (местоположение IP или wifi-сети), полученные {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.</p>
-</div>
+> **Примечание:** По умолчанию {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} пытается вернуть результат так быстро, как это возможно, за счёт чего даёт не очень точный результат. Это может быть полезно, если вам нужно быстро получить ответ, при этом не важна точность. Устройства с GPS, например, могут пытаться скорректировать данные GPS около минуты и даже больше, поэтому в самом начале могут вернуться менее точные данные (местоположение IP или wifi-сети), полученные {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
-<pre class="brush: js">navigator.geolocation.getCurrentPosition(function(position) {
+```js
+navigator.geolocation.getCurrentPosition(function(position) {
   do_something(position.coords.latitude, position.coords.longitude);
-});</pre>
+});
+```
 
-<p>Функция <code>do_something()</code>, в примере выше, будет вызвана лишь тогда, когда данные о местоположении будут получены.</p>
+Функция `do_something()`, в примере выше, будет вызвана лишь тогда, когда данные о местоположении будут получены.
 
-<h3 id="Наблюдение_за_текущим_местоположением">Наблюдение за текущим местоположением</h3>
+### Наблюдение за текущим местоположением
 
-<p>Если данные о местоположении меняются (либо устройство находится в движении, либо пришли более точные данные о геопозиции), вы можете указать callback функцию, которая будет вызывается при любом обновлении данных о местоположении. Это делается с использованием функции {{domxref("Geolocation.watchPosition()","watchPosition()")}}, которая имеет несколько входных параметров: {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Эта функция вызывается много раз, позволяя браузеру обновлять данные о текущей локации либо во время движения, либо после получения более точной информации о местоположении (после применения более точных приёмов). Функция, которая вызывается при ошибке, для {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}, при желании, может быть вызвана неоднократно.</p>
+Если данные о местоположении меняются (либо устройство находится в движении, либо пришли более точные данные о геопозиции), вы можете указать callback функцию, которая будет вызывается при любом обновлении данных о местоположении. Это делается с использованием функции {{domxref("Geolocation.watchPosition()","watchPosition()")}}, которая имеет несколько входных параметров: {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Эта функция вызывается много раз, позволяя браузеру обновлять данные о текущей локации либо во время движения, либо после получения более точной информации о местоположении (после применения более точных приёмов). Функция, которая вызывается при ошибке, для {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}, при желании, может быть вызвана неоднократно.
 
-<div class="note">
-<p><strong>Примечание:</strong> вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.</p>
-</div>
+> **Примечание:** вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
-<pre class="brush: js">var watchID = navigator.geolocation.watchPosition(function(position) {
+```js
+var watchID = navigator.geolocation.watchPosition(function(position) {
   do_something(position.coords.latitude, position.coords.longitude);
-});</pre>
+});
+```
 
-<p>Метод {{domxref("Geolocation.watchPosition()","watchPosition()")}} возвращает числовой ID, который может быть использован для идентификации наблюдателя за местоположением; используйте его вместе с методом {{domxref("Geolocation.clearWatch()","clearWatch()")}}, чтобы перестать получать новые данные о местоположении.</p>
+Метод {{domxref("Geolocation.watchPosition()","watchPosition()")}} возвращает числовой ID, который может быть использован для идентификации наблюдателя за местоположением; используйте его вместе с методом {{domxref("Geolocation.clearWatch()","clearWatch()")}}, чтобы перестать получать новые данные о местоположении.
 
-<pre class="brush: js">navigator.geolocation.clearWatch(watchID);
-</pre>
+```js
+navigator.geolocation.clearWatch(watchID);
+```
 
-<h3 id="Точная_настройка_отклика">Точная настройка отклика</h3>
+### Точная настройка отклика
 
-<p>{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект <code><a href="/ru/docs/Web/API/PositionOptions">PositionOptions</a></code>.</p>
+{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект [`PositionOptions`](/ru/docs/Web/API/PositionOptions).
 
-<p>Этот объект позволяет вам включить возможность определения позиции с высокой точностью, указать максимальное время кеширования значения позиции (при повторных запросах, пока время не вышло, вам будет возвращается кешированное значение; после браузер будет запрашивать актуальные данные), а также указать значение, устанавливающее интервал — как часто браузер должен пытаться получить данные о местоположении, прежде чем выйдет время.</p>
+Этот объект позволяет вам включить возможность определения позиции с высокой точностью, указать максимальное время кеширования значения позиции (при повторных запросах, пока время не вышло, вам будет возвращается кешированное значение; после браузер будет запрашивать актуальные данные), а также указать значение, устанавливающее интервал — как часто браузер должен пытаться получить данные о местоположении, прежде чем выйдет время.
 
-<p>Вызов {{domxref("Geolocation.watchPosition()","watchPosition")}} может выглядит следующим образом:</p>
+Вызов {{domxref("Geolocation.watchPosition()","watchPosition")}} может выглядит следующим образом:
 
-<pre class="brush: js">function geo_success(position) {
+```js
+function geo_success(position) {
   do_something(position.coords.latitude, position.coords.longitude);
 }
 
@@ -78,42 +81,46 @@ var geo_options = {
   timeout           : 27000
 };
 
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);</pre>
+var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+```
 
-<h2 id="Описание_позиции">Описание позиции</h2>
+## Описание позиции
 
-<p>Местоположение пользователя содержится в экземпляре объекта {{domxref("GeolocationPosition")}}, содержащего внутри экземпляр другого объекта — {{domxref("GeolocationCoordinates")}}.</p>
+Местоположение пользователя содержится в экземпляре объекта {{domxref("GeolocationPosition")}}, содержащего внутри экземпляр другого объекта — {{domxref("GeolocationCoordinates")}}.
 
-<p>Экземпляр <code>GeolocationPosition</code> содержит только две вещи, свойство <code>coords</code>, внутри которого <code>GeolocationCoordinates</code> и свойство timestamp, внутри которого экземпляр {{domxref("DOMTimeStamp")}}, предоставляющее метку времени, созданную при получении данные.</p>
+Экземпляр `GeolocationPosition` содержит только две вещи, свойство `coords`, внутри которого `GeolocationCoordinates` и свойство timestamp, внутри которого экземпляр {{domxref("DOMTimeStamp")}}, предоставляющее метку времени, созданную при получении данные.
 
-<p>Экземпляр <code>GeolocationCoordinates</code> содержит некоторое количество свойств, двое из которых вы будете чаще всего использовать: <code>latitude</code> и <code>longitude</code>, которые помогут вам отобразить полученную позицию на карте. Поэтому многие колбэк-функции с успешным получением позиции выглядят очень просто:</p>
+Экземпляр `GeolocationCoordinates` содержит некоторое количество свойств, двое из которых вы будете чаще всего использовать: `latitude` и `longitude`, которые помогут вам отобразить полученную позицию на карте. Поэтому многие колбэк-функции с успешным получением позиции выглядят очень просто:
 
-<pre class="brush: js">function success(position) {
+```js
+function success(position) {
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // Дальше код, который что-то делает с широтой(latitude) и долготой(longitude)
-}</pre>
+}
+```
 
-<p>Однако, вы также можете получить и другую информацию из объекта <code>GeolocationCoordinates</code>, такую как высота над уровнем моря, скорость, направление устройства и точные данные о высоте, долготе и широте.</p>
+Однако, вы также можете получить и другую информацию из объекта `GeolocationCoordinates`, такую как высота над уровнем моря, скорость, направление устройства и точные данные о высоте, долготе и широте.
 
-<h2 id="Обработка_ошибок">Обработка ошибок</h2>
+## Обработка ошибок
 
-<p>Callback-функция для ошибок, если она была передана в <code>getCurrentPosition()</code> или <code>watchPosition()</code>, ожидает экземпляр объекта <code><a href="/en-US/docs/Web/API/GeolocationPositionError">GeolocationPositionError</a></code> в качестве первого аргумента. Он будет содержать два свойства, <code>code</code>, который укажет на то, какая именно ошибка произошла и понятное для человека <code>message</code>, описывающее значение поля code.</p>
+Callback-функция для ошибок, если она была передана в `getCurrentPosition()` или `watchPosition()`, ожидает экземпляр объекта [`GeolocationPositionError`](/en-US/docs/Web/API/GeolocationPositionError) в качестве первого аргумента. Он будет содержать два свойства, `code`, который укажет на то, какая именно ошибка произошла и понятное для человека `message`, описывающее значение поля code.
 
-<p>Функция может выглядеть примерно так:</p>
+Функция может выглядеть примерно так:
 
-<pre class="brush: js">function errorCallback(error) {
+```js
+function errorCallback(error) {
   alert('ERROR(' + error.code + '): ' + error.message);
 };
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий пример использует Geolocation API для того, чтобы получить широту и долготу пользователя. При успешном выполнении, ссылка будет вести на <code>openstreetmap.org</code>, который отобразит пользовательскую позицию на карте.</p>
+Следующий пример использует Geolocation API для того, чтобы получить широту и долготу пользователя. При успешном выполнении, ссылка будет вести на `openstreetmap.org`, который отобразит пользовательскую позицию на карте.
 
-<div class="hidden">
-<pre class="brush: css">body {
+```css hidden
+body {
   padding: 20px;
   background-color:#ffffc9
 }
@@ -121,19 +128,20 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_optio
 button {
   margin: .5rem 0;
 }
-</pre>
-</div>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;button id = "find-me"&gt;Show my location&lt;/button&gt;&lt;br/&gt;
-&lt;p id = "status"&gt;&lt;/p&gt;
-&lt;a id = "map-link" target="_blank"&gt;&lt;/a&gt;
-</pre>
+```html
+<button id = "find-me">Show my location</button><br/>
+<p id = "status"></p>
+<a id = "map-link" target="_blank"></a>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function geoFindMe() {
+```js
+function geoFindMe() {
 
   const status = document.querySelector('#status');
   const mapLink = document.querySelector('#map-link');
@@ -164,8 +172,8 @@ button {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-</pre>
+```
 
-<h3 id="Демо">Демо</h3>
+### Демо
 
-<p>{{EmbedLiveSample('Примеры', 350, 150, "", "", "", "geolocation")}}</p>
+{{EmbedLiveSample('Примеры', 350, 150, "", "", "", "geolocation")}}

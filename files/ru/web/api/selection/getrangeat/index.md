@@ -3,55 +3,47 @@ title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 translation_of: Web/API/Selection/getRangeAt
 ---
-<div>
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>Метод <strong><code>Selection.getRangeAt()</code></strong> возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.</p>
+Метод **`Selection.getRangeAt()`** возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>range</em> = <em>sel</em>.getRangeAt(<em>index</em>)
-</pre>
+```
+range = sel.getRangeAt(index)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em><code>range</code></em></dt>
- <dd>Объект {{domxref("Range")}}, который будет возвращён.</dd>
- <dt><em><code>index</code></em></dt>
- <dd>Индекс диапазона, начинающийся с нуля, который необходимо вернуть. Отрицательное значение или значение выше или равное {{domxref("Selection.rangeCount")}} приведёт к ошибке.</dd>
-</dl>
+- _`range`_
+  - : Объект {{domxref("Range")}}, который будет возвращён.
+- _`index`_
+  - : Индекс диапазона, начинающийся с нуля, который необходимо вернуть. Отрицательное значение или значение выше или равное {{domxref("Selection.rangeCount")}} приведёт к ошибке.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<pre class="brush:js">var ranges = [];
+```js
+var ranges = [];
 
 sel = window.getSelection();
 
-for(var i = 0; i &lt; sel.rangeCount; i++) {
+for(var i = 0; i < sel.rangeCount; i++) {
  ranges[i] = sel.getRangeAt(i);
 }
 /* Каждый элемент в массиве диапазонов является
  * объектом диапазона, который представляет
  * один из диапазонов текущего выделения */
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость</h2>
+## Совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Selection")}}, интерфейс, к которому принадлежит метод.</li>
- <li><a href="/en-US/docs/XUL_Tutorial/Tree_Selection" title="XUL_Tutorial/Tree_Selection">Tree Selection</a> (для метода <code>getRangeAt()</code> в интерфейсе <code>nsITreeSelection</code>)</li>
-</ul>
+- {{domxref("Selection")}}, интерфейс, к которому принадлежит метод.
+- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection "XUL_Tutorial/Tree_Selection") (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)

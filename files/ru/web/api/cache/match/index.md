@@ -3,54 +3,51 @@ title: Cache.match()
 slug: Web/API/Cache/match
 translation_of: Web/API/Cache/match
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>Метод <strong><code>match()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в {{domxref("Response")}}, ассоциированный с первым совпадающим запросом в объекте {{domxref("Cache")}}. Если совпадений не найдено, {{jsxref("Promise")}} разрешается в {{jsxref("undefined")}}.</p>
+Метод **`match()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в {{domxref("Response")}}, ассоциированный с первым совпадающим запросом в объекте {{domxref("Cache")}}. Если совпадений не найдено, {{jsxref("Promise")}} разрешается в {{jsxref("undefined")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">cache.match(request,{options}).then(function(response) {
+```js
+cache.match(request,{options}).then(function(response) {
   //сделать что-нибудь с ответом
 });
-</pre>
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который разрешается в первый {{domxref("Response")}}, который совпадает с запросом или в {{jsxref("undefined")}}, если совпадений не найдено.</p>
+{{jsxref("Promise")}}, который разрешается в первый {{domxref("Response")}}, который совпадает с запросом или в {{jsxref("undefined")}}, если совпадений не найдено.
 
-<div class="note">
-<p><strong>Замечание</strong>: <code>Cache.match()</code> в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что <code>Cache.match()</code> разрешается в <code>response[0]</code> (первый совпадающий ответ) вместо <code>response[]</code> (массив со всеми совпадающими ответами).</p>
-</div>
+> **Примечание:** **Замечание**: `Cache.match()` в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что `Cache.match()` разрешается в `response[0]` (первый совпадающий ответ) вместо `response[]` (массив со всеми совпадающими ответами).
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>request</dt>
- <dd>Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Объект, который задаёт параметры для операции <code>match</code>. Допустимые значения:
- <ul>
-  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое указывает следует ли игнорировать строку запроса в url.  Например, если оно установлено в <code>true, часть</code> <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет проигнорирована при поиске соответствий ключа. По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true</code>, предотвращает проверку <code>http</code> метода для запроса  {{domxref("Request")}} при выполнении сопоставлений ключа (обычно разрешены лишь <code>GET</code> и <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда установлено в <code>true,</code> указывает операции сопоставления ключа не проводить проверку соответствия заголовка <code>VARY</code> — т.е., если URL совпадает, вы получите соответствие независимо от того, установлен ли на объекте {{domxref("Response")}} заголовок <code>VARY</code>. По умолчанию равно <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, задающая определённый кеш для поиска. Заметьте, что этот параметр игнорируется методом  <code>Cache.match()</code>.</li>
- </ul>
+- request
+  - : Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.
+- options {{optional_inline}}
 
- <p>В Chrome поддерживается лишь <code>cacheName</code>.</p>
- </dd>
-</dl>
+  - : Объект, который задаёт параметры для операции `match`. Допустимые значения:
 
-<h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
+    - `ignoreSearch`: Булево значение {{domxref("Boolean")}}, которое указывает следует ли игнорировать строку запроса в url. Например, если оно установлено в `true, часть` `?value=bar` запроса `http://foo.com/?value=bar` будет проигнорирована при поиске соответствий ключа. По умолчанию равно `false`.
+    - `ignoreMethod`: Булево значение {{domxref("Boolean")}}, которое, когда равно `true`, предотвращает проверку `http` метода для запроса {{domxref("Request")}} при выполнении сопоставлений ключа (обычно разрешены лишь `GET` и `HEAD`). По умолчанию равно `false`.
+    - `ignoreVary`: Булево значение {{domxref("Boolean")}}, которое, когда установлено в `true,` указывает операции сопоставления ключа не проводить проверку соответствия заголовка `VARY` — т.е., если URL совпадает, вы получите соответствие независимо от того, установлен ли на объекте {{domxref("Response")}} заголовок `VARY`. По умолчанию равно `false`.
+    - `cacheName`: Строка {{domxref("DOMString")}}, задающая определённый кеш для поиска. Заметьте, что этот параметр игнорируется методом `Cache.match()`.
 
-<p>Код взят примера из примера <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js">пользовательская офлайн-страница</a> (<a href="https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html">живой пример</a>).</p>
+    В Chrome поддерживается лишь `cacheName`.
 
-<p>Следующий пример использует кеш для предоставления данных, когда запрос не удался. Выражение <code>catch()</code> выполняется когда вызов <code>fetch()</code> возбуждает исключение. Внутри выражения <code>catch()</code>, <code>match()</code> используется для возврата корректного ответа.</p>
+## Примеры
 
-<p>В этом примере, мы решили что кешироваться будут лишь HTML-документы полученные с помощью GET-запроса. Если условие <code>if()</code> равно false, то обработчик не будет вмешиваться в ответ. Если зарегистрированы другие обработчики получения данных, то у них будет шанс вызвать  <code>event.respondWith()</code>. Если ни один из обработчиков не вызовет <code>event.respondWith()</code>, запрос будет обработан браузером, как это было бы сделано без участия сервис воркера. Если <code style="font-style: normal; line-height: 19.0909080505371px;">fetch()</code> возвращает валидный HTTP ответ к кодом из диапазона 4xx или 5xx, то метод <code style="font-style: normal; line-height: 19.0909080505371px;">catch()</code> не будет вызван. </p>
+Код взят примера из примера [пользовательская офлайн-страница](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) ([живой пример](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)).
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+Следующий пример использует кеш для предоставления данных, когда запрос не удался. Выражение `catch()` выполняется когда вызов `fetch()` возбуждает исключение. Внутри выражения `catch()`, `match()` используется для возврата корректного ответа.
+
+В этом примере, мы решили что кешироваться будут лишь HTML-документы полученные с помощью GET-запроса. Если условие `if()` равно false, то обработчик не будет вмешиваться в ответ. Если зарегистрированы другие обработчики получения данных, то у них будет шанс вызвать `event.respondWith()`. Если ни один из обработчиков не вызовет `event.respondWith()`, запрос будет обработан браузером, как это было бы сделано без участия сервис воркера. Если `fetch()` возвращает валидный HTTP ответ к кодом из диапазона 4xx или 5xx, то метод `catch()` не будет вызван.
+
+```js
+self.addEventListener('fetch', function(event) {
   // Мы хотим выполнить лишь event.respondWith() если это GET-запрос HTML-документа.
-  if (event.request.method === 'GET' &amp;&amp;
+  if (event.request.method === 'GET' &&
       event.request.headers.get('accept').indexOf('text/html') !== -1) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
@@ -62,20 +59,19 @@ translation_of: Web/API/Cache/match
       })
     );
   }
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис воркеров</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

@@ -3,29 +3,32 @@ title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D.beginPath()</strong></code> Canvas 2D API запускает новый путь, опуская список подпутей. Вызовите этот метод, когда хотите создать новый путь.</p>
+Метод **`CanvasRenderingContext2D.beginPath()`** Canvas 2D API запускает новый путь, опуская список подпутей. Вызовите этот метод, когда хотите создать новый путь.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.beginPath();</var>
-</pre>
+```
+void ctx.beginPath();
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_beginPath_метода">Использование <code>beginPath</code> метода</h3>
+### Использование `beginPath` метода
 
-<p>Это простой фрагмент кода, использующий <code>beginPath</code> метод.</p>
+Это простой фрагмент кода, использующий `beginPath` метод.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Первый путь
@@ -41,19 +44,17 @@ ctx.strokeStyle = 'green';
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();
-</pre>
+```
 
-<p>Отредактируйте код ниже чтобы увидеть изменения в canvas:</p>
+Отредактируйте код ниже чтобы увидеть изменения в canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:200px"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:200px">
 // First path
 ctx.beginPath();
 ctx.strokeStyle = 'blue';
@@ -66,10 +67,11 @@ ctx.beginPath();
 ctx.strokeStyle = 'green';
 ctx.moveTo(20,20);
 ctx.lineTo(120, 120);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,24 +94,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 460) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 460) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий это, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.closePath()")}}</li>
-</ul>
+- Интерфейс, определяющий это, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.closePath()")}}

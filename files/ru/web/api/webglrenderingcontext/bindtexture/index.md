@@ -3,77 +3,73 @@ title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.bindTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLTexture")}} с <code>target</code>.</p>
+**`WebGLRenderingContext.bindTexture()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLTexture")}} с `target`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>gl</var>.bindTexture(<var>target</var>, <var>texture</var>);
-</pre>
+```
+void gl.bindTexture(target, texture);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>target</dt>
- <dd>{{domxref("GLenum")}} указывает тип объекта <code>texture</code> для связывания. Возможные значения:
- <ul>
-  <li><code>gl.TEXTURE_2D</code>: двухмерная текстура.</li>
-  <li><code>gl.TEXTURE_CUBE_MAP</code>: кубическая текстура.</li>
-  <li>При использовании {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, дополнительно доступны:
-   <ul>
-    <li><code>gl.TEXTURE_3D</code>: трёхмерная текстура.</li>
-    <li><code>gl.TEXTURE_2D_ARRAY</code>: массив двумерных текстур.</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>texture</dt>
- <dd>{{domxref("WebGLTexture")}} объект связывания</dd>
-</dl>
+- target
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : {{domxref("GLenum")}} указывает тип объекта `texture` для связывания. Возможные значения:
 
-<p>None.</p>
+    - `gl.TEXTURE_2D`: двухмерная текстура.
+    - `gl.TEXTURE_CUBE_MAP`: кубическая текстура.
+    - При использовании {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, дополнительно доступны:
 
-<h3 id="Исключения">Исключения</h3>
+      - `gl.TEXTURE_3D`: трёхмерная текстура.
+      - `gl.TEXTURE_2D_ARRAY`: массив двумерных текстур.
 
-<p><code>gl.INVALID_ENUM</code> исключение если <code>target</code> не<code>gl.TEXTURE_2D</code>, <code>gl.TEXTURE_CUBE_MAP</code>, <code>gl.TEXTURE_3D</code>, или <code>gl.TEXTURE_2D_ARRAY</code>.</p>
+- texture
+  - : {{domxref("WebGLTexture")}} объект связывания
 
-<h2 id="Примеры">Примеры</h2>
+### Возвращаемое значение
 
-<h3 id="Привязка_текстуры">Привязка текстуры</h3>
+None.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+### Исключения
+
+`gl.INVALID_ENUM` исключение если `target` не`gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, или `gl.TEXTURE_2D_ARRAY`.
+
+## Примеры
+
+### Привязка текстуры
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
-</pre>
+```
 
-<h3 id="Получить_текущую_привязку">Получить текущую привязку</h3>
+### Получить текущую привязку
 
-<p>Для проверки текущей привязки текстуры, вызовите<code>gl.TEXTURE_BINDING_2D</code> или <code>gl.TEXTURE_BINDING_CUBE_MAP</code>.</p>
+Для проверки текущей привязки текстуры, вызовите`gl.TEXTURE_BINDING_2D` или `gl.TEXTURE_BINDING_CUBE_MAP`.
 
-<pre class="brush: js">gl.getParameter(gl.TEXTURE_BINDING_2D);
-</pre>
+```js
+gl.getParameter(gl.TEXTURE_BINDING_2D);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-</ul>
+<!---->
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

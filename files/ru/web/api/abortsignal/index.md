@@ -3,39 +3,36 @@ title: AbortSignal
 slug: Web/API/AbortSignal
 translation_of: Web/API/AbortSignal
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>AbortSignal</code></strong> интерфейс представляет собой объект сигнала, который позволяет вам общаться с DOM запросом (например, Fetch) и прервать его при необходимости с помощью объекта {{domxref("AbortController")}}.</p>
+**`AbortSignal`** интерфейс представляет собой объект сигнала, который позволяет вам общаться с DOM запросом (например, Fetch) и прервать его при необходимости с помощью объекта {{domxref("AbortController")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>AbortSignal также наследует свойства от своего родительского интерфейса, {{domxref("EventTarget")}}.</em></p>
+_AbortSignal также наследует свойства от своего родительского интерфейса, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
- <dd>Это {{domxref("Boolean")}}, который указывает, отменён ли запрос(ы), с которым связывался сигнал, отменён (<code>true</code>) или нет (<code>false</code>).</dd>
-</dl>
+- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+  - : Это {{domxref("Boolean")}}, который указывает, отменён ли запрос(ы), с которым связывался сигнал, отменён (`true`) или нет (`false`).
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+### Обработчики событий
 
-<dl>
- <dt>{{domxref("AbortSignal.onabort")}}</dt>
- <dd>Вызывается когда происходит событие {{event("abort_(dom_abort_api)", "abort")}}, т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.</dd>
-</dl>
+- {{domxref("AbortSignal.onabort")}}
+  - : Вызывается когда происходит событие {{event("abort_(dom_abort_api)", "abort")}}, т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>AbortSignal наследует методы от родительского интерфейса, {{domxref("EventTarget")}}.</em></p>
+_AbortSignal наследует методы от родительского интерфейса, {{domxref("EventTarget")}}._
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем фрагменте мы будем загружать видео используя <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+В следующем фрагменте мы будем загружать видео используя [Fetch API](/ru/docs/Web/API/Fetch_API).
 
-<p>Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
+Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-<p>Когда <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запрос</a> инициируется, мы передаём <code>AbortSignal</code> в качестве опции внутрь объекта параметров запроса (см. <code>{signal}</code> ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.</p>
+Когда [fetch запрос](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -55,31 +52,24 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Ошибка загрузки: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> промис отклоняется с <code>AbortError</code>.</p>
-</div>
+> **Примечание:** Когда `abort()` вызывается, `fetch()` промис отклоняется с `AbortError`.
 
-<div class="warning">
-<p>Текущая версия Firefox отклоняет промис с <code>DOMException</code></p>
-</div>
+> **Предупреждение:** Текущая версия Firefox отклоняет промис с `DOMException`
 
-<p>Вы можете найти полный рабочий пример на GitHub — см. <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">см. как он работает в живую</a>).</p>
+Вы можете найти полный рабочий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([см. как он работает в живую](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> by Jake Archibald</li>
-</ul>
+- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald

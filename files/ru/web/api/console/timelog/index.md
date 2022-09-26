@@ -3,73 +3,75 @@ title: Console.timeLog()
 slug: Web/API/Console/timeLog
 translation_of: Web/API/Console/timeLog
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.
 
-<div>Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.</div>
+Подробности и примеры смотрите в документации [Timers](/ru/docs/Web/API/console#Timers).
 
-<p>Подробности и примеры смотрите в документации <a href="/en-US/docs/Web/API/console#Timers">Timers</a>.</p>
+{{AvailableInWorkers}}
 
-<p>{{AvailableInWorkers}}</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+console.timeLog(label);
+```
 
-<pre class="syntaxbox">console.timeLog(<em>label</em>);
-</pre>
+### Параметры
 
-<h3 id="Параметры">Параметры</h3>
+- `label`
+  - : Имя таймера для вывода в консоль.
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Имя таймера для вывода в консоль.</dd>
-</dl>
+### Результат
 
-<h3 id="Результат">Результат</h3>
+Если параметр `label` опущен, выводит значение таймера по умолчанию:
 
-<p>Если параметр <code>label</code> опущен, выводит значение таймера по умолчанию:</p>
+```
+default: 1042ms
+```
 
-<pre>default: 1042ms</pre>
+Если в параметре `label` указано имя существующего таймера:
 
-<p>Если в параметре <code>label</code> указано имя существующего таймера:</p>
+```
+timer name: 1242ms
+```
 
-<pre>timer name: 1242ms</pre>
+### Исключения
 
-<h3 id="Исключения">Исключения</h3>
+При отсутствии запущенного таймера по умолчанию `timeLog()` выводит предупреждение:
 
-<p>При отсутствии запущенного таймера по умолчанию <code>timeLog()</code> выводит предупреждение:</p>
+```
+Timer “default” doesn’t exist.
+```
 
-<pre>Timer “default” doesn’t exist.</pre>
+При указании имени несуществующего таймера:
 
-<p>При указании имени несуществующего таймера:</p>
+```
+ Timer “timer name” doesn’t exist.
+```
 
-<pre> Timer “timer name” doesn’t exist. </pre>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Нажмите для продолжения");
 console.timeLog("answer time");
 alert("Делаем кучу другой работы...");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>Отчёт таймера начинается с момента вызова <code>console.time()</code>. Сначала выводится время от начала отсчёта до закрытия первого уведомления. Затем выводится время с начала отсчёта до закрытия второго уведомления:</p>
+Отчёт таймера начинается с момента вызова `console.time()`. Сначала выводится время от начала отсчёта до закрытия первого уведомления. Затем выводится время с начала отсчёта до закрытия второго уведомления:
 
-<p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16113/console-timeLog.png" style="border: 1px solid black; height: 102px; margin: 0 auto; width: 318px;"></p>
+![timerresult.png](https://mdn.mozillademos.org/files/16113/console-timeLog.png)
 
-<p>Обратите внимание, имя таймера печатается как при вызовах <code>timeLog()</code> , так и при завершении таймера.</p>
+Обратите внимание, имя таймера печатается как при вызовах `timeLog()` , так и при завершении таймера.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

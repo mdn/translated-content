@@ -8,40 +8,35 @@ tags:
 translation_of: Web/API/Window/mozAnimationStartTime
 original_slug: Web/API/Window/mozAnimationStartTime
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}</p>
+{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}
 
-<h3 id="Summary">Summary</h3>
+### Summary
 
-<p>Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, <code><a href="/en/JavaScript/Reference/Global_Objects/Date/now" title="en/JavaScript/Reference/Global Objects/Date/now">Date.now()</a></code>, потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.</p>
+Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, [`Date.now()`](/en/JavaScript/Reference/Global_Objects/Date/now "en/JavaScript/Reference/Global Objects/Date/now"), потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.
 
-<p>Это также позволяет анимациям JavaScript оставаться синхронизированными с CSS переходами и SMIL анимациями, запущенными в течение того же интервала обновления.</p>
+Это также позволяет анимациям JavaScript оставаться синхронизированными с CSS переходами и SMIL анимациями, запущенными в течение того же интервала обновления.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval"><em>time</em> = window.mozAnimationStartTime;
-</pre>
+```
+time = window.mozAnimationStartTime;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><em><code>time</code></em> это время в миллисекундах с начала эпохи UNIX, начиная с которого анимации для текущего окна принимаются уже начавшимися.</li>
-</ul>
+- _`time`_ это время в миллисекундах с начала эпохи UNIX, начиная с которого анимации для текущего окна принимаются уже начавшимися.
 
-<h3 id="Specification">Specification</h3>
+### Specification
 
-<p>Not part of specification.</p>
+Not part of specification.
 
-<h3 id="Browser_compatibility">Browser compatibility</h3>
+### Browser compatibility
 
+{{Compat}}
 
+### See also
 
-<p>{{Compat}}</p>
-
-<h3 id="See_also">See also</h3>
-
-<ul>
- <li>{{ domxref("window.mozRequestAnimationFrame()") }}</li>
- <li>{{ domxref("window.onmozbeforepaint") }}</li>
-</ul>
+- {{ domxref("window.mozRequestAnimationFrame()") }}
+- {{ domxref("window.onmozbeforepaint") }}

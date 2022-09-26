@@ -3,52 +3,45 @@ title: FetchEvent
 slug: Web/API/FetchEvent
 translation_of: Web/API/FetchEvent
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>Это тип событий <code>fetch</code>, обрабатываемых в {{domxref("ServiceWorkerGlobalScope", "глобальном контексте service worker", "", 1)}}. Данное событие содержит данные о запросе, включая его цель. Оно предоставляет метод {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, с помощью которого service worker может ответить на запрос.</p>
+Это тип событий `fetch`, обрабатываемых в {{domxref("ServiceWorkerGlobalScope", "глобальном контексте service worker", "", 1)}}. Данное событие содержит данные о запросе, включая его цель. Оно предоставляет метод {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, с помощью которого service worker может ответить на запрос.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}</dt>
- <dd>Создаёт новый объект <code>FetchEvent</code>. Как правило, данный конструктор не используется. Браузер самостоятельно создаёт данные объекты и передаёт их в обработчик событий <code>fetch</code>.</dd>
-</dl>
+- {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
+  - : Создаёт новый объект `FetchEvent`. Как правило, данный конструктор не используется. Браузер самостоятельно создаёт данные объекты и передаёт их в обработчик событий `fetch`.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Данный класс наследует все свойства класса {{domxref("Event")}}</em>.</p>
+_Данный класс наследует все свойства класса {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.clientId")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}} того же источника, отправившего запрос.</dd>
- <dt>{{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}</dt>
- <dd>{{jsxref("Promise", "Промис")}} для {{domxref("Response", "запроса")}}, или же пустой промис, если не произошла навигация или {{domxref("NavigationPreloadManager", "предзагрузка навигации", "", 1)}} отключена.</dd>
- <dt>{{domxref("fetchEvent.request")}} {{readonlyInline}}</dt>
- <dd>Запрос ({{domxref("Request")}}) от браузера.</dd>
- <dt>{{domxref("fetchEvent.replacesClientId")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}}, заменяемого при навигации.</dd>
- <dt>{{domxref("fetchEvent.resultingClientId")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}}, заменившего прошлый клиент при навигации.</dd>
-</dl>
+- {{domxref("fetchEvent.clientId")}} {{readonlyInline}}
+  - : {{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}} того же источника, отправившего запрос.
+- {{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}
+  - : {{jsxref("Promise", "Промис")}} для {{domxref("Response", "запроса")}}, или же пустой промис, если не произошла навигация или {{domxref("NavigationPreloadManager", "предзагрузка навигации", "", 1)}} отключена.
+- {{domxref("fetchEvent.request")}} {{readonlyInline}}
+  - : Запрос ({{domxref("Request")}}) от браузера.
+- {{domxref("fetchEvent.replacesClientId")}} {{readonlyInline}}
+  - : {{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}}, заменяемого при навигации.
+- {{domxref("fetchEvent.resultingClientId")}} {{readonlyInline}}
+  - : {{domxref("Client.id", "Идентификатор")}} {{domxref("Client", "клиента")}}, заменившего прошлый клиент при навигации.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Данный класс наследует методы класса </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+_Данный класс наследует методы класса_ _{{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.respondWith()")}}</dt>
- <dd>Перехватывает запрос и отправляет промис с ответом.</dd>
- <dt>{{domxref("extendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Продлевает выполнение обработчика события до завершения переданного промиса. Используется чтобы уведомить браузер о событии, продолжающемся после отправки ответа, таком как обновление кеша или потоковая передача.</p>
- </dd>
-</dl>
+- {{domxref("fetchEvent.respondWith()")}}
+  - : Перехватывает запрос и отправляет промис с ответом.
+- {{domxref("extendableEvent.waitUntil()")}}
+  - : Продлевает выполнение обработчика события до завершения переданного промиса. Используется чтобы уведомить браузер о событии, продолжающемся после отправки ответа, таком как обновление кеша или потоковая передача.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В данном примере все не-GET запросы будут обрабатываться стандартными средствами браузера. В случае GET запросов, service worker попробует найти ответ в кеше, а в случае его отсутствия получит данные с сервера. Также, он асинхронно обновит данные в кеше.</p>
+В данном примере все не-GET запросы будут обрабатываться стандартными средствами браузера. В случае GET запросов, service worker попробует найти ответ в кеше, а в случае его отсутствия получит данные с сервера. Также, он асинхронно обновит данные в кеше.
 
-<pre class="brush: js">self.addEventListener('fetch', event =&gt; {
+```js
+self.addEventListener('fetch', event => {
   // В случае не-GET запроса браузер должен сам обрабатывать его
   if (event.request.method != 'GET') return;
 
@@ -68,23 +61,18 @@ translation_of: Web/API/FetchEvent
     // В случае, если данные не были найдены в кеше, получаем их с сервера.
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Fetch API](/ru/docs/Web/API/Fetch_API)

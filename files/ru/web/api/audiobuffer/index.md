@@ -3,52 +3,45 @@ title: AudioBuffer
 slug: Web/API/AudioBuffer
 translation_of: Web/API/AudioBuffer
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещённые в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
-</div>
+`AudioBuffer` - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещённые в AudioBuffer звуковые данные могут быть воспроизведены в {{ domxref("AudioBufferSourceNode") }}.
 
-<p>Объекты этого типа предназначены для хранения небольших звуковых фрагментов, обычно менее 45 секунд. Для более длинных звуков, объекты реализующие {{domxref("MediaElementAudioSourceNode")}} являются более подходящими. Этот буфер содержит данные в формате неперемещаемого IEE754 32-битного линейного ИКМ с номинальным диапазоном от -1 до +1, то есть 32-битный буфер с плавающей точкой каждого звукового фрагмента (samples) от -1.0 до 1.0. Если {{domxref("AudioBuffer")}} имеет несколько каналов, то они хранятся в отдельном буфере.</p>
+Объекты этого типа предназначены для хранения небольших звуковых фрагментов, обычно менее 45 секунд. Для более длинных звуков, объекты реализующие {{domxref("MediaElementAudioSourceNode")}} являются более подходящими. Этот буфер содержит данные в формате неперемещаемого IEE754 32-битного линейного ИКМ с номинальным диапазоном от -1 до +1, то есть 32-битный буфер с плавающей точкой каждого звукового фрагмента (samples) от -1.0 до 1.0. Если {{domxref("AudioBuffer")}} имеет несколько каналов, то они хранятся в отдельном буфере.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
- <dd>Создаёт и возвращает новый объект <code>AudioBuffer</code>.</dd>
-</dl>
+- {{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}
+  - : Создаёт и возвращает новый объект `AudioBuffer`.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
- <dd>Возвращает число с плавающей точкой - частоту дискретизации (sample rate), хранящих в буфере данных ИКМ в звуковых фрагментах (samples) в секунду.</dd>
- <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
- <dd>Возвращает целое число - длину в кадрах, хранящихся в буфере данных ИКМ.</dd>
- <dt>{{domxref("AudioBuffer.duration")}} {{readonlyInline}}</dt>
- <dd>Возвращает целое число или число с плавающей точкой - продолжительность в секундах данных ИКМ, хранящихся в буфере.</dd>
- <dt>{{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}</dt>
- <dd>Возвращает целое число - количество аудиоканалов в буфере, описываемых данными ИКМ.</dd>
-</dl>
+- {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
+  - : Возвращает число с плавающей точкой - частоту дискретизации (sample rate), хранящих в буфере данных ИКМ в звуковых фрагментах (samples) в секунду.
+- {{domxref("AudioBuffer.length")}} {{readonlyInline}}
+  - : Возвращает целое число - длину в кадрах, хранящихся в буфере данных ИКМ.
+- {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
+  - : Возвращает целое число или число с плавающей точкой - продолжительность в секундах данных ИКМ, хранящихся в буфере.
+- {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
+  - : Возвращает целое число - количество аудиоканалов в буфере, описываемых данными ИКМ.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("AudioBuffer.getChannelData()")}}</dt>
- <dd>Возвращает {{jsxref("Float32Array")}}, содержащий связанные с каналом данные ИКМ. Определяется параметром канала (с 0 - первого канала).</dd>
- <dt>{{domxref("AudioBuffer.copyFromChannel()")}}</dt>
- <dd>Копирует звуковые фрагменты (samples) из указанного канала AudioBuffer в массив.</dd>
- <dt>{{domxref("AudioBuffer.copyToChannel()")}}</dt>
- <dd>Копирует звуковые фрагменты (samples) из массива в указанный канал AudioBuffer.</dd>
-</dl>
+- {{domxref("AudioBuffer.getChannelData()")}}
+  - : Возвращает {{jsxref("Float32Array")}}, содержащий связанные с каналом данные ИКМ. Определяется параметром канала (с 0 - первого канала).
+- {{domxref("AudioBuffer.copyFromChannel()")}}
+  - : Копирует звуковые фрагменты (samples) из указанного канала AudioBuffer в массив.
+- {{domxref("AudioBuffer.copyToChannel()")}}
+  - : Копирует звуковые фрагменты (samples) из массива в указанный канал AudioBuffer.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере показывается как создать объект AudioBuffer и заполнить его случайными белыми шумами. Вы можете найти полный пример в репозитории <a href="https://github.com/mdn/webaudio-examples">webaudio-examples</a>. Так же доступна <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">live версия</a>.</p>
+В этом примере показывается как создать объект AudioBuffer и заполнить его случайными белыми шумами. Вы можете найти полный пример в репозитории [webaudio-examples](https://github.com/mdn/webaudio-examples). Так же доступна [live версия](https://mdn.github.io/webaudio-examples/audio-buffer/).
 
-<pre class="brush: js;">// Стерео
+```js
+// Стерео
 var channels = 2;
 
 // Создаёт пустой двухсекундный стерео-буфер
@@ -59,10 +52,10 @@ var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleR
 button.onclick = function() {
   // Заполняет буфер белыми шумами;
   // просто случайные значения от -1.0 до 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
     // Получаем массив данных канала
     var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i &lt; frameCount; i++) {
+    for (var i = 0; i < frameCount; i++) {
       // Math.random() находится в [0; 1.0]
       // аудио должно быть в интервале [-1.0; 1.0]
       nowBuffering[i] = Math.random() * 2 - 1;
@@ -84,20 +77,18 @@ button.onclick = function() {
   source.start();
 
 }
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Использование Web Audio API</a></li>
-</ul>
+- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

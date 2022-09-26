@@ -3,45 +3,30 @@ title: HTMLDataElement
 slug: Web/API/HTMLDataElement
 translation_of: Web/API/HTMLDataElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Интерфейс <strong><code>HTMLDataElement</code></strong> предоставляет специальные свойства (после чего постоянный  {{domxref("HTMLElement")}} интерфейс также доступен еме по наследству) для манипуляции {{HTMLElement("data")}} элементами.</p>
+Интерфейс **`HTMLDataElement`** предоставляет специальные свойства (после чего постоянный {{domxref("HTMLElement")}} интерфейс также доступен еме по наследству) для манипуляции {{HTMLElement("data")}} элементами.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителя, {{domxref("HTMLElement")}}.</em></p>
+_Наследует свойства от родителя, {{domxref("HTMLElement")}}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Имя</th>
-   <th scope="col">Тип</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>value</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>отображает {{ htmlattrxref("value", "data") }} HTML атрибут, содержащий машиночитаемый вид значения элемента.</td>
-  </tr>
- </tbody>
-</table>
+| Имя     | Тип                              | Описание                                                                                                                   |
+| ------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `value` | {{domxref("DOMString")}} | отображает {{ htmlattrxref("value", "data") }} HTML атрибут, содержащий машиночитаемый вид значения элемента. |
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<p><em>Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}}.</em></p>
+_Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{HTMLElement("data")}}.</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{HTMLElement("data")}}.

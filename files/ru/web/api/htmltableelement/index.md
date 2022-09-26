@@ -9,112 +9,80 @@ tags:
   - Интерфейсы
 translation_of: Web/API/HTMLTableElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>Объекты <code>table</code> описывают интерфейс <code><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425">HTMLTableElement</a></code>, который содержит дополнительные свойства и методы (по сравнению с обычным объектным интерфейсом <a href="/ru/docs/DOM/element"><code>element</code></a> которые также доступны вследствие наследования) для управления внешним видом таблиц HTML.</p>
+Объекты `table` описывают интерфейс [`HTMLTableElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425), который содержит дополнительные свойства и методы (по сравнению с обычным объектным интерфейсом [`element`](/ru/docs/DOM/element) которые также доступны вследствие наследования) для управления внешним видом таблиц HTML.
 
-<h2 id=".D0.A1.D0.B2.D0.BE.D0.B9.D1.81.D1.82.D0.B2.D0.B0">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителя, {{domxref("HTMLElement")}}.</em></p>
+_Наследует свойства от родителя, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt><a href="/ru/docs/DOM/table.caption">table.caption</a></dt>
- <dd><strong>caption</strong> возвращает заголовок таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.tHead">table.tHead</a></dt>
- <dd><strong>tHead</strong> возвращает header таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.tFoot">table.tFoot</a></dt>
- <dd><strong>tFoot</strong> возвращает footer таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.rows">table.rows</a></dt>
- <dd><strong>rows</strong> возвращает строки таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.tBodies">table.tBodies</a></dt>
- <dd><strong>tBodies</strong> возвращает тела таблицы.</dd>
-</dl>
+- [table.caption](/ru/docs/DOM/table.caption)
+  - : **caption** возвращает заголовок таблицы.
+- [table.tHead](/ru/docs/DOM/table.tHead)
+  - : **tHead** возвращает header таблицы.
+- [table.tFoot](/ru/docs/DOM/table.tFoot)
+  - : **tFoot** возвращает footer таблицы.
+- [table.rows](/ru/docs/DOM/table.rows)
+  - : **rows** возвращает строки таблицы.
+- [table.tBodies](/ru/docs/DOM/table.tBodies)
+  - : **tBodies** возвращает тела таблицы.
 
-<dl>
- <dt><a href="/ru/docs/DOM/table.align">table.align</a></dt>
- <dd><strong>align</strong> возвращает/устанавливает выравнивание таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.bgColor">table.bgColor</a></dt>
- <dd><strong>bgColor</strong> возвращает/устанавливает цвет фона таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.border">table.border</a></dt>
- <dd><strong>border</strong> возвращает/устанавливает рамку таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.cellPadding">table.cellPadding</a></dt>
- <dd><strong>cellPadding</strong> возвращает/устанавливает cellpadding.</dd>
- <dt><a href="/ru/docs/DOM/table.cellSpacing">table.cellSpacing</a></dt>
- <dd><strong>cellSpacing</strong> возвращает/устанавливает cellspacing.</dd>
- <dt><a href="/ru/docs/DOM/table.frame">table.frame</a></dt>
- <dd><strong>frame</strong> определяет, какие стороны таблицы имеют рамку.</dd>
- <dt><a href="/ru/docs/DOM/table.rules">table.rules</a></dt>
- <dd><strong>rules</strong> определяет, какие внутренние рамки являются видимыми.</dd>
- <dt><a href="/ru/docs/DOM/table.summary">table.summary</a></dt>
- <dd><strong>summary</strong> возвращает/устанавливает описание таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.width">table.width</a></dt>
- <dd><strong>width</strong> возвращает/устанавливает ширину таблицы.</dd>
-</dl>
+<!---->
 
-<h2 id="Methods">Методы</h2>
+- [table.align](/ru/docs/DOM/table.align)
+  - : **align** возвращает/устанавливает выравнивание таблицы.
+- [table.bgColor](/ru/docs/DOM/table.bgColor)
+  - : **bgColor** возвращает/устанавливает цвет фона таблицы.
+- [table.border](/ru/docs/DOM/table.border)
+  - : **border** возвращает/устанавливает рамку таблицы.
+- [table.cellPadding](/ru/docs/DOM/table.cellPadding)
+  - : **cellPadding** возвращает/устанавливает cellpadding.
+- [table.cellSpacing](/ru/docs/DOM/table.cellSpacing)
+  - : **cellSpacing** возвращает/устанавливает cellspacing.
+- [table.frame](/ru/docs/DOM/table.frame)
+  - : **frame** определяет, какие стороны таблицы имеют рамку.
+- [table.rules](/ru/docs/DOM/table.rules)
+  - : **rules** определяет, какие внутренние рамки являются видимыми.
+- [table.summary](/ru/docs/DOM/table.summary)
+  - : **summary** возвращает/устанавливает описание таблицы.
+- [table.width](/ru/docs/DOM/table.width)
+  - : **width** возвращает/устанавливает ширину таблицы.
 
-<p><em>Наследует методы от своего родителя, {{domxref("HTMLElement")}}</em>.</p>
+## Методы
 
-<dl>
- <dt><a href="/ru/docs/DOM/table.createTHead">table.createTHead</a></dt>
- <dd><strong>createTHead</strong> создаёт header таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.deleteTHead">table.deleteTHead</a></dt>
- <dd><strong>deleteTHead</strong> удаляет header таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.createTFoot">table.createTFoot</a></dt>
- <dd><strong>createTFoot</strong> создаёт footer таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.deleteTFoot">table.deleteTFoot</a></dt>
- <dd><strong>deleteTFoot</strong> удаляет footer таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.createCaption">table.createCaption</a></dt>
- <dd><strong>createCaption</strong> создаёт заголовок таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.deleteCaption">table.deleteCaption</a></dt>
- <dd><strong>deleteCaption</strong> удаляет заголовок таблицы.</dd>
- <dt><a href="/ru/docs/DOM/table.insertRow">table.insertRow</a></dt>
- <dd><strong>insertRow</strong> вставляет строку.</dd>
- <dt><a href="/ru/docs/DOM/table.deleteRow">table.deleteRow</a></dt>
- <dd><strong>deleteRow</strong> удаляет строку.</dd>
-</dl>
+_Наследует методы от своего родителя, {{domxref("HTMLElement")}}_.
 
-<h2 id="Specifications">Спецификации</h2>
+- [table.createTHead](/ru/docs/DOM/table.createTHead)
+  - : **createTHead** создаёт header таблицы.
+- [table.deleteTHead](/ru/docs/DOM/table.deleteTHead)
+  - : **deleteTHead** удаляет header таблицы.
+- [table.createTFoot](/ru/docs/DOM/table.createTFoot)
+  - : **createTFoot** создаёт footer таблицы.
+- [table.deleteTFoot](/ru/docs/DOM/table.deleteTFoot)
+  - : **deleteTFoot** удаляет footer таблицы.
+- [table.createCaption](/ru/docs/DOM/table.createCaption)
+  - : **createCaption** создаёт заголовок таблицы.
+- [table.deleteCaption](/ru/docs/DOM/table.deleteCaption)
+  - : **deleteCaption** удаляет заголовок таблицы.
+- [table.insertRow](/ru/docs/DOM/table.insertRow)
+  - : **insertRow** вставляет строку.
+- [table.deleteRow](/ru/docs/DOM/table.deleteRow)
+  - : **deleteRow** удаляет строку.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "tabular-data.html#the-table-element", "HTMLTableElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Добавляет свойство <code>sortable</code> и метод <code>stopSorting()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "tabular-data.html#the-table-element", "HTMLTableElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Добавляет метод <code>createTBody()</code>.<br>
-    Obsoleted xaz</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-64060425', 'HTMLTableElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Defined when <code>caption</code>, <code>tHead</code>, <code>tFoot</code>, <code>insertRow()</code>, and <code>deleteRow()</code> raise exceptions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-64060425', 'HTMLTableElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Спецификация                                                                                                         | Статус                           | Комментарий                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "tabular-data.html#the-table-element", "HTMLTableElement")}} | {{Spec2('HTML WHATWG')}} | Добавляет свойство `sortable` и метод `stopSorting()`.                                       |
+| {{SpecName('HTML5 W3C', "tabular-data.html#the-table-element", "HTMLTableElement")}}     | {{Spec2('HTML5 W3C')}}     | Добавляет метод `createTBody()`. Obsoleted xaz                                               |
+| {{SpecName('DOM2 HTML', 'html.html#ID-64060425', 'HTMLTableElement')}}                         | {{Spec2('DOM2 HTML')}}     | Defined when `caption`, `tHead`, `tFoot`, `insertRow()`, and `deleteRow()` raise exceptions. |
+| {{SpecName('DOM1', 'level-one-html.html#ID-64060425', 'HTMLTableElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                          |
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Элемент HTML, реализующий данный интерфейс: {{HTMLElement("table")}}.</li>
-</ul>
+## Смотрите также
+
+- Элемент HTML, реализующий данный интерфейс: {{HTMLElement("table")}}.

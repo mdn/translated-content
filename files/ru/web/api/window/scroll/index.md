@@ -3,35 +3,33 @@ title: Window.scroll()
 slug: Web/API/Window/scroll
 translation_of: Web/API/Window/scroll
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Прокручивает страницу до указанного места.</p>
+Прокручивает страницу до указанного места.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.scroll(<em>x-coord</em>,<em>y-coord</em>)
-</pre>
+```
+window.scroll(x-coord,y-coord)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>x-coord</code> - это x-координата пикселя, который окажется в верхнем левом углу экрана.</li>
- <li><code>y-coord</code>- это y-координата пикселя, который окажется в верхнем левом углу экрана.</li>
-</ul>
+- `x-coord` - это x-координата пикселя, который окажется в верхнем левом углу экрана.
+- `y-coord`- это y-координата пикселя, который окажется в верхнем левом углу экрана.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:html;">&lt;!-- прокрутить до пикселя с y = 100 --&gt;
+```html
+<!-- прокрутить до пикселя с y = 100 -->
 
-&lt;button onClick="scroll(0, 100);"&gt;прокрутить&lt;/button&gt;
-</pre>
+<button onClick="scroll(0, 100);">прокрутить</button>
+```
 
-<h2 id="Notes">Замечания</h2>
+## Замечания
 
-<p><a href="/en-US/docs/DOM/window.scrollTo">window.scrollTo</a> имеет тот же самый эффект. Для того, чтобы прокрутить на некоторое количество пикселей относительно текущей позиции, используйте <a href="/en-US/docs/Window.scrollBy">window.scrollBy</a>. Смотрите также <a href="/en-US/docs/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/Window.scrollByPages">window.scrollByPages</a>.</p>
+[window.scrollTo](/ru/docs/DOM/window.scrollTo) имеет тот же самый эффект. Для того, чтобы прокрутить на некоторое количество пикселей относительно текущей позиции, используйте [window.scrollBy](/ru/docs/Window.scrollBy). Смотрите также [window.scrollByLines](/ru/docs/Window.scrollByLines), [window.scrollByPages](/ru/docs/Window.scrollByPages).
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrolloptions">CSSOM: scroll() Method</a></li>
-</ul>
+- [CSSOM: scroll() Method](http://dev.w3.org/csswg/cssom-view/#dom-element-scrolloptions)

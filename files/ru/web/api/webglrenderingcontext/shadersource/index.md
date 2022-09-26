@@ -3,48 +3,47 @@ title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.shaderSource()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> записывает исходный код шейдера в шейдерную программу {{domxref("WebGLShader")}}.</p>
+**`WebGLRenderingContext.shaderSource()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) записывает исходный код шейдера в шейдерную программу {{domxref("WebGLShader")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>gl</var>.shaderSource(<var>shader</var>, <var>source</var>);
-</pre>
+```
+void gl.shaderSource(shader, source);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>shader</dt>
- <dd>A {{domxref("WebGLShader")}} объект в который записывается исходный код.</dd>
- <dt>source</dt>
- <dd>A {{domxref("DOMString")}} исходный код шейдера на GLSL который будет записан.</dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} объект в который записывается исходный код.
+- source
+  - : A {{domxref("DOMString")}} исходный код шейдера на GLSL который будет записан.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>None.</p>
+None.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);</pre>
+var source = gl.getShaderSource(shader);
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}

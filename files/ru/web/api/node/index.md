@@ -6,223 +6,185 @@ tags:
   - DOM
 translation_of: Web/API/Node
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Node</code></strong> это интерфейс, от которого наследуют несколько типов DOM, он так же позволяет различным типам быть обработанными(или протестированными).</p>
+**`Node`** это интерфейс, от которого наследуют несколько типов DOM, он так же позволяет различным типам быть обработанными(или протестированными).
 
-<p>Следующие интерфейсы полностью наследуют от <code>Node</code> его методы и свойства: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} (which {{domxref("Text")}}, {{domxref("Comment")}}, и {{domxref("CDATASection")}} inherit), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}</p>
+Следующие интерфейсы полностью наследуют от `Node` его методы и свойства: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} (which {{domxref("Text")}}, {{domxref("Comment")}}, и {{domxref("CDATASection")}} inherit), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}
 
-<p>Эти интерфейсы могут возвращать null в особых случаях, когда методы и свойства не уместны. Они могут сбросить исключение - например, когда добавляются дети к типу узла, у которого не может их существовать.</p>
+Эти интерфейсы могут возвращать null в особых случаях, когда методы и свойства не уместны. Они могут сбросить исключение - например, когда добавляются дети к типу узла, у которого не может их существовать.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителей {{domxref("EventTarget")}}</em>.<sup>[1]</sup></p>
+_Наследует свойства от родителей {{domxref("EventTarget")}}_.\[1]
 
-<dl>
- <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего<code> '/'</code>.</dd>
- <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>(Не доступно для веб-контента.) Только для чтения. Объект <code>nsIURI</code>, представляющий базовый URI элемента.</dd>
- <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
- <dd>Возвращает живой {{domxref("NodeList")}}, содержащий всех потомков данного узла. Живой {{domxref("NodeList")}} означает то, что если потомки <code>узла</code> изменяются, объект {{domxref("NodeList")}} автоматически обновляется.</dd>
- <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Node")}}, представляющий первый прямой узел потомок узла или<code> null,</code> если узел не имеет потомков.</dd>
- <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или <code>null</code>, если узел не имеет потомков.</dd>
- <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
- <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Пространство имён URI данного узла или <code>null,</code> если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
- Хотя недавние спецификации требуют <code>namespaceURI</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
- <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Node")}} представляющий следующий узел в древе или <code>null,</code> если не такого узла.</dd>
- <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} содержащий имя <code>узла</code>. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега:<code> 'audio'</code> для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой <code>'#text'</code> или узел {{domxref("Document")}} будет строкой<code> '#document'</code>.</dd>
- <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd><code>nsIPrincipal</code> представляет основной узел.</dd>
- <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
- <dd>Возвращает беззнаковое короткое число <code>(unsigned short</code>) представляющее тип узла. Возможные значения:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Имя</th>
-    <th scope="col">Значение</th>
-   </tr>
-   <tr>
-    <td><code>ELEMENT_NODE</code></td>
-    <td><code>1</code></td>
-   </tr>
-   <tr>
-    <td><code>ATTRIBUTE_NODE</code> {{deprecated_inline()}}</td>
-    <td><code>2</code></td>
-   </tr>
-   <tr>
-    <td><code>TEXT_NODE</code></td>
-    <td><code>3</code></td>
-   </tr>
-   <tr>
-    <td><code>CDATA_SECTION_NODE</code> {{deprecated_inline()}}</td>
-    <td><code>4</code></td>
-   </tr>
-   <tr>
-    <td><code>ENTITY_REFERENCE_NODE</code> {{deprecated_inline()}}</td>
-    <td><code>5</code></td>
-   </tr>
-   <tr>
-    <td><code>ENTITY_NODE</code> {{deprecated_inline()}}</td>
-    <td><code>6</code></td>
-   </tr>
-   <tr>
-    <td><code>PROCESSING_INSTRUCTION_NODE</code></td>
-    <td><code>7</code></td>
-   </tr>
-   <tr>
-    <td><code>COMMENT_NODE</code></td>
-    <td><code>8</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_NODE</code></td>
-    <td><code>9</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_TYPE_NODE</code></td>
-    <td><code>10</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_FRAGMENT_NODE</code></td>
-    <td><code>11</code></td>
-   </tr>
-   <tr>
-    <td><code>NOTATION_NODE</code> {{deprecated_inline()}}</td>
-    <td><code>12</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("Node.nodeValue")}}</dt>
- <dd>Это {{domxref("DOMString")}}, представляющее значение объектов. Для большинства типов <code>Node</code>, возвращает <code>null</code> и любой набор операция игнорируется. Для узлов типа <code>TEXT_NODE</code> ({{domxref("Text")}} objects), <code>COMMENT_NODE</code> ({{domxref("Comment")}} objects), и <code>PROCESSING_INSTRUCTION_NODE</code> ({{domxref("ProcessingInstruction")}} objects), значение соответствует текстовым данным, содержащихся в объекте.</dd>
- <dt>{{domxref("Node.ownerDocument")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает <code>null</code>.</dd>
- <dt>{{domxref("Node.parentNode")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернёт<code> null</code>.</dd>
- <dt>{{domxref("Node.parentElement")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернёт <code>null</code>.</dd>
- <dt>{{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} представляющий префикс пространства имён узла или <code>null</code> если нет префикса точно определённого.<br>
- Хотя недавние спецификации требуют того, чтобы <code>префикс</code> был определён как интерфейс {{domxref("Element")}}, браузеры основанные на Gecko ещё реализовывают его как интерфейс {{domxref("Node")}}.</dd>
- <dt>{{domxref("Node.previousSibling")}} {{readonlyInline}}</dt>
- <dd>Возвращают {{domxref("Node")}} представляющий предыдущий узел древа или <code>null</code>, если нет такого узла.</dd>
- <dt>{{domxref("Node.textContent")}}</dt>
- <dd>Это {{domxref("DOMString")}} представляющее текстовый контент элемента и всех его потомков.</dd>
-</dl>
+- {{domxref("Node.baseURI")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего` '/'`.
+- {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
+  - : (Не доступно для веб-контента.) Только для чтения. Объект `nsIURI`, представляющий базовый URI элемента.
+- {{domxref("Node.childNodes")}} {{readonlyInline}}
+  - : Возвращает живой {{domxref("NodeList")}}, содержащий всех потомков данного узла. Живой {{domxref("NodeList")}} означает то, что если потомки `узла` изменяются, объект {{domxref("NodeList")}} автоматически обновляется.
+- {{domxref("Node.firstChild")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Node")}}, представляющий первый прямой узел потомок узла или` null,` если узел не имеет потомков.
+- {{domxref("Node.lastChild")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или `null`, если узел не имеет потомков.
+- {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от `localName` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
+- {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
+  - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}
+    Хотя недавние спецификации требуют `namespaceURI` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
+- {{domxref("Node.nextSibling")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Node")}} представляющий следующий узел в древе или `null,` если не такого узла.
+- {{domxref("Node.nodeName")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} содержащий имя `узла`. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега:` 'audio'` для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой `'#text'` или узел {{domxref("Document")}} будет строкой` '#document'`.
+- {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
+  - : `nsIPrincipal` представляет основной узел.
+- {{domxref("Node.nodeType")}}{{readonlyInline}}
 
-<h2 id="Методы">Методы</h2>
+  - : Возвращает беззнаковое короткое число `(unsigned short`) представляющее тип узла. Возможные значения:
 
-<p><em>Наследует методы от своих родителей {{domxref("EventTarget")}}</em>.<sup>[1]</sup></p>
+    | Имя                                                      | Значение |
+    | -------------------------------------------------------- | -------- |
+    | `ELEMENT_NODE`                                           | `1`      |
+    | `ATTRIBUTE_NODE` {{deprecated_inline()}}        | `2`      |
+    | `TEXT_NODE`                                              | `3`      |
+    | `CDATA_SECTION_NODE` {{deprecated_inline()}}    | `4`      |
+    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}} | `5`      |
+    | `ENTITY_NODE` {{deprecated_inline()}}           | `6`      |
+    | `PROCESSING_INSTRUCTION_NODE`                            | `7`      |
+    | `COMMENT_NODE`                                           | `8`      |
+    | `DOCUMENT_NODE`                                          | `9`      |
+    | `DOCUMENT_TYPE_NODE`                                     | `10`     |
+    | `DOCUMENT_FRAGMENT_NODE`                                 | `11`     |
+    | `NOTATION_NODE` {{deprecated_inline()}}         | `12`     |
 
-<dl>
- <dt>{{domxref("Node.appendChild()")}}</dt>
- <dd>Вставляет {{domxref("Node")}} как последний дочерний узел данного элемента.</dd>
- <dt>{{domxref("Node.cloneNode()")}}</dt>
- <dd>Клонирует {{domxref("Node")}}, и опционально, все его компоненты. По умолчанию, оно клонирует содержимое узла.</dd>
- <dt>{{domxref("Node.compareDocumentPosition()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.contains()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.getFeature()")}} {{obsolete_inline}}</dt>
- <dd>...</dd>
- <dt>{{domxref("Node.getUserData()")}} {{obsolete_inline}}</dt>
- <dd>Позволяет пользователю получить некоторый {{domxref("DOMUserData")}} от узла.</dd>
- <dt>{{domxref("Node.hasAttributes()")}} {{obsolete_inline}}</dt>
- <dd>Возвращает {{domxref("Boolean")}} показывающий, есть ли у элемента какие-либо атрибуты или нет.</dd>
- <dt>{{domxref("Node.hasChildNodes()")}}</dt>
- <dd>Возвращает {{domxref("Boolean")}} показывающий, есть ли у элемента дочерние узлы или нет.</dd>
- <dt>{{domxref("Node.insertBefore()")}}</dt>
- <dd>Вставляет первым {{domxref("Node")}} данный в качестве параметра, непосредственно перед вторым, потомком данного элемента {{domxref("Node")}}.</dd>
- <dt>{{domxref("Node.isDefaultNamespace()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.isEqualNode()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.isSameNode()")}} {{obsolete_inline}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.isSupported()")}} {{obsolete_inline}}</dt>
- <dd>Возвращает <a href="https://developer.mozilla.org/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> флаг содержащий результаты теста, реализует ли реализация DOM конкретную особенность и поддерживается ли эта особенность конкретным узлом.</dd>
- <dt>{{domxref("Node.lookupPrefix()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.lookupNamespaceURI()")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Node.normalize()")}}</dt>
- <dd>Очищает все текстовые узлы под этим элементом (поглотить смежный, удалить пустой).</dd>
- <dt>{{domxref("Node.removeChild()")}}</dt>
- <dd>Удаляет дочерний узел из текущего элемента, который должен быть потомком текущего узла.</dd>
- <dt>{{domxref("Node.replaceChild()")}}</dt>
- <dd>Заменяет одного потомка {{domxref("Node")}} из существующего на второй указанный в параметре.</dd>
- <dt>{{domxref("Node.setUserData()")}} {{obsolete_inline}}</dt>
- <dd>Позволяет пользователю присоединить или удалить {{domxref("DOMUserData")}} к узлу.</dd>
-</dl>
+- {{domxref("Node.nodeValue")}}
+  - : Это {{domxref("DOMString")}}, представляющее значение объектов. Для большинства типов `Node`, возвращает `null` и любой набор операция игнорируется. Для узлов типа `TEXT_NODE` ({{domxref("Text")}} objects), `COMMENT_NODE` ({{domxref("Comment")}} objects), и `PROCESSING_INSTRUCTION_NODE` ({{domxref("ProcessingInstruction")}} objects), значение соответствует текстовым данным, содержащихся в объекте.
+- {{domxref("Node.ownerDocument")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает `null`.
+- {{domxref("Node.parentNode")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернёт` null`.
+- {{domxref("Node.parentElement")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернёт `null`.
+- {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
+  - : {{domxref("DOMString")}} представляющий префикс пространства имён узла или `null` если нет префикса точно определённого.
+    Хотя недавние спецификации требуют того, чтобы `префикс` был определён как интерфейс {{domxref("Element")}}, браузеры основанные на Gecko ещё реализовывают его как интерфейс {{domxref("Node")}}.
+- {{domxref("Node.previousSibling")}} {{readonlyInline}}
+  - : Возвращают {{domxref("Node")}} представляющий предыдущий узел древа или `null`, если нет такого узла.
+- {{domxref("Node.textContent")}}
+  - : Это {{domxref("DOMString")}} представляющее текстовый контент элемента и всех его потомков.
 
-<h2 id="Примеры">Примеры</h2>
+## Методы
 
-<h3 id="Просмотреть_все_дочерние_узлы">Просмотреть все дочерние узлы</h3>
+_Наследует методы от своих родителей {{domxref("EventTarget")}}_.\[1]
 
-<p>Следующая функция рекурсивный цикл всех дочерних узлов узла и она исполняет вызов функции относительно их (и себя относительно родительского узла).</p>
+- {{domxref("Node.appendChild()")}}
+  - : Вставляет {{domxref("Node")}} как последний дочерний узел данного элемента.
+- {{domxref("Node.cloneNode()")}}
+  - : Клонирует {{domxref("Node")}}, и опционально, все его компоненты. По умолчанию, оно клонирует содержимое узла.
+- {{domxref("Node.compareDocumentPosition()")}}
+  - : …
+- {{domxref("Node.contains()")}}
+  - : …
+- {{domxref("Node.getFeature()")}} {{obsolete_inline}}
+  - : ...
+- {{domxref("Node.getUserData()")}} {{obsolete_inline}}
+  - : Позволяет пользователю получить некоторый {{domxref("DOMUserData")}} от узла.
+- {{domxref("Node.hasAttributes()")}} {{obsolete_inline}}
+  - : Возвращает {{domxref("Boolean")}} показывающий, есть ли у элемента какие-либо атрибуты или нет.
+- {{domxref("Node.hasChildNodes()")}}
+  - : Возвращает {{domxref("Boolean")}} показывающий, есть ли у элемента дочерние узлы или нет.
+- {{domxref("Node.insertBefore()")}}
+  - : Вставляет первым {{domxref("Node")}} данный в качестве параметра, непосредственно перед вторым, потомком данного элемента {{domxref("Node")}}.
+- {{domxref("Node.isDefaultNamespace()")}}
+  - : …
+- {{domxref("Node.isEqualNode()")}}
+  - : …
+- {{domxref("Node.isSameNode()")}} {{obsolete_inline}}
+  - : …
+- {{domxref("Node.isSupported()")}} {{obsolete_inline}}
+  - : Возвращает [`Boolean`](/ru/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.") флаг содержащий результаты теста, реализует ли реализация DOM конкретную особенность и поддерживается ли эта особенность конкретным узлом.
+- {{domxref("Node.lookupPrefix()")}}
+  - : …
+- {{domxref("Node.lookupNamespaceURI()")}}
+  - : …
+- {{domxref("Node.normalize()")}}
+  - : Очищает все текстовые узлы под этим элементом (поглотить смежный, удалить пустой).
+- {{domxref("Node.removeChild()")}}
+  - : Удаляет дочерний узел из текущего элемента, который должен быть потомком текущего узла.
+- {{domxref("Node.replaceChild()")}}
+  - : Заменяет одного потомка {{domxref("Node")}} из существующего на второй указанный в параметре.
+- {{domxref("Node.setUserData()")}} {{obsolete_inline}}
+  - : Позволяет пользователю присоединить или удалить {{domxref("DOMUserData")}} к узлу.
 
-<pre class="brush: js">function DOMComb (oParent, oCallback) {
+## Примеры
+
+### Просмотреть все дочерние узлы
+
+Следующая функция рекурсивный цикл всех дочерних узлов узла и она исполняет вызов функции относительно их (и себя относительно родительского узла).
+
+```js
+function DOMComb (oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
     }
   }
   oCallback.call(oParent);
-}</pre>
+}
+```
 
-<h4 id="Синтаксис">Синтаксис</h4>
+#### Синтаксис
 
-<pre>DOMComb(parentNode, callbackFunction);</pre>
+```
+DOMComb(parentNode, callbackFunction);
+```
 
-<h4 id="Описание">Описание</h4>
+#### Описание
 
-<p>Рекурсивный цикл всех дочерних узлов <code>parentNode</code> и<code> </code>самого <code>parentNode</code>, выполняет <code>callbackFunction</code> относительно их  как <a href="/en-US/docs/JavaScript/Reference/Operators/this" title="en-US/docs/JavaScript/Reference/Operators/this"><code>эти</code></a> объекты.</p>
+Рекурсивный цикл всех дочерних узлов `parentNode` и` `самого `parentNode`, выполняет `callbackFunction` относительно их как [`эти`](/ru/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") объекты.
 
-<h4 id="Параметры">Параметры</h4>
+#### Параметры
 
-<dl>
- <dt><code>parentNode</code></dt>
- <dd>Родительский узел (<code><strong>Node</strong> <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object" title="en-US/docs/JavaScript/Reference/Global_Objects/Object">Object</a></code>).</dd>
- <dt><code>callbackFunction</code></dt>
- <dd>Колбэк-функции (<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>).</dd>
-</dl>
+- `parentNode`
+  - : Родительский узел (`Node Object`).
+- `callbackFunction`
+  - : Колбэк-функции ([`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
 
-<h4 id="Пример_использования">Пример использования</h4>
+#### Пример использования
 
-<p>Следующий пример отправляет в <code>console.log</code> текстовое содержимое body:</p>
+Следующий пример отправляет в `console.log` текстовое содержимое body:
 
-<pre class="brush: js">function printContent () {
+```js
+function printContent () {
   if (this.nodeValue) { console.log(this.nodeValue); }
 }
 
 onload = function () {
   DOMComb(document.body, printContent);
-};</pre>
+};
+```
 
-<h3 id="Удалить_все_потомки_вложенные_в_узел">Удалить все потомки, вложенные в узел</h3>
+### Удалить все потомки, вложенные в узел
 
-<pre class="brush: js">Element.prototype.removeAll = function () {
+```js
+Element.prototype.removeAll = function () {
   while (this.firstChild) { this.removeChild(this.firstChild); }
   return this;
-};</pre>
+};
+```
 
-<h4 id="Пример_использования_2">Пример использования</h4>
+#### Пример использования
 
-<pre class="brush: js">/* ... как альтернатива document.body.innerHTML = "" ... */
-document.body.removeAll();</pre>
+```js
+/* ... как альтернатива document.body.innerHTML = "" ... */
+document.body.removeAll();
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<p> </p>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

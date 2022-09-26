@@ -3,44 +3,32 @@ title: Window.print()
 slug: Web/API/Window/print
 translation_of: Web/API/Window/print
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Открывает диалоговое окно для печати текущего документа.</p>
+Открывает диалоговое окно для печати текущего документа.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">window.print()
-</pre>
+```
+window.print()
+```
 
-<h2 id="Specification">Примечания</h2>
+## Примечания
 
-<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован внутри {{htmlelement("iframe")}} до тех пор, пока его атрибут sandbox не имеет значение <code>allow-modals</code>.</p>
+Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован внутри {{htmlelement("iframe")}} до тех пор, пока его атрибут sandbox не имеет значение `allow-modals`.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                           | Комментарий |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en/Printing" title="en/Printing">Printing</a></li>
- <li>{{ domxref("window.onbeforeprint") }}</li>
- <li>{{ domxref("window.onafterprint") }}</li>
-</ul>
+- [Printing](/en/Printing "en/Printing")
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}
 
-<p>{{ languages( { "ja": "ja/DOM/window.print", "it": "it/DOM/window.print" , "zh-cn": "zh-cn/DOM/window.print" } ) }}</p>
+{{ languages( { "ja": "ja/DOM/window\.print", "it": "it/DOM/window\.print" , "zh-cn": "zh-cn/DOM/window\.print" } ) }}

@@ -3,59 +3,43 @@ title: CSSConditionRule
 slug: Web/API/CSSConditionRule
 translation_of: Web/API/CSSConditionRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>An object implementing the <strong><code>CSSConditionRule</code></strong> interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of {{domxref("CSSGroupingRule")}}.</p>
+An object implementing the **`CSSConditionRule`** interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of {{domxref("CSSGroupingRule")}}.
 
-<p>Two objects derive from it : {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</p>
+Two objects derive from it : {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The syntax is described using the <a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+The syntax is described using the [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) format.
 
-<pre>interface CSSConditionRule : CSSGroupingRule {
+```
+interface CSSConditionRule : CSSGroupingRule {
     attribute DOMString conditionText;
 }
-</pre>
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The <code>CSSConditionRule</code> derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all properties of these classes. It has one specific property:</p>
+The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all properties of these classes. It has one specific property:
 
-<dl>
- <dt>{{domxref("CSSConditionRule.conditionText")}}</dt>
- <dd>Represents the text of the condition of the rule.</dd>
-</dl>
+- {{domxref("CSSConditionRule.conditionText")}}
+  - : Represents the text of the condition of the rule.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The <code>CSSConditionRule</code> derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all methods of these classes. It has no specific property of its own.</p>
+The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all methods of these classes. It has no specific property of its own.
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#the-cssconditionrule-interface', 'CSSConditionRule') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                   | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Conditional', '#the-cssconditionrule-interface', 'CSSConditionRule') }} | {{ Spec2('CSS3 Conditional') }} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/DOM/Using_dynamic_styling_information" title="en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information "en/DOM/Using_dynamic_styling_information")

@@ -3,61 +3,56 @@ title: abort
 slug: Web/API/AbortSignal/abort_event
 translation_of: Web/API/AbortSignal/abort_event
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p>Событие <code><strong>abort</strong></code> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> вызывается когда fetch запрос прерывается, т.е. с помощью {{domxref("AbortController.abort()")}}.</p>
+Событие **`abort`** из [Fetch API](/ru/docs/Web/API/Fetch_API) вызывается когда fetch запрос прерывается, т.е. с помощью {{domxref("AbortController.abort()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>Bubbles</td>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <td>Target objects</td>
-   <td>{{domxref("AbortSignal")}}</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("Event")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Bubbles</td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td>Cancelable</td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td>Target objects</td>
+      <td>{{domxref("AbortSignal")}}</td>
+    </tr>
+    <tr>
+      <td>Interface</td>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p> </p>
+В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве `signal`). Позже мы проверяем, был ли прерван сигнал, используя свойство `aborted`, и выводим соответствующее сообщение в консоль.
 
-<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже мы проверяем, был ли прерван сигнал, используя свойство <code>aborted</code>, и выводим соответствующее сообщение в консоль.</p>
-
-<p> </p>
-
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 signal.onabort = function() {
   console.log('Request aborted');
 };
-</pre>
+```
 
-<h2 id="Наследование">Наследование</h2>
+## Наследование
 
-<p>Событие <code>abort</code> реализует {{domxref("Event")}} интерфейс — он имеет свойства и методы, определённые в нём.</p>
+Событие `abort` реализует {{domxref("Event")}} интерфейс — он имеет свойства и методы, определённые в нём.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/ru/docs/Web/API/Fetch_API)

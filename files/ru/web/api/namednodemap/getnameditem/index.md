@@ -3,22 +3,20 @@ title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
 translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>getNamedItem()</strong></code> интерфейса {{domxref ("NamedNodeMap")}} возвращает значение {{domxref ("Attr")}}, соответствующее заданному имени, или значение null, если соответствующий атрибут отсутствует.</p>
+Метод **`getNamedItem()`** интерфейса {{domxref ("NamedNodeMap")}} возвращает значение {{domxref ("Attr")}}, соответствующее заданному имени, или значение null, если соответствующий атрибут отсутствует.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>myAttr</em> = attrs.getNamedItem(<em>name</em>)</pre>
+```
+myAttr = attrs.getNamedItem(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>name</code> имя нужного атрибута</li>
-</ul>
+- `name` имя нужного атрибута
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,48 +3,46 @@ title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 translation_of: Web/API/XMLHttpRequest/open
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Метод <strong>XMLHttpRequest.open()</strong> инициализирует новый запрос или повторно инициализирует уже созданный.</p>
+Метод **XMLHttpRequest.open()** инициализирует новый запрос или повторно инициализирует уже созданный.
 
-<div class="note"><strong>Примечание:</strong> Вызов этого метода для уже активного запроса (для которого уже был вызван  <code>open()</code>) эквивалентно вызову <code>abort()</code>.</div>
+> **Примечание:** Вызов этого метода для уже активного запроса (для которого уже был вызван `open()`) эквивалентно вызову `abort()`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>XMLHttpRequest</var>.open(<var>method</var>, <var>url</var>[, <var>async</var>[, <var>user</var>[, <var>password</var>]]])
-</pre>
+```
+XMLHttpRequest.open(method, url[, async[, user[, password]]])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>method</code></dt>
- <dd>Для HTTP-запроса используются такие методы как "GET", "POST", "PUT", "DELETE", и т. д. Игнорируется для URL, отличных от HTTP(S)-запросов.</dd>
- <dt><code>url</code></dt>
- <dd>{{domxref("DOMString")}} представляет URL для отправки запроса.</dd>
- <dt><code>async</code> {{optional_inline}}</dt>
- <dd>
- <p>Необязательный логический параметр со значением по умолчанию <code>true</code>, указывающим, выполнять ли операцию асинхронно или нет. Если это значение равно <code>false</code>, метод <code>send()</code> не возвращается, пока не будет получен ответ. Если <code>true</code>, уведомление о получении ответа осуществляется с помощью обработчика события. Должен быть <code>true</code>, если атрибут <code>multipart</code> равен <code>true</code>, иначе будет выброшено исключение.</p>
+- `method`
+  - : Для HTTP-запроса используются такие методы как "GET", "POST", "PUT", "DELETE", и т. д. Игнорируется для URL, отличных от HTTP(S)-запросов.
+- `url`
+  - : {{domxref("DOMString")}} представляет URL для отправки запроса.
+- `async` {{optional_inline}}
 
- <div class="note"><strong>Примечание:</strong> Синхронные запросы в основном потоке могут нарушить работу пользователя, их следует избегать. Фактически большинство браузеров полностью отказались от поддержки синхронных XHR в основном потоке. Синхронные запросы можно использовать в {{domxref("Worker")}}.</div>
- </dd>
- <dt><code>user</code> {{optional_inline}}</dt>
- <dd>Опционально: имя пользователя, использующееся для аутентификации; по умолчанию имеет значение <code>null</code>.</dd>
- <dt><code>password</code> {{optional_inline}}</dt>
- <dd>Опционально: пароль, использующийся для аутентификации; по умолчанию имеет значение <code>null</code>.</dd>
-</dl>
+  - : Необязательный логический параметр со значением по умолчанию `true`, указывающим, выполнять ли операцию асинхронно или нет. Если это значение равно `false`, метод `send()` не возвращается, пока не будет получен ответ. Если `true`, уведомление о получении ответа осуществляется с помощью обработчика события. Должен быть `true`, если атрибут `multipart` равен `true`, иначе будет выброшено исключение.
 
-<h2 id="Спецификации">Спецификации</h2>
+    > **Примечание:** Синхронные запросы в основном потоке могут нарушить работу пользователя, их следует избегать. Фактически большинство браузеров полностью отказались от поддержки синхронных XHR в основном потоке. Синхронные запросы можно использовать в {{domxref("Worker")}}.
+
+- `user` {{optional_inline}}
+  - : Опционально: имя пользователя, использующееся для аутентификации; по умолчанию имеет значение `null`.
+- `password` {{optional_inline}}
+  - : Опционально: пароль, использующийся для аутентификации; по умолчанию имеет значение `null`.
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li>{{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}</li>
- <li>{{domxref("XMLHttpRequest.send", "send()")}}</li>
- <li>{{domxref("XMLHttpRequest.abort", "abort()")}}</li>
-</ul>
+## Смотрите также
+
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
+- {{domxref("XMLHttpRequest.send", "send()")}}
+- {{domxref("XMLHttpRequest.abort", "abort()")}}

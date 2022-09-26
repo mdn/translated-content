@@ -3,57 +3,59 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 translation_of: Web/API/FormData/getAll
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>getAll()</strong></code> - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.</p>
+**`getAll()`** - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">formData.getAll(name);</pre>
+```js
+formData.getAll(name);
+```
 
-<h3 id="append_Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Строка формата {{domxref("USVString")}}, задающая имя ключа.</dd>
-</dl>
+- `name`
+  - : Строка формата {{domxref("USVString")}}, задающая имя ключа.
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p>Массив значений типа {{domxref("FormDataEntryValue")}}, привязанных к ключу, переданному в параметре <code>name</code>. Если переданный ключ не существует, метод вернёт пустой массив.</p>
+Массив значений типа {{domxref("FormDataEntryValue")}}, привязанных к ключу, переданному в параметре `name`. Если переданный ключ не существует, метод вернёт пустой массив.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Эта строка создаст пустой объект FormData:</p>
+Эта строка создаст пустой объект FormData:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>Можем добавить два <code>username</code> при помощи {{domxref("FormData.append")}}:</p>
+Можем добавить два `username` при помощи {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Борис');
-formData.append('username', 'Кирилл');</pre>
+```js
+formData.append('username', 'Борис');
+formData.append('username', 'Кирилл');
+```
 
-<p>Тогда метод <code>getAll()</code> вернёт оба значения username в виде массива:</p>
+Тогда метод `getAll()` вернёт оба значения username в виде массива:
 
-<pre class="brush: js">formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]</pre>
+```js
+formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

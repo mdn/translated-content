@@ -3,185 +3,158 @@ title: WebRTC API
 slug: Web/API/WebRTC_API
 translation_of: Web/API/WebRTC_API
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p><strong>WebRTC</strong> (Web Real-Time Communications) - это технология, которая позволяет Web-приложениям и сайтам захватывать и выборочно передавать аудио и/или видео медиа-потоки, а также обмениваться произвольными данными между браузерами, без обязательного использования посредников. Набор стандартов, которые включает в себя технология WebRTC, позволяет обмениваться данными и проводить пиринговые телеконференции, без необходимости пользователю устанавливать плагины или любое другое стороннее программное обеспечение.</p>
+**WebRTC** (Web Real-Time Communications) - это технология, которая позволяет Web-приложениям и сайтам захватывать и выборочно передавать аудио и/или видео медиа-потоки, а также обмениваться произвольными данными между браузерами, без обязательного использования посредников. Набор стандартов, которые включает в себя технология WebRTC, позволяет обмениваться данными и проводить пиринговые телеконференции, без необходимости пользователю устанавливать плагины или любое другое стороннее программное обеспечение.
 
-<p>WebRTC состоит из нескольких взаимосвязанных программных интерфейсов (API) и протоколов, которые работают вместе. Документация, которую вы здесь найдёте, поможет вам понять основы WebRTC, как настроить и использовать соединение для передачи данных и медиа-потока, и многое другое.</p>
+WebRTC состоит из нескольких взаимосвязанных программных интерфейсов (API) и протоколов, которые работают вместе. Документация, которую вы здесь найдёте, поможет вам понять основы WebRTC, как настроить и использовать соединение для передачи данных и медиа-потока, и многое другое.
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<p>Поскольку реализация WebRTC находится в процессе становления, и каждый браузер имеет <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">различный уровень поддержки кодеков</a> и WebRTC функций, настоятельно рекомендуется использовать полифил-библиотеку <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> от Google до начала работы над вашим кодом.</p>
+Поскольку реализация WebRTC находится в процессе становления, и каждый браузер имеет [различный уровень поддержки кодеков](/ru/docs/Web/Media/Formats/WebRTC_codecs) и WebRTC функций, настоятельно рекомендуется использовать полифил-библиотеку [Adapter.js](https://github.com/webrtcHacks/adapter) от Google до начала работы над вашим кодом.
 
-<p>Adapter.js использует клинья и полифилы для гладкой стыковки различий в реализациях WebRTC среди контекстов, его поддерживающих. Adapter.js также обрабатывает префиксы производителей и иные различия именования свойств, облегчая процесс разработки на WebRTC с наиболее совместимым результатом. Библиотека также доступна как <a href="https://www.npmjs.com/package/webrtc-adapter">NPM пакет</a>.</p>
+Adapter.js использует клинья и полифилы для гладкой стыковки различий в реализациях WebRTC среди контекстов, его поддерживающих. Adapter.js также обрабатывает префиксы производителей и иные различия именования свойств, облегчая процесс разработки на WebRTC с наиболее совместимым результатом. Библиотека также доступна как [NPM пакет](https://www.npmjs.com/package/webrtc-adapter).
 
-<p>Для дальнейшего изучения библиотеки Adapter.js смотрите <a href="/en-US/docs/Web/API/WebRTC_API/adapter.js">Улучшаем совместимость при использовании WebRTC adapter.js</a>.</p>
+Для дальнейшего изучения библиотеки Adapter.js смотрите [Улучшаем совместимость при использовании WebRTC adapter.js](/ru/docs/Web/API/WebRTC_API/adapter.js).
 
-<h2 id="Понятия_и_использование_WebRTC">Понятия и использование WebRTC </h2>
+## Понятия и использование WebRTC
 
-<p>WebRTC является многоцелевым и вместе с <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>, предоставляют мощные мультимедийные возможности для Web, включая поддержку аудио и видео конференций, обмен файлами, захват экрана, управление идентификацией и взаимодействие с  устаревшими телефонными системами, включая поддержку передачи сигналов тонового набора {{Glossary("DTMF")}}. Соединения между узлами могут создаваться без использования специальных драйверов или плагинов, и часто без промежуточных сервисов.</p>
+WebRTC является многоцелевым и вместе с [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API), предоставляют мощные мультимедийные возможности для Web, включая поддержку аудио и видео конференций, обмен файлами, захват экрана, управление идентификацией и взаимодействие с устаревшими телефонными системами, включая поддержку передачи сигналов тонового набора {{Glossary("DTMF")}}. Соединения между узлами могут создаваться без использования специальных драйверов или плагинов, и часто без промежуточных сервисов.
 
-<p>Соединение между двумя узлами представлено как объект интерфейса  {{DOMxRef("RTCPeerConnection")}}. Как только соединение установлено и открыто, используя объект <code>RTCPeerConnection</code>, медиапотоки ({{DOMxRef("MediaStream")}}s) и/или каналы данных ({{DOMxRef("RTCDataChannel")}}s) могут быть добавлены в соединение.</p>
+Соединение между двумя узлами представлено как объект интерфейса {{DOMxRef("RTCPeerConnection")}}. Как только соединение установлено и открыто, используя объект `RTCPeerConnection`, медиапотоки ({{DOMxRef("MediaStream")}}s) и/или каналы данных ({{DOMxRef("RTCDataChannel")}}s) могут быть добавлены в соединение.
 
-<p>Медиа потоки могут состоять из любого количества треков (дорожек) медиаинформации. Эти треки, представлены объектами интерфейса  {{DOMxRef("MediaStreamTrack")}} , и могут содержать один или несколько типов медиаданных, включая аудио, видео, текст (такие как субтитры или название глав). Большинство потоков состоят, как минимум, только из одного аудио трека (одной аудио дорожки), или видео дорожки, и могут быть отправлены и получены, как потоки (медиаданные в настоящим времени) или сохранены в файл.</p>
+Медиа потоки могут состоять из любого количества треков (дорожек) медиаинформации. Эти треки, представлены объектами интерфейса {{DOMxRef("MediaStreamTrack")}} , и могут содержать один или несколько типов медиаданных, включая аудио, видео, текст (такие как субтитры или название глав). Большинство потоков состоят, как минимум, только из одного аудио трека (одной аудио дорожки), или видео дорожки, и могут быть отправлены и получены, как потоки (медиаданные в настоящим времени) или сохранены в файл.
 
-<p>Так же, можно использовать соединение между двумя узлами  для обмена произвольными данными, используя объект интерфейса {{DOMxRef("RTCDataChannel")}}, что может быть использовано для передачи служебной информации, биржевых данных , пакетов игровых статусов, передача файлов или закрытых каналов передачи данных.</p>
+Так же, можно использовать соединение между двумя узлами для обмена произвольными данными, используя объект интерфейса {{DOMxRef("RTCDataChannel")}}, что может быть использовано для передачи служебной информации, биржевых данных , пакетов игровых статусов, передача файлов или закрытых каналов передачи данных.
 
-<p><em><strong>more details and links to relevant guides and tutorials needed</strong></em></p>
+_**more details and links to relevant guides and tutorials needed**_
 
-<h2 id="WebRTC_интерфейсы">WebRTC интерфейсы</h2>
+## WebRTC интерфейсы
 
-<p>По причине того, что WebRTC предоставляет интерфейсы, работающие совместно для выполнения различных задач, мы разделили их на категории. Смотрите алфавитный указатель боковой панели для быстрой навигации.</p>
+По причине того, что WebRTC предоставляет интерфейсы, работающие совместно для выполнения различных задач, мы разделили их на категории. Смотрите алфавитный указатель боковой панели для быстрой навигации.
 
-<h3 id="Настройка_соединения_и_управление">Настройка соединения и управление</h3>
+### Настройка соединения и управление
 
-<p>Эти интерфейсы используются для настройки, открытия и управлением  WebRTC соединениями. Они представляют одноуровневые медиа соединения, каналы данных, и интерфейсы, использующиеся при обмене информацией о возможностях каждого узла, для выбора наилучшей конфигурации при установки двустороннего мультимедийного соединения.</p>
+Эти интерфейсы используются для настройки, открытия и управлением WebRTC соединениями. Они представляют одноуровневые медиа соединения, каналы данных, и интерфейсы, использующиеся при обмене информацией о возможностях каждого узла, для выбора наилучшей конфигурации при установки двустороннего мультимедийного соединения.
 
-<dl>
- <dt>{{domxref("RTCPeerConnection")}}</dt>
- <dd>Представляет  WebRTC соединение между локальным компьютером и удалённым узлом. Используется для обработки успешной передачи данных между двумя узлами.</dd>
- <dt>{{domxref("RTCSessionDescription")}}</dt>
- <dd>Представляет параметры сессии. Каждый <code>RTCSessionDescription </code>содержит описания <a href="/en-US/docs/Web/API/RTCSessionDescription/type">типа</a>, показывающего какую часть (предложение/ответ) процесса переговоров он описывает, и <a href="/en-US/docs/Glossary/SDP">SDP</a>-дескриптор сессии<code>.</code></dd>
- <dt>{{domxref("RTCIceCandidate")}}</dt>
- <dd>Представляет собой кандидата сервера установки интернет соединения (ICE)  для установленовки соединения {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCIceTransport")}}</dt>
- <dd>Представляет информацию о средстве подключения к Интернету (ICE).</dd>
- <dt>{{domxref("RTCPeerConnectionIceEvent")}}</dt>
- <dd>Представляет события, которые происходят в отношении кандидатов ICE, обычно {{domxref ("RTCPeerConnection")}}. Один тип передаётся данному объекту события: {{event ("icecandidate")}}.</dd>
- <dt>{{domxref("RTCRtpSender")}}</dt>
- <dd>Управляет кодированием и передачей данных через объект типа  {{domxref("MediaStreamTrack")}} для объекта типа {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCRtpReceiver")}}</dt>
- <dd>Управляет получением и декодированием данных через объект типа {{domxref("MediaStreamTrack")}} для объекта типа {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCTrackEvent")}}</dt>
- <dd>Указывает на то, что новый входящий объект типа  {{domxref("MediaStreamTrack")}} был создан и объект типа {{domxref("RTCRtpReceiver")}} был добавлен в объект  {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCCertificate")}}</dt>
- <dd>Представляет сертификат, который использует объект {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCDataChannel")}}</dt>
- <dd>Представляет двунаправленный канал данных между двумя узлами соединения.</dd>
- <dt>{{domxref("RTCDataChannelEvent")}}</dt>
- <dd>Представляет события, которые возникают при присоединении объекта типа  {{domxref("RTCDataChannel")}} к объекту типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("datachannel")}}.</dd>
- <dt>{{domxref("RTCDTMFSender")}}</dt>
- <dd>Управляет кодированием и передачей  двухтональной мультичастотной  (DTMF) сигнализацией для объекта типа {{domxref("RTCPeerConnection")}}.</dd>
- <dt>{{domxref("RTCDTMFToneChangeEvent")}}</dt>
- <dd>Указывает на входящее событие изменение тона двутоновой мультичастотной сигнализации  (DTMF). Это событие не всплывает (если не указано иначе) и не является отменяемым (если не указано иначе).</dd>
- <dt>{{domxref("RTCStatsReport")}}</dt>
- <dd>Асинхронно сообщает статус для переданного объекта типа  {{domxref("MediaStreamTrack")}} .</dd>
- <dt>{{domxref("RTCIdentityProviderRegistrar")}}</dt>
- <dd>Регистрирует провайдер идентификации (idP).</dd>
- <dt>{{domxref("RTCIdentityProvider")}}</dt>
- <dd>Активирует возможность браузеру запросить создание или проверку объявления идентификации.</dd>
- <dt>{{domxref("RTCIdentityAssertion")}}</dt>
- <dd>Представляет идентификатор удалённого узла текущего соединения. Если узел ещё не установлен и подтверждён, ссылка на интерфейс вернёт <code>null</code>. После установки не изменяется.</dd>
- <dt>{{domxref("RTCIdentityEvent")}}</dt>
- <dd>Представляет объект события объявление идентификатора провайдером идентификации  (idP). Событие объекта типа  {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("identityresult")}}.</dd>
- <dt>{{domxref("RTCIdentityErrorEvent")}}</dt>
- <dd>Представляет объект события ошибки, связанной с провайдером идентификации (idP). Событие объекта типа  {{domxref("RTCPeerConnection")}}. Два типа ошибки передаются этому событию : {{event("idpassertionerror")}} и {{event("idpvalidationerror")}}.</dd>
-</dl>
+- {{domxref("RTCPeerConnection")}}
+  - : Представляет WebRTC соединение между локальным компьютером и удалённым узлом. Используется для обработки успешной передачи данных между двумя узлами.
+- {{domxref("RTCSessionDescription")}}
+  - : Представляет параметры сессии. Каждый `RTCSessionDescription `содержит описания [типа](/ru/docs/Web/API/RTCSessionDescription/type), показывающего какую часть (предложение/ответ) процесса переговоров он описывает, и [SDP](/ru/docs/Glossary/SDP)-дескриптор сессии`.`
+- {{domxref("RTCIceCandidate")}}
+  - : Представляет собой кандидата сервера установки интернет соединения (ICE) для установленовки соединения {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCIceTransport")}}
+  - : Представляет информацию о средстве подключения к Интернету (ICE).
+- {{domxref("RTCPeerConnectionIceEvent")}}
+  - : Представляет события, которые происходят в отношении кандидатов ICE, обычно {{domxref ("RTCPeerConnection")}}. Один тип передаётся данному объекту события: {{event ("icecandidate")}}.
+- {{domxref("RTCRtpSender")}}
+  - : Управляет кодированием и передачей данных через объект типа {{domxref("MediaStreamTrack")}} для объекта типа {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCRtpReceiver")}}
+  - : Управляет получением и декодированием данных через объект типа {{domxref("MediaStreamTrack")}} для объекта типа {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCTrackEvent")}}
+  - : Указывает на то, что новый входящий объект типа {{domxref("MediaStreamTrack")}} был создан и объект типа {{domxref("RTCRtpReceiver")}} был добавлен в объект {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCCertificate")}}
+  - : Представляет сертификат, который использует объект {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCDataChannel")}}
+  - : Представляет двунаправленный канал данных между двумя узлами соединения.
+- {{domxref("RTCDataChannelEvent")}}
+  - : Представляет события, которые возникают при присоединении объекта типа {{domxref("RTCDataChannel")}} к объекту типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("datachannel")}}.
+- {{domxref("RTCDTMFSender")}}
+  - : Управляет кодированием и передачей двухтональной мультичастотной (DTMF) сигнализацией для объекта типа {{domxref("RTCPeerConnection")}}.
+- {{domxref("RTCDTMFToneChangeEvent")}}
+  - : Указывает на входящее событие изменение тона двутоновой мультичастотной сигнализации (DTMF). Это событие не всплывает (если не указано иначе) и не является отменяемым (если не указано иначе).
+- {{domxref("RTCStatsReport")}}
+  - : Асинхронно сообщает статус для переданного объекта типа {{domxref("MediaStreamTrack")}} .
+- {{domxref("RTCIdentityProviderRegistrar")}}
+  - : Регистрирует провайдер идентификации (idP).
+- {{domxref("RTCIdentityProvider")}}
+  - : Активирует возможность браузеру запросить создание или проверку объявления идентификации.
+- {{domxref("RTCIdentityAssertion")}}
+  - : Представляет идентификатор удалённого узла текущего соединения. Если узел ещё не установлен и подтверждён, ссылка на интерфейс вернёт `null`. После установки не изменяется.
+- {{domxref("RTCIdentityEvent")}}
+  - : Представляет объект события объявление идентификатора провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Один тип передаётся этому событию {{event("identityresult")}}.
+- {{domxref("RTCIdentityErrorEvent")}}
+  - : Представляет объект события ошибки, связанной с провайдером идентификации (idP). Событие объекта типа {{domxref("RTCPeerConnection")}}. Два типа ошибки передаются этому событию : {{event("idpassertionerror")}} и {{event("idpvalidationerror")}}.
 
-<h2 id="Руководства">Руководства</h2>
+## Руководства
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Architecture">Обзор архитектуры WebRTC</a></dt>
- <dd>Под API, который применяют разработчики, чтобы создавать и использовать WebRTC, расположен набор сетевых протоколов и стандартов соединения. Этот обзор - витрина этих стандартов.</dd>
- <dt><a href="https://developer.mozilla.org/ru/docs/Web/API/WebRTC_API/Session_lifetime">Жизнь WebRTC-сессии</a></dt>
- <dd>WebRTC позволяет вам организовать соединение в режиме узел-узел для передачи произвольных данных, аудио-, видео-потоков или любую их комбинацию в браузере. В этой статье мы взглянем на жизнь WebRTC-сессии, начиная с установки соединения и пройдём весь путь до его завершения, когда оно больше не нужно.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Overview">Обзор WebRTC API</a></dt>
- <dd>WebRTC состоит из нескольких взаимосвязанных программных интерфейсов (API) и протоколов, которые работают вместе, чтобы обеспечить поддержку обмена данными и медиа-потоками между двумя и более узлами. В этой статье представлен краткий обзор каждого из этих API и какую цель он преследует.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/WebRTC_basics">Основы WebRTC</a></dt>
- <dd>Эта статья проведёт вас через создание кросс-браузерного RTC-приложения. К концу этой статьи вы должны иметь работающий дата- и медиа-канал, работающий в режиме точка-точка.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Протоколы WebRTC</a></dt>
- <dd>В этой статье представлены протоколы, в дополнение к которым создан API WebRTC.</dd>
-</dl>
+- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Architecture)
+  - : Под API, который применяют разработчики, чтобы создавать и использовать WebRTC, расположен набор сетевых протоколов и стандартов соединения. Этот обзор - витрина этих стандартов.
+- [Жизнь WebRTC-сессии](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
+  - : WebRTC позволяет вам организовать соединение в режиме узел-узел для передачи произвольных данных, аудио-, видео-потоков или любую их комбинацию в браузере. В этой статье мы взглянем на жизнь WebRTC-сессии, начиная с установки соединения и пройдём весь путь до его завершения, когда оно больше не нужно.
+- [Обзор WebRTC API](/ru/docs/Web/API/WebRTC_API/Overview)
+  - : WebRTC состоит из нескольких взаимосвязанных программных интерфейсов (API) и протоколов, которые работают вместе, чтобы обеспечить поддержку обмена данными и медиа-потоками между двумя и более узлами. В этой статье представлен краткий обзор каждого из этих API и какую цель он преследует.
+- [Основы WebRTC](/ru/docs/Web/API/WebRTC_API/WebRTC_basics)
+  - : Эта статья проведёт вас через создание кросс-браузерного RTC-приложения. К концу этой статьи вы должны иметь работающий дата- и медиа-канал, работающий в режиме точка-точка.
+- [Протоколы WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)
+  - : В этой статье представлены протоколы, в дополнение к которым создан API WebRTC.
 
-<dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Использование каналов данных в WebRTC</a></dt>
- <dd>Это руководство описывает как вы можете использовать соединение узел-узел и связанный {{domxref("RTCDataChannel")}} для обмена произвольными данными между двумя узлами.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">Взаимосвязи WebRTC</a></dt>
- <dd>В этой статье описано то, как протоколы, связанные с WebRTC, взаимодействуют друг с другом для того, чтобы создать соединение и передавать данные и/или медиа-потоки между узлами.</dd>
-</dl>
+- [Использование каналов данных в WebRTC](/ru/docs/Web/API/WebRTC_API/Using_data_channels)
+  - : Это руководство описывает как вы можете использовать соединение узел-узел и связанный {{domxref("RTCDataChannel")}} для обмена произвольными данными между двумя узлами.
 
-<h2 id="Учебные_материалы">Учебные материалы</h2>
+<!---->
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/adapter.js">Увеличение совместимости, используя WebRTC adapter.js</a></dt>
- <dd>Организация WebRTC  <a href="https://github.com/webrtc/adapter/">предлагает на GitHub библиотеку adapter.js</a> для решения вопросов совместимости WebRTC реализаций в различных браузерах. Эта библиотека является JavaScript клином, который позволяет писать код, согласно спецификации, так, что бы он просто взял, и заработал во всех браузерах с поддержкой  WebRTC, не смотря на проблемы совместимости браузеров.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Захват кадров с WebRTC</a></dt>
- <dd>Статья описывает как использовать WebRTC для получения доступа к камере на компьютере или мобильном устройстве с поддержкой  WebRTC, и захват кадров с его помощью.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">Простой пример канала данных RTCDataChannel</a></dt>
- <dd>Интерфейс {{domxref("RTCDataChannel")}}  - это функциональность, которая позволяет открыть канал передачи данных между двумя узлами, по которому можно предавать произвольные данные. Эти API намеренно подобны  <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, так, что бы в обоих могла использоваться единая модель программирования.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Сигнализация и двухсторонние видео вызовы</a></dt>
- <dd>Например, мы берём чат на веб сокете, который мы создали в другом примере, и добавляем в него способность создавать видео вызовы. Сервер чата расширяется функциональностью обработки WebRTC сигнализации.</dd>
-</dl>
+- [Взаимосвязи WebRTC](/ru/docs/Web/API/WebRTC_API/Connectivity)
+  - : В этой статье описано то, как протоколы, связанные с WebRTC, взаимодействуют друг с другом для того, чтобы создать соединение и передавать данные и/или медиа-потоки между узлами.
 
-<h2 id="Ресурсы_2"><a id="Ресурсы">Ресурсы</a></h2>
+## Учебные материалы
 
-<h3 id="Протоколы">Протоколы</h3>
+- [Увеличение совместимости, используя WebRTC adapter.js](/ru/docs/Web/API/WebRTC_API/adapter.js)
+  - : Организация WebRTC [предлагает на GitHub библиотеку adapter.js](https://github.com/webrtc/adapter/) для решения вопросов совместимости WebRTC реализаций в различных браузерах. Эта библиотека является JavaScript клином, который позволяет писать код, согласно спецификации, так, что бы он просто взял, и заработал во всех браузерах с поддержкой WebRTC, не смотря на проблемы совместимости браузеров.
+- [Захват кадров с WebRTC](/ru/docs/Web/API/WebRTC_API/Taking_still_photos)
+  - : Статья описывает как использовать WebRTC для получения доступа к камере на компьютере или мобильном устройстве с поддержкой WebRTC, и захват кадров с его помощью.
+- [Простой пример канала данных RTCDataChannel](/ru/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+  - : Интерфейс {{domxref("RTCDataChannel")}} - это функциональность, которая позволяет открыть канал передачи данных между двумя узлами, по которому можно предавать произвольные данные. Эти API намеренно подобны [WebSocket API](/ru/docs/Web/API/WebSocket_API), так, что бы в обоих могла использоваться единая модель программирования.
+- [Сигнализация и двухсторонние видео вызовы](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+  - : Например, мы берём чат на веб сокете, который мы создали в другом примере, и добавляем в него способность создавать видео вызовы. Сервер чата расширяется функциональностью обработки WebRTC сигнализации.
 
-<h4 id="WebRTC-_текущие_протоколы">WebRTC- текущие протоколы</h4>
+## Ресурсы
 
-<ul>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/"><cite>Протокол согласования соединения для Web RTC</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/"><cite>WebRTC Аудио кодек и требования к обработке</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/"><cite>RTCWeb Каналы данных</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/"><cite>RTCWeb Протокол канала данных</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/"><cite>Связь в реальном времени (WebRTC): Медиа транспорт и использование RTP</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"><cite>WebRTC Безопасная архитектура</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/"><cite>Транспорты для RTCWEB</cite></a></li>
-</ul>
+### Протоколы
 
-<h4 id="Связанные_поддерживающие_протоколы">Связанные поддерживающие протоколы</h4>
+#### WebRTC- текущие протоколы
 
-<ul>
- <li><a href="https://tools.ietf.org/html/rfc5245">Установка интерактивной связи (ICE): Протокол обхода транслятора сетевых адресов (NAT) при доставки объектов Offer/Answer</a></li>
- <li><a href="https://tools.ietf.org/html/rfc5389"><cite>Сети обхода NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7064"><cite>Схема URI для протокола сетей обхода  NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7065"><cite>Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc3264"><cite>An Offer/Answer Model with Session Description Protocol (SDP)</cite></a></li>
- <li><a href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/"><cite>Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization</cite></a></li>
-</ul>
+- [Протокол согласования соединения для Web RTC](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
+- [WebRTC Аудио кодек и требования к обработке](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
+- [RTCWeb Каналы данных](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
+- [RTCWeb Протокол канала данных](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
+- [Связь в реальном времени (WebRTC): Медиа транспорт и использование RTP](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
+- [WebRTC Безопасная архитектура](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
+- [Транспорты для RTCWEB](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
 
-<h4 id="WebRTC_статистика"><cite>WebRTC статистика</cite></h4>
+#### Связанные поддерживающие протоколы
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_Statistics_API">WebRTC Statistics API</a></li>
-</ul>
+- [Установка интерактивной связи (ICE): Протокол обхода транслятора сетевых адресов (NAT) при доставки объектов Offer/Answer](https://tools.ietf.org/html/rfc5245)
+- [Сети обхода NAT (STUN)](https://tools.ietf.org/html/rfc5389)
+- [Схема URI для протокола сетей обхода NAT (STUN)](https://tools.ietf.org/html/rfc7064)
+- [Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers](https://tools.ietf.org/html/rfc7065)
+- [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
+- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-<h2 id="Спецификации">Спецификации</h2>
+#### WebRTC статистика
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://w3c.github.io/webrtc-pc/">WebRTC: Real-Time Communication Between Browsers</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://w3c.github.io/mediacapture-main/">Media Capture and Streams</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://w3c.github.io/mediacapture-fromelement/">Media Capture from DOM Elements</a></td>
-    </tr>
-  </tbody>
-</table>
+- [WebRTC Statistics API](/ru/docs/Web/API/WebRTC_Statistics_API)
 
-<p>В дополнение к этим спецификациям, определяющим API, необходимый для использования WebRTC, имеется несколько протоколов, перечисленных в разделе <a href="#Ресурсы">ресурсы</a>.</p>
+## Спецификации
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+| Specification                                                                        |
+| ------------------------------------------------------------------------------------ |
+| [WebRTC: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/) |
+| [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)                |
+| [Media Capture from DOM Elements](https://w3c.github.io/mediacapture-fromelement/)   |
 
-<ul>
- <li>{{domxref("MediaDevices")}}</li>
- <li>{{domxref("MediaStreamEvent")}}</li>
- <li>{{domxref("MediaStreamConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
- <li>{{domxref("MessageEvent")}}</li>
- <li>{{domxref("MediaStream")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/">Firefox multistream and renegotiation for Jitsi Videobridge</a></li>
- <li><a href="https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/">Peering Through the WebRTC Fog with SocketPeer</a></li>
- <li><a href="https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/">Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics</a></li>
-</ul>
+В дополнение к этим спецификациям, определяющим API, необходимый для использования WebRTC, имеется несколько протоколов, перечисленных в разделе [ресурсы](#Ресурсы).
+
+## Смотрите также
+
+- {{domxref("MediaDevices")}}
+- {{domxref("MediaStreamEvent")}}
+- {{domxref("MediaStreamConstraints")}}
+- {{domxref("MediaStreamTrack")}}
+- {{domxref("MessageEvent")}}
+- {{domxref("MediaStream")}}
+- [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
+- [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
+- [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)

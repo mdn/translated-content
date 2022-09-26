@@ -9,69 +9,73 @@ tags:
   - Ссылка
 translation_of: Web/API/Event/type
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><code><strong>Event.type</strong></code> - это доступное только для чтения свойство, возвращающее строку, содержащую тип события. Оно устанавливается в момент создания события и это имя обычно используется для ссылки на определённое событие.</p>
+**`Event.type`** - это доступное только для чтения свойство, возвращающее строку, содержащую тип события. Оно устанавливается в момент создания события и это имя обычно используется для ссылки на определённое событие.
 
-<p>Аргумент <em><code>event</code></em> функций {{ domxref("EventTarget.addEventListener()") }} и {{ domxref("EventTarget.removeEventListener()") }} не чувствителен к регистру.</p>
+Аргумент _`event`_ функций {{ domxref("EventTarget.addEventListener()") }} и {{ domxref("EventTarget.removeEventListener()") }} не чувствителен к регистру.
 
-<p>Для получения списка доступных типов событий смотри <a href="/en-US/docs/Web/Events" title="Mozilla event reference">event reference</a></p>
+Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events "Mozilla event reference")
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">event.type
-</pre>
+```
+event.type
+```
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre><code><em>var string</em> = event.type;</code>
-</pre>
+```
+var string = event.type;
+```
 
-<pre><em><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;</code></em>
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-<em><code>    &lt;title&gt;Event.type Example&lt;/title&gt;</code></em>
+    <title>Event.type Example</title>
 
-<em><code>    &lt;script&gt;
-        var currEvent = null;</code></em>
+    <script>
+        var currEvent = null;
 
-<em><code>        function getEvtType(evt) {
-            console.log("//Start------------getEvtType(evt)------------ ");</code></em>
+        function getEvtType(evt) {
+            console.log("//Start------------getEvtType(evt)------------ ");
 
-<em><code>            currEvent = evt.type;
-            console.log(currEvent);</code></em>
+            currEvent = evt.type;
+            console.log(currEvent);
 
-<em><code>            //document.getElementById("Etype").firstChild.nodeValue = currEvent;
-            document.getElementById("Etype").innerHTML = currEvent;</code></em>
+            //document.getElementById("Etype").firstChild.nodeValue = currEvent;
+            document.getElementById("Etype").innerHTML = currEvent;
 
-<em><code>            console.log("//End--------------getEvtType(evt)------------ ");
-        }</code></em>
+            console.log("//End--------------getEvtType(evt)------------ ");
+        }
 
-<em><code>        //Keyboard events
-        document.addEventListener("keypress", getEvtType, false); //[second]  </code></em>
+        //Keyboard events
+        document.addEventListener("keypress", getEvtType, false); //[second]
 
-<em><code>        document.addEventListener("keydown", getEvtType, false); //first
-        document.addEventListener("keyup", getEvtType, false); //third</code></em>
+        document.addEventListener("keydown", getEvtType, false); //first
+        document.addEventListener("keyup", getEvtType, false); //third
 
-<em><code>        //Mouse events
-        document.addEventListener("click", getEvtType, false); // third</code></em>
+        //Mouse events
+        document.addEventListener("click", getEvtType, false); // third
 
-<em><code>        document.addEventListener("mousedown", getEvtType, false); //first
-        document.addEventListener("mouseup", getEvtType, false); //second</code></em>
+        document.addEventListener("mousedown", getEvtType, false); //first
+        document.addEventListener("mouseup", getEvtType, false); //second
 
-<em><code>    &lt;/script&gt;
-&lt;/head&gt;</code></em>
+    </script>
+</head>
 
-<em><code>&lt;body&gt;</code></em>
+<body>
 
-<em><code>    &lt;p&gt;Press any key or click the mouse to get the event type.&lt;/p&gt;
-    &lt;p&gt;Event type: &lt;span id="Etype" style="color:red"&gt;-&lt;/span&gt;&lt;/p&gt;</code></em>
+    <p>Press any key or click the mouse to get the event type.</p>
+    <p>Event type: <span id="Etype" style="color:red">-</span></p>
 
-<em><code>&lt;/body&gt;
-&lt;/html&gt;</code></em></pre>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

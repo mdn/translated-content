@@ -3,44 +3,46 @@ title: Gamepad.id
 slug: Web/API/Gamepad/id
 translation_of: Web/API/Gamepad/id
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство<strong> <code>Gamepad.id</code></strong> интерфейса {{domxref("Gamepad") }} возвращает строку, содержащую некоторую информацию о контроллере.</p>
+Свойство** `Gamepad.id`** интерфейса {{domxref("Gamepad") }} возвращает строку, содержащую некоторую информацию о контроллере.
 
-<p>Существующий синтаксис не стандартизирован, но в Firefox эта строка представляет собой три значения, разделённые тире (<code>-</code>):</p>
+Существующий синтаксис не стандартизирован, но в Firefox эта строка представляет собой три значения, разделённые тире (`-`):
 
-<ul>
- <li>Две четырёхзначных шестнадцатеричных строки, содержащих USB vendor id (<code>VID</code>) и product id (<code>PID</code>) контроллера</li>
- <li>Имя контроллера, предоставленное драйвером.</li>
-</ul>
+- Две четырёхзначных шестнадцатеричных строки, содержащих USB vendor id (`VID`) и product id (`PID`) контроллера
+- Имя контроллера, предоставленное драйвером.
 
-<p>Например, PS2 контроллер вернёт <code><strong>810-3-USB Gamepad</strong></code>.</p>
+Например, PS2 контроллер вернёт **`810-3-USB Gamepad`**.
 
-<p>Эта информация позволяет вам найти соответствие для элементов управления контроллера, а также, отобразить полезную информацию для пользователя.</p>
+Эта информация позволяет вам найти соответствие для элементов управления контроллера, а также, отобразить полезную информацию для пользователя.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute DOMString           id;</pre>
+```
+readonly    attribute DOMString           id;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
+```js
+window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});</pre>
+});
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>{{jsxref("String")}}.</p>
+{{jsxref("String")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

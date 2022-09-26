@@ -12,57 +12,51 @@ tags:
   - селектор
 translation_of: Web/API/Document/querySelector
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>{{domxref("Document")}} метод <code><strong>querySelector()</strong></code> возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение <code>null</code>.</p>
+{{domxref("Document")}} метод **`querySelector()`** возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение `null`.
 
-<div class="note">
-<p><strong>Примечание</strong>: Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.</p>
-</div>
+> **Примечание:** Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">element = document.querySelector(selectors);
-</pre>
+```js
+element = document.querySelector(selectors);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><var>селекторы</var></dt>
- <dd>{{domxref("DOMString")}}, содержащий один или более селекторов для сопоставления. Эта строка должна быть допустимой строкой селектора CSS; если же нет, генерируется исключение <code>SYNTAX_ERR</code>. Смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Расположение элементов DOM с использованием селекторов</a> для того, чтобы узнать больше о селекторах и о том, как ими управлять.</dd>
-</dl>
+- _селекторы_
+  - : {{domxref("DOMString")}}, содержащий один или более селекторов для сопоставления. Эта строка должна быть допустимой строкой селектора CSS; если же нет, генерируется исключение `SYNTAX_ERR`. Смотрите [Расположение элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) для того, чтобы узнать больше о селекторах и о том, как ими управлять.
 
-<div class="note">
-<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. <a href="#escaping_special_characters">Escaping special characters</a> для получения дополнительной информации.</p>
-</div>
+> **Примечание:** Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. [Escaping special characters](#escaping_special_characters) для получения дополнительной информации.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Ссылка на объект типа {{domxref("Element")}}, являющийся первым элементов в документе, который соответствует указанному набору <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B">CSS селекторов</a>, либо <code>null</code>, если совпадений нет.  </p>
+Ссылка на объект типа {{domxref("Element")}}, являющийся первым элементов в документе, который соответствует указанному набору [CSS селекторов](/ru/docs/Web/CSS/CSS_%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B), либо `null`, если совпадений нет.
 
-<p>Если вам нужен список всех элементов, соответствующих указанным селекторам, используйте функцию {{domxref("Document.querySelectorAll", "querySelectorAll()")}}.</p>
+Если вам нужен список всех элементов, соответствующих указанным селекторам, используйте функцию {{domxref("Document.querySelectorAll", "querySelectorAll()")}}.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>Некорректный синтаксис указанных селекторов <var>selectors</var>.</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : Некорректный синтаксис указанных селекторов _selectors_.
 
-<h2 id="Примечания_по_использованию">Примечания по использованию</h2>
+## Примечания по использованию
 
-<p>Если указанный селектор соответствует идентификатору, который неправильно используется более одного раза в документе, возвращается первый элемент с этим идентификатором.</p>
+Если указанный селектор соответствует идентификатору, который неправильно используется более одного раза в документе, возвращается первый элемент с этим идентификатором.
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Псевдо-элементы CSS</a> никогда не вернут никаких элементов, как указано в <a href="http://www.w3.org/TR/selectors-api/#grammar">API селекторов</a>.</p>
+[Псевдо-элементы CSS](/ru/docs/Web/CSS/Pseudo-elements) никогда не вернут никаких элементов, как указано в [API селекторов](http://www.w3.org/TR/selectors-api/#grammar).
 
-<h3 id="Экранирование_специальных_символов">Экранирование специальных символов</h3>
+### Экранирование специальных символов
 
-<p>Чтобы сопоставить ID или селекторы, которые не соответствуют стандартному синтаксису CSS (например, использующих ненадлежащим образом двоеточие или пробел), необходимо экранировать символ обратной косой чертой ("<code>\</code>"). Поскольку обратная косая черта также является экранирующим символом в JavaScript, то при вводе литеральной строки необходимо экранировать её <em>дважды</em> (первый раз для строки JavaScript и второй для <code>querySelector()</code>):</p>
+Чтобы сопоставить ID или селекторы, которые не соответствуют стандартному синтаксису CSS (например, использующих ненадлежащим образом двоеточие или пробел), необходимо экранировать символ обратной косой чертой ("`\`"). Поскольку обратная косая черта также является экранирующим символом в JavaScript, то при вводе литеральной строки необходимо экранировать её _дважды_ (первый раз для строки JavaScript и второй для `querySelector()`):
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
   console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
   document.querySelector('#foo\bar');    // Does not match anything
 
@@ -72,38 +66,39 @@ translation_of: Web/API/Document/querySelector
 
   document.querySelector('#foo:bar');    // Does not match anything
   document.querySelector('#foo\\:bar');  // Match the second div
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h3 id="Выбор_первого_элемента_с_совпадающим_классом">Выбор первого элемента с совпадающим классом</h3>
+### Выбор первого элемента с совпадающим классом
 
-<p>В этом примере, нам вернётся первый элемент в документе с классом "<code>myclass</code>":</p>
+В этом примере, нам вернётся первый элемент в документе с классом "`myclass`":
 
-<pre class="brush: js">var el = document.querySelector(".myclass");
-</pre>
+```js
+var el = document.querySelector(".myclass");
+```
 
-<h3 id="Notes">Более сложный селектор</h3>
+### Более сложный селектор
 
-<p>Селекторы, передаваемые в querySelector, могут быть использованы и для точного поиска, как показано в примере ниже. В данном примере возвращается элемент &lt;input name="login"/&gt;, находящийся в &lt;div class="user-panel main"&gt;:</p>
+Селекторы, передаваемые в querySelector, могут быть использованы и для точного поиска, как показано в примере ниже. В данном примере возвращается элемент \<input name="login"/>, находящийся в \<div class="user-panel main">:
 
-<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name=login]");
-</pre>
+```js
+var el = document.querySelector("div.user-panel.main input[name=login]");
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>
- <li>{{domxref("document.querySelectorAll()")}}</li>
- <li>{{domxref("element.querySelector()")}}</li>
- <li>{{domxref("element.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code snippets/QuerySelector">Фрагменты кода для querySelector</a></li>
-</ul>
+- [Locating DOM elements using selectors](/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("element.querySelector()")}}
+- {{domxref("element.querySelectorAll()")}}
+- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")

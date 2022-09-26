@@ -5,375 +5,311 @@ tags:
   - API
 translation_of: Web/API/DataTransfer
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{ gecko_minversion_header("1.9") }} Объект <strong>DataTransfer</strong> используется для хранения данных, перетаскиваемых мышью во время операции <strong>drag and drop</strong>. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. <a href="/En/DragDrop/Drag_and_Drop">Drag and Drop</a></p>
+{{ gecko_minversion_header("1.9") }} Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
 
-<p>Объект может быть получен из свойства <strong>dataTransfer</strong> всех событий перетаскивания. Он не может быть отдельно создан.</p>
+Объект может быть получен из свойства **dataTransfer** всех событий перетаскивания. Он не может быть отдельно создан.
 
-<h2 id="Properties">Список свойств</h2>
+## Список свойств
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Свойство</td>
-   <td class="header">Тип</td>
-  </tr>
-  <tr>
-   <td><code><a href="#dropEffect.28.29" title="En/DragDrop/DataTransfer#dropEffect">dropEffect</a></code></td>
-   <td><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String" title="en/String">String</a></code></td>
-  </tr>
-  <tr>
-   <td><code><a href="#effectAllowed.28.29" title="En/DragDrop/DataTransfer#effectAllowed">effectAllowed</a></code></td>
-   <td><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String" title="en/String">String</a></code></td>
-  </tr>
-  <tr>
-   <td><a href="#files.28.29" title="En/DragDrop/DataTransfer#files"><code>files</code></a> {{ gecko_minversion_inline("1.9.2") }}</td>
-   <td>{{ domxref("FileList") }}</td>
-  </tr>
-  <tr>
-   <td><code><a href="#mozCursor" title="En/DragDrop/DataTransfer#mozCursor">mozCursor</a></code> {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String" title="en/String">String</a></code></td>
-  </tr>
-  <tr>
-   <td><code><a href="#mozItemCount.28.29" title="En/DragDrop/DataTransfer#mozItemCount">mozItemCount</a></code> {{ non-standard_inline() }}</td>
-   <td><code>unsigned long</code></td>
-  </tr>
-  <tr>
-   <td><a href="#mozSourceNode" title="En/DragDrop/DataTransfer#mozSourceNode"><code>mozSourceNode</code></a> {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }}</td>
-   <td>{{ domxref("Node") }}</td>
-  </tr>
-  <tr>
-   <td><a href="#mozUserCancelled" title="En/DragDrop/DataTransfer#mozUserCancelled"><code>mozUserCancelled</code></a></td>
-   <td><a href="/en/JavaScript/Reference/Global_Objects/Boolean" title="en/Core JavaScript 1.5 Reference/Global Objects/Boolean"><code>Boolean</code></a></td>
-  </tr>
-  <tr>
-   <td><code><a href="#types.28.29" title="En/DragDrop/DataTransfer#types">types</a></code></td>
-   <td><code><a href="/en-US/docs/Web/API/DOMStringList" title="en-US/docs/Web/API/DOMStringList">DOMStringList</a></code></td>
-  </tr>
- </tbody>
-</table>
+| Свойство                                                                                                                                                     | Тип                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| [`dropEffect`](#dropEffect.28.29 "En/DragDrop/DataTransfer#dropEffect")                                                                                      | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
+| [`effectAllowed`](#effectAllowed.28.29 "En/DragDrop/DataTransfer#effectAllowed")                                                                             | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
+| [`files`](#files.28.29 "En/DragDrop/DataTransfer#files") {{ gecko_minversion_inline("1.9.2") }}                                                | {{ domxref("FileList") }}                                                                                       |
+| [`mozCursor`](#mozCursor "En/DragDrop/DataTransfer#mozCursor") {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String "en/String")            |
+| [`mozItemCount`](#mozItemCount.28.29 "En/DragDrop/DataTransfer#mozItemCount") {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
+| [`mozSourceNode`](#mozSourceNode "En/DragDrop/DataTransfer#mozSourceNode") {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                                                                           |
+| [`mozUserCancelled`](#mozUserCancelled "En/DragDrop/DataTransfer#mozUserCancelled")                                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean "en/Core JavaScript 1.5 Reference/Global Objects/Boolean") |
+| [`types`](#types.28.29 "En/DragDrop/DataTransfer#types")                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList "en-US/docs/Web/API/DOMStringList")                                |
 
-<h2 id="Method_overview">Список методов</h2>
+## Список методов
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#addElement.28.29">addElement</a>(in <a href="/en/XPCOM_Interface_Reference/nsIDOMElement" title="en/nsIDOMElement">Element</a> element)</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#clearData.28.29">clearData</a>([in <a href="/en/String" title="en/String">String</a> type])</code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en/String" title="en/String">String</a> <a href="#getData.28.29">getData</a>(in <a href="/en/String" title="en/String">String</a> type)</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#setData.28.29">setData</a>(in <a href="/en/String" title="en/String">String</a> type, in <a href="/en/String" title="en/String">String</a> data)</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#setDragImage.28.29">setDragImage</a>(in <a href="/en/XPCOM_Interface_Reference/nsIDOMElement" title="en/nsIDOMElement">nsIDOMElement</a> image, in long x, in long y)</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#mozClearDataAt.28.29">mozClearDataAt</a>([in <a href="/en/String" title="en/String">String</a> type, in unsigned long index])</code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en/XPCOM_Interface_Reference/NsIVariant" title="en/nsIVariant">nsIVariant</a> <a href="#mozGetDataAt.28.29">mozGetDataAt</a>(in <a href="/en/String" title="en/String">String</a> type, in unsigned long index)</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#mozSetDataAt.28.29">mozSetDataAt</a>(in <a href="/en/String" title="en/String">String</a> type, in <a href="/en/XPCOM_Interface_Reference/NsIVariant" title="en/nsIVariant">nsIVariant</a> data, in unsigned long index)</code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en/StringList" title="en/StringList">StringList</a> <a href="#mozTypesAt.28.29">mozTypesAt</a>([in unsigned long index])</code></td>
-  </tr>
- </tbody>
-</table>
+| `void addElement(in Element element)`                                           |
+| ------------------------------------------------------------------------------- |
+| `void clearData([in String type])`                                              |
+| `String getData(in String type)`                                                |
+| `void setData(in String type, in String data)`                                  |
+| `void setDragImage(in nsIDOMElement image, in long x, in long y)`               |
+| `void mozClearDataAt([in String type, in unsigned long index])`                 |
+| `nsIVariant mozGetDataAt(in String type, in unsigned long index)`               |
+| `void mozSetDataAt(in String type, in nsIVariant data, in unsigned long index)` |
+| `StringList mozTypesAt([in unsigned long index])`                               |
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<h3 id="dropEffect.28.29">dropEffect</h3>
+### dropEffect
 
-<p>Реальное действие, которое будет выполнено, и единственное возможное значение свойства <strong>effectAllowed.</strong></p>
+Реальное действие, которое будет выполнено, и единственное возможное значение свойства **effectAllowed.**
 
-<p>Для событий <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.</p>
+Для событий **dragenter** и **dragover**, **dropEffect** будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для **dragenter** и **dragover**, **dropEffect** следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.
 
-<p>Для событий <strong>dragstart</strong>, <strong>drag</strong>, и <strong>dragleave</strong>,<strong> dropEffect</strong> будет инициализировано значением "none". Свойства <strong>dropEffect</strong> можно присвоить любое значение, но оно не будет ни для чего использоваться.</p>
+Для событий **dragstart**, **drag**, и **dragleave**, **dropEffect** будет инициализировано значением "none". Свойства **dropEffect** можно присвоить любое значение, но оно не будет ни для чего использоваться.
 
-<p>Для событий <strong>drop</strong> и <strong>dragend</strong>, <strong>dropEffect</strong> будет инициализировано значением, которое было назначено свойству <strong>dropEffect</strong> после последнего события <strong>dragenter</strong> или <strong>dragover</strong>.</p>
+Для событий **drop** и **dragend**, **dropEffect** будет инициализировано значением, которое было назначено свойству **dropEffect** после последнего события **dragenter** или **dragover**.
 
-<p>Возможные значения:</p>
+Возможные значения:
 
-<ul>
- <li><strong>copy</strong>: в новом расположении создаётся копия исходного элемента.</li>
- <li><strong>move</strong>: элемент перемещается в новое расположение.</li>
- <li><strong>link</strong>: в новом расположении создаётся ссылка на исходный элемент.</li>
- <li><strong>none</strong>: элемент не может быть брошен.</li>
-</ul>
+- **copy**: в новом расположении создаётся копия исходного элемента.
+- **move**: элемент перемещается в новое расположение.
+- **link**: в новом расположении создаётся ссылка на исходный элемент.
+- **none**: элемент не может быть брошен.
 
-<p>Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.</p>
+Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.
 
-<h3 id="effectAllowed.28.29">effectAllowed</h3>
+### effectAllowed
 
-<p>Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
+Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии `dragstart `чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем), или в событии `dragenter `и` dragenter `чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.
 
-<p>Возможные значения:</p>
+Возможные значения:
 
-<ul>
- <li><strong>copy</strong>: Копия ресурса может быть сделана в новом месте.</li>
- <li><strong>move</strong>: Элемент может быть перемещён в новое место. </li>
- <li><strong>link</strong>: A link may be established to the source at the new location.</li>
- <li><strong>copyLink</strong>: A copy or link operation is permitted.</li>
- <li><strong>copyMove</strong>: A copy or move operation is permitted.</li>
- <li><strong>linkMove</strong>: A link or move operation is permitted.</li>
- <li><strong>all</strong>: All operations are permitted.</li>
- <li><strong>none</strong>: the item may not be dropped.</li>
- <li><strong>uninitialized</strong>: the default value when the effect has not been set, equivalent to all.</li>
-</ul>
+- **copy**: Копия ресурса может быть сделана в новом месте.
+- **move**: Элемент может быть перемещён в новое место.
+- **link**: A link may be established to the source at the new location.
+- **copyLink**: A copy or link operation is permitted.
+- **copyMove**: A copy or move operation is permitted.
+- **linkMove**: A link or move operation is permitted.
+- **all**: All operations are permitted.
+- **none**: the item may not be dropped.
+- **uninitialized**: the default value when the effect has not been set, equivalent to all.
 
-<p>Assigning any other value has no effect and retains the old value.</p>
+Assigning any other value has no effect and retains the old value.
 
-<h3 id="files.28.29">files</h3>
+### files
 
-<p>{{ gecko_minversion_header("1.9.2") }}</p>
+{{ gecko_minversion_header("1.9.2") }}
 
-<p>Содержит список локальных файлов доступных на dataTransfer. Если операция перемещения не включала в себя перемещение файлов, то данное свойство будет пустым списком. Неверное обращение по индексу к объекту {{ domxref("FileList") }} определённым данным свойством вернёт null.</p>
+Содержит список локальных файлов доступных на dataTransfer. Если операция перемещения не включала в себя перемещение файлов, то данное свойство будет пустым списком. Неверное обращение по индексу к объекту {{ domxref("FileList") }} определённым данным свойством вернёт null.
 
-<h4 id="Пример">Пример</h4>
+#### Пример
 
-<p>Данный пример демонстрирует перетаскивание файлов в окно браузера:</p>
+Данный пример демонстрирует перетаскивание файлов в окно браузера:
 
-<p><a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></p>
+<http://jsfiddle.net/9C2EF/>
 
-<h3 id="types.28.29">types</h3>
+### types
 
-<p>Содержит список типов форматов данных в порядке добавления данных. Если ничего не было добавлено, то будет вернут пустой список.</p>
+Содержит список типов форматов данных в порядке добавления данных. Если ничего не было добавлено, то будет вернут пустой список.
 
-<h3>mozCursor</h3>
+### mozCursor
 
-<p>The drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
+The drag cursor's state. This is primarily used to control the cursor during tab drags.
 
-<div class="note"><strong>Note:</strong> This method is currently only implemented on Windows.</div>
+> **Примечание:** This method is currently only implemented on Windows.
 
-<h4 id="Possible_values">Possible values</h4>
+#### Possible values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Uses the default system behavior.</dd>
- <dt><code>default</code></dt>
- <dd>Uses the default Gecko behavior, which is to set the cursor to an arrow during the drag operation.</dd>
-</dl>
+- `auto`
+  - : Uses the default system behavior.
+- `default`
+  - : Uses the default Gecko behavior, which is to set the cursor to an arrow during the drag operation.
 
-<div class="note"><strong>Note:</strong> If you specify any value other than "default", "auto" is assumed.</div>
+> **Примечание:** If you specify any value other than "default", "auto" is assumed.
 
-<h3 id="mozItemCount.28.29">mozItemCount</h3>
+### mozItemCount
 
-<p>The number of items being dragged.</p>
+The number of items being dragged.
 
-<div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
+> **Примечание:** This property is Gecko-specific.
 
-<h3 id="mozSourceNode">mozSourceNode</h3>
+### mozSourceNode
 
-<p>{{ gecko_minversion_header("2") }}</p>
+{{ gecko_minversion_header("2") }}
 
-<p>The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is <code>null</code> for external drags or if the caller can't access the node.</p>
+The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
 
-<div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
+> **Примечание:** This property is Gecko-specific.
 
-<h3 id="mozItemCount.28.29">mozUserCancelled</h3>
+### mozUserCancelled
 
-<p>This property applies only to the <code>dragend</code> event, and is <code>true</code> if the user canceled the drag operation by pressing escape. It will be <code>false</code> in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location. This property is not currently implemented on Linux.</p>
+This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location. This property is not currently implemented on Linux.
 
-<div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
+> **Примечание:** This property is Gecko-specific.
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<h3 id="addElement.28.29">addElement()</h3>
+### addElement()
 
-<p>Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то,  на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.</p>
+Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то, на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.
 
-<pre class="eval"> void addElement(
+```
+ void addElement(
    in Element element
  );
-</pre>
+```
 
-<h6 id="Parameters_addElement">Параметры</h6>
+###### Параметры
 
-<dl>
- <dt><code>element </code></dt>
- <dd>Элемент для добавления.</dd>
-</dl>
+- `element`
+  - : Элемент для добавления.
 
-<h3 id="clearData.28.29">clearData()</h3>
+### clearData()
 
-<p>Удаление данных, связанные с указанным типом. Аргумент <strong>type</strong> является необязательным. Если <strong>type</strong> пуст или не указан, тогда данные, связанные со всеми типами удаляются. Если данные для указанного типа не существуют или передача данных не содержит данных, тогда этот метод не будет делать ничего.</p>
+Удаление данных, связанные с указанным типом. Аргумент **type** является необязательным. Если **type** пуст или не указан, тогда данные, связанные со всеми типами удаляются. Если данные для указанного типа не существуют или передача данных не содержит данных, тогда этот метод не будет делать ничего.
 
-<pre class="eval"> void clearData(
+```
+ void clearData(
    [optional] in String type
  );
-</pre>
+```
 
-<h6 id="Parameters_clearData">Параметры</h6>
+###### Параметры
 
-<dl>
- <dt><code>type </code></dt>
- <dd>Тип данных для удаления.</dd>
-</dl>
+- `type`
+  - : Тип данных для удаления.
 
-<h3 id="getData.28.29">getData()</h3>
+### getData()
 
-<p>Возвращает данные для указанного типа или пустую строку, если данные для указанного типа не существуют или передаваемая сущность не содержит данных.</p>
+Возвращает данные для указанного типа или пустую строку, если данные для указанного типа не существуют или передаваемая сущность не содержит данных.
 
-<p>Ошибка безопасности возникает при попытке получить данные во время перетаскивания из другого домена, иначе вызывающий объект не будет иметь доступа. Эти данные будут доступны только после того, как элемент будет отпущен в случае события <strong>drop</strong>.</p>
+Ошибка безопасности возникает при попытке получить данные во время перетаскивания из другого домена, иначе вызывающий объект не будет иметь доступа. Эти данные будут доступны только после того, как элемент будет отпущен в случае события **drop**.
 
-<pre class="eval"> String getData(
+```
+ String getData(
    in String type
  );
-</pre>
+```
 
-<h6 id="Parameters_getData">Параметры</h6>
+###### Параметры
 
-<p>Тип данных который будет возвращён.</p>
+Тип данных который будет возвращён.
 
-<p><code>type </code></p>
+`type`
 
-<h3 id="setData.28.29">setData()</h3>
+### setData()
 
-<p>Установка данных для указываемого типа. Если данные для <strong>type</strong> не существуют, тогда они добавляются в конце, так что последним элементом в списке типов будет новый формат. Если данные для <strong>type</strong> уже существуют, существующие данные заменяются в том же положении. То есть порядок списка типов не изменяется при замене данных одного и того же типа.</p>
+Установка данных для указываемого типа. Если данные для **type** не существуют, тогда они добавляются в конце, так что последним элементом в списке типов будет новый формат. Если данные для **type** уже существуют, существующие данные заменяются в том же положении. То есть порядок списка типов не изменяется при замене данных одного и того же типа.
 
-<pre class="eval"> void setData(
+```
+ void setData(
    in String type,
    in String data
  );
-</pre>
+```
 
-<h6 id="Parameters_setData">Параметры</h6>
+###### Параметры
 
-<dl>
- <dt><code>type </code></dt>
- <dd>Тип добавляемых данных.</dd>
- <dt><code>data </code></dt>
- <dd>Данные для добавления.</dd>
-</dl>
+- `type`
+  - : Тип добавляемых данных.
+- `data`
+  - : Данные для добавления.
 
-<h3 id="setDragImage.28.29">setDragImage()</h3>
+### setDragImage()
 
-<p>Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создаётся из перетаскиваемого узла.</p>
+Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создаётся из перетаскиваемого узла.
 
-<p>Если узел является HTML-элементом img, HTML-элементом canvas или XUL-элементом изображения, тогда используются данные изображения. В противном случае изображение должно быть видимым узлом, и из этого будет создано перетаскиваемое изображение. Если изображение равно null, любое пользовательское изображение перетаскиваемое очищается и вместо него используется значение по умолчанию.</p>
+Если узел является HTML-элементом img, HTML-элементом canvas или XUL-элементом изображения, тогда используются данные изображения. В противном случае изображение должно быть видимым узлом, и из этого будет создано перетаскиваемое изображение. Если изображение равно null, любое пользовательское изображение перетаскиваемое очищается и вместо него используется значение по умолчанию.
 
-<p>Координаты указывают смещение в изображении, где должен находиться курсор мыши. Например, для центрирования изображения используйте значения, которые составляют половину ширины и высоты изображения.</p>
+Координаты указывают смещение в изображении, где должен находиться курсор мыши. Например, для центрирования изображения используйте значения, которые составляют половину ширины и высоты изображения.
 
-<pre class="eval"> void setDragImage(
+```
+ void setDragImage(
    in Element image,
    in long x,
    in long y
  );
-</pre>
+```
 
-<h6 id="Parameters_setDragImage">Параметры</h6>
+###### Параметры
 
-<dl>
- <dt><code>image </code></dt>
- <dd>Элемент используемый в качестве изображения обратной связи при перетаскивании</dd>
- <dt><code>x </code></dt>
- <dd>Горизонтальное смещение внутри изображения.</dd>
- <dt><code>y </code></dt>
- <dd>Вертикальное смещение внутри изображения.</dd>
-</dl>
+- `image`
+  - : Элемент используемый в качестве изображения обратной связи при перетаскивании
+- `x`
+  - : Горизонтальное смещение внутри изображения.
+- `y`
+  - : Вертикальное смещение внутри изображения.
 
-<h3 id="mozClearDataAt.28.29">mozClearDataAt()</h3>
+### mozClearDataAt()
 
-<p>Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one.</p>
+Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one.
 
-<p>If the last format for the item is removed, the entire item is removed, reducing <code>mozItemCount</code> by one.</p>
+If the last format for the item is removed, the entire item is removed, reducing `mozItemCount` by one.
 
-<p>If the <code>format</code> list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.</p>
+If the `format` list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.
 
-<div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
+> **Примечание:** This method is Gecko-specific.
 
-<pre class="eval"> void mozClearDataAt(
+```
+ void mozClearDataAt(
    [optional] in String type,
    in unsigned long index
  );
-</pre>
+```
 
-<h6 id="Parameters_mozClearDataAt">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>type </code></dt>
- <dd>The type of data to remove.</dd>
- <dt><code>index </code></dt>
- <dd>The index of the data to remove.</dd>
-</dl>
+- `type`
+  - : The type of data to remove.
+- `index`
+  - : The index of the data to remove.
 
-<h3 id="mozGetDataAt.28.29">mozGetDataAt()</h3>
+### mozGetDataAt()
 
-<p>Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.</p>
+Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
 
-<div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
+> **Примечание:** This method is Gecko-specific.
 
-<pre class="eval"> nsIVariant mozGetDataAt(
+```
+ nsIVariant mozGetDataAt(
    [optional] in String type,
    in unsigned long index
  );
-</pre>
+```
 
-<h6 id="Parameters_mozClearDataAt">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>type </code></dt>
- <dd>The type of data to retrieve.</dd>
- <dt><code>index </code></dt>
- <dd>The index of the data to retrieve.</dd>
-</dl>
+- `type`
+  - : The type of data to retrieve.
+- `index`
+  - : The index of the data to retrieve.
 
-<h3 id="mozSetDataAt.28.29">mozSetDataAt()</h3>
+### mozSetDataAt()
 
-<p>A data transfer may store multiple items, each at a given zero-based index. <code>mozSetDataAt()</code> may only be called with an index argument less than <code>mozItemCount</code> in which case an existing item is modified, or equal to <code>mozItemCount</code> in which case a new item is added, and the <code>mozItemCount</code> is incremented by one.</p>
+A data transfer may store multiple items, each at a given zero-based index. `mozSetDataAt()` may only be called with an index argument less than `mozItemCount` in which case an existing item is modified, or equal to `mozItemCount` in which case a new item is added, and the `mozItemCount` is incremented by one.
 
-<p>Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.</p>
+Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.
 
-<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an <code>nsISupports</code>.</p>
+The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an `nsISupports`.
 
-<div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
+> **Примечание:** This method is Gecko-specific.
 
-<pre class="eval"> void mozSetDataAt(
+```
+ void mozSetDataAt(
    [optional] in String type,
    in nsIVariant data,
    in unsigned long index
  );
-</pre>
+```
 
-<h6 id="Parameters_mozSetDataAt">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>type </code></dt>
- <dd>The type of data to add.</dd>
- <dt><code>data </code></dt>
- <dd>The data to add.</dd>
- <dt><code>index </code></dt>
- <dd>The index of the data to add.</dd>
-</dl>
+- `type`
+  - : The type of data to add.
+- `data`
+  - : The data to add.
+- `index`
+  - : The index of the data to add.
 
-<h3 id="mozTypesAt.28.29">mozTypesAt()</h3>
+### mozTypesAt()
 
-<p>Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.</p>
+Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
 
-<div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
+> **Примечание:** This method is Gecko-specific.
 
-<pre class="eval"> nsIVariant mozTypesAt(
+```
+ nsIVariant mozTypesAt(
    in unsigned long index
  );
-</pre>
+```
 
-<h6 id="Parameters_mozTypesAt">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>index </code></dt>
- <dd>The index of the data for which to retrieve the types.</dd>
-</dl>
+- `index`
+  - : The index of the data for which to retrieve the types.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a class="internal" href="/En/DragDrop/Drag_and_Drop" title="Drag and Drop">Drag and Drop</a></p>
+[Drag and Drop](/En/DragDrop/Drag_and_Drop "Drag and Drop")
 
-<p>{{ languages( { "ja": "Ja/DragDrop/DataTransfer" } ) }}</p>
+{{ languages( { "ja": "Ja/DragDrop/DataTransfer" } ) }}

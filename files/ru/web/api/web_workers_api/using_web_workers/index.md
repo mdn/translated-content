@@ -7,56 +7,56 @@ tags:
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: DOM/Using_web_workers
 ---
-<div>{{DefaultAPISidebar("Web Workers API")}}</div>
+{{DefaultAPISidebar("Web Workers API")}}
 
-<p>Web Worker-ы предоставляют простое средство для запуска скриптов в фоновом потоке. Поток Worker'а может выполнять задачи без вмешательства в пользовательский интерфейс. К тому же, они могут осуществлять ввод/вывод, используя <code><a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest">XMLHttpRequest</a></code> (хотя атрибуты <code>responseXML</code> и <code>channel</code> всегда будут равны null). Существующий Worker может отсылать сообщения JavaScript коду-создателю через обработчик событий, указанный этим кодом (и наоборот). Эта статья даёт детальную инструкцию по использованию Web Workers.</p>
+Web Worker-ы предоставляют простое средство для запуска скриптов в фоновом потоке. Поток Worker'а может выполнять задачи без вмешательства в пользовательский интерфейс. К тому же, они могут осуществлять ввод/вывод, используя [`XMLHttpRequest`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest) (хотя атрибуты `responseXML` и `channel` всегда будут равны null). Существующий Worker может отсылать сообщения JavaScript коду-создателю через обработчик событий, указанный этим кодом (и наоборот). Эта статья даёт детальную инструкцию по использованию Web Workers.
 
-<h2 id="Web_Workers_API">Web Workers API</h2>
+## Web Workers API
 
-<p>Worker - это объект, создаваемый конструктором (например, {{domxref("Worker.Worker", "Worker()")}}) и запускающий именной JavaScript файл — этот файл содержит код, который будет выполнен в потоке Worker'а; объекты же Workers запускаются в другом глобальном контексте, отличающемся от текущего, - {{domxref("window")}}. Поэтому использование переменной {{domxref("window")}} для получения текущего глобального контекста (вместо {{domxref("window.self","self")}}) внутри {{domxref("Worker")}} вернёт ошибку.</p>
+Worker - это объект, создаваемый конструктором (например, {{domxref("Worker.Worker", "Worker()")}}) и запускающий именной JavaScript файл — этот файл содержит код, который будет выполнен в потоке Worker'а; объекты же Workers запускаются в другом глобальном контексте, отличающемся от текущего, - {{domxref("window")}}. Поэтому использование переменной {{domxref("window")}} для получения текущего глобального контекста (вместо {{domxref("window.self","self")}}) внутри {{domxref("Worker")}} вернёт ошибку.
 
-<p>Контекст Worker'а представлен объектом {{domxref("DedicatedWorkerGlobalScope")}} в случае выделенных Workers (обычные Workers используются одним скриптом; совместные Workers используют объект {{domxref("SharedWorkerGlobalScope")}}). Выделенный Worker доступен только из скрипта-родителя, в то время как совместные Workers могут быть доступны из нескольких сценариев.</p>
+Контекст Worker'а представлен объектом {{domxref("DedicatedWorkerGlobalScope")}} в случае выделенных Workers (обычные Workers используются одним скриптом; совместные Workers используют объект {{domxref("SharedWorkerGlobalScope")}}). Выделенный Worker доступен только из скрипта-родителя, в то время как совместные Workers могут быть доступны из нескольких сценариев.
 
-<div class="note">
-<p><strong>Примечание</strong>: Смотрите <a href="/en-US/docs/Web/API/Web_Workers_API">страницу Web Workers API</a> для справки по Workers и прочие руководства.</p>
-</div>
+> **Примечание:** Смотрите [страницу Web Workers API](/ru/docs/Web/API/Web_Workers_API) для справки по Workers и прочие руководства.
 
-<p>Вы можете запускать любой код внутри потока worker-а, за некоторыми исключениями. Например, вы не можете прямо манипулировать DOM внутри worker-а, или использовать некоторые методы по умолчанию и свойства объекта {{domxref("window")}}. Но вы можете использовать большой набор опций, доступный под <code>Window</code>, включая <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, и механизмы хранения данных, таких как <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> и относящихся только к Firefox OS <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a>. Для дополнительной информации смотрите <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a>.</p>
+Вы можете запускать любой код внутри потока worker-а, за некоторыми исключениями. Например, вы не можете прямо манипулировать DOM внутри worker-а, или использовать некоторые методы по умолчанию и свойства объекта {{domxref("window")}}. Но вы можете использовать большой набор опций, доступный под `Window`, включая [WebSockets](/ru/docs/Web/API/WebSockets_API), и механизмы хранения данных, таких как [IndexedDB](/ru/docs/Web/API/IndexedDB_API) и относящихся только к Firefox OS [Data Store API](/ru/docs/Web/API/Data_Store_API). Для дополнительной информации смотрите [Functions and classes available to workers](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
-<p>Данные передаются между worker-ами и главным потоком через систему сообщений — обе стороны передают свои сообщения, используя метод <code>postMessage()</code> и отвечают на сообщения при помощи обработчика событий <code>onmessage</code> (сообщение хранится в атрибуте data события {{event("Message")}}). Данные при этом копируются, а не делятся.</p>
+Данные передаются между worker-ами и главным потоком через систему сообщений — обе стороны передают свои сообщения, используя метод `postMessage()` и отвечают на сообщения при помощи обработчика событий `onmessage` (сообщение хранится в атрибуте data события {{event("Message")}}). Данные при этом копируются, а не делятся.
 
-<p>Объекты Workers могут, в свою очередь, создавать новые объекты workers, и так до тех пор, пока всё работает в рамках текущей страницы. Плюс к этому, объекты workers могут использовать <a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> для сетевого ввода/вывода, но есть исключение - атрибуты <code>responseXML</code> и <code>channel</code> объекта <code>XMLHttpRequest</code> всегда возвращают <code>null</code>.</p>
+Объекты Workers могут, в свою очередь, создавать новые объекты workers, и так до тех пор, пока всё работает в рамках текущей страницы. Плюс к этому, объекты workers могут использовать [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) для сетевого ввода/вывода, но есть исключение - атрибуты `responseXML` и `channel` объекта `XMLHttpRequest` всегда возвращают `null`.
 
-<h2 id="Выделенные_Workers">Выделенные Workers</h2>
+## Выделенные Workers
 
-<p>Как уже упоминалось выше, выделенный Worker доступен только для скрипта, который его вызвал. В этом разделе речь пойдёт о JavaScript, который можно найти в нашем <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">основном примере выделенного Worker</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">запустить скрипт</a>): этот пример позволяет ввести два числа для умножения. Эти числа отправляются в Worker, перемножаются, а результат возвращается на страницу и отображается.</p>
+Как уже упоминалось выше, выделенный Worker доступен только для скрипта, который его вызвал. В этом разделе речь пойдёт о JavaScript, который можно найти в нашем [основном примере выделенного Worker](https://github.com/mdn/simple-web-worker) ([запустить скрипт](http://mdn.github.io/simple-web-worker/)): этот пример позволяет ввести два числа для умножения. Эти числа отправляются в Worker, перемножаются, а результат возвращается на страницу и отображается.
 
-<p>Этот пример достаточно тривиален, но для ознакомления с базовыми концепциями worker-ов мы решили его упростить. Более продвинутые детали описаны далее в статье.</p>
+Этот пример достаточно тривиален, но для ознакомления с базовыми концепциями worker-ов мы решили его упростить. Более продвинутые детали описаны далее в статье.
 
-<h3 id="Определение_поддержки_Worker">Определение поддержки Worker</h3>
+### Определение поддержки Worker
 
-<p>Для большего контроля над ошибками и обратной совместимости, рекомендуется обернуть ваш код доступа к worker-у в следующий (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
+Для большего контроля над ошибками и обратной совместимости, рекомендуется обернуть ваш код доступа к worker-у в следующий ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
-<pre class="brush: js">if (window.Worker) {
+```js
+if (window.Worker) {
 
   ...
 
-}</pre>
+}
+```
 
-<h3 id="Создание_выделенного_worker">Создание выделенного worker</h3>
+### Создание выделенного worker
 
-<p>Создание нового worker-а — это легко. Всё что вам нужно это вызвать конструктор {{domxref("Worker.Worker", "Worker()")}}, указав URI скрипта для выполнения в потоке worker-а (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
+Создание нового worker-а — это легко. Всё что вам нужно это вызвать конструктор {{domxref("Worker.Worker", "Worker()")}}, указав URI скрипта для выполнения в потоке worker-а ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var myWorker = new Worker("worker.js");
-</pre>
-</div>
+```js
+var myWorker = new Worker("worker.js");
+```
 
-<h3 id="Передача_сообщений_в_и_из_выделенного_worker">Передача сообщений в и из выделенного worker</h3>
+### Передача сообщений в и из выделенного worker
 
-<p>Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
+Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
-<pre class="brush: js">first.onchange = function() {
+```js
+first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
@@ -64,156 +64,169 @@ original_slug: DOM/Using_web_workers
 second.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>В приведённом фрагменте кода мы имеем два {{htmlelement("input")}} элемента, представленных переменными <code>first</code> и <code>second</code>; когда значение любой из переменных изменяется,<code> myWorker.postMessage([first.value,second.value])</code> используется для отправки обоих значений, представленных в виде массива, в worker. Посредством аргумента <code>message</code> возможна передача практически любых данных в worker.</p>
+В приведённом фрагменте кода мы имеем два {{htmlelement("input")}} элемента, представленных переменными `first` и `second`; когда значение любой из переменных изменяется,` myWorker.postMessage([first.value,second.value])` используется для отправки обоих значений, представленных в виде массива, в worker. Посредством аргумента `message` возможна передача практически любых данных в worker.
 
-<p>Внутри worker-a мы можем обрабатывать сообщения и отвечать на них при помощи добавления обработчика события <code>onmessage</code> подобным образом (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js">worker.js</a>):</p>
+Внутри worker-a мы можем обрабатывать сообщения и отвечать на них при помощи добавления обработчика события `onmessage` подобным образом ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
 
-<pre class="brush: js">onmessage = function(e) {
+```js
+onmessage = function(e) {
   console.log('Message received from main script');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p>Обработчик <code>onmessage</code> позволяет нам запустить некий код всякий раз, когда получен пакет с сообщением, доступным в атрибуте <code>data</code> события <code>message</code>. В примере выше мы просто перемножаем вместе две цифры, после чего используем <code>postMessage()</code> снова, чтобы отправить полученный результат назад в основной поток.</p>
+Обработчик `onmessage` позволяет нам запустить некий код всякий раз, когда получен пакет с сообщением, доступным в атрибуте `data` события `message`. В примере выше мы просто перемножаем вместе две цифры, после чего используем `postMessage()` снова, чтобы отправить полученный результат назад в основной поток.
 
-<p>Возвращаясь в основной поток, мы используем <code>onmessage</code> снова, чтобы отреагировать на сообщение, отправленное нам назад из worker-а:</p>
+Возвращаясь в основной поток, мы используем `onmessage` снова, чтобы отреагировать на сообщение, отправленное нам назад из worker-а:
 
-<pre class="brush: js">myWorker.onmessage = function(e) {
+```js
+myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>В примере выше мы берём данные из события сообщения и ставим их как <code>textContent</code> у результирующего абзаца, чтобы показать пользователю результат этой калькуляции.</p>
+В примере выше мы берём данные из события сообщения и ставим их как `textContent` у результирующего абзаца, чтобы показать пользователю результат этой калькуляции.
 
-<p class="note"><strong>Примечание</strong>: Обратите внимание, что <code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</p>
+> **Примечание:** Обратите внимание, что `onmessage()`​ и `postmessage()` должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.
 
-<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте <a href="#transferring_data_to_and_from_workers:_further_details">Transferring data to and from workers: further details</a> для более подробного объяснения.</p>
+> **Примечание:** При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте [Transferring data to and from workers: further details](#transferring_data_to_and_from_workers:_further_details) для более подробного объяснения.
 
-<h3 id="Завершение_работы_worker-а">Завершение работы worker-а</h3>
+### Завершение работы worker-а
 
-<p>Прекращение работы worker-а главного потока достигается методом {{domxref("Worker", "terminate")}}:</p>
+Прекращение работы worker-а главного потока достигается методом {{domxref("Worker", "terminate")}}:
 
-<pre class="brush: js">myWorker.terminate();</pre>
+```js
+myWorker.terminate();
+```
 
-<p>Поток worker-а немедленно уничтожается.</p>
+Поток worker-а немедленно уничтожается.
 
-<h3 id="Обработка_ошибок">Обработка ошибок</h3>
+### Обработка ошибок
 
-<p>При ошибке во время выполнения worker-а, вызывается его обработчик событий <code>onerror</code>. Он принимает событие <code>error</code>, которое реализует интерфейс <code>ErrorEvent</code>.</p>
+При ошибке во время выполнения worker-а, вызывается его обработчик событий `onerror`. Он принимает событие `error`, которое реализует интерфейс `ErrorEvent`.
 
-<p>Событие не всплывает и его можно отменить. Для отмены действия по умолчанию, worker может вызвать метод <a class="internal" href="/en-US/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code> </a> в обработчике события ошибки.</p>
+Событие не всплывает и его можно отменить. Для отмены действия по умолчанию, worker может вызвать метод [`preventDefault()` ](/ru/docs/Web/API/Event/preventDefault)в обработчике события ошибки.
 
-<p>У события ошибки есть три поля, которые представляют интерес:</p>
+У события ошибки есть три поля, которые представляют интерес:
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Сообщение об ошибке в читаемом виде.</dd>
- <dt><code>filename</code></dt>
- <dd>Имя файла со скриптом, в котором ошибка произошла.</dd>
- <dt><code>lineno</code></dt>
- <dd>Номер строки в файле, в котором произошла ошибка.</dd>
-</dl>
+- `message`
+  - : Сообщение об ошибке в читаемом виде.
+- `filename`
+  - : Имя файла со скриптом, в котором ошибка произошла.
+- `lineno`
+  - : Номер строки в файле, в котором произошла ошибка.
 
-<h3 id="Создание_subworkers">Создание subworkers</h3>
+### Создание subworkers
 
-<p>Worker-ы могут запускать другие worker-ы. Так называемые sub-worker'ы должны быть того же происхождения (same-origin), что и родительский документ. Кроме того, URI для subworker-ов рассчитываются относительно родительского worker'а, а не родительского документа. Это позволяет worker-ам проще следить за тем, где находятся их зависимости.</p>
+Worker-ы могут запускать другие worker-ы. Так называемые sub-worker'ы должны быть того же происхождения (same-origin), что и родительский документ. Кроме того, URI для subworker-ов рассчитываются относительно родительского worker'а, а не родительского документа. Это позволяет worker-ам проще следить за тем, где находятся их зависимости.
 
-<h3 id="Импорт_скриптов_и_библиотек">Импорт скриптов и библиотек</h3>
+### Импорт скриптов и библиотек
 
-<p>Worker потоки имеют доступ к глобальной функции, <code>importScripts()</code>, которая позволяет импортировать скрипты с того же домена в их область видимости. Функция принимает ноль и более URI параметров, как список ссылок на ресурсы для импорта; все нижеприведённые примеры верны:</p>
+Worker потоки имеют доступ к глобальной функции, `importScripts()`, которая позволяет импортировать скрипты с того же домена в их область видимости. Функция принимает ноль и более URI параметров, как список ссылок на ресурсы для импорта; все нижеприведённые примеры верны:
 
-<pre class="brush: js">importScripts();                        /* imports nothing */
+```js
+importScripts();                        /* imports nothing */
 importScripts('foo.js');                /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');      /* imports two scripts */
-</pre>
+```
 
-<p>Браузер загружает каждый указанный скрипт и исполняет его. Любые глобальные объекты, создаваемые каждым скриптом могут быть использованы в worker'е. Если скрипт не удалось загрузить, будет брошена ошибка <code>NETWORK_ERROR</code>, и последующий код не будет исполнен. Тем не менее код, исполненный ранее (включая отложенный при помощи {{domxref("window.setTimeout()")}}) останется функционален. Объявления функций идущие <strong>после</strong> вызова метода <code>importScripts()</code> также будут доступны, т.к. объявления функций всегда обрабатываются перед остальным кодом.</p>
+Браузер загружает каждый указанный скрипт и исполняет его. Любые глобальные объекты, создаваемые каждым скриптом могут быть использованы в worker'е. Если скрипт не удалось загрузить, будет брошена ошибка `NETWORK_ERROR`, и последующий код не будет исполнен. Тем не менее код, исполненный ранее (включая отложенный при помощи {{domxref("window.setTimeout()")}}) останется функционален. Объявления функций идущие **после** вызова метода `importScripts()` также будут доступны, т.к. объявления функций всегда обрабатываются перед остальным кодом.
 
-<div class="note"><strong>Примечание</strong>: Скрипты могут быть загружены в произвольном порядке, но их исполнение будет в  том порядке, в котором имена файлов были переданы в <code>importScripts()</code>. Функция выполняется синхронно; <code>importScripts()</code> не вернёт исполнение, пока все скрипты не будут загружены и исполнены.</div>
+> **Примечание:** Скрипты могут быть загружены в произвольном порядке, но их исполнение будет в том порядке, в котором имена файлов были переданы в `importScripts()`. Функция выполняется синхронно; `importScripts()` не вернёт исполнение, пока все скрипты не будут загружены и исполнены.
 
-<h2 id="Разделяемые_worker-ы_Shared_workers">Разделяемые worker-ы (Shared workers)</h2>
+## Разделяемые worker-ы (Shared workers)
 
-<p>Разделяемый worker доступен нескольким разным скриптам — даже если они находятся в разных окнах, фреймах или даже worker-ах. В этом разделе мы обсудим JavaScript, который можно найти в нашем <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">базовом примере разделяемых worker-ов</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">запустить разделяемый worker</a>): Он очень похож на базовый пример выделенных worker-ов, за исключением двух функций, которые доступны из разных скриптовых файлов: <em>умножение двух чисел</em> или <em>возведение числа в степень.</em> Оба скрипта используют один и тот же worker для необходимых вычислений.</p>
+Разделяемый worker доступен нескольким разным скриптам — даже если они находятся в разных окнах, фреймах или даже worker-ах. В этом разделе мы обсудим JavaScript, который можно найти в нашем [базовом примере разделяемых worker-ов](https://github.com/mdn/simple-shared-worker) ([запустить разделяемый worker](http://mdn.github.io/simple-shared-worker/)): Он очень похож на базовый пример выделенных worker-ов, за исключением двух функций, которые доступны из разных скриптовых файлов: _умножение двух чисел_ или _возведение числа в степень._ Оба скрипта используют один и тот же worker для необходимых вычислений.
 
-<p>Здесь мы сосредоточимся на разнице между выделенными и разделёнными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript-кодом, которые используют один и тот же файл worker-а.</p>
+Здесь мы сосредоточимся на разнице между выделенными и разделёнными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript-кодом, которые используют один и тот же файл worker-а.
 
-<div class="note">
-<p><strong>Примечание</strong>: Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).</p>
-</div>
+> **Примечание:** Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).
 
-<div class="note">
-<p><strong>Примечание: </strong>В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ({{bug(1177621)}}).</p>
-</div>
+> **Примечание:**В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ({{bug(1177621)}}).
 
-<h3 id="Создание_разделяемого_worker-а">Создание разделяемого worker-а</h3>
+### Создание разделяемого worker-а
 
-<p>Запуск разделяемого worker-а очень похож на запуск выделенного worker-а, но используется другой конструктор (см. <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> и <a href="http://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>) — в каждом документе необходимо поднять worker, для этого следует написать такой код:</p>
+Запуск разделяемого worker-а очень похож на запуск выделенного worker-а, но используется другой конструктор (см. [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) и [index2.html](http://mdn.github.io/simple-shared-worker/index2.html)) — в каждом документе необходимо поднять worker, для этого следует написать такой код:
 
-<pre class="brush: js">var myWorker = new SharedWorker("worker.js");</pre>
+```js
+var myWorker = new SharedWorker("worker.js");
+```
 
-<p>Большая разница заключается в том, что с разделяемым worker-ом необходимо взаимодействовать через объект <code>port</code> — явно открыв порт, с помощью которого скрипты могут взаимодействовать с worker-ом (в случае выделенного worker-а это происходит неявно).</p>
+Большая разница заключается в том, что с разделяемым worker-ом необходимо взаимодействовать через объект `port` — явно открыв порт, с помощью которого скрипты могут взаимодействовать с worker-ом (в случае выделенного worker-а это происходит неявно).
 
-<p>Соединение с портом должно быть осуществлено либо неявно, используя обработчик событие <code>onmessage</code>, либо явно, вызвав метод <strong>start()</strong> перед тем, как отправлять любые сообщения. Вызов метода start() необходим только тогда, когда подписка на событие реализована через метод <code>addEventListener()</code>.</p>
+Соединение с портом должно быть осуществлено либо неявно, используя обработчик событие `onmessage`, либо явно, вызвав метод **start()** перед тем, как отправлять любые сообщения. Вызов метода start() необходим только тогда, когда подписка на событие реализована через метод `addEventListener()`.
 
-<div class="note">
-<p><strong>Примечание: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
-</div>
+> **Примечание:**Когда используется метод `start()` чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.
 
-<pre class="brush: js">myWorker.port.start();  // в родительском потоке</pre>
+```js
+myWorker.port.start();  // в родительском потоке
+```
 
-<pre class="brush: js">port.start();  // в потоке worker-а, где переменная <code>port</code> является ссылкой на порт</pre>
+```js
+port.start();  // в потоке worker-а, где переменная port является ссылкой на порт
+```
 
-<h3 id="Передача_сообщений_виз_разделяемого_worker-а">Передача сообщений в/из разделяемого worker-а</h3>
+### Передача сообщений в/из разделяемого worker-а
 
-<p>Теперь сообщения могут быть отправлены worker-у, как и прежде, но метод <code>postMessage()</code> должен вызываться из объекта <code>port</code> (ещё раз, вы можете увидеть схожие конструкции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
+Теперь сообщения могут быть отправлены worker-у, как и прежде, но метод `postMessage()` должен вызываться из объекта `port` (ещё раз, вы можете увидеть схожие конструкции в [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) и [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
 
-<pre class="brush: js">squareNumber.onchange = function() {
+```js
+squareNumber.onchange = function() {
   myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>Теперь на стороне worker-а. Здесь код немного сложнее (<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a>):</p>
+Теперь на стороне worker-а. Здесь код немного сложнее ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
 
-<pre class="brush: js">self.addEventListener('connect', function(e) { // требуется addEventListener()
+```js
+self.addEventListener('connect', function(e) { // требуется addEventListener()
   var port = e.ports[0];
   port.onmessage = function(e) {
     var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
     port.postMessage(workerResult);
   }
-  <s>port.start();</s>  // вызов необязательный, т.к. используется обработчик событий onmessage
-});</pre>
+  port.start();  // вызов необязательный, т.к. используется обработчик событий onmessage
+});
+```
 
-<p>Первый этап состоит из события <code>onconnect</code>. Оно срабатывает, когда произошло подключение (т.е. когда в родительском потоке отработало событие <code>onmessage</code> или когда в нем был вызван метод <code>start()</code>).</p>
+Первый этап состоит из события `onconnect`. Оно срабатывает, когда произошло подключение (т.е. когда в родительском потоке отработало событие `onmessage` или когда в нем был вызван метод `start()`).
 
-<p>Мы используем атрибут события <code>ports</code>, чтобы получить порт и сохранить его в переменной.</p>
+Мы используем атрибут события `ports`, чтобы получить порт и сохранить его в переменной.
 
-<p>Второй этап — это обработчик события <code>message</code> на сохранённом порту. Он нужен для подсчёта и вывода результата вычисления в основной поток. Установка обработчика <code>message</code> в потоке worker-а также открывает подключение к родительскому потоку, поэтому вызов на <code>port.start()</code> на самом деле не нужен (см. код обработчика <code>onconnect</code>).</p>
+Второй этап — это обработчик события `message` на сохранённом порту. Он нужен для подсчёта и вывода результата вычисления в основной поток. Установка обработчика `message` в потоке worker-а также открывает подключение к родительскому потоку, поэтому вызов на `port.start()` на самом деле не нужен (см. код обработчика `onconnect`).
 
-<p>Последний этап — возвращение в основной поток и обработка сообщения от worker‑а (ещё раз, вы можете увидеть схожие конструкции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
+Последний этап — возвращение в основной поток и обработка сообщения от worker‑а (ещё раз, вы можете увидеть схожие конструкции в [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) и [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
 
-<pre class="brush: js">myWorker.port.onmessage = function(e) {
+```js
+myWorker.port.onmessage = function(e) {
   result2.textContent = e.data[0];
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>Когда сообщение приходит через порт от worker-а, мы проверяем тип результата вычислений и затем вставляем его в соответствующий абзац.</p>
+Когда сообщение приходит через порт от worker-а, мы проверяем тип результата вычислений и затем вставляем его в соответствующий абзац.
 
-<h2 id="О_потоковой_безопасности">О потоковой безопасности</h2>
+## О потоковой безопасности
 
-<p>Интерфейс {{domxref("Worker")}} создаёт настоящие потоки на уровне операционной системы, что может смутить опытных программистов и навести их на мысли о проблемах, связанных с конфликтом доступа к общим объектам.</p>
+Интерфейс {{domxref("Worker")}} создаёт настоящие потоки на уровне операционной системы, что может смутить опытных программистов и навести их на мысли о проблемах, связанных с конфликтом доступа к общим объектам.
 
-<p>На самом деле создать такие проблемы достаточно сложно, так как worker-ы жёстко контролируются. У них нет доступа к непотокобезопасным объектам DOM, а все данные между потоками передаются в качестве сериализованных объектов. Придётся очень постараться, чтобы вызывать проблемы потокобезопасности в вашем коде.</p>
+На самом деле создать такие проблемы достаточно сложно, так как worker-ы жёстко контролируются. У них нет доступа к непотокобезопасным объектам DOM, а все данные между потоками передаются в качестве сериализованных объектов. Придётся очень постараться, чтобы вызывать проблемы потокобезопасности в вашем коде.
 
-<h2 id="Передача_данных_в_и_из_worker-ов_другие_детали">Передача данных в и из worker-ов: другие детали</h2>
+## Передача данных в и из worker-ов: другие детали
 
-<p>Передача данных между главной страницей и worker-ом происходит путём копирования, а не передачи по ссылке. Объекты сериализуются при передаче и затем десериализуются на другом конце. Страница и worker не используют совместно одни и те же экземпляры, для каждого создаётся свой. Большинство браузеров реализуют это структурированным клонированием (<a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a>).</p>
+Передача данных между главной страницей и worker-ом происходит путём копирования, а не передачи по ссылке. Объекты сериализуются при передаче и затем десериализуются на другом конце. Страница и worker не используют совместно одни и те же экземпляры, для каждого создаётся свой. Большинство браузеров реализуют это структурированным клонированием ([structured cloning](/ru/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)).
 
-<p>Для иллюстрации этого мы создадим функцию <code>emulateMessage()</code>, которая будет имитировать поведение значения, которое клонируется, но не используется совместно при переходе от worker-а к главной странице или наоборот.</p>
+Для иллюстрации этого мы создадим функцию `emulateMessage()`, которая будет имитировать поведение значения, которое клонируется, но не используется совместно при переходе от worker-а к главной странице или наоборот.
 
-<pre class="brush: js">function emulateMessage (vVal) {
+```js
+function emulateMessage (vVal) {
     return eval("(" + JSON.stringify(vVal) + ")");
 }
 
@@ -249,39 +262,45 @@ function Animal (sType, nAge) {
 }
 var example5 = new Animal("Cat", 3);
 alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object</pre>
+alert(emulateMessage(example5).constructor); // Object
+```
 
-<p>Значения, которые клонируются и совместно не используются, называются сообщениями. Как вы, возможно, знаете, сообщения могут быть отправлены в главную страницу и из неё, используя <code>postMessage()</code>, и {{domxref("MessageEvent.data", "data")}}, содержа данные, передаваемые из worker-а.</p>
+Значения, которые клонируются и совместно не используются, называются сообщениями. Как вы, возможно, знаете, сообщения могут быть отправлены в главную страницу и из неё, используя `postMessage()`, и {{domxref("MessageEvent.data", "data")}}, содержа данные, передаваемые из worker-а.
 
-<p><strong>example.html</strong>: (главная страница):</p>
+**example.html**: (главная страница):
 
-<pre class="brush: js">var myWorker = new Worker("my_task.js");
+```js
+var myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = function (oEvent) {
   console.log("Worker said : " + oEvent.data);
 };
 
-myWorker.postMessage("ali");</pre>
+myWorker.postMessage("ali");
+```
 
-<p><strong>my_task.js</strong> (worker):</p>
+**my_task.js** (worker):
 
-<pre class="brush: js">postMessage("I\'m working before postMessage(\'ali\').");
+```js
+postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function (oEvent) {
   postMessage("Hi " + oEvent.data);
-};</pre>
+};
+```
 
-<p>Алгоритм структурированного клонирования может принять JSON и некоторые вещи, которые JSON не может принять, например, циклические ссылки.</p>
+Алгоритм структурированного клонирования может принять JSON и некоторые вещи, которые JSON не может принять, например, циклические ссылки.
 
-<h3 id="Примеры_передачи_данных">Примеры передачи данных</h3>
+### Примеры передачи данных
 
-<h4 id="Пример_1_Расширенная_передача_JSON_данных_и_создание_системы_коммутации">Пример #1: Расширенная передача JSON данных и создание системы коммутации</h4>
+#### Пример #1: Расширенная передача JSON данных и создание системы коммутации
 
-<p>Если вам нужно передать сложные данные и вызвать множество различных функций как на главной странице, так и в worker-е, вы можете создать следующую систему.</p>
+Если вам нужно передать сложные данные и вызвать множество различных функций как на главной странице, так и в worker-е, вы можете создать следующую систему.
 
-<p>В первую очередь мы создаём класс QueryableWorker, который принимает url worker-а, стандартный обработчик событий (defaultListener) и обработчик ошибок. Этот класс будет отслеживать всех обработчиков и поможет нам общаться с воркером.</p>
+В первую очередь мы создаём класс QueryableWorker, который принимает url worker-а, стандартный обработчик событий (defaultListener) и обработчик ошибок. Этот класс будет отслеживать всех обработчиков и поможет нам общаться с воркером.
 
-<pre class="brush: js"><code>function QueryableWorker(url, defaultListener, onError) {
+```js
+function QueryableWorker(url, defaultListener, onError) {
     var instance = this,
         worker = new Worker(url),
         listeners = {};
@@ -297,28 +316,30 @@ onmessage = function (oEvent) {
     this.terminate = function() {
         worker.terminate();
     }
-}</code>
-</pre>
+}
+```
 
-<p>Затем мы добавляем методы добавления/удаления обработчиков.</p>
+Затем мы добавляем методы добавления/удаления обработчиков.
 
-<pre class="brush: js"><code>this.addListeners = function(name, listener) {
+```js
+this.addListeners = function(name, listener) {
     listeners[name] = listener;
 }
 
 this.removeListeners = function(name) {
     delete listeners[name];
-}</code>
-</pre>
+}
+```
 
-<p>Здесь мы создадим у worker-а два простых события для примера: получение разницы двух чисел и создание оповещения через три секунды. Но сначала нам нужно реализовать метод sendQuery, который проверит есть ли вообще у worker-а обработчик, который мы собираемся вызвать.</p>
+Здесь мы создадим у worker-а два простых события для примера: получение разницы двух чисел и создание оповещения через три секунды. Но сначала нам нужно реализовать метод sendQuery, который проверит есть ли вообще у worker-а обработчик, который мы собираемся вызвать.
 
-<pre class="brush: js"><code>/*
+```js
+/*
   Эта функция принимает по крайней мере один аргумент: имя метода, который мы хотим вызвать.
   Далее мы можем передать методу необходимые ему аргументы.
  */
 this.sendQuery = function() {
-    if (arguments.length &lt; 1) {
+    if (arguments.length < 1) {
          throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
          return;
     }
@@ -326,25 +347,27 @@ this.sendQuery = function() {
         'queryMethod': arguments[0],
         'queryArguments': Array.prototype.slice.call(arguments, 1)
     });
-}</code>
-</pre>
+}
+```
 
-<p>Завершим QueryableWorker методом <code>onmessage</code>.  Если worker имеет соответствующий метод, который мы запросили, он также должен вернуть соответствующий обработчик и аргументы, которые нам нужны. Останется лишь найти его в <code>listeners</code>:</p>
+Завершим QueryableWorker методом `onmessage`. Если worker имеет соответствующий метод, который мы запросили, он также должен вернуть соответствующий обработчик и аргументы, которые нам нужны. Останется лишь найти его в `listeners`:
 
-<pre class="brush: js"><code>worker.onmessage = function(event) {
-    if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+```js
+worker.onmessage = function(event) {
+    if (event.data instanceof Object &&
+        event.data.hasOwnProperty('queryMethodListener') &&
         event.data.hasOwnProperty('queryMethodArguments')) {
         listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
         this.defaultListener.call(instance, event.data);
     }
-}</code>
-</pre>
+}
+```
 
-<p>Теперь к самому worker-у. Сначала следует определить эти два простых метода:</p>
+Теперь к самому worker-у. Сначала следует определить эти два простых метода:
 
-<pre class="brush: js"><code>var queryableFunctions = {
+```js
+var queryableFunctions = {
     getDifference: function(a, b) {
         reply('printStuff', a - b);
     },
@@ -356,7 +379,7 @@ this.sendQuery = function() {
 }
 
 function reply() {
-    if (arguments.length &lt; 1) {
+    if (arguments.length < 1) {
         throw new TypeError('reply - takes at least one argument');
         return;
     }
@@ -369,32 +392,35 @@ function reply() {
 /* This method is called when main page calls QueryWorker's postMessage method directly*/
 function defaultReply(message) {
     // do something
-}</code>
-</pre>
+}
+```
 
-<p>И <code>onmessage</code>:</p>
+И `onmessage`:
 
-<pre class="brush: js"><code>onmessage = function(event) {
-    if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethod') &amp;&amp;
+```js
+onmessage = function(event) {
+    if (event.data instanceof Object &&
+        event.data.hasOwnProperty('queryMethod') &&
         event.data.hasOwnProperty('queryMethodArguments')) {
         queryableFunctions[event.data.queryMethod]
             .apply(self, event.data.queryMethodArguments);
     } else {
         defaultReply(event.data);
     }
-}</code></pre>
+}
+```
 
-<p>Полный код примера:</p>
+Полный код примера:
 
-<p><strong>example.html</strong> (основная страница):</p>
+**example.html** (основная страница):
 
-<pre class="brush: html"><code>&lt;!doctype html&gt;
-  &lt;html&gt;
-    &lt;head&gt;
-      &lt;meta charset="UTF-8"  /&gt;
-      &lt;title&gt;MDN Example - Queryable worker&lt;/title&gt;
-    &lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="UTF-8"  />
+      <title>MDN Example - Queryable worker</title>
+    <script type="text/javascript">
     /*
       QueryableWorker instances methods:
         * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
@@ -435,7 +461,7 @@ function defaultReply(message) {
         Then we can pass in the arguments that the method needs.
       */
       this.sendQuery = function() {
-        if (arguments.length &lt; 1) {
+        if (arguments.length < 1) {
           throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
           return;
         }
@@ -446,8 +472,8 @@ function defaultReply(message) {
       }
 
       worker.onmessage = function(event) {
-        if (event.data instanceof Object &amp;&amp;
-          event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+        if (event.data instanceof Object &&
+          event.data.hasOwnProperty('queryMethodListener') &&
           event.data.hasOwnProperty('queryMethodArguments')) {
           listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
         } else {
@@ -467,20 +493,22 @@ function defaultReply(message) {
     myTask.addListener('doAlert', function (time, unit) {
       alert('Worker waited for ' + time + ' ' + unit + ' :-)');
     });
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);"&gt;What is the difference between 5 and 3?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript:myTask.sendQuery('waitSomeTime');"&gt;Wait 3 seconds&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript:myTask.terminate();"&gt;terminate() the Worker&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+</script>
+</head>
+<body>
+  <ul>
+    <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
+    <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
+    <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+  </ul>
+</body>
+</html>
+```
 
-<p><strong>my_task.js</strong> (код worker-а):</p>
+**my_task.js** (код worker-а):
 
-<pre class="brush: js"><code>var queryableFunctions = {
+```js
+var queryableFunctions = {
   // пример #1: получить разницу между двумя числами
   getDifference: function(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
@@ -499,53 +527,53 @@ function defaultReply(message) {
 }
 
 function reply() {
-  if (arguments.length &lt; 1) { throw new TypeError('reply - not enough arguments'); return; }
+  if (arguments.length < 1) { throw new TypeError('reply - not enough arguments'); return; }
   postMessage({ 'queryMethodListener': arguments[0], 'queryMethodArguments': Array.prototype.slice.call(arguments, 1) });
 }
 
 onmessage = function(oEvent) {
-  if (oEvent.data instanceof Object &amp;&amp; oEvent.data.hasOwnProperty('queryMethod') &amp;&amp; oEvent.data.hasOwnProperty('queryMethodArguments')) {
+  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty('queryMethod') && oEvent.data.hasOwnProperty('queryMethodArguments')) {
     queryableFunctions[oEvent.data.queryMethod].apply(self, oEvent.data.queryMethodArguments);
   } else {
     defaultReply(oEvent.data);
   }
-};</code>
-</pre>
+};
+```
 
-<p>Можно переключать содержимое каждой главной страницы -&gt; worker и worker -&gt; сообщение главной страницы. И имена свойств "queryMethod", "queryMethodListeners", "queryMethodArguments" могут быть любыми пока они согласуются с <code>QueryableWorker</code> и <code>worker</code>.</p>
+Можно переключать содержимое каждой главной страницы -> worker и worker -> сообщение главной страницы. И имена свойств "queryMethod", "queryMethodListeners", "queryMethodArguments" могут быть любыми пока они согласуются с `QueryableWorker` и `worker`.
 
-<h3 id="Передача_данных_с_помощью_передачи_владения_передаваемые_объекты">Передача данных с помощью передачи владения (передаваемые объекты)</h3>
+### Передача данных с помощью передачи владения (передаваемые объекты)
 
-<p>Google Chrome 17+ and Firefox 18+ имеют дополнительную возможность передачи определённых типов объектов (передаваемые объекты реализующие {{domxref("Transferable")}} интерфейс) к или из worker-а с высокой производительностью. Эти объекты передаются из одного контекста в другой без операций копирования, что приводит к значительному повышению производительности при отправке больших наборов данных. Думайте об этом как о передаче по ссылке в мире C/C++. Однако в отличии от передачи по ссылке, "версия" из вызывающего контекста больше недоступна после передачи. Владельцем становится новый контекст.  Для примера, после передачи {{domxref("ArrayBuffer")}} из главной страницы к worker-у,  исходный {{domxref("ArrayBuffer")}} очищается и более недоступен для использования.  Его содержание (в буквальном смысле) переносится в рабочий контекст.</p>
+Google Chrome 17+ and Firefox 18+ имеют дополнительную возможность передачи определённых типов объектов (передаваемые объекты реализующие {{domxref("Transferable")}} интерфейс) к или из worker-а с высокой производительностью. Эти объекты передаются из одного контекста в другой без операций копирования, что приводит к значительному повышению производительности при отправке больших наборов данных. Думайте об этом как о передаче по ссылке в мире C/C++. Однако в отличии от передачи по ссылке, "версия" из вызывающего контекста больше недоступна после передачи. Владельцем становится новый контекст. Для примера, после передачи {{domxref("ArrayBuffer")}} из главной страницы к worker-у, исходный {{domxref("ArrayBuffer")}} очищается и более недоступен для использования. Его содержание (в буквальном смысле) переносится в рабочий контекст.
 
-<pre class="brush: js">// Create a 32MB "file" and fill it.
+```js
+// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
-for (var i = 0; i &lt; uInt8Array.length; ++i) {
+for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
-</pre>
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Для дополнительной информации о передаваемых объектах, производительности и поддержки для этого метода, читайте  <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> на HTML5 Rocks.</p>
-</div>
+> **Примечание:** Для дополнительной информации о передаваемых объектах, производительности и поддержки для этого метода, читайте [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) на HTML5 Rocks.
 
-<h2 id="Встроенные_worker-ы">Встроенные worker-ы</h2>
+## Встроенные worker-ы
 
-<p>Не существует утверждённого способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута <code>src</code> и атрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
+Не существует утверждённого способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута `src` и атрибута `type`, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;MDN Example - Embedded worker&lt;/title&gt;
-&lt;script type="text/js-worker"&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>MDN Example - Embedded worker</title>
+<script type="text/js-worker">
   // Этот script НЕ БУДЕТ анализироваться JS движками, потому что  его MIME-тип text/js-worker.
   var myVar = 'Hello World!';
   // Остальная часть кода вашего воркера идёт сюда.
-&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+</script>
+<script type="text/javascript">
   // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
   function pageLog(sMsg) {
     // Use a fragment: browser will only render/reflow once.
@@ -554,15 +582,15 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
     oFragm.appendChild(document.createElement('br'));
     document.querySelector('#logDisplay').appendChild(oFragm);
   }
-&lt;/script&gt;
-&lt;script type="text/js-worker"&gt;
+</script>
+<script type="text/js-worker">
   // Этот script НЕ БУДЕТ анализироваться JS движками, потому что его MIME-тип text/js-worker.
   onmessage = function(oEvent) {
     postMessage(myVar);
   };
   // Остальная часть кода вашего воркера идёт сюда.
-&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+</script>
+<script type="text/javascript">
   // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
 
   // В прошлом...:
@@ -579,37 +607,35 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
   // Запуск воркера.
   window.onload = function() { document.worker.postMessage(''); };
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;div id="logDisplay"&gt;&lt;/div&gt;&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</head>
+<body><div id="logDisplay"></div></body>
+</html>
+```
 
-<div id="logDisplay">Встраиваемый worker теперь внесён в новое custom свойство <code>document.worker</code></div>
+Встраиваемый worker теперь внесён в новое custom свойство `document.worker`Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:
 
-
-
-<div>Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:</div>
-
-<pre>function fn2workerURL(fn) {
+```
+function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
   return URL.createObjectURL(blob)
 }
-</pre>
+```
 
-<h2 id="Другие_примеры">Другие примеры</h2>
+## Другие примеры
 
-<p>В этой секции представлено ещё несколько примеров как использовать worker-ы.</p>
+В этой секции представлено ещё несколько примеров как использовать worker-ы.
 
-<h3 id="Выполнение_вычислений_в_фоне">Выполнение вычислений в фоне</h3>
+### Выполнение вычислений в фоне
 
-<p>Worker-ы в основном полезны для того, чтобы позволить вашему коду выполнять ресурсоёмкие вычисления, не блокируя поток пользовательского интерфейса. В этом примере, worker используется для вычисления числа Фибоначчи.</p>
+Worker-ы в основном полезны для того, чтобы позволить вашему коду выполнять ресурсоёмкие вычисления, не блокируя поток пользовательского интерфейса. В этом примере, worker используется для вычисления числа Фибоначчи.
 
-<h4 id="Код_JavaScript">Код JavaScript</h4>
+#### Код JavaScript
 
-<p>Следующий код JavaScript хранится в файле "fibonacci.js", на который ссылается HTML в следующем разделе.</p>
+Следующий код JavaScript хранится в файле "fibonacci.js", на который ссылается HTML в следующем разделе.
 
-<pre class="brush: js">var results = [];
+```js
+var results = [];
 
 function resultReceiver(event) {
   results.push(parseInt(event.data));
@@ -630,29 +656,31 @@ onmessage = function(event) {
     return;
   }
 
-  for (var i = 1; i &lt;= 2; i++) {
+  for (var i = 1; i <= 2; i++) {
     var worker = new Worker("fibonacci.js");
     worker.onmessage = resultReceiver;
     worker.onerror = errorReceiver;
     worker.postMessage(n - i);
   }
- };</pre>
+ };
+```
 
-<p>Worker устанавливает свойство <code>onmessage</code> для функции,  которая будет получать сообщения, отправленные при вызове <code>postMessage()</code> рабочего объекта (обратите внимание, что это отличается от определения глобальной <em>переменной</em> с таким именем или определения <em>функции</em> с таким именем. <code>var onmessage</code> и <code>function onmessage</code> будет определять глобальные свойства с этими именами , но они не будут регистрировать функцию для получения сообщений, отправленных веб-страницей, которая создала worker). Это запускает рекурсию, порождая новые копии для обработки каждой итерации вычисления.</p>
+Worker устанавливает свойство `onmessage` для функции, которая будет получать сообщения, отправленные при вызове `postMessage()` рабочего объекта (обратите внимание, что это отличается от определения глобальной _переменной_ с таким именем или определения _функции_ с таким именем. `var onmessage` и `function onmessage` будет определять глобальные свойства с этими именами , но они не будут регистрировать функцию для получения сообщений, отправленных веб-страницей, которая создала worker). Это запускает рекурсию, порождая новые копии для обработки каждой итерации вычисления.
 
-<h4 id="HTML_код">HTML код</h4>
+#### HTML код
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"  /&gt;
-    &lt;title&gt;Test threads fibonacci&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"  />
+    <title>Test threads fibonacci</title>
+  </head>
+  <body>
 
-  &lt;div id="result"&gt;&lt;/div&gt;
+  <div id="result"></div>
 
-  &lt;script language="javascript"&gt;
+  <script language="javascript">
 
     var worker = new Worker('fibonacci.js');
 
@@ -668,75 +696,55 @@ onmessage = function(event) {
 
     worker.postMessage('5');
 
-  &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </script>
+  </body>
+</html>
+```
 
-<p>Веб-страница создаёт элемент <code>div</code> с ID <code>result</code> , который используется для отображения результата, а затем порождает worker. После порождения worker-а, обработчик <code>onmessage</code> настроен для отображения результатов путём установки содержимого элемента <code>div</code>, и обработчик <code>onerror</code> настроен на <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">выброс</a> сообщения об ошибке.</p>
+Веб-страница создаёт элемент `div` с ID `result` , который используется для отображения результата, а затем порождает worker. После порождения worker-а, обработчик `onmessage` настроен для отображения результатов путём установки содержимого элемента `div`, и обработчик `onerror` настроен на [выброс](/ru/docs/Debugging_JavaScript#dump.28.29) сообщения об ошибке.
 
-<p>Наконец, сообщение отправляется worker-у, чтобы запустить его.</p>
+Наконец, сообщение отправляется worker-у, чтобы запустить его.
 
-<p><a class="external" href="/samples/workers/fibonacci">Попробуйте этот пример</a>.</p>
+[Попробуйте этот пример](/samples/workers/fibonacci).
 
-<h3 id="Выполнение_веб_IO_в_фоне">Выполнение веб I/O в фоне</h3>
+### Выполнение веб I/O в фоне
 
-<p>Вы можете найти пример этого в статье <a class="internal" href="/en-US/docs/Using_workers_in_extensions">Использование worker-ов в расширениях</a>.</p>
+Вы можете найти пример этого в статье [Использование worker-ов в расширениях](/ru/docs/Using_workers_in_extensions).
 
-<h3 id="Разделение_задач_между_множественными_worker-ами">Разделение задач между множественными worker-ами</h3>
+### Разделение задач между множественными worker-ами
 
-<p>Поскольку многоядерные компьютеры становятся все более распространёнными, часто бывает полезно разделить вычислительно сложные задачи между несколькими worker-ами, которые затем могут выполнить эти задачи на многопроцессорных ядрах.</p>
+Поскольку многоядерные компьютеры становятся все более распространёнными, часто бывает полезно разделить вычислительно сложные задачи между несколькими worker-ами, которые затем могут выполнить эти задачи на многопроцессорных ядрах.
 
-<h2 id="Другие_типы_worker-ов">Другие типы worker-ов</h2>
+## Другие типы worker-ов
 
-<p>В дополнение к выделенным и совместно используемым web worker-ам доступны другие типы worker-ов:</p>
+В дополнение к выделенным и совместно используемым web worker-ам доступны другие типы worker-ов:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>, по сути, действуют как прокси-серверы, которые размещаются между веб-приложениями, браузером и сетью (при наличии). Они предназначены (помимо прочего) для создания эффективного автономного взаимодействия, перехвата сетевых запросов и принятия соответствующих действий в зависимости от того, доступна ли сеть, и обновлены ли ресурсы на сервере. Они также разрешают доступ push-уведомлениям и API фоновой синхронизации.</li>
- <li>Chrome Workers это worker типа Firefox-only, который вы можете использовать, если вы разрабатываете дополнения и хотите использовать worker-ы в расширениях и иметь доступ к <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> в вашем worker-е. Смотрите {{domxref("ChromeWorker")}} для более подробной информации.</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> предоставляют возможность прямой обработки звука по сценарию в контексте web worker-а.</li>
-</ul>
+- [ServiceWorkers](/ru/docs/Web/API/ServiceWorker_API), по сути, действуют как прокси-серверы, которые размещаются между веб-приложениями, браузером и сетью (при наличии). Они предназначены (помимо прочего) для создания эффективного автономного взаимодействия, перехвата сетевых запросов и принятия соответствующих действий в зависимости от того, доступна ли сеть, и обновлены ли ресурсы на сервере. Они также разрешают доступ push-уведомлениям и API фоновой синхронизации.
+- Chrome Workers это worker типа Firefox-only, который вы можете использовать, если вы разрабатываете дополнения и хотите использовать worker-ы в расширениях и иметь доступ к [js-ctypes](https://developer.mozilla.org/en/js-ctypes) в вашем worker-е. Смотрите {{domxref("ChromeWorker")}} для более подробной информации.
+- [Audio Workers](/ru/docs/Web/API/Web_Audio_API#Audio_Workers) предоставляют возможность прямой обработки звука по сценарию в контексте web worker-а.
 
-<h2 id="Функции_и_интерфейсы_доступные_в_worker-ах">Функции и интерфейсы доступные в worker-ах</h2>
+## Функции и интерфейсы доступные в worker-ах
 
-<p>Внутри web worker-а вы можете использовать большинство стандартных функций JavaScript, включая:</p>
+Внутри web worker-а вы можете использовать большинство стандартных функций JavaScript, включая:
 
-<ul>
- <li>{{domxref("Navigator")}}</li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, и {{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, и {{domxref("WindowTimers.setInterval")}}</li>
-</ul>
+- {{domxref("Navigator")}}
+- {{domxref("XMLHttpRequest")}}
+- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, и {{jsxref("Global_Objects/String", "String")}}
+- {{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, и {{domxref("WindowTimers.setInterval")}}
 
-<p>Главное, что вы не можете сделать в Worker это напрямую повлиять на родительскую страницу. Это включает в себя манипулирование DOM и использование объектов этой страницы. Вы должны сделать это косвенно, отправив сообщение обратно основному сценарию через {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, а затем выполнив изменения оттуда.</p>
+Главное, что вы не можете сделать в Worker это напрямую повлиять на родительскую страницу. Это включает в себя манипулирование DOM и использование объектов этой страницы. Вы должны сделать это косвенно, отправив сообщение обратно основному сценарию через {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, а затем выполнив изменения оттуда.
 
-<div class="note">
-<p><strong>Примечание</strong>: Для знакомства с  полным списком функций,  доступных для worker-ов, смотрите статью <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Функции и интерфейсы доступные worker-ам</a>.</p>
-</div>
+> **Примечание:** Для знакомства с полным списком функций, доступных для worker-ов, смотрите статью [Функции и интерфейсы доступные worker-ам](/ru/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#workers', 'Web workers')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code><a class="internal" href="/en-US/docs/Web/API/Worker">Worker</a></code> интерфейс</li>
- <li><code><a class="internal" href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> интерфейс</li>
- <li><a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Функции доступные для worker-ов</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Продвинутые концепции и примеры</a></li>
-</ul>
+- [`Worker`](/en-US/docs/Web/API/Worker) интерфейс
+- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) интерфейс
+- [Функции доступные для worker-ов](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- [Продвинутые концепции и примеры](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

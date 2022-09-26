@@ -3,45 +3,40 @@ title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Свойство <strong><code>HTMLElement.contentEditable</code></strong> элемента - признак, указывающий можно или нет редактировать содержимое элемента. Свойство может принимать следующие значения:</p>
+Свойство **`HTMLElement.contentEditable`** элемента - признак, указывающий можно или нет редактировать содержимое элемента. Свойство может принимать следующие значения:
 
-<ul>
- <li><code>true или пустая строка - содержимое элемента доступно для редактирования</code>.</li>
- <li><code>false</code> - содержимое элемента не доступно для редактирования.</li>
- <li><code>inherit</code> - наследуется значение данного свойства от родительского элемента.</li>
-</ul>
+- `true или пустая строка - содержимое элемента доступно для редактирования`.
+- `false` - содержимое элемента не доступно для редактирования.
+- `inherit` - наследуется значение данного свойства от родительского элемента.
 
-<p>Вы можете использовать свойство {{domxref("HTMLElement.isContentEditable")}}, чтобы проверить {{domxref("Boolean")}} значение этого свойства.</p>
+Вы можете использовать свойство {{domxref("HTMLElement.isContentEditable")}}, чтобы проверить {{domxref("Boolean")}} значение этого свойства.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>editable</em> = element.contentEditable
+```
+editable = element.contentEditable
 element.contentEditable = "true"
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>In Internet Explorer, <code>contenteditable</code> cannot be applied to the
-    {{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
-    {{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
-    {{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
-    directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
-    can be placed inside the individual table cells.</p>
-  
-<h2 id="See_also">See also</h2>
+In Internet Explorer, `contenteditable` cannot be applied to the
+{{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
+{{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
+{{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
+directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
+can be placed inside the individual table cells.
 
-<ul>
- <li>{{domxref("HTMLElement.isContentEditable")}}</li>
- <li>The <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a> global attribute.</li>
- <li><a href="https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480">Why ContentEditable is Terrible, Or: How the Medium Editor Works</a></li>
-</ul>
+## See also
+
+- {{domxref("HTMLElement.isContentEditable")}}
+- The [contenteditable](/ru/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

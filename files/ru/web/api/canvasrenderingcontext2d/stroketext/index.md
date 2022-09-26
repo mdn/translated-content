@@ -3,66 +3,66 @@ title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeText(),</code></strong> предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (<em>x, y</em>). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.strokeText(),`\*\* предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.
 
-<p>Смотрите также метод {{domxref("CanvasRenderingContext2D.fillText()")}} для заливки контуров текста.</p>
+Смотрите также метод {{domxref("CanvasRenderingContext2D.fillText()")}} для заливки контуров текста.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.strokeText(text, x, y [, maxWidth]);</var>
-</pre>
+```
+void ctx.strokeText(text, x, y [, maxWidth]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>text</code></dt>
- <dd>Текст, использующий для визуализации следующие свойства: {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} и {{domxref("CanvasRenderingContext2D.direction","direction")}}.</dd>
- <dt><code>x</code></dt>
- <dd>Координата левой нижней точки текста по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата левой нижней точки текста по оси y.</dd>
- <dt><code>maxWidth</code> {{optional_inline}}</dt>
- <dd>Максимальная ширина текста.  Если ширина надписи больше параметра, текст масштабируется по горизонтали, или, если это невозможно (надпись становится нечитаемой), уменьшается размер шрифта.</dd>
-</dl>
+- `text`
+  - : Текст, использующий для визуализации следующие свойства: {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} и {{domxref("CanvasRenderingContext2D.direction","direction")}}.
+- `x`
+  - : Координата левой нижней точки текста по оси x.
+- `y`
+  - : Координата левой нижней точки текста по оси y.
+- `maxWidth` {{optional_inline}}
+  - : Максимальная ширина текста. Если ширина надписи больше параметра, текст масштабируется по горизонтали, или, если это невозможно (надпись становится нечитаемой), уменьшается размер шрифта.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_strokeText">Использование метода strokeText</h3>
+### Использование метода strokeText
 
-<p>Ниже представлен простой фрагмент кода, использующий strokeText.</p>
+Ниже представлен простой фрагмент кода, использующий strokeText.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.font = "48px serif";
 ctx.strokeText("Hello world", 50, 100);
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText("Hello world", 50, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -85,22 +85,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillText()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillText()")}}

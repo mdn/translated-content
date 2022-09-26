@@ -10,33 +10,34 @@ tags:
   - ValidityState
 browser-compat: api.ValidityState.badInput
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Доступное только для чтения свойство <strong><code>badInput</code></strong> объекта <a href="/ru/docs/Web/API/ValidityState">ValidityState</a>, указывающее, что пользователь ввёл значение, которое браузер не может преобразовать. Например, поле ввода чисел, содержащее строку. <em><strong>Примечание:</strong> Во всех браузерах, кроме Internet Explorer, ввести в числовое поле любое нечисловое значения не удастся.</em></p>
+Доступное только для чтения свойство **`badInput`** объекта [ValidityState](/ru/docs/Web/API/ValidityState), указывающее, что пользователь ввёл значение, которое браузер не может преобразовать. Например, поле ввода чисел, содержащее строку. _**Примечание:** Во всех браузерах, кроме Internet Explorer, ввести в числовое поле любое нечисловое значения не удастся._
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;input type="number" id="age"&gt;</pre>
+```html
+<input type="number" id="age">
+```
 
-<pre class="brush: js">var input = document.getElementById("age");
+```js
+var input = document.getElementById("age");
 if (input.validity.badInput) {
   console.log("Bad input detected…");
 } else {
   console.log("Content of input ok.");
 }
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Руководство: Валидация ограничений</a></li>
- <li><a href="/ru/docs/Learn/Forms/Form_validation">Учебник: Валидация форм</a></li>
-</ul>
+- [Руководство: Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Учебник: Валидация форм](/ru/docs/Learn/Forms/Form_validation)

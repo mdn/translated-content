@@ -3,50 +3,50 @@ title: History.replaceState()
 slug: Web/API/History/replaceState
 translation_of: Web/API/History/replaceState
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>Метод <strong><code>History.replaceState()</code> </strong>изменяет текущую запись в истории, заменяя её на значения <code>stateObj</code>, <code>title</code> и <code>URL</code>, передаваемые в параметрах метода. Данный метод особенно полезен, когда вы хотите обновить объект состояния или URL текущей записи в истории в ответ на какое-то действие пользователя.</p>
+Метод **`History.replaceState()` **изменяет текущую запись в истории, заменяя её на значения `stateObj`, `title` и `URL`, передаваемые в параметрах метода. Данный метод особенно полезен, когда вы хотите обновить объект состояния или URL текущей записи в истории в ответ на какое-то действие пользователя.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
+```
+history.replaceState(stateObj, title, [url])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>stateObj</code></dt>
- <dd>Объект состояния – это JavaScript-объект, связанный с записью в истории, переданной в метод <code>replaceState()</code>. Объект состояния может быть <code>null</code>.</dd>
- <dt><code>title</code></dt>
- <dd>Заголовок - <a href="https://github.com/whatwg/html/issues/2174" rel="noopener">все браузеры, кроме Safari, на данный момент игнорируют этот параметр</a>, но могут начать использовать в будущем. Ввиду будущих изменений метода, безопасным решением является передача пустой строки. В качестве альтернативы вы можете передать короткий заголовок для состоянии, в которое переходите.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd>URL-адрес записи в истории. Новый URL должен вести на тот же домен, протокол и порт, иначе pushState() выдаст исключение.</dd>
-</dl>
+- `stateObj`
+  - : Объект состояния – это JavaScript-объект, связанный с записью в истории, переданной в метод `replaceState()`. Объект состояния может быть `null`.
+- `title`
+  - : Заголовок - [все браузеры, кроме Safari, на данный момент игнорируют этот параметр](https://github.com/whatwg/html/issues/2174), но могут начать использовать в будущем. Ввиду будущих изменений метода, безопасным решением является передача пустой строки. В качестве альтернативы вы можете передать короткий заголовок для состоянии, в которое переходите.
+- `url` {{optional_inline}}
+  - : URL-адрес записи в истории. Новый URL должен вести на тот же домен, протокол и порт, иначе pushState() выдаст исключение.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Предположим, на странице <code>http://mozilla.org/foo.html</code> выполняется следующий JavaScript-код:</p>
+Предположим, на странице `http://mozilla.org/foo.html` выполняется следующий JavaScript-код:
 
-<pre>let stateObj = { foo: "bar" }
+```
+let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
-</pre>
+```
 
-<p>Объяснение этих двух строк можно найти в приведённом выше разделе <em><a href="#Example_of_pushState_method">пример метода pushState()</a></em>.</p>
+Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#Example_of_pushState_method)_.
 
-<p>Далее, предположим, на странице <code>http://mozilla.org/bar.html</code> выполняется JavaScript-код:</p>
+Далее, предположим, на странице `http://mozilla.org/bar.html` выполняется JavaScript-код:
 
-<pre>history.replaceState(stateObj, "page 3", "bar2.html")
-</pre>
+```
+history.replaceState(stateObj, "page 3", "bar2.html")
+```
 
-<p>Это приведёт к тому, что в URL-строке отобразится адрес <code>http://mozilla.org/bar2.html</code>, но браузер не станет сразу загружать <code>bar2.html</code> и даже не станет проверять наличие этой страницы <code>bar2.html</code>.</p>
+Это приведёт к тому, что в URL-строке отобразится адрес `http://mozilla.org/bar2.html`, но браузер не станет сразу загружать `bar2.html` и даже не станет проверять наличие этой страницы `bar2.html`.
 
-<p>Теперь предположим, что пользователь переходит по адресу <code>http://www.microsoft.com</code>, а затем нажимает на кнопку <strong>"Назад"</strong>. В этом случае в URL-строке отобразится <code>http://mozilla.org/bar2.html</code>. Если же пользователь снова нажмёт на кнопку <strong>"Назад"</strong>, в URL-строке отобразится <code>http://mozilla.org/foo.html</code> и полностью обойдёт <code>bar.html</code>.</p>
+Теперь предположим, что пользователь переходит по адресу `http://www.microsoft.com`, а затем нажимает на кнопку **"Назад"**. В этом случае в URL-строке отобразится `http://mozilla.org/bar2.html`. Если же пользователь снова нажмёт на кнопку **"Назад"**, в URL-строке отобразится `http://mozilla.org/foo.html` и полностью обойдёт `bar.html`.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

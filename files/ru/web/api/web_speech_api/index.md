@@ -3,119 +3,104 @@ title: Web Speech API
 slug: Web/API/Web_Speech_API
 translation_of: Web/API/Web_Speech_API
 ---
-<div>{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}</div>
+{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
-<div class="summary">
-<p>Web Speech API позволяет взаимодействовать с голосовыми интерфейсами в ваших веб приложениях. Web Speech API состоит из двух частей: SpeechSynthesis (Текст-в-Речь), и SpeechRecognition (Асинхронное распознавание речи)</p>
-</div>
+Web Speech API позволяет взаимодействовать с голосовыми интерфейсами в ваших веб приложениях. Web Speech API состоит из двух частей: SpeechSynthesis (Текст-в-Речь), и SpeechRecognition (Асинхронное распознавание речи)
 
-<h2 id="Концепции_и_использование_Web_Speech">Концепции и использование Web Speech</h2>
+## Концепции и использование Web Speech
 
-<p>Web Speech API позволяет веб приложениям управлять голосовыми данными. Существует два компонента к этому API:</p>
+Web Speech API позволяет веб приложениям управлять голосовыми данными. Существует два компонента к этому API:
 
-<ul>
- <li>Распознавание голоса. Доступ обеспечивается через {{domxref("SpeechRecognition")}} интерфейс, который в свою очередь обеспечивает возможность распознавать текст из входящего аудио потока (обычно через устройство распознавания речи в устройстве по умолчанию) и отвечать соответственно. Воспользовавшись конструктором интерфейса вы можете создать новый {{domxref("SpeechRecognition")}} объект, у которого есть ряд событий для обнаружения начала речи через микрофон устройства. {{domxref("SpeechGrammar")}} интерфейс предоставляет контейнер для определённого набора грамматики, которое ваше приложение должно использовать. Грамматика определяется с помощью <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.)</li>
- <li>Доступ к синтезу речи осуществляется с помощью {{domxref("SpeechSynthesis")}} интерфейса, компонент text-to-speech позволяет приложениям прочесть свой текстовый контент (обычно через дефолтный синтезатор речи устройства). В {{domxref("SpeechSynthesisVoice")}} объектах есть различные типы голоса, и различным частям текста можно назначать   {{domxref("SpeechSynthesisUtterance")}} объекты. Можно начать воспроизведение передав их методу {{domxref("SpeechSynthesis.speak()")}}.</li>
-</ul>
+- Распознавание голоса. Доступ обеспечивается через {{domxref("SpeechRecognition")}} интерфейс, который в свою очередь обеспечивает возможность распознавать текст из входящего аудио потока (обычно через устройство распознавания речи в устройстве по умолчанию) и отвечать соответственно. Воспользовавшись конструктором интерфейса вы можете создать новый {{domxref("SpeechRecognition")}} объект, у которого есть ряд событий для обнаружения начала речи через микрофон устройства. {{domxref("SpeechGrammar")}} интерфейс предоставляет контейнер для определённого набора грамматики, которое ваше приложение должно использовать. Грамматика определяется с помощью [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.)
+- Доступ к синтезу речи осуществляется с помощью {{domxref("SpeechSynthesis")}} интерфейса, компонент text-to-speech позволяет приложениям прочесть свой текстовый контент (обычно через дефолтный синтезатор речи устройства). В {{domxref("SpeechSynthesisVoice")}} объектах есть различные типы голоса, и различным частям текста можно назначать {{domxref("SpeechSynthesisUtterance")}} объекты. Можно начать воспроизведение передав их методу {{domxref("SpeechSynthesis.speak()")}}.
 
-<p>Для большей информации по использованию этих фич, смотрите <a href="/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a>.</p>
+Для большей информации по использованию этих фич, смотрите [Using the Web Speech API](/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
 
-<h2 id="Интерфейсы_Web_Speech_API">Интерфейсы Web Speech API</h2>
+## Интерфейсы Web Speech API
 
-<h3 id="Распознавание_речи">Распознавание речи</h3>
+### Распознавание речи
 
-<dl>
- <dt>{{domxref("SpeechRecognition")}}</dt>
- <dd>The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.</dd>
- <dt>{{domxref("SpeechRecognitionAlternative")}}</dt>
- <dd>Представляет одно слово которое было распознано службой распознавания голоса.</dd>
- <dt>{{domxref("SpeechRecognitionError")}}</dt>
- <dd>Представляет сообщения об ошибках из службы распознавания.</dd>
- <dt>{{domxref("SpeechRecognitionEvent")}}</dt>
- <dd>The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.</dd>
- <dt>{{domxref("SpeechGrammar")}}</dt>
- <dd>Слова или шаблоны слов которые мы хотим чтобы служба распознавания распознала.</dd>
- <dt>{{domxref("SpeechGrammarList")}}</dt>
- <dd>Представляет список объектов {{domxref("SpeechGrammar")}}.</dd>
- <dt>{{domxref("SpeechRecognitionResult")}}</dt>
- <dd>Представляет одно распознанное совпадение, которое может содержать несколько объектов {{domxref("SpeechRecognitionAlternative")}}.</dd>
- <dt>{{domxref("SpeechRecognitionResultList")}}</dt>
- <dd>Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.</dd>
-</dl>
+- {{domxref("SpeechRecognition")}}
+  - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
+- {{domxref("SpeechRecognitionAlternative")}}
+  - : Представляет одно слово которое было распознано службой распознавания голоса.
+- {{domxref("SpeechRecognitionError")}}
+  - : Представляет сообщения об ошибках из службы распознавания.
+- {{domxref("SpeechRecognitionEvent")}}
+  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+- {{domxref("SpeechGrammar")}}
+  - : Слова или шаблоны слов которые мы хотим чтобы служба распознавания распознала.
+- {{domxref("SpeechGrammarList")}}
+  - : Представляет список объектов {{domxref("SpeechGrammar")}}.
+- {{domxref("SpeechRecognitionResult")}}
+  - : Представляет одно распознанное совпадение, которое может содержать несколько объектов {{domxref("SpeechRecognitionAlternative")}}.
+- {{domxref("SpeechRecognitionResultList")}}
+  - : Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
 
-<h3 id="Синтезирование_речи">Синтезирование речи</h3>
+### Синтезирование речи
 
-<dl>
- <dt>{{domxref("SpeechSynthesis")}}</dt>
- <dd>The controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.</dd>
- <dt>{{domxref("SpeechSynthesisErrorEvent")}}</dt>
- <dd>Contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.</dd>
- <dt>{{domxref("SpeechSynthesisEvent")}}</dt>
- <dd>Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance")}}</dt>
- <dd>Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)</dd>
-</dl>
+- {{domxref("SpeechSynthesis")}}
+  - : The controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.
+- {{domxref("SpeechSynthesisErrorEvent")}}
+  - : Contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
+- {{domxref("SpeechSynthesisEvent")}}
+  - : Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
+- {{domxref("SpeechSynthesisUtterance")}}
+  - : Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
 
-<dl>
- <dt>{{domxref("SpeechSynthesisVoice")}}</dt>
- <dd>Represents a voice that the system supports. Every <code>SpeechSynthesisVoice</code> has its own relative speech service including information about language, name and URI.</dd>
- <dt>{{domxref("Window.speechSynthesis")}}</dt>
- <dd>Specced out as part of a <code>[NoInterfaceObject]</code> interface called <code>SpeechSynthesisGetter</code>, and Implemented by the <code>Window</code> object, the <code>speechSynthesis</code> property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.</dd>
-</dl>
+<!---->
 
-<h2 id="Примеры">Примеры</h2>
+- {{domxref("SpeechSynthesisVoice")}}
+  - : Represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
+- {{domxref("Window.speechSynthesis")}}
+  - : Specced out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
 
-<p><a href="https://github.com/mdn/web-speech-api/">Web Speech API репозиторий</a> на GitHub содержит примеры, показывающие распознавание и синтез речи.</p>
+## Примеры
 
-<h2 id="Спецификации">Спецификации</h2>
+[Web Speech API репозиторий](https://github.com/mdn/web-speech-api/) на GitHub содержит примеры, показывающие распознавание и синтез речи.
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="">Web Speech API</a></td>
-    </tr>
-  </tbody>
-</table>
+## Спецификации
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification  |
+| -------------- |
+| Web Speech API |
 
-<h3 id="SpeechRecognition"><code>SpeechRecognition</code></h3>
+## Browser compatibility
 
-<p>{{Compat("api.SpeechRecognition", 0)}}</p>
+### `SpeechRecognition`
 
-<h3 id="SpeechSynthesis"><code>SpeechSynthesis</code></h3>
+{{Compat("api.SpeechRecognition", 0)}}
 
-<p>{{Compat("api.SpeechSynthesis", 0)}}</p>
+### `SpeechSynthesis`
 
-<h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
+{{Compat("api.SpeechSynthesis", 0)}}
 
-<p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+## Firefox OS permissions
 
-<pre class="brush: json">"permissions": {
+To use speech recognition in an app, you need to specify the following permissions in your [manifest](/ru/docs/Web/Apps/Build/Manifest):
+
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<p>Speech synthesis needs no permissions to be set.</p>
+Speech synthesis needs no permissions to be set.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a></li>
- <li><a href="http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/">SitePoint article</a></li>
- <li><a href="http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API">HTML5Rocks article</a></li>
- <li><a href="http://aurelio.audero.it/demo/speech-synthesis-api-demo.html">Demo</a> [aurelio.audero.it]</li>
-</ul>
+- [Using the Web Speech API](/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
+- [SitePoint article](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
+- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

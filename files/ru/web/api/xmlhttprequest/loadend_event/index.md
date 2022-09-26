@@ -4,22 +4,26 @@ slug: Web/API/XMLHttpRequest/loadend_event
 translation_of: Web/API/GlobalEventHandlers/onloadend
 original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>Свойство <strong><code>onloadend</code></strong>  от {{domxref("GlobalEventHandlers")}} примесь {{event("Event_handlers", "event handler")}} передаёт код для вызова в момент возникновения события {{event("loadend")}}  (когда процесс загрузки ресурса окончился и остановился)</p>
+Свойство **`onloadend`** от {{domxref("GlobalEventHandlers")}} примесь {{event("Event_handlers", "event handler")}} передаёт код для вызова в момент возникновения события {{event("loadend")}} (когда процесс загрузки ресурса окончился и остановился)
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>img</var>.onloadend = <var>funcRef</var>;
-</pre>
+```
+img.onloadend = funcRef;
+```
 
-<p>При возникновении события  <code>loadend</code>  будет вызвана функция обработчик <code>funcRef</code>.</p>
+При возникновении события `loadend` будет вызвана функция обработчик `funcRef`.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;img src="myImage.jpg"&gt;</pre>
+```html
+<img src="myImage.jpg">
+```
 
-<pre class="brush: js">// 'loadstart' fires first, then 'load', then 'loadend'
+```js
+// 'loadstart' fires first, then 'load', then 'loadend'
 
 image.addEventListener('load', function(e) {
   console.log('Image loaded');
@@ -31,27 +35,15 @@ image.addEventListener('loadstart', function(e) {
 
 image.addEventListener('loadend', function(e) {
   console.log('Image load finished');
-});</pre>
+});
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

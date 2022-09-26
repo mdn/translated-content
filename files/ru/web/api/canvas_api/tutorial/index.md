@@ -6,53 +6,47 @@ tags:
   - Graphics
 translation_of: Web/API/Canvas_API/Tutorial
 ---
-<p><a href="/ru/docs/Web/API/Canvas_API"><img alt="" src="https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg" style="float: right; height: 450px; width: 200px;"></a>{{CanvasSidebar}}</p>
+[![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{CanvasSidebar}}
 
-<p class="summary"><a href="/ru/docs/Web/HTML/Element/canvas" title="HTML/Canvas"><strong><code>&lt;canvas&gt;</code></strong></a> — это <a href="Web/HTML" title="HTML">HTML</a> элемент, использующийся для рисования графики средствами языков программирования (обычно это <a href="Glossary/JavaScript">JavaScript</a>). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой (<a href="/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster" title="A_Basic_RayCaster">и не очень</a>) анимации.<br>
- Изображения в правой части статьи являются примерами использования <code><a href="/ru/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a>.</code><br>
- Примеры их создания приводятся в этой статье. </p>
+[**`<canvas>`**](/ru/docs/Web/HTML/Element/canvas "HTML/Canvas") — это [HTML](Web/HTML "HTML") элемент, использующийся для рисования графики средствами языков программирования (обычно это [JavaScript](Glossary/JavaScript)). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой ([и не очень](/ru/docs/Web/API/Canvas_API/A_basic_ray-caster "A_Basic_RayCaster")) анимации.
+Изображения в правой части статьи являются примерами использования `<canvas>.`
+Примеры их создания приводятся в этой статье.
 
-<p>В этом руководстве описываются основы использования элемента <code>&lt;canvas&gt;</code> для рисования 2D-графики. Приведённые примеры дадут вам понимание того, что вы можете сделать с помощью &lt;canvas&gt;, а использованные в статье фрагменты кода помогут в создании собственных проектов.</p>
+В этом руководстве описываются основы использования элемента `<canvas>` для рисования 2D-графики. Приведённые примеры дадут вам понимание того, что вы можете сделать с помощью \<canvas>, а использованные в статье фрагменты кода помогут в создании собственных проектов.
 
-<p><code>Впервые &lt;canvas&gt;</code> использовался компанией Apple для создания <a href="https://ru.wikipedia.org/wiki/Dashboard">Mac OS X Dashboard</a>, а затем был реализован в Web-браузерах. На сегодняшний день все основные браузеры поддерживают работу с &lt;canvas&gt;. Тег <code>&lt;canvas&gt;</code> часть спецификации <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WhatWG Web applications 1.0</a> также известной как HTML5.</p>
+`Впервые <canvas>` использовался компанией Apple для создания [Mac OS X Dashboard](https://ru.wikipedia.org/wiki/Dashboard), а затем был реализован в Web-браузерах. На сегодняшний день все основные браузеры поддерживают работу с \<canvas>. Тег `<canvas>` часть спецификации [WhatWG Web applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/) также известной как HTML5.
 
-<h2 id="Before_you_start">Прежде чем начать</h2>
+## Прежде чем начать
 
-<p>Работа с элементом <strong><code>&lt;canvas&gt;</code></strong> довольно проста, но потребует от вас базовых знаний <a href="ru/docs/HTML" title="HTML">HTML</a> и <a href="JavaScript" title="JavaScript">JavaScript</a>. Следует предупредить о том, что элемент <code>&lt;<strong>canvas&gt;</strong></code> не работает в некоторых старых браузерах, но поддерживается большинством современных браузеров. Стандартный размер <strong><code>&lt;canvas&gt;</code></strong>  300px × 150px (ширина × высота), однако эти размеры могут быть изменены при помощи HTML-атрибутов <code>height</code> и <code>width</code>. Для рисования графики <strong><code>&lt;canvas&gt;</code></strong> мы будем использовать <code>javascript context object</code>,  который создаёт графику динамически.</p>
+Работа с элементом **`<canvas>`** довольно проста, но потребует от вас базовых знаний [HTML](ru/docs/HTML "HTML") и [JavaScript](JavaScript). Следует предупредить о том, что элемент `<canvas>` не работает в некоторых старых браузерах, но поддерживается большинством современных браузеров. Стандартный размер **`<canvas>`** 300px × 150px (ширина × высота), однако эти размеры могут быть изменены при помощи HTML-атрибутов `height` и `width`. Для рисования графики **`<canvas>`** мы будем использовать `javascript context object`, который создаёт графику динамически.
 
-<h2 id="In_this_tutorial">В этом руководстве</h2>
+## В этом руководстве
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage" title="Canvas_tutorial/Basic_usage">Базовое использование</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes" title="Canvas_tutorial/Drawing_shapes">Рисование форм</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images" title="Canvas_tutorial/Using_images">Использование изображений</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors" title="Canvas_tutorial/Applying_styles_and_colors">Применение стилей и цветов</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations" title="Canvas_tutorial/Transformations">Трансформации</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing" title="Canvas_tutorial/Compositing">Композирование и обрезка</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations" title="Canvas_tutorial/Basic_animations">Базовое анимирование</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas" title="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas">Оптимизация canvas</a></li>
-</ul>
+- [Базовое использование](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage "Canvas_tutorial/Basic_usage")
+- [Рисование форм](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes "Canvas_tutorial/Drawing_shapes")
+- [Использование изображений](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Using_images "Canvas_tutorial/Using_images")
+- [Применение стилей и цветов](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors "Canvas_tutorial/Applying_styles_and_colors")
+- [Трансформации](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Transformations "Canvas_tutorial/Transformations")
+- [Композирование и обрезка](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Compositing "Canvas_tutorial/Compositing")
+- [Базовое анимирование](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations "Canvas_tutorial/Basic_animations")
+- [Оптимизация canvas](/ru/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")
 
-<h2 id="See_also">Смотрите Также</h2>
+## Смотрите Также
 
-<ul>
- <li><a href="/en-US/docs/HTML/Canvas" title="HTML/Canvas">Canvas topic page</a></li>
- <li><a href="/en-US/docs/HTML/Canvas/Drawing_Graphics_with_Canvas" title="Drawing_Graphics_with_Canvas">Drawing Graphics with Canvas</a></li>
- <li><a href="/en-US/docs/tag/Canvas_examples" title="tag/Canvas_examples">Canvas examples</a></li>
- <li><a class="external" href="http://html5tutorial.com">HTML5 Tutorial</a></li>
- <li><a href="/en-US/docs/Drawing_text_using_a_canvas" title="Drawing_text_using_a_canvas">Drawing Text Using a Canvas</a></li>
- <li><a class="external" href="http://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/HTML-canvas-guide/AddingText/AddingText.html#//apple_ref/doc/uid/TP40010542-CH6-SW4" title="Adding Text to Canvas">Adding Text to Canvas</a></li>
- <li><a class="external" href="http://canvimation.github.com/">Canvas Drawing and Animation Application</a></li>
- <li><a class="external" href="http://billmill.org/static/canvastutorial/">Interactive canvas tutorial</a></li>
- <li><a class="external" href="http://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></li>
- <li><a class="external" href="http://html5tutorial.com/how-to-draw-n-grade-bezier-curve-with-canvas-api">How to draw N grade Bézier curves with the Canvas API</a></li>
- <li><a href="http://www.w3.org/TR/2dcontext/">W3C Standard</a></li>
-</ul>
+- [Canvas topic page](/ru/docs/HTML/Canvas "HTML/Canvas")
+- [Drawing Graphics with Canvas](/ru/docs/HTML/Canvas/Drawing_Graphics_with_Canvas "Drawing_Graphics_with_Canvas")
+- [Canvas examples](/ru/docs/tag/Canvas_examples "tag/Canvas_examples")
+- [HTML5 Tutorial](http://html5tutorial.com)
+- [Drawing Text Using a Canvas](/ru/docs/Drawing_text_using_a_canvas "Drawing_text_using_a_canvas")
+- [Adding Text to Canvas](http://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/HTML-canvas-guide/AddingText/AddingText.html#//apple_ref/doc/uid/TP40010542-CH6-SW4 "Adding Text to Canvas")
+- [Canvas Drawing and Animation Application](http://canvimation.github.com/)
+- [Interactive canvas tutorial](http://billmill.org/static/canvastutorial/)
+- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [How to draw N grade Bézier curves with the Canvas API](http://html5tutorial.com/how-to-draw-n-grade-bezier-curve-with-canvas-api)
+- [W3C Standard](http://www.w3.org/TR/2dcontext/)
 
-<h2 id="Примечание_для_помощников">Примечание для помощников</h2>
+## Примечание для помощников
 
-<p>Из-за досадной технической ошибки, которая произошла 17 июня 2013 года, мы утеряли историю по этому руководству, в том числе атрибуции ко всем прошлым, участвовавшие в его создании. Мы приносим извинения за это, и надеемся, что вы простите нас за этот несчастный случай. </p>
+Из-за досадной технической ошибки, которая произошла 17 июня 2013 года, мы утеряли историю по этому руководству, в том числе атрибуции ко всем прошлым, участвовавшие в его создании. Мы приносим извинения за это, и надеемся, что вы простите нас за этот несчастный случай.
 
-<div>
-<div>{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}</div>
-</div>
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

@@ -7,85 +7,78 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getImageData() </code></strong><code>-</code> метод Canvas 2D API, возвращает объект {{domxref("ImageData")}}, представляющий базовые пиксельные данные для области холста, обозначенного прямоугольником, который начинается в точке <em>(sx, sy)</em> и имеет ширину <em>sw</em> и высоту <em>sh</em>.</p>
+**`CanvasRenderingContext2D`\*\***`.getImageData() `\*\*`-` метод Canvas 2D API, возвращает объект {{domxref("ImageData")}}, представляющий базовые пиксельные данные для области холста, обозначенного прямоугольником, который начинается в точке _(sx, sy)_ и имеет ширину _sw_ и высоту _sh_.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">ImageData <var><em>ctx</em>.getImageData(sx, sy, sw, sh);</var>
-</pre>
+```
+ImageData ctx.getImageData(sx, sy, sw, sh);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>sx</code></dt>
- <dd>Координата x верхнего левого угла прямоугольника, из которого будет извлечён ImageData.</dd>
- <dt><code>sy</code></dt>
- <dd>Координата y верхнего левого угла прямоугольника, из которого будет извлечён ImageData.</dd>
- <dt><code>sw</code></dt>
- <dd>Ширина прямоугольника, из которого будет извлечён ImageData.</dd>
- <dt><code>sh</code></dt>
- <dd>Высота прямоугольника, из которого будет извлечён ImageData.</dd>
-</dl>
+- `sx`
+  - : Координата x верхнего левого угла прямоугольника, из которого будет извлечён ImageData.
+- `sy`
+  - : Координата y верхнего левого угла прямоугольника, из которого будет извлечён ImageData.
+- `sw`
+  - : Ширина прямоугольника, из которого будет извлечён ImageData.
+- `sh`
+  - : Высота прямоугольника, из которого будет извлечён ImageData.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект {{domxref("ImageData")}}, содержащий данные изображения для данного прямоугольника холста.</p>
+Объект {{domxref("ImageData")}}, содержащий данные изображения для данного прямоугольника холста.
 
-<h3 id="Выбрасываемые_ошибки">Выбрасываемые ошибки</h3>
+### Выбрасываемые ошибки
 
-<dl>
- <dt><code>IndexSizeError</code></dt>
- <dd>Выбрасывает, если аргумент высоты или ширины равен нулю.</dd>
- <dt><code>SecurityError</code></dt>
- <dd>The canvas contains or may contain pixels which were loaded from an origin other than the one from which the document itself was loaded. To avoid <code>SecurityError</code> being thrown in this situation, configure CORS to allow the source image to be used in this way. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image">Allowing cross-origin use of images and canvas</a>.</dd>
-</dl>
+- `IndexSizeError`
+  - : Выбрасывает, если аргумент высоты или ширины равен нулю.
+- `SecurityError`
+  - : The canvas contains or may contain pixels which were loaded from an origin other than the one from which the document itself was loaded. To avoid `SecurityError` being thrown in this situation, configure CORS to allow the source image to be used in this way. See [Allowing cross-origin use of images and canvas](/ru/docs/Web/HTML/CORS_enabled_image).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p> </p>
+### Getting image data from a canvas
 
-<h3 id="Getting_image_data_from_a_canvas">Getting image data from a canvas</h3>
+This example draws a rectangle, and then uses `getImageData()` to grab a portion of the canvas.
 
-<p>This example draws a rectangle, and then uses <code>getImageData()</code> to grab a portion of the canvas.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
+The object retrieved by `getImageData()` has a width of 200 and a height of 100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken from off the canvas; only 5,000 of them are opaque black (the color of the drawn rectangle).
 
-<p>The object retrieved by <code>getImageData()</code> has a width of 200 and a height of 100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken from off the canvas; only 5,000 of them are opaque black (the color of the drawn rectangle).</p>
-
-<pre class="brush: html">const canvas = document.getElementById('canvas');
+```html
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 let imageData = ctx.getImageData(60, 60, 200, 100);
-ctx.putImageData(imageData, 150, 10);</pre>
+ctx.putImageData(imageData, 150, 10);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}</p>
+{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}
 
-<p> </p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий его, {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</a></li>
-</ul>
+- Интерфейс, определяющий его, {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [Pixel manipulation with canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

@@ -3,45 +3,40 @@ title: Element.tagName
 slug: Web/API/Element/tagName
 translation_of: Web/API/Element/tagName
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Возвращает HTML-тег элемента <em>("div", "p", "a" и т.д).</em></p>
+Возвращает HTML-тег элемента _("div", "p", "a" и т.д)._
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>var elementName</em> = element.tagName;
-</pre>
+```
+var elementName = element.tagName;
+```
 
-<ul>
- <li><strong><code>elementName</code></strong> это строка, содержащая название HTML-тега элемента<code><strong> element.</strong></code></li>
-</ul>
+- **`elementName`** это строка, содержащая название HTML-тега элемента**` element.`**
 
-<div class="warning">
-<p>В XML (и XML-подобных языках) возвращаемое значение будет в нижнем регистре, а в HTML - в верхнем.</p>
-</div>
+> **Предупреждение:** В XML (и XML-подобных языках) возвращаемое значение будет в нижнем регистре, а в HTML - в верхнем.
 
-<div class="note">
-<p>Существует более древнее и обыденное свойство <a href="/en/DOM/Node.nodeName" title="En/DOM/Node.nodeName">nodeName</a>!</p>
-</div>
+> **Примечание:** Существует более древнее и обыденное свойство [nodeName](/en/DOM/Node.nodeName "En/DOM/Node.nodeName")!
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Предположим, есть на странице элемент с id <strong>"born"</strong>:</p>
+Предположим, есть на странице элемент с id **"born"**:
 
-<pre class="eval">&lt;span id="born"&gt;Я родился...&lt;/span&gt;
-</pre>
+```
+<span id="born">Я родился...</span>
+```
 
-<p>Давайте узнаем его HTML-тег:</p>
+Давайте узнаем его HTML-тег:
 
-<pre class="brush: js">var span = document.getElementById("born");
+```js
+var span = document.getElementById("born");
 alert(span.tagName); //"SPAN"
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815">DOM Level 2 Core: tagName</a></li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: tagName](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

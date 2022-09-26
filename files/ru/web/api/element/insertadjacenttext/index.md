@@ -3,116 +3,95 @@ title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 translation_of: Web/API/Element/insertAdjacentText
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>insertAdjacentText()</code></strong> метод помещает заданный текстовый узел в указанную позицию относительно элемента, который передан в вызове метода.</p>
+The **`insertAdjacentText()`** метод помещает заданный текстовый узел в указанную позицию относительно элемента, который передан в вызове метода.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
+```
+element.insertAdjacentText(position, element);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>position</code></dt>
- <dd>{{domxref("DOMString")}} позиция для вставки текста относительно элемента  <code>element</code>; должна быть указана в следующем виде:
- <ul>
-  <li><code style="color: red;">'beforebegin'</code>: Перед самим <code>element</code>.</li>
-  <li><code style="color: green;">'afterbegin'</code>: Внутри самого <code>element</code>, перед первым child.</li>
-  <li><code style="color: blue;">'beforeend'</code>: Внутри самого <code>element</code>, после последнего child.</li>
-  <li><code style="color: magenta;">'afterend'</code>: После самого <code>element</code>.</li>
- </ul>
- </dd>
- <dt><code>element</code></dt>
- <dd>{{domxref("DOMString")}} текст, который будет помещён в заданную позицию.</dd>
-</dl>
+- `position`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : {{domxref("DOMString")}} позиция для вставки текста относительно элемента `element`; должна быть указана в следующем виде:
 
-<p>Void.</p>
+    - `'beforebegin'`: Перед самим `element`.
+    - `'afterbegin'`: Внутри самого `element`, перед первым child.
+    - `'beforeend'`: Внутри самого `element`, после последнего child.
+    - `'afterend'`: После самого `element`.
 
-<h3 id="Исключения">Исключения</h3>
+- `element`
+  - : {{domxref("DOMString")}} текст, который будет помещён в заданную позицию.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>Указанная <code>position</code> не может быть распознана.</td>
-  </tr>
- </tbody>
-</table>
+### Возвращаемое значение
 
-<h3 id="Наглядное_отображение_параметра_position">Наглядное отображение параметра position</h3>
+Void.
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+### Исключения
+
+| Exception     | Explanation                                    |
+| ------------- | ---------------------------------------------- |
+| `SyntaxError` | Указанная `position` не может быть распознана. |
+
+### Наглядное отображение параметра position
+
+```
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
 foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
-<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
+> **Примечание:** значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+```js
+beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
 });
 
 afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
-});</pre>
+});
+```
 
-<p>Посмотрите пример <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> на GitHub (исходный код <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a>.)  Вы можете ввести любой текст в поле формы, а затем нажать кнопки <em>Insert before</em> (вставить до) и <em>Insert after</em> (вставить после) для размещения этого текста до или после существующего абзаца, используя <code>insertAdjacentText()</code>. Обратите внимание, что существующий текстовой узел не изменился, а произошло добавление новых текстовых узлов.</p>
+Посмотрите пример [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) на GitHub (исходный код [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html).) Вы можете ввести любой текст в поле формы, а затем нажать кнопки _Insert before_ (вставить до) и _Insert after_ (вставить после) для размещения этого текста до или после существующего абзаца, используя `insertAdjacentText()`. Обратите внимание, что существующий текстовой узел не изменился, а произошло добавление новых текстовых узлов.
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Можно создать polyfill для insertAdjacentText<code>() method</code> который будет работать в Internet Explorer 5.5 (возможно и в более ранних версиях) и последующих версиях, с помощью данного кода:</p>
+Можно создать polyfill для insertAdjacentText`() method` который будет работать в Internet Explorer 5.5 (возможно и в более ранних версиях) и последующих версиях, с помощью данного кода:
 
-<pre>if (!Element.prototype.insertAdjacentText)
+```
+if (!Element.prototype.insertAdjacentText)
   Element.prototype.insertAdjacentText = function(type, txt){
     this.insertAdjacentHTML(
       type,
       (txt+'') // convert to string
-        .replace(/&amp;/g, '&amp;amp;') // embed ampersand symbols
-        .replace(/&lt;/g, '&amp;lt;') // embed greater than symbols
+        .replace(/&/g, '&amp;') // embed ampersand symbols
+        .replace(/</g, '&lt;') // embed greater than symbols
     )
   }
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                     | Статус                           | Комментарий |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-</ul>
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.insertAdjacentHTML()")}}

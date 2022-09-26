@@ -10,43 +10,34 @@ tags:
 translation_of: Web/API/WebSockets_API
 original_slug: WebSockets
 ---
-<p><strong>Веб-сокеты</strong> это продвинутая технология, позволяющая открыть постоянное двунаправленное сетевое соединение между браузером пользователя и сервером. С помощью его API вы можете отправить сообщение на сервер и получить ответ без выполнения http запроса, причём этот процесс будет событийно-управляемым.</p>
+**Веб-сокеты** это продвинутая технология, позволяющая открыть постоянное двунаправленное сетевое соединение между браузером пользователя и сервером. С помощью его API вы можете отправить сообщение на сервер и получить ответ без выполнения http запроса, причём этот процесс будет событийно-управляемым.
 
-<h2 id="Documentation">Документация</h2>
+## Документация
 
-<dl>
- <dt><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications" title="WebSockets/Writing WebSocket client applications">Writing WebSocket client applications</a></dt>
- <dd>Учебник описывающий как написать WebSocket клиента работающего в браузере.</dd>
- <dt><a href="/en-US/docs/WebSockets/WebSockets_reference" title="WebSockets/WebSockets reference">Справочник по WebSocket</a></dt>
- <dd>A reference to the client-side WebSocket API.</dd>
- <dt><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers" title="WebSockets/Writing WebSocket servers">(TBD) Writing WebSocket servers</a></dt>
- <dd>A guide to writing server-side code to handle the WebSocket protocol.</dd>
-</dl>
+- [Writing WebSocket client applications](/ru/docs/WebSockets/Writing_WebSocket_client_applications "WebSockets/Writing WebSocket client applications")
+  - : Учебник описывающий как написать WebSocket клиента работающего в браузере.
+- [Справочник по WebSocket](/ru/docs/WebSockets/WebSockets_reference "WebSockets/WebSockets reference")
+  - : A reference to the client-side WebSocket API.
+- [(TBD) Writing WebSocket servers](/ru/docs/WebSockets/Writing_WebSocket_servers "WebSockets/Writing WebSocket servers")
+  - : A guide to writing server-side code to handle the WebSocket protocol.
 
+## Tools
 
-<h2 id="Tools">Tools</h2>
+- [Socket.IO](http://socket.io): A powerful cross-platform WebSocket API for [Node.js](http://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): A WebSocket server API implementation for [Node.js](http://nodejs.org).
+- [A more extensive list of frameworks and libraries here](http://ajf.me/websocket/#libs)
 
-<ul>
- <li><a class="external" href="http://socket.io">Socket.IO</a>: A powerful cross-platform WebSocket API for <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: A WebSocket server API implementation for <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a href="http://ajf.me/websocket/#libs">A more extensive list of frameworks and libraries here</a></li>
-</ul>
+## Related Topics
 
-<h2 id="Related_Topics">Related Topics</h2>
+- [AJAX](/ru/docs/AJAX "AJAX"), [JavaScript](/ru/docs/JavaScript "JavaScript")
 
-<ul>
- <li><a href="/en-US/docs/AJAX" title="AJAX">AJAX</a>, <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a></li>
-</ul>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+{{Compat("api.WebSocket")}}
 
-<p>{{Compat("api.WebSocket")}}</p>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="external" href="http://tools.ietf.org/html/rfc6455">RFC 6455 - The WebSocket Protocol</a></li>
- <li><a class="external" href="http://www.w3.org/TR/websockets/">WebSocket API Specification</a></li>
- <li><a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Server-Sent Events</a></li>
- <li><a class="external" href="http://websocket.us/">WebSocket.us</a> - a community-run, not-for-profit site about WebSocket</li>
-</ul>
+- [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
+- [WebSocket API Specification](http://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/ru/docs/Server-sent_events "Server-sent_events")
+- [WebSocket.us](http://websocket.us/) - a community-run, not-for-profit site about WebSocket

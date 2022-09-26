@@ -3,24 +3,26 @@ title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
 translation_of: Web/API/ServiceWorker/state
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Свойство интерфейса {{domxref("ServiceWorker")}} <strong><code>state</code></strong>, доступное только для чтения является строкой, показывающей текущее состояние данного Service Worker. Его возможные значения: <code>installing</code>, <code>installed,</code> <code>activating</code>, <code>activated</code> и <code>redundant</code>.</p>
+Свойство интерфейса {{domxref("ServiceWorker")}} **`state`**, доступное только для чтения является строкой, показывающей текущее состояние данного Service Worker. Его возможные значения: `installing`, `installed,` `activating`, `activated` и `redundant`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>someURL</em> = <em>ServiceWorker</em>.state
-</pre>
+```
+someURL = ServiceWorker.state
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Определение {{domxref("ServiceWorkerState")}} (<a href="http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum">см. спецификацию</a>)</p>
+Определение {{domxref("ServiceWorkerState")}} ([см. спецификацию](http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum))
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Это фрагмент кода из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html" rel="noopener">примера событий Service Worker</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/" rel="noopener">демо</a>). Данный код возвращает значение <a href="/ru/docs/Web/API/ServiceWorker/state" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>ServiceWorker.state</code></a> при каждом изменении состояния.</p>
+Это фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение [`ServiceWorker.state`](/ru/docs/Web/API/ServiceWorker/state "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!") при каждом изменении состояния.
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -37,16 +39,13 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

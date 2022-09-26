@@ -8,60 +8,57 @@ tags:
   - Элемент
 translation_of: Web/API/Element/getElementsByClassName
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.getElementsByClassName()</code></strong> метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.</p>
+**`Element.getElementsByClassName()`** метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.
 
-<p>Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернёт элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.</p>
+Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернёт элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.
 
-<p>Syntax</p>
+Syntax
 
-<pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+```
+var elements = element.getElementsByClassName(names);
+```
 
-<ul>
- <li><em><var>elements</var></em> — {{ domxref("HTMLCollection") }} содержащий найденные элементы</li>
- <li><em><var>names</var></em> — строка, содержащая в себе имена классов; имена разделяются пробелами</li>
- <li><em>element</em> — любой {{domxref("Element")}} в документе (в котором осуществляется выборка)</li>
-</ul>
+- **elements** — {{ domxref("HTMLCollection") }} содержащий найденные элементы
+- **names** — строка, содержащая в себе имена классов; имена разделяются пробелами
+- _element_ — любой {{domxref("Element")}} в документе (в котором осуществляется выборка)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Получить все элементы с классом test:</p>
+Получить все элементы с классом test:
 
-<pre class="brush: js">element.getElementsByClassName('test');</pre>
+```js
+element.getElementsByClassName('test');
+```
 
-<p>Получить все элементы с классами test и red:</p>
+Получить все элементы с классами test и red:
 
-<pre class="brush: js">element.getElementsByClassName('red test');</pre>
+```js
+element.getElementsByClassName('red test');
+```
 
-<p>Получить все элементы с классом test, которые находятся в элементе с id main:</p>
+Получить все элементы с классом test, которые находятся в элементе с id main:
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+```js
+document.getElementById('main').getElementsByClassName('test');
+```
 
-<p>Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом  {{ domxref("HTMLCollection") }} путём передачи <code><var>HTMLCollection</var></code> в метод как значение <var>this</var>. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:</p>
+Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом {{ domxref("HTMLCollection") }} путём передачи `HTMLCollection` в метод как значение _this_. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'div';
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

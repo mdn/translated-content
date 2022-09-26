@@ -3,26 +3,28 @@ title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 translation_of: Web/API/MouseEvent/shiftKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.shiftKey</code></strong>атрибут только для чтения , который указывает была ли нажата клавиша <kbd>shift</kbd>  . Возвращает (<code>true</code>) если нажата <kbd>shift</kbd>, (<code>false</code>) если нет.</p>
+**`MouseEvent.shiftKey`**атрибут только для чтения , который указывает была ли нажата клавиша <kbd>shift</kbd> . Возвращает (`true`) если нажата <kbd>shift</kbd>, (`false`) если нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>shiftKeyPressed</em> = <em>instanceOfMouseEvent</em>.shiftKey
-</pre>
+```
+var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Логический</p>
+Логический
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;shiftKey example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>shiftKey example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e){
   alert(
@@ -33,26 +35,24 @@ function showChar(e){
   );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;Нажмите на любую символьную клавишу удерживая или не удерживая клавишу SHIFT.&lt;br /&gt;
-Вы также можете использовать клавишу SHIFT вместе с клавишей ALT.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onkeypress="showChar(event);">
+<p>Нажмите на любую символьную клавишу удерживая или не удерживая клавишу SHIFT.<br />
+Вы также можете использовать клавишу SHIFT вместе с клавишей ALT.</p>
+</body>
+</html>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

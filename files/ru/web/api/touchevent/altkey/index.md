@@ -3,48 +3,50 @@ title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
 translation_of: Web/API/TouchEvent/altKey
 ---
-<p>{{APIRef("Touch Events") }}</p>
+{{APIRef("Touch Events") }}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Логическое ({{jsxref("Boolean")}}) значение, показывающее, была ли активирована клавиша <kbd>alt</kbd> (Alternate), когда событие касания было создано. Если клавиша <kbd>alt</kbd> активирована, значение равно <code>true</code>. В противном случае оно равно<code>false</code>.</p>
+Логическое ({{jsxref("Boolean")}}) значение, показывающее, была ли активирована клавиша <kbd>alt</kbd> (Alternate), когда событие касания было создано. Если клавиша <kbd>alt</kbd> активирована, значение равно `true`. В противном случае оно равно`false`.
 
-<p>Данное свойство предназначено {{readonlyInline}}.</p>
+Данное свойство предназначено {{readonlyInline}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var <em>altEnabled</em> = <em>touchEvent</em>.altKey;
-</pre>
+```
+var altEnabled = touchEvent.altKey;
+```
 
-<h3 id="Return_Value">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt><code>altEnabled</code></dt>
- <dd><code>true</code> если клавиша <kbd>alt</kbd> активирована для данного события; и <code>false</code> если нет.</dd>
-</dl>
+- `altEnabled`
 
-<h2 id="Пример">Пример</h2>
+  - : `true` если клавиша&#x20;
 
-<p>Данный пример демонстрирует доступ к свойствам клавиш-модификаторов события {{domxref("TouchEvent")}}: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} и {{domxref("TouchEvent.shiftKey")}}.</p>
+    <kbd>alt</kbd>
 
-<p>В фрагменте кода ниже обработчик события {{event("touchstart")}} логирует состояние клавиш-модификаторов события.</p>
+    &#x20;активирована для данного события; и `false` если нет.
 
-<pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
+## Пример
+
+Данный пример демонстрирует доступ к свойствам клавиш-модификаторов события {{domxref("TouchEvent")}}: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} и {{domxref("TouchEvent.shiftKey")}}.
+
+В фрагменте кода ниже обработчик события {{event("touchstart")}} логирует состояние клавиш-модификаторов события.
+
+```js
+someElement.addEventListener('touchstart', function(e) {
    // Log the state of this event's modifier keys
    console.log("altKey = " + e.altKey);
    console.log("ctrlKey = " + e.ctrlKey);
    console.log("metaKey = " + e.metaKey);
    console.log("shiftKey = " + e.shiftKey);
 }, false);
+```
 
-</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

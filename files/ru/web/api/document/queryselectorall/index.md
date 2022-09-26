@@ -9,157 +9,138 @@ tags:
   - Selectors
 translation_of: Web/API/Document/querySelectorAll
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>Метод <code><strong>querySelectorAll()</strong></code> {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.</p>
+Метод **`querySelectorAll()`** {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.
 
-<div class="note">
-<p><strong>Примечание:</strong> Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.</p>
-</div>
+> **Примечание:** Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">elementList = document.querySelectorAll(selectors);
-</pre>
+```js
+elementList = document.querySelectorAll(selectors);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><strong><code>selectors</code></strong></dt>
- <dd>Строка {{domxref("DOMString")}}, содержащая один или более <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">CSS селектор</a>. Эта строка должна быть валидным <a href="/ru/docs/Web/CSS/CSS_Selectors">CSS селектором</a>. Если это не так, то генерируется <code>SyntaxError</code>. Смотрите <a href="/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors">Поиск элементов DOM с использованием селекторов</a> для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.</dd>
-</dl>
+- **`selectors`**
+  - : Строка {{domxref("DOMString")}}, содержащая один или более [CSS селектор](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors). Эта строка должна быть валидным [CSS селектором](/ru/docs/Web/CSS/CSS_Selectors). Если это не так, то генерируется `SyntaxError`. Смотрите [Поиск элементов DOM с использованием селекторов](/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors) для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.
 
-<div class="note">
-<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (<code>\</code>). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри <a href="#escaping_special_characters">Escaping special characters</a>.</p>
-</div>
+> **Примечание:** Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (`\`). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри [Escaping special characters](#escaping_special_characters).
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Статический (non-live) {{domxref("NodeList")}}, содержащий все элементы в пределах документа, которые соответствуют как минимум одному из указанных селекторов, или пустой {{domxref("NodeList")}} в случае отсутствия совпадений.</p>
+Статический (non-live) {{domxref("NodeList")}}, содержащий все элементы в пределах документа, которые соответствуют как минимум одному из указанных селекторов, или пустой {{domxref("NodeList")}} в случае отсутствия совпадений.
 
-<div class="note">
-<p><strong>Примечание:</strong> Если в строке <code>selectors</code> содержатся <a href="/ru/docs/Web/CSS/Pseudo-elements">CSS псевдоэлементы</a>, то возвращаемый список будет всегда пуст.</p>
-</div>
+> **Примечание:** Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), то возвращаемый список будет всегда пуст.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>Исключение <code>SYNTAX_ERR</code> происходит в случае передачи некорректной группы селекторов.</dd>
-</dl>
+- `SyntaxError`
+  - : Исключение `SYNTAX_ERR` происходит в случае передачи некорректной группы селекторов.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Получение_списка_совпадений">Получение списка совпадений</h3>
+### Получение списка совпадений
 
-<p>Чтобы получить {{domxref("NodeList")}} всех элементов {{HTMLElement("p")}} в документе:</p>
+Чтобы получить {{domxref("NodeList")}} всех элементов {{HTMLElement("p")}} в документе:
 
-<pre class="brush: js">var matches = document.querySelectorAll("p");</pre>
+```js
+var matches = document.querySelectorAll("p");
+```
 
-<p>В этом примере возвращается список всех элементов {{HTMLElement ("div")}} в документе, которые имеют класс <code>note</code> или <code>alert</code>:</p>
+В этом примере возвращается список всех элементов {{HTMLElement ("div")}} в документе, которые имеют класс `note` или `alert`:
 
-<pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
-</pre>
+```js
+var matches = document.querySelectorAll("div.note, div.alert");
+```
 
-<p>Здесь мы получаем список элементов <code>&lt;p&gt;</code>, чьим непосредственным родительским элементом является {{HTMLElement("div")}} с классом <code>highlighted</code>, который расположен внутри контейнера с идентификатором <code>test</code>.</p>
+Здесь мы получаем список элементов `<p>`, чьим непосредственным родительским элементом является {{HTMLElement("div")}} с классом `highlighted`, который расположен внутри контейнера с идентификатором `test`.
 
-<pre class="brush: js">var container = document.querySelector("#test");
-var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
+```js
+var container = document.querySelector("#test");
+var matches = container.querySelectorAll("div.highlighted > p");
+```
 
-<p>В этом примере используются <a href="/ru/docs/Web/CSS/Attribute_selectors">селекторы атрибутов</a>, чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут <code>data-src</code>:</p>
+В этом примере используются [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors), чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут `data-src`:
 
-<pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
+```js
+var matches = document.querySelectorAll("iframe[data-src]");
+```
 
-<p>Здесь селектор атрибута используется для возврата элементов списка, содержащихся в списке с идентификатором <code>"userlist"</code>, который имеет атрибут <code>"data-active"</code> со значением <code>"1"</code>:</p>
+Здесь селектор атрибута используется для возврата элементов списка, содержащихся в списке с идентификатором `"userlist"`, который имеет атрибут `"data-active"` со значением `"1"`:
 
-<pre class="brush: js">var container = document.querySelector("#userlist");
-var matches = container.querySelectorAll("li[data-active='1']");</pre>
+```js
+var container = document.querySelector("#userlist");
+var matches = container.querySelectorAll("li[data-active='1']");
+```
 
-<h3 id="Доступ_к_совпадениям">Доступ к совпадениям</h3>
+### Доступ к совпадениям
 
-<p>Вернув {{domxref("NodeList")}} совпадений один раз, вы можете использовать его как простой массив. Если массив пустой (т. е. свойство <code>length</code> равно 0), то совпадений не было найдено.</p>
+Вернув {{domxref("NodeList")}} совпадений один раз, вы можете использовать его как простой массив. Если массив пустой (т. е. свойство `length` равно 0), то совпадений не было найдено.
 
-<p>В другом случае, вы можете использовать стандартную запись массива для доступа к содержимому. Вы можете использовать любой оператор зацикливания, например:</p>
+В другом случае, вы можете использовать стандартную запись массива для доступа к содержимому. Вы можете использовать любой оператор зацикливания, например:
 
-<pre class="brush: js">var highlightedItems = userList.querySelectorAll(".highlighted");
+```js
+var highlightedItems = userList.querySelectorAll(".highlighted");
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
-});</pre>
+});
+```
 
-<h2 id="Примечания_пользователя">Примечания пользователя</h2>
+## Примечания пользователя
 
-<p><code>querySelectorAll()</code> ведёт себя не так, как большинство библиотек JavaScript DOM. Это может привести к неожиданным результатам.</p>
+`querySelectorAll()` ведёт себя не так, как большинство библиотек JavaScript DOM. Это может привести к неожиданным результатам.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Рассмотрим этот HTML с тремя вложенными {{HTMLElement("div")}} блоками.</p>
+Рассмотрим этот HTML с тремя вложенными {{HTMLElement("div")}} блоками.
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;div class="select"&gt;
-    &lt;div class="inner"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="outer">
+  <div class="select">
+    <div class="inner">
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var select = document.querySelector('.select');
+```js
+var select = document.querySelector('.select');
 var inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, не 0!</pre>
+inner.length; // 1, не 0!
+```
 
-<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
+В данном примере, когда мы выбрали `".outer .inner"` в контексте `<div>` с классом `"select"`, элемент с классом `".inner"` был всё равно найден, хотя `.outer` не является потомком элемента в котором происходил поиск (`".select"`). По умолчанию, `querySelectorAll()` проверяет только последний элемент без учёта контекста.
 
-<p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:</p>
+Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:
 
-<pre class="brush: js">var select = document.querySelector('.select');
+```js
+var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0</pre>
+inner.length; // 0
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Живой стандарт</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("Selectors API Level 2")}}</td>
-   <td>Без изменений</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Изначальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 1")}}</td>
-   <td>Оригинальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                                 | Статус                                       | Комментарий              |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------ |
+| {{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}             | {{Spec2("DOM WHATWG")}}             | Живой стандарт           |
+| {{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}} | {{Spec2("Selectors API Level 2")}} | Без изменений            |
+| {{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}                     | {{Spec2("DOM4")}}                     | Изначальное определение  |
+| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}                     | {{Spec2("Selectors API Level 1")}} | Оригинальное определение |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} and {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for <code>querySelector</code></a></li>
-</ul>
+- {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}
+- {{domxref("ParentNode.querySelector()")}} and {{domxref("ParentNode.querySelectorAll()")}}
+- [Code snippets for `querySelector`](/ru/docs/Code_snippets/QuerySelector)

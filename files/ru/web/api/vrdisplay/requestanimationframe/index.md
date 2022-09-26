@@ -3,34 +3,32 @@ title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Метод <code><strong>requestAnimationFrame()</strong></code> интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента колбэк-функцию. Эта функция будет вызвана, когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены:</p>
+Метод **`requestAnimationFrame()`** интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента колбэк-функцию. Эта функция будет вызвана, когда объект типа `VRDisplay` будет готов отобразить новый кадр сцены:
 
-<ul>
- <li>Если в этот момент объект типа <code>VRDisplay</code> не находится в процессе отображения сцены, то вызов этой функции эквивалентен вызову {{domxref("Window.requestAnimationFrame")}}.</li>
- <li>Если объект типа <code>VRDisplay</code> находится в состоянии отображения сцены, вызов колбэк-функции происходит с собственной частотой обновления устройства, представленного этим объектом.</li>
-</ul>
+- Если в этот момент объект типа `VRDisplay` не находится в процессе отображения сцены, то вызов этой функции эквивалентен вызову {{domxref("Window.requestAnimationFrame")}}.
+- Если объект типа `VRDisplay` находится в состоянии отображения сцены, вызов колбэк-функции происходит с собственной частотой обновления устройства, представленного этим объектом.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var handle = vrDisplayInstance.requestAnimationFrame(<em>callback</em>);
-</pre>
+```js
+var handle = vrDisplayInstance.requestAnimationFrame(callback);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>callback</dt>
- <dd>Колбэк-функция, которая будет вызвана когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены.</dd>
-</dl>
+- callback
+  - : Колбэк-функция, которая будет вызвана когда объект типа `VRDisplay` будет готов отобразить новый кадр сцены.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>A long representing the handle of the <code>requestAnimationFrame()</code> call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.</p>
+A long representing the handle of the `requestAnimationFrame()` call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var frameData = new VRFrameData();
+```js
+var frameData = new VRFrameData();
 var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
@@ -87,36 +85,22 @@ function drawVRScene() {
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Примечание:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.

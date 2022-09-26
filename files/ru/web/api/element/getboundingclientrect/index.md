@@ -14,89 +14,80 @@ tags:
   - метод
 translation_of: Web/API/Element/getBoundingClientRect
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>Element.getBoundingClientRect()</strong></code> возвращает размер элемента и его позицию относительно viewport (часть страницы, показанная на экране, и которую мы видим).</p>
+Метод **`Element.getBoundingClientRect()`** возвращает размер элемента и его позицию относительно viewport (часть страницы, показанная на экране, и которую мы видим).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
+```
+domRect = element.getBoundingClientRect();
+```
 
-<h3 id="Returns">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Данный метод возвращает объект {{domxref("DOMRect")}}, который является объединением прямоугольников, возвращаемых методом {{domxref("Element.getClientRects", "getClientRects()")}}  для данного элемента, т. е. CSS border-boxes (css-коробок в рамках), связанных с этим элементом. Результатом является самый маленький прямоугольник, в котором содержится весь элемент с read-only <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code> свойствами, описывающие это в пикселях. Все свойства, кроме <code>width</code> и <code>height</code>, являются относительными к верхнему левому углу viewport-а.</p>
+Данный метод возвращает объект {{domxref("DOMRect")}}, который является объединением прямоугольников, возвращаемых методом {{domxref("Element.getClientRects", "getClientRects()")}} для данного элемента, т. е. CSS border-boxes (css-коробок в рамках), связанных с этим элементом. Результатом является самый маленький прямоугольник, в котором содержится весь элемент с read-only `left`, `top`, `right`, `bottom`, `x`, `y`, `width` и `height` свойствами, описывающие это в пикселях. Все свойства, кроме `width` и `height`, являются относительными к верхнему левому углу viewport-а.
 
-<p style="display: block;"><img alt="Explanation of DOMRect values" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;" title="Explanation of DOMRect values"></p>
+![Explanation of DOMRect values](https://mdn.mozillademos.org/files/15087/rect.png "Explanation of DOMRect values")
 
-<p>Пустые border-box полностью игнорируются. Если border-box элемента пуст, прямоугольник возвращается с нулевыми <code>width</code> и <code>height</code>, а <code>top</code> и <code>left</code> берутся у следующего CSS элемента (в порядке контента).</p>
+Пустые border-box полностью игнорируются. Если border-box элемента пуст, прямоугольник возвращается с нулевыми `width` и `height`, а `top` и `left` берутся у следующего CSS элемента (в порядке контента).
 
-<p>После каждого скролла значения <code>left</code>, <code>top</code>, <code>right</code> и <code>bottom</code> изменяются, так как эти значения относительны к viewport и не абсолютные.</p>
+После каждого скролла значения `left`, `top`, `right` и `bottom` изменяются, так как эти значения относительны к viewport и не абсолютные.
 
-<p>Если вам нужны значения, описывающие прямоугольник относительно к верхнему левому углу документа, просто добавьте к свойствам <code>top</code> и <code>left</code> текущую позицию прокрутки, используя {{domxref("window.scrollX")}} и {{domxref("window.scrollY")}}), чтобы получить прямоугольник, положение которого не зависит от текущей позиции прокрутки.</p>
+Если вам нужны значения, описывающие прямоугольник относительно к верхнему левому углу документа, просто добавьте к свойствам `top` и `left` текущую позицию прокрутки, используя {{domxref("window.scrollX")}} и {{domxref("window.scrollY")}}), чтобы получить прямоугольник, положение которого не зависит от текущей позиции прокрутки.
 
-<h3 id="Про_кроссбраузерность">Про кроссбраузерность</h3>
+### Про кроссбраузерность
 
-<p>Скрипты, требующих высокую кроссбраузерность, могут использовать {{domxref("window.pageXOffset")}} и {{domxref("window.pageYOffset")}} вместо <code>window.scrollX</code> and <code>window.scrollY</code>. Скрипты без доступа к этим свойствам могут использовать код, наподобие этого:</p>
+Скрипты, требующих высокую кроссбраузерность, могут использовать {{domxref("window.pageXOffset")}} и {{domxref("window.pageYOffset")}} вместо `window.scrollX` and `window.scrollY`. Скрипты без доступа к этим свойствам могут использовать код, наподобие этого:
 
-<pre class="brush: js"><code>// Для scrollX
+```js
+// Для scrollX
 (((t = document.documentElement) || (t = document.body.parentNode))
-  &amp;&amp; typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
+  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
 // Для scrollY
 (((t = document.documentElement) || (t = document.body.parentNode))
-  &amp;&amp; typeof t.scrollTop == 'number' ? t : document.body).scrollTop</code></pre>
+  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js"><code>// rect - DOMRect объект с 8-ми свойствами: left, top, right, bottom, x, y, width, height
-var rect = obj.getBoundingClientRect();</code></pre>
+```js
+// rect - DOMRect объект с 8-ми свойствами: left, top, right, bottom, x, y, width, height
+var rect = obj.getBoundingClientRect();
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                         | Статус                           | Комментарий        |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Initial definition |
 
-<h3 id="Notes">Примечания</h3>
+### Примечания
 
-<p>Возвращаемый <code>DOMRect</code> объект может быть модифицирован в современных браузерах. Это не так со старыми версиями, которые возвращали <code>DOMRectReadOnly</code>. У IE и Edge, не имея возможности добавить пропущенные свойства к возвращаемым ими <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a>, объект не позволял добавить <code>x</code> и <code>y</code>.</p>
+Возвращаемый `DOMRect` объект может быть модифицирован в современных браузерах. Это не так со старыми версиями, которые возвращали `DOMRectReadOnly`. У IE и Edge, не имея возможности добавить пропущенные свойства к возвращаемым ими [`ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), объект не позволял добавить `x` и `y`.
 
-<p>Для кроссбраузерности надёжно использовать только <code>left</code>, <code>top</code>, <code>right</code>, и <code>bottom</code>.</p>
+Для кроссбраузерности надёжно использовать только `left`, `top`, `right`, и `bottom`.
 
-<p>Свойства у <code>DOMRect</code> не являются собственными. <code>in</code> оператор и <code>for...in</code> найдут возвращённые значение, но другие APIs, <code>Object.keys()</code>, — нет. А ещё <code>Object.assign()</code> и spread оператор не копируют их.</p>
+Свойства у `DOMRect` не являются собственными. `in` оператор и `for...in` найдут возвращённые значение, но другие APIs, `Object.keys()`, — нет. А ещё `Object.assign()` и spread оператор не копируют их.
 
-<pre><code>rect = elt.getBoundingClientRect()
+```
+rect = elt.getBoundingClientRect()
 // emptyObj всегда {}
 emptyObj = Object.assign({}, rect)
 emptyObj = { ...rect }
-{width, ...emptyObj} = rect</code></pre>
+{width, ...emptyObj} = rect
+```
 
-<p><code>DOMRect</code> свойства <code>top</code>, <code>left</code>, <code>right</code> и <code>bottom</code> вычисляются, используя значения других свойств объекта.</p>
+`DOMRect` свойства `top`, `left`, `right` и `bottom` вычисляются, используя значения других свойств объекта.
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.getClientRects", "getClientRects()")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx">MSDN: <code>getBoundingClientRect</code></a></li>
- <li><a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx">MSDN: <code>ClientRect</code></a>, более ранняя версия <code>DOMRect</code></li>
- <li></li>
- <li>{{DOMxRef("Element.getClientRects()")}}</li>
-</ul>
+- {{domxref("Element.getClientRects", "getClientRects()")}}
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), более ранняя версия `DOMRect`
+-
+- {{DOMxRef("Element.getClientRects()")}}

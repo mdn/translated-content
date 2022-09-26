@@ -3,63 +3,40 @@ title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 translation_of: Web/API/HTMLElement/offsetWidth
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Свойство <code><strong>HTMLElement.offsetWidth</strong></code> возвращает ширину элемента. Как правило, <code>offsetWidth</code> — это значение, включающее горизонтальный отступ элемента, ширину вертикального скроллбара (если он есть) и CSS ширину.</p>
+Свойство **`HTMLElement.offsetWidth`** возвращает ширину элемента. Как правило, `offsetWidth` — это значение, включающее горизонтальный отступ элемента, ширину вертикального скроллбара (если он есть) и CSS ширину.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var<em> offsetWidth</em> = <em>element</em>.offsetWidth;
-</pre>
+```
+var offsetWidth = element.offsetWidth;
+```
 
-<p><code>offsetWidth</code> — свойство только для чтения</p>
+`offsetWidth` — свойство только для чтения
 
-<div class="note">
-<p>Это свойство возвращает целочисленное значение. Если вам требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Примечание:** Это свойство возвращает целочисленное значение. Если вам требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
-<p> </p>
+## Пример
 
-<h2 id="Example">Пример</h2>
+![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-<p> </p>
+## Спецификация
 
-<p>              <img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |         |
 
+### Примечание
 
-<h2 id="Specification">Спецификация</h2>
+`offsetWidth — `свойство объектной модели DHTML, которое впервые было представлено в браузере MSIE. Его иногда называют физической/графической шириной или шириной блока элемента.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Совместимость с браузерами
 
-<h3 id="Notes">Примечание</h3>
+{{Compat}}
 
-<p><code>offsetWidth — </code>свойство объектной модели <abbr title="Dynamic HyperText Markup Language">DHTML,</abbr> которое впервые было представлено в браузере MSIE. Его иногда называют физической/графической шириной или шириной блока элемента.</p>
+## Смотрите также
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Element.clientWidth")}}</li>
- <li>{{domxref("Element.scrollWidth")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
-
-<div class="noinclude"> </div>
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollWidth")}}
+- [Determining the dimensions of elements](/ru/docs/Determining_the_dimensions_of_elements)

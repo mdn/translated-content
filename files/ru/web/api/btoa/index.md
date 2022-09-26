@@ -4,35 +4,39 @@ slug: Web/API/btoa
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Создаёт ASCII строку закодированную в base-64 из "строки" бинарных данных.</p>
+Создаёт ASCII строку закодированную в base-64 из "строки" бинарных данных.
 
-<p>Будьте внимательней этот способ не подходит для <a href="http://www.unicode.org/standard/WhatIsUnicode.html">Unicode</a> строк! Описание работы с Unicode в секции ниже.</p>
+Будьте внимательней этот способ не подходит для [Unicode](http://www.unicode.org/standard/WhatIsUnicode.html) строк! Описание работы с Unicode в секции ниже.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var encodedData = window.btoa(<em>stringToEncode</em>);</pre>
+```
+var encodedData = window.btoa(stringToEncode);
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">var encodedData = window.btoa("Hello, world"); // encode a string
+```js
+var encodedData = window.btoa("Hello, world"); // encode a string
 var decodedData = window.atob(encodedData); // decode the string
-</pre>
+```
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<p>Вы можете воспользоваться этим способом, чтобы избежать проблем при передаче данных через сетевое соединение. Для этого нужно перекодировать данные в base64 и отправить их, и на другой стороне с помощью метода <code>{{domxref("WindowBase64.atob","window.atob()")}}</code> декодировать полученные данные в исходный вид. Например, вы можете перекодировать управляющие символы ASCII с 0 до 31.</p>
+Вы можете воспользоваться этим способом, чтобы избежать проблем при передаче данных через сетевое соединение. Для этого нужно перекодировать данные в base64 и отправить их, и на другой стороне с помощью метода `{{domxref("WindowBase64.atob","window.atob()")}}` декодировать полученные данные в исходный вид. Например, вы можете перекодировать управляющие символы ASCII с 0 до 31.
 
-<p><code>btoa()</code> также доступна для XPCOM компонентов реализованных в JavaScript, даже если <a href="/en-US/docs/DOM/window" title="DOM/window"><code>window</code></a> не является глобальным объектом в компонентах.</p>
+`btoa()` также доступна для XPCOM компонентов реализованных в JavaScript, даже если [`window`](/ru/docs/DOM/window "DOM/window") не является глобальным объектом в компонентах.
 
-<h2 id="Строки_Юникод">Строки Юникод</h2>
+## Строки Юникод
 
-<p>В большинстве браузеров, вызов <code>window.btoa()</code> на Unicode строке выбросит исключение Character Out Of Range (Символ вне допустимого диапазона).</p>
+В большинстве браузеров, вызов `window.btoa()` на Unicode строке выбросит исключение Character Out Of Range (Символ вне допустимого диапазона).
 
-<p>Чтобы избежать этого, воспользуйтесь паттерном, предложенным <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>:</p>
+Чтобы избежать этого, воспользуйтесь паттерном, предложенным [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html):
 
-<pre class="brush:js">function utf8_to_b64(str) {
+```js
+function utf8_to_b64(str) {
     return window.btoa(unescape(encodeURIComponent(str)));
 }
 
@@ -46,24 +50,21 @@ b64_to_utf8('JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ=='); // "✓ à la m
 
 utf8_to_b64('I \u2661 Unicode!'); // SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ==
 b64_to_utf8('SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=='); // "I ♡ Unicode!"
+```
 
-</pre>
+Более правильный и производительный способ - это конвертировать [`DOMString`](/ru/docs/Web/API/DOMString) в UTF-8 строку передав [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays). Как это сделать узнать можно здесь** [в этом параграфе](</ru/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)**.
 
-<p>Более правильный и производительный способ - это конвертировать <a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> в UTF-8 строку передав <a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>. Как это сделать узнать можно здесь<strong> <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8" title="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8">в этом параграфе</a></strong>.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/en-US/docs/data_URIs"><code>data</code> URIs</a></li>
- <li>{{domxref("WindowBase64.atob","window.atob()")}}</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [`data` URIs](/ru/docs/data_URIs)
+- {{domxref("WindowBase64.atob","window.atob()")}}
+- [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)

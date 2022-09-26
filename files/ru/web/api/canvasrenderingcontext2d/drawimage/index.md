@@ -9,93 +9,91 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawImage()</code></strong> метод Canvas 2D API предоставляет разные способы рисования изображения на холсте.</p>
+**`CanvasRenderingContext2D`\*\***`.drawImage()`\*\* метод Canvas 2D API предоставляет разные способы рисования изображения на холсте.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.drawImage(image, dx, dy);</var>
-void <var><em>ctx</em>.drawImage(image, dx, dy, dWidth, dHeight);</var>
-void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</var>
-</pre>
+```
+void ctx.drawImage(image, dx, dy);
+void ctx.drawImage(image, dx, dy, dWidth, dHeight);
+void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
 
-<p><img alt="drawImage" src="https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg" style="float: right;"></p>
+![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>image</code></dt>
- <dd>Элемент для отображения в контексте. Функция принимает любой источник изображения, пригодный для отображения на холсте ({{domxref("CanvasImageSource")}}), конкретнее, {{domxref("CSSImageValue")}},  {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("ImageBitmap")}} или {{domxref("OffscreenCanvas")}}.</dd>
- <dt><code>dx</code></dt>
- <dd>Координата по оси Х, обозначающая стартовую точку холста-приёмника, в которую будет помещён верхний левый угол исходного <code>image</code>.</dd>
- <dt><code>dy</code></dt>
- <dd>Координата по оси Y, обозначающая стартовую точку холста-приёмника, в которую будет помещён верхний левый угол исходного <code>image</code>.</dd>
- <dt><code>dWidth</code></dt>
- <dd>Ширина изображения, полученного из исходного <code>image</code>. Эта опция позволяет масштабировать изображение по ширине. Если опция не задана, изображение не будет масштабировано.</dd>
- <dt><code>dHeight</code></dt>
- <dd>Высота изображения, полученного из исходного <code>image</code>. Эта опция позволяет масштабировать изображение по высоте. Если опция не задана, изображение не будет масштабировано.</dd>
- <dt><code>sx</code></dt>
- <dd>Координата по оси X верхнего левого угла фрагмента, который будет вырезан из изображения-источника и помещён в контекст-приёмник.</dd>
- <dt><code>sy</code></dt>
- <dd>Координата по оси Y верхнего левого угла фрагмента, который будет вырезан из изображения-источника и помещён в контекст-приёмник.</dd>
- <dt><code>sWidth</code></dt>
- <dd>Ширина фрагмента, который будет вырезан из изображения источника и помещён в контекст-приёмник. Если не задана, фрагмент от точки, заданной <code>sx</code> и <code>sy</code> до правого нижнего угла источника будет целиком скопирован в контекст-приёмник.</dd>
- <dt><code>sHeight</code></dt>
- <dd>Высота фрагмента, который будет вырезан из изображения источника и помещён в контекст-приёмник.</dd>
-</dl>
+- `image`
+  - : Элемент для отображения в контексте. Функция принимает любой источник изображения, пригодный для отображения на холсте ({{domxref("CanvasImageSource")}}), конкретнее, {{domxref("CSSImageValue")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("ImageBitmap")}} или {{domxref("OffscreenCanvas")}}.
+- `dx`
+  - : Координата по оси Х, обозначающая стартовую точку холста-приёмника, в которую будет помещён верхний левый угол исходного `image`.
+- `dy`
+  - : Координата по оси Y, обозначающая стартовую точку холста-приёмника, в которую будет помещён верхний левый угол исходного `image`.
+- `dWidth`
+  - : Ширина изображения, полученного из исходного `image`. Эта опция позволяет масштабировать изображение по ширине. Если опция не задана, изображение не будет масштабировано.
+- `dHeight`
+  - : Высота изображения, полученного из исходного `image`. Эта опция позволяет масштабировать изображение по высоте. Если опция не задана, изображение не будет масштабировано.
+- `sx`
+  - : Координата по оси X верхнего левого угла фрагмента, который будет вырезан из изображения-источника и помещён в контекст-приёмник.
+- `sy`
+  - : Координата по оси Y верхнего левого угла фрагмента, который будет вырезан из изображения-источника и помещён в контекст-приёмник.
+- `sWidth`
+  - : Ширина фрагмента, который будет вырезан из изображения источника и помещён в контекст-приёмник. Если не задана, фрагмент от точки, заданной `sx` и `sy` до правого нижнего угла источника будет целиком скопирован в контекст-приёмник.
+- `sHeight`
+  - : Высота фрагмента, который будет вырезан из изображения источника и помещён в контекст-приёмник.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><code>INDEX_SIZE_ERR</code></dt>
- <dd>Выбрасывается, если ширина или высота источника или приёмника равна нулю.</dd>
- <dt><code>INVALID_STATE_ERR</code></dt>
- <dd>Источник не имеет данных изображения.</dd>
- <dt><code>TYPE_MISMATCH_ERR</code></dt>
- <dd>Тип данных источника не поддерживается.</dd>
-</dl>
+- `INDEX_SIZE_ERR`
+  - : Выбрасывается, если ширина или высота источника или приёмника равна нулю.
+- `INVALID_STATE_ERR`
+  - : Источник не имеет данных изображения.
+- `TYPE_MISMATCH_ERR`
+  - : Тип данных источника не поддерживается.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_drawImage">Использование метода <code>drawImage</code></h3>
+### Использование метода `drawImage`
 
-<p>Вот простой пример использования <code>drawImage</code>.</p>
+Вот простой пример использования `drawImage`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
-       width="300" height="227"&gt;
-&lt;/div&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       width="300" height="227">
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var image = document.getElementById('source');
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
-</pre>
+```
 
-<p>Отредактируйте код ниже и посмотрите, как ваши изменения отражаются на холсте:</p>
+Отредактируйте код ниже и посмотрите, как ваши изменения отражаются на холсте:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+</div>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
-&lt;/div&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
-</pre>
-
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -119,24 +117,26 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="Понимание_размеров_изображения-источника">Понимание размеров изображения-источника</h3>
+### Понимание размеров изображения-источника
 
-<p>Метод <code>drawImage()</code> использует <em>внутренние размеры</em> элемента-источника, выраженные в CSS-пикселях (а не реальные размеры самой картинки).</p>
+Метод `drawImage()` использует _внутренние размеры_ элемента-источника, выраженные в CSS-пикселях (а не реальные размеры самой картинки).
 
-<p>Например, если изображение было загружено с использованием необязательных параметров <code>width</code> и <code>height</code> в конструкторе {{domxref("HTMLImageElement")}}, вместо <code>element.width</code> и <code>element.height</code> вам следует использовать свойства <code>naturalWidth</code> и <code>naturalHeight</code> экземпляра картинки (или <code>videoWidth</code> и <code>videoHeight</code>, если источник {{htmlelement("video")}}), чтобы добиться правильного масштабирования и получения фрагментов картинки.</p>
+Например, если изображение было загружено с использованием необязательных параметров `width` и `height` в конструкторе {{domxref("HTMLImageElement")}}, вместо `element.width` и `element.height` вам следует использовать свойства `naturalWidth` и `naturalHeight` экземпляра картинки (или `videoWidth` и `videoHeight`, если источник {{htmlelement("video")}}), чтобы добиться правильного масштабирования и получения фрагментов картинки.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var image = new Image(60, 45);   // Размер изображения
@@ -158,58 +158,38 @@ function drawImageActualSize() {
   // using the element's width and height properties - lets draw one
   // on top in the corner:
   ctx.drawImage(this, 0, 0, this.width, this.height);
-}</pre>
+}
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Понимание_размеров_изображения-источника', 700, 360)}}</p>
+{{EmbedLiveSample('Понимание_размеров_изображения-источника', 700, 360)}}
 
-<p> </p>
+## Спецификация
 
-<h2 id="Спецификация">Спецификация</h2>
+| Спецификация                                                                                                                                     | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<p> </p>
+## Совместимость с браузерами
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Дополнительно о совместимости
 
-<p>{{Compat}}</p>
+- Поддержка переворачивания изображения с использованием отрицательных значений `sw` и `sh` была добавлена в Gecko 5.0 {{geckoRelease("5.0")}}.
+- Начиная с {{geckoRelease("5.0")}}, `drawImage()` поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.
+- Начиная с {{geckoRelease("5.0")}}, передача `null` или `undefined` как источника для `drawImage()` корректно выбрасывает исключение `TYPE_MISMATCH_ERR`.
+- Вплоть до Gecko 7.0 {{ geckoRelease("7.0") }} Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.
+- Gecko 9.0 {{ geckoRelease("9.0") }} теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
+- Gecko 11.0 {{ geckoRelease("11.0") }} теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
 
-<h2 id="Дополнительно_о_совместимости">Дополнительно о совместимости</h2>
+## Дополнительно
 
-<ul>
- <li>Поддержка переворачивания изображения с использованием отрицательных значений <code>sw</code> и <code>sh</code> была добавлена в Gecko 5.0 {{geckoRelease("5.0")}}.</li>
- <li>Начиная с {{geckoRelease("5.0")}}, <code>drawImage()</code> поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.</li>
- <li>Начиная с {{geckoRelease("5.0")}}, передача <code>null</code> или <code>undefined</code> как источника для <code>drawImage()</code> корректно выбрасывает исключение <code>TYPE_MISMATCH_ERR</code>.</li>
- <li>Вплоть до Gecko 7.0 {{ geckoRelease("7.0") }} Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.</li>
- <li>Gecko 9.0 {{ geckoRelease("9.0") }} теперь корректно поддерживает CORS без необходимости <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">"порчи" холста</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} теперь поддерживает SVG как источник для <code>drawImage()</code> без необходимости <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">"порчи" холста</a>.</li>
-</ul>
+- `drawImage()` корректно работает с {{domxref("HTMLVideoElement")}} только в том случае, когда {{domxref("HTMLMediaElement.readyState")}} **больше единицы** (т.е., событие **seek** корректно вызывается после установки свойства `currentTime`)
+- `drawImage()` будет использовать внутренний размер элемента-источника, выраженный в CSS-пикселях, при рисовании, фрагментировании или масштабировании.
+- `drawImage()` проигнорирует все EXIF-данные изображений, в том числе и `Orientation`. Такое поведение метода особенно проблематично для iOS-устройств. Вам потребуется распознать ориентацию самостоятельно и использовать `rotate()` для её корректировки.
 
-<h2 id="Дополнительно">Дополнительно</h2>
+## Смотрите также
 
-<ul>
- <li><code>drawImage()</code> корректно работает с {{domxref("HTMLVideoElement")}} только в том случае, когда {{domxref("HTMLMediaElement.readyState")}}<strong> больше единицы</strong> (т.е., событие <strong>seek</strong> корректно вызывается после установки свойства <code>currentTime</code>)</li>
- <li><code>drawImage()</code> будет использовать внутренний размер элемента-источника, выраженный в CSS-пикселях, при рисовании, фрагментировании или масштабировании.</li>
- <li><code>drawImage()</code> проигнорирует все EXIF-данные изображений, в том числе и <code>Orientation</code>. Такое поведение метода особенно проблематично для iOS-устройств. Вам потребуется распознать ориентацию самостоятельно и использовать <code>rotate()</code> для её корректировки.</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Родительский интерфейс метода {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- Родительский интерфейс метода {{domxref("CanvasRenderingContext2D")}}.

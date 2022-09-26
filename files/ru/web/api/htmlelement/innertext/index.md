@@ -4,31 +4,27 @@ slug: Web/API/HTMLElement/innerText
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.innerText</strong></code> - это свойство, позволяющее задавать или получать текстовое содержимое элемента и его потомков. В качестве геттера, свойство приближается к тексту, который пользователь получит, если он выделит содержимое элемента курсором, затем копирует его в буфер обмена.</p>
+**`Node.innerText`** - это свойство, позволяющее задавать или получать текстовое содержимое элемента и его потомков. В качестве геттера, свойство приближается к тексту, который пользователь получит, если он выделит содержимое элемента курсором, затем копирует его в буфер обмена.
 
-<p>Изначально, данное поведение было представлено Internet Explorer, и было формально специализированно в стандарте HTML в 2016 после того, как было адаптировано всеми ведущими браузерами.</p>
+Изначально, данное поведение было представлено Internet Explorer, и было формально специализированно в стандарте HTML в 2016 после того, как было адаптировано всеми ведущими браузерами.
 
-<p>{{domxref("Node.textContent")}} - это альтернативное свойство, которое имеет ряд отличий:</p>
+{{domxref("Node.textContent")}} - это альтернативное свойство, которое имеет ряд отличий:
 
-<ul>
- <li><code>textContent</code> получает содержимое <em>всех</em> элементов, включая  <a class="new" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/script" title="This article hasn't been written yet. Please consider contributing!"><code>&lt;script&gt;</code></a> и <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/style" title="HTML-элемент &lt;style> содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на CSS."><code>&lt;style&gt;</code></a>, тогда как <code>innerText</code> этого не делает.</li>
- <li><code>innerText</code> умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как <code>textContent</code> этого не делает.</li>
- <li>Метод <code>innerText</code> позволяет получить CSS, а <code>textContent</code> — нет.</li>
-</ul>
+- `textContent` получает содержимое _всех_ элементов, включая [`<script>`](/ru/docs/Web/HTML/Element/script "This article hasn't been written yet. Please consider contributing!") и [`<style>`](/ru/docs/Web/HTML/Element/style "HTML-элемент <style> содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на CSS."), тогда как `innerText` этого не делает.
+- `innerText` умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как `textContent` этого не делает.
+- Метод `innerText` позволяет получить CSS, а `textContent` — нет.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- {{domxref("Element.innerHTML")}}

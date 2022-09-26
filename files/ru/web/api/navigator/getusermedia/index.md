@@ -3,54 +3,57 @@ title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 translation_of: Web/API/Navigator/getUserMedia
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-<p>The deprecated <code><strong>Navigator.getUserMedia()</strong></code> method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.</p>
+The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
 
-<p>If permission is granted, a <code>MediaStream</code> whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed.</p>
+If permission is granted, a `MediaStream` whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed.
 
-<div class="note">
-<p>Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.</p>
-</div>
+> **Примечание:** Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+```
+navigator.getUserMedia(constraints, successCallback, errorCallback);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><var>constraints</var></code></dt>
- <dd>{{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Возможности, ограничения и настройки.</a></dd>
- <dt><code><var>successCallback</var></code></dt>
- <dd>Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
- <pre class="brush: js">function(stream) {
-   var video = document.querySelector('video');
-   video.srcObject = stream;
-   video.onloadedmetadata = function(e) {
-      // Do something with the video here.
-   };
-}</pre>
- </dd>
- <dt><code><var>errorCallback</var></code></dt>
- <dd>When the call fails, the function specified in the <code>errorCallback</code> is invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this object is is modeled on {{domxref("DOMException")}}. See <a href="#ошибки">Ошибки</a> below for a list of the errors which can occur.</dd>
-</dl>
+- `constraints`
+  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Streams_API/Constraints)
+- `successCallback`
 
-<h3 id="Возвращающееся_значение">Возвращающееся значение</h3>
+  - : Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
 
-<p>{{domxref("undefined")}}.</p>
+    ```js
+    function(stream) {
+       var video = document.querySelector('video');
+       video.srcObject = stream;
+       video.onloadedmetadata = function(e) {
+          // Do something with the video here.
+       };
+    }
+    ```
 
-<h3 id="Ошибки">Ошибки</h3>
+- `errorCallback`
+  - : When the call fails, the function specified in the `errorCallback` is invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this object is is modeled on {{domxref("DOMException")}}. See [Ошибки](#ошибки) below for a list of the errors which can occur.
 
-<p>{{page("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Errors")}}</p>
+### Возвращающееся значение
 
-<h2 id="Примеры">Примеры</h2>
+{{domxref("undefined")}}.
 
-<h3 id="Width_and_height_Ширина_и_высота">Width and height (Ширина и высота)</h3>
+### Ошибки
 
-<p>Это пример использования <code>getUserMedia()</code> , включая код для работы с префиксами различных браузеров. Обратите внимание, что это устаревший способ сделать это: современные примеры см. В разделе «Примеры» в разделе {{domxref ("MediaDevices.getUserMedia ()")}}.</p>
+{{page("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Errors")}}
 
-<pre class="brush: js">navigator.getUserMedia = navigator.getUserMedia ||
+## Примеры
+
+### Width and height (Ширина и высота)
+
+Это пример использования `getUserMedia()` , включая код для работы с префиксами различных браузеров. Обратите внимание, что это устаревший способ сделать это: современные примеры см. В разделе «Примеры» в разделе {{domxref ("MediaDevices.getUserMedia ()")}}.
+
+```js
+navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia;
 
@@ -70,38 +73,34 @@ if (navigator.getUserMedia) {
 } else {
    console.log("getUserMedia not supported");
 }
-</pre>
+```
 
-<h2 id="Разрешения">Разрешения</h2>
+## Разрешения
 
-<p>Чтобы использовать<code>getUserMedia()</code><code> </code>в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:</p>
+Чтобы использовать` getUserMedia()``  `в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:
 
-<pre class="brush: js">"permissions": {
+```js
+"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
   "video-capture": {
     "description": "Required to capture video using getUserMedia()"
   }
-}</pre>
+}
+```
 
-<p>См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.</p>
+См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div class="warning">
-<p>New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.</p>
-</div>
+> **Предупреждение:** New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.</li>
- <li><a href="/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
+- [WebRTC](/ru/docs/WebRTC) - the introductory page to the API
+- [MediaStream API](/ru/docs/WebRTC/MediaStream_API) - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

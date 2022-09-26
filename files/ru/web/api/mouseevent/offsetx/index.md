@@ -8,31 +8,28 @@ tags:
   - Read-only
 translation_of: Web/API/MouseEvent/offsetX
 ---
-<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM Events")}}{{SeeCompatTable}}
 
-<p><code>Свойство <strong>MouseEvent.offsetX</strong></code>, доступное только для чтения,<code> показывает отступ курсора мыши по оси X от края целевого DOM узла.</code></p>
+`Свойство MouseEvent.offsetX`, доступное только для чтения,` показывает отступ курсора мыши по оси X от края целевого DOM узла.`
 
-<p> </p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+var xOffset = instanceOfMouseEvent.offsetX;
+```
 
-<pre class="syntaxbox">var xOffset = <em>instanceOfMouseEvent</em>.offsetX;
-</pre>
+### Возвращаемое значение
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+Значение с плавающей запятой - double. Ранние версии спецификации определяли возвращаемое значение как целое число. Подробнее смотрите в разделе про совместимость с браузерами.
 
-<p>Значение с плавающей запятой - double. Ранние версии спецификации определяли возвращаемое значение как целое число. Подробнее смотрите в разделе про совместимость с браузерами.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

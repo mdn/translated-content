@@ -3,75 +3,38 @@ title: hashchange
 slug: Web/API/Window/hashchange_event
 translation_of: Web/API/Window/hashchange_event
 ---
-<p>Событие <code>hashchange</code> генерируется когда изменяется идентификатор фрагмента URL (т.е. часть URL следующая за символом #, включая сам символ #).</p>
+Событие `hashchange` генерируется когда изменяется идентификатор фрагмента URL (т.е. часть URL следующая за символом #, включая сам символ #).
 
-<h2 id="Общая_информация">Общая информация</h2>
+## Общая информация
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-hashchange">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">HashChangeEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">defaultView</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
-</dl>
+- Спецификация
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-hashchange)
+- Интерфейс
+  - : HashChangeEvent
+- Bubbles
+  - : Yes
+- Cancelable
+  - : No
+- Target
+  - : defaultView
+- Действие по умолчанию
+  - : None
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The browsing context (<code>window</code>).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>oldURL</code> {{readonlyInline}}</td>
-   <td>{{jsxref("String")}}</td>
-   <td>The previous URL from which the window was navigated.</td>
-  </tr>
-  <tr>
-   <td>newURL {{readonlyInline}}</td>
-   <td>{{jsxref("String")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                           |
+| ------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.            |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.              |
+| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}         | The previous URL from which the window was navigated. |
+| newURL {{readonlyInline}}       | {{jsxref("String")}}         |                                                       |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Похожие_события">Похожие события</h2>
+## Похожие события
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/popstate"><code>popstate</code></a></li>
-</ul>
+- [`popstate`](/ru/docs/Mozilla_event_reference/popstate)

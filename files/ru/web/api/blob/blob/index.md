@@ -3,57 +3,41 @@ title: Blob()
 slug: Web/API/Blob/Blob
 translation_of: Web/API/Blob/Blob
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p><code>Конструктор <strong>Blob()</strong></code> возвращает новый объект {{domxref("Blob")}}. Содержимое blob состоит из объединённых значений, переданных в параметре <em>array</em>.</p>
+`Конструктор Blob()` возвращает новый объект {{domxref("Blob")}}. Содержимое blob состоит из объединённых значений, переданных в параметре _array_.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var aBlob = new Blob(<em> array</em>, <em>options</em> );
-</pre>
+```
+var aBlob = new Blob( array, options );
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><em>array</em> - массив {{jsxref("Array")}} из объектов {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, или смесь любых из подобных объектов, которая может быть размещена внутри {{domxref("Blob")}}. DOMStrings представлены в кодировке UTF-8.</li>
- <li><em>option</em><em>s</em> is an optional <code>BlobPropertyBag</code> dictionary which may specify the following two attributes:
-  <ul>
-   <li><code>type</code>, with a default value of <code>""</code>, that represents the MIME type of the content of the array that will be put in the blob.</li>
-   <li><code>endings</code>, with a default value of <code>"transparent"</code>, that specifies how strings containing the line ending character <code>\n</code> are to be written out. It is one of the two values: <code>"native"</code>, meaning that line ending characters are changed to match host OS filesystem convention, or <code>"transparent", </code>meaning that endings are stored in the blob without change. {{non-standard_inline}}</li>
-  </ul>
- </li>
-</ul>
+- _array_ - массив {{jsxref("Array")}} из объектов {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, или смесь любых из подобных объектов, которая может быть размещена внутри {{domxref("Blob")}}. DOMStrings представлены в кодировке UTF-8.
+- _option\_\_s_ is an optional `BlobPropertyBag` dictionary which may specify the following two attributes:
 
-<h2 id="Пример">Пример</h2>
+  - `type`, with a default value of `""`, that represents the MIME type of the content of the array that will be put in the blob.
+  - `endings`, with a default value of `"transparent"`, that specifies how strings containing the line ending character `\n` are to be written out. It is one of the two values: `"native"`, meaning that line ending characters are changed to match host OS filesystem convention, or `"transparent", `meaning that endings are stored in the blob without change. {{non-standard_inline}}
 
-<pre class="brush: js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
+## Пример
 
-<h2 id="Specification">Спецификация</h2>
+```js
+var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
+var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#constructorBlob', 'Blob()')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## Спецификация
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+| Specification                                                            | Status                       | Comment             |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Initial definition. |
 
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>The deprecated {{domxref("BlobBuilder")}} which this constructor replaces.</li>
-</ul>
+## See also
 
-<p> </p>
+- The deprecated {{domxref("BlobBuilder")}} which this constructor replaces.

@@ -8,18 +8,21 @@ tags:
   - frameset
 translation_of: Web/API/Document/body
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает узел {{HTMLElement("body")}} или {{HTMLElement("frameset")}} текущей страницы, или <strong><code>null</code></strong> если таких элементов не существует.</p>
+Возвращает узел {{HTMLElement("body")}} или {{HTMLElement("frameset")}} текущей страницы, или **`null`** если таких элементов не существует.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var objRef</em> = document.body;
-document.body = <em>objRef;</em></pre>
+```
+var objRef = document.body;
+document.body = objRef;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">// в HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+```js
+// в HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
 var aNewBodyElement = document.createElement("body");
@@ -27,57 +30,28 @@ var aNewBodyElement = document.createElement("body");
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p><strong><code>document.body</code></strong> это элемент, который включает в себя содержимое страницы. На страницах с <code>&lt;body&gt;</code> вернётся элемент <code>&lt;body&gt;</code>, а с frameset - элемент <code>&lt;frameset&gt;</code>.</p>
+**`document.body`** это элемент, который включает в себя содержимое страницы. На страницах с `<body>` вернётся элемент `<body>`, а с frameset - элемент `<frameset>`.
 
-<p><strong><code>body</code></strong> может быть заменено, но это удалит все его дочерние элементы.</p>
+**`body`** может быть заменено, но это удалит все его дочерние элементы.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML','html.html#ID-56360201','Document.body')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-html.html#attribute-body','Document.body')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Исходное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                     | Статус                           | Комментарии           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| {{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}} | {{Spec2('HTML WHATWG')}} |                       |
+| {{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5.1')}}     |                       |
+| {{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5 W3C')}}     |                       |
+| {{SpecName('DOM2 HTML','html.html#ID-56360201','Document.body')}}         | {{Spec2('DOM2 HTML')}}     |                       |
+| {{SpecName('DOM1','level-one-html.html#attribute-body','Document.body')}} | {{Spec2('DOM1')}}         | Исходное определение. |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("document.head")}}</li>
-</ul>
+- {{domxref("document.head")}}

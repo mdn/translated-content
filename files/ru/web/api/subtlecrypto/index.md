@@ -3,70 +3,53 @@ title: SubtleCrypto
 slug: Web/API/SubtleCrypto
 translation_of: Web/API/SubtleCrypto
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>Интерфейс <code><strong>SubtileCrypto</strong></code> представляет набор криптографических примитивов. Экземпляр <code><strong>SubtileCrypto</strong></code> доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).</p>
+Интерфейс **`SubtileCrypto`** представляет набор криптографических примитивов. Экземпляр **`SubtileCrypto`** доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).
 
-<div class="warning">
-<p>Per the spec: "Developers making use of the SubtleCrypto interface are expected to be aware of the security concerns associated with both the design and implementation of the various algorithms provided. The raw algorithms are provided in order to allow developers maximum flexibility in implementing a variety of protocols and applications, each of which may represent the composition and security parameters in a unique manner that necessitate the use of the raw algorithms."</p>
-</div>
+> **Предупреждение:** Per the spec: "Developers making use of the SubtleCrypto interface are expected to be aware of the security concerns associated with both the design and implementation of the various algorithms provided. The raw algorithms are provided in order to allow developers maximum flexibility in implementing a variety of protocols and applications, each of which may represent the composition and security parameters in a unique manner that necessitate the use of the raw algorithms."
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс не наследует и не определяет собственные свойства.</em></p>
+_Интерфейс не наследует и не определяет собственные свойства._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("SubtleCrypto.encrypt()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с данными, зашифрованными на основании исходного текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
- <dt>{{domxref("SubtleCrypto.decrypt()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с исходным текстом. В качества аргументов принимает зашифрованную строку, алгоритм шифрования и ключ.</dd>
- <dt>{{domxref("SubtleCrypto.sign()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сигнатурой, полученной на основании текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
- <dt>{{domxref("SubtleCrypto.verify()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с {{jsxref("Boolean")}} значением, определяющим соответствует ли переданная сигнатура тексу, алгоритму шифрования и ключу, также переданным в качества аргументов.</dd>
- <dt>{{domxref("SubtleCrypto.digest()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с хеш-суммой сгенерированной на основании алгоритма шифрования и исходного текста, переданных в качества аргументов</dd>
- <dt>{{domxref("SubtleCrypto.generateKey()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}} для симметричных алгоритмов, или {{domxref("CryptoKeyPair")}} для асимметричных алгоритмов.</dd>
- <dt>{{domxref("SubtleCrypto.deriveKey()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}}, на основе переданных в качестве аргументов мастер-ключа и алгоритма шифрования.</dd>
- <dt>{{domxref("SubtleCrypto.deriveBits()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с буфером псевдо-случайных бит, полученных на основании мастер-ключа и алгоритма шифрования, переданных в качества аргументов.</dd>
- <dt>{{domxref("SubtleCrypto.importKey()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the format, the algorithm, the raw key data, the usages and the extractability given as parameters.</dd>
- <dt>{{domxref("SubtleCrypto.exportKey()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} of a buffer containing the key in the format requested.</dd>
- <dt>{{domxref("SubtleCrypto.wrapKey()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} of a wrapped symmetric key for usage (transfer, storage) in insecure environments. The wrapped buffer returned is in the format given in parameters, and contains the key wrapped by the given wrapping key with the given algorithm.</dd>
- <dt>{{domxref("SubtleCrypto.unwrapKey()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the wrapped key given in parameter.</dd>
-</dl>
+- {{domxref("SubtleCrypto.encrypt()")}}
+  - : Возвращает {{jsxref("Promise")}} с данными, зашифрованными на основании исходного текста, алгоритма шифрования и ключа, переданных в качества аргументов.
+- {{domxref("SubtleCrypto.decrypt()")}}
+  - : Возвращает {{jsxref("Promise")}} с исходным текстом. В качества аргументов принимает зашифрованную строку, алгоритм шифрования и ключ.
+- {{domxref("SubtleCrypto.sign()")}}
+  - : Возвращает {{jsxref("Promise")}} с сигнатурой, полученной на основании текста, алгоритма шифрования и ключа, переданных в качества аргументов.
+- {{domxref("SubtleCrypto.verify()")}}
+  - : Возвращает {{jsxref("Promise")}} с {{jsxref("Boolean")}} значением, определяющим соответствует ли переданная сигнатура тексу, алгоритму шифрования и ключу, также переданным в качества аргументов.
+- {{domxref("SubtleCrypto.digest()")}}
+  - : Возвращает {{jsxref("Promise")}} с хеш-суммой сгенерированной на основании алгоритма шифрования и исходного текста, переданных в качества аргументов
+- {{domxref("SubtleCrypto.generateKey()")}}
+  - : Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}} для симметричных алгоритмов, или {{domxref("CryptoKeyPair")}} для асимметричных алгоритмов.
+- {{domxref("SubtleCrypto.deriveKey()")}}
+  - : Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}}, на основе переданных в качестве аргументов мастер-ключа и алгоритма шифрования.
+- {{domxref("SubtleCrypto.deriveBits()")}}
+  - : Возвращает {{jsxref("Promise")}} с буфером псевдо-случайных бит, полученных на основании мастер-ключа и алгоритма шифрования, переданных в качества аргументов.
+- {{domxref("SubtleCrypto.importKey()")}}
+  - : Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the format, the algorithm, the raw key data, the usages and the extractability given as parameters.
+- {{domxref("SubtleCrypto.exportKey()")}}
+  - : Returns a {{jsxref("Promise")}} of a buffer containing the key in the format requested.
+- {{domxref("SubtleCrypto.wrapKey()")}}
+  - : Returns a {{jsxref("Promise")}} of a wrapped symmetric key for usage (transfer, storage) in insecure environments. The wrapped buffer returned is in the format given in parameters, and contains the key wrapped by the given wrapping key with the given algorithm.
+- {{domxref("SubtleCrypto.unwrapKey()")}}
+  - : Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the wrapped key given in parameter.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                                   | Comment             |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.</li>
-</ul>
+- {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.

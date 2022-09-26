@@ -11,44 +11,46 @@ translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Возвращает текущий сфокусированный элемент, то есть элемент, на котором будут вызываться события клавиатуры, если пользователь начнёт с неё ввод. Этот атрибут доступен только для чтения.</p>
+Возвращает текущий сфокусированный элемент, то есть элемент, на котором будут вызываться события клавиатуры, если пользователь начнёт с неё ввод. Этот атрибут доступен только для чтения.
 
-<p>Часто возвращается {{ HTMLElement("input") }} или {{ HTMLElement("textarea") }} объект, если он содержит в себе выделенный в данный момент текст. При этом вы можете получить более подробные сведения, используя свойства элемента  <code>selectionStart</code> и <code>selectionEnd</code>.  В других случаях сфокусированным элементом может быть {{ HTMLElement("select") }} элемент (меню) или {{ HTMLElement("input") }} элемент типа button, checkbox или radio.</p>
+Часто возвращается {{ HTMLElement("input") }} или {{ HTMLElement("textarea") }} объект, если он содержит в себе выделенный в данный момент текст. При этом вы можете получить более подробные сведения, используя свойства элемента `selectionStart` и `selectionEnd`. В других случаях сфокусированным элементом может быть {{ HTMLElement("select") }} элемент (меню) или {{ HTMLElement("input") }} элемент типа button, checkbox или radio.
 
-<p>{{ Note("На Mac, элементы, не являющиеся текстовыми полями, как правило, не получают фокус.") }}</p>
+{{ Note("На Mac, элементы, не являющиеся текстовыми полями, как правило, не получают фокус.") }}
 
-<p>Как правило, пользователь может нажать клавишу табуляции для перемещения по фокусируемым элементам страницы, и использовать пробел для их активации (нажать кнопку button, выбрать переключатель radio).</p>
+Как правило, пользователь может нажать клавишу табуляции для перемещения по фокусируемым элементам страницы, и использовать пробел для их активации (нажать кнопку button, выбрать переключатель radio).
 
-<p>Не следует путать фокус с выделением документа, состоящего в основном из статических текстовых узлов. См. {{ domxref("window.getSelection()") }}. </p>
+Не следует путать фокус с выделением документа, состоящего в основном из статических текстовых узлов. См. {{ domxref("window.getSelection()") }}.
 
-<p>Когда выделение отсутствует, активным элементом является {{ HTMLElement("body") }} страницы или null. </p>
+Когда выделение отсутствует, активным элементом является {{ HTMLElement("body") }} страницы или null.
 
-<p>{{ Note("Этот атрибут является частью разрабатываемой спецификации HTML 5.") }}</p>
+{{ Note("Этот атрибут является частью разрабатываемой спецификации HTML 5.") }}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var curElement = document.activeElement;
-</pre>
+```
+var curElement = document.activeElement;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript" charset="utf-8">
     function init() {
 
         function onMouseUp(e) {
             console.log(e);
             var outputElement = document.getElementById('output-element');
             var outputText = document.getElementById('output-text');
-            var selectedTextArea = document.<strong>activeElement</strong>;
+            var selectedTextArea = document.activeElement;
             var selection = selectedTextArea.value.substring(
-            selectedTextArea.<strong>selectionStart</strong>, selectedTextArea.<strong>selectionEnd</strong>);
+            selectedTextArea.selectionStart, selectedTextArea.selectionEnd);
             outputElement.innerHTML = selectedTextArea.id;
             outputText.innerHTML = selection;
         }
@@ -56,63 +58,48 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
         document.getElementById("ta-example-one").addEventListener("mouseup", onMouseUp, false);
         document.getElementById("ta-example-two").addEventListener("mouseup", onMouseUp, false);
     }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-&lt;div&gt;
+    </script>
+</head>
+<body onload="init()">
+<div>
     Выделите текст в одном из текстовых полей ниже:
-&lt;/div&gt;
-&lt;form id="frm-example" action="#" accept-charset="utf-8"&gt;
-&lt;textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40"&gt;
+</div>
+<form id="frm-example" action="#" accept-charset="utf-8">
+<textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
 Это текстовое поле 1:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-&lt;/textarea&gt;
-&lt;textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40"&gt;
+</textarea>
+<textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40">
 Это текстовое поле 2:
 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-&lt;/textarea&gt;
-&lt;/form&gt;
-ID активного элемента: &lt;span id="output-element"&gt;&lt;/span&gt;&lt;br/&gt;
-Выделенный текст: &lt;span id="output-text"&gt;&lt;/span&gt;
+</textarea>
+</form>
+ID активного элемента: <span id="output-element"></span><br/>
+Выделенный текст: <span id="output-text"></span>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/w9gFj">Посмотреть на JSFiddle</a></p>
+[Посмотреть на JSFiddle](https://jsfiddle.net/w9gFj)
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Первоначально введённое как собственное расширение DOM в Internet Explorer 4, это свойство также поддерживается в Opera и Safari (в версии 4).</p>
+Первоначально введённое как собственное расширение DOM в Internet Explorer 4, это свойство также поддерживается в Opera и Safari (в версии 4).
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                             | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Связанные_события">Связанные события</h2>
+## Связанные события
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

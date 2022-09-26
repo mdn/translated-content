@@ -3,48 +3,42 @@ title: Coordinates
 slug: Web/API/GeolocationCoordinates
 translation_of: Web/API/GeolocationCoordinates
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>Интерфейс <strong><code>Coordinates</code></strong> отображает позицию устройства и его высоту над уровнем моря с расчётным уровнем точности.</p>
+Интерфейс **`Coordinates`** отображает позицию устройства и его высоту над уровнем моря с расчётным уровнем точности.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс <code>Coordinates</code> не наследует никаких свойств</em>.</p>
+_Интерфейс `Coordinates` не наследует никаких свойств_.
 
-<dl>
- <dt>{{domxref("Coordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее широту, выраженную в градусах.</dd>
- <dt>{{domxref("Coordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее долготу, выраженную в градусах.</dd>
- <dt>{{domxref("Coordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее высоту над уровнем моря, выраженную в метрах. Возвращает <code>null</code>, если устройство не может предоставить эти данные.</dd>
- <dt>{{domxref("Coordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее точность свойств <code>latitude</code> и <code>longitude</code>, выраженную в метрах.</dd>
- <dt>{{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее точность свойства <code>altitude</code>, выраженную в метрах. Может быть <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее в каком направлении движется устройство. Это значение, выраженное в градусах, показывает насколько отклонено устройство относительно севера. <code>0</code> градусов показывает ровно на север и далее направление определяется по часовой стрелке (то есть, <code>90</code> градусов означает восток, а <code>270</code> градусов означает запад). Если <code>speed</code> равно <code>0</code>, то <code>heading</code> будет <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>. Если устройство не может предоставить <code>heading</code>, то его значение будет <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <code>дробное</code> число, означающее скорость движения устройства, выраженное в метрах в секунду. Это значение может быть <code>null</code>.</dd>
-</dl>
+- {{domxref("Coordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее широту, выраженную в градусах.
+- {{domxref("Coordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее долготу, выраженную в градусах.
+- {{domxref("Coordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее высоту над уровнем моря, выраженную в метрах. Возвращает `null`, если устройство не может предоставить эти данные.
+- {{domxref("Coordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее точность свойств `latitude` и `longitude`, выраженную в метрах.
+- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее точность свойства `altitude`, выраженную в метрах. Может быть `null`.
+- {{domxref("Coordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее в каком направлении движется устройство. Это значение, выраженное в градусах, показывает насколько отклонено устройство относительно севера. `0` градусов показывает ровно на север и далее направление определяется по часовой стрелке (то есть, `90` градусов означает восток, а `270` градусов означает запад). Если `speed` равно `0`, то `heading` будет [`NaN`](/ru/docs/JavaScript/Reference/Global_Objects/NaN). Если устройство не может предоставить `heading`, то его значение будет `null`.
+- {{domxref("Coordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает `дробное` число, означающее скорость движения устройства, выраженное в метрах в секунду. Это значение может быть `null`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em><em>Интерфейс <code>Coordinates</code> не наследует никаких методов<em>.</em></em></em></p>
+**Интерфейс `Coordinates` не наследует никаких методов*.***
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>The {{domxref("Geolocation")}} interface that uses it.</li>
-</ul>
+- [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
+- The {{domxref("Geolocation")}} interface that uses it.

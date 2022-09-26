@@ -5,59 +5,43 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRDisplayEvent
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Интерфейс VRDisplayEvent API WebVR представляет объект  событий, связанных с WebVR (Подробнее - см. Список расширений окна WebVR)</p>
+Интерфейс VRDisplayEvent API WebVR представляет объект событий, связанных с WebVR (Подробнее - см. Список расширений окна WebVR)
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("VRDisplayEvent.VRDisplayEvent()")}}</dt>
- <dd>Создаёт экземпляр объекта VRDisplayEvent.</dd>
-</dl>
+- {{domxref("VRDisplayEvent.VRDisplayEvent()")}}
+  - : Создаёт экземпляр объекта VRDisplayEvent.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>VRDisplayEvent</code> также наследует свойства от своего родительского объекта, {{domxref("Event")}}.</em></p>
+_`VRDisplayEvent` также наследует свойства от своего родительского объекта, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("VRDisplayEvent.display")}} {{readonlyInline}}</dt>
- <dd> {{domxref("VRDisplay")}} связанный с этим событием.</dd>
- <dt>{{domxref("VRDisplayEvent.reason")}} {{readonlyInline}}</dt>
- <dd>Определяемая человеческим фактором причина, по которой произошло событие.</dd>
-</dl>
+- {{domxref("VRDisplayEvent.display")}} {{readonlyInline}}
+  - : {{domxref("VRDisplay")}} связанный с этим событием.
+- {{domxref("VRDisplayEvent.reason")}} {{readonlyInline}}
+  - : Определяемая человеческим фактором причина, по которой произошло событие.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">window.addEventListener('vrdisplaypresentchange', function(e) {
+```js
+window.addEventListener('vrdisplaypresentchange', function(e) {
   console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                       | Comment            |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демонстрации, загружаемые материалы и другие ресурсы команды the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демонстрации, загружаемые материалы и другие ресурсы команды the Mozilla VR team.

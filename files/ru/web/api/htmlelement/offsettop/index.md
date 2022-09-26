@@ -3,54 +3,38 @@ title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 translation_of: Web/API/HTMLElement/offsetTop
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLElement.offsetTop - </code></strong><code>свойство элемента доступно только для чтения,</code> возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.</p>
+**`HTMLElement.offsetTop - `**`свойство элемента доступно только для чтения,` возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>topPos</var> = element.offsetTop;
-</pre>
+```
+topPos = element.offsetTop;
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>topPos</code> - <code>это количество пикселей на которые делается отступ сверху, отсносительно родительского элемента.</code></li>
-</ul>
+- `topPos` - `это количество пикселей на которые делается отступ сверху, отсносительно родительского элемента.`
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var d = document.getElementById("div1");
+```js
+var d = document.getElementById("div1");
 var topPos = d.offsetTop;
 
-if (topPos &gt; 10) {
+if (topPos > 10) {
   // объект имеет отступ больше
   // чем 10 пикселей относительно своего родителя
-}</pre>
+}
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                           | Комментарии |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |             |
 
-<h2 id="Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

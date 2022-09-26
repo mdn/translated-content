@@ -3,25 +3,26 @@ title: FormData.keys()
 slug: Web/API/FormData/keys
 translation_of: Web/API/FormData/keys
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code><strong>FormData.keys()</strong></code> метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.</p>
+**`FormData.keys()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.
 
-<div class="note">
-<p><strong>Примечание</strong>: Метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">formData.keys();</pre>
+```
+formData.keys();
+```
 
-<h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
+### Возвращаемые значения
 
-<p>Возвращает {{jsxref("Iteration_protocols","iterator")}}.</p>
+Возвращает {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js;">// Create a test FormData object
+```js
+// Create a test FormData object
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -30,28 +31,26 @@ formData.append('key2', 'value2');
 for (var key of formData.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>Результат:</p>
+Результат:
 
-<pre>key1
-key2</pre>
+```
+key1
+key2
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Использование объектов FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

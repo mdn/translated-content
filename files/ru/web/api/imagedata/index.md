@@ -3,39 +3,33 @@ title: ImageData
 slug: Web/API/ImageData
 translation_of: Web/API/ImageData
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>Интерфейс <code><strong>ImageData</strong></code> представляет лежащие в основе пиксельные данные области элемента {{HTMLElement("canvas")}}. Он создан используя конструктор {{domxref("ImageData.ImageData", "ImageData()")}} или метод создания объекта {{domxref("CanvasRenderingContext2D")}} ассоциированного с canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} и {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Он также может быть использован для установки части canvas используя метод {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.</p>
+Интерфейс **`ImageData`** представляет лежащие в основе пиксельные данные области элемента {{HTMLElement("canvas")}}. Он создан используя конструктор {{domxref("ImageData.ImageData", "ImageData()")}} или метод создания объекта {{domxref("CanvasRenderingContext2D")}} ассоциированного с canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} и {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Он также может быть использован для установки части canvas используя метод {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
 
-<h2 id="Конструкторы">Конструкторы</h2>
+## Конструкторы
 
-<dl>
- <dt>{{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}</dt>
- <dd>Создаёт ImageData из указанного {{jsxref("Uint8ClampedArray")}} и из размера изображения которого он содержит. Если массив не указан, то он создаёт изображение чёрного прямоугольника. Обратите внимание, что такой довольно распространённый путь создания подобного объекта в воркерах как {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} там не доступен.</dd>
-</dl>
+- {{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}
+  - : Создаёт ImageData из указанного {{jsxref("Uint8ClampedArray")}} и из размера изображения которого он содержит. Если массив не указан, то он создаёт изображение чёрного прямоугольника. Обратите внимание, что такой довольно распространённый путь создания подобного объекта в воркерах как {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} там не доступен.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("ImageData.data")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{jsxref("Uint8ClampedArray")}} представляющий собой одномерный массив, содержащий данные цветовой модели RGBA, с целыми значениями от 0 до 255 (включительно).</dd>
- <dt>{{domxref("ImageData.height")}} {{readonlyInline}}</dt>
- <dd>Фактическая высота в пикселях объекта <code>ImageData</code>.</dd>
- <dt>{{domxref("ImageData.width")}} {{readonlyInline}}</dt>
- <dd>Фактическая ширина в пикселях объекта <code>ImageData</code>.</dd>
-</dl>
+- {{domxref("ImageData.data")}} {{readonlyInline}}
+  - : Возвращает {{jsxref("Uint8ClampedArray")}} представляющий собой одномерный массив, содержащий данные цветовой модели RGBA, с целыми значениями от 0 до 255 (включительно).
+- {{domxref("ImageData.height")}} {{readonlyInline}}
+  - : Фактическая высота в пикселях объекта `ImageData`.
+- {{domxref("ImageData.width")}} {{readonlyInline}}
+  - : Фактическая ширина в пикселях объекта `ImageData`.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li>The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}.</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}}
+- The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}.

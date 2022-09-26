@@ -10,165 +10,145 @@ tags:
   - Событие
 translation_of: Web/API/Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Интерфейс <code><strong>Event</strong></code> представляет собой любое событие, которое происходит в <a href="/ru/docs/DOM/DOM_Reference">DOM</a>; некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе <code>Event</code>. <code>Event</code> содержит общие свойства и методы для всех событий.</p>
+Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/DOM/DOM_Reference); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
 
-<h2 id="Introduction">Интерфейсы, основанные на <code>Event</code></h2>
+## Интерфейсы, основанные на `Event`
 
-<p>Ниже приведён список интерфейсов, основанных на главном интерфейсе <code>Event</code>, а также указаны ссылки на них в документации MDN API. Заметьте, что имена всех интерфейсов оканчиваются на "Event".</p>
+Ниже приведён список интерфейсов, основанных на главном интерфейсе `Event`, а также указаны ссылки на них в документации MDN API. Заметьте, что имена всех интерфейсов оканчиваются на "Event".
 
-<div class="index">
-<ul>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>{{domxref("AudioProcessingEvent")}}</li>
- <li>{{domxref("BeforeInputEvent")}}</li>
- <li>{{domxref("BeforeUnloadEvent")}}</li>
- <li>{{domxref("BlobEvent")}}</li>
- <li>{{domxref("ClipboardEvent")}}</li>
- <li>{{domxref("CloseEvent")}}</li>
- <li>{{domxref("CompositionEvent")}}</li>
- <li>{{domxref("CSSFontFaceLoadEvent")}}</li>
- <li>{{domxref("CustomEvent")}}</li>
- <li>{{domxref("DeviceLightEvent")}}</li>
- <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>{{domxref("DeviceOrientationEvent")}}</li>
- <li>{{domxref("DeviceProximityEvent")}}</li>
- <li>{{domxref("DOMTransactionEvent")}}</li>
- <li>{{domxref("DragEvent")}}</li>
- <li>{{domxref("EditingBeforeInputEvent")}}</li>
- <li>{{domxref("ErrorEvent")}}</li>
- <li>{{domxref("FetchEvent")}}</li>
- <li>{{domxref("FocusEvent")}}</li>
- <li>{{domxref("GamepadEvent")}}</li>
- <li>{{domxref("HashChangeEvent")}}</li>
- <li>{{domxref("IDBVersionChangeEvent")}}</li>
- <li>{{domxref("InputEvent")}}</li>
- <li>{{domxref("KeyboardEvent")}}</li>
- <li>{{domxref("MediaStreamEvent")}}</li>
- <li>{{domxref("MessageEvent")}}</li>
- <li>{{domxref("MouseEvent")}}</li>
- <li>{{domxref("MutationEvent")}}</li>
- <li>{{domxref("OfflineAudioCompletionEvent")}}</li>
- <li>{{domxref("PageTransitionEvent")}}</li>
- <li>{{domxref("PointerEvent")}}</li>
- <li>{{domxref("PopStateEvent")}}</li>
- <li>{{domxref("ProgressEvent")}}</li>
- <li>{{domxref("RelatedEvent")}}</li>
- <li>{{domxref("RTCDataChannelEvent")}}</li>
- <li>{{domxref("RTCIdentityErrorEvent")}}</li>
- <li>{{domxref("RTCIdentityEvent")}}</li>
- <li>{{domxref("RTCPeerConnectionIceEvent")}}</li>
- <li>{{domxref("SensorEvent")}}</li>
- <li>{{domxref("StorageEvent")}}</li>
- <li>{{domxref("SVGEvent")}}</li>
- <li>{{domxref("SVGZoomEvent")}}</li>
- <li>{{domxref("TimeEvent")}}</li>
- <li>{{domxref("TouchEvent")}}</li>
- <li>{{domxref("TrackEvent")}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
- <li>{{domxref("UIEvent")}}</li>
- <li>{{domxref("UserProximityEvent")}}</li>
- <li>{{domxref("WebGLContextEvent")}}</li>
- <li>{{domxref("WheelEvent")}}</li>
-</ul>
-</div>
+- {{domxref("AnimationEvent")}}
+- {{domxref("AudioProcessingEvent")}}
+- {{domxref("BeforeInputEvent")}}
+- {{domxref("BeforeUnloadEvent")}}
+- {{domxref("BlobEvent")}}
+- {{domxref("ClipboardEvent")}}
+- {{domxref("CloseEvent")}}
+- {{domxref("CompositionEvent")}}
+- {{domxref("CSSFontFaceLoadEvent")}}
+- {{domxref("CustomEvent")}}
+- {{domxref("DeviceLightEvent")}}
+- {{domxref("DeviceMotionEvent")}}
+- {{domxref("DeviceOrientationEvent")}}
+- {{domxref("DeviceProximityEvent")}}
+- {{domxref("DOMTransactionEvent")}}
+- {{domxref("DragEvent")}}
+- {{domxref("EditingBeforeInputEvent")}}
+- {{domxref("ErrorEvent")}}
+- {{domxref("FetchEvent")}}
+- {{domxref("FocusEvent")}}
+- {{domxref("GamepadEvent")}}
+- {{domxref("HashChangeEvent")}}
+- {{domxref("IDBVersionChangeEvent")}}
+- {{domxref("InputEvent")}}
+- {{domxref("KeyboardEvent")}}
+- {{domxref("MediaStreamEvent")}}
+- {{domxref("MessageEvent")}}
+- {{domxref("MouseEvent")}}
+- {{domxref("MutationEvent")}}
+- {{domxref("OfflineAudioCompletionEvent")}}
+- {{domxref("PageTransitionEvent")}}
+- {{domxref("PointerEvent")}}
+- {{domxref("PopStateEvent")}}
+- {{domxref("ProgressEvent")}}
+- {{domxref("RelatedEvent")}}
+- {{domxref("RTCDataChannelEvent")}}
+- {{domxref("RTCIdentityErrorEvent")}}
+- {{domxref("RTCIdentityEvent")}}
+- {{domxref("RTCPeerConnectionIceEvent")}}
+- {{domxref("SensorEvent")}}
+- {{domxref("StorageEvent")}}
+- {{domxref("SVGEvent")}}
+- {{domxref("SVGZoomEvent")}}
+- {{domxref("TimeEvent")}}
+- {{domxref("TouchEvent")}}
+- {{domxref("TrackEvent")}}
+- {{domxref("TransitionEvent")}}
+- {{domxref("UIEvent")}}
+- {{domxref("UserProximityEvent")}}
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WheelEvent")}}
 
-<h2 id="Constructor">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("Event.Event", "Event()")}}</dt>
- <dd>Создаёт объект <code>Event</code> и возвращает его вызывающему.</dd>
-</dl>
+- {{domxref("Event.Event", "Event()")}}
+  - : Создаёт объект `Event` и возвращает его вызывающему.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("Event.bubbles")}} {{readonlyinline}}</dt>
- <dd>Логическое значение, указывающее, всплыло ли событие вверх по DOM или нет.</dd>
- <dt>{{domxref("Event.cancelBubble")}}</dt>
- <dd>Историческое название синонима {{domxref("Event.stopPropagation()")}}. Если установить значение в <code>true</code> до возврата из обработчика события (Event Handler), то событие не будет распространяться дальше (например, на обработчики для родительских узлов).</dd>
- <dt>{{domxref("Event.cancelable")}} {{readonlyinline}}</dt>
- <dd>Логическое значение, показывающее возможность отмены события.</dd>
- <dt>{{domxref("Event.composed")}} {{ReadOnlyInline}}</dt>
- <dd>Логическое значение, показывающее может или нет событие всплывать через границы между shadow DOM (внутренний DOM конкретного элемента) и обычного DOM документа.</dd>
- <dt>{{domxref("Event.currentTarget")}} {{readonlyinline}}</dt>
- <dd>Ссылка на текущий зарегистрированный объект, на котором обрабатывается событие. Это объект, которому планируется отправка события; поведение можно изменить с использованием перенаправления (<em>retargeting</em>).</dd>
- <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
- <dd>{{jsxref("Array", "Массив")}} DOM-{{domxref("Node", "узлов")}}, через которые всплывало событие.</dd>
- <dt>{{domxref("Event.defaultPrevented")}} {{readonlyinline}}</dt>
- <dd>Показывает, была ли для события вызвана функция {{domxref("event.preventDefault()")}}.</dd>
- <dt>{{domxref("Event.eventPhase")}} {{readonlyinline}}</dt>
- <dd>Указывает фазу процесса обработки события.</dd>
- <dt>{{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Явный первоначальный целевой объект события (Mozilla-специфичный). Не может содержать <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">анонимного контента</a>.</dd>
- <dt>{{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Первоначальный целевой объект события до перенаправлений (Mozilla-специфичный). Может быть из <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">анонимного контента</a>.</dd>
- <dt>{{domxref("Event.returnValue")}} {{non-standard_inline}}</dt>
- <dd>Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.</dd>
- <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}</dt>
- <dd>{{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в  {{domxref("Event.composed", "composed")}}.</dd>
- <dt>{{domxref("Event.srcElement")}} {{non-standard_inline}}</dt>
- <dd>Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.</dd>
- <dt>{{domxref("Event.target")}} {{readonlyinline}}</dt>
- <dd>Ссылка на целевой объект, на котором произошло событие.</dd>
- <dt>{{domxref("Event.timeStamp")}} {{readonlyinline}}</dt>
- <dd>Время, когда событие было создано (в миллисекундах). По спецификации это время от начала Эпохи (Unix Epoch), но в действительности в разных браузерах определяется по-разному; кроме того, ведётся работа по изменению его на {{domxref("DOMHighResTimeStamp")}} тип.</dd>
- <dt>{{domxref("Event.type")}} {{readonlyinline}}</dt>
- <dd>Название события (без учёта регистра символов).</dd>
- <dt>{{domxref("Event.isTrusted")}} {{readonlyinline}}</dt>
- <dd>Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как <a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a>)</dd>
-</dl>
+- {{domxref("Event.bubbles")}} {{readonlyinline}}
+  - : Логическое значение, указывающее, всплыло ли событие вверх по DOM или нет.
+- {{domxref("Event.cancelBubble")}}
+  - : Историческое название синонима {{domxref("Event.stopPropagation()")}}. Если установить значение в `true` до возврата из обработчика события (Event Handler), то событие не будет распространяться дальше (например, на обработчики для родительских узлов).
+- {{domxref("Event.cancelable")}} {{readonlyinline}}
+  - : Логическое значение, показывающее возможность отмены события.
+- {{domxref("Event.composed")}} {{ReadOnlyInline}}
+  - : Логическое значение, показывающее может или нет событие всплывать через границы между shadow DOM (внутренний DOM конкретного элемента) и обычного DOM документа.
+- {{domxref("Event.currentTarget")}} {{readonlyinline}}
+  - : Ссылка на текущий зарегистрированный объект, на котором обрабатывается событие. Это объект, которому планируется отправка события; поведение можно изменить с использованием перенаправления (_retargeting_).
+- {{domxref("Event.deepPath")}} {{non-standard_inline}}
+  - : {{jsxref("Array", "Массив")}} DOM-{{domxref("Node", "узлов")}}, через которые всплывало событие.
+- {{domxref("Event.defaultPrevented")}} {{readonlyinline}}
+  - : Показывает, была ли для события вызвана функция {{domxref("event.preventDefault()")}}.
+- {{domxref("Event.eventPhase")}} {{readonlyinline}}
+  - : Указывает фазу процесса обработки события.
+- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Явный первоначальный целевой объект события (Mozilla-специфичный). Не может содержать [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
+- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Первоначальный целевой объект события до перенаправлений (Mozilla-специфичный). Может быть из [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
+- {{domxref("Event.returnValue")}} {{non-standard_inline}}
+  - : Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.
+- {{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}
+  - : {{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в {{domxref("Event.composed", "composed")}}.
+- {{domxref("Event.srcElement")}} {{non-standard_inline}}
+  - : Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.
+- {{domxref("Event.target")}} {{readonlyinline}}
+  - : Ссылка на целевой объект, на котором произошло событие.
+- {{domxref("Event.timeStamp")}} {{readonlyinline}}
+  - : Время, когда событие было создано (в миллисекундах). По спецификации это время от начала Эпохи (Unix Epoch), но в действительности в разных браузерах определяется по-разному; кроме того, ведётся работа по изменению его на {{domxref("DOMHighResTimeStamp")}} тип.
+- {{domxref("Event.type")}} {{readonlyinline}}
+  - : Название события (без учёта регистра символов).
+- {{domxref("Event.isTrusted")}} {{readonlyinline}}
+  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/DOM/event.initEvent))
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<p> </p>
+- {{domxref("Event.createEvent()")}}
 
-<dl>
- <dt>{{domxref("Event.createEvent()")}} </dt>
- <dd>
- <p>Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода <code>initEvent()</code>.</p>
- </dd>
-</dl>
+  - : Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода `initEvent()`.
 
-<p> </p>
+- {{domxref("Event.initEvent()")}} {{deprecated_inline}}
+  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent "Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent.") события. Если событие уже отправлено, то эта функция ничего не делает.
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+  - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+  - : Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
+- {{domxref("Event.preventDefault()")}}
+  - : Отменяет событие (если его возможно отменить).
+- {{domxref("Event.stopImmediatePropagation()")}}
+  - : Для конкретного события не будет больше вызвано обработчиков. Ни тех, которые привязаны к этому же элементу (на котором работает обработчик, который вызывает этот Event.stopImmediatePropagation()), ни других, которые могли бы вызваться при распространении события позже (например, в фазе перехвата - capture).
+- {{domxref("Event.stopPropagation()")}}
+  - : Остановка распространения события далее по DOM.
+- {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}
+  - : Нестандартная. Возвращает значение {{domxref("Event.defaultPrevented")}}. Используйте вместо неё {{domxref("Event.defaultPrevented")}}.
 
-<dl>
- <dt>{{domxref("Event.initEvent()")}} {{deprecated_inline}}</dt>
- <dd>Инициализация значений созданного с помощью <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent" title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent.">Document.createEvent()</a> события. Если событие уже отправлено, то эта функция ничего не делает.</dd>
- <dt>{{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}</dt>
- <dd>Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.</dd>
- <dt>{{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}</dt>
- <dd>Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.</dd>
- <dt>{{domxref("Event.preventDefault()")}}</dt>
- <dd>Отменяет событие (если его возможно отменить).</dd>
- <dt>{{domxref("Event.stopImmediatePropagation()")}}</dt>
- <dd>Для конкретного события не будет больше вызвано обработчиков. Ни тех, которые привязаны к этому же элементу (на котором работает обработчик, который вызывает этот Event.stopImmediatePropagation()), ни других, которые могли бы вызваться при распространении события позже (например, в фазе перехвата - capture).</dd>
- <dt>{{domxref("Event.stopPropagation()")}}</dt>
- <dd>Остановка распространения события далее по DOM.</dd>
- <dt>{{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}</dt>
- <dd>Нестандартная. Возвращает значение {{domxref("Event.defaultPrevented")}}. Используйте вместо неё {{domxref("Event.defaultPrevented")}}.</dd>
-</dl>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Типы событий: <a href="/en-US/docs/Web/Reference/Events">Event reference</a></li>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Сравнение Event Targets</a> (target и currentTarget и relatedTarget и originalTarget)</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
- <li>Для разработчиков дополнений Firefox:
-  <ul>
-   <li><a href="/en-US/docs/Listening_to_events_in_Firefox_extensions">Listening to events in Firefox extensions</a></li>
-   <li><a href="/en-US/docs/Listening_to_events_on_all_tabs">Listening to events on all tabs</a></li>
-  </ul>
- </li>
- <li><a class="link-https" href="https://wiki.mozilla.org/Events">Mozilla related events in real life at wiki.mozilla.org</a></li>
-</ul>
+- Типы событий: [Event reference](/ru/docs/Web/Reference/Events)
+- [Сравнение Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets) (target и currentTarget и relatedTarget и originalTarget)
+- [Creating and triggering custom events](/ru/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- Для разработчиков дополнений Firefox:
+
+  - [Listening to events in Firefox extensions](/ru/docs/Listening_to_events_in_Firefox_extensions)
+  - [Listening to events on all tabs](/ru/docs/Listening_to_events_on_all_tabs)
+
+- [Mozilla related events in real life at wiki.mozilla.org](https://wiki.mozilla.org/Events)

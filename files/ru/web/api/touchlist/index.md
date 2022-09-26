@@ -3,43 +3,35 @@ title: TouchList
 slug: Web/API/TouchList
 translation_of: Web/API/TouchList
 ---
-<div>{{ APIRef("Touch Events") }}</div>
+{{ APIRef("Touch Events") }}
 
-<p>Интерфейс <strong><code>TouchList</code></strong> представляет собой список точек касаний сенсорной поверхности. Например, если пользователь коснулся сенсорной поверхности (такой как экран или трекпад) тремя пальцами, соответствующий объект <code>TouchList</code> будет содержать по одному объекту {{domxref("Touch")}} для каждого пальца, всего три объекта.</p>
+Интерфейс **`TouchList`** представляет собой список точек касаний сенсорной поверхности. Например, если пользователь коснулся сенсорной поверхности (такой как экран или трекпад) тремя пальцами, соответствующий объект `TouchList` будет содержать по одному объекту {{domxref("Touch")}} для каждого пальца, всего три объекта.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("TouchList.length")}} {{readonlyInline}}</dt>
- <dd>Количество объектов {{domxref("Touch")}} в <code>TouchList</code>.</dd>
-</dl>
+- {{domxref("TouchList.length")}} {{readonlyInline}}
+  - : Количество объектов {{domxref("Touch")}} в `TouchList`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("TouchList.identifiedTouch()")}} {{obsolete_inline}}</dt>
- <dd>Возвращает первый объект {{domxref("Touch")}} из списка, чей идентификатор соответствует заданному значению.</dd>
- <dt>{{domxref("TouchList.item()")}}</dt>
- <dd>Возвращает объект {{domxref("Touch")}}, находящийся в списке по указанному индексу</dd>
-</dl>
+- {{domxref("TouchList.identifiedTouch()")}} {{obsolete_inline}}
+  - : Возвращает первый объект {{domxref("Touch")}} из списка, чей идентификатор соответствует заданному значению.
+- {{domxref("TouchList.item()")}}
+  - : Возвращает объект {{domxref("Touch")}}, находящийся в списке по указанному индексу
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>С примером можно ознакомиться в основной статье про <a href="/ru/docs/Web/API/Touch_events">События касаний (тач-события)</a></p>
+С примером можно ознакомиться в основной статье про [События касаний (тач-события)](/ru/docs/Web/API/Touch_events)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+## Доступность в браузерах
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/API/Touch_events">События касаний (тач-события)</a></li>
- <li>{{domxref("Document.createTouchList()")}}</li>
-</ul>
+- [События касаний (тач-события)](/ru/docs/Web/API/Touch_events)
+- {{domxref("Document.createTouchList()")}}

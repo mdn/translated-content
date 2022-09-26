@@ -3,37 +3,30 @@ title: Window.blur()
 slug: Web/API/Window/blur
 translation_of: Web/API/Window/blur
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Убирает фокус с окна.</p>
+Убирает фокус с окна.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code>window.blur()</code></pre>
+```
+window.blur()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">window.blur();</pre>
+```js
+window.blur();
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Метод window.blur() является программным эквивалентом действия, когда пользователь переключает фокус с текущего окна.</p>
+Метод window\.blur() является программным эквивалентом действия, когда пользователь переключает фокус с текущего окна.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','interaction.html#dom-window-blur','Window.blur()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                           | Комментарий |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','interaction.html#dom-window-blur','Window.blur()')}} | {{Spec2('HTML WHATWG')}} |             |

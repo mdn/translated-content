@@ -4,30 +4,30 @@ slug: Web/API/HTMLDialogElement/close_event
 translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Обработчик события для событий закрытия, отправляется в окно. (Не доступен в Firefox 2 или Safari)</p>
+Обработчик события для событий закрытия, отправляется в окно. (Не доступен в Firefox 2 или Safari)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.onclose = funcRef;
-</pre>
+```
+window.onclose = funcRef;
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>funcRef</code> является ссылкой на функцию.</li>
-</ul>
+- `funcRef` является ссылкой на функцию.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">window.onclose = resetThatServerThing;
-</pre>
+```js
+window.onclose = resetThatServerThing;
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

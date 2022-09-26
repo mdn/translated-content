@@ -9,66 +9,66 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong>, предоставляемый Canvas 2D API, рисует залитый прямоугольник в позиции <em>(x, y),</em> размер которого определяется аргументами <em>width</em> и <em>height</em>, и стиль которого определяется атрибутом {{domxref("CanvasRenderingContext2D.fillStyle", "<code>fillStyle</code>")}}.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.fillRect()`\*\*, предоставляемый Canvas 2D API, рисует залитый прямоугольник в позиции _(x, y),_ размер которого определяется аргументами _width_ и _height_, и стиль которого определяется атрибутом {{domxref("CanvasRenderingContext2D.fillStyle", "<code>fillStyle</code>")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillRect(x, y, width, height);</var>
-</pre>
+```
+void ctx.fillRect(x, y, width, height);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Координата начальной точки прямоугольника по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата начальной точки прямоугольника по оси y.</dd>
- <dt><code>width</code></dt>
- <dd>Ширина прямоугольника.</dd>
- <dt><code>height</code></dt>
- <dd>Высота прямоугольника.</dd>
-</dl>
+- `x`
+  - : Координата начальной точки прямоугольника по оси x.
+- `y`
+  - : Координата начальной точки прямоугольника по оси y.
+- `width`
+  - : Ширина прямоугольника.
+- `height`
+  - : Высота прямоугольника.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_fillRect">Использование метода <code>fillRect</code></h3>
+### Использование метода `fillRect`
 
-<p>Ниже представлен простой фрагмент кода, использующий метод <code>fillRect</code>.</p>
+Ниже представлен простой фрагмент кода, использующий метод `fillRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // залить canvas целиком
 // ctx.fillRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -91,24 +91,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

@@ -3,31 +3,36 @@ title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
 translation_of: Web/API/Window/sessionStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p><code>Свойство sessionStorage</code> позволяет получить доступ к объекту {{domxref("Storage")}} текущей сессии. Свойство sessionStorage очень похоже на свойство {{domxref("Window.localStorage")}}, единственное различие заключается в том, что все данные, сохранённые в localStorage не имеют определённого времени жизни, а данные в sessionStorage очищаются в момент окончания сессии текущий страницы. Сессия страницы остаётся активной все время пока окно браузера открыто и сохраняется между перезагрузками страниц. <strong>Открытие той же страницы в новом окне браузера или новой вкладке приводит к созданию новой сессии страницы, </strong>что отличается от поведения session cookies<strong>.</strong></p>
+`Свойство sessionStorage` позволяет получить доступ к объекту {{domxref("Storage")}} текущей сессии. Свойство sessionStorage очень похоже на свойство {{domxref("Window.localStorage")}}, единственное различие заключается в том, что все данные, сохранённые в localStorage не имеют определённого времени жизни, а данные в sessionStorage очищаются в момент окончания сессии текущий страницы. Сессия страницы остаётся активной все время пока окно браузера открыто и сохраняется между перезагрузками страниц. **Открытие той же страницы в новом окне браузера или новой вкладке приводит к созданию новой сессии страницы,** что отличается от поведения session cookies**.**
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">// Сохранение данных в sessionStorage
+```js
+// Сохранение данных в sessionStorage
 sessionStorage.setItem('key', 'value');
 
 // Получение данных из sessionStorage
-var data = sessionStorage.getItem('key');</pre>
+var data = sessionStorage.getItem('key');
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект типа {{domxref("Storage")}}.</p>
+Объект типа {{domxref("Storage")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код получает доступ к объекту {{domxref("Storage")}}  текущей сессии домена и добавляет данные в него используя {{domxref("Storage.setItem()")}}.</p>
+Следующий код получает доступ к объекту {{domxref("Storage")}} текущей сессии домена и добавляет данные в него используя {{domxref("Storage.setItem()")}}.
 
-<pre class="brush: js">sessionStorage.setItem('myCat', 'Tom');</pre>
+```js
+sessionStorage.setItem('myCat', 'Tom');
+```
 
-<p>Следующий пример автоматически сохраняет содержимое текстового поля. Если страница случайно будет обновлена значение  текстового поля будет восстановлено. Таким образом ничего из введённого пользователем не потеряется даже в этом случае.</p>
+Следующий пример автоматически сохраняет содержимое текстового поля. Если страница случайно будет обновлена значение текстового поля будет восстановлено. Таким образом ничего из введённого пользователем не потеряется даже в этом случае.
 
-<pre class="brush: js">// Получаем ссылку на текстовое поле,
+```js
+// Получаем ссылку на текстовое поле,
 // изменение которого будем отслеживать.
 var field = document.getElementById("field");
 
@@ -42,25 +47,20 @@ if (sessionStorage.getItem("autosave")) {
 field.addEventListener("change", function() {
   // И сохраняем их в объект session storage
   sessionStorage.setItem("autosave", field.value);
-});</pre>
+});
+```
 
-<p> </p>
+> **Примечание:** **Замечание**: Обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), чтобы изучить полный пример.
 
-<div class="note">
-<p><strong>Замечание</strong>: Обратитесь к статье <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a>, чтобы изучить полный пример.</p>
-</div>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li>{{domxref("Window.localStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("Window.localStorage")}}

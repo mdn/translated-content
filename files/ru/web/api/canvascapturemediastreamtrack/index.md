@@ -3,57 +3,36 @@ title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
 translation_of: Web/API/CanvasCaptureMediaStreamTrack
 ---
-<div>{{APIRef ("захват мультимедиа и потоки")}}</div>
+{{APIRef ("захват мультимедиа и потоки")}}
 
-<p><strong><code>CanvasCaptureMediaStreamTrack</code></strong>Интерфейс представляет собой видеодорожку, содержащуюся в {{domxref ("MediaStream")}}, генерируемую из {{HTMLElement ("canvas")}} после вызова {{domxref ("HTMLCanvasElement.captureStream ()")}}.</p>
+**`CanvasCaptureMediaStreamTrack`**Интерфейс представляет собой видеодорожку, содержащуюся в {{domxref ("MediaStream")}}, генерируемую из {{HTMLElement ("canvas")}} после вызова {{domxref ("HTMLCanvasElement.captureStream ()")}}.
 
-<p>Часть <a href="/en-US/docs/Web/API/Media_Streams_API">API захвата мультимедиа и потоков</a>.</p>
+Часть [API захвата мультимедиа и потоков](/ru/docs/Web/API/Media_Streams_API).
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс наследует свойства своего родителя, {{domxref ("MediaStreamTrack")}}.</em></p>
+_Этот интерфейс наследует свойства своего родителя, {{domxref ("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref ("CanvasCaptureMediaStreamTrack.холст")}} {{readonlyInline}}</dt>
- <dd>Возвращает объект {{domxref ("HTMLCanvasElement")}}, поверхность которого захватывается в режиме реального времени.</dd>
-</dl>
+- {{domxref ("CanvasCaptureMediaStreamTrack.холст")}} {{readonlyInline}}
+  - : Возвращает объект {{domxref ("HTMLCanvasElement")}}, поверхность которого захватывается в режиме реального времени.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс наследует методы своего родителя, {{domxref ("MediaStreamTrack")}}.</em></p>
+_Этот интерфейс наследует методы своего родителя, {{domxref ("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref ("CanvasCaptureMediaStreamTrack.requestFrame()")}}</dt>
- <dd>Вручную заставляет кадр быть захваченным и отправленным в поток. Это позволяет приложениям, которые хотят непосредственно указать время захвата кадра, сделать это, если они указали a <code>frameRate</code>из 0 при вызове {{domxref ("HTMLCanvasElement.captureStream", " captureStream ()")}}.</dd>
-</dl>
+- {{domxref ("CanvasCaptureMediaStreamTrack.requestFrame()")}}
+  - : Вручную заставляет кадр быть захваченным и отправленным в поток. Это позволяет приложениям, которые хотят непосредственно указать время захвата кадра, сделать это, если они указали a `frameRate`из 0 при вызове {{domxref ("HTMLCanvasElement.captureStream", " captureStream ()")}}.
 
-<h2 id="Технические_характеристики">Технические характеристики</h2>
+## Технические характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName ('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}}</td>
-   <td>{{Spec2 ('Media Captiondom Elements')}}</td>
-   <td>Исходное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                                             | Статус                                               | Комментарий          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
+| {{SpecName ('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}} | {{Spec2 ('Media Captiondom Elements')}} | Исходное определение |
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<div>
-<p>{{Compat ("api.CanvasCaptureMediaStreamTrack")}}</p>
-</div>
+{{Compat ("api.CanvasCaptureMediaStreamTrack")}}
 
-<h2 id="Смотреть_также">Смотреть также</h2>
+## Смотреть также
 
-<ul>
- <li>{{domxref ("HTMLCanvasElement.captureStream ()")}} чтобы начать захват кадров с холста</li>
-</ul>
+- {{domxref ("HTMLCanvasElement.captureStream ()")}} чтобы начать захват кадров с холста

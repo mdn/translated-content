@@ -3,47 +3,43 @@ title: Window.frameElement
 slug: Web/API/Window/frameElement
 translation_of: Web/API/Window/frameElement
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div> </div>
+## Сводка
 
-<h2 id="Summary">Сводка</h2>
+Возвращает элемент (например `<iframe>` или ` <object>), в который встроено окно, или ``null, если это окно верхнего уровня. `
 
-<p>Возвращает элемент (например <code>&lt;iframe&gt;</code> или <code>&lt;object&gt;), в который встроено окно, или </code> <code>null, если это окно верхнего уровня.</code></p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+frameEl = window.frameElement;
+```
 
-<pre class="syntaxbox"><var>frameEl</var> = window.frameElement;
-</pre>
+- `frameEl` это элемент, в который встроено окно, или `null, если это окно верхнего уровня`
 
-<ul>
- <li><code>frameEl</code> это элемент, в который встроено окно, или  <code>null, если это окно верхнего уровня</code></li>
-</ul>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:js">var frameEl = window.frameElement;
+```js
+var frameEl = window.frameElement;
 // Если мы внутри фрейма, то изменить его URL на 'http://mozilla.org/'
 if (frameEl) {
   frameEl.src = 'http://mozilla.org/';
 }
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Заметьте, что несмотря на своё имя, свойство также работает для документов внутри <code>&lt;object&gt;</code> и других встраиваемых элементов.</p>
+Заметьте, что несмотря на своё имя, свойство также работает для документов внутри `<object>` и других встраиваемых элементов.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><a href="http://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement">WHATWG</a></p>
+[WHATWG](http://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("window.frames")}} возвращает массивоподобный объект, включающий список прямых суб-фреймов данного окна.</li>
- <li>{{domxref("window.parent")}} возвращает родительское окно, которое является окном, содержащим frameElement дочернего окна. </li>
-</ul>
+- {{domxref("window.frames")}} возвращает массивоподобный объект, включающий список прямых суб-фреймов данного окна.
+- {{domxref("window.parent")}} возвращает родительское окно, которое является окном, содержащим frameElement дочернего окна.

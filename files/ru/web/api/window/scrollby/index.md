@@ -3,51 +3,38 @@ title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 translation_of: Web/API/Window/scrollBy
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Прокручивает документ на указанные величины.</p>
+Прокручивает документ на указанные величины.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">window.scrollBy(<em>X</em>, <em>Y</em>);
-</pre>
+```
+window.scrollBy(X, Y);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>X</code> - смещение в пикселях по горизонтали.</li>
- <li><code>Y</code> - смещение в пикселях по вертикали.</li>
-</ul>
+- `X` - смещение в пикселях по горизонтали.
+- `Y` - смещение в пикселях по вертикали.
 
-<p>Положительные значения приведут к прокрутке страницы вправо и вниз. Отрицательные координаты прокрутят страницу влево и вверх.</p>
+Положительные значения приведут к прокрутке страницы вправо и вниз. Отрицательные координаты прокрутят страницу влево и вверх.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">// Прокрутка на один экран вертикально вниз.
+```
+// Прокрутка на один экран вертикально вниз.
 window.scrollBy(0, window.innerHeight);
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p><a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a> прокручивает страницу на указанное количество пикселей, в то время как метод <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a> указывает абсолютную позицию в документе, на которую надо сместиться. Смотрите также <a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a></p>
+[window.scrollBy](/ru/docs/DOM/Window.scrollBy) прокручивает страницу на указанное количество пикселей, в то время как метод [window.scroll](/ru/docs/DOM/Window.scroll) указывает абсолютную позицию в документе, на которую надо сместиться. Смотрите также [window.scrollByLines](/ru/docs/DOM/Window.scrollByLines), [window.scrollByPages](/ru/docs/DOM/Window.scrollByPages)
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Исходное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                     | Статус                           | Комментарий           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Исходное определение. |

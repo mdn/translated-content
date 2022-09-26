@@ -10,66 +10,66 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.</p>
+**`CanvasRenderingContext2D`\*\***`.fill()`\*\* метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fill([fillRule]);</var>
-void <var><em>ctx</em>.fill(path[, fillRule]);</var>
-</pre>
+```
+void ctx.fill([fillRule]);
+void ctx.fill(path[, fillRule]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>Выбор алгоритма заливки фигуры<br>
- Возможные значения:
- <ul>
-  <li><code><strong>"nonzero</strong></code>": <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0">Правило ненулевого индекса</a>, значение по умолчанию</li>
-  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">Чётно-нечётное правило</a></li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>{{domxref("Path2D")}} путь для заливки.</dd>
-</dl>
+- `fillRule`
 
-<h2 id="Пример">Пример</h2>
+  - : Выбор алгоритма заливки фигуры
+    Возможные значения:
 
-<h3 id="Использование_метода_fill">Использование метода <code>fill</code></h3>
+    - **`"nonzero`**": [Правило ненулевого индекса](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0), значение по умолчанию
+    - **`"evenodd"`**: [Чётно-нечётное правило](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)
 
-<p>Это всего лишь простой фрагмент кода, который использует метод <code>fill</code> для заполнения пути.</p>
+- `path`
+  - : {{domxref("Path2D")}} путь для заливки.
 
-<h4 id="HTML">HTML</h4>
+## Пример
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### Использование метода `fill`
 
-<h4 id="JavaScript">JavaScript</h4>
+Это всего лишь простой фрагмент кода, который использует метод `fill` для заполнения пути.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:</p>
+Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,33 +92,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Характеристика</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Характеристика                                                                                                                       | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Совместимость">Совместимость</h2>
-<p>{{Compat}}</p>
+## Совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Интерфейс определяющий этот метод, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+## Смотрите также
+
+- Интерфейс определяющий этот метод, {{domxref("CanvasRenderingContext2D")}}.

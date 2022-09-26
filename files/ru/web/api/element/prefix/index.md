@@ -4,34 +4,32 @@ slug: Web/API/Element/prefix
 translation_of: Web/API/Node/prefix
 original_slug: Web/API/Node/prefix
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.prefix</strong></code> только для чтения, возвращающее префикс пространства имён указанного узла или <code>null,</code> если не указан префикс. Это свойство только для чтения.</p>
+Свойство **`Node.prefix`** только для чтения, возвращающее префикс пространства имён указанного узла или `null,` если не указан префикс. Это свойство только для чтения.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>string</var> = element.prefix
-</pre>
+```
+string = element.prefix
+```
 
-<h2 id="Examples">Пример</h2>
+## Пример
 
-<p>Следующее выражение выведет "x".</p>
+Следующее выражение выведет "x".
 
-<pre class="brush:xml">&lt;x:div onclick="alert(this.prefix)"/&gt;
-</pre>
+```xml
+<x:div onclick="alert(this.prefix)"/>
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Это будет работать только когда используется соответствующий парсер пространства имен. т.е. когда документ обработан как XML mime-type. Это не будет работать для документов HTML.</p>
+Это будет работать только когда используется соответствующий парсер пространства имен. т.е. когда документ обработан как XML mime-type. Это не будет работать для документов HTML.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeNSPrefix">Node.prefix</a> (введено в употребление в DOM2)</li>
-</ul>
+- [Node.prefix](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeNSPrefix) (введено в употребление в DOM2)
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

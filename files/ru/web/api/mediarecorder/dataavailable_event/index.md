@@ -4,32 +4,30 @@ slug: Web/API/MediaRecorder/dataavailable_event
 translation_of: Web/API/MediaRecorder/ondataavailable
 original_slug: Web/API/MediaRecorder/ondataavailable
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p><strong><code>MediaRecorder.ondataavailable </code></strong>обработчик события (часть <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a>) обрабатывает {{event("dataavailable")}} событие, позволяет выполнить код, когда тип данных  {{domxref("Blob")}}, представляющий обработанные данные становиться доступным для использования.</p>
+**`MediaRecorder.ondataavailable `**обработчик события (часть [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)) обрабатывает {{event("dataavailable")}} событие, позволяет выполнить код, когда тип данных {{domxref("Blob")}}, представляющий обработанные данные становиться доступным для использования.
 
-<p>Событие <code>dataavailable</code> вызывается когда MediaRecorder доставляет медиа данные в ваше приложение для использования. Они представляются в виде объекта типа  {{domxref("Blob")}}, содержащего данные. Это происходит в четырёх ситуациях:</p>
+Событие `dataavailable` вызывается когда MediaRecorder доставляет медиа данные в ваше приложение для использования. Они представляются в виде объекта типа {{domxref("Blob")}}, содержащего данные. Это происходит в четырёх ситуациях:
 
-<ul>
- <li>Когда медиа поток завершается, любые мультимедийные данные ещё не доставленные в обработчик <code>ondataavailable</code> немедленно передаются в объект {{domxref("Blob")}}.</li>
- <li>При вызове метода  {{domxref("MediaRecorder.stop()")}} , порция медиаданных, объем которых был захвачен с момента начала записи или после последнего вызова события <code>dataavailable</code> помещаются в объект  {{domxref("Blob")}};  после этого захват завершается.</li>
- <li>При вызове метода {{domxref("MediaRecorder.requestData()")}} порция медиаданных, объем которых был захвачен с момента начала записи, или после последнего вызова события <code>dataavailable</code> помещаются в вновь созданный объект типа <code>Blob</code> , и захват порций медиаданных продолжается уже в этот новый объект <code>blob</code>.</li>
- <li>Если свойство  <code>timeslice</code> передаётся в метод {{domxref("MediaRecorder.start()")}}, который запускает захват порций медиаданных, событие  <code>dataavailable</code> запускается каждые <code>timeslice</code> миллисекунд. Это значит, что каждый объект типа <code>blob</code> будет иметь специфический размер (за исключением последнего, который может быть короче, содержащий все, что осталось с момента последнего события ). Поэтому, если метод выглядит так : <code>recorder.start(1000);</code> то событие  <code>dataavailable</code> будет запускаться каждую секунду общего потока медиа захвата, и обработчик события будет вызываться каждую секунду, содержащий в параметре объект типа  <code>blob</code> , который будет содержать объем порции записи медиаданных продолжительностью в одну секунду. Можно использовать свойство  <code>timeslice</code> вместе с {{domxref("MediaRecorder.stop()")}} и {{domxref("MediaRecorder.requestData()")}} для создания нескольких объектов типа<code> blob</code> одинакового объёма данных , плюс последние короткие объекты типа<code> blob.</code></li>
-</ul>
+- Когда медиа поток завершается, любые мультимедийные данные ещё не доставленные в обработчик `ondataavailable` немедленно передаются в объект {{domxref("Blob")}}.
+- При вызове метода {{domxref("MediaRecorder.stop()")}} , порция медиаданных, объем которых был захвачен с момента начала записи или после последнего вызова события `dataavailable` помещаются в объект {{domxref("Blob")}}; после этого захват завершается.
+- При вызове метода {{domxref("MediaRecorder.requestData()")}} порция медиаданных, объем которых был захвачен с момента начала записи, или после последнего вызова события `dataavailable` помещаются в вновь созданный объект типа `Blob` , и захват порций медиаданных продолжается уже в этот новый объект `blob`.
+- Если свойство `timeslice` передаётся в метод {{domxref("MediaRecorder.start()")}}, который запускает захват порций медиаданных, событие `dataavailable` запускается каждые `timeslice` миллисекунд. Это значит, что каждый объект типа `blob` будет иметь специфический размер (за исключением последнего, который может быть короче, содержащий все, что осталось с момента последнего события ). Поэтому, если метод выглядит так : `recorder.start(1000);` то событие `dataavailable` будет запускаться каждую секунду общего потока медиа захвата, и обработчик события будет вызываться каждую секунду, содержащий в параметре объект типа `blob` , который будет содержать объем порции записи медиаданных продолжительностью в одну секунду. Можно использовать свойство `timeslice` вместе с {{domxref("MediaRecorder.stop()")}} и {{domxref("MediaRecorder.requestData()")}} для создания нескольких объектов типа` blob` одинакового объёма данных , плюс последние короткие объекты типа` blob.`
 
-<div class="note">
-<p>Медиаданные, содержащиеся в объекте типа {{domxref("Blob")}} доступны в свойстве <code>data</code> , возвращаемого в параметре объекта события {{event("dataavailable")}}.</p>
-</div>
+> **Примечание:** Медиаданные, содержащиеся в объекте типа {{domxref("Blob")}} доступны в свойстве `data` , возвращаемого в параметре объекта события {{event("dataavailable")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>MediaRecorder</em>.ondataavailable = function(event) { ... }
-<em>MediaRecorder</em>.addEventListener('dataavailable', function(event) { ... })
-</pre>
+```
+MediaRecorder.ondataavailable = function(event) { ... }
+MediaRecorder.addEventListener('dataavailable', function(event) { ... })
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js" id="line1">...
+```js
+...
 
   mediaRecorder.onstop = function(e) {
     console.log("data available after MediaRecorder.stop() called.");
@@ -47,23 +45,19 @@ original_slug: Web/API/MediaRecorder/ondataavailable
   }
 
 ...
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">Использование интерфейса записи медиапотока</a></li>
- <li><a href="http://mdn.github.io/web-dictaphone/">Веб диктофон</a>: MediaRecorder + getUserMedia + Web Audio API пример визуализации, от <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">Демонстрационный пример записи медиапотока</a>, от <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Использование интерфейса записи медиапотока](/ru/docs/Web/API/MediaStream_Recording_API)
+- [Веб диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API пример визуализации, от [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [Демонстрационный пример записи медиапотока](http://simpl.info/mediarecorder/), от [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

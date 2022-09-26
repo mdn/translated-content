@@ -5,398 +5,324 @@ tags:
   - DOM
 translation_of: Web/API/Document
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
+Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core "Using_the_W3C_DOM_Level_1_Core") - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
+Объект **document** может быть получен из разных API:
 
-<p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).</p>
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script "HTML/Element/Script") которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Через свойство [`contentDocument`](/en-US/docs/Web/API/HTMLIFrameElement#Properties "DOM/HTMLIFrameElement#Properties") объекта iframe.
+- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML "XMLHttpRequest#responseXML") объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest "XMLHttpRequest")
+- Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
-<p>Объект <strong>document</strong> может быть получен из разных API:</p>
+В зависимости от вида документа (т.е. [HTML](/ru/docs/HTML "HTML") или [XML](/ru/docs/XML "XML")) у объекта **document** могут быть доступны разные API.
 
-<ul>
- <li>Чаще всего используется прямой доступ к объекту <strong>document</strong> из сценариев <a href="/en-US/docs/HTML/Element/Script" title="HTML/Element/Script">scripts</a> которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)</li>
- <li>Через свойство <code><a href="/en-US/docs/Web/API/HTMLIFrameElement#Properties" title="DOM/HTMLIFrameElement#Properties">contentDocument</a></code> объекта iframe.</li>
- <li>Как ответ <a href="/en-US/docs/Web/API/XMLHttpRequest#responseXML" title="XMLHttpRequest#responseXML"><code>responseXML</code></a> объекта  <a href="/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest"><code>XMLHttpRequest.</code></a></li>
- <li>Доступ к документу может быть получен из элемента или узла через свойство  {{domxref("Node.ownerDocument","ownerDocument")}}.</li>
-</ul>
+- Все объекты документов реализуют интерфейс [`Document`](http://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
+- В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
+- В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.
 
-<p>В зависимости от вида документа (т.е. <a href="/en-US/docs/HTML" title="HTML">HTML</a> или <a href="/en-US/docs/XML" title="XML">XML</a>) у объекта <strong>document</strong> могут быть доступны разные API.</p>
+В будущем все эти интерфейсы будут сведены в один интерфейс - `Document`.
 
-<ul>
- <li>Все объекты документов реализуют интерфейс <a href="http://dom.spec.whatwg.org/#interface-document"><code>Document</code></a> (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.</li>
- <li>В современных браузерах некоторые документы (т.е. те, которые содержат контент <code>text/html</code>) также реализуют  {{domxref("HTMLDocument")}} интерфейс.</li>
- <li>В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.</li>
-</ul>
+## Свойства
 
-<p>В будущем все эти интерфейсы будут сведены в один интерфейс - <code>Document</code>.</p>
+> **Примечание:** Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
 
-<h2 id="Properties">Свойства</h2>
+- {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
+  - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
+- {{domxref("Document.async")}} {{Deprecated_inline}}
+  - : Используется с {{domxref("document.load")}} чтобы обозначить асинхронный запрос.
+- {{domxref("Document.characterSet")}} {{experimental_inline}}
+  - : Возвращает кодировку документа.
+- {{domxref("Document.compatMode")}} {{experimental_inline}}
+  - : Указывает в каком режиме (Quirks или Strict) рендерился документ.
+- {{domxref("Document.contentType")}} {{experimental_inline}}
+  - : Возвращает Content-Type из MIME заголовка текущего документа.
+- {{domxref("Document.doctype")}}
+  - : Возвращает Document Type Definition (DTD) текущего документа .
+- {{domxref("Document.documentElement")}}
+  - : Возвращает Element, который является первым дочерним элементом документа. Для HTML документов это HTML-элемент.
+- {{domxref("Document.documentURI")}}
+  - : Возвращает URL документа.
+- {{domxref("Document.domConfig")}} {{Deprecated_inline}}
+  - : Должен вернуть {{domxref("DOMConfiguration")}} объект.
+- {{domxref("Document.implementation")}}
+  - : Возвращает DOM implementation связанную с текущим документом.
+- {{domxref("Document.inputEncoding")}} {{Deprecated_inline}}
+  - : Возвращает кодировку, которая использовалась во время парсинга документа.
+- {{domxref("Document.lastStyleSheetSet")}}
+  - : Возвращает имя последнего включённого набора таблиц стилей. Имеет значение `null` , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
+- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
+  - : `true` если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.
+- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+  - : `true` когда документ находится в {{domxref("Using_full-screen_mode","full-screen mode")}}.
+- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+  - : Элемент, который в данный момент находится в полноэкранном режиме для этого документа.
+- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+  - : `true` if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.
+- {{domxref("Document.pointerLockElement")}} {{experimental_inline}}
+  - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
+- {{domxref("Document.preferredStyleSheetSet")}}
+  - : Returns the preferred style sheet set as specified by the page author.
+- {{domxref("Document.selectedStyleSheetSet")}}
+  - : Returns which style sheet set is currently in use.
+- {{domxref("Document.styleSheets")}}
+  - : Returns a list of the style sheet objects on the current document.
+- {{domxref("Document.styleSheetSets")}}
+  - : Returns a list of the style sheet sets available on the document.
+- {{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}
+  - : Returns the encoding as determined by the XML declaration.
+- {{domxref("Document.xmlStandalone")}} {{Deprecated_inline}}
+  - : Returns `true` if the XML declaration specifies the document to be standalone (_e.g.,_ An external part of the DTD affects the document's content), else `false`.
+- {{domxref("Document.xmlVersion")}} {{Deprecated_inline}}
+  - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
-<div class="note">
-<p><strong>Примечание:</strong> Интерфейс <code>Document</code> наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.</p>
-</div>
+The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-<dl>
- <dt>{{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}</dt>
- <dd>Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.</dd>
- <dt>{{domxref("Document.async")}} {{Deprecated_inline}}</dt>
- <dd>Используется с {{domxref("document.load")}} чтобы обозначить асинхронный запрос.</dd>
- <dt>{{domxref("Document.characterSet")}} {{experimental_inline}}</dt>
- <dd>Возвращает кодировку документа.</dd>
- <dt>{{domxref("Document.compatMode")}} {{experimental_inline}}</dt>
- <dd>Указывает в каком режиме (Quirks или Strict) рендерился документ.</dd>
- <dt>{{domxref("Document.contentType")}} {{experimental_inline}}</dt>
- <dd>Возвращает Content-Type из MIME заголовка текущего документа.</dd>
- <dt>{{domxref("Document.doctype")}}</dt>
- <dd>Возвращает Document Type Definition (DTD) текущего документа .</dd>
- <dt>{{domxref("Document.documentElement")}}</dt>
- <dd>Возвращает Element, который является первым дочерним элементом документа. Для HTML документов это HTML-элемент.</dd>
- <dt>{{domxref("Document.documentURI")}}</dt>
- <dd>Возвращает URL документа.</dd>
- <dt>{{domxref("Document.domConfig")}} {{Deprecated_inline}}</dt>
- <dd>Должен вернуть  {{domxref("DOMConfiguration")}} объект.</dd>
- <dt>{{domxref("Document.implementation")}}</dt>
- <dd>Возвращает DOM implementation связанную с текущим документом.</dd>
- <dt>{{domxref("Document.inputEncoding")}} {{Deprecated_inline}}</dt>
- <dd>Возвращает кодировку, которая использовалась во время парсинга документа.</dd>
- <dt>{{domxref("Document.lastStyleSheetSet")}}</dt>
- <dd>Возвращает имя последнего включённого набора таблиц стилей. Имеет значение <code>null</code> , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>
- <dt>{{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}</dt>
- <dd><code>true</code> если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.</dd>
- <dt>{{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
- <dd><code>true</code> когда документ находится в  {{domxref("Using_full-screen_mode","full-screen mode")}}.</dd>
- <dt>{{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
- <dd>Элемент, который в данный момент находится в полноэкранном режиме для этого документа.</dd>
- <dt>{{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
- <dd><code>true</code> if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.</dd>
- <dt>{{domxref("Document.pointerLockElement")}} {{experimental_inline}}</dt>
- <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
- <dt>{{domxref("Document.preferredStyleSheetSet")}}</dt>
- <dd>Returns the preferred style sheet set as specified by the page author.</dd>
- <dt>{{domxref("Document.selectedStyleSheetSet")}}</dt>
- <dd>Returns which style sheet set is currently in use.</dd>
- <dt>{{domxref("Document.styleSheets")}}</dt>
- <dd>Returns a list of the style sheet objects on the current document.</dd>
- <dt>{{domxref("Document.styleSheetSets")}}</dt>
- <dd>Returns a list of the style sheet sets available on the document.</dd>
- <dt>{{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}</dt>
- <dd>Returns the encoding as determined by the XML declaration.</dd>
- <dt>{{domxref("Document.xmlStandalone")}} {{Deprecated_inline}}</dt>
- <dd>Returns <code>true</code> if the XML declaration specifies the document to be standalone (<em>e.g.,</em> An external part of the DTD affects the document's content), else <code>false</code>.</dd>
- <dt>{{domxref("Document.xmlVersion")}} {{Deprecated_inline}}</dt>
- <dd>Returns the version number as specified in the XML declaration or <code>"1.0"</code> if the declaration is absent.</dd>
-</dl>
+{{page("/en-US/docs/Web/API/ParentNode","Properties")}}
 
-<p>The <code>Document</code> interface is extended with the {{domxref("ParentNode")}} interface:</p>
+### Extension for HTML documents
 
-<p>{{page("/en-US/docs/Web/API/ParentNode","Properties")}}</p>
+The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
 
-<h3 id="Extension_for_HTML_documents">Extension for HTML documents</h3>
+- {{domxref("Document.activeElement")}}
+  - : Returns the currently focused element.
+- {{domxref("Document.alinkColor")}} {{Deprecated_inline}}
+  - : Returns or sets the color of active links in the document body.
+- {{domxref("Document.anchors")}}
+  - : Returns a list of all of the anchors in the document.
+- {{domxref("Document.applets")}} {{Deprecated_inline}}
+  - : Returns an ordered list of the applets within a document.
+- {{domxref("Document.bgColor")}} {{Deprecated_inline}}
+  - : Gets/sets the background color of the current document.
+- {{domxref("Document.body")}}
+  - : Returns the {{HTMLElement("body")}} element of the current document.
+- {{domxref("Document.cookie")}}
+  - : Returns a semicolon-separated list of the cookies for that document or sets a single cookie.
+- {{domxref("Document.defaultView")}}
+  - : Returns a reference to the window object.
+- {{domxref("Document.designMode")}}
+  - : Gets/sets the ability to edit the whole document.
+- {{domxref("Document.dir")}}
+  - : Gets/sets directionality (rtl/ltr) of the document.
+- {{domxref("Document.domain")}}
+  - : Returns the domain of the current document.
+- {{domxref("Document.embeds")}}
+  - : Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.
+- {{domxref("Document.fgColor")}} {{Deprecated_inline}}
+  - : Gets/sets the foreground color, or text color, of the current document.
+- {{domxref("Document.forms")}}
+  - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
+- {{domxref("Document.head")}}
+  - : Returns the {{HTMLElement("head")}} element of the current document.
+- {{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}
+  - : Gets/sets the height of the current document.
+- {{domxref("Document.images")}}
+  - : Returns a list of the images in the current document.
+- {{domxref("Document.lastModified")}}
+  - : Returns the date on which the document was last modified.
+- {{domxref("Document.linkColor")}} {{Deprecated_inline}}
+  - : Gets/sets the color of hyperlinks in the document.
+- {{domxref("Document.links")}}
+  - : Returns a list of all the hyperlinks in the document.
+- {{domxref("Document.location")}}
+  - : Returns the URI of the current document.
+- {{domxref("Document.plugins")}}
+  - : Returns a list of the available plugins.
+- {{domxref("Document.readyState")}} {{gecko_minversion_inline("1.9.2")}}
+  - : Returns loading status of the document.
+- {{domxref("Document.referrer")}}
+  - : Returns the URI of the page that linked to this page.
+- {{domxref("Document.scripts")}}
+  - : Returns all the {{HTMLElement("script")}} elements on the document.
+- {{domxref("Document.title")}}
+  - : Returns the title of the current document.
+- {{domxref("Document.URL")}}
+  - : Returns a string containing the URL of the current document.
+- {{domxref("Document.vlinkColor")}} {{Deprecated_inline}}
+  - : Gets/sets the color of visited hyperlinks.
+- {{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}
+  - : Returns the width of the current document.
 
-<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
+### Event handlers
 
-<dl>
- <dt>{{domxref("Document.activeElement")}}</dt>
- <dd>Returns the currently focused element.</dd>
- <dt>{{domxref("Document.alinkColor")}} {{Deprecated_inline}}</dt>
- <dd>Returns or sets the color of active links in the document body.</dd>
- <dt>{{domxref("Document.anchors")}}</dt>
- <dd>Returns a list of all of the anchors in the document.</dd>
- <dt>{{domxref("Document.applets")}} {{Deprecated_inline}}</dt>
- <dd>Returns an ordered list of the applets within a document.</dd>
- <dt>{{domxref("Document.bgColor")}} {{Deprecated_inline}}</dt>
- <dd>Gets/sets the background color of the current document.</dd>
- <dt>{{domxref("Document.body")}}</dt>
- <dd>Returns the {{HTMLElement("body")}} element of the current document.</dd>
- <dt>{{domxref("Document.cookie")}}</dt>
- <dd>Returns a semicolon-separated list of the cookies for that document or sets a single cookie.</dd>
- <dt>{{domxref("Document.defaultView")}}</dt>
- <dd>Returns a reference to the window object.</dd>
- <dt>{{domxref("Document.designMode")}}</dt>
- <dd>Gets/sets the ability to edit the whole document.</dd>
- <dt>{{domxref("Document.dir")}}</dt>
- <dd>Gets/sets directionality (rtl/ltr) of the document.</dd>
- <dt>{{domxref("Document.domain")}}</dt>
- <dd>Returns the domain of the current document.</dd>
- <dt>{{domxref("Document.embeds")}}</dt>
- <dd>Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.</dd>
- <dt>{{domxref("Document.fgColor")}} {{Deprecated_inline}}</dt>
- <dd>Gets/sets the foreground color, or text color, of the current document.</dd>
- <dt>{{domxref("Document.forms")}}</dt>
- <dd>Returns a list of the {{HTMLElement("form")}} elements within the current document.</dd>
- <dt>{{domxref("Document.head")}}</dt>
- <dd>Returns the {{HTMLElement("head")}} element of the current document.</dd>
- <dt>{{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Gets/sets the height of the current document.</dd>
- <dt>{{domxref("Document.images")}}</dt>
- <dd>Returns a list of the images in the current document.</dd>
- <dt>{{domxref("Document.lastModified")}}</dt>
- <dd>Returns the date on which the document was last modified.</dd>
- <dt>{{domxref("Document.linkColor")}} {{Deprecated_inline}}</dt>
- <dd>Gets/sets the color of hyperlinks in the document.</dd>
- <dt>{{domxref("Document.links")}}</dt>
- <dd>Returns a list of all the hyperlinks in the document.</dd>
- <dt>{{domxref("Document.location")}}</dt>
- <dd>Returns the URI of the current document.</dd>
- <dt>{{domxref("Document.plugins")}}</dt>
- <dd>Returns a list of the available plugins.</dd>
- <dt>{{domxref("Document.readyState")}} {{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns loading status of the document.</dd>
- <dt>{{domxref("Document.referrer")}}</dt>
- <dd>Returns the URI of the page that linked to this page.</dd>
- <dt>{{domxref("Document.scripts")}}</dt>
- <dd>Returns all the {{HTMLElement("script")}} elements on the document.</dd>
- <dt>{{domxref("Document.title")}}</dt>
- <dd>Returns the title of the current document.</dd>
- <dt>{{domxref("Document.URL")}}</dt>
- <dd>Returns a string containing the URL of the current document.</dd>
- <dt>{{domxref("Document.vlinkColor")}} {{Deprecated_inline}}</dt>
- <dd>Gets/sets the color of visited hyperlinks.</dd>
- <dt>{{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns the width of the current document.</dd>
-</dl>
+- {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
+  - : Returns the event handling code for the {{event("pointerlockchange")}} event.
+- {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
+  - : Returns the event handling code for the {{event("pointerlockerror")}} event.
+- {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
+  - : Returns the event handling code for the `readystatechange` event.
 
-<h3 id="Event_handlers">Event handlers</h3>
+## Methods
 
-<dl>
- <dt>{{domxref("Document.onpointerlockchange")}} {{experimental_inline}}</dt>
- <dd>Returns the event handling code for the {{event("pointerlockchange")}} event.</dd>
- <dt>{{domxref("Document.onpointerlockerror")}} {{experimental_inline}}</dt>
- <dd>Returns the event handling code for the {{event("pointerlockerror")}} event.</dd>
- <dt>{{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the event handling code for the <code>readystatechange</code> event.</dd>
-</dl>
+> **Примечание:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
+  - : Adopt node from an external document.
+- {{domxref("Document.captureEvents","Document.captureEvents(String eventName)")}} {{Deprecated_inline}}
+  - : See {{domxref("window.captureEvents")}}.
+- {{domxref("Document.caretPositionFromPoint","Document.caretPositionFromPoint(Number x, Number y)")}}
+  - : Gets a {{domxref("CaretPosition")}} based on two coordinates.
+- {{domxref("Document.createAttribute","Document.createAttribute(String name)")}}
+  - : Creates a new {{domxref("Attr")}} object and returns it.
+- {{domxref("Document.createAttributeNS","Document.createAttributeNS(String namespace, String name)")}}
+  - : Creates a new attribute node in a given namespace and returns it.
+- {{domxref("Document.createCDATASection","Document.createCDATASection(String data)")}}
+  - : Creates a new CDATA node and returns it.
+- {{domxref("Document.createComment","Document.createComment(String comment)")}}
+  - : Creates a new comment node and returns it.
+- {{domxref("Document.createDocumentFragment()")}}
+  - : Creates a new document fragment.
+- {{domxref("Document.createElement","Document.createElement(String name)")}}
+  - : Creates a new element with the given tag name.
+- {{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}
+  - : Creates a new element with the given tag name and namespace URI.
+- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}} {{obsolete_inline}}
+  - : Creates a new entity reference object and returns it.
+- {{domxref("Document.createEvent","Document.createEvent(String interface)")}}
+  - : Creates an event object.
+- {{domxref("Document.createNodeIterator","Document.createNodeIterator(Node root[, Number whatToShow[, NodeFilter filter]])")}}
+  - : Creates a {{domxref("NodeIterator")}} object.
+- {{domxref("Document.createProcessingInstruction","Document.createProcessingInstruction(String target, String data)")}}
+  - : Creates a new {{domxref("ProcessingInstruction")}} object.
+- {{domxref("Document.createRange()")}}
+  - : Creates a {{domxref("Range")}} object.
+- {{domxref("Document.createTextNode","Document.createTextNode(String text)")}}
+  - : Creates a text node.
+- {{domxref("Document.createTreeWalker","Document.createTreeWalker(Node root[, Number whatToShow[, NodeFilter filter]])")}}
+  - : Creates a {{domxref("TreeWalker")}} object.
+- {{domxref("Document.elementFromPoint","Document.elementFromPoint(Number x, Number y)")}}
+  - : Returns the element visible at the specified coordinates.
+- {{domxref("Document.enableStyleSheetsForSet","Document.enableStyleSheetsForSet(String name)")}}
+  - : Enables the style sheets for the specified style sheet set.
+- {{domxref("Document.exitPointerLock()")}} {{experimental_inline}}
+  - : Release the pointer lock.
+- {{domxref("Document.getElementsByClassName","Document.getElementsByClassName(String className)")}}
+  - : Returns a list of elements with the given class name.
+- {{domxref("Document.getElementsByTagName","Document.getElementsByTagName(String tagName)")}}
+  - : Returns a list of elements with the given tag name.
+- {{domxref("Document.getElementsByTagNameNS","Document.getElementsByTagNameNS(String namespace, String tagName)")}}
+  - : Returns a list of elements with the given tag name and namespace.
+- {{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}
+  - : Returns a clone of a node from an external document.
+- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+  - : Allows you to change the element being used as the background image for a specified element ID.
+- {{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}
+  - : Replaces entities, normalizes text nodes, etc.
+- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+  - : Releases the current mouse capture if it's on an element in this document.
+- {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
+  - : See {{domxref("window.releaseEvents")}}.
+- {{domxref("document.routeEvent")}} {{non-standard_inline}} {{obsolete_inline(24)}}
+  - : See {{domxref("window.routeEvent")}}.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>Document</code> interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.</p>
-</div>
+The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-<dl>
- <dt>{{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}</dt>
- <dd>Adopt node from an external document.</dd>
- <dt>{{domxref("Document.captureEvents","Document.captureEvents(String eventName)")}} {{Deprecated_inline}}</dt>
- <dd>See {{domxref("window.captureEvents")}}.</dd>
- <dt>{{domxref("Document.caretPositionFromPoint","Document.caretPositionFromPoint(Number x, Number y)")}}</dt>
- <dd>Gets a {{domxref("CaretPosition")}} based on two coordinates.</dd>
- <dt>{{domxref("Document.createAttribute","Document.createAttribute(String name)")}}</dt>
- <dd>Creates a new {{domxref("Attr")}} object and returns it.</dd>
- <dt>{{domxref("Document.createAttributeNS","Document.createAttributeNS(String namespace, String name)")}}</dt>
- <dd>Creates a new attribute node in a given namespace and returns it.</dd>
- <dt>{{domxref("Document.createCDATASection","Document.createCDATASection(String data)")}}</dt>
- <dd>Creates a new CDATA node and returns it.</dd>
- <dt>{{domxref("Document.createComment","Document.createComment(String comment)")}}</dt>
- <dd>Creates a new comment node and returns it.</dd>
- <dt>{{domxref("Document.createDocumentFragment()")}}</dt>
- <dd>Creates a new document fragment.</dd>
- <dt>{{domxref("Document.createElement","Document.createElement(String name)")}}</dt>
- <dd>Creates a new element with the given tag name.</dd>
- <dt>{{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}</dt>
- <dd>Creates a new element with the given tag name and namespace URI.</dd>
- <dt>{{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}} {{obsolete_inline}}</dt>
- <dd>Creates a new entity reference object and returns it.</dd>
- <dt>{{domxref("Document.createEvent","Document.createEvent(String interface)")}}</dt>
- <dd>Creates an event object.</dd>
- <dt>{{domxref("Document.createNodeIterator","Document.createNodeIterator(Node root[, Number whatToShow[, NodeFilter filter]])")}}</dt>
- <dd>Creates a {{domxref("NodeIterator")}} object.</dd>
- <dt>{{domxref("Document.createProcessingInstruction","Document.createProcessingInstruction(String target, String data)")}}</dt>
- <dd>Creates a new {{domxref("ProcessingInstruction")}} object.</dd>
- <dt>{{domxref("Document.createRange()")}}</dt>
- <dd>Creates a {{domxref("Range")}} object.</dd>
- <dt>{{domxref("Document.createTextNode","Document.createTextNode(String text)")}}</dt>
- <dd>Creates a text node.</dd>
- <dt>{{domxref("Document.createTreeWalker","Document.createTreeWalker(Node root[, Number whatToShow[, NodeFilter filter]])")}}</dt>
- <dd>Creates a {{domxref("TreeWalker")}} object.</dd>
- <dt>{{domxref("Document.elementFromPoint","Document.elementFromPoint(Number x, Number y)")}}</dt>
- <dd>Returns the element visible at the specified coordinates.</dd>
- <dt>{{domxref("Document.enableStyleSheetsForSet","Document.enableStyleSheetsForSet(String name)")}}</dt>
- <dd>Enables the style sheets for the specified style sheet set.</dd>
- <dt>{{domxref("Document.exitPointerLock()")}} {{experimental_inline}}</dt>
- <dd>Release the pointer lock.</dd>
- <dt>{{domxref("Document.getElementsByClassName","Document.getElementsByClassName(String className)")}}</dt>
- <dd>Returns a list of elements with the given class name.</dd>
- <dt>{{domxref("Document.getElementsByTagName","Document.getElementsByTagName(String tagName)")}}</dt>
- <dd>Returns a list of elements with the given tag name.</dd>
- <dt>{{domxref("Document.getElementsByTagNameNS","Document.getElementsByTagNameNS(String namespace, String tagName)")}}</dt>
- <dd>Returns a list of elements with the given tag name and namespace.</dd>
- <dt>{{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}</dt>
- <dd>Returns a clone of a node from an external document.</dd>
- <dt>{{domxref("document.mozSetImageElement")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
- <dt>{{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}</dt>
- <dd>Replaces entities, normalizes text nodes, etc.</dd>
- <dt>{{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Releases the current mouse capture if it's on an element in this document.</dd>
- <dt>{{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}</dt>
- <dd>See {{domxref("window.releaseEvents")}}.</dd>
- <dt>{{domxref("document.routeEvent")}} {{non-standard_inline}} {{obsolete_inline(24)}}</dt>
- <dd>See {{domxref("window.routeEvent")}}.</dd>
-</dl>
+- {{domxref("Document.getElementById","Document.getElementById(String id)")}}
+  - : Returns an object reference to the identified element.
+- {{domxref("Document.querySelector","Document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+  - : Returns the first Element node within the document, in document order, that matches the specified selectors.
+- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+  - : Returns a list of all the Element nodes within the document that match the specified selectors.
 
-<p>The <code>Document</code> interface is extended with the {{domxref("ParentNode")}} interface:</p>
+The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
-<dl>
- <dt>{{domxref("Document.getElementById","Document.getElementById(String id)")}}</dt>
- <dd>Returns an object reference to the identified element.</dd>
- <dt>{{domxref("Document.querySelector","Document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}</dt>
- <dd>Returns the first Element node within the document, in document order, that matches the specified selectors.</dd>
- <dt>{{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}</dt>
- <dd>Returns a list of all the Element nodes within the document that match the specified selectors.</dd>
-</dl>
+- {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
+  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression "XPathExpression") which can then be used for (repeated) evaluations.
+- {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
+  - : Creates an {{domxref("XPathNSResolver")}} object.
+- {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
+  - : Evaluates an XPath expression.
 
-<p>The <code>Document</code> interface is extended with the {{domxref("XPathEvaluator")}} interface:</p>
+### Extension for HTML documents
 
-<dl>
- <dt>{{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression" title="XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
- <dt>{{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}</dt>
- <dd>Creates an {{domxref("XPathNSResolver")}} object.</dd>
- <dt>{{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}</dt>
- <dd>Evaluates an XPath expression.</dd>
-</dl>
+The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
 
-<h3 id="Extension_for_HTML_documents_2">Extension for HTML documents</h3>
+- {{domxref("Document.clear()")}} {{non-standard_inline}} {{Deprecated_inline}}
+  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
+- {{domxref("Document.close()")}}
+  - : Closes a document stream for writing.
+- {{domxref("Document.execCommand","Document.execCommand(String command[, Boolean showUI[, String value]])")}}
+  - : On an editable document, executes a formating command.
+- {{domxref("Document.getElementsByName","Document.getElementsByName(String name)")}}
+  - : Returns a list of elements with the given name.
+- {{domxref("Document.getSelection()")}}
+  - : Returns a {{domxref("Selection")}} object related to text selected in the document.
+- {{domxref("Document.hasFocus()")}}
+  - : Returns `true` if the focus is currently located anywhere inside the specified document.
+- {{domxref("Document.open()")}}
+  - : Opens a document stream for writing.
+- {{domxref("Document.queryCommandEnabled","Document.queryCommandEnabled(String command)")}}
+  - : Returns true if the formating command can be executed on the current range.
+- {{domxref("Document.queryCommandIndeterm","Document.queryCommandIndeterm(String command)")}}
+  - : Returns true if the formating command is in an indeterminate state on the current range.
+- {{domxref("Document.queryCommandState","Document.queryCommandState(String command)")}}
+  - : Returns true if the formating command has been executed on the current range.
+- {{domxref("Document.queryCommandSupported","Document.queryCommandSupported(String command)")}}
+  - : Returns true if the formating command is supported on the current range.
+- {{domxref("Document.queryCommandValue","Document.queryCommandValue(String command)")}}
+  - : Returns the current value of the current range for a formatting command.
+- {{domxref("Document.registerElement","Document.registerElement(String tagname[, Object options])")}}
+  - : Registers a new custom element in the browser and returns a constructor for the new element.
+- {{domxref("Document.write","Document.write(String text)")}}
+  - : Writes text in a document.
+- {{domxref("Document.writeln","Document.writeln(String text)")}}
+  - : Writes a line of text in a document.
 
-<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
+## Specifications
 
-<dl>
- <dt>{{domxref("Document.clear()")}} {{non-standard_inline}} {{Deprecated_inline}}</dt>
- <dd>In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.</dd>
- <dt>{{domxref("Document.close()")}}</dt>
- <dd>Closes a document stream for writing.</dd>
- <dt>{{domxref("Document.execCommand","Document.execCommand(String command[, Boolean showUI[, String value]])")}}</dt>
- <dd>On an editable document, executes a formating command.</dd>
- <dt>{{domxref("Document.getElementsByName","Document.getElementsByName(String name)")}}</dt>
- <dd>Returns a list of elements with the given name.</dd>
- <dt>{{domxref("Document.getSelection()")}}</dt>
- <dd>Returns a {{domxref("Selection")}} object related to text selected in the document.</dd>
- <dt>{{domxref("Document.hasFocus()")}}</dt>
- <dd>Returns <code>true</code> if the focus is currently located anywhere inside the specified document.</dd>
- <dt>{{domxref("Document.open()")}}</dt>
- <dd>Opens a document stream for writing.</dd>
- <dt>{{domxref("Document.queryCommandEnabled","Document.queryCommandEnabled(String command)")}}</dt>
- <dd>Returns true if the formating command can be executed on the current range.</dd>
- <dt>{{domxref("Document.queryCommandIndeterm","Document.queryCommandIndeterm(String command)")}}</dt>
- <dd>Returns true if the formating command is in an indeterminate state on the current range.</dd>
- <dt>{{domxref("Document.queryCommandState","Document.queryCommandState(String command)")}}</dt>
- <dd>Returns true if the formating command has been executed on the current range.</dd>
- <dt>{{domxref("Document.queryCommandSupported","Document.queryCommandSupported(String command)")}}</dt>
- <dd>Returns true if the formating command is supported on the current range.</dd>
- <dt>{{domxref("Document.queryCommandValue","Document.queryCommandValue(String command)")}}</dt>
- <dd>Returns the current value of the current range for a formatting command.</dd>
- <dt>{{domxref("Document.registerElement","Document.registerElement(String tagname[, Object options])")}}</dt>
- <dd>Registers a new custom element in the browser and returns a constructor for the new element.</dd>
- <dt>{{domxref("Document.write","Document.write(String text)")}}</dt>
- <dd>Writes text in a document.</dd>
- <dt>{{domxref("Document.writeln","Document.writeln(String text)")}}</dt>
- <dd>Writes a line of text in a document.</dd>
-</dl>
+| Specification                                                                                            | Status                           | Comment                                                                                |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('DOM1','#i-Document','Document')}}                                             | {{Spec2('DOM1')}}         | Initial definition for the interface                                                   |
+| {{SpecName('DOM2 Core','#i-Document','Document')}}                                     | {{Spec2('DOM2 Core')}}     | Supersede DOM 1                                                                        |
+| {{SpecName('DOM3 Core','#i-Document','Document')}}                                     | {{Spec2('DOM3 Core')}}     | Supersede DOM 2                                                                        |
+| {{SpecName('DOM WHATWG','#interface-document','Document')}}                         | {{Spec2('DOM WHATWG')}} | Intend to supersede DOM 3                                                              |
+| {{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}             | {{Spec2('HTML WHATWG')}} | Turn the {{domxref("HTMLDocument")}} interface into a `Document` extension.   |
+| {{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}         | {{Spec2('DOM3 XPath')}} | Define the {{domxref("XPathEvaluator")}} interface which extend `Document`. |
+| {{SpecName('HTML Editing','#dom-document-getselection','Document')}}             | {{Spec2('HTML Editing')}} | Extend the `Document` interface                                                        |
+| {{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}} | {{Spec2('CSSOM View')}} | Extend the `Document` interface                                                        |
+| {{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}         | {{Spec2('CSSOM')}}         | Extend the `Document` interface                                                        |
+| {{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extend the `Document` interface                                                        |
 
-<h2 id="Specifications">Specifications</h2>
+## Browser compatibility
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition for the interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Supersede DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','#i-Document','Document')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Supersede DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-document','Document')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Intend to supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Turn the {{domxref("HTMLDocument")}} interface into a <code>Document</code> extension.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}</td>
-   <td>{{Spec2('DOM3 XPath')}}</td>
-   <td>Define the {{domxref("XPathEvaluator")}} interface which extend <code>Document</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing','#dom-document-getselection','Document')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
- </tbody>
-</table>
+### Firefox notes
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Mozilla defines a set of non-standard properties made only for XUL content:
 
-<h3 id="Firefox_notes">Firefox notes</h3>
+- {{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}
+  - : Returns the {{HTMLElement("script")}} element that is currently executing.
+- {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
+  - : (**Mozilla add-ons only!**) Returns the `nsIURI` object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).
+- {{domxref("document.popupNode")}}
+  - : Returns the node upon which a popup was invoked.
+- {{domxref("document.tooltipNode")}}
+  - : Returns the node which is the target of the current tooltip.
 
-<p>Mozilla defines a set of non-standard properties made only for XUL content:</p>
+Mozilla also define some non-standard methods:
 
-<dl>
- <dt>{{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Returns the {{HTMLElement("script")}} element that is currently executing.</dd>
- <dt>{{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) Returns the <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
- <dt>{{domxref("document.popupNode")}}</dt>
- <dd>Returns the node upon which a popup was invoked.</dd>
- <dt>{{domxref("document.tooltipNode")}}</dt>
- <dd>Returns the node which is the target of the current tooltip.</dd>
-</dl>
+- {{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+- {{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}
+  - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
+- {{domxref("Document.loadOverlay")}}
+  - : Loads a [XUL overlay](/ru/docs/XUL_Overlays "XUL_Overlays") dynamically. This only works in XUL documents.
+- {{domxref("document.queryCommandText")}} {{deprecated_inline}}
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
 
-<p>Mozilla also define some non-standard methods:</p>
+### Internet Explorer notes
 
-<dl>
- <dt>{{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}</dt>
- <dd>This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
- <dt>{{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}</dt>
- <dd>Use the {{domxref("Element.getBoundingClientRect()")}} method instead.</dd>
- <dt>{{domxref("Document.loadOverlay")}}</dt>
- <dd>Loads a <a href="/en-US/docs/XUL_Overlays" title="XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
- <dt>{{domxref("document.queryCommandText")}} {{deprecated_inline}}</dt>
- <dd>This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
-</dl>
+Microsoft defines some non-standard properties:
 
-<h3 id="Internet_Explorer_notes">Internet Explorer notes</h3>
+- {{domxref("document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
 
-<p>Microsoft defines some non-standard properties:</p>
+  - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).
 
-<dl>
- <dt>{{domxref("document.fileSize")}}* {{Non-standard_Inline}} {{deprecated_inline}}</dt>
- <dd><p>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</p>
- <p>Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</p>
- <dt>{{domxref("document.contains")}}</dt>
- <dd>As a work-around, <code>document.body.contains()</code> can be used.</dd>
-</dl>
+    Internet Explorer does not support all methods from the `Node` interface in the `Document` interface:
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+- {{domxref("document.contains")}}
+  - : As a work-around, `document.body.contains()` can be used.
 
-<p>{{Compat}}</p>
+## Совместимость с браузерами
+
+{{Compat}}

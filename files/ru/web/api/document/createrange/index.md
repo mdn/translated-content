@@ -3,31 +3,31 @@ title: Document.createRange()
 slug: Web/API/Document/createRange
 translation_of: Web/API/Document/createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает новый объект типа {{domxref("Range")}}.</p>
+Возвращает новый объект типа {{domxref("Range")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">range = document.createRange();
-</pre>
+```
+range = document.createRange();
+```
 
-<p><code>range</code> содержит созданный объект {{domxref("Range")}}.</p>
+`range` содержит созданный объект {{domxref("Range")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>После того, как Range был создан, вам необходимо установить границы, прежде чем вы сможете использовать большую часть методов.</p>
+После того, как Range был создан, вам необходимо установить границы, прежде чем вы сможете использовать большую часть методов.
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange">DOM Level 2 Range: DocumentRange.createRange</a></li>
-</ul>
+- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)

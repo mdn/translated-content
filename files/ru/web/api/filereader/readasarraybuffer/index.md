@@ -11,31 +11,29 @@ tags:
   - метод
 translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>Метод <strong><code>readAsArrayBuffer</code></strong> используется для чтения содержимого файла, представленного как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершается, {{domxref("FileReader.readyState","readyState")}} принимает значение <code>DONE</code>, и наступает событие {{event("loadend")}}. В то же время в {{domxref("FileReader.result","result")}} помещается информация о файле в виде {{domxref("ArrayBuffer")}}.</p>
+Метод **`readAsArrayBuffer`** используется для чтения содержимого файла, представленного как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершается, {{domxref("FileReader.readyState","readyState")}} принимает значение `DONE`, и наступает событие {{event("loadend")}}. В то же время в {{domxref("FileReader.result","result")}} помещается информация о файле в виде {{domxref("ArrayBuffer")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsArrayBuffer(<em>blob</em>);</pre>
+```
+instanceOfFileReader.readAsArrayBuffer(blob);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>{{domxref("Blob")}} или {{domxref("File")}}, информацию из которого необходимо прочитать.</dd>
-</dl>
+- `blob`
+  - : {{domxref("Blob")}} или {{domxref("File")}}, информацию из которого необходимо прочитать.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

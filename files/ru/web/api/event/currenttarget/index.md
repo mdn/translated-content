@@ -3,36 +3,37 @@ title: Event.currentTarget
 slug: Web/API/Event/currentTarget
 translation_of: Web/API/Event/currentTarget
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Определяет элемент, в котором в данный момент обрабатывается событие, при движении события внутри DOM. Всегда совпадает элементом, на котором обработчик события был назначен, в отличие от свойства <code>event.target</code>, идентифицирующего элемент, на котором событие возникло.</p>
+Определяет элемент, в котором в данный момент обрабатывается событие, при движении события внутри DOM. Всегда совпадает элементом, на котором обработчик события был назначен, в отличие от свойства `event.target`, идентифицирующего элемент, на котором событие возникло.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p><code>event.currentTarget</code> используется, когда один и тот же обработчик события присваивается нескольким элементам.</p>
+`event.currentTarget` используется, когда один и тот же обработчик события присваивается нескольким элементам.
 
-<pre class="brush: js">function hide(e){
+```js
+function hide(e){
   e.currentTarget.style.visibility = "hidden";
   // Когда данная функция используется в качестве обработчика события: this === e.currentTarget
 }
 
 var ps = document.getElementsByTagName('p');
 
-for(var i = 0; i &lt; ps.length; i++){
+for(var i = 0; i < ps.length; i++){
   ps[i].addEventListener('click', hide, false);
 }
 
 // click around and make paragraphs disappear
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></p>
+[Comparison of Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)

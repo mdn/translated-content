@@ -14,64 +14,47 @@ tags:
   - WebVR
 translation_of: Web/API/VRPose
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>VRPose</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)</p>
+The **`VRPose`** interface of the [WebVR API](/ru/docs/Web/API/WebVR_API) represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
 
-<p>This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.</p>
+This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRPose.position")}} {{readonlyInline}}</dt>
- <dd>Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector</dd>
- <dt>{{domxref("VRPose.linearVelocity")}} {{readonlyInline}}</dt>
- <dd>Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.</dd>
- <dt>{{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}</dt>
- <dd>Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
- <dt>{{domxref("VRPose.orientation")}} {{readonlyInline}}</dt>
- <dd>Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.</dd>
- <dt>{{domxref("VRPose.angularVelocity")}} {{readonlyInline}}</dt>
- <dd>Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.</dd>
- <dt>{{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}</dt>
- <dd>Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
-</dl>
+- {{domxref("VRPose.position")}} {{readonlyInline}}
+  - : Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector
+- {{domxref("VRPose.linearVelocity")}} {{readonlyInline}}
+  - : Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
+- {{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}
+  - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+- {{domxref("VRPose.orientation")}} {{readonlyInline}}
+  - : Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.
+- {{domxref("VRPose.angularVelocity")}} {{readonlyInline}}
+  - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
+- {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
+  - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}</dt>
- <dd>Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occured in. <strong>This version of <code>timestamp</code> has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.</strong></dd>
-</dl>
+- {{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}
+  - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occured in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#interface-vrpose', 'VRPose')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment            |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#interface-vrpose', 'VRPose')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.

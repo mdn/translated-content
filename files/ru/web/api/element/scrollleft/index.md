@@ -3,64 +3,65 @@ title: Элемент.scrollLeft
 slug: Web/API/Element/scrollLeft
 translation_of: Web/API/Element/scrollLeft
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Свойство <strong><code>scrollLeft</code></strong> получает или устанавливает количество пикселей, на которое контент элемента прокручен влево.</p>
+Свойство **`scrollLeft`** получает или устанавливает количество пикселей, на которое контент элемента прокручен влево.
 
-<p>Заметьте, что если свойство {{cssxref("direction")}}: <code>rtl</code> (right-to-left), то <code>scrollLeft</code> равен <code>0, </code>когда скроллбар на его самой правой позиции (с начала прокрученного контента), а затем становится отрицательным по мере прокрутки к концу контента.</p>
+Заметьте, что если свойство {{cssxref("direction")}}: `rtl` (right-to-left), то `scrollLeft` равен `0, `когда скроллбар на его самой правой позиции (с начала прокрученного контента), а затем становится отрицательным по мере прокрутки к концу контента.
 
-<h2 id="Syntax_and_values">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">// Получаем количество прокрученных пикселей
-var <var>sLeft</var> = <var>element</var>.scrollLeft;
-</pre>
+```
+// Получаем количество прокрученных пикселей
+var sLeft = element.scrollLeft;
+```
 
-<p><var>sLeft</var> - целое число, представленное количеством пикселей, на которые элемент был прокручен влево.</p>
+_sLeft_ - целое число, представленное количеством пикселей, на которые элемент был прокручен влево.
 
-<pre class="eval">// Устанавливаем количество прокрученных пикселей
-<var>element</var>.scrollLeft = 10;
-</pre>
+```
+// Устанавливаем количество прокрученных пикселей
+element.scrollLeft = 10;
+```
 
-<p><code>scrollLeft</code> может быть установлен, как любое целое число, однако:</p>
+`scrollLeft` может быть установлен, как любое целое число, однако:
 
-<ul>
- <li>Если элемент не может быть прокручен (т.е. у него нет переполнения), <code>scrollLeft</code> устанавливается в 0.</li>
- <li>Если установили значение меньше 0 (больше 0 при расположении элементов справа налево), <code>scrollLeft</code> устанавливается в 0.</li>
- <li>Если установлено значение больше, чем максимум прокручиваемого контента, <code>scrollLeft</code> устанавливается в максимум.</li>
-</ul>
+- Если элемент не может быть прокручен (т.е. у него нет переполнения), `scrollLeft` устанавливается в 0.
+- Если установили значение меньше 0 (больше 0 при расположении элементов справа налево), `scrollLeft` устанавливается в 0.
+- Если установлено значение больше, чем максимум прокручиваемого контента, `scrollLeft` устанавливается в максимум.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
         #container {
             border: 1px solid #ccc; height: 100px; overflow: scroll; width: 100px;
         }
         #content {
             background-color: #ccc; width: 250px;
         }
-    &lt;/style&gt;
-    &lt;script&gt;
+    </style>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             var button = document.getElementById('slide');
             button.onclick = function () {
                 document.getElementById('container').scrollLeft += 20;
             };
         }, false);
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="container"&gt;
-        &lt;div id="content"&gt;Бла-бла-бла&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;button id="slide" type="button"&gt;Пролистать&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">Бла-бла-бла</div>
+    </div>
+    <button id="slide" type="button">Пролистать</button>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

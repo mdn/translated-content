@@ -3,55 +3,49 @@ title: BatteryManager
 slug: Web/API/BatteryManager
 translation_of: Web/API/BatteryManager
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Интерфейс <code>BatteryManager</code> предоставляет пути получения информации о уровне заряда батареи устройства.</p>
+Интерфейс `BatteryManager` предоставляет пути получения информации о уровне заряда батареи устройства.
 
-<p>Метод {{domxref("navigator.getBattery()")}} возвращает battery promise, разрешающий использование <code>BatteryManager</code> интерфейса, который вы можете использовать для взаимодействия с <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a>.</p>
+Метод {{domxref("navigator.getBattery()")}} возвращает battery promise, разрешающий использование `BatteryManager` интерфейса, который вы можете использовать для взаимодействия с [Battery Status API](/ru/docs/Web/API/Battery_Status_API).
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}</dt>
- <dd>Значение с булевым типом, заряжается сейчас батарея или нет.</dd>
- <dt>{{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}</dt>
- <dd>Число оставшихся секунд до полной зарядки, или 0, если устройство заряжено.</dd>
- <dt>{{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}</dt>
- <dd>Число оставшихся секунд до полной разрядки устройства.</dd>
- <dt>{{domxref("BatteryManager.level")}} {{ReadOnlyInline}}</dt>
- <dd>Число между 0.0 и 1.0, показывающее уровень заряда батареи устройства.</dd>
-</dl>
+- {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
+  - : Значение с булевым типом, заряжается сейчас батарея или нет.
+- {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
+  - : Число оставшихся секунд до полной зарядки, или 0, если устройство заряжено.
+- {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
+  - : Число оставшихся секунд до полной разрядки устройства.
+- {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
+  - : Число между 0.0 и 1.0, показывающее уровень заряда батареи устройства.
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+### Обработчики событий
 
-<dl>
- <dt>{{domxref("BatteryManager.onchargingchange")}}</dt>
- <dd>Обработчик для {{event("chargingchange")}} события; Событие вызывается при обновлении состояния процесса зарядки батареи на текущий момент.</dd>
- <dt>{{domxref("BatteryManager.onchargingtimechange")}}</dt>
- <dd>Обработчик для {{event("chargingtimechange")}} события; Событие вызывается при обновлении времени до полной зарядки батареи устройства.</dd>
- <dt>{{domxref("BatteryManager.ondischargingtimechange")}}</dt>
- <dd>Обработчик для {{event("dischargingtimechange")}} события; Событие вызывается при обновлении времени до разрядки батареи устройства.</dd>
- <dt>{{domxref("BatteryManager.onlevelchange")}}</dt>
- <dd>Обработчик для {{event("levelchange")}} события; Событие вызывается при обновление уровня заряда батареи устройства.</dd>
-</dl>
+- {{domxref("BatteryManager.onchargingchange")}}
+  - : Обработчик для {{event("chargingchange")}} события; Событие вызывается при обновлении состояния процесса зарядки батареи на текущий момент.
+- {{domxref("BatteryManager.onchargingtimechange")}}
+  - : Обработчик для {{event("chargingtimechange")}} события; Событие вызывается при обновлении времени до полной зарядки батареи устройства.
+- {{domxref("BatteryManager.ondischargingtimechange")}}
+  - : Обработчик для {{event("dischargingtimechange")}} события; Событие вызывается при обновлении времени до разрядки батареи устройства.
+- {{domxref("BatteryManager.onlevelchange")}}
+  - : Обработчик для {{event("levelchange")}} события; Событие вызывается при обновление уровня заряда батареи устройства.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>Наследует от {{domxref("EventTarget")}}:</p>
+Наследует от {{domxref("EventTarget")}}:
 
-<p>{{page("/ru-RU/docs/Web/API/EventTarget","Methods")}}</p>
+{{page("/ru-RU/docs/Web/API/EventTarget","Methods")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
- <li>{{domxref("navigator.getBattery")}}</li>
-</ul>
+- [Battery Status API](/ru/docs/Web/API/Battery_Status_API)
+- {{domxref("navigator.getBattery")}}

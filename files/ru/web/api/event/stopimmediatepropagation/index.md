@@ -13,19 +13,20 @@ tags:
   - метод
 translation_of: Web/API/Event/stopImmediatePropagation
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Останавливает цепочку вызова событий для последующих обработчиков DOM-элемента.</p>
+Останавливает цепочку вызова событий для последующих обработчиков DOM-элемента.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>event</em>.stopImmediatePropagation();
-</pre>
+```
+event.stopImmediatePropagation();
+```
 
-<h2 id="Notes">Замечания</h2>
+## Замечания
 
-<p>Если несколько обработчиков прикреплены к одному и тому же элементу с одинаковым типом события, тогда они будут вызваны в порядке своего добавления. Если один из этих обработчиков вызовет event.stopImmediatePropagation() тогда события оставшихся обработчиков вызваны не будут.</p>
+Если несколько обработчиков прикреплены к одному и тому же элементу с одинаковым типом события, тогда они будут вызваны в порядке своего добавления. Если один из этих обработчиков вызовет event.stopImmediatePropagation() тогда события оставшихся обработчиков вызваны не будут.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopImmediatePropagation">DOM Level 3 Events: stopImmediatePropagation</a></p>
+[DOM Level 3 Events: stopImmediatePropagation](http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopImmediatePropagation)

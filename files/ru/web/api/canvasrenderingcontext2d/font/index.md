@@ -7,75 +7,72 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/font
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.font</code></strong> – свойство<strong> </strong>Canvas 2D API, определяющее  текущие стили рисуемого текста. Это строка, которая использует синтаксис <a href="/en-US/docs/Web/CSS/font" title="en/CSS/font">CSS font</a>.</p>
+**`CanvasRenderingContext2D`\*\***`.font`** – свойство** \*\*Canvas 2D API, определяющее текущие стили рисуемого текста. Это строка, которая использует синтаксис [CSS font](/ru/docs/Web/CSS/font "en/CSS/font").
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.font = <em>value</em>;
-</pre>
+```
+ctx.font = value;
+```
 
-<h3 id="Опции">Опции</h3>
+### Опции
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Строка {{domxref("DOMString")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".</dd>
-</dl>
+- `value`
+  - : Строка {{domxref("DOMString")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_пользовательского_шрифта">Использование пользовательского шрифта</h3>
+### Использование пользовательского шрифта
 
-<p>Этот пример задаёт в свойстве <code>font</code> другие <code>font-size</code> и <code>font-family</code>.</p>
+Этот пример задаёт в свойстве `font` другие `font-size` и `font-family`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = 'bold 48px serif';
 ctx.strokeText('Hello world', 50, 100);
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Использование_пользовательского_шрифта', 700, 180) }}</p>
+{{ EmbedLiveSample('Использование_пользовательского_шрифта', 700, 180) }}
 
-<h3 id="Загрузка_шрифта_с_помощью_CSS_Font_Loading_API">Загрузка шрифта с помощью CSS Font Loading API</h3>
+### Загрузка шрифта с помощью CSS Font Loading API
 
-<p>С помощью {{domxref("FontFace")}} API, вы можете явно загрузить шрифт перед использованием его в <code>canvas</code>.</p>
+С помощью {{domxref("FontFace")}} API, вы можете явно загрузить шрифт перед использованием его в `canvas`.
 
-<pre class="brush: js">let f = new FontFace('test', 'url(x)');
+```js
+let f = new FontFace('test', 'url(x)');
 
 f.load().then(function() {
   // Ready to use the font in a canvas context
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+### Особенности Gecko
 
-<p>{{Compat}}</p>
+- Браузеры на основе Gecko, например Firefox, имеют не стандартное и устаревшее свойство `ctx.mozTextStyle`. Используйте `ctx.font` вместо него.
+- In Gecko, when setting a system font as the value of a canvas 2D context's {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`), getting the font value used to fail to return the expected font (it returns nothing). This is fixed in Firefox's [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) parallel CSS engine, released in Firefox 57 ({{bug(1374885)}}).
 
-<h3 id="Особенности_Gecko">Особенности Gecko</h3>
+## Смотрите также
 
-<ul>
- <li>Браузеры на основе Gecko, например Firefox, имеют не стандартное и устаревшее свойство <code>ctx.mozTextStyle</code>. Используйте <code>ctx.font</code> вместо него.</li>
- <li>In Gecko, when setting a system font as the value of a canvas 2D context's {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., <code>menu</code>), getting the font value used to fail to return the expected font (it returns nothing). This is fixed in Firefox's <a href="https://wiki.mozilla.org/Quantum/Stylo">Quantum/Stylo</a> parallel CSS engine, released in Firefox 57 ({{bug(1374885)}}).</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}

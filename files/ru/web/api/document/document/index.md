@@ -8,41 +8,26 @@ tags:
   - Конструктор
 translation_of: Web/API/Document/Document
 ---
-<p>{{APIRef}}{{Non-standard_header}}</p>
+{{APIRef}}{{Non-standard_header}}
 
-<p><strong><code>Document</code></strong> конструктор создаёт новый {{domxref("Document")}} объект, который является веб-страницей, загруженной в браузере  и служит точкой входа в содержание страницы.</p>
+**`Document`** конструктор создаёт новый {{domxref("Document")}} объект, который является веб-страницей, загруженной в браузере и служит точкой входа в содержание страницы.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>document</em> = new Document()</pre>
+```
+var document = new Document()
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нету.</p>
+Нету.
 
-<p>Спецификация</p>
+Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-document','Document')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                     | Статус                           | Комментарий                 |
+| -------------------------------------------------------------------------------- | -------------------------------- | --------------------------- |
+| {{SpecName('DOM WHATWG','#interface-document','Document')}} | {{Spec2('DOM WHATWG')}} | Первоначальное определение. |
 
-<h2 id="Совместимость_с_Браузерами">Совместимость с Браузерами</h2>
+## Совместимость с Браузерами
 
-<div> </div>
-
-<p> </p>
-
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

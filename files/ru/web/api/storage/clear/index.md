@@ -3,46 +3,48 @@ title: Storage.clear()
 slug: Web/API/Storage/clear
 translation_of: Web/API/Storage/clear
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Метод <code>clear()</code> интерфейса {{domxref("Storage")}} удалит все значения из хранилища.</p>
+Метод `clear()` интерфейса {{domxref("Storage")}} удалит все значения из хранилища.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><em>storage</em>.clear();</pre>
+```js
+storage.clear();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p><em>Метод не принимает параметры.</em></p>
+_Метод не принимает параметры._
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><em>Метод не возвращает значение.</em></p>
+_Метод не возвращает значение._
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующая функция создаёт 3 записи в локальном хранилище, после этого все значения удаляются с помощью метода <code>clear()</code>.</p>
+Следующая функция создаёт 3 записи в локальном хранилище, после этого все значения удаляются с помощью метода `clear()`.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.clear();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации <a href="https://github.com/mdn/web-storage-demo">Web Storage</a>.</p>
-</div>
+> **Примечание:** Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

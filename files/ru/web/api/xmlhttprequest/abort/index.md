@@ -12,25 +12,28 @@ tags:
   - метод
 translation_of: Web/API/XMLHttpRequest/abort
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Метод <strong>XMLHttpRequest.abort()</strong> прерывает уже отправленный запрос. Когда запрос прерывается, то его свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} устанавливается в <code>UNSENT</code> (0), а {{domxref("XMLHttpRequest.status", "status")}} в 0.</p>
+Метод **XMLHttpRequest.abort()** прерывает уже отправленный запрос. Когда запрос прерывается, то его свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} устанавливается в `UNSENT` (0), а {{domxref("XMLHttpRequest.status", "status")}} в 0.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">XMLHttpRequest.abort()</pre>
+```
+XMLHttpRequest.abort()
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
@@ -38,20 +41,16 @@ xhr.open(method, url, true);
 xhr.send();
 
 xhr.abort();
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
-</ul>
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

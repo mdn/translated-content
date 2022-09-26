@@ -3,40 +3,36 @@ title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.ownerDocument</strong></code> только для чтения, возвращающее объект документа верхнего уровня для этого узла.</p>
+Свойство **`Node.ownerDocument`** только для чтения, возвращающее объект документа верхнего уровня для этого узла.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>document</em> = element.ownerDocument
-</pre>
+```
+document = element.ownerDocument
+```
 
-<ul>
- <li><code>document</code> это объект <a href="/en-US/docs/DOM/document" title="DOM/document"><code>document</code></a> родитель текущего элемента.</li>
-</ul>
+- `document` это объект [`document`](/ru/docs/DOM/document "DOM/document") родитель текущего элемента.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">// given a node "p", get the top-level HTML child
+```js
+// given a node "p", get the top-level HTML child
 // of the document object
 
 var d = p.ownerDocument;
 var html = d.documentElement;
-</pre>
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Объект <code>document</code>, возвращаемый этим свойством, это основной объект с которым все дочерние узлы в настоящем  HTML документе созданы. Если это свойство используется для узла самого документа, результат будет <code>null</code>.</p>
+Объект `document`, возвращаемый этим свойством, это основной объект с которым все дочерние узлы в настоящем HTML документе созданы. Если это свойство используется для узла самого документа, результат будет `null`.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc">DOM Level 2 Core: Node.ownerDocument</a></li>
-</ul>
+- [DOM Level 2 Core: Node.ownerDocument](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc)

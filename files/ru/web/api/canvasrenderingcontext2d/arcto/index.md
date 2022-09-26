@@ -7,49 +7,49 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>В Canvas 2D API есть метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong>. Он добавляет дугу к контуру (path) с заданными контрольными точками и радиусом, соединяя их прямой линией с предыдущей точкой контура.</p>
+В Canvas 2D API есть метод **`CanvasRenderingContext2D`\*\***`.arcTo()`\*\*. Он добавляет дугу к контуру (path) с заданными контрольными точками и радиусом, соединяя их прямой линией с предыдущей точкой контура.
 
-<p>Обычно метод используется для скругления углов.</p>
+Обычно метод используется для скругления углов.
 
-<div class="note">
-<p><strong>Примечание:</strong> Помните, что вы можете получить неожиданный результат при использовании большого радиуса: соединительная линия дуги будет идти в любом направлении, в котором она должна соответствовать указанному радиусу.</p>
-</div>
+> **Примечание:** Помните, что вы можете получить неожиданный результат при использовании большого радиуса: соединительная линия дуги будет идти в любом направлении, в котором она должна соответствовать указанному радиусу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arcTo(x1, y1, x2, y2, radius);</var>
-</pre>
+```
+void ctx.arcTo(x1, y1, x2, y2, radius);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x1</code></dt>
- <dd>Координата <u>x</u> первой контрольной точки.</dd>
- <dt><code>y1</code></dt>
- <dd>Координата <u>y</u> первой контрольной точки.</dd>
- <dt><code>x2</code></dt>
- <dd>Координата <u>x</u> второй контрольной точки.</dd>
- <dt><code>y2</code></dt>
- <dd>Координата <u>y</u> второй контрольной точки.</dd>
- <dt><code>radius</code></dt>
- <dd>Радиус дуги. Не может быть отрицательным.</dd>
-</dl>
+- `x1`
+  - : Координата **x** первой контрольной точки.
+- `y1`
+  - : Координата **y** первой контрольной точки.
+- `x2`
+  - : Координата **x** второй контрольной точки.
+- `y2`
+  - : Координата **y** второй контрольной точки.
+- `radius`
+  - : Радиус дуги. Не может быть отрицательным.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Как_работает_arcTo">Как работает arcTo</h3>
+### Как работает arcTo
 
-<p>Один из способов понять как работает <code>arcTo()</code> - представить две прямые линии: одна идёт от начальной точки к первой контрольной точке, а вторая от этой точки до второй контрольной точки. Без <code>arcTo()</code> эти два сегмента образовали бы острый угол: <code>arcTo()</code> создаёт дугу между этими двумя точками и сглаживает его. Другими словами, дуга является касательной для обеих линий.</p>
+Один из способов понять как работает `arcTo()` - представить две прямые линии: одна идёт от начальной точки к первой контрольной точке, а вторая от этой точки до второй контрольной точки. Без `arcTo()` эти два сегмента образовали бы острый угол: `arcTo()` создаёт дугу между этими двумя точками и сглаживает его. Другими словами, дуга является касательной для обеих линий.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Касательная линия
@@ -79,27 +79,31 @@ ctx.beginPath();
 ctx.fillStyle = 'red';
 ctx.arc(200, 130, 5, 0, 2 * Math.PI); // Первая контрольная точка
 ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Вторая контрольная точка
-ctx.fill();</pre>
+ctx.fill();
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>В этом примере контур, созданный с помощью <code>arcTo()</code> <strong>жирный и чёрный</strong>. Касательная линия серия, контрольные точки красные, а начальная точка синяя. </p>
+В этом примере контур, созданный с помощью `arcTo()` **жирный и чёрный**. Касательная линия серия, контрольные точки красные, а начальная точка синяя.
 
-<p>{{ EmbedLiveSample('Как_работает_arcTo', 315, 165) }}</p>
+{{ EmbedLiveSample('Как_работает_arcTo', 315, 165) }}
 
-<h3 id="Создание_скруглённого_угла">Создание скруглённого угла</h3>
+### Создание скруглённого угла
 
-<p>В этом примере создаётся скруглённый угол с использованием <code>arcTo()</code>. Это ещё один метод, который часто используется.</p>
+В этом примере создаётся скруглённый угол с использованием `arcTo()`. Это ещё один метод, который часто используется.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>Дуга начинается в точке, заданной в <code>moveTo()</code>: (230, 20). Она сформирована так, чтобы соответствовать точкам на (90, 130) и (20, 20) с радиусом 50. Метод <code>lineTo()</code> соединяет дугу с (20, 20) прямой линией. Заметьте, что вторая контрольная точка дуги и точка, заданная в <code>lineTo()</code> одинаковые, что создаёт абсолютно гладкий угол.</p>
+Дуга начинается в точке, заданной в `moveTo()`: (230, 20). Она сформирована так, чтобы соответствовать точкам на (90, 130) и (20, 20) с радиусом 50. Метод `lineTo()` соединяет дугу с (20, 20) прямой линией. Заметьте, что вторая контрольная точка дуги и точка, заданная в `lineTo()` одинаковые, что создаёт абсолютно гладкий угол.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const p0 = { x: 230, y: 20  }
 const p1 = { x: 90,  y: 130 }
@@ -119,56 +123,64 @@ labelPoint(p0);
 labelPoint(p1);
 labelPoint(p2);
 
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Создание_скруглённого_угла', 315, 165) }}</p>
+{{ EmbedLiveSample('Создание_скруглённого_угла', 315, 165) }}
 
-<h3 id="Результат_с_большим_радиусом">Результат с большим радиусом</h3>
+### Результат с большим радиусом
 
-<p>Если вы используете относительно большой радиус, дуга может появиться в том месте, где вы её не ожидаете. В данном примере соединительная линия дуги идёт вверху, а не внизу. Это происходит потому что радиус слишком большой, чтобы уместить дугу между точками.</p>
+Если вы используете относительно большой радиус, дуга может появиться в том месте, где вы её не ожидаете. В данном примере соединительная линия дуги идёт вверху, а не внизу. Это происходит потому что радиус слишком большой, чтобы уместить дугу между точками.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(180, 90);
 ctx.arcTo(180,130, 110,130, 130);
 ctx.lineTo(110, 130);
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Результат_3">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Результат_с_большим_радиусом', 315, 165) }}</p>
+{{ EmbedLiveSample('Результат_с_большим_радиусом', 315, 165) }}
 
-<h3 id="Живая_демонстрация">Живая демонстрация</h3>
+### Живая демонстрация
 
-<p>Более сложная демонстрация метода. Вы можете поиграть с диапазоном ввода, чтобы увидеть, как изменяется дуга.</p>
+Более сложная демонстрация метода. Вы можете поиграть с диапазоном ввода, чтобы увидеть, как изменяется дуга.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;label for="radius"&gt;Radius: &lt;/label&gt;
-  &lt;input name="radius"  type="range" id="radius" min=0 max=100 value=50&gt;
-  &lt;label for="radius"  id="radius-output"&gt;50&lt;/label&gt;
-&lt;/div&gt;
-&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<div>
+  <label for="radius">Radius: </label>
+  <input name="radius"  type="range" id="radius" min=0 max=100 value=50>
+  <label for="radius"  id="radius-output">50</label>
+</div>
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_4">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
 
 const controlOut = document.getElementById('radius-output');
 const control    = document.getElementById('radius');
-      control.oninput = () =&gt; {
+      control.oninput = () => {
           controlOut.textContent = r = control.value;
       };
 
@@ -190,7 +202,7 @@ const labelPoint = function (p, offset, i = 0){
 }
 
 const drawPoints = function (points){
-  for (let i = 0; i &lt; points.length; i++) {
+  for (let i = 0; i < points.length; i++) {
     var p = points[i];
     labelPoint(p, { x: 0, y: -20 } , i)
   }
@@ -222,22 +234,21 @@ const loop = function (t) {
   requestAnimationFrame(loop);
 }
 
-loop(0);</pre>
+loop(0);
+```
 
-<h4 id="Результат_4">Результат</h4>
+#### Результат
 
-<p>{{EmbedLiveSample('Живая_демонстрация', 315, 200) }}</p>
+{{EmbedLiveSample('Живая_демонстрация', 315, 200) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Элемент определяющий этот метод, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- Элемент определяющий этот метод, {{domxref("CanvasRenderingContext2D")}}

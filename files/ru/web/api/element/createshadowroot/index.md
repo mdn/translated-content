@@ -3,33 +3,30 @@ title: Element.createShadowRoot()
 slug: Web/API/Element/createShadowRoot
 translation_of: Web/API/Element/createShadowRoot
 ---
-<p></p>
+{{deprecated_header()}}
 
-<p>{{deprecated_header()}}</p>
+Используйте `Element.createShadowRoot` чтобы создать экземпляр [shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM). После создания shadow DOM, он всегда будет привязан к существующему элементу. После создания shadowDOM, элемент к которому он привязан будет называться Теневой корень ({{glossary("shadow root","shadowRoot")}}) .
 
-<p>Используйте <code>Element.createShadowRoot</code> чтобы создать  экземпляр <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>. После создания shadow DOM, он всегда будет привязан к существующему элементу. После создания shadowDOM, элемент к которому он привязан будет называться Теневой корень ({{glossary("shadow root","shadowRoot")}}) .</p>
+> **Примечание:** This method has been deprecated in favor of [attachShadow](/ru/docs/Web/API/Element/attachShadow).
 
-<div class="note">
-<p>This method has been deprecated in favor of <a href="/ru/docs/Web/API/Element/attachShadow">attachShadow</a>.</p>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+var shadowroot = element.createShadowRoot();
+```
 
-<pre class="syntaxbox">var <em>shadowroot =</em><em> element</em>.createShadowRoot();
-</pre>
+### Параметры
 
-<h3 id="Параметры">Параметры</h3>
+Отсутствуют
 
-<p>Отсутствуют</p>
+### Значение результата
 
-<h3 id="Значение_результата">Значение результата</h3>
+Возвращает {{domxref("ShadowRoot")}}.
 
-<p>Возвращает {{domxref("ShadowRoot")}}.</p>
+## Спецификация
 
-<h2 id="Спецификация">Спецификация</h2>
+Эта функция больше не определяется никакими спецификациями
 
-<p>Эта функция больше не определяется никакими спецификациями</p>
+## Совместимость браузеров
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

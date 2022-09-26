@@ -9,68 +9,52 @@ tags:
   - консоль
 translation_of: Web/API/Console/timeEnd
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.</p>
+Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.
 
-<p>Более подробная документация и примеры есть в разделе <a href="/ru/docs/DOM/console#Timers" title="DOM/console#Timers">Таймеры</a> документации к {{domxref("console")}}.</p>
+Более подробная документация и примеры есть в разделе [Таймеры](/ru/docs/DOM/console#Timers "DOM/console#Timers") документации к {{domxref("console")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">console.timeEnd(<code><var>label</var></code>);
-</pre>
+```js
+console.timeEnd(label);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в <a href="/ru/docs/Tools/Web_Console" title="Web Console">Веб-консоли</a>.</dd>
-</dl>
+- `label`
+  - : Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в [Веб-консоли](/ru/docs/Tools/Web_Console "Web Console").
 
-<h2 id="Specification">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
-console.timeEnd("answer time");</pre>
+console.timeEnd("answer time");
+```
 
-<p>В примере выше мы получим время, которое потребовалось пользователю, чтобы закрыть первое диалоговое окно, а затем время, которое потребовалось пользователю, чтобы закрыть второе диалоговое окно:</p>
+В примере выше мы получим время, которое потребовалось пользователю, чтобы закрыть первое диалоговое окно, а затем время, которое потребовалось пользователю, чтобы закрыть второе диалоговое окно:
 
-<p><img alt="timerresult.png" src="https://mdn.mozillademos.org/files/16741/timer_output.png"></p>
+![timerresult.png](https://mdn.mozillademos.org/files/16741/timer_output.png)
 
-<p>Обратите внимание, что метка таймера отображается как при вызове <code>timeLog()</code>, так и завершении таймера. Кроме того, вызов timeEnd() выводит дополнительную информацию "timer ended", чтобы очевидно показать, что таймер больше не отслеживается.</p>
+Обратите внимание, что метка таймера отображается как при вызове `timeLog()`, так и завершении таймера. Кроме того, вызов timeEnd() выводит дополнительную информацию "timer ended", чтобы очевидно показать, что таймер больше не отслеживается.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timeend", "console.timeEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment                    |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
+| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Первоначальное определение |
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Console.time")}}</li>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- {{domxref("Console.time")}}
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

@@ -3,45 +3,42 @@ title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
-<p>{{ApiRef("URL")}}{{SeeCompatTable}}</p>
+{{ApiRef("URL")}}{{SeeCompatTable}}
 
-<h2 id="Определение">Определение</h2>
+## Определение
 
-<p><strong><code>URL.createObjectURL()</code></strong> - статический метод, который создаёт {{domxref("DOMString")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.</p>
+**`URL.createObjectURL()`** - статический метод, который создаёт {{domxref("DOMString")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>objectURL</em> = URL.createObjectURL(<em>blob</em>);
-</pre>
+```
+objectURL = URL.createObjectURL(blob);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><em>blob</em></dt>
- <dd>Объект типа {{domxref("File")}} или {{domxref("Blob")}} для которого создаётся URL объект.</dd>
-</dl>
+- _blob_
+  - : Объект типа {{domxref("File")}} или {{domxref("Blob")}} для которого создаётся URL объект.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Смотрите <a href="/en-US/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">Using object URLs to display images</a>.</p>
+Смотрите [Using object URLs to display images](/ru/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images "https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images").
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>При каждом вызове <code>createObjectURL()</code>, создаётся новый URL объект, даже если он уже был ранее создан для того же самого объекта. Память для каждого из них нужно освобождать с помощью {{domxref("URL.revokeObjectURL()")}}, в том случае, если они больше не нужны. Браузер сделает это автоматически с выгрузкой объекта, тем не менее в целях оптимизации производительности и использования памяти, следует принудительно выгружать их по возможности.</p>
+При каждом вызове `createObjectURL()`, создаётся новый URL объект, даже если он уже был ранее создан для того же самого объекта. Память для каждого из них нужно освобождать с помощью {{domxref("URL.revokeObjectURL()")}}, в том случае, если они больше не нужны. Браузер сделает это автоматически с выгрузкой объекта, тем не менее в целях оптимизации производительности и использования памяти, следует принудительно выгружать их по возможности.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("URL.revokeObjectURL()")}}</li>
- <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
-</ul>
+- {{domxref("URL.revokeObjectURL()")}}
+- [Using files from web applications](/ru/docs/Using_files_from_web_applications "Using files from web applications")

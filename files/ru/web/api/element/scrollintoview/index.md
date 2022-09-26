@@ -3,52 +3,54 @@ title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 translation_of: Web/API/Element/scrollIntoView
 ---
-<div>{{ APIRef("DOM")}}</div>
+{{ APIRef("DOM")}}
 
-<p>Метод <code><strong>Element.scrollIntoView()</strong></code> интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван <code>scrollIntoView()</code>, стал виден пользователю.</p>
+Метод **`Element.scrollIntoView()`** интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван `scrollIntoView()`, стал виден пользователю.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.scrollIntoView();
-</code>element.scrollIntoView(alignToTop); // аргумент типа Boolean
+```
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // аргумент типа Boolean
 element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Object
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>alignToTop</code> {{optional_inline}}</dt>
- <dd>Параметр типа {{jsxref("Boolean")}}:
- <ul>
-  <li><code>true</code>, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Значение по умолчанию.</li>
-  <li><code>false</code>, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
- </ul>
- </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>Объект со следующими свойствами:</dd>
- <dt><code>behavior</code> {{optional_inline}}</dt>
- <dd>Анимация прокрутки. Принимает значения <code>"auto"</code> или <code>"smooth"</code>. По умолчанию <code>"auto"</code>.</dd>
- <dt><code>block</code> {{optional_inline}}</dt>
- <dd>Вертикальное выравнивание.<br>
- Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"start"</code>.</dd>
- <dt><code>inline</code> {{optional_inline}}</dt>
- <dd>Горизонтальное выравнивание.<br>
- Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"nearest"</code>.</dd>
-</dl>
+- `alignToTop` {{optional_inline}}
 
-<h2 id="Пример">Пример</h2>
+  - : Параметр типа {{jsxref("Boolean")}}:
 
-<h3 id="HTML">HTML</h3>
+    - `true`, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Значение по умолчанию.
+    - `false`, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
 
-<pre class="brush: html">&lt;button type="button" class="btn"&gt;Нажми на меня&lt;/button&gt;
+- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
+  - : Объект со следующими свойствами:
+- `behavior` {{optional_inline}}
+  - : Анимация прокрутки. Принимает значения `"auto"` или `"smooth"`. По умолчанию `"auto"`.
+- `block` {{optional_inline}}
+  - : Вертикальное выравнивание.
+    Одно из значений: `"start"`, `"center"`, `"end"` или `"nearest"`. По умолчанию `"start"`.
+- `inline` {{optional_inline}}
+  - : Горизонтальное выравнивание.
+    Одно из значений: `"start"`, `"center"`, `"end"` или `"nearest"`. По умолчанию `"nearest"`.
 
-&lt;div class="big"&gt;&lt;/div&gt;
+## Пример
 
-&lt;div id="box" class="box"&gt;Скрытый элемент&lt;/div&gt;</pre>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<button type="button" class="btn">Нажми на меня</button>
 
-<pre class="brush: css">.big {
+<div class="big"></div>
+
+<div id="box" class="box">Скрытый элемент</div>
+```
+
+### CSS
+
+```css
+.big {
    background: #ccc;
    height: 300px;
 }
@@ -60,11 +62,13 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 .box {
    background: lightgreen;
    height: 40px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var hiddenElement = document.getElementById("box");
+```js
+var hiddenElement = document.getElementById("box");
 var btn = document.querySelector('.btn');
 
 function handleButtonClick() {
@@ -72,26 +76,24 @@ function handleButtonClick() {
 }
 
 btn.addEventListener('click', handleButtonClick);
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Область может не полностью прокручивается до элемента (вверх или вниз), это зависит от расположения других элементов.</p>
+Область может не полностью прокручивается до элемента (вверх или вниз), это зависит от расположения других элементов.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/ru/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}

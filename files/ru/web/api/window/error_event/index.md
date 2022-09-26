@@ -9,35 +9,32 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Обработчик события для ошибок среды Javascript.</p>
+Обработчик события для ошибок среды Javascript.
 
-<p>Обратите внимание, что некоторые/многие <code>error</code> не вызывают <code>window.onerror</code>, вы должны слушать их специально.</p>
+Обратите внимание, что некоторые/многие `error` не вызывают `window.onerror`, вы должны слушать их специально.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre>window.onerror = funcRef;
-</pre>
+```
+window.onerror = funcRef;
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>funcRef</code> ссылка на функцию. Когда функция возвращает <code>true</code>, блокируется вызов обработчика события по умолчанию. Параметры функции:
+- `funcRef` ссылка на функцию. Когда функция возвращает `true`, блокируется вызов обработчика события по умолчанию. Параметры функции:
 
-  <ul>
-   <li>Сообщение ошибки (string)</li>
-   <li>Url, где произошла ошибка (string)</li>
-   <li>Номер строки, где произошла ошибка (number)</li>
-   <li>Номер столбца для строки, в которой произошла ошибка (number) {{gecko_minversion_inline("31.0")}}</li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object) {{gecko_minversion_inline("31.0")}}</li>
-  </ul>
- </li>
-</ul>
+  - Сообщение ошибки (string)
+  - Url, где произошла ошибка (string)
+  - Номер строки, где произошла ошибка (number)
+  - Номер столбца для строки, в которой произошла ошибка (number) {{gecko_minversion_inline("31.0")}}
+  - [Error Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Пример 1:
+```js
+// Пример 1:
 
 // Предотвращает диалоги об ошибках, отображает какая это функция окна, это нормальное
 // поведение - путём переопределения обработчика событий по умолчанию для событий об ошибках, которые
@@ -56,16 +53,16 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
   // Просто запустить обработчик события по умолчанию.
   return false;
 }
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Событие возникает, когда происходит ошибка в скрипте.</p>
+Событие возникает, когда происходит ошибка в скрипте.
 
-<p>При использовании строчной HTML-разметки (&lt;body onerror="alert('an error occurred')&gt;...), аргументы не именуются. Они могут быть доступны через arguments от <code>{{ mediawiki.external(0) }}</code> до <code>{{ mediawiki.external(2) }}</code>.</p>
+При использовании строчной HTML-разметки (\<body onerror="alert('an error occurred')>...), аргументы не именуются. Они могут быть доступны через arguments от `{{ mediawiki.external(0) }}` до `{{ mediawiki.external(2) }}`.
 
-<p>Здесь недоступен <code><a class="external" href="/en/Components.stack" title="https://developer.mozilla.org/En/Components.stack">Components.stack</a>.caller для использования</code>. (Смотрите <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=355430"><strong>bug 355430</strong></a>.)</p>
+Здесь недоступен `Components.stack.caller для использования`. (Смотрите [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<p><a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097">JavaScript 1.1</a></p>
+[JavaScript 1.1](http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097)

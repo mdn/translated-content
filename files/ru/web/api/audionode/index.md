@@ -3,67 +3,62 @@ title: AudioNode
 slug: Web/API/AudioNode
 translation_of: Web/API/AudioNode
 ---
-<p>{{ APIRef("Web Audio API") }}<br>
- <strong>AudioNode </strong>это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приёмники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}). </p>
+{{ APIRef("Web Audio API") }}
+**AudioNode** это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приёмники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}).
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
+![AudioNodes participating in an AudioContext create a audio routing graph.](https://mdn.mozillademos.org/files/9713/WebAudioBasics.png)
 
-<p><code>AudioNode</code> имеет входы и выходы, каждый с заданным количеством <em>каналов</em>.<em> </em><code>AudioNode</code> без входов в с одним или несколькими выходами называются <em>источниками</em> (<em>source node)</em>. Результаты обработки передаются от одного AudioNode к другому, при этом каждый узел считывает только свой вход, производит обработку и представляет результат на свой выход, или просто пропускает аудио через себя (например {{domxref("AnalyserNode")}} где результат представляется отдельно).</p>
+`AudioNode` имеет входы и выходы, каждый с заданным количеством _каналов_.\_ *`AudioNode` без входов в с одним или несколькими выходами называются *источниками* (\_source node)*. Результаты обработки передаются от одного AudioNode к другому, при этом каждый узел считывает только свой вход, производит обработку и представляет результат на свой выход, или просто пропускает аудио через себя (например {{domxref("AnalyserNode")}} где результат представляется отдельно).
 
-<p>Разные узлы могут быть связаны в <em>граф обработки</em>. Граф помещается в {{domxref("AudioContext")}}. Один <code>AudioNode</code> может принадлежать только одному {{domxref("AudioContext")}}. В общем, узлы наследуют свойства и методы AudioNode, но они могут также и определять собственный функционал.Смотрите описания конкретных узлов на страницах этих узлов перечисленных на главной странице <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>.</p>
+Разные узлы могут быть связаны в _граф обработки_. Граф помещается в {{domxref("AudioContext")}}. Один `AudioNode` может принадлежать только одному {{domxref("AudioContext")}}. В общем, узлы наследуют свойства и методы AudioNode, но они могут также и определять собственный функционал.Смотрите описания конкретных узлов на страницах этих узлов перечисленных на главной странице [Web Audio API](/ru/docs/Web/API/Web_Audio_API).
 
-<div class="note">
-<p><strong>Note</strong>: An <code>AudioNode</code> can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
-</div>
+> **Примечание:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
-<h2 id="Свойства" style="">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
- <dd>Возвращает связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.</dd>
-</dl>
+- {{domxref("AudioNode.context")}} {{readonlyInline}}
+  - : Возвращает связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>Возвращает количество входов узла. Узлы определённые как источники имеют <code>numberOfInputs</code> равное 0.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>Возвращает количество выходов узла. Узлы назначения — такие как {{ domxref("AudioDestinationNode") }} — имеют количество выходов равное 0.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
+  - : Возвращает количество входов узла. Узлы определённые как источники имеют `numberOfInputs` равное 0.
 
-<dl>
- <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Это целое число, используемое для определения того, сколько каналов используются для <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> с любыми входами узла. Его использование точнее определяется значением {{domxref("AudioNode.channelCountMode")}}.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
- <dd>Это перечисление описывающее путь согласования каналов между входом и выходом.</dd>
- <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Это перечисление описывающее каналы.Эта интерпретация описывает как будет происходить <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a>.<br>
- Возможные значения <code>"speakers"</code> or <code>"discrete"</code>.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
+  - : Возвращает количество выходов узла. Узлы назначения — такие как {{ domxref("AudioDestinationNode") }} — имеют количество выходов равное 0.
 
-<h2 id="Методы">Методы</h2>
+<!---->
 
-<p><em>Так же реализует методы из интерфейса </em>{{domxref("EventTarget")}}.</p>
+- {{domxref("AudioNode.channelCount")}}
+  - : Это целое число, используемое для определения того, сколько каналов используются для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) с любыми входами узла. Его использование точнее определяется значением {{domxref("AudioNode.channelCountMode")}}.
 
-<dl>
- <dt>{{domxref("AudioNode.connect(AudioNode)")}}</dt>
- <dd>Позволяет нам подключить один выход данного узла на один вход другого узла.</dd>
- <dt>{{domxref("AudioNode.connect(AudioParam)")}}</dt>
- <dd>Позволяет нам подключить один выход данного узла на параметрический вход другого.</dd>
- <dt>{{domxref("AudioNode.disconnect()")}}</dt>
- <dd>Позволяет нам отключить текущий узел от другого, уже подключённого узла.</dd>
-</dl>
+<!---->
 
-<h2 id="Примеры">Примеры</h2>
+- {{domxref("AudioNode.channelCountMode")}}
+  - : Это перечисление описывающее путь согласования каналов между входом и выходом.
+- {{domxref("AudioNode.channelInterpretation")}}
+  - : Это перечисление описывающее каналы.Эта интерпретация описывает как будет происходить [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing).
+    Возможные значения `"speakers"` or `"discrete"`.
 
-<p>Этот простой фрагмент кода показывает создание некоторых аудио узлов, и как можно использовать свойства и методы AudioNode. Вы можете найти примеры такого использования на любом из примеров, на странице <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>  (например <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)</p>
+## Методы
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+_Так же реализует методы из интерфейса_ {{domxref("EventTarget")}}.
+
+- {{domxref("AudioNode.connect(AudioNode)")}}
+  - : Позволяет нам подключить один выход данного узла на один вход другого узла.
+- {{domxref("AudioNode.connect(AudioParam)")}}
+  - : Позволяет нам подключить один выход данного узла на параметрический вход другого.
+- {{domxref("AudioNode.disconnect()")}}
+  - : Позволяет нам отключить текущий узел от другого, уже подключённого узла.
+
+## Примеры
+
+Этот простой фрагмент кода показывает создание некоторых аудио узлов, и как можно использовать свойства и методы AudioNode. Вы можете найти примеры такого использования на любом из примеров, на странице [Web Audio API](/ru/docs/Web/API/Web_Audio_API) (например [Violent Theremin](https://github.com/mdn/violent-theremin).)
+
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -76,31 +71,19 @@ gainNode.connect(audioCtx.destination);
 oscillator.context;
 oscillator.numberOfInputs;
 oscillator.numberOfOutputs;
-oscillator.channelCount;</pre>
+oscillator.channelCount;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

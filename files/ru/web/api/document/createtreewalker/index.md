@@ -3,112 +3,53 @@ title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 translation_of: Web/API/Document/createTreeWalker
 ---
-<div>{{ApiRef("Document")}}</div>
+{{ApiRef("Document")}}Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
 
-<div>Вызов метода <code><strong>Document.createTreeWalker()</strong></code> возвращает новый объект класса  {{domxref("TreeWalker")}}.</div>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]);
+```
 
-<pre class="syntaxbox"><em>document</em>.createTreeWalker(<em>root</em>, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]);
-</pre>
+### Параметры
 
-<h3 id="Параметры">Параметры</h3>
+- `root`
+  - : корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.
+- `whatToShow` {{optional_inline}}
 
-<dl>
- <dt><code>root </code></dt>
- <dd>корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.</dd>
- <dt><code>whatToShow</code> {{optional_inline}}</dt>
- <dd>A <code>unsigned long</code> representing a bitmask created by combining the constant properties of <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>. It is a convenient way of filtering for certain types of node. It defaults to <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">Константа</td>
-    <td class="header">Числовое значение</td>
-    <td class="header">Описание</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ALL</code></td>
-    <td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
-    <td>Показывать все узлы.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
-    <td><code>2</code></td>
-    <td>Shows attribute {{domxref("Attr")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Attr")}} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}</td>
-    <td><code>8</code></td>
-    <td>Shows {{domxref("CDATASection")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_COMMENT</code></td>
-    <td><code>128</code></td>
-    <td>Shows {{domxref("Comment")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-    <td><code>256</code></td>
-    <td>Shows {{domxref("Document")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-    <td><code>1024</code></td>
-    <td>Shows {{domxref("DocumentFragment")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-    <td><code>512</code></td>
-    <td>Shows {{domxref("DocumentType")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-    <td><code>1</code></td>
-    <td>Shows {{domxref("Element")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
-    <td><code>32</code></td>
-    <td>Shows {{domxref("Entity")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Entity")}} node as its root; in this case, it means that the {{domxref("Entity")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
-    <td><code>16</code></td>
-    <td>Shows {{domxref("EntityReference")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
-    <td><code>2048</code></td>
-    <td>Shows {{domxref("Notation")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with a {{domxref("Notation")}} node as its root; in this case, it means that the {{domxref("Notation")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-    <td><code>64</code></td>
-    <td>Shows {{domxref("ProcessingInstruction")}} nodes.</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_TEXT</code></td>
-    <td><code>4</code></td>
-    <td>Shows {{domxref("Text")}} nodes.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>filter</code> {{optional_inline}}</dt>
- <dd>A {{domxref("NodeFilter")}}, that is an object with a method <code>acceptNode</code>, which is called by the {{domxref("TreeWalker")}} to determine whether or not to accept a node that has passed the <code>whatToShow</code> check.</dd>
- <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{obsolete_inline}}</dt>
- <dd>A {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.</dd>
-</dl>
+  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 
-<h3 id="Return_value">Return value</h3>
+    | Константа                                                       | Числовое значение                               | Описание                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | --------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                           | `-1` (that is the max value of `unsigned long`) | Показывать все узлы.                                                                                                                                                                                                                                                                                                                                                                                                    |
+    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | Shows attribute {{domxref("Attr")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Attr")}} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree.              |
+    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | Shows {{domxref("CDATASection")}} nodes.                                                                                                                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_COMMENT`                                       | `128`                                           | Shows {{domxref("Comment")}} nodes.                                                                                                                                                                                                                                                                                                                                                                               |
+    | `NodeFilter.SHOW_DOCUMENT`                                      | `256`                                           | Shows {{domxref("Document")}} nodes.                                                                                                                                                                                                                                                                                                                                                                           |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                             | `1024`                                          | Shows {{domxref("DocumentFragment")}} nodes.                                                                                                                                                                                                                                                                                                                                                                   |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                                 | `512`                                           | Shows {{domxref("DocumentType")}} nodes.                                                                                                                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_ELEMENT`                                       | `1`                                             | Shows {{domxref("Element")}} nodes.                                                                                                                                                                                                                                                                                                                                                                               |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                            | Shows {{domxref("Entity")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Entity")}} node as its root; in this case, it means that the {{domxref("Entity")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.            |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                            | Shows {{domxref("EntityReference")}} nodes.                                                                                                                                                                                                                                                                                                                                                                   |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                          | Shows {{domxref("Notation")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with a {{domxref("Notation")}} node as its root; in this case, it means that the {{domxref("Notation")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree. |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{domxref("ProcessingInstruction")}} nodes.                                                                                                                                                                                                                                                                                                                                                           |
+    | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                                                   |
 
-<p>A new {{domxref("TreeWalker")}} object.</p>
+- `filter` {{optional_inline}}
+  - : A {{domxref("NodeFilter")}}, that is an object with a method `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine whether or not to accept a node that has passed the `whatToShow` check.
+- `entityReferenceExpansion` {{optional_inline}} {{obsolete_inline}}
+  - : A {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<p>The following example goes through all nodes in the body, reduces the set of nodes to elements, simply passes through as acceptable each node (it could reduce the set in the <code>acceptNode()</code> method instead), and then makes use of tree walker iterator that is created to advance through the nodes (now all elements) and push them into an array.</p>
+A new {{domxref("TreeWalker")}} object.
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+## Example
+
+The following example goes through all nodes in the body, reduces the set of nodes to elements, simply passes through as acceptable each node (it could reduce the set in the `acceptNode()` method instead), and then makes use of tree walker iterator that is created to advance through the nodes (now all elements) and push them into an array.
+
+```js
+var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
@@ -118,38 +59,19 @@ translation_of: Web/API/Document/createTreeWalker
 var nodeList = [];
 
 while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>expandEntityReferences</code> parameter. Made the <code>whatToShow</code> and <code>filter</code> parameters optionals.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#NodeIteratorFactory-createTreeWalker', 'Document.createTreeWalker')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                    | Status                                       | Comment                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}                                         | {{Spec2('DOM WHATWG')}}             | Removed the `expandEntityReferences` parameter. Made the `whatToShow` and `filter` parameters optionals. |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#NodeIteratorFactory-createTreeWalker', 'Document.createTreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Initial definition                                                                                       |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The interface of the object it creates: {{domxref("TreeWalker")}}.</li>
-</ul>
+- The interface of the object it creates: {{domxref("TreeWalker")}}.

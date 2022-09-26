@@ -3,27 +3,23 @@ title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 translation_of: Web/API/HTMLElement/outerText
 ---
-<div>{{APIRef("DOM")}} {{ Non-standard_header() }}</div>
+{{APIRef("DOM")}} {{ Non-standard_header() }}
 
-<p><strong><code>HTMLElement.outerText</code></strong> - нестандартное свойство. В качестве геттера возвращает то же значение, что и {{domxref("Node.innerText")}}. В качестве сеттера удаляет текущий элемент и вставляет вместо него указанный текст.</p>
+**`HTMLElement.outerText`** - нестандартное свойство. В качестве геттера возвращает то же значение, что и {{domxref("Node.innerText")}}. В качестве сеттера удаляет текущий элемент и вставляет вместо него указанный текст.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p><a href="http://stackoverflow.com/a/18481435">См. ответ на StackOverflow.</a></p>
+[См. ответ на StackOverflow.](http://stackoverflow.com/a/18481435)
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью какой-либо спецификации. Обсуждение стандарта: <a href="https://github.com/whatwg/html/issues/668">whatwg/html#668</a>.</p>
+Не является частью какой-либо спецификации. Обсуждение стандарта: [whatwg/html#668](https://github.com/whatwg/html/issues/668).
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Node.innerText")}}</li>
- <li>{{domxref("Element.outerHTML")}}</li>
-</ul>
+- {{domxref("Node.innerText")}}
+- {{domxref("Element.outerHTML")}}

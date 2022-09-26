@@ -4,74 +4,39 @@ slug: Web/API/Element/focusout_event
 translation_of: Web/API/Element/focusout_event
 original_slug: Web/Events/focusout
 ---
-<p>Событие <code>focusout</code> вызывается перед потерей элементом фокуса. Главное отличие между этим событием и <a href="/en-US/docs/Mozilla_event_reference/blur_(event)"><code>blur</code></a> в том, что у последнего нет фазы всплытия.</p>
+Событие `focusout` вызывается перед потерей элементом фокуса. Главное отличие между этим событием и [`blur`](</ru/docs/Mozilla_event_reference/blur_(event)>) в том, что у последнего нет фазы всплытия.
 
-<p> </p>
+Основная информация
 
-<p>Основная информация</p>
+- Спецификация
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+- Интерфейс
+  - : {{domxref("FocusEvent")}}
+- Всплытие
+  - : Да
+- Отменяемый
+  - : Нет
+- Цель
+  - : Элемент
+- Действие по умолчанию
+  - : Нет.
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Всплытие</dt>
- <dd style="margin: 0 0 0 120px;">Да</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отменяемый</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Цель</dt>
- <dd style="margin: 0 0 0 120px;">Элемент</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">Нет.</dd>
-</dl>
+## Свойства
 
-<h2 id="Свойства">Свойства</h2>
+| Свойство                                 | Тип                                                | Описание                                      |
+| ---------------------------------------- | -------------------------------------------------- | --------------------------------------------- |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Цель события, теряющая фокус.                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | Тип события.                                  |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Всплывает ли событие при нормальных условиях. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Возможно ли отменить событие.                 |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Свойство</th>
-   <th scope="col">Тип</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Цель события, теряющая фокус.</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Тип события.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Всплывает ли событие при нормальных условиях.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Возможно ли отменить событие.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM-элемент)</td>
-   <td>Цель события, получающая фокус.</td>
-  </tr>
- </tbody>
-</table>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Related Events
 
-<h2 id="Related_Events">Related Events</h2>
-
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}

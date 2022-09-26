@@ -9,66 +9,52 @@ tags:
 translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/getRandomValues
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>Метод <code><strong>RandomSource.getRandomValues()</strong></code> позволяет вам получать криптографически стойкие числа. Массив, переданный как параметр, заполняется случайными числами (случайными в криптографическом смысле).</p>
+Метод **`RandomSource.getRandomValues()`** позволяет вам получать криптографически стойкие числа. Массив, переданный как параметр, заполняется случайными числами (случайными в криптографическом смысле).
 
-<p>Для того, чтобы гарантировать достаточную производительность, реализации используют не настоящий генератор случайных чисел (RNG, en - Random Number Generator), а генератор псевдо-случайных чисел, которому предоставлено начальное зерно (wiki - <a href="https://en.wikipedia.org/wiki/Random_seed">https://en.wikipedia.org/wiki/Random_seed</a>) с достаточной энтропией (<a href="http://cryptography.ru/ref/энтропия">http://cryptography.ru/ref/энтропия</a>). Реализация генератора псевдо-случайных чисел (PRNG, en - PseudoRandom Number Generator) отличается от других реализаций RNG, но она больше подходит для использования в криптографии. Реализации также требуют использование начального зерна с достаточной энтропией, как источник системно-уровневой энтропии.</p>
+Для того, чтобы гарантировать достаточную производительность, реализации используют не настоящий генератор случайных чисел (RNG, en - Random Number Generator), а генератор псевдо-случайных чисел, которому предоставлено начальное зерно (wiki - <https://en.wikipedia.org/wiki/Random_seed>) с достаточной энтропией (<http://cryptography.ru/ref/энтропия>). Реализация генератора псевдо-случайных чисел (PRNG, en - PseudoRandom Number Generator) отличается от других реализаций RNG, но она больше подходит для использования в криптографии. Реализации также требуют использование начального зерна с достаточной энтропией, как источник системно-уровневой энтропии.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>cryptoObj</em>.getRandomValues(<em>typedArray</em>);</pre>
+```
+cryptoObj.getRandomValues(typedArray);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>Целочисленный массив {{jsxref("TypedArray")}}, например {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, или {{jsxref("Uint32Array")}}. Все элементы массива замещаются случайными числами.</dd>
-</dl>
+- `typedArray`
+  - : Целочисленный массив {{jsxref("TypedArray")}}, например {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, или {{jsxref("Uint32Array")}}. Все элементы массива замещаются случайными числами.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<ul>
- <li>Исключение <code>QuotaExceededError</code> {{domxref("DOMException")}} выбрасывается если запрошенная длина больше чем 65536 байт.</li>
-</ul>
+- Исключение `QuotaExceededError` {{domxref("DOMException")}} выбрасывается если запрошенная длина больше чем 65536 байт.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">/* Предполагается что функция window.crypto.getRandomValues доступна */
+```js
+/* Предполагается что функция window.crypto.getRandomValues доступна */
 
 var array = new Uint32Array(10);
 window.crypto.getRandomValues(array);
 
 console.log("Ваше счастливое число:");
-for (var i = 0; i &lt; array.length; i++) {
+for (var i = 0; i < array.length; i++) {
     console.log(array[i]);
 }
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                               | Комментарий             |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------- |
+| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Изначальное определение |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("Window.crypto") }} чтобы получить объект {{domxref("Crypto")}}.</li>
- <li>{{jsxref("Math.random")}}, не криптографический способ получения случайных чисел.</li>
-</ul>
+- {{ domxref("Window.crypto") }} чтобы получить объект {{domxref("Crypto")}}.
+- {{jsxref("Math.random")}}, не криптографический способ получения случайных чисел.

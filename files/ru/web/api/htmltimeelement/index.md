@@ -3,39 +3,31 @@ title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 translation_of: Web/API/HTMLTimeElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLTimeElement</code></strong> даёт специальные свойства (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) для управления {{HTMLElement("time")}} элементами.</p>
+**`HTMLTimeElement`** даёт специальные свойства (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) для управления {{HTMLElement("time")}} элементами.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителя {{domxref("HTMLElement")}}.</em></p>
+_Наследует свойства от родителя {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTimeElement.dateTime")}}</dt>
- <dd>Это {{domxref("DOMString")}} который отражает {{ htmlattrxref("datetime", "time") }} HTML атрибут, содержащий понятный для машин формат даты и времени.</dd>
-</dl>
+- {{domxref("HTMLTimeElement.dateTime")}}
+  - : Это {{domxref("DOMString")}} который отражает {{ htmlattrxref("datetime", "time") }} HTML атрибут, содержащий понятный для машин формат даты и времени.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Нет определённого метода; наследует его у родителя, {{domxref("HTMLElement")}}.</em></p>
+_Нет определённого метода; наследует его у родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>HTML-элемент, реализующий данный интерфейс: {{HTMLElement("time")}}.</li>
-</ul>
+- HTML-элемент, реализующий данный интерфейс: {{HTMLElement("time")}}.

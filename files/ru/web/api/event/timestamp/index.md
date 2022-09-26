@@ -3,53 +3,57 @@ title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 translation_of: Web/API/Event/timeStamp
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает время (в миллисекундах), в котором было создано событие.</p>
+Возвращает время (в миллисекундах), в котором было создано событие.
 
-<div class="note">
-<p><strong>Примечание: </strong>Это свойство работает только в том случае, если система событий поддерживает его для конкретного события.</p>
-</div>
+> **Примечание:**Это свойство работает только в том случае, если система событий поддерживает его для конкретного события.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>event</var>.timeStamp
-</pre>
+```
+event.timeStamp
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Значение - это миллисекунды, прошедшие с начала жизненного цикла текущего документа до создания события.</p>
+Значение - это миллисекунды, прошедшие с начала жизненного цикла текущего документа до создания события.
 
-<p>In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}}  accurate to 5 microseconds (0.005 ms). In older implementations, the value is a {{domxref("DOMTimeStamp")}}, accurate to a millisecond.</p>
+In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}} accurate to 5 microseconds (0.005 ms). In older implementations, the value is a {{domxref("DOMTimeStamp")}}, accurate to a millisecond.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Focus this iframe and press any key to get the
   current timestamp for the keypress event.
-&lt;/p&gt;
-&lt;p&gt;timeStamp: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;</pre>
+</p>
+<p>timeStamp: <span id="time">-</span></p>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">function getTime(event) {
+```js
+function getTime(event) {
   var time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener("keypress", getTime);</pre>
+document.body.addEventListener("keypress", getTime);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of <code>event.timeStamp</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of `event.timeStamp` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 event.timeStamp;
 // 1519211809934
 // 1519211810362
@@ -63,41 +67,18 @@ event.timeStamp;
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enabled <code>privacy.resistFingerprinting</code>, the precision will be 100ms or the value of <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever is larger.</p>
+In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-timestamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-timestamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-timeStamp", "Event.timeStamp")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#dom-event-timestamp", "Event.timeStamp")}}     | {{Spec2("DOM WHATWG")}} |                    |
+| {{SpecName("DOM4", "#dom-event-timestamp", "Event.timeStamp")}}             | {{Spec2("DOM4")}}         |                    |
+| {{SpecName("DOM2 Events", "#Events-Event-timeStamp", "Event.timeStamp")}} | {{Spec2("DOM2 Events")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

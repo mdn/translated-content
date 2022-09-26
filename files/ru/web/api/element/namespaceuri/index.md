@@ -4,43 +4,43 @@ slug: Web/API/Element/namespaceURI
 translation_of: Web/API/Node/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.namespaceURI</strong></code> только для чтения, возвращает пространство имён URI узла или <code>null,</code> если узел не находится в пространстве имён (только для чтения). Хотя узел документа, возвращает пространство имён XML для текущего документа.</p>
+Свойство **`Node.namespaceURI`** только для чтения, возвращает пространство имён URI узла или `null,` если узел не находится в пространстве имён (только для чтения). Хотя узел документа, возвращает пространство имён XML для текущего документа.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>namespace</em> = <em>node</em>.namespaceURI</pre>
+```
+namespace = node.namespaceURI
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>В этом сниппете, узел рассматривается для его <a href="/en-US/docs/DOM/Node.localName" title="DOM/Node.localName">localName</a> и его <code>namespaceURI</code>. Если <code>namespaceURI</code> возвращает XUL пространство имён и <code>localName</code> возвращая "browser", затем узел XUL согласует <code>&lt;browser/&gt;</code>.</p>
+В этом сниппете, узел рассматривается для его [localName](/ru/docs/DOM/Node.localName "DOM/Node.localName") и его `namespaceURI`. Если `namespaceURI` возвращает XUL пространство имён и `localName` возвращая "browser", затем узел XUL согласует `<browser/>`.
 
-<pre class="brush:js">if (node.localName == "browser" &amp;&amp;
+```js
+if (node.localName == "browser" &&
     node.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // this is a XUL browser
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Это не вычисленное значение, которое является результатом поиска имён на основе проверки декларации в области пространства имён. Пространство имён URI узла заморожена в момент создания узла.</p>
+Это не вычисленное значение, которое является результатом поиска имён на основе проверки декларации в области пространства имён. Пространство имён URI узла заморожена в момент создания узла.
 
-<p>В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это <code>null</code>. В более поздних версиях, в соответствии с HTML5, это <code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> как в XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это `null`. В более поздних версиях, в соответствии с HTML5, это [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в XHTML. {{gecko_minversion_inline("1.9.2")}}
 
-<p>Для узлов любого <a href="/en-US/docs/DOM/Node.nodeType" title="DOM/Node/NodeType/Node.nodeType">nodeType</a> кроме <code>ELEMENT_NODE</code> и <code>ATTRIBUTE_NODE</code> значение <code>namespaceURI</code> всегда <code>null</code>.</p>
+Для узлов любого [nodeType](/ru/docs/DOM/Node.nodeType "DOM/Node/NodeType/Node.nodeType") кроме `ELEMENT_NODE` и `ATTRIBUTE_NODE` значение `namespaceURI` всегда `null`.
 
-<p>Вы можете создать элемент с конкретным <code>namespaceURI</code> используйте метод DOM Level 2 <a href="/en-US/docs/DOM/document.createElementNS" title="DOM/document.createElementNS">document.createElementNS</a>.</p>
+Вы можете создать элемент с конкретным `namespaceURI` используйте метод DOM Level 2 [document.createElementNS](/ru/docs/DOM/document.createElementNS "DOM/document.createElementNS").
 
-<p>Через <a class="external" href="http://www.w3.org/TR/xml-names11/">пространство имён в XML</a> спецификации, атрибуты не наследуют пространство имён для элемента к которому он прикреплён. Если у атрибута не задано явно пространство имён, он не имеет пространства имён.</p>
+Через [пространство имён в XML](http://www.w3.org/TR/xml-names11/) спецификации, атрибуты не наследуют пространство имён для элемента к которому он прикреплён. Если у атрибута не задано явно пространство имён, он не имеет пространства имён.
 
-<p>DOM не обрабатывает или не вынуждает проверять пространство имён как таковое. Приложения выше DOM, делают необходимые проверки. Отметим также, что префикс пространства имён, когда он связан с конкретным узлом, не может быть изменён.</p>
+DOM не обрабатывает или не вынуждает проверять пространство имён как таковое. Приложения выше DOM, делают необходимые проверки. Отметим также, что префикс пространства имён, когда он связан с конкретным узлом, не может быть изменён.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSname">DOM Level 2 Core: namespaceURI</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">DOM Level 2 Core: XML Namespaces</a></li>
- <li><a href="http://www.w3.org/TR/dom/#dom-element-namespaceuri">DOM4: namespaceURI</a></li>
-</ul>
+- [DOM Level 2 Core: namespaceURI](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSname)
+- [DOM Level 2 Core: XML Namespaces](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)
+- [DOM4: namespaceURI](http://www.w3.org/TR/dom/#dom-element-namespaceuri)

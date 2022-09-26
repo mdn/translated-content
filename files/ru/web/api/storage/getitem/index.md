@@ -3,31 +3,31 @@ title: Storage.getItem()
 slug: Web/API/Storage/getItem
 translation_of: Web/API/Storage/getItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Если в метод <code>getItem()</code> интерфейса {{domxref("Storage")}} передать ключ в качестве параметра, то метод вернёт значение, лежащее в хранилище по указанному ключу.</p>
+Если в метод `getItem()` интерфейса {{domxref("Storage")}} передать ключ в качестве параметра, то метод вернёт значение, лежащее в хранилище по указанному ключу.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>aValue</em> = <em>storage</em>.getItem(<em>название Ключа</em>);
-</pre>
+```
+var aValue = storage.getItem(название Ключа);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>название Ключа</em></dt>
- <dd>Является строкой {{domxref("DOMString")}}, содержащей название ключа, по которому получается значение из хранилища.</dd>
-</dl>
+- _название Ключа_
+  - : Является строкой {{domxref("DOMString")}}, содержащей название ключа, по которому получается значение из хранилища.
 
-<h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
+### Возвращаемые значения
 
-<p>Является строкой {{domxref("DOMString")}}, содержащей значение для соответствующего ключа.  Если ключ не существует, то будет возвращено значение <code>null</code>.</p>
+Является строкой {{domxref("DOMString")}}, содержащей значение для соответствующего ключа. Если ключ не существует, то будет возвращено значение `null`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующая функция получает 3 значения из локального хранилища, после этого они используются для установки стилей на странице.</p>
+Следующая функция получает 3 значения из локального хранилища, после этого они используются для установки стилей на странице.
 
-<pre class="brush: js">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -39,20 +39,19 @@ translation_of: Web/API/Storage/getItem
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации <a href="https://github.com/mdn/web-storage-demo">Web Storage</a>.</p>
-</div>
+> **Примечание:** Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

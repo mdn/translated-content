@@ -3,43 +3,44 @@ title: CDATASection
 slug: Web/API/CDATASection
 translation_of: Web/API/CDATASection
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Интерфейс <code><strong>CDATASection</strong></code> представляет собой раздел CDATA, который может быть использован внутри XML для добавления extended групп "незакавыченного" текста. Символы <code>&lt;</code> and <code>&amp;</code> не нуждаются в кавычках, как внутри раздела CDATA.</p>
+Интерфейс **`CDATASection`** представляет собой раздел CDATA, который может быть использован внутри XML для добавления extended групп "незакавыченного" текста. Символы `<` and `&` не нуждаются в кавычках, как внутри раздела CDATA.
 
-<p>В XML, раздел CDATA выглядит так:</p>
+В XML, раздел CDATA выглядит так:
 
-<pre class="syntaxbox">&lt;![CDATA[  ... ]]&gt;
-</pre>
+```
+<![CDATA[  ... ]]>
+```
 
-<p>Например:</p>
+Например:
 
-<pre class="brush:xml">&lt;foo&gt;Here is a CDATA section: &lt;![CDATA[  &lt; &gt; &amp; ]]&gt; with all kinds of unescaped text. &lt;/foo&gt;
-</pre>
+```xml
+<foo>Here is a CDATA section: <![CDATA[  < > & ]]> with all kinds of unescaped text. </foo>
+```
 
-<p>Единственная последовательность (символов), не разрешённая внутри раздела CDATA -  это сами символы закрытия раздела CDATA:</p>
+Единственная последовательность (символов), не разрешённая внутри раздела CDATA - это сами символы закрытия раздела CDATA:
 
-<pre class="brush:xml">&lt;![CDATA[  ]]&gt; will cause an error   ]]&gt;
-</pre>
+```xml
+<![CDATA[  ]]> will cause an error   ]]>
+```
 
-<p>Заметьте, что разделы CDATA не следует использовать внутри HTML; они работают только в  XML.</p>
+Заметьте, что разделы CDATA не следует использовать внутри HTML; они работают только в XML.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс не имеет специфических свойств и наследует родительские свойства {{domxref("Text")}}.</em></p>
+_Этот интерфейс не имеет специфических свойств и наследует родительские свойства {{domxref("Text")}}._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>This interface has no specific methods and наследует родительские методы {{domxref("Text")}}.</em></p>
+_This interface has no specific methods and наследует родительские методы {{domxref("Text")}}._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

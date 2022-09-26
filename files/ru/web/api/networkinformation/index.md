@@ -3,37 +3,33 @@ title: NetworkInformation
 slug: Web/API/NetworkInformation
 translation_of: Web/API/NetworkInformation
 ---
-<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p>Интерфейс <code><strong>NetworkInformation</strong></code> содержит методы и свойства, связанные с типом сети браузера.</p>
+Интерфейс **`NetworkInformation`** содержит методы и свойства, связанные с типом сети браузера.
 
-<p>В нем нет объектов типа  <code>NetworkInformation</code>, но другие интерфейсы, такие как {{domxref("Navigator")}}, реализуют его.</p>
+В нем нет объектов типа `NetworkInformation`, но другие интерфейсы, такие как {{domxref("Navigator")}}, реализуют его.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em><code>Интерфейс NetworkInformation</code></em><em> не наследует других свойств.</em></p>
+_`Интерфейс NetworkInformation`_ _не наследует других свойств._
 
-<dl>
- <dt>{{domxref("NetworkInformation.connection")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Connection")}} предоставляет информацию о сетевом соединении устройства.</dd>
-</dl>
+- {{domxref("NetworkInformation.connection")}} {{readonlyInline}}
+  - : {{domxref("Connection")}} предоставляет информацию о сетевом соединении устройства.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><code>Интерфейс NetworkInformation</code><em> ничего не предоставляет и не наследует других методов.</em></p>
+`Интерфейс NetworkInformation` _ничего не предоставляет и не наследует других методов._
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+## Доступность в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Информация о API сети.</a></li>
- <li><a href="/en/Online_and_offline_events" title="en/Online_and_offline_events">Онлайн- и офлайн-события.</a></li>
- <li>Интерфейс {{domxref("Navigator")}} который реализует его.</li>
-</ul>
+- [Информация о API сети.](/ru/docs/WebAPI/Network_Information)
+- [Онлайн- и офлайн-события.](/en/Online_and_offline_events "en/Online_and_offline_events")
+- Интерфейс {{domxref("Navigator")}} который реализует его.

@@ -3,91 +3,45 @@ title: Node.nodeType
 slug: Web/API/Node/nodeType
 translation_of: Web/API/Node/nodeType
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Доступное только для чтения свойство <code>Node.nodeType</code> возвращает беззнаковое короткое целочисленное значение, представляющее тип узла.</p>
+Доступное только для чтения свойство `Node.nodeType` возвращает беззнаковое короткое целочисленное значение, представляющее тип узла.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>type</var> = <var>node</var>.nodeType;
-</pre>
+```
+var type = node.nodeType;
+```
 
-<p><code>type</code> – беззнаковое короткое целочисленное значение с одним из следующих значений:</p>
+`type` – беззнаковое короткое целочисленное значение с одним из следующих значений:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/Element"><code>ELEMENT_NODE</code></a></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>ATTRIBUTE_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/Text"><code>TEXT_NODE</code></a></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <td><code>CDATA_SECTION_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>4</code></td>
-  </tr>
-  <tr>
-   <td><code>ENTITY_REFERENCE_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>5</code></td>
-  </tr>
-  <tr>
-   <td><code>ENTITY_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/ProcessingInstruction"><code>PROCESSING_INSTRUCTION_NODE</code></a></td>
-   <td><code>7</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/document.createComment"><code>COMMENT_NODE</code></a></td>
-   <td><code>8</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/HTML/Element/html"><code>DOCUMENT_NODE</code></a></td>
-   <td><code>9</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/document.doctype"><code>DOCUMENT_TYPE_NODE</code></a></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/DocumentFragment"><code>DOCUMENT_FRAGMENT_NODE</code></a></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <td><code>NOTATION_NODE</code> {{deprecated_inline()}}</td>
-   <td><code>12</code></td>
-  </tr>
- </tbody>
-</table>
+| Name                                                                    | Value |
+| ----------------------------------------------------------------------- | ----- |
+| [`ELEMENT_NODE`](/ru/docs/Web/API/Element)                              | `1`   |
+| `ATTRIBUTE_NODE` {{deprecated_inline()}}                       | `2`   |
+| [`TEXT_NODE`](/ru/docs/Web/API/Text)                                    | `3`   |
+| `CDATA_SECTION_NODE` {{deprecated_inline()}}                   | `4`   |
+| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                | `5`   |
+| `ENTITY_NODE` {{deprecated_inline()}}                          | `6`   |
+| [`PROCESSING_INSTRUCTION_NODE`](/ru/docs/Web/API/ProcessingInstruction) | `7`   |
+| [`COMMENT_NODE`](/ru/docs/Web/API/document.createComment)               | `8`   |
+| [`DOCUMENT_NODE`](/ru/docs/Web/HTML/Element/html)                       | `9`   |
+| [`DOCUMENT_TYPE_NODE`](/ru/docs/Web/API/document.doctype)               | `10`  |
+| [`DOCUMENT_FRAGMENT_NODE`](/ru/docs/Web/API/DocumentFragment)           | `11`  |
+| `NOTATION_NODE` {{deprecated_inline()}}                        | `12`  |
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>В примере проверяется, является ли первый узел внутри <code>documentElement</code> узлом комментария, если нет, то выводится сообщение.</p>
+В примере проверяется, является ли первый узел внутри `documentElement` узлом комментария, если нет, то выводится сообщение.
 
-<pre class="brush: js">var node = document.documentElement.firstChild;
+```js
+var node = document.documentElement.firstChild;
 if (node.nodeType != Node.COMMENT_NODE)
   console.log("You should comment your code well!");
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558">DOM Level 2 Core: Node.nodeType</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558">DOM Level 3 Core: Node.nodeType</a></li>
- <li><a class="external" href="http://dom.spec.whatwg.org/#node">DOM Standard</a></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
+- [DOM Level 3 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
+- [DOM Standard](http://dom.spec.whatwg.org/#node)

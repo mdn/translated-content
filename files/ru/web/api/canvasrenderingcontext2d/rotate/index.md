@@ -3,40 +3,39 @@ title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}Метод **`CanvasRenderingContext2D`\*\***`.rotate()`\*\* из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.
 
-<div>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong> из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+void ctx.rotate(angle);
+```
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rotate(angle);</var>
-</pre>
+![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;"></p>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `angle`
+  - : Угол поворота по часовой стрелке, в радианах. Вы также можете использовать `degree * Math.PI / 180` если вы хотите использовать для угла значение градуса (degree).
 
-<dl>
- <dt><code>angle</code></dt>
- <dd>Угол поворота по часовой стрелке, в радианах. Вы также можете использовать <code><em>degree</em> * Math.PI / 180</code> если вы хотите использовать для угла значение градуса (degree).</dd>
-</dl>
+Центром вращения всегда является начало холста. Для изменения центра вращения, нам необходимо передвинуть холст, используя метод {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
 
-<p>Центром вращения всегда является начало холста. Для изменения центра вращения, нам необходимо передвинуть холст, используя метод {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.</p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
+### Использование метода `rotate`
 
-<h3 id="Использование_метода_rotate">Использование метода <code>rotate</code></h3>
+Ниже приведён простой пример кода, который использует метод `rotate`.
 
-<p>Ниже приведён простой пример кода, который использует метод <code>rotate</code>.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.rotate(45 * Math.PI / 180);
@@ -44,25 +43,24 @@ ctx.fillRect(70, 0, 100, 30);
 
 // reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<p>Отредактируйте приведённый ниже код и посмотрите, как обновляются ваши изменения на холсте:</p>
+Отредактируйте приведённый ниже код и посмотрите, как обновляются ваши изменения на холсте:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
-</pre>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -85,23 +83,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>The interface defining it, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining it, {{domxref("CanvasRenderingContext2D")}}

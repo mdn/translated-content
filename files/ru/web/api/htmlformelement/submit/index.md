@@ -5,52 +5,37 @@ tags:
   - HTMLFormElement
 translation_of: Web/API/HTMLFormElement/submit
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Метод <strong><code>HTMLFormElement.submit()</code></strong> позволяет отправить форму {{HtmlElement("form")}}.</p>
+Метод **`HTMLFormElement.submit()`** позволяет отправить форму {{HtmlElement("form")}}.
 
-<p>Этот метод похож, но не идентичен кнопке {{HtmlElement("button")}}. , который активирует отправку формы.   Однако при непосредственном вызове этого метода:</p>
+Этот метод похож, но не идентичен кнопке {{HtmlElement("button")}}. , который активирует отправку формы. Однако при непосредственном вызове этого метода:
 
-<ul>
- <li>Событие {{event("submit")}} не инициировано. В частности, обработчик события {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} для данной формы не запускается.</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Проверка ограничений</a> не запускается.</li>
-</ul>
+- Событие {{event("submit")}} не инициировано. В частности, обработчик события {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} для данной формы не запускается.
+- [Проверка ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) не запускается.
 
-<p>Метод {{domxref("HTMLFormElement.requestSubmit()")}} идентичен кнопке {{HtmlElement("button")}} , которая активирует отправку формы и не имеет различий, указанных выше.</p>
+Метод {{domxref("HTMLFormElement.requestSubmit()")}} идентичен кнопке {{HtmlElement("button")}} , которая активирует отправку формы и не имеет различий, указанных выше.
 
-<p>Если элемент управления формы (например, кнопка отправки) имеет <code>name</code> или <code>id</code> кнопки <code>submit</code>, тогда этот метод будет маскировать метод <code>submit</code> формы..</p>
+Если элемент управления формы (например, кнопка отправки) имеет `name` или `id` кнопки `submit`, тогда этот метод будет маскировать метод `submit` формы..
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>HTMLFormElement</em>.submit()
-</pre>
+```
+HTMLFormElement.submit()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.forms["myform"].submit();
-</pre>
+```js
+document.forms["myform"].submit();
+```
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-form-submit', 'HTMLFormElement: submit')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#dom-form-submit', 'HTMLFormElement: submit')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}
