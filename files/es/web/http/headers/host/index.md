@@ -21,7 +21,9 @@ El encabezado `Host` debe enviarse obligatoriamente en todas las solicitudes HTT
 
 ## Sintaxis
 
-    Host: <host>:<puerto>
+```
+Host: <host>:<puerto>
+```
 
 ## Directivas
 
@@ -32,7 +34,9 @@ El encabezado `Host` debe enviarse obligatoriamente en todas las solicitudes HTT
 
 ## Ejemplos
 
-    Host: developer.mozilla.org
+```
+Host: developer.mozilla.org
+```
 
 ## Especificaciones
 

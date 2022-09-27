@@ -22,7 +22,9 @@ Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("A
 
 ## Sintaxis
 
-    Access-Control-Allow-Headers: <nombre-de-encabezado>, <nombre-de-encabezado>, ...
+```
+Access-Control-Allow-Headers: <nombre-de-encabezado>, <nombre-de-encabezado>, ...
+```
 
 ## Directivas
 
@@ -31,7 +33,9 @@ Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("A
 
 ## Ejemplos
 
-    Access-Control-Allow-Headers: X-Custom-Header
+```
+Access-Control-Allow-Headers: X-Custom-Header
+```
 
 ## Especificaciones
 

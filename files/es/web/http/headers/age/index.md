@@ -13,7 +13,9 @@ El encabezado **`Age`** contiene el tiempo medido en segundos que el objeto ha e
 
 ## Sintaxis
 
-    Age: <segundos>
+```
+Age: <segundos>
+```
 
 ## Directivas
 
@@ -22,7 +24,9 @@ El encabezado **`Age`** contiene el tiempo medido en segundos que el objeto ha e
 
 ## Ejemplos
 
-    Age: 24
+```
+Age: 24
+```
 
 ## Especificaciones
 

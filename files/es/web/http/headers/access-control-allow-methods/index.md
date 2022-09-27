@@ -13,7 +13,9 @@ La cabecera de respuesta **`Access-Control-Allow-Methods`** especifica el métod
 
 ## Sintaxis
 
-    Access-Control-Allow-Methods: <method>, <method>, ...
+```
+Access-Control-Allow-Methods: <method>, <method>, ...
+```
 
 ## Directivas
 
@@ -22,7 +24,9 @@ La cabecera de respuesta **`Access-Control-Allow-Methods`** especifica el métod
 
 ## Ejemplos
 
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
 
 ## Especificaciones
 

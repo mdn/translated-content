@@ -13,9 +13,11 @@ translation_of: Web/HTTP/Headers/Strict-Transport-Security
 
 ## Sintaxis
 
-    Strict-Transport-Security: max-age=<expire-time>
-    Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-    Strict-Transport-Security: max-age=<expire-time>; preload
+```
+Strict-Transport-Security: max-age=<expire-time>
+Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
+Strict-Transport-Security: max-age=<expire-time>; preload
+```
 
 ## Directivas
 
@@ -28,7 +30,7 @@ translation_of: Web/HTTP/Headers/Strict-Transport-Security
 
 ## Descripción
 
-Si un sitio web acepta una conexión a través de HTTP y redirecciona a HTTPS, el usuario en este caso podría inicialmente hablar a la versión no encriptada del sitio antes de ser redireccionado, si por ejemplo el usuario tipea http\://www\.foo.com/ o incluso solo foo.com.
+Si un sitio web acepta una conexión a través de HTTP y redirecciona a HTTPS, el usuario en este caso podría inicialmente hablar a la versión no encriptada del sitio antes de ser redireccionado, si por ejemplo el usuario tipea `http://www.foo.com/` o incluso solo foo.com.
 
 Esto habilita el potencial ataque man-in-the-middle, donde el redireccionamiento podría ser aprovechado para enviar al usuario a un sitio malicioso en lugar de la versión segura de la página original.
 
@@ -44,7 +46,7 @@ Strict Transport Security resuelve este problema; siempre que hayas ingresado al
 
 ### Como el navegador lo maneja
 
-La primera vez que accediste al sitio usando HTTPS y este retornó el encabezado `Strict-Transport-Security, `el navegador registra esta información, de tal manera que en futuros intentos para cargar el sitio usando HTTP va a usar en su lugar HTTPS automáticamente.``
+La primera vez que accediste al sitio usando HTTPS y este retornó el encabezado `Strict-Transport-Security`, el navegador registra esta información, de tal manera que en futuros intentos para cargar el sitio usando HTTP va a usar en su lugar HTTPS automáticamente.``
 
 Cuando el tiempo de expiración especificado por el encabezado Strict-Transport-Security haya pasado, el siguiente intento de cargar el sitio a través de HTTP se va a procesar de forma normal.
 
@@ -63,7 +65,9 @@ Todos los presentes y futuros subdominios usarán HTTPS durante 1 año.
 
 This blocks access to pages or sub domains that can only be served over HTTP.
 
-    Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
 
 ## Especificaciones
 

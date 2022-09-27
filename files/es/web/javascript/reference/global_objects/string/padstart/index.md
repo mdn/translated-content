@@ -16,7 +16,9 @@ El método **`padStart()`** rellena la cadena actual con una cadena dada (repeti
 
 ## Sintaxis
 
-    str.padStart(targetLength [, padString])
+```
+str.padStart(targetLength [, padString])
+```
 
 ### Parámetros
 

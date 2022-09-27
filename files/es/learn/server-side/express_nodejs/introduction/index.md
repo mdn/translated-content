@@ -145,7 +145,7 @@ app.listen(3000, function() {
 });
 ```
 
-Las primeras dos líneas incluyen (mediante la orden `require()`) el módulo de Express y crean una [aplicación de Express](https://expressjs.com/en/4x/api.html#app). Este elemento se denomina comúnmente `app`, y posee métodos para el enrutamiento de las peticiones HTTP, configuración del 'middleware', y visualización de las vistas de HTML, uso del motores de 'templates', y gestión de las [configuraciones de las aplicaciones ](https://expressjs.com/en/4x/api.html#app.settings.table)que controlan la aplicación (por ejemplo el entorno, las definiciones para enrutado ... etcetera.)
+Las primeras dos líneas incluyen (mediante la orden `require()`) el módulo de Express y crean una [aplicación de Express](https://expressjs.com/en/4x/api.html#app). Este elemento se denomina comúnmente `app`, y posee métodos para el enrutamiento de las peticiones HTTP, configuración del 'middleware', y visualización de las vistas de HTML, uso del motores de 'templates', y gestión de las [configuraciones de las aplicaciones](https://expressjs.com/en/4x/api.html#app.settings.table) que controlan la aplicación (por ejemplo el entorno, las definiciones para enrutado ... etcetera.)
 
 Las líneas que siguen en el código (las tres líneas que comienzan con `app.get`) muestran una definición de ruta que se llamará cuando se reciba una petición HTTP `GET` con una dirección (`'/'`) relativa al directorio raíz. La función 'callback' coge una petición y una respuesta como argumentos, y ejecuta un [`send()`](https://expressjs.com/en/4x/api.html#res.send) en la respuesta, para enviar la cadena de caracteres: "Hola Mundo!".
 
@@ -286,7 +286,7 @@ var wiki = require('./wiki.js');
 app.use('/wiki', wiki);
 ```
 
-Le mostraremos mucho más sobre como trabajar con rutas, y en particular, acerca de como usar el `Router`, más adelante en la sección[ Rutas y controladores .](/es/docs/Learn/Server-side/Express_Nodejs/routes)
+Le mostraremos mucho más sobre como trabajar con rutas, y en particular, acerca de como usar el `Router`, más adelante en la sección [Rutas y controladores .](/es/docs/Learn/Server-side/Express_Nodejs/routes)
 
 ### Usando middleware
 
@@ -299,7 +299,7 @@ La mayoría de las aplicaciones usan middleware desarrollado por terceras partes
 Para usar estas colecciones, primero ha de instalar la aplicación usando NPM. Por ejemplo para instalar el registro de peticiones HTTP [morgan](http://expressjs.com/en/resources/middleware/morgan.html), se haría con el comando Bash:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 Entonces podría llamar a la función `use()` en un objeto de aplicación _Express_ para utilizar este middleware a su aplicación.
@@ -356,10 +356,12 @@ app.use(express.static('public'));
 
 Cualesquiere archivos en el directorio público son servidos al agregar su nombre de archivo (_relativo_ a la ubicación del directorio "público" ) de la ubicación URL. Por ejemplo:
 
-    http://localhost:3000/images/dog.jpg
-    http://localhost:3000/css/style.css
-    http://localhost:3000/js/app.js
-    http://localhost:3000/about.html
+```
+http://localhost:3000/images/dog.jpg
+http://localhost:3000/css/style.css
+http://localhost:3000/js/app.js
+http://localhost:3000/about.html
+```
 
 Puede llamar `static()` multiples ocasiones a servir multiples directorios. Si un archivo no puede ser encontrado por una función middleware entonces este simplemente será pasado en la subsequente middleware (el orden en que el middleware está basado en su orden de declaración).
 
@@ -376,9 +378,11 @@ app.use('/media', express.static('public'));
 
 Ahora, puede bajar los archivos que estan en el directorio `publico` del path con prefijo `/media`.
 
-    http://localhost:3000/media/images/dog.jpg
-    http://localhost:3000/media/video/cat.mp4
-    http://localhost:3000/media/cry.mp3
+```
+http://localhost:3000/media/images/dog.jpg
+http://localhost:3000/media/video/cat.mp4
+http://localhost:3000/media/cry.mp3
+```
 
 Para más información, ver [Sirviendo archivos estáticos en Express](https://expressjs.com/en/starter/static-files.html).
 
@@ -410,7 +414,7 @@ Las apps de _Express_ pueden usar cualquier mecanismo de bases de datos suportad
 Con el propósito de usar éste, debe primero instalar el manejador de bases de datos utilizando NPM. Por ejemplo, para instalar el manejador para el popular NoSQL MongoDB querría utilizar el comando:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 La base de datos por si misma puede ser instalada localmente o en un servidor de la nube. En su codigo Express requiere el manejador, conectarse a la base de datos, y entonces ejecutar operaciones crear, leer, actualizar, y borrar (CLAB). }El ejemplo de abajo (de la documentación Express documentation) muestra como puede encontrar registros en la colección "mamiferos" usando MongoDB.
