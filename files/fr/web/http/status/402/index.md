@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/402
 translation_of: Web/HTTP/Status/402
 browser-compat: http.status.402
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 Le code de statut de réponse HTTP **`402 Payment Required`** est une erreur non standard réservée pour un usage futur.

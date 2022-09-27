@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createCaption
-translation_of: Web/API/HTMLTableElement/createCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.createCaption()`** メソッドは、この {{HtmlElement("table")}} に関連付けられた {{HtmlElement("caption")}} 要素を返します。

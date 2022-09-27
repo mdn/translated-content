@@ -2,6 +2,7 @@
 title: datalist
 slug: Web/HTML/Element/datalist
 ---
+
 **_HTML_ `<datalist>`_元素_**包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
@@ -41,7 +42,7 @@ slug: Web/HTML/Element/datalist
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## Polyfill
 

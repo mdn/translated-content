@@ -11,6 +11,7 @@ tags:
   - fetchStart
 translation_of: Web/API/PerformanceResourceTiming/fetchStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`fetchStart`** représente un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à récupérer la ressource.

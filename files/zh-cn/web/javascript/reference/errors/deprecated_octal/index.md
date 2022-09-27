@@ -2,6 +2,7 @@
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -14,7 +15,7 @@ for octal literals use the \"0o\" prefix instead
 
 ## 错误类型
 
-语法错误（{{jsxref("SyntaxError")}} ），只出现于[严格模式](/en-US/docs/Web/JavaScript/Reference/Strict_mode)下。
+语法错误（{{jsxref("SyntaxError")}} ），只出现于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。
 
 ## 哪里出错了？
 
@@ -60,5 +61,5 @@ for octal literals use the \"0o\" prefix instead
 
 ## 相关内容
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [警告： 08/09 不是符合 ECMA-262 规范的八进制常量](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
+- [警告： 08/09 不是符合 ECMA-262 规范的八进制常量](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal)

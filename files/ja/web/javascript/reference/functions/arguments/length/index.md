@@ -1,14 +1,8 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.length
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.length`** プロパティは、関数に渡された引数の数が入ります。

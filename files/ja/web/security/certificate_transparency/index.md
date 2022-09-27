@@ -1,10 +1,6 @@
 ---
 title: 証明書の透明性
 slug: Web/Security/Certificate_Transparency
-tags:
-  - Security
-  - Web
-translation_of: Web/Security/Certificate_Transparency
 ---
 **Certificate Transparency** は、証明書の誤発行を防止し、監視するために設計されたオープンなフレームワークです。新しく発行された証明書は、公開されている、多くの場合独立した CT ログに「記録」され、発行された TLS 証明書の追加のみの暗号的に保証された記録を維持します。
 

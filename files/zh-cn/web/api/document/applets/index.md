@@ -2,6 +2,7 @@
 title: document.applets
 slug: Web/API/Document/applets
 ---
+
 {{ ApiRef() }}
 
 ### 概述

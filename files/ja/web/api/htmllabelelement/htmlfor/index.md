@@ -1,14 +1,8 @@
 ---
 title: HTMLLabelElement.htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
-tags:
-  - フォーム
-  - HTML DOM
-  - HTMLLabelElement
-  - リファレンス
-  - htmlFor
-browser-compat: api.HTMLLabelElement.htmlFor
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLLabelElement.htmlFor`** プロパティは {{htmlattrxref("for", "label")}} コンテンツプロパティの値を反映します。つまり、このスクリプトでアクセス可能なプロパティは、ラベルに関連付けられたコントロール要素の ID である `for` コンテンツプロパティの値を設定したり読み取ったりするために使用されます。

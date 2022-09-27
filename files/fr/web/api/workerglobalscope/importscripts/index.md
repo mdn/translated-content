@@ -3,6 +3,7 @@ title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 La méthode **`importScripts()`** de l'interface synchrome {{domxref("WorkerGlobalScope")}} importe un ou plusieurs scripts dans l'environnement du worker.
@@ -40,13 +41,11 @@ importScripts('foo.js');
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.importScripts")}}
+{{Compat}}
 
 ## Voir aussi
 

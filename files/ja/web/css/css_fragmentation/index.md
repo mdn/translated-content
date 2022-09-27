@@ -1,15 +1,6 @@
 ---
 title: CSS 断片化
 slug: Web/CSS/CSS_Fragmentation
-tags:
-  - CSS
-  - CSS 断片化
-  - ガイド
-  - NeedsCompatTable
-  - NeedsContent
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Fragmentation
 ---
 {{CSSRef}}
 

@@ -3,6 +3,7 @@ title: IDBIndex.get()
 slug: Web/API/IDBIndex/get
 translation_of: Web/API/IDBIndex/get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`get()`** de l'interface {{domxref("IDBIndex")}} fait une requête ({{domxref("IDBRequest")}}) pour renvoyer le premier enregistrement correspondant à la clé ou l'intervalle de clé {{domxref("IDBKeyRange","")}} du magasin d'objet suivant l'index.

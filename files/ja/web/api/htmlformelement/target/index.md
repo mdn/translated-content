@@ -1,11 +1,8 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
-tags:
-  - Reference
-  - form
-translation_of: Web/API/HTMLFormElement/target
 ---
+
 ## 概要
 
 フォームのアクションの対象を取得 / 設定します。

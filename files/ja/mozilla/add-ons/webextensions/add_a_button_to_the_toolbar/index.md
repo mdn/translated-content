@@ -1,10 +1,8 @@
 ---
 title: ツールバーにボタンを追加する
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
+
 {{AddonSidebar}}
 
 ツールバーボタンは拡張機能で利用できる主な UI コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:

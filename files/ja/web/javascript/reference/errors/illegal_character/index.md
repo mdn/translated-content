@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "illegal character" は、コード内のこの位置に属していない、無効または予期しないトークンがあった場合に発生します。

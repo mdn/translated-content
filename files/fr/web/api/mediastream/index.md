@@ -3,6 +3,7 @@ title: MediaStream
 slug: Web/API/MediaStream
 translation_of: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}} {{SeeCompatTable}}
 
 L'interface `MediaStream` représente le contenu d'un flux de média. Un flux est composé de plusieurs *pistes*, tel que des pistes vidéos ou audio.

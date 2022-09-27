@@ -1,12 +1,6 @@
 ---
 title: 뷰포트
 slug: Glossary/Viewport
-tags:
-  - CodingScripting
-  - Glossary
-  - Layout
-  - viewport
-translation_of: Glossary/Viewport
 ---
 컴퓨터 그래픽스에서, **뷰포트**(viewport)는 현재 화면에 보여지고 있는 다각형(보통 직사각형)의 영역입니다. 웹 브라우저에서는 현재 창에서 문서를 볼 수 있는 부분(전체화면이라면 화면 전체)을 말합니다. 뷰포트 바깥의 콘텐츠는 스크롤 하기 전엔 보이지 않습니다.
 

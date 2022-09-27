@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Int32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Int32Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 32 bits et dans l'ordre des octets de la plate-forme. Pour avoir un contrôle sur le boutisme utilisé, il faudra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).

@@ -1,18 +1,6 @@
 ---
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Media
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - setLiveSeekableRange()
-translation_of: Web/API/MediaSource/setLiveSeekableRange
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

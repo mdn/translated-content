@@ -4,6 +4,7 @@ slug: Web/HTML/Element/tbody
 translation_of: Web/HTML/Element/tbody
 browser-compat: html.elements.tbody
 ---
+
 {{HTMLRef}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper un ou plusieurs éléments [`<tr>`](/fr/docs/Web/HTML/Element/tr) afin de former le corps d'un tableau HTML ([`<table>`](/fr/docs/Web/HTML/Element/table)).

@@ -1,14 +1,8 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 {{jsxref("Error")}} オブジェクトの標準外の **`stack`** プロパティは、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
@@ -109,7 +103,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [Debugger](/ja/docs/Tools/Debugger) ドキュメント内の [eval ソースのデバッグ](/ja/docs/Tools/Debugger/How_to/Debug_eval_sources) と [ブログ記事](http://fitzgeraldnick.com/weblog/59/ "Naming `eval` Scripts with the `//# sourceURL` Directive") も参照してください。
+`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [Debugger](/ja/docs/Tools/Debugger) ドキュメント内の [eval ソースのデバッグ](/ja/docs/Tools/Debugger/How_to/Debug_eval_sources) と [ブログ記事](http://fitzgeraldnick.com/weblog/59/) も参照してください。
 
 ## 仕様書
 

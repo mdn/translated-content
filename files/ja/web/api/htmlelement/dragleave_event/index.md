@@ -1,20 +1,8 @@
 ---
 title: 'HTMLElement: dragleave イベント'
 slug: Web/API/HTMLElement/dragleave_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragleave
-browser-compat: api.HTMLElement.dragleave_event
-translation_of: Web/API/HTMLElement/dragleave_event
 ---
+
 {{APIRef}}
 
 `dragleave` イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。

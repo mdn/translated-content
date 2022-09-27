@@ -1,12 +1,6 @@
 ---
 title: 子孫結合子
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.descendant
-translation_of: Web/CSS/Descendant_combinator
 ---
 {{CSSRef("Selectors")}}
 

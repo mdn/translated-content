@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou rajoute cette clé et cette valeur quand elle n'existe pas.

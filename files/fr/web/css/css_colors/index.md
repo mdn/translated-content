@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/CSS_Color
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **_CSS Color_** est un module des spécifications CSS qui décrit la gestion des couleurs, les types de donnée associés, la fusion des couleurs et la gestion de l'opacitié. Ce module ne contient pas l'ensemble des propriétés CSS qui prennent une valeur de type {{cssxref("&lt;color&gt;")}}, toutefois, ces propriétés dépendent des notions et règles définies dans cette spécification.

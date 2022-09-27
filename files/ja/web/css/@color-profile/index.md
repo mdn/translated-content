@@ -1,16 +1,6 @@
 ---
 title: '@color-profile'
 slug: Web/CSS/@color-profile
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Color
-  - color-profile
-browser-compat: css.at-rules.color-profile
-translation_of: Web/CSS/@color-profile
 ---
 {{CSSRef}}
 

@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion")}}, il permet de référencer un élément {{SVGElement("path")}} pour définir le chemin utilisé par l'animation.
@@ -70,14 +71,11 @@ Cet élément implémente l'interface {{domxref("SVGMPathElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                   | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#MPathElement", "&lt;mpath&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName("SVG1.1", "animate.html#MPathElement", "&lt;mpath&gt;")}} | {{Spec2("SVG1.1")}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.mpath")}}
+{{Compat}}
 
 ## Voir aussi
 

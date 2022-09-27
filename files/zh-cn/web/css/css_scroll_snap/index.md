@@ -2,6 +2,7 @@
 title: CSS Scroll Snap
 slug: Web/CSS/CSS_Scroll_Snap
 ---
+
 {{CSSRef}}
 
 **CSS 滚动快照**是 CSS 的模块，它引入滚动捕捉位置，它强制滚动位置，即 {{Glossary("滚动容器")}}的 {{Glossary("滚动端口")}} 在滚动操作完成后可能结束的滚动位置。

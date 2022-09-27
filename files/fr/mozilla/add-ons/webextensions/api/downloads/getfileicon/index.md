@@ -13,6 +13,7 @@ tags:
   - getFileIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.

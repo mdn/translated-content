@@ -1,15 +1,6 @@
 ---
 title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
-tags:
-  - API
-  - AudioBuffer
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - length
-browser-compat: api.AudioBuffer.length
-translation_of: Web/API/AudioBuffer/length
 ---
 {{ APIRef("Web Audio API") }}
 

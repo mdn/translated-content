@@ -1,12 +1,6 @@
 ---
 title: Hyperlink (ハイパーリンク)
 slug: Glossary/Hyperlink
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - Navigation
-translation_of: Glossary/Hyperlink
 ---
 ハイパーリンクはウェブページやデータ項目をお互いに接続します。HTML では {{HTMLElement("a")}} 要素が、ウェブページのある場所 (テキスト文字や画像のようなもの) から、その他のウェブページ (や同じページでも) のどこかの場所へのハイパーリンクを定義します。
 

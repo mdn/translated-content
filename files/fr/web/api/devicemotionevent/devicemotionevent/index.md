@@ -10,6 +10,7 @@ tags:
   - axes
 translation_of: Web/API/DeviceMotionEvent/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{Non-standard_header}}
 
 Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotionEvent")}}.

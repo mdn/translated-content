@@ -1,12 +1,6 @@
 ---
 title: POP3
 slug: Glossary/POP
-tags:
-  - Beginner
-  - Glossary
-  - Infrastructure
-  - 用語集
-translation_of: Glossary/POP
 ---
 **POP3** (Post Office Protocol) は {{glossary("TCP")}} 接続を使用して、メールサーバーから電子メールを取得する非常に一般的な{{glossary("protocol","プロトコル")}}です。 POP3 はもっと新しいプロトコルである {{Glossary("IMAP4")}} とは異なり、フォルダー管理に対応していません。複雑な構造となるため、実装が困難です。
 

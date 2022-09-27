@@ -9,6 +9,7 @@ tags:
   - web console
 translation_of: Web/API/Console/info
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 Affiche un message informatif dans la console du navigateur. Dans Firefox et Chrome, une petit icône de _i_ s'affiche devant le message.

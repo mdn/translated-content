@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/caret-color
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`caret-color`** définit la couleur du curseur visible à l'endroit où l'utilisateur peut ajouter du texte ou un autre contenu dans l'élément lorsqu'il saisit au clavier ou qu'il édite les informations.

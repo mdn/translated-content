@@ -1,16 +1,6 @@
 ---
 title: '-webkit-box-reflect'
 slug: Web/CSS/-webkit-box-reflect
-tags:
-  - '-webkit-box-reflect'
-  - CSS
-  - CSS プロパティ
-  - CSS:WebKit 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-box-reflect
-translation_of: Web/CSS/-webkit-box-reflect
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

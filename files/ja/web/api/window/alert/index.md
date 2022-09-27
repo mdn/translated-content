@@ -1,16 +1,8 @@
 ---
 title: window.alert
 slug: Web/API/Window/alert
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - Reference
-  - Window
-  - alert
-translation_of: Web/API/Window/alert
 ---
+
 {{ApiRef}}
 
 **`Window.alert()`** メソッドは、オプションの指定されたコンテンツと OK ボタンを持つ警告ダイアログを表示します。

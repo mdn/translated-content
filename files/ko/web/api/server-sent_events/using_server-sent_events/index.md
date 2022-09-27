@@ -17,13 +17,13 @@ tags:
 
 ## 서버에서 이벤트 받기
 
-Server-Sent Event API는 [`EventSource`](/ko/docs/Server-sent_events/EventSource "Server-sent events/EventSource") 인터페이스에 포함돼 있다. 이벤트를 전달 받기 위해서 서버로 접속을 시작하려면 우선, 이벤트를 생성하는 서버측 스크립트를 URI로 지정하여 새로운 [`EventSource`](/ko/docs/Server-sent_events/EventSource "Server-sent events/EventSource") 객체를 생성한다. 예를 들어:
+Server-Sent Event API는 [`EventSource`](/ko/docs/Server-sent_events/EventSource) 인터페이스에 포함돼 있다. 이벤트를 전달 받기 위해서 서버로 접속을 시작하려면 우선, 이벤트를 생성하는 서버측 스크립트를 URI로 지정하여 새로운 [`EventSource`](/ko/docs/Server-sent_events/EventSource) 객체를 생성한다. 예를 들어:
 
 ```js
 var evtSource = new EventSource("ssedemo.php");
 ```
 
-이벤트를 생성하는 스크립트가 다른 도메인에 존재할 경우엔 URI와 옵션 딕셔너리를 모두 지정하여 새로운 [`EventSource`](/ko/docs/Server-sent_events/EventSource "Server-sent events/EventSource") 객체를 생성한다. 클라이언트 스크립트가 example.com에 있는 경우라면:
+이벤트를 생성하는 스크립트가 다른 도메인에 존재할 경우엔 URI와 옵션 딕셔너리를 모두 지정하여 새로운 [`EventSource`](/ko/docs/Server-sent_events/EventSource) 객체를 생성한다. 클라이언트 스크립트가 example.com에 있는 경우라면:
 
 ```js
 var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
@@ -98,7 +98,7 @@ to break the loop if the connection has been closed (e.g. client closes the page
 
 ## 에러 핸들링
 
-문제가 발생한 경우(네크워크 타임아웃이나 [접근 제약](/ko/docs/HTTP/Access_control_CORS "HTTP/Access_control_CORS")과 관련한 문제)에는 오류 이벤트를 생성한다. `EventSource` 갹채에 `onerror` 콜백을 등록하면 에러를 프로그램으로 대처할 수 있다.
+문제가 발생한 경우(네크워크 타임아웃이나 [접근 제약](/ko/docs/HTTP/Access_control_CORS)과 관련한 문제)에는 오류 이벤트를 생성한다. `EventSource` 갹채에 `onerror` 콜백을 등록하면 에러를 프로그램으로 대처할 수 있다.
 
 ```js
 evtSource.onerror = function(e) {
@@ -147,41 +147,47 @@ evtSource.close();
 
 두 번째 메시지는 값이 "some text"인 data 필드를 갖고있다. 세 번째 메시지는 값이 "another message\nwith two lines"인 data 필드를 갖고 있다. 값에 줄 바꿈 문자가 있음을 주의하라.
 
-    : this is a test stream
+```
+: this is a test stream
 
-    data: some text
+data: some text
 
-    data: another message
-    data: with two lines
+data: another message
+data: with two lines
+```
 
 #### 이름이 있는 이벤트
 
 아래 예에서는 이름이 있는 이벤트를 몇개 송신하고 있다. 각각의 이벤트는 `event` 필드로 지정된 이벤트 명을 갖고 있고 또, 클라이언트에서 필요한 데이터를 포함하는 적절한 JSON 문자열을 값으로 갖는 `data` 필드도 있다. 물론 `data` 필드는 임의의 문자열 데이터를 가질 수 있다. 꼭 JSON 일 필요는 없다.
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+```
+event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-    event: userdisconnect
-    data: {"username": "bobby", "time": "02:34:23"}
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
 
-    event: usermessage
-    data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+```
 
 #### 조합형
 
 이름 없는 메시지 또는, 이름이 있는 이벤트만 사용해야 하는 경우는 없다. 그리고 이것을 하나의 이벤트 스트림 내에서 혼합해 표현할 수 있다.
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+```
+event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    data: Here's a system message of some kind that will get used
-    data: to accomplish some task.
+data: Here's a system message of some kind that will get used
+data: to accomplish some task.
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+```
 
 ## 브라우저 호환성
 

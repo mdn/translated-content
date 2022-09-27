@@ -1,10 +1,10 @@
 ---
 title: WebGLRenderingContext.framebufferTexture2D()
 slug: Web/API/WebGLRenderingContext/framebufferTexture2D
-page-type: web-api-instance-method
 l10n:
   sourceCommit: 41fe03908c341ab928c4a8d5ee48e03e28e2dd6c
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.framebufferTexture2D()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、テクスチャを {{domxref("WebGLFramebuffer")}} に割り当てます。

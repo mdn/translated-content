@@ -8,6 +8,7 @@ tags:
   - Web Performance
 translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 ---
+
 {{DefaultAPISidebar("Performance Timeline API")}}
 
 La norme **[Performance Timeline](https://w3c.github.io/performance-timeline/)** définit des extensions de l'interface [`Performance`](/fr/docs/Web/API/Performance) pour prendre en charge les mesures de latence côté client au sein des applications.

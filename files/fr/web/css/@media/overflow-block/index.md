@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/overflow-block
 ---
+
 {{CSSRef}}
 
 **`overflow-block`** est une caractéristique média CSS qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique de bloc (c'est-à-dire le sens perpendiculaire au sens de lecture).

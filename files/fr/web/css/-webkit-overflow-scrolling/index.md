@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-overflow-scrolling`** permet de contrôler si l'appareil tactile utilise l'inertie pour faire défiler l'élément visé par la déclaration.

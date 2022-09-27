@@ -1,18 +1,10 @@
 ---
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - overscroll-behavior-inline
-  - recipe:css-property
-browser-compat: css.properties.overscroll-behavior-inline
-translation_of: Web/CSS/overscroll-behavior-inline
+l10n:
+  sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-inline`** は CSS のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
@@ -29,6 +21,7 @@ overscroll-behavior-inline: none;
 overscroll-behavior-inline: inherit;
 overscroll-behavior-inline: initial;
 overscroll-behavior-inline: revert;
+overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
@@ -55,7 +48,7 @@ overscroll-behavior-inline: unset;
 
 ## 例
 
-<h3 id="Preventing_inline_overscrolling">インライン方向のオーバースクロールの抑止</h3>
+### インライン方向のオーバースクロールの抑止
 
 このデモでは、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い幅を持ち、水平にスクロールします。
 
@@ -67,7 +60,11 @@ overscroll-behavior-inline: unset;
 <main>
   <div>
     <div>
-      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+      <p>
+        <code>overscroll-behavior-inline</code> has been used to make it so that
+        when the scroll boundaries of the yellow inner box are reached, the
+        whole page does not begin to scroll.
+      </p>
     </div>
   </div>
 </main>
@@ -80,7 +77,12 @@ main {
   height: 400px;
   width: 3000px;
   background-color: white;
-  background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 main > div {
@@ -97,12 +99,17 @@ div > div {
   height: 100%;
   width: 1500px;
   background-color: yellow;
-  background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   margin: 0;
   width: 360px;
   position: relative;
@@ -125,4 +132,4 @@ p {
 
 ## 関連情報
 
-- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://developer.chrome.com/blog/overscroll-behavior/#demo)

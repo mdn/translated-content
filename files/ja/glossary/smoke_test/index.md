@@ -1,13 +1,6 @@
 ---
 title: Smoke Test (スモークテスト)
 slug: Glossary/Smoke_Test
-tags:
-  - Composing
-  - Glossary
-  - Intro
-  - QA
-  - Testing
-translation_of: Glossary/Smoke_Test
 ---
 スモークテストは、ソフトウェアの中核機能の機能テストと単体テストから構成され、より詳細なテストの前に実施されます。
 

@@ -1,12 +1,6 @@
 ---
 title: 段組みレイアウトでのボックス配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
-tags:
-  - CSS
-  - ガイド
-  - ボックス配置
-  - 段組み
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 ---
 {{CSSRef}}
 

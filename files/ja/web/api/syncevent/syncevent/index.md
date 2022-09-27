@@ -2,6 +2,7 @@
 title: SyncEvent.SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 ---
+
 {{APIRef("Service Workers API")}}{{Non-standard_header}}
 
 **`SyncEvent()`** コンストラクタは、新規の {{domxref("SyncEvent")}} オブジェクトを作成します。

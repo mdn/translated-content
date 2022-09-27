@@ -2,6 +2,7 @@
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -52,4 +53,4 @@ border-image-repeat: inherit
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-image-repeat")}}
+{{Compat}}

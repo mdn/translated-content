@@ -1,14 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptor()`** メソッドは、与えられたオブジェクトの特定のプロパティ (すなわち、あるオブジェクトの直接の表現であり、オブジェクトのプロトタイプチェーン内のものではない) の構成を記述したオブジェクトを返します。返されるオブジェクトは変更可能ですが、変更しても元のプロパティの構成には影響を与えません。

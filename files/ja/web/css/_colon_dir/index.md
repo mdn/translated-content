@@ -1,15 +1,6 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
-tags:
-  - BiDi
-  - CSS
-  - 実験的
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.dir
-translation_of: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 ---
 {{CSSRef}}
 

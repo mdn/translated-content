@@ -2,11 +2,12 @@
 title: DOMPoint.DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint()`**构造函数创建并返回一个 {{domxref("DOMPoint")}} 对象，可提供部分或全部属性值作为其参数。
 
-也可以通过调用静态方法 {{domxref("DOMPoint.fromPoint()")}} 来创建 `DOMPoint` 。此方法接受一个 {{domxref("DOMPointInit")}} 兼容对象（`DOMPoint` 或 {{domxref("DOMPointReadOnly")}}）作为参数 。
+也可以通过调用静态方法 {{domxref("DOMPoint.fromPoint()")}} 来创建 `DOMPoint` 。此方法接受一个 {{domxref("DOMPointInit")}} 兼容对象（`DOMPoint` 或 {{domxref("DOMPointReadOnly")}}）作为参数。
 
 ## 语法
 
@@ -42,7 +43,7 @@ newTopLeft.y += 100;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPoint.DOMPoint")}}
+{{Compat}}
 
 ## 相关链接
 

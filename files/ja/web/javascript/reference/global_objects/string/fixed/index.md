@@ -1,16 +1,8 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`fixed()`** メソッドは、文字列を等幅フォントで表示させる HTML の {{HTMLElement("tt")}} 要素を生成します。

@@ -12,6 +12,7 @@ tags:
   - onInputEntered
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur a sélectionné l'une des suggestions que votre extension a ajoutées à la liste déroulante de la barre d'adresse.

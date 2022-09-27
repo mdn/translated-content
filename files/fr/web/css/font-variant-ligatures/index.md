@@ -4,6 +4,7 @@ slug: Web/CSS/font-variant-ligatures
 translation_of: Web/CSS/font-variant-ligatures
 browser-compat: css.properties.font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`font-variant-ligatures`** contrôle quelles [ligatures](/fr/docs/Glossary/Ligature) et formes contextuelles sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.

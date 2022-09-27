@@ -1,18 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-block
-  - margin-block-start
-  - recipe:css-property
-browser-compat: css.properties.margin-block-start
-translation_of: Web/CSS/margin-block-start
 ---
 {{CSSRef}}
 

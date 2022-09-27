@@ -1,13 +1,6 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
 {{HTTPSidebar}}
 
@@ -20,7 +13,7 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
 
 `identity` の値、つまりエンコードをしないということは、 `identity;q=0` または `*;q=0` で `identity` とは別な値が明確に設定されていない限り、サーバーは{{HTTPStatus("406")}} `Not Acceptable` エラーを返してはいけません。
 
-> **Note:** **注:**- IANA レジストリが[公式なコンテンツエンコーディングの完全なリスト](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
+> **Note:** - IANA レジストリが[公式なコンテンツエンコーディングの完全なリスト](http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
 >
 > - 他にも `bzip` および `bzip2` の二種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら二つの UNIX プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。
 

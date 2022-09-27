@@ -1,14 +1,6 @@
 ---
 title: スタイルと色の適用
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

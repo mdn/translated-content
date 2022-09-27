@@ -1,13 +1,8 @@
 ---
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
-tags:
-  - '68'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/68
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされました。このページでは、開発者に影響する Firefox 68 の変更点をまとめています。

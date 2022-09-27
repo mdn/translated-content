@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
+
 {{JSRef}}
 
 La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) qui contient les valeurs de chacun des éléments contenu dans l'objet `Map` donné, dans leur ordre d'insertion.

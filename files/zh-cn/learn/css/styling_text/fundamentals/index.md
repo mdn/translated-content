@@ -3,6 +3,7 @@ title: 基本文本和字体样式
 slug: Learn/CSS/Styling_text/Fundamentals
 original_slug: Learn/CSS/为文本添加样式/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 在这篇文章中，我们将带你开始掌握 {{glossary("CSS")}} 的文字样式的旅程。这里我们将详细介绍文本/字体样式的所有基本原理，包括设置文字的粗细，字体和样式，文字的属性简写，文字的对齐，和其他效果，以及行和字母间距。
@@ -169,7 +170,7 @@ p {
 
 #### 默认字体
 
-CSS 定义了 5 个常用的字体名称: `serif`, `sans-serif`, `monospace`, `cursive`, 和 `fantasy`. 这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 `serif`, `sans-serif` 和 `monospace` 是比较好预测的，默认的情况应该比较合理，另一方面，`cursive` 和 `fantasy` 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。
+CSS 定义了 5 个常用的字体名称：`serif`, `sans-serif`, `monospace`, `cursive`, 和 `fantasy`. 这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 `serif`, `sans-serif` 和 `monospace` 是比较好预测的，默认的情况应该比较合理，另一方面，`cursive` 和 `fantasy` 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。
 
 五个名称定义如下：
 
@@ -183,7 +184,7 @@ CSS 定义了 5 个常用的字体名称: `serif`, `sans-serif`, `monospace`, `c
 
 #### 字体栈
 
-由于你无法保证你想在你的网页上使用的字体的可用性 (甚至一个网络字体可能由于某些原因而出错), 你可以提供一个**字体栈** (**font stack**)，这样的话，浏览器就有多种字体可以选择了。只需包含一个`font-family属性`，其值由几个用逗号分离的字体名称组成。比如
+由于你无法保证你想在你的网页上使用的字体的可用性 (甚至一个网络字体可能由于某些原因而出错), 你可以提供一个**字体栈** (**font stack**)，这样的话，浏览器就有多种字体可以选择了。只需包含一个 `font-family` 属性，其值由几个用逗号分离的字体名称组成。比如
 
 ```css
 p {
@@ -229,7 +230,7 @@ occasion such as this that he did.</p>
 
 在我们之前的模块中的[CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 文章，我们回顾了[length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size). 字体大小 (通过 {{cssxref("font-size")}} 属性设置) 可以取大多数这些单位的值 (以及其他，比如百分比 [percentages](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages))，然而你在调整字体大小时，最常用的单位是：
 
-- `px` (像素): 将像素的值赋予给你的文本。这是一个绝对单位， 它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。
+- `px` (像素): 将像素的值赋予给你的文本。这是一个绝对单位，它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。
 - `em`: 1em 等于我们设计的当前元素的父元素上设置的字体大小 (更加具体的话，比如包含在父元素中的大写字母 M 的宽度) 如果你有大量设置了不同字体大小的嵌套元素，这可能会变得棘手，但它是可行的，如下图所示。为什么要使用这个麻烦的单位呢？当你习惯这样做时，那么就会变得很自然，你可以使用`em`调整任何东西的大小，不只是文本。你可以有一个单位全部都使用 em 的网站，这样维护起来会很简单。
 - `rem`: 这个单位的效果和 `em` 差不多，除了 1`rem` 等于 HTML 中的根元素的字体大小， (i.e. {{htmlelement("html")}}) ，而不是父元素。这可以让你更容易计算字体大小，但是遗憾的是， `rem` 不支持 Internet Explorer 8 和以下的版本。如果你的项目需要支持较老的浏览器，你可以坚持使用`em` 或 `px`, 或者是 {{glossary("polyfill")}} 就像 [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill). （这个单位在“CSS 的值和单位”一节也有讲解）
 
@@ -311,7 +312,7 @@ CSS 提供了 4 种常用的属性来改变文本的样子：
   - `overline`: 文本上划线
   - `line-through`: 穿过文本的线。
 
-  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 `text-decoration: underline overline`.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 `text-decoration: line-through red wavy`.
+  你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值，比如 `text-decoration: underline overline`.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 `text-decoration: line-through red wavy`.
 
 我们来看一下这几个属性添加到我们的例子中：
 

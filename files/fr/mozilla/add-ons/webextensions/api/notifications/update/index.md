@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
+
 {{AddonSidebar()}}
 
 Met à jour une notification, compte tenu de son identifiant

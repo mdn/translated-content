@@ -1,13 +1,8 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 **`extends`** キーワードは[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。

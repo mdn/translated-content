@@ -11,6 +11,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message d'erreur dans la console du navigateur.

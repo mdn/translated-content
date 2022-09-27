@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LOG10E
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LOG10E`** fournit la valeur du logarithme en base 10 de e, environ 0.434 :

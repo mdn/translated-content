@@ -2,6 +2,7 @@
 title: AudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 {{ domxref("AudioContext") }} 接口的`createScriptProcessor()` 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过 JavaScript 直接处理音频。
@@ -33,7 +34,7 @@ A {{domxref("ScriptProcessorNode")}}.
 
 ## 示例
 
-`下面的例子展示了一个ScriptProcessorNode的基本用法，数据源取自` {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，` scriptNode.onaudioprocess方法关联``audioProcessingEvent ` ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。
+下面的例子展示了一个 `ScriptProcessorNode` 的基本用法，数据源取自 {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，`scriptNode.onaudioprocess` 方法关联 `audioProcessingEvent` ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。
 
 > **备注：** 完整的示例参照 [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) github (查看源码 [source code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
 

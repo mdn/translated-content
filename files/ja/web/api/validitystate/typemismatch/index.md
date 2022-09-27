@@ -1,14 +1,8 @@
 ---
 title: ValidityState.typeMismatch
 slug: Web/API/ValidityState/typeMismatch
-tags:
-  - API
-  - 制約検証 API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.ValidityState.typeMismatch
 ---
+
 **`typeMismatch`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーによって変更された後、その要素の [`type`](/ja/docs/Web/HTML/Element/input#input_types) 属性で設定された制約に適合していないことを示します。
 
 `type` 属性が特定の文字列を期待する場合、例えば {{HTMLElement("input/email", "email")}} や {{HTMLElement("input/url", "url")}} 型で、型で設定された制約に適合しない値である場合は、 `typeMismatch` プロパティが true になります。

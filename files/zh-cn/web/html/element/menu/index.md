@@ -2,6 +2,7 @@
 title: <menu>
 slug: Web/HTML/Element/menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 **HTML `<menu>` 元素**呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。
@@ -38,7 +39,7 @@ slug: Web/HTML/Element/menu
 
 ## 属性
 
-该元素支持[全局属性](/en-US/HTML/Global_attributes)，以及以下属性。
+该元素支持[全局属性](/zh-CN/HTML/Global_attributes)，以及以下属性。
 
 - {{HTMLAttrDef("label")}} {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
@@ -160,7 +161,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 参见
 

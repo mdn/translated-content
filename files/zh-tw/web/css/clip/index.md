@@ -2,6 +2,7 @@
 title: clip
 slug: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 ## 總結
@@ -90,7 +91,7 @@ clip: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## See also
 

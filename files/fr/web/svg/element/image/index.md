@@ -3,6 +3,7 @@ title: <image>
 slug: Web/SVG/Element/image
 translation_of: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.

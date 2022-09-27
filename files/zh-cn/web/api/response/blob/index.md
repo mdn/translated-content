@@ -2,6 +2,7 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} mixin 的 **`blob()`**方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。
@@ -51,6 +52,6 @@ fetch(myRequest)
 
 ## 另见
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

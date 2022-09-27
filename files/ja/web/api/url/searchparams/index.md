@@ -1,17 +1,8 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URLSearchParameter
-  - URLSearchParams
-  - searchParams
-translation_of: Web/API/URL/searchParams
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`searchParams`** 読み取り専用プロパティは、URL に含まれる GET デコードされたクエリー引数へのアクセスを可能にする {{domxref("URLSearchParams")}} オブジェクトを返します。

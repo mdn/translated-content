@@ -1,12 +1,8 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
-tags:
-  - API
-  - HTML5
-  - WebVTT
-translation_of: Web/API/TextTrackCue
 ---
+
 {{APIRef("WebVTT")}}
 
 **`TextTrackCues`** は、{{domxref("TextTrack")}} に一定期間表示されるテキストの文字列を表します。 これには、キューが表示される開始時間と終了時間が含まれます。 **`TextTrackCue`** を直接使用することはできません。 その代わりに、派生型の 1 つ（例えば {{domxref("VTTCue")}}）を使用する必要があります。

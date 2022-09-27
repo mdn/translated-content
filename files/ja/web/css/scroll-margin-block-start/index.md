@@ -1,14 +1,6 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
-tags:
-  - 初心者
-  - CSS
-  - Example
-  - recipe:css-property
-  - scroll-margin-block-start
-browser-compat: css.properties.scroll-margin-block-start
-translation_of: Web/CSS/scroll-margin-block-start
 ---
 {{CSSRef}}
 

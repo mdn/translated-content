@@ -2,6 +2,7 @@
 title: Headers.get()
 slug: Web/API/Headers/get
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 **`get()`** 方法以 {{domxref("ByteString")}} 形式从 Headers 对象中返回指定 header 的全部值。如果 Header 对象中不存在请求的 header，则返回 `null`。
@@ -54,7 +55,7 @@ myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
 
 ## Browser compatibility
 
-{{Compat("api.Headers.get")}}
+{{Compat}}
 
 ## See also
 

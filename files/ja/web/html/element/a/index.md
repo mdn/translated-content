@@ -1,20 +1,6 @@
 ---
 title: '<a>: アンカー要素'
 slug: Web/HTML/Element/a
-tags:
-  - コンテンツ
-  - 要素
-  - HTML
-  - HTML テキストレベルの意味づけ
-  - HTML:フローコンテンツ
-  - HTML:対話的コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - インライン要素
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.a
-translation_of: Web/HTML/Element/a
 ---
 
 {{HTMLRef}}
@@ -247,7 +233,7 @@ a { display: block; margin-bottom: 0.5em }
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links)または {{RFC(6068)}} をご覧ください。
+件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 

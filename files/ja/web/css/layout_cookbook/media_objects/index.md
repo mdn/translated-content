@@ -1,16 +1,6 @@
 ---
 title: 'レシピ: メディアオブジェクト'
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - メディアオブジェクト
-  - 料理帳
-  - fit-content
-  - float
-  - グリッド
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
 {{CSSRef}}
 

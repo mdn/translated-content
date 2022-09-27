@@ -1,15 +1,7 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/grayscale()
 original_slug: Web/CSS/filter-function/grayscale()
-browser-compat: css.types.filter-function.grayscale
 ---
 {{CSSRef}}
 

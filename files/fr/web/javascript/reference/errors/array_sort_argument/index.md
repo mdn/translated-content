@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Array_sort_argument
 original_slug: Web/JavaScript/Reference/Erreurs/Array_sort_argument
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

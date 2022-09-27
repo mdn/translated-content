@@ -2,6 +2,7 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 屬性的初始值與 {{jsxref("Array.prototype.values()", "values()")}} 屬性的初始值為相同的的函式物件。
@@ -48,7 +49,7 @@ console.log(eArr.next().value); // p
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## 參見
 

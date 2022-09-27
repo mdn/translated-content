@@ -1,15 +1,8 @@
 ---
 title: new 演算子
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - 言語機能
-  - 左辺値式
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.new
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 **`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。

@@ -2,6 +2,7 @@
 title: show
 slug: Web/API/Element/show_event
 ---
+
 当一个具有 contextmenu 属性的元素的 contextmenu 事件触发或冒泡到该元素时，show 事件会被触发。
 
 ## 基本信息
@@ -45,4 +46,4 @@ slug: Web/API/Element/show_event
 
 ## 相关事件
 
-- [`contextmenu`](/en-US/Mozilla_event_reference/contextmenu)
+- [`contextmenu`](/zh-CN/Mozilla_event_reference/contextmenu)

@@ -2,6 +2,7 @@
 title: VRPose.timestamp
 slug: Web/API/VRPose/timeStamp
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 **`timestamp`** 是 {{domxref("VRPose")}} 接口的只读属性，返回为系统此时的时间戳 — 一个单调递增的数值，代表这个软件启动到现在的时间。
@@ -36,5 +37,5 @@ TBD.
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- [WebVR API homepage](/zh-CN/docs/Web/API/WebVR_API).
 - [MozVr.com](http://mozvr.com/) — 来自于 Mozilla 的 VR 团队的模板、下载以及其他其他资源。

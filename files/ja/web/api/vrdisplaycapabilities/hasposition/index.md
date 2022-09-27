@@ -1,8 +1,8 @@
 ---
 title: VRDisplayCapabilities.hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
-translation_of: Web/API/VRDisplayCapabilities/hasPosition
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRDisplayCapabilities")}} インターフェイスの **`hasPosition`** 読取専用プロパティは，その VR ディスプレイがトラッキング機能を備えていて位置情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します．

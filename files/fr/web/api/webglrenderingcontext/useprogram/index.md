@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/useProgram
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.
@@ -43,14 +44,11 @@ gl.useProgram(programme);
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire               |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "useProgram")}}                             | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glUseProgram.xml", "glUseProgram")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
-## Browser compatibilité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.useProgram")}}
+{{Compat}}
 
 ## Voir aussi
 

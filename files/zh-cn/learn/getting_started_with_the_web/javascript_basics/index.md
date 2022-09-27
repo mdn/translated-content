@@ -2,6 +2,7 @@
 title: JavaScript 基础
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -207,7 +208,7 @@ myVariable = '韩梅梅';
       <td>这些运算符操作与基础算术一致。只是乘法写作星号，除法写作斜杠。</td>
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
-        <code>9 - 3;<br />8 * 2; //乘法在JS中是一个星号<br />9 / 3;</code>
+        <code>9 - 3;<br />8 * 2; //乘法在 JS 中是一个星号<br />9 / 3;</code>
       </td>
     </tr>
     <tr>

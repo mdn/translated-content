@@ -3,6 +3,7 @@ title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
 translation_of: Web/API/IDBDatabase/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`transaction`** de l'interface {{domxref("IDBDatabase")}} renvoie une {{domxref("IDBTransaction","transaction")}} sur laquelle on peut appeler la méthode {{domxref("IDBTransaction.objectStore")}} pour accéder aux magasins d'objets de la base de donnée.

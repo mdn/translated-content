@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
+
 {{AddonSidebar()}}
 
 Ferme un ou plusieurs onglets.

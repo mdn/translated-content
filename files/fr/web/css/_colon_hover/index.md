@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:hover
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.

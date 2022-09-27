@@ -1,14 +1,8 @@
 ---
 title: 'Window: vrdisplayfocus event'
 slug: Web/API/Window/vrdisplayfocus_event
-tags:
-  - Reference
-  - WebVR
-  - events
-  - onvrdisplayfocus
-  - vrdisplayfocus
-translation_of: Web/API/Window/vrdisplayfocus_event
 ---
+
 {{APIRef("Window")}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplayfocus`** イベントは VR ディスプレイへのプレゼンテーションがぼやけた後に再開されたときに発生します。

@@ -1,16 +1,8 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsNonDHMLImage
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetHeight`** は読み取り専用プロパティで、垂直パディングや境界線を含む要素の高さを整数として返します。

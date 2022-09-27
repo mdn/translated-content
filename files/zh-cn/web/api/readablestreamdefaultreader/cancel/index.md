@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`cancel()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 在流被取消时兑现。消费者在流中调用该方法发出取消流的信号。

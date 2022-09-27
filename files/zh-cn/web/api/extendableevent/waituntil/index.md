@@ -2,6 +2,7 @@
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableEvent.waitUntil()`** 方法告诉事件分发器该事件仍在进行。这个方法也可以用于检测进行的任务是否成功。在服务工作线程中，这个方法告诉浏览器事件一直进行，直至 promise 解决，浏览器不应该在事件中的异步操作完成之前终止服务工作线程。
@@ -48,7 +49,7 @@ addEventListener('install', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.ExtendableEvent.waitUntil")}}
+{{Compat}}
 
 ## 另参见
 

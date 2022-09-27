@@ -9,6 +9,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable }}
 
 Le constructeur **`DOMRectReadOnly()`** crée un nouvel objet {{domxref("DOMRectReadOnly")}}.

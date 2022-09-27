@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Read-only
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)のみの例外 "is read-only" は、代入されたグローバル変数またはオブジェクトプロパティが読み取り専用プロパティであった場合に発生します。

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 original_slug: Web/JavaScript/Reference/Erreurs/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

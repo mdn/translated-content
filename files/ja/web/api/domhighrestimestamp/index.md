@@ -46,5 +46,5 @@ slug: Web/API/DOMHighResTimeStamp
 
 ## 関連情報
 
-- [Navigation Timing API](/ja/docs/Navigation_timing "Navigation_timing")
+- [Navigation Timing API](/ja/docs/Navigation_timing)
 - [performance.now()](/ja/docs/Web/API/Performance/now)

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/source
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/HTML/formats_media_support).
@@ -128,13 +129,11 @@ Avec l'élément {{HTMLElement("picture")}}, il faut toujours inclure un éléme
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.source")}}
+{{Compat}}
 
 ## Voir aussi
 

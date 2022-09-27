@@ -1,17 +1,6 @@
 ---
 title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLRef}}
 
@@ -25,8 +14,8 @@ translation_of: Web/HTML/Element/picture
 
 `<img>` 要素は 2 つの役割を担います。
 
-1.  画像の寸法やその他の属性を記述します。
-2.  `<source>` 要素で利用可能な画像を提供できなかった場合の代替策を提供します。
+1. 画像の寸法やその他の属性を記述します。
+2. `<source>` 要素で利用可能な画像を提供できなかった場合の代替策を提供します。
 
 `<picture>` をよく使う場面は以下の通りです。
 

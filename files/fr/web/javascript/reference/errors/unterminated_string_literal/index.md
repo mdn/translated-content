@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 original_slug: Web/JavaScript/Reference/Erreurs/Unterminated_string_literal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

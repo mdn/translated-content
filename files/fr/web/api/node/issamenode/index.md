@@ -3,6 +3,7 @@ title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 translation_of: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.

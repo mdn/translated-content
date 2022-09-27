@@ -1,16 +1,6 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - put
-translation_of: Web/API/Cache/put
 ---
 {{APIRef("Service Workers API")}}
 
@@ -27,9 +17,9 @@ fetch(url).then(function(response) {
 })
 ```
 
-> **Note:** **注**: `put()` は、リクエストに一致する、以前にキャッシュに保存されたキーと値のペアを上書きします。
+> **Note:** `put()` は、リクエストに一致する、以前にキャッシュに保存されたキーと値のペアを上書きします。
 
-> **Note:** **注**: {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 の範囲にない `Response.status` 値を持つレスポンスをキャッシュしませんが、{{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。 その結果、{{domxref("Cache.put")}} では可能ですが、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できません。
+> **Note:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 の範囲にない `Response.status` 値を持つレスポンスをキャッシュしませんが、{{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。 その結果、{{domxref("Cache.put")}} では可能ですが、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できません。
 
 ## 構文
 
@@ -50,15 +40,15 @@ cache.put(request, response).then(function() {
 
 `undefined` で解決する {{jsxref("Promise")}}。
 
-> **Note:** 注: URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
+> **Note:** URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
 
 ## 例
 
 この例は、MDN の [sw-test の例](https://github.com/mdn/sw-test/)からのものです（[sw-test をライブで](https://mdn.github.io/sw-test/)見る）。 ここでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
-1.  {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、リクエストの一致が {{domxref("CacheStorage")}} にあるかどうかを確認します。 もしそうなら、それを提供します。
-2.  そうでない場合は、`open()` を使用して `v1` キャッシュを開き、{{domxref("Cache.put","Cache.put()")}} を使用してデフォルトのネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用してデフォルトのネットワークリクエストのクローンを返します。 `put()` がレスポンスのボディを消費するため、クローンが必要です。
-3.  これが失敗した場合（ネットワークがダウンしているなど）、フォールバックレスポンスを返します。
+1. {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、リクエストの一致が {{domxref("CacheStorage")}} にあるかどうかを確認します。 もしそうなら、それを提供します。
+2. そうでない場合は、`open()` を使用して `v1` キャッシュを開き、{{domxref("Cache.put","Cache.put()")}} を使用してデフォルトのネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用してデフォルトのネットワークリクエストのクローンを返します。 `put()` がレスポンスのボディを消費するため、クローンが必要です。
+3. これが失敗した場合（ネットワークがダウンしているなど）、フォールバックレスポンスを返します。
 
 ```js
 var response;

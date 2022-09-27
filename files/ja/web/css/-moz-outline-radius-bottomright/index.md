@@ -1,16 +1,6 @@
 ---
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-outline-radius-bottomright
-translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
 {{CSSRef}}{{deprecated_header}}
 

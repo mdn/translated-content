@@ -2,6 +2,7 @@
 title: <body>：文档主体元素
 slug: Web/HTML/Element/body
 ---
+
 {{HTMLRef}}
 
 **HTML `body` 元素**表示文档的内容。{{domxref("document.body")}} 属性提供了可以轻松访问文档的 body 元素的脚本。
@@ -10,11 +11,11 @@ slug: Web/HTML/Element/body
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="/zh-CN/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >Sectioning root</a
         >.
       </td>
@@ -22,7 +23,7 @@ slug: Web/HTML/Element/body
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>
@@ -147,7 +148,7 @@ slug: Web/HTML/Element/body
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## 参见
 

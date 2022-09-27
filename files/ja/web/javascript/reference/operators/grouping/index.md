@@ -1,14 +1,8 @@
 ---
 title: グループ化演算子 ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expressions
-browser-compat: javascript.operators.grouping
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 グループ化演算子 `( )` は、式での評価の優先順位を制御します。

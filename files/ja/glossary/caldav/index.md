@@ -1,11 +1,6 @@
 ---
 title: CalDAV
 slug: Glossary/CalDAV
-tags:
-  - CalDAV
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/CalDAV
 ---
 CalDAV（Calendaring extensions to {{Glossary("WebDAV")}}）は、{{Glossary("IETF")}} によって標準化された{{glossary("protocol","プロトコル")}}であり、{{glossary("server","サーバー")}}からカレンダーデータにリモートアクセスするために使用されます。
 

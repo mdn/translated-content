@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/409
 translation_of: Web/HTTP/Status/409
 browser-compat: http.status.409
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse **`409 Conflict`** indique que la requête entre en conflit avec l'état actuel du serveur.

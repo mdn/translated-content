@@ -2,6 +2,7 @@
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
 ---
+
 {{HTTPSidebar}}
 
 Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。 这可能是传输成本高，连接速度慢等原因。
@@ -78,7 +79,7 @@ Content-Type: image/jpeg
 
 ## 参见
 
-- [Help Your Users \`Save-Data\` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
+- [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - [Network Information API - WICG](https://wicg.github.io/netinfo/#save-data-request-header-field)
 - Header to indicate that the content served varies by `Save-Data`: {{HTTPHeader("Vary")}}

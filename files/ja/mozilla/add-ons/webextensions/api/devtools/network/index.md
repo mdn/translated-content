@@ -1,16 +1,9 @@
 ---
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.network
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 ---
+
 {{AddonSidebar}}
 
 > **Note:** このページは Firefox 54 に存在する WebExtensions devtools APIs を記述しています。この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs) を見てください。

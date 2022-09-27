@@ -2,6 +2,7 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
@@ -312,7 +313,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition-delay")}}
+{{Compat}}
 
 ## 扩展阅读
 

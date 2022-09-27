@@ -1,15 +1,6 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.block-size
-translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}
 

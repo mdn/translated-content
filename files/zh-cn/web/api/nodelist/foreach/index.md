@@ -2,6 +2,7 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}}接口的 **`forEach()`** 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。

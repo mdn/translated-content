@@ -1,13 +1,8 @@
 ---
 title: Firefox 72 for Developers
 slug: Mozilla/Firefox/Releases/72
-tags:
-  - '72'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/72
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 72 の変更点をまとめています。

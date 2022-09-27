@@ -3,6 +3,7 @@ title: range
 slug: Web/API/Range
 translation_of: Web/API/Range
 ---
+
 {{ ApiRef() }}
 
 ### Introduction

@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Apprendre/Utiliser_les_pages_GitHub
 ---
+
 [GitHub](https://github.com/) est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version [Git](http://git-scm.com/)**.** Par défaut, le système est _open source_, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées _gh-pages_) qui sont une des fonctionnalités de GitHub.
 
 ## Publier du contenu
@@ -88,7 +89,7 @@ La ligne de commande peut sembler un peu effrayante au début mais ne vous inqui
     git push -u origin master
     ```
 
-4. Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une _branche_ `gh-pages` sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « Branch: **master** » (GitHub indique que vous êtes sur la branche `master` de votre dépôt). Dans la liste qui s'affiche, saisissez le texte **gh-pages** puis cliquez sur _Create branch: gh-pages_ (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera _nom-utilisateur.github.io/nom-du-depot_. Dans mon exemple, l'URL est donc _https\://chrisdavidmills.github.io/my-repository_. La page qui est affichée à cette URL est la page `index.html` contenue dans le dépôt.
+4. Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une _branche_ `gh-pages` sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « Branch: **master** » (GitHub indique que vous êtes sur la branche `master` de votre dépôt). Dans la liste qui s'affiche, saisissez le texte **gh-pages** puis cliquez sur _Create branch: gh-pages_ (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera _nom-utilisateur.github.io/nom-du-depot_. Dans mon exemple, l'URL est donc `https://chrisdavidmills.github.io/my-repository`. La page qui est affichée à cette URL est la page `index.html` contenue dans le dépôt.
     ![](repo-site.png)
 5. Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)
 

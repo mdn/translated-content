@@ -1,13 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/431
 ---
 {{HTTPSidebar}}
 
