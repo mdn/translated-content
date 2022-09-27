@@ -60,7 +60,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 
 > **备注：** 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确定所有东西都是最新的。
 
-接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在[selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) (第一部分的表格) 页面查看如何下载。 显然，有的浏览器是 OS 定制的，我们将使用 Firefox 和 Chrome, 它们在主流的 OS 下都支持。
+接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在[selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) (第一部分的表格) 页面查看如何下载。显然，有的浏览器是 OS 定制的，我们将使用 Firefox 和 Chrome, 它们在主流的 OS 下都支持。
 
 1. 下载最新版本的 [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) ( Firefox) 和 [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html) 驱动。
 2. 将它们解压到一个简单的目录下，如用户根目录。
@@ -378,7 +378,7 @@ driver.sleep(2000).then(function() {
 
 WebDriver 等待 2 秒然后填充表单的文本框。接下来我们使用`getAttribute()`获取它的`value`属性值，并对它进行测试（如是否为空），最后将测试结果打印出来。
 
-> **备注：** 还有一个方法叫 [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), 其中定义了使用`wait()的常见条件`.
+> **备注：** 还有一个方法叫 [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), 其中定义了使用`wait() 的常见条件`.
 
 ### 使用后关闭驱动
 
@@ -419,7 +419,7 @@ driver.quit();
 
 ## 运行远程测试
 
-在远端服务器上运行测试并不比在本地执行测试要困难多少，只需要在创建驱动实例的时候多配置几个特征参数，如测试的浏览器类型、服务器地址和用户权限（如果需要） 就可以。
+在远端服务器上运行测试并不比在本地执行测试要困难多少，只需要在创建驱动实例的时候多配置几个特征参数，如测试的浏览器类型、服务器地址和用户权限（如果需要）就可以。
 
 ### BrowserStack
 
