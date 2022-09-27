@@ -3,6 +3,7 @@ title: 'Django didactique Section 3: Utilisation des modèles de données'
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Ce troisième article est consacré aux modèles de données pour les sites web générés avec Django. Après une définition et une présentation de la notion de modèle de données, il explique comment les déclarer, choisir le type de champs et quelques méthodes d'accès au modèle de données via Django.
@@ -440,7 +441,7 @@ Cet article est consacré à la création des objets et leur lien en base de don
 
 A ce stade, il est prématuré de créer le site web, nous allons simplement utiliser le site d'administration qui permet d'ajouter et de manipuler des données. Nous afficherons ces informations ensuite en créant des vues et de gabarits.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecriture de votre première application Django, Deuxième partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/) (Documentation Django)
 - [Création de requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) (Documentation Django)

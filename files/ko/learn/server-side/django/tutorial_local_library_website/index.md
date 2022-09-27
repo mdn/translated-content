@@ -1,7 +1,6 @@
 ---
 title: 'Django 튜토리얼: 지역 도서관 웹사이트'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
@@ -65,7 +64,7 @@ _LocalLibrary는 이 튜토리얼 시리즈에서 우리가 만들고 개선시�
 
 튜토리얼을 진행하면서, 각 포인트마다 복사해서 붙여넣기할 수 있는 적절한 토막 코드가 제공될 것이다. 또한 당신이 스스로 (약간의 안내문과 함께) 도전해볼 수 있는 부분도 있을 것이다.
 
-개발중에 진행이 어렵다면, 여기[ Github](https://github.com/mdn/django-locallibrary-tutorial)에 완전히 개발된 버전의 웹사이트 소스코드를 참고할 수도 있다.
+개발중에 진행이 어렵다면, 여기 [Github](https://github.com/mdn/django-locallibrary-tutorial)에 완전히 개발된 버전의 웹사이트 소스코드를 참고할 수도 있다.
 
 ## 요약
 

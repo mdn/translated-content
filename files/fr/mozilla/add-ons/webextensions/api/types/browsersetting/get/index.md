@@ -12,6 +12,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 ---
+
 {{AddonSidebar()}}
 
 La méthode  `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..

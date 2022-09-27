@@ -2,6 +2,7 @@
 title: SVGEvent
 slug: Web/API/SVGEvent
 ---
+
 {{APIRef("SVG")}}
 
 {{domxref("SVGEvent")}} 是一种与 SVG 相关事件所对应的事件对象接口。

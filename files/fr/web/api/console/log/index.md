@@ -4,6 +4,7 @@ slug: Web/API/Console/log
 translation_of: Web/API/Console/log
 browser-compat: api.Console.log
 ---
+
 {{APIRef("Console API")}}
 
 La méthode **`console.log()`** affiche un message dans la console Web. Le message peut être une simple chaine de caractères (avec des valeurs optionnelles de substitution) ou peut être composé d'un ou plusieurs objets JavaScript.

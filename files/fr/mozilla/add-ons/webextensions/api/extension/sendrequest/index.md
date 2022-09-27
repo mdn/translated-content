@@ -13,6 +13,7 @@ tags:
   - sendRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
+
 {{AddonSidebar}}{{Deprecated_Header}}
 
 > **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.

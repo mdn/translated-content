@@ -1,17 +1,6 @@
 ---
 title: BaseAudioContext.createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - CreateIIRFilter
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - filter
-browser-compat: api.BaseAudioContext.createIIRFilter
 ---
 {{ APIRef("Web Audio API") }}
 

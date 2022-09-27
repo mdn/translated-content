@@ -2,6 +2,7 @@
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 在上一章節，我們做了一些[基礎動畫](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations)且知道它的移動方式。在這部分我們更仔細的介紹它的動畫效果且並增加一些特效，使它看起來更高級。
@@ -295,7 +296,7 @@ ball.draw();
 
 ## 增加滑鼠控制
 
-為了能控制球使它跟著滑鼠移動，在這個範例使用[`mousemove`](/en-US/docs/Web/Reference/Events/mousemove) 效果。當 [`click`](/en-US/docs/Web/Events/click) 事件觸發了這顆球，它又會開始彈跳。
+為了能控制球使它跟著滑鼠移動，在這個範例使用[`mousemove`](/zh-TW/docs/Web/Reference/Events/mousemove) 效果。當 [`click`](/zh-TW/docs/Web/Events/click) 事件觸發了這顆球，它又會開始彈跳。
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

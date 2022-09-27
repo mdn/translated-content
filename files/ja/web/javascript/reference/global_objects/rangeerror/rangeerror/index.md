@@ -1,12 +1,8 @@
 ---
 title: RangeError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 ---
+
 {{JSRef}}
 
 **`RangeError()`** コンストラクターは、値が存在しないか許可された値の範囲にない場合のエラーを生成します。

@@ -16,6 +16,7 @@ tags:
   - uniformMatrix4fv
 translation_of: Web/API/WebGLRenderingContext/uniformMatrix
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.uniformMatrix[234]fv()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent des valeurs matricielles pour les variables uniform.
@@ -51,33 +52,11 @@ gl.uniformMatrix2fv(loc, false, [2.1, 2.2]);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "uniformMatrix")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## Voir aussi
 

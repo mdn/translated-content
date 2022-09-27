@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLIFrameElement`** fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{domxref("HTMLElement")}} auxquelles elle peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'un cadre.

@@ -9,6 +9,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/Event/isTrusted
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule isTrusted, de l'interface {{domxref("Event")}}, est un booléen qui vaut true lorsque l'événement est généré par une action de l'utilisateur, et false, quand l'événement est créé ou modifié par un script ou envoyé par dispatchEvent.

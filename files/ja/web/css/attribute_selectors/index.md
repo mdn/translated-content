@@ -1,13 +1,6 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
-tags:
-  - 属性セレクター
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.attribute
-translation_of: Web/CSS/Attribute_selectors
 ---
 {{CSSRef}}
 

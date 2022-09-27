@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 ---
+
 {{AddonSidebar()}}
 
 > **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} à la place.

@@ -2,6 +2,7 @@
 title: ':empty'
 slug: Web/CSS/:empty
 ---
+
 {{ CSSRef()}}
 
 `:empty` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes) 代表没有子元素的元素。子元素只可以是元素节点或文本（包括空格）。注释或处理指令都不会产生影响。
@@ -60,7 +61,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}
 
 ## 参考
 

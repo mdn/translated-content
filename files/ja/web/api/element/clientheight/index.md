@@ -2,6 +2,7 @@
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.clientHeight`** は読み取り専用のプロパティで、 CSS のない要素やインラインレイアウトボックスではゼロになります。それ以外では、要素の内側の寸法をピクセル単位で表します。パディングは含みますが、境界、マージン、（もしあれば）水平スクロールバーは含みません。

@@ -8,6 +8,7 @@ tags:
   - en-tête
 translation_of: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête général **`Connection`** contrôle la façon dont la connexion reste ouverte ou non après que la transaction courante soit terminée. Si la valeur envoyée est `keep-alive`, la connexion est persistente et n'est pas fermée, permettant aux requêtes qui suivent et s'adressent au même serveur d'être envoyées.

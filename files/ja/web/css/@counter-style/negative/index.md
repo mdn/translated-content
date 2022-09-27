@@ -1,14 +1,6 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.negative
-translation_of: Web/CSS/@counter-style/negative
 ---
 {{CSSRef}}
 

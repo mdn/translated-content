@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.

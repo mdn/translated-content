@@ -2,9 +2,10 @@
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-服务器设置**`Accept-CH-Lifetime`**标头以指定{{HTTPHeader("Accept-CH")}}标头值的持久性，该值指定客户端应在后续请求中包括哪些[Client Hints](/zh-CN/docs/Glossary/Client_hints)标头。
+服务器设置 **`Accept-CH-Lifetime`** 标头以指定{{HTTPHeader("Accept-CH")}}标头值的持久性，该值指定客户端应在后续请求中包括哪些[Client Hints](/zh-CN/docs/Glossary/Client_hints)标头。
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -27,7 +28,7 @@ Accept-CH-Lifetime: 86400
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Accept-CH-Lifetime")}}
+{{Compat}}
 
 ## 参见
 

@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 ## 구문
 
-    str.padStart(targetLength [, padString])
+```js
+str.padStart(targetLength [, padString])
+```
 
 ### 매개변수
 

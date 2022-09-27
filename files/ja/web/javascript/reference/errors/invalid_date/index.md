@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: invalid date'
 slug: Web/JavaScript/Reference/Errors/Invalid_date
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid date" は、無効な日付を示す文字列が {{jsxref("Date")}} または {{jsxref("Date.parse()")}} に与えらえた場合に発生します。

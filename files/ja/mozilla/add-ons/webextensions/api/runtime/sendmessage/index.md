@@ -1,18 +1,8 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
+
 {{AddonSidebar()}}
 
 単一のメッセージを、自分や別の拡張機能が持つイベントリスナーに送信します。
@@ -60,9 +50,9 @@ var sending = browser.runtime.sendMessage(
 
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
 
-    1.  有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
-    2.  null
-    3.  undefined
+    1. 有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
+    2. null
+    3. undefined
 
   - それ以外の場合、引数は `(extensionId, message)` と解釈され、メッセージは `extensionId` によって識別された拡張機能に送信されます。
 

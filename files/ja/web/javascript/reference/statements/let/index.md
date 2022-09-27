@@ -1,20 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-  - 変数
-  - 変数宣言
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。

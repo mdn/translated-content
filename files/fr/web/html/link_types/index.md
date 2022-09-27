@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Types_de_lien
 ---
+
 {{HTMLSidebar}}
 
 En HTML, les types de lien indiquent la relation entre deux documents, reliés ensemble grâce à un élément [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/Form) ou [`<link>`](/fr/docs/Web/HTML/Element/link).
@@ -955,94 +956,8 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('Preload','#x2.link-type-preload','preload')}}
-      </td>
-      <td>{{Spec2('Preload')}}</td>
-      <td>Ajout du type <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Resource Hints', '#dfn-preconnect', 'preconnect')}}
-      </td>
-      <td>{{Spec2('Resource Hints')}}</td>
-      <td>
-        Ajout des types <code>dns-prefetch</code>, <code>preconnect</code> et
-        <code>prerender</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML WHATWG", "links.html#linkTypes", "link types")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Ajout de <code>opener</code>. <code>noopener</code> devient le
-        comportement par défaut pour les liens avec
-        <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML5 W3C", "links.html#linkTypes", "link types")}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        <p>
-          Ajout de <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-          <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code> et
-          <code>author</code>.
-        </p>
-        <p>Renommage de <code>copyright</code> en <code>license</code>.</p>
-        <p>
-          Suppression de <code>start</code>, <code>chapter</code>,
-          <code>section</code>, <code>subsection</code> et <code>appendix</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2('HTML4.01')}}</td>
-      <td>
-        <p>
-          Ajout de <code>alternate</code>, <code>stylesheet</code>,
-          <code>start</code>, <code>chapter</code>, <code>section</code>,
-          <code>subsection</code>, <code>appendix</code> et
-          <code>bookmark</code>.
-        </p>
-        <p>Renommage de <code>previous</code> en <code>prev</code>.</p>
-        <p>Suppression de <code>top</code> et <code>search</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td>Obsolete</td>
-      <td>
-        Ajout de <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code> et <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>Obsolete</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}

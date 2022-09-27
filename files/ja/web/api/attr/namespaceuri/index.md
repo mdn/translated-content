@@ -1,13 +1,6 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.namespaceURI
-translation_of: Web/API/Attr/namespaceURI
 ---
 {{APIRef("DOM")}}
 

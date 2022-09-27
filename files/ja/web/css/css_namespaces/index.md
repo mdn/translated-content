@@ -1,14 +1,6 @@
 ---
 title: CSS 名前空間
 slug: Web/CSS/CSS_Namespaces
-tags:
-  - CSS
-  - CSS 名前空間
-  - ガイド
-  - 概要
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/CSS_Namespaces
 ---
 {{CSSRef}}
 

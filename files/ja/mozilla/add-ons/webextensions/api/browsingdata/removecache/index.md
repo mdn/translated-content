@@ -1,17 +1,8 @@
 ---
 title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCache
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
+
 {{AddonSidebar()}}
 
 ブラウザのキャッシュを消去します。
@@ -30,7 +21,7 @@ var removing = browser.browsingData.removeCache(
 
 ### 引数
 
-- `removalOptions `{{optional_inline}}
+- `removalOptions` {{optional_inline}}
   - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。
 
 ### 返り値

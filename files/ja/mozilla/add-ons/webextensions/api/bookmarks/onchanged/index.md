@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
+
 {{AddonSidebar()}}
 
 以下の変更に対して発火します。

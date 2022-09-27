@@ -1,11 +1,8 @@
 ---
 title: Firefox 40 for developers
 slug: Mozilla/Firefox/Releases/40
-tags:
-  - Firefox
-  - Releases
-translation_of: Mozilla/Firefox/Releases/40
 ---
+
 Firefox 40 は、米国時間 2015 年 8 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 40 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

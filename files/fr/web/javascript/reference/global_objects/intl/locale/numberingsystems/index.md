@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.numberingSystems
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems
 browser-compat: javascript.builtins.Intl.Locale.numberingSystems
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.numberingSystems`** est un accesseur qui renvoie un ou plusieurs identifiants pour des systèmes de numération utilisés par la locale représentée par l'instance `Intl.Locale` courante.

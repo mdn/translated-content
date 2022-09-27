@@ -2,6 +2,7 @@
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`overrideMimeType()`** メソッドは、リクエストで転送されるデータを解釈するときに、 サーバーが提供されたもの以外の MIME タイプを代わりに使用するように指定します。

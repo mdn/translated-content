@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 `Window.outerWidth` récupère la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), la fenêtre chrome et le redimensionnement de la fenêtre.
@@ -31,13 +32,11 @@ Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de 
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

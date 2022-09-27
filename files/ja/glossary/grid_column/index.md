@@ -1,10 +1,6 @@
 ---
 title: Grid 列
 slug: Glossary/Grid_Column
-tags:
-  - CSS
-  - CodingScripting
-translation_of: Glossary/Grid_Column
 ---
 **グリッド列**とは [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)における縦のトラックであり、二つの垂直方向のグリッドラインに挟まれた領域のことです。グリッド列は {{cssxref("grid-template-columns")}} プロパティまたは短縮記法の {{cssxref("grid")}} や {{cssxref("grid-template")}} プロパティで定義されます。
 

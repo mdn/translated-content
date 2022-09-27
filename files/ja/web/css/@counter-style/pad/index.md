@@ -1,15 +1,6 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.pad
-translation_of: Web/CSS/@counter-style/pad
 ---
 {{CSSRef}}
 

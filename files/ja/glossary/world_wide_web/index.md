@@ -1,12 +1,6 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Glossary
-  - Infrastructure
-  - WWW
-  - World Wide Web
-translation_of: Glossary/World_Wide_Web
 ---
 _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と呼ばれ、{{Glossary("Internet", "インターネット")}} を通じて公開されたウェブページが相互に接続されたシステムのことです。ウェブはインターネットと同義ではありません。ウェブは、インターネット上に構築された多くのアプリケーションの中の一つなのです。
 

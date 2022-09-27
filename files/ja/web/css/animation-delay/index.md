@@ -1,14 +1,6 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-delay
-translation_of: Web/CSS/animation-delay
 ---
 {{CSSRef}}
 

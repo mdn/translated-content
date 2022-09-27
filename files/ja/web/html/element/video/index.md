@@ -1,25 +1,6 @@
 ---
 title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
-tags:
-  - Element
-  - HTML
-  - HTML Video
-  - HTML Video Player
-  - HTML embedded content
-  - HTML5
-  - Media
-  - Movie Playback
-  - Movies
-  - Multimedia
-  - Playing Movies
-  - Playing Video
-  - Reference
-  - Showing Video
-  - Video
-  - Web
-browser-compat: html.elements.video
-translation_of: Web/HTML/Element/video
 ---
 {{HTMLRef}}
 

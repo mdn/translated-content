@@ -2,6 +2,7 @@
 title: getBBox
 slug: Web/API/SVGGraphicsElement/getBBox
 ---
+
 **`SVGGraphicsElement.getBBox()`**允许我们确定对象适合的最小矩形的坐标。返回的坐标是相对于当前 svg 空间的，即在将所有几何属性应用于目标元素中包含的所有元素之后。
 
 Note: `getBBox` must return the actual bounding box at the time the method was called, even in case the element has not yet been rendered. It also neglects any transformation applied on the element or its parents.

@@ -1,12 +1,8 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 `Error` オブジェクトは、実行時エラーが発生した時に発生します。 `Error` オブジェクトは、ユーザー定義の例外の基底オブジェクトとして使用することもできます。標準の組み込みエラー型については下記を参照してください。

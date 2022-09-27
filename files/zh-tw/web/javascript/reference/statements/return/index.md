@@ -2,6 +2,7 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
@@ -120,7 +121,7 @@ answer(1337); // 56154
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## 參見
 

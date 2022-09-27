@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/offsetTop
 translation_of: Web/API/HTMLElement/offsetTop
 browser-compat: api.HTMLElement.offsetTop
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`HTMLElement.offsetTop`** renvoie la distance entre la bordure extérieure de l'élément courant et la bordure intérieure haute de l'élément [`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent) (le plus proche ancêtre positionné).

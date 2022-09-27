@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/filter
 ---
+
 {{SVGRef}}
 
 L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour définir des opérations de filtre. Il n'est jamais affiché par lui-même, il est référencé en utilisant l'attribut {{SVGAttr("filter")}} sur un élément SVG ou via la propriété  {{Glossary("CSS")}} {{cssxref("filter")}}.
@@ -66,14 +67,11 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#FilterElement", "&lt;filter&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
-| {{SpecName("SVG1.1", "filters.html#FilterElement", "&lt;filter&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/What_we_write
 l10n:
   sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---
+
 {{MDNSidebar}}
 
 MDN contient une documentation sur le Web, _neutre_ pour les différents navigateurs, pour permettre aux développeuses et développeurs d'écrire du code «&nbsp;agnostique&nbsp;» aux différents navigateurs. Dans cet article, vous trouverez des informations pour savoir si un sujet ou un type de contenu a sa place pour être inclus dans MDN.

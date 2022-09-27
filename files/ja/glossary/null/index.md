@@ -1,10 +1,6 @@
 ---
 title: 'Null'
 slug: Glossary/Null
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Null
 ---
 コンピュータサイエンス分野において、一般的に **`null`** という値は、存在しないまたは無効な{{glossary("object","オブジェクト")}}やアドレスへのポインター参照を表します。 null による参照が持つ意味は、言語実装によって様々です。
 

@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/Règles_@) **`@import`** est utilisée afin d'importer des règles à partir d'autres feuilles de style. Ces règles @ doivent être utilisées avant toutes les autres règles, à l'exception de {{cssxref("@charset")}}. `@import` n'est pas [une instruction imbriquée](/fr/Apprendre/CSS/Les_bases/La_syntaxe#Les_instructions_CSS) et ne peut donc pas être utilisée à l'intérieur [de groupe de règles conditionnelles](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe).

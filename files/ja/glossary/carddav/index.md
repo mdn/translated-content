@@ -1,11 +1,6 @@
 ---
 title: CardDAV
 slug: Glossary/CardDAV
-tags:
-  - CardDAV
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/CardDAV
 ---
 **CardDAV**（vCard Extension to {{Glossary("WebDAV")}}）は、{{Glossary("IETF")}} によって標準化された{{glossary("protocol","プロトコル")}}であり、{{glossary("server","サーバー")}}上で連絡先情報をリモートアクセスまたは共有するために使用されます。
 

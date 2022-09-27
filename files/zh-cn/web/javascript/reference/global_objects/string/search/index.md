@@ -2,6 +2,7 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 **`search()`** 方法执行正则表达式和 {{jsxref("String")}} 对象之间的一个搜索匹配。

@@ -1,20 +1,13 @@
 ---
 title: データ URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-tags:
-  - Base64
-  - Guide
-  - HTTP
-  - Intermediate
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 {{HTTPSidebar}}
 
 **データ URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは "data URIs" と呼ばれていました。
 
-> **Note:** **注**: 最近のブラウザーでは、データ URL はナビゲーションを担当する設定オブジェクトの起源を継承するのではなく、一意の不透明な起点として扱われます。
+> **Note:** 最近のブラウザーでは、データ URL はナビゲーションを担当する設定オブジェクトの起源を継承するのではなく、一意の不透明な起点として扱われます。
 
 ## 構文
 

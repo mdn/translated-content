@@ -1,16 +1,8 @@
 ---
 title: TextTrack.mode
 slug: Web/API/TextTrack/mode
-tags:
-  - Accessibility
-  - NeedsExample
-  - Property
-  - TextTrack
-  - Web
-  - WebVTT
-  - mode
-translation_of: Web/API/TextTrack/mode
 ---
+
 {{APIRef("WebVTT")}}
 
 {{domxref("TextTrack")}} インターフェイスの **`mode`** プロパティは、テキストトラックのモードを指定して制御する `disabled`, `hidden`, `showing` のいずれかの文字列です。この値を読み取って現在のモードを決定したり、この値を変更してモードを切り替えることができます。

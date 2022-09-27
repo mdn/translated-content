@@ -9,7 +9,9 @@ translation_of: Web/API/NodeList/keys
 
 ## Syntax
 
-    nodeList.keys();
+```js
+nodeList.keys();
+```
 
 ### Return value
 
@@ -37,9 +39,11 @@ for(var key of list.keys()) {
 
 결과는 다음과 같습니다 :
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Specifications
 

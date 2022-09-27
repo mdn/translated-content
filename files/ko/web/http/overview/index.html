@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Overview
 
 <p class="summary"><strong>HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 </strong>{{glossary("protocol", "프로토콜")}}입니다. HTTP는 웹에서 이루어지는 모든 데이터 교환의 기초이며, 클라이언트-서버 프로토콜이기도 합니다. 클라이언트-서버 프로토콜이란 (보통 웹브라우저인) 수신자 측에 의해 요청이 초기화되는 프로토콜을 의미합니다. 하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온(fetched) 하위 문서들로 재구성됩니다.</p>
 
-<p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
+<p><img alt="A Web document is the composition of different resources" src="https://user-images.githubusercontent.com/13804810/191727034-a0fbcc05-d1b7-45ef-978d-230389f5c23e.png" style="height: 319px; width: 545px;"></p>
 
 <p>클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 <em>요청(requests)이</em>라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(<em>responses)이</em>라고 부릅니다.</p>
 
-<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.</p>
+<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http-layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.</p>
 
 <h2 id="HTTP_기반_시스템의_구성요소">HTTP 기반 시스템의 구성요소</h2>
 

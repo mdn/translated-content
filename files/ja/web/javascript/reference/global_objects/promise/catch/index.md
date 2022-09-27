@@ -1,15 +1,8 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - プロトタイプ
-browser-compat: javascript.builtins.Promise.catch
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
+
 {{JSRef}}
 
 **`catch()`** メソッドは {{jsxref("Promise")}} を返しますが、拒否された場合のみ扱います。 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} の呼び出しと同じ動作をします（実際、 `obj.catch(onRejected)` の呼び出しは内部的に `obj.then(undefined, onRejected)` を呼び出しています）。つまり、返値を `undefined` に代替させたい場合でも、 `onRejected` 関数を提供する必要があります。 - 例えば、 `obj.catch(() => {})` のようにします。

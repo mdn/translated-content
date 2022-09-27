@@ -9,6 +9,7 @@ tags:
   - vrdisplayconnect
 translation_of: Web/API/Window/vrdisplayconnect_event
 ---
+
 {{APIRef("Window")}}
 
 L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est connecté à l'ordinateur.
@@ -62,13 +63,11 @@ window.onvrdisplayconnect = function() {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentair          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplayconnect', 'vrdisplayconnect')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplayconnect_event")}}
+{{Compat}}
 
 ## Voir aussi
 

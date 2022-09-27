@@ -2,6 +2,7 @@
 title: HTMLDialogElement.show()
 slug: Web/API/HTMLDialogElement/show
 ---
+
 {{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
 
 The **`show()`** method of the {{domxref("HTMLDialogElement")}} interface displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
@@ -85,7 +86,7 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDialogElement.show")}}
+{{Compat}}
 
 ## See also
 

@@ -1,16 +1,6 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - dimension
-  - 単位
-  - 値
-browser-compat: css.types.dimension
-translation_of: Web/CSS/dimension
 ---
 {{CSSRef}}
 

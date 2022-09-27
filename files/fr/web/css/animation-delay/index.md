@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-delay`** définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément.

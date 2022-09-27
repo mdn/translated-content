@@ -1,19 +1,6 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
-tags:
-  - API
-  - Crypto
-  - 暗号技術
-  - エンコーディング
-  - 暗号化
-  - HTML DOM
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - セキュリティ
-browser-compat: api.crypto
-translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
 {{APIRef}}

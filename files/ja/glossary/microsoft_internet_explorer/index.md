@@ -1,17 +1,6 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-tags:
-  - Browser
-  - Glossary
-  - Internet Explorer
-  - Microsoft
-  - Microsoft Internet Explorer
-  - Navigation
-  - Web Browser
-  - Windows
-  - Windows Operating System
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
 Internet Explorer (IE) は、レガシーエンタープライズ向けに Microsoft が管理している無料のグラフィカル{{glossary("browser","ブラウザー")}}です。{{glossary("Microsoft Edge")}} が現在、デフォルトの Windows ブラウザーです。
 

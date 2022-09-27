@@ -1,15 +1,6 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.active
-translation_of: Web/CSS/:active
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: FTP
 slug: Glossary/FTP
-tags:
-  - CodingScripting
-  - FTP
-  - Glossary
-  - Protocol
-translation_of: Glossary/FTP
 ---
 **FTP** (File Transfer Protocol、ファイル転送プロトコル) は、ある{{glossary("host","ホスト")}}から別のホストに、インターネットを介してファイルを転送するための長年の標準的な{{glossary("protocol","プロトコル")}}でした。しかし、チームやホスティングアカウントは FTP を許可せず、代わりに Git などのバージョン管理システムに依存することが増えています。古いホスティングアカウントでも使用されていますが、もはや FTP はベストプラクティスとは見なされていないと言っても過言ではありません。
 

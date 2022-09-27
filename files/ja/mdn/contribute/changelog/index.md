@@ -1,11 +1,8 @@
 ---
 title: MDN への貢献の変更履歴
 slug: MDN/Contribute/Changelog
-tags:
-  - Changelog
-  - Contribute
-  - MDN
 ---
+
 {{MDNSidebar}}
 
 この文書は MDN コンテンツのプロセス、構造、ベストプラクティスが変更されたこと、いつ変更されたかを記録するものです。これは、定期的に協力する人が、 MDN のコンテンツ作成プロセスで何が変わったかを確認するのに役立ちます。

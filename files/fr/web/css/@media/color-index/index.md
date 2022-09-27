@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/color-index
 ---
+
 {{CSSRef}}
 
 **`color-index`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur correspond au nombre d'entrées que comporte la palette de couleurs du périphérique de sortie, ou zéro si ce dernier n'en utilise pas.

@@ -1,7 +1,6 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
-translation_of: Web/API/AudioDestinationNode
 ---
 {{APIRef("Web Audio API")}}
 

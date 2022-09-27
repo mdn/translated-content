@@ -1,15 +1,9 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.notify
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
+
 {{JSRef}}
 
 静的メソッドである **`Atomics.notify()`** は、待ち行列で休眠状態にあるエージェントに通知します。

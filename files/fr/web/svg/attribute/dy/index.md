@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/dy
 ---
+
 {{SVGRef}}
 
 L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.
@@ -274,13 +275,4 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire                                    |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------- |
-| {{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dy', 'dy') }} | {{Spec2('Filters 1.0')}} | Définition initiale pour `<feDropShadow>`      |
-| {{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dy', 'dy') }}         | {{Spec2('Filters 1.0')}} | Définition pour `<feOffset>`                   |
-| {{SpecName("SVG2", "text.html#TextElementDYAttribute", "dy")}}             | {{Spec2("SVG2")}}         | Définition pour `<text>` et `<tspan>`          |
-| {{SpecName("SVG1.1", "filters.html#feOffsetDyAttribute", "dy")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<feOffset>`          |
-| {{SpecName("SVG1.1", "text.html#AltGlyphElementDYAttribute", "dy")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<altGlyph>`          |
-| {{SpecName("SVG1.1", "text.html#GlyphRefElementDYAttribute", "dy")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<glyphRef>`          |
-| {{SpecName("SVG1.1", "text.html#TextElementDYAttribute", "dy")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<text>`              |
-| {{SpecName("SVG1.1", "text.html#TSpanElementDYAttribute", "dy")}}         | {{Spec2("SVG1.1")}}         | Définition initiale pour `<tref>` et `<tspan>` |
+{{Specifications}}

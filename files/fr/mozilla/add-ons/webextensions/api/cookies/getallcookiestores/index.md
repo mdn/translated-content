@@ -13,6 +13,7 @@ tags:
   - getAllCookieStores
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`getAllCookieStores()`** de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.

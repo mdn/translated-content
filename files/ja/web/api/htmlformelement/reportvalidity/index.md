@@ -1,14 +1,8 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
-tags:
-  - HTML
-  - HTMLFormElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLFormElement/reportValidity
-browser-compat: api.HTMLFormElement.reportValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFormElement.reportValidity()`** メソッドは、この要素の子コントロールが制約の検証を満たしていれば `true` を返します。

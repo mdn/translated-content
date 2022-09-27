@@ -1,16 +1,6 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scroll-margin-inline
-browser-compat: css.properties.scroll-margin-inline
-translation_of: Web/CSS/scroll-margin-inline
 ---
 {{CSSRef}}
 

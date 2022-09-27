@@ -1,14 +1,6 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-inside
-translation_of: Web/CSS/display-inside
 ---
 {{CSSRef}}
 

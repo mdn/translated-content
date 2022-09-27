@@ -1,18 +1,8 @@
 ---
 title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getUILanguage
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
+
 {{AddonSidebar()}}
 
 ブラウザーの UI 言語を取得します。これは、優先されるユーザー言語を返す {{WebExtAPIRef('i18n.getAcceptLanguages')}} とは異なります。

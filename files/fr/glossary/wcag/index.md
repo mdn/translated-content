@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/WCAG
 original_slug: Glossaire/WCAG
 ---
+
 Les _Web Content Accessibility Guidelines_ (**WCAG**) sont une recommandation publiée par le groupe {{Glossary("WAI","Web Accessibility Initiative")}} du {{Glossary("W3C")}}. Ils définissent un ensemble de lignes de conduite à suivre pour rendre le contenu accessible principalement aux personnes avec des handicaps, mais aussi aux appareils aux ressources limitées comme les téléphones portables.
 
 WCAG 2.0, qui a replacé WCAG 1.0, a été publié en tant que recommandation W3C le 11 décembre 2008. Elle consiste en 12 directives principales organisées en 4 principes (le contenu doit être perceptible, utilisable, compréhensible et robuste) et chacune de ces directives est accompagnée de critères de succès à évaluer.

@@ -1,17 +1,8 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
-tags:
-  - API
-  - Constructor
-  - HTML DOM
-  - HTMLOptionElement
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - NeedsSpecTable
-translation_of: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Option()`** コンストラクターは、新しい {{domxref("HTMLOptionElement")}} を生成します。

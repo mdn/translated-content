@@ -97,7 +97,7 @@ Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bue
 
 Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.
 
-> **Nota:** En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe[ ](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)[cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> **Nota:** En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Agregar SVG a sus páginas
 
@@ -173,7 +173,7 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> ](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)[—](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)[ otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 
 Aquí hay una revisión rápida:
 

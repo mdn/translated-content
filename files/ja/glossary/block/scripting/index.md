@@ -1,11 +1,6 @@
 ---
 title: Block (ブロック) (スクリプティング)
 slug: Glossary/Block/Scripting
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Block/Scripting
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---

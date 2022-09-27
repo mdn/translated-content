@@ -1,10 +1,6 @@
 ---
 title: HSTS
 slug: Glossary/HSTS
-tags:
-  - HTTP
-  - セキュリティ
-translation_of: Glossary/HSTS
 ---
 **HTTP Strict Transport Security** を使用すると、ウェブサイトはブラウザーに、HTTP を使用してサイトを読み込まないことと、HTTP を使用してサイトにアクセスしようとするすべての試みを HTTPS リクエストへ自動的に変換する必要があることを通知することができます。 これは、{{HTTPHeader("Strict-Transport-Security")}} という 1 つの HTTP ヘッダーで構成され、サーバーによってリソースとともに送り返されます。
 

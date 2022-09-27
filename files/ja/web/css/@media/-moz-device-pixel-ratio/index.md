@@ -1,14 +1,6 @@
 ---
 title: '-moz-device-pixel-ratio'
 slug: Web/CSS/@media/-moz-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - 標準外
-  - media feature
-browser-compat: css.at-rules.media.-moz-device-pixel-ratio
-translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 {{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
 

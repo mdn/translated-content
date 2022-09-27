@@ -3,6 +3,7 @@ title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
 translation_of: Web/API/WorkerGlobalScope/location
 ---
+
 {{APIRef("Web Workers API")}}
 
 La propriété en lecture seule **`location`** de l'interface {{domxref("WorkerGlobalScope")}} retourne l'objet {{domxref("WorkerLocation")}} associé au worker. C'est un objet location spécifique, essentiellement un sous-ensemble de {{domxref("Location")}} pour les contextes de navigation, mais adapté aux workers.
@@ -47,13 +48,11 @@ Vous pouvez utiliser l'objet location pour récupérer des informations supplém
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-location', 'location')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.location")}}
+{{Compat}}
 
 ## Voir aussi
 

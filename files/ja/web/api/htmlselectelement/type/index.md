@@ -1,16 +1,8 @@
 ---
 title: HTMLSelectElement.type
 slug: Web/API/HTMLSelectElement/type
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLSelectElement.type
-translation_of: Web/API/HTMLSelectElement/type
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.type`** は読み取り専用のプロパティで、フォームコントロールの `type` を返します。

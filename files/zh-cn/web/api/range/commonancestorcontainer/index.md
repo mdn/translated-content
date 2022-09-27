@@ -2,6 +2,7 @@
 title: Range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.commonAncestorContainer`** 只读属性，返回目标节点的共有祖先节点。因而需要注意：selectNode 方法中的该值为目标节点的父节点，selectNodeContents 方法中的该值为其本身。
@@ -36,4 +37,4 @@ rangeAncestor = range.commonAncestorContainer;
 
 ## 更多
 
-- [DOM 接口相关内容](/en-US/docs/DOM/DOM_Reference)
+- [DOM 接口相关内容](/zh-CN/docs/DOM/DOM_Reference)

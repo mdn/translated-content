@@ -2,6 +2,7 @@
 title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.entries()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全ての キー/バリュー ペアを通過できるようにします。 各ペアのキーは {{domxref("USVString")}} オブジェクトで、 {{domxref("USVString")}} 、または {{domxref("Blob")}} のいずれかの値。
@@ -52,6 +53,6 @@ key2, value2
 ## 関連項目
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

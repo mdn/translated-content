@@ -1,13 +1,6 @@
 ---
 title: CSS セレクター
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/CSS_Selectors
 ---
 {{CSSRef("Selectors")}}
 

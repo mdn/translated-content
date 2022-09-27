@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/compileShader
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **WebGLRenderingContext.compileShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) compile un shader GLSL en données binaires, de sorte qu'il puisse être utilisé par un {{domxref("WebGLProgram")}}.
@@ -34,16 +35,13 @@ gl.compileShader(shader);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.14.9", "compileShader")}}                                 | {{Spec2('WebGL')}}             | Définition initiale. |
-| {{SpecName('OpenGL ES 2.0', "glCompileShader.xml", "glCompileShader")}} | {{Spec2('OpenGL ES 2.0')}} | Page man OpenGL.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.compileShader")}}
+{{Compat}}
 
-## Voire aussi
+## Voir aussi
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}

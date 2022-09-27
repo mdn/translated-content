@@ -2,6 +2,7 @@
 title: element.setAttribute
 slug: Web/API/Element/setAttribute
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -38,4 +39,4 @@ d.setAttribute("align", "center");
 ## 仕様
 
 - [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
-- [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+- [HTML5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** renvoie un objet tableau, contenant une copie superficielle (_shallow copy_) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.

@@ -1,14 +1,8 @@
 ---
 title: DataView() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 ---
+
 {{JSRef}}
 
 **`DataView()`** コンストラクターは、 {{jsxref("DataView")}} オブジェクトを生成するために使用します。

@@ -1,16 +1,8 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
-  - インターフェイス
-translation_of: Web/API/TouchEvent
 ---
+
 {{APIRef("Touch Events")}}
 
 **`TouchEvent`** インターフェイスは、タッチ感応面への接触状態が変化したときに発生する {{domxref("UIEvent")}} を表します。この面は、例えばタッチ画面やトラックパッドです。このイベントは画面との 1 か所以上の接触を表すことが可能であり、また接触個所の移動、増加、減少などに対応することができます。
@@ -69,7 +61,7 @@ _このインターフェイスは、親である {{domxref("UIEvent")}} およ�
 
 このイベントはタッチ点の範囲、回転角、強さの属性が変化したときにも発生します。
 
-> **Note:** **注:** `touchmove` イベントが発生する頻度はブラウザーごとに異なります。また、ユーザーのハードウェアの能力にも大きく依存するでしょう。特定のイベント粒度に依存してはいけません。
+> **Note:** `touchmove` イベントが発生する頻度はブラウザーごとに異なります。また、ユーザーのハードウェアの能力にも大きく依存するでしょう。特定のイベント粒度に依存してはいけません。
 
 ### {{domxref("Element/touchcancel_event", "touchcancel")}}
 

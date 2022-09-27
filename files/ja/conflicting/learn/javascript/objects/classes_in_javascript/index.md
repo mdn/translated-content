@@ -1,17 +1,6 @@
 ---
 title: 初心者のためのオブジェクト指向 JavaScript
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Beginner
-  - Create
-  - JavaScript
-  - OOJS
-  - OOP
-  - オブジェクト
-  - オブジェクト指向
-  - 学習
-  - 記事
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -74,7 +63,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm \[firstName]" (例：_Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に_ "Hello, my name is \[Prefix] \[lastName], and I teach \[Subject]." (例：_Hello, My name is Mr Griffiths, and I teach Chemistry) のように。_
 
-> **Note:** **注**: 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
+> **Note:** 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
 
 子クラスのオブジェクトインスタンスを生成しましょう。例：
 
@@ -90,7 +79,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
 ### シンプルな例
 
-1.  どのように通常の関数で人物を定義できるかを見てみるところから始めましょう。この関数を `script` 要素の中に加えてください。
+1. どのように通常の関数で人物を定義できるかを見てみるところから始めましょう。この関数を `script` 要素の中に加えてください。
 
     ```js
     function createNewPerson(name) {
@@ -103,7 +92,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
     }
     ```
 
-2.  この関数を呼び出すことで、新しい人物を生成することができます。次の 3 行をブラウザーの JavaScript コンソールで試してみてください。
+2. この関数を呼び出すことで、新しい人物を生成することができます。次の 3 行をブラウザーの JavaScript コンソールで試してみてください。
 
     ```js
     const salva = createNewPerson('Salva');
@@ -113,7 +102,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
     これも十分上手くいっていますが、やや長ったらしいです。オブジェクトを生成したいと知っているなら、なぜ明示的に空のオブジェクトを生成し、返すことが必要なのでしょうか？幸いにも、 JavaScript はコンストラクター関数という形で、便利なショートカットを提供してくれます。早速作ってみましょう！
 
-3.  前の関数を、以下のもので置き換えてください。
+3. 前の関数を、以下のもので置き換えてください。
 
     ```js
     function Person(name) {
@@ -126,18 +115,18 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
 コンストラクター関数は、 JavaScript 版のクラスです。それは関数に期待される全ての機能を持っていますが、何も返さないし、明示的にオブジェクトを生成しもしないという点に注意してください。基本的には、プロパティとメソッドを定義するだけです。加えて、 `this` キーワードが使われていることにも注意してください。基本、オブジェクトインスタンスの 1 つが作成されるときにはいつでも、オブジェクトの `name` プロパティはコンストラクター呼び出しに渡される name 値と等しくなり、 `greeting()` メソッドもコンストラクター呼び出しに渡される name 値を使用します。
 
-> **Note:** **メモ**: 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
+> **Note:**  通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
 
 では、オブジェクトを生成するために、どのようにコンストラクターを呼び出したらよいでしょうか？
 
-1.  次の 2 行を、前のコードの続きに加えてください。
+1. 次の 2 行を、前のコードの続きに加えてください。
 
     ```js
     let person1 = new Person('Bob');
     let person2 = new Person('Sarah');
     ```
 
-2.  コードを保存し、ブラウザーをリロードして、以下の 4 行を JavaScript コンソールに入れて試してみてください。
+2. コードを保存し、ブラウザーをリロードして、以下の 4 行を JavaScript コンソールに入れて試してみてください。
 
     ```js
     person1.name
@@ -190,7 +179,7 @@ function Person(name) {
 
 上で見てきた例は、スタートのためのシンプルな例に過ぎません。次は最終的な `Person()` コンストラクター関数を作りましょう。
 
-1.  ここまでに挿入したコードを削除し、代わりとなるコンストラクターを追加してください。これはシンプルな例とほぼ同じもので、ほんのわずか複雑になっているだけです。
+1. ここまでに挿入したコードを削除し、代わりとなるコンストラクターを追加してください。これはシンプルな例とほぼ同じもので、ほんのわずか複雑になっているだけです。
 
     ```js
     function Person(first, last, age, gender, interests) {
@@ -210,7 +199,7 @@ function Person(name) {
     }
     ```
 
-2.  ではその下に、コンストラクターからオブジェクトインスタンスを生成するため、次の行を追加してください。
+2. ではその下に、コンストラクターからオブジェクトインスタンスを生成するため、次の行を追加してください。
 
     ```js
     let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
@@ -225,7 +214,7 @@ person1.bio()
 // etc.
 ```
 
-> **Note:** **メモ**: もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
+> **Note:**  もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
 
 ### さらなる練習
 
@@ -233,7 +222,7 @@ person1.bio()
 
 加えて、 `bio()` メソッドにはいくつかの問題点があります。人物が女性である、あるいは他の優先される性別分類の場合でも、その出力には常に "He" という代名詞が含まれています。また、 bio は `interests` 配列により多くのものが列挙されていても、2 つの趣味しか含みません。このクラス定義 (コンストラクター) の問題を、あなたはどのように修正することができますか？コンストラクター内に任意のコード (恐らく、いくつかの条件分岐やループが必要となるでしょう) を入れてみてください。性別や、趣味の数が 1、2、あるいは 2 よりも多いかどうかによって、文がどのように構築されるべきか考えてみてください。
 
-> **Note:** **注**: もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
+> **Note:** もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
 
 ## オブジェクトインスタンスを生成する他の方法
 
@@ -245,13 +234,13 @@ person1.bio()
 
 まず最初に、 [`Object()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object) コンストラクターを新しいオブジェクトの生成のために使うことができます。はい、一般的なオブジェクトにも、空のオブジェクトを生成するコンストラクターがあります。
 
-1.  このコードを JavaScript コンソールに入力してみましょう。
+1. このコードを JavaScript コンソールに入力してみましょう。
 
     ```js
     let person1 = new Object();
     ```
 
-2.  `person1` 変数に空のオブジェクトが格納されました。このオブジェクトに、ドット記法とブラケット記法を使ってプロパティを追加することができます。次の例を JavaScript コンソールで試してみましょう。
+2. `person1` 変数に空のオブジェクトが格納されました。このオブジェクトに、ドット記法とブラケット記法を使ってプロパティを追加することができます。次の例を JavaScript コンソールで試してみましょう。
 
     ```js
     person1.name = 'Chris';
@@ -261,7 +250,7 @@ person1.bio()
     };
     ```
 
-3.  あらかじめプロパティやメソッドを設定するため、`Object()` コンストラクターに引数としてオブジェクトリテラルを渡すことも可能です。次のコードを JavaScript コンソールで試してみてください。
+3. あらかじめプロパティやメソッドを設定するため、`Object()` コンストラクターに引数としてオブジェクトリテラルを渡すことも可能です。次のコードを JavaScript コンソールで試してみてください。
 
     ```js
     let person1 = new Object({
@@ -279,13 +268,13 @@ person1.bio()
 
 しかしながら、特に少数のインスタンスのみを生成する場合に、最初にコンストラクターを作らずにインスタンスを生成することを好む人もいます。JavaScript にはそれを可能とする、`create()` と呼ばれる組み込みメソッドがあります。それにより、既存のオブジェクトを基にして、新しいオブジェクトを生成することができます。
 
-1.  前のセクションの練習をブラウザーで終えた状態で、こちらを JavaScript コンソールで試してみてください。
+1. 前のセクションの練習をブラウザーで終えた状態で、こちらを JavaScript コンソールで試してみてください。
 
     ```js
     let person2 = Object.create(person1);
     ```
 
-2.  次は以下のコードです。
+2. 次は以下のコードです。
 
     ```js
     person2.name;

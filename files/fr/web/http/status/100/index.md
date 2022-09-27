@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/100
 translation_of: Web/HTTP/Status/100
 browser-compat: http.status.100
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`100 Continue`** indique que, jusqu'à présent, tout est normal (OK) et que le client doit poursuivre avec la requête ou l'ignorer si celle-ci est déjà finie.

@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing variable name" は、開発者がよく経験するエラーです。入力間違いや変数名を忘れた場合によく発生します。

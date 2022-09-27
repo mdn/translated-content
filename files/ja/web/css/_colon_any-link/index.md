@@ -1,19 +1,6 @@
 ---
 title: ':any-link'
 slug: Web/CSS/:any-link
-tags:
-  - ':any-link'
-  - CSS
-  - 実験的
-  - レイアウト
-  - リンク
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - ハイパーリンク
-browser-compat: css.selectors.any-link
-translation_of: Web/CSS/:any-link
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: 常见 web 布局都包含什么？
 slug: Learn/Common_questions/Common_web_layouts
 ---
+
 当你设计自己站点时，最好已经对常见的 web 页面布局所包含的内容有过构思。
 
 <table class="standard-table">

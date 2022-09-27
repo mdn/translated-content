@@ -2,6 +2,7 @@
 title: Canvas
 slug: Glossary/Canvas
 ---
+
 {{Glossary("HTML")}} 的 _{{HTMLElement("canvas")}}_ 元素提供了一个空白绘图区域，可以使用 {{Glossary("API","APIs")}} （比如 Canvas 2D 或 {{Glossary("WebGL")}}）来绘制图形。
 
 ## 更多信息

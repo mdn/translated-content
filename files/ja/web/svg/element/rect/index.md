@@ -1,12 +1,6 @@
 ---
 title: rect
 slug: Web/SVG/Element/rect
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/rect
 ---
 {{SVGRef}}
 
@@ -18,11 +12,11 @@ translation_of: Web/SVG/Element/rect
 
 ### シンプルな `rect 要素の使い方`
 
-» [rect-1.svg](rect-1.svg "https://developer.mozilla.orgrect-1.svg")
+» [rect-1.svg](rect-1.svg)
 
 ### `角の丸い rect` 要素
 
-» [rect-2.svg](rect-2.svg "https://developer.mozilla.orgrect-2.svg")
+» [rect-2.svg](rect-2.svg)
 
 ## 属性
 
@@ -48,7 +42,7 @@ translation_of: Web/SVG/Element/rect
 
 ## DOM インターフェイス
 
-この要素は [`SVGRectElement`](/ja/DOM/SVGRectElement "en/DOM/SVGRectElement") インターフェイスを提供します。
+この要素は [`SVGRectElement`](/ja/DOM/SVGRectElement) インターフェイスを提供します。
 
 ## 使用可能な場所
 

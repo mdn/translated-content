@@ -1,21 +1,9 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - depthFar
-browser-compat: api.VRDisplay.depthFar
-translation_of: Web/API/VRDisplay/depthFar
 original_slug: Web/API/VRDevice/depthFar
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`depthFar`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の far 平面を定義している z-depth の取得と設定を行います．

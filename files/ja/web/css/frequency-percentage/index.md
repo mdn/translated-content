@@ -1,16 +1,6 @@
 ---
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - frequency-percentage
-  - 単位
-  - 値
-browser-compat: css.types.frequency-percentage
-translation_of: Web/CSS/frequency-percentage
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -3,6 +3,7 @@ title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 translation_of: Web/API/IDBObjectStore/createIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`createIndex()`** de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.

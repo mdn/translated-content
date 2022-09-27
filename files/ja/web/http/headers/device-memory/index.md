@@ -1,12 +1,6 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-translation_of: Web/HTTP/Headers/Device-Memory
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
@@ -29,7 +23,7 @@ translation_of: Web/HTTP/Headers/Device-Memory
   </tbody>
 </table>
 
-> **Note:** **注**: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
+> **Note:** クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 

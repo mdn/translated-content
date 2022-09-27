@@ -90,9 +90,9 @@ CSS は、継承を制御するための 4 つ の特別なユニバーサルプ
 
 以下を試してみてください。
 
-1.  2 番目 のリストアイテムには、`my-class-1` が適用されています。これは、内部にネストされた `<a>` 要素に色を継承します。ルールを削除すると、リンクの色はどのように変わるでしょうか？
-2.  なぜ 3 番目 と 4 番目 のリンクがその色であるのか理解できていますか？そうでない場合は、上述しているそれぞれの値の説明を確認してください。
-3.  例えば `a { color: red; }` というように `<a>` 要素に新しい色を定義すると、どのリンクの色が変わるでしょうか？
+1. 2 番目 のリストアイテムには、`my-class-1` が適用されています。これは、内部にネストされた `<a>` 要素に色を継承します。ルールを削除すると、リンクの色はどのように変わるでしょうか？
+2. なぜ 3 番目 と 4 番目 のリンクがその色であるのか理解できていますか？そうでない場合は、上述しているそれぞれの値の説明を確認してください。
+3. 例えば `a { color: red; }` というように `<a>` 要素に新しい色を定義すると、どのリンクの色が変わるでしょうか？
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -112,9 +112,9 @@ HTML 構造に深くネストされた段落が body の CSS と同じ色であ�
 
 考慮すべき 3 つ の要因がありますが、ここでは重要度の高い順にリストしています。前にあるものは、後のものを無効にします。
 
-1.  重要性 _(Importance)_
-2.  詳細度 _(Specificity)_
-3.  ソースオーダー _(Source order)_
+1. 重要性 _(Importance)_
+2. 詳細度 _(Specificity)_
+3. ソースオーダー _(Source order)_
 
 これらを下から順に、ブラウザーがどうやって CSS を適用しているのかを見ていきましょう。
 
@@ -138,10 +138,10 @@ HTML 構造に深くネストされた段落が body の CSS と同じ色であ�
 
 セレクターが持つ詳細度の量は、4 つ の異なる値（またはコンポーネント）を使用して測定されます。これは、1,000、100、10、1 のそれぞれの位として考えることができます。
 
-1.  **「1,000」** 宣言が {{htmlattrxref("style")}} 属性（別名、インラインスタイル）内にある場合、これがスコアされます。このような宣言にはセレクターがないため、その詳細度は常にシンプルに 1,000 です。
-2.  **「100」** 全体のセレクターの内部にある ID セレクターは、これがスコアされます。
-3.  **「10」** 全体のセレクターの内部にあるクラスセレクター・属性セレクター・擬似クラスは、これがスコアされます。
-4.  **「1」** 全体のセレクターの内部にある要素セレクターまたは疑似要素には、これがスコアされます。
+1. **「1,000」** 宣言が {{htmlattrxref("style")}} 属性（別名、インラインスタイル）内にある場合、これがスコアされます。このような宣言にはセレクターがないため、その詳細度は常にシンプルに 1,000 です。
+2. **「100」** 全体のセレクターの内部にある ID セレクターは、これがスコアされます。
+3. **「10」** 全体のセレクターの内部にあるクラスセレクター・属性セレクター・擬似クラスは、これがスコアされます。
+4. **「1」** 全体のセレクターの内部にある要素セレクターまたは疑似要素には、これがスコアされます。
 
 > **Note:** ユニバーサルセレクタ (`*`)、コンビネータ (`+`、`>`、`~`、' ') 、及び否定擬似クラス（`:not`）は詳細度に影響を及ぼしません。
 
@@ -179,10 +179,10 @@ HTML 構造に深くネストされた段落が body の CSS と同じ色であ�
 
 何が起きているのかを見てみましょう。理解しにくい場合は、いくつかのプロパティを削除しながら、どうなるか見てみてください。
 
-1.  3 番目のルールでは {{cssxref("color")}} と {{cssxref("padding")}} が適用されていますが、{{cssxref("background-color")}} は適用されていないことようです。なぜでしょうか？ソースオーダーの後の方は、普通は前の方のルールをオーバーライドするため、その観点では 3 つ すべてが適用されるはずです。
-2.  とはいえ、クラスセレクターは要素セレクターよりも詳細度が高いため前者のルールが優先されます。
-3.  両方の要素には `better` という {{htmlattrxref("class")}} がありますが、2 番目 の要素には `winning` という {{htmlattrxref("id")}} もあります。ID はクラスよりも**より高い詳細度**があるため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方が**非常に限定的**になります）、2 番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。
-4.  2 番目 の要素は赤い背景が適用されていますが、あるはずの境界線はありません。なぜでしょうか？ 2 番目 のルールでは `border: none` のあとに `!important` と宣言されており、高い詳細度であるはずの ID よりも重要なものとして扱われているためです。
+1. 3 番目のルールでは {{cssxref("color")}} と {{cssxref("padding")}} が適用されていますが、{{cssxref("background-color")}} は適用されていないことようです。なぜでしょうか？ソースオーダーの後の方は、普通は前の方のルールをオーバーライドするため、その観点では 3 つ すべてが適用されるはずです。
+2. とはいえ、クラスセレクターは要素セレクターよりも詳細度が高いため前者のルールが優先されます。
+3. 両方の要素には `better` という {{htmlattrxref("class")}} がありますが、2 番目 の要素には `winning` という {{htmlattrxref("id")}} もあります。ID はクラスよりも**より高い詳細度**があるため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方が**非常に限定的**になります）、2 番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。
+4. 2 番目 の要素は赤い背景が適用されていますが、あるはずの境界線はありません。なぜでしょうか？ 2 番目 のルールでは `border: none` のあとに `!important` と宣言されており、高い詳細度であるはずの ID よりも重要なものとして扱われているためです。
 
 > **Note:** この `!important` 宣言をオーバーライドする唯一の方法は、ソースオーダーの後半で同じ詳細度を持つように\_ \_`!important` 宣言するか、またはより高い詳細度を持つ宣言に含めることです。
 
@@ -198,11 +198,11 @@ HTML 構造に深くネストされた段落が body の CSS と同じ色であ�
 
 競合する宣言は次の順序で適用され、後の方がそれより前のものを上書きします。
 
-1.  ユーザーエージェントのスタイルシートの宣言。例えば、他のスタイルが設定されていない場合に使用されるブラウザー標準のスタイルなど。
-2.  ユーザースタイルシートの通常の宣言 (ユーザーが設定したカスタムスタイル)
-3.  作者のスタイルシートでの通常の宣言 (私たちウェブ開発者によって設定されたスタイルのことです)
-4.  作者のスタイルシートの重要 _(important)_ な宣言
-5.  ユーザーのスタイルシートの重要 _(important)_ な宣言
+1. ユーザーエージェントのスタイルシートの宣言。例えば、他のスタイルが設定されていない場合に使用されるブラウザー標準のスタイルなど。
+2. ユーザースタイルシートの通常の宣言 (ユーザーが設定したカスタムスタイル)
+3. 作者のスタイルシートでの通常の宣言 (私たちウェブ開発者によって設定されたスタイルのことです)
+4. 作者のスタイルシートの重要 _(important)_ な宣言
+5. ユーザーのスタイルシートの重要 _(important)_ な宣言
 
 ウェブ開発者のスタイルシートがユーザーのそれを上書きするのは理にかなっているので設計を意図どおりに保つことができますが、前述したとおり、ユーザーがウェブ開発者スタイルをオーバーライドする正当な理由がある場合もあります。それは `!important` ルールを使用することで実現できます。
 
@@ -222,21 +222,21 @@ HTML 構造に深くネストされた段落が body の CSS と同じ色であ�
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

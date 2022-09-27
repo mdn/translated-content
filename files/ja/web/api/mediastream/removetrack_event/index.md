@@ -1,10 +1,6 @@
 ---
 title: 'MediaStream: removetrack イベント'
 slug: Web/API/MediaStream/removetrack_event
-tags:
-  - イベント
-browser-compat: api.MediaStream.removetrack_event
-translation_of: Web/API/MediaStream/removetrack_event
 ---
 {{APIRef("Media Capture and Streams")}}
 

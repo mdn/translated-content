@@ -1,14 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-basis
-translation_of: Web/CSS/flex-basis
 ---
 {{CSSRef}}
 

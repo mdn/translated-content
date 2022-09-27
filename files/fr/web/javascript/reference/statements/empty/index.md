@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Reference/Instructions/Vide
 ---
+
 {{jsSidebar("Statements")}}
 
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.

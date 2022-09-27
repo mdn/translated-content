@@ -1,11 +1,6 @@
 ---
 title: Challenge-response authentication (チャレンジレスポンス認証)
 slug: Glossary/challenge
-tags:
-  - Authentication
-  - Glossary
-  - Security
-translation_of: Glossary/challenge
 ---
 セキュリティプロトコルでは、チャレンジは、毎回異なるレスポンス（応答）を生成するために、サーバーによってクライアントに送信されるデータです。 チャレンジレスポンスプロトコルは、攻撃者が元のメッセージを聞いて、後でそれ再送信して元のメッセージと同じ資格情報を取得する{{Interwiki("wikipedia", "反射攻撃")}}に対抗する 1 つの方法です。
 

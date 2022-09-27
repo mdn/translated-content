@@ -1,14 +1,6 @@
 ---
 title: アットルール
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls:
-  - https://drafts.csswg.org/css-conditional-3/
-  - https://compat.spec.whatwg.org/#css-at-rules
-translation_of: Web/CSS/At-rule
 ---
 {{CSSRef}}
 

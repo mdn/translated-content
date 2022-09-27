@@ -2,6 +2,7 @@
 title: input
 slug: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 当一个 {{HTMLElement("input")}}, {{HTMLElement("select")}}, 或 {{HTMLElement("textarea")}} 元素的 `value` 被修改时，会触发 **`input`** 事件。
@@ -76,7 +77,7 @@ function updateValue(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.input_event")}}
+{{Compat}}
 
 \[1] 在 Gecko 12.0 {{geckoRelease("12.0")}} 之前，用户在输入法中输入时，或者 dead keys were used on Mac OS X 时，Gecko 不触发 input 事件。
 
@@ -96,4 +97,4 @@ function updateValue(e) {
 - {{domxref("HTMLElement/change_event", "change")}}
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 
-此外，还有一个类似的 [`change`](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/change) 事件。change 触发的频率低于 `input` - 它只会在用户提交更改时触发。
+此外，还有一个类似的 [`change`](/zh-CN/docs/Web/Reference/Events/change) 事件。change 触发的频率低于 `input` - 它只会在用户提交更改时触发。

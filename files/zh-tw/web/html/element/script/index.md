@@ -2,6 +2,7 @@
 title: <script>
 slug: Web/HTML/Element/script
 ---
+
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。\<script> 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content). |
@@ -98,7 +99,7 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.script", 2)}}
+{{Compat}}
 
 ## 相容性註解
 

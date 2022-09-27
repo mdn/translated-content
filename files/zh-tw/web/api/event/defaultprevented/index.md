@@ -2,6 +2,7 @@
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 ---
+
 {{ APIRef("DOM") }}
 
 ## 概述
@@ -30,4 +31,4 @@ bool = event.defaultPrevented
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}

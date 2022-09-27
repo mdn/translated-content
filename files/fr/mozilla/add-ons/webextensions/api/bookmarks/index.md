@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
 L’API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d’interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l’utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.

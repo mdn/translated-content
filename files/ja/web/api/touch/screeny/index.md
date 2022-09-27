@@ -1,14 +1,8 @@
 ---
 title: Touch.screenY
 slug: Web/API/Touch/screenY
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
-translation_of: Web/API/Touch/screenY
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## 概要

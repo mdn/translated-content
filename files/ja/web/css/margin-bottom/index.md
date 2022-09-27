@@ -1,13 +1,6 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.margin-bottom
-translation_of: Web/CSS/margin-bottom
 ---
 {{CSSRef}}
 

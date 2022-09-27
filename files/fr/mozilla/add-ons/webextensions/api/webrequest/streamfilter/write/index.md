@@ -11,6 +11,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 ---
+
 {{AddonSidebar()}}Écrit quelques données de réponse dans le flux de sortie..Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.
 
 ## Syntaxe

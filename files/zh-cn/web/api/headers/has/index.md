@@ -2,6 +2,7 @@
 title: Headers.has()
 slug: Web/API/Headers/has
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
@@ -45,10 +46,10 @@ myHeaders.has('Accept-Encoding'); // Returns false
 
 ## Browser compatibility
 
-{{Compat("api.Headers.has")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

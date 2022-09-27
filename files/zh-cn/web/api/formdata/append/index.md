@@ -2,6 +2,7 @@
 title: FormData.append()
 slug: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 接口的**`append()`** 方法 会添加一个新值到 `FormData` 对象内的一个已存在的键中，如果键不存在则会添加该键。
@@ -22,13 +23,13 @@ formData.append(name, value, filename);
 ### 参数
 
 - `name`
-  - : `value中包含的数据对应的表单名称。`
+  - : `value` 中包含的数据对应的表单名称。
 - `value`
   - : `表单的值。`可以是{{domxref("USVString")}} 或 {{domxref("Blob")}} (包括子类型，如 {{domxref("File")}})。
 - `filename` {{optional_inline}}
   - : 传给服务器的文件名称 (一个 {{domxref("USVString")}}), 当一个 {{domxref("Blob")}} 或 {{domxref("File")}} 被作为第二个参数的时候， {{domxref("Blob")}} 对象的默认文件名是 "blob"。 {{domxref("File")}} 对象的默认文件名是该文件的名称。
 
-> **备注：** 如果你指定一个 {{domxref("Blob")}} 作为数据添加到 `FormData` 对象中， 文件名会被放在 "Content-Disposition" 头部（常常会根据浏览器变化而变化）传给服务器。
+> **备注：** 如果你指定一个 {{domxref("Blob")}} 作为数据添加到 `FormData` 对象中，文件名会被放在 "Content-Disposition" 头部（常常会根据浏览器变化而变化）传给服务器。
 
 ### 返回值
 
@@ -64,7 +65,7 @@ formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,14 +1,8 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。

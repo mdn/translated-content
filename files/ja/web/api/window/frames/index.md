@@ -1,18 +1,8 @@
 ---
 title: Window.frames
 slug: Web/API/Window/frames
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - NeedsContent
-  - NeedsUpdate
-  - Property
-  - Reference
-  - Window
-  - プロパティ
-translation_of: Web/API/Window/frames
 ---
+
 {{APIRef("DOM")}}
 
 ウィンドウ自体を、現在のウィンドウの直接のサブフレームを列挙した配列風オブジェクトとして返します。

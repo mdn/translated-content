@@ -1,13 +1,6 @@
 ---
 title: IRC
 slug: Glossary/IRC
-tags:
-  - Glossary
-  - Infrastructure
-  - Internet Relay Chat
-  - Open Protocol
-  - irc
-translation_of: Glossary/IRC
 ---
 **IRC** (_Internet Relay Chat_) は、インターネット接続と IRC サーバーを介してメッセージを送受信する IRC クライアントを必要とする世界的なチャットシステムです。
 

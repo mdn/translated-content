@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Viewport_concepts
 original_slug: Web/CSS/Concepts_viewport
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous définirons le concept de _viewport_ ou de zone d'affichage, les différences entre la zone d'affichage visuelle et la zone d'affichage pour la disposition. Nous verrons également ce que signifie la zone d'affichage pour CSS, SVG et pour les appareils mobiles.

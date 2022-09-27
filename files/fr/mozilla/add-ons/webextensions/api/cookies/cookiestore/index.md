@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
+
 {{AddonSidebar()}}
 
 Le type `CookieStore` de l'API {{WebExtAPIRef("cookies")}} représente un cookie store dans le navigateur.

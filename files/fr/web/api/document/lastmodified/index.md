@@ -3,6 +3,7 @@ title: Document.lastModified
 slug: Web/API/Document/lastModified
 translation_of: Web/API/Document/lastModified
 ---
+
 {{APIRef("DOM")}}
 
 Retourne une chaîne de caractère contenant la date et l'heure à laquelle le présent document a été modifié pour la dernière fois.

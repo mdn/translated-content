@@ -1,15 +1,8 @@
 ---
 title: HTMLElement.blur()
 slug: Web/API/HTMLElement/blur
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLElement.blur
-translation_of: Web/API/HTMLElement/blur
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLElement.blur()`** メソッドは、現在の要素からキーボードフォーカスを取り除きます。

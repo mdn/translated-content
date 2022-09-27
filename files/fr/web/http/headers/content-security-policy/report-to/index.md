@@ -12,6 +12,7 @@ tags:
   - report-to
 translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-to`** demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP `Report-To`.

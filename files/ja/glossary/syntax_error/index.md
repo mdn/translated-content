@@ -1,11 +1,6 @@
 ---
 title: Syntax error (構文エラー)
 slug: Glossary/Syntax_error
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Syntax_error
 ---
 あらかじめ定義された{{Glossary("syntax","構文")}}の誤った使用による{{Glossary("exception","例外")}}。構文エラーは、ソースコードのコンパイルまたは構文解析中に検出されます。
 

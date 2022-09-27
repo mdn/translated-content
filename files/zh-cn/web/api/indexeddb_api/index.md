@@ -2,6 +2,7 @@
 title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象（blobs））。该 API 使用索引实现对数据的高性能搜索。虽然 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 在存储较少量的数据很有用，但对于存储更大量的结构化数据来说力不从心。而 IndexedDB 提供了这种场景的解决方案。本页面 MDN IndexedDB 的主要引导页 - 这里，我们提供了完整的 API 参考和使用指南，浏览器支持细节，以及关键概念的一些解释的链接。
@@ -77,20 +78,6 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
   - : 表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。
 - {{domxref("IDBDatabaseException")}} {{Deprecated_Inline}}
   - : 表示执行数据库操作时可能遇到的异常情况。
-- {{domxref("IDBTransactionSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBTransaction")}}。
-- {{domxref("IDBObjectStoreSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBObjectStore")}}。
-- {{domxref("IDBIndexSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBIndex")}}。
-- {{domxref("IDBFactorySync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBFactory")}}。
-- {{domxref("IDBEnvironmentSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBEnvironment")}}。
-- {{domxref("IDBDatabaseSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBDatabase")}}。
-- {{domxref("IDBCursorSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBCursor")}}。
 
 ## 示例
 

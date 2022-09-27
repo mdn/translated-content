@@ -1,18 +1,6 @@
 ---
 title: MediaRecorder.isTypeSupported
 slug: Web/API/MediaRecorder/isTypeSupported
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - Video
-  - canRecordMimeType
-translation_of: Web/API/MediaRecorder/isTypeSupported
 ---
 {{APIRef("MediaStream Recording")}}
 

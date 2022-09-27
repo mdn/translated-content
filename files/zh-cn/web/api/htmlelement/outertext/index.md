@@ -2,6 +2,7 @@
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 ---
+
 {{APIRef("DOM")}}
 
 {{ Non-standard_header() }}
@@ -22,7 +23,7 @@ slug: Web/API/HTMLElement/outerText
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLElement.outerText")}}
+{{Compat}}
 
 ## 相关链接
 

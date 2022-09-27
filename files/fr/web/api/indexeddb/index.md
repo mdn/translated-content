@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
+
 {{APIRef}}
 
 La propriété globale en lecture seule **`indexedDB`** fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
