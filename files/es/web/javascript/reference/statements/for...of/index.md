@@ -176,7 +176,7 @@ for (let n of fibonacci()) {
 }
 ```
 
-> **Nota:** #### No se deben reutilizar los generadoresLos generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.
+> **Nota:** **No se deben reutilizar los generadores** Los generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.
 
 ```js example-bad
 var gen = (function *(){
@@ -226,9 +226,9 @@ for (var value of iterable) {
 
 El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]] `configurada como `true`.
 
-La sintaxis de **`for...of` **es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
+La sintaxis de **`for...of`** es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 
-El siguiente ejemplo muestra las diferencias entre un bucle** `for...of`** y un bucle **f`or...in`**.
+El siguiente ejemplo muestra las diferencias entre un bucle **`for...of`** y un bucle **f`or...in`**.
 
 ```js
 let arr = [3, 5, 7];
