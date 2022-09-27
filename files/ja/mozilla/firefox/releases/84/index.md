@@ -1,6 +1,8 @@
 ---
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
 {{FirefoxSidebar}}
@@ -13,7 +15,7 @@ slug: Mozilla/Firefox/Releases/84
 
 ### 開発者ツール
 
-- Firefox の [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) で、ウェブページの [タブオーダー](/ja/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order) の表示をサポートしました。ページがキー操作でどのようなナビゲーションになるかを、リンクをタブ移動するよりも高レベルな概要で示します ({{bug(1654956)}})。
+- Firefox の [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) で、ウェブページの [タブオーダー](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order) の表示をサポートしました。ページがキー操作でどのようなナビゲーションになるかを、リンクをタブ移動するよりも高レベルな概要で示します ({{bug(1654956)}})。
 
 ### HTML
 
@@ -21,7 +23,7 @@ _変更なし。_
 
 ### CSS
 
-- {{cssxref(":not")}} 疑似クラスで、複雑なセレクターをサポートしました ({{bug(933562)}})。
+- {{cssxref(":not")}} 擬似クラスで、複雑なセレクターをサポートしました ({{bug(933562)}})。
 
 #### 廃止
 
@@ -50,7 +52,7 @@ _変更なし。_
 
 #### 廃止
 
-- [アプリケーションキャッシュ](/ja/docs/Web/HTML/Using_the_application_cache) を削除しました。開発者は、代わりに [Service Worker API](/ja/docs/Web/API/Service_Worker_API) を使用してください ({{bug(1619673)}})。
+- アプリケーションキャッシュを削除しました。開発者は、代わりに[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) を使用してください ({{bug(1619673)}})。
 
 ### WebAssembly
 
