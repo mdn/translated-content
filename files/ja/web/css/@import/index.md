@@ -1,14 +1,6 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-tags:
-  - アットルール
-  - CSS
-  - CSS カスケードと継承
-  - CSS 条件付きルール
-  - リファレンス
-browser-compat: css.at-rules.import
-translation_of: Web/CSS/@import
 ---
 {{CSSRef}}
 

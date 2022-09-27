@@ -2,6 +2,7 @@
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
 ---
+
 {{APIRef}}
 
 ## 概述

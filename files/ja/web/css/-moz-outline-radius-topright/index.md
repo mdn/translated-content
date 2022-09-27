@@ -1,16 +1,6 @@
 ---
 title: '-moz-outline-radius-topright'
 slug: Web/CSS/-moz-outline-radius-topright
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-outline-radius-topright
-translation_of: Web/CSS/-moz-outline-radius-topright
 ---
 {{CSSRef}}{{deprecated_header}}
 

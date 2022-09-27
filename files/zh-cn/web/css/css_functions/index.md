@@ -2,6 +2,7 @@
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
 ---
+
 {{CSSRef}}
 
 **CSS 功能符号**是一种 [CSS 值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)，可以表示更复杂的数据类型或调用特殊的数据处理或计算。

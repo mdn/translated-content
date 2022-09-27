@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Text
 ---
+
 {{CSSRef}}
 
 **_CSS Text_** (ou module texte de CSS) est un module CSS qui définit comment effectuer des manipulations de texte, comme les coupures de mots, la justification et l'alignement, la gestion des espaces et les transformations de texte.

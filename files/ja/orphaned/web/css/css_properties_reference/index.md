@@ -1,13 +1,9 @@
 ---
 title: CSS プロパティリファレンス
 slug: orphaned/Web/CSS/CSS_Properties_Reference
-tags:
-  - CSS
-  - ガイド
-  - スタイル
-translation_of: Web/CSS/CSS_Properties_Reference
 original_slug: Web/CSS/CSS_Properties_Reference
 ---
+
 ## 一般的な CSS プロパティリファレンス
 
 下記は最も一般的な CSS プロパティと、 JavaScript からアクセスする際に使用される等価な DOM 表記の基本的な一覧です。

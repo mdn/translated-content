@@ -8,6 +8,7 @@ tags:
   - Range
 translation_of: Web/API/Range/selectNode
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à contenir le {{domxref("Node")}} et son contenu. Le {{domxref ("Node")}} parent du début et de la fin du {{domxref("Range")}} sera le même que le parent du _noeudDeReference_.

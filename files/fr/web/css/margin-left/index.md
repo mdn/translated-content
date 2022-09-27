@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-left
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera la marge à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.

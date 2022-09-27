@@ -1,13 +1,6 @@
 ---
 title: ISP
 slug: Glossary/ISP
-tags:
-  - Glossary
-  - ISP
-  - Internet Service Provider
-  - Web
-  - WebMechanics
-translation_of: Glossary/ISP
 ---
 ISP (Internet Service Provider, インターネットサービスプロバイダー) は、インターネット接続を提供する事業を行っています。また、メールやウェブホスティング、VoIP (IP 電話) などのサービスを提供していることもあります。これらは、(かつて主流の方式であった) 電話回線を使ったダイアルアップ接続や、ケーブルモデムまたは DSL (デジタルサービス回線) などの広帯域接続により提供されます。
 

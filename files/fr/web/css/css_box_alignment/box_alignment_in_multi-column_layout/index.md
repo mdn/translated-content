@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes
 ---
+
 {{CSSRef}}
 
 Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [une disposition multi-colonnes](/fr/docs/Web/CSS/Colonnes_CSS). Cette page détaille les aspects spécifiques relatifs à l'alignement et au module _Multi-Column Layout_. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).

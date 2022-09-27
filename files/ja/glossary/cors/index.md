@@ -1,13 +1,6 @@
 ---
 title: CORS
 slug: Glossary/CORS
-tags:
-  - Glossary
-  - Infrastructure
-  - Security
-  - セキュリティ
-  - 用語集
-translation_of: Glossary/CORS
 ---
 **CORS** (オリジン間リソース共有、 Cross-Origin Resource Sharing) は、 {{Glossary("Header", "HTTP ヘッダー")}}の転送で構成されるシステムであり、ブラウザーがオリジンをまたいだリクエストのレスポンスに、フロントエンドの JavaScript コードがアクセスすることをブロックするかどうかを決めるものです。
 

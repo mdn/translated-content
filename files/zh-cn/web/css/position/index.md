@@ -2,6 +2,7 @@
 title: position
 slug: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{{Cssxref("top")}}，{{Cssxref("right")}}，{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性则决定了该元素的最终位置。
@@ -268,4 +269,4 @@ dd + dd {
 
 ## 浏览器兼容
 
-{{Compat("css.properties.position")}}
+{{Compat}}

@@ -9,6 +9,7 @@ tags:
   - WebExtensions;
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
+
 {{AddonSidebar()}}
 
 L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :

@@ -1,13 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - レスポンスヘッダー
-  - 範囲リクエスト
-translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
 {{HTTPSidebar}}
 

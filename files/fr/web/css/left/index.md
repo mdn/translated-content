@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 La propriété **`left`** permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.

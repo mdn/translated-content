@@ -1,15 +1,6 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsUpdate
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-align
-translation_of: Web/CSS/box-align
 ---
 {{CSSRef}}{{Non-standard_header}}{{warning("このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。")}}
 

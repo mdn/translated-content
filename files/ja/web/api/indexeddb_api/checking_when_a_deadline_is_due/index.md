@@ -1,14 +1,6 @@
 ---
 title: 期限の確認
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
-tags:
-  - Apps
-  - Date
-  - Example
-  - Guide
-  - IndexedDB
-  - deadline
-translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 

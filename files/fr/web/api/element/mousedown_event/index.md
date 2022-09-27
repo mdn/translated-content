@@ -4,6 +4,7 @@ slug: Web/API/Element/mousedown_event
 translation_of: Web/API/Element/mousedown_event
 browser-compat: api.Element.mousedown_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mousedown`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'on appuie sur le bouton d'un dispositif de pointage (une souris par exemple) pendant que le curseur est sur l'élément.

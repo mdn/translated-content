@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toJSON
 ---
+
 {{JSRef}}
 
 La méthode **`toJSON()`** renvoie une chaîne représentant l'objet {{jsxref("Date")}} sous forme {{Glossary("JSON")}}

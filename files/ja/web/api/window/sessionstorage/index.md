@@ -1,15 +1,8 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - API
-  - Property
-  - Reference
-  - Storage
-  - WindowSessionStorage
-  - sessionStorage
-translation_of: Web/API/Window/sessionStorage
 ---
+
 {{APIRef}}
 
 `sessionStorage` プロパティで、 session {{domxref("Storage")}} オブジェクトにアクセスできます。sessionStorage は {{domxref("Window.localStorage")}} に似ています。唯一の違いは、localStorage に保存されたデータに期限がないのに対して、sessionStorage に保存されたデータはページのセッションが終了するときに消去されます。ページのセッションはブラウザを開いている限り、ページの再読み込みや復元を越えて持続します。**新しいタブやウィンドウにページを開くと、新しいセッションが開始します。**これは、セッション Cookie の動作とは異なります。
@@ -61,7 +54,7 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **Note:** **注記**: 詳細な使用例は [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+> **Note:** 詳細な使用例は [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
 ## 仕様
 

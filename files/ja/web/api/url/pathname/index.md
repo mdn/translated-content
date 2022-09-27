@@ -1,14 +1,8 @@
 ---
 title: URL.pathname
 slug: Web/API/URL/pathname
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - pathname
-translation_of: Web/API/URL/pathname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`pathname`** プロパティは、最初の `'/'` とその後に続く URL のパス（またはパスがない場合は空の文字列）を含む {{domxref("USVString")}} です。

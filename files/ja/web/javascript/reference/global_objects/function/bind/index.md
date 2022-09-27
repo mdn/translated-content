@@ -1,16 +1,8 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Function
-  - JavaScript
-  - Method
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
-browser-compat: javascript.builtins.Function.bind
 ---
+
 {{JSRef}}
 
 **`bind()`** メソッドは、呼び出された際に `this` キーワードに指定された値が設定される新しい関数を生成します。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
@@ -245,8 +237,8 @@ slice(arguments);
 
 したがって、 `Function.prototype.bind()` のポリフィルの選択肢を二つ示します。
 
-1.  最初の方の方がずっと小さくて性能が良いのですが、 `new` 演算子を使うとうまくいきません。
-2.  2 番目の方が大きくて性能が低いですが、`new` 演算子を使ってバインドされた関数を使用することができます。
+1. 最初の方の方がずっと小さくて性能が良いのですが、 `new` 演算子を使うとうまくいきません。
+2. 2 番目の方が大きくて性能が低いですが、`new` 演算子を使ってバインドされた関数を使用することができます。
 
 一般的に、ほとんどのコードでは、バインドされた関数で `new` が使用されることはとても稀なので、一般的には最初の選択肢を使用するのがベストです。
 

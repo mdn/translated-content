@@ -12,6 +12,7 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 ---
+
 {{AddonSidebar()}}
 
 Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.

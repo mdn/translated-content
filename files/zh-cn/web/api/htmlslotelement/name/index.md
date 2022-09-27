@@ -2,6 +2,7 @@
 title: HTMLSlotElement.name
 slug: Web/API/HTMLSlotElement/name
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 元素{{domxref("HTMLSlotElement")}}的**name**属性， 可以获取和设置属性值. 插槽提供了 web 组件的摆放位置，辅助用户布局。
@@ -39,4 +40,4 @@ slots[1].addEventListener('slotchange', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSlotElement.name")}}
+{{Compat}}

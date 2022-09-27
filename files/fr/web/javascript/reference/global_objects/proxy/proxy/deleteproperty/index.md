@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/deleteProperty
 ---
+
 {{JSRef}}
 
 La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.

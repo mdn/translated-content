@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
+
 {{AddonSidebar()}}
 
 Rechargez un onglet, en contournant éventuellement le cache Web local.

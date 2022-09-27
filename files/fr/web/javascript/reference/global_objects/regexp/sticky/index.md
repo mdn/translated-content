@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/sticky
 ---
+
 {{JSRef}}
 
 La propriété **`sticky`** (adhérante) permet de déterminer si la recherche s'effectue uniquement à partir de l'indice {{jsxref("RegExp.lastIndex", "lastIndex")}} lié à l'expression rationnelle ou non). `sticky` est une propriété accessible en lecture seule, rattachée à l'instance.

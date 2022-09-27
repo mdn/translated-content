@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-left-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left-color`** permet de définir la couleur utilisée pour la bordure gauche d'un élément.

@@ -1,15 +1,8 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Object.entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
+
 {{JSRef}}
 
 **`Object.entries()`** メソッドは、引数に与えたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティの組 `[key, value]` からなる配列を返します。これは {{jsxref("Statements/for...in", "for...in")}} ループでの反復処理と同様ですが、違いは `for...in` ループではプロトタイプチェーン内のプロパティも列挙されることです。

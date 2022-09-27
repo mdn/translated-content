@@ -2,6 +2,7 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM")}}
 
 **`removeEventListener()`** は {{domxref("EventTarget")}} インターフェイスのメソッドで、以前に {{domxref("EventTarget.addEventListener()")}} で登録されたイベントリスナーを取り外します。

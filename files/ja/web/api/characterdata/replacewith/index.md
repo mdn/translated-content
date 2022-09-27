@@ -1,14 +1,6 @@
 ---
 title: CharacterData.replaceWith()
 slug: Web/API/CharacterData/replaceWith
-tags:
-  - API
-  - DOM
-  - メソッド
-  - CharacterData
-  - リファレンス
-browser-compat: api.CharacterData.replaceWith
-translation_of: Web/API/CharacterData/replaceWith
 ---
 {{APIRef("DOM")}}
 

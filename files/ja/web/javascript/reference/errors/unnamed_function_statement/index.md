@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "function statement requires a name" は、名前が必要な[関数文](/ja/docs/Web/JavaScript/Reference/Statements/function)がコードの中にあった場合に発生します。

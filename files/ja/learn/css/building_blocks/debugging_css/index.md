@@ -144,10 +144,10 @@ CSS の問題を解決する場合、DevTools は非常に役立ちます。CSS 
 
 縮小されたテストケースを作成するには：
 
-1.  マークアップが動的に生成される場合—例えば、CMS を介して—問題を示す出力の静的バージョンを作成します。[CodePen](https://codepen.io/)などのコード共有サイトは、オンラインでアクセスでき、同僚と簡単に共有できるため、テストケースを減らすのに役立ちます。まず、ページで\[ソースの表示]を実行し、HTML を CodePen にコピーしてから、関連する CSS と JavaScript を取得して、それも含めます。その後、問題がまだ明らかかどうかを確認できます。
-2.  JavaScript を削除しても問題が解決しない場合は、JavaScript を含めないでください。JavaScript を削除*し*ても問題が解決しない場合は、できるだけ多くの JavaScript を削除して、問題の原因はすべて残してください。
-3.  問題の原因となっていない HTML を削除します。コンポーネントまたはレイアウトの主要な要素を削除します。繰り返しになりますが、まだ問題を示している最小限のコードになるようにしてください。
-4.  問題に影響を与えない CSS をすべて削除します。
+1. マークアップが動的に生成される場合—例えば、CMS を介して—問題を示す出力の静的バージョンを作成します。[CodePen](https://codepen.io/)などのコード共有サイトは、オンラインでアクセスでき、同僚と簡単に共有できるため、テストケースを減らすのに役立ちます。まず、ページで\[ソースの表示]を実行し、HTML を CodePen にコピーしてから、関連する CSS と JavaScript を取得して、それも含めます。その後、問題がまだ明らかかどうかを確認できます。
+2. JavaScript を削除しても問題が解決しない場合は、JavaScript を含めないでください。JavaScript を削除*し*ても問題が解決しない場合は、できるだけ多くの JavaScript を削除して、問題の原因はすべて残してください。
+3. 問題の原因となっていない HTML を削除します。コンポーネントまたはレイアウトの主要な要素を削除します。繰り返しになりますが、まだ問題を示している最小限のコードになるようにしてください。
+4. 問題に影響を与えない CSS をすべて削除します。
 
 その過程で、何が問題を引き起こしているのかを発見したり、特定の何かを取り除くことで、 少なくとも問題のオン/オフを切り替えることができるようになるかもしれません。あなたが物事を発見したときに、あなたのコードにいくつかのコメントを追加する価値はあります。助けを求める必要がある場合は、それがあなたがすでに試したものを助けてくれる人に伝えてくれます。これにより、考えられる問題や回避策を検索するのに十分な情報が得られる場合があります。
 
@@ -161,21 +161,21 @@ CSS を使いこなせるようになると、問題を発見するのが早く�
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [共役](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

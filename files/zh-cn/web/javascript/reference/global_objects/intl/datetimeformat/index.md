@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat`** 是根据语言来格式化日期和时间的对象的构造器。

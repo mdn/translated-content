@@ -1,10 +1,6 @@
 ---
 title: 멱등성
 slug: Glossary/Idempotent
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Idempotent
 ---
 동일한 요청을 한 번 보내는 것과 여러 번 연속으로 보내는 것이 같은 효과를 지니고, 서버의 상태도 동일하게 남을 때, 해당 HTTP 메서드가 **멱등성**을 가졌다고 말합니다. 다른 말로는, 멱등성 메서드에는 통계 기록 등을 제외하면 어떠한 부수 효과(side effect)도 존재해서는 안됩니다. 올바르게 구현한 경우 {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}} 메서드는 멱등성을 가지며, {{HTTPMethod("POST")}} 메서드는 그렇지 않습니다. 모든 {{glossary("safe", "안전한")}} 메서드는 멱등성도 가집니다.
 

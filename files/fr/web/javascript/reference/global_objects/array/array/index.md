@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.

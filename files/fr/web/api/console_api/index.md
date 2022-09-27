@@ -3,6 +3,7 @@ title: API Console
 slug: Web/API/Console_API
 translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 L'API Console fournit des fonctionnalités permettant d'effectuer des tâches de débogage lors du développement, telles que la journalisation de message ou des valeurs de variables à des points définis du code, ou le calcul de la durée d'une opération.

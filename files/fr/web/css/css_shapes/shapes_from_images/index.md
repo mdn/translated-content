@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Shapes/Shapes_From_Images
 original_slug: Web/CSS/CSS_Shapes/Générer_formes_images
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous allons voir comment créer une forme à partir d'une image, que ce soit un fichier avec un canal alpha ou un dégradé CSS. Grâce aux images, on peut suivre une forme complexe sans avoir à dessiner de polygone. On peut créer la forme à partir d'un éditeur graphique et utiliser le contour de cette image formé par la ligne des pixels moins opaques qu'un seuil donné.

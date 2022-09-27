@@ -1,16 +1,8 @@
 ---
 title: HTMLSlotElement.name
 slug: Web/API/HTMLSlotElement/name
-tags:
-  - API
-  - HTMLSlotElement
-  - プロパティ
-  - リファレンス
-  - name
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.name
-translation_of: Web/API/HTMLSlotElement/name
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 **`name`** は {{domxref("HTMLSlotElement")}} インターフェイスのプロパティで、スロットの名前を返したり、設定したりします。スロットはウェブコンポーネント内のプレイスホルダーで、ユーザーが独自のマークアップで埋めることができます。

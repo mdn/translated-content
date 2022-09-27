@@ -1,13 +1,6 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.CustomEvent.detail
-translation_of: Web/API/CustomEvent/detail
 ---
 {{APIRef("DOM")}}
 

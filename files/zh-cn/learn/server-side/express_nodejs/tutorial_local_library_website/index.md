@@ -2,9 +2,10 @@
 title: Express 教程：本地图书馆网站
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
-在实战教程第一节中，你将了解要学习哪些内容，对「本地图书馆」示例网站有一个初步的印象 。本章接下来的内容就是逐步完成这个网站。
+在实战教程第一节中，你将了解要学习哪些内容，对「本地图书馆」示例网站有一个初步的印象。本章接下来的内容就是逐步完成这个网站。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -52,7 +53,7 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 - 教程前几节中我们将定义一个简单的、只能浏览的图书馆，会员可以在网站找书。通过这几节我们来学习大多数网站都会涉及的一项操作：从数据库读取并呈现内容。
 - 随着教程的进展，图书馆的示例子会逐步扩充，以演示更高级的网站特征。比如我们会加入新增书目的功能，以此来演示表单和用户授权的用法。
 
-尽管这个示例具备相当可观的扩展度，但依然有理由把它叫做**本地**图书馆（**Local**Library）。 我们希望呈现给你最少的信息，从而帮助你尽快上手并运行 Express。因此，我们只保留书名、本数、作者以及其它关键信息。我们会省略掉其它可能用到的信息，也不会提供多图书馆架构或“大型图书馆"等特性的支持。
+尽管这个示例具备相当可观的扩展度，但依然有理由把它叫做**本地**图书馆（**Local**Library）。我们希望呈现给你最少的信息，从而帮助你尽快上手并运行 Express。因此，我们只保留书名、本数、作者以及其它关键信息。我们会省略掉其它可能用到的信息，也不会提供多图书馆架构或“大型图书馆"等特性的支持。
 
 ## 我被难住了，哪里有源代码？
 

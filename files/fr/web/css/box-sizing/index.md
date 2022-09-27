@@ -16,6 +16,7 @@ tags:
   - width
 translation_of: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`box-sizing`** définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec [le modèle de boîte CSS](/fr/docs/CSS/Modèle_de_boîte)).

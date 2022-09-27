@@ -1,11 +1,6 @@
 ---
 title: 基本的なフォームのヒント
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-tags:
-  - ARIA
-  - アクセシビリティ
-  - Forms
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 伝統的な HTML のフォーム関連要素を使用してフォームを実装する際は、コントロール向けのラベルを提供することと、ラベルとコントロールとを明示的に結びつけることが重要です。画面リーダーのユーザーがページを操作するとき、画面リーダーはフォームコントロールについて読み上げますが、コントロールトラベルとの間に直接的な結びつきがないと、どのラベルが適切かを画面リーダーが知る方法がなくなります。

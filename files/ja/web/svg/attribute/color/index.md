@@ -1,11 +1,6 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.color
-translation_of: Web/SVG/Attribute/color
 ---
 {{SVGRef}}
 

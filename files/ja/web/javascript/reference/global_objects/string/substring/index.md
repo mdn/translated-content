@@ -1,14 +1,8 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef}}
 
 **`substring()`** メソッドは `string` オブジェクトの開始・終了位置の間、または文字列の最後までの部分集合を返します。

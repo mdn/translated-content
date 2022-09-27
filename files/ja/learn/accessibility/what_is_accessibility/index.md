@@ -35,7 +35,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 視覚障碍者には全盲の人や、視覚が低レベルな人、色盲の人などが含まれます。これらの多くはスクリーン拡大鏡 (物理的な拡大鏡とソフトウェアズーム機能のいずれか — 大半のブラウザーと OS には今日ズーム機能があります) を使い、スクリーンリーダー、つまりデジタルテキストを読み上げるソフトウェアを使う人もいます。スクリーンリーダーの例はこれらです:
 
-- 有償の商用製品、例えば [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) や [Dolphin Screen Reader ](https://yourdolphin.com/screenreader)(Windows).
+- 有償の商用製品、例えば [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) や [Dolphin Screen Reader](https://yourdolphin.com/screenreader) (Windows).
 - 無償の製品、例えば [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://www.chromevox.com/) (Chrome, Windows Mac OS X), や [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - OS に組み込まれたもの、例えば [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (Mac OS X と iPadOS と iOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (Chrome OS), や [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
@@ -61,7 +61,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 これが通常ウェブ開発作業に影響するのは、コントロールがキーボードからアクセス可能であることという要件です — このモジュールの後の記事でキーボード・アクセシビリティを扱いますが、どのようにやるかを見るためにキーボードだけを使っていくつかのウェブサイトを試してみることは良い考えです。例えば、<kbd>Tab</kbd> キーを使ってウェブフォームのさまざまなコントロール間を移動できますか？ キーボードコントロールの詳細については、[クロスブラウザーテストのネイティブなキーボード・アクセシビリティを使う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)のセクションを参照してください。
 
-統計では、有意な数の人が運動障碍を持っています。米国疾病管理予防センターの[障碍と機能 (施設に入らない 18 歳以上の大人) ](https://www.cdc.gov/nchs/fastats/disability.htm)（英語）の報告によると、米国では "肉体的な機能障碍のある大人の割合は、16.1%" です。
+統計では、有意な数の人が運動障碍を持っています。米国疾病管理予防センターの[障碍と機能 (施設に入らない 18 歳以上の大人)](https://www.cdc.gov/nchs/fastats/disability.htm)（英語）の報告によると、米国では "肉体的な機能障碍のある大人の割合は、16.1%" です。
 
 ### 認知障碍者
 

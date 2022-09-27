@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`text-size-adjust`** permet de contrôler l'algorithme d'amplification du texte sur certains appareils mobiles. Cette propriété n'est pas standard et doit donc être préfixée : `-moz-text-size-adjust`, `-webkit-text-size-adjust`, and `-ms-text-size-adjust`.

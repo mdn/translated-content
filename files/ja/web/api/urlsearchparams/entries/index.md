@@ -1,15 +1,8 @@
 ---
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
-tags:
-  - API
-  - Entries
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/entries
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`entries()`** メソッドは、このオブジェクトに含まれるすべてのキー/値のペアを反復処理できる {{jsxref("Iteration_protocols","iterator")}} を返します。 各ペアのキーと値は {{domxref("USVString")}} オブジェクトです。

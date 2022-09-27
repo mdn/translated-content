@@ -3,6 +3,7 @@ title: ループ文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements
 original_slug: Web/JavaScript/Guide/Loop_Statements
 ---
+
 ## ループ文
 
 ループは指定した条件が満たされている限り繰り返し実行されるコマンドのセットです。JavaScript は、label はもちろん、for、do while、while といったループ文をサポートしています（label 自体はループ文ではありませんが、これらの文とともに頻繁に使用されます）。さらに、`break` および `continue` 文をループ文の中で使うことができます。

@@ -3,6 +3,7 @@ title: Utiliser l'API JavaScript de WebAssembly
 slug: WebAssembly/Using_the_JavaScript_API
 translation_of: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 Si vous avez déjà [compilé un module depuis un autre langage en utilisant des outils comme Emscripten](/fr/docs/WebAssembly/C_to_wasm), ou [chargé et éxecuté vous-même le code](/fr/docs/WebAssembly/Loading_and_running), l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.
@@ -278,7 +279,7 @@ Vous pouvez voir la mise en application du concept de multiplicité dans notre a
 
 Cet article a couvert les bases de l'utilisation de l'API WebAssembly JavaScript nécessaires à l'inclusion d'un module WebAssembly dans un contexte JavaScript, afin d'utiliser les fonctions du module dans ce contexte,  et de se familiairiser avec la manipulation de la mémoire et des tables WebAssembly. Nous avons terminé en évoquant le concept de multiplicité.
 
-## A voir également
+## Voir aussi
 
 - [webassembly.org](http://webassembly.org/)
 - [WebAssembly concepts](/fr/docs/WebAssembly/Concepts)

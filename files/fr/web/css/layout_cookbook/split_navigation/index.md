@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 original_slug: Web/CSS/Layout_cookbook/Navigation_segmentée
 ---
+
 {{CSSRef}}
 
 Une barre de navigation divisée consiste en un ou plusieurs éléments de navigation séparés des autres éléments de navigation.

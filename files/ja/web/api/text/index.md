@@ -1,12 +1,8 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Text
-translation_of: Web/API/Text
 ---
+
 {{ApiRef("DOM")}}
 
 **`Text`** インターフェイスは、 DOM ツリー内でテキストノード ({{domxref("Node", "node")}}) を表します。

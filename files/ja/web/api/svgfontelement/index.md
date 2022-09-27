@@ -2,6 +2,7 @@
 title: SVGFontElement
 slug: Web/API/SVGFontElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 `SVGFontElement` インタフェースは、SVG の {{SVGElement("font")}} 要素に対応するインタフェースです。

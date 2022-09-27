@@ -2,13 +2,14 @@
 title: Getting Started
 slug: Web/Guide/AJAX/Getting_Started
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 这篇文章旨在帮助你了解 AJAX 基础，并提供两个可上手的简单案例供你学习。
 
 ## 什么是 AJAX？
 
-AJAX 是异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**nd **X**ML）。简单点说，就是使用 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 对象与服务器通信。 它可以使用 JSON，XML，HTML 和 text 文本等格式发送和接收数据。AJAX 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
+AJAX 是异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**nd **X**ML）。简单点说，就是使用 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 对象与服务器通信。它可以使用 JSON，XML，HTML 和 text 文本等格式发送和接收数据。AJAX 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
 
 你可以使用 AJAX 最主要的两个特性做下列事：
 
@@ -17,7 +18,7 @@ AJAX 是异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**nd *
 
 ## Step 1 – 怎样发送 http 请求
 
-为了使用 JavaScript 向服务器发送一个 http 请求，你需要一个包含必要函数功能的对象实例。这就是为什么会有 `XMLHttpRequest` 的原因。 这是 IE 浏览器的 ActiveX 对象 `XMLHTTP`的前身。 随后 Mozilla，Safari 和其他浏览器也都实现了类似的方法，被称为 `XMLHttpRequest` 。同时，微软也实现了 XMLHttpRequest 方法。
+为了使用 JavaScript 向服务器发送一个 http 请求，你需要一个包含必要函数功能的对象实例。这就是为什么会有 `XMLHttpRequest` 的原因。这是 IE 浏览器的 ActiveX 对象 `XMLHTTP`的前身。随后 Mozilla，Safari 和其他浏览器也都实现了类似的方法，被称为 `XMLHttpRequest` 。同时，微软也实现了 XMLHttpRequest 方法。
 
 ```js
 // Old compatibility code, no longer needed.
@@ -36,7 +37,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 httpRequest.onreadystatechange = nameOfTheFunction;
 ```
 
-要注意的是，函数名后没有参数，因为你把一个引用赋值给了函数，而不是真正的调用了它。 此外，如果不使用函数名的方式，你还可以用 JavaScript 的匿名函数响应处理的动作，就像下面这样：
+要注意的是，函数名后没有参数，因为你把一个引用赋值给了函数，而不是真正的调用了它。此外，如果不使用函数名的方式，你还可以用 JavaScript 的匿名函数响应处理的动作，就像下面这样：
 
 ```js
 httpRequest.onreadystatechange = function(){
@@ -51,8 +52,8 @@ httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send();
 ```
 
-- `open()` 的第一个参数是 HTTP 请求方法 - 有 GET，POST，HEAD 以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如 FireFox）可能无法处理这个请求。更多关于 HTTP 的请求方法，可以查看 [W3C specs](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)。
-- 第二个参数是你要发送的 URL。由于安全原因，默认不能调用第三方 URL 域名。 确保你在页面中使用的是正确的域名，否则在调用 `open()` 方法是会有 "permission denied" 错误提示。一个容易犯的错误是你企图通过 `domain.tld` 访问网站， 而不是使用 `www.domain.tld`。如果你真的需要向另一个域名发送请求，可以查看 [HTTP access control](/En/HTTP_access_control)。
+- `open()` 的第一个参数是 HTTP 请求方法 - 有 GET，POST，HEAD 以及服务器支持的其他方法。保证这些方法一定要是大写字母，否则其他一些浏览器（比如 FireFox）可能无法处理这个请求。更多关于 HTTP 的请求方法，可以查看 [W3C specs](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)。
+- 第二个参数是你要发送的 URL。由于安全原因，默认不能调用第三方 URL 域名。确保你在页面中使用的是正确的域名，否则在调用 `open()` 方法是会有 "permission denied" 错误提示。一个容易犯的错误是你企图通过 `domain.tld` 访问网站，而不是使用 `www.domain.tld`。如果你真的需要向另一个域名发送请求，可以查看 [HTTP access control](/En/HTTP_access_control)。
 - 第三个参数是可选的，用于设置请求是否是异步的。如果设为 `true` (默认值)，即开启异步，JavaScript 就不会在此语句阻塞，使得用户能在服务器还没有响应的情况下与页面进行交互。
 
 `send()` 方法的参数可以是任何你想发送给服务器的内容，如果是 `POST` 请求的话。发送表单数据时应该用服务器可以解析的格式，像查询语句：
@@ -97,7 +98,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 
 ([Source](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx))
 
-接下来，点击 HTTP 响应的 [response code](/en/HTTP#HTTP_Response_Codes)。 可能的响应码都已经列在 [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)这个列表里。在下面的例子中，我们通过检查响应码 `200 OK` 判断 AJAX 有没有成功。
+接下来，点击 HTTP 响应的 [response code](/zh-CN/HTTP#HTTP_Response_Codes)。可能的响应码都已经列在 [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)这个列表里。在下面的例子中，我们通过检查响应码 `200 OK` 判断 AJAX 有没有成功。
 
 ```js
 if (httpRequest.status === 200) {
@@ -109,7 +110,7 @@ if (httpRequest.status === 200) {
 }
 ```
 
-在检查完请求状态和 HTTP 响应码后， 你就可以用服务器返回的数据做任何你想做的了。你有两个方法去访问这些数据：
+在检查完请求状态和 HTTP 响应码后，你就可以用服务器返回的数据做任何你想做的了。你有两个方法去访问这些数据：
 
 - `httpRequest.responseText` – 服务器以文本字符的形式返回
 - `httpRequest.responseXML` – 以 XMLDocument 对象方式返回，之后就可以使用 JavaScript 来处理
@@ -155,14 +156,14 @@ if (httpRequest.status === 200) {
 
 在这个例子中：
 
-- 用户点击 “Make a request” 按钮；
+- 用户点击“Make a request”按钮；
 - 事件处理调用 `makeRequest()` 函数；
 - 请求已通过然后（`onreadystatechange`）传给 `alertContents()` 执行。
 - `alertContents()` 检查返回的响应是否 OK，然后 `alert()` `test.html` 文件内容。
 
-> **备注：** 如果你向一个代码片段发送请求，将返回 XML，而不是静态 XML 文件，在 IE 浏览器上则必须要设置响应头才能正常工作。如果不设置响应头为 `Content-Type:application/xml` ，IE 浏览器会在你访问 XML 元素时抛出 “Object Expected” 错误。
+> **备注：** 如果你向一个代码片段发送请求，将返回 XML，而不是静态 XML 文件，在 IE 浏览器上则必须要设置响应头才能正常工作。如果不设置响应头为 `Content-Type:application/xml` ，IE 浏览器会在你访问 XML 元素时抛出“Object Expected”错误。
 
-> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
+> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 [bypassing the cache](/zh-CN/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
 > **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest` 变量。
 
@@ -254,7 +255,7 @@ alert(root_node.firstChild.data);
   }
 ```
 
-如果这就是服务器返回的全部内容，`alertContents()` 函数可以使用 step 3 中的相同函数写。可是，服务器会返回计算后的内容和原内容。所以，如果用户输入 “Jane” 在输入框中，那服务器就会返回如下内容：
+如果这就是服务器返回的全部内容，`alertContents()` 函数可以使用 step 3 中的相同函数写。可是，服务器会返回计算后的内容和原内容。所以，如果用户输入“Jane”在输入框中，那服务器就会返回如下内容：
 
 `{"userData":"Jane","computedString":"Hi, Jane!"}`
 

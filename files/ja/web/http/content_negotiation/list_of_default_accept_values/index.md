@@ -1,12 +1,6 @@
 ---
 title: 既定の Accept 値の一覧
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - Accept
-  - コンテンツネゴシエーション
-  - HTTP
-  - リファレンス
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
 {{HTTPSidebar}}
 

@@ -1,18 +1,6 @@
 ---
 title: 이전 브라우저 지원
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - 가변상자
-  - 격자
-  - 기능 쿼리
-  - 레거시
-  - 부동체
-  - 씨에스에스
-  - 안내서
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 ---
 {{LearnSidebar}}
@@ -73,7 +61,7 @@ original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 
 ## CSS로 대체 페이지 생성하기
 
-CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn/CSS/CSS_layout/레거시_조판_메서드)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
+CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
 
 아래 예에서는 세 개의 `<div>` 부동체를 행으로 표시했습니다. [CSS grid 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Grids)을 지원하지 않는 브라우저는 상자 행을 <ruby><em>부동 레이아웃</em><rp> (</rp><rt>浮動 組版</rt><rp>) </rp></ruby>으로 간주합니다. grid 항목이 되는 부동 항목은 부동 동작을 상실합니다. 즉, `.wrapper` 클레스를 grid 컨테이너로 전환하면 부동 항목이 grid 항목이 됩니다. 브라우저가 grid 레이아웃을 지원하는 경우 grid 디스플레이를 표시합니다. 지원하지 않으면 `display: grid` 관련 속성은 무시되고 부동 레이아웃이 사용됩니다.
 
@@ -248,6 +236,6 @@ Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 
 - [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
 - [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_조판_메서드)
+- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
 - [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
 - 레이아웃 이해도 필수 평가

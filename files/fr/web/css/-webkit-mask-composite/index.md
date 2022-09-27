@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-composite
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{cssxref("-webkit-mask-image")}}.

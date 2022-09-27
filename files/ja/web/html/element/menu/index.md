@@ -1,29 +1,6 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-tags:
-  - Element
-  - Experimental
-  - HTML
-  - HTML interactive elements
-  - Navigation
-  - Reference
-  - Site Navigation
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menu
-  - menus
-  - HTML 対話型コンテンツ
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - サイトナビゲーション
-  - メニュー
-  - ユーザーインターフェイス
-  - 要素
-translation_of: Web/HTML/Element/menu
 ---
 {{HTMLRef}}{{SeeCompatTable}}
 

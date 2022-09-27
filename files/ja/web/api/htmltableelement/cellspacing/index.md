@@ -1,18 +1,8 @@
 ---
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - cellSpacing
-  - 非推奨
-browser-compat: api.HTMLTableElement.cellSpacing
-translation_of: Web/API/HTMLTableElement/cellSpacing
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 代わりに CSS の {{cssxref("border-spacing")}} プロパティを使うべきですが、旧式の {{domxref("HTMLTableElement")}} インターフェースの **`cellSpacing`** プロパティは、表のセルを表す個々の {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素の周りの間隔を表わします。任意の 2 つのセルは、それぞれの `cellSpacing` の合計値で区切られます。

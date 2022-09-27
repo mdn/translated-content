@@ -1,14 +1,6 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-type
-translation_of: Web/CSS/list-style-type
 ---
 {{CSSRef}}
 

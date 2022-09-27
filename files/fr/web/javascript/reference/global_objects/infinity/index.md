@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 original_slug: Web/JavaScript/Reference/Objets_globaux/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 La propriété globale **`Infinity`** est une valeur numérique représentant l'infini.

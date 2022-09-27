@@ -1,16 +1,6 @@
 ---
 title: '<rp>: ルビのフォールバック用括弧要素'
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-browser-compat: html.elements.rp
-translation_of: Web/HTML/Element/rp
 ---
 {{HTMLRef}}
 

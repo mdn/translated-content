@@ -5,7 +5,7 @@ translation_of: Web/API/Element/mouseenter_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">Событие <strong><code>mouseenter</code></strong> вызывается в {{domxref("Element")}} </span><span class="tlid-translation translation" lang="ru"><span title="">когда указательное устройство (обычно мышь) изначально перемещается так, что его горячая точка находится в пределах элемента, в котором было запущено событие.</span></span></p>
+<p>Событие <strong><code>mouseenter</code></strong> вызывается в {{domxref("Element")}} когда указательное устройство (обычно мышь) изначально перемещается так, что его горячая точка находится в пределах элемента, в котором было запущено событие.</p>
 
 <table class="properties">
  <tbody>
@@ -30,18 +30,18 @@ translation_of: Web/API/Element/mouseenter_event
 
 <h2 id="Примечания_по_использованию">Примечания по использованию</h2>
 
-<p>Хотя <code>mouseenter</code> похоже на {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> <span class="tlid-translation translation" lang="ru"><span title="">отличается тем, что он не является </span></span><a href="/ru/docs/Web/API/Event/bubbles">bubble</a> <span class="tlid-translation translation" lang="ru"><span title="">и не отправляется никаким потомкам, когда указатель перемещается из физического пространства одного из его потомков в его собственное физическое пространство.</span></span></p>
+<p>Хотя <code>mouseenter</code> похоже на {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> отличается тем, что он не является <a href="/ru/docs/Web/API/Event/bubbles">bubble</a> и не отправляется никаким потомкам, когда указатель перемещается из физического пространства одного из его потомков в его собственное физическое пространство.</p>
 
 <div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
 <div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-<span class="tlid-translation translation" lang="ru"><span title="">Одно событие </span></span> <code>mouseenter</code> <span class="tlid-translation translation" lang="ru"><span title="">отправляется каждому элементу иерархии при их вводе.</span> <span title="">Здесь 4 события отправляются четырём элементам иерархии, когда указатель достигает текста.</span></span>
+Одно событие  <code>mouseenter</code> отправляется каждому элементу иерархии при их вводе. Здесь 4 события отправляются четырём элементам иерархии, когда указатель достигает текста.
 
 <div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-<span class="tlid-translation translation" lang="ru"><span title="">Одиночное событие наведения мыши</span></span> <code>mouseover</code> <span class="tlid-translation translation" lang="ru"><span title="">отправляется в самый глубокий элемент дерева DOM, затем оно всплывает в иерархии, пока не будет отменено обработчиком или не достигнет корня.</span></span></div>
+Одиночное событие наведения мыши <code>mouseover</code> отправляется в самый глубокий элемент дерева DOM, затем оно всплывает в иерархии, пока не будет отменено обработчиком или не достигнет корня.</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">При наличии глубокой иерархии количество отправляемых </span></span>событий <code>mouseover</code><span class="tlid-translation translation" lang="ru"><span title=""> может быть довольно большим и вызывать значительные проблемы с производительностью.</span> <span title="">В таких случаях лучше обрабатывать события </span></span><code>mouseenter</code>.</p>
+<p>При наличии глубокой иерархии количество отправляемых событий <code>mouseover</code> может быть довольно большим и вызывать значительные проблемы с производительностью. В таких случаях лучше обрабатывать события <code>mouseenter</code>.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В сочетании с соответствующим событием</span></span> <code>mouseleave</code> (<span class="tlid-translation translation" lang="ru"><span title="">которое запускается в элементе, когда мышь покидает область содержимого</span></span>), событие <code>mouseenter</code> <span class="tlid-translation translation" lang="ru"><span title="">действует очень похоже на псевдокласс</span></span> CSS {{cssxref(':hover')}}.</p>
+<p>В сочетании с соответствующим событием <code>mouseleave</code> (которое запускается в элементе, когда мышь покидает область содержимого), событие <code>mouseenter</code> действует очень похоже на псевдокласс CSS {{cssxref(':hover')}}.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -49,7 +49,7 @@ translation_of: Web/API/Element/mouseenter_event
 
 <h3 id="mouseenter">mouseenter</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В следующем тривиальном примере событие <code>mouseenter</code> используется для изменения границы элемента <code>div</code>, когда мышь входит в выделенное ему пространство.</span> <span title="">Затем он добавляет элемент в список с номером события <code>mouseenter</code> или <code>mouseleave</code>.</span></span></p>
+<p>В следующем тривиальном примере событие <code>mouseenter</code> используется для изменения границы элемента <code>div</code>, когда мышь входит в выделенное ему пространство. Затем он добавляет элемент в список с номером события <code>mouseenter</code> или <code>mouseleave</code>.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -89,10 +89,10 @@ mouseTarget.addEventListener('mouseleave', e =&gt; {
 });
 
 function addListItem(text) {
-  // <span class="tlid-translation translation" lang="ru"><span title="">Создать новый текстовый узел, используя предоставленный текст</span></span>
+  // Создать новый текстовый узел, используя предоставленный текст
   var newTextNode = document.createTextNode(text);
 
-  // <span class="tlid-translation translation" lang="ru"><span title="">Создать новый элемент li</span></span>
+  // Создать новый элемент li
   var newListItem = document.createElement("li");
 
   // Добавить текстовый узел к элементу li

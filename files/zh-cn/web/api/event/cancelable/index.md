@@ -2,6 +2,7 @@
 title: Event.cancelable
 slug: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Event")}} 实例的只读属性 **`cancelable`** 表明该事件是否可以被取消，即事件是否可以像从未发生一样被阻止。

@@ -14,6 +14,7 @@ tags:
   - captureStream
 translation_of: Web/API/HTMLMediaElement/captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
 **`captureStream()`** est une méthode de l'interface {{domxref("HTMLMediaElement")}} retournant un objet {{domxref('MediaStream')}} qui diffuse en temps réel l'enregistrement d'un contenu obtenu dans un élément média.

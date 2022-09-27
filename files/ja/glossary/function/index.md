@@ -1,13 +1,6 @@
 ---
 title: Function (関数)
 slug: Glossary/Function
-tags:
-  - CodingScripting
-  - IIFE
-  - Immediately Invoked Function Expressions (IIFE)
-  - Intro
-  - JavaScript
-translation_of: Glossary/Function
 ---
 **関数** は、他のコードや自分自身、関数を参照する {{Glossary("variable", "変数")}} から呼ばれるコード断片です。関数が呼ばれると、{{Glossary("Argument", "引数")}} が関数への入力として渡され、次に関数は任意で値を戻します。{{glossary("JavaScript")}} における関数は、{{glossary("object", "オブジェクト")}} でもあります。
 

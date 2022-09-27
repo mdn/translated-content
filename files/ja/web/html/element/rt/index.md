@@ -1,16 +1,6 @@
 ---
 title: '<rt>: ルビ文字列要素'
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-browser-compat: html.elements.rt
-translation_of: Web/HTML/Element/rt
 ---
 {{HTMLRef}}
 
@@ -69,7 +59,7 @@ translation_of: Web/HTML/Element/rt
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 例
 

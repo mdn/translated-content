@@ -1,12 +1,8 @@
 ---
 title: インデックス付きコレクション
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 この節では、インデックス値により順序付けされたデータのコレクションを紹介します。これには配列と、 {{jsxref("Array")}} オブジェクトや {{jsxref("TypedArray")}} オブジェクトなどの配列風の構造物があります。
@@ -48,7 +44,7 @@ let arr = []
 arr.length = arrayLength
 ```
 
-> **Note:** **注:** 上記のコードでは、 `arrayLength` は `Number` (数値) である必要があります。さもないと、 (指定した値の) 単一の要素を持つ配列が生成されます。 `arr.length` を呼び出すと `arrayLength` が返されますが、実際には配列は空要素 (undefined) で構成されます。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
+> **Note:** 上記のコードでは、 `arrayLength` は `Number` (数値) である必要があります。さもないと、 (指定した値の) 単一の要素を持つ配列が生成されます。 `arr.length` を呼び出すと `arrayLength` が返されますが、実際には配列は空要素 (undefined) で構成されます。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
 
 上記のように新規に定義した変数に割り当てるだけでなく、新規または既存のオブジェクトのプロパティに配列を割り当てることができます。
 
@@ -99,7 +95,7 @@ let myArray = ['Wind', 'Rain', 'Fire']
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **Note:** **注:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> **Note:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > let arr = ['one', 'two', 'three']
@@ -118,7 +114,7 @@ emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
 ```
 
-> **Note:** **注:** 上記のコードで配列演算子 (角括弧) 内に非整数値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
+> **Note:** 上記のコードで配列演算子 (角括弧) 内に非整数値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
 >
 > ```js
 > let arr = []
@@ -328,7 +324,7 @@ myArray.sort()
 
 `sort()` は要素を比較する方法を指定するための、コールバック関数を引数として取ることがあります。
 
-コールバック関数を引数として取る `sort` メソッド (および以下のメソッド) は、らかの形で配列全体を反復処理することから、**反復メソッド** (iterative method") と呼ばれています。それぞれが任意で `thisObject` と呼ばれる第二引数を受け取ります。`thisObject` が与えられた場合、これがコールバック関数の本体内で `this` キーワードの値になります。与えられなかった場合は、関数が明示的なオブジェクトコンテキストの外で呼び出された場合と同様に、`this` はアロー関数がコールバックとして使用された場合にはグローバルオブジェクト ([`window`](/ja/docs/Web/API/Window "Window インターフェースは、 DOM 文書を含むウィンドウを表します。 document プロパティは、そのウィンドウに読み込まれた DOM 文書を指します。")) を参照し、通常の関数の場合には `undefined` になります。
+コールバック関数を引数として取る `sort` メソッド (および以下のメソッド) は、らかの形で配列全体を反復処理することから、**反復メソッド** (iterative method") と呼ばれています。それぞれが任意で `thisObject` と呼ばれる第二引数を受け取ります。`thisObject` が与えられた場合、これがコールバック関数の本体内で `this` キーワードの値になります。与えられなかった場合は、関数が明示的なオブジェクトコンテキストの外で呼び出された場合と同様に、`this` はアロー関数がコールバックとして使用された場合にはグローバルオブジェクト ([`window`](/ja/docs/Web/API/Window)) を参照し、通常の関数の場合には `undefined` になります。
 
 コールバック関数は、配列の要素 2 つを引数として呼び出されます。
 
@@ -481,7 +477,7 @@ console.log(arr.property);  // "value" がログに出力される
 
 ### 配列風オブジェクトを利用する
 
-[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName "与えられたタグ名を持つ要素の HTMLCollection を返します。") によって返される [`NodeList`](/ja/docs/Web/API/NodeList "NodeList オブジェクトはノードのコレクションで、通常、 Node.childNodes などのプロパティや document.querySelectorAll() などのメソッドによって返されます。") や、関数本体内で利用できる {{jsxref("Functions/arguments","arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Global_Objects/Function/length","length")}} 属性がありますが、{{jsxref("Array.forEach", "forEach()")}} メソッドは実装されていません。
+[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName) によって返される [`NodeList`](/ja/docs/Web/API/NodeList) や、関数本体内で利用できる {{jsxref("Functions/arguments","arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Global_Objects/Function/length","length")}} 属性がありますが、{{jsxref("Array.forEach", "forEach()")}} メソッドは実装されていません。
 
 配列風オブジェクトに対して配列メソッドを直接呼び出すことはできません。
 

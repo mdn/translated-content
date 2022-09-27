@@ -2,6 +2,7 @@
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 語法會在物件屬性被嘗試定義時，將其屬性綁定到要呼叫的函式內。
@@ -101,7 +102,7 @@ console.log(obj.baz); // "baz"
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## 參見
 

@@ -3,6 +3,7 @@ title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
 translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.
@@ -38,17 +39,15 @@ xhr.send();
  */
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Statut                               | Comment                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-status-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.status")}}
+{{Compat}}
 
-Voir aussi
+## Voir aussi
 
 - Liste des [HTTP response codes](/fr/docs/Web/HTTP/Response_codes)
 - [HTTP](/fr/docs/Web/HTTP)

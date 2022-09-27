@@ -1,19 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
-  - MutationObserver
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-  - mutation
-  - observers
-  - resize
-translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM WHATWG")}}
 

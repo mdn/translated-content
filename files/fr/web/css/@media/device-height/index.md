@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-height
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`device-height`** est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.

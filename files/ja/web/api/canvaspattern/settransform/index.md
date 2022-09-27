@@ -1,14 +1,6 @@
 ---
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
-tags:
-  - API
-  - Canvas
-  - CanvasPattern
-  - Experimental
-  - Method
-  - Reference
-translation_of: Web/API/CanvasPattern/setTransform
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

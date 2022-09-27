@@ -1,16 +1,11 @@
 ---
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
-page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-translation_of: MDN/Contribute/Localize
 original_slug: MDN/Contribute/Localize
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 2020 年 12 月 14 日より、MDN は GitHub ベースの新しい [Yari プラットフォーム](https://github.com/mdn/yari)で運用しています。これは MDN にとって多くの利点がありますが、ローカライズを扱う方法を大幅に変更する必要がありました。というのも、アメリカ英語以外のロケールでは、保守されていない古いコンテンツが多く存在しているため、今後はそれらをより適切に管理していきたいと考えているからです。

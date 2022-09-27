@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/link
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
@@ -278,18 +279,11 @@ De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Préchar
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Subresource Integrity", "#HTMLLinkElement", "lt;link&gt;")}}                 | {{Spec2('Subresource Integrity')}} | Ajout de l'attribut `integrity`.                                                                                                                                    |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}}             | Aucune modification depuis la dernière dérivation.                                                                                                                  |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}                 | Ajout des attributs `crossorigin` et `sizes`. Les valeurs de `media` sont étendues à l'ensemble des requêtes médias, ajout de nombreuses autres valeurs pour `rel`. |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}                 |                                                                                                                                                                     |
-| {{SpecName("Preload")}}                                                                                 | {{Spec2("Preload")}}                 | Définition de `<link rel="preload">` et de l'attribut `as`.                                                                                                         |
-| {{SpecName('Resource Hints','#prefetch','prefetch')}}                                         | {{Spec2('Resource Hints')}}         | Ajout des valeurs `dns-prefetch`, `preconnect`, `prefetch` et `prerender`.                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link",3)}}
+{{Compat}}
 
 ## Voir aussi
 

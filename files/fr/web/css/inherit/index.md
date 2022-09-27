@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 Le mot-clé **`inherit`** est une valeur qui peut être utilisée pour qu'une propriété prenne [la valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.

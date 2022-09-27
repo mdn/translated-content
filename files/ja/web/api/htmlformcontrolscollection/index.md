@@ -1,11 +1,8 @@
 ---
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
-tags:
-  - DOM
-  - DOM Reference
-translation_of: Web/API/HTMLFormControlsCollection
 ---
+
 {{ApiRef}}
 
 HTMLFormControlsCollection は、HTML フォームコントロール要素のコレクションを表すインタフェースです。 {{domxref("HTMLCollection")}} から継承されるプロパティとメソッドの他に、追加メソッドがひとつ提供されます。

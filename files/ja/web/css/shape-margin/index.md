@@ -1,21 +1,6 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - プロパティ
-  - Reference
-  - シェイプ
-  - float
-  - マージン
-  - recipe:css-property
-  - shape-margin
-browser-compat: css.properties.shape-margin
-translation_of: Web/CSS/shape-margin
 ---
 {{CSSRef}}
 

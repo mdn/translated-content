@@ -1,15 +1,8 @@
 ---
 title: Headers.delete()
 slug: Web/API/Headers/delete
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - delete
-translation_of: Web/API/Headers/delete
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} インターフェイスの **`delete()`** メソッドは、現在の `Headers` オブジェクトからヘッダーを削除します。

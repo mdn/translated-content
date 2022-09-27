@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 **`fetch()`** は {{domxref("WindowOrWorkerGlobalScope")}} ミックスインのメソッドで、ネットワークからリソースを取得するプロセスを開始し、レスポンスが利用できるようになったら満足するプロミスを返します。このプロミスはリクエストに対するレスポンスを表す {{domxref("Response")}} で解決します。プロミスは HTTP エラーでは拒否されず、ネットワークエラーでのみ拒否されます。 HTTP エラーをチェックするには、 `then` ハンドラーを使用する必要があります。
@@ -13,7 +14,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 `fetch()` メソッドは取得するリソースのディレクティブではなく [Content Security Policy](/ja/docs/Security/CSP/CSP_policy_directives) の `connect-src` ディレクティブによって制御されます。
 
-> **Note:** **注**: `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
+> **Note:** `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
 
 ## 構文
 

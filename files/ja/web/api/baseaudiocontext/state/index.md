@@ -1,17 +1,6 @@
 ---
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - state
-browser-compat: api.BaseAudioContext.state
-translation_of: Web/API/BaseAudioContext/state
 original_slug: Web/API/AudioContext/state
 ---
 {{ APIRef("Web Audio API") }}

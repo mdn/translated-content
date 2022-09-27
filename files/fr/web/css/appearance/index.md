@@ -13,6 +13,7 @@ tags:
 translation_of: Web/CSS/appearance
 browser-compat: css.properties.appearance
 ---
+
 {{CSSRef}}
 
 La propriété **`-moz-appearance`** est utilisée dans Gecko (Firefox) afin d'afficher un élément en utilisant la mise en forme native du système d'exploitation.

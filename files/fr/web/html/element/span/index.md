@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/span
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs {{htmlattrxref("class")}} ou {{htmlattrxref("id")}} et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme {{htmlattrxref("lang")}}. Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Web/HTML/Éléments_en_bloc), alors que `<span>` est [un élément en ligne](/fr/docs/Web/HTML/Éléments_en_ligne).
@@ -102,15 +103,11 @@ p span {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                         |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}}     | {{Spec2('HTML5 W3C')}}     | L'interface DOM est désormais {{domxref("HTMLSpanElement")}}. |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## Voir aussi
 

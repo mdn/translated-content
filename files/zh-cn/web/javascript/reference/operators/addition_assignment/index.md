@@ -2,6 +2,7 @@
 title: 加法赋值 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 加法赋值操作符 (`+=`) 将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型确定加法赋值运算符的行为。加法或串联是可能的。
@@ -54,5 +55,5 @@ foo += 'bar' // "foobar"
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)

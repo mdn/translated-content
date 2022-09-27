@@ -1,12 +1,6 @@
 ---
 title: CSS 雑題
 slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Miscellaneous
 ---
 {{CSSRef}}
 

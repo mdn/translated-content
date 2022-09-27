@@ -2,6 +2,7 @@
 title: Performance.measure()
 slug: Web/API/Performance/measure
 ---
+
 {{APIRef("User Timing API")}}
 
 **`measure()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。 被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。
@@ -74,4 +75,4 @@ setTimeout(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.measure")}}
+{{Compat}}

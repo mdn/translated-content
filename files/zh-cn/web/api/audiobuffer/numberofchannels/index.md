@@ -2,6 +2,7 @@
 title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBuffer") }}接口的`numberOfChannels`属性返回一个整数，该整数表示由缓冲区中存储的 PCM 数据描述的离散音频通道的数量
@@ -51,7 +52,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.numberOfChannels")}}
+{{Compat}}
 
 ## 相关链接
 

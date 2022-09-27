@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCHours
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCHours()`** renvoie les heures de la date renseignée, d'après UTC.

@@ -1,16 +1,8 @@
 ---
 title: 'HTMLMediaElement: loadedmetadata イベント'
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.loadedmetadata_event
-translation_of: Web/API/HTMLMediaElement/loadedmetadata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `loadedmetadata` イベントは、メタデータが読み込まれたときに発生します。

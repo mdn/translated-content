@@ -1,14 +1,6 @@
 ---
 title: 'リンク種別: preload'
 slug: Web/HTML/Link_types/preload
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-translation_of: Web/HTML/Link_types/preload
-browser-compat: html.elements.link.rel.preload
 ---
 {{HTMLSidebar}}
 

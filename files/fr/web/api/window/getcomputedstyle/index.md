@@ -3,6 +3,7 @@ title: window.getComputedStyle
 slug: Web/API/Window/getComputedStyle
 translation_of: Web/API/Window/getComputedStyle
 ---
+
 {{ ApiRef() }}
 
 ## Résumé
@@ -81,16 +82,13 @@ L'objet retourné est du même type que celui de la propriété {{domxref("HTMLE
 
 Le premier argument doit être un Element, sinon, si par exemple un #text Node est utilisé, une exception sera lancée. Depuis la version 1.9.2 de Gecko {{geckoRelease("1.9.2")}}, les URLs renvoyées ont désormais des guillemets autour de celles-ci: `url("http://foo.com/bar.jpg")`.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}                     | {{Spec2("CSSOM")}}         |                      |
-| {{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle", "getComputedStyle()")}} | {{Spec2("DOM2 Style")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.getComputedStyle")}}
+{{Compat}}
 
 ## Voir aussi
 

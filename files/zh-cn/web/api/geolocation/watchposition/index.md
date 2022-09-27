@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.watchPosition()`** 用于注册监听器，在设备的地理位置发生改变的时候自动被调用。也可以选择特定的错误处理函数。
@@ -17,9 +18,9 @@ id = navigator.geolocation.watchPosition(success[, error[, options]])
 ### 参数
 
 - _success_
-  - : 成功时候的回调函数， 同时传入一个 {{domxref("Position")}} 对象当作参数。
+  - : 成功时候的回调函数，同时传入一个 {{domxref("Position")}} 对象当作参数。
 - _error_ {{optional_inline}}
-  - : 失败时候的回调函数，可选， 会传入一个 {{domxref("PositionError")}} 对象当作参数。
+  - : 失败时候的回调函数，可选，会传入一个 {{domxref("PositionError")}} 对象当作参数。
 - _options_ {{optional_inline}}
   - : 一个可选的 {{domxref("PositionOptions")}} 对象。
 
@@ -55,22 +56,17 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-## 注意
-
-如果你的应用程序运行在 firefox OS 上，请参考下 [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>) ，以便在屏幕关闭的时候，程序可以运行在后台以继续监听位置的变化。
-
 ## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
-- [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>)
-- [使用地理位置定位](/en-US/docs/WebAPI/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)
 - 该方法属于 {{domxref("Geolocation")}}，可以通过 {{domxref("NavigatorGeolocation.geolocation")}} 访问。
 - 取消监听的方法： {{domxref("Geolocation.clearWatch()")}}
 - 另一个类似的方法： {{domxref("Geolocation.getCurrentPosition()")}}

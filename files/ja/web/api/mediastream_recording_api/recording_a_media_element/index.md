@@ -1,17 +1,6 @@
 ---
 title: メディア要素の記録
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
-tags:
-  - API
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Media Recording
-  - MediaStream Recording
-  - Tutorial
-  - Video
-translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 

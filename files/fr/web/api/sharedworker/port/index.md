@@ -7,6 +7,7 @@ browser-compat: api.SharedWorker.port
 l10n:
   sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
+
 {{APIRef("Web Workers API")}}
 
 La propriété **`port`** de l'interface [`SharedWorker`](/fr/docs/Web/API/SharedWorker) retourne un objet [`MessagePort`](/fr/docs/Web/API/MessagePort) utilisé pour contrôler et communiquer avec le <i lang="en">worker</i> partagé.

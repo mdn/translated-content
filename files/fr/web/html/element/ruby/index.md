@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ruby
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<ruby>`** représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.
@@ -110,14 +111,11 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## Voir aussi
 

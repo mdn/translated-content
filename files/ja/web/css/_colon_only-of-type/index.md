@@ -1,15 +1,6 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.only-of-type
-translation_of: Web/CSS/:only-of-type
 ---
 {{CSSRef}}
 

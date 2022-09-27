@@ -1,15 +1,8 @@
 ---
 title: window.close
 slug: Web/API/Window/close
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/close
 ---
+
 {{APIRef}}
 
 **`Window.close()`** メソッドは、現在のウィンドウ、またはそのページ上で呼び出されたウィンドウを閉じます。

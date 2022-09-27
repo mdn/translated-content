@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 original_slug: Web/JavaScript/Reference/Erreurs/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: banner ロール'
 slug: Web/Accessibility/ARIA/Roles/Banner_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Banner_role
 ---
 バナー (`banner`) ロールは、ページの先頭に頻繁に配置される一般的で有益なコンテンツを表します。 これには、通常、ロゴ、会社名、検索アイコン、ページに関連する写真、またはスローガンが含まれます。
 
@@ -85,4 +80,4 @@ TBD
 - HTML {{htmlelement("header")}} 要素
 - [WC3 Landmarks Example](https://w3c.github.io/aria-practices/examples/landmarks/banner.html)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

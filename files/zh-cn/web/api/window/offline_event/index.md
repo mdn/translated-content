@@ -2,6 +2,7 @@
 title: offline
 slug: Web/API/Window/offline_event
 ---
+
 当浏览器失去网络连接时，`offline`事件被触发。并且`navigator.onLine`的值变为 `false`。
 
 ## 常规信息
@@ -34,4 +35,4 @@ slug: Web/API/Window/offline_event
 
 ## 相关事件
 
-- [`online`](/en-US/docs/Mozilla_event_reference/online)
+- [`online`](/zh-CN/docs/Mozilla_event_reference/online)

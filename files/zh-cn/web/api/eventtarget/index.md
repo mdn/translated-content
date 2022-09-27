@@ -2,13 +2,14 @@
 title: EventTarget
 slug: Web/API/EventTarget
 ---
-{{ApiRef("DOM Events")}}
 
-`EventTarget` 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现。
+{{ApiRef("DOM")}}
 
-{{domxref("Element")}}，{{domxref("document")}} 和 {{domxref("window")}} 是最常见的 event targets ，但是其他对象也可以作为 event targets，比如 {{domxref("XMLHttpRequest")}}，{{domxref("AudioNode")}}，{{domxref("AudioContext")}} 等等。
+`EventTarget` 接口由可以接收事件、并且可以创建侦听器的对象实现。换句话说，任何事件目标都会实现与该接口有关的这三个方法。
 
-许多 event targets（包括 elements， documents 和 windows）支持通过 `onevent` 特性和属性设置[事件处理程序](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers) ([event handlers](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers))。
+{{domxref("Element")}} 及其子项、{{domxref("document")}} 和 {{domxref("window")}} 是最常见的事件目标，但其他对象也可以是事件目标。比如 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}} 和 {{domxref("AudioContext")}} 等等。
+
+许多事件目标（包括 `element`、`document` 和 `window`）都支持通过 `onevent` 特性和属性设置[事件处理程序](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers)。
 
 {{InheritanceDiagram}}
 
@@ -20,60 +21,11 @@ slug: Web/API/EventTarget
 ## 方法
 
 - {{domxref("EventTarget.addEventListener()")}}
-  - : 在 EventTarget 上注册特定事件类型的事件处理程序。
+  - : 在 `EventTarget` 上注册特定事件类型的事件处理程序。
 - {{domxref("EventTarget.removeEventListener()")}}
-  - : EventTarget 中删除事件侦听器。
+  - : `EventTarget` 中删除事件侦听器。
 - {{domxref("EventTarget.dispatchEvent()")}}
-  - : 将事件分派到此 EventTarget。
-
-### Mozilla chrome 代码的其他方法
-
-Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on\* 属性。另见 [WebIDL bindings](/en-US/docs/Mozilla/WebIDL_bindings) 绑定。
-
-- void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
-- EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}
-
-## 示例
-
-### EventTarget 的简单实现
-
-```js
-var EventTarget = function() {
-  this.listeners = {};
-};
-
-EventTarget.prototype.listeners = null;
-EventTarget.prototype.addEventListener = function(type, callback) {
-  if(!(type in this.listeners)) {
-    this.listeners[type] = [];
-  }
-  this.listeners[type].push(callback);
-};
-
-EventTarget.prototype.removeEventListener = function(type, callback) {
-  if(!(type in this.listeners)) {
-    return;
-  }
-  var stack = this.listeners[type];
-  for(var i = 0, l = stack.length; i < l; i++) {
-    if(stack[i] === callback){
-      stack.splice(i, 1);
-      return this.removeEventListener(type, callback);
-    }
-  }
-};
-
-EventTarget.prototype.dispatchEvent = function(event) {
-  if(!(event.type in this.listeners)) {
-    return;
-  }
-  var stack = this.listeners[event.type];
-  event.target = this;
-  for(var i = 0, l = stack.length; i < l; i++) {
-      stack[i].call(this, event);
-  }
-};
-```
+  - : 将事件分派到此 `EventTarget`。
 
 ## 规范
 
@@ -81,10 +33,10 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
-- [Event reference](/en-US/docs/Web/Reference/Events) - the events available in the platform.
-- [Event developer guide](/en-US/docs/Web/Guide/DOM/Events)
-- {{domxref("Event")}} interface
+- [事件参考](/zh-CN/docs/Web/Events)——站点中列出的事件
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Event")}} 接口

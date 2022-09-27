@@ -4,6 +4,7 @@ slug: Web/CSS/minmax
 translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
+
 {{CSSRef}}
 
 La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).

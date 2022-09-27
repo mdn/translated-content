@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
 original_slug: Web/API/Pointer_events/gestes_pincer_zoom
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 Ajouter la gestion des _gestes_ à une application peut améliorer de manière significative l'expérience utilisateur. Il existe de nombreux types de gestes, du simple geste _swipe_ (balayage de l'écran) aux gestes plus complexes avec plusieurs doigts comme le _twist_ (rotation), où les points de contact (dits _pointeurs_) bougent dans des directions différentes.

@@ -5,6 +5,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 original_slug: >-
   Web/CSS/CSS_Grid_Layout/Construire_des_dispositions_courantes_avec_des_grilles_CSS
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition","","Web/CSS/CSS_Grid_Layout")}}

@@ -2,6 +2,7 @@
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 ---
+
 {{HTTPSidebar}}
 
 服务器使用 HTTP 响应头 **`Accept-Ranges`** 标识自身支持范围请求 (partial requests)。字段的具体值用于定义范围请求的单位。

@@ -1,25 +1,8 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
-tags:
-  - API
-  - アニメーション
-  - Drawing
-  - Games
-  - Graphics
-  - HTML DOM
-  - 中級者
-  - JavaScript タイマー
-  - メソッド
-  - Performance
-  - リファレンス
-  - スケジュール
-  - Window
-  - requestAnimationFrame
-  - Polyfill
-browser-compat: api.Window.requestAnimationFrame
-translation_of: Web/API/window/requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame()`** メソッドは、ブラウザーにアニメーションを行いたいことを知らせ、指定した関数を呼び出して次の再描画の前にアニメーションを更新することを要求します。このメソッドは、再描画の前に呼び出されるコールバック 1 個を引数として取ります。

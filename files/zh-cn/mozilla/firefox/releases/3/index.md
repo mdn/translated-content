@@ -2,6 +2,7 @@
 title: 致 Firefox 3 开发者
 slug: Mozilla/Firefox/Releases/3
 ---
+
 {{FirefoxSidebar}}
 
 如果你是一个 Web 开发人员，并且希望了解 Firefox 3 中所有的新特性，这里是一个很好的起点。这篇文章提供了一个覆盖所有 Firefox 3 新特性的列表。虽然他并不是能够包括所有微小的改动，但他能够帮助你学习到最主要的更新。
@@ -19,11 +20,11 @@ slug: Mozilla/Firefox/Releases/3
 - [交错格式样表](/zh-CN/%E4%BA%A4%E9%94%99%E6%A0%BC%E5%BC%8F%E6%A0%B7%E8%A1%A8)
   - : Firefox 3 支持 CSS 层叠式样式表 API.
 - [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)
-  - : 你现在可以使用`navigator.registerProtocolHandler()方法`注册 web 应用
+  - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法注册 web 应用
 - [在画布（canvas）中“绘”出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
   - : 您可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
 - [支持画布变换](/zh-CN/Canvas_tutorial/Transformations#Transforms)
-  - : Firefox 现在的 canvas 支持`transform()`和`setTransform()方法。`
+  - : Firefox 现在的 canvas 支持 `transform()` 和 `setTransform()` 方法。
 - [使用微格式](/zh-CN/%E4%BD%BF%E7%94%A8%E5%BE%AE%E6%A0%BC%E5%BC%8F)
   - : Firefox 现在有一组微格式的 API。
 - [拖放事件](/zh-CN/%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6)
@@ -104,7 +105,7 @@ slug: Mozilla/Firefox/Releases/3
 - **改进了文本选择。** 使用 Crtl (Macintosh 的 Command) 键选择多块文本。双击可以选中个词（中文为一句）三击选中一段。
 - **查找工具。** 查找工具以当前选中内容为默认查找内容。
 - **扩展管理。** 用户可以在附件组件管理器中单独显示插件。
-- **与 Windows Vista 的整合**。 火狐菜单用一个 Vista 本地主题显示。
+- **与 Windows Vista 的整合**。火狐菜单用一个 Vista 本地主题显示。
 - **与 Mac OS X 的整合**。Firefox 现在使用 Mac OS X 拼写检查器并使用 [Growl](http://growl.info/) 来通知下载完成或有可用更新。
 - **星按钮。** 地址栏上的“星”按钮使你通过一个点击添加一个新书签。一次双击保存并编辑你的新书签。
 - **标签。** 可以为你的书签指定关键词，并按主题排序。
@@ -114,7 +115,7 @@ slug: Mozilla/Firefox/Releases/3
 - **基于 Web 的协议处理。** 网络应用，比如你最喜欢的电子邮件提供商可以代替本地邮件应用来处理 `mailto:` 链接。对于其他也提供相似的支持。 (注意网络应用需要向火狐注册)
 - **易于使用的下载。** 一个新的引用界面提供高级选项来配置对不同文件类型及协议策略的处理方案。
 - **改进的浏览器外观。** 新的图形及字体处理方案使网页在你的屏幕上显示的更漂亮。包括清晰的文字渲染、连体字、复杂文字的更好支持。另外 Mac 及 Linux (Gnome) 用户会发现 Firefox 感觉起来更像他们本地的应用或平台一样。
-- **支持颜色设置。** 通过设置 在{{ mediawiki.external('about:config') }} 的 `gfx.color_management.enabled` 优先级，您可以要求 Firefox 的按照新的配置文件中对图像的颜色进行调整，以符合您电脑的显示器。
+- **支持颜色设置。** 通过设置 在 `about:config` 的 `gfx.color_management.enabled` 优先级，您可以要求 Firefox 的按照新的配置文件中对图像的颜色进行调整，以符合您电脑的显示器。
 - **支持离线浏览。**即使您没有 Internet 连接，Web 应用程序仍可使用。
 
 #### 安全和隐私

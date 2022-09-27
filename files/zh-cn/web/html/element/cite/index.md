@@ -2,6 +2,7 @@
 title: <cite>
 slug: Web/HTML/Element/cite
 ---
+
 {{HTMLRef}}
 
 _HTML 引用（ Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
@@ -99,7 +100,7 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## 相关链接
 

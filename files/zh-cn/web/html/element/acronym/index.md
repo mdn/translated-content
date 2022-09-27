@@ -2,6 +2,7 @@
 title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
+
 {{deprecated_header}}
 
 ## 简介
@@ -42,7 +43,7 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.acronym")}}
+{{Compat}}
 
 ## 另见
 

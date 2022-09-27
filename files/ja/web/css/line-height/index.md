@@ -1,19 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - テキスト
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.line-height
-translation_of: Web/CSS/line-height
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: 解構賦值
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 **解構賦值** (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
@@ -420,7 +421,7 @@ const {self, prot} = obj;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## 參見
 

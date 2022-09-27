@@ -1,21 +1,8 @@
 ---
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Web
-browser-compat: api.HTMLMediaElement.error
-translation_of: Web/API/HTMLMediaElement/error
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.error`** は最新のエラーの {{domxref("MediaError")}} オブジェクトです。エラーが発生していない場合は `null` です。 要素が {{domxref("HTMLMediaElement/error_event", "error")}} イベントを受け取ったら、このオブジェクトを調べることで、何が起こったのかについての詳細を決定することができます。

@@ -1,15 +1,6 @@
 ---
 title: '-webkit-mask-repeat-x'
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-repeat-x
-translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
 {{CSSRef}}{{Non-standard_header}}
 

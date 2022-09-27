@@ -16,11 +16,11 @@ slug: Learn/Performance/Measuring_performance
 
 ![The various handlers that the navigation tiiming API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnettionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-現在のページのパフォーマンスに関連する情報へのアクセスを提供する [Performance API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[Performance Timeline API](/ja/docs/Web/API/Performance_Timeline)、[Navigation Timing API](/ja/docs/Web/API/Navigation_timing_API)、[User Timing API](/ja/docs/Web/API/User_Timing_API)、そして [Resource Timing API ](/ja/docs/Web/API/Resource_Timing_API)を含みます。これらのインターフェースにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
+現在のページのパフォーマンスに関連する情報へのアクセスを提供する [Performance API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[Performance Timeline API](/ja/docs/Web/API/Performance_Timeline)、[Navigation Timing API](/ja/docs/Web/API/Navigation_timing_API)、[User Timing API](/ja/docs/Web/API/User_Timing_API)、そして [Resource Timing API](/ja/docs/Web/API/Resource_Timing_API) を含みます。これらのインターフェースにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
 [PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxref("PerformanceMark","mark")}}* または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
 
-[PerformanceObserver API ](/ja/docs/Web/API/PerformanceObserver)はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
+[PerformanceObserver API](/ja/docs/Web/API/PerformanceObserver) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
 
 この記事ではこれらの API に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ API を使う例についてより深く知りたい場合は [Navigation and timings](/ja/docs/Web/Performance/Navigation_and_resource_timings) の記事を参照してください。
 

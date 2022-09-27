@@ -1,13 +1,6 @@
 ---
 title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
-tags:
-  - API
-  - CSSOM
-  - CSSStyleSheet
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleSheet/deleteRule
 ---
 {{APIRef("CSSOM")}}
 

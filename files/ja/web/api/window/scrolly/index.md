@@ -1,16 +1,8 @@
 ---
 title: window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Window
-  - scrollY
-  - プロパティ
-translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef("CSSOM View")}}
 
 {{domxref("Window")}} インターフェイスの読み取り専用プロパティである **`scrollY`** は、文書が現在垂直方向にスクロールしているピクセル数を返します。最近のブラウザーでは、この値はサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が水平方向にスクロールしているピクセル数は {{domxref("Window.scrollX", "scrollX")}} プロパティで取得できます。

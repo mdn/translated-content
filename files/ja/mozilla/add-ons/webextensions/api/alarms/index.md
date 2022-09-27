@@ -1,8 +1,8 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
+
 {{AddonSidebar}}
 
 コードが動作するタイミングを予約します。この API は [`setTimeout()`](/ja/docs/Web/API/WindowTimers/setTimeout) や [`setInterval()`](/ja/docs/Web/API/WindowTimers/setInterval) と似ていますが、 alarms API はバックグラウンドで動作する点が異なります。

@@ -1,18 +1,6 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - 破線
-  - LInes
-  - メソッド
-  - リファレンス
-  - パターン
-  - setLineDash
-browser-compat: api.CanvasRenderingContext2D.setLineDash
-translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 ---
 {{APIRef}}
 

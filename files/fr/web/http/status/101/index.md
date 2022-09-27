@@ -3,6 +3,7 @@ title: 101 Switching Protocol
 slug: Web/HTTP/Status/101
 translation_of: Web/HTTP/Status/101
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse HTTP **`101 Switching Protocol`** indique le protocole sur lequel le serveur a basculé, comme demandé par le client via l'en-tête de requête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).

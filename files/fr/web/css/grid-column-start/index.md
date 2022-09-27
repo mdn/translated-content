@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-column-start
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-column-start`** définit la position du début d'un élément (au sens des propriétés logiques `*-block-start`) en définissant la ligne ou la taille de fragment occupé sur la grille.

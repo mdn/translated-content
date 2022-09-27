@@ -1,10 +1,8 @@
 ---
 title: Firefox 33 for developers
 slug: Mozilla/Firefox/Releases/33
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/33
 ---
+
 Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 33 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

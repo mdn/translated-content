@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/byteLength
 ---
+
 {{JSRef}}
 
 La propriété **`byteLength`** est un accesseur qui représente la longueur, exprimée en octets, du tableau typé à partir du début de l'{{jsxref("ArrayBuffer")}} correspondant.

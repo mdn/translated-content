@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.hourCycles
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycles
 browser-compat: javascript.builtins.Intl.Locale.hourCycles
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.hourCycles`** est un accesseur qui renvoie une liste d'un ou plusieurs identifiants de cycles horaires utilisés pour la locale représentée par l'instance `Locale` courante.

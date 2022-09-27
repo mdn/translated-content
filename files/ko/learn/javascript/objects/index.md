@@ -1,15 +1,6 @@
 ---
 title: JavaScript 객체 소개
 slug: Learn/JavaScript/Objects
-tags:
-  - 객체
-  - 배우기
-  - 입문자
-  - 자바스크립트
-  - 지침
-  - 코딩스크립트
-  - 평가
-translation_of: Learn/JavaScript/Objects
 ---
 {{LearnSidebar}}
 

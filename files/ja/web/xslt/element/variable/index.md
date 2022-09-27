@@ -1,12 +1,6 @@
 ---
 title: <xsl:variable>
 slug: Web/XSLT/Element/variable
-tags:
-  - XSLT
-  - variable
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/variable
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/variable
 
 ```
 <xsl:variable name=NAME select=EXPRESSION >
-	TEMPLATE
+  TEMPLATE
 </xsl:variable>
 ```
 

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/ParentNode/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{APIRef("DOM") }}
 
 La propriété **`ParentNode.childElementCount`** en lecture seule renvoie un `unsigned long` (_long non signé_) représentant le nombre d'élèments fils de l'élément donné.

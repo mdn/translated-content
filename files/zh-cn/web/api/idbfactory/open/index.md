@@ -2,6 +2,7 @@
 title: IDBFactory.open
 slug: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IDBFactory")}}
 
 **`IDBFactory.open`** 方法用于[打开一个数据库连接](/zh-CN/docs/IndexedDB#gloss_database_connection)。本方法立即返回一个 {{domxref("IDBOpenDBRequest")}} 对象，但打开数据库的操作是异步执行的。
@@ -57,7 +58,7 @@ var request = window.indexedDB.open("toDoList", {version: 4, storage: "temporary
 - version
   - : 指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 versionchange 来更改
 - options (version and storage) {{ NonStandardBadge() }}
-  - : In Gecko, since [version 26](/en-US/Firefox/Releases/26), you can include an `options` object as a parameter of {{ domxref("IDBFactory.open") }} that contains the `version` number of the database, plus a storage value that specifies whether you want to use `permanent` (the default value) storage for the IndexedDB, or `temporary` storage (aka shared pool.) See {{ bug("785884") }} for more details. This is a non-standard feature that we are looking to standardise sometime in the future.
+  - : In Gecko, since [version 26](/zh-CN/Firefox/Releases/26), you can include an `options` object as a parameter of {{ domxref("IDBFactory.open") }} that contains the `version` number of the database, plus a storage value that specifies whether you want to use `permanent` (the default value) storage for the IndexedDB, or `temporary` storage (aka shared pool.) See {{ bug("785884") }} for more details. This is a non-standard feature that we are looking to standardise sometime in the future.
 
 > **备注：** Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see {{ Bug("968272") }}). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requets that would exceed the group limit are just rejected.
 

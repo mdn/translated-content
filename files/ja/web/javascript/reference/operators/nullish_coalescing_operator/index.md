@@ -1,15 +1,8 @@
 ---
 title: Null 合体演算子 (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - nullish coalescing
-browser-compat: javascript.operators.nullish_coalescing
-translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
+
 {{JSSidebar("Operators")}}
 
 **Null 合体演算子 (`??`)** は論理演算子の一種です。この演算子は左辺が {{jsxref("null")}} または {{jsxref("undefined")}} の場合に右の値を返し、それ以外の場合に左の値を返します。

@@ -1,16 +1,8 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - API
-  - Canvas
-  - HTML DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** インタフェースは canvas 要素のレイアウトや表現の操作のための属性やメソッドを提供します。`HTMLCanvasElement`は{{domxref("HTMLElement")}}インタフェースのプロパティやメソッドも利用可能です。

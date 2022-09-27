@@ -1,15 +1,6 @@
 ---
 title: '<thead>: 表ヘッダー要素'
 slug: Web/HTML/Element/thead
-tags:
-  - 要素
-  - HTML
-  - HTML 表形式データ
-  - リファレンス
-  - 表
-  - ウェブ
-browser-compat: html.elements.thead
-translation_of: Web/HTML/Element/thead
 ---
 
 {{HTMLRef}}

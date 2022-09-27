@@ -37,7 +37,7 @@ Opera Mini 는 아직 지원되지 않는다.
 
 {{DOMXRef("HTMLElement.contentEditable", "contentEditable")}} 속성을 HTML element 에서 `true` 로 설정하라. 이 속성은 대부분의 HTML elements 에 사용될 수 있다.
 
-## 예제들
+## 예제
 
 간단한 예제:
 

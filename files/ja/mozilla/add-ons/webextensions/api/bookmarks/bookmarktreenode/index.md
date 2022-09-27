@@ -1,18 +1,8 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNode
-  - Bookmarks
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 `bookmarks.BookmarkTreeNode` 型のオブジェクトは、ブックマークツリー上のノード（ブックマーク / フォルダ）を表現するものです。子ノードは親フォルダの中で `index` に従って順序付けされます。
@@ -23,11 +13,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 - `id`
   - : そのノードを一意に識別する {{jsxref("string")}} です。この ID はユーザのプロファイル内で固有であり、ブラウザを再起動した後も有効です。
-- `parentId `{{optional_inline}}
+- `parentId` {{optional_inline}}
   - : 親フォルダの ID を表す {{jsxref("string")}} です。ルートノードの場合は省略されます。
-- `index `{{optional_inline}}
+- `index` {{optional_inline}}
   - : 親フォルダの中におけるノードの位置を表す 0 以上の {{jsxref("number")}} です。0 は先頭の要素を意味します。
-- `url `{{optional_inline}}
+- `url` {{optional_inline}}
   - : ブックマークの URL を表す {{jsxref("string")}} です。フォルダの場合は省略されます。
 - `title`
   - : ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("string")}} です。

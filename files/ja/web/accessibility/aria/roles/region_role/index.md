@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: region ロール'
 slug: Web/Accessibility/ARIA/Roles/Region_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Region_role
 ---
 リージョン (`region`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書内で、著者が重要であると識別した領域を識別するために使用されます。 これは、他のランドマークロールのどれも適切でないときでも、汎用のランドマークを提供することで、人々が容易にナビゲートできるようにするために使用されます。
 
@@ -116,4 +111,4 @@ TBD
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The section element | HTML5 Doctor](http://html5doctor.com/the-section-element/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
