@@ -1,18 +1,8 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getTree()`** は、ブックマークツリーのルートを表した{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} オブジェクトの配列を返します。

@@ -1,18 +1,8 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - クラス
-  - ECMAScript 2015
-  - グローバルオブジェクト
-  - JavaScript
-  - オブジェクト
-  - リファレンス
-  - set
-  - Polyfill
-browser-compat: javascript.builtins.Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{JSRef}}
 
 **`Set`** オブジェクトは、{{Glossary("Primitive", "プリミティブ値")}}やオブジェクト参照を問わず、あらゆる型で多数の一意の値を格納することができます。

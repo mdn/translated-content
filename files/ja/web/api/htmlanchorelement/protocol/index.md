@@ -1,15 +1,9 @@
 ---
 title: HTMLAnchorElement.protocol
 slug: Web/API/HTMLAnchorElement/protocol
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-browser-compat: api.HTMLAnchorElement.protocol
-translation_of: Web/API/HTMLAnchorElement/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。

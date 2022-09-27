@@ -13,6 +13,7 @@ tags:
   - deleteUrl
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 ---
+
 {{AddonSidebar()}}
 
 Supprime toutes les visites à l'URL donnée de l'historique du navigateur.

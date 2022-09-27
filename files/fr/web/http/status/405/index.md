@@ -3,6 +3,7 @@ title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
 translation_of: Web/HTTP/Status/405
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`405 Method Not Allowed`** indique que la méthode utilisée pour la requête est connue du serveur mais qu'elle n'est pas supportée par la ressource ciblée.

@@ -2,6 +2,7 @@
 title: Node.isSameNode
 slug: Web/API/Node/isSameNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述

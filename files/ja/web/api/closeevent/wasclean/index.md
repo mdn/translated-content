@@ -1,13 +1,6 @@
 ---
 title: CloseEvent.wasClean
 slug: Web/API/CloseEvent/wasClean
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - closeEvent
-browser-compat: api.CloseEvent.wasClean
-translation_of: Web/API/CloseEvent/wasClean
 ---
 {{APIRef("Websockets API")}}
 

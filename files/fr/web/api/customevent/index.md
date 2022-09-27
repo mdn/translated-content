@@ -4,6 +4,7 @@ slug: Web/API/CustomEvent
 translation_of: Web/API/CustomEvent
 browser-compat: api.CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`CustomEvent`** représente un évènement initialisé par une application dans un but quelconque.

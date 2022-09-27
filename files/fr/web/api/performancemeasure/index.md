@@ -9,6 +9,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceMeasure
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMeasure`** est une interface _abstraite_ pour les objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) ayant un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) « `measure` ». Les entrées de ce type sont créées en appelant [`measure()`](/fr/docs/Web/API/Performance/measure) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) _nommé_ (la _mesure_) entre deux _marqueurs_ à la _chronologie des performances_ du navigateur.

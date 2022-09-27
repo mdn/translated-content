@@ -1,12 +1,8 @@
 ---
 title: HTMLImageElement.y
 slug: Web/API/HTMLImageElement/y
-page-type: web-api-instance-property
-tags:
-- プロパティ
-browser-compat: api.HTMLImageElement.y
-translation_of: Web/API/HTMLImageElement/y
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`y`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の上端の y 座標を示します。

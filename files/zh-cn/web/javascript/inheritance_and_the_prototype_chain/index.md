@@ -2,6 +2,7 @@
 title: 继承与原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript 实在是有些令人困惑 —— JavaScript 是动态的，本身不提供一个 `class` 的实现。即便是在 ES2015/ES6 中引入了 `class` 关键字，但那也只是语法糖，JavaScript 仍然是基于原型的。

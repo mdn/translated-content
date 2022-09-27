@@ -2,6 +2,7 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}}
 
 **`Atomics`** 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和 {{jsxref("ArrayBuffer")}} 对象进行原子操作。

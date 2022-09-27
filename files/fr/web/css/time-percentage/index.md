@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/time-percentage
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<time-percentage>`** représente une valeur qui peut être de type {{Cssxref("time")}} ou une valeur qui peut être de type {{Cssxref("percentage")}}.

@@ -2,6 +2,7 @@
 title: document.querySelector
 slug: Web/API/Document/querySelector
 ---
+
 {{ApiRef()}}
 
 ## 摘要
@@ -16,7 +17,7 @@ element = document.querySelector(selectors);
 
 其中
 
-- `element` 是[元素](/en-US/docs/DOM/element)物件。
+- `element` 是[元素](/zh-TW/docs/DOM/element)物件。
 - `selectors` 是以逗號分隔，包含一個或多個 CSS 選擇器的字串。
 
 ## 範例
@@ -53,7 +54,7 @@ document.querySelector('#foo\\:bar')   // 選到第二個 div
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.querySelector")}}
+{{Compat}}
 
 ## 規格文件
 
@@ -64,4 +65,4 @@ document.querySelector('#foo\\:bar')   // 選到第二個 div
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [querySelector 代碼片段](/en-US/docs/Code_snippets/QuerySelector)
+- [querySelector 代碼片段](/zh-TW/docs/Code_snippets/QuerySelector)

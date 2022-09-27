@@ -1,13 +1,8 @@
 ---
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
-tags:
-  - '77'
-  - Firefox
-  - Mozilla
-  - Releases
-translation_of: Mozilla/Firefox/Releases/77
 ---
+
 {{FirefoxSidebar}}
 
 この記事では、開発者に影響する Firefox 77 の変更点をまとめています。 Firefox 77 は、[2020 年 6 月 2 日](https://wiki.mozilla.org/RapidRelease/Calendar) にリリースされました。

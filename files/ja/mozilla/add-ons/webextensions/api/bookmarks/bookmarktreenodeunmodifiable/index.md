@@ -1,18 +1,8 @@
 ---
 title: bookmarks.BookmarkTreeNodeUnmodifiable
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNodeUnmodifiable
-  - Bookmarks
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.BookmarkTreeNodeUnmodifiable`** 型は、ブックマークツリー上のノード（ブックマーク / フォルダー）が変更不可な理由を表すものです。この型は、ブックマークノードの {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} プロパティで使用されます。

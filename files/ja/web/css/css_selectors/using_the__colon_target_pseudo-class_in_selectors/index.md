@@ -1,13 +1,6 @@
 ---
-title: 'セレクターでの :target 擬似クラスの利用'
+title: セレクターでの :target 擬似クラスの利用
 slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-tags:
-  - ':target'
-  - CSS
-  - ガイド
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 ---
 {{CSSRef}}
 

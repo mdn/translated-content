@@ -1,15 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - 演算子
-  - 概要
-  - Reference
-browser-compat: javascript.operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{JSSidebar("Operators")}}
 
 この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。

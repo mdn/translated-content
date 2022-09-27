@@ -1,12 +1,6 @@
 ---
 title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
-tags:
-  - HTTP
-  - HTTP Header
-  - NeedsCompatTable
-  - Reference
-translation_of: Web/HTTP/Headers/Alt-Svc
 ---
 {{HTTPSidebar}}
 

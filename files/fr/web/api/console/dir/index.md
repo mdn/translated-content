@@ -4,6 +4,7 @@ slug: Web/API/console/dir
 translation_of: Web/API/Console/dir
 browser-compat: api.console.dir
 ---
+
 {{APIRef("Console API")}}
 
 La méthode **`console.dir()`** affiche une liste interactive des propriétés de l'objet JavaScript passé en argument. La sortie est présentée comme une liste hiérarchique avec des triangles qui permettent de développer l'arborescence de l'objet et de voir le contenu des objets descendants.

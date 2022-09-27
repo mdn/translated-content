@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme&nbsp;! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
@@ -75,7 +76,7 @@ Sémantique en ligne&nbsp;:
 - Les six indices/exposants seront balisés de manière appropriée.
 - Les symboles «&nbsp;degré&nbsp;», «&nbsp;plus grand que » , «&nbsp;multiplier&nbsp;» seront marqués avec les références d'entités voulues.
 - Essayez de marquer au moins deux mots importants en gras/italique.
-- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
+- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement `http://example.com`.
 - La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
 
 Dans l'en‑tête du document&nbsp;:

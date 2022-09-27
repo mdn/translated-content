@@ -10,7 +10,7 @@ slug: Learn/JavaScript
 
 ## 学習の道筋
 
-JavaScript は [HTML ](/ja/docs/Learn/HTML)や [CSS](/ja/docs/Learn/CSS) などの関連技術よりもきっと学ぶのが難しいでしょう。JavaScript を習得する前に、まずこれらの 2 つの技術、そしておそらく他の技術を熟知しておくことを強くおすすめします。先ず次のモジュールを実施してください :
+JavaScript は [HTML](/ja/docs/Learn/HTML) や [CSS](/ja/docs/Learn/CSS) などの関連技術よりもきっと学ぶのが難しいでしょう。JavaScript を習得する前に、まずこれらの 2 つの技術、そしておそらく他の技術を熟知しておくことを強くおすすめします。先ず次のモジュールを実施してください :
 
 - [ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)
 - [HTML 入門](/ja/docs/Web/Guide/HTML/Introduction)
@@ -46,14 +46,9 @@ JavaScript の基本をよく理解できたら、より高度なトピックに
 
 - [MDN の JavaScript](/ja/docs/Web/JavaScript)
   - : MDN の主要な JavaScript ドキュメントの主要なエントリポイントです。ここでは、JavaScript 言語のあらゆる側面に関する広範なリファレンスドキュメント、および経験豊富な JavaScripter を対象とした高度なチュートリアルがあります。
-
-<!---->
-
 - [JavaScript の学習](https://learnjavascript.online/)
   - : ウェブ開発者になりたい人向けのすばらしいリソース — JavaScript をインタラクティブな環境と、短いレッスンやインタラクティブなテスト、自動化された評価つきで学ぶことができる。最初の 40 レッスンは無料で、完全なコースは少額の支払いで利用できる。
-
-**[JavaScript Fundamentals on EXLskills](https://exlskills.com/learn-en/courses/javascript-fundamentals-basics_javascript)**
-
-- - : JS でアプリケーションを構築するために必要なすべてを紹介する EXLskills オープンソースコースで、無料で JavaScript を学んでください。
+- **[JavaScript Fundamentals on EXLskills](https://exlskills.com/learn-en/courses/javascript-fundamentals-basics_javascript)**
+  - : JS でアプリケーションを構築するために必要なすべてを紹介する EXLskills オープンソースコースで、無料で JavaScript を学んでください。
 - [Coding math](https://www.youtube.com/user/codingmath)
   - : [Keith Peters](https://twitter.com/bit101) による、有能なプログラマーを理解するのに必要な数学の優れたビデオチュートリアルのシリーズ。

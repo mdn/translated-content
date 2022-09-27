@@ -2,6 +2,7 @@
 title: ':link'
 slug: Web/CSS/:link
 ---
+
 {{ CSSRef() }}
 
 ## 总结
@@ -21,7 +22,7 @@ a:link {color: slategray;}
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.link")}}
+{{Compat}}
 
 ## 参见
 

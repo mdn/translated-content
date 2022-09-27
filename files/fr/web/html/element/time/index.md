@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/time
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<time>`** permet de représenter une période donnée. Cet élément permet d'utiliser l'attribut `datetime` afin de traduire la date ou l'instant dans un format informatique (permettant aux moteurs de recherche d'exploiter ces données ou de créer des rappels).
@@ -139,15 +140,11 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                                |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-time-element', '&lt;time&gt;')}}             | {{Spec2('HTML5.1')}}     | Aucune modification depuis {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 > **警告：** 不建议使用`document.registerElement（）`,请使用{{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}。
@@ -19,7 +20,7 @@ var constructor = document.registerElement(tag-name, options);
 ### 参数
 
 - _tag-name_
-  - : 自定义标签的名字。 必须含有一个连字符（-），例如 `my-tag。`
+  - : 自定义标签的名字。必须含有一个连字符（-），例如 `my-tag`。
 - _options {{optional_inline}}_
   - : 这个参数是一个用于添加描述自定义元素原型属性和扩展的对象，以扩展现有标签。这个参数是可选的。
 
@@ -37,7 +38,7 @@ var Mytag = document.registerElement('my-tag');
 document.body.appendChild(new Mytag());
 ```
 
-这样我们就插入了一个空的 my-tag 元素，你可以通过浏览器提供的开发者工具来找到它。如果你使用浏览器来查看源代码它是不可见的。由于现在元素并没有内容，所以我们在页面中是看不到它的。我们可以给它添加一些内容，以便在页面中看到。 下面是一种往新标签里面添加内容的方式。
+这样我们就插入了一个空的 my-tag 元素，你可以通过浏览器提供的开发者工具来找到它。如果你使用浏览器来查看源代码它是不可见的。由于现在元素并没有内容，所以我们在页面中是看不到它的。我们可以给它添加一些内容，以便在页面中看到。下面是一种往新标签里面添加内容的方式。
 
 ```js
 var mytag = document.getElementsByTagName("my-tag")[0];
@@ -46,7 +47,7 @@ mytag.textContent = "I am a my-tag element.";
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.registerElement")}}
+{{Compat}}
 
 ## 另请参阅
 

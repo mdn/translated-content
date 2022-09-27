@@ -4,6 +4,7 @@ slug: Web/CSS/image-resolution
 browser-compat: css.properties.image-resolution
 translation_of: Web/CSS/image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`**  spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.

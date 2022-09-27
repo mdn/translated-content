@@ -2,6 +2,7 @@
 title: Navigator.share
 slug: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}
 
 **`Navigator.share()`** 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 `undefined`。
@@ -24,7 +25,7 @@ const sharePromise = window.navigator.share(data);
 
 ### 返回值
 
-该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受 。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。
+该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。
 
 例如，在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。
 

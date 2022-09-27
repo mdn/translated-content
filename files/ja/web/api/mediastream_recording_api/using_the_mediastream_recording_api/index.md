@@ -1,14 +1,6 @@
 ---
 title: Media​Stream Recording API の使用
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - Tutorial
-translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 

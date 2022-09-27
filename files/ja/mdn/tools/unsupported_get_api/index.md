@@ -2,6 +2,7 @@
 title: 非公式の GET API
 slug: MDN/Tools/Unsupported_GET_API
 ---
+
 {{MDNSidebar}}
 
 MDN のプラットフォームである [Yari](https://github.com/mdn/yari) は、公式の GET API を提供していません。しかし、 Yari は現在、 HTTP の `GET` リクエストで受け取ることができる JSON リソースを公開する非公式の仕組みを提供しており、プログラム的に処理することができます。

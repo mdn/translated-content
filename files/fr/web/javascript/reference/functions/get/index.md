@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/get
 original_slug: Web/JavaScript/Reference/Fonctions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.

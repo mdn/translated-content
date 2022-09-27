@@ -1,12 +1,6 @@
 ---
 title: CSSStyleRule.selectorText
 slug: Web/API/CSSStyleRule/selectorText
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Reference
-translation_of: Web/API/CSSStyleRule/selectorText
 ---
 {{APIRef("CSSOM") }}
 

@@ -1,15 +1,8 @@
 ---
 title: Bookmarks API を使う
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-tags:
-  - Add-ons
-  - Beginner
-  - Bookmarks
-  - Extensions
-  - How-to
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
+
 {{AddonSidebar}}
 
 ブックマークにより、ユーザーはウェブページのリストを集めたり編集したりできて、お気に入りに簡単に戻ることができます。Bookmarks API を使って、拡張機能はユーザーができるのとほぼ同じ方法でブックマークを操作できます。

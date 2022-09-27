@@ -13,6 +13,7 @@ tags:
   - getTree
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getTree()`** renvoie un tableau contenant la racine de l'arborescence des signets en tant qu'objet {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}.

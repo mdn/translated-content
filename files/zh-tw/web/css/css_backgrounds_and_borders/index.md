@@ -3,6 +3,7 @@ title: CSS Background and Borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
 original_slug: Web/CSS/CSS_Background_and_Borders
 ---
+
 {{CSSRef}}
 
 **CSS Background and Borders** is a module of CSS that defines how background and borders of elements are described. Borders can be lines or images, boxes can have one or multiple backgrounds, have rounded corners, and shadows.

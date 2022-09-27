@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
 Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Structures/Macros).

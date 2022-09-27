@@ -1,14 +1,6 @@
 ---
 title: BlobEvent.timecode
 slug: Web/API/BlobEvent/timecode
-tags:
-  - API
-  - BlobEvent
-  - Media
-  - Media Stream Recording
-  - Property
-  - Reference
-translation_of: Web/API/BlobEvent/timecode
 ---
 {{SeeCompatTable}}{{APIRef("Media Capture and Streams")}}
 

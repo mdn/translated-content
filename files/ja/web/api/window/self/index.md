@@ -1,16 +1,8 @@
 ---
 title: window.self
 slug: Web/API/Window/self
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/self
 ---
+
 {{ APIRef() }}
 
 **`Window.self`** 読み取り専用プロパティは、{{domxref("WindowProxy")}} のように、ウィンドウ自身を返します。`window` オブジェクトでドット表記法 (つまり、`window.self`) を使用して使うことも、単独 (`self`) で使うこともできます。単独表記法を使用する利点は、{{domxref("Worker", "Web Workers")}} のような非 window コンテクストにも同様の表記法が存在することです。`self` を使用することで、window コンテキスト (`self` は `window.self` として解決されます) だけでなく、worker コンテキスト (`self` は {{domxref("WorkerGlobalScope.self")}} として解決されます) でも機能するようにグローバルスコープを参照できます。

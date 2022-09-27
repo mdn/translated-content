@@ -1,17 +1,6 @@
 ---
 title: CSS を使った HTML の要素への色の適用
 slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS 色
-  - Guide
-  - HTML
-  - HTML 色
-  - HTML スタイル
-  - Styling HTML
-  - color
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 {{HTMLRef}}

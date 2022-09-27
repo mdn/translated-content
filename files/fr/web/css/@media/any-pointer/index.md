@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/any-pointer
 ---
+
 {{CSSRef}}
 
 **`any-pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin de déterminer si un des mécanismes de saisie/d'entrée disponibles est un dispositif de pointage et sa précision le cas échéant.

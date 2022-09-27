@@ -1,13 +1,8 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
+
 {{JSRef}}
 
 ウェルノウンシンボルの **`Symbol.species`** は、コンストラクター関数が派生オブジェクトを生成する際に使用する関数値プロパティを指定します。

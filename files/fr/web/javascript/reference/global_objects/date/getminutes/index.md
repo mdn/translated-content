@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMinutes
 ---
+
 {{JSRef}}
 
 La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'après l'heure locale.

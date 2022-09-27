@@ -3,6 +3,7 @@ title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 La méthode **`Intl.supportedValuesOf()`** renvoie un tableau qui contient le calendrier, la collation, la devise, les systèmes de numérations ou les unités prises en charge par l'implémentation.

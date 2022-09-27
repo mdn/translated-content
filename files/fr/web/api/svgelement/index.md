@@ -4,6 +4,7 @@ slug: Web/API/SVGElement
 translation_of: Web/API/SVGElement
 browser-compat: api.SVGElement
 ---
+
 {{APIRef("SVG")}}
 
 Toutes les interfaces du DOM SVG qui correspondent à des éléments SVG dérivent de l'interface `SVGElement`.

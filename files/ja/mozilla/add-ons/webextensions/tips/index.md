@@ -1,8 +1,8 @@
 ---
 title: Tips and Tricks
 slug: Mozilla/Add-ons/WebExtensions/Tips
-translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
+
 {{AddonSidebar}}
 
 このページには開発者が WebExtensions を開発するのに便利ないろいろなコツや技術が書かれています。

@@ -1,14 +1,8 @@
 ---
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLParagraphElement
-translation_of: Web/API/HTMLParagraphElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLParagraphElement`** インターフェイスはインターフェイスは、（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） {{HTMLElement("p")}} 要素を操作するためのプロパティやメソッドを提供します。

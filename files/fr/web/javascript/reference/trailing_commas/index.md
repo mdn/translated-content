@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Trailing_commas
 original_slug: Web/JavaScript/Reference/Virgules_finales
 ---
+
 {{JsSidebar("More")}}
 
 Les **virgules finales** (_trailing commas_ en anglais) s'avèrent utiles lorsqu'on souhaite ajouter de nouveaux éléments, paramètres ou de nouvelles propriétés à du code JavaScript. Si on souhaite ajouter une propriété en fin de course, on peut simplement ajouter une ligne sans avoir à modifier la précédente si celle-ci utilise une virgule finale. Cela permet d'avoir des vues de différences (_diffs_) plus claires et de simplifier l'édition de code.

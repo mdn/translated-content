@@ -2,6 +2,7 @@
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
 ---
+
 {{ ApiRef() }}
 
 ## HTML Field Set Element

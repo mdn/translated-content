@@ -1,8 +1,8 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
+
 {{AddonSidebar()}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。

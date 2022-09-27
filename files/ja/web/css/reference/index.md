@@ -1,13 +1,6 @@
 ---
 title: CSS リファレンス
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - l10n:priority
-translation_of: Web/CSS/Reference
 ---
 {{CSSRef}}
 
@@ -57,7 +50,7 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **Note:** **注:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
+> **Note:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
 
 {{CSS_Ref}}
 

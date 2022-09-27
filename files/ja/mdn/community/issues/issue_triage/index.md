@@ -3,6 +3,7 @@ title: MDN コンテンツのバグのトリアージ手順
 slug: MDN/Community/Issues/Issue_triage
 original_slug: MDN/Contribute/Processes/Content_bug_triage
 ---
+
 {{MDNSidebar}}
 
 この文書では、コンテンツのバグをトリアージし、協力者が効果的に作業できるようにするための手順について説明します。

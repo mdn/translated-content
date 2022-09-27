@@ -2,6 +2,7 @@
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
 ---
+
 {{ApiRef("DOM")}}
 
 **`hasAttributes()`** は {{domxref("Element")}} インターフェイスのメソッドで、現在の要素が属性を持っているか否かを {{jsxref("Boolean")}} で返します。

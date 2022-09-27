@@ -1,15 +1,8 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.WebSocket
-translation_of: Web/API/WebSocket/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket()`** コンストラクターは、新しい {{domxref("WebSocket")}} オブジェクトを返します。

@@ -10,6 +10,7 @@ tags:
   - shadow dom
 translation_of: Web/HTML/Element/slot
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/Web_Components).
@@ -116,14 +117,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}                             | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.slot")}}
+{{Compat}}
 
 ## Voir aussi
 

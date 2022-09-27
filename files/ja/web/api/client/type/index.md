@@ -1,14 +1,6 @@
 ---
 title: Client.type
 slug: Web/API/Client/type
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - Type
-translation_of: Web/API/Client/type
 ---
 {{APIRef("Service Workers API")}}
 

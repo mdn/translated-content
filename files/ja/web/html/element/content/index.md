@@ -1,15 +1,6 @@
 ---
 title: '<content>: シャドウ DOM のコンテンツのプレイスホルダー要素'
 slug: Web/HTML/Element/content
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - NeedsContent
-  - Reference
-  - Web
-  - Web Components
-translation_of: Web/HTML/Element/content
 ---
 {{Deprecated_header}}
 
@@ -60,7 +51,7 @@ translation_of: Web/HTML/Element/content
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")を持ちます。
+この要素は[グローバル属性](/ja/docs/HTML/Global_attributes)を持ちます。
 
 - `select`
   - : コンマ区切りで複数のセレクターを指定できます。これらは CSS セレクターと同じ文法です。 `<content>` 要素が指定された場所に挿入する内容を指定します。

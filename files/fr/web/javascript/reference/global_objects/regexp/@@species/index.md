@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@species
 ---
+
 {{JSRef}}
 
 La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp`.

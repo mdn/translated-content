@@ -2,6 +2,7 @@
 title: Request.method
 slug: Web/API/Request/method
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}}的只读属性**method**包含请求的方法 (`GET`, `POST`, etc.)
@@ -35,6 +36,6 @@ var myMethod = myRequest.method; // GET
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

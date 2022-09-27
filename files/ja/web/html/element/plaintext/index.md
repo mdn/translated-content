@@ -1,16 +1,6 @@
 ---
 title: '<plaintext>: プレーンテキスト要素 (非推奨)'
 slug: Web/HTML/Element/plaintext
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - プレーンテキスト
-  - リファレンス
-  - ウェブ
-  - 要素
-browser-compat: html.elements.plaintext
-translation_of: Web/HTML/Element/plaintext
 ---
 
 {{deprecated_header}}

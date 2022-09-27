@@ -1,15 +1,6 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - アクセシビリティ
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-reduced-motion
-translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 **`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。
 

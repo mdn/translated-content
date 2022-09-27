@@ -1,19 +1,6 @@
 ---
 title: '<q>: 行内引用要素'
 slug: Web/HTML/Element/q
-tags:
-  - Citation
-  - Cite
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Q
-  - Quotation
-  - Quotation Marks
-  - Reference
-  - Web
-  - quote
-translation_of: Web/HTML/Element/q
 ---
 {{HTMLRef}}
 

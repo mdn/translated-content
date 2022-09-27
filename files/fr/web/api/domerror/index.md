@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/DOMError
 ---
+
 {{ APIRef("DOM") }}{{deprecated_header}}
 
 L'interface **`DOMError`**  décrit un objet d'erreur contenant le nom de l'erreur.

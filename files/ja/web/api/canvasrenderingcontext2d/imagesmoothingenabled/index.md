@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
-translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
 {{APIRef}}
 

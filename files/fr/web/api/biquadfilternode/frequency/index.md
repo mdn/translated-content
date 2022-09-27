@@ -3,6 +3,7 @@ title: BiquadFilterNode.frequency
 slug: Web/API/BiquadFilterNode/frequency
 translation_of: Web/API/BiquadFilterNode/frequency
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `frequency` de l'interface {{ domxref("BiquadFilterNode") }} est un  {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage courant, exprimée en hertz (Hz).

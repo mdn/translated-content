@@ -1,14 +1,8 @@
 ---
 title: HTMLFormElement.reset
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - form
-  - form Methods
-translation_of: Web/API/HTMLFormElement/reset
 ---
+
 ## 概要
 
 `reset` はフォームを初期状態にリセットします。

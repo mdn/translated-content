@@ -1,19 +1,7 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS 変数
-  - CSS 関数
-  - Draft
-  - 関数
-  - リファレンス
-  - 変数
-  - env
-  - env()
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
-browser-compat: css.properties.custom-property.env
 ---
 {{CSSRef}}
 

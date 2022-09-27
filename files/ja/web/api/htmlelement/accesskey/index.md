@@ -1,11 +1,9 @@
 ---
 title: HTMLElement.accessKey
 slug: Web/API/HTMLElement/accessKey
-browser-compat: api.HTMLElement.accessKey
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
 original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLElement.accessKey`** プロパティは、ユーザーが押すとこの要素へジャンプすることができるキーストロークを設定します。

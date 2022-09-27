@@ -5,14 +5,14 @@ translation_of: Web/API/MediaRecorder/start
 ---
 <div>{{APIRef("Media Recorder API")}}</div>
 
-<p><span class="seoSummary">Метод <strong><code>MediaRecorder.start()</code></strong> (часть <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) используется для начала захвата медиа {{domxref("Blob")}}.</span></p>
+<p>Метод <strong><code>MediaRecorder.start()</code></strong> (часть <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) используется для начала захвата медиа {{domxref("Blob")}}.</p>
 
 <p>When the <code>start()</code> method is invoked, the UA queues a task that runs the following steps:</p>
 
 <ol>
  <li>If the {{domxref("MediaRecorder.state")}} is not "inactive", raise a DOM <code>InvalidState</code> error and terminate these steps. if the {{domxref("MediaRecorder.state")}} is "inactive", continue on to the next step.</li>
  <li>Set the {{domxref("MediaRecorder.state")}} to "recording" and wait until media becomes available from the <code>stream</code> passed into {{domxref("Navigator.getUserMedia")}}.</li>
- <li>Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see <cite><a class="bibref" href="https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API">FILE-API</a></cite>).</li>
+ <li>Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see <a href="https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API">FILE-API</a>).</li>
  <li>If the <code>timeSlice</code> argument has been provided, once that many milliseconds of data have been collected — or a minimum time slice imposed by the UA, whichever is greater — raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of collected data, and start gathering a new Blob of data. If <code>timeSlice</code> has not been provided, continue gathering data into the original Blob.</li>
  <li>When the <code>stream</code> is ended, set {{domxref("MediaRecorder.state")}} to "inactive" and stop gathering data.</li>
  <li>Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.</li>

@@ -1,7 +1,6 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
-translation_of: Web/MathML/Element/mover
 ---
 {{MathMLRef}}
 

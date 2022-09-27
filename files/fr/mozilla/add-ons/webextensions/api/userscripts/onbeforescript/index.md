@@ -14,7 +14,8 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 ---
-{{AddonSidebar}}La propriété **`onBeforeScript`** de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un {{event("Event_handlers", "event handler")}} qui traite {{event("beforeScript")}}.
+
+{{AddonSidebar}}La propriété **`onBeforeScript`** de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un gestionnaire d'évènement qui traite l'évènement `beforeScript`.
 
 L'événement `beforeScript` se déclenche juste avant l'exécution d'un script utilisateur correspondant, permettant à APIScript d'exporter des méthodes API personnalisées vers le script utilisateur.
 

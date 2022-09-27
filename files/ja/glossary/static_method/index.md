@@ -24,15 +24,15 @@ let myNotification = new Notification('This is my notification');
 myNotification.close();
 ```
 
-1.  一般知識
+1. 一般知識
 
-    1.  Techopedia の [Static Method](https://www.techopedia.com/definition/24034/static-method)
+    1. Techopedia の [Static Method](https://www.techopedia.com/definition/24034/static-method)
 
-2.  JavaScript リファレンス
+2. JavaScript リファレンス
 
-    1.  [static](/ja/docs/Web/JavaScript/Reference/Classes/static)
+    1. [static](/ja/docs/Web/JavaScript/Reference/Classes/static)
 
-3.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+3. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Object", "オブジェクト")}}
-    2.  {{Glossary("Method", "メソッド")}}
+    1. {{Glossary("Object", "オブジェクト")}}
+    2. {{Glossary("Method", "メソッド")}}

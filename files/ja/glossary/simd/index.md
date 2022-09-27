@@ -6,11 +6,11 @@ SIMD (「シムディー」と発音します) は{{Interwiki("wikipedia","フ�
 
 処理やデータ集合に並列処理を使わない逐次的アーキテクチャの {{Glossary("SISD")}} についても参照ください。
 
-1.  一般知識
+1. 一般知識
 
-    1.  Wikipedia 上の記事「{{Interwiki("wikipedia", "SIMD")}}」
+    1. Wikipedia 上の記事「{{Interwiki("wikipedia", "SIMD")}}」
 
-2.  [用語集](/ja/docs/Glossary)
+2. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("SIMD")}}
-    2.  {{Glossary("SISD")}}
+    1. {{Glossary("SIMD")}}
+    2. {{Glossary("SISD")}}

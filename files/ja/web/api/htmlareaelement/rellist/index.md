@@ -1,16 +1,8 @@
 ---
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.relList
-translation_of: Web/API/HTMLAreaElement/relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "area")}} 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。

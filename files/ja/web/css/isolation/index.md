@@ -1,15 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - CSS プロパティ
-  - 合成と混合
-  - NeedsContent
-  - isolation
-  - recipe:css-property
-browser-compat: css.properties.isolation
-translation_of: Web/CSS/isolation
 ---
 {{CSSRef}}
 

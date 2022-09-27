@@ -1,16 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Reference
-  - continue
-  - ストレージ
-  - メソッド
-translation_of: Web/API/IDBCursor/continue
 ---
 {{APIRef("IndexedDB")}}
 

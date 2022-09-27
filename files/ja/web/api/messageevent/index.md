@@ -1,17 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-tags:
-  - API
-  - チャンネル
-  - インターフェイス
-  - リファレンス
-  - WebSockets
-  - ウィンドウ
-  - ワーカー
-  - messaging
-browser-compat: api.MessageEvent
-translation_of: Web/API/MessageEvent
 ---
 {{APIRef("HTML DOM")}}
 

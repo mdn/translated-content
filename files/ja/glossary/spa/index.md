@@ -16,14 +16,14 @@ SPA (Single-page application) はウェブアプリの実装の一種で、単�
 - [Angular](http://angular.io/)
 - [Vue.JS](https://vuejs.org/)
 
-1.  Wikipedia の記事
+1. Wikipedia の記事
 
-    1.  {{Interwiki("wikipedia", "シングルページアプリケーション")}}
+    1. {{Interwiki("wikipedia", "シングルページアプリケーション")}}
 
-2.  [用語集](/ja/docs/Glossary)
+2. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("API")}}
-    2.  {{Glossary("AJAX")}}
-    3.  {{Glossary("JavaScript")}}
+    1. {{Glossary("API")}}
+    2. {{Glossary("AJAX")}}
+    3. {{Glossary("JavaScript")}}
 
-3.  [クライアント側 JavaScript フレームワークの理解](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+3. [クライアント側 JavaScript フレームワークの理解](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)

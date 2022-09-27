@@ -1,15 +1,6 @@
 ---
 title: clearInterval()
 slug: Web/API/clearInterval
-tags:
-  - API
-  - HTML DOM
-  - JavaScript タイマー
-  - メソッド
-  - リファレンス
-  - clearInterval
-browser-compat: api.clearInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
 {{APIRef("HTML DOM")}}

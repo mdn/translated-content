@@ -1,17 +1,7 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-tags:
-  - CSS
-  - CSS 関数
-  - CSS-4 画像
-  - 実験的
-  - 関数
-  - Reference
-  - ウェブ
-translation_of: Web/CSS/cross-fade()
 original_slug: Web/CSS/cross-fade()
-browser-compat: css.types.image.cross-fade
 ---
 {{CSSRef}}
 

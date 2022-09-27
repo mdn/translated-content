@@ -1,19 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - Blob
-  - DOM
-  - File
-  - File API
-  - Format
-  - MIME
-  - MIME Type
-  - Property
-  - Reference
-  - Type
-translation_of: Web/API/Blob/type
 ---
 {{APIRef("File API")}}
 

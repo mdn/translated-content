@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportEnded
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
+
 {{AddonSidebar()}}
 
 ブックマークのインポートが終了した際に発火します。

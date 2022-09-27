@@ -17,7 +17,9 @@ translation_of: Web/API/MediaStreamTrack/applyConstraints
 
 ## 구문
 
-    const appliedPromise = track.applyConstraints([constraints])
+```js
+const appliedPromise = track.applyConstraints([constraints])
+```
 
 ### 매개변수
 

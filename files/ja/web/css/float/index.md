@@ -1,14 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.float
-translation_of: Web/CSS/float
 ---
 {{CSSRef}}
 

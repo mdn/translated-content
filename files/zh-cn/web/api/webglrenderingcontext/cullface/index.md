@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.cullFace()`** 指定正面和/或背面多边形是否可以剔除。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.cullFace()`** 指定正面和/或背面多边形是否可以剔除。
 
 ## 语法
 
@@ -48,7 +49,7 @@ gl.getParameter(gl.CULL_FACE_MODE) === gl.FRONT_AND_BACK;
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.cullFace")}}
+{{Compat}}
 
 ## 相关资料
 

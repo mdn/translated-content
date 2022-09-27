@@ -1,20 +1,8 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
-page-type: web-api-constructor
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像()
-  - リファレンス
-  - img
-browser-compat: api.HTMLImageElement.Image
-translation_of: Web/API/HTMLImageElement/Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。

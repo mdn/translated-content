@@ -10,6 +10,7 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/Shell
 original_slug: MDN/Guidelines/Code_guidelines/Shell
 ---
+
 {{MDNSidebar}}
 
 Les directives suivantes expliquent comment rédiger des exemples de lignes de commande sur MDN.

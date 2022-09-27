@@ -1,14 +1,6 @@
 ---
 title: 合成の例
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - キャンバス
-  - 例
-  - グラフィック
-  - HTML
-  - HTML5
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 {{CanvasSidebar}}
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/offset-anchor
 ---
+
 {{cssref}}{{seecompattable}}
 
 La propriété CSS **`offset-anchor`** définit le point, à l'intérieur d'une boîte d'un élément, qui se déplace le long d'un chemin {{cssxref("offset-path")}}.

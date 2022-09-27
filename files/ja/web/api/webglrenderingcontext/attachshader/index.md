@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
-translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.attachShader()** メソッドは、フラグメントか頂点のどちらかの {{domxref("WebGLShader")}} を {{domxref("WebGLProgram")}} にアタッチします。

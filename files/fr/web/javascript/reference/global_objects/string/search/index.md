@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/search
 ---
+
 {{JSRef}}
 
 La méthode **`search()`** éxecute une recherche dans une chaine de caractères grâce à une expression rationnelle appliquée sur la chaîne courante.

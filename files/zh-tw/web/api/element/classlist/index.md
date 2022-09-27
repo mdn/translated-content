@@ -2,6 +2,7 @@
 title: Element.classList
 slug: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`** 唯讀屬性代表了該元素所擁有之類別屬性（`Class` {{Glossary("Attribute")}}）的即時更新集－{{domxref("DOMTokenList")}}。
@@ -300,7 +301,7 @@ if (objCtr.defineProperty) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
 ## 參見
 

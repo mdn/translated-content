@@ -14,6 +14,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.

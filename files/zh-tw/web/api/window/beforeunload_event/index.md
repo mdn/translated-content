@@ -3,6 +3,7 @@ title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`onbeforeunload`** 事件处理函数包含的代码将在 {{event("beforeunload")}} 发出时被执行。当 window 准备释放它的资源时，该事件被触发。此时 document 仍然可见，且事件是仍然可被取消的。

@@ -11,6 +11,7 @@ tags:
   - Workers
 translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **Worker** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) représente une tâche de fond qui peut facilement être créée et peut envoyer des messages en retour à son créateur. Créer un Worker est aussi simple que d'appeler le constructeur `Worker()`, en spécifiant un script qui définira le comportement du thread du worker.

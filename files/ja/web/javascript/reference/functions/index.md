@@ -1,16 +1,8 @@
 ---
 title: 関数
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - 関数
-  - ガイド
-  - JavaScript
-  - Parameter
-  - 引数
-browser-compat: javascript.functions
-translation_of: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 一般的に言うと、関数とは外部 (再帰の場合は内部) から *呼び出す* ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (*function body*) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。

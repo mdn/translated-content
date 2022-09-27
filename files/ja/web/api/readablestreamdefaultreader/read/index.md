@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`read()`** メソッドは、ストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。

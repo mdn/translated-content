@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/shift
 ---
+
 {{JSRef}}
 
 La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.

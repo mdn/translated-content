@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 original_slug: Web/JavaScript/Reference/Erreurs/Property_access_denied
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

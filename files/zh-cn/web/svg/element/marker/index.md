@@ -2,6 +2,7 @@
 title: marker
 slug: Web/SVG/Element/marker
 ---
+
 {{SVGRef}}
 
 `marker`元素定义了在特定的{{ SVGElement("path") }}元素、{{ SVGElement("line") }}元素、{{ SVGElement("polyline") }}元素或者{{ SVGElement("polygon") }}元素上绘制的箭头或者多边标记图形。
@@ -12,14 +13,14 @@ slug: Web/SVG/Element/marker
 
 ## 示例
 
-» [marker.svg](https://developer.mozilla.org/files/3267/marker.svg)
+» [marker.svg](/files/3267/marker.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -38,7 +39,7 @@ slug: Web/SVG/Element/marker
 
 ## DOM 接口
 
-该元素实现了[`SVGMarkerElement`](/en/DOM/SVGMarkerElement) 接口。
+该元素实现了[`SVGMarkerElement`](/zh-CN/DOM/SVGMarkerElement) 接口。
 
 ## Example
 
@@ -67,4 +68,4 @@ slug: Web/SVG/Element/marker
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.marker")}}
+{{Compat}}

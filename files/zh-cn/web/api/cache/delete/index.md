@@ -2,6 +2,7 @@
 title: Cache.delete()
 slug: Web/API/Cache/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`delete()`** 方法查询 request 为 key 的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回 resolve 为 true 的 {{jsxref("Promise")}} 。 如果没有找到，则返回 resolve 为 false 的 {{jsxref("Promise")}} 。
@@ -47,10 +48,10 @@ caches.open('v1').then(function(cache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.delete")}}
+{{Compat}}
 
 ## 参见
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

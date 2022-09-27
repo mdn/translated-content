@@ -13,6 +13,7 @@ tags:
   - addAll
 translation_of: Web/API/Cache/addAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.

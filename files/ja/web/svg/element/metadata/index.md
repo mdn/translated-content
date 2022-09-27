@@ -1,11 +1,6 @@
 ---
 title: metadata
 slug: Web/SVG/Element/metadata
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
-translation_of: Web/SVG/Element/metadata
 ---
 {{SVGRef}}
 
@@ -29,7 +24,7 @@ _この要素には専用属性はありません。_
 
 ## DOM インターフェース
 
-この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement "en/DOM/SVGMetadataElement") インターフェースを提供します。
+この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement) インターフェースを提供します。
 
 ## 仕様
 

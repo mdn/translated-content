@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
+
 C'est déclenché lorsqu'un onglet est mis à jour.
 
 Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements `onUpdated` au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' `url`, mais aussi potentiellement le `title` et les propriétés `favIconUrl`. La propriété du  `status` passe par le `"loading"` et `"complete"`.
@@ -136,7 +137,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -174,7 +175,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combiner les deux filtres précédents : changements de journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -199,7 +200,7 @@ browser.tabs.onUpdated.addListener(
 Changements dans le journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet"
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`
 - et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :
 
 ```js

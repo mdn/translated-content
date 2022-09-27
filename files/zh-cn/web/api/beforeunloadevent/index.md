@@ -2,6 +2,7 @@
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 **`beforeunload`** 事件触发于 window、document 和它们的资源即将卸载时。
@@ -55,7 +56,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Compat}}
 
 ## 参见
 

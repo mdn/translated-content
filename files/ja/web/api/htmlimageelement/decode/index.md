@@ -1,24 +1,8 @@
 ---
 title: HTMLImageElement.decode()
 slug: Web/API/HTMLImageElement/decode
-page-type: web-api-instance-method
-tags:
-  - API
-  - Decode
-  - グラフィック
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - Loading
-  - Method
-  - Performance
-  - リファレンス
-  - async
-  - asynchronous
-  - decoding
-browser-compat: api.HTMLImageElement.decode
-translation_of: Web/API/HTMLImageElement/decode
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`decode()`** は {{domxref("HTMLImageElement")}} インターフェイスのメソッドで、画像がデコードされ、 DOM に画像を追加しても安全になったときに解決されるプロミス ({{jsxref("Promise")}}) を返します。

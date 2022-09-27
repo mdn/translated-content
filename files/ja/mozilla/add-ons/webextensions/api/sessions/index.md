@@ -1,16 +1,8 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
+
 {{AddonSidebar}}
 
 セッション API を使ってブラウザーが動作している間に閉じたタブやウィンドウを一覧、復帰します。
@@ -33,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 ## プロパティ
 
 - {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : [`sessions.getRecentlyClosed()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed "Returns an array Session objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).")の呼び出しで返される最大のセッション数。
+  - : [`sessions.getRecentlyClosed()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed)の呼び出しで返される最大のセッション数。
 
 ## 関数
 

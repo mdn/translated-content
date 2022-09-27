@@ -1,14 +1,8 @@
 ---
 title: 小なりイコール (<=)
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.less_than_or_equal
-translation_of: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 小なりイコール演算子 (`<=`) は、左のオペランドが右のオペランドより小さいか等しい場合に `true` を返し、それ以外の場合は `false` を返します。

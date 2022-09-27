@@ -1,9 +1,8 @@
 ---
 title: HTMLElement.accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
-browser-compat: api.HTMLElement.accessKeyLabel
-translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.accessKeyLabel`** は読み取り専用プロパティで、要素に割り当てられたアクセスキーを（あれば）文字列で返します。それ以外の場合は空文字列を返します。

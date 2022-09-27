@@ -2,6 +2,7 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 ---
+
 {{APIRef()}}
 
 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 IDBIndex 接口提供了异步获取数据库中一个[index](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#index)的功能。index 是一种用于在另一个 object store 中查找记录的 object store，其被称为被引用的 object store。你可以通过使用该接口来取回数据。
@@ -16,7 +17,7 @@ index 是一个持久的键 - 值存储，其中其记录的值部分是被引�
 
 ## Methods
 
-Inherits from: [EventTarget](/en/DOM/EventTarget)
+Inherits from: [EventTarget](/zh-CN/DOM/EventTarget)
 
 - {{domxref("IDBIndex.count")}}
   - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
@@ -27,9 +28,9 @@ Inherits from: [EventTarget](/en/DOM/EventTarget)
 - {{domxref("IDBIndex.getKey")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is a key range.
 - {{domxref("IDBIndex.getAllKeys")}} {{ Non-Standard_inline() }}
-  - : Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the [`result`](/en/IndexedDB/IDBRequest#attr_result) of the request object.
+  - : Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the [`result`](/zh-CN/IndexedDB/IDBRequest#attr_result) of the request object.
 - {{domxref("IDBIndex.openCursor")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en/IndexedDB#gloss_cursor) over the specified key range.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/zh-CN/IndexedDB#gloss_cursor) over the specified key range.
 - {{domxref("IDBIndex.openKeyCursor")}} {{ Non-Standard_inline() }}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 
@@ -90,7 +91,7 @@ request.onsuccess = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.IDBIndex")}}
+{{Compat}}
 
 ## See also
 

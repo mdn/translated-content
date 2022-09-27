@@ -1,15 +1,8 @@
 ---
-title: >-
-  SyntaxError: applying the 'delete' operator to an unqualified name is
-  deprecated
+title: 'SyntaxError: applying the ''delete'' operator to an unqualified name is deprecated'
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "applying the 'delete' operator to an unqualified name is deprecated" は、 [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を用いて変数を削除しようとしたときに発生します。

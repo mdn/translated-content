@@ -2,7 +2,8 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 **`fill-rule`** 是一个外观属性，它定义了用来确定一个多边形内部区域的算法。
 

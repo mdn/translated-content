@@ -2,6 +2,7 @@
 title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 为了提供更加组织化、标准化且易于阅读的文档，MDN Web 文档写作规范明确了文本的组织方式、拼写规则、固定格式等内容，不过这些内容只是指导性的而不是严格的规定，因为比起格式我们对内容更感兴趣，所以没有必要在参与贡献之前强迫自己学习本规范。但是如果有一位勤劳的志愿者在之后编辑了你的文档使它更加符合本规范，也请不要感到惊讶或难过。
@@ -86,9 +87,9 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 下面这个简介比前两个要好很多。
 
-> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 多提供一些示例
 
@@ -304,7 +305,7 @@ HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素
 
 ### 采用包容性的语言
 
-MDN拥有广泛而多样化的受众。我们强烈建议尽可能保持文本的包容性。以下是文档中使用的常用术语的一些替代方案：
+MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本的包容性。以下是文档中使用的常用术语的一些替代方案：
 
 - 不使用“**master**”和“**slave**”，而使用“**main**”和“**replica**”
 - 不使用“**whitelist**”和“**blacklist**”，而使用“**allowlist**”和“**denylist**”
@@ -398,7 +399,7 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 - **正确**: Please don't use "curly quotes."
 - **错误**: Please don’t use “curly quotes.”
 
-> **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南-标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
+> **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
 
 ### 拼写
 

@@ -2,6 +2,7 @@
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad")}} インターフェイスの **`Gamepad.mapping`** プロパティは、ブラウザーがデバイスのコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。

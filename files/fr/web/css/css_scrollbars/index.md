@@ -7,6 +7,7 @@ tags:
   - css scrollbars
 translation_of: Web/CSS/CSS_Scrollbars
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 Le module de spécification _CSS Scrollbars_ standardise la mise en forme des barres de défilement (_scrollbar_) notamment introduite en 2000 avec Windows IE 5.5.

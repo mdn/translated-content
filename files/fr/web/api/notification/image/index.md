@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/image
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`image`** de l'interface {{domxref ("Notification")}} contient l'URL d'une image à afficher dans le cadre de la notification, comme définis à l'aide de l'option `image` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.

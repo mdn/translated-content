@@ -1,15 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - インターフェイス
-  - NeedsContent
-  - WebSocket
-  - WebSockets
-browser-compat: api.WebSocket
-translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 `WebSocket` オブジェクトは、サーバーへの [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続の作成と管理、および接続上のデータの送受信に使用する API を提供します。

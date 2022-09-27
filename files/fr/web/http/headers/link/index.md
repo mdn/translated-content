@@ -6,6 +6,7 @@ browser-compat: http.headers.Link
 l10n:
   sourceCommit: 4c8cc837352076a0d2973e3f2b637c5f6b4452e5
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête d'entité HTTP **`Link`** permet de sérialiser un ou plusieurs liens dans un en-tête HTTP. Il est sémantiquement équivalent à l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link).

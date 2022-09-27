@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Combinateur_de_voisin_direct
 ---
+
 {{CSSRef("Selectors")}}
 
 Cette forme de combinateur permet de sélectionner un élément uniquement si celui-ci « suit » un élément donné et que les deux éléments sont les fils d'un même élément parent.

@@ -4,6 +4,7 @@ slug: Web/CSS/break-before
 translation_of: Web/CSS/break-before
 browser-compat: css.properties.break-before
 ---
+
 {{CSSRef}}
 
 La propriété **`break-before`** décrit la façon dont la page, la colonne ou la région se fragmente avant la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.

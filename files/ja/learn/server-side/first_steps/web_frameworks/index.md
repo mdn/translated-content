@@ -94,7 +94,7 @@ class Team(models.Model):
     TEAM_LEVELS = (
         ('U09', 'Under 09s'),
         ('U10', 'Under 10s'),
-        ('U11, 'Under 11s'),
+        ('U11', 'Under 11s'),
         ...  #list our other teams
     )
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
@@ -122,7 +122,7 @@ def youngest(request):
 
 ウェブフレームワークは多くの場合、{{glossary("JSON")}} や {{glossary("XML")}} など、格納されているデータから他のフォーマットを簡単に生成するためのメカニズムを提供します。
 
-たとえば、Django テンプレートシステムでは、"double-handlebars" 構文 (例えば ` {``{ variable_name ``}``} `) を使って変数を指定することができます。これは、ページがレンダリングされるときにビュー関数から渡された値に置き換えられます。テンプレートシステムは式のサポート (構文: `{% expression %}`) も提供します。これによりテンプレートは、渡されたリスト値を繰り返すような単純な操作を実行できます。
+たとえば、Django テンプレートシステムでは、"double-handlebars" 構文 (例えば `\{{ variable_name }}`) を使って変数を指定することができます。これは、ページがレンダリングされるときにビュー関数から渡された値に置き換えられます。テンプレートシステムは式のサポート (構文: `{% expression %}`) も提供します。これによりテンプレートは、渡されたリスト値を繰り返すような単純な操作を実行できます。
 
 > **Note:** Jinja2 (Python)、handlebars (JavaScript)、moustache (JavaScript) など、他の多くのテンプレートシステムでも同様の構文が使用されています。
 
@@ -175,13 +175,13 @@ def youngest(request):
 
 > **Note:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
 >
-> 1.  メインサイトに移動する (上記のリンク先)
+> 1. メインサイトに移動する (上記のリンク先)
 >
 >     - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
 >     - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
 >     - ドキュメントは明確ですか？
 >
-> 2.  各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
+> 2. 各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
 >
 >     - 過去数日間に投稿された質問の数
 >     - 回答はいくつありますか？

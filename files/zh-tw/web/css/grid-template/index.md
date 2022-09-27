@@ -2,6 +2,9 @@
 title: grid-template
 slug: Web/CSS/grid-template
 ---
+
+{{CSSRef}}
+
 的**`grid-template`**CSS 屬性是一個[速記屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。
 
 {{EmbedInteractiveExample("pages / css / grid-template.html")}}
@@ -110,7 +113,7 @@ footer {
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template")}}
+{{Compat}}
 
 ## See also
 
@@ -118,5 +121,3 @@ footer {
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
 - Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_
 - Video tutorial:_ [Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
-
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li><li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="/en-US/docs/Web/CSS/grid">grid</a></li><li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-columns">網格自動列</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-flow">網格自動流</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-rows">網格自動行</a></li><li><a href="/en-US/docs/Web/CSS/grid-column">網格列</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-end">網格列端</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-gap">網格列間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-start">網格列開始</a></li><li><a href="/en-US/docs/Web/CSS/grid-gap">網格間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-row">網格行</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-end">網格行尾</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-gap">網格行間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-start">網格行開始</a></li><li><a href="/en-US/docs/Web/CSS/grid-template">網格模板</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-areas">網格模板區域</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-columns">網格模板列</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-rows">網格模板行</a></li></ol></li><li data-default-state="open"><a href="#"><strong>詞彙表</strong></a><ol><li><a href="/en-US/docs/Glossary/Grid_lines">網格線</a></li><li><a href="/en-US/docs/Glossary/Grid_tracks">網格軌道</a></li><li><a href="/en-US/docs/Glossary/Grid_cell">網格單元</a></li><li><a href="/en-US/docs/Glossary/Grid_areas">網格區域</a></li><li><a href="/en-US/docs/Glossary/Gutters">天溝</a></li><li><a href="/en-US/docs/Glossary/Grid_rows">網格行</a></li><li><a href="/en-US/docs/Glossary/Grid_column">網格列</a></li></ol></li></ol></section>

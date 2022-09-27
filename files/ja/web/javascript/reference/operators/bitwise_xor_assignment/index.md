@@ -1,14 +1,8 @@
 ---
 title: ビット排他的論理和代入 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット排他的論理和代入演算子 (`^=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の XOR 演算を実行し、結果を変数に代入します。

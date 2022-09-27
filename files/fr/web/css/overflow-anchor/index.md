@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-anchor
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-anchor`** permet d'éviter, lors du défilement, que le navigateur ajuste la position afin de minimiser le déplacement du contenu.

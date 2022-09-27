@@ -10,6 +10,7 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
+
 {{AddonSidebar}}
 
 L'API `pkcs11` permet à une extension d'énumérer les modules de sécurité [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11), et de rendre accessibles au navigateur en tant que sources clés et de certificats.

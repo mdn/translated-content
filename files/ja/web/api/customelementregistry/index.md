@@ -1,16 +1,6 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-tags:
-  - API
-  - CustomElementRegistry
-  - 実験的
-  - インターフェイス
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-browser-compat: api.CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
 

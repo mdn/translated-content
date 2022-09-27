@@ -1,15 +1,6 @@
 ---
 title: Canvas チュートリアル
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - キャンバス
-  - グラフィック
-  - ガイド
-  - HTML
-  - HTML5
-  - 中級者
-  - ウェブ
-translation_of: Web/API/Canvas_API/Tutorial
 ---
 {{CanvasSidebar}}
 

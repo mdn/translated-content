@@ -8,6 +8,7 @@ translation_of: Web/API/DOMMatrix
 translation_of_original: Web/API/CSSMatrix
 original_slug: Web/API/CSSMatrix
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
 Une **`CSSMatrix`** représente une matrice homogène 4x4 dans laquelle il est possible d'appliquer des transformations 2D ou 3D. Cette classe faisait à un moment partie du module de transitions CSS (Level 3) mais elle n'a pas été propagée dans le brouillon de travail (_Working Draft_) actuel. Utilisez plutôt `DOMMatrix.`

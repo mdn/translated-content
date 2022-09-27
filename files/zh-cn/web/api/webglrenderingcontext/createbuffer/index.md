@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 下的 **`WebGLRenderingContext.createBuffer()`** 方法可创建并初始化一个用于储存顶点数据或着色数据的{{domxref("WebGLBuffer")}}对象
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 下的 **`WebGLRenderingContext.createBuffer()`** 方法可创建并初始化一个用于储存顶点数据或着色数据的{{domxref("WebGLBuffer")}}对象
 
 ## 语法
 
@@ -36,7 +37,7 @@ var buffer = gl.createBuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+{{Compat}}
 
 ## See also
 

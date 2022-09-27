@@ -1,15 +1,8 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - メソッド
-  - Object
-browser-compat: javascript.builtins.Object.defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
+
 {{JSRef}}
 
 静的メソッドの **`Object.defineProperty()`** は、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。

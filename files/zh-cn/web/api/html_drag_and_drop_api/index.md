@@ -2,6 +2,7 @@
 title: HTML 拖放 API
 slug: Web/API/HTML_Drag_and_Drop_API
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **HTML 拖放**（Drag and Drop）接口使应用程序能够在浏览器中使用拖放功能。例如，用户可使用鼠标选择可拖拽（*draggable*）元素，将元素拖拽到可放置（*droppable*）元素，并释放鼠标按钮以放置这些元素。拖拽操作期间，会有一个可拖拽元素的半透明快照跟随着鼠标指针。

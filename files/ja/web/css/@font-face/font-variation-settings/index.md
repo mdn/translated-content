@@ -1,15 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - CSS フォント
-  - リファレンス
-browser-compat: css.at-rules.font-face.font-variation-settings
-translation_of: Web/CSS/@font-face/font-variation-settings
 ---
 {{CSSRef}}
 

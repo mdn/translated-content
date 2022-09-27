@@ -11,6 +11,7 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
+
 {{AddonSidebar()}}
 
 S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.

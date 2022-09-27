@@ -1,20 +1,6 @@
 ---
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
-page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - Streams
-  - WebRTC
-  - stop
-browser-compat: api.MediaStreamTrack.stop
-translation_of: Web/API/MediaStreamTrack/stop
 ---
 {{APIRef("Media Capture and Streams")}}
 

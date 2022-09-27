@@ -1,16 +1,8 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Reference
-  - dard
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。

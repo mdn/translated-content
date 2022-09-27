@@ -20,9 +20,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 このねらいは、テスト時に参照できるブラウザー/デバイスの図を作ることです。できるだけ簡単にすることも、できるだけ複雑にすることも、お好みに合わせてできます — 例えば、よくある手法はサポートレベルを次のように複数のグレードに分けることです:
 
-1.  A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
-2.  B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
-3.  C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
+1. A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
+2. B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
+3. C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
 
 下記のセクションを通じて、このフォーマットでサポート図を作ります。
 
@@ -42,9 +42,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 ここまでで以下のサポート図ができました:
 
-1.  A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
-2.  B グレード: Windows 用 IE 9
-3.  C グレード: n/a
+1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
+2. B グレード: Windows 用 IE 9
+3. C グレード: n/a
 
 どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。
 
@@ -73,12 +73,12 @@ You may also consider using open source and privacy focussed analytics platforms
 
 #### Setting up Google analytics
 
-1.  First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
-2.  Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
-3.  Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
-4.  Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
-5.  The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
-6.  Upload the changes to the development server, or wherever else you need your code.
+1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
+2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
+3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
+4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
+5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
+6. Upload the changes to the development server, or wherever else you need your code.
 
 That's it! Your site should now be ready to start reporting analytics data.
 
@@ -106,9 +106,9 @@ Plus you might have other considerations. If you are creating some kind of compa
 
 So, our final support chart will end up looking like so:
 
-1.  A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2.  B grade: IE 8 and 9 for Windows, Opera Mini.
-3.  C grade: Opera, other niche modern browsers.
+1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2. B grade: IE 8 and 9 for Windows, Opera Mini.
+3. C grade: Opera, other niche modern browsers.
 
 ## これから何をテストしていくのか？
 
@@ -197,17 +197,17 @@ Virtual machines are applications that run on your desktop computer and allow yo
 
 To use a Virtual Box, you need to:
 
-1.  Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
-2.  [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3.  Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
-4.  To create a new virtual machine, press the _New_ button in the top left hand corner.
-5.  Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
+1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
+2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
+3. Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
+4. To create a new virtual machine, press the _New_ button in the top left hand corner.
+5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
 
-    1.  Provide a name for the new virtual machine
-    2.  Choose with operating system and version you are installing on it
-    3.  Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
-    4.  Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
-    5.  Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
+    1. Provide a name for the new virtual machine
+    2. Choose with operating system and version you are installing on it
+    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
+    4. Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
+    5. Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
 
 Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 

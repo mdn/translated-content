@@ -1,16 +1,8 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.controls
-translation_of: Web/API/HTMLMediaElement/controls
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.controls`** プロパティは、 HTML の {{htmlattrxref("controls", "video")}} 属性を反映し、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
