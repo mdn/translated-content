@@ -2,6 +2,7 @@
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息

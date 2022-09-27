@@ -1,15 +1,8 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-tags:
-  - API
-  - Interface
-  - Landing
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams`** インターフェイスは URL のクエリー文字列の操作に役立つメソッドを定義します。

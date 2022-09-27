@@ -1,18 +1,6 @@
 ---
 title: 実用的な位置指定の例
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Learn
-  - absolute
-  - fixed
-  - relative
-translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 {{LearnSidebar}}
 

@@ -1,15 +1,10 @@
 ---
 title: コミュニティガイドライン
 slug: MDN/Community
-page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-translation_of: MDN/Community
 i10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
+
 {{MDNSidebar}}
 
 👋 MDN Web Docs on GitHub へようこそ! MDN Web Docs は、[HTML](/ja/docs/Web/HTML)、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript)、[Web API](/ja/docs/Web/API) など、ウェブプラットフォーム技術のオープンソースかつ共同プロジェクトで、その文書を作成しています。また、初期段階の開発者や学生向けに、豊富な[学習リソース](/ja/docs/Learn)を提供しています。
@@ -41,7 +36,7 @@ i10n:
 
 MDN Web Docs チームやコミュニティと連絡を取るには、 [Matrix チャンネル](https://chat.mozilla.org/#/room/#mdn:mozilla.org)、 [Discourse](https://discourse.mozilla.org/c/mdn/236) のフォーラム、 [GitHub](https://github.com/mdn/mdn-community/discussions) のディスカッションが利用できます。
 
-- ウェブ開発を学んでいて、コーディングの問題に行き詰まった場合、質問をしたり助けを求めたりできる[アクティブんはフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
+- ウェブ開発を学んでいて、コーディングの問題に行き詰まった場合、質問をしたり助けを求めたりできる[アクティブなフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
 
 ### 一般的なサポートに関する質問
 

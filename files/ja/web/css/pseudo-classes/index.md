@@ -1,14 +1,6 @@
 ---
 title: 擬似クラス
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/Pseudo-classes
 ---
 {{CSSRef}}
 

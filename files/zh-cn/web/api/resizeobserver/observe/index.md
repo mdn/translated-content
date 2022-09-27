@@ -2,6 +2,7 @@
 title: ResizeObserver.observe()
 slug: Web/API/ResizeObserver/observe
 ---
+
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
 The **`observe()`** method of the {{domxref("ResizeObserver")}} interface initiates observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.

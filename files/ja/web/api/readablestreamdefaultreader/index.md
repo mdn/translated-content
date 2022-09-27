@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableStreamDefaultReader`** インターフェイスは、ネットワークから提供されたストリームデータ（フェッチ要求など）を読み取るために使用できるデフォルトのリーダーを表します。

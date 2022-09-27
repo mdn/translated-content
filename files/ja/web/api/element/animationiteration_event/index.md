@@ -1,18 +1,9 @@
 ---
 title: 'Document: animationiteration イベント'
 slug: Web/API/Element/animationiteration_event
-tags:
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - CSS アニメーション
-  - Event
-  - Reference
-  - animationiteration
-  - イベント
-translation_of: Web/API/Document/animationiteration_event
 original_slug: Web/API/Document/animationiteration_event
 ---
+
 {{APIRef}}
 
 **`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Document/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。

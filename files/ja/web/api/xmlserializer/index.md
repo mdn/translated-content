@@ -1,20 +1,9 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
-tags:
-  - Converting
-  - DOM Parsing
-  - Interface
-  - Parsing
-  - Reference
-  - Serialization
-  - Serializing
-  - XML
-  - XML Serializer
-  - conversion
-translation_of: Web/API/XMLSerializer
 original_slug: XMLSerializer
 ---
+
 {{APIRef("XMLSerializer")}}
 
 `XMLSerializer` インターフェースは、{{Glossary("DOM")}} ツリーを表す XML 文字列を構築するための {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} メソッドを提供します。
@@ -45,7 +34,7 @@ original_slug: XMLSerializer
 
 この例は、{{domxref("Element.insertAdjacentHTML()")}} メソッドを使用して新しい DOM {{domxref("Node")}} を {{domxref("Document")}} の body に挿入します。これは、{{domxref("Element")}} オブジェクトをシリアライズすることにより作成された XML を基にしています。
 
-> **Note:** **注記:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
+> **Note:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
 >
 > - {{domxref("Document")}} および {{domxref("Element")}} メソッド {{domxref("ParentNode.append", "append()")}} および {{domxref("ParentNode.prepend", "prepend()")}}
 > - {{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} メソッド (既存のノードを新しいノードと置き換えるため)

@@ -1,13 +1,8 @@
 ---
 title: Event
 slug: Web/API/Event
-page-type: web-api-interface
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Event
-translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** インターフェイスは DOM で発生するイベントを表します。

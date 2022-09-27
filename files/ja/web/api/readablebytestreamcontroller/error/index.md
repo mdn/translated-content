@@ -1,16 +1,8 @@
 ---
 title: ReadableByteStreamController.error()
 slug: Web/API/ReadableByteStreamController/error
-tags:
-  - API
-  - Error
-  - Experimental
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableByteStreamController/error
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。

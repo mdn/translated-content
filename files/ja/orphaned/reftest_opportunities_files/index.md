@@ -1,11 +1,9 @@
 ---
 title: reftest opportunities files
 slug: orphaned/reftest_opportunities_files
-tags:
-  - Automated testing
-  - Developing Mozilla
 original_slug: reftest_opportunities_files
 ---
+
 ### Introduction
 
 [reftest](ja/Creating_reftest-based_unit_tests) に便利かもしれない Mozilla のソース内のファイルです。それぞれのファイルがチェックインされた理由は常に明白ではありませんが、チェックされるなんらかの必要が推測されます。これらの多くは [レイアウトリグレッション](http://www.mozilla.org/newlayout/doc/regression_tests.html) テストツールでチェックされました。そのテストツールは使うには難しく書かれ、一見エラーではなかった大量のリグレッションを報告しました

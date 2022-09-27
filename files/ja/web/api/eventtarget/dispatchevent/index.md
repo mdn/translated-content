@@ -1,12 +1,8 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.EventTarget.dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`dispatchEvent()`** は {{domxref("EventTarget")}} のメソッドで、 {{domxref("Event")}} をそのオブジェクトへ送り、関連する {{domxref("EventListener")}} を（同期的に）適切に起動させます。通常のイベント処理ルール（キャプチャとオプションのバブリングフェーズを含む）は `dispatchEvent()` で手動で配信されたイベントにも適用されます。

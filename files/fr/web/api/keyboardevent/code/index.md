@@ -3,6 +3,7 @@ title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 translation_of: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("DOM Events")}}
 
 La propriété **`KeyboardEvent.code`** représente une touche physique du clavier (contrairement au caractère généré par celle-ci). En d'autres termes, cette propriété retourne une valeur qui n'est pas modifiée par la disposition du clavier ou l'état des touches de modification.
@@ -199,10 +200,8 @@ Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('UI Events', '#dom-keyboardevent-code', 'KeyboardEvent.code')}} | {{Spec2('UI Events')}} | Définition initiale, inclut les [valeurs de code](https://w3c.github.io/uievents-code/). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}

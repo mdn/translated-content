@@ -3,6 +3,7 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 translation_of: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface  **`HTMLImageElement`** fournit des propriétés et des méthodes spéciales pour manipuler la mise en page et la présentation des éléments {{HTMLElement("img")}} .
@@ -92,18 +93,11 @@ alert(document.images[0].src);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}         | {{Spec2('Referrer Policy')}} | Ajoute la propriété `referrerPolicy` .                                                                                                                                                                                                                                                                                                                                                         |
-| {{SpecName("CSSOM View", "#excensions-to-the-htmlimageelement-interface", "Extensions to HTMLImageElement")}} | {{Spec2('CSSOM View')}}     | Ajoute les propriétés `x` et`y` .                                                                                                                                                                                                                                                                                                                                                              |
-| {{SpecName('HTML WHATWG', "embedded-content.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML WHATWG')}}     | Les propriétés suivantes sont ajoutées : `srcset`, `currentSrc` et `sizes`.                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML5 W3C')}}         | Un constructeur (avec 2 paramètres facultatifs) est ajouté. Les propriétés suivantes sont maintenant obsolètes : `name`, `border`, `align`, `hspace`, `vspace`, et `longdesc`. Les propriétés suivantes sont maintenant `unsigned et long`, iau lieu de `long`: `height` et `width`. Les propriétés suivantes ont été ajoutées : `crossorigin`, `naturalWidth`, `naturalHeight` et `complete`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-17701901', 'HTMLImgElement')}}                                                     | {{Spec2('DOM2 HTML')}}         | La propriété `lowSrc` a été supprimée. La propriété est maintenant `long`, au lieu des `DOMString`: `height`, `width`, `hspace` et `vspace`.                                                                                                                                                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-html.html#ID-17701901', 'HTMLImgElement')}}                                                 | {{Spec2('DOM1')}}             | définition initiale.                                                                                                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## Voir aussi
 

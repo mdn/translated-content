@@ -1,22 +1,8 @@
 ---
 title: 'Element: mousedown イベント'
 slug: Web/API/Element/mousedown_event
-tags:
-  - API
-  - DOM
-  - Down
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - Press
-  - リファレンス
-  - UI
-  - ボタン
-  - マウス
-  - mousedown
-translation_of: Web/API/Element/mousedown_event
 ---
+
 {{APIRef}}
 
 **`mousedown`** イベントは、ポインターが要素の中にあるときにポインティングデバイスのボタンが押下されたとき、その要素 ({{domxref("Element")}}) に発行されます。

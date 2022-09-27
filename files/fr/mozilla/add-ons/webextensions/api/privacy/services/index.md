@@ -11,6 +11,7 @@ tags:
   - Services
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
+
 {{AddonSidebar}}
 
 La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.

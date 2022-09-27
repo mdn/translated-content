@@ -1,15 +1,6 @@
 ---
 title: Document.title
 slug: Web/API/Document/title
-tags:
-  - API
-  - Command API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/title
 ---
 {{APIRef("DOM")}}
 

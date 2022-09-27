@@ -1,17 +1,8 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-tags:
-  - API
-  - Geolocation
-  - 位置情報 API
-  - メソッド
-  - リファレンス
-  - 安全なコンテキスト
-  - getCurrentPosition
-browser-compat: api.Geolocation.getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** メソッドは、端末の現在位置を取得するために使われます。

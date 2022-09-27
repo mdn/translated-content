@@ -1,16 +1,8 @@
 ---
 title: Gamepad.hand
 slug: Web/API/Gamepad/hand
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hand
-translation_of: Web/API/Gamepad/hand
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("Gamepad")}} インターフェイスの **`hand`** 読み取り専用プロパティは、コントローラが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。

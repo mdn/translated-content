@@ -1,16 +1,8 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - msMatchesSelector
-  - webkitMatchesSelector
-translation_of: Web/API/Element/matches
 ---
+
 {{APIRef("DOM")}}
 
 **`matches()`** メソッドは、その要素 ({{domxref("Element")}}) が指定された `selectorString` によって選択されるかをチェックします。言い換えれば、要素「が」セレクターであることをチェックします。

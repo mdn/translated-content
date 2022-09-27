@@ -1,18 +1,8 @@
 ---
 title: SyncEvent
 slug: Web/API/SyncEvent
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Non-standard
-  - Offline
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - Workers
-translation_of: Web/API/SyncEvent
 ---
+
 {{APIRef("Service Workers API")}} {{Non-standard_header}}
 
 **`SyncEvent`** インターフェイスは、 ServiceWorker の {{domxref("ServiceWorkerGlobalScope")}} でディスパッチされる同期アクションを表します。

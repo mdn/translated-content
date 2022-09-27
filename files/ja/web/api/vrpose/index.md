@@ -1,8 +1,8 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
-translation_of: Web/API/VRPose
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRPose`** インターフェイスは，特定のタイムスタンプにおける VR センサーの状態（向き，位置，速度，加速度の情報を含みます）を示します．

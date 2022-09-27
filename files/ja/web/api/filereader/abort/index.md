@@ -1,17 +1,8 @@
 ---
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
-tags:
-  - API
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - abort
-  - メソッド
-translation_of: Web/API/FileReader/abort
 ---
+
 {{APIRef("File API")}}
 
 **`abort`** メソッドは読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。

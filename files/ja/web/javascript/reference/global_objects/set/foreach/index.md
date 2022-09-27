@@ -1,16 +1,8 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.forEach
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** メソッドは、与えられた関数を `Set` オブジェクトの各値に対して一回ずつ、挿入順で実行します。

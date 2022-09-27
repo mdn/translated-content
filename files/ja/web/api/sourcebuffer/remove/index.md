@@ -1,19 +1,8 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - remove
-translation_of: Web/API/SourceBuffer/remove
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`remove()`** メソッドは、特定の時間範囲内のメディアセグメントを `SourceBuffer` から削除します。 このメソッドは、{{domxref("SourceBuffer.updating")}} が `false` の場合にのみ呼び出すことができます。 `SourceBuffer.updating` が `false` に等しくない場合、{{domxref("SourceBuffer.abort()")}} を呼び出します。

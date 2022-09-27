@@ -53,7 +53,7 @@ p_list = doc.getElementsByTagName("para");
 
 DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라우저는 자신만의 방법으로 DOM 구현하였으며, 이로 인해 실제 DOM 기준을 따르는지 확인해야 하는 번거로움이 발생하였다. (이 문제는 이 문서에서 피하고 싶어하는 주제이기도 하다.) 모든 웹 브라우저는 스크립트가 접근할 수 있는 웹 페이지를 만들기 위해 어느 정도의 DOM 을 항상 사용한다.
 
-스크립트를 작성할 때(인라인 \<script> 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/DOM/window "DOM/window") elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/DOM/window "DOM/window") object 로 부터 [`alert()`](/ko/docs/DOM/window.alert "DOM/window.alert") 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
+스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/DOM/window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/DOM/window) object 로 부터 [`alert()`](/ko/docs/DOM/window.alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
 
 ```html
 <body onload="window.alert('welcome to my home page!');">
@@ -195,7 +195,7 @@ table.summary = "note: increased border";
 
 ### DOM 의 핵심 Interfaces
 
-이 섹션은 DOM 에서 가장 많이 사용되는 interfaces 를 정리해보았다. 여기에서는 이들 API 가 실제로 어떤 일을 하는지 설명하는 대신 DOM 을 사용하면서 자주 만나게 되는 methods 와 properties 를 보여줄 것이다. 이들 API 는 이 책의 마지막에 소개된 [DOM 예제](/ko/docs/Gecko_DOM_Reference/Examples "Gecko_DOM_Reference/Examples")에서도 사용되었다.
+이 섹션은 DOM 에서 가장 많이 사용되는 interfaces 를 정리해보았다. 여기에서는 이들 API 가 실제로 어떤 일을 하는지 설명하는 대신 DOM 을 사용하면서 자주 만나게 되는 methods 와 properties 를 보여줄 것이다. 이들 API 는 이 책의 마지막에 소개된 [DOM 예제](/ko/docs/Gecko_DOM_Reference/Examples)에서도 사용되었다.
 
 `Document` 와 `window` objects 는 DOM 프로그래밍에서 가장 자주 사용하는 objects 이다. 간단하게 설명하자면, `window` object 는 브라우저와 같다고 할 수 있으며, `document` object 는 root document 자체라고 할 수 있다. generic `Node` interface 로부터 상속받은 `Element` 와 `Node`, `Element` interfaces 가 협력하여 각각의 elements 에서 사용할 수 있는 수많은 methods 와 properties 를 제공한다. 이러한 elements 는 이전 섹션에서 설명한 `table` object 예제에서도 살펴봤듯이, elements 가 보유한 데이터를 처리할 수 있는 특정한 interfaces 도 가지고 있다.
 
@@ -210,10 +210,10 @@ table.summary = "note: increased border";
 - `element.setAttribute`
 - `element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/ko/docs/DOM/window.content "DOM/window.content")
-- [`window.onload`](/ko/docs/DOM/window.onload "DOM/window.onload")
-- [`window.dump`](/ko/docs/DOM/window.dump "DOM/window.dump")
-- [`window.scrollTo`](/ko/docs/DOM/window.scrollTo "DOM/window.scrollTo")
+- [`window.content`](/ko/docs/DOM/window.content)
+- [`window.onload`](/ko/docs/DOM/window.onload)
+- [`window.dump`](/ko/docs/DOM/window.dump)
+- [`window.scrollTo`](/ko/docs/DOM/window.scrollTo)
 
 ## DOM API 테스팅
 

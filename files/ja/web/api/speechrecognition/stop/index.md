@@ -1,18 +1,8 @@
 ---
 title: SpeechRecognition.stop()
 slug: Web/API/SpeechRecognition/stop
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - stop
-translation_of: Web/API/SpeechRecognition/stop
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`stop()`** メソッドは音声認識のサービスを停止し、入ってくる音声を聞かなくします。後、今まで認識した音声を {{domxref("SpeechRecognitionResult")}} として返します。

@@ -12,6 +12,7 @@ tags:
 translation_of: Glossary/WebRTC
 original_slug: Glossaire/WebRTC
 ---
+
 **WebRTC** (_Web Real-Time Communication_) _(communication en temps réel web)_ est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.
 
 WebRTC est constitué principalement de ces éléments :
@@ -23,7 +24,7 @@ WebRTC est constitué principalement de ces éléments :
 - [RTCDataChannels](/fr/docs/Web/API/RTCDataChannel)
   - : fournit une méthode de définition des itinéraires de données {{Glossary("P2P","pair-à-pair")}} entre les navigateurs
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

@@ -11,6 +11,7 @@ tags:
   - Window
 translation_of: Web/API/Window/event
 ---
+
 {{APIRef("DOM")}}
 
 L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours `undefined`.
@@ -21,14 +22,12 @@ Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', "#dom-window-event", "Window.event")}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Event.srcElement")}}

@@ -1,16 +1,6 @@
 ---
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - 非推奨
-  - メソッド
-  - MouseEvent
-  - リファレンス
-browser-compat: api.MouseEvent.initMouseEvent
-translation_of: Web/API/MouseEvent/initMouseEvent
 ---
 {{APIRef("DOM Events")}}{{deprecated_header}}
 

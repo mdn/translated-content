@@ -1,17 +1,8 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - Offline
-  - リファレンス
-  - サービスワーカー
-  - サービスワーカー API
-  - ServiceWorkerRegistration
-  - ワーカー
-translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ServiceWorkerRegistration`** は [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、サービスワーカー登録を表します。 同じオリジンを共有している 1 つ以上のページを制御するサービスワーカーを登録します。

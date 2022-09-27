@@ -1,16 +1,8 @@
 ---
 title: 'SharedWorkerGlobalScope: connect イベント'
 slug: Web/API/SharedWorkerGlobalScope/connect_event
-tags:
-  - API
-  - Event
-  - Reference
-  - SharedWorkerGlobalScope
-  - connect
-  - events
-  - イベント
-translation_of: Web/API/SharedWorkerGlobalScope/connect_event
 ---
+
 {{APIRef}}
 
 **`connect`** イベントは、新しいクライアントが接続したときに共有ワーカーの {{domxref("SharedWorkerGlobalScope")}} に発生します。

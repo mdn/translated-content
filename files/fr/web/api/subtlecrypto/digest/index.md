@@ -3,6 +3,7 @@ title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 translation_of: Web/API/SubtleCrypto/digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
@@ -95,15 +96,11 @@ console.log(digestHex);
 
 ## Spécifications
 
-| Spécifications                                                                                                           | Statue                               | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Définition intiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SubtleCrypto.digest")}}
-
-> **Note :** Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive **crypto.subtle** pour les connexions non TLS.
+{{Compat}}
 
 ## Voir aussi
 

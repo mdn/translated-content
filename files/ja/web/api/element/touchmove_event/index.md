@@ -1,17 +1,8 @@
 ---
 title: 'Element: touchmove イベント'
 slug: Web/API/Element/touchmove_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
-translation_of: Web/API/Element/touchmove_event
 ---
+
 {{APIRef}}
 
 `touchmove` イベントは、タッチ面上で 1 つ以上のタッチ点が移動したときに発生します。

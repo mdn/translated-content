@@ -1,14 +1,8 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/id
 ---
+
 {{ ApiRef("DOM") }}
 
 **`id`** は {{domxref("Element")}} インターフェイスのプロパティで、グローバル属性の [**`id`**](/ja/docs/Web/HTML/Global_attributes/id) を反映した要素の識別子を表します。

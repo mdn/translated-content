@@ -1,13 +1,8 @@
 ---
 title: Element.remove()
 slug: Web/API/Element/remove
-tags:
-  - API
-  - Element
-  - DOM
-  - Method
-translation_of: Web/API/Element/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.remove()`** は所属するツリーから要素を削除します。

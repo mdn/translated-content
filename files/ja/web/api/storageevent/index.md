@@ -1,17 +1,13 @@
 ---
 title: StorageEvent
 slug: Web/API/StorageEvent
-tags:
-  - API
-  - Reference
-  - Web Storage API
-translation_of: Web/API/StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
 `StorageEvent` は、ストレージエリアが変化したときに window へ送信されます。
 
-> **Note:** **注記:** {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
+> **Note:** {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
 
 ## メソッドの概要
 

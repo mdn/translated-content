@@ -3,6 +3,7 @@ title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
 translation_of: Web/API/IDBObjectStore/clear
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`clear()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet {{domxref("IDBObjectStore","relié")}}.
@@ -79,15 +80,13 @@ function clearData() {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

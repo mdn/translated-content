@@ -10,6 +10,7 @@ tags:
   - Video
 translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLMediaElement`** ajoute à {{domxref("HTMLElement")}} les propriétés et les méthodes nécessaires pour prendre en charge les fonctionnalités de base liées aux médias qui sont communes aux vidéos et aux documents audios. {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}} héritent de cette interface.
@@ -170,16 +171,11 @@ Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un n
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                     |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Définition initiale.                                                                                      |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Ajout de {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, et setMediaKeys. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Ajout de `sinkId`, `setSinkId()` et `captureStream()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## Voir aussi
 

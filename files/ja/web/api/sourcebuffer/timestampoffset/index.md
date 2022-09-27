@@ -1,19 +1,8 @@
 ---
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - timestampOffset
-translation_of: Web/API/SourceBuffer/timestampOffset
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`timestampOffset`** プロパティは、`SourceBuffer` に追加されるメディアセグメント内のタイムスタンプに適用されるオフセットを制御します。

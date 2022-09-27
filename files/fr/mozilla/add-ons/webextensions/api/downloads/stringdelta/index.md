@@ -13,6 +13,7 @@ tags:
   - download
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
 ---
+
 {{AddonSidebar()}}
 
 Le type `StringDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux chaînes.

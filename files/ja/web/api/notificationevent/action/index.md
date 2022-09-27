@@ -1,19 +1,6 @@
 ---
 title: NotificationEvent.action
 slug: Web/API/NotificationEvent/action
-tags:
-  - API
-  - Experimental
-  - NotificationEvent
-  - Notifications
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - action
-  - プロパティ
-  - 通知
-translation_of: Web/API/NotificationEvent/action
 ---
 {{APIRef("Web Notifications")}}
 

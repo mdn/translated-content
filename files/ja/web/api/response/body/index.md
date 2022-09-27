@@ -1,17 +1,9 @@
 ---
 title: Response.body
 slug: Web/API/Response/body
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Streams
-  - Response
-translation_of: Web/API/Response/body
 original_slug: Web/API/Body/body
-browser-compat: api.Response.body
 ---
+
 {{APIRef("Fetch")}}
 
 **`body`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文コンテンツの {{domxref("ReadableStream")}} です。

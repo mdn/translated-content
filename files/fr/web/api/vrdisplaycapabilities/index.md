@@ -3,6 +3,7 @@ title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
 translation_of: Web/API/VRDisplayCapabilities
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 L'interface **`VRDisplayCapabilities`** de [WebVR API](/fr/docs/Web/API/WebVR_API) décrit les capacités d'un appareil {{domxref("VRDisplay")}} — ses fonctionalités peuvent être utilisée pour tester les capacités de l'appareil, par exemple il peut retourner de l'information sur la position.
@@ -28,13 +29,11 @@ TBD.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebVR', '#interface-vrdisplaycapabilities', 'VRDisplayCapabilities')}} | {{Spec2('WebVR')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.VRDisplayCapabilities")}}
+{{Compat}}
 
 ## Voir aussi
 

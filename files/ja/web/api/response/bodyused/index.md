@@ -1,17 +1,9 @@
 ---
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - bodyUsed
-  - Response
-translation_of: Web/API/Response/bodyUsed
 original_slug: Web/API/Body/bodyUsed
-browser-compat: api.Response.bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 **`bodyUsed`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文が読取済みであるかどうかを示す論理値です。

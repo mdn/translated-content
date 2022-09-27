@@ -1,16 +1,8 @@
 ---
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
-tags:
-  - API
-  - Experimental
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - byobRequest
-translation_of: Web/API/ReadableByteStreamController/byobRequest
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`byobRequest`** 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は `undefined` を返します。

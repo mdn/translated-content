@@ -4,6 +4,7 @@ slug: Web/API/IDBRequest/success_event
 translation_of: Web/API/IDBRequest/onsuccess
 original_slug: Web/API/IDBRequest/onsuccess
 ---
+
 {{ APIRef("IndexedDB") }}
 
 Le gestionnaire d'événement **`onsuccess`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`success`](/fr/docs/Web/Events/success), déclenché quand la requête réussie.
@@ -55,13 +56,11 @@ objectStoreTitleRequest.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-onsuccess', 'onsuccess')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.onsuccess")}}
+{{Compat}}
 
 ## Voir aussi
 

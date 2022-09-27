@@ -1,15 +1,6 @@
 ---
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Method
-  - Pointer Events
-  - PointerEvent
-  - Reference
-translation_of: Web/API/PointerEvent/getCoalescedEvents
 ---
 {{APIRef("Pointer Events")}}{{seecompattable}}
 

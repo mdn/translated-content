@@ -1,14 +1,8 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
-tags:
-  - API
-  - CSSOM
-  - Media
-  - StyleSheet
-  - プロパティ
-translation_of: Web/API/StyleSheet/media
 ---
+
 {{APIRef("CSSOM")}}
 
 **StyleSheet.media** は、スタイル情報の対象として想定するメディアを指定します。これは読み取り専用で配列風の `MediaList` オブジェクトであり、 `deleteMedium()` で削除したり `appendMedium()` で追加したりすることができます。

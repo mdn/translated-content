@@ -1,15 +1,8 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの読み取り専用プロパティ `length` は、`Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
@@ -38,7 +31,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** **注記**: 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **Note:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
 ## 仕様
 

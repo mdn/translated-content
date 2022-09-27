@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/index
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`index()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, permet d'ouvrir un index sur le magasin d'objet courant pour, par exemple, renvoyer une liste d'enregistrements triés par cet index grâce à un curseur.
@@ -78,13 +79,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-index-IDBIndex-DOMString-name', 'index()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.index")}}
+{{Compat}}
 
 ## Voir aussi
 

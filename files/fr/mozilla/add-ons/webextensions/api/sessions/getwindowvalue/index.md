@@ -12,6 +12,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.

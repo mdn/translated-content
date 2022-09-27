@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/contains
 ---
+
 {{APIRef("DOM")}}La méthode **`Node.contains()`** renvoie une valeur {{jsxref("Boolean")}} (_booléenne_) indiquant si un nœud est un descendant d'un nœud donné, c'est-à-dire le nœud lui-même, l'un de ses enfants directs ({{domxref("Node.childNodes", "childNodes")}}), l'un des enfants directs des enfants, et ainsi de suite.
 
 ## Syntaxe
@@ -29,13 +30,11 @@ function isInPage(node) {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## Voir aussi
 

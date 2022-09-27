@@ -1,17 +1,8 @@
 ---
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
-page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - ScriptProcessorNode
-  - Web Audio API
-browser-compat: api.ScriptProcessorNode
-translation_of: Web/API/ScriptProcessorNode
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `ScriptProcessorNode` インターフェイスは、JavaScript を使って音声を生成、処理、または分析することを可能にします。

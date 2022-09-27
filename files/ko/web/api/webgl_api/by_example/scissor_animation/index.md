@@ -3,8 +3,6 @@ title: 애니메이션 잘라내기
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 ---
-{{IncludeSubnav("/en-US/Learn")}}
-
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
 활동을 청소하고 잘라내는 어떤 애니메이션 장난

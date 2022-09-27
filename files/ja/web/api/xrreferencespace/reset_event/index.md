@@ -1,24 +1,8 @@
 ---
 title: 'XRReferenceSpace: reset イベント'
 slug: Web/API/XRReferenceSpace/reset_event
-tags:
-  - API
-  - AR
-  - Event
-  - Graphics
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
-translation_of: Web/API/XRReferenceSpace/reset_event
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 ネイティブの原点または実際の原点のいずれかで不連続が検出されると、**`reset`** イベントが {{domxref("XRReferenceSpace")}} オブジェクトに送信され、参照空間を使用して方向付けられたオブジェクトの位置または方向がジャンプします。 これは、ユーザーが XR デバイスを較正または再較正する場合、またはデバイスがユーザーの追跡を失った後に原点を自動的に変更してから再び取得する場合によく見られます。
@@ -62,7 +46,7 @@ translation_of: Web/API/XRReferenceSpace/reset_event
 - ユーザーは、`unbounded` 参照空間にいて、開始位置（参照空間の原点）から十分に離れているため、浮動小数点またはその他の形式の誤差またはドリフトが問題になります。 このため座標系は、ユーザーの現在の位置またはその近くの新しい原点でリセットされます。
 - WebXR インフラストラクチャーまたはハードウェアドライバーは、デバイスが一時的に追跡を失い、ハードウェアとソフトウェアの位置と方向が同期していないことを検出しました。
 
-> **Note:** **注**: 参照空間が以前の原点の追跡を取り戻すことができる場合、`reset` イベントは発生*しません*。 これは、原点が強制的に再配置されていないことを意味します。 このイベントは、追跡喪失から回復するために原点を再配置する必要がある場合にのみ発生します。
+> **Note:** 参照空間が以前の原点の追跡を取り戻すことができる場合、`reset` イベントは発生*しません*。 これは、原点が強制的に再配置されていないことを意味します。 このイベントは、追跡喪失から回復するために原点を再配置する必要がある場合にのみ発生します。
 
 ### 手動リセット
 

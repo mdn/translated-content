@@ -1,17 +1,8 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
-tags:
-  - API
-  - Controller
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerController
-translation_of: Web/API/ServiceWorkerContainer/controller
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`controller`** 読み取り専用プロパティは、{{domxref("ServiceWorker")}} オブジェクトの状態が `activating` または `activated` ならそれ ({{domxref("ServiceWorkerRegistration.active")}} で返されるのと同じオブジェクト) を返します。このプロパティはリクエストが強制リフレッシュ(_Shift_ + リフレッシュ)やアクティブワーカーがない場合は `null` を返します。

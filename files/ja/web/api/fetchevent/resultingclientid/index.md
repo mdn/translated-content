@@ -1,17 +1,8 @@
 ---
 title: FetchEvent.resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
-tags:
-  - API
-  - DOM
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - Worker
-  - resultingClientId
-translation_of: Web/API/FetchEvent/resultingClientId
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`resultingClientId`** 読み取り専用プロパティは、ページナビゲーション中に前のクライアントを置き換える{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。

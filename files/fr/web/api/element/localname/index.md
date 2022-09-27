@@ -11,6 +11,7 @@ tags:
   - local
 translation_of: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.localName`** renvoie la partie locale du nom qualifié d'un élément.
@@ -74,13 +75,11 @@ Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive aprè
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-localname', 'Element.localName')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
 ## Voir aussi
 

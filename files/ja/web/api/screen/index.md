@@ -1,15 +1,8 @@
 ---
 title: Screen
 slug: Web/API/Screen
-page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
-browser-compat: api.Screen
-translation_of: Web/API/Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 `Screen` インターフェイスは画面を表し、通常は、現在のウィンドウが描画されている画面であり、 {{DOMxRef("window.screen")}} を使用して取得されます。

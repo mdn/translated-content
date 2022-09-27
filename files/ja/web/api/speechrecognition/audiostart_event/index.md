@@ -1,16 +1,8 @@
 ---
 title: 'SpeechRecognition: audiostart イベント'
 slug: Web/API/SpeechRecognition/audiostart_event
-tags:
-  - Event
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - audiostart
-  - onaudiostart
-  - イベント
-translation_of: Web/API/SpeechRecognition/audiostart_event
 ---
+
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`audiostart`** イベントは、ユーザーエージェントが会話認識のためのオーディオキャプチャを開始したときに発生します。

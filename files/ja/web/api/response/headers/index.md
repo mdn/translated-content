@@ -1,16 +1,8 @@
 ---
 title: Response.headers
 slug: Web/API/Response/headers
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Headers
-  - Property
-  - Reference
-  - Response
-translation_of: Web/API/Response/headers
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} インターフェイスの **`headers`** 読み取り専用プロパティはレスポンスに関連付けられた {{domxref("Headers")}} オブジェクトが含まれています。

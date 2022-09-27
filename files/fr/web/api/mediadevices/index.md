@@ -14,6 +14,7 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 L'interface **`MediaDevices`** permet d'accéder aux périphériques d'entrée multimédia connectés tels que les caméras et les microphones, ainsi que le partage d'écran. Essentiellement, il vous permet d'accéder à n'importe quelle source matérielle de données multimédias.
@@ -87,13 +88,11 @@ function errorMsg(msg, error) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## Voir aussi
 

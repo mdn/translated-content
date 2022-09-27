@@ -1,18 +1,8 @@
 ---
 title: SpeechRecognition.continuous
 slug: Web/API/SpeechRecognition/continuous
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - continuous
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/continuous
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`continuous`** プロパティは、認識が行われるたびに、継続的に結果を返すのか、あるいは１つの結果のみ返すのかを制御するようになります。

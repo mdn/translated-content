@@ -1,15 +1,8 @@
 ---
 title: 'Window: messageerror イベント'
 slug: Web/API/Window/messageerror_event
-tags:
-  - API
-  - Event
-  - MessageEvent
-  - Reference
-  - Window
-  - イベント
-translation_of: Web/API/Window/messageerror_event
 ---
+
 {{APIRef}}
 
 `messageerror` イベントは、解読できないメッセージを受け取った時に {{domxref('Window')}} オブジェクトに発生します。

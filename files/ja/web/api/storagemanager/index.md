@@ -1,19 +1,8 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
-tags:
-  - API
-  - Interface
-  - Persistence
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-translation_of: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 [Storage API](/ja/docs/Web/API/Storage_API) の **`StorageManager`** インターフェイスは、永続性のパーミッションの管理と、利用可能なストレージの見積もりのインターフェイスを提供します。{{domxref("navigator.storage")}} か {{domxref("WorkerNavigator.storage")}} のいずれかを使用して、このインターフェイスへの参照を取得できます。

@@ -1,12 +1,6 @@
 ---
 title: テキストの描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - キャンバス
-  - グラフィック
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Drawing_text_using_a_canvas
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

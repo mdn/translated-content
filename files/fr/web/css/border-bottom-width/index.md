@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.

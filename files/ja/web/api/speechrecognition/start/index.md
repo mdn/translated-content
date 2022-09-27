@@ -1,18 +1,8 @@
 ---
 title: SpeechRecognition.start()
 slug: Web/API/SpeechRecognition/start
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - start
-translation_of: Web/API/SpeechRecognition/start
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`start()`** メソッドは、{{domxref("SpeechRecognition")}} に関連する文法を認識する意図をもって、着信される音声を認識する音声認識サービスを開始します。

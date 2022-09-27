@@ -1,14 +1,8 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollHeight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の中身の高さの寸法です。

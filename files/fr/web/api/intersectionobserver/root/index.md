@@ -11,6 +11,7 @@ tags:
   - root
 translation_of: Web/API/IntersectionObserver/root
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 La propriété en lecture seule **`root`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) identifie l'[`Element`](/fr/docs/Web/API/Element) ou le [`Document`](/fr/docs/Web/API/Document) dont les bornes sont considérées comme la zone englobante (_bounding box_) de la zone d'affichage (_viewport_) au sein de laquelle les intersections avec la cible sont observées. Si `root` vaut `null`, ce sont les limites de la zone d'affichage (_viewport_) courantes qui sont utilisées.
@@ -37,13 +38,11 @@ observer.root.style.border = "2px solid #44aa44";
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-root', 'IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.root")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 ## 문법
 
-    new ReferenceError([message[, fileName[, lineNumber]]])
+```js
+new ReferenceError([message[, fileName[, lineNumber]]])
+```
 
 ### 파라미터
 

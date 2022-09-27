@@ -3,6 +3,7 @@ title: Element.querySelector()
 slug: Web/API/Element/querySelector
 translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/Element) renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.
@@ -77,15 +78,11 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}} | {{Spec2('DOM WHATWG')}}             |             |
-| {{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 2')}} |             |
-| {{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 1')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 

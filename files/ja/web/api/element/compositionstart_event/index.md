@@ -1,16 +1,8 @@
 ---
 title: 'Element: compositionstart イベント'
 slug: Web/API/Element/compositionstart_event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionstart
-  - イベント
-  - 入力メソッド
-translation_of: Web/API/Element/compositionstart_event
 ---
+
 {{APIRef}}
 
 **`compositionstart`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムが新しい変換セッションを開始した時に発生します。

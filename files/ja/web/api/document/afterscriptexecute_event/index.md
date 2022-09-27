@@ -1,14 +1,6 @@
 ---
 title: Document.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-tags:
-  - API
-  - DOM
-  - Non-standard
-  - Reference
-  - プロパティ
-  - 標準外
-translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
 {{ApiRef("DOM")}}{{non-standard_header}}
@@ -37,7 +29,7 @@ document.addEventListener('afterscriptexecute', finished, true);
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## ブラウザーの互換性
 

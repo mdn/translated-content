@@ -2,6 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 ---
+
 {{JSRef}}
 
 JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。

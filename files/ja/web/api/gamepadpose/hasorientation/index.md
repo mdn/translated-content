@@ -1,18 +1,8 @@
 ---
 title: GamepadPose.hasOrientation
 slug: Web/API/GamepadPose/hasOrientation
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - hasOrientation
-translation_of: Web/API/GamepadPose/hasOrientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("GamepadPose")}} インターフェイスの **`hasOrientation`** 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します。

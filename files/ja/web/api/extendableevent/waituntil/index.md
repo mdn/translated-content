@@ -1,14 +1,8 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
-tags:
-  - API
-  - ExtendableEvent
-  - Method
-  - Reference
-  - waitUntil
-translation_of: Web/API/ExtendableEvent/waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableEvent.waitUntil()`** メソッドは、作業が進行中であることをイベントディスパッチャーに通知します。 また、その作業が成功したかどうかを検出するためにも使用できます。 サービスワーカーの場合、`waitUntil()` は、Promise が確定するまで作業が進行中であることをブラウザーに通知し、サービスワーカーがその作業を完了させたい場合にサービスワーカーを終了させません。
@@ -19,7 +13,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 `waitUntil()` メソッドは、最初はイベントコールバック内で呼び出す必要がありますが、その後、すべての Promise が解決するまで、複数回呼び出すことができます。
 
-> **Note:** **注**: 上記の段落で説明した動作は、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
+> **Note:** 上記の段落で説明した動作は、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
 
 ## 構文
 

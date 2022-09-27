@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Accessibility/Mobile
 original_slug: Apprendre/a11y/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
@@ -272,7 +273,7 @@ Si vous souhaitez fournir une solution différente pour les ordinateurs de burea
 
 Dans cet article, nous vous avons fourni des détails sur les problèmes courants spécifiques à l'accessibilité mobile et sur la façon de les résoudre. Nous vous avons également montré comment utiliser les lecteurs d'écran les plus courants pour vous aider à effectuer des tests d'accessibilité.
 
-### Voir également
+### Voir aussi
 
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.

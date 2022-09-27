@@ -1,15 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/location
 ---
 {{APIRef("DOM")}}
 

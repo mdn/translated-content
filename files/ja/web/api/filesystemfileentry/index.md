@@ -1,18 +1,8 @@
 ---
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
-page-type: web-api-interface
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - FileEntry
-  - ファイル
-  - インターフェイス
-  - オフライン
-  - リファレンス
-browser-compat: api.FileSystemFileEntry
-translation_of: Web/API/FileSystemFileEntry
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 **`FileSystemFileEntry`** は[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) のインターフェイスで、ファイルシステム内のファイルを表します。このファイルの属性を記述するプロパティと、そのファイルを読み出すために使用する {{domxref("File")}} オブジェクトを生成する {{domxref("FileSystemFileEntry.file", "file()")}} メソッドを提供します。

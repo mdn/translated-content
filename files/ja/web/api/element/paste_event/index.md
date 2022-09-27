@@ -1,14 +1,8 @@
 ---
 title: 'Element: paste イベント'
 slug: Web/API/Element/paste_event
-page-type: web-api-event
-tags:
-  - Clipboard API
-  - Event
-  - NeedsUpdate
-  - Reference
-translation_of: Web/API/Element/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスで「貼り付け」操作を行ったときに発生します。

@@ -1,15 +1,8 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - Advanced
-  - DOM
-  - HTML5
-  - History
-  - 履歴
-translation_of: Web/API/History_API
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 DOM の {{DOMxRef("Window")}} オブジェクトは、ブラウザーのセッション履歴 ([WebExtensions history](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history) と混同しないように) へのアクセスを {{DOMxRef("Window.history","history")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。

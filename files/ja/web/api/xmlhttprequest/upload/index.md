@@ -1,24 +1,8 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-tags:
-  - AJAX
-  - API
-  - Monitoring XMLHttpRequest
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ファイル送信
-  - アップロード
-  - XHR
-  - XHR アップロード
-  - XMLHttpRequest
-  - XMLHttpRequest アップロード
-  - XMLHttpRequestUpload
-  - アップロード
-browser-compat: api.XMLHttpRequest.upload
-translation_of: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の `upload` プロパティは、アップロードの進捗を監視することができる {{domxref("XMLHttpRequestUpload")}} オブジェクトを返します。

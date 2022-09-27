@@ -17,8 +17,10 @@ translation_of: Web/API/Document/domain
 
 ## 구문
 
-    const domainString = document.domain
-    document.domain = domainString
+```js
+const domainString = document.domain
+document.domain = domainString
+```
 
 ### 값
 

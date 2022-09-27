@@ -1,22 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS 色
-  - CSS プロパティ
-  - CSS テキスト
-  - HTML 色
-  - HTML 
-  - レイアウト
-  - リファレンス
-  - Styling HTML
-  - Styling text
-  - ウェブ
-  - color
-  - recipe:css-property
-browser-compat: css.properties.color
-translation_of: Web/CSS/color
 ---
 {{CSSRef}}
 

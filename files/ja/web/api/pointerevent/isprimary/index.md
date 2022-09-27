@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/isPrimary
 ---
 {{ APIRef("Pointer Events") }}
 

@@ -10,6 +10,7 @@ tags:
   - openCursor
 translation_of: Web/API/IDBIndex/openCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openCursor()`** de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée [un curseur](/fr/docs/Web/API/IDBCursor) sur l'intervalle de clé fourni en argument.
@@ -120,13 +121,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.openCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

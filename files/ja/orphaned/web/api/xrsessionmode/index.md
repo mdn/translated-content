@@ -1,24 +1,9 @@
 ---
 title: XRSessionMode
 slug: orphaned/Web/API/XRSessionMode
-tags:
-  - API
-  - AR
-  - Enum
-  - Graphics
-  - Reference
-  - Session
-  - Type
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - XRSessionMode
-translation_of: Web/API/XRSessionMode
 original_slug: Web/API/XRSessionMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRSessionMode`** 列挙型は、使用できるセッションモードの可能な種類を識別するために使用される文字列値を定義します。

@@ -2,6 +2,7 @@
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** 方法用于判断一个字符串是否包含在另一个字符串中，根据情况返回 true 或 false。

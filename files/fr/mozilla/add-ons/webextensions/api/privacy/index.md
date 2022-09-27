@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
+
 {{AddonSidebar}}
 
 Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.

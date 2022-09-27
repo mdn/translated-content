@@ -1,9 +1,6 @@
 ---
 title: DSL (デジタル加入者線)
 slug: Glossary/DSL/Digital_subscriber_line
-tags:
-  - Glossary
-  - Reference
 ---
 **DSL (デジタル加入者線)** は、ブロードバンドインターネット接続の一種で、電話回線を使って有線データ通信を行うものです。
 

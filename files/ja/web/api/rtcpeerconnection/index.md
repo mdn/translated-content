@@ -1,24 +1,8 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Communication
-  - Interface
-  - Media
-  - NeedsUpdate
-  - Networking
-  - RTCPeerConnection
-  - Reference
-  - Telecom
-  - Video
-  - WebRTC
-  - WebRTC API
-browser-compat: api.RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 **`RTCPeerConnection`** インターフェイスは、ローカルコンピューターとリモートピアの間の WebRTC 接続を表します。リモートピアに接続したり、接続を維持・監視したり、不要になったら接続を切断したりするためのメソッドを提供します。

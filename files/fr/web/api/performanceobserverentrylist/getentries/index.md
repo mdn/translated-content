@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntries()`** de l'interface [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets explicitement _observés_ d'[entrées de performance](/fr/docs/Web/API/PerformanceEntry) pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des [types d'entrée](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
@@ -93,10 +94,8 @@ observe_frame.observe({entryTypes: ['frame']});
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentries', 'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserverEntryList.getEntries")}}
+{{Compat}}

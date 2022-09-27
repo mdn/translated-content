@@ -1,12 +1,8 @@
 ---
 title: element.hasAttribute
 slug: Web/API/Element/hasAttribute
-tags:
-  - DOM
-  - DOM Element Methods
-  - Gecko
-translation_of: Web/API/Element/hasAttribute
 ---
+
 {{ApiRef}}
 
 ## 概要

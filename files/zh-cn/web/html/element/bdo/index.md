@@ -2,6 +2,7 @@
 title: '<bdo>: 双向文本替代元素'
 slug: Web/HTML/Element/bdo
 ---
+
 {{HTMLRef}}
 
 HTML 双向文本替代元素 (**`<bdo>`**) 改写了文本的方向性，使文本以不同的方向渲染呈现出来 (override 可以翻译很多意思，编程语言中多用覆盖，重载；这里采用了 Google 的整体翻译，取替代替换改写之意)
@@ -76,7 +77,7 @@ HTML 4 规范未指定此元素的事件。 它们是在 XHTML 中添加的。 �
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}
 
 ## 另参见
 

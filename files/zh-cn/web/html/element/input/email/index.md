@@ -2,6 +2,7 @@
 title: <input type="email">
 slug: Web/HTML/Element/Input/email
 ---
+
 {{HTMLRef}}
 
 带有 **`"email"`** (电子邮箱) 类型标记的输入框元素 ({{HTMLElement("input")}}) 能够让用户输入或编辑一个电子邮箱地址，此外，如果指定了{{htmlattrxref("multiple", "input")}}属性，用户还可以输入多个电子邮箱地址。在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址 (非空值且符合电子邮箱地址格式). CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用。
@@ -284,7 +285,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## Browser compatibility
 
-{{Compat("html.elements.input.input-email")}}
+{{Compat}}
 
 ## See also
 

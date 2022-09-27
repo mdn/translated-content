@@ -1,19 +1,9 @@
 ---
 title: 'Document: transitionrun イベント'
 slug: Web/API/Element/transitionrun_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - TransitionEvent
-  - Web
-  - transitionrun
-  - イベント
-  - ウェブ
-  - トランジション
-translation_of: Web/API/Document/transitionrun_event
 original_slug: Web/API/Document/transitionrun_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`transitionrun`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が最初に生成されたとき、すなわち {{cssxref("transition-delay")}} が始まる前に発生します。

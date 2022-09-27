@@ -1,20 +1,8 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Object
-  - Reference
-  - freeze
-  - メソッド
-  - ロック
-  - 不変性
-  - 凍結
-  - 変更
-  - 変更可能性
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
+
 {{JSRef}}
 
 **`Object.freeze()`** メソッドはオブジェクトを**凍結**します。凍結されたオブジェクトは変更できなくなります。オブジェクトを凍結すると、新しいプロパティを追加したり、既存のプロパティを削除したりすることができなくなり、既存のプロパティに対する列挙可否、構成可否、書き込み可否の変更ができなくなり、既存のプロパティの値が変更できなくなります。加えて、オブジェクトを凍結するとプロトタイプも変更できなくなります。`freeze()` は渡されたものと同じオブジェクトを返します。

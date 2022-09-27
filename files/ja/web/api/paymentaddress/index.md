@@ -1,16 +1,6 @@
 ---
 title: PaymentAddress
 slug: Web/API/PaymentAddress
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - paymentAddress
-browser-compat: api.PaymentAddress
 l10n:
   sourceCommit: da3e8fe86e7ae4bb7342c6ccb56188b25f9be55c
 ---

@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - releaseLock
-translation_of: Web/API/ReadableStreamDefaultReader/releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} インターフェイスの `releaseLock()` メソッドは、ストリームのリーダーのロックを解除します。

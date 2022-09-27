@@ -3,6 +3,7 @@ title: 样式列表
 slug: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/为文本添加样式/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [List 列表](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
@@ -210,7 +211,7 @@ ul li {
 
   - {{cssxref("background-image")}}: 充当项目符号的图片文件的参考路径
   - {{cssxref("background-position")}}: 这定义了所选元素背景中的图像将出现在哪里 - 在我们的示例中设置 `0 0`，这意味着项目符号将出现在每个列表项的最左上侧。
-  - {{cssxref("background-size")}}: 设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 1.6rem（16px），它非常吻合我们为项目符号设置的 20px 的填充， 16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
+  - {{cssxref("background-size")}}: 设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 1.6rem（16px），它非常吻合我们为项目符号设置的 20px 的填充，16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
   - {{cssxref("background-repeat")}}：默认条件下，背景图片不断复制直到填满整个背景空间，在我们的例子中，背景图片只需复制一次，所以我们设置值为 `no-repeat`。
 
 效果显示如下：

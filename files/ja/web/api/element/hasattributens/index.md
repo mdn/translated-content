@@ -1,12 +1,8 @@
 ---
 title: element.hasAttributeNS
 slug: Web/API/Element/hasAttributeNS
-tags:
-  - DOM
-  - Gecko
-  - 翻訳中
-translation_of: Web/API/Element/hasAttributeNS
 ---
+
 {{ ApiRef() }}
 
 ### 概要

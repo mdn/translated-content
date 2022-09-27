@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-width
 ---
+
 {{CSSRef}}
 
 La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.

@@ -1,16 +1,8 @@
 ---
 title: 基本的な 2D WebGL アニメーションの例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
-tags:
-  - 2D Animation
-  - 2D Graphics
-  - Animation
-  - Drawing
-  - Example
-  - WebGL
-  - WebGL API
-translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 ---
+
 {{WebGLSidebar}}
 
 この WebGL の例では、キャンバスを作成し、その中に WebGL を使用して回転する四角形をレンダリングします。シーンを表すために使用する座標系は、キャンバスの座標系と同じです。つまり、(0, 0) は左上隅にあり、右下隅は (600, 460) となります。

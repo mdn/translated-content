@@ -1,19 +1,9 @@
 ---
 title: 'Document: animationcancel イベント'
 slug: Web/API/Element/animationcancel_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationcancel
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/animationcancel_event
 original_slug: Web/API/Document/animationcancel_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Document/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。

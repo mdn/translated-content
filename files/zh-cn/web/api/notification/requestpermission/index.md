@@ -2,6 +2,7 @@
 title: Notification.requestPermission()
 slug: Web/API/notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("Notification")}} 接口的 **`requestPermission()` **方法请求用户当前来源的权限以显示通知。
@@ -27,7 +28,7 @@ Notification.requestPermission(callback);
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} ，将解析为一个 {{domxref("DOMString")}} ，它是用户对权限请求的选择。这个字符串可以是 `granted`（被授予）， `denied`（被拒绝） 或者 `default`（默认）。
+一个 {{jsxref("Promise")}} ，将解析为一个 {{domxref("DOMString")}} ，它是用户对权限请求的选择。这个字符串可以是 `granted`（被授予）， `denied`（被拒绝）或者 `default`（默认）。
 
 ## 实例
 

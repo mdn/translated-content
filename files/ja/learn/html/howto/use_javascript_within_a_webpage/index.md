@@ -1,12 +1,6 @@
 ---
 title: ウェブページで JavaScript を使う方法
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
-translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 ---
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 

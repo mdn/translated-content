@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Fullscreen_API
 original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 L'**API Fullscreen** _(plein écran)_ fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.
@@ -52,7 +53,7 @@ Dans l'autre sens, si vous essayez d'émuler le comportement de WebKit sur Gecko
 
 ### Notification
 
-Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type {{ event("fullscreenchange") }} . Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement  {{ event("fullscreenchange") }} . Notez que l'événement en lui-même {{ event("fullscreenchange") }} ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
+Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event). Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement  [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) . Notez que l'événement en lui-même [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
 
 ### Lorsqu'une demande de plein écran échoue
 
@@ -133,9 +134,7 @@ Pour le moment, tous les navigateurs n'ont pas implémenté la version sans pré
 
 ## Spécifications
 
-| Specification                        | Statut                           | Commentaire          |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

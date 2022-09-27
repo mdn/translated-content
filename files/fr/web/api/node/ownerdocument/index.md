@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet document de niveau supérieur pour ce nœud.
@@ -34,14 +35,10 @@ var html = d.documentElement;
 
 L'objet `document` renvoyé par cette propriété est l'objet principal avec lequel tous les nœuds enfants du document HTML réel sont créés. Si cette propriété est utilisée sur un nœud qui est lui-même un document, le résultat est `null`.
 
-### Spécifications
+## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}         | {{Spec2("DOM4")}}     |                      |
-| {{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM3 Core")}} | Pas de changement    |
-| {{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM2 Core")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.ownerDocument")}}
+{{Compat}}

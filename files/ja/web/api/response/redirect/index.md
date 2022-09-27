@@ -1,8 +1,8 @@
 ---
 title: Response.redirect()
 slug: Web/API/Response/redirect
-translation_of: Web/API/Response/redirect
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} インターフェイスの **`redirect()`** メソッドは、指定された URL へのレダイレクトをもたらす `Response` を返します。

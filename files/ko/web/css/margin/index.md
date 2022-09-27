@@ -119,7 +119,7 @@ margin: auto;               /* 상하: 0 */
 
 ### 수평 중앙정렬
 
-현대 브라우저에서 어떤 요소를 중앙에 배치하려면 {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`를 사용하면 됩니다.
+현대 브라우저에서 어떤 요소를 중앙에 배치하려면 {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`를 사용하면 됩니다.
 
 하지만 플렉스 박스 레이아웃을 지원하지 않는 Internet Explorer 8-9 등 오래된 브라우저를 지원해야 하면 `margin: 0 auto;`를 대신 사용하세요.
 

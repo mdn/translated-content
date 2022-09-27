@@ -3,6 +3,7 @@ title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 translation_of: Web/API/HTMLSelectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLSelectElement`** représente un élément HTML {{HTMLElement("select")}}. Cet élément partage aussi toute les propriétés et méthodes des autres elements HTML via l'interface {{ domxref("HTMLElement") }}.
@@ -104,16 +105,11 @@ Une meilleure façon de suivre les modifications apportées à la sélection de 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}             | {{Spec2('HTML WHATWG')}} | Ajoute la propriété `autocomplete` et la méthode `reportValidity()`.                                                                                                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Ajoute les propriétés `autofocus`, `form`, `required`, `labels`, `selectedOptions`, `willValidate`, `validity` et `validationMessage`. La propriété `tabindex` et les méthodes `blur()` et `focus()` ont été déplacées vers {{domxref("HTMLElement")}}. Les méthodes `item()`, `namedItem()`, `checkValidity()` et `setCustomValidity()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}         | {{Spec2('DOM2 HTML')}}     | `options` retourne désormais un {{domxref("HTMLOptionsCollection")}}. `length` retourne désormais un `unsigned long`.                                                                                                                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: StyleSheet.href
 slug: Web/API/StyleSheet/href
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - StyleSheet
-translation_of: Web/API/StyleSheet/href
 ---
+
 {{ApiRef}}
 
 ## 概要

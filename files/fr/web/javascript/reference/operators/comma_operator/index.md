@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauche vers la droite) et de renvoyer la valeur du dernier opérande.

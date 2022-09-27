@@ -1,15 +1,6 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-tags:
-  - API
-  - DOM
-  - DOMException
-  - Error
-  - Error code
-  - Exception
-  - Reference
-translation_of: Web/API/DOMException
 ---
 {{APIRef("DOM")}}
 
@@ -35,7 +26,7 @@ translation_of: Web/API/DOMException
 
 これは、一般的なエラー名の一覧です。独自にエラー名のセットを定義している API がありますので、これは必ずしも完全なリストではありません。
 
-> **Note:** **注記**: 歴史的にエラーは、エラーの値を持つように定義した名前付き変数と、それに対応する値で識別されてきたため、一部の項目では過去に使用されたレガシーコードや定数名も記載します。
+> **Note:** 歴史的にエラーは、エラーの値を持つように定義した名前付き変数と、それに対応する値で識別されてきたため、一部の項目では過去に使用されたレガシーコードや定数名も記載します。
 
 - `IndexSizeError`
   - : インデックスが許可された範囲から外れています。例えば、{{domxref("Range")}} オブジェクトで発生することがあります。(レガシーコード: `1`、レガシー定数名: `INDEX_SIZE_ERR`)

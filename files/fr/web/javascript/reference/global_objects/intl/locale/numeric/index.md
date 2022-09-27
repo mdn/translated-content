@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numeric
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.numeric`** est une propriété fournie par un accesseur et qui indique si la locale possède une collation spécifique pour les caractères numériques (la collation étant la méthode qui permet d'ordonner des chaînes de caractères entre elles).

@@ -1,14 +1,8 @@
 ---
 title: Element.scroll()
 slug: Web/API/Element/scroll
-tags:
-  - API
-  - Element
-  - メソッド
-  - Reference
-  - Scroll
-translation_of: Web/API/Element/scroll
 ---
+
 {{APIRef}}
 
 **`scroll()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素内の特定の座標の組まで要素をスクロールさせます。

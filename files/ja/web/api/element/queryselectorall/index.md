@@ -1,21 +1,9 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Element
-  - Finding Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelector
-translation_of: Web/API/Element/querySelectorAll
 original_slug: Web/API/ParentNode/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} の **`querySelectorAll()`** メソッドは、静的な (ライブではない) {{domxref("NodeList")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。

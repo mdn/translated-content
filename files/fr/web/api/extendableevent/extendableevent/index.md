@@ -10,6 +10,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 Le contructeur **`ExtendableEvent()`** crée un nouvel objet {{domxref("ExtendableEvent")}}.
@@ -29,13 +30,11 @@ var myExtendableEvent = new ExtendableEvent(type, init);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableEvent.ExtendableEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

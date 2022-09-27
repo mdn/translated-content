@@ -1,14 +1,8 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - メソッド
-translation_of: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 **`readAsText()`** メソッドは、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{event("loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。

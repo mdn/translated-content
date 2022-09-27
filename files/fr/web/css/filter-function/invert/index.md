@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/invert()
 original_slug: Web/CSS/filter-function/invert()
 browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`invert()`** permet d'inverser les couleurs de l'image. La valeur obtenue par cette fonction est de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).

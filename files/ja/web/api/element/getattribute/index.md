@@ -1,14 +1,8 @@
 ---
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の指定された属性の値を返します。

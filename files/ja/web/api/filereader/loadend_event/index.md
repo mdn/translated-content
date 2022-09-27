@@ -1,16 +1,8 @@
 ---
 title: 'FileReader: loadend イベント'
 slug: Web/API/FileReader/loadend_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressiveEvent
-  - Web
-  - loadend
-  - イベント
-translation_of: Web/API/FileReader/loadend_event
 ---
+
 {{APIRef}}
 
 `loadend` イベントは、ファイル読み込みが、成功したかどうかにかかわらず完了したときに発生します。

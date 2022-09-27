@@ -1,16 +1,6 @@
 ---
 title: '<applet>: 埋め込み Java アプレット要素'
 slug: Web/HTML/Element/applet
-tags:
-  - 要素
-  - HTML
-  - Java
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - applet
-browser-compat: html.elements.applet
-translation_of: Web/HTML/Element/applet
 ---
 
 {{HTMLRef}}{{deprecated_header}}

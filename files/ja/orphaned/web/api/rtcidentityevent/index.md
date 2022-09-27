@@ -1,9 +1,9 @@
 ---
 title: RTCIdentityEvent
 slug: orphaned/Web/API/RTCIdentityEvent
-translation_of: Web/API/RTCIdentityEvent
 original_slug: Web/API/RTCIdentityEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCIdentityEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは ID アサーションによって生成されたものです。イベントタイプは{{event("identityresult")}}です。
@@ -43,5 +43,5 @@ pc.onidentityresult = function( ev ) {
 
 ## See also
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
 - このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

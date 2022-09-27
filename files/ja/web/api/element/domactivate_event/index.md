@@ -1,20 +1,8 @@
 ---
 title: 'Element: DOMActivate イベント'
 slug: Web/API/Element/DOMActivate_event
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Mouse Events
-  - MouseEvent
-  - Reference
-  - activate event
-  - onactivate
-translation_of: Web/API/Element/DOMActivate_event
 ---
+
 {{APIRef}}
 
 {{Deprecated_Header}}

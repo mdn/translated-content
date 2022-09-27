@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
-browser-compat: api.ServiceWorkerRegistration.showNotification
-translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 `showNotification()` は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、アクティブなサービスワーカー上で通知を作成します。

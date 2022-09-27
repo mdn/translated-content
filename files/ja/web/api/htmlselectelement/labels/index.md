@@ -1,15 +1,8 @@
 ---
 title: HTMLSelectElement.labels
 slug: Web/API/HTMLSelectElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLSelectElement.labels
-translation_of: Web/API/HTMLSelectElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLSelectElement.labels`** は読み取り専用のプロパティで、{{HTMLElement("select")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。

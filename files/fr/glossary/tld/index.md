@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/TLD
 original_slug: Glossaire/TLD
 ---
+
 Un domaine de premier niveau ou TLD (_top-level domain_) est le {{Glossary("domaine")}} le plus générique de toute la hiérarchie {{Glossary("DNS")}} (système de noms de domaine) d'Internet. Un TLD est la composante finale d'un {{Glossary("nom de domaine")}}, par exemple, le "org" dans `developer.mozilla.org`.
 
 L'{{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) désigne des organisations pour gérer chaque TLD. En fonction des contraintes que peuvent imposer ces organisations d'administration, le TLD apporte souvent une indication sur le but, le propriétaire ou la nationalité d'un site web.
@@ -30,7 +31,7 @@ De nos jours, {{Glossary("IANA")}} divise les domaines de premier niveau en plus
 - infrastructure top-level domain
   - : Ce groupe consiste en un seul domaine, l'{{Glossary("ARPA", "ARPA")}} (Address and Routing Parameter Area).
 
-## Pour approfondir
+## Voir aussi
 
 ### **Culture générale**
 

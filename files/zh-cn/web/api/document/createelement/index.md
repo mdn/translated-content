@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 在 [HTML](/zh-CN/docs/Web/HTML) 文档中，**`Document.createElement()`** 方法用于创建一个由标签名称 _tagName_ 指定的 HTML 元素。如果用户代理无法识别 _tagName_，则会生成一个未知 HTML 元素 {{domxref("HTMLUnknownElement")}}。
@@ -66,7 +67,7 @@ function addElement () {
 
 ### Web component 示例
 
-以下示例片段取自我们的 expanding-list-web-component 示例 (实时查看)。 在这个案例中， 我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}.
+以下示例片段取自我们的 expanding-list-web-component 示例 (实时查看)。在这个案例中，我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}.
 
 ```js
 // 为新元素创建一个类
@@ -102,7 +103,7 @@ let expandingList = document.createElement('ul', { is : 'expanding-list' })
 - 当创建一个带限制条件的元素时，请使用{{ domxref("document.createElementNS()") }}。
 - Gecko 2.0{{ geckoRelease("2.0") }}之前，quirks 模式下 tagName 可以包含尖括号 (<和>)；从 Gecko2.0 开始，该方法在 quirks 模式和标准模式下表现一致。
 - 从 Gecko19.0{{ geckoRelease("19.0") }}开始， `createElement(null)` 和 `createElement("null")` 相同。Opera 也会将 null 字符串化，但是 Chrome 和 IE 都会抛出错误。
-- 从 Gecko22.0{{geckoRelease("22.0")}}开始，当参数为"bgsounds", "multicol", 或"image"时， `createElement()` 不再使用 {{domxref("HTMLSpanElement")}} 接口， 参数为 "bgsound" 和 "multicol" 时，使用 `HTMLUnknownElement` ，为“image”时使用{{domxref("HTMLElement")}} `HTMLElement`。
+- 从 Gecko22.0{{geckoRelease("22.0")}}开始，当参数为"bgsounds", "multicol", 或"image"时， `createElement()` 不再使用 {{domxref("HTMLSpanElement")}} 接口，参数为 "bgsound" 和 "multicol" 时，使用 `HTMLUnknownElement`，为“image”时使用{{domxref("HTMLElement")}} `HTMLElement`。
 - `createElement` 的 Gecko 实现不遵循 XUL 和 XHTML 的 DOM 说明文档：创建元素的`localName`和`namespaceURI 不会被设置为 null`. 更多细节详见 {{Bug(280692)}}。
 
 ## 规范
@@ -111,7 +112,7 @@ let expandingList = document.createElement('ul', { is : 'expanding-list' })
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createElement")}}
+{{Compat}}
 
 ## 参考
 

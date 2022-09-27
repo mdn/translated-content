@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode `allowedFeatures()` retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.
@@ -44,10 +45,8 @@ for (const directive of permissions)
 
 ## Spécifications
 
-| Spécification                                                    | Statut                               | Commentaire         |
-| ---------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.allowedFeatures")}}
+{{Compat}}

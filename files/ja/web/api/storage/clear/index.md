@@ -1,14 +1,8 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 **`clear()`** は {{domxref("Storage")}} インターフェイスのメソッドで、指定された `Storage` オブジェクトに格納されているすべてのキーを消去します。
@@ -37,7 +31,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** **注**: 実際の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **Note:** 実際の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 

@@ -16,6 +16,7 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 The **`StorageManager`** interface of the the [Storage API](/fr/docs/Web/API/Storage_API) provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.
@@ -29,12 +30,10 @@ The **`StorageManager`** interface of the the [Storage API](/fr/docs/Web/API/Sto
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

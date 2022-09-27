@@ -2,6 +2,7 @@
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}} 接口的 **`put()`** 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录
@@ -48,7 +49,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
       <td><code>ReadOnlyError</code></td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

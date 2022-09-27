@@ -1,16 +1,8 @@
 ---
 title: Gamepad.pose
 slug: Web/API/Gamepad/pose
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - pose
-translation_of: Web/API/Gamepad/pose
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("Gamepad")}} インターフェイスの **`pose`** 読み取り専用プロパティは、 WebVR controller に関連付けられた pose 情報 ( 3D 空間での位置と方向など) を表す {{domxref("GamepadPose")}} オブジェクトを返します。

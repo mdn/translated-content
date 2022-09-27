@@ -4,6 +4,7 @@ slug: Web/API/Element/compositionstart_event
 translation_of: Web/API/Element/compositionstart_event
 original_slug: Web/Events/compositionstart
 ---
+
 {{APIRef}}
 
 L'événement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.
@@ -118,13 +119,11 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       |
-| ---------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-compositionstart')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.compositionstart_event")}}
+{{Compat}}
 
 ## Voir aussi
 

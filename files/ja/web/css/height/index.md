@@ -1,18 +1,6 @@
 ---
 title: height
 slug: Web/CSS/height
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - 垂直
-  - 寸法
-  - height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.height
-translation_of: Web/CSS/height
 ---
 {{CSSRef}}
 

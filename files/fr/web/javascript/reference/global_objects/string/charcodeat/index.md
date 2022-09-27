@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/charCodeAt
 ---
+
 {{JSRef}}
 
 La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.

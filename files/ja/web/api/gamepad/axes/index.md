@@ -1,17 +1,8 @@
 ---
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/axes
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.axes`** プロパティはデバイス上に存在する軸を持つコントロールを表す配列を返します。 (例 : アナログスティック)。

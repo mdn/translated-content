@@ -1,12 +1,8 @@
 ---
 title: StyleSheet.title
 slug: Web/API/StyleSheet/title
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/StyleSheet/title
 ---
+
 {{ApiRef}}
 
 ## 概要

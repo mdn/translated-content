@@ -11,7 +11,7 @@ translation_of: Web/CSS/Specificity
 ---
 {{cssref}}
 
-**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/CSS_Reference#Selectors "CSS selectors")로 구성된 일치 규칙에 기반합니다.
+**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/CSS_Reference#Selectors)로 구성된 일치 규칙에 기반합니다.
 
 ## 어떻게 계산되는가?
 
@@ -23,11 +23,11 @@ translation_of: Web/CSS/Specificity
 
 아래 선택자는 유형별로 명시도를 증가시킵니다.
 
-1.  [유형 선택자](/ko/docs/Web/CSS/Type_selectors)(`h1` 등) 및 의사 요소(`:before` 등).
-2.  [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)(`.example` 등), 속성 선택자(`[type="radio"]` 등), 의사 클래스(`:hover` 등).
-3.  [ID 선택자](/ko/docs/Web/CSS/ID_selectors)(`#example` 등).
+1. [유형 선택자](/ko/docs/Web/CSS/Type_selectors)(`h1` 등) 및 의사 요소(`:before` 등).
+2. [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)(`.example` 등), 속성 선택자(`[type="radio"]` 등), 의사 클래스(`:hover` 등).
+3. [ID 선택자](/ko/docs/Web/CSS/ID_selectors)(`#example` 등).
 
-전역 선택자({{cssxref("Universal_selectors", "*")}}), 조합자({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/ko/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) 및 부정 의사 클래스(`:not()`)는 명시도에 영향을 주지 않습니다. (`:not()` _내부에_ 선언한 선택자는 영향을 끼칩니다)
+전역 선택자({{cssxref("Universal_selectors", "*")}}), 조합자({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/ko/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) 및 부정 의사 클래스(`:not()`)는 명시도에 영향을 주지 않습니다. (`:not()` _내부에_ 선언한 선택자는 영향을 끼칩니다)
 
 <https://specifishity.com>에서 자세한 정보를 확인할 수 있습니다.
 
@@ -35,7 +35,7 @@ translation_of: Web/CSS/Specificity
 
 ### `!important` 예외
 
-`!important` 규칙이 스타일 선언에 사용된 경우, 이 선언은 다른 선언보다 우선합니다. 엄밀히 말해 `!important` 자체는 명시도와 아무 관련이 없지만, 명시도에 직접 영향을 미칩니다. 그러나 `!important` 사용은 **나쁜 습관**이고 스타일시트 내 자연스러운 [종속](/ko/docs/Web/CSS/Cascade "cascading")을 깨뜨려 디버깅을 더 어렵게 만들기에 피해야 합니다. `!important` 규칙으로 충돌하는 두 선언이 같은 요소에 적용된 경우, 더 큰 명시도를 갖는 선언이 적용됩니다.
+`!important` 규칙이 스타일 선언에 사용된 경우, 이 선언은 다른 선언보다 우선합니다. 엄밀히 말해 `!important` 자체는 명시도와 아무 관련이 없지만, 명시도에 직접 영향을 미칩니다. 그러나 `!important` 사용은 **나쁜 습관**이고 스타일시트 내 자연스러운 [종속](/ko/docs/Web/CSS/Cascade)을 깨뜨려 디버깅을 더 어렵게 만들기에 피해야 합니다. `!important` 규칙으로 충돌하는 두 선언이 같은 요소에 적용된 경우, 더 큰 명시도를 갖는 선언이 적용됩니다.
 
 **몇몇 경험 법칙들:**
 
@@ -46,8 +46,8 @@ translation_of: Web/CSS/Specificity
 
 **`!important`를 사용하는 대신에, 다음을 고려하세요:**
 
-1.  CSS 종속cascading을 더 잘 활용하세요.
-2.  더 명시된(명확한) 규칙을 쓰세요. 선택 중인 요소 앞에 하나 이상의 요소를 나타냄으로써 규칙은 더 명확해지고 더 높은 우선 순위를 얻습니다:
+1. CSS 종속cascading을 더 잘 활용하세요.
+2. 더 명시된(명확한) 규칙을 쓰세요. 선택 중인 요소 앞에 하나 이상의 요소를 나타냄으로써 규칙은 더 명확해지고 더 높은 우선 순위를 얻습니다:
 
     ```html
     <div id="test">
@@ -63,7 +63,7 @@ translation_of: Web/CSS/Specificity
 
     순서와 무관하게 첫 번째 규칙이 가장 명확하므로 텍스트는 녹색이 됩니다. (또한, 역시 순서와 무관하게 파란색 규칙이 빨간색 규칙보다 우선합니다.)
 
-3.  (2)의 말도 안 되는 특별한 경우로, 더 이상 명시할 요소가 없는 경우 간단한 선택자를 여러 번 써서 명시도를 높일 수 있습니다.
+3. (2)의 말도 안 되는 특별한 경우로, 더 이상 명시할 요소가 없는 경우 간단한 선택자를 여러 번 써서 명시도를 높일 수 있습니다.
 
     ```css
     #myId#myId span { color: yellow; }

@@ -1,18 +1,9 @@
 ---
 title: SpeechRecognitionError
 slug: Web/API/SpeechRecognitionErrorEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechRecognitionError
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognitionError
 original_slug: Web/API/SpeechRecognitionError
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognitionError`** インターフェイスは、認識サービスからのエラーメッセージを表します。

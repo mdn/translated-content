@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/offline_event
 ---
+
 {{APIRef}}
 
 L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de {{domxref("Navigator.onLine")}} bascule à `false`.
@@ -52,14 +53,12 @@ window.onoffline = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-offline", "offline event")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Window.offline_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [`online`](/fr/docs/Web/API/Window/online_event)

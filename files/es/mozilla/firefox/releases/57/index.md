@@ -2,11 +2,12 @@
 title: Firefox Quantum 57 para programadores
 slug: Mozilla/Firefox/Releases/57
 tags:
-  - '57'
+  - "57"
   - Firefox
   - Notas de publicación
 translation_of: Mozilla/Firefox/Releases/57
 ---
+
 {{FirefoxSidebar}}
 
 Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el [14 de noviembre de 2017](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).

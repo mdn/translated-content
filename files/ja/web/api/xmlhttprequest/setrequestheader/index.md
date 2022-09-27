@@ -1,23 +1,8 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-tags:
-  - API
-  - HTTP
-  - HTTP ヘッダー
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - リクエストヘッダー
-  - XHR
-  - XHR リクエスト
-  - XMLHttpRequest
-  - ヘッダー
-  - request
-  - setRequestHeader
-browser-compat: api.XMLHttpRequest.setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`setRequestHeader()`** メソッドは、 HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は、 {{domxref("XMLHttpRequest.open", "open()")}} の呼び出しの後、 {{domxref("XMLHttpRequest.send", "send()")}} の呼び出しの前に呼び出さなければなりません。同じヘッダーについてこのメソッドを複数回呼び出された場合は、複数の値が単一のリクエストヘッダーにマージされます。

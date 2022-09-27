@@ -1,14 +1,6 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
-tags:
-  - API
-  - Interface
-  - NotificationEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/NotificationEvent
 ---
 {{APIRef("Web Notifications")}}
 
@@ -66,7 +58,7 @@ self.addEventListener('notificationclick', function(event) {
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------- |
 | {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} | Living standard. |
 
-> **Note:** **注**: このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
+> **Note:** このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
 
 ## ブラウザーの互換性
 

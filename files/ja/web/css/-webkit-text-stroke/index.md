@@ -1,15 +1,6 @@
 ---
 title: '-webkit-text-stroke'
 slug: Web/CSS/-webkit-text-stroke
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-shorthand-property
-browser-compat: css.properties.-webkit-text-stroke
-translation_of: Web/CSS/-webkit-text-stroke
 ---
 {{CSSRef}}{{Non-standard_header}}
 

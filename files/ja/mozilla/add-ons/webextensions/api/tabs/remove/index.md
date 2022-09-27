@@ -1,8 +1,8 @@
 ---
 title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
+
 {{AddonSidebar()}}
 
 １つ以上のタブを閉じます。

@@ -1,12 +1,8 @@
 ---
 title: SVGEvent
 slug: Web/API/SVGEvent
-tags:
-  - API
-  - Reference
-  - SVG
-translation_of: Web/API/SVGEvent
 ---
+
 {{APIRef("SVG")}}
 
 このセクションには、Scalable Vector Graphics (SVG) イベントリファレンスのドキュメントが含まれています。

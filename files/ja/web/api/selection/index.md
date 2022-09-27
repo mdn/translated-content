@@ -1,15 +1,8 @@
 ---
 title: Selection
 slug: Web/API/Selection
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Selection
-browser-compat: api.Selection
-translation_of: Web/API/Selection
 ---
+
 {{ ApiRef("Selection API") }}
 
 **`Selection`** オブジェクトは、ユーザーが選択したテキストの範囲、またはキャレットの現在の位置を表します。検査や操作のために `Selection` オブジェクトを取得するには、 {{DOMxRef("window.getSelection()")}} を呼び出してください。

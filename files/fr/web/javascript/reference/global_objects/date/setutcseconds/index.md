@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCSeconds()`** définit les secondes pour la date, selon UTC.

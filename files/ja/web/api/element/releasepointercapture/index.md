@@ -1,15 +1,8 @@
 ---
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-translation_of: Web/API/Element/releasePointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} インターフェイスの **`releasePointerCapture()`** メソッドは、特定の（{{domxref("PointerEvent")}}）*ポインタ*に対して以前に設定された*ポインタキャプチャ*を解放（停止）します。

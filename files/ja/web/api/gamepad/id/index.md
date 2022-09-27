@@ -1,17 +1,8 @@
 ---
 title: Gamepad.id
 slug: Web/API/Gamepad/id
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/id
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.id`** プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。

@@ -1,14 +1,6 @@
 ---
 title: PushManager.unregister()
 slug: Web/API/PushManager/unregister
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
-  - メソッド
-translation_of: Web/API/PushManager/unregister
 ---
 {{deprecated_header}}{{ ApiRef("Push API")}}
 

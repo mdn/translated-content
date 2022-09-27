@@ -1,14 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-family
-translation_of: Web/CSS/font-family
 ---
 {{CSSRef}}
 

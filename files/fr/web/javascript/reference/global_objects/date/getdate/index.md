@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDate
 ---
+
 {{JSRef}}
 
 La méthode **`getDate()`** retourne le jour du mois pour la date spécifiée d'après l'heure locale.

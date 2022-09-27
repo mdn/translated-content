@@ -1,15 +1,6 @@
 ---
 title: '<p>: 段落要素'
 slug: Web/HTML/Element/p
-tags:
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - ウェブ
-  - 要素
-translation_of: Web/HTML/Element/p
 ---
 {{HTMLRef}}
 
@@ -81,7 +72,7 @@ translation_of: Web/HTML/Element/p
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global_attributes")があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
 > **Note:** **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 

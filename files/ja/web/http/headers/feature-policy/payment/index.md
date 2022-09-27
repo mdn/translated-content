@@ -1,17 +1,6 @@
 ---
 title: 'Feature-Policy: payment'
 slug: Web/HTTP/Headers/Feature-Policy/payment
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - Payment Request API
-  - Payments API
-  - リファレンス
-  - 実験的
-browser-compat: http.headers.Feature-Policy.payment
-translation_of: Web/HTTP/Headers/Feature-Policy/payment
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Mozilla/Firefox/Versions/3.5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
@@ -217,6 +218,6 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 - Rendu plus rapide des pages
   - : Le contenu web est affiché plus rapidement dans Firefox 3.5, grâce à des technologies telles que l'« analyse spéculative ». Vos utilisateurs n'ont pas besoin de savoir de quoi il s'agit, simplement que ça rend les choses plus rapides.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('3')}}

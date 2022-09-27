@@ -1,19 +1,9 @@
 ---
 title: SpeechRecognition.onaudioend
 slug: Web/API/SpeechRecognition/audioend_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onaudioend
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onaudioend
 original_slug: Web/API/SpeechRecognition/onaudioend
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onaudioend`** プロパティは、ユーザーエージェントが音声を取り込んだ後 ({{event("audioend")}}イベントが発生した時) に、実行するイベントハンドラーになります。

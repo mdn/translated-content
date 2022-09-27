@@ -1,14 +1,8 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/error
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`error`** プロパティは、ファイルの読み取り中に発生したエラーを返します。

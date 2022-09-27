@@ -1,8 +1,8 @@
 ---
 title: FileReaderSync.readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
-translation_of: Web/API/FileReaderSync/readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 `readAsArrayBuffer()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に {{jsxref("ArrayBuffer")}} に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。

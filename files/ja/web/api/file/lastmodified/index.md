@@ -1,15 +1,8 @@
 ---
 title: File.lastModified
 slug: Web/API/File/lastModified
-tags:
-  - API
-  - File API
-  - ファイル
-  - プロパティ
-  - リファレンス
-browser-compat: api.File.lastModified
-translation_of: Web/API/File/lastModified
 ---
+
 {{APIRef("File")}}
 
 **`File.lastModified`** は読み取り専用プロパティで、ファイルの最終更新日時を UNIX 元期 (1970 年 1 月 1 日の深夜 0 時) からのミリ秒数で返します。最終更新日時が分からないファイルは、現在の日時を返します。

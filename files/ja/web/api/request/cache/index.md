@@ -1,16 +1,8 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - requesut
-translation_of: Web/API/Request/cache
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} インターフェースの **`cache`** 読み取り専用プロパティには、リクエストのキャッシュモードが含まれています。リクエストがブラウザの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching) とどのように相互作用するかを制御します。

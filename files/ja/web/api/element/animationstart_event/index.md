@@ -1,19 +1,9 @@
 ---
 title: 'Document: animationstart イベント'
 slug: Web/API/Element/animationstart_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationstart
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/animationstart_event
 original_slug: Web/API/Document/animationstart_event
 ---
+
 {{APIRef}}
 
 **`animationstart`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が開始したときに発生します。 {{cssxref("animation-delay")}} がある場合、このイベントは待ち時間が経過したときに一度発生します。待ち時間が負の数の場合、イベントは {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} が待ち時間の絶対値と等しくなったときに発生します (および、関連して、アニメーションはシーケンスの中でそのタイムインデックスに再生が始まります)。

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/mode
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie le mode d'accès aux données des magasins d'objet pendant la transaction (autrement dit, s'agit-il d'une transaction en lecture seule ou d'un accès en écriture ?). La valeur par défaut est `readonly`.
@@ -87,15 +88,13 @@ function addData() {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-mode', 'mode')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.mode")}}
+{{Compat}}
 
 ## Voir aussi
 

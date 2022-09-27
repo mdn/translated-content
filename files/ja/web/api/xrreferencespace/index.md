@@ -1,28 +1,8 @@
 ---
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
-page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Distances
-  - Interface
-  - Mixed Reality
-  - Offsets
-  - Reference
-  - Spaces
-  - VR
-  - Virtual Reality
-  - WebXR API
-  - WebXR Device API
-  - WebXR\
-  - XR
-  - XRReferenceSpace
-  - matrix
-  - transform
-translation_of: Web/API/XRReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 WebXR 機器 API の **`XRReferenceSpace`** インターフェイスは、指定された追跡の振る舞いを使用して、仮想世界内の特定の追跡対象のエンティティまたはオブジェクトの座標系を記述します。</span> 追跡の振る舞いは、選択した[参照空間型](#参照空間型)によって定義されます。 いくつかの異なる追跡の振る舞いのサポートを追加し、追跡対象オブジェクトと世界の別の場所との間のオフセット変換を記述する新しい参照空間を要求することにより、基本クラス {{domxref("XRSpace")}} を拡張します。

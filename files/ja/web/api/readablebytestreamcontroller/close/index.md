@@ -1,21 +1,13 @@
 ---
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - close
-translation_of: Web/API/ReadableByteStreamController/close
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。
 
-> **Note:** **注**: リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。
+> **Note:** リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。
 
 ## 構文
 

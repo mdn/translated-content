@@ -2,6 +2,7 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `MediaStreamAudioSourceNode` 接口代表一个音频接口，是[WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxref("AudioNode")}}。
@@ -44,7 +45,7 @@ _从 {{domxref("AudioNode")}} 上继承。_
 
 ## 示例
 
-{{page("/zh-CN/docs/Web/API/AudioContext/createMediaStreamSource","示例")}}
+参见 [`AudioContext.createMediaStreamSource()`](/zh-CN/docs/Web/API/AudioContext/createMediaStreamSource#示例) 以获取有关该对象用法的示例代码。
 
 ## 规范
 
@@ -52,8 +53,8 @@ _从 {{domxref("AudioNode")}} 上继承。_
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamAudioSourceNode")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

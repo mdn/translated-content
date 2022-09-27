@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
-tags:
-  - API
-  - Clients
-  - Property
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`clients`** 読み取り専用プロパティは、service worker に関連する [`Clients`](/ja/docs/Web/API/Clients) オブジェクトを返します。

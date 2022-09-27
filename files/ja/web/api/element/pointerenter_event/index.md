@@ -1,17 +1,9 @@
 ---
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointerenter`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。

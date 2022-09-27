@@ -1,23 +1,15 @@
 ---
 title: 書き込み可能なストリームの使用
 slug: Web/API/Streams_API/Using_writable_streams
-tags:
-  - API
-  - Controller
-  - Guide
-  - Streams
-  - WritableStream
-  - writable streams
-  - writer
-translation_of: Web/API/Streams_API/Using_writable_streams
 ---
+
 {{apiref("Streams")}}
 
 JavaScript 開発者として、プログラムでストリームにデータを書き込むことは非常に便利です！ この記事では、[Streams API](/ja/docs/Web/API/Streams_API) の書き込み可能なストリームの機能について説明します。
 
-> **Note:** **注**: この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず [Streams の概念と使用方法の概要](/ja/docs/Web/API/Streams_API#Concepts_and_usage)と専用の [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
+> **Note:** この記事は、書き込み可能なストリームのユースケースを理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず [Streams の概念と使用方法の概要](/ja/docs/Web/API/Streams_API#Concepts_and_usage)と専用の [Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
 
-> **Note:** **注**: 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリーム](/ja/docs/Web/API/Streams_API/Using_readable_streams)の使用を試してください。
+> **Note:** 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリーム](/ja/docs/Web/API/Streams_API/Using_readable_streams)の使用を試してください。
 
 ## ブラウザーのサポート
 
@@ -61,10 +53,10 @@ const stream = new WritableStream({
 
 次のように最初のオブジェクトには最大 4 つのメンバーを含めることができますが、それらはすべてオプションです。
 
-1.  `start(controller)` — {{domxref("WritableStream")}} が構築された直後に 1 回だけ呼び出されるメソッド。 このメソッド内には、ストリーム機能を設定するコードを含める必要があります。 例えば、基になるシンクへのアクセスを取得します。
-2.  `write(chunk,controller)` — 新しいチャンク（`chunk` パラメーターで指定）を基になるシンクに書き込む準備ができるたびに繰り返し呼び出されるメソッド。
-3.  `close(controller)` — ストリームへのチャンクの書き込みが完了したことをアプリが通知した場合に呼び出されるメソッド。 基になるシンクへの書き込みを完了し、アクセスを解放するために必要なことは何でも行う必要があります。
-4.  `abort(reason)` — ストリームを突然閉じてエラー状態にしたいとアプリが通知した場合に呼び出されるメソッド。
+1. `start(controller)` — {{domxref("WritableStream")}} が構築された直後に 1 回だけ呼び出されるメソッド。 このメソッド内には、ストリーム機能を設定するコードを含める必要があります。 例えば、基になるシンクへのアクセスを取得します。
+2. `write(chunk,controller)` — 新しいチャンク（`chunk` パラメーターで指定）を基になるシンクに書き込む準備ができるたびに繰り返し呼び出されるメソッド。
+3. `close(controller)` — ストリームへのチャンクの書き込みが完了したことをアプリが通知した場合に呼び出されるメソッド。 基になるシンクへの書き込みを完了し、アクセスを解放するために必要なことは何でも行う必要があります。
+4. `abort(reason)` — ストリームを突然閉じてエラー状態にしたいとアプリが通知した場合に呼び出されるメソッド。
 
 この例のコンストラクター呼び出しは次のようになります。
 

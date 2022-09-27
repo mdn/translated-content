@@ -1,11 +1,6 @@
 ---
 title: Math (math)
 slug: Web/EXSLT/math
-tags:
-  - EXSLT
-  - 概要
-  - リファレンス
-translation_of: Web/EXSLT/math
 ---
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} dont le résultat sera un curseur ({{domxref("IDBCursor")}}) qui pourra être utilisé afin de parcourir les enregistrements correspondants. Cette méthode est utilisée afin de parcourir les clés d'un magasin d'objets grâce à un curseur.
@@ -64,13 +65,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

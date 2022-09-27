@@ -1,15 +1,8 @@
 ---
 title: 'ServiceWorkerGlobalScope: activate イベント'
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
-tags:
-  - API
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - activate
-  - events
-translation_of: Web/API/ServiceWorkerGlobalScope/activate_event
 ---
+
 {{DefaultAPISidebar("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`activate`** イベントは、{{domxref("ServiceWorkerRegistration")}} が新しいアクティブワーカー（{{domxref("ServiceWorkerRegistration.active")}} worker）を取得すると発生します。

@@ -2,6 +2,7 @@
 title: PeriodicWave
 slug: Web/API/PeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`PeriodicWave`** 接口定义了一个可用于对 {{domxref("OscillatorNode")}}(振荡节点) 的输出进行构造（描述）的周期性波形。
@@ -23,7 +24,7 @@ _None; 而且，`PeriodicWave` 继承任何属性。_
 
 ## 例子
 
-{{page("/zh-CN/docs/Web/API/BaseAudioContext/createPeriodicWave","例子")}}
+参见 {{domxref("BaseAudioContext.createPeriodicWave")}} 以获取简单的示例代码，其展示了如何创建一个包含简单的正弦波的 `PeriodicWave` 对象。
 
 ## 规格
 
@@ -31,8 +32,8 @@ _None; 而且，`PeriodicWave` 继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.PeriodicWave")}}
+{{Compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

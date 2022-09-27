@@ -2,6 +2,7 @@
 title: Age
 slug: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** 標頭代表資源進到代理快取後，經過了幾秒。
@@ -36,7 +37,7 @@ Age: 24
 
 ## Browser compatibility
 
-{{Compat("http.headers.Age")}}
+{{Compat}}
 
 ## See also
 

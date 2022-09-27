@@ -1,31 +1,27 @@
 ---
 title: API リファレンスには何が必要ですか？
 slug: orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
-tags:
-  - API
-  - ページ
-  - リファレンス
-translation_of: MDN/Structures/API_references/What_does_an_API_reference_need
 original_slug: MDN/Structures/API_references/What_does_an_API_reference_need
 ---
+
 {{MDNSidebar}}
 
 この記事では、完全な API リファレンスに必要なページについて説明します。
 
-> **Note:** **メモ**: API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
+> **Note:**  API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
 
 ## API ページの概要
 
 An API reference will generally contain the following pages. You can find more details of what each page contains, examples, and templates, in our [Page types](/ja/docs/MDN/Contribute/Structures/Page_types) article.
 
-1.  Overview page
-2.  Interface pages
-3.  Constructor pages
-4.  Method pages
-5.  Property pages (including event handlers properties)
-6.  Event pages
-7.  Concept/guide pages
-8.  Examples
+1. Overview page
+2. Interface pages
+3. Constructor pages
+4. Method pages
+5. Property pages (including event handlers properties)
+6. Event pages
+7. Concept/guide pages
+8. Examples
 
 > **Note:** We'll be referring to the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) for examples in this article.
 

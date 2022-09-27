@@ -1,12 +1,6 @@
 ---
 title: PointerEvent.PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
-tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
-translation_of: Web/API/PointerEvent/PointerEvent
 ---
 {{APIRef("Pointer Events")}}
 
@@ -37,7 +31,7 @@ translation_of: Web/API/PointerEvent/PointerEvent
     - `pointerType` — インスタンスの {{domxref("PointerEvent.pointerType")}} の値を設定する {{domxref("DOMString")}} 型のオプションで、デフォルトは `""` です。
     - `isPrimary` — インスタンスの {{domxref("PointerEvent.isPrimary")}} の値を設定する {{jsxref("Boolean")}} 型のオプションで、デフォルトは `false` です。
 
-    > **Note:** **注**: `PointerEventInit` ディクショナリは、{{domxref("MouseEvent.MouseEvent","MouseEvent")}}、{{domxref("UIEvent.UIEvent", "UIEventInit")}}、および {{domxref("Event.Event", "EventInit")}} ディクショナリからのフィールドも受け入れます。
+    > **Note:** `PointerEventInit` ディクショナリは、{{domxref("MouseEvent.MouseEvent","MouseEvent")}}、{{domxref("UIEvent.UIEvent", "UIEventInit")}}、および {{domxref("Event.Event", "EventInit")}} ディクショナリからのフィールドも受け入れます。
 
 ## 例
 

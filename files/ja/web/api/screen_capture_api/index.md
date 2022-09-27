@@ -1,18 +1,8 @@
 ---
 title: 画面キャプチャ API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - 概要
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - 画面共有
-  - getDisplayMedia
-translation_of: Web/API/Screen_Capture_API
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 画面キャプチャ API (Screen Capture API) は、既存のメディアキャプチャおよびストリーム API に追加して、ユーザーが画面または画面の一部（ウィンドウなど）を選択してメディアストリームとしてキャプチャできるようにしたものです。このストリームは、ネットワーク上で録画したり、他の人と共有したりすることができます。

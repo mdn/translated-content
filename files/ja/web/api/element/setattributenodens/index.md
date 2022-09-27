@@ -1,12 +1,8 @@
 ---
 title: element.setAttributeNodeNS
 slug: Web/API/Element/setAttributeNodeNS
-tags:
-  - DOM
-  - Gecko
-  - 翻訳中
-translation_of: Web/API/Element/setAttributeNodeNS
 ---
+
 \<breadcrumbs>\</breadcrumbs>{{ ApiRef("DOM") }}== Summary ==
 
 ### 概要

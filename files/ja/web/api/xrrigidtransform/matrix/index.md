@@ -1,25 +1,8 @@
 ---
 title: XRRigidTransform.matrix
 slug: Web/API/XRRigidTransform/matrix
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - matrix
-  - transform
-translation_of: Web/API/XRRigidTransform/matrix
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRRigidTransform")}} の **`matrix`** 読み取り専用プロパティは、オブジェクトによって表される変換行列を返します。 そして、返された行列に列ベクトルを前乗算して、{{domxref("XRRigidTransform.orientation", "orientation")}} で指定された 3D 回転でベクトルを回転させ、{{domxref("XRRigidTransform.position", "position")}} で平行移動させることができます。

@@ -1,23 +1,8 @@
 ---
 title: 'Element: error イベント'
 slug: Web/API/Element/error_event
-tags:
-  - Audio
-  - DOM
-  - Error Handling
-  - Errors
-  - Event
-  - Media
-  - Reference
-  - UI
-  - UI Events
-  - UIEvent
-  - Video
-  - Web
-  - events
-  - イベント
-translation_of: Web/API/Element/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に {{domxref("Element")}} オブジェクトに発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。

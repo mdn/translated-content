@@ -1,19 +1,8 @@
 ---
 title: SourceBuffer.buffered
 slug: Web/API/SourceBuffer/buffered
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - buffered
-translation_of: Web/API/SourceBuffer/buffered
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`buffered`** 読み取り専用プロパティは、`SourceBuffer` に現在バッファされている時間範囲を正規化された {{domxref("TimeRanges")}} オブジェクトとして返します。

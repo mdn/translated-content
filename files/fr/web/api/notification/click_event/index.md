@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Notification/onclick
 original_slug: Web/API/notification/onclick
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété **`onclick`**, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement {{event("click")}} (qui se produit lorsqu'un utilisateur clique sur la notification).
@@ -36,13 +37,11 @@ notification.onclick = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName('Web Notifications','#dom-notification-onclick','onclick')}} | {{Spec2('Web Notifications')}} | Standard évolutif |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclick")}}
+{{Compat}}
 
 ## Voir aussi
 

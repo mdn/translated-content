@@ -3,6 +3,7 @@ title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 translation_of: Web/API/FileReader/readAsBinaryString
 ---
+
 {{APIRef("File API")}}
 
 La méthode `readAsArrayBuffer()` de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (_fichier_). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur `"DONE"` (_terminé_), et l'événement {{event("loadend")}} est levé.
@@ -54,14 +55,12 @@ canvas.toBlob(function (blob) {
 
 ## Spécifications
 
-| Specification                                                                            | Status                       | Comment |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsBinaryString")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("FileReader")}}

@@ -2,12 +2,13 @@
 title: Firefox 66 para desarrolladores
 slug: Mozilla/Firefox/Releases/66
 tags:
-  - '66'
+  - "66"
   - Firefox
   - Lanzamiento
   - Mozilla
 translation_of: Mozilla/Firefox/Releases/66
 ---
+
 {{FirefoxSidebar}}
 
 Este artículo proporciona información sobre los cambios en Firefox 66 que afectarán a los desarrolladores. Firefox 66 fue lanzado el 19 de marzo de 2019.
@@ -16,13 +17,13 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 
 ### Herramientas de desarrollo
 
-- Los captadores de JavaScript ahora pueden ejecutarse desde la ventana emergente de autocompletado en la [Consola Web](/es/docs/Tools/Web_Console) ({{bug(1499289)}}).
-- Los métodos de la ventana {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} ahora trabajan de nuevo en el [Modo de diseño de respuesta](/es/docs/Tools/Responsive_Design_Mode), después de un período de ruptura ({{bug(1273997)}}).
+- Los captadores de JavaScript ahora pueden ejecutarse desde la ventana emergente de autocompletado en la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/) ({{bug(1499289)}}).
+- Los métodos de la ventana {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} ahora trabajan de nuevo en el [Modo de diseño de respuesta](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/), después de un período de ruptura ({{bug(1273997)}}).
 - Puede copiar la salida de la consola al portapapeles haciendo clic derecho y seleccionando "**Exportar mensajes visibles al portapapeles**" en el menú contextual.
 
 ### HTML
 
-- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:`URL ahora son compatibles sin `<meta charset="utf-8"> `la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
+- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:`URL ahora son compatibles sin `<meta charset="utf-8">` la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
 
 #### Removido
 
@@ -122,7 +123,7 @@ _Sin cambios._
 
   <kbd>Ctrl</kbd>
 
-  \+
+  &#x20;\+&#x20;
 
   <kbd>B</kbd>
 
@@ -130,11 +131,11 @@ _Sin cambios._
 
   <kbd>Ctrl</kbd>
 
-  \+
+  &#x20;\+&#x20;
 
   <kbd>Shift</kbd>
 
-  \+
+  &#x20;\+&#x20;
 
   <kbd>B</kbd>
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 La méthode **`Geolocation.watchPosition()`** permet de manipuler une fonction appelée automatiquement à chaque fois que la position de l'appareil change. Vous pouvez de même, en option, manipuler une autre fonction appelée automatiquement pour gérer les erreurs.
@@ -67,13 +68,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Specification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

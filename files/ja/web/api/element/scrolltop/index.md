@@ -1,15 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsArtUpdate
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollTop`** プロパティは、要素の内容が垂直にスクロールするピクセル数を取得または設定します。

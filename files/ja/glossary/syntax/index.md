@@ -1,11 +1,6 @@
 ---
 title: Syntax (構文)
 slug: Glossary/Syntax
-tags:
-  - CodingScripting
-  - Glossary
-  - Syntax
-translation_of: Glossary/Syntax
 ---
 構文は、正しく構造化されたコードを構成する{{Glossary("character","文字")}}の必要な組み合わせと順序を指定します。構文は一般に、文法とそれを書く上で適用される規則、例えば Python にはインデントの要件などを含みます。
 

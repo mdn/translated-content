@@ -1,18 +1,8 @@
 ---
 title: SpeechRecognition.grammars
 slug: Web/API/SpeechRecognition/grammars
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - grammars
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/grammars
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`grammars`** プロバティは現在の `SpeechRecognition` が理解できる文法を表す {{domxref("SpeechGrammar")}} オブジェクトの集合を返すことになります。

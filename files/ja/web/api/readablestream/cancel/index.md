@@ -1,15 +1,8 @@
 ---
 title: ReadableStream.cancel()
 slug: Web/API/ReadableStream/cancel
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - cancel
-translation_of: Web/API/ReadableStream/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`cancel()`** メソッドは、関連付けられたストリームをキャンセルします。 提供された `reason` パラメーターは、基になるソースに与えられ、使用する場合と使用しない場合があります。

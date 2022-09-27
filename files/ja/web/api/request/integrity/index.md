@@ -1,16 +1,8 @@
 ---
 title: Request.integrity
 slug: Web/API/Request/integrity
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - integrity
-  - request
-translation_of: Web/API/Request/integrity
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} インターフェイスの **`integrity`** 読み取り専用プロパティには、リクエストの [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) 値が含まれています。

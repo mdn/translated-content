@@ -1,17 +1,8 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{APIRef("Service Workers API")}}
 
 [Service Worker API](/ja/docs/Web/API/Service_Worker_API) の `ServiceWorkerContainer` インターフェイスは、ネットワークエコシステムの全体的な単位として、サービスワーカーを表すオブジェクトを提供します。 サービスワーカーは、サービスワーカーの登録、登録解除、更新のための機能や、サービスワーカーの状態とそれらの登録状況にアクセスするための機能を備えています。

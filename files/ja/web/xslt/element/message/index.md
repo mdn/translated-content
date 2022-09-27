@@ -1,12 +1,6 @@
 ---
 title: <xsl:message>
 slug: Web/XSLT/Element/message
-tags:
-  - XSLT
-  - message
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/message
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/message
 
 ```
 <xsl:message terminate="yes" | "no" >
-	TEMPLATE
+  TEMPLATE
 </xsl:message>
 ```
 

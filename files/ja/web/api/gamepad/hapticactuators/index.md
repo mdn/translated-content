@@ -1,16 +1,8 @@
 ---
 title: Gamepad.hapticActuators
 slug: Web/API/Gamepad/hapticActuators
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hapticActuators
-translation_of: Web/API/Gamepad/hapticActuators
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("Gamepad")}} インターフェイスの **`hapticActuators`** 読み取り専用プロパティは、 {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列を返します。各オブジェクトは、コントローラーで利用可能な触覚フィードバックハードウェアを表します。

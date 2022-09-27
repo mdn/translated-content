@@ -1,12 +1,8 @@
 ---
 title: collapseToStart
 slug: Web/API/Selection/collapseToStart
-tags:
-  - DOM
-  - Gecko DOM Reference
-  - Selection
-translation_of: Web/API/Selection/collapseToStart
 ---
+
 {{ApiRef}}
 
 ## 概要

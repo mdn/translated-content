@@ -1,15 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - 属性
-  - グローバル属性
-  - HTML
-  - HTML マイクロデータ
-  - マイクロデータ
-  - リファレンス
-  - itemid
-translation_of: Web/HTML/Global_attributes/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}

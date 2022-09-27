@@ -1,12 +1,8 @@
 ---
 title: イベントターゲットの比較
 slug: Web/API/Event/Comparison_of_Event_Targets
-page-type: guide
-tags:
-  - DOM
-  - Gecko
-  - Guide
 ---
+
 {{ ApiRef() }}
 
 イベントハンドラーを書くときに、どのイベントターゲットを調べればいいのか迷うことはよくあります。この記事では、ターゲットプロパティの使い方を明確にします。

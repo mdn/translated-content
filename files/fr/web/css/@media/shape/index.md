@@ -9,6 +9,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@media/shape
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 La caractéristique média **`shape`** peut être utilisée afin de tester la forme d'un appareil pour distinguer les affichages rectangulaires des affichages ronds.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Descendant_combinator
 original_slug: Web/CSS/Sélecteurs_descendant
 ---
+
 {{CSSRef("Selectors")}}
 
 Le **combinateur de descendance**, représenté par un blanc (ou plusieurs blancs à la suite) permet de combiner deux sélecteurs  (sous la forme `sélecteur₁ sélecteur₂`) afin de cibler les éléments qui correspondent au second sélecteur uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur. Les sélecteurs qui utilisent ce combinateur sont souvent appelés des sélecteurs de descendants.

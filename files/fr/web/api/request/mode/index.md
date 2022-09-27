@@ -3,6 +3,7 @@ title: Request.mode
 slug: Web/API/Request/mode
 translation_of: Web/API/Request/mode
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 La propriété **`mode`** (en lecture seule) de l’interface {{domxref("Request")}} contient le mode de la requête (e.g., `cors`, `no-cors`, `cors-with-forced-preflight`, `same-origin`, or `navigate`.) Ceci est utilisé pour déterminer si les requêtes différentes de l’origine (cross-origin) mèneront à des réponses valides, et quelles propriétés de la réponse seront lisibles:
@@ -33,13 +34,11 @@ var myMode = myRequest.mode; // returns "cors" by default
 
 ## Spécifications
 
-| Spécification                                                    | État                     | Commentaires        |
-| ---------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#dom-request-mode', 'mode')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request.mode")}}
+{{Compat}}
 
 ## Voir aussi
 

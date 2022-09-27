@@ -1,16 +1,8 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-tags:
-  - API
-  - File API
-  - FileReader
-  - Reference
-  - result
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/result
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`result`** プロパティは、ファイルの内容を返します。このプロパティは、読み取り操作が完了した後でのみ有効で、データの形式は、読み取り操作を開始するために使用されたメソッドによって異なります。

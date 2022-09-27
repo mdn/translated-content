@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/indexNames
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`indexNames`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie la liste des noms des index pour les objets du magasin d'objets courant.
@@ -84,13 +85,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-indexNames', 'indexNames')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.indexNames")}}
+{{Compat}}
 
 ## Voir aussi
 

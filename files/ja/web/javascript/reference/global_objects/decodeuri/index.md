@@ -1,18 +1,8 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-tags:
-  - Decode
-  - JavaScript
-  - Method
-  - String
-  - Text
-  - URI
-  - URL
-  - decodeURI
-  - decoding
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 **`decodeURI()`** 関数は、{{jsxref("encodeURI", "encodeURI()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) をデコードします。

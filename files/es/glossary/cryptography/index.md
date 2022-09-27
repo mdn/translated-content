@@ -17,4 +17,4 @@ Criptografía, o criptología, es la ciencia que estudia como codificar y transm
 
 - {{Interwiki("wikipedia", "Criptografía")}} en Wikipedia
 - {{glossary("Cryptanalysis")}}
-- [T](https://developer.mozilla.org/en-US/Learn/tutorial/Information_Security_Basics)[utorial de seguridad de la información](/en-US/docs/Web/Security/Information_Security_Basics)
+- [Tutorial de seguridad de la información](/en-US/docs/Web/Security/Information_Security_Basics)

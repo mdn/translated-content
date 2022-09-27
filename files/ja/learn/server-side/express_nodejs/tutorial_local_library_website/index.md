@@ -1,20 +1,6 @@
 ---
 title: 'Express チュートリアル: 地域図書館の Web サイト'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - Tutorial
-  - nodejs
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 

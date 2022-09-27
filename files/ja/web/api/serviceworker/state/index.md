@@ -1,16 +1,8 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-tags:
-  - API
-  - Property
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorker
-  - state
-translation_of: Web/API/ServiceWorker/state
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 `ServiceWorker` インターフェイスの読み込みプロパティである **`state`** は service worker の現在の状態を表す文字列を返します。それは次のいずれかです: `installing`, `installed,` `activating`, `activated`, `redundant`。

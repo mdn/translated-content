@@ -1,15 +1,8 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-tags:
-  - API
-  - Property
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - port
-translation_of: Web/API/SharedWorker/port
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("SharedWorker")}} インターフェースの **`port`** プロパティは、shared worker を制御したり通信したりするために使用する {{domxref("MessagePort")}} オブジェクトを返します。

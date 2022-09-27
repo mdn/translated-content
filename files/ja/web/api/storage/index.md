@@ -1,15 +1,8 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - Reference
-  - Storage
-  - Web Storage
-  - data
-translation_of: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 Web Storage API の `Storage` インターフェイスは、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。
@@ -68,7 +61,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** **注意**: 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **Note:** 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
 ## 仕様
 

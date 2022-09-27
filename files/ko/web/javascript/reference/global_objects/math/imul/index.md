@@ -28,7 +28,7 @@ browser-compat: javascript.builtins.Math.imul
 
 ## 설명
 
-`Math.imul()` 를 쓰면 C 언어와 같은 양식의 빠른 32-bit 정수 곱셈이 가능합니다. 이 기능은 [Emscripten](http://en.wikipedia.org/wiki/Emscripten) 같은 프로젝트에 유용합니다. `imul()` 이 `Math `객체의 정적 메소드이기 때문에, `Math 객체를 직접 만들어서 사용하지 않고 (Math 는 생성자가 아닙니다), Math.imul()` 같은 형태로 사용합니다.
+`Math.imul()` 를 쓰면 C 언어와 같은 양식의 빠른 32-bit 정수 곱셈이 가능합니다. 이 기능은 [Emscripten](http://en.wikipedia.org/wiki/Emscripten) 같은 프로젝트에 유용합니다. `imul()` 이 `Math` 객체의 정적 메소드이기 때문에, `Math 객체를 직접 만들어서 사용하지 않고 (Math 는 생성자가 아닙니다), Math.imul()` 같은 형태로 사용합니다.
 
 ## 예제
 

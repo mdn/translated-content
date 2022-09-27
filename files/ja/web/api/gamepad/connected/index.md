@@ -1,17 +1,8 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.connected`** プロパティはゲームパッドがシステムに接続しているかどうかを示す真偽値を返します。

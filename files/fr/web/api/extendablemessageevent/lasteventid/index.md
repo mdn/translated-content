@@ -11,6 +11,7 @@ tags:
   - lastEventID
 translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/fr/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
@@ -50,13 +51,11 @@ self.onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-lasteventid-attribute', 'ExtendableMessageEvent.lastEventId')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.lastEventId")}}
+{{Compat}}
 
 ## Voir aussi
 

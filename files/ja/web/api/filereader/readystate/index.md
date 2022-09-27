@@ -1,14 +1,8 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/readyState
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`readyState`** プロパティは、 `FileReader` がいる読み取り操作の現在の状態を提供します。 `FileReader` は以下のいずれかの状態にあります。

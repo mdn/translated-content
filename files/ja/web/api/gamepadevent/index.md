@@ -1,14 +1,8 @@
 ---
 title: GamepadEvent
 slug: Web/API/GamepadEvent
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
-translation_of: Web/API/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 Gamepad API の GamepadEvent インターフェイスは、システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント {{domxref("Window.gamepadconnected")}} と {{domxref("Window.gamepaddisconnected")}} が応答して発生するものです。

@@ -9,6 +9,7 @@ tags:
   - Resource Timing API
 translation_of: Web/API/PerformanceServerTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 
 L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing) dans l'en-tête HTTP.
@@ -68,13 +69,11 @@ console.log(entries[0].serverTiming);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#the-performanceservertiming-interface', 'PerformanceServerTiming')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

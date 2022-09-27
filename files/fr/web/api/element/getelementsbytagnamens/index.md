@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("HTMLCollection")}} avec le nom de balise donné appartenant à l'espace de noms donné. Elle est semblable à la méthode {{Domxref("Document.getElementsByTagNameNS")}} mais cette dernière recherche sur l'ensemble du document tandis que `getElementsByTagNameNS()` recherche parmi les descendants de l'élément courant.
@@ -46,12 +47,8 @@ for (var i = 0; i < cells.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbytagnamens', 'Element.getElementsByTagNameNS()')}} | {{Spec2('DOM WHATWG')}} | Modification du type de la valeur de retour : passage de {{domxref("NodeList")}} à {{domxref("HTMLCollection")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM3 Core')}}     | Aucune modification depuis {{SpecName('DOM2 Core')}}.                                                                          |
-| {{SpecName('DOM2 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM2 Core')}}     | Définition initiale.                                                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getElementsByTagNameNS")}}
+{{Compat}}

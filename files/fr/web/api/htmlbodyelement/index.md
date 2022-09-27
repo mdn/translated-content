@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
@@ -42,7 +43,7 @@ _Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hé
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("beforeprint")}} est déclenché.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("beforeunload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
@@ -64,21 +65,15 @@ _Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hé
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("storage")}} est déclenché.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("unload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "sections.html#the-body-element", "HTMLBodyElement")}} | {{Spec2('HTML WHATWG')}} | Techniquement, les propriétés liées à l'événement, `onafterprint`, `onbeforeprint`, `onbeforeunload`, `onblur`, `onerror`, `onfocus`, `onhashchange`, `onlanguagechange`, `onload`, `onmessage`, `onoffline`, `ononline`, `onpopstate`, `onresize`, `onstorage` et `onunload`, ont été passées à {{domxref("WindowEventHandlers")}}, et `HTMLBodyElement` implémentant cette interface. |
-| {{SpecName('HTML5.1', "sections.html#the-body-element", "HTMLBodyElement")}}         | {{Spec2('HTML5.1')}}     |                                                                                                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('HTML5 W3C', "sections.html#the-body-element", "HTMLBodyElement")}}     | {{Spec2('HTML5 W3C')}}     | Les propriétés suivantes sont désormais obsolètes: `aLink`, `bgColor`, `background`, `link`, `text` Les propriétés suivantes ont été ajoutées:. `vLink`, `onafterprint`, `onbeforeprint`, `onbeforeunload`, `onblur`, `onerror`, `onfocus`, `onhashchange`, `onload`, `onmessage`, `onoffline`, `ononline`, `onpopstate`, `onresize`, et `onstorage`.                                             |
-| {{SpecName('DOM2 HTML', 'html.html#ID-62018039', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Ne change pas de {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('DOM1', 'level-one-html.html#ID-62018039', 'HTMLBodyElement')}}         | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLBodyElement")}}
+{{Compat}}
 
 ## Voir aussi
 

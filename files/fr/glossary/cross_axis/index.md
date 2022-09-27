@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Cross_Axis
 original_slug: Glossaire/Axe_transversal
 ---
+
 L'axe transversal d'une {{glossary("flexbox")}} traverse l'{{glossary("Main Axis","axe principal")}}, donc si la {{glossary("flex-direction")}} et l'axe principal sont `row` (_ligne_) ou `row-reverse` l'axe transversal est en colonne.
 
 ![The cross axis runs down the column](basics3.png)
@@ -18,7 +19,7 @@ Si l'axe principal est `column` ou `column-reverse`, l'axe transversal est donc 
 
 L'alignement des articles sur l'axe transversal est réalisé avec la propriété `align-items` sur le conteneur flexible ou la propriété `align-self` sur les éléments individuels. Dans le cas d'un conteneur flexible multi-lignes, avec un espace supplémentaire sur l'axe transversal, vous pouvez utiliser `align-content` pour contrôler l'espacement des lignes.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

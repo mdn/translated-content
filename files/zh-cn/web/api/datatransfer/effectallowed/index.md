@@ -2,9 +2,10 @@
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.effectAllowed`** 属性指定拖放操作所允许的一个效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。*move 操作用于指定被拖动的数据将被移动。 link*操作用于指示将在源和放置位置之间创建某种形式的关系或连接。
+**`DataTransfer.effectAllowed`** 属性指定拖放操作所允许的一个效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。_move_ 操作用于指定被拖动的数据将被移动。_link_ 操作用于指示将在源和放置位置之间创建某种形式的关系或连接。
 
 应该在{{event("dragstart")}}事件中设置此属性，以便为拖动源设置所需的拖动效果。在 {{event("dragenter")}} 和{{event("dragover")}} 事件处理程序中，该属性将设置为在{{event("dragstart")}} 事件期间分配的任何值，因此，可以使用`effectAllowed`来确定允许哪个效果。
 
@@ -41,9 +42,9 @@ dataTransfer.effectAllowed;
 
 分配一个没有效果的其他值给 `effectAllowed`，则保留原值。
 
-Internet Explorer 会将该值改为小写。因此，`linkMove`将会变为`linkmove` ，等等。
+Internet Explorer 会将该值改为小写。因此，`linkMove`将会变为 `linkmove`，等等。
 
-## 举个例子
+## 示例
 
 此例子展示 `effectAllowed` 用法 和 {{domxref("DataTransfer.dropEffect", "dropEffect")}} 属性
 
@@ -106,8 +107,12 @@ function dragover_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.effectAllowed")}}
+{{Compat}}
 
-## 参考链接
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

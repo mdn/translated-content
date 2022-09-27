@@ -1,26 +1,8 @@
 ---
 title: XRReferenceSpaceEvent.referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
-tags:
-  - API
-  - AR
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
-  - events
-  - referenceSpace
-  - source
-translation_of: Web/API/XRReferenceSpaceEvent/referenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 {{domxref("XRReferenceSpaceEvent")}} の **`referenceSpace`** 読み取り専用プロパティは、イベントの発生元である参照空間を指定します。

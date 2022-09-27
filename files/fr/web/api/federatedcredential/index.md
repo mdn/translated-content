@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 L'interface **`FederatedCredential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), donne des détails quant aux informations d'authentification fournies par un fournisseur d'identité fédéré. Un fournisseur d'identité fédéré est une entité en laquelle un site web à confiance pour authentifier un utilisateur et qui fournit une API à cet effet. [OpenID Connect](http://openid.net/developers/specs/) est un exemple de _framework_ pour construire un fournisseur d'identité fédéré.
@@ -53,10 +54,8 @@ navigator.credentials.store(cred)
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FederatedCredential")}}
+{{Compat}}

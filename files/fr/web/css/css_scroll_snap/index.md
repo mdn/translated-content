@@ -8,6 +8,7 @@ tags:
   - Vue d'ensemble
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
+
 {{CSSRef}}
 
 **_CSS Scroll Snap_** est un module de spécification CSS qui introduit les positions d'accroche lors du défilement. Cela permet de garantir la position sur laquelle on arrive après avoir fait défiler du contenu.

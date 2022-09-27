@@ -11,6 +11,7 @@ tags:
   - set
 translation_of: Web/API/FormData/set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode `set()` de l'interface {{domxref("FormData")}} définit une nouvelle valeur pour une clé existante dans un objet `FormData`, ou ajoute la clé/valeur si elle n'existe pas encore.
@@ -63,13 +64,11 @@ formData.get('name'); // "72"
 
 ## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## Voir aussi
 

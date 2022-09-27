@@ -1,16 +1,8 @@
 ---
 title: 'Element: show イベント'
 slug: Web/API/Element/show_event
-tags:
-  - API
-  - Deprecated
-  - Event
-  - Reference
-  - events
-  - show
-  - イベント
-translation_of: Web/API/Element/show_event
 ---
+
 {{APIRef}}{{deprecated_header}}
 
 **`show`** イベントは、 {{domxref("Element/contextmenu_event", "contextmenu")}} イベントが [`contextmenu` 属性](/ja/docs/Web/HTML/Global_attributes/contextmenu)を持つ要素に発生またはバブリングしたときに発生します。

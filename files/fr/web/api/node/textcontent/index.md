@@ -8,6 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud et de ses descendants.
@@ -86,11 +87,7 @@ if (Object.defineProperty
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire               |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement de DOM4 |
-| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                           |
-| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Définition initiale.      |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Crypto API
-translation_of: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`SubtleCrypto`** インターフェイスは、暗号プリミティブのセットを表します。これは、window コンテキスト ({{domxref("Window.crypto")}}) 内で利用可能な {{domxref("Crypto.subtle")}} プロパティを通して利用できます。

@@ -1,18 +1,8 @@
 ---
 title: 'Element: touchend イベント'
 slug: Web/API/Element/touchend_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - events
-  - touch
-  - touchstart
-translation_of: Web/API/Element/touchend_event
 ---
+
 {{APIRef}}
 
 `touchend` イベントは、タッチ面から 1 つ以上のタッチ点が取り除かれた場合に発生します。

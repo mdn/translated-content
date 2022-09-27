@@ -1,15 +1,8 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - インターフェイス
-  - リファレンス
-  - ウェブ
-browser-compat: api.File
-translation_of: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript からその内容にアクセスできるようにしたりします。

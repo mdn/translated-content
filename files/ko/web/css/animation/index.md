@@ -10,7 +10,7 @@ translation_of: Web/CSS/animation
 ---
 {{CSSRef}}
 
-**`animation`** [CSS](/ko/docs/Web/CSS "CSS")\*\* \*\*속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`animation`** [CSS](/ko/docs/Web/CSS)\*\* \*\*속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
@@ -232,13 +232,13 @@ The order within each animation definition is also important for distinguishing 
 
 ### 값
 
-- [`<single-animation-iteration-count>`]()
+- `<single-animation-iteration-count>`
   - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.
 - `<single-animation-direction>`
   - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.
 - `<single-animation-fill-mode>`
   - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.
-- [`<single-animation-play-state>`]()
+- `<single-animation-play-state>`
   - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.
 
 ### 형식 구문

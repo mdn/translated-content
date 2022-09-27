@@ -1,14 +1,8 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.getElementsByTagName()`** メソッドは、生きた {{domxref("HTMLCollection")}} で指定された[タグ名](/ja/docs/Web/API/Element/tagName)を持つ要素を返します。

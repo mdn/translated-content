@@ -1,21 +1,9 @@
 ---
 title: 'SourceBufferList: indexed property getter'
 slug: orphaned/Web/API/SourceBufferList/SourceBuffer
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Getter
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - SourceBufferList
-  - Video
-translation_of: Web/API/SourceBufferList/SourceBuffer
 original_slug: Web/API/SourceBufferList/SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBufferList")}} インターフェイスの **indexed property getter**（インデックス指定のプロパティゲッター）を使用すると、リスト内の `SourceBuffer` オブジェクトに配列演算子（つまり `[]`）でアクセスできます。

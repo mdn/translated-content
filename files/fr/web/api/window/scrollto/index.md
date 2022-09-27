@@ -4,6 +4,7 @@ slug: Web/API/Window/scrollTo
 translation_of: Web/API/Window/scrollTo
 browser-compat: api.Window.scrollTo
 ---
+
 {{APIRef}}
 
 La méthode **`Window.scrollTo()`** permet de faire défiler la fenêtre pour atteindre les coordonnées données dans le document.

@@ -1,15 +1,6 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
-tags:
-  - API
-  - CredentialsContainer
-  - Property
-  - Reference
-  - credentials
-  - プロパティ
-  - 資格情報
-translation_of: Web/API/Navigator/credentials
 ---
 {{securecontext_header}}{{APIRef("")}}
 

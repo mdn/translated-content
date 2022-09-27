@@ -1,19 +1,10 @@
 ---
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-  - getComputedStyle
-browser-compat: api.Window.getComputedStyle
-translation_of: Web/API/Window/getComputedStyle
 l10n:
   sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
 ---
+
 {{APIRef("CSSOM")}}
 
 **`Window.getComputedStyle()`** メソッドは、アクティブなスタイルシートを適用し、それらの値に含まれる可能性のある基本的な計算を解決した後、要素のすべての CSS プロパティの値を含むオブジェクトを返します。

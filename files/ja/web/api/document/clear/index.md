@@ -1,13 +1,6 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - DOM
-  - DOM_0
-  - Document
-  - Gecko
-  - HTML5
-translation_of: Web/API/Document/clear
 ---
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
@@ -23,7 +16,7 @@ document.clear();
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
 
 ## ブラウザーの互換性
 

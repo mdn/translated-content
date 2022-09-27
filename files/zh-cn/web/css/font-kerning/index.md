@@ -2,6 +2,7 @@
 title: font-kerning
 slug: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 **`font-kerning`** CSS 属性设置是否使用字体中储存的字距信息。
@@ -92,7 +93,7 @@ nokern.textContent = input.value;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
 ## 参考
 

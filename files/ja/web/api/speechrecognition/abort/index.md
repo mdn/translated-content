@@ -1,18 +1,8 @@
 ---
 title: SpeechRecognition.abort()
 slug: Web/API/SpeechRecognition/abort
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - abort
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/abort
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`abort()`** メソッドは音声認識サービスが、入ってくる音声を聞くことを停止します。あと、{{domxref("SpeechRecognitionResult")}} を返しません。

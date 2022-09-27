@@ -1,14 +1,8 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.Event.returnValue
-translation_of: Web/API/Event/returnValue
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 {{domxref("Event")}} の **`returnValue`** は、このイベントの既定のアクションが禁止されているかどうかを示します。

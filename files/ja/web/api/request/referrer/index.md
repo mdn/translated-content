@@ -1,16 +1,8 @@
 ---
 title: Request.referrer
 slug: Web/API/Request/referrer
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - referrer
-  - request
-translation_of: Web/API/Request/referrer
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} インターフェースの **`referrer`** 読み取り専用プロパティには、ユーザーエージェントによってリクエストのリファラが設定されます（たとえば、`about:client` や `no-referrer`、URL）。

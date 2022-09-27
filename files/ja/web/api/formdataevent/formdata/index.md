@@ -1,16 +1,8 @@
 ---
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
-tags:
-  - API
-  - Experimental
-  - FormDataEvent
-  - Forms
-  - Property
-  - Reference
-translation_of: Web/API/FormDataEvent/formData
-browser-compat: api.FormDataEvent.formData
 ---
+
 {{APIRef("DOM")}}
 
 `formData` は {{domxref("FormDataEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行された時点のフォームに含まれていたデータを表す {{domxref("FormData")}} オブジェクトが入っています。

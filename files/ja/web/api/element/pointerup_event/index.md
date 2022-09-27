@@ -1,17 +1,9 @@
 ---
 title: GlobalEventHandlers.onpointerup
 slug: Web/API/Element/pointerup_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointerup
 original_slug: Web/API/GlobalEventHandlers/onpointerup
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointerup`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointerup")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。

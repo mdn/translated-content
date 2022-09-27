@@ -21,10 +21,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2.  If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
+2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML Audio
 
@@ -342,7 +342,9 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-    #t=[starttime][,endtime]
+```
+#t=[starttime][,endtime]
+```
 
 The time can be specified as a number of seconds (as a floating-point value) or as an hours/minutes/seconds time separated with colons (such as 2:05:01 for 2 hours, 5 minutes, and 1 second).
 
@@ -403,18 +405,20 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-    # AddType TYPE/SUBTYPE EXTENSION
+```
+# AddType TYPE/SUBTYPE EXTENSION
 
-    AddType audio/mpeg mp3
-    AddType audio/mp4 m4a
-    AddType audio/ogg ogg
-    AddType audio/ogg oga
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
 
-    AddType video/mp4 mp4
-    AddType video/mp4 m4v
-    AddType video/ogg ogv
-    AddType video/webm webm
-    AddType video/webm webmv
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+```
 
 #### 2. Your files have been encoded incorrectly
 
@@ -513,7 +517,7 @@ A number of audio and video JavaScript libaries exist. The most popular librarie
 ## Advanced tutorials
 
 - [Adding captions and subtitles to HTML5 video](/en-US/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ko/docs/Web/API/Web_Video_Text_Tracks_Format "WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the <track> element. The primary purpose of WebVTT files is to add subtitles to a <video>.") and the {{ htmlelement("track") }} element.
+  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ko/docs/Web/API/Web_Video_Text_Tracks_Format) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/ko/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [H.264 support in Firefox](/en-US/Apps/Developing/Manipulating_media/H.264_support_in_Firefox)

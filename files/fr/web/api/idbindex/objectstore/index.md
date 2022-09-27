@@ -3,6 +3,7 @@ title: IDBIndex.objectStore
 slug: Web/API/IDBIndex/objectStore
 translation_of: Web/API/IDBIndex/objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriètè **`objectStore`** de l'interface {{domxref("IDBIndex")}} renvoie un accès au magasin d'objet que référence l'index.
@@ -70,15 +71,13 @@ function displayDataByIndex() {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-objectStore', 'objectStore')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.objectStore")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -11,6 +11,7 @@ tags:
   - fermeture
 translation_of: Web/API/HTMLDialogElement/close_event
 ---
+
 {{ APIRef() }}
 
 L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.
@@ -92,14 +93,12 @@ closeButton.addEventListener('click', () => {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-close', 'close') }} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLDialogElement.close_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)

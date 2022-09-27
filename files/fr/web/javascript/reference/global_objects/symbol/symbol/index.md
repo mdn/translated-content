@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
+
 {{JSRef}}
 
 Le constructeur `Symbol()` renvoie une valeur de type **`symbol`**. Ce n'est pas à proprement parler un constructeur, car il n'accepte pas la syntaxe `new Symbol()` et qu'il n'est pas prévu pour créer des sous-classes. On pourra l'utiliser comme valeur pour la clause [`extends`](/fr/docs/Web/JavaScript/Reference/Classes/extends) d'une définition de classe, mais on ne pourra pas l'utiliser avec un appel [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super), cela entraînera une exception.

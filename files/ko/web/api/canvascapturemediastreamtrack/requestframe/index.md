@@ -13,7 +13,9 @@ The {{domxref("CanvasCaptureMediaStreamTrack")}} 의 메서드 **`requestFrame()
 
 ## 구문
 
-    stream.requestFrame();
+```js
+stream.requestFrame();
+```
 
 ### Return 값
 

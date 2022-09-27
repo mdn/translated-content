@@ -2,6 +2,7 @@
 title: document.referrer
 slug: Web/API/Document/referrer
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.referrer`** 返回的是一个 [URI](http://www.w3.org/Addressing/#background), 当前页面就是从这个 URI 所代表的页面 跳转或打开的。
@@ -24,4 +25,4 @@ var referrer = document.referrer;
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.referrer")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - Reference
-  - Storage
-  - Web Storage
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 **Web Storage API** は、{{Glossary("Cookie","クッキー")}}を使用するよりも直感的な方法で、ブラウザーがキーと値のペアを保存できる仕組みを提供します。
@@ -31,11 +24,11 @@ Web Storage には、以下の 2 種類の仕組みがあります:
 
 これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、サポートするブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。 同じオリジンに対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。 これらは別々に制御されて機能します。
 
-> **Note:** **注記**: Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。
+> **Note:** Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。
 
-> **Note:** **注記**: ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
+> **Note:** ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
 
-> **Note:** **注記:** Web Storage は、[mozStorage](/ja/docs/Storage "Storage") (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API "Session_store_API") (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM "XPCOM") ストレージユーティリティ) とは異なります。
+> **Note:** Web Storage は、[mozStorage](/ja/docs/Storage) (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API) (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM) ストレージユーティリティ) とは異なります。
 
 ## Web Storage インターフェイス
 
@@ -48,7 +41,7 @@ Web Storage には、以下の 2 種類の仕組みがあります:
 
 ## 例
 
-Web Storage の典型的な使用法を示すため、想像力豊かに [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage) と名づけたシンプルな例を作成しました。[ ランディングページ](https://mdn.github.io/dom-examples/web-storage/)には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
+Web Storage の典型的な使用法を示すため、想像力豊かに [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage) と名づけたシンプルな例を作成しました。[ランディングページ](https://mdn.github.io/dom-examples/web-storage/)には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
 
 また、[event output ページ](https://mdn.github.io/dom-examples/web-storage/event.html)も提供します。 このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。
 

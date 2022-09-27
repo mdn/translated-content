@@ -1,9 +1,6 @@
 ---
 title: Grid Line (グリッド線)
 slug: Glossary/Grid_Lines
-tags:
-  - CSS Grids
-translation_of: Glossary/Grid_Lines
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---

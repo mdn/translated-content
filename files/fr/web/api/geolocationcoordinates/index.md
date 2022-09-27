@@ -3,6 +3,7 @@ title: Coordinates
 slug: Web/API/GeolocationCoordinates
 translation_of: Web/API/GeolocationCoordinates
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}L'interface **`Coordinates`** représente la position et l'altitude du périphérique sur Terre, ainsi que la précision avec lesquels ces propriétés sont calculées.
 
 ## Propriétés
@@ -30,13 +31,11 @@ _L'interface `Coordinates` n'hérite d'aucune propriété._
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#coordinates', 'Coordinates')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -6,6 +6,7 @@ tags:
   - Release Notes
 translation_of: Mozilla/Firefox/Releases/50
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 50 was released on November 15, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -53,8 +54,8 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### Seguridad
 
-- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](https://developer.mozilla.org/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
-- Agregado soporte para la directiva [`sandbox`](https://developer.mozilla.org/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ({{bug(671389)}}).
+- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
+- Agregado soporte para la directiva [`sandbox`](/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ({{bug(671389)}}).
 - Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy) ({{bug (959388)}}).
 - El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/Security/CSP); en su lugar, retorna `false` como es esperado ({{bug(1234813)}}).
 
@@ -63,7 +64,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 - Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ({{bug(1286744)}}).
 - En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un {{event("error")}} que puede ser capturado como cualquier otro error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
-- La opción `only-if-cached` fue agregada a [`Request.cache`](https://developer.mozilla.org/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
+- La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
 
 ### DOM
 

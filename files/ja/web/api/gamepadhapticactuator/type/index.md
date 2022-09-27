@@ -1,17 +1,8 @@
 ---
 title: GamepadHapticActuator.type
 slug: Web/API/GamepadHapticActuator/type
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Property
-  - Reference
-  - Type
-translation_of: Web/API/GamepadHapticActuator/type
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("GamepadHapticActuator")}} インターフェイスの **`type`** 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。

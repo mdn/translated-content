@@ -1,25 +1,8 @@
 ---
 title: XRRigidTransform.inverse
 slug: Web/API/XRRigidTransform/inverse
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - inverse
-  - transform
-translation_of: Web/API/XRRigidTransform/inverse
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRRigidTransform")}} インターフェイスの **`inverse`** 読み取り専用プロパティは、それ自体の変換の逆である別の {{domxref("XRRigidTransform")}} オブジェクトを返します。 つまり、逆を明示的に生成する代わりに、`inverse` プロパティを使用して、`XRRigidTransform` の逆をいつでも取得できます。

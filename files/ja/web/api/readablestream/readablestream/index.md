@@ -1,13 +1,8 @@
 ---
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
-tags:
-  - API
-  - Constructor
-  - ReadableStream
-  - Reference
-translation_of: Web/API/ReadableStream/ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStream()`** コンストラクターは、指定されたハンドラーから読み取り可能なストリームのオブジェクトを作成して返します。
@@ -44,7 +39,7 @@ var readableStream = new ReadableStream(underlyingSource[, queuingStrategy]);
     - size(chunk)
       - : パラメーター `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
 
-    > **Note:** **注**: 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用されるデフォルトは、最高水準点が 1 の `CountQueuingStrategy` と同じです。
+    > **Note:** 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用されるデフォルトは、最高水準点が 1 の `CountQueuingStrategy` と同じです。
 
 ### 戻り値
 

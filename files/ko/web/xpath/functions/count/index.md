@@ -1,0 +1,33 @@
+---
+title: count
+slug: Web/XPath/Functions/count
+tags:
+  - XSLT_Reference
+translation_of: Web/XPath/Functions/count
+---
+{{ XsltRef() }}
+
+`count` 함수는 노드 집합의 노드 수를 세고 나서 정수로 반환합니다.
+
+### 문법
+
+```
+count(node-set )
+```
+
+### 인수
+
+- `node-set`
+  - : 셀 노드 집합.
+
+### 반환
+
+노드 집합의 노드 수를 나타내는 정수.
+
+### 정의
+
+[1.0 4.1](http://www.w3.org/TR/xpath#function-count)
+
+### Gecko 지원
+
+지원함.

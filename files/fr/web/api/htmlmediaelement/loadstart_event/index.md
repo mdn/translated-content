@@ -10,9 +10,10 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onloadstart
 original_slug: Web/API/GlobalEventHandlers/onloadstart
 ---
+
 {{ApiRef}}
 
-La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'évènement {{event("loadstart")}} est déclenché (quand la progression est commencée sur le chargement d'une ressource).
+La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement {{event("loadstart")}} est déclenché (quand la progression est commencée sur le chargement d'une ressource).
 
 ## Syntaxe
 
@@ -52,10 +53,8 @@ image.addEventListener('loadend', function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "webappapis.html#handler-onloadstart", "onloadstart")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onloadstart")}}
+{{Compat}}

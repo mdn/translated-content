@@ -1,25 +1,8 @@
 ---
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - リファレンス
-  - border
-  - left
-  - x
-  - プロパティ
-browser-compat: api.HTMLImageElement.x
-translation_of: Web/API/HTMLImageElement/x
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`x`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の左端の x 座標を示します。

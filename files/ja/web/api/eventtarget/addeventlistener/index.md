@@ -1,12 +1,8 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.EventTarget.addEventListener
-translation_of: Web/API/EventTarget/addEventListener
 ---
+
 {{APIRef("DOM")}}
 
 **`addEventListener()`** は {{domxref("EventTarget")}} インターフェイスのメソッドで、ターゲットに特定のイベントが配信されるたびに呼び出される関数を設定します。

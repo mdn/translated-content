@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 original_slug: Apprendre/CSS/styliser_boites/Creating_fancy_letterheaded_paper
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}
 
 Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à en-tête peut vraiment être un bon début. Dans cet execice, le défi à relever consiste à créer un modèle en ligne pour obtenir ce bel aspect.

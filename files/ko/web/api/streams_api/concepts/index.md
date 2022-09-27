@@ -95,7 +95,9 @@ In general, the strategy compares the size of the chunks in the queue to a value
 
 The calculation performed is
 
-    high water mark - total size of chunks in queue = desired size
+```
+high water mark - total size of chunks in queue = desired size
+```
 
 The **desired size** is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.
 

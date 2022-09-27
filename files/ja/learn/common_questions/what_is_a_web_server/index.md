@@ -1,11 +1,6 @@
 ---
 title: ウェブサーバーとは？
 slug: Learn/Common_questions/What_is_a_web_server
-tags:
-  - Beginner
-  - Infrastructure
-  - needsSchema
-translation_of: Learn/Common_questions/What_is_a_web_server
 ---
 この記事では、ウェブサーバーとは何か、ウェブサーバーの仕組み、なぜウェブサーバーが重要なのかを説明します。
 

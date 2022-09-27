@@ -1,16 +1,8 @@
 ---
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - scrollBy
-  - メソッド
-translation_of: Web/API/Element/scrollBy
 ---
+
 {{APIRef}}
 
 **`scrollBy()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。

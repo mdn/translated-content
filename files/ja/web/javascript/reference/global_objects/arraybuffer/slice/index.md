@@ -1,14 +1,8 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** メソッドは新しい `ArrayBuffer` を返し、その中にこの `ArrayBuffer` の `begin` から `end` の手前までをコピーします。

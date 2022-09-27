@@ -1,18 +1,8 @@
 ---
 title: 'Element: fullscreenchange イベント'
 slug: Web/API/Element/fullscreenchange_event
-tags:
-  - API
-  - Fullscreen API
-  - Fullscreen events
-  - events
-  - fullscreen
-  - fullscreenchange
-  - イベント
-  - 全画面 API
-  - 全画面イベント
-translation_of: Web/API/Element/fullscreenchange_event
 ---
+
 {{APIRef}}
 
 `fullscreenchange` イベントは、ある要素 ({{domxref("Element")}}) が全画面モードに切り替わったり、終了したりした直後に発生します。
@@ -89,7 +79,7 @@ document.getElementById('toggle-fullscreen').addEventListener('click', (event) =
 
 | 仕様書                                                                                     | 状態            |
 | ------------------------------------------------------------------------------------------ | --------------- |
-| [Fullscreen API](https://fullscreen.spec.whatwg.org/ "The 'Fullscreen API' specification") | Living Standard |
+| [Fullscreen API](https://fullscreen.spec.whatwg.org/) | Living Standard |
 
 ## ブラウザーの互換性
 

@@ -1,16 +1,6 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - ノード
-  - リファレンス
-  - コピー
-  - importNode
-translation_of: Web/API/Document/importNode
 ---
 {{APIRef("DOM")}}
 

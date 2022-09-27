@@ -1,8 +1,8 @@
 ---
 title: HTML の生成
 slug: Web/API/XSLTProcessor/Generating_HTML
-translation_of: Web/API/XSLTProcessor/Generating_HTML
 ---
+
 ## HTML の生成
 
 ブラウザー内の XSLT のよくあるアプリケーションの一つは、クライアント上で XML を HTML へと変換することです。二つ目の例は、前回と同様の記事についての情報を含む文書 (example2.xml) を入力し、HTML 文書へ変換します。

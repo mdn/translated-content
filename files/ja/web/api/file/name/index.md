@@ -1,15 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - ファイル
-  - プロパティ
-  - リファレンス
-browser-compat: api.File.name
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("File")}} オブジェクトによって表されるファイルの名前を返します。セキュリティ上の理由から、パスはこのプロパティから除外されます。

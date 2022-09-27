@@ -6,6 +6,7 @@ browser-compat: css.types.abs
 l10n:
   sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`abs()`** contient un calcul et renvoie la valeur absolue de l'argument, avec le même type que l'argument.

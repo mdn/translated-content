@@ -1,16 +1,8 @@
 ---
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableByteStreamController
 ---
+
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableByteStreamController`** インターフェイスは、{{domxref("ReadableStream")}} の状態と内部キューを制御できるコントローラーを表します。 バイトストリームコントローラーは、バイトストリーム用です。

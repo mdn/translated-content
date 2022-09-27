@@ -10,6 +10,7 @@ tags:
   - Noeud
 translation_of: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.insertBefore()`** insère un nœud avant un _nœud de référence_ en tant qu'enfant d'un _nœud parent_ spécifié.
@@ -125,14 +126,8 @@ Si l'élément n'a pas de premier enfant, alors `firstChild` est `null`. L'élé
 
 ## Spécifications
 
-| Specification                                                                                                | Status                           | Comment                                 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}             | {{Spec2('DOM WHATWG')}} | Fixes errors in the insertion algorithm |
-| {{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}                     | {{Spec2('DOM4')}}         | Describes the algorithm in more detail  |
-| {{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM3 Core')}}     | No notable changes                      |
-| {{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM2 Core')}}     | No notable changes                      |
-| {{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}} | {{Spec2('DOM1')}}         | Introduced                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.insertBefore")}}
+{{Compat}}

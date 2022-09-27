@@ -1,16 +1,8 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-  - 要素
-translation_of: Web/API/Element/setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 **`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。 ({{domxref("Element.releasePointerCapture()")}} を介して) キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。

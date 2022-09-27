@@ -1,19 +1,8 @@
 ---
 title: Element.tagName
 slug: Web/API/Element/tagName
-tags:
-  - API
-  - DOM
-  - DOM リファレンス
-  - Element
-  - Gecko
-  - NeedsBrowserCompatibility
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - tagName
-translation_of: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 **`tagName`** は {{domxref("Element")}} インターフェイスのプロパティで、呼び出された要素のタグ名を返します。

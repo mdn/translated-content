@@ -2,6 +2,7 @@
 title: AudioContext.createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 接口的 createWaveShaper() 方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果
@@ -17,7 +18,7 @@ var distortion = audioCtx.createWaveShaper();
 
 A {{domxref("WaveShaperNode")}}.
 
-## 例子
+## 示例
 
 下面的例子展示了 AudioContext 创建一个波形整形器节点的基本用法。有关应用示例/信息，请查看我们的 [voice-change-O-matic demo](http://mdn.github.io/voice-change-o-matic/) 演示（有关代码，请参阅[app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js)）。
 
@@ -55,8 +56,8 @@ distortion.oversample = '4x';
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createWaveShaper")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

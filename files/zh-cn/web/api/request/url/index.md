@@ -2,6 +2,7 @@
 title: Request.url
 slug: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Request")}} interface contains the URL of the request.
@@ -35,6 +36,6 @@ var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

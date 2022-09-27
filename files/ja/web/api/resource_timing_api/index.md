@@ -1,8 +1,8 @@
 ---
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
-translation_of: Web/API/Resource_Timing_API
 ---
+
 {{DefaultAPISidebar("Resource Timing API")}}
 
 **`Resource Timing`** インターフェイスは、アプリケーションの*リソース*のロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG element")}}、画像、スクリプトなど特定のリソースをロードするのにかかる時間を決定できます。

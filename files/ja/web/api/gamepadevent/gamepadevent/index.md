@@ -1,14 +1,8 @@
 ---
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
-tags:
-  - API
-  - Constructor
-  - Gamepad API
-  - Games
-  - Referece
-translation_of: Web/API/GamepadEvent/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadEvent_`** コンストラクタは新規の {{domxref("GamepadEvent")}} オブジェクトを作成します。.

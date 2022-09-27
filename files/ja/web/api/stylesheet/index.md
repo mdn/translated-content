@@ -1,14 +1,8 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
-tags:
-  - CSSOM
-  - DOM
-  - NeedsTranslation
-  - TopicStub
-  - 要更新
-translation_of: Web/API/StyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 `StyleSheet`インターフェースを実装するオブジェクトは、単一のスタイルシートを表します。CCS スタイルシートは、より特殊化された{{domxref("CSSStyleSheet")}}インターフェースを実装します。

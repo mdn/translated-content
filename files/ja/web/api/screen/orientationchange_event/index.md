@@ -1,18 +1,9 @@
 ---
 title: 'Screen: orientationchange イベント'
 slug: Web/API/Screen/orientationchange_event
-page-type: web-api-event
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Event Handler
-  - Property
-  - Screen Orientation
-browser-compat: api.Screen.orientationchange_event
-translation_of: Web/API/Screen/orientationchange_event
 original_slug: Web/API/Screen/onorientationchange
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 `orientationchange` イベントは、端末の向きが変化したときに発行されます。

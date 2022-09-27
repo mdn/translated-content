@@ -1,14 +1,8 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
-translation_of: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGGraphicsElement`** インターフェイスは、直接グループにグラフィックを描画することを主な目的とした SVG 要素を表します。

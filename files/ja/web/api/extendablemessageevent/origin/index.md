@@ -1,15 +1,8 @@
 ---
 title: ExtendableMessageEvent.origin
 slug: Web/API/ExtendableMessageEvent/origin
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - origin
-translation_of: Web/API/ExtendableMessageEvent/origin
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`origin`** 読み取り専用プロパティは、メッセージを送信した {{domxref("Client")}} のオリジンを返します。

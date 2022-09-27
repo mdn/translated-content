@@ -1,14 +1,6 @@
 ---
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
-tags:
-  - API
-  - Experimental
-  - MediaCapabilities
-  - Navigator
-  - メディア
-  - メディア能力 API
-translation_of: Web/API/Navigator/mediaCapabilities
 ---
 {{SeeCompatTable}}
 

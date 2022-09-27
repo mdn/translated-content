@@ -1,14 +1,8 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの `setItem()` メソッドはキーの名称と値を渡すと、ストレージにキーを追加する、またはキーがすでに存在する場合はキーに対する値を更新します。
@@ -47,7 +41,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** **注記**: 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **Note:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様
 

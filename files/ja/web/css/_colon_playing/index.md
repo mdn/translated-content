@@ -1,13 +1,6 @@
 ---
 title: ':playing'
 slug: Web/CSS/:playing
-tags:
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - playing
-browser-compat: css.selectors.playing
-translation_of: Web/CSS/:playing
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

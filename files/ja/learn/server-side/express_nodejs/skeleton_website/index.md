@@ -1,16 +1,6 @@
 ---
 title: 'Express チュートリアル Part 2: スケルトン Web サイトの作成'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-tags:
-  - CodingScripting
-  - Express
-  - Node
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-  - 開発環境
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 
@@ -153,14 +143,14 @@ express express-locallibrary-tutorial --view=pug
 
 これで、完全なスケルトンプロジェクトが完成しました。 ウェブサイトは実際にはそれほど多くは行っていませんが、それがどのように機能するかを示すために実行する価値があります。
 
-1.  まず、依存関係をインストールします (`install` コマンドはプロジェクトの **package.json** ファイルにリストされているすべての依存関係パッケージを取得します)
+1. まず、依存関係をインストールします (`install` コマンドはプロジェクトの **package.json** ファイルにリストされているすべての依存関係パッケージを取得します)
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  その後、アプリケーションを実行します
+2. その後、アプリケーションを実行します
 
     - Windows では、次のコマンドを使用します
 
@@ -174,7 +164,7 @@ express express-locallibrary-tutorial --view=pug
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  その後、ブラウザーに <http://localhost:3000/> をロードしてアプリにアクセスします
+3. その後、ブラウザーに <http://localhost:3000/> をロードしてアプリにアクセスします
 
 次のようなブラウザーページが表示されるはずです。
 

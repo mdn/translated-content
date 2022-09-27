@@ -1,10 +1,6 @@
 ---
 title: OpenSSL
 slug: Glossary/OpenSSL
-tags:
-  - Glossary
-  - Security
-translation_of: Glossary/OpenSSL
 ---
 OpenSSL は、{{glossary("SSL")}} と {{glossary("TLS")}} のオープンソースの実装です。
 

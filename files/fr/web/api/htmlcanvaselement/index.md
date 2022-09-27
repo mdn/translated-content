@@ -5,6 +5,7 @@ tags:
   - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{ApiRef}}
 
 L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.
@@ -306,14 +307,11 @@ Remarquez qu'ici nous créons une image PNG ; si vous ajoutez un second paramèt
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "embedded-content-0.html#the-canvas-element", "HTMLCanvasElement")}} | {{Spec2('HTML WHATWG')}} | La méthode `getContext()` retourne un {{domxref("RenderingContext")}} au lieu d'un `object` opaque. Les méthodes `supportsContext()`, `setContext()`, `transferControlToProxy()`, `toDataURLHD()`, `toBlobURLHD()` ont été ajoutées. |
-| {{SpecName('HTML5 W3C', "the-canvas-element.html#the-canvas-element", "HTMLCanvasElement")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                                                                                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## Voir aussi
 

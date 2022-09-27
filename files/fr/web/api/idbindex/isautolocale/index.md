@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/isAutoLocale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#Paramètres)).

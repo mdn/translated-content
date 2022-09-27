@@ -1,19 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS プロパティ
-  - グラフィック
-  - レイアウト
-  - NeedsContent
-  - リファレンス
-  - SVG
-  - SVG フィルター
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
 {{CSSRef}}
 

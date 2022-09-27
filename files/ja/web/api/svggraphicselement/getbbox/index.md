@@ -1,16 +1,8 @@
 ---
 title: getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
-tags:
-  - API
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGGraphicsElement
-  - メソッド
-translation_of: Web/API/SVGGraphicsElement/getBBox
 ---
+
 {{APIRef}}
 
 **`SVGGraphicsElement.getBBox()`** で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の SVG 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。

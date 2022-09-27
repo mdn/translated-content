@@ -1,19 +1,9 @@
 ---
 title: SpeechRecognition.onsoundend
 slug: Web/API/SpeechRecognition/soundend_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onsoundend
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onsoundend
 original_slug: Web/API/SpeechRecognition/onsoundend
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`onsoundend`** プロパティは、何らかの音（認識できる音声、できない音声にかかわらず）が検出し終えた時に({{event("soundend")}} イベントが発生した時)、実行するイベントハンドラーになります。

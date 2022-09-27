@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
+
 {{JSRef}}
 
 **`setSeconds()`** メソッドは、地方時に基づき、指定された日時の「秒」を設定します。

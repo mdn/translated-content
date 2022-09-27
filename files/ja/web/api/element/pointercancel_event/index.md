@@ -1,17 +1,9 @@
 ---
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/Element/pointercancel_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointercancel
 original_slug: Web/API/GlobalEventHandlers/onpointercancel
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointercancel`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointercancel")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。

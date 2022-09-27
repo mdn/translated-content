@@ -1,17 +1,8 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad")}} インターフェイスの **`Gamepad.mapping`** プロパティは、ブラウザーがデバイスのコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。

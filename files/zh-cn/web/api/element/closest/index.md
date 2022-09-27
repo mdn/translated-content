@@ -2,6 +2,7 @@
 title: Element.closest()
 slug: Web/API/Element/closest
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`Element.closest()`** 方法用来获取：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）。如果匹配不到，则返回 `null`。
@@ -102,14 +103,14 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ### 兼容性说明
 
-- 当在 Edge 15-18 里使用 `document.createElement(tagName).closest(tagName)` ，如果元素不是第一个（直接地或间接地）连接到上下文对象的话将会返回 `null` ，例如在一般情况下 DOM 中的 [`Document`](/en-US/docs/Web/API/Document) 对象。
+- 当在 Edge 15-18 里使用 `document.createElement(tagName).closest(tagName)` ，如果元素不是第一个（直接地或间接地）连接到上下文对象的话将会返回 `null` ，例如在一般情况下 DOM 中的 [`Document`](/zh-CN/docs/Web/API/Document) 对象。
 
 ## 相关链接
 
 - {{domxref("Element")}} 接口。
 - [选择器语法](/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors)
-- 其他相关选择器方法: {{domxref("element.querySelector()")}} and {{domxref("element.matches()")}}.
+- 其他相关选择器方法：{{domxref("element.querySelector()")}} and {{domxref("element.matches()")}}.

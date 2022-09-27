@@ -1,15 +1,8 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
-translation_of: Web/API/ReadableStream/tee
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`tee()`** メソッドは、現在の読み取り可能なストリームを[ティーイング](https://streams.spec.whatwg.org/#tee-a-readable-stream)し、結果の 2 つの分岐を新しい {{domxref("ReadableStream")}} インスタンスとして含む 2 要素配列を返します。

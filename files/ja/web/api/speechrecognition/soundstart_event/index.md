@@ -1,19 +1,9 @@
 ---
 title: SpeechRecognition.onsoundstart
 slug: Web/API/SpeechRecognition/soundstart_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onsoundstart
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onsoundstart
 original_slug: Web/API/SpeechRecognition/onsoundstart
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onsoundstart`** プロパティは、何らかの音（認識できる音声、できない音声にかかわらず）が検出できた時に ({{event("soundstart")}}イベントが発生した時)、実行されるイベントハンドラーになります。

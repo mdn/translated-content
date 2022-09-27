@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-iteration-count`** indique le nombre de cycles utilisés pour répéter une animation avant que celle-ci s'arrête.

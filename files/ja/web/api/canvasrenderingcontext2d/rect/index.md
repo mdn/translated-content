@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.rect
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
 {{APIRef}}
 

@@ -1,26 +1,6 @@
 ---
 title: CSS と JavaScript のアクセシビリティの ベスト・プラクティス
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Accessibility
-  - Article
-  - CSS
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - color
-  - contrast
-  - hiding
-  - unobtrusive
-  - ひかえめ
-  - アクセシビリティ
-  - ガイド
-  - コントラスト
-  - 学習
-  - 色
-  - 隠す
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
@@ -118,7 +98,7 @@ abbr {
 }
 ```
 
-略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)を参照してください。
+略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)を参照してください。
 
 #### リンク
 

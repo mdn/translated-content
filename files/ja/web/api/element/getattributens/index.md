@@ -1,14 +1,8 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/getAttributeNS
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された名前空間と名前を持つ属性の文字列値を返します。のような名前の属性が存在しない場合は、 `null` または `""` （空文字列のどちらかを返します。詳しくは[メモ](#メモ)を参照してください。

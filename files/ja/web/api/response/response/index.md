@@ -1,8 +1,8 @@
 ---
 title: Response()
 slug: Web/API/Response/Response
-translation_of: Web/API/Response/Response
 ---
+
 {{APIRef("Fetch")}}
 
 **`Response()`** コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。

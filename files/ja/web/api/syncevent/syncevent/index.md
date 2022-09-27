@@ -1,16 +1,8 @@
 ---
 title: SyncEvent.SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
-tags:
-  - API
-  - Background Sync
-  - Constructor
-  - Experimental
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-translation_of: Web/API/SyncEvent/SyncEvent
 ---
+
 {{APIRef("Service Workers API")}}{{Non-standard_header}}
 
 **`SyncEvent()`** コンストラクタは、新規の {{domxref("SyncEvent")}} オブジェクトを作成します。

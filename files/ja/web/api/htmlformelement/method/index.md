@@ -1,12 +1,8 @@
 ---
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/method
 ---
+
 {{APIRef}}概要
 
 `method` は、 フォーム送信時に使用する HTTP メソッドを取得 / 設定する。

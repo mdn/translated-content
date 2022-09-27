@@ -1,17 +1,8 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
-translation_of: Web/API/Response
-browser-compat: api.Response
 ---
+
 {{APIRef("Fetch API")}}
 
 **`Response`** は [Fetch API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、リクエストのレスポンスを表します。

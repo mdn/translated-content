@@ -1,18 +1,9 @@
 ---
 title: 'Document: transitionend イベント'
 slug: Web/API/Element/transitionend_event
-tags:
-  - CSS トランジション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - transitionend
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
+
 {{APIRef}}
 
 **`transitionend`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。

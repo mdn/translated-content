@@ -2,6 +2,7 @@
 title: Service Worker API
 slug: Web/API/Service_Worker_API
 ---
+
 {{ServiceWorkerSidebar}}
 
 Service workers 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。
@@ -65,7 +66,7 @@ Service workers 也可以用来做这些事情：
 - 自定义模板用于特定 URL 模式
 - 性能增强，比如预取用户可能需要的资源，比如相册中的后面数张图片
 
-未来 service workers 能够用来做更多使 web 平台接近原生应用的事。 值得关注的是，其他标准也能并且将会使用 service worker，例如：
+未来 service workers 能够用来做更多使 web 平台接近原生应用的事。值得关注的是，其他标准也能并且将会使用 service worker，例如：
 
 - [后台同步](https://github.com/slightlyoff/BackgroundSync)：启动一个 service worker 即使没有用户访问特定站点，也可以更新缓存
 - [响应推送](/zh-CN/docs/Web/API/Push_API)：启动一个 service worker 向用户发送一条信息通知新的内容可用

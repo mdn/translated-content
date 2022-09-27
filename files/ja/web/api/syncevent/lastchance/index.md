@@ -1,17 +1,8 @@
 ---
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - lastChance
-translation_of: Web/API/SyncEvent/lastChance
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 {{domxref("SyncEvent")}} インターフェイスの **`SyncEvent.lastChance`** 読み取り専用プロパティは、現在の試行後にユーザーエージェントが同期を試行しない場合に `true` を返します。 これは、 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} コンストラクタの `lastChance` パラメータに渡される値です。

@@ -1,26 +1,6 @@
 ---
 title: '<img>: 画像埋め込み要素'
 slug: Web/HTML/Element/img
-tags:
-  - コンテンツ
-  - 要素
-  - グラフィック
-  - HTML
-  - HTML グラフィック
-  - HTML 画像
-  - HTML 写真
-  - HTML Pictures
-  - HTML embedded content
-  - 画像
-  - 画像要素
-  - メディア
-  - マルチメディア
-  - 写真
-  - Pictures
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.img
-translation_of: Web/HTML/Element/img
 ---
 {{HTMLRef}}
 

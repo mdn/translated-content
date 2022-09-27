@@ -35,7 +35,8 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
   ```
 
 - 커스텀 함수에 대한 `toSource()` 는 객체를 정의하는 JavaScript 코드를 스트링으로 반환합니다.
-- ```js
+
+  ```js
   // 예시:
   function hello() {
       console.log("Hello, World!");
@@ -44,7 +45,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
   hello.toSource();
   ```
 
-- ```js
+  ```js
   // 결과:
   "function hello() {
       console.log(\"Hello, World!\");

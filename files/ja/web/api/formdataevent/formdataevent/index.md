@@ -1,16 +1,8 @@
 ---
 title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - FormDataEvent
-  - Forms
-  - Reference
-translation_of: Web/API/FormDataEvent/FormDataEvent
-browser-compat: api.FormDataEvent.FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`FormDataEvent()`** コンストラクターは、新しい {{domxref("FormDataEvent")}} オブジェクトインスタンスを生成します。

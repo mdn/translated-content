@@ -3,6 +3,7 @@ title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 translation_of: Web/API/HTMLElement/beforeinput_event
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 L’évènement DOM **`beforeinput`** est émis quand la valeur d’un élément {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} est sur le point d’être modifié. L’évènement s’applique également aux éléments ayant l’attribut {{domxref("HTMLElement.contentEditable", "contenteditable")}} actif, et à tout élément quand le {{domxref("Document.designMode", "designMode")}} est activé.
@@ -72,13 +73,11 @@ function updateValue(e) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', "#event-type-beforeinput", "beforeinput event")}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.beforeinput_event")}}
+{{Compat}}
 
 ## Voir aussi
 

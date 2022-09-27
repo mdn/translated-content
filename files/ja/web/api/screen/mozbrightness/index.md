@@ -1,16 +1,8 @@
 ---
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Property
-browser-compat: api.Screen.mozBrightness
-translation_of: Web/API/Screen/mozBrightness
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 画面のバックライトの明るさを、 0 (とても暗い) から 1 (完全に明るい) の範囲で示します。この値は倍精度浮動小数点数です。

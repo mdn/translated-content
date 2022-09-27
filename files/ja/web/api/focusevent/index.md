@@ -1,15 +1,8 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - イベント
-  - リファレンス
-browser-compat: api.FocusEvent
-translation_of: Web/API/FocusEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`FocusEvent`** はフォーカスに関するイベント、例えば {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}} などを表します。

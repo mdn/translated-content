@@ -14,12 +14,16 @@ translation_of: Web/API/Document/applets
 
 ### 문법
 
-    nodeList = document.applets
+```js
+nodeList = document.applets
+```
 
 ### 예제
 
-    // ( 여러분이 원하는 두 번째 애플릿을 알고 있을 때 )
-    my_java_app = document.applets[1];
+```js
+// ( 여러분이 원하는 두 번째 애플릿을 알고 있을 때 )
+my_java_app = document.applets[1];
+```
 
 ### 명세
 

@@ -1,20 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
-  - Workers
-  - インターフェイス
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 `ServiceWorkerGlobalScope` は [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) のインターフェイスで、サービスワーカーのグローバル実行コンテキストを表します。

@@ -1,15 +1,8 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollWidth
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollWidth`** は読み取り専用のプロパティで、あふれたために画面に表示されない部分を含めた、要素の中身の幅の寸法です。

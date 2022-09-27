@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope.registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - registration
-translation_of: Web/API/ServiceWorkerGlobalScope/registration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`registration`** 読み取り専用プロパティは、Service Worker の登録を表す {{domxref("ServiceWorkerRegistration")}} オブジェクトの参照を返します。

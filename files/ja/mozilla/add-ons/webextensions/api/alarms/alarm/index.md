@@ -1,18 +1,8 @@
 ---
 title: alarms.Alarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - alarm
-  - alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 ---
+
 {{AddonSidebar()}}
 
 単一のアラームに関する情報を含みます。このオブジェクトは {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.getAll()')}} の戻り値として返されます。また、{{WebExtAPIRef('alarms.onAlarm')}} リスナに渡されることもあります。

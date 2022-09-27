@@ -3,6 +3,7 @@ title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
+
 {{ ApiRef() }}
 
 L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.
@@ -151,20 +152,13 @@ onload = function () {
 
 [Voir l'exemple en action](/files/4589/readme-example.html)
 
-## Spécification
+## Spécifications
 
-`scrollHeight` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle fait partie de la spécification : {{ SpecName("CSSOM View") }}.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-| Navigateur                 | Version                 |
-| -------------------------- | ----------------------- |
-| Internet Explorer          | **8.0**                 |
-| Firefox (Gecko)            | **3.0** (1.9)           |
-| Opera                      | ?                       |
-| Safari \| Chrome \| Webkit | **4.0** \| **4.0** \| ? |
-
-**Dans les versions inférieures à Firefox 21&nbsp;:** quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété `scrollHeight` est égale à sa propriété `clientHeight`. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS [`overflow`](/fr/docs/Web/CSS/overflow) de l'élément a pour valeur `visible`.
+{{Compat}}
 
 ## Voir aussi
 

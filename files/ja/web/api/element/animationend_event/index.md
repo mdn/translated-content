@@ -1,18 +1,9 @@
 ---
 title: 'Document: animationend イベント'
 slug: Web/API/Element/animationend_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationend
-  - イベント
-translation_of: Web/API/Document/animationend_event
 original_slug: Web/API/Document/animationend_event
 ---
+
 {{APIRef}}
 
 **`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションが要素から削除されたりした場合、 `animationend` イベントは発生しません。

@@ -1,19 +1,8 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media
-  - RTCSessionDescription
-  - Reference
-  - Video
-  - Web
-  - WebRTC
-translation_of: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCSessionDescription`** インターフェイスは、接続 (または接続する予定のもの) の一端と、その構成方法を記述します。それぞれの **`RTCSessionDescription`** は、どのオファー/アンサー交渉プロセスを使用するかを表す記述の {{domxref("RTCSessionDescription.type", "type")}} と、セッションの {{Glossary("SDP")}} 記述子から成ります。

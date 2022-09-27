@@ -1,23 +1,15 @@
 ---
 title: MathML
 slug: Glossary/MathML
-tags:
-  - CodingScripting
-  - Glossaire
-  - MathML
-  - Mathematical Markup Language
-  - XML
-translation_of: Glossary/MathML
-original_slug: Glossaire/MathML
+l10n:
+  sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
-**MathML** (une application {{glossary("XML")}}) est un standard ouvert destiné à représenter des formules mathématiques dans des pages web. En 1998, MathML était d'abord une recommandation du W3C pour représenter des formules mathématiques dans le {{glossary("navigateur")}}. MathML a également d'autres applications parmi lesquelles les informations scientifiques et la synthèse vocale.
 
-## Pour approfondir
+**MathML** (une application [XML](/fr/docs/Glossary/XML)) est un standard ouvert destiné à représenter des formules mathématiques dans des pages web. En 1998, MathML était d'abord une recommandation du W3C pour représenter des formules mathématiques dans le [navigateur](/fr/docs/Glossary/Browser). MathML a également d'autres applications parmi lesquelles le contenu scientifique et la synthèse vocale.
 
-### Culture générale
+## Voir aussi
 
-- [MathML](https://fr.wikipedia.org/wiki/MathML) sur Wikipédia
-
-### Référence technique
-
-- {{spec("http://www.w3.org/Math/whatIsMathML.html", "MathML", "REC")}}
+- [MathML sur Wikipédia](https://fr.wikipedia.org/wiki/MathML)
+- [La section MathML sur MDN](/fr/docs/Web/MathML)
+- [L'édition de documents MathML](/fr/docs/Web/MathML/Authoring)
+- [Ce qu'est le MathML (en anglais)](https://www.w3.org/Math/whatIsMathML.html)

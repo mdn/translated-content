@@ -9,6 +9,7 @@ tags:
   - Propriété
 translation_of: Web/API/TreeWalker/currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 La propriété **`TreeWalker.currentNode`** représente le {{domxref("Node")}} (_noeud_) sur lequel le {{domxref("TreeWalker")}} est actuellement pointé.
@@ -34,14 +35,11 @@ root = treeWalker.currentNode; // l'élément racine car c'est le premier élém
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-currentnode', 'TreeWalker.currrentNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-currentNode', 'TreeWalker.currentNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.currentNode")}}
+{{Compat}}
 
 ## Voir aussi
 

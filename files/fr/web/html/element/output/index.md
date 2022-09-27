@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/output
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<output>`** représente un conteneur dans lequel un site ou une application peut injecter le résultat d'un calcul ou d'une action utilisateur.
@@ -103,14 +104,11 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-output-element', '&lt;output&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#the-output-element', '&lt;output&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.output")}}
+{{Compat}}
 
 > **Note :** La plupart des navigateurs implémente cet élément comme s'il avait l'attribut `aria-live` par défaut. Les outils d'assistance annonceront donc les résultats des interactions avec l'interface utilisateur qui arrivent sur cet élément sans demander à avoir passé le focus depuis un autre contrôle. Toutefois, ce comportement n'est pas précisément décrit dans les spécifications actuelles.
 

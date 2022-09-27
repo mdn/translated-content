@@ -1,18 +1,9 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - メソッド
-  - Response
-translation_of: Web/API/Response/json
 original_slug: Web/API/Body/json
-browser-compat: api.Response.json
 ---
+
 {{APIRef("Fetch API")}}
 
 **`json()`** は {{DOMxRef("Response")}} インターフェイスのメソッドで、 {{DOMxRef("Response")}} のストリームを取得して完全に読み取ります。本文のテキストを {{JSxRef("JSON")}} として解釈した結果で解決するプロミスを返します。

@@ -1,23 +1,8 @@
 ---
 title: 'Element: contextmenu イベント'
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - コンテキスト
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - Right Click
-  - 右クリック
-  - ボタン
-  - contextmenu
-  - メニュー
-  - マウス
-translation_of: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 **`contextmenu`** イベントは、ユーザーがコンテキストメニューを開こうとしたときに発行されます。このイベントは、通常、マウスの右ボタンをクリックするか、コンテキストメニューキーを押すことで発行されます。

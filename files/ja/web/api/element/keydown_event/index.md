@@ -1,18 +1,8 @@
 ---
 title: 'Element: keydown イベント'
 slug: Web/API/Element/keydown_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - KeyboardEvent
-  - Reference
-  - keyboard
-  - keydown
-translation_of: Web/API/Element/keydown_event
 ---
+
 {{APIRef}}
 
 **`keydown`** イベントは、キーが押されたときに発生します。

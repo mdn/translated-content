@@ -19,11 +19,11 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 하나 또는 더 많은 소스에서 시작하고, 하나 또는 더 많은 노드를 통과하고, 그리고서 도착지(destination)에서 끝나는 체인(chain)을 형성하며, 오디오 노드는 입력과 출력을 통해 연결되어 있습니다. 그러나, 예를 들어 여러분이 단지 오디오 데이터를 시각화하기를 원한다면 도착지를 반드시 제공할 필요는 없습니다. 웹 오디오의 단순하고, 일반적인 작업 흐름은 다음과 같습니다:
 
-1.  오디오 컨텍스트를 생성합니다.
-2.  컨텍스트 내에서, 다음과 같이 소스를 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.
-3.  효과 노드를 생성하는데, 예를 들자면 reverb, biquad filter, panner, 또는 compressor가 있습니다.
-4.  사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.
-5.  오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.
+1. 오디오 컨텍스트를 생성합니다.
+2. 컨텍스트 내에서, 다음과 같이 소스를 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.
+3. 효과 노드를 생성하는데, 예를 들자면 reverb, biquad filter, panner, 또는 compressor가 있습니다.
+4. 사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.
+5. 오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.
 
 <div class="notecard note"><h4>채널 표기법</h4><p>한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 <a href="https://en.wikipedia.org/wiki/Surround_sound#Channel_notation">채널 표기법</a>이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 <strong>서브 우퍼</strong>(subwoofer)로 불립니다.</p></div>
 
@@ -93,13 +93,17 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 Web Audio API는 평면 버퍼 포맷을 사용합니다. 왼쪽과 오른쪽 채널은 다음과 같이 저장됩니다:
 
-    LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (16 프레임의 버퍼에 대해)
+```
+LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (16 프레임의 버퍼에 대해)
+```
 
 이것은 오디오 프로세싱에서 아주 일반적입니다: 이것은 각 채널을 독립적으로 처리하기 쉽게 만들어줍니다.
 
 대안은 인터리브 버퍼 포맷을 사용하는 것입니다:
 
-    LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (16 프레임의 버퍼에 대해)
+```
+LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (16 프레임의 버퍼에 대해)
+```
 
 이 포맷은 많은 프로세싱 없이 오디오를 저장하고 재생하는 데 아주 일반적인데, 예를 들자면 디코드된 MP3 스트림이 있습니다.
 

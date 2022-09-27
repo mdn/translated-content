@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Gradients
 original_slug: Web/SVG/Tutoriel/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}
 
 Probablement plus excitant qu'un simple remplissage et contour, est le fait de pouvoir créer et appliquer des dégradés comme remplissage ou contour.

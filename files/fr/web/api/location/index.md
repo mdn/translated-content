@@ -3,6 +3,7 @@ title: Location
 slug: Web/API/Location
 translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`Location`** représente l'emplacement de l'objet auquel elle est liée. Les changements effectués dessus sont reflétés sur l'objet lié. Les deux interfaces {{domxref("Document")}} et {{domxref("Window")}} sont liées à une `Location`, accessible via {{domxref("Document.location")}} et {{domxref("Window.location")}} respectivement.
@@ -118,14 +119,11 @@ console.log(url.origin);    // https://developer.mozilla.org:8080
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaires                                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Location")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## Voir aussi
 

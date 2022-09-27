@@ -1,16 +1,8 @@
 ---
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - read
-translation_of: Web/API/ReadableStreamBYOBReader/read
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`read()`** メソッドは、バイトストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。

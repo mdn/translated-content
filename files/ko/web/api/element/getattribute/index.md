@@ -15,7 +15,9 @@ translation_of: Web/API/Element/getAttribute
 
 ## 문법
 
-    var attribute = element.getAttribute(attributeName);
+```js
+var attribute = element.getAttribute(attributeName);
+```
 
 - `attribute`는 `attributeName`의 값을 가지고 있는 문자열입니다.
 - `attributeName`은 값을 얻고자 하는 속성의 이름입니다.

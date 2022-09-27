@@ -1,18 +1,10 @@
 ---
 title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
-translation_of: Web/API/Element/removeAttributeNS
 l10n:
   sourceCommit: 196cc4ff3068a59b962a3fe1cbb960eb72ef542b
 ---
+
 {{ APIRef("DOM") }}
 
 **`removeAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、要素から指定された属性を取り除きます。

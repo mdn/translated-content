@@ -8,6 +8,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement_).
@@ -43,13 +44,11 @@ myDiv.dispatchEvent(evt);
 
 ## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-event','Event()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
 ## Voir aussi
 

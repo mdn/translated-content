@@ -1,19 +1,9 @@
 ---
 title: SpeechRecognition.onend
 slug: Web/API/SpeechRecognition/end_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onend
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onend
 original_slug: Web/API/SpeechRecognition/onend
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onend`** プロパティは、音声認識のサービスが切断された後 ({{event("end_(SpeechRecognition)","end")}}イベントが発生した時) に、実行するイベントハンドラーになります。

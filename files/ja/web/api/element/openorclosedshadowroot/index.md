@@ -1,21 +1,8 @@
 ---
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
-tags:
-  - API
-  - Add-ons
-  - Element
-  - 拡張機能
-  - Mozilla
-  - 特権が必要
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - WebExtensions
-  - openOrClosedShadowRoot
-  - シャドウ DOM
-translation_of: Web/API/Element/openOrClosedShadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}{{non-standard_header}}
 
 > **Note:** この API は [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) でのみ使用できます。

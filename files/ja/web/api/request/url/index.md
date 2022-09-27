@@ -1,16 +1,8 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - URL
-  - request
-translation_of: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} インターフェースの **`url`** 読み取り専用プロパティは、 リクエストの URL を含みます。

@@ -1,18 +1,9 @@
 ---
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/Element/pointerleave_event
-tags:
-  - API
-  - GlobalEventHandlers
-  - HTML DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - onpointerleave
-translation_of: Web/API/GlobalEventHandlers/onpointerleave
 original_slug: Web/API/GlobalEventHandlers/onpointerleave
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベントの{{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}で、ポインター (マウスカーソル、指先など) がヒットテスト領域を出ると (例えば、カーソルが {{domxref("Element")}} や {{domxref("Window")}} のコンテンツ領域を出ると)、{{domxref("Node")}} に配信されます。このイベントは [Pointer Events API](/ja/docs/Web/API/Pointer_events) の一部です。

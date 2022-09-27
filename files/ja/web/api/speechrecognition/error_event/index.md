@@ -1,19 +1,9 @@
 ---
 title: SpeechRecognition.onerror
 slug: Web/API/SpeechRecognition/error_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onerror
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onerror
 original_slug: Web/API/SpeechRecognition/onerror
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onerror`** プロパティは、音声の認識でエラーが発生した場合([error](/ja/docs/Web/Events/error_%28SpeechRecognitionError%29) イベントが発生した時) に、実行するイベントハンドラーになります。

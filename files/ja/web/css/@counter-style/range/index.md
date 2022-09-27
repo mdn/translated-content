@@ -1,15 +1,6 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.range
-translation_of: Web/CSS/@counter-style/range
 ---
 {{CSSRef}}
 

@@ -1,16 +1,8 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - インターフェイス
-  - ウェブワーカー
-translation_of: Web/API/SharedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`SharedWorkerGlobalScope`** オブジェクト ( {{domxref("SharedWorker")}} グローバルスコープ) は、 {{domxref("window.self","self")}} キーワードでアクセスできます。一部の追加のグローバル関数、名前空間オブジェクト、コンストラクターは、通常はワーカーのグローバルスコープに関連付けられていませんが、利用することができ、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)に列挙されています。[ワーカーで利用できる機能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)の完全なリストを参照してください。
@@ -58,7 +50,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### 他の場所から実装したもの
 

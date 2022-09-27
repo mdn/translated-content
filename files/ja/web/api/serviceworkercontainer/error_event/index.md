@@ -1,18 +1,9 @@
 ---
 title: ServiceWorkerContainer.onerror
 slug: Web/API/ServiceWorkerContainer/error_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - onerror
-translation_of: Web/API/ServiceWorkerContainer/onerror
 original_slug: Web/API/ServiceWorkerContainer/onerror
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`onerror`** プロパティは、関連するサービスワーカーで {{Event("error")}} イベントが発生するたびに発生するイベントハンドラーです。

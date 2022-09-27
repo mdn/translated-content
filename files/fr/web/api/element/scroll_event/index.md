@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

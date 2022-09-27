@@ -1,349 +1,80 @@
 ---
-title: Fonctions et classes disponibles dans les Web Workers
+title: Fonctions et classes disponibles dans les web workers
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-original_slug: Web/API/Worker/Functions_and_classes_available_to_workers
+l10n:
+  sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
-En plus de l'ensemble des fonctions standard [JavaScript](/fr/docs/Web/JavaScript) (telles que {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/JSON", "JSON")}} etc), des fonctions du DOM restent disponibles pour les workers. Cet article en fournit la liste.
 
-**Les workers s'exécutent dans un contexte global, {{domxref("DedicatedWorkerGlobalScope")}} différent du contexte de la fenêtre courante**. Par défaut les méthodes et propriétés de {{domxref("Window")}} ne leur sont pas disponibles, mais {{domxref("DedicatedWorkerGlobalScope")}}, comme `Window`, implémente {{domxref("WindowTimers")}} et {{domxref("WindowBase64")}}.
+{{DefaultAPISidebar("Web Workers API")}}
 
-## Comparaison des propriétés et méthodes des différents types de workers
+En plus de l'ensemble des fonctions standard [JavaScript](/fr/docs/Web/JavaScript) (telles que [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), [`JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON), etc.), des fonctions du DOM sont disponibles pour les <i lang="en">workers</i>. Cet article en fournit la liste.
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Fonctions</td>
-      <td class="header">Workers dédiés</td>
-      <td class="header">Workers partagés</td>
-      <td class="header">Service workers</td>
-      <td class="header">Chrome workers {{Non-standard_inline}}</td>
-      <td class="header">En dehors des workers</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WindowBase64.atob", "atob()")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WindowBase64.btoa", "btoa()")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WindowTimers.clearInterval", "clearInterval()")}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("Window.dump()", "dump()")}}
-        {{non-standard_inline}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WindowTimers.setInterval", "setInterval()")}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WindowTimers.setTimeout", "setTimeout()")}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>non</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("WorkerGlobalScope.close", "close()")}}
-        {{non-standard_inline}}
-      </td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, sur {{domxref("WorkerGlobalScope")}}</td>
-      <td>oui, mais sans effet</td>
-      <td>Inconnu</td>
-      <td>non</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}}
-      </td>
-      <td>oui, sur {{domxref("DedicatedWorkerGlobalScope")}}</td>
-      <td>non</td>
-      <td>non</td>
-      <td>Inconnu</td>
-      <td>non</td>
-    </tr>
-  </tbody>
-</table>
+## Contextes et fonctions des relatifs aux <i lang="en">workers</i>
 
-## APIs disponibles dans les workers
+**Les <i lang="en">workers</i> s'exécutent dans un contexte global différent de celui de la fenêtre courante&nbsp;!** Bien que [`Window`](/fr/docs/Web/API/Window) ne soit pas directement accessible depuis les <i lang="en">workers</i>, de nombreuses méthodes en commun sont définies sur un mixin partagé (`WindowOrWorkerGlobalScope`), et disponibles pour les <i lang="en">workers</i> via les contextes dérivés de [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope)&nbsp;:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Fonction</td>
-      <td class="header">Fonctionnalité</td>
-      <td class="header">Support dans Gecko (Firefox)</td>
-      <td class="header">Support dans IE</td>
-      <td class="header">Support dans Blink (Chrome et Opera)</td>
-      <td class="header">Support dans WebKit (Safari)</td>
-    </tr>
-    <tr>
-      <td><code>XMLHttpRequest</code></td>
-      <td>
-        Crée et retourne un nouvel objet
-        {{domxref("XMLHttpRequest")}}; il imite le comportement du
-        constructeur standard <code>XMLHttpRequest()</code>. Remarquez que les
-        attributs <code>responseXML</code> et <code>channel</code> de
-        <code>XMLHttpRequest</code> retourne toujours <code>null</code>.
-      </td>
-      <td>
-        <p>Basique : {{CompatGeckoDesktop("1.9.1")}}</p>
-        <p>
-          {{domxref("XMLHttpRequest.response", "response")}}
-          et
-          {{domxref("XMLHttpRequest.responseType", "responseType")}}
-          sont disponibles depuis {{CompatGeckoDesktop("10")}}
-        </p>
-        <p>
-          {{domxref("XMLHttpRequest.timeout", "timeout")}} et
-          {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}}
-          sont disponibles depuis {{CompatGeckoDesktop("13")}}
-        </p>
-      </td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-    <tr>
-      <td><code>Worker</code></td>
-      <td>
-        Crée un nouveau {{ domxref("Worker") }}. Oui, les workers
-        peuvent engendrer des workers supplémentaires.
-      </td>
-      <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-      <td>10.0</td>
-      <td>
-        {{CompatNo}} Voir
-        <a href="http://code.google.com/p/chromium/issues/detail?id=31666"
-          >crbug.com/31666</a
-        >
-      </td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>{{ domxref("URL") }}</td>
-      <td>
-        Les workers peuvent utiliser les méthodes statiques
-        <a href="/en-US/docs/DOM/window.URL.createObjectURL"
-          >URL.createObjectURL</a
-        >
-        et
-        <a href="/en-US/docs/DOM/window.URL.revokeObjectURL"
-          >URL.revokeObjectURL</a
-        >
-        avec les objets {{domxref("Blob")}} accessibles au worker.<br />Les
-        workers peuvent aussi créer une nouvelle URL en utilisant le
-        constructeur {{domxref("URL.URL", "URL()")}} et appeler
-        n'importe quelle méthode normale sur l'objet retourné.
-      </td>
-      <td>
-        {{CompatGeckoDesktop(21)}} et
-        {{CompatGeckoDesktop(26)}} pour le constructeur URL()
-      </td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("TextEncoder")}} and
-        {{domxref("TextDecoder")}}
-      </td>
-      <td>
-        Crée et retourne un nouveau {{domxref("TextEncoder")}}, ou
-        respectivement {{domxref("TextDecoder")}}, permettant
-        d'encoder ou de décoder des chaînes de caractère dans un encodage
-        spécifique.
-      </td>
-      <td>{{CompatGeckoDesktop(20)}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WorkerNavigator")}}</td>
-      <td>
-        Le sous-ensemble de l'interface {{domxref("Navigator")}}
-        disponible aux workers.
-      </td>
-      <td>
-        Implémentation basique {{CompatVersionUnknown}}<br />{{domxref("NavigatorID.appCodeName", "appCodeName")}},
-        {{domxref("NavigatorID.product", "product")}},
-        {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}}:
-        {{CompatGeckoDesktop(28)}}<br />{{domxref("WorkerNavigator.onLine", "onLine")}}:
-        {{CompatGeckoDesktop(29)}}<br />{{domxref("NavigatorLanguage")}}:
-        {{CompatNo}}
-      </td>
-      <td>
-        {{domxref("NavigatorID.appName", "appName")}},
-        {{domxref("NavigatorID.appVersion", "appName")}},
-        {{domxref("WorkerNavigator.onLine", "onLine")}},
-        {{domxref("NavigatorID.platform", "platform")}},
-        {{domxref("NavigatorID.userAgent", "userAgent")}}:
-        10.0<br />Autre : {{CompatNo}}
-      </td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WorkerLocation")}}</td>
-      <td>
-        Le sous-ensemble de l'interface {{domxref("Location")}}
-        disponible aux workers.
-      </td>
-      <td>{{CompatGeckoDesktop(1.9.2)}}</td>
-      <td>10.0</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WorkerGlobalScope")}}</td>
-      <td>
-        Le contexte global des workers. Cet objet définit
-        <a href="#workerscope">les fonctions spécifiques aux workers</a>.
-      </td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>10.0</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("ImageData")}}</td>
-      <td>
-        Les données en pixels sous-jacentes à une zone d'un élément
-        {{domxref("canvas")}}. Manipuler de telles données peut être une
-        tâche complexe qu'il est plus approprié de déléguer à un web worker.
-      </td>
-      <td>{{CompatGeckoDesktop(25)}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("FileReaderSync")}}</td>
-      <td>
-        Cette API permet la lecture synchrone d'objets {{domxref("Blob")}}
-        et {{domxref("File")}}. C'est une API qui fonctionne uniquement au
-        sein des workers.
-      </td>
-      <td>{{CompatGeckoDesktop(8)}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("IndexedDB_API", "IndexedDB")}}</td>
-      <td>
-        Une base de données pour stocker des enregistrements contenant des
-        valeurs simples et des objets hiérarchiques.
-      </td>
-      <td>{{CompatGeckoDesktop(37)}}</td>
-      <td>10.0</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>{{domxref("WebSocket")}}</td>
-      <td>
-        Crée et retourne un nouvel objet {{domxref("WebSocket")}}; Il
-        imite le comportement d'un constructeur
-        <code>WebSocket()</code> standard.
-      </td>
-      <td>{{CompatGeckoDesktop(36)}}</td>
-      <td>11.0</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a></td>
-      <td>
-        Un mécanisme de stockage puissant et flexible pour de multiples
-        applications Firefox OS qui ont l'habitude de stocker et d'échanger des
-        données entre elles de manière rapide, efficace et sécurisée.
-      </td>
-      <td>
-        Seulement dans les applications internes (certifiées) de Firefox OS,
-        deuis v1.0.1.
-      </td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-      <td>{{CompatNo}}</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-          >Promises</a
-        >
-      </td>
-      <td>
-        Les objets JavaScript qui vous permettent d'écrire des fonctions
-        asynchrones.
-      </td>
-      <td>{{CompatGeckoDesktop(28)}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-      <td>{{CompatVersionUnknown}}</td>
-    </tr>
-  </tbody>
-</table>
+- [`DedicatedWorkerGlobalScope`](/fr/docs/Web/API/DedicatedWorkerGlobalScope) pour les <i lang="en">workers</i> dédiés
+- [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) pour les <i lang="en">workers</i> partagés
+- [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope) pour les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API)
+
+Certaines des fonctions qui sont accessibles depuis tous les types de <i lang="en">service workers</i> et depuis le fil d'exécution principal (via `WindowOrWorkerGlobalScope`) sont&nbsp;:
+
+- [`atob()`](/fr/docs/Web/API/atob)
+- [`btoa()`](/fr/docs/Web/API/btoa)
+- [`clearInterval()`](/fr/docs/Web/API/clearInterval)
+- [`clearTimeout()`](/fr/docs/Web/API/clearTimeout)
+- [`dump()`](/fr/docs/Web/API/Window/dump) {{non-standard_inline}}
+- [`setInterval()`](/fr/docs/Web/API/setInterval)
+- [`setTimeout()`](/fr/docs/Web/API/setTimeout)
+
+Les fonctions suivantes sont **uniquement** disponibles pour les pour les <i lang="en">workers</i>&nbsp;:
+
+- [`WorkerGlobalScope.importScripts()`](/fr/docs/Web/API/WorkerGlobalScope/importScripts) (pour tous les <i lang="en">workers</i>),
+- [`DedicatedWorkerGlobalScope.postMessage`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) (<i lang="en">workers</i> dédiés uniquement).
+
+## Les API web disponibles pour les <i lang="en">workers</i>
+
+> **Note :** Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
+
+Les API web suivantes sont disponibles pour les <i lang="en">workers</i>&nbsp;:
+
+- [API <i lang="en">Broadcast Channel</i>](/fr/docs/Web/API/Broadcast_Channel_API)
+- [API Cache](/fr/docs/Web/API/Cache)
+- [API <i lang="en">Channel Messaging</i>](/fr/docs/Web/API/Channel_Messaging_API)
+- [API Console](/fr/docs/Web/API/Console_API)
+- [`Crypto`](/fr/docs/Web/API/Crypto)
+- [`CustomEvent`](/fr/docs/Web/API/CustomEvent)
+- [Évènements émis par le serveur](/fr/docs/Web/API/Server-sent_events)
+- [`Fetch`](/fr/docs/Web/API/Fetch_API)
+- [`FileReader`](/fr/docs/Web/API/FileReader)
+- [`FileReaderSync`](/fr/docs/Web/API/FileReaderSync) (fonctionne uniquement dans les <i lang="en">workers</i>)
+- [`FormData`](/fr/docs/Web/API/FormData)
+- [`ImageData`](/fr/docs/Web/API/ImageData)
+- [`IndexedDB`](/fr/docs/Web/API/IndexedDB_API)
+- [API <i lang="en">Network Information</i>](/fr/docs/Web/API/Network_Information_API)
+- [`Notifications`](/fr/docs/Web/API/Notifications_API)
+- [`Performance`](/fr/docs/Web/API/Performance)
+- [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry)
+- [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)
+- [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)
+- [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)
+- [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)
+- [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`ServiceWorkerRegistration`](/fr/docs/Web/API/ServiceWorkerRegistration)
+- [`TextEncoder`](/fr/docs/Web/API/TextEncoder) et [`TextDecoder`](/fr/docs/Web/API/TextDecoder)
+- [`URL`](/fr/docs/Web/API/URL)
+- [WebGL](/fr/docs/Web/API/WebGL_API) avec [`OffscreenCanvas`](/fr/docs/Web/API/OffscreenCanvas) (activé via une préférence `gfx.offscreencanvas.enabled`)
+- [`WebSocket`](/fr/docs/Web/API/WebSocket)
+- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (bien que les attributs `responseXML` et `channel` vaillent toujours `null`).
+
+Les <i lang="en">workers</i> peuvent également engendrer d'autres <i lang="en">workers</i> et les API suivantes sont donc disponibles&nbsp;:
+
+- [`Worker`](/fr/docs/Web/API/Worker)
+- [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope)
+- [`WorkerLocation`](/fr/docs/Web/API/WorkerLocation)
+- [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)
 
 ## Voir aussi
 
-- [Utilisation des web workers](/fr/docs/Utilisation_des_web_workers)
-- {{ domxref("Worker") }}
+- [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [`Worker`](/fr/docs/Web/API/Worker)

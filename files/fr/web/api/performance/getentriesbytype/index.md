@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/getEntriesByType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntriesByName()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour le type donné. Les entrées de performance auront pu être créées au préalable avec des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites.
@@ -86,11 +87,8 @@ function usePerformanceEntryMethods() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbytype', 'getEntriesByType()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performance-getentriesbytype', 'getEntriesByType()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.getEntriesByType")}}
+{{Compat}}

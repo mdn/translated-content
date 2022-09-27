@@ -2,6 +2,7 @@
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 在包括 Firefox 在内的 Mozilla 的应用里， **`-moz-outline-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性可以用作给一个元素 {{cssxref("outline")}} 圆角。
@@ -85,4 +86,4 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-moz-outline-radius")}}
+{{Compat}}

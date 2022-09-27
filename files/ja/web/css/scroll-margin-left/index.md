@@ -1,17 +1,6 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Scroll margin left
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-left
-browser-compat: css.properties.scroll-margin-left
-translation_of: Web/CSS/scroll-margin-left
 ---
 {{CSSRef}}
 

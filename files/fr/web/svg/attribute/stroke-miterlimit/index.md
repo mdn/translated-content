@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-miterlimit
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-miterlimit`** définit la limite du rapport entre la longueur du coin et la valeur de {{ SVGAttr("stroke-width") }} utilisée pour dessiner la [liaison entre deux segments de ligne](/fr/docs/Web/SVG/Attribute/stroke-linejoin). Quand la limite est dépassée, la liaison passe du type _miter_ (pointu) au type _bevel_ (biseauté).
@@ -94,13 +95,10 @@ Par exemple, une limite de 1.414 convertit une liaison _miter_ en _bevel_ pour l
 
 La valeur de `stroke-miterlimit` doit être supérieure ou égale à 1.
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-miterlimit")}}
-
-## Spécification
-
-| Spécification                                                                                                    | Statut                   | Commentaire                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

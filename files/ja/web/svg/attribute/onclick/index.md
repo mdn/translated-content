@@ -1,12 +1,6 @@
 ---
 title: onclick
 slug: Web/SVG/Attribute/onclick
-tags:
-  - SVG
-  - SVG Attribute
-  - events
-  - イベント
-translation_of: Web/SVG/Attribute/onclick
 ---
 {{SVGRef}}
 

@@ -1,16 +1,8 @@
 ---
 title: 'WebSocket: error イベント'
 slug: Web/API/WebSocket/error_event
-tags:
-  - API
-  - Error
-  - イベント
-  - リファレンス
-  - ウェブ
-  - WebSocket
-browser-compat: api.WebSocket.error_event
-translation_of: Web/API/WebSocket/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、 `WebSocket` の接続がエラーによって閉じられた（例えば一部のデータを送信できなかった）ときに発生します。

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/kbd
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant la saisie de texte par l'utilisateur à partir d'un clavier, d'une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le {{Glossary("user agent")}} rend par défaut le contenu d'un élément `<kbd>` en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.
@@ -212,15 +213,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                                                        |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}     | Extension de l'élément afin d'inclure tout type de saisie de l'utilisateur (vocale, tactile, clavier). |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## Voir aussi
 

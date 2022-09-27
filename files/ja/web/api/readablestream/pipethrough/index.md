@@ -1,16 +1,8 @@
 ---
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
-translation_of: Web/API/ReadableStream/pipeThrough
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`pipeThrough()`** メソッドは、変換ストリームまたはその他の書き込み可能/読み取り可能なペアを介して現在のストリームをパイプするチェーン可能な方法を提供します。

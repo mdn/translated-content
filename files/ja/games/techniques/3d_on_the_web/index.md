@@ -1,15 +1,6 @@
 ---
 title: ウェブ上の 3D ゲームの概要
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - Games
-  - Graphics
-  - NeedsContent
-  - NeedsExample
-  - WebGL
-  - WebVR
-  - three.js
-translation_of: Games/Techniques/3D_on_the_web
 ---
 {{GamesSidebar}}
 

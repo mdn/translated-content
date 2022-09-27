@@ -1,17 +1,8 @@
 ---
 title: ResizeObserverEntry.contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserverEntry
-  - contentBoxSize
-browser-compat: api.ResizeObserverEntry.contentBoxSize
-translation_of: Web/API/ResizeObserverEntry/contentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`contentBoxSize`** は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバック実行時に、監視された要素の新しいコンテンツボックスサイズを含む配列を返します。

@@ -1,22 +1,9 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript タイマー
-  - MakeBrowserAgnostic
-  - メソッド
-  - NeedsMarkupWork
-  - タイマー
-  - setInterval
-  - Polyfill
-browser-compat: api.setInterval
-translation_of: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("Worker")}} メソッドで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。

@@ -1,15 +1,8 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - Class
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 **`DataView`** ビューは {{jsxref("ArrayBuffer")}} の多様な数値型を、プラットフォームの[エンディアン](/ja/docs/Glossary/Endianness)に関係なく読み書きするための低水準インターフェイスを提供します。

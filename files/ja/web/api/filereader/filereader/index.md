@@ -1,13 +1,8 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - Constructor
-  - FileReader
-  - Reference
-translation_of: Web/API/FileReader/FileReader
 ---
+
 **`FileReader()`** コンストラクタは、新しい FileReader を作成します。
 
 `FileReader` の使用方法の詳細については、[Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications) を参照してください。

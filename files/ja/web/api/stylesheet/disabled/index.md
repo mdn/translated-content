@@ -1,13 +1,8 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - StyleSheet
-translation_of: Web/API/StyleSheet/disabled
 ---
+
 {{ApiRef}}
 
 ## 概要

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de fournir des traductions des noms de langues, régions et systèmes d'écriture.

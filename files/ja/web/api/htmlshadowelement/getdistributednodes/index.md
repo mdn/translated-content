@@ -1,14 +1,8 @@
 ---
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-translation_of: Web/API/HTMLShadowElement/getDistributedNodes
 ---
+
 {{APIRef("Web Components")}}
 
 **`HTMLShadowElement.getDistributedNodes()`** メソッドは、`<shadow>` 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返します。

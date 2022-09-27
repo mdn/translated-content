@@ -1,15 +1,8 @@
 ---
 title: 'ServiceWorkerGlobalScope: install event'
 slug: Web/API/ServiceWorkerGlobalScope/install_event
-tags:
-  - API
-  - Reference
-  - Service Worker
-  - ServiceWorkerGlobalScope
-  - events
-  - install
-translation_of: Web/API/ServiceWorkerGlobalScope/install_event
 ---
+
 {{DefaultAPISidebar("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`install`** イベントは、{{domxref("ServiceWorkerRegistration")}} が新しいインストール中のワーカー（{{domxref("ServiceWorkerRegistration.installing")}} worker）を取得すると発生します。

@@ -1,20 +1,8 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
-  - メソッド
-translation_of: Web/API/StorageManager/estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 **`estimate()`** は {{domxref("StorageManager")}} インターフェイスのメソッドで、ストレージマネージャーに、現在の[オリジン](/ja/docs/Glossary/Same-origin_policy)が使用しているストレージの大きさ (`usage`) と、利用可能な空間の量 (`quota`) を要求します。

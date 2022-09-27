@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/source
 ---
+
 {{JSRef}}
 
 La propriété **`source`** renvoie une chaîne de caractères qui contient le texte du motif à rechercher (_pattern_), sans les barres obliques (_slashes_). C'est une propriété en lecture seule liée à l'instance. **`source`** ne contient aucun des options ou drapeaux (_flags_) (tels que "g", "i" ou "m") de l'expression rationnelle.

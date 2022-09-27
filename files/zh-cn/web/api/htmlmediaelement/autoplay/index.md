@@ -2,6 +2,7 @@
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.autoplay`** 属性等同于 HTML 属性中的 {{htmlattrxref("autoplay", "video")}}, 它表示当 player 下载到足够可以播放的媒体文件时，是否自动播放视频。
@@ -38,7 +39,7 @@ Xxx.xxx()
 
 ## 浏览器支持
 
-{{Compat("api.HTMLMediaElement.autoplay")}}
+{{Compat}}
 
 ## 看看这里
 

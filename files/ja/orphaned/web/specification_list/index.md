@@ -1,9 +1,9 @@
 ---
 title: Specification List
 slug: orphaned/Web/Specification_list
-translation_of: Web/Specification_list
 original_slug: Web/Specification_list
 ---
+
 Open Web の基盤は幾つもの仕様書によって定義されています。このページではそれらの仕様書をリストしています。
 
 The Open Web Platform is defined in numerous specifications. This page lists these specifications, as well as links to MDN's documentation (including both tutorials and reference content), and links to status documentation about how complete our documentation project is in that topic.
@@ -24,7 +24,7 @@ The Open Web Platform is defined in numerous specifications. This page lists the
       <td>
         <a
           class="external"
-          href="http://www.whatwg.org/specs/web-apps/current-work/"
+          href="https://www.whatwg.org/specs/web-apps/current-work/"
           >HTML</a
         >
         (one page)<br />{{ SpecName("HTML WHATWG") }}<br />

@@ -15,7 +15,7 @@ MDN 내 각 [CSS 속성(property) 정의](/ko/docs/Web/CSS/CSS_Reference) 페이
 
 ## 상속되는 속성
 
-요소의 **상속되는 속성**에 값이 지정되지 않은 경우, 요소는 부모 요소의 해당 속성의 [계산값](/ko/docs/Web/CSS/computed_value "computed value")을 얻습니다. 오직 문서의 루트 요소만 속성의 요약절에 주어진 [초기값](/ko/docs/Web/CSS/initial_value "initial value")을 얻습니다.
+요소의 **상속되는 속성**에 값이 지정되지 않은 경우, 요소는 부모 요소의 해당 속성의 [계산값](/ko/docs/Web/CSS/computed_value)을 얻습니다. 오직 문서의 루트 요소만 속성의 요약절에 주어진 [초기값](/ko/docs/Web/CSS/initial_value)을 얻습니다.
 
 상속되는 속성의 대표적인 예는 {{ Cssxref("color") }} 속성입니다. 주어진 스타일 규칙:
 
@@ -33,7 +33,7 @@ p { color: green }
 
 ## 상속되지 않는 속성
 
-요소의 **상속되지 않는 속성**(Mozilla 코드에서는 가끔 **reset 속성**으로 불림)에 어떤 값이 지정되지 않는 경우, 요소는 그 속성의 [초기값](/ko/docs/Web/CSS/initial_value "initial value")을 얻습니다(속성의 요약절에 지정된 대로).
+요소의 **상속되지 않는 속성**(Mozilla 코드에서는 가끔 **reset 속성**으로 불림)에 어떤 값이 지정되지 않는 경우, 요소는 그 속성의 [초기값](/ko/docs/Web/CSS/initial_value)을 얻습니다(속성의 요약절에 지정된 대로).
 
 상속되지 않는 속성의 대표적인 예는 {{ Cssxref("border") }} 속성입니다. 주어진 스타일 규칙:
 
@@ -55,7 +55,7 @@ p { color: green }
 
 ## 같이 보기
 
-- [CSS 참고서](/ko/docs/Web/CSS/CSS_Reference "CSS Reference")
+- [CSS 참고서](/ko/docs/Web/CSS/CSS_Reference)
 - CSS 주요 개념
 
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)

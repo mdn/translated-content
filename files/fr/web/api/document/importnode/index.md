@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/importNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode {{domxref ("Document")}} `importNode()` crée une nouvelle copie du {{domxref ("Node")}} ou {{domxref ("DocumentFragment")}} spécifié à partir d'un autre document, afin qu'il puisse être inséré dans le document actuel. Il n'est pas encore inclus dans l'arbre des documents; Pour ce faire, vous devez appeler une méthode telle que {{domxref ("Node.appendChild", "appendChild ()")}} ou {{domxref ("Node.insertBefore", "insertBefore ()")}}.
