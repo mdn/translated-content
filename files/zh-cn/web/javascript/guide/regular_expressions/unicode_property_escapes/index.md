@@ -9,7 +9,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
-> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.nicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
+> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
 
 > **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符 ，但后者浏览器兼容性更好 (截至 2020 一月).
 
