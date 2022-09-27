@@ -43,7 +43,7 @@ var milisegundos = ahora.getMilliseconds();
 
 ## Especificaciones
 
-{{Specification}}
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 
