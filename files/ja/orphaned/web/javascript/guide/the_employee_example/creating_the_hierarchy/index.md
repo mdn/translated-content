@@ -3,6 +3,7 @@ title: Creating the Hierarchy
 slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy
 original_slug: Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy
 ---
+
 ### 階層の作成
 
 Employee の階層を実装するための適当なコンストラクタ関数を定義する方法はいくつかあります。これの定義に何を選択するかは、アプリケーションで何ができるようにしたいかに大きくよります。

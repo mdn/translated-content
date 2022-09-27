@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 La propriété _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.

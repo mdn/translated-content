@@ -1,7 +1,6 @@
 ---
 title: Code splitting (コード分割)
 slug: Glossary/Code_splitting
-translation_of: Glossary/Code_splitting
 ---
 **コード分 ​​ 割**とは、コードをさまざまなバンドルまたはコンポーネントに分割することです。そうすることで、必要に応じて特定のコンポーネントのみを読み込んだり、並列で読み込んだりすることを可能にします。
 

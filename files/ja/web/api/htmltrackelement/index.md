@@ -1,17 +1,8 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTrackElement
-  - Interface
-  - NeedsNewLayout
-  - Reference
-browser-compat: api.HTMLTrackElement
-translation_of: Web/API/HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTrackElement`** インターフェイスは {{Glossary("DOM")}} 内にある {{Glossary("HTML")}} の {{HTMLElement("track")}} 要素を表します。この要素は {{HTMLElement("audio")}} または {{HTMLElement("video")}} の子として使用され、クローズドキャプションや字幕などの情報を含むテキストトラックを指定することが可能です。

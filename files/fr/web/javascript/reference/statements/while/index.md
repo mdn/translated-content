@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Reference/Instructions/while
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.

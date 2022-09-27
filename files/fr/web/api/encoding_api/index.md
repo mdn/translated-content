@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Encoding_API
 ---
+
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
 L'`API Encoding` fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.

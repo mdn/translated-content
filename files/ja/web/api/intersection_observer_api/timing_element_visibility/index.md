@@ -1,14 +1,6 @@
 ---
 title: Intersection Observer API を使用したタイミング要素の可視性
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - チュートリアル
-  - 中級
-  - 例
-translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 

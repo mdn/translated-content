@@ -2,6 +2,7 @@
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 **`DataView`** 视图是一个可以从 二进制{{jsxref("ArrayBuffer")}} 对象中读写多种数值类型的底层接口，使用它时，不用考虑不同平台的[字节序](/zh-CN/docs/Glossary/Endianness)问题。

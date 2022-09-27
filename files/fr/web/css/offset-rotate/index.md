@@ -8,6 +8,7 @@ tags:
   - offset-rotate
 translation_of: Web/CSS/offset-rotate
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`offset-rotate`** définit l'orientation et la direction de l'élément lorsqu'il est positionné le long du chemin représenté par {{cssxref("offset-path")}}.

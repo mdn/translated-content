@@ -1,12 +1,6 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Key
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/key
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/key
 
 ```
 <xsl:key name=NAME match=EXPRESSION
-	use=EXPRESSION />
+  use=EXPRESSION />
 ```
 
 ### 必須属性

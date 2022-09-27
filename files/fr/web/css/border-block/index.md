@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-block`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en bloc.

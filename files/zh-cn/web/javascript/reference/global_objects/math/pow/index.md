@@ -2,6 +2,7 @@
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
+
 {{JSRef}}
 
 **`Math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
@@ -51,4 +52,4 @@ function raisePower(x,y) {
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}

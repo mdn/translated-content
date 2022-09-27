@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 
 ## 구문
 
-    mySet.has(value);
+```js
+mySet.has(value);
+```
 
 ### 매개변수
 

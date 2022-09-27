@@ -1,14 +1,6 @@
 ---
 title: animation-timeline
 slug: Web/CSS/animation-timeline
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-timeline
-translation_of: Web/CSS/animation-timeline
 ---
 {{CSSRef}}
 

@@ -7,6 +7,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Types
 ---
+
 {{WebGLSidebar}}
 
 Les types suivants sont utilisés dans les interfaces [WebGL](/fr-FR/docs/Web/API/WebGL_API).
@@ -146,11 +147,7 @@ Ces types sont utilisés à l'intérieur des [extensions WebGL](/fr-FR/docs/Web/
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                           | Commentaire                        |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------- |
-| {{SpecName('WebGL', "#5.1", "Types")}}                             | {{Spec2('WebGL')}}                         | Définition initiale                |
-| {{SpecName('WebGL2', "#3.1", "Types")}}                             | {{Spec2('WebGL2')}}                         | Définit des types supplémentaires. |
-| {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}} | {{Spec2('EXT_disjoint_timer_query')}} | Ajoute `GLuint64EXT`               |
+{{Specifications}}
 
 ## Voir aussi
 

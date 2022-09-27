@@ -1,16 +1,6 @@
 ---
 title: ':has()'
 slug: Web/CSS/:has
-tags:
-  - ':has'
-  - CSS
-  - 実験的
-  - リファレンス
-  - セレクター
-  - リファレンス
-  - 擬似クラス
-browser-compat: css.selectors.has
-translation_of: Web/CSS/:has
 ---
 {{CSSRef}}
 

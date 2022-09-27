@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-color
 ---
+
 {{CSSRef}}
 
 La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) et peut être utilisé pour faire ressortir l'élément.

@@ -2,6 +2,7 @@
 title: Web Workers 可以使用的函数和类
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 除了标准的 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数集（例如 {{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("Object")}}、{{jsxref("JSON")}} 等）DOM 中的许多函数都可在 worker 中使用。本文列出了这些函数。

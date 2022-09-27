@@ -2,6 +2,7 @@
 title: Console
 slug: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 **`Console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web Console](/zh-CN/docs/Tools/Web_Console)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
@@ -195,7 +196,7 @@ console.debug("Back to the outer level");
 
 ### 定时器
 
-你可以使用定时器来计算一段特定操作的周期。使用 ` console.time``() ` 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 ` console.timeEnd``() ` 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。
+你可以使用定时器来计算一段特定操作的周期。使用 `console.time()` 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 `console.timeEnd()` 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。
 
 示例：:
 

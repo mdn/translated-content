@@ -1,13 +1,8 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
+
 {{JSRef}}
 
 **`RangeError`** オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。

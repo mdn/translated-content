@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "is not a function" は、値を関数として呼び出そうとしたが、その値が実際には関数ではなかった場合に発生します。

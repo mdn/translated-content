@@ -1,18 +1,8 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。

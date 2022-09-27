@@ -5,9 +5,9 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
 <p>{{DefaultAPISidebar("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">В этой статье изучается использование программного интерфейса  Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> .</span></p>
+<p>В этой статье изучается использование программного интерфейса  Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> .</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> Полезно отметить, что последние версии библиотеки <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js</a>  включают реализацию метода <code>getDisplayMedia()</code> для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях  Chrome, Edge, и Firefox.</p>
 </div>
 
@@ -15,8 +15,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Захват содержимого экрана, как живого потока {{domxref("MediaStream")}} запускается вызовом метода {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getDisplayMedia()")}}, и возвращает экземпляр объекта промиса , который разрешается объектом потока, текущих медиаданных с экрана.</p>
 
-<figure>
-<figcaption><strong><em>Запуск захвата с экрана : в стиле <code>async</code>/<code>await</code> </em></strong></figcaption>
+<p><strong><em>Запуск захвата с экрана : в стиле <code>async</code>/<code>await</code> </em></strong></p>
 
 <pre class="brush: js">async function startCapture(displayMediaOptions) {
   let captureStream = null;
@@ -31,8 +30,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Можно написать этот код, используя асинхронную функцию и оператор <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.</p>
 
-<figure>
-<figcaption><strong><em>Запуска захвата с экрана: в стиле <code>Promise</code> </em></strong>
+<p><strong><em>Запуска захвата с экрана: в стиле <code>Promise</code> </em></strong></p>
 
 <pre class="brush: js">function startCapture(displayMediaOptions) {
  let captureStream = null;
@@ -45,11 +43,9 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Смотрим <a href="#options_and_constraints">Options and constraints</a>, ниже, подробнее о том, как указать желаемый тип поверхности, а также о других способах настройки результирующего потока.</p>
 
-<figure>
-<figcaption><strong><em>Пример окна, позволяющего пользователю выбрать поверхность дисплея для захвата</em></strong></figcaption>
+<p><strong><em>Пример окна, позволяющего пользователю выбрать поверхность дисплея для захвата</em></strong></p>
 
 <p><a href="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png" style="height: 520px; width: 619px;"></a></p>
-</figure>
 
 <p>Затем можно использовать захваченный поток <code>captureStream</code>, везде, где принимается тип потока в качестве входных параметров.  Пример <a href="#examples">examples</a> ниже показывает несколько способов использования полученного типа потока </p>
 
@@ -67,7 +63,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Объект ограничений, передающийся в метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} является объектом типа {{domxref("DisplayMediaStreamConstraints")}} , который используется для конфигурации получаемого объекта потока.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.</p>
 </div>
 
@@ -95,13 +91,13 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>К примеру, если определить ограничение  {{domxref("MediaTrackConstraints.width", "width")}} для видео, оно применится как масштабирование видео, после того, как пользователь выберет область, и не устанавливает ограничение на размер самого источника.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.</p>
 </div>
 
 <p>В процессе захвата экрана машина, которая обменивается содержимым экрана, будет отображать какую-то форму индикатора, чтобы пользователь знал, что обмен находиться в процессе.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие {{event("devicechange")}} никогда не вызывается, когда есть изменения в доступных источниках  при выполнении <code>getDisplayMedia()</code>.</p>
 </div>
 
@@ -137,7 +133,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Захват аудио всегда необязателен, и даже когда веб-контент запрашивает поток с аудио  и видео, возвращаемый {{domxref ("MediaStream")}} может по-прежнему иметь только одну видеодорожку без звука.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, <code>cursor </code><a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">имеет ограниченную поддержку</a>.</p>
 </div>
 
@@ -160,8 +156,6 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 <h3 id="Authorizing_capture_of_display_contents">Authorizing capture of display contents</h3>
 
 <p>Before streaming of captured screen contents can begin, the {{Glossary("user agent")}} will ask the user to confirm the sharing request, and to select the content to share.</p>
-</figcaption>
-</figure>
 
 <h2 id="Examples">Examples</h2>
 
@@ -179,7 +173,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>The object <code>displayMediaOptions</code> contains the {{domxref("MediaStreamConstraints")}} to pass into <code>getDisplayMedia()</code>; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to <code>always</code>, indicating that the mouse cursor should always be included in the captured media.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
 </div>
 
@@ -348,4 +342,3 @@ Click the Start Capture button to begin.&lt;/p&gt;
  <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking still photos with WebRTC</a></li>
  <li>{{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}</li>
 </ul>
-</figure>

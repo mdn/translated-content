@@ -1,13 +1,6 @@
 ---
 title: WebGL
 slug: Glossary/WebGL
-tags:
-  - Advanced
-  - CodingScripting
-  - Glossary
-  - Web Graphics
-  - WebGL
-translation_of: Glossary/WebGL
 ---
 **WebGL** (_Web グラフィックライブラリー_) は、インタラクティブな 2D/3D グラフィックを描画する {{Glossary("JavaScript")}} {{Glossary("API")}} です。
 

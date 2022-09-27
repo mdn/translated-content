@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 browser-compat: javascript.builtins.Int8Array.Int8Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Int8Array()`** permet de créer un nouveau tableau typé [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array) dont les éléments sont des nombres entiers signés en complément à deux, représentés sur 8 bits. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.

@@ -2,6 +2,7 @@
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Node")}} 的 **`nodeValue`** 属性返回或设置当前节点的值。
@@ -35,7 +36,7 @@ value 是一个包含当前节点的值的字符串（如果有的话）。
 | {{domxref("ProcessingInstruction")}} | 整个标签的文本内容 |
 | {{domxref("Text")}}                         | 文本节点的内容     |
 
-如果` nodeValue 的值为``null `,则对它赋值也不会有任何效果。
+如果 `nodeValue` 的值为 `null`,则对它赋值也不会有任何效果。
 
 ## 规范
 

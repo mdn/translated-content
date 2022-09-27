@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/hypot
 ---
+
 {{JSRef}}
 
 La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés de ses arguments. On peut également la définir avec la formule suivante :

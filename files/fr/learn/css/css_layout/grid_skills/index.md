@@ -3,6 +3,7 @@ title: 'Testez vos compétences : Grilles'
 slug: Learn/CSS/CSS_layout/Grid_skills
 translation_of: Learn/CSS/CSS_layout/Grid_skills
 ---
+
 {{LearnSidebar}}
 
 Le but de cette tâche est de vous faire travailler avec « _CSS Grid Layout_ » (modèle de disposition en grille) et d'évaluer votre compréhension du comportement d'une grille et des éléments de grille. Vous allez compléter trois petites tâches en utilisant différents éléments des grilles CSS.

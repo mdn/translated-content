@@ -1,15 +1,6 @@
 ---
 title: フレックスアイテムの折り返しのマスター
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-tags:
-  - CSS
-  - Flex
-  - ガイド
-  - collapsed items
-  - フレックスボックス
-  - grid
-  - 折り返し
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.selection
-translation_of: Web/CSS/::selection
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr.namespaceURI`** 只读属性返回属性的命名空间 URI，如果该元素不在命名空间中，则返回 null。
@@ -47,7 +48,7 @@ DOM 本身不处理或强制命名空间验证。 DOM 应用程序需要做任�
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.namespaceURI")}}
+{{Compat}}
 
 ## 其他文章
 

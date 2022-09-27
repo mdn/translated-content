@@ -1,15 +1,8 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLLabelElement
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLLabelElement
-translation_of: Web/API/HTMLLabelElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLabelElement`** インターフェイスは {{HTMLElement("label")}} 要素を操作するための独自のプロパティへのアクセスを提供します。基底となる {{domxref("HTMLElement")}} インターフェイスからメソッドとプロパティを継承しています。

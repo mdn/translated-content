@@ -1,12 +1,8 @@
 ---
 title: 私たちが書くものは何か
 slug: MDN/Writing_guidelines/What_we_write
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/What_we_write
 ---
+
 {{MDNSidebar}}  
 
 MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。

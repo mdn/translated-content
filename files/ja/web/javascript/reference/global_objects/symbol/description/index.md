@@ -1,13 +1,8 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
+
 {{JSRef}}
 
 読み取り専用 **`description`** プロパティは、 {{JSxRef("Symbol")}} オブジェクトのオプションの説明を返す文字列です。

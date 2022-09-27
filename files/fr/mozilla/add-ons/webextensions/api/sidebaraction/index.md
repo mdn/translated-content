@@ -11,6 +11,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
+
 {{AddonSidebar}}
 
 Obtient et définit les propriétés de la barre latérale d'une extension.

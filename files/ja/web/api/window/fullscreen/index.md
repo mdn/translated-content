@@ -1,18 +1,8 @@
 ---
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
-tags:
-  - API
-  - HTML DOM
-  - NeedsMarkupWork
-  - Non-standard
-  - Property
-  - Reference
-  - Window
-  - プロパティ
-  - 標準外
-translation_of: Web/API/Window/fullScreen
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 **`fullScreen`** は `Window` インターフェイスのプロパティで、そのウィンドウが全画面モードで表示されているかどうかを示します。

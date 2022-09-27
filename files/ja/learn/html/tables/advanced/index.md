@@ -32,9 +32,9 @@ slug: Learn/HTML/Tables/Advanced
 
 前の記事で最初に出会った例を再考しながら、これを試してみましょう。
 
-1.  [HTML 表の基本](/ja/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col)の最後から語学教師の学校の時間割を開くか、または [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ファイルのローカルコピーを作成してください。
-2.  表に適切なキャプションを追加します。
-3.  コードを保存してブラウザーで開くと、コードがどのように見えるかがわかります。
+1. [HTML 表の基本](/ja/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col)の最後から語学教師の学校の時間割を開くか、または [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ファイルのローカルコピーを作成してください。
+2. 表に適切なキャプションを追加します。
+3. コードを保存してブラウザーで開くと、コードがどのように見えるかがわかります。
 
 > **Note:** GitHub で私たちのバージョンを見つけることができます — [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) を見てください([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html))。
 
@@ -56,12 +56,12 @@ slug: Learn/HTML/Tables/Advanced
 
 これらの新しい要素を実行してみましょう。
 
-1.  まず、新しいフォルダに [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを作成します。
-2.  ブラウザーでそれを開いてみてください — あなたはそれが問題ないように見えますが、それは改善されることになるかもしれません。 支出額の合計を含む "SUM" 行は間違った場所にあるように思われ、コードから抜けている細部がいくつかあります。
-3.  明白なヘッダー行を `<thead>` 要素内に、 "SUM" 行を `<tfoot>` 要素内に、そして残りの内容を `<tbody>` 要素内に配置します。
-4.  保存して更新すると、`<tfoot>` 要素を追加すると "SUM" 行が表の一番下に移動していることがわかります。
-5.  次に、{{htmlattrxref("colspan","td")}} 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
-6.  これらの要素が CSS を適用するためにどれほど有用であるかのアイデアをあなたに与えるために、表にいくつかの簡単な追加のスタイリングを追加しましょう。 HTML 文書の `<head>` の中には、空の {{htmlelement("style")}} 要素があります。 この要素内に、次の CSS コード行を追加します。
+1. まず、新しいフォルダに [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを作成します。
+2. ブラウザーでそれを開いてみてください — あなたはそれが問題ないように見えますが、それは改善されることになるかもしれません。 支出額の合計を含む "SUM" 行は間違った場所にあるように思われ、コードから抜けている細部がいくつかあります。
+3. 明白なヘッダー行を `<thead>` 要素内に、 "SUM" 行を `<tfoot>` 要素内に、そして残りの内容を `<tbody>` 要素内に配置します。
+4. 保存して更新すると、`<tfoot>` 要素を追加すると "SUM" 行が表の一番下に移動していることがわかります。
+5. 次に、{{htmlattrxref("colspan","td")}} 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
+6. これらの要素が CSS を適用するためにどれほど有用であるかのアイデアをあなたに与えるために、表にいくつかの簡単な追加のスタイリングを追加しましょう。 HTML 文書の `<head>` の中には、空の {{htmlelement("style")}} 要素があります。 この要素内に、次の CSS コード行を追加します。
 
     ```css
     tbody {
@@ -74,7 +74,7 @@ slug: Learn/HTML/Tables/Advanced
     }
     ```
 
-7.  保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
+7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
 
 > **Note:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう([CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)は始めるのに良い場所です。 [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)に関する具体的な記事もあります)。
 
@@ -375,8 +375,8 @@ slug: Learn/HTML/Tables/Advanced
 
 `scope` 属性を使用する代わりに、{{htmlattrxref("id")}} 属性と {{htmlattrxref("headers", "td")}} 属性を使用して、ヘッダーとセル間の関連付けを作成することもできます。 使い方は次のとおりです。
 
-1.  各 `<th>` 要素に一意の `id` を追加します。
-2.  各 `<td>` 要素に `headers` 属性を追加します。 各 `headers` 属性には、そのセルのヘッダーとして機能する全ての `<th>` 要素の `id` のリストを、スペースで区切って含める必要があります。
+1. 各 `<th>` 要素に一意の `id` を追加します。
+2. 各 `<td>` 要素に `headers` 属性を追加します。 各 `headers` 属性には、そのセルのヘッダーとして機能する全ての `<th>` 要素の `id` のリストを、スペースで区切って含める必要があります。
 
 これは HTML の表に、表内の各セルの位置の明示的な定義を与えます。 これは、それが属する各列と各行のヘッダーによって定義されます。 スプレッドシートのようなものです。 それがうまく機能するためには、表は本当に列と行の両方のヘッダーを必要とします。
 
@@ -410,9 +410,9 @@ slug: Learn/HTML/Tables/Advanced
 
 ### アクティブラーニング: scope と headers で遊ぶ
 
-1.  この最後の演習では、まず [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを新しいディレクトリーに作成してください。
-2.  この表をより適切にするために適切な `scope` 属性を追加してみてください。
-3.  最後に、最初のファイルの別のコピーを作成して、今度は、`id` 属性と `headers` 属性を使用して表にアクセスしやすくします。
+1. この最後の演習では、まず [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを新しいディレクトリーに作成してください。
+2. この表をより適切にするために適切な `scope` 属性を追加してみてください。
+3. 最後に、最初のファイルの別のコピーを作成して、今度は、`id` 属性と `headers` 属性を使用して表にアクセスしやすくします。
 
 > **Note:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
 

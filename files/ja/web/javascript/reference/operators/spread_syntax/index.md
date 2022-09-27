@@ -1,15 +1,8 @@
 ---
 title: スプレッド構文
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - イテレーター
-  - JavaScript
-  - 言語機能
-  - Reference
-browser-compat: javascript.operators.spread
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}
 
 **スプレッド構文** (`...`) を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数 (関数呼び出しの場合) や要素 (配列リテラルの場合) を期待された場所で展開したり、オブジェクト式を、0 個以上のキーと値の組 (オブジェクトリテラルの場合) を期待された場所で展開したりすることができます。

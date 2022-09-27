@@ -2,6 +2,7 @@
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}返回与指定的选择器组匹配的元素的后代的第一个元素。
 
 ## 语法
@@ -11,12 +12,12 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` 和 `baseElement` 是 {{domxref("element")}} 对象。
-- `selectors` 是一个 CSS 选择器字符串 ( [selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors) )
+- `selectors` 是一个 CSS 选择器字符串 ( [selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors) )
 
 ### 参数
 
 - `selectors`
-  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
+  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
 
 ### 返回值
 
@@ -92,7 +93,7 @@ document.getElementById("output").innerHTML =
 
 ## 相关链接
 
-- [`element.querySelectorAll`](/en-US/docs/DOM/Element.querySelectorAll)
-- [`document.querySelector`](/en-US/docs/DOM/Document.querySelector)
-- [`document.querySelectorAll`](/en-US/docs/DOM/Document.querySelectorAll)
-- [Code snippets for querySelector](/en-US/docs/Code_snippets/QuerySelector)
+- [`element.querySelectorAll`](/zh-CN/docs/DOM/Element.querySelectorAll)
+- [`document.querySelector`](/zh-CN/docs/DOM/Document.querySelector)
+- [`document.querySelectorAll`](/zh-CN/docs/DOM/Document.querySelectorAll)
+- [Code snippets for querySelector](/zh-CN/docs/Code_snippets/QuerySelector)

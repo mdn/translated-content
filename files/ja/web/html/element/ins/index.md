@@ -1,16 +1,6 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Inserted Text
-  - Insertion
-  - Reference
-  - Web
-  - ins
-translation_of: Web/HTML/Element/ins
 ---
 {{HTMLRef}}
 

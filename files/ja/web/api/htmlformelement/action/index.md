@@ -1,12 +1,8 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
-tags:
-  - DOM
-  - Forms
-  - Reference
-translation_of: Web/API/HTMLFormElement/action
 ---
+
 ## 概要
 
 {{HTMLElement("form")}} 要素の action を取得 / 設定します。

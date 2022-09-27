@@ -1,13 +1,6 @@
 ---
 title: サブグリッド
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
-tags:
-  - CSS
-  - CSS 表示
-  - CSS グリッド
-  - ガイド
-  - サブグリッド
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
 {{CSSRef}}
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 La propriété **`touch-action`** définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.

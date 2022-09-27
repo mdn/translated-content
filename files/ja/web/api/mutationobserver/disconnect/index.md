@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
-translation_of: Web/API/MutationObserver/disconnect
 ---
 {{APIRef("DOM WHATWG")}}
 
@@ -21,7 +20,7 @@ mutationObserver.disconnect()
 
 `undefined`
 
-> **Note:** **注:** すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。
+> **Note:** すでに検知されているものの、まだオブザーバーに報告されていない変更の通知は、すべて破棄されます。
 
 ## 使用における注意点
 

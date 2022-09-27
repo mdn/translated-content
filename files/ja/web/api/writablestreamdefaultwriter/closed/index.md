@@ -1,16 +1,8 @@
 ---
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - closed
-translation_of: Web/API/WritableStreamDefaultWriter/closed
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはライターのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。

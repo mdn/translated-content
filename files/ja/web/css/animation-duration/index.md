@@ -1,15 +1,6 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-tags:
-  - アニメーション
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-duration
-translation_of: Web/CSS/animation-duration
 ---
 {{CSSRef}}
 

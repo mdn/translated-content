@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Uint32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Uint32Array`** permet de représenter un tableau d'entiers non signés représentés sur 32 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).

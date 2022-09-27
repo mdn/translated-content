@@ -3,6 +3,7 @@ title: <input type="range">
 slug: Web/HTML/Element/input/range
 original_slug: Web/HTML/Element/Input/范围
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} **`range`** 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}} 输入类型这样的文本输入框来表示。 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
@@ -73,7 +74,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### max
 
-允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/en-US/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。 如果输入到元素中的{{htmlattrxref("value", "input")}}超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。 如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 min 属性的值。 请参见 [HTML `max`](/zh-CN/docs/Web/HTML/Attributes/max)`属性。`
 
@@ -479,7 +480,7 @@ input[type="range"] {
 
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [使用 ConstantSourceNode 控制多个参数](/zh-CN/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [设置范围元素的样式](https://css-tricks.com/sliding-nightmare-understanding-range-input)

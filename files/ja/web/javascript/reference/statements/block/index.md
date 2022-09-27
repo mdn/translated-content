@@ -1,15 +1,8 @@
 ---
 title: ブロック
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 **ブロック文** (他の言語では **複合文** とも呼ばれる) は 0 個以上の文をグループ化するのに使われます。ブロックは中括弧 (「波括弧」) の組で区切られ、場合によっては{{jsxref("Statements/label", "ラベル", "", 1)}}が付くことがあります。

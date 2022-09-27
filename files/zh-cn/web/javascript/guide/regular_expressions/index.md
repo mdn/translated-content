@@ -2,6 +2,7 @@
 title: 正则表达式
 slug: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript 中，正则表达式也是对象。这些模式被用于 {{jsxref("RegExp")}} 的 {{jsxref("RegExp.exec", "exec")}} 和 {{jsxref("RegExp.test", "test")}} 方法，以及 {{jsxref("String")}} 的 {{jsxref("String.match", "match")}}、{{jsxref("String.matchAll", "matchAll")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}} 和 {{jsxref("String.split", "split")}} 方法。本章介绍 JavaScript 正则表达式。

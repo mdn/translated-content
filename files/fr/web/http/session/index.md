@@ -7,6 +7,7 @@ tags:
   - Session HTTP
 translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :

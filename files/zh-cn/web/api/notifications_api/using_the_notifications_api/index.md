@@ -2,6 +2,7 @@
 title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。

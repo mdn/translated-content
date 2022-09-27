@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/General_sibling_combinator
 original_slug: Web/CSS/Sélecteurs_de_voisins_généraux
 ---
+
 {{CSSRef("Selectors")}}
 
 Le combinateur `~` permet de séparer deux sélecteurs et de cibler un élément si celui-ci correspond au second sélecteur et est précédé (mais pas forcément voisin immédiat) d'un autre élément correspondant au premier sélecteur qui partage le même parent. Les deux éléments sont des fils d'un même parent {{domxref("Element")}}, voisins immédiats ou pas.

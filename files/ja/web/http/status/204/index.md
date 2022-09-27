@@ -1,12 +1,6 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - HTTP
-  - Success
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/204
 ---
 {{HTTPSidebar}}
 

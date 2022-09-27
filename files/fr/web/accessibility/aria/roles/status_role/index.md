@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 ---
+
 ### Description
 
 Cette technique présente l’utilisation du rôle [status](http://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d’assistance.

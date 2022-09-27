@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Text_formatting
 original_slug: Web/JavaScript/Guide/Formatage_du_texte
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 Ce chapitre présente comment travailler avec les chaînes de caractères et le texte en JavaScript.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asin
 ---
+
 {{JSRef}}
 
 La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle est définie par :

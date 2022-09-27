@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/DNS
 original_slug: Glossaire/DNS
 ---
+
 **DNS** (domain name system) transforme les noms de domaines en adresses IP nécessaires à la mise en relation avec un service sur Internet ou un réseau privé.
 
 ## Pour en savoir plus

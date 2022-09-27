@@ -1,14 +1,6 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/402
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 

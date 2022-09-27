@@ -1,14 +1,6 @@
 ---
 title: CSS の Mozilla 拡張
 slug: Web/CSS/Mozilla_Extensions
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - ガイド
-  - 標準外
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/Mozilla_Extensions
 ---
 {{CSSRef}}
 

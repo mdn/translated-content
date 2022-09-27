@@ -1,14 +1,6 @@
 ---
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
-tags:
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Storage
-  - version
-translation_of: Web/API/IDBDatabase/version
 ---
 {{ APIRef("IDBDatabase") }}
 

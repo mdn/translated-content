@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerRegistration")}} 接口的 **`pushManager`** 属性返回用于管理推送订阅的 {{domxref("PushManager")}} 接口的引用。包括支持订阅，获取活动订阅和访问推送权限状态。
@@ -51,7 +52,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerRegistration.pushManager")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: SVGRect
 slug: Web/API/SVGRect
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGRect`** は矩形を表します。矩形は、最小の x の値と最小の y の値を特定する x と y の座標の対と、幅と、高さから構成されており、これらは、非負であるものと考えられます。

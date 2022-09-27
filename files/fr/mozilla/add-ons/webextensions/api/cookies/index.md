@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'obtenir et de définir des cookies, et d'être averti quand ils changent.

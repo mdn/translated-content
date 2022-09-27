@@ -2,6 +2,7 @@
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
+
 {{JSRef("Global_Objects", "Function")}}`function.name` 属性返回函数实例的名称。
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}

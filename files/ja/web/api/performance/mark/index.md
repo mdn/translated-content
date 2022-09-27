@@ -30,7 +30,7 @@ performance.mark(measureName, markOptions)
     - `detail`
       - : マークに含める任意のメタデータです。
     - `startTime`
-      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} desu.
+      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} です。
 
 ### 返値
 

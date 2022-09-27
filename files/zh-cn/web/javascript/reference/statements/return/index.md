@@ -2,9 +2,10 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
-**`return`语句**终止函数的执行，并返回一个指定的值给函数调用者。
+**`return`** **语句**终止函数的执行，并返回一个指定的值给函数调用者。
 
 ## 语法
 

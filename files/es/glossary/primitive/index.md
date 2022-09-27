@@ -76,7 +76,7 @@ console.log(foo);   // 5
 - Luego, se ejecutan las instrucciones de las funciones:
 
   - En la primera función, se creó una variable `num` local. ¡Estas aumentando su valor en 2, no el valor original de `foo`!
-  - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("../Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
+  - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
 
 - En conclusión, cualquier cambio dentro de tus funciones **no** afectará a la `foo` original en absoluto, ya que estas modificando **copias** de la misma.
 
@@ -95,14 +95,15 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
 ## Aprende más
+
 ### Conocimientos generales
-- {{JSxRef("../Data_structures", "Introducción a los tipos de datos de JavaScript")}}
+
+- {{JSxRef("Data_structures", "Introducción a los tipos de datos de JavaScript")}}
 - {{Interwiki("wikipedia", "Tipo de dato primitivo")}} en Wikipedia
 
 <section id="Quick_links">
  <ol>
-  <li>{{Link("/es/docs/Glossary")}}
- 
+  <li><a href="/es/docs/Glossary">Glosario</a>
    <ol>
     <li>{{Glossary("JavaScript")}}</li>
     <li>{{Glossary("string")}}</li>
@@ -114,6 +115,6 @@ El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del conten
     <li>{{Glossary("symbol")}}</li>
    </ol>
   </li>
-  <li>{{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}</li>
+  <li>{{JSxRef("Data_structures", "Tipos de datos JavaScript")}}</li>
  </ol>
 </section>

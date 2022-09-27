@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - プロトタイプ
-browser-compat: javascript.builtins.Object.propertyIsEnumerable
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 **`propertyIsEnumerable()`** メソッドは、指定されたプロパティが列挙可能で、かつオブジェクト自身のプロパティであるかどうかを示す論理値を返します。

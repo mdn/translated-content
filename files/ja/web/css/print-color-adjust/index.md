@@ -1,16 +1,7 @@
 ---
 title: '-webkit-print-color-adjust'
 slug: Web/CSS/print-color-adjust
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 標準外
-  - ウェブ
-  - recipe:css-property
-translation_of: Web/CSS/-webkit-print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
-browser-compat: css.properties.-webkit-print-color-adjust
 ---
 {{CSSRef}}{{Non-standard_header}}
 

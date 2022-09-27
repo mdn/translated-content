@@ -3,6 +3,7 @@ title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
 translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 L'entête HTTP de réponse **`WWW-Authenticate`** définit la méthode d'authentification qui doit être utilisé pour obtenir l'accès à une ressource.
 

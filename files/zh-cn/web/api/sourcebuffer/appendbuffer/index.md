@@ -2,6 +2,7 @@
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} 的 **`appendBuffer()`** 方法将 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 中的媒体片段数据添加到 `SourceBuffer` 对象中。

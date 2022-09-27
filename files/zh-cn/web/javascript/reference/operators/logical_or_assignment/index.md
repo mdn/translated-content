@@ -2,6 +2,7 @@
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "虚")}}值时赋值。

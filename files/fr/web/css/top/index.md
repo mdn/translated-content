@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 La propriété **`top`** définit une partie de la position des éléments positionnés, elle n'a aucun effet pour les éléments non-positionnés.

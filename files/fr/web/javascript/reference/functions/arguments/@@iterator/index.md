@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 La valeur initiale de la propriété **`@@iterator`** est le même objet que la fonction utilisée pour la valeur initiale de la propriété {{jsxref("Array.prototype.values")}}.

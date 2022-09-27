@@ -4,6 +4,7 @@ slug: Web/CSS/backdrop-filter
 translation_of: Web/CSS/backdrop-filter
 browser-compat: css.properties.backdrop-filter
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`backdrop-filter`** permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. L'effet étant situé _derrière_ l'élément, il pourra être observé en ajustant la transparence de l'élément.

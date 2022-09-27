@@ -1,13 +1,6 @@
 ---
 title: Baseline (ベースライン)
 slug: Glossary/baseline
-tags:
-  - CSS
-  - Glossary
-  - SVG
-  - alignment
-  - typography
-translation_of: Glossary/baseline
 ---
 **ベースライン**とは、ヨーロッパおよび西アジアの書体で使用される用語で、フォントの文字がその上に載る概念上の線を意味します。
 

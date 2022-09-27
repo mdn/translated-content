@@ -2,6 +2,7 @@
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
 ---
+
 {{SeeCompatTable}}
 
 **`402 Payment Required`** 是一个被保留使用的非标准客户端错误状态响应码。
@@ -29,8 +30,8 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 浏览器兼容性
 
-{{Compat("http.status.402")}}
+{{Compat}}
 
 ## 相关内容
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)

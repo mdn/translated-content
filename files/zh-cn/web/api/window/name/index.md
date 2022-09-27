@@ -2,6 +2,7 @@
 title: Window.name
 slug: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 获取/设置窗口的名称。
@@ -23,7 +24,7 @@ window.name = "lab_view";
 
 窗口的名字主要用于为超链接和表单设置目标（targets）。窗口不需要有名称。
 
-在某些框架里（如，[SessionVars](http://www.thomasfrank.se/sessionvars.html) 和 Dojo's [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) ，该属性也被用于作为 JSONP 的一个更安全的备选，来提供跨域通信（cross-domain messaging）。现代 web 应用应使用 [postMessage API](/en-US/docs/Web/API/Window/postMessage) 进行敏感的跨域通信。
+在某些框架里（如，[SessionVars](http://www.thomasfrank.se/sessionvars.html) 和 Dojo's [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) ，该属性也被用于作为 JSONP 的一个更安全的备选，来提供跨域通信（cross-domain messaging）。现代 web 应用应使用 [postMessage API](/zh-CN/docs/Web/API/Window/postMessage) 进行敏感的跨域通信。
 
 `window.name` 会调用 `toString` 将赋给它的值转换成对应的字符串表示。
 
@@ -42,4 +43,4 @@ window.name = Symbol.for('foo').toString(); // "Symbol(foo)"
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.name")}}
+{{Compat}}

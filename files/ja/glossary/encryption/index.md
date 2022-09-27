@@ -1,12 +1,6 @@
 ---
 title: Encryption (暗号化)
 slug: Glossary/Encryption
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-translation_of: Glossary/Encryption
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---

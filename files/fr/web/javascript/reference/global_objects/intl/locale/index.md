@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` représentant l'identifiant d'une locale Unicode.

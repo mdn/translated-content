@@ -1,21 +1,6 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - HTML5
-  - Navigation
-  - Navigation Menus
-  - Reference
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menuitem
-translation_of: Web/HTML/Element/menuitem
 ---
 {{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
 

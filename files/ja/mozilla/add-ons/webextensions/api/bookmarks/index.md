@@ -1,17 +1,8 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API を利用すると、拡張機能からブラウザーのブックマークシステムにアクセスしたり、操作することができます。ページをブックマークしたり、既存のブックマークを取得したり、ブックマークを編集・削除・整理することが可能です。

@@ -33,9 +33,9 @@ Los hipervínculos, generalmente llamados enlaces, son un concepto fundamental d
 
 En 1989, Tim Berners-Lee, el inventor de la Web, habló de los tres pilares en los que se basa la Web:
 
-1.  {{Glossary("URL")}}, un sistema de direcciones que realiza un seguimiento de los documentos web
-2.  {{Glossary("HTTP")}}, un protocolo de transferencia para encontrar documentos cuando se les da su URL
-3.  {{Glossary("HTML")}}, un formato de documento que permite hipervínculos incrustados
+1. {{Glossary("URL")}}, un sistema de direcciones que realiza un seguimiento de los documentos web
+2. {{Glossary("HTTP")}}, un protocolo de transferencia para encontrar documentos cuando se les da su URL
+3. {{Glossary("HTML")}}, un formato de documento que permite hipervínculos incrustados
 
 Como puede ver en los tres pilares, todo en la Web gira en torno a los documentos y cómo acceder a ellos. El propósito original de la Web era proporcionar una manera fácil de alcanzar, leer y navegar a través de documentos de texto. Desde entonces, la Web ha evolucionado para proporcionar acceso a imágenes, videos y datos binarios, pero estas mejoras apenas han cambiado los tres pilares.
 

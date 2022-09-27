@@ -1,12 +1,8 @@
 ---
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
+
 {{APIRef}}概要
 
 `acceptCharset` は対象フォームでサポートされる文字エンコーディングのリストを返します。リストの各アイテムは、カンマか半角スペースで区切られます。

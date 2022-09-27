@@ -1,13 +1,6 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
 {{HTTPSidebar}}
 
@@ -82,5 +75,5 @@ If-None-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`

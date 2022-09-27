@@ -3,6 +3,7 @@ title: CSSStyleRule
 slug: Web/API/CSSStyleRule
 translation_of: Web/API/CSSStyleRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 CSSStyleRule représente une règle de style CSS unique. Il implémente l'interface {{domxref ("CSSRule")}} avec une valeur de type 1 (CSSRule STYLE_RULE).

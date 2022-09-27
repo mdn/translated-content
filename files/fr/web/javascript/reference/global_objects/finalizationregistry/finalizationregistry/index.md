@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationR
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 Le constructeur **`FinalizationRegistry`** crée un objet [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) qui utilise la fonction de rappel passée en argument comme fonction de nettoyage pour les objets du registre.

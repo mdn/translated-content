@@ -2,6 +2,7 @@
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 ## 概要

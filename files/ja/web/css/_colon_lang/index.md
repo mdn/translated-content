@@ -1,15 +1,6 @@
 ---
 title: ':lang()'
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.lang
-translation_of: Web/CSS/:lang
 ---
 {{CSSRef}}
 

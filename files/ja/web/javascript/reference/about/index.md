@@ -1,11 +1,8 @@
 ---
 title: JavaScript リファレンスについて
 slug: Web/JavaScript/Reference/About
-tags:
-  - ガイド
-  - JavaScript
-translation_of: Web/JavaScript/Reference/About
 ---
+
 {{JsSidebar}}
 
 この JavaScript リファレンスは、JavaScript 言語に関する事実の情報倉庫となっています。言語全体がここで詳細に記述されています。JavaScript コードを書くとき、これらのページをよく参照することになるでしょう (だからリファレンスです)。JavaScript を学んだり JavaScript の能力や機能について理解する助けがほしければ、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)を見てみてください。

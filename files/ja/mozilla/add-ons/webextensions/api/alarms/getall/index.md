@@ -1,18 +1,8 @@
 ---
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
+
 {{AddonSidebar()}}
 
 予約されたアラームすべてを取得します。取得されたアラームは {{WebExtAPIRef('alarms.Alarm')}} オブジェクトの配列としてコールバック関数に渡されます。
@@ -67,6 +57,6 @@ getAlarms.then(gotAll);
 
 {{WebExtExamples}}
 
-> **Note:** 
+> **Note:**
 >
 > この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

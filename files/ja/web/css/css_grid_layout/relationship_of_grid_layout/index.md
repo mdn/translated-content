@@ -1,11 +1,6 @@
 ---
 title: グリッドレイアウトと他のレイアウト方法との関係
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 {{CSSRef}}
 

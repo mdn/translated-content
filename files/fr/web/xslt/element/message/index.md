@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/message
 original_slug: Web/XSLT/message
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:message>` écrit un message de sortie (dans la console JavaScript) et, éventuellement, met fin à l'exécution de la feuille de styles. Il peut être utile pour le débogage.

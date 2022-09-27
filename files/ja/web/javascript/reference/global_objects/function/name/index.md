@@ -1,13 +1,8 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-tags:
-  - ECMAScript6
-  - Function
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
+
 {{JSRef}}
 
 {{jsxref("Function")}} オブジェクトの **`name`** プロパティは読み取り専用で、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` (空文字列) を返します。

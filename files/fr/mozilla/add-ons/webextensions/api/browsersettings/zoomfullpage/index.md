@@ -12,6 +12,7 @@ tags:
   - zoomFullPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.

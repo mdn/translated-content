@@ -2,6 +2,7 @@
 title: Streams API 概念
 slug: Web/API/Streams_API/Concepts
 ---
+
 {{apiref("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令你感到陌生——本文将解释你需要了解的所有内容。
@@ -25,7 +26,7 @@ slug: Web/API/Streams_API/Concepts
 
 另一个你将用到的对象叫做 **controller**——每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流关闭）。
 
-一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（一个活跃的 reader）时，我们说，它被 **locked**（锁定）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作（你也可以 **tee**，请参阅下面的拷贝部分）。
+一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（一个活跃的 reader）时，我们说，它被 **locked**（锁定）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader，再执行其他操作（你也可以 **tee**，请参阅下面的拷贝部分）。
 
 注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，“带上你自己的缓冲区”）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
 
@@ -91,6 +92,6 @@ pipe chain 的起点称为 **original source**，终点称为 **ultimate sink**�
 
 `high water mark - total size of chunks in queue = desired size`
 
-**所需大小**（desired size）是流中仍然可以接收的分块数量，以保持流运行，但是小于 high water mark 的大小。当所需的大小大于0时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
+**所需大小**（desired size）是流中仍然可以接收的分块数量，以保持流运行，但是小于 high water mark 的大小。当所需的大小大于 0 时，分块的生成将适当的减慢或者加速，以保持流尽可能快的运行。如果值降到 0（或者小于 0），这意味着分块的产生快于流的处理，这可能产生问题。
 
 举一个例子，让我们为 1 的分块大小 和为 3 的 high water mark 为例：这意味着在达到 high water mark 和运用背压之前，最多可以入队 3 个分块。

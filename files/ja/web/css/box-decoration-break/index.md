@@ -1,15 +1,6 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-decoration-break
-translation_of: Web/CSS/box-decoration-break
 ---
 {{CSSRef}}
 

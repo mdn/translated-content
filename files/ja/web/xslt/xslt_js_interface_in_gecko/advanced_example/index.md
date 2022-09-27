@@ -1,9 +1,6 @@
 ---
 title: 高度な例
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
 ## 高度な例
 

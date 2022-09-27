@@ -2,6 +2,7 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
@@ -33,7 +34,7 @@ var formData = new FormData(); // 当前为空
 formData.append('username', 'Chris');
 ```
 
-或者你可以使用可选的`form参数来创建一个带预置数据的FormData对象`:
+或者你可以使用可选的 `form` 参数来创建一个带预置数据的 FormData 对象：
 
 ```html
 <form id="myForm" name="myForm">
@@ -66,7 +67,7 @@ formData = new FormData(myForm);
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## 附注
 

@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 ---
+
 {{AddonSidebar()}}
 
 Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'application ne sera pas déchargée après tout.

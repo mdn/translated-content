@@ -1,18 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-tags:
-  - 日付
-  - 日付選択
-  - 要素
-  - フォーム入力
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-translation_of: Web/HTML/Element/input/date
 ---
 
 {{HTMLRef}}

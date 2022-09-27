@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 ---
+
 {{AddonSidebar()}}
 
 ブックマークやフォルダが作成された際に発火します。

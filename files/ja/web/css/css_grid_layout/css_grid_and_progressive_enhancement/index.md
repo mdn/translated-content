@@ -1,12 +1,6 @@
 ---
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
-tags:
-  - CSS
-  - CSS グリッド
-  - デザイン
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - Client hints
-  - HTTP
-  - HTTP Header
-translation_of: Web/HTTP/Headers/DPR
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
@@ -28,7 +23,7 @@ translation_of: Web/HTTP/Headers/DPR
   </tbody>
 </table>
 
-> **Note:** **注**: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `DPR` ヘッダーを受信することを選択する必要があります。
+> **Note:** クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `DPR` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 

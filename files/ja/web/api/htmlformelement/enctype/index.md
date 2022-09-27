@@ -1,11 +1,8 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
-tags:
-  - Reference
-  - form
-translation_of: Web/API/HTMLFormElement/enctype
 ---
+
 ## 概要
 
 `enctype` は form 要素のコンテンツタイプの取得 / 設定に用います。

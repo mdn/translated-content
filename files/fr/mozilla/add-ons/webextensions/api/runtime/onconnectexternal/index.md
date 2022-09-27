@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.

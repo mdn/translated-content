@@ -1,15 +1,8 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - regex
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 **`replaceAll()`** メソッドは、`pattern` にマッチしたすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各マッチに対して呼び出される関数を指定することができます。

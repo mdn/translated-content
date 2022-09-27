@@ -1,13 +1,6 @@
 ---
 title: 부가 기능들
 slug: Mozilla/Add-ons
-tags:
-  - 모질라
-  - 부가기능
-  - 애드온
-  - 확장
-  - 확장기능
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}
 

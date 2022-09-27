@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/base
 browser-compat: html.elements.base
 ---
+
 {{HTMLRef}}
 
 L'élément **`<base>`** définit l'URL de base à utiliser pour recomposer toutes les URL relatives contenues dans un document. Il ne peut y avoir qu'un seul élément `<base>` au sein d'un document.

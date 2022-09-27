@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/break-inside
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`break-inside`** définit comment la page, la colonne ou la région se fragmente au sein de la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.

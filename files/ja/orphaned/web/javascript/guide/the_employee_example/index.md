@@ -3,6 +3,7 @@ title: The Employee Example
 slug: orphaned/Web/JavaScript/Guide/The_Employee_Example
 original_slug: Web/JavaScript/Guide/The_Employee_Example
 ---
+
 ### 従業員の例
 
 この章の残りは次の図で示す従業員の階層を使用していきます。

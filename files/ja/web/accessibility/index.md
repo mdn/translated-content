@@ -1,10 +1,6 @@
 ---
 title: アクセシビリティ
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Landing
-translation_of: Web/Accessibility
 ---
 ウェブ開発におけるアクセシビリティとは、何らかの理由により能力に制約がある場合でも、可能な限り多くの人々がウェブサイトを使用できるようにすることを意味します。この記事では、アクセシビリティを考慮したコンテンツを開発するための情報を提供します。
 

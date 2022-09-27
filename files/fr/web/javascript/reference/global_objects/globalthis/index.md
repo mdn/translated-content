@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 original_slug: Web/JavaScript/Reference/Objets_globaux/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 La propriété globale **`globalThis`** renvoie l'objet global de plus haut niveau.

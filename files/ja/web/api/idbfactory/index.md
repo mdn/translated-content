@@ -1,15 +1,6 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
-tags:
-  - API
-  - HTTP
-  - IndexedDB
-  - Interface
-  - Offline
-  - Reference
-  - Storage
-translation_of: Web/API/IDBFactory
 ---
 {{APIRef("IndexedDB")}}
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 original_slug: Mozilla/Add-ons/WebExtensions/que_faire_ensuite
 ---
+
 {{AddonSidebar}}
 
 Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses qui vous aides à en faire une.
