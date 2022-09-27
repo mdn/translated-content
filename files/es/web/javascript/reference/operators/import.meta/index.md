@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 {{JSSidebar("Statements")}}
 
-El objeto** `import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
+El objeto **`import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
 
 ## Syntax
 

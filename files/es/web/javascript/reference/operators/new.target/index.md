@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
 {{JSSidebar("Operators")}}
 
-La propiedad** `new.target`** te permite detectar si una función o constructor fue llamado usando el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new). En constructores y funciones instanciadas con el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new), `new.target` devuelve una referencia al constructor o función. En llamadas a funciones normales, `new.target` es {{jsxref("undefined")}}.
+La propiedad **`new.target`** te permite detectar si una función o constructor fue llamado usando el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new). En constructores y funciones instanciadas con el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new), `new.target` devuelve una referencia al constructor o función. En llamadas a funciones normales, `new.target` es {{jsxref("undefined")}}.
 
 ## Sintaxis
 
