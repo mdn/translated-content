@@ -93,7 +93,7 @@ document.getElementById('results').innerHTML = Array.prototype.map.call(selected
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.scope")}}
+{{Compat}}
 
 ## 参见
 

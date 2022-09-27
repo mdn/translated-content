@@ -72,7 +72,7 @@ form { min-height: 0; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.min-height")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -63,7 +63,7 @@ caches.match(event.request).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.match")}}
+{{Compat}}
 
 ## 亦可参考
 

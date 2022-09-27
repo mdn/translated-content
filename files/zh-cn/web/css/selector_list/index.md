@@ -78,7 +78,7 @@ h3 { font-family: sans-serif }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.list")}}
+{{Compat}}
 
 ## 参见
 

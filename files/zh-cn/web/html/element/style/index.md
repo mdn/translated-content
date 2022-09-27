@@ -129,7 +129,7 @@ slug: Web/HTML/Element/style
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## 查看更多
 

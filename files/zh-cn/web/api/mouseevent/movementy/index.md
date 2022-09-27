@@ -23,7 +23,7 @@ A number
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.movementY")}}
+{{Compat}}
 
 ## 相关
 

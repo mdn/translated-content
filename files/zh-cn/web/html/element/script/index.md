@@ -123,7 +123,7 @@ Browsers that support the `module` value for the `type` attribute ignore any scr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.script")}}
+{{Compat}}
 
 ## 参见
 

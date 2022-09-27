@@ -330,7 +330,7 @@ function voiceMute() { // toggle to mute and unmute sound
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 相关链接
 

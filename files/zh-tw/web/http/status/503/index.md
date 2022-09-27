@@ -27,7 +27,7 @@ slug: Web/HTTP/Status/503
 
 以下資訊是從 MDN 的 GitHub 取得 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## 請參閱
 

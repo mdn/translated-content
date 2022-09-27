@@ -25,7 +25,7 @@ _This property is not part of any specification._
 
 ## Browser compatibility
 
-{{Compat("api.Element.openOrClosedShadowRoot")}}
+{{Compat}}
 
 ## See also
 

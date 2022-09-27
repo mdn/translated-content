@@ -80,7 +80,7 @@ function addData() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBObjectStore.keyPath")}}
+{{Compat}}
 
 ## 相关内容
 

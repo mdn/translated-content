@@ -81,7 +81,7 @@ unicode-bidi: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.unicode-bidi")}}
+{{Compat}}
 
 ## 参见
 

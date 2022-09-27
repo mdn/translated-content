@@ -109,7 +109,7 @@ function fetchAB (url, cb) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## 相關資料
 

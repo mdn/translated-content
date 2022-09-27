@@ -70,7 +70,7 @@ slug: Web/API/Payment_Request_API
 
 ### 支付请求接口
 
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## 相关文档
 

@@ -56,7 +56,7 @@ xhr.send(null);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.responseXML")}}
+{{Compat}}
 
 ## 了解更多
 

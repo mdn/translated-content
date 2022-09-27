@@ -40,7 +40,7 @@ Trusted events are never fired with 0.
 
 ## Browser compatibility
 
-{{Compat("api.Element.DOMMouseScroll_event")}}
+{{Compat}}
 
 ## See also
 

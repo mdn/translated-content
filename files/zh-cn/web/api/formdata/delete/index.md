@@ -44,7 +44,7 @@ formData.delete('username');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.delete")}}
+{{Compat}}
 
 ## 参见
 

@@ -51,4 +51,4 @@ function setClipboard(text) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clipboard.write")}}
+{{Compat}}

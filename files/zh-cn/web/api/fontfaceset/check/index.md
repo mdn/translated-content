@@ -37,4 +37,4 @@ document.fonts.check("12px MyFont"，"ß"); 如果字体“MyFont”具有ß字�
 
 ## 浏览器兼容性
 
-{{Compat("api.FontFaceSet.check")}}
+{{Compat}}

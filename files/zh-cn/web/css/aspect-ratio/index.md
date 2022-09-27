@@ -60,7 +60,7 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.aspect-ratio")}}
+{{Compat}}
 
 ## 相关阅读
 

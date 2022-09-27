@@ -98,7 +98,7 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## 参见
 

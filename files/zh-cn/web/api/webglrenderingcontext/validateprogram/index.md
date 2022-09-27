@@ -48,7 +48,7 @@ gl.useProgram(program);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.validateProgram")}}
+{{Compat}}
 
 ## See also
 

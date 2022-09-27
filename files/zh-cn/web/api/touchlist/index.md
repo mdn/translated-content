@@ -29,7 +29,7 @@ slug: Web/API/TouchList
 
 ## 浏览器兼容
 
-{{Compat("api.TouchList")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -101,7 +101,7 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 
 ## Browser compatibility
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## See also
 

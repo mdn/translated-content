@@ -53,7 +53,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.X-Forwarded-For")}}
+{{Compat}}
 
 ## 參見
 

@@ -59,4 +59,4 @@ navigator.permissions.query({name: "clipboard-read"}).then(result => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clipboard.read")}}
+{{Compat}}

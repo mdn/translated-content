@@ -145,7 +145,7 @@ dropzone.addEventListener("drop", function(event) {
 
 ### 结果
 
-你可以通过下面的尝试看看它是如何工作的。 找到一些文件和目录并将其拖入，然后查看生成的输出。
+你可以通过下面的尝试看看它是如何工作的。找到一些文件和目录并将其拖入，然后查看生成的输出。
 
 {{ EmbedLiveSample('Example', 600, 400) }}
 
@@ -155,7 +155,7 @@ dropzone.addEventListener("drop", function(event) {
 
 ## 浏览器兼容性
 
-{{COMPAT("api.DataTransferItem.webkitGetAsEntry")}}
+{{Compat}}
 
 ## 也可以看看
 

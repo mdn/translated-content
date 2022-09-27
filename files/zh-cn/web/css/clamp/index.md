@@ -91,7 +91,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.types.clamp")}}
+{{Compat}}
 
 ## 继续阅读
 

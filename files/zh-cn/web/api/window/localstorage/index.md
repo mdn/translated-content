@@ -61,7 +61,7 @@ localStorage.clear();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## 参见
 

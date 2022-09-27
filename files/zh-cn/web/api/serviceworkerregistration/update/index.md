@@ -48,7 +48,7 @@ if ('serviceWorker' in navigator) {
 
 ## Browser compatibility
 
-{{Compat("api.ServiceWorkerRegistration.update")}}
+{{Compat}}
 
 ## See also
 

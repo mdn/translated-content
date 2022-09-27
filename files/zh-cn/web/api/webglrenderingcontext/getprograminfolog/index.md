@@ -51,7 +51,7 @@ gl.getProgramInfoLog(program);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.getProgramInfoLog")}}
+{{Compat}}
 
 ## See also
 

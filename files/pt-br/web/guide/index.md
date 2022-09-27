@@ -31,12 +31,12 @@ translation_of: Web/Guide
   - : Web sites modernos e aplicativos, muitas vezes precisam apresentar gráficos de diferentes graus de satisfação.
 - [Guia para APIs da Web](/pt-BR/docs/Web/Guide/API)
   - : Um lista de todas as APIs da Web e o que elas fazem.
-- [JavaScript](/pt-BR/docs/Web/JavaScript "/en-US/docs/JavaScript")
+- [JavaScript](/pt-BR/docs/Web/JavaScript)
   - : JavaScript é uma poderosa linguagem de scripts utilizada para criar aplicativos para a Web.
 - [Localizações e codificação de caracteres](/pt-BR/docs/Localizations_and_character_encodings)
   - : Internamente, navegadores processam texto como Unicode. Entretanto, uma forma de representar caracteres em termos de bytes (codificação de caracteres) deve ser utilizada para transferência de texto da rede para o navegador. A recomendação da especificação HTML é utilizar UTF-8 (que é capaz de representar todo o conteúdo Unicode). Independentemente da escolha da codificação, ela precisa ser declarada no conteúdo Web.
 - [Desenvolvimento Web móvel](/pt-BR/docs/Web/Guide/Mobile)
-  - : Esta página fornece uma visão geral de algumas das principais técnicas necessárias para projetar sites que funcionam bem em dispositivos móveis. Se você está procurando informações sobre o projeto Firefox OS da Mozilla, consulte a página [Firefox OS](/en/Mozilla/Firefox_OS "Boot to Gecko"). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
+  - : Esta página fornece uma visão geral de algumas das principais técnicas necessárias para projetar sites que funcionam bem em dispositivos móveis. Se você está procurando informações sobre o projeto Firefox OS da Mozilla, consulte a página [Firefox OS](/en/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
 
 <!---->
 
@@ -55,4 +55,4 @@ translation_of: Web/Guide
 
 ## Veja também
 
-- [Referência do desenvolvedor web](/pt-BR/docs/Web/Reference "/en-US/docs/Web/Reference")
+- [Referência do desenvolvedor web](/pt-BR/docs/Web/Reference)

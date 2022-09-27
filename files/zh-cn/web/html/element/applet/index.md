@@ -55,7 +55,7 @@ HTML 中的 Applet 元素 (`<applet>`) 标志着包含了 Java 的 applet。
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.applet")}}
+{{Compat}}
 
 ## 注意
 

@@ -44,4 +44,4 @@ key2, value2
 
 ## 另请参阅
 
-- 其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.

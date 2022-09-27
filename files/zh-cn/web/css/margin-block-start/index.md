@@ -72,7 +72,7 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.margin-block-start")}}
+{{Compat}}
 
 ## 同样推荐
 

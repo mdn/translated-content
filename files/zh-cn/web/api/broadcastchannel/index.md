@@ -54,7 +54,7 @@ _该接口会从它的父级 {{domxref("EventTarget")}} 继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

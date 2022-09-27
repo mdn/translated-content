@@ -28,7 +28,7 @@ slug: Web/API/ImageData
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData")}}
+{{Compat}}
 
 ## 参见
 

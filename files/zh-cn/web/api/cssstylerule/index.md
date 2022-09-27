@@ -22,4 +22,4 @@ slug: Web/API/CSSStyleRule
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

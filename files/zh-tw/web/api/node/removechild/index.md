@@ -118,7 +118,7 @@ while (element.firstChild) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.removeChild")}}
+{{Compat}}
 
 ## 相關連結
 

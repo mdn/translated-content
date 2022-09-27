@@ -88,7 +88,7 @@ See [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Pol
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 参见
 

@@ -104,7 +104,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rb")}}
+{{Compat}}
 
 ## 另见
 

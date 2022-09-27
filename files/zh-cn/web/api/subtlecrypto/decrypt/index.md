@@ -64,7 +64,7 @@ const decryptText = async (ctBuffer, iv, password) => {
 
 ## 浏览器支持
 
-{{Compat("api.SubtleCrypto.decrypt")}}
+{{Compat}}
 
 ## 另请参见
 

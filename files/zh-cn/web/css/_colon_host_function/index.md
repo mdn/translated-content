@@ -58,7 +58,7 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.hostfunction")}}
+{{Compat}}
 
 ## 参见
 

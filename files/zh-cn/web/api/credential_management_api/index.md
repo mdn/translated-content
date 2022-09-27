@@ -36,4 +36,4 @@ Credential Management API 允许网站存储和检索用户，联合账户和公
 
 ## 浏览器兼容性
 
-{{Compat("api.Credential")}}
+{{Compat}}

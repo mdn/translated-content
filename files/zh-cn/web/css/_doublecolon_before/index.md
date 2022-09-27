@@ -203,7 +203,7 @@ line to flow under it.</span>
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## 参见
 

@@ -53,7 +53,7 @@ blockquote {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.direction")}}
+{{Compat}}
 
 ## 参见
 

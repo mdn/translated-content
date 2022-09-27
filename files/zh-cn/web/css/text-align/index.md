@@ -309,7 +309,7 @@ The standard-compatible way to center a block itself without centering its inlin
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-align")}}
+{{Compat}}
 
 ## 参见
 

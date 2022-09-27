@@ -38,7 +38,7 @@ console.log(audioCtx.sampleRate);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.sampleRate")}}
+{{Compat}}
 
 ## 另见
 

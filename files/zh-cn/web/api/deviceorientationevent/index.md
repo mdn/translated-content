@@ -36,7 +36,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 ## 浏览器支持
 
-{{Compat("api.DeviceOrientationEvent")}}
+{{Compat}}
 
 ## 参考
 

@@ -30,7 +30,7 @@ document.documentElement.requestFullscreen();
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.fullscreenerror_event")}}
+{{Compat}}
 
 ## 相关文章
 

@@ -58,7 +58,7 @@ client.send()
 
 ## 浏览器兼容性
 
-{{Compat("api.ProgressEvent")}}
+{{Compat}}
 
 ## 相关链接
 

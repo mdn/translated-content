@@ -32,7 +32,7 @@ slug: Learn/CSS/CSS_layout
 - [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
   - : 最初对于文本块中的浮动图像，{{cssxref("float")}}属性已经成为在网页上创建多个列布局的最常用工具之一。本文解释所有。
 - [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-  - : 定位允许您从常规文档布局流程中取出元素，并使它们具有不同的行为，例如坐在另一个之上，或始终保持在浏览器视口内的同一位置。 本文解释不同的{{cssxref("position")}} 值，以及如何使用它们。
+  - : 定位允许您从常规文档布局流程中取出元素，并使它们具有不同的行为，例如坐在另一个之上，或始终保持在浏览器视口内的同一位置。本文解释不同的{{cssxref("position")}} 值，以及如何使用它们。
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
   - : 多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。这篇文章介绍怎么使用这一特性。
 - [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)

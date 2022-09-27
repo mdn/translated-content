@@ -44,4 +44,4 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.BeforeInstallPromptEvent")}}
+{{Compat}}

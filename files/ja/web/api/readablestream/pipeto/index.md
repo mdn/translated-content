@@ -2,6 +2,7 @@
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`pipeTo()`** メソッドは、現在の `ReadableStream` を与えられた {{domxref("WritableStream")}} にパイプし、パイプのプロセスが正常に完了した場合は満たされ、エラーが発生した場合は拒否する promise を返します。

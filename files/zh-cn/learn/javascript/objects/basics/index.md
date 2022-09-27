@@ -37,7 +37,7 @@ slug: Learn/JavaScript/Objects/Basics
 
 首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 文件复制到本地。此文件包含非常少 — 一个供我们写源代码的 {{HTMLElement("script")}} 标签，一个供我们输入示例指令的 {{HTMLElement("input")}} 标签，当页面被渲染时，一些变量定义，一个输出任何输入到{{HTMLElement("input")}}的内容输出到{{HTMLElement("p")}}标签的函数。我们用这个文件做为基础探索对象的基础语法。
 
-如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。 尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
+如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
 
 ```js
 var person = {};

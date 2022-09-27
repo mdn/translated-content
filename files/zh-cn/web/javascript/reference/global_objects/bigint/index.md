@@ -255,7 +255,7 @@ nthPrime(20n)
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.BigInt")}}
+{{Compat}}
 
 ## 相关链接
 

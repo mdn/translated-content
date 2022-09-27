@@ -52,7 +52,7 @@ void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.uniform1ui")}}
+{{Compat}}
 
 ## 详见
 

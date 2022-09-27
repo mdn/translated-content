@@ -44,7 +44,7 @@ susresBtn.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.suspend")}}
+{{Compat}}
 
 ## See also
 

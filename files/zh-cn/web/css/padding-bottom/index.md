@@ -53,7 +53,7 @@ padding-bottom: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.padding-bottom")}}
+{{Compat}}
 
 ## See also
 

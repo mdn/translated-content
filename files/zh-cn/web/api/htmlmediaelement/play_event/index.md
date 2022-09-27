@@ -77,7 +77,7 @@ video.onplay = (event) => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.play_event")}}
+{{Compat}}
 
 ## Related Events
 

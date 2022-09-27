@@ -46,7 +46,7 @@ For a full working example, see our [channel messaging basic demo](https://githu
 
 ## Browser compatibility
 
-{{Compat("api.MessagePort.onmessage")}}
+{{Compat}}
 
 ## See also
 

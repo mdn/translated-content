@@ -49,7 +49,7 @@ var selectedText = selObj.toString();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.getSelection")}}
+{{Compat}}
 
 ## 相关链接
 

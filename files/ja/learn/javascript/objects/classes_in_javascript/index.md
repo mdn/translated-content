@@ -366,7 +366,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 
 ## プロトタイプチェーンを拡張するための代替案
 
-JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain)の記事を参照してください。
+JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#プロトタイプチェーンを作成・変更する様々な方法)の記事を参照してください。
 
 ## あなたのスキルをテストしてみましょう!
 

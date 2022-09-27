@@ -70,7 +70,7 @@ gl.getParameter(gl.UNPACK_ALIGNMENT);
 
 ## Browser compatibility
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.pixelStorei")}}
+{{Compat}}
 
 ## See also
 

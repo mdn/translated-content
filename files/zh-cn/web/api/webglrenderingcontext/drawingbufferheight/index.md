@@ -35,7 +35,7 @@ gl.drawingBufferHeight; // 150
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.drawingBufferHeight")}}
+{{Compat}}
 
 ## 相关链接
 

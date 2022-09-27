@@ -46,7 +46,7 @@ The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all metho
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSGroupingRule")}}
+{{Compat}}
 
 ## 参见
 

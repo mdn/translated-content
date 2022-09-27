@@ -79,7 +79,7 @@ video.onpause = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.pause_event")}}
+{{Compat}}
 
 ## 相关事件
 

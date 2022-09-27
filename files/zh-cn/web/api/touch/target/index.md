@@ -44,4 +44,4 @@ src.addEventListener('touchstart', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Touch.target")}}
+{{Compat}}

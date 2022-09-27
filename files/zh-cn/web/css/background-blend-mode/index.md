@@ -81,7 +81,7 @@ console.log(document.getElementById('div'));
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ## 参见
 

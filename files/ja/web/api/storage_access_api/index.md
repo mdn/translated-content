@@ -2,6 +2,7 @@
 title: Storage Access API
 slug: Web/API/Storage_Access_API
 ---
+
 {{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
 
 Storage Access API（ストレージアクセス API）は、埋め込まれたクロスオリジンのコンテンツが、通常はファーストパーティのコンテキストでのみアクセスできるストレージ（これをオリジンの*ファーストパーティ*ストレージと呼びます）に無制限にアクセスする方法を提供します。 API は、埋め込まれたリソースがファーストパーティストレージに現在アクセスできるかどうかを確認し、ユーザーエージェントからファーストパーティストレージへのアクセスを要求できるメソッドを提供します。

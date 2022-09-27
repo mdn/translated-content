@@ -53,7 +53,7 @@ MediaRecorder.addEventListener('dataavailable', function(event) { ... })
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaRecorder.ondataavailable")}}
+{{Compat}}
 
 ## 也可以看看
 

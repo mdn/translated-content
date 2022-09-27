@@ -36,7 +36,7 @@ gl.commit();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.transferControlToOffscreen")}}
+{{Compat}}
 
 ## 查阅
 

@@ -239,7 +239,7 @@ display.addEventListener('change', function (evt) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.place-items")}}
+{{Compat}}
 
 ## See also
 

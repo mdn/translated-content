@@ -21,7 +21,7 @@ var aBlob = new Blob( array[, options]);
 - _option\_\_s_ é um dicionário opcional `BlobPropertyBag` que pode especificar os dois atributos seguintes:
 
   - `type`, com um valor padrão de `""`, que representa o MIME type do conteúdo do array que será inserido no blob.
-  - `endings`, com um valor padrão de `"transparent"`, especifica como strings contendo o caracter de final de linha `\n` deverão ser escritos. Tem um dos dois valores: `"native"`, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou `"transparent", `indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}
+  - `endings`, com um valor padrão de `"transparent"`, especifica como strings contendo o caracter de final de linha `\n` deverão ser escritos. Tem um dos dois valores: `"native"`, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou `"transparent"`, indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}
 
 ## Exemplo
 

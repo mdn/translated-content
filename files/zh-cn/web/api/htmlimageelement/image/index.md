@@ -44,4 +44,4 @@ document.body.appendChild(myImage);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.Image")}}
+{{Compat}}

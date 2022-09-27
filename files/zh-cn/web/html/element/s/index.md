@@ -91,7 +91,7 @@ Some people who use screen readers deliberately disable announcing content that 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## 参见
 

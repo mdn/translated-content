@@ -2,6 +2,7 @@
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。

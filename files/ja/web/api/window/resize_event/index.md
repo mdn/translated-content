@@ -2,6 +2,7 @@
 title: 'Window: resize イベント'
 slug: Web/API/Window/resize_event
 ---
+
 {{APIRef}}
 
 **`resize`** イベントは、この文書のビュー (ウィンドウ) の大きさが変更されたときに発行されます。

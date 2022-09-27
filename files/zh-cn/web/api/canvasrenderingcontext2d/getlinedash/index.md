@@ -94,7 +94,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getLineDash")}}
+{{Compat}}
 
 ## 参见
 

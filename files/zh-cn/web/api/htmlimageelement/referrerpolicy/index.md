@@ -37,7 +37,7 @@ div.appendChild(img); // Fetch the image using the origin as the referrer
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.referrerPolicy")}}
+{{Compat}}
 
 ## 相关
 

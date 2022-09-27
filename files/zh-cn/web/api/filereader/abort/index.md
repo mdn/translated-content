@@ -24,7 +24,7 @@ instanceOfFileReader.abort();
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.abort")}}
+{{Compat}}
 
 ## 相关链接
 

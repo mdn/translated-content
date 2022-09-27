@@ -81,7 +81,7 @@ div:nth-child(2) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-left-width")}}
+{{Compat}}
 
 ## 其他
 

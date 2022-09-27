@@ -23,7 +23,7 @@ var xShift = instanceOfMouseEvent.movementX
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.movementX")}}
+{{Compat}}
 
 ## 相关
 

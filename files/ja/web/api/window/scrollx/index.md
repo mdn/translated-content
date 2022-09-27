@@ -2,6 +2,7 @@
 title: window.scrollX
 slug: Web/API/Window/scrollX
 ---
+
 {{APIRef("CSSOM View")}}
 
 {{domxref("Window")}} インターフェイスの読み取り専用プロパティである **`scrollX`** は、文書が水平スクロールされているピクセル数を返します。現代のブラウザーではこの値がサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が垂直スクロールされているピクセル数は、{{domxref("Window.scrollY", "scrollY")}} プロパティで取得できます。

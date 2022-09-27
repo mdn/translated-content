@@ -54,7 +54,7 @@ canvas.toBlob(function (blob) {
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.readAsBinaryString")}}
+{{Compat}}
 
 ## 相关链接
 

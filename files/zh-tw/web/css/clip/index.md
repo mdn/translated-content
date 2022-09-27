@@ -91,7 +91,7 @@ clip: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## See also
 

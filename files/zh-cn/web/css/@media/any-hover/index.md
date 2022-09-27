@@ -46,7 +46,7 @@ slug: Web/CSS/@media/any-hover
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.any-hover")}}
+{{Compat}}
 
 ## 更多资料
 

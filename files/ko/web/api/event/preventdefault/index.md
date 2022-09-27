@@ -21,7 +21,7 @@ browser-compat: api.Event.preventDefault
 event.preventDefault();
 ```
 
-## 예제들
+## 예제
 
 ### 기본 클릭 동작 방지하기
 

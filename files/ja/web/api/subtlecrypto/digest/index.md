@@ -2,6 +2,7 @@
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 {{domxref("SubtleCrypto")}} インターフェースの **`digest()`** メソッドは、指定されたデータの {{Glossary("digest")}} を返します。ダイジェストとは、可変長の入力に由来する固定長の短い値です。暗号的ダイジェスト値は耐衝突性を示すため、同じダイジェスト値を持つ 2 つの異なる入力を見つけるのは非常に困難です。

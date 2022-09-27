@@ -47,7 +47,7 @@ Read more about how it works in our article [Using the Permissions API](/zh-CN/d
 
 ### Permissions interface
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 

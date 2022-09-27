@@ -37,4 +37,4 @@ interface CSSPageRule : CSSRule {
 
 ## Browser compatibility
 
-{{Compat("api.CSSPageRule")}}
+{{Compat}}

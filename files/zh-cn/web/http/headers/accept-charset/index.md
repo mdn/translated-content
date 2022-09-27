@@ -51,7 +51,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Accept-Charset")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。

@@ -48,7 +48,7 @@ MediaRecorder.pause()
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder.pause")}}
+{{Compat}}
 
 ## See also
 

@@ -173,7 +173,7 @@ slug: Web/HTML/Element/ol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## 相关
 

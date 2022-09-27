@@ -29,7 +29,7 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 ## 瀏覽器相容性
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## 參見
 

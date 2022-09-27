@@ -35,7 +35,7 @@ O objeto _destino_ será retornado.
 
 ## Descrição
 
-O método `Object.assign()` copia apenas propriedades _enumeráveis\_\_ \_e \_próprias_ de um objeto _de origem_ para um objeto destino. Ele usa `[[Get]]` na origem e `[[Put]]` no _destino_, então isto irá invocar _getters_ e _setters_.
+O método `Object.assign()` copia apenas propriedades _enumeráveis_ e _próprias_ de um objeto _de origem_ para um objeto destino. Ele usa `[[Get]]` na origem e `[[Put]]` no _destino_, então isto irá invocar _getters_ e _setters_.
 
 Portanto, ele _atribui_ propriedades, em vez de simplesmente copiar ou definir novas propriedades. Isso pode fazê-lo impróprio para combinar novas propriedades com um _prototype_ se os objetos _de origem_ contiverem getters. Para copiar definições de propriedades, incluindo sua enumerabilidade, para _prototypes_ {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.defineProperty()")}} devem ser utilizadas no lugar.
 

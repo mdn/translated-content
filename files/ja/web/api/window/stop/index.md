@@ -3,6 +3,7 @@ title: window.stop
 slug: Web/API/Window/stop
 original_slug: Web/API/window.stop
 ---
+
 {{ApiRef}}
 
 ## 概要

@@ -61,7 +61,7 @@ ctx.stroke();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineWidth")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 

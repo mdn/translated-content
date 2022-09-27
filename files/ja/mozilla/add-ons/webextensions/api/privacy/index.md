@@ -2,6 +2,7 @@
 title: privacy
 slug: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
+
 {{AddonSidebar}}
 
 さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。

@@ -68,4 +68,4 @@ h2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

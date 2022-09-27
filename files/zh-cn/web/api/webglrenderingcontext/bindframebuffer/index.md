@@ -62,7 +62,7 @@ gl.getParameter(gl.FRAMEBUFFER_BINDING);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindFramebuffer")}}
+{{Compat}}
 
 ## 另见
 

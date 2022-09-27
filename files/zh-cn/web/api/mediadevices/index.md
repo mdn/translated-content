@@ -80,7 +80,7 @@ function errorMsg(msg, error) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## 参见
 

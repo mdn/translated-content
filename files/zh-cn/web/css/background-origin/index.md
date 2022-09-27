@@ -80,7 +80,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-origin")}}
+{{Compat}}
 
 ## 相关文献
 

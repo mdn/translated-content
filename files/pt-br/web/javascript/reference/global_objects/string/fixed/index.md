@@ -27,7 +27,7 @@ Uma string que representa o elemento HTML [\<tt>](/pt-BR/docs/Web/HTML/Element/t
 
 ## Descrição
 
-O método\*\* \*\*`fixed()` cria uma string dentro de uma tag `<tt>`:
+O método `fixed()` cria uma string dentro de uma tag `<tt>`:
 `"<tt>str</tt>"`.
 
 ## Exemplos

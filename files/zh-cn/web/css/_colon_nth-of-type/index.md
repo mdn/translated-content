@@ -70,7 +70,7 @@ p:nth-of-type(1) {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.nth-of-type")}}
+{{Compat}}
 
 ## 参见
 

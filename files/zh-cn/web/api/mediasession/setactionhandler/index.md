@@ -78,4 +78,4 @@ navigator.mediaSession.setActionHandler('nexttrack', null);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSession.setActionHandler")}}
+{{Compat}}

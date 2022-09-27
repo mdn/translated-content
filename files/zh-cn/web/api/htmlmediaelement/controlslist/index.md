@@ -37,7 +37,7 @@ A {{domxref("DOMTokenList")}}.
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.controlsList")}}
+{{Compat}}
 
 ## 参阅
 

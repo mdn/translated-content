@@ -54,7 +54,7 @@ _继承了其父对象_ _{{domxref("HTMLMediaElement")}}和_ _{{domxref("HTMLEle
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## 另见
 

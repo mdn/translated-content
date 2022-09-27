@@ -39,7 +39,7 @@ var metaKeyPressed = instanceOfMouseEvent.metaKey
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.metaKey")}}
+{{Compat}}
 
 ## 相关链接
 

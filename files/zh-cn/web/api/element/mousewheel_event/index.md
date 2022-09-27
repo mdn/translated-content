@@ -24,7 +24,7 @@ The document in MSDN: [onmousewheel event](http://msdn.microsoft.com/en-us/libra
 
 ## Browser compatibility
 
-{{Compat("api.Element.mousewheel_event")}}
+{{Compat}}
 
 ## detail value
 

@@ -2,6 +2,7 @@
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStream()`** コンストラクターは、指定されたハンドラーから読み取り可能なストリームのオブジェクトを作成して返します。

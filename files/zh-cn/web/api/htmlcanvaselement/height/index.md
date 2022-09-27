@@ -37,7 +37,7 @@ console.log(canvas.height); // 300
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.height")}}
+{{Compat}}
 
 ## 其他
 

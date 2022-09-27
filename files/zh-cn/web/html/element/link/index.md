@@ -263,7 +263,7 @@ function sheetError() {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.link", 3)}}
+{{Compat}}
 
 ## 请参阅
 

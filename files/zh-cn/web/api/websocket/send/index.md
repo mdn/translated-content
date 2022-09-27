@@ -45,4 +45,4 @@ WebSocket.send("Hello server!");
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.send")}}
+{{Compat}}
