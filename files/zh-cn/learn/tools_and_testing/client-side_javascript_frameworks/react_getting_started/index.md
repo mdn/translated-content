@@ -130,7 +130,7 @@ const header = React.createElement("header", null,
 npx create-react-app moz-todo-react
 ```
 
-这句命令创建了一个名为 `moz-todo-react` 的文件夹， 并在此文件夹里做了如下工作：
+这句命令创建了一个名为 `moz-todo-react` 的文件夹，并在此文件夹里做了如下工作：
 
 - 为你的应用程序安装了一些 npm 包；
 - 写入 react 应用启动所需要的脚本文件；
@@ -147,7 +147,7 @@ npx create-react-app moz-todo-react
 
 处理完成之后，你可以 `cd` 到 `moz-todo-react` 文件夹下，然后键入 `npm start` 命令并回车，先前由 create-react-app 创建的脚本会启动一个地服务 <localhost:3000>，并打开你的默认浏览器来访问这个服务。成功启动浏览器的话，你的浏览器上会显示如下画面：
 
-![Firefox MacOS的屏幕截图，打开到localhost：3000，显示了默认的create-react-app应用程序](default-create-react-app.png)
+![Firefox MacOS 的屏幕截图，打开到 localhost：3000，显示了默认的 create-react-app 应用程序](default-create-react-app.png)
 
 ### 应用结构
 
@@ -180,7 +180,7 @@ moz-todo-react
 
 目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 这一篇教程。
 
-文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。 不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
 ## 探索第一个 React 组件 — `<App/>`
 
@@ -216,7 +216,7 @@ function App() {
 export default App;
 ```
 
-文件 `App.js` 主要由三部分组成： 顶部的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，中间的 `App` 组件，以及底部的 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句。大多数 React 组件都遵循这个模式。
+文件 `App.js` 主要由三部分组成：顶部的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，中间的 `App` 组件，以及底部的 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句。大多数 React 组件都遵循这个模式。
 
 ### import 语句
 

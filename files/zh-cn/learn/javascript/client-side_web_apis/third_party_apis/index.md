@@ -41,7 +41,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 ### 它们植根于第三方服务器
 
-浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/zh-CN/docs/Web/API/Geolocation) 的对象。 这个例子使用了这个对象的方法 [`getCurrentPosition()`](/zh-CN/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
+浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/zh-CN/docs/Web/API/Geolocation) 的对象。这个例子使用了这个对象的方法 [`getCurrentPosition()`](/zh-CN/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -93,7 +93,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
 2. 接下来，用以下步骤获取你自己的开发者密钥：
 
     1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
