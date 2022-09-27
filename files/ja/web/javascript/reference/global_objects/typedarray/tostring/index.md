@@ -1,14 +1,8 @@
 ---
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された配列とその要素を表す文字列を返します。このメソッドは、{{jsxref("Array.prototype.toString()")}} と同じアルゴリズムを持ちます。ここで _TypedArray_ は [TypedArray オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。

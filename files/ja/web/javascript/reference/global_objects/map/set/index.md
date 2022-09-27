@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。

@@ -84,9 +84,9 @@ Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS p
 
 En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla juntos.
 
-1.  Para comenzar, crea una copia local del [código de ejemplo](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html "código de ejemplo"), descarga las dos imágenes ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) y [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), y pon los tres archivos en alguna carpeta de tu ordenador.
-2.  Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
-3.  Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
+1. Para comenzar, crea una copia local del [código de ejemplo](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), descarga las dos imágenes ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) y [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), y pon los tres archivos en alguna carpeta de tu ordenador.
+2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
+3. Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">

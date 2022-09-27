@@ -1,17 +1,7 @@
 ---
 title: circle()
 slug: Web/CSS/basic-shape/circle
-tags:
-  - CSS
-  - CSS データ型
-  - CSS シェイプ
-  - circle
-  - CSS 関数
-  - データ型
-  - Reference
-translation_of: Web/CSS/basic-shape/circle()
 original_slug: Web/CSS/basic-shape/circle()
-browser-compat: css.types.basic-shape.circle
 ---
 {{CSSRef}}
 

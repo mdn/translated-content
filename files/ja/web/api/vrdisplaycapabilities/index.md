@@ -1,8 +1,8 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
-translation_of: Web/API/VRDisplayCapabilities
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRDisplayCapabilities`** インターフェイスは {{domxref("VRDisplay")}} の利用可能な機能を示しています — この機能は，例えば位置情報を返すことが可能か，といった VR デバイスの動作可能テストに使うことができます．

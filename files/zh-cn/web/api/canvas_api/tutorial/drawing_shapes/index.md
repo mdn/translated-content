@@ -2,6 +2,7 @@
 title: 使用 canvas 来绘制图形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 既然我们已经设置了 [canvas 环境](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)，我们可以深入了解如何在 canvas 上绘制。到本文的最后，你将学会如何绘制矩形，三角形，直线，圆弧和曲线，变得熟悉这些基本的形状。绘制物体到 Canvas 前，需掌握路径，我们看看到底怎么做。

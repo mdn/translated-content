@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/aural
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Un [groupe de médias](/fr/docs/Web/CSS/@media#Groupes_de_médias) défini par les standards [CSS](/fr/docs/Web/CSS).

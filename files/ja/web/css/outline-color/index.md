@@ -1,20 +1,6 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - CSS ユーザーインターフェイス
-  - HTML 色
-  - HTML スタイル
-  - アウトライン
-  - Reference
-  - スタイル
-  - Styling HTML
-  - outline-color
-  - 'recipe:css-property'
-translation_of: Web/CSS/outline-color
 ---
 {{CSSRef}}
 

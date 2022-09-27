@@ -1,15 +1,8 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLElement.click
-translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。

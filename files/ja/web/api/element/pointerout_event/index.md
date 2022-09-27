@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onpointerout
 slug: Web/API/Element/pointerout_event
 original_slug: Web/API/GlobalEventHandlers/onpointerout
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointerout`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("pointerout")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。

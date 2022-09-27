@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur inférieur strict (`<`) renvoie `true` si son opérande gauche est strictement inférieur à son opérande droit et `false` sinon.

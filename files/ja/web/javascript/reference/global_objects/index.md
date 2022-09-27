@@ -1,13 +1,8 @@
 ---
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{JSSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。

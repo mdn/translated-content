@@ -41,8 +41,8 @@ Uno de las principales razones por las que HTML hace más fácil la navegación 
 
 ### Imágenes y multimedia
 
-- [Cómo](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Active_learning_creating_a_navigation_menu)[ añadir imagenes al sitio web](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)
-- [Cómo](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Active_learning_creating_a_navigation_menu)[ añadir contenidos de video al sitio web](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Cómo añadir imagenes al sitio web](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)
+- [Cómo añadir contenidos de video al sitio web](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 ### Scripts y estilización
 
@@ -54,7 +54,6 @@ HTML únicamente define la estructura del documento. Para solucionar los problem
 ### Contenido integrado
 
 - [Cómo integrar una página web dentro de otra](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Cómo integrar contenido Flash ](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_%3Cembed%3E_and_%3Cobject%3E_elements)[dentro de ](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)[una página web](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_%3Cembed%3E_and_%3Cobject%3E_elements)
 
 ## Problemas avanzados o raros
 

@@ -1,8 +1,8 @@
 ---
 title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
+
 {{AddonSidebar()}}
 
 メニューアイテムがクリックされたときに発火します。

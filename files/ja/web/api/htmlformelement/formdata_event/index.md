@@ -1,14 +1,8 @@
 ---
 title: 'HTMLFormElement: formdata イベント'
 slug: Web/API/HTMLFormElement/formdata_event
-tags:
-  - Event
-  - Forms
-  - Reference
-  - formevent
-translation_of: Web/API/HTMLFormElement/formdata_event
-browser-compat: api.HTMLFormElement.formdata_event
 ---
+
 {{APIRef}}
 
 **`formdata`** イベントは、フォームのデータを表すエントリーリストが構築された後に発行されます。このイベントは、フォームが送信されたときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターが呼び出されたときにも発行されます。

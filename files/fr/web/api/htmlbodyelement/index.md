@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
@@ -42,7 +43,7 @@ _Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hé
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("beforeprint")}} est déclenché.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("beforeunload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
@@ -64,7 +65,7 @@ _Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hé
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("storage")}} est déclenché.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("unload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
 
 ## Spécifications
 

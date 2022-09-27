@@ -15,7 +15,9 @@ El método **`toSource()`** devuelve código que podría evaluar el mismo error.
 
 ## Sintaxis
 
-    e.toSource()
+```js
+e.toSource()
+```
 
 ### Valor de retorno
 

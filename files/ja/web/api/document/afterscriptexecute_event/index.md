@@ -29,7 +29,7 @@ document.addEventListener('afterscriptexecute', finished, true);
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## ブラウザーの互換性
 

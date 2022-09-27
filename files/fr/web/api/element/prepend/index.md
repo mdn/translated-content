@@ -4,6 +4,7 @@ slug: Web/API/Element/prepend
 translation_of: Web/API/Element/prepend
 browser-compat: api.Element.prepend
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.prepend()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou des chaînes de caractères avant le premier élément enfant de l'élément courant. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).

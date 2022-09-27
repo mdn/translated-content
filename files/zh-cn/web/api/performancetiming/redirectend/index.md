@@ -2,6 +2,7 @@
 title: PerformanceTiming.redirectEnd
 slug: Web/API/PerformanceTiming/redirectEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

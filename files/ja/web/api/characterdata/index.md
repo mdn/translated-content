@@ -1,11 +1,6 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CharacterData
-translation_of: Web/API/CharacterData
 ---
 {{APIRef("DOM")}}
 

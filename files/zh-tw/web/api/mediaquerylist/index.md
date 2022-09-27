@@ -2,6 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 `MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/CSS/Media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
@@ -55,7 +56,7 @@ void removeListener(
 
 ## 瀏覽器相容性
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 規範標準
 

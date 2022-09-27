@@ -2,6 +2,7 @@
 title: HTTP 消息
 slug: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）-- 由客户端发送用来触发一个服务器上的动作；响应（responses）-- 来自服务器的应答。

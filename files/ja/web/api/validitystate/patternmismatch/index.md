@@ -1,15 +1,8 @@
 ---
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
-tags:
-  - API
-  - 制約検証 API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.ValidityState.patternMismatch
-translation_of: Web/API/ValidityState
 ---
+
 **`patternMismatch`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} 要素の値がユーザーによって編集された後で、その要素の [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で設定された制約に適合するかどうかを示します。
 
 そのフィールドが [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応している場合 -- つまり、 {{HTMLElement("input")}} の `type` が {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} のいずれかであった場合 -- かつ、 pattern の値が有効な正規表現に設定されていた場合、値が [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) の値で設定された制約に適合していない場合、 `patternMismatch` プロパティが true になります。

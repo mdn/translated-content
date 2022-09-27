@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
+
 {{AddonSidebar}}
 
 Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.

@@ -2,6 +2,7 @@
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 {{ domxref("AnalyserNode") }} 接口的 **`getByteTimeDomainData()`** 方法复制当前波形或时域数据到传递给它的 {{domxref("Uint8Array")}} (无符号字节数组) 中。
@@ -84,8 +85,8 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.getByteTimeDomainData")}}
+{{Compat}}
 
 ## See also
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

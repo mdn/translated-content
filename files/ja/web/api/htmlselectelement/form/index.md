@@ -1,15 +1,8 @@
 ---
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
-tags:
-  - API
-  - HTMLSelectElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLSelectElement.form
-translation_of: Web/API/HTMLSelectElement/form
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.form`** は読み取り専用のプロパティで、この要素が関連付けられているフォームを表す {{domxref("HTMLFormElement")}} を返します。この要素が {{HTMLElement("form")}} 要素に関連付けられていなかった場合は、`null` を返します。

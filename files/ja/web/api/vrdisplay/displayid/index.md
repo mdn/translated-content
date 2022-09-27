@@ -1,21 +1,9 @@
 ---
 title: VRDisplay.displayId
 slug: Web/API/VRDisplay/displayId
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - displayId
-browser-compat: api.VRDisplay.displayId
-translation_of: Web/API/VRDisplay/displayId
 original_slug: Web/API/VRDevice/displayId
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`displayId`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この特定の `VRDisplay` の識別子を返します。これは、 [Gamepad API](/ja/docs/Web/API/Gamepad_API) の関連付けポイントとしても使用されます( {{domxref("Gamepad.displayId")}} を参照)。

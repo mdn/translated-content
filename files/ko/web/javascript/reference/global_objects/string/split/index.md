@@ -171,7 +171,13 @@ console.log(splits);  //["c", "c,", "c", "c", "c"]
 
 ### `split()`으로 문자열 뒤집기
 
-> **경고:** 이 방법은 문자열 뒤집기에 효과적인 방법이 아닙니다.`js var str = 'asdfghjkl'; var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa' // split()에서 반환한 배열에는 reverse()와 join()을 사용할 수 있다 `문자열에 grapheme clusters가 있을 경우, 유니코드 플래그를 설정해도 오류를 일으킵니다([esrever](https://github.com/mathiasbynens/esrever) 등의 라이브러리를 대신 사용하세요).```js
+> **경고:**
+> 이 방법은 문자열 뒤집기에 효과적인 방법이 아닙니다.
+> ```js
+> var str = 'asdfghjkl';
+> var strReverse = str.split('').reverse().join('');
+> // 'lkjhgfdsa'
+> // split()에서 반환한 배열에는 reverse()와 join()을 사용할 수 있다 문자열에 grapheme clusters가 있을 경우, 유니코드 플래그를 설정해도 오류를 일으킵니다([esrever](https://github.com/mathiasbynens/esrever) 등의 라이브러리를 대신 사용하세요).
 
 ```js
 var str = 'résumé';
@@ -180,7 +186,6 @@ var strReverse = str.split(/(?:)/u).reverse().join('');
 ```
 
 **추가:** {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 연산자를 사용하면 원본 문자열이 팰린드롬인지 확인할 수 있습니다.
-
 
 ## 명세
 

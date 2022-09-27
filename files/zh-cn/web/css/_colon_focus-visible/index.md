@@ -2,6 +2,7 @@
 title: ':focus-visible'
 slug: Web/CSS/:focus-visible
 ---
+
 {{CSSRef}}
 
 当元素匹配{{cssxref(":focus")}}伪类并且客户端 (UA) 的启发式引擎决定焦点应当可见 (在这种情况下很多浏览器默认显示“焦点框”。) 时，**`:focus-visible` **伪类将生效。

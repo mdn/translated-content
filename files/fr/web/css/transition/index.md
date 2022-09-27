@@ -8,6 +8,7 @@ tags:
   - Transitions CSS
 translation_of: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.

@@ -8,6 +8,7 @@ tags:
   - Type
 translation_of: Web/CSS/shape
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Le type de donnée CSS **`<shape>`** permet de représenter des formes. Ces formes (ou régions) sont utilisées pour définir les parties d'un élément sur lesquelles des propriétés comme {{cssxref("clip")}} s'appliquent. Ce type de donnée a été déprécié pour être remplacé par {{cssxref("&lt;basic-shape&gt;")}}.

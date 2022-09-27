@@ -1,14 +1,6 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-top-style
-translation_of: Web/CSS/border-top-style
 ---
 {{CSSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: フィルター効果
 slug: Web/CSS/Filter_Effects
-tags:
-  - CSS
-  - フィルター効果
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/Filter_Effects
 ---
 {{CSSRef}}
 

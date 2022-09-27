@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/raw
 ---
+
 {{JSRef}}
 
 La méthode statique **`String.raw()`** est une fonction d'étiquetage (_tag function_) pour les [gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits#Les_gabarits_étiquetés) (elle est [semblable](https://bugs.chromium.org/p/v8/issues/detail?id=5016) au préfixe `r` en Python ou au préfixe `@` en C#). Cette fonction permet d'obtenir la chaîne brute pour un gabarit (les caractères spéciaux ne sont pas pris en compte mais retranscrits tels quels, les séquences d'échappement ne sont pas interprétées et les emplacements (ex. `${toto}`) sont traités).

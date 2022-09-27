@@ -1,14 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - CodingScripting
-  - Glossar
-  - Glossary
-  - Web
-  - l10n:priority
-translation_of: Glossary/CSS
 ---
 **CSS** (Cascading StyleSheets) は {{glossary("browser","ブラウザー")}} でウェブページの見た目を調整する宣言型の言語です。ウェブブラウザーは、指定された要素を適切に表示するために CSS スタイル宣言を適用する働きを持ちます。スタイルの宣言には、ウェブページの見た目を決定するプロパティとプロパティの値が含まれています。
 

@@ -1,15 +1,6 @@
 ---
 title: mask-type
 slug: Web/CSS/mask-type
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - リファレンス
-  - SVG
-  - recipe:css-property
-browser-compat: css.properties.mask-type
-translation_of: Web/CSS/mask-type
 ---
 {{CSSRef}}
 

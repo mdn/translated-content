@@ -1,14 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-repeat
-translation_of: Web/CSS/background-repeat
 ---
 {{CSSRef}}
 

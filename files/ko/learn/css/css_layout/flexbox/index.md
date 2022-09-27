@@ -1,14 +1,6 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - 문서
-  - 안내서
-  - 용어집
-  - 초보자
-  - 코딩스크립팅
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
@@ -373,6 +365,6 @@ flexbox는 몇몇 CSS 기능보다 다소 까다롭습니다. 예를 들어 브�
 - [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
 - [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_조판_메서드)
+- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
 - [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
 - [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

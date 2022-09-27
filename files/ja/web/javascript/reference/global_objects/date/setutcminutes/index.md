@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 ---
+
 {{JSRef}}
 
 **`setUTCMinutes()`** メソッドは、協定世界時に基づき、指定された日時の「分」を設定します。

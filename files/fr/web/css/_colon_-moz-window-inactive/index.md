@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-window-inactive
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La pseudo-classe **`:-moz-window-inactive`**, spécifique à Mozilla, correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.

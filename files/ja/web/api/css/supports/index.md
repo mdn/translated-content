@@ -1,15 +1,6 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - メソッド
-  - リファレンス
-  - supports
-browser-compat: api.CSS.supports
-translation_of: Web/API/CSS/supports
 ---
 {{APIRef("CSSOM")}}
 

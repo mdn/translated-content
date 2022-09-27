@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément {{HTMLElement("html")}} pour les documents HTML).

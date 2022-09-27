@@ -1,14 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 **`static`** キーワードは、クラスに静的メソッドや静的プロパティを定義します。静的メソッドも静的プロパティもクラスのインスタンスからは呼び出されません。その代わりに、クラスそのものから呼び出されます。静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
@@ -28,9 +22,9 @@ static propertyName [= value];
 
 次の例はいくつかのことを説明しています。
 
-1.  静的メンバー (メソッドまたはプロパティ) がクラスでどのように定義されるか
-2.  静的メンバーを持つクラスがサブクラスを作れるか
-3.  静的メンバーがどう呼び出せて、どう呼び出せないか
+1. 静的メンバー (メソッドまたはプロパティ) がクラスでどのように定義されるか
+2. 静的メンバーを持つクラスがサブクラスを作れるか
+3. 静的メンバーがどう呼び出せて、どう呼び出せないか
 
 ```js
 class Triple {
@@ -87,7 +81,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し
 
-静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名() `/ `this.constructor.静的プロパティ名` のようにしてください。
+静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名()` / `this.constructor.静的プロパティ名` のようにしてください。
 
 ```js
 class StaticMethodCall {

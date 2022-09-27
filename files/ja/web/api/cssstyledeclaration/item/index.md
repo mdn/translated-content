@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration.item()
 slug: Web/API/CSSStyleDeclaration/item
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/item
-browser-compat: api.CSSStyleDeclaration.item
 ---
 {{ APIRef("CSSOM") }}
 

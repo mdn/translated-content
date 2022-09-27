@@ -1,12 +1,6 @@
 ---
 title: Expando
 slug: Glossary/Expando
-tags:
-  - CodingScripting
-  - JavaScript
-  - Reference
-  - expando
-translation_of: Glossary/Expando
 ---
 expando プロパティは、 {{glossary("JavaScript")}} によって {{glossary("DOM")}} ノードに追加されたプロパティであり、 DOM {{glossary("object","オブジェクト")}}の仕様書に含まれていないものです。
 

@@ -2,9 +2,10 @@
 title: Guide to media types and formats on the web
 slug: Web/Media/Formats
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-几乎从一开始，网络就包含了对某种形式的视觉媒体呈现的支持。 最初，这些功能是有限的，但是不同的浏览器厂商扩展了这些功能，并且找到了自己的解决方案来解决网络上的静态和视频图像等问题。 现代 Web 具有强大的功能来支持媒体的呈现和操作，多个与媒体相关的 API 支持各种类型的内容。 通常，浏览器支持的媒体格式完全取决于浏览器的创建者，这可能会使 Web 开发人员的工作复杂化。
+几乎从一开始，网络就包含了对某种形式的视觉媒体呈现的支持。最初，这些功能是有限的，但是不同的浏览器厂商扩展了这些功能，并且找到了自己的解决方案来解决网络上的静态和视频图像等问题。现代 Web 具有强大的功能来支持媒体的呈现和操作，多个与媒体相关的 API 支持各种类型的内容。通常，浏览器支持的媒体格式完全取决于浏览器的创建者，这可能会使 Web 开发人员的工作复杂化。
 
 This guide provides an overview of the media file types, {{Glossary("codec", "codecs")}}, and algorithms that may comprise media used on the web. It also provides browser support information for various combinations of these, and suggestions for prioritization of formats, as well as which formats excel at specific types of content.
 

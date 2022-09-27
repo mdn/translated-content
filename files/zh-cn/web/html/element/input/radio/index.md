@@ -2,6 +2,7 @@
 title: <input type="radio">
 slug: Web/HTML/Element/Input/radio
 ---
+
 {{HTMLRef}}
 
 {{htmlelement("input")}} 的 **`radio`** 类型元素默认渲染为小型圆圈图表，填充即为激活，类似于之前描述额复选框（checkbox）类型。单选按钮允许你选择单一的值来提交表单。

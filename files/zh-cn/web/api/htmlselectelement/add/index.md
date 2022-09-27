@@ -2,6 +2,7 @@
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.add()`** 方法用于向 `select` 元素的 `option` 元素集合中添加一个元素。
@@ -130,4 +131,4 @@ sel.add(opt, sel.options[1]);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.add")}}
+{{Compat}}

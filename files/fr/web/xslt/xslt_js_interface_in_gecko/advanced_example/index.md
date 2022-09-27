@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé
 ---
+
 ## Exemple avancé
 
 Dans l'exemple avancé, nous allons trier plusieurs `div` selon leur contenu. L'exemple permet de trier le contenu plusieurs fois, en alternant entre le tri ascendant et le tri descendant. Le JavaScript ne charge que le fichier .xsl la première fois, et définit la variable `xslloaded` à `true` une fois que le fichier est fini de chargé. En utilisant la méthode `getParameter` sur l'objet `XSLTProcessor` , le code peut estimer s'il faut trier de façon ascendante ou descendante. Il trie par défaut de manière ascendante si le paramètre est vide (lors du premier tri, car sa valeur n'est pas définie dans le fichier XSLT). La valeur du tri est définie à l'aide de `setParameter`.

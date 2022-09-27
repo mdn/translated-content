@@ -1,12 +1,6 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Headers/Early-Data
-tags:
-  - HTTP
-  - クライアントヒント
-  - ヘッダー
-  - リクエスト
-translation_of: Web/HTTP/Headers/Early-Data
 ---
 {{SeeCompatTable}}{{HTTPSidebar}}
 

@@ -2,6 +2,7 @@
 title: Path2D()
 slug: Web/API/Path2D/Path2D
 ---
+
 {{APIRef("Canvas API")}}{{seeCompatTable}}
 
 **`Path2D()`** 构造函数返回一个新的 `Path2D` 对象的实例，可以选择另一条路径作为参数（创建一个拷贝），或者选择 [SVG path](/zh-CN/docs/Web/SVG/Tutorial/Paths) 数据构成的字符串。
@@ -147,7 +148,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.Path2D.Path2D")}}
+{{Compat}}
 
 ## 参见
 

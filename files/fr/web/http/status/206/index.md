@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/206
 translation_of: Web/HTTP/Status/206
 browser-compat: http.status.206
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse succès HTTP **`206 Partial Content`** indique que la requête a bien abouti et que le corps de la réponse contient les plages de données demandées, tel que décrit dans l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) de la requête.

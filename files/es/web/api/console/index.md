@@ -71,7 +71,6 @@ Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `cons
 - {{domxref("console.warn()")}}
   - : Muestra un mensaje de advertencia.Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 
-
 ## Ejemplos
 
 ### Enviar texto a la consola
@@ -228,7 +227,6 @@ Registrará el tiempo necesitado por el usuario para descartar el cuadro de aler
 
 Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador es iniciado como cuando es detenido.
 
-
 > **Nota:** Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
 > Si en cambio tienes el registro de cuerpo (`response body logging`) habilitado, el tiempo listado para la respuesta de la cabecera y el cuerpo combinados debiera coincidir con lo que ves en la salida de la consola.
 
@@ -274,4 +272,3 @@ La salida en la consola se verá como esto:
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
 - [Inspector Web Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
-

@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
+
 {{AddonSidebar()}}
 
 Injecter du code CSS dans une page web.

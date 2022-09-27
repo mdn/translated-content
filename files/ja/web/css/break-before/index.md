@@ -1,15 +1,6 @@
 ---
 title: break-before
 slug: Web/CSS/break-before
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.break-before
-translation_of: Web/CSS/break-before
 ---
 {{CSSRef}}
 

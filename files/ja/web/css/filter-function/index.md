@@ -1,15 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - フィルター効果
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: css.types.filter-function
-translation_of: Web/CSS/filter-function
 ---
 {{CSSRef}}
 

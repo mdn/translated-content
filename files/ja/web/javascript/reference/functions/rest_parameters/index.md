@@ -1,14 +1,8 @@
 ---
 title: 残余引数
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **残余引数**構文により、関数が不定数の引数を配列として受け入れることができ、[可変長引数関数](https://ja.wikipedia.org/wiki/可変長引数)を JavaScript で表すことができます。

@@ -16,6 +16,7 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 The **`StorageManager`** interface of the the [Storage API](/fr/docs/Web/API/Storage_API) provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.

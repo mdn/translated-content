@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/startTime
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`startTime`** renvoie le premier [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) enregistré pour l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry).

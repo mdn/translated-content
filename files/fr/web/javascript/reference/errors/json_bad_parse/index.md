@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
 original_slug: Web/JavaScript/Reference/Erreurs/JSON_bad_parse
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

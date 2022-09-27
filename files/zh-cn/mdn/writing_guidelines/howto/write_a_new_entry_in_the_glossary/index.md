@@ -3,6 +3,7 @@ title: 如何撰写和引用一个词汇表中的条目
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编码的术语、行话和缩写的地方。对词汇表做出贡献是使 Web 更易于理解的简单方法。您不需要高水平的技术技能来编写词汇表条目，因为它们应该保持简单直接。
@@ -23,7 +24,7 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 
 使用“链接到词汇表条目”工具可以方便读者直接看到词汇条目中的定义，不需要读者跳转到词汇条目的页面。（更多内容请浏览如何使用 \\{{Glossary}} 宏插入词汇表条目的链接。）
 
-如果需要的话，你可以添加少量额外的段落，但是这很容易导致你写了一整篇文章的情况发生。写一个完整的文章很棒，但是请不要把它们整个放在词汇表中。如果你不确定这里是否适合放你的文章，你就要随时[在这里讨论](/en-US/docs/MDN/Community#Join_our_mailing_lists)。
+如果需要的话，你可以添加少量额外的段落，但是这很容易导致你写了一整篇文章的情况发生。写一个完整的文章很棒，但是请不要把它们整个放在词汇表中。如果你不确定这里是否适合放你的文章，你就要随时[在这里讨论](/zh-CN/docs/MDN/Community#Join_our_mailing_lists)。
 
 ### 第二步：扩展链接
 
@@ -49,7 +50,7 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 - 该术语的主页面必须是一个包含了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
 - 该术语具有定义给定上下文的术语的子页面。
 
-我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义： _安全_、_函数_ 和 _电子邮件_。
+我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义：_安全_、_函数_ 和 _电子邮件_。
 
 1. [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
 2. [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；

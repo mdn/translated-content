@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le premier octet du corps de réponse est reçu.

@@ -7,6 +7,7 @@ tags:
   - Experimental
 translation_of: Web/API/XMLDocument
 ---
+
 {{ ApiRef("DOM") }} {{SeeCompatTable}}
 
 L'interface XMLDocument représente un document XML. Elle hérite du {{domxref("Document")}} générique et ne lui ajoute aucune méthode ou propriété spécifique : néanmoins, plusieurs algorithmes se comportent différemment avec les deux types de documents.
@@ -24,15 +25,11 @@ _Cette interface n'ajoute aucune nouvelle méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", 'dom.html#xmldocument', "Extension to XMLDocument")}}             | {{Spec2('HTML WHATWG')}} | Pas de changement par rapport à {{SpecName("HTML5 W3C")}} |
-| {{SpecName("HTML5 W3C", "dom.html#loading-xml-documents", "Extension to XMLDocument")}} | {{Spec2('HTML5 W3C')}}     | Ajoute la méthode `load()`.                                      |
-| {{SpecName('DOM WHATWG', '#xmldocument', 'XMLDocument')}}                                         | {{Spec2('DOM WHATWG')}} | Définition initiale.                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLDocument")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,9 @@
 ---
 title: Mozilla におけるリッチテキスト編集
 slug: orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-tags:
-  - Midas
-  - ガイド
-translation_of: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 original_slug: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 ---
+
 > **Note:** この文書は古くなっています。[コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)にある最新のドキュメントを参照することをお勧めします。
 
 Mozilla 1.3 は、Microsoft® Internet Explorer の designMode 機能の実装を導入しました。 Mozilla 1.3 のリッチテキスト編集機能は、HTML 文書をリッチテキスト編集環境へと変える designMode 属性をサポートします。更に、Firefox 3 以降、Mozilla は、あらゆる要素を編集可能にしたり編集不能にしたりする (後者は、編集可能な環境に含まれる固定したい要素の編集をできなくするのに使います) Internet Explorer の contentEditable 属性をサポートするようになりました。
@@ -54,7 +51,7 @@ _**DevEdge**_ は、 [`xbDesignMode`](/ja/Rich-Text_Editing_in_Mozilla/Class_xbD
 
 ### 例
 
-_**ご注意ください:** サンプルファイルは他サイトから取り入れられています。現在これは利用できません。_ --[fumble](/User:Fumble "User:Fumble") 18:13, 24 Apr 2005 (PDT)
+_**ご注意ください:** サンプルファイルは他サイトから取り入れられています。現在これは利用できません。_ --[fumble](/User:Fumble) 18:13, 24 Apr 2005 (PDT)
 
 #### 例 1
 
@@ -268,11 +265,11 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Note:** if you want to see how to standardize the creation and the insertion of your editor in your page, please see our [more complete rich-text editor example](rich-text-editor.zip "rich-text-editor.zip").
+> **Note:** if you want to see how to standardize the creation and the insertion of your editor in your page, please see our [more complete rich-text editor example](rich-text-editor.zip).
 
 ### リソース
 
-- [mozilla.org のリッチテキスト編集仕様 ](http://mozilla.org/editor/midas-spec.html)([日本語訳](http://www.mozilla-japan.org/editor/midas-spec.html)）
+- [mozilla.org のリッチテキスト編集仕様](http://mozilla.org/editor/midas-spec.html)([日本語訳](http://www.mozilla-japan.org/editor/midas-spec.html)）
 - [mozilla.org のリッチテキスト編集デモ](http://mozilla.org/editor/midasdemo/)
 - [Converting an app using document.designMode from IE to Mozilla at mozilla.org](http://www.mozilla.org/editor/ie2midas.html)
 - [`designMode`](/ja/docs/Web/API/Document/designMode)
@@ -286,6 +283,6 @@ img.intLink { border: 0; }
 - Author(s): Doron Rosenberg, Netscape Communications
 - Published: 04 Apr 2003
 - Revised: 01 Jul 2003
-- Revised: 24 Apr 2005, [Joel Coreson](/User:Fumble "User:Fumble")
+- Revised: 24 Apr 2005, [Joel Coreson](/User:Fumble)
 - Revised: 28 Nov 2006, [Ken Kuhns](mailto:kkuhns@ComputronicsUSA.com), [ComputronicsUSA](http://www.ComputronicsUSA.com)
-- Revised: 19 Dec 2007, [Mark Finkle](/User:MarkFinkle "User:MarkFinkle")
+- Revised: 19 Dec 2007, [Mark Finkle](/User:MarkFinkle)

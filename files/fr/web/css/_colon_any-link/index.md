@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:any-link
 ---
+
 {{CSSRef}}
 
 La pseudo-classe **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.

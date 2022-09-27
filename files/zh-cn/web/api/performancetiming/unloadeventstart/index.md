@@ -2,6 +2,7 @@
 title: PerformanceTiming.unloadEventStart
 slug: Web/API/PerformanceTiming/unloadEventStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

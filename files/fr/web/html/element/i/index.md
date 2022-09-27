@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/i
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<i>`** représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l'expression des pensées d'un personnage. Le contenu de cet élément est généralement affiché en italique.
@@ -108,15 +109,11 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-i-element', '&lt;i&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-i-element', '&lt;i&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}                 | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.i")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,7 +13,9 @@ translation_of: Web/API/Screen/orientation
 
 ## Syntax
 
-    var orientation = window.screen.orientation;
+```js
+var orientation = window.screen.orientation;
+```
 
 ## Return value
 

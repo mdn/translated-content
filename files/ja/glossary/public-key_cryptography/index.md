@@ -1,15 +1,6 @@
 ---
 title: Public-key cryptography (公開鍵暗号)
 slug: Glossary/Public-key_cryptography
-tags:
-  - Cryptography
-  - Glossary
-  - Public-key cryptography
-  - Security
-  - セキュリティ
-  - 公開鍵暗号
-  - 暗号
-translation_of: Glossary/Public-key_cryptography
 ---
 公開鍵暗号 — または*非対称暗号* — は、対となる鍵による暗号システムです。一方の鍵によって行われた変換は、もう一方の鍵によってしか解除できません。一方の鍵 (_秘密鍵_) は秘匿しておくのに対し、もう一方の鍵は公開します。
 

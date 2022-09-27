@@ -11,6 +11,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient un tableau de tous les moteurs de recherche installés.

@@ -1,8 +1,8 @@
 ---
 title: VREyeParameters.renderHeight
 slug: Web/API/VREyeParameters/renderHeight
-translation_of: Web/API/VREyeParameters/renderHeight
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VREyeParameters")}} インターフェイスの **`renderHeight`** 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット高さをピクセル値で表します．

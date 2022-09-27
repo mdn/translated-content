@@ -4,6 +4,7 @@ slug: Web/API/NodeList/forEach
 translation_of: Web/API/NodeList/forEach
 browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.

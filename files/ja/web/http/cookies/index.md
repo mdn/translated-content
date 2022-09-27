@@ -1,24 +1,6 @@
 ---
 title: HTTP Cookie の使用
 slug: Web/HTTP/Cookies
-tags:
-  - 広告
-  - ブラウザー
-  - Cookie
-  - Cookies Article
-  - ガイド
-  - HTTP
-  - 履歴
-  - JavaScript
-  - プライバシー
-  - プロトコル
-  - サーバー
-  - ストレージ
-  - ウェブ開発
-  - データ
-  - リクエスト
-  - 追跡
-translation_of: Web/HTTP/Cookies
 ---
 {{HTTPSidebar}}
 

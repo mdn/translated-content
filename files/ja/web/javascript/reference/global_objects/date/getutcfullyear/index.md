@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
+
 {{JSRef}}
 
 **`getUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日時の「年」を返します。

@@ -1,13 +1,6 @@
 ---
 title: Quaternion (四元数)
 slug: Glossary/Quaternion
-tags:
-  - Definition
-  - 用語集
-  - Orientation
-  - Quaternion
-  - WebXR
-  - rotation
 ---
 **四元数**は、2 つの 3D ベクトルの商であり、3D グラフィックや加速度計ベースのセンサーで、方位や回転のデータを表現するために使用されます。
 

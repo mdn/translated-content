@@ -1,12 +1,6 @@
 ---
 title: XML
 slug: Glossary/XML
-tags:
-  - CodingScripting
-  - Glossary
-  - XML
-  - l10n:priority
-translation_of: Glossary/XML
 ---
 eXtensible Markup Language (XML) は W3C によって規定された汎用マークアップ言語です。情報技術 (IT) 産業では、データ記述言語として多くの XML を基にした言語を使用しています。
 

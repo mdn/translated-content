@@ -79,4 +79,3 @@ No es parte de ningún estándar.
 ## Véase también
 
 - {{bug(432891)}}
-

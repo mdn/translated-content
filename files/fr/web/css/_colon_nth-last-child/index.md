@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.

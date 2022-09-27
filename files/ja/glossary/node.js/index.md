@@ -1,13 +1,6 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-tags:
-  - Glossary
-  - Infrastructure
-  - JavaScript
-  - l10n:priority
-  - node.js
-translation_of: Glossary/Node.js
 ---
 Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} 実行環境であり、サーバー側アプリケーションやネットワークアプリケーションを JavaScript で構築することができます。
 

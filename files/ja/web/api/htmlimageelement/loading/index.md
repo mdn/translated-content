@@ -1,28 +1,8 @@
 ---
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
-page-type: web-api-instance-property
-tags:
-  - API
-  - Content
-  - Eager
-  - グラフィック
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Pictures
-  - プロパティ
-  - リファレンス
-  - load
-  - rendering
-browser-compat: api.HTMLImageElement.loading
-translation_of: Web/API/HTMLImageElement/loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`loading`** プロパティは、文字列で、{{Glossary("user agent", "ユーザーエージェント")}}に現在のウィンドウの{{Glossary("visual viewport", "視覚ビューポート")}}の外にある画像の読み込みをどのように処理するかのヒントを提供するものです。

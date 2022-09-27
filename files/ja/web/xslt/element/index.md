@@ -1,12 +1,6 @@
 ---
 title: XSLT 要素リファレンス
 slug: Web/XSLT/Element
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - 概要
-translation_of: Web/XSLT/Element
 ---
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 

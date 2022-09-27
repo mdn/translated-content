@@ -1,17 +1,6 @@
 ---
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - ConstantSourceNode
-  - メディア
-  - メソッド
-  - createConstantSource
-browser-compat: api.BaseAudioContext.createConstantSource
-translation_of: Web/API/BaseAudioContext/createConstantSource
 ---
 {{APIRef("Web Audio API")}}
 

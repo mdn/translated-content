@@ -2,6 +2,7 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
+
 {{JSRef}}
 
 **`return()`** 方法返回给定的值并结束生成器。
@@ -69,4 +70,4 @@ g.return(1); // { value: 1, done: true }
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)

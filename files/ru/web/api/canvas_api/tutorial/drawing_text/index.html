@@ -31,7 +31,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 <p>Текст вставлен с использованием текущего <code>fillStyle</code>.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
@@ -49,7 +49,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 <p>Текст вставлен с использованием текущего <code>strokeStyle</code>.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
@@ -95,7 +95,7 @@ baselines, due to glyphs extending far outside the em square." src="http://www.w
 
 <p>Редактируя код ниже, вы можете видеть, как меняется отображение текста на canvas в реальном времени:</p>
 
-<pre class="brush: js;highlight[2]">ctx.font = "48px serif";
+<pre class="brush: js;">ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
 ctx.strokeText("Hello world!", 0, 100);
 </pre>
@@ -153,7 +153,7 @@ window.addEventListener("load", drawCanvas);
 
 <p>Пример ниже показывает, как можно измерить ширину текста.</p>
 
-<pre class="brush: js;highlight[3]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;

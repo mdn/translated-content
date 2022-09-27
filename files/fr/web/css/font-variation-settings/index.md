@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variation-settings
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`font-variation-settings`** permet de contrôler les caractéristiques typographiques de bas niveau OpenType ou TrueType en utilisant les quatres lettres représentant les axes des caractéristiques qu'on souhaite faire varier, ainsi que les valeurs pour les variations associées.

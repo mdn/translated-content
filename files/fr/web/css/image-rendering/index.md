@@ -4,6 +4,7 @@ slug: Web/CSS/Image-rendering
 translation_of: Web/CSS/image-rendering
 browser-compat: css.properties.image-rendering
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments descendants de l'élément ciblé.

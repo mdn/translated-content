@@ -1,22 +1,15 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
-tags:
-  - API
-  - DOM
-  - Method
-  - URL
-  - URL API
-  - revokeObjectURL
-translation_of: Web/API/URL/revokeObjectURL
 ---
+
 {{ApiRef("URL")}}
 
 **`URL.revokeObjectURL()`** 静的メソッドは、以前に {{domxref("URL.createObjectURL()") }} を呼び出して生成された既存のオブジェクト URL を解放します。 オブジェクト URL を使い終わったら、このメソッドを呼び出して、ファイルへの参照をこれ以上保持しないようにブラウザーに知らせます。
 
 {{AvailableInWorkers}}
 
-> **Note:** **注**: このメソッドは、{{domxref("Blob")}} インターフェイスのライフサイクルの問題とリークの可能性があるため、サービスワーカーからは利用できません。
+> **Note:** このメソッドは、{{domxref("Blob")}} インターフェイスのライフサイクルの問題とリークの可能性があるため、サービスワーカーからは利用できません。
 
 ## 構文
 

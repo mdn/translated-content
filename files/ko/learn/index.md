@@ -1,16 +1,6 @@
 ---
 title: Web 개발 학습하기
 slug: Learn
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Index
-  - Intro
-  - Landing
-  - Learn
-  - Web
-translation_of: Learn
 ---
 {{LearnSidebar}}
 

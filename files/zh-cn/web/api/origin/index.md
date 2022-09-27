@@ -2,6 +2,7 @@
 title: origin
 slug: Web/API/origin
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 `WindowOrWorkerGlobalScope` 接口的 **`origin`** 只读属性返回全局范围的 **origin**, 序列化为一个字符串。

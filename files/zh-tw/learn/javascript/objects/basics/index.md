@@ -2,6 +2,7 @@
 title: JavaScript 物件基礎概念
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 第一篇談到 JavaScript 物件的文章中，我們了解到基本的 JavaScript 物件語法，複習了某些先前提過的 JavaScript 功能，也再次強調你現正使用中的許多功能其實就是物件。

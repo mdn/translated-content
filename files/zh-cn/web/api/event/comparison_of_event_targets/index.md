@@ -2,6 +2,7 @@
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
 ---
+
 {{ ApiRef() }}
 
 ### Event targets
@@ -103,7 +104,7 @@ There are 5 targets to consider:
         {{ Non-standard_inline() }} The original target of the event,
         before any retargetings. See
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/zh-CN/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         for details.
@@ -190,7 +191,7 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 
 The `relatedTarget` property for the `mouseover` event holds the node that the mouse was previously over. For the `mouseout` event, it holds the node that the mouse moved to.
 
-| Event type  | [event.target](/en/DOM/event.target)              | [event.relatedTarget](/en/DOM/event.relatedTarget) |
+| Event type  | [event.target](/zh-CN/DOM/event.target)              | [event.relatedTarget](/zh-CN/DOM/event.relatedTarget) |
 | ----------- | ------------------------------------------------- | -------------------------------------------------- |
 | `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited   |
 | `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered  |

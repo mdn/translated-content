@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.

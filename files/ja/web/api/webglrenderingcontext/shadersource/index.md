@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
-translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.shaderSource()`** メソッドは、{{domxref("WebGLShader")}} のソースコードを設定します。

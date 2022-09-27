@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/li
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.
@@ -149,15 +150,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                                   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                   |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | L'attribut `type` a été déprécié. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## Voir aussi
 

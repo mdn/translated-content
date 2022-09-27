@@ -1,30 +1,8 @@
 ---
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
-page-type: web-api-event
-tags:
-  - API
-  - Accessibility
-  - Audio
-  - Chapters
-  - Descriptions
-  - HTMLTextTrack
-  - Media
-  - Reference
-  - Text
-  - TextTrack
-  - Video
-  - WebVTT
-  - a11y
-  - captions
-  - cuechange
-  - events
-  - oncuechange
-  - track
-  - vtt
-browser-compat: api.HTMLTrackElement.cuechange_event
-translation_of: Web/API/HTMLTrackElement/cuechange_event
 ---
+
 {{APIRef("WebVTT")}}
 
 **`cuechange`** イベントは {{domxref("TextTrack")}} が現在表示しているキューを変更した際に発生します。このイベントは `TextTrack` と、それが表示されている {{domxref("HTMLTrackElement")}} があれば、その両方で発生します。

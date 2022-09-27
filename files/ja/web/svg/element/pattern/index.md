@@ -1,12 +1,6 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - 要素
-  - SVG
-  - SVG コンテナー
-browser-compat: svg.elements.pattern
-translation_of: Web/SVG/Element/pattern
 ---
 {{SVGRef}}
 

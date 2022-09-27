@@ -1,14 +1,8 @@
 ---
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
-tags:
-  - '57'
-  - Firefox
-  - Firefox Quantum
-  - Release Notes
-  - Stylo
-translation_of: Mozilla/Firefox/Releases/57
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。

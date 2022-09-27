@@ -3,6 +3,7 @@ title: Window.ondeviceproximity
 slug: orphaned/Web/API/Window/ondeviceproximity
 original_slug: Web/API/Window/ondeviceproximity
 ---
+
 {{ ApiRef() }}
 
 {{event("deviceproximity")}} イベントを受け取るイベントリスナーを指定します。これらのイベントは、デバイスセンサーが、物がデバイスに近づいたこと、または離れたことを検知したときに発生します。

@@ -3,6 +3,7 @@ title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
+
 {{APIRef}}
 
 An [`EventHandler`](/docs/Web/API/EventHandler) that is called whenever the `readyState` attribute changes. The callback is called from the user interface thread. The **`XMLHttpRequest.onreadystatechange`** property contains the event handler to be called when the {{event("readystatechange")}} event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
@@ -45,4 +46,4 @@ xhr.send();
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.readystatechange_event")}}
+{{Compat}}

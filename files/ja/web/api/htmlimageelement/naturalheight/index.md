@@ -1,19 +1,8 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Intrinsic Height
-  - リファレンス
-  - プロパティ
-  - Vertical
-  - naturalHeight
-  - size
-browser-compat: api.HTMLImageElement.naturalHeight
-translation_of: Web/API/HTMLImageElement/naturalHeight
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`naturalHeight`** プロパティは読み取り専用で、画像の本来の（自然な）密度補正された高さを{{Glossary("CSS pixel", "CSS ピクセル数")}}で返します。

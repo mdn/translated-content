@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.

@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: invalid array length'
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "Invalid array length" は、配列の長さが負の数か、プラットフォームで対応している最大値を超える値に設定しようとしたとき (すなわち、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を生成しようとしたとき、または {{jsxref("Array.length")}} を設定しようとしたとき) に発生します。

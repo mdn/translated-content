@@ -7,6 +7,7 @@ tags:
   - DOM
 translation_of: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}} .

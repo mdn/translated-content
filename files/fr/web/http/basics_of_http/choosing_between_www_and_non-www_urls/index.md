@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Choisir_entre_les_URLs_www_sans_www
 ---
+
 {{HTTPSidebar}}
 
 Une question récurrente chez les propriétaires de sites web est de choisir entre utiliser des URLs qui débutent ou non par www. Cette page fournit quelques conseils sur la meilleure approche à envisager.

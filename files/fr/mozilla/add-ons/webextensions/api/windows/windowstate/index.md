@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
+
 {{AddonSidebar()}}
 
 L'état de cette fenêtre du navigateur.

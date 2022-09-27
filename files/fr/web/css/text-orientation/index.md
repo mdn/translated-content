@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-orientation
 ---
+
 {{CSSRef}}
 
 La propriété **`text-orientation`** définit l'orientation du texte sur une ligne. Cette propriété n'a d'effet qu'en mode vertical (autrement dit, quand {{cssxref("writing-mode")}} n'est pas `horizontal-tb`). Elle est utile pour contrôler l'affichage de l'écriture pour les langues dont le script est vertical. Elle permet aussi de gérer les en-têtes de tableaux verticaux.

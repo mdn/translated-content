@@ -1,12 +1,6 @@
 ---
 title: Digest
 slug: Glossary/Digest
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-translation_of: Glossary/Digest
 ---
 ダイジェストはメッセージ全体から{{glossary("hash function", "ハッシュ関数")}}によって生成された小さな値です。理想的にはダイジェストは即座に計算でき、不可逆であり、予測不可能なため、メッセージが改ざんされたかどうかの判定に利用することができます。
 

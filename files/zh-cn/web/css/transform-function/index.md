@@ -2,6 +2,7 @@
 title: transform-function
 slug: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 **`<transform-function>`** CSS 数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。

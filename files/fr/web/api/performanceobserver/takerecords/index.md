@@ -12,6 +12,7 @@ tags:
   - takeRecords()
 translation_of: Web/API/PerformanceObserver/disconnect
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`takeRecords()`** de l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) renvoie la liste actuelle des [entrées de performance](/fr/docs/Web/API/PerformanceEntry) stockées dans l'observateur de performance, en la vidant.

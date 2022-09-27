@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.getContext()`** 方法返回{{jsxref("canvas")}} 的上下文，如果上下文没有定义则返回 {{jsxref("null")}} .
@@ -95,7 +96,7 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## 另请参阅
 

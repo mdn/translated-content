@@ -2,6 +2,7 @@
 title: TextEncoder.prototype.encode()
 slug: Web/API/TextEncoder/encode
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder.prototype.encode()`** 方法接受一个 {{domxref("USVString")}} 作为参数，返回一个以给定的文本（字符串）参数，通过 `TextEncoder` 中指定的方法（默认 UTF-8）编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} 类型的值。
@@ -47,7 +48,7 @@ resultPara.textContent += encoded;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder.encode")}}
+{{Compat}}
 
 ## 另见
 

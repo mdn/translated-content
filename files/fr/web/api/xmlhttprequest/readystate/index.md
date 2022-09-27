@@ -3,6 +3,7 @@ title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 translation_of: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client XHR existe dans l'un des états suivants :
@@ -81,12 +82,10 @@ xhr.onload = function () {
 xhr.send(null);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                            | Statut                               | Comment                |
-| -------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#states')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

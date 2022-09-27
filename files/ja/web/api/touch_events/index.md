@@ -1,19 +1,8 @@
 ---
 title: タッチイベント
 slug: Web/API/Touch_events
-tags:
-  - Advanced
-  - DOM
-  - Event
-  - Guide
-  - Mobile
-  - Overview
-  - touch
-  - イベント
-  - タッチ
-  - 概要
-translation_of: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 タッチベースのユーザーインターフェイスを高度にサポートするため、端末やトラックパッドでの指 (あるいはスタイラス) の動きを解釈する機能を、タッチイベントが提供します。
@@ -45,7 +34,7 @@ translation_of: Web/API/Touch_events
 
 ここでは一度に複数のタッチ箇所を取得しており、ユーザーが一度に複数の指で {{HTMLElement("canvas")}} に描くことができるようになっています。このサンプルはタッチイベントに対応するブラウザーのみで動作します。
 
-> **Note:** **注:** ここからはタッチ面への接触を表すときに "指" という表現を使用しますが、当然ながらスタイラスなど他の接触法も使用できます。
+> **Note:** ここからはタッチ面への接触を表すときに "指" という表現を使用しますが、当然ながらスタイラスなど他の接触法も使用できます。
 
 ### canvas を生成する
 

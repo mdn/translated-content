@@ -1,11 +1,6 @@
 ---
 title: 高度なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-tags:
-  - キャンバス
-  - グラフィック
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

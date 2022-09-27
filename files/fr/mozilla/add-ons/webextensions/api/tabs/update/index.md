@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
+
 {{AddonSidebar()}}
 
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
@@ -86,7 +87,7 @@ A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera
 
 ## Exemples
 
-Naviguez dans l'onglet actif de la fenêtre en cours pour https\://developer.mozilla.org :
+Naviguez dans l'onglet actif de la fenêtre en cours pour `https://developer.mozilla.org` :
 
 ```js
 function onUpdated(tab) {
@@ -101,7 +102,7 @@ var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
-Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à https\://developer.mozilla.org:
+Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {

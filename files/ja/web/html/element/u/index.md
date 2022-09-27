@@ -1,19 +1,6 @@
 ---
 title: '<u>: 非言語的注釈 (下線) 要素'
 slug: Web/HTML/Element/u
-tags:
-  - Annotation
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Unarticulated Annotation
-  - Underline
-  - Web
-translation_of: Web/HTML/Element/u
 ---
 {{HTMLRef}}
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/place-items
 ---
+
 {{CSSRef}}
 
 La propriété raccourcie **`place-items`** définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour `align-items` et la seconde est utilisée pour `justify-items`. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour `justify-items`.

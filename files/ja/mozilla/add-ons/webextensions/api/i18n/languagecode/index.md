@@ -1,18 +1,8 @@
 ---
 title: i18n.LanguageCode
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - LanguageCode
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 ---
+
 {{AddonSidebar()}}
 
 `"en-US"` や "`fr`" などの [言語タグ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10)。

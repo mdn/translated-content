@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.shadowOffsetY`** 是 Canvas 2D API 描述阴影垂直偏移距离的属性。
@@ -91,7 +92,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.shadowOffsetY")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,12 +1,6 @@
 ---
 title: Delta (デルタ)
 slug: Glossary/Delta
-tags:
-  - Delta
-  - Glossary
-  - difference
-  - value
-translation_of: Glossary/Delta
 ---
 **デルタ**は、2 つの値または状態の差分を表す用語です。
 

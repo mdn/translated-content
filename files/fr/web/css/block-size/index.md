@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/block-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`block-size`** est une propriété _logique_ qui permet de définir la taille de l'élément dans la direction orthogonale au sens de lecture. Selon la valeur de la propriété {{cssxref("writing-mode")}}, elle correspondra à la propriété physique {{cssxref("width")}} ou {{cssxref("height")}}.

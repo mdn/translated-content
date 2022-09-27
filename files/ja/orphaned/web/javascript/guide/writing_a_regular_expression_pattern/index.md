@@ -3,6 +3,7 @@ title: 正規表現パターンの記述
 slug: orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 original_slug: Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 ---
+
 ### 正規表現パターンを書く
 
 正規表現パターンは、`/abc/` のような単純な文字、または `/ab*c/` や `/Chapter (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。最後の例では記憶装置として使われている丸括弧が含まれています。パターンのこの部分でなされたマッチは後で使用できるように記憶されます。詳しくは [括弧で囲まれた部分文字列のマッチの使用](/ja/docs/JavaScript/Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches) を参照してください。
@@ -95,7 +96,7 @@ original_slug: Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
           にマッチする。
         </p>
         <p>
-          <span class="nowiki">*</span>、+、?、{}
+          *、+、?、{}
           といった量指定子の直後に使用した場合、その量指定子をスキップ優先（最小回数にマッチ）にする。これはデフォルトとは逆であり、デフォルトは繰り返し優先（最大回数にマッチ）。例えば、/\d+/
           は非グローバルで "123abc" の "123" にマッチするが、/\d+?/ の場合、"1"
           だけにマッチする。

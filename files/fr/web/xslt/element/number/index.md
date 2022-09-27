@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/number
 original_slug: Web/XSLT/number
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:number>` compte des éléments de façon séquentielle. Il peut également être utilisé

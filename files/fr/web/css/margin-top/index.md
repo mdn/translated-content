@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.

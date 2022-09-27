@@ -2,6 +2,7 @@
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
+
 {{JSRef}}
 
 **`Symbol.match`** 指定了匹配的是正则表达式而不是字符串。{{jsxref("String.prototype.match()")}} 方法会调用此函数。

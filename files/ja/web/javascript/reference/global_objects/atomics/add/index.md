@@ -1,14 +1,8 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。

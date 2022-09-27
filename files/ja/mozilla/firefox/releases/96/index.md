@@ -1,12 +1,8 @@
 ---
 title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
-tags:
-  - '96'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 96 の変更点をまとめています。Firefox 96 は、米国時間 2022 年 1 月 11 日にリリースされました。

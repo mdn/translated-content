@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Motion_Path
 original_slug: Web/CSS/Motion_Path
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **_Motion Path_** est un module de la spécification CSS qui permet aux auteurs d'animer des objets graphiques le long d'une ligne appelée _chemin_.

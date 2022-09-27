@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
+
 {{JSRef}}
 
 **`getTimezoneOffset()`** メソッドは、 (ホストシステム上における) 現在のロケールから協定世界時 (UTC) までのタイムゾーンの差を分単位で返します。

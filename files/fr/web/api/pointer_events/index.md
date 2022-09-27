@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 La plupart du contenu web d'aujourd'hui suppose que le périphérique de pointage de l'utilisateur sera une souris. Cependant, beaucoup d'appareils prennent en charge d'autres types de d'entrée pour pointeur, comme le stylet ou les doigts pour les écrans tactiles. Des extensions aux modèles d'événement de pointage sont nécessaires et les _événements de pointeur_ répondent à ce besoin.
