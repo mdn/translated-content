@@ -5,7 +5,7 @@ slug: Web/API/Document/getElementsByTagName
 
 {{ ApiRef("DOM") }}
 
-返回一个包括所有给定标签名称的元素的 HTML 集合{{domxref("HTMLCollection")}}。 整个文件结构都会被搜索，包括根节点。返回的 `HTML 集合`是动态的，意味着它可以自动更新自己来保持和 DOM 树的同步而不用再次调用 `document.getElementsByTagName()` 。
+返回一个包括所有给定标签名称的元素的 HTML 集合{{domxref("HTMLCollection")}}。整个文件结构都会被搜索，包括根节点。返回的 `HTML 集合`是动态的，意味着它可以自动更新自己来保持和 DOM 树的同步而不用再次调用 `document.getElementsByTagName()`。
 
 ## 语法
 
@@ -16,7 +16,7 @@ var elements = document.getElementsByTagName(name);
 - `elements` 是一个由发现的元素出现在树中的顺序构成的动态的 HTML 集合 {{domxref("HTMLCollection")}} (但是看下面的提示) 。
 - `name` 是一个代表元素的名称的字符串。特殊字符 "\*" 代表了所有元素。
 
-> **备注：** [最新的 W3C 规范](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 说明这些元素是 `HTMLCollection（HTML 集合）；` 然而，这个方法在 WebKit 内核的浏览器中返回一个 {{domxref("NodeList")}} 。 更多详情请查看 {{bug(14869)}} 。
+> **备注：** [最新的 W3C 规范](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 说明这些元素是 `HTMLCollection`（HTML 集合）；然而，这个方法在 WebKit 内核的浏览器中返回一个 {{domxref("NodeList")}} 。更多详情请查看 {{bug(14869)}} 。
 
 ## 例子
 
