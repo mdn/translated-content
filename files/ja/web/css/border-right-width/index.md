@@ -1,14 +1,6 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 境界
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-right-width
-translation_of: Web/CSS/border-right-width
 ---
 {{CSSRef}}
 

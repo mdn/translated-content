@@ -1,14 +1,8 @@
 ---
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLHeadElement
-translation_of: Web/API/HTMLHeadElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLHeadElement`** インターフェイスは、文書の説明的な情報やメタデータを持ちます。このオブジェクトはすべてのプロパティとメソッドを {{domxref("HTMLElement")}} インターフェイスから継承しています。

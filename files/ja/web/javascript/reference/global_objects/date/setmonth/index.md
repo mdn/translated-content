@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
+
 {{JSRef}}
 
 **`setMonth()`** メソッドは、現在設定されている年に基づき、指定された日付の「月」を設定します。

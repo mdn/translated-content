@@ -2,6 +2,7 @@
 title: 'Warning: String.x is deprecated; use String.prototype.x instead'
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

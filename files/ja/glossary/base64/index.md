@@ -1,17 +1,6 @@
 ---
 title: Base64
 slug: Glossary/Base64
-tags:
-  - Advanced
-  - Base64
-  - JavaScript
-  - Typed Arrays
-  - URI
-  - URL
-  - Unicode Problem
-  - atob()
-  - btoa()
-translation_of: Glossary/Base64
 ---
 **Base64** とは、[バイナリーからテキストへの符号化](https://en.wikipedia.org/wiki/Binary-to-text_encoding)を行う手法のグループであり、バイナリーデータを 64 を基数とする表現に変換することで、 ASCII 文字列で表すことができます。_Base64_ という呼び方は、[MIME の Content-Transfer-Encoding](https://ja.wikipedia.org/wiki/MIME#Content-Transfer-Encoding) における特定の符号化方式の名前に由来します。
 

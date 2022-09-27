@@ -2,6 +2,7 @@
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回一个表示该对象的字符串。

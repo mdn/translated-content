@@ -2,9 +2,10 @@
 title: FileSystemSync
 slug: Web/API/FileSystemSync
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
-在 [文件系统 API](/en/DOM/File_API/File_System_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
+在 [文件系统 API](/zh-CN/DOM/File_API/File_System_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
 
 ## 关于这个文档
 
@@ -25,12 +26,12 @@ slug: Web/API/FileSystemSync
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystemSync")}}
+{{Compat}}
 
 ## 另见
 
 规范：[File API: Directories and System Specification](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
 
-参考： [文件系统 API](/en/DOM/File_API/File_System_API)
+参考： [文件系统 API](/zh-CN/DOM/File_API/File_System_API)
 
-简介：[文件系统 API 的基本概念](/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)
+简介：[文件系统 API 的基本概念](/zh-CN/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

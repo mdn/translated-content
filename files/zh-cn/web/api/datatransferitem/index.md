@@ -2,6 +2,7 @@
 title: DataTransferItem
 slug: Web/API/DataTransferItem
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItem`** 描述了一个拖拽项。在一个拖拽操作*中，*每一个 {{domxref("DragEvent","drag event")}} 都有一个{{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，它包含一个存有拖拽数据的 {{domxref("DataTransferItemList","list")}} ，其中每一项都是一个 `DataTransferItem` 。
@@ -34,4 +35,4 @@ slug: Web/API/DataTransferItem
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransferItem")}}
+{{Compat}}

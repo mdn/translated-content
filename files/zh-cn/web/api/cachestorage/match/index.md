@@ -2,6 +2,7 @@
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口 (可适用于全局性`caches`) 的 **`match()`** 方法检查给定的{{domxref("Request")}} 对象或 url 字符串是否是一个已存储的 {{domxref("Response")}} 对象的 key. 这个方法针对 {{domxref("Response")}} 返回一个 {{jsxref("Promise")}} ，如果没有匹配则返回 `undefined` 。
@@ -62,7 +63,7 @@ caches.match(event.request).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.match")}}
+{{Compat}}
 
 ## 亦可参考
 

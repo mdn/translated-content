@@ -1,14 +1,6 @@
 ---
 title: '-moz-image-region'
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-image-region
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

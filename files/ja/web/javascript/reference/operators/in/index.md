@@ -1,14 +1,8 @@
 ---
 title: in 演算子
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - 関係演算子
-browser-compat: javascript.operators.in
-translation_of: Web/JavaScript/Reference/Operators/in
 ---
+
 {{jsSidebar("Operators")}}
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。

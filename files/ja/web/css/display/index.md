@@ -1,15 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS 表示方法
-  - CSS プロパティ
-  - リファレンス
-  - display
-  - recipe:css-property
-browser-compat: css.properties.display
-translation_of: Web/CSS/display
 ---
 {{CSSRef}}
 

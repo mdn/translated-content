@@ -2,6 +2,7 @@
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.bufferedAmount`是一个只读属性，用于返回已经被**[`send()`](#send)方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用[`send()`](#send)，则该属性值会持续增长
@@ -24,4 +25,4 @@ An `unsigned long`.
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket.bufferedAmount")}}
+{{Compat}}

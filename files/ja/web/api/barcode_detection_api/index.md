@@ -1,15 +1,6 @@
 ---
 title: バーコード検出 API
 slug: Web/API/Barcode_Detection_API
-tags:
-  - API
-  - ランディング
-  - 概要
-  - バーコード
-  - バーコード検出
-  - 形状認識
-  - 実験的
-translation_of: Web/API/Barcode_Detection_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 

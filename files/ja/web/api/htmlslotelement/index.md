@@ -1,15 +1,8 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-tags:
-  - API
-  - HTMLSlotElement
-  - インターフェイス
-  - リファレンス
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
 ---
+
 {{APIRef('Web Components')}}
 
 **`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。

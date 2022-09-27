@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/word-spacing
 ---
+
 {{CSSRef}}
 
 La propriété **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.

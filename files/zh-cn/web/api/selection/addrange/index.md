@@ -2,6 +2,7 @@
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
 ---
+
 {{ApiRef}}
 
 ## 概述
@@ -42,7 +43,7 @@ for(var i = 0; i < strongs.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.addRange")}}
+{{Compat}}
 
 ## 相关链接
 

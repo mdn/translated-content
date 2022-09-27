@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、言語に合わせた日時の文字列を返します。
@@ -148,7 +141,7 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 // false in IE and Edge
 ```
 
-> **Note:** **注**: 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
+> **Note:** 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
 
 ## 仕様書
 

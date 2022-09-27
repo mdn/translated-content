@@ -1,11 +1,6 @@
 ---
 title: Control flow (制御フロー)
 slug: Glossary/Control_flow
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Control_flow
 ---
 _制御フロー_（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
 

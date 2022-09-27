@@ -1,10 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Cookie
 ---
 Cookie は、ウェブサイトによってウェブブラウザーを通じて訪問者のコンピューター上に残される小さな情報です。
 

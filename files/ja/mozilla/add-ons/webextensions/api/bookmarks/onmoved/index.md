@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
+
 {{AddonSidebar()}}
 
 ブックマークやフォルダが、異なる親フォルダやフォルダ内の別の場所へ移された際に発火します。

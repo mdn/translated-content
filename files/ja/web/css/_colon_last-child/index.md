@@ -1,15 +1,6 @@
 ---
 title: ':last-child'
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.last-child
-translation_of: Web/CSS/:last-child
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: SVGElement
 slug: Web/API/SVGElement
 ---
+
 {{APIRef("SVG")}}
 
 SVG 言語における要素に直接対応する SVG DOM インタフェースのすべては、`SVGElement` インタフェースから派生しています。

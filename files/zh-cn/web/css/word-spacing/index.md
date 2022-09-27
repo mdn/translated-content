@@ -2,6 +2,7 @@
 title: word-spacing
 slug: Web/CSS/word-spacing
 ---
+
 {{ CSSRef() }}
 
 ## Summary
@@ -31,7 +32,7 @@ word-spacing: inherit;
 
 ### Formal syntax
 
-[How to read CSS syntax.](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
+[How to read CSS syntax.](/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax("word-spacing")}}
 

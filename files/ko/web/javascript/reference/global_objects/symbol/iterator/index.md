@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 {{JSRef}}
 
-잘 알려진 **`Symbol.iterator`** 심볼은 객체에 대응하는 기본 이터레이터를 지정합니다. [`for...of`](/docs/Web/JavaScript/Reference/Statements/for...of)와 같이 사용됩니다.
+잘 알려진 **`Symbol.iterator`** 심볼은 객체에 대응하는 기본 이터레이터를 지정합니다. [`for...of`](/ko/docs/docs/Web/JavaScript/Reference/Statements/for...of)와 같이 사용됩니다.
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}{{js_property_attributes(0,0,0)}}
 

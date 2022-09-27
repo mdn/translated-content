@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-inline
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-inline`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-inline-start` et `scroll-margin-inline-end`).

@@ -2,6 +2,7 @@
 title: SourceBuffer.appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`appendWindowStart`** プロパティは、追加ウィンドウ（[append window](https://w3c.github.io/media-source/#append-window)）の始まりのタイムスタンプを制御します。 タイムスタンプの範囲は、`SourceBuffer` に追加されるメディアデータをフィルターするために使用できます。 この範囲内のタイムスタンプを持つコード化されたメディアフレームは追加されますが、範囲外のものは除外されます。

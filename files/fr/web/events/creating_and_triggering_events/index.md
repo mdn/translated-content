@@ -3,6 +3,7 @@ title: Créer et déclencher des évènements
 slug: Web/Events/Creating_and_triggering_events
 translation_of: Web/Events/Creating_and_triggering_events
 ---
+
 Dans cet article, nous allons voir comment créer et diffuser des évènements dans le DOM. Ce type d'évènements ainsi créés sont appelés des **évènements synthétiques**, en opposition aux évènements déclenchés par le navigateur.
 
 ## Créer des évènements spécifiques

@@ -14,12 +14,12 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
 <p>{{APIRef("URL API")}}</p>
 
-<p>Свойство только для чтения <strong><code>HTMLHyperlinkElementUtils.origin</code></strong> <span class="st">–</span> это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:</p>
+<p>Свойство только для чтения <strong><code>HTMLHyperlinkElementUtils.origin</code></strong> – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:</p>
 
 <ul>
- <li>для URL, начинающегося с <code>http</code> или <code>https</code>, <span class="st">–</span> протокол, <code>'://'</code>, домен, <code>':'</code>, порт (порт по умолчанию, <code>80</code> и <code>443</code> соответственно, если указаны явно);</li>
- <li>для URL, начинающегося с <code>file:</code>, <span class="st">–</span> значение зависит от браузера;</li>
- <li>для URL, начинающегося с <code>blob:</code>, <span class="st">–</span> основа URL следующего за <code>blob:</code>. Т.е. для <code>"blob:https://mozilla.org"</code> будет <code>"https://mozilla.org".</code></li>
+ <li>для URL, начинающегося с <code>http</code> или <code>https</code>, – протокол, <code>'://'</code>, домен, <code>':'</code>, порт (порт по умолчанию, <code>80</code> и <code>443</code> соответственно, если указаны явно);</li>
+ <li>для URL, начинающегося с <code>file:</code>, – значение зависит от браузера;</li>
+ <li>для URL, начинающегося с <code>blob:</code>, – основа URL следующего за <code>blob:</code>. Т.е. для <code>"blob:https://mozilla.org"</code> будет <code>"https://mozilla.org".</code></li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>

@@ -2,6 +2,7 @@
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 ---
+
 {{APIRef("DOM")}}
 
 接口 {{domxref("CustomEvent")}} 的只读属性 **`detail`** （详情）返回在初始化事件对象时传递过来的任何类型数据。

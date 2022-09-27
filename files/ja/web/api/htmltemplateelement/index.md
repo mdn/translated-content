@@ -1,16 +1,8 @@
 ---
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - インターフェイス
-  - リファレンス
-  - ウェブコンポーネント
-browser-compat: api.HTMLTemplateElement
-translation_of: Web/API/HTMLTemplateElement
 ---
+
 {{APIRef("Web Components")}}
 
 `HTMLTemplateElement` インターフェイスは、 HTML の {{HTMLElement("template")}} 要素の内容にアクセスできるようにします。

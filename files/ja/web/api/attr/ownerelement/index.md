@@ -1,13 +1,6 @@
 ---
 title: Attr.ownerElement
 slug: Web/API/Attr/ownerElement
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.ownerElement
-translation_of: Web/API/Attr/ownerElement
 ---
 {{APIRef("DOM")}}
 

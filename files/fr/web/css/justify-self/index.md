@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.

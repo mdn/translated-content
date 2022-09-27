@@ -1,14 +1,6 @@
 ---
 title: '@property'
 slug: Web/CSS/@property
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

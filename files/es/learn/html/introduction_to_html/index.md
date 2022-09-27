@@ -26,7 +26,7 @@ En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{
 
 Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en {{web.link("/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software", "Instalación de software básico")}}), y comprender cómo crear y administrar archivos (como se detalla en {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files", "Manejo de archivos")}}). Ambos son parte de nuestro módulo completo {{web.link("/es/docs/Learn/Getting_started_with_the_web", "Introducción a la web")}} para principiantes.
 
-> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](http://jsbin.com/) o [Glitch]().
+> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -41,7 +41,7 @@ Este módulo contiene los siguientes artículos, que te llevarán a través de t
 - [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
   - : Los hipervínculos realmente son importantes — estos son los que hacen la Web. Este artículo muestra la sintaxis requerida para hacer un enlace, y explica las mejores prácticas sobre enlaces.
 - [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : Hay muchos otros elementos en HTML para formatear texto, que no hemos tratado en los artículos [fundamentos de texto HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Los siguientes elementos son menos conocidos, pero sigue siendo útil conocerlos. Aquí aprenderás sobre el marcado de citas, listas de descripción, código de computadoras y otros textos relacionados,  subíndices y superíndices, información de contacto, y mucho más.
+  - : Hay muchos otros elementos en HTML para formatear texto, que no hemos tratado en los artículos [fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Los siguientes elementos son menos conocidos, pero sigue siendo útil conocerlos. Aquí aprenderás sobre el marcado de citas, listas de descripción, código de computadoras y otros textos relacionados,  subíndices y superíndices, información de contacto, y mucho más.
 - {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Estructura web y documentación")}}
   - : Así como definimos las partes individuales de tu página (como "un párrafo" o "una imagen"), HTML también se usa para definir las áreas de tu sitio web (como "la cabecera", "el menú de navegación", "la columna de contenido principal"). Este artículo trata sobre cómo planear una estructura básica del sitio web, y escribir el HTML para representar esa estructura.
 - [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)

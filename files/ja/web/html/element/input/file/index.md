@@ -1,18 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
-tags:
-  - Directory Picker
-  - File
-  - File Picker
-  - Files
-  - Form input
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Type
-translation_of: Web/HTML/Element/input/file
 ---
 {{HTMLRef("Input_types")}}
 
@@ -81,7 +69,7 @@ translation_of: Web/HTML/Element/input/file
 
 ファイル入力欄の {{htmlattrxref("value", "input")}} 属性には、選択されたファイルへのパスを表す {{domxref("DOMString")}} が入ります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは input 要素の `HTMLInputElement.files` プロパティを使って得ることができます。
 
-> **Note:** **注:**1. 複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに [input の `FileList` プロパティを通して](/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files)アクセスすることができます。 2. ファイルが選択されていない場合、文字列は `""` (空) になります。 3. 疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には [`C:\fakepath\` の接頭辞が付きます](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)。
+> **Note:** 1. 複数のファイルが選択された場合、文字列は最初に選択されたファイルを表します。 JavaScript は他のファイルに [input の `FileList` プロパティを通して](/ja/docs/Using_files_from_web_applications#Getting_information_about_selected_files)アクセスすることができます。 2. ファイルが選択されていない場合、文字列は `""` (空) になります。 3. 疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するため、文字列には [`C:\fakepath\` の接頭辞が付きます](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)。
 
 ## 追加の属性
 
@@ -250,14 +238,14 @@ div {
 
 ### 注
 
-1.  スクリプトからファイル選択ダイアログの値を設定することはできません。 — 以下のようにしても効果はありません。
+1. スクリプトからファイル選択ダイアログの値を設定することはできません。 — 以下のようにしても効果はありません。
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  `<input type="file">` を使用してファイルが選択された場合、セキュリティ上の理由から、元のファイルへの実際のパスが `value` 属性上では見えないようになっています。その代わりに、ファイル名の先頭に `C:\fakepath\` を追加したものが表示されます。この処置にはいくつかの経緯上の理由がありますが、すべての最新のブラウザーで対応されており、実際に[仕様書で定義されています](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
+2. `<input type="file">` を使用してファイルが選択された場合、セキュリティ上の理由から、元のファイルへの実際のパスが `value` 属性上では見えないようになっています。その代わりに、ファイル名の先頭に `C:\fakepath\` を追加したものが表示されます。この処置にはいくつかの経緯上の理由がありますが、すべての最新のブラウザーで対応されており、実際に[仕様書で定義されています](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
 
 ## 例
 

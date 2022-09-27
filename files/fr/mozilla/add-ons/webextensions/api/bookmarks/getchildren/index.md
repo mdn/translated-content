@@ -13,6 +13,7 @@ tags:
   - getChildren
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getChildren()`** récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.

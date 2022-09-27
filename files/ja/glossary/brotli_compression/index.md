@@ -1,13 +1,6 @@
 ---
 title: Brotli
 slug: Glossary/brotli_compression
-tags:
-  - Brotli
-  - Glossary
-  - Reference
-  - Web Performance
-  - compression
-translation_of: Glossary/brotli_compression
 l10n:
   sourceCommit: a0e987d407b31560bde1f982520ee10103db4ba0
 ---

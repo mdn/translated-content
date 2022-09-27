@@ -1,19 +1,8 @@
 ---
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
-tags:
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - VideoTrack
-  - selected
-  - track
-translation_of: Web/API/VideoTrack/selected
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("VideoTrack")}}** の **`selected`** プロパティは、特定の動画トラックがアクティブかどうかを制御します。

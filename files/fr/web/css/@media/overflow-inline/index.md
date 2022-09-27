@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/overflow-inline
 ---
+
 {{CSSRef}}
 
 **`overflow-inline`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).

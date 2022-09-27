@@ -2,6 +2,7 @@
 title: transform-box
 slug: Web/CSS/transform-box
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
@@ -45,8 +46,8 @@ transform-box: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.transform-box")}}
+{{Compat}}
 
 ## See also
 
-- [Using CSS Transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/CSS/Using_CSS_transforms)

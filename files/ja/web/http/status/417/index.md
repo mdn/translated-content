@@ -1,13 +1,6 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/417
 ---
 {{HTTPSidebar}}
 

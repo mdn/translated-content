@@ -12,7 +12,9 @@ La propiedad **`navigator.hardwareConcurrency`** es de solo lectura navigator.ha
 
 ## Sintaxi
 
-    logicalProcessors = window.navigator.hardwareConcurrency
+```js
+logicalProcessors = window.navigator.hardwareConcurrency
+```
 
 ## Valor
 

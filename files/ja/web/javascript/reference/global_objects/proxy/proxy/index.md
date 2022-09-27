@@ -1,14 +1,8 @@
 ---
 title: Proxy() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
-  - コンストラクター
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
+
 {{JSRef}}
 
 **`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成するために使用します。

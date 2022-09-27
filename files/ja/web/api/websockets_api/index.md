@@ -1,20 +1,8 @@
 ---
 title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
-tags:
-  - API
-  - クライアント
-  - 通信
-  - 概要
-  - サーバー
-  - 双方向
-  - WebSocket
-  - WebSocket API
-  - ウェブソケット
-  - データ
-  - 対話
-translation_of: Web/API/WebSockets_API
 ---
+
 {{DefaultAPISidebar("Websockets API")}}
 
 **WebSocket API** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができる先進技術です。この API によって、サーバーにメッセージを送信したり、応答をサーバーにポーリングすることなく、イベント駆動型のレスポンスを受信したりすることができます。

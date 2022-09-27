@@ -4,6 +4,7 @@ slug: Web/CSS/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient()
 browser-compat: css.types.image.gradient.linear-gradient
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`**  crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/image)).

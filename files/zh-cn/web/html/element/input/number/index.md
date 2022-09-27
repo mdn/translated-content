@@ -2,11 +2,12 @@
 title: <input type="number">
 slug: Web/HTML/Element/Input/number
 ---
+
 {{HTMLRef}}
 
 **`"number"`**类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-> **备注：** 不支持 `"number"` 类型的浏览器会改用标准的 [`"text"`](/en-US/docs/Web/HTML/Element/input/text) 输入框。
+> **备注：** 不支持 `"number"` 类型的浏览器会改用标准的 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 输入框。
 
 ```html
 <input id="number" type="number">
@@ -334,10 +335,10 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.input.input-number")}}
+{{Compat}}
 
 ## 相关链接
 
 - [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)

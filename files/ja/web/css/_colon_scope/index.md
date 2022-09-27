@@ -1,17 +1,6 @@
 ---
 title: ':scope'
 slug: Web/CSS/:scope
-tags:
-  - ':scope'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - スコープ付き要素
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.scope
-translation_of: Web/CSS/:scope
 ---
 {{CSSRef}}
 

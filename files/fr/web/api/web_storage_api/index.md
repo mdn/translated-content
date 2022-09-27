@@ -10,6 +10,7 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 L'API **Web Storage** fournit des mécanismes par lesquels les navigateurs peuvent stocker des paires clé / valeur, d'une manière beaucoup plus intuitive que l'utilisation de cookies.

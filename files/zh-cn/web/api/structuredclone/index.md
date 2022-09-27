@@ -2,6 +2,7 @@
 title: structuredClone()
 slug: web/api/structuredClone
 ---
+
 {{APIRef("HTML DOM")}}
 
 全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)将给定的值进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy)。

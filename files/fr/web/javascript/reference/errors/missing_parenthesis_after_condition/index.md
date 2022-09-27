@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_condition
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

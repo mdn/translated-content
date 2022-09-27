@@ -1,17 +1,8 @@
 ---
 title: WebVRでの VRコントローラーの使用
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
-translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 ---
+
 {{APIRef("WebVR API")}}
 
 多くの WebVR ハードウェアは、ヘッドセットとコントローラーがセットになっています。WebVR アプリにおいては、ヘッドセットとコントローラーは[Gamepad API](/ja/docs/Web/API/Gamepad_API)を通じて接続されます。中でも、[Gamepad Extensions API](/ja/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions)は、コントローラーの状態([controller pose](/ja/docs/Web/API/GamepadPose))、触覚アクチュエータ([haptic actuators](/ja/docs/Web/API/GamepadHapticActuator))などの情報を取得します。この記事では、その基礎となる部分を解説いたします。

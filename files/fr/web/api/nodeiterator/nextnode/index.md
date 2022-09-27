@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeIterator/nextNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeIterator.nextNode()`** renvoie le noeud suivant dans l'ensemble représenté par le {{domxref("NodeIterator")}} et avance la position de l'itérateur dans cet ensemble.  Le premier appel de `nextNode()` en renvoie le premier noeud.

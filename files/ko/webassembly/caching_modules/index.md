@@ -1,7 +1,6 @@
 ---
 title: Caching compiled WebAssembly modules
 slug: WebAssembly/Caching_modules
-translation_of: WebAssembly/Caching_modules
 ---
 {{WebAssemblySidebar}}
 

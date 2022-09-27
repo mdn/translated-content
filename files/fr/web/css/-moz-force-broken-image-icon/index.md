@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
+
 {{Non-standard_header}}{{ CSSRef}}
 
 La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-standard. Lorsqu'elle vaut `1`, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut `0`, l'image est utilisée de façon normale et n'affichera que l'attribut `alt`.

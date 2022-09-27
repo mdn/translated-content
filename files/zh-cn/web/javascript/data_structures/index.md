@@ -2,6 +2,7 @@
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。
@@ -246,7 +247,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
-[类型数组 (Typed Arrays)](/en-US/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
+[类型数组 (Typed Arrays)](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
 
 | 类型                                         | 取值范围                                       | 占用字节数 | 描述                                                                                 | Web IDL 类型            | 对等的 C 语言类型                      |
 | --------------------------------- | --------------------------------- | ------------ | ----------------------------------------------------------- | ---------------------- | --------------------------------- |

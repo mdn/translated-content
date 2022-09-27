@@ -2,6 +2,7 @@
 title: Element.computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`computedStyleMap()`** は {{domxref("Element")}} インターフェイスのメソッドであり、 {{domxref("StylePropertyMapReadOnly")}} インターフェイスで {{domxref("CSSStyleDeclaration")}} の代替となる CSS 宣言ブロックの読み取り専用の表現を提供します。

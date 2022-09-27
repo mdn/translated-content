@@ -1,16 +1,6 @@
 ---
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
-tags:
-  - API
-  - ArrayBuffer
-  - Blob
-  - File API
-  - Method
-  - Reference
-  - binary
-  - read
-translation_of: Web/API/Blob/arrayBuffer
 ---
 {{APIRef("File API")}}
 

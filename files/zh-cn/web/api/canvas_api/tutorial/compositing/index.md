@@ -2,6 +2,7 @@
 title: 组合 Compositing
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 在[之前的例子](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)里面，我们总是将一个图形画在另一个之上，对于其他更多的情况，仅仅这样是远远不够的。比如，对合成的图形来说，绘制顺序会有限制。不过，我们可以利用 `globalCompositeOperation` 属性来改变这种状况。此外，`clip`属性允许我们隐藏不想看到的部分图形。

@@ -1,15 +1,6 @@
 ---
 title: Parse (解析)
 slug: Glossary/Parse
-tags:
-  - Browser
-  - CSS
-  - CodingScripting
-  - Glossary
-  - HTML
-  - JavaScript
-  - Web Performance
-translation_of: Glossary/Parse
 ---
 解析(Parsing)とは、プログラムを解析し、例えばブラウザー内の {{glossary("JavaScript")}} エンジンといった実行環境で、実際に実行できる内部形式に変換することを意味します。
 

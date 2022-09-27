@@ -2,6 +2,7 @@
 title: FormData.set()
 slug: Web/API/FormData/set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`set()`** 方法会对 `FormData` 对象里的某个 `key` 设置一个新的值，如果该 `key` 不存在，则添加。
@@ -39,7 +40,7 @@ formData.set(name, value, filename);
 var formData = new FormData(); // Currently empty
 ```
 
-使用 {{domxref("FormData.set")}} 设置键/值 ：
+使用 {{domxref("FormData.set")}} 设置键/值：
 
 ```js
 formData.set('username', 'Chris');
@@ -52,7 +53,7 @@ formData.set('userpic', myFileInput.files[0], 'chris.jpg');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## 相关链接
 

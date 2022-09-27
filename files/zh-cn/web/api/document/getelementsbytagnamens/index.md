@@ -2,6 +2,7 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{ ApiRef("DOM") }}
 
 ```
@@ -19,16 +20,16 @@ elements = document.getElementsByTagNameNS(namespace, name)
 ```
 
 - `elements` 是一个在树中按顺序查询到的动态的 HTML 集合 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) (但是看下面的提示)。
-- `namespace` 是所要查询的元素的命名空间 URL(参考 [`element.namespaceURI`](/en/DOM/Node.namespaceURI))。
-- `name` 是所要查询的元素的名称。其中特殊字符 "\*" 代表所有元素 (参考 [`element.localName`](/en/DOM/Node.localName))。
+- `namespace` 是所要查询的元素的命名空间 URL(参考 [`element.namespaceURI`](/zh-CN/DOM/Node.namespaceURI))。
+- `name` 是所要查询的元素的名称。其中特殊字符 "\*" 代表所有元素 (参考 [`element.localName`](/zh-CN/DOM/Node.localName))。
 
-> **备注：** 在 W3C 文档中，`elements`是一个 `NodeList`，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合`HTMLCollection.` Opera 返回的也是一个 `NodeList`，但通过 `namedItem`方法 ， 使得它类似于一个`HTMLCollection` . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 `NodeList`. 详情请参考 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) .
+> **备注：** 在 W3C 文档中，`elements` 是一个 `NodeList`，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合 `HTMLCollection`。Opera 返回的也是一个 `NodeList`，但通过 `namedItem`方法，使得它类似于一个`HTMLCollection`。截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 `NodeList`。详情请参考 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869)。
 
 ## 示例
 
-在下面的示例中，`getElementsByTagNameNS`方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素 。
+在下面的示例中，`getElementsByTagNameNS`方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素。
 
-注意当调用`getElementsByTagName`方法获取到的节点不是文档节点时，实际上是调用了[element.getElementsByTagNameNS](/en/DOM/element.getElementsByTagNameNS)方法 。
+注意当调用`getElementsByTagName`方法获取到的节点不是文档节点时，实际上是调用了[element.getElementsByTagNameNS](/zh-CN/DOM/element.getElementsByTagNameNS)方法。
 
 需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。
 

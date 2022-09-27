@@ -1,10 +1,6 @@
 ---
 title: HTTP のリソースと仕様書
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Resources_and_specifications
 ---
 {{HTTPSidebar}}
 

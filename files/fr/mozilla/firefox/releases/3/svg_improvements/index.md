@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/SVG_improvements
 original_slug: Améliorations_SVG_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 offre un support [SVG](fr/SVG) amélioré par rapport aux versions précédentes de Firefox. Ces fonctionnalités sont documentés ailleurs, et cet article fournit une liste pratique permettant de déterminer lesquelles ont été ajoutées dans Firefox 3.

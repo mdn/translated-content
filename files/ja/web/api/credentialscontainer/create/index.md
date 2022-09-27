@@ -1,14 +1,6 @@
 ---
 title: PublicKeyCredentialCreationOptions.authenticatorSelection
 slug: Web/API/CredentialsContainer/create
-tags:
-  - API
-  - Property
-  - PublicKeyCredentialCreationOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection
 original_slug: Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

@@ -1,15 +1,8 @@
 ---
 title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createTBody
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`createTBody()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた新しい {{HTMLElement("tbody")}} 要素を返します。

@@ -1,17 +1,8 @@
 ---
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.hourCycle`** プロパティは、ロケールで使用される時刻保持書式の規則を返すアクセサープロパティです。

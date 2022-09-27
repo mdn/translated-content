@@ -1,15 +1,6 @@
 ---
 title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - ':-moz-only-whitespace'
-  - CSS
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-moz-only-whitespace
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 {{CSSRef}}
 

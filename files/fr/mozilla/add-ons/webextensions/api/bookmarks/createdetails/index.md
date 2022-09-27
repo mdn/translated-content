@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
+
 {{AddonSidebar()}}
 
 Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.

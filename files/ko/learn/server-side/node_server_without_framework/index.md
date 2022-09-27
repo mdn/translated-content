@@ -1,7 +1,6 @@
 ---
 title: Node server without framework
 slug: Learn/Server-side/Node_server_without_framework
-translation_of: Learn/Server-side/Node_server_without_framework
 original_slug: Node_server_without_framework
 ---
 ## 소개

@@ -2,6 +2,7 @@
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
 ---
+
 {{APIRef("WebRTC")}}{{domxref("RTCPeerConnection")}}接口的 createOffer() 方法启动创建一个{{Glossary("SDP")}} offer，目的是启动一个新的 WebRTC 去连接远程端点。SDP offer 包含有关已附加到 WebRTC 会话，浏览器支持的编解码器和选项的所有{{domxref("MediaStreamTrack")}}s 信息，以及{{Glossary("ICE")}} 代理，目的是通过信令信道发送给潜在远程端点，以请求连接或更新现有连接的配置。返回值是一个{{domxref("Promise")}}，创建 offer 后，将使用包含新创建的要约的{{domxref("RTCSessionDescription")}}对象来解析该返回值。
 
 ## Syntax
@@ -21,7 +22,7 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 
 `RTCOfferOptions` 词典被用于自定义通过此方法创建 offer。
 
-- [`iceRestart`](/en-US/docs/Web/API/RTCOfferOptions/iceRestart) {{optional_inline}}
+- [`iceRestart`](/zh-CN/docs/Web/API/RTCOfferOptions/iceRestart) {{optional_inline}}
   - : 要在活动连接上重新启动 ICE，请将其设置为`true`。 这将导致返回的 offer 与已经存在的凭证不同。 如果您应用返回的 offer，则 ICE 将重新启动。 指定`false`以保留相同的凭据，因此不重新启动 ICE。 默认值为`false`。
 - `offerToReceiveAudio` {{optional_inline}} (Legacy)
 

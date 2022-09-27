@@ -10,6 +10,7 @@ tags:
   - Suppression
 translation_of: Web/API/Node/removeChild
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`Node.removeChild()`** retire un nœud enfant de l'arbre DOM et retourne le nœud retiré.

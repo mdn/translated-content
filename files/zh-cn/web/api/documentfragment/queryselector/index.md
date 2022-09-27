@@ -2,6 +2,7 @@
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 **`DocumentFragment.querySelector()`** 方法返回第一个在 {{domxref("DocumentFragment")}} 中的、符合选择器的元素。其使用深度优先，前序遍历规则遍历文档中的节点。如果没有匹配结果，返回 `null` 。
@@ -53,7 +54,7 @@ document.querySelector('#foo\\:bar')   // 第二个 DIV
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentFragment.querySelector")}}
+{{Compat}}
 
 ## 参考
 

@@ -1,17 +1,8 @@
 ---
 title: クラス
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - クラス
-  - コンストラクター
-  - ECMAScript 2015
-  - ガイド
-  - 継承
-  - 中級者
-  - JavaScript
-browser-compat: javascript.classes
-translation_of: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 クラスはオブジェクトを作成するためのテンプレートです。それらは、そのデータを処理するためのコードでデータをカプセル化します。JS のクラスはプロトタイプに基づいて構築されていますが、ES5 のクラス風のセマンティクスとは共有されない構文やセマンティクスも持っています。

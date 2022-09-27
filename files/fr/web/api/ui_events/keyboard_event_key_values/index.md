@@ -4,6 +4,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
 original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
+
 Les tableaux ci-dessous énumèrent les valeurs clés standard dans différentes catégories de clés, avec une explication de l'utilisation habituelle de la clé. Les codes de clés virtuels correspondants pour les plateformes communes sont inclus lorsqu'ils sont disponibles.
 
 Apprenez à utiliser ces valeurs clés en JavaScript en utilisant [KeyboardEvent.key](/fr/docs/Web/API/KeyboardEvent/key)
@@ -3027,7 +3028,7 @@ The values below are derived in part form a number of consumer electronics techn
 
 - [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification)
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
-- [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx>): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
 > **Note :** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.

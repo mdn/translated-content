@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/style
 ---
+
 {{SVGRef}}
 
 L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Attributs_universels/style).

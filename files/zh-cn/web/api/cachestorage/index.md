@@ -2,6 +2,7 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`CacheStorage`** 接口表示 {{domxref("Cache")}} 对象的存储。它提供了一个 {{domxref("ServiceWorker")}} 、其它类型 worker 或者 {{domxref("window")}} 范围内可以访问到的所有命名 cache 的主目录（它并不是一定要和 service workers 一起使用，即使它是在 service workers 规范中定义的），并维护一份字符串名称到相应 {{domxref("Cache")}} 对象的映射。
@@ -80,7 +81,7 @@ this.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## 参见
 

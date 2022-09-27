@@ -1,11 +1,6 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/mask
 ---
 {{SVGRef}}
 

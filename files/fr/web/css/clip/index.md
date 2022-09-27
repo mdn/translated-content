@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`clip`** permet de définir la zone d'un élément qui est visible. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (autrement dit, ceux avec {{cssxref("position","position:absolute")}} ou {{cssxref("position","position:fixed")}}).

@@ -1,15 +1,8 @@
 ---
 title: HTMLSelectElement.item()
 slug: Web/API/HTMLSelectElement/item
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.item
-translation_of: Web/API/HTMLSelectElement/item
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.item()`** メソッドは、選択肢のリスト内で引数で渡された位置にある {{domxref("HTMLOptionElement")}} に対応する {{domxref("Element")}} を返します。存在しない場合は `null` を返します。

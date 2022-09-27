@@ -1,17 +1,8 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLImageElement
-  - プロパティ
-  - リファレンス
-  - decoding
-browser-compat: api.HTMLImageElement.decoding
-translation_of: Web/API/HTMLImageElement/decoding
 ---
+
 {{APIRef}}
 
 **`decoding`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、ブラウザーが画像をどのようにデコードすべきかというヒントを表します。

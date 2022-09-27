@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createTHead
-translation_of: Web/API/HTMLTableElement/createTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`createTHead()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた {{HTMLElement("thead")}} 要素を返します。表内にヘッダーが存在しない場合、このメソッドはそれを作成して返します。

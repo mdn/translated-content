@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acosh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.Elle est définie par :

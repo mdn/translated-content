@@ -7,6 +7,7 @@ browser-compat: api.BroadcastChannel
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
 L'interface **`BroadcastChannel`** représente un canal nommé auquel peut s'abonner n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Il permet la communication entre différents documents (dans différentes fenêtres, onglets, cadres ou iframes) d'une même origine. Les messages sont diffusés via un évènement [`message`](/fr/docs/Web/API/BroadcastChannel/message_event) déclenché à tout objet `BroadcastChannel` écoutant le canal, sauf celui qui l'a envoyé.

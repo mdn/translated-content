@@ -1,14 +1,6 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
-tags:
-  - Browser
-  - CodingScripting
-  - DOCTYPE
-  - Glossary
-  - HTML
-  - Intro
-translation_of: Glossary/Doctype
 ---
 {{Glossary("HTML")}} において、 doctype はすべての文書の先頭に見られる "`<!DOCTYPE html>`" という必須の前置きです。その唯一の目的は、{{Glossary("browser","ブラウザー")}}が文書をレンダリングするときにいわゆる[「後方互換モード (quirks mode)」](/ja/docs/Quirks_Mode_and_Standards_Mode)に切り替わるのを防ぐことです。つまり、 "`<!DOCTYPE html>`" という doctype は、ブラウザーがいくつかの仕様で互換性のない別のレンダリングモードを使用するのではなく、関連する仕様に従って最大限の努力を試みるようにします。
 

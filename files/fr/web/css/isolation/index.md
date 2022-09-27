@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 La propriété **`isolation`** indique que l'élément crée un nouveau contexte d'empilement (_stacking context_).

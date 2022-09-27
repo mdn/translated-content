@@ -10,6 +10,7 @@ tags:
   - XHTML
 translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 {{HTMLRef}}
 
 Par le passé, les pages web étaient souvent écrites sous deux versions : une destinée à Netscape Navigator et l'autre à Microsoft Internet Explorer. Lorsque les standards du Web sont apparus avec le W3C, les navigateurs ne pouvaient pas simplement commencer à les utiliser car leur mise en place rendrait inutilisable la plupart des sites web existant. Les navigateurs ont alors introduit deux modes afin de traiter les sites respectants les standards des autres sites historiques.

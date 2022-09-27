@@ -1,12 +1,8 @@
 ---
 title: 文法とデータ型
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 この節では JavaScript の基本文法、変数宣言、データ型、リテラルについて説明します。
@@ -49,7 +45,7 @@ JavaScript のソーステキストは左から右にスキャンされ、_ト�
 
 コメントはホワイトスペースのように扱われ、スクリプトの実行から除外されます。
 
-> **Note:** **注**: 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
+> **Note:** 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
 >
 > これは**ハッシュバンコメント**構文と呼ばれ、スクリプトの実行に使用したい特定の JavaScript エンジンへのパスを指定するのに使用される特殊なコメントです。詳しくは[ハッシュバンコメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments)を参照してください。
 
@@ -397,7 +393,7 @@ JavaScript では値の表現に*リテラル*を使います。これらは固�
 let coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **Note:** **注:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
+> **Note:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
 
 トップレベルのスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
 
@@ -421,7 +417,7 @@ let fish = ['Lion', , 'Angel'];
 
 次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
 
-> **Note:** **注:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
+> **Note:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
 
 ```js
 let myList = ['home', , 'school', ];

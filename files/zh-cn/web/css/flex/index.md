@@ -2,6 +2,7 @@
 title: flex
 slug: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 `flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
@@ -244,7 +245,7 @@ flex.addEventListener("click", function() {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 参见
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL
 ---
+
 {{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Dans cette démonstration, nous construisons sur l'exemple précédent en remplaçant nos textures statiques par les images d'un fichier vidéo mp4 en cours de lecture. C'est en fait assez facile à faire, mais c'est amusant à regarder, alors commençons. Un code similaire peut être réalisé pour utiliser n'importe quel type de données (comme un {{HTMLElement ("canvas")}}) comme source pour vos textures..

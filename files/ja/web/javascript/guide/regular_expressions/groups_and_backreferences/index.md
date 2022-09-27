@@ -1,15 +1,9 @@
 ---
 title: グループと範囲
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 グループと範囲は、式にある文字のグループと範囲を示します。
@@ -195,7 +189,7 @@ do {
 } while((match = regexpNames.exec(personList)) !== null);
 ```
 
-> **Note:** **注:** すべてのブラウザがこの機能をサポートしているわけではありません。以下の互換性の表を参照してください。
+> **Note:** すべてのブラウザがこの機能をサポートしているわけではありません。以下の互換性の表を参照してください。
 
 ## 仕様
 

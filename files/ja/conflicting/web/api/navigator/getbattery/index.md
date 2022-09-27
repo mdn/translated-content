@@ -1,21 +1,6 @@
 ---
 title: Navigator.battery
 slug: conflicting/Web/API/Navigator/getBattery
-tags:
-  - API
-  - Battery
-  - Battery API
-  - Device API
-  - Navigator
-  - Non-standard
-  - Obsolete
-  - Property
-  - Reference
-  - バッテリ
-  - プロパティ
-  - 廃止
-  - 標準外
-translation_of: Web/API/Navigator/battery
 original_slug: Web/API/Navigator/battery
 ---
 {{ApiRef("Battery API")}}

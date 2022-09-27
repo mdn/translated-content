@@ -60,4 +60,3 @@ Symbol.for('foo').toString() // "Symbol(foo)"
 ## Véase también
 
 - {{jsxref("Object.prototype.toString()")}}
-

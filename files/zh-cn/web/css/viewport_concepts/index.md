@@ -2,6 +2,7 @@
 title: 视口概念
 slug: Web/CSS/Viewport_concepts
 ---
+
 {{CSSRef}}
 
 这篇文章阐述了**视口**（viewport）的概念，对视觉视口（visual viewport）和布局视口（layout viewport）进行区分，并让你了解视口的意义是什么，以及它在 CSS、SVG 和移动设备方面的影响。
@@ -36,7 +37,7 @@ window.outerHeight /* 900 */
 
 下面是一些帮助你查询视口大小和其它类似的长度属性的 DOM 属性：
 
-- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/en-US/docs/Web/HTML/Viewport_meta_tag#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
+- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Viewport_meta_tag#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
 - {{DOMxRef("Window.innerWidth")}} 是用 CSS 像素单位表示的浏览器窗口的视口宽度，包括垂直滚动条。
 - {{DOMxRef("Window.outerWidth")}} 是指包括了浏览器外边框的窗口宽度。
 

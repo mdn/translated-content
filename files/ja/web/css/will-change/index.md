@@ -1,15 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 変更予定
-  - Reference
-  - recipe:css-property
-  - transition
-  - トランジション
-translation_of: Web/CSS/will-change
 ---
 {{CSSRef}}
 

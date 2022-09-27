@@ -2,6 +2,7 @@
 title: resize
 slug: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -117,7 +118,7 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## See also
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/panneaux_devtools
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cette fonctionnalité deviendra disponible dans Firefox 54.

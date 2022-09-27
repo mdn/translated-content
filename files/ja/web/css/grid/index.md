@@ -1,14 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid
-translation_of: Web/CSS/grid
 ---
 {{CSSRef}}
 

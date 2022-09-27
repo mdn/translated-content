@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.isEnabled()
 slug: Web/API/WebGLRenderingContext/isEnabled
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.isEnabled()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 方法之一，用来检测给定的 WebGL 功能项在当前上下文是否可用。

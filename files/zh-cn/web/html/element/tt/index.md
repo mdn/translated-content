@@ -2,6 +2,7 @@
 title: <tt>
 slug: Web/HTML/Element/tt
 ---
+
 {{deprecated_header}}
 
 ## 概述

@@ -12,6 +12,7 @@ tags:
   - resolve
 translation_of: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 ---
+
 {{AddonSidebar()}}
 
 Résout le nom d'hôte donné en un enregistrement DNS.
