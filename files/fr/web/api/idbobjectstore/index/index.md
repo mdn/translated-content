@@ -75,7 +75,7 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [exemple sur GitHub](https://github.com/mdn/IDBIndex-example) ([la démonstration associée](https://mdn.github.io/IDBIndex-example/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [exemple sur GitHub](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([la démonstration associée](http://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ## Spécifications
 

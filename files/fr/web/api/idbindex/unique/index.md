@@ -34,7 +34,7 @@ Dans l'exemple suivant, on ouvre une transaction en lecture sur un magasin d'obj
 
 On affiche le caractère unique des clé dans la console (ici, on voit que la propriété vaut `false`).
 
-Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([voir la démonstration _live_](https://mdn.github.io/IDBIndex-example/)).
+Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([voir la démonstration _live_](http://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

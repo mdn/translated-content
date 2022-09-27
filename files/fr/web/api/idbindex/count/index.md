@@ -67,7 +67,7 @@ Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets puis on
 
 `myIndex.count()` est alors utilisé afin de compter le nombre d'enregistrements dans l'index et le résultat de la requête est affiché dans la console au travers du gestionnaire d'évènements pour la réussite (`onsuccess`).
 
-Efin, on parcourt chaque enregistrement pour l'insérer dans un tableau HTML. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre dépôt [IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([cf. la démonstration _live_](https://mdn.github.io/IDBIndex-example/)).
+Efin, on parcourt chaque enregistrement pour l'insérer dans un tableau HTML. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre dépôt [IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([cf. la démonstration _live_](http://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

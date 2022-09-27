@@ -107,7 +107,7 @@ On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours
 
 ## Exemple
 
-Dans ce fragment simple, nous créons une transaction, récupérons un magasin d'objets, puis utilisons un curseur pour parcourir tous les enregistrements du magasin d'objets. Le curseur ne nous oblige pas à sélectionner les données basées sur une clé, nous pouvons simplement travailler sur tout les enregistrements. Notez également que dans chaque itération de la boucle, vous pouvez récupérer les données de l'enregistrement en cours sous l'objet curseur à l'aide `curseur.value.toto`. Pour un exemple de travail complet, voir notre [exemple IDBCursor](https://github.com/mdn/IDBcursor-example/) ([l'exemple en _live_](https://mdn.github.io/IDBcursor-example/)).
+Dans ce fragment simple, nous créons une transaction, récupérons un magasin d'objets, puis utilisons un curseur pour parcourir tous les enregistrements du magasin d'objets. Le curseur ne nous oblige pas à sélectionner les données basées sur une clé, nous pouvons simplement travailler sur tout les enregistrements. Notez également que dans chaque itération de la boucle, vous pouvez récupérer les données de l'enregistrement en cours sous l'objet curseur à l'aide `curseur.value.toto`. Pour un exemple de travail complet, voir notre [exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([l'exemple en _live_](http://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function afficheDonnee() {

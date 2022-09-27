@@ -37,7 +37,7 @@ cursor.advance(count);
 
 このシンプルな断片でトランザクションを作成し、オブジェクトストアを取得し、オブジェクトストアのレコードを一通り繰り返すカーソルを使っています。ここで `cursor.advance(2)` を使ってそれぞれ 2 回前進していて、つまり 1 つおきの結果だけが表示されます。`advance()` は {{domxref("IDBCursor.continue")}} と同様に動作しますが、常に次のレコードに移動するのでなく、一度に複数のレコードを飛び越えられるのが違います。
 
-注意点としてループの繰り返しで、カーソルオブジェクトの現在のレコードのテータを `cursor.value.foo`を使って取得できます。完全な動作例は、[IDBCursor の例](https://github.com/mdn/IDBcursor-example/)([ライブ例を見る](http://mdn.github.io/IDBcursor-example/))を見てください。
+注意点としてループの繰り返しで、カーソルオブジェクトの現在のレコードのテータを `cursor.value.foo`を使って取得できます。完全な動作例は、[IDBCursor の例](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor)([ライブ例を見る](http://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))を見てください。
 
 ```js
 function advanceResult() {

@@ -35,7 +35,7 @@ Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objets et on 
 
 La propriété `multiEntry` est affichée dans la console. Dans cet exemple, elle a la valeur `false`.
 
-Enfin, on parcourt chacun des enregistrements pour insérer les données dans un tableau HTML. Pour consulter un exemple complet, vous pouvez vous référer à [notre dépôt IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([voir également la démo _live_](https://mdn.github.io/IDBIndex-example/)).
+Enfin, on parcourt chacun des enregistrements pour insérer les données dans un tableau HTML. Pour consulter un exemple complet, vous pouvez vous référer à [notre dépôt IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([voir également la démo _live_][(https://mdn.github.io/IDBIndex-example/](http://mdn.github.io/dom-examples/indexeddb-examples/idbindex/))).
 
 ```js
 function displayDataByIndex() {
