@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.activeTexture()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 方法之一，用来激活指定的纹理单元。
@@ -53,7 +54,7 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.activeTexture")}}
+{{Compat}}
 
 ## 另见
 

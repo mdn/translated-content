@@ -8,6 +8,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.isDefaultNamespace()`** accepte un URI d'espace de nom comme argument et renvoie un {{jsxref("Boolean")}} (booléen) avec une valeur `true` (_vrai_) si l'espace de nom est celui par défaut du noeud donné ou `false` (_faux_) sinon.

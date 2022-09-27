@@ -3,6 +3,7 @@ title: オープンソースプロジェクトのための基本的なエチケ�
 slug: MDN/Community/Open_source_etiquette
 original_slug: MDN/Contribute/Open_source_etiquette
 ---
+
 {{MDNSidebar}}
 
 オープンソースプロジェクト (OSP) で作業したことがない方は、 MDN (または他のオープンソースプロジェクト) への協力を始める前に、この記事を読むことをお勧めします。あなたや他のプロジェクトの協力者が大切にされ、安全であると感じ、生産性を維持するために採用すべきベストプラクティスがいくつかあります。

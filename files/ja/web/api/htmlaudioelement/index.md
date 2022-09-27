@@ -2,6 +2,7 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 ---
+
 **`HTMLAudioElement`** インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドを提供します。 {{domxref("HTMLMediaElement")}} インターフェイスから派生しています。
 
 {{InheritanceDiagram(600, 120)}}

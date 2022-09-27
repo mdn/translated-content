@@ -2,6 +2,7 @@
 title: Response()
 slug: Web/API/Response/Response
 ---
+
 {{APIRef("Fetch")}}
 
 **`Response()`** 构造函数创建了一个新的 {{domxref("Response")}} 对象。

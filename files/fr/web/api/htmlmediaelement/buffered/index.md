@@ -4,6 +4,7 @@ slug: Web/API/HTMLMediaElement/buffered
 browser-compat: api.HTMLMediaElement.buffered
 translation_of: Web/API/HTMLMediaElement/buffered
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`buffered`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et qui renvoie un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique représentant les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.

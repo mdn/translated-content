@@ -11,7 +11,7 @@ translation_of: Web/CSS/@page
 
 ## Resumo
 
-A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando o documento for impresso.\*\* \*\*Você não pode mudar todas as propriedades CSS com @page. Você poderá somente mudar as margens, orphans, widows, e page breaks do documento. Na tentativa de mudar outra propriedade CSS, elas serão ignoradas.
+A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando o documento for impresso. Você não pode mudar todas as propriedades CSS com @page. Você poderá somente mudar as margens, orphans, widows, e page breaks do documento. Na tentativa de mudar outra propriedade CSS, elas serão ignoradas.
 
 A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.
 
@@ -27,7 +27,7 @@ A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxre
 
 ## Exemplos
 
-Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes") de `@page` por exemplo.
+Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes) de `@page` por exemplo.
 
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}

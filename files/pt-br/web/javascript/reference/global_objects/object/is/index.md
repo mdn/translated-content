@@ -49,7 +49,7 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
   - ambos são {{jsxref("NaN")}}
   - ou ambos são não-zero e ambos são não {{jsxref("NaN")}} e ambos correspondem ao mesmo valor
 
-Isso _não é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. O operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica diversas coerções para ambos os lados (se eles não correspondem ao mesmo Tipo) antes de testar a igualdade (resultando em comportamentos como a comparação `"" == false `retornar `true`), enquanto `Object.is` não realiza a coerção de nenhum dos valores.
+Isso _não é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. O operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica diversas coerções para ambos os lados (se eles não correspondem ao mesmo Tipo) antes de testar a igualdade (resultando em comportamentos como a comparação `"" == false` retornar `true`), enquanto `Object.is` não realiza a coerção de nenhum dos valores.
 
 Isso também _não_ _é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. O operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (assim como o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata os valores numéricos `-0` e `+0` como iguais e trata {{jsxref("Number.NaN")}} como não igual a {{jsxref("NaN")}}.
 

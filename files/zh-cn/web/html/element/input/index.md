@@ -2,6 +2,7 @@
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Element/Input
 ---
+
 {{HTMLRef}}
 
 **HTML `<input>` 元素**用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。

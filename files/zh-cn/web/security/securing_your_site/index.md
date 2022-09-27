@@ -2,6 +2,7 @@
 title: 确保你的站点安全
 slug: Web/Security/Securing_your_site
 ---
+
 你可以采取一些措施来确保你的网站安全。本文提供了各种建议，以及提供更多有用信息的其他文章的链接。
 
 > **备注：** This article is a work in progress, and is neither complete nor does following its suggestions guarantee your site will be fully secure.
@@ -20,9 +21,9 @@ slug: Web/Security/Securing_your_site
 - [HTTP Strict Transport Security](/zh-CN/Security/HTTP_Strict_Transport_Security)
   - : `Strict-Transport-Security:` 这个 HTTP 头允许站点只能使用 HTTPS。
 - [HTTP 访问控制](/En/HTTP_access_control)
-  - : 跨源资源共享标准提供了一种指定可从其他域加载的内容的方法。 您可以使用它来防止您的网站被不正当地使用; 此外，您可以使用它来建立明确允许其他站点使用的资源。
+  - : 跨源资源共享标准提供了一种指定可从其他域加载的内容的方法。您可以使用它来防止您的网站被不正当地使用; 此外，您可以使用它来建立明确允许其他站点使用的资源。
 - [内容安全策略](/zh-CN/Security/CSP)
-  - : 一种附加的安全层，有助于检测和减轻某些类型的攻击，包括跨站脚本 (XSS) 以及数据注入攻击。 这些攻击用于从数据窃取到站点破坏或恶意软件分发的所有内容。
+  - : 一种附加的安全层，有助于检测和减轻某些类型的攻击，包括跨站脚本 (XSS) 以及数据注入攻击。这些攻击用于从数据窃取到站点破坏或恶意软件分发的所有内容。
 - [X-Frame-Options 响应头](/zh-CN/docs/Web/HTTP/X-Frame-Options)
   - : `X-Frame-Options:`该[HTTP](/zh-CN/HTTP) 响应头可用于指示是否应允许浏览器在{{HTMLElement("frame")}}中呈现页面。站点可以通过确保其内容未嵌入到其他站点中来避免点击劫持攻击。
 

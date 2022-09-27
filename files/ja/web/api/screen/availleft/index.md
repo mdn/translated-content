@@ -2,6 +2,7 @@
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 画面の左端から利用できる最初の有効ピクセルを返します。

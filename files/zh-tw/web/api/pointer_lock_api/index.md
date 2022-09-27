@@ -210,7 +210,7 @@ Pointer lock 一次僅能鎖定一組 iframe。在鎖定一組 iframe 之後，�
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 另可參閱
 

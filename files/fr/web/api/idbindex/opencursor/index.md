@@ -10,6 +10,7 @@ tags:
   - openCursor
 translation_of: Web/API/IDBIndex/openCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openCursor()`** de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée [un curseur](/fr/docs/Web/API/IDBCursor) sur l'intervalle de clé fourni en argument.

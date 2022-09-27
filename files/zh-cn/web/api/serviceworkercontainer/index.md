@@ -2,16 +2,17 @@
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-`ServiceWorkerContainer`接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载 ，更新和访问 service worker 的状态，以及他们的注册者
+`ServiceWorkerContainer`接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载，更新和访问 service worker 的状态，以及他们的注册者
 
 主要是{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}}提供一个注册 service worker 的方法，{{domxref("ServiceWorkerContainer.controller")}}将获取当前控制页面网络的 service worker
 
 ## ?属性
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : 当 {{domxref("ServiceWorker")}} 对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。 如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。
+  - : 当 {{domxref("ServiceWorker")}} 对象的 state 是 active 的时候，返回一个 {{domxref("ServiceWorker")}} ?对象 和{{domxref("ServiceWorkerRegistration.active")}}) 返回相同的对象。如果当前的 state 都不是 active 或者强制刷新浏览器则返回 null。
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : 定义了一个 serviceWorker 是否准备好为一个页面服务，将返回一个 {{jsxref("Promise")}}，并且这个 {{jsxref("Promise")}}永远不会 reject，这个 {{jsxref("Promise")}}会在{{domxref("ServiceWorkerRegistration")}} 获取到一个 active 的{{domxref("ServiceWorker")}}的时候被解决。
 
@@ -35,7 +36,7 @@ slug: Web/API/ServiceWorkerContainer
 
 ## ?举例
 
-?代码是[service worker fallback-response sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (see [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)) 的其中一段. ?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看. 代码也处理了注册失败的情况
+?代码是[service worker fallback-response sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (see [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)) 的其中一段。?首先检查浏览器是否支持 serviceWorker. 代码创建了一个 serviceWorker，并且打印出来当前页面的 serviceWorker 的？是否接管了页面的网络状态。如果没有需要刷新页面再次查看。代码也处理了注册失败的情况
 
 ```
 if ('serviceWorker' in navigator) {

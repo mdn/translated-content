@@ -2,6 +2,7 @@
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`conic-gradient()`** 创建了一个由渐变组成的图像，渐变的颜色变换围绕一个中心点旋转（而不是从中心辐射）。锥形渐变的例子包括饼图和色轮 {{glossary("color wheel", "color wheels")}}. `conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。

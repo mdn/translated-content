@@ -2,6 +2,7 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`HTMLDialogElement`** インターフェイスは {{HTMLElement("dialog")}} 要素を操作するメソッドを提供します。 {{domxref("HTMLElement")}} インターフェースからプロパティとメソッドを継承しています。

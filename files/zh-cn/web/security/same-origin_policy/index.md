@@ -2,11 +2,12 @@
 title: 浏览器的同源策略
 slug: Web/Security/Same-origin_policy
 ---
+
 **同源策略**是一个重要的安全策略，它用于限制一个{{Glossary("origin")}}的文档或者它加载的脚本如何能与另一个源的资源进行交互。它能帮助阻隔恶意文档，减少可能被攻击的媒介。
 
 ## 同源的定义
 
-如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话) 和 {{Glossary("host")}} 都相同的话，则这两个 URL 是*同源*。这个方案也被称为“协议/主机/端口元组”，或者直接是 “元组”。（“元组” 是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。
+如果两个 URL 的 {{Glossary("protocol")}}、{{Glossary("port")}} (如果有指定的话) 和 {{Glossary("host")}} 都相同的话，则这两个 URL 是*同源*。这个方案也被称为“协议/主机/端口元组”，或者直接是“元组”。（“元组”是指一组项目构成的整体，双重/三重/四重/五重/等的通用形式）。
 
 下表给出了与 URL `http://store.company.com/dir/page.html` 的源进行对比的示例：
 
@@ -79,7 +80,7 @@ document.domain = "company.com";
 
 - 阻止跨源写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 [Cross-Site Request Forgery (CSRF)](https://owasp.org/www-community/attacks/csrf) 标记。你必须使用这个标记来阻止页面的跨源读操作。
 - 阻止资源的跨源读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。
-- 阻止跨源嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 `Content-Type` 头部定义的类型。例如，如果您在 HTML 文档中指定 `<script>` 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。
+- 阻止跨源嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 `Content-Type` 头部定义的类型。例如，如果您在 HTML 文档中指定 `<script>` 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。
 
 ## 跨源脚本 API 访问
 
@@ -87,7 +88,7 @@ JavaScript 的 API 中，如 [`iframe.contentWindow`](/zh-CN/docs/DOM/HTMLIFrame
 
 为了能让不同源中文档进行交流，可以使用 {{domxref("window.postMessage")}}。
 
-规范: [HTML Living Standard § Cross-origin objects](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-objects) 。
+规范：[HTML Living Standard § Cross-origin objects](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-objects) 。
 
 ### Window
 
@@ -132,7 +133,7 @@ JavaScript 的 API 中，如 [`iframe.contentWindow`](/zh-CN/docs/DOM/HTMLIFrame
 
 访问存储在浏览器中的数据，如 [localStorage](/zh-CN/docs/Web/API/Window/localStorage) 和 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，是以源进行分割。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
 
-{{glossary("Cookie", "Cookies")}} 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 [Public Suffix List](http://publicsuffix.org/) 检测一个域是否是公共后缀（public suffix）。Internet Explorer 使用其内部的方法来检测域是否是公共后缀。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名 (sub-domains) 访问 cookie。当你设置 cookie 时，你可以使用 `Domain`、`Path`、`Secure`、和 `HttpOnly` 标记来限定其无障碍。当你读取 cookie 时，你无法知道它是在哪里被设置的。 即使您只使用安全的 https 连接，您看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
+{{glossary("Cookie", "Cookies")}} 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 [Public Suffix List](http://publicsuffix.org/) 检测一个域是否是公共后缀（public suffix）。Internet Explorer 使用其内部的方法来检测域是否是公共后缀。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名 (sub-domains) 访问 cookie。当你设置 cookie 时，你可以使用 `Domain`、`Path`、`Secure`、和 `HttpOnly` 标记来限定其无障碍。当你读取 cookie 时，你无法知道它是在哪里被设置的。即使您只使用安全的 https 连接，您看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
 
 ## 参见
 

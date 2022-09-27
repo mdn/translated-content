@@ -5,7 +5,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
 <p>{{DefaultAPISidebar("Gamepad API")}}</p>
 
-<p><span class="seoSummary">HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, и <code>&lt;video&gt;</code>, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы.  Gamepad API - это способ получения данных с геймпада и других игровых контроллеров. </span></p>
+<p>HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, и <code>&lt;video&gt;</code>, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы.  Gamepad API - это способ получения данных с геймпада и других игровых контроллеров. </p>
 
 <p><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> добавляет в  объект {{ domxref("Window") }}  новые события для получения событий контроллера. Дополнительно к этим событиям, API также добавляет объект {{ domxref("Gamepad") }}, который позволяет получить  состояние подключённого контроллера, и метод {{ domxref("navigator.getGamepads()") }} который позволяет получить все контроллеры, определённые на странице браузера.</p>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p>Когда новый  геймпад подключается, на странице срабатывают события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики. </p>
 
-<div class="blockIndicator geckoVersionNote">
+<div class="note">
 <p>В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.</p>
 </div>
 
@@ -91,7 +91,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
  <li><code>timestamp</code>: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the <code>axes</code> and <code>button</code> data have been updated from the hardware. The value must be relative to the <code>navigationStart</code> attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note</strong>: The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
 </div>
 

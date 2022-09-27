@@ -3,6 +3,7 @@ title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 original_slug: Web/API/Body/arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 **`arrayBuffer()`** は {{domxref("Response")}} インターフェイスのメソッドで、リクエストの本文を読み取り、 {{jsxref("ArrayBuffer")}} で解決されるプロミスを返します。

@@ -2,6 +2,7 @@
 title: Window.confirm()
 slug: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 **`Window.confirm()`** 方法显示一个具有一个可选消息和两个按钮 (确定和取消) 的模态对话框 。

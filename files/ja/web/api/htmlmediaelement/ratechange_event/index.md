@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: ratechange イベント'
 slug: Web/API/HTMLMediaElement/ratechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `ratechange` イベントは、再生レートが変更されたときに発生します。

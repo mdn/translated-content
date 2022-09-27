@@ -13,6 +13,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
+
 {{AddonSidebar()}}
 
 Obtient l'URL d'un document HTML en tant que popup pour cette action de page.

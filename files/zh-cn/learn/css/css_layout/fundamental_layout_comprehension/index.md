@@ -2,6 +2,7 @@
 title: Fundamental Layout Comprehension
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
+
 {{LearnSidebar}}
 
 如果您已经完成了这个模块的学习，那么您将已经学习了今天进行 CSS 布局以及使用旧的 CSS 所需的基本知识。
@@ -54,4 +55,4 @@ slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 ## 评估
 
-如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。 如果你是自学，可以很容易地在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
+如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！

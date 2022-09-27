@@ -2,6 +2,7 @@
 title: Fetch の使用
 slug: Web/API/Fetch_API/Using_Fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 [Fetch API](/ja/docs/Web/API/Fetch_API) は、リクエストやレスポンスといった HTTP のパイプラインを操作する要素にアクセスするための JavaScript インターフェイスです。グローバルの {{domxref("fetch()")}} メソッドも提供しており、簡単で論理的な方法で、非同期にネットワーク越しでリソースを取得することができます。

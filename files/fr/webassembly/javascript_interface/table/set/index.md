@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 ---
+
 {{JSRef}}
 
 La méthode **`set()`**, rattachée au prototype de {{jsxref("WebAssembly.Table")}}, permet de modifier une référence de fonction stockée dans un tableau WebAssembly.

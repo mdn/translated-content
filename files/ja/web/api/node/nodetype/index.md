@@ -27,7 +27,7 @@ slug: Web/API/Node/nodeType
 - `Node.DOCUMENT_TYPE_NODE` (`10`)
   - : `<!DOCTYPE html>` のような {{domxref("DocumentType")}} ノードです。
 - `Node.DOCUMENT_FRAGMENT_NODE` (`11`)
-  - : A {{domxref("DocumentFragment")}} node.
+  - : {{domxref("DocumentFragment")}} ノードです。
 
 `Node.ENTITY_REFERENCE_NODE` (`5`), `Node.ENTITY_NODE` (`6`), `Node.NOTATION_NODE` (`12`) は非推奨になっており、使用されなくなっています。
 

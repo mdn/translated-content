@@ -3,6 +3,7 @@ title: 解决常见的无障碍问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 接下来，我们将关注无障碍，提供关于一些常见问题的信息，如何进行简单测试以及如何使用审核/自动化工具来查找无障碍问题。
@@ -310,7 +311,7 @@ aXe 也可以使用`npm`安装，并且可以与任务运行器（如[Grunt](htt
 
 #### VoiceOver
 
-VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。
+VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。我们在 Mac OS X 系统上测试了它。
 
 按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。
 

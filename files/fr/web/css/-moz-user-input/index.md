@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-user-input
 ---
+
 {{Non-standard_header}}{{CSSRef}}{{Deprecated_Header(60)}}
 
 Pour les applications Mozilla, la propriété **`-moz-user-input`** détermine si l'utilisateur peut effectuer une saisie sur l'élément (bien que rejetée, cette propriété a contribué à la construction de la propriété standard {{cssxref("user-input")}}.

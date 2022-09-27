@@ -2,6 +2,7 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
+
 {{JSRef}}
 
 **`Math.asinh()`** 関数は、数値の双曲線逆正弦 (ハイパーボリックアークサイン) を返します。

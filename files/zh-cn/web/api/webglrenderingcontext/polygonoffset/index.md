@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.polygonOffset()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) specifies the scale factors and units to calculate depth values.
@@ -47,7 +48,7 @@ gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.polygonOffset")}}
+{{Compat}}
 
 ## See also
 

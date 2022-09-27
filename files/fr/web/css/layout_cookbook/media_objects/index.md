@@ -7,6 +7,7 @@ tags:
   - Recette
 translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
+
 {{CSSRef}}
 
 Le motif _Media Object_ (qu'on peut traduire en « objet avec média ») est un motif qu'on rencontre fréquemment sur le Web. [Intitulé ainsi par Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), cela fait référence à une boîte organisée en deux colonnes dont l'une contient une image d'un côté et un texte descriptif de l'autre (par exemple l'image de profil de quelqu'un à gauche et un billet à droite).

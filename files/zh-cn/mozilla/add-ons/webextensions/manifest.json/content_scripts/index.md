@@ -2,6 +2,7 @@
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -254,4 +255,4 @@ content 脚本有相同的 DOM 视图，并按照它们在数组中出现的顺�
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

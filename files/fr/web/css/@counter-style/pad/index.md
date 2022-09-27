@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/pad
 ---
+
 {{CSSRef}}
 
 Le descripteur **`pad`**, utilisé dans la règle @ {{cssxref("@counter-style")}} peut être utilisé pour que la représentation du marqueur pour le compteur ait une longueur minimale. Si la représentation du marqueur est plus courte que la longueur indiquée, le marqueur sera complété autant de fois que nécessaire avec le symbole indiqué. Les représentations du marqueur qui sont plus longues que la longueur minimale indiquée dans le descripteur sont construites normalement.

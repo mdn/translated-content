@@ -2,6 +2,7 @@
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}{{Deprecated_header}}
 
 **`Navigator.doNotTrack`** 属性返回用户的不跟踪（Do Not Track）设置，表示用户是否请求网站和广告商不进行跟踪。

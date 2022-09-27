@@ -11,6 +11,7 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 S'allume lorsque l'état de portail captif change.

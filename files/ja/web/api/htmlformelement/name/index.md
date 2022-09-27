@@ -2,6 +2,7 @@
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
 ---
+
 ## 概要
 
 form の `name` 属性は、その `form` 要素の名前を文字列として返します。

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 Les en-têtes HTTP permettent au client et au serveur de transmettre des informations supplémentaires avec la requête ou la réponse. Un en-tête de requête est constitué de son nom (insensible à la casse) suivi d'un deux-points `:`, puis de sa valeur (sans saut de ligne). L'espace blanc avant la valeur est ignoré.

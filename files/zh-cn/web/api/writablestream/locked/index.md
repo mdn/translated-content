@@ -2,6 +2,7 @@
 title: WritableStream.locked
 slug: Web/API/WritableStream/locked
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("WritableStream")}} 接口的只读属性 **`locked`** 返回一个布尔值，表示 `WritableStream` 是否锁定到一个 writer。

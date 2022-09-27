@@ -2,6 +2,7 @@
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

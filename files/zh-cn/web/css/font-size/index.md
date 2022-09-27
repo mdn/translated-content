@@ -2,6 +2,7 @@
 title: font-size
 slug: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 **`font-size`** [CSS](/zh-CN/docs/CSS) 属性指定字体的大小。因为该属性的值会被用于计算 em 和 ex 长度单位，定义该值可能改变其他元素的大小。
@@ -150,4 +151,4 @@ span { font-size: 16px; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: 'Django Tutorial Part 4: Django 管理员站点'
 slug: Learn/Server-side/Django/Admin_site
 original_slug: learn/Server-side/Django/管理站点
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 好了，我们已经为本地图书馆网站 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。
@@ -12,7 +13,7 @@ original_slug: learn/Server-side/Django/管理站点
     <tr>
       <th scope="row">前提：</th>
       <td>
-        完成:
+        完成：
         <a href="/zh-CN/docs/Learn/Server-side/Django/Models"
           >Django Tutorial Part 3: 使用模型</a
         >。
@@ -99,7 +100,7 @@ python3 manage.py runserver
 
 ![Admin Site - List of book objects](admin_book_list.png)
 
-从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作 ，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。
+从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。
 
 您可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加 删除，历史和`VIEW ON SITE`按钮（最后一个按钮出现，因为我们定义了`get_absolute_url()`我们的模型中的 方法）。
 
@@ -272,7 +273,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 你可以使用 [fieldsets](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets) 属性添加“部分”以在详细信息表单中对相关的模型信息进行分组。
 
-在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name，imprint和id`），并且当将可用（`status，due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分 。
+在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name`、`imprint` 和 `id`），并且当将可用（`status`、`due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分。
 
 ```python
 @admin.register(BookInstance)

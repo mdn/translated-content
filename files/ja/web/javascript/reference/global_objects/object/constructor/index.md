@@ -2,6 +2,7 @@
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef}}
 
 **`constructor`** プロパティは、インスタンスオブジェクトを生成した {{jsxref("Object")}} のコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。

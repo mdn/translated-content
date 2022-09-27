@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
+
 {{AddonSidebar()}}
 
 Cet objet contient un booléen indiquant si l'onglet est muet et la raison du dernier changement d'état.

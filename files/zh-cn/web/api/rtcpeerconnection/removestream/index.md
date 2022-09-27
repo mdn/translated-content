@@ -2,6 +2,7 @@
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.removeStream()`** 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。

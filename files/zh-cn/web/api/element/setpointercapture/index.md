@@ -2,6 +2,7 @@
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}}接口的**`setPointerCapture()`** 方法用于将特定元素指定为未来指针事件的捕获目标。指针的后续事件将以捕获元素为目标，直到捕获被释放（通过{{domxref("Element.releasePointerCapture()")}}）。
@@ -83,7 +84,7 @@ slider.onpointerup = stopSliding;
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.setPointerCapture")}}
+{{Compat}}
 
 ## 参见
 

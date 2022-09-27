@@ -2,6 +2,7 @@
 title: 评估：DIY Django 微博客
 slug: Learn/Server-side/Django/django_assessment_blog
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 在这个评估中，您将使用您在 [Django Web Framework (Python)](/zh-CN/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。

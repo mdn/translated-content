@@ -3,6 +3,7 @@ title: 初识 MDN
 slug: MDN/Community/Contributing/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 我们是一个开放包容的开发者社区，目标是为更好的互联网提供资源，无关品牌、浏览器或平台。任何人都可以贡献自己的力量，你的每一份贡献都会让我们更强大。与我们一起，持续推动互联网技术向更伟大的方向革新——就在这里，与你一起。

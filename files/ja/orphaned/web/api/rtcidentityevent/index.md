@@ -3,6 +3,7 @@ title: RTCIdentityEvent
 slug: orphaned/Web/API/RTCIdentityEvent
 original_slug: Web/API/RTCIdentityEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCIdentityEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは ID アサーションによって生成されたものです。イベントタイプは{{event("identityresult")}}です。

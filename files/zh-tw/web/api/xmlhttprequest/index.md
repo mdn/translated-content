@@ -110,7 +110,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 參見
 

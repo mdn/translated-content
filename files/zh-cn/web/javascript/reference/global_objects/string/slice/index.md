@@ -2,6 +2,7 @@
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 方法提取某个字符串的一部分，并返回一个新的字符串，且不会改动原字符串。

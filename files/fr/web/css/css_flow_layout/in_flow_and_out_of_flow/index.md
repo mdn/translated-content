@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/Dans_le_flux_ou_en_dehors
 ---
+
 {{CSSRef}}
 
 Dans [le précédent guide](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal), nous avons vu le fonctionnement de la disposition en ligne et en bloc dans le flux normal. Tous les éléments qui sont « dans » le flux seront disposés grâce à cette méthode.

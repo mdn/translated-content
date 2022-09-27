@@ -2,6 +2,7 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef}}
 
 ## 摘要
@@ -124,7 +125,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 ## 浏览器兼容
 
-{{Compat("api.Window.getComputedStyle")}}
+{{Compat}}
 
 ## 规范
 

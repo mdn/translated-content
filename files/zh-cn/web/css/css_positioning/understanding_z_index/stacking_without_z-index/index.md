@@ -3,6 +3,7 @@ title: Stacking without z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 ---
+
 « [CSS](/zh-CN/CSS) « [理解 CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 不含 z-index 的堆叠

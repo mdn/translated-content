@@ -2,6 +2,7 @@
 title: Spécificité
 slug: Web/CSS/Specificity
 ---
+
 {{CSSRef}}
 
 La **spécificité** est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. La spécificité est basée sur les règles, ciblant un élément, composées par différents types de [sélecteurs CSS](/fr/docs/Web/CSS/Reference#sélecteurs).

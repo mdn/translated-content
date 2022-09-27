@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-block-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`margin-block-end`** définit la marge logique appliquée à la fin des éléments de bloc, selon le mode d'écriture, la directionnalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.

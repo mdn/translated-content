@@ -18,17 +18,17 @@ Este guia assume que você tem os seguintes conhecimentos básicos:
 
 - Um entendimento geral da internet e da _World Wide Web_ ({{Glossary("WWW")}}).
 - Um bom conhecimento de _HyperText Markup Language_ ({{Glossary("HTML")}}).
-- Alguma experiência em programação. Se você é novo em programação, veja alguns tutorias na página inicial sobre [JavaScript](/pt-BR/docs/Web/JavaScript "/en-US/docs/").
+- Alguma experiência em programação. Se você é novo em programação, veja alguns tutorias na página inicial sobre [JavaScript](/pt-BR/docs/Web/JavaScript).
 
 ## Onde encontrar informações sobre JavaScript
 
 A documentação de JavaScript na MDN inclui o seguinte:
 
 - [Aprendendo sobre a internet](/en-US/Learn) fornece informações aos iniciantes e introduz os conceitos básicos de programação e da internet.
-- [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide "en/Core_JavaScript_1.5_Guide") (este guia) dá uma visão geral sobre a linguagem de programação JavaScript e seus objetos.
-- [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference "en/JavaScript/Reference") provê um material de referência detalhado da linguagem JavaScript.
+- [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide) (este guia) dá uma visão geral sobre a linguagem de programação JavaScript e seus objetos.
+- [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) provê um material de referência detalhado da linguagem JavaScript.
 
-Se você é novo com JavaScript, comece com os artigos na [área de aprendizado](/en-US/Learn) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide "en/Core_JavaScript_1.5_Guide"). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference "en/JavaScript/Reference") para ter mais detalhes sobre objetos e declarações.
+Se você é novo com JavaScript, comece com os artigos na [área de aprendizado](/en-US/Learn) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para ter mais detalhes sobre objetos e declarações.
 
 ## O que é JavaScript?
 
@@ -58,7 +58,7 @@ Em contraste, JavaScript descende em espírito de uma linhagem de linguagens men
 | Não pode escrever automaticamente no disco rigído.                                                                                                                                 | Pode escrever automaticamente no disco rigído.                                                                                                                                                              |
 | Linguagem não compilada                                                                                                                                                            | Linguagem compilada                                                                                                                                                                                         |
 
-Para mais informações sobre as diferenças entre JavaScript e Java, veja a seção [Detalhes do modelo de objetos](/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto "JavaScript/Guide/Details of the Object Model").
+Para mais informações sobre as diferenças entre JavaScript e Java, veja a seção [Detalhes do modelo de objetos](/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto).
 
 ## JavaScript e a especificação ECMAScript
 

@@ -36,4 +36,4 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 ### Comentarios
 
-[em](es/HTML/Elemento/em) tiene un hermano mayor: [strong](es/HTML/Elemento/strong). [em](es/HTML/Elemento/em) sirve para dar énfasis y [strong](es/HTML/Elemento/strong) para dar mucho énfasis
+[em](/es/HTML/Elemento/em) tiene un hermano mayor: [strong](/es/HTML/Elemento/strong). [em](/es/HTML/Elemento/em) sirve para dar énfasis y [strong](/es/HTML/Elemento/strong) para dar mucho énfasis

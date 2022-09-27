@@ -2,6 +2,7 @@
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.length`** プロパティは、関数に渡された引数の数が入ります。

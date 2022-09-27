@@ -2,6 +2,7 @@
 title: style
 slug: Web/API/CSSStyleRule/style
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -37,4 +38,4 @@ declaration block 是样式规则中花括号内的部分（选择器就在花�
 
 ### 浏览器兼容性
 
-{{Compat("api.CSSStyleRule.style")}}
+{{Compat}}

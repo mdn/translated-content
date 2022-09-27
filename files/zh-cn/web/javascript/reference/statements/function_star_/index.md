@@ -2,6 +2,7 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 这种声明方式 (`function`关键字后跟一个星号）会定义一个**生成器函数** (generator function)，它返回一个 {{jsxref("Global_Objects/Generator","Generator")}} 对象。

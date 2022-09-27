@@ -2,6 +2,7 @@
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`audioTracks`** は {{domxref("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、メディア要素の音声トラックを表すすべての {{domxref("AudioTrack")}} オブジェクトを列挙した {{domxref("AudioTrackList")}} オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
+
 {{JSRef}}
 
 **`return()`** メソッドは、指定された値を返してジェネレーターを終了します。

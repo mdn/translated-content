@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Methods/POST
 original_slug: Web/HTTP/Méthode/POST
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de la requête est indiqué par l'en-tête {{HTTPHeader("Content-Type")}}.

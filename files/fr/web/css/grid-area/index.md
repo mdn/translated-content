@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-area
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-area`** est une propriété raccourcie pour {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} et {{cssxref("grid-column-end")}} qui permet de définir la taille d'un objet de la grille et son emplacement via les bords de sa zone de grille.

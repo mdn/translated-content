@@ -2,6 +2,7 @@
 title: VRFrameData
 slug: Web/API/VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRFrameData`** は [WebVR API]("/ja/docs/Web/API/WebVR_API) のインターフェイスで、 VR シーンの 1 つのフレームを描画するのに必要となるすべての情報を表現します。 {{domxref("VRDisplay.getFrameData()")}} で構築します。

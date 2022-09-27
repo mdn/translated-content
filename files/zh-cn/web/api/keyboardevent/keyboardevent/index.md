@@ -2,6 +2,7 @@
 title: 键盘事件 KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent()`** 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。
@@ -41,7 +42,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.KeyboardEvent")}}
+{{Compat}}
 
 ## 参考
 

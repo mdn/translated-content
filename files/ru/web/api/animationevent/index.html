@@ -20,11 +20,11 @@ translation_of: Web/API/AnimationEvent
  <dd>Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события   "animationstart" , elapsedTime равно  <code>0.0 если не было заданно отрицательное значение для </code>{{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с  elapsedTime содержащим <code>(-1 * </code><em>delay</em><code>)</code>.</dd>
  <dt>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</dt>
  <dd>Является  {{domxref("DOMString")}}, начинающийся с '::', содержащий имя <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">псевдо-элемента </a> ,на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '. </dd>
- <dt>
- <h2 id="Конструктор">Конструктор</h2>
+</dl>
 
- <p> </p>
- </dt>
+<h2 id="Конструктор">Конструктор</h2>
+
+<dl>
  <dt>{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}</dt>
  <dd>Создаёт событие AnimationEvent с передачей параметров.</dd>
 </dl>
@@ -36,12 +36,10 @@ translation_of: Web/API/AnimationEvent
 <dl>
  <dt>{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
  <dd>Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.</dd>
- <dt>
- <h2 id="Спецификация">Спецификация</h2>
+</dl>
 
- <p> </p>
- </dt>
- <dt>
+<h2 id="Спецификация">Спецификация</h2>
+
  <table>
   <thead>
    <tr>
@@ -60,8 +58,6 @@ translation_of: Web/API/AnimationEvent
    </tr>
   </tbody>
  </table>
- </dt>
-</dl>
 
 <h2 id="Поддержка_браузерами"> Поддержка браузерами</h2>
 

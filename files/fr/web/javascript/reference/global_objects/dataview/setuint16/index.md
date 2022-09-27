@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint16
 ---
+
 {{JSRef}}
 
 La méthode **`setUint16()`** permet d'enregister un entier non-signé sur 16 bits (type _unsigned short_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

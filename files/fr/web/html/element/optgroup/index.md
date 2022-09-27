@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/optgroup
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer un groupe d'options parmi lesquelles on peut choisir dans un élément {{HTMLElement("select")}}.

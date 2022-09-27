@@ -4,6 +4,7 @@ slug: Web/API/GainNode
 translation_of: Web/API/GainNode
 browser-compat: api.GainNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`GainNode`** représente une variation de volume. Il s'agit d'un objet [`AudioNode`](/fr/docs/Web/API/AudioNode), c'est un module de traitement audio, qui provoque un gain donné à appliquer à des données d'entrée avant sa propagation à la sortie. Un `GainNode` a toujours exactement une entrée et une sortie, avec la même quantité de canaux.

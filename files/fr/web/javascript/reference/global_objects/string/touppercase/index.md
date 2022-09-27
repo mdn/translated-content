@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toUpperCase
 ---
+
 {{JSRef}}
 
 La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.

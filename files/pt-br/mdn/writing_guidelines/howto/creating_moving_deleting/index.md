@@ -74,9 +74,9 @@ Como na maioria das wikis, na MDN é possível criar links para uma página que 
 
 Para criar um link para uma "página inexistente":
 
-1.  Certifique-se que você está logado na MDN. (Se você não estiver, vai receber um erro 404).
-2.  Clique no link "página inexistente". O [MDN Editor UI](/pt-BR/docs/MDN/Contribute/Editor) abrirá, pronto para você criar a página inexistente.
-3.  Escreva o conteúdo da página e salve-a.
+1. Certifique-se que você está logado na MDN. (Se você não estiver, vai receber um erro 404).
+2. Clique no link "página inexistente". O [MDN Editor UI](/pt-BR/docs/MDN/Contribute/Editor) abrirá, pronto para você criar a página inexistente.
+3. Escreva o conteúdo da página e salve-a.
 
 ### Nova página sem link
 
@@ -92,28 +92,28 @@ O MDN cria uma nova página com o título "FooBar" e abre o editor para você in
 
 Para criar uma subpágina que você quer que seja filha de uma página existente:
 
-1.  Na página "pai", clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Nova subpágina**.
-2.  Digite um título para o documento no campo **Título**.
-3.  Mude o **Slug** se necessário (por exemplo, se o título for muito longo e você quiser um título menor). Esse campo é gerado automaticamente pelo editor, substituindo underlines por espaços no título. Nesse caso, você pode mudar apenas a última parte da URL do documento.
+1. Na página "pai", clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Nova subpágina**.
+2. Digite um título para o documento no campo **Título**.
+3. Mude o **Slug** se necessário (por exemplo, se o título for muito longo e você quiser um título menor). Esse campo é gerado automaticamente pelo editor, substituindo underlines por espaços no título. Nesse caso, você pode mudar apenas a última parte da URL do documento.
 
 ### Clone de uma página existente
 
 Se houver uma página existente cujo formato você quer usar numa página nova, você pode clonar essa página e mudar seu conteúdo
 
-1.  Na página original, clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Clonar essa página**. O editor vai abrir para que você mude seu conteúdo.
-2.  Mude o **Título** da página conforme apropriado. O campo **Slug** é atualizado automaticamente quando você muda o campo **Título**.
-3.  Se necessário, mude o caminho do campo **Slug** para colocar o documento em uma parte diferente da hierarquia dele.
-4.  No campo **TOC**, selecione os níveis de cabeçalho que você quer que sejam automaticamente exibidos na tabela de conteúdo da página, ou "Sem tabela de conteúdos" se a página não precisar de uma.
-5.  Escreva o conteúdo da página e salve suas alterações. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
+1. Na página original, clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Clonar essa página**. O editor vai abrir para que você mude seu conteúdo.
+2. Mude o **Título** da página conforme apropriado. O campo **Slug** é atualizado automaticamente quando você muda o campo **Título**.
+3. Se necessário, mude o caminho do campo **Slug** para colocar o documento em uma parte diferente da hierarquia dele.
+4. No campo **TOC**, selecione os níveis de cabeçalho que você quer que sejam automaticamente exibidos na tabela de conteúdo da página, ou "Sem tabela de conteúdos" se a página não precisar de uma.
+5. Escreva o conteúdo da página e salve suas alterações. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
 
 ### Link para uma página existente
 
 Esse método é um pouco híbrido. Você pode criar um link em outra página, e clicar no link que você inseriu, para criar a nova página.
 
-1.  Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.
-2.  Selecione o nome e clique no **ícone de link (![](https://developer.mozilla.org/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
-3.  "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
-4.  Clique em OK para criar e inserir o link.
+1. Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.
+2. Selecione o nome e clique no **ícone de link (![](https://developer.mozilla.org/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
+3. "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
+4. Clique em OK para criar e inserir o link.
 
 Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o [guia para nomear páginas](/pt-BR/docs/MDN/Contribute/Content/Style_guide).
 

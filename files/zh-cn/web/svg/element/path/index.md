@@ -2,6 +2,7 @@
 title: path
 slug: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 **[起步](/zh-CN/docs/Web/SVG/Tutorial/Paths)**
@@ -52,7 +53,7 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## 参见
 

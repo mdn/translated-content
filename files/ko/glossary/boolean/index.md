@@ -1,14 +1,6 @@
 ---
 title: 불린
 slug: Glossary/Boolean
-tags:
-  - 데이터 타입
-  - 부울
-  - 불린
-  - 자료 유형
-  - 자바스크립트
-  - 프로그래밍 언어
-translation_of: Glossary/Boolean
 original_slug: Glossary/불린
 ---
 컴퓨터 과학에서, **불린(boolean)**은 논리적인 데이터 유형이다. 불린은 `참(true)` 혹은 `거짓(false)` 값만을 가질 수 있다. 자바스크립트에서 불린 조건은 어떤 코드 부문이 실행되어야 할 지(예를 들어 [if 절](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 안에서) 또는 어떤 코드 부문을 반복해야 할지(예를 들어 [for 문](/ko/docs/Web/JavaScript/Reference/Statements/for) 안에서) 결정하는 데 쓰인다.

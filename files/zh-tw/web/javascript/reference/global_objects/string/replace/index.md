@@ -206,7 +206,7 @@ This snippet generates an array of 3 objects in the desired format without using
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.String.replace")}}
+{{Compat}}
 
 ## Firefox-specific notes
 

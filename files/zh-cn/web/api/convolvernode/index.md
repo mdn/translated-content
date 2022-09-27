@@ -2,6 +2,7 @@
 title: ConvolverNode
 slug: Web/API/ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `ConvolverNode` 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 `ConvolverNode` 都会有一个输入值和输出值。
@@ -86,7 +87,7 @@ reverb.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.ConvolverNode")}}
+{{Compat}}
 
 ## 相关链接
 

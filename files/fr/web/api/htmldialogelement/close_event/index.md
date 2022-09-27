@@ -11,6 +11,7 @@ tags:
   - fermeture
 translation_of: Web/API/HTMLDialogElement/close_event
 ---
+
 {{ APIRef() }}
 
 L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.

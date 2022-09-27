@@ -3,6 +3,7 @@ title: Constructeur Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.NumberFormat()`** permet de créer des objets [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) qui formatent des valeurs numériques en texte selon une locale et des options.

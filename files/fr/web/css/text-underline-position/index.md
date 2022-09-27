@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-underline-position
 ---
+
 {{CSSRef}}
 
 La propriété **`text-underline-position`** définit la position du soulignement utilisé lorsque la propriété {{cssxref("text-decoration")}} prend la valeur `underline`.

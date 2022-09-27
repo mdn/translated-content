@@ -135,7 +135,7 @@ function draw() {
 
 ## Browser compatibility
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## See also
 

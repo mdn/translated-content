@@ -2,6 +2,7 @@
 title: File drag and drop
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档介绍了 web 应用如何接受从底层平台的文件管理器拖动一个或多个文件到网页的操作。

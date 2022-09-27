@@ -2,6 +2,7 @@
 title: HTMLTableElement.rules
 slug: Web/API/HTMLTableElement/rules
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.rules`** プロパティは、表の中でセルのどの境界を描画するかを示します。

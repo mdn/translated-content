@@ -2,6 +2,7 @@
 title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}}的只读属性 **`autoIncrement`** 接口返回当前 objectStore 的自增标记值（true 或 false）。

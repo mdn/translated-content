@@ -2,6 +2,7 @@
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
+
 {{JSRef}}
 
 ## 概述

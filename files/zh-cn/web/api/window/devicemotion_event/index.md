@@ -2,6 +2,7 @@
 title: Window.ondevicemotion
 slug: Web/API/Window/devicemotion_event
 ---
+
 {{ ApiRef() }}
 
 ## 摘要

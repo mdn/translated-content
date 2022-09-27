@@ -2,6 +2,7 @@
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
+
 {{JSRef}}
 
 **`handler.apply()`** メソッドは関数呼び出しに対するトラップです。

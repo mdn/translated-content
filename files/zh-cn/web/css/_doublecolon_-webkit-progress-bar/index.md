@@ -2,6 +2,7 @@
 title: '::-webkit-progress-bar'
 slug: Web/CSS/::-webkit-progress-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## 概述
@@ -44,7 +45,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-bar")}}
+{{Compat}}
 
 ## 参见
 

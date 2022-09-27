@@ -2,6 +2,7 @@
 title: <table>
 slug: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 **HTML**的 **`table` **元素表示表格数据 — 即通过二维数据表表示的信息。
@@ -337,7 +338,7 @@ If the table cannot be broken apart, use a combination of the {{htmlattrxref("id
 
 ## Browser compatibility
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 相关
 

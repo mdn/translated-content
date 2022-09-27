@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.

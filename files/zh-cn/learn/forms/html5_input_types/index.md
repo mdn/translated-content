@@ -2,6 +2,7 @@
 title: HTML5 的输入（input）类型
 slug: Learn/Forms/HTML5_input_types
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 在[前一篇文章](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
@@ -185,7 +186,7 @@ price.addEventListener('input', () => {
 
 ## 日期和时间选择器
 
-收集日期和时间值历来是 web 开发者的噩梦。为了获得良好的用户体验，提供一个日历选择用户界面是很重要的，使用户能够选择日期，而不需要切换到本地日历应用程序的上下文，或者可能以难以解析的不同格式输入。上个千年（1000~1999年）的最后一分钟可以用以下不同的方式表示，例如：1999/12/31，23:59 或 12/31/99T11:59PM。
+收集日期和时间值历来是 web 开发者的噩梦。为了获得良好的用户体验，提供一个日历选择用户界面是很重要的，使用户能够选择日期，而不需要切换到本地日历应用程序的上下文，或者可能以难以解析的不同格式输入。上个千年（1000~1999 年）的最后一分钟可以用以下不同的方式表示，例如：1999/12/31，23:59 或 12/31/99T11:59PM。
 
 HTML 日期控件可用于处理这种特定的数据，提供日历控件并使数据统一。
 

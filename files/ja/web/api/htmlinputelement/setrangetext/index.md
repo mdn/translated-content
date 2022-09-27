@@ -2,6 +2,7 @@
 title: HTMLInputElement.setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.setRangeText()`** メソッドは、 {{HTMLElement("input")}} や {{HTMLElement("textarea")}} 要素の中のテキストの範囲を新しい文字列に置き換えます。

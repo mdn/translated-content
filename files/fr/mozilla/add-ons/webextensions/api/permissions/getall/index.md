@@ -11,6 +11,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
+
 {{AddonSidebar()}}
 
 Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.

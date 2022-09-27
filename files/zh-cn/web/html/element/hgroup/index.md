@@ -2,6 +2,7 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 ---
+
 {{HTMLRef}}**HTML `<hgroup>` element**代表文档章节所属的多级别的目录，它将多个\<h1>至\<h6>的子元素组装到一起。{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
 <table class="properties">
@@ -95,7 +96,7 @@ That is, the rendered outline might show the primary title, _HTML_, followed by 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 参阅
 

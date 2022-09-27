@@ -2,6 +2,7 @@
 title: HTMLImageElement.isMap
 slug: Web/API/HTMLImageElement/isMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`isMap`** プロパティは、論理値で、画像がサーバサイドイメージマップで使用されることを示します。

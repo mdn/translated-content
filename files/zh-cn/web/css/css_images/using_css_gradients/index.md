@@ -3,6 +3,7 @@ title: 使用 CSS 渐变
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/Guide/CSS/Using_CSS_gradients
 ---
+
 {{CSSRef}}
 
 **CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。

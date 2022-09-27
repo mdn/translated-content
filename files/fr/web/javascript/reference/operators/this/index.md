@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/this
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
+
 {{jsSidebar("Operators")}}
 
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.

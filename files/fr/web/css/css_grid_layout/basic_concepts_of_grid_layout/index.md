@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("", "Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}

@@ -3,6 +3,7 @@ title: align-self
 slug: Web/CSS/align-self
 translation_of: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-self`** permet d'aligner les objets flexibles d'une ligne flexible ou d'une grille en surchargeant la valeur donnée par {{cssxref("align-items")}}.

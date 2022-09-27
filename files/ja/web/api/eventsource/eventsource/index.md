@@ -2,6 +2,7 @@
 title: EventSource()
 slug: Web/API/EventSource/EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 **`EventSource()`** コンストラクタは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。

@@ -17,7 +17,7 @@ var formData = new FormData(form)
 
 ### Parâmetros
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : Um elemento HTML {{HTMLElement("form")}} — quando especifico, o objeto {{domxref("FormData")}} será preenchido com as chaves/valores atuais do formulário usando a propriedade _name_ de cada elemento para as chaves e seu valor enviado para os valores. Também condificará conteúdo de entrada do arquivo.
 
 ## Exemplo
@@ -74,6 +74,6 @@ formData = new FormData(myForm);
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

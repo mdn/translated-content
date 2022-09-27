@@ -2,6 +2,7 @@
 title: 框架的主要特性
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
@@ -123,7 +124,7 @@ function add(a: number, b: number) {
 
 如前一章所述，大多数框架都有某种组件模型。React 组件可以使用 JSX 编写，Ember 组件可以使用 Handlebars 编写，Angular 和 Vue 组件可以使用模板语法轻松地扩展 HTML。
 
-不管框架的作者们对于如何编写组件有多么多么不同的看法, 每个框架的组件都提供了一种方法来描述组件可能需要的外部属性、组件的内部状态以及用户可以在组件上可以触发的事件。
+不管框架的作者们对于如何编写组件有多么多么不同的看法，每个框架的组件都提供了一种方法来描述组件可能需要的外部属性、组件的内部状态以及用户可以在组件上可以触发的事件。
 
 本节其余部分的代码片段将使用 React 作为示例，并使用 JSX 编写其组件。
 

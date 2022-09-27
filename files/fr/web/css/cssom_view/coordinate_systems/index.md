@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSSOM_View/Coordinate_systems
 original_slug: Web/CSS/CSSOM_View/Systèmes_de_coordonnées
 ---
+
 {{cssref}}
 
 Lorsqu'on définit l'emplacement d'un pixel dans un contexte graphique, on indique les coordonnées de ce point par rapport à un point fixe du contexte qu'on appelle l'origine. La position du pixel est donc indiquée comme le décalage de ce pixel par rapport à l'origine, sur les deux axes du plan.

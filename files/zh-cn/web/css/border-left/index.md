@@ -2,6 +2,7 @@
 title: border-left
 slug: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 CSS 属性 **border-left** 是属性{{ Cssxref("border-left-color") }}, {{ Cssxref("border-left-style") }}, 和{{ Cssxref("border-left-width") }}的三者的缩写。这些属性都是在描述一个元素的左边的边框{{cssxref("border")}}。
@@ -76,4 +77,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

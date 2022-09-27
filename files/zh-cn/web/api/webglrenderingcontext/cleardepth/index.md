@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.clearDepth()`** 方法用于设置深度缓冲区的深度清除值。
@@ -42,7 +43,7 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.clearDepth")}}
+{{Compat}}
 
 ## 另见
 

@@ -19,7 +19,7 @@ speed = coordinates.speed
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.speed")}}
+{{Compat}}
 
 ## 請參考
 
