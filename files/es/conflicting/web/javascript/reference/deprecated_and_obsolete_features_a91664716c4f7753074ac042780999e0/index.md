@@ -1,13 +1,14 @@
 ---
 title: WeakMap.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
+slug: >-
+  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0
 tags:
   - JavaScript
   - Obsolete
   - Protocols
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/clear
+original_slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 {{JSRef}} {{obsolete_header}}
 
