@@ -50,10 +50,10 @@ place-content: unset;
   - : 所有的子元素堆叠在父元素上合适的轴线上的终点对齐
 - `flex-start`
   - : 所有的子元素堆叠在父元素的主轴或交叉轴上起点对齐，主要取决于 flex-direction 的设置。
-    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-start将被视为start`
+    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-start 将被视为 start`
 - `flex-end`
   - : 所有的子元素堆叠在父元素的主轴或交叉轴上终点对齐，主要取决于 flex-direction 的设置。
-    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-end将被视为end`
+    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-end 将被视为 end`
 - `center`
   - : 所有的子元素堆叠在父元素的中间对齐
 - `left`

@@ -41,7 +41,7 @@ slug: Web/CSS/basic-shape
     circle( [<shape-radius>]? [at <position>]? )
     ```
 
-    `<shape-radius>` 参数代表了 _r，_ 即圆形的半径， 不接受负数作为该参数的值。一个以百分比表示的值将以公式 `sqrt(width^2+height^2)/sqrt(2)`计算，其中 width 与 height 为相关盒模型的宽与高。
+    `<shape-radius>` 参数代表了 _r，_ 即圆形的半径，不接受负数作为该参数的值。一个以百分比表示的值将以公式 `sqrt(width^2+height^2)/sqrt(2)`计算，其中 width 与 height 为相关盒模型的宽与高。
 
     {{cssxref("&lt;position&gt;")}} 参数定义了圆心的位置。省缺值为盒模型的中心。
 
@@ -65,9 +65,9 @@ slug: Web/CSS/basic-shape
     polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
     ```
 
-    `<fill-rule>` 代表了填充规则（ [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) ），即，如何填充该多边形。 可选值为 nonzero 和 evenodd。该参数的省缺值为 nonzero。
+    `<fill-rule>` 代表了填充规则（ [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) ），即，如何填充该多边形。可选值为 nonzero 和 evenodd。该参数的省缺值为 nonzero。
 
-    每一对在列表中的参数都代表了多边形顶点的坐标， _xi_ 与 _yi_ ，i 代表顶点的编号，即，第 i 个顶点。
+    每一对在列表中的参数都代表了多边形顶点的坐标，_xi_ 与 _yi_，i 代表顶点的编号，即，第 i 个顶点。
 
 - {{cssxref("path","path()")}}
 
@@ -104,7 +104,7 @@ slug: Web/CSS/basic-shape
 
 ## 基础图形的插值
 
-`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)、 或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
+`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)、或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
 
 - 一对的图形需要使用一样的盒模型。
 - 如果一对图形是同一种类型，例如， `ellipse()` 或 `circle()`，并且没有任何半径使用了 `closest-side` 或 `farthest-side` 关键值，那么这些值将会成为相应的图形函数的插值。
