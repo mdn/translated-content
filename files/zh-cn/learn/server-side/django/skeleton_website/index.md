@@ -145,7 +145,7 @@ INSTALLED_APPS = [
 
 新的这行详细说明了应用配置文件在 (`CatalogConfig`) **/locallibrary/catalog/apps.py** 里，当你创建应用时就完成了这个过程。
 
-> **备注：** 注意到`INSTALLED_APPS 已经有许多其他的应用了` (还有 `MIDDLEWARE`, 在 settings 的下面)。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能 (包括会话，认证系统等)。
+> **备注：** 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
 
 ## 配置数据库
 

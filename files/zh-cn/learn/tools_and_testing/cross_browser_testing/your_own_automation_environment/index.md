@@ -378,7 +378,7 @@ driver.sleep(2000).then(function() {
 
 WebDriver 等待 2 秒然后填充表单的文本框。接下来我们使用`getAttribute()`获取它的`value`属性值，并对它进行测试（如是否为空），最后将测试结果打印出来。
 
-> **备注：** 还有一个方法叫 [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), 其中定义了使用`wait() 的常见条件`.
+> **备注：** 还有一个方法叫 [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)，其中定义了使用`wait()` 的常见条件。
 
 ### 使用后关闭驱动
 

@@ -59,7 +59,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 ### 步骤 2: 激活你的热点
 
-在这一步中，将所有代码放置 {{htmlelement('map')}} 标签中。`<map>` 只需要一个属性，设置{{htmlattrxref("name","map")}} 和上面`usemap 属性一样的 map 值：`
+在这一步中，将所有代码放置 {{htmlelement('map')}} 标签中。`<map>` 只需要一个属性，设置 {{htmlattrxref("name","map")}} 和上面 `usemap` 属性一样的 map 值：
 
 ```html
 <map name="example-map-1">

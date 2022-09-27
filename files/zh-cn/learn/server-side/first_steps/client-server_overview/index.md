@@ -104,7 +104,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 针对这个请求的回应的第一部分内容展示如下。The header 包含了如下信息：
 
 - 第一行包括了回应状态码 200 OK，这告诉我们请求是成功的。
-- 我们可以看到回应是文本`/html 格式的`(`Content-Type`).
+- 我们可以看到回应是文本 `html` 格式的（`Content-Type`）。
 - 我们也可以看到它使用的是 UTF-8 字符集 (`Content-Type: text/html; charset=utf-8`).
 - The head 也告诉我们它有多大 (`Content-Length: 41823`).
 

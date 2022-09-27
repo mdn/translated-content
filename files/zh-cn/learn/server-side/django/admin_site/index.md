@@ -273,7 +273,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 你可以使用 [fieldsets](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets) 属性添加“部分”以在详细信息表单中对相关的模型信息进行分组。
 
-在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name，imprint 和 id`），并且当将可用（`status，due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分。
+在 `BookInstance`模型中，我们有相关的书是什么（即信息 `name`、`imprint` 和 `id`），并且当将可用（`status`、`due_back`）。我们可以通过将粗体文本添加到我们的`BookInstanceAdmin`类中来将其添加到不同的部分。
 
 ```python
 @admin.register(BookInstance)

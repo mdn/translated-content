@@ -193,7 +193,7 @@ btn.addEventListener('click', bgChange);
 
 > **备注：** 您可以在[Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)上找到这个示例的完整源代码 (也可以 [在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html))。
 
-`在 addEventListener()` 函数中，我们具体化了两个参数——我们想要将处理器应用上去的事件名称，和包含我们用来回应事件的函数的代码。注意将这些代码全部放到一个匿名函数中是可行的：
+在 `addEventListener()` 函数中，我们具体化了两个参数——我们想要将处理器应用上去的事件名称，和包含我们用来回应事件的函数的代码。注意将这些代码全部放到一个匿名函数中是可行的：
 
 ```js
 btn.addEventListener('click', function() {
@@ -267,7 +267,7 @@ btn.addEventListener('click', bgChange);
 
 > **备注：** 您可以在 Github 上查看这个示例的 [完整代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看 [实时演示](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
 
-在这里，您可以看到我们在函数中包括一个事件对象`e`，并在函数中设置背景颜色样式在`e.target 上` - 它指的是按钮本身。事件对象 `e` 的`target`属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
+在这里，您可以看到我们在函数中包括一个事件对象`e`，并在函数中设置背景颜色样式在 `e.target` 上——它指的是按钮本身。事件对象 `e` 的 `target` 属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
 
 > **备注：** 您可以使用任何您喜欢的名称作为事件对象 - 您只需要选择一个名称，然后可以在事件处理函数中引用它。开发人员最常使用 e / evt / event，因为它们很简单易记。坚持标准总是很好。
 

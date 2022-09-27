@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 
 ## if ... else 语句
 
-`让我们看看到目前为止你将会在 JavaScript 中用到的最常见的条件语句类型 — if ... else 语句。`
+让我们看看到目前为止你将会在 JavaScript 中用到的最常见的条件语句类型 — `if ... else` 语句。
 
 ### 基本的的 if…else 语法
 

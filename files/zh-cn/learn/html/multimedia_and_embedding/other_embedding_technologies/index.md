@@ -188,8 +188,7 @@ Google Maps 或 Youtube，当你嵌入内容时，`<iframe>`将通过 HTTPS 提�
 文档的安全性。在`<iframe>`的安全性方面，你可以*[将服务器配置为发送适当的`X-Frame-Options`
 标题。](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)*这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击](https://en.wikipedia.org/wiki/clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
 
-> **备注：** 你可以阅读 Frederik Braun 的帖子 [在
-> X-Frame-Options 安全性头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) 来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
+> **备注：** 你可以阅读 Frederik Braun 的帖子[在 X-Frame-Options 安全性头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
 
 ## \<embed> 和 \<object> 元素
 
@@ -248,12 +247,10 @@ PDF 是纸与数据之间重要的阶梯，但它们[在无障碍上有些问题
 - **扩大你对大家的影响力**。每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。
 - **从 Flash 和其他插件附带的[额外的无障碍问题](https://webaim.org/techniques/flash/)中摆脱**。
 - **避免额外的安全隐患**。即使经过无数次补丁[，](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) Adobe Flash 也是[非常不安全的](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53)。2015
-  年，Facebook 的首席安全官 Alex Stamos 甚至 [要求 Adobe 停止
-  Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
+  年，Facebook 的首席安全官 Alex Stamos 甚至[要求 Adobe 停止  Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
 那你该怎么办？如果你需要交互性，HTML 和[JavaScript](/zh-CN/docs/Glossary/JavaScript)可以轻松地为你完成工作，而不需要 Java 小程序或过时的 ActiveX /
-BHO 技术。你可以使用 [HTML5
-视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)来满足媒体需求，矢量图形[SVG](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)，以及复杂图像和动画[画布](/zh-CN/docs/Web/API/Canvas_API/Tutorial)。[彼得·埃尔斯特（Peter Elst）几年前已经提到](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp)，对于工作 Adobe Flash
+BHO 技术。你可以使用 [HTML5 视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)来满足媒体需求，矢量图形[SVG](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)，以及复杂图像和动画[画布](/zh-CN/docs/Web/API/Canvas_API/Tutorial)。[彼得·埃尔斯特（Peter Elst）几年前已经提到](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp)，对于工作 Adobe Flash
 极少是正确的工具，除了专门的游戏和商业应用。对于 ActiveX，即使微软的[Edge](/zh-CN/docs/Glossary/Microsoft_Edge)浏览器也不再支持。
 
 ## 总结

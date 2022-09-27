@@ -164,7 +164,7 @@ closeBtn.onclick = function() {
     btn.onclick = displayMessage;
     ```
 
-    `跟关闭按钮类似 closeBtn.onclick...` , 当按钮被点击的时候我们运行了点代码。但不同的是，之前等号的右边是一个匿名函数，看起来是这样的：`btn.onclick = function(){...}`, 我们现在是直接使用函数名称来调用。
+    跟关闭按钮类似 `closeBtn.onclick...` , 当按钮被点击的时候我们运行了点代码。但不同的是，之前等号的右边是一个匿名函数，看起来是这样的：`btn.onclick = function(){...}`, 我们现在是直接使用函数名称来调用。
 
 6. 保存好以后刷新页面 — 现在你应该能看到当你点击按钮的时候提示框弹出来。
 
