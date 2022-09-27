@@ -5,9 +5,9 @@ slug: Web/API/DataTransfer/types
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.types`** 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。
+**`DataTransfer.types`** 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。格式顺序与拖动操作中包含的数据顺序相同。
 
-这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。 一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
+这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
 
 ## 语法
 
