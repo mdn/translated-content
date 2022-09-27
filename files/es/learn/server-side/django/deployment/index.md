@@ -274,7 +274,11 @@ El paso final es copiar en él tu aplicación y a continuación añadir los arch
 
 Una vez completada esta operación, deberías poder regresar a la página de Github donde creaste tu repositorio, refrescar la página, y comprobar que tu toda tu aplicación ha sido ya cargada. Puedes continuar actualizando tu repositorio según vayan cambiando los archivos, usando este ciclo add/commit/push.
 
-> **Nota:** Este es un buen momento para hacer una copia de seguridad de tu proyecto "simple" — algunos de los cambios que vamos a ir haciendo en las siguientes secciones podrían ser útiles para el despliegue en cualquier plataforma (o para el desarrollo), pero otros no.La _mejor_ manera de hacer esto es usar _git_ para gestionar tus revisiones. Con _git_ puedes no solo volver a una versión anterior en particular, sino que puedes mantener ésta en una "rama" separada de tus cambios en producción, y seleccionar determinados cambios a trasladar entre las ramas de producción y desarrollo. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) merece la pena el esfuerzo, pero queda fuera del alcance de este tema.La forma _más fácil_ de hacer ésto es simplemente copiar tus archivos en otra ubicación. Usa la manera que más se ajuste a tus conocimientos de git!
+> **Nota:** Este es un buen momento para hacer una copia de seguridad de tu proyecto "simple" — algunos de los cambios que vamos a ir haciendo en las siguientes secciones podrían ser útiles para el despliegue en cualquier plataforma (o para el desarrollo), pero otros no.
+> 
+> La _mejor_ manera de hacer esto es usar _git_ para gestionar tus revisiones. Con _git_ puedes no solo volver a una versión anterior en particular, sino que puedes mantener ésta en una "rama" separada de tus cambios en producción, y seleccionar determinados cambios a trasladar entre las ramas de producción y desarrollo. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) merece la pena el esfuerzo, pero queda fuera del alcance de este tema.
+>
+> La forma _más fácil_ de hacer ésto es simplemente copiar tus archivos en otra ubicación. Usa la manera que más se ajuste a tus conocimientos de git!
 
 ### Actualizar la app para Heroku
 
@@ -327,9 +331,9 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **Nota:** >Nosotros seguiremos utilizando SQLite durante el desarrollo porque la variable de entorno `DATABASE_URL` no será fijada en nuestra computadora de desarrollo.
->
-> El valor `conn_max_age=500` hace que la conexión sea persistente, lo que es más eficiente que recrear la conexión en cada ciclo de petición. No obstante, esto es opcional y puede ser eliminado si es necesario.
+> **Nota:** 
+> - Nosotros seguiremos utilizando SQLite durante el desarrollo porque la variable de entorno `DATABASE_URL` no será fijada en nuestra computadora de desarrollo.
+> - El valor `conn_max_age=500` hace que la conexión sea persistente, lo que es más eficiente que recrear la conexión en cada ciclo de petición. No obstante, esto es opcional y puede ser eliminado si es necesario.
 
 ##### psycopg2 (soporte a la base de datos Python Postgres)
 
@@ -383,7 +387,7 @@ Para más información, vea [Django and Static Assets](https://devcenter.heroku.
 
 Hay muchas formas de servir ficheros estáticos en producción (ya vimos los ajustes Django relevantes en las secciones previas). Heroku recomienda usar el proyecto [WhiteNoise](https://warehouse.python.org/project/whitenoise/) para servir objetos estáticos directamente desde Gunicorn en producción.
 
-> **Nota:**Heroku llama automáticamente a _collectstatic_ y prepara tus ficheros estáticos para ser usados por WhiteNoise después de que se cargue tu aplicación. Revisa la documentación [WhiteNoise](https://warehouse.python.org/project/whitenoise/), en la que se explica cómo funciona y por qué la implementación es un método para servir estos ficheros relativamente eficiente.
+> **Nota:** Heroku llama automáticamente a _collectstatic_ y prepara tus ficheros estáticos para ser usados por WhiteNoise después de que se cargue tu aplicación. Revisa la documentación [WhiteNoise](https://warehouse.python.org/project/whitenoise/), en la que se explica cómo funciona y por qué la implementación es un método para servir estos ficheros relativamente eficiente.
 
 Los pasos para instalar _WhiteNoise_ para usarlo dentro del proyecto son:
 

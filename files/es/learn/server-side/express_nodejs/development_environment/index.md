@@ -304,7 +304,10 @@ Para crear una aplicación _Express_ llamada "helloworld" con la configuración 
 express helloworld
 ```
 
-> **Nota:** También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones: `express --help`
+> **Nota:** También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones: 
+> ```
+> express --help
+> ```
 
 NPM creará la nueva aplicación Express en una subcarpeta de su ubicación actual, mostrando el progreso de la compilación en la consola. Al finalizar, la herramienta mostrará los comandos que necesita ingresar para instalar las dependencias de Node e iniciar la aplicación.
 

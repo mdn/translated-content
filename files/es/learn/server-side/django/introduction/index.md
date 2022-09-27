@@ -49,15 +49,21 @@ Django es un framework web de alto nivel que permite el desarrollo rápido de si
 Django te ayuda a escribir software que es:
 
 - Completo
-  - .
+  - : Django sigue la filosofía "Baterías incluidas" y provee casi todo lo que los desarrolladores quisieran que tenga "de fábrica". Porque todo lo que necesitas es parte de un único "producto", todo funciona a la perfección, sigue principios de diseño consistentes y tiene una amplia y [actualizada documentación](https://docs.djangoproject.com/en/1.10/).
 - Versátil
-  - Internamente, mientras ofrece opciones para casi cualquier funcionalidad que desees (distintos motores de base de datos , motores de plantillas, etc.), también puede ser extendido para usar otros componentes si es necesario.
+  - : Django puede ser (y ha sido) usado para construir casi cualquier tipo de sitio web — desde sistemas manejadores de contenidos y wikis, hasta redes sociales y sitios de noticias. Puede funcionar con cualquier framework en el lado del cliente, y puede devolver contenido en casi cualquier formato (incluyendo HTML, RSS feeds, JSON, XML, etc). ¡El sitio que estás leyendo actualmente está basado en Django!
+
+      Internamente, mientras ofrece opciones para casi cualquier funcionalidad que desees (distintos motores de base de datos , motores de plantillas, etc.), también puede ser extendido para usar otros componentes si es necesario.
 - Seguro
-  - para obtener más detalles sobre dichos ataques).
+  - : Django ayuda a los desarrolladores evitar varios errores comunes de seguridad al proveer un framework que ha sido diseñado para "hacer lo correcto" para proteger el sitio web automáticamente. Por ejemplo, Django, proporciona una manera segura de administrar cuentas de usuario y contraseñas, evitando así errores comunes como colocar informaciones de sesión en cookies donde es vulnerable (en lugar de eso las cookies solo contienen una clave y los datos se almacenan en la base de datos) o se almacenan directamente las contraseñas en un hash de contraseñas.  
+  
+      _Un hash de contraseña es un valor de longitud fija creado al enviar la contraseña a una [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Django puede validar si la contraseña ingresada es correcta enviándola a través de una función hash y comparando la salida con el valor hash almacenado. Sin embargo debido a la naturaleza "unidireccional" de la función, incluso si un valor hash almacenado se ve comprometido es difícil para un atacante resolver la contraseña original._  
+        
+      Django permite protección contra algunas vulnerabilidades de forma predeterminada, incluida la inyección SQL, scripts entre sitios, falsificación de solicitudes entre sitios y clickjacking (consulte [Seguridad de sitios web](/es/docs/Learn/Server-side/First_steps/Website_security) para obtener más detalles sobre dichos ataques).
 - Escalable
-  - ” (cada parte de la arquitectura es independiente de las otras, y por lo tanto puede ser reemplazado o cambiado si es necesario). Teniendo en cuenta una clara separación entre las diferentes partes significa que puede escalar para aumentar el tráfico al agregar hardware en cualquier nivel: servidores de cache, servidores de bases de datos o servidores de aplicación. Algunos de los sitios más concurridos han escalado a Django para satisfacer sus demandas (por ejemplo, Instagram y Disqus, por nombrar solo dos).
+  - : Django usa un componente basado en la arquitectura “[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)” (cada parte de la arquitectura es independiente de las otras, y por lo tanto puede ser reemplazado o cambiado si es necesario). Teniendo en cuenta una clara separación entre las diferentes partes significa que puede escalar para aumentar el tráfico al agregar hardware en cualquier nivel: servidores de cache, servidores de bases de datos o servidores de aplicación. Algunos de los sitios más concurridos han escalado a Django para satisfacer sus demandas (por ejemplo, Instagram y Disqus, por nombrar solo dos).
 - Mantenible
-  - ).
+  - : El código de Django está escrito usando principios y patrones de diseño para fomentar la creación de código mantenible y reutilizable. En particular, utiliza el principio No te repitas "Don't Repeat Yourself" (DRY) para que no exista una duplicación innecesaria, reduciendo la cantidad de código. Django también promueve la agrupación de la funcionalidad relacionada en "aplicaciones" reutilizables y en un nivel más bajo, agrupa código relacionado en módulos (siguiendo el patrón [Model View Controller (MVC)](/es/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)).
 - Portable
   - : Django está escrito en Python, el cual se ejecuta en muchas plataformas. Lo que significa que no está sujeto a ninguna plataforma en particular, y puede ejecutar sus aplicaciones en muchas distribuciones de Linux, Windows y Mac OS X. Además, Django cuenta con el respaldo de muchos proveedores de alojamiento web, y que a menudo proporcionan una infraestructura específica y documentación para el alojamiento de sitios de Django.
 
@@ -117,8 +123,8 @@ Un mapeador URL está normalmente almacenado en un fichero llamado **urls.py**. 
         url(r'^([0-9]+)/$', views.best),
     ]
 
-> **Nota:** Un poco de Python:\* El objeto `urlpatterns` es una lista de funciones `url()`. En Python, las listas se definen usando using corchetes. Los elementos se separan con comas y pueden tener una [coma colgante opcional](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Por ejemplo: `[item1, item2, item3,]`.
->
+> **Nota:** Un poco de Python:
+> - El objeto `urlpatterns` es una lista de funciones `url()`. En Python, las listas se definen usando using corchetes. Los elementos se separan con comas y pueden tener una [coma colgante opcional](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Por ejemplo: `[item1, item2, item3,]`.
 > - La extraña sintaxis de los patrones se conoce como _"expresión regular"_. ¡Hablaremos sobre ellas en un artículo posterior!.
 > - El segundo argumento de `url()` es otra función a la que se llamará cuando se encuentre un patrón que coincida. La notación `views.index` indica que la función se llama `index()` y se puede encontrar en un módulo llamado `views` (es decir, dentro del fichero llamado `views.py`).
 
@@ -139,8 +145,8 @@ def index(request):
     return HttpResponse('!Hola desde Django!')
 ```
 
-> **Nota:** Un poco de Python:\* [Módulos Python](https://docs.python.org/3/tutorial/modules.html) son "bibliotecas" de funciones, almacenadas en ficheros separados, que podríamos querer usar en nuestro código. Aquí importamos sólo el objeto `HttpResponse` desde el módulo `django.http` de manera que podamos usarlo en nuestra vista: `from django.http import HttpResponse`. Hay también otras formas de importar algunos o todos los objetos de un módulo.
->
+> **Nota:** Un poco de Python:
+> - [Módulos Python](https://docs.python.org/3/tutorial/modules.html) son "bibliotecas" de funciones, almacenadas en ficheros separados, que podríamos querer usar en nuestro código. Aquí importamos sólo el objeto `HttpResponse` desde el módulo `django.http` de manera que podamos usarlo en nuestra vista: `from django.http import HttpResponse`. Hay también otras formas de importar algunos o todos los objetos de un módulo.
 > - Las funciones se declaran usando la plabra clave `def` tal como se muestra arriba, con parámetros con nombre listados entre paréntesis después del nombre de la función; la línea entera termina con dos puntos. Fíjate como las líneas siguientes están todas ellas **indentadas**. La indentación es importante, ya que especifica que las líneas de código están dentro de ese bloque en particular (la indentación obligatoria es una característica clave de Python, y es una razón por la que el código de Python es tan fácil de leer.
 
 Las vistas se almacenan normalmente en un fichero llamado **views.py**.
@@ -168,8 +174,10 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **Nota:** Un poco de Python:\* Python soporta "programación orientada a objetos", un estilo de programación donde organizamos nuestro código en objetos, que incluyen datos relacionados y funciones para operar con los datos. Los objetos también pueden heredarse/extenderse/derivarse de otros objetos, permitiendo que se comparta un comportamiento común entre objetos relacionados. En Python usamos la palabra clave `class` para definir el "prototipo" de un objeto. Podemos crear múltiples _instancias_ específicas de ese tipo de objeto basado en el modelo especificado en la clase.
-> Así por ejemplo, aquí tenemos una clase `Team`, que deriva de la clase `Model`. Esto significa que es un modelo y que contendrá los métodos de un modelo, pero también podemos darle características especializadas propias. En nuestro modelo definimos los campos de nuestra base que necesitaremos para almacenar nuestros datos, dándoles nombres específicos. Django usa estas definiciones, incluídos los nombres de los campos para crear la base subyacente.
+> **Nota:** Un poco de Python:
+> - Python soporta "programación orientada a objetos", un estilo de programación donde organizamos nuestro código en objetos, que incluyen datos relacionados y funciones para operar con los datos. Los objetos también pueden heredarse/extenderse/derivarse de otros objetos, permitiendo que se comparta un comportamiento común entre objetos relacionados. En Python usamos la palabra clave `class` para definir el "prototipo" de un objeto. Podemos crear múltiples _instancias_ específicas de ese tipo de objeto basado en el modelo especificado en la clase.
+>
+>   Así por ejemplo, aquí tenemos una clase `Team`, que deriva de la clase `Model`. Esto significa que es un modelo y que contendrá los métodos de un modelo, pero también podemos darle características especializadas propias. En nuestro modelo definimos los campos de nuestra base que necesitaremos para almacenar nuestros datos, dándoles nombres específicos. Django usa estas definiciones, incluídos los nombres de los campos para crear la base subyacente.
 
 ### Consultar datos (views.py)
 

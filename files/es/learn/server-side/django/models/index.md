@@ -203,7 +203,9 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Nota:** Asumiendo que usarás URLs tipo `/myapplication/mymodelname/2` para presentar registros individuales para tu modelo (donde "2" es el `id` de un registro en particular), necesitarás crear un mapeador URL para pasar la respuesta e id a la "vista detallada del modelo (model detail view)" (que hará el trabajo requerido para presentar el registro). La función `reverse()` de arriba es capaz de "invertir" tu mapeador url (llamado _'model-detail-view'_ en el caso de arriba) para crear una URL del formato correcto.Por supuesto para hacer este trabajo ¡tienes aún que escribir el mapeo URL, la vista y la plantilla!
+> **Nota:** Asumiendo que usarás URLs tipo `/myapplication/mymodelname/2` para presentar registros individuales para tu modelo (donde "2" es el `id` de un registro en particular), necesitarás crear un mapeador URL para pasar la respuesta e id a la "vista detallada del modelo (model detail view)" (que hará el trabajo requerido para presentar el registro). La función `reverse()` de arriba es capaz de "invertir" tu mapeador url (llamado _'model-detail-view'_ en el caso de arriba) para crear una URL del formato correcto.
+> 
+> Por supuesto para hacer este trabajo ¡tienes aún que escribir el mapeo URL, la vista y la plantilla!
 
 Puedes también definir todos los métodos que te apetezca y llamarlos desde tu código o plantillas (siempre y cuando no reciban ningún parámetro).
 
@@ -393,7 +395,9 @@ Adicionalmente hemos declarado algunos tipos nuevos de campos:
 
 El patrón `__str__()` representa el objeto `BookInstance` usando una combinación de su id único y el título del `Book` asociado.
 
-> **Nota:** Un poco de Python: El valor retornado por `__str__()` es una _cadena formateada_. Dentro de la cadena usamos `%s` para declarar "marcadores de posición". Después de la cadena ponemos `%` y después una tupla que contiene los valores que serán puestos en los marcadores de posición. Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. `'Mi valor: %s' % variable.`
+> **Nota:** Un poco de Python: 
+>
+> El valor retornado por `__str__()` es una _cadena formateada_. Dentro de la cadena usamos `%s` para declarar "marcadores de posición". Después de la cadena ponemos `%` y después una tupla que contiene los valores que serán puestos en los marcadores de posición. Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. `'Mi valor: %s' % variable.`
 >
 > Note que aunque este enfoque es perfectamente válido, sea conciente que ya no es preferido. Desde Python 3 debes usar en su lugar el método **format**, ej. `'{0} ({1})'.format(self.id,self.book.title)`. Puedes leer más sobre esto [aquí](https://www.python.org/dev/peps/pep-3101/). A partir de Python 3.6 también puedes usar la sintaxis de interpolación de cadena, e.j. `f'{self.id} ({self.book.title})'`.
 

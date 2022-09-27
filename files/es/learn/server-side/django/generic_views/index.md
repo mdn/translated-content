@@ -509,43 +509,43 @@ Lo interesante que no hemos visto previamente es la función `book.bookinstance_
 Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-muchos) únicamente en la lado "uno" de la relación. Como no haces nada para declarar la relación en el otro modelo ("muchos"), este no tiene ningún campo para obtener el conjunto de registros asociados. Para superar este problema, Django construye una función apropiadamente llamada "búsqueda reversa" que puedes usar. El nombre de la función se construye convirtiendo a minúsculas el nombre del modelo donde la `ForeignKey` fue declarada, seguido por `_set` (así, la función creada en `Book` es `bookinstance_set()`).
 
 > **Nota:** Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
-
-Ten también cuidado de que si no defines un orden (en tu vista o modelo basado en clases), verás errores arrojados por el servidor de dearrollo como este:
-
-    [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
-    /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
-      allow_empty_first_page=allow_empty_first_page, **kwargs)
-
-Eso sucede porque el [objeto paginador](https://docs.djangoproject.com/en/1.10/topics/pagination/#paginator-objects) espera ver una cláusula ORDER BY siendo ejecutada en tu base de datos subyacente. Sin ella, ¡no puede estar seguro de que los registros devueltos están en el orden correcto!
-
-Este tutorial no llegó a la **Paginación** (aún, pero pronto lo hará), pero como no puedes uar `sort_by()` y enviar un parámetro (el mismo con `filter()` descrito arriba) tendrás que escoger entre tres opciones:
-
-1.  Añadir un `ordering` dentro de una declaración `class Meta` en tu modelo.
-2.  Añadir un atributo `queryset` en tu vista basada en clases personalizada, especificando un `order_by()`.
-3.  Añadir un método `get_queryset` a tu vista basada en clases pesonalizada y también especificar el `order_by()`.
-
-Si te decides por la opción `class Meta` para el modelo Author (probablemente no tan flexible como personalizar la vista basada en clases, pero lo suficientemente fácil), terminarás con algo como esto:
-
-```python
-class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
-
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
-
-    def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)
-
-    class Meta:
-        ordering = ['last_name']
-```
-
-Por supuesto, el campo no tiene que ser `last_name`: podría ser cualquier otro.
-
-Y por último, pero no menos importante, deberías ordenar por un atributo/columna que tenga un índice real (único o no) en tu base de datos para evitar problemas de rendimiento. Por supuesto, esto no será necesario aquí (y probablemente nos estemos adelantando mucho) para la pequeña cantidad de libros (¡y usuarios!), pero es algo a tener en cuenta para proyectos futuros.
+>
+> Ten también cuidado de que si no defines un orden (en tu vista o modelo basado en clases), verás errores arrojados por el servidor de dearrollo como este:
+> ```
+> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
+> allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
+> Eso sucede porque el [objeto paginador](https://docs.djangoproject.com/en/1.10/topics/pagination/#paginator-objects) espera ver una cláusula ORDER BY siendo ejecutada en tu base de datos subyacente. Sin ella, ¡no puede estar seguro de que los registros devueltos están en el orden correcto!
+>
+> Este tutorial no llegó a la **Paginación** (aún, pero pronto lo hará), pero como no puedes uar `sort_by()` y enviar un parámetro (el mismo con `filter()` descrito arriba) tendrás que escoger entre tres opciones:
+>
+> 1. Añadir un `ordering` dentro de una declaración `class Meta` en tu modelo.
+> 2. Añadir un atributo `queryset` en tu vista basada en clases personalizada, especificando un `order_by()`.
+> 3. Añadir un método `get_queryset` a tu vista basada en clases pesonalizada y también especificar el `order_by()`.
+>
+> Si te decides por la opción `class Meta` para el modelo Author (probablemente no tan flexible como personalizar la vista basada en clases, pero lo suficientemente fácil), terminarás con algo como esto:
+>
+> ```python
+> class Author(models.Model):
+>     first_name = models.CharField(max_length=100)
+>     last_name = models.CharField(max_length=100)
+>     date_of_birth = models.DateField(null=True, blank=True)
+>     date_of_death = models.DateField('Died', null=True, blank=True)
+>
+>     def get_absolute_url(self):
+>         return reverse('author-detail', args=[str(self.id)])
+>
+>     def __str__(self):
+>         return '%s, %s' % (self.last_name, self.first_name)
+>
+>     class Meta:
+>         ordering = ['last_name']
+> ```
+>
+> Por supuesto, el campo no tiene que ser `last_name`: podría ser cualquier otro.
+>
+> Y por último, pero no menos importante, deberías ordenar por un atributo/columna que tenga un índice real (único o no) en tu base de datos para evitar problemas de rendimiento. Por supuesto, esto no será necesario aquí (y probablemente nos estemos adelantando mucho) para la pequeña cantidad de libros (¡y usuarios!), pero es algo a tener en cuenta para proyectos futuros.
 
 ## ¿Cómo se ve?
 
@@ -630,12 +630,13 @@ El reto en este artículo es crear las vistas de lista y detalle para autores, q
 
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 
-- Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **All authors** en la plantilla base. Sigue el [mismo proceso](#Update_the_base_template) que hicimos cuando actualizamos el enlace **All books**.
-- Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros ](#Creating_the_Detail_View_template)(**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
-
-```html
-<p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
-```
+> **Nota:**
+> - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **All authors** en la plantilla base. Sigue el [mismo proceso](#Update_the_base_template) que hicimos cuando actualizamos el enlace **All books**.
+> - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros ](#Creating_the_Detail_View_template)(**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
+>
+> ```html
+> <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+> ```
 
 Cuando termines, tus páginas deberían lucir similares a las capturas de pantalla de abajo.
 

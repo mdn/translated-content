@@ -138,7 +138,7 @@ Los argumentos que son comunes a la mayoría de los campos se enumeran a continu
 
 - [required](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#required): Si es `True`, el campo no se puede dejar en blanco o dar un valor `None`. Los Campos son obligatorios por defecto, tambien puedes establecer `required=False` para permitir valores en blanco en el formulario.
 - [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label): label es usado cuando renderizamos el campo en HTML. Si [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label) no es especificado entonces Django crearía uno a partir del nombre del campo al poner en mayúscula la primera letra y reemplazar los guiones bajos por espacios (por ejemplo. _Renewal date_).
-- [label_suffix](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix): Por defecto, se muestran dos puntos después de la etiqueta (ejemplo. Renewal date**:**). Este argumento le permite especificar como sufijo diferente que contiene otros caracteres.
+- [label_suffix](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix): Por defecto, se muestran dos puntos después de la etiqueta (ejemplo. Renewal date:). Este argumento le permite especificar como sufijo diferente que contiene otros caracteres.
 - [initial](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#initial): El valor inicial para el campo cuando es mostrado en el formulario.
 - [widget](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget): El widget de visualización para usar.
 - [help_text](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#help-text) (como se ve en el ejemplo anterior): texto adicional que se puede mostrar en formularios para explicar cómo usar el campo.

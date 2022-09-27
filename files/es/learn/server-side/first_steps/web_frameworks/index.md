@@ -211,13 +211,13 @@ Si eres un completo principiante en la programación probablemente escogerás tu
 > **Nota:** Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
 > 
 > 1. Navega a los sitios principales (enlazados abajo)
->   - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
->   - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
->   - ¿Son los documentos suficientemente claros?
+>     - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
+>     - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
+>     - ¿Son los documentos suficientemente claros?
 > 2.  Navega a las listas de correo de cada sitio (accesible desde los enlaces de Comunidad).
->   - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
->   - ¿Cuántas tienen respuestas?
->   - ¿Tienen una comunidad activa?
+>     - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
+>     - ¿Cuántas tienen respuestas?
+>     - ¿Tienen una comunidad activa?
 
 ## ¿Unos pocos frameworks web buenos?
 

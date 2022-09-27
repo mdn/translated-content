@@ -79,20 +79,20 @@ MIDDLEWARE = [
 Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
 
 > **Nota:** Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).
-
-```python
-from django.contrib.auth.models import User
-
-# Create user and save to the database
-
-user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-
-# Update fields and then save again
-
-user.first_name = 'John'
-user.last_name = 'Citizen'
-user.save()
-```
+> 
+> ```python
+> from django.contrib.auth.models import User
+> 
+> # Create user and save to the database
+> 
+> user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+> 
+> # Update fields and then save again
+> 
+> user.first_name = 'John'
+> user.last_name = 'Citizen'
+> user.save()
+> ```
 
 A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengamos ningún permiso aún para otorgar a los miembros de nuestra biblioteca, si lo necesitamos para más adelante, será mucho más fácil otorgarlo una vez al grupo que individualmente a cada miembro.
 
@@ -145,18 +145,18 @@ urlpatterns += [
 
 Navega hasta la URL <http://127.0.0.1:8000/accounts/> (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
 
-> **Nota:**Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
-
-```
-^accounts/login/$ [name='login']
-^accounts/logout/$ [name='logout']
-^accounts/password_change/$ [name='password_change']
-^accounts/password_change/done/$ [name='password_change_done']
-^accounts/password_reset/$ [name='password_reset']
-^accounts/password_reset/done/$ [name='password_reset_done']
-^accounts/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$ [name='password_reset_confirm']
-^accounts/reset/done/$ [name='password_reset_complete']
-```
+> **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
+> 
+> ```
+> ^accounts/login/$ [name='login']
+> ^accounts/logout/$ [name='logout']
+> ^accounts/password_change/$ [name='password_change']
+> ^accounts/password_change/done/$ [name='password_change_done']
+> ^accounts/password_reset/$ [name='password_reset']
+> ^accounts/password_reset/done/$ [name='password_reset_done']
+> ^accounts/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$ [name='password_reset_confirm']
+> ^accounts/reset/done/$ [name='password_reset_complete']
+> ```
 
 Ahora intenta navegar a la URL de inicio de sesion "login"(<http://127.0.0.1:8000/accounts/login/>). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
 
@@ -174,11 +174,13 @@ Las URL's (y vistas "views" implicitas) que recien hemos añadido esperan encont
 Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/registration/".** Este directorio debera estar en el directorio raiz de tu proyecto, es decir, el mismo directorio de las carpetas donde estan **catalog** y **locallibrary**. Por favor ahora crea las carpetas "templates" y dentro de esta "registration".
 
 > **Nota:** Your folder structure should now look like the below:
+> ```
 > locallibrary (django project folder)
-> |\_catalog
-> |\_locallibrary
-> |\_templates **(new)**
-> |\_registration
+>   |\_catalog
+>   |\_locallibrary
+>   |\_templates **(new)**
+>     |\_registration
+> ```
 
 Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**, y actualiza la seccion de **TEMPLATES** con la linea **'DIRS'** como se muestra a continuacion.
 

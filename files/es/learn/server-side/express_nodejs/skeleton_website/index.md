@@ -244,7 +244,9 @@ Ahora podemos iniciar el servidor casi exactamente como antes, pero especificand
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **Nota:** Ahora si modifica cualquier archivo del proyecto el servidor se reiniciará (o lo puede reiniciar `rs` en la consola de comandos en cualquier momento). Aún necesitará recargar el navegador para refrescar la página.Ahora tendremos que llamar "`npm run <nombre del script>`" en vez de `npm start`, porque "start" es actualmente un comando NPM que es mapeado al nombre del script. Podríamos haber reemplazado el comando en el script _start_ pero sólo queremos usar _nodemon_ durante el desarrollo, así que tiene sentido crear un nuevo script para este comando.
+> **Nota:** Ahora si modifica cualquier archivo del proyecto el servidor se reiniciará (o lo puede reiniciar `rs` en la consola de comandos en cualquier momento). Aún necesitará recargar el navegador para refrescar la página.
+>
+> Ahora tendremos que llamar "`npm run <nombre del script>`" en vez de `npm start`, porque "start" es actualmente un comando NPM que es mapeado al nombre del script. Podríamos haber reemplazado el comando en el script _start_ pero sólo queremos usar _nodemon_ durante el desarrollo, así que tiene sentido crear un nuevo script para este comando.
 
 ## El proyecto generado
 
