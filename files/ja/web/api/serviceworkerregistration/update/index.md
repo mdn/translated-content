@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`update()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、サービスワーカーの更新を試みます。 ワーカーのスクリプト URL を読み取り、新しいワーカーが現在のワーカーとバイト単位で同一でない場合は、新しいワーカーをインストールします。 前回の読み取りが 24 時間以上前であった場合、ワーカーの読み取り時にブラウザーのキャッシュをバイパスします。

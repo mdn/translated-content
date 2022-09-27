@@ -15,7 +15,7 @@ var imageCollection = document.images;
 
 ### 值
 
-一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。 集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}
+一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}
 
 ## 备注
 

@@ -3,6 +3,7 @@ title: PWS/Cloud Foundry に LocalLibrary をインストールする
 slug: orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 ---
+
 {{LearnSidebar}}
 
 この記事では Pivotal Web Services の PaaS クラウドに*地域図書館*をインストールする方法の実際的なデモンストレーションを提供します。これは、チュートリアルのパート 7 で使用されている PaaS クラウドサービスである Heroku のフル機能のオープンソース代替です。PWS/Cloud Foundry は、Heroku (または別の PaaS クラウドサービス) に代わるものを探している場合、または単に何か違うことを試したい場合には、絶対にチェックする価値があります。

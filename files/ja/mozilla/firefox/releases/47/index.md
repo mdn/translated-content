@@ -2,6 +2,7 @@
 title: Firefox 47 for developers
 slug: Mozilla/Firefox/Releases/47
 ---
+
 Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 47 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

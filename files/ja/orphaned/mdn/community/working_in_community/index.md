@@ -3,6 +3,7 @@ title: コミュニティでの作業
 slug: orphaned/MDN/Community/Working_in_community
 original_slug: MDN/Community/Working_in_community
 ---
+
 {{MDNSidebar}}
 
 MDN の文書に関連して行われる、意味をなす規模での貢献の大部分は、いかに MDN コミュニティの一員として作業するかを知ることだといえます。この記事ではあなたが行う他の文書作成者、開発チームとのやりとりの多くで役に立つコツを紹介します。

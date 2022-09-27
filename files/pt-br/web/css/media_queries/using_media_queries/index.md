@@ -408,7 +408,7 @@ Mozilla oferece várias _media features_ para específicos _Gecko_ . Algumas des
 **Mídia:** {{cssxref("Media/Visual")}}
 **Aceita prefixos min/max:** não
 
-Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-mac-graphite-theme
 
@@ -418,7 +418,7 @@ Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrár
 
 Se o usuário tenha configurado seu dispositivo para usar a aparência _"Graphite"_ no _Mac OS X_, o valor é 1. Se o usuário está usando a aparência padrão _blue_, ou não está num _Mac OS X_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-maemo-classic
 
@@ -428,7 +428,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS
 
 Se o usuário está usando _Maemo_ com o tema original, o valor é 1; Se está usando o mais novo tema _Fremantle_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-device-pixel-ratio
 
@@ -480,7 +480,7 @@ Isto é fornecido pelas _skins das aplicações_ e outros códigos do chrome par
 
 Se a interface do usuário do dispositivo exibe uma seta para trás no final da barra de rolagem, o valor é 1. Caso contrário, é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-end-forward
 
@@ -490,7 +490,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }}
 
 Se a interface do usuário do dispositivo a forward arrow button at the end of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-backward
 
@@ -500,7 +500,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} 
 
 Se a interface do usuário do dispositivo a backward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-forward
 
@@ -510,7 +510,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") 
 
 Se a interface do usuário do dispositivo a forward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-thumb-proportional
 
@@ -520,7 +520,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }
 
 Se a interface do usuário do dispositivo the thumb of scrollbars proportionally (that is, sized based on the percentage of the document that is visible), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-touch-enabled
 
@@ -530,7 +530,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional
 
 If the device supports touch events (for a touch screen), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 #### Exemplo
 
@@ -544,7 +544,7 @@ You might use this to render your buttons slightly larger, for example, if the u
 
 If the user is using Windows unthemed (in classic mode instead of using uxtheme), this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-compositor
 
@@ -554,7 +554,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [p
 
 If the user is using Windows with the DWM compositor, this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-default-theme
 
@@ -564,7 +564,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS
 
 If the user is currently using one of the default Windows themes (Luna, Royale, Zune, or Aero (including Vista Basic, Vista Advanced, and Aero Glass), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-glass
 
@@ -595,7 +595,7 @@ Isto é previsto para _skins_ de aplicativo e outro código de aplicações de c
 ## See also
 
 - [CSS 3 media query specification](http://www.w3.org/TR/css3-mediaqueries/)
-- [Media types](/pt-BR/docs/CSS/@media "En/CSS/@media")
-- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code "en/CSS/Using media queries from code")
+- [Media types](/pt-BR/docs/CSS/@media)
+- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code)
 - [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
 - [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries) by David Walsh

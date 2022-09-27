@@ -4936,7 +4936,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
@@ -6411,6 +6411,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Set	/fr/docs/Web/JavaScript/Reference/Global_Objects/Set
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb	/fr/docs/Web/JavaScript/Reference/Global_Objects/String

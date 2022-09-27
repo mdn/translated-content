@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/online_event
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`online`** は {{domxref("WorkerGlobalScope")}} のイベントで、端末がインターネットに再接続したときに発行されます。

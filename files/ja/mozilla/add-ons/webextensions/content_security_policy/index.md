@@ -2,6 +2,7 @@
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
+
 {{AddonSidebar}}
 
 WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。

@@ -2,6 +2,7 @@
 title: window.scrollbars
 slug: Web/API/Window/scrollbars
 ---
+
 {{ApiRef}}
 
 ## 概要

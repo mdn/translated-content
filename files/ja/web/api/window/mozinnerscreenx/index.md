@@ -2,6 +2,7 @@
 title: Window.mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 ---
+
 {{APIRef}}
 
 ## 概要

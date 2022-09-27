@@ -2,6 +2,7 @@
 title: WindowClient
 slug: Web/API/WindowClient
 ---
+
 {{APIRef("Service Workers API")}}
 
 [Service Worker API](/ja/docs/Web/API/Service_Worker_API) の **`WindowClient`** インターフェイスは、アクティブなワーカーによって制御される閲覧コンテキスト内のドキュメントであるサービスワーカークライアントのスコープを表します。 サービスワーカークライアントは、それ自身の読み込みとサブリソースに対してサービスワーカーを個別に選択して使用します。

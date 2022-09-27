@@ -3,6 +3,7 @@ title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 original_slug: Web/API/RTCConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCPeerConnection()`** コンストラクターは、ローカル端末とリモート端末間の接続を表す新しく作成された {{domxref("RTCPeerConnection")}} を返します。

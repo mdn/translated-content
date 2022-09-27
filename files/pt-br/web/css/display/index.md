@@ -11,9 +11,9 @@ translation_of: Web/CSS/display
 
 ## Resumo
 
-A propriedade CSS `display `especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade `display `são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.
+A propriedade CSS `display` especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade `display` são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.
 
-Além dos muitos tipos diferentes de exibição de caixa, o valor `none `permite desativar a exibição de um elemento; quando você usa `none`, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.
+Além dos muitos tipos diferentes de exibição de caixa, o valor `none` permite desativar a exibição de um elemento; quando você usa `none`, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.
 
 {{cssinfo}}
 

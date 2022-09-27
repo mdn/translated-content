@@ -35,7 +35,7 @@ Recuerda que en Firefox 3 no necesitas incluir el ".0" extra en el número de la
 
 Ha habido (y continuará habiendo) una serie de cambios en las APIs, lo que muy probablemente averiará algunas extensiones. Aún estamos trabajando para confeccionar una lista completa de estos cambios.
 
-Si tu extensión todavía usa un script [`Install.js`]("es/Install.js") en vez de un [manifiesto de instalación]("es/Manifiesto_de_instalaci%c3%b3n"), necesitas hacer la transición a un manifiesto de instalación lo más pronto posible. Firefox 3 no implementará el script `install.js` en documentos XPI.
+Si tu extensión todavía usa un script [`Install.js`](/es/Install.js) en vez de un [manifiesto de instalación](/es/Manifiesto_de_instalaci%c3%b3n), necesitas hacer la transición a un manifiesto de instalación lo más pronto posible. Firefox 3 no implementará el script `install.js` en documentos XPI.
 
 #### Agregar localizaciones al manifiesto de instalación
 
@@ -138,7 +138,7 @@ O bien, emplear la siguiente técnica para hacer que la superposición funcione 
 
 _Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensión para que funcione con Firefox 3._
 
-- Por razones de seguridad, se ha dejado de implementar [`chrome://browser/base/utilityOverlay.js`](). Si lo estabas usando, deberás cambiarlo por [`chrome://browser/content/utilityOverlay.js`]().
+- Por razones de seguridad, se ha dejado de implementar `chrome://browser/base/utilityOverlay.js`. Si lo estabas usando, deberás cambiarlo por `chrome://browser/content/utilityOverlay.js`.
 - Para implementar [`nsIAboutModule`](/es/nsIAboutModule) ahora debes incluir el método `getURIFlags`. Visita [nsIAboutModule.idl](https://mxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) para consultar la documentación. Esto afecta a las extensiones que brinden nuevas URIs del tipo `about:`. ( [bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746) )
 - El elemento [tabbrowser](/en/XUL/tabbrowser) ya no forma parte del "conjunto de herramientas" ( [bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964) ). Esto significa que este elemento ya no está disponible en aplicaciones y extensiones XUL. Este elemento sigue siendo parte de la ventana principal de Firefox (browser.xul).
 - Es necesario documentar los cambios en [nsISupports proxies](/es/NsISupports_proxies) [\[1\]](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&rnum=1#939240fc3f5123a8) y posiblemente, también aquellos relacionados con el procesamiento de interfaces.

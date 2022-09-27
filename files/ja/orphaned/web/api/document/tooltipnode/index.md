@@ -2,6 +2,7 @@
 title: Document.tooltipNode
 slug: orphaned/Web/API/Document/tooltipNode
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`Document.tooltipNode`** プロパティは、現在の `<tooltip>` の対象となるノードを返します。

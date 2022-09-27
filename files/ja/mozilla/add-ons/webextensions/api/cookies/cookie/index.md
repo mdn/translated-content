@@ -2,6 +2,7 @@
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("cookies")}} API の `Cookie` 型は HTTP cookie の情報を持ちます。
