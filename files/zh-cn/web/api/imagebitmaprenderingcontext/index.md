@@ -12,7 +12,7 @@ slug: Web/API/ImageBitmapRenderingContext
 ## 方法
 
 - {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
-  - : 在与此渲染上下文相关的 canvas 中显示给定的 `ImageBitmap` 。 `ImageBitmap` 的所有权被转移到画布上。 这个函数以前命名为`transferImageBitmap()`，但在规范中修改了原名字。 为了避免影响之前的代码，旧名称作为别名被保留下来。
+  - : 在与此渲染上下文相关的 canvas 中显示给定的 `ImageBitmap` 。 `ImageBitmap` 的所有权被转移到画布上。这个函数以前命名为`transferImageBitmap()`，但在规范中修改了原名字。为了避免影响之前的代码，旧名称作为别名被保留下来。
 
 ## 规范
 
