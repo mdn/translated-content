@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 
 El objeto **`RegExp`** se utiliza para hacer coincidir texto con un patrón.
 
-Para obtener una introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide/Regular_Expressions", "Guía de JavaScript")}}.
+Para obtener una introducción a las expresiones regulares, lee el {{JSxRef("Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("Guide/Regular_Expressions", "Guía de JavaScript")}}.
 
 ## Descripción
 
@@ -201,7 +201,7 @@ console.log(regex.lastIndex) // registra '15'
 // y así sucesivamente
 ```
 
-La función {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "Escapes de propiedad Unicode")}} presenta una solución, al permitir una declaración tan simple como `\p{scx=Cyrl}`.
+La función {{JSxRef("Guide/Regular_Expressions/Unicode_Property_Escapes", "Escapes de propiedad Unicode")}} presenta una solución, al permitir una declaración tan simple como `\p{scx=Cyrl}`.
 
 ### Extraer el nombre de subdominio de la URL
 
@@ -244,7 +244,7 @@ Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolvie
 
 ## Ve también
 
-- El capítulo de {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}
+- El capítulo de {{JSxRef("Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("Guide", "Guía de JavaScript")}}
 - {{JSxRef("String.prototype.match()")}}
 - {{JSxRef("String.prototype.replace()")}}
 - {{JSxRef("String.prototype.split()")}}

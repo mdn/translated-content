@@ -14,7 +14,9 @@ El método **`test()`** ejecuta la búsqueda de una ocurrencia entre una expresi
 
 ## Sintaxis
 
-    regexObj.test(cadena)
+```
+regexObj.test(cadena)
+```
 
 ### Parámetros
 

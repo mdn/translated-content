@@ -6,13 +6,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
 {{jsSidebar("Objects")}}
 
-La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función `isNaN` tiene reglas [interesantes](/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN$edit#Description); tal vez quieras usar de forma alternativa **[`Number.isNaN()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN)**, como fue definido en ECMAScript 2015.
+La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función `isNaN` tiene reglas [interesantes](/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN$edit#Description); tal vez quieras usar de forma alternativa **[`Number.isNaN()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN)**, como fue definido en ECMAScript 2015.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
 ## Sintaxis
 
-    isNaN(valor)
+```
+isNaN(valor)
+```
 
 ### Parámetros
 
