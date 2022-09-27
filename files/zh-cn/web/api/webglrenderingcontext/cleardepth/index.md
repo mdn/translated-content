@@ -18,7 +18,7 @@ void gl.clearDepth(depth);
 ### 参数
 
 - `depth`
-  - : 类型：{{domxref("GLclampf")}}。 深度值的设定，是当清除深度缓冲区的时候使用。默认值为 1。
+  - : 类型：{{domxref("GLclampf")}}。深度值的设定，是当清除深度缓冲区的时候使用。默认值为 1。
 
 ### 返回值
 
