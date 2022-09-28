@@ -11,7 +11,6 @@ O operador bitwise AND (`&`) retorna `1` em cada posição do bit em que os bits
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}} 
 
-
 ## Sintaxe
 
 ```js-nolint
