@@ -13,9 +13,11 @@ translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 
 ## Mensaje
 
-    Advertencia: Error de Sintaxis al utilizar //@ para indicar el código fuente de la URL esta obsoleto. En su lugar use //#.
+```
+Advertencia: Error de Sintaxis al utilizar //@ para indicar el código fuente de la URL esta obsoleto. En su lugar use //#.
 
-    Advertencia: Error de Sintaxis: al utilizar //@ para indicar el mapeo de programas del código fuente de la URL esta obsoleto. En su lugar use //#.
+Advertencia: Error de Sintaxis: al utilizar //@ para indicar el mapeo de programas del código fuente de la URL esta obsoleto. En su lugar use //#.
+```
 
 ## Tipo de error
 

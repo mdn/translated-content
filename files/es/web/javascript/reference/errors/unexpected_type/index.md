@@ -7,14 +7,16 @@ translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 
 ## Mensaje
 
-    TypeError: "x" is (not) "y"
+```
+TypeError: "x" is (not) "y"
 
-    Examples:
-    TypeError: "x" is undefined
-    TypeError: "x" is null
-    TypeError: "undefined" is not an object
-    TypeError: "x" is not an object or null
-    TypeError: "x" is not a symbol
+Examples:
+TypeError: "x" is undefined
+TypeError: "x" is null
+TypeError: "undefined" is not an object
+TypeError: "x" is not an object or null
+TypeError: "x" is not a symbol
+```
 
 ## Tipo de error
 

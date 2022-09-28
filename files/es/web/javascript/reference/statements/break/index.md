@@ -15,7 +15,9 @@ Termina el bucle actual, sentecia switch o label y transfiere el control del pro
 
 ## Sintaxis
 
-    break [etiqueta];
+```
+break [etiqueta];
+```
 
 - `etiqueta`
   - : Identificador asociado con la etiqueta de la sentencia.

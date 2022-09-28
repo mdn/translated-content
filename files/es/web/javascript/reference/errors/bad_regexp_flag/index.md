@@ -15,9 +15,11 @@ La excepción de JavaScript "indicador de expresión regular no válido" se prod
 
 ## Mensaje
 
-    SyntaxError: error de sintaxis en la expresión regular (Edge)
-    SyntaxError: marca de expresión regular no válida "x" (Firefox)
-    SyntaxError: indicadores de expresión regular no válidos (Chrome)
+```
+SyntaxError: error de sintaxis en la expresión regular (Edge)
+SyntaxError: marca de expresión regular no válida "x" (Firefox)
+SyntaxError: indicadores de expresión regular no válidos (Chrome)
+```
 
 ## Tipo `Error`
 

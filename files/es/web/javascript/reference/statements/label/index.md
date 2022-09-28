@@ -17,7 +17,9 @@ Por ejemplo, puede usar una etiqueta para identificar un bucle, y entonces usar 
 
 ## Sintaxis
 
-    etiqueta :sentencia
+```
+etiqueta :sentencia
+```
 
 - `etiqueta`
   - : Cualquier identificador JavaScript que no sea una palabra reservada.

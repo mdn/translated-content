@@ -15,7 +15,9 @@ Ejecuta una sentencia si una condición específicada es evaluada como verdadera
 
 ## Sintaxis
 
-    if (condición) sentencia1 [else sentencia2]
+```
+if (condición) sentencia1 [else sentencia2]
+```
 
 - `condición`
   - : Una expresión que puede ser evaluada como verdadera o falsa.
@@ -30,26 +32,30 @@ Ejecuta una sentencia si una condición específicada es evaluada como verdadera
 
 Multiples sentencias `if...else` pueden ser anidadas para crear una cláusula `else if`:
 
-    if (condición1)
-       sentencia1
-    else if (condición2)
-       sentencia2
-    else if (condición3)
-       sentencia3
-    ...
-    else
-       sentenciaN
+```
+if (condición1)
+   sentencia1
+else if (condición2)
+   sentencia2
+else if (condición3)
+   sentencia3
+...
+else
+   sentenciaN
+```
 
 Para entender como esto funciona, así es como se vería si el anidamiento hubiera sido indentado correctamente:
 
-    if (condición1)
-       sentencia1
-    else
-       if (condición2)
-          sentencia2
-       else
-          if (condición3)
-            ...
+```
+if (condición1)
+   sentencia1
+else
+   if (condición2)
+      sentencia2
+   else
+      if (condición3)
+      ...
+```
 
 Para ejecutar varias sentencias en una cláusula, use una sentencia block (`{ ... }`) para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
 

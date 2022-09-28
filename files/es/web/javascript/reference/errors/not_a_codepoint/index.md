@@ -7,8 +7,10 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_codepoint
 
 ## Message
 
-    RangeError: {0} is not a valid code point (Firefox)
-    RangeError: Invalid code point {0} (Chrome)
+```
+RangeError: {0} is not a valid code point (Firefox)
+RangeError: Invalid code point {0} (Chrome)
+```
 
 ## Tipo de error
 

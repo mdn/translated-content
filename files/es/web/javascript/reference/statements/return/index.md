@@ -15,7 +15,9 @@ La sentencia `return` finaliza la ejecución de la función y especifica un valo
 
 ## Sintaxis
 
-    return [[ expresion ]];
+```
+return [[ expresion ]];
+```
 
 - expresion
   - : La expresión a retornar. Si se omite, `undefined` es retornado en su lugar.

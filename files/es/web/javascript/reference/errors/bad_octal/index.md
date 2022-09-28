@@ -7,8 +7,10 @@ translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 
 ## Mensaje
 
-    Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-    Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+```
+Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
+Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+```
 
 ## Tipo de Error
 

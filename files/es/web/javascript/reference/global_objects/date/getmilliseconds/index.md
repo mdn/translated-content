@@ -15,7 +15,9 @@ El método **`getMilliseconds()`** devuelve la cantidad de milisegundos en el ob
 
 ## Sintaxis
 
-    dateObj.getMilliseconds()
+```
+dateObj.getMilliseconds()
+```
 
 ### Valor de Retorno
 
