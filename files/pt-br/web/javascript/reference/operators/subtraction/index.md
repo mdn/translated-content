@@ -40,7 +40,7 @@ x - y
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade de navegadores
 
 {{Compat}}
 
