@@ -61,7 +61,7 @@ f(1, 'a', true);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## 參見
 

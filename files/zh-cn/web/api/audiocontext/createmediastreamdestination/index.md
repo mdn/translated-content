@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的 `createMediaStreamDestination()` 方法用于创建一个新的对象，该对象关联着表示音频流的一个 [WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}}，音频流可以存储在本地文件或者被发送到另外一台计算机。
@@ -87,7 +88,7 @@ From here, you can play and save the opus file.
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.createMediaStreamDestination")}}
+{{Compat}}
 
 ## See also
 

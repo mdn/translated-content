@@ -42,7 +42,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 ## 오디오 데이터: 무엇이 샘플 속에 들어있는가
 
-오디오 신호가 처리될 때, **샘플링**이란 [연속 신호](https://en.wikipedia.org/wiki/Continuous_signal "Continuous signal")(continuous signal)의 [불연속 신호](https://en.wikipedia.org/wiki/Discrete_signal "Discrete signal")(discrete signal)로의 전환을 의미합니다; 또는 달리 말하면, 라이브로 연주하고 있는 밴드와 같이, 연속적인 음파를 컴퓨터가 오디오를 구별되는 단위로 다룰 수 있게 허용하는 일련의 샘플들로 전환하는 것을 의미합니다.
+오디오 신호가 처리될 때, **샘플링**이란 [연속 신호](https://en.wikipedia.org/wiki/Continuous_signal)(continuous signal)의 [불연속 신호](https://en.wikipedia.org/wiki/Discrete_signal)(discrete signal)로의 전환을 의미합니다; 또는 달리 말하면, 라이브로 연주하고 있는 밴드와 같이, 연속적인 음파를 컴퓨터가 오디오를 구별되는 단위로 다룰 수 있게 허용하는 일련의 샘플들로 전환하는 것을 의미합니다.
 
 더 많은 정보는 위키피디아 문서 [샘플링 (신호 처리)](https://en.wikipedia.org/wiki/Sampling_%28signal_processing%29)에서 찾을 수 있습니다.
 
@@ -72,11 +72,11 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **참고:** **노트**: [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio "Digital audio")에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency "Sampling frequency")입니다. 왜 44.1kHz일까요?
+> **참고:** **노트**: [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio)에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency)입니다. 왜 44.1kHz일까요?
 >
-> 첫째로, 왜냐하면 인간의 [가청 범위](https://en.wikipedia.org/wiki/Hearing_range "Hearing range")(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. [표본화 정리](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem "Nyquist–Shannon sampling theorem")(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.
+> 첫째로, 왜냐하면 인간의 [가청 범위](https://en.wikipedia.org/wiki/Hearing_range)(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. [표본화 정리](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.
 >
-> 둘째로, 신호는 반드시 샘플링 전에 [저주파 통과 필터](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter")(low-pass filter)를 거쳐야만 합니다, 그렇지 않으면 [에일리어싱](https://en.wikipedia.org/wiki/Aliasing)(aliasing)이 발생합니다. 이상적인 저주파 통과 필터는 완벽히 20 kHz 아래의 주파수들을 (약화시키는 일 없이) 통과시키고 완벽히 20 kHz 위의 주파수들을 잘라낼 것이지만, 실제로는 [천이 대역](https://en.wikipedia.org/wiki/Transition_band "Transition band")(transition band)이 필수적인데, 여기서 주파수들은 부분적으로 약화됩니다. 천이 대역이 넓을수록, [주파수 중복방지 필터](https://en.wikipedia.org/wiki/Anti-aliasing_filter "Anti-aliasing filter")(anti-aliasing filter)를 만들기 쉽고 경제적입니다. 44.1 kHz 샘플링 주파수는 2.05 kHz 천이 대역을 감안합니다.
+> 둘째로, 신호는 반드시 샘플링 전에 [저주파 통과 필터](https://en.wikipedia.org/wiki/Low-pass_filter)(low-pass filter)를 거쳐야만 합니다, 그렇지 않으면 [에일리어싱](https://en.wikipedia.org/wiki/Aliasing)(aliasing)이 발생합니다. 이상적인 저주파 통과 필터는 완벽히 20 kHz 아래의 주파수들을 (약화시키는 일 없이) 통과시키고 완벽히 20 kHz 위의 주파수들을 잘라낼 것이지만, 실제로는 [천이 대역](https://en.wikipedia.org/wiki/Transition_band)(transition band)이 필수적인데, 여기서 주파수들은 부분적으로 약화됩니다. 천이 대역이 넓을수록, [주파수 중복방지 필터](https://en.wikipedia.org/wiki/Anti-aliasing_filter)(anti-aliasing filter)를 만들기 쉽고 경제적입니다. 44.1 kHz 샘플링 주파수는 2.05 kHz 천이 대역을 감안합니다.
 
 만약 위의 이 호출을 사용한다면, 여러분은 44100Hz (아주 일반적입니다, 대부분의 보통 사운드 카드는 이 레이트에서 실행됩니다) 에서 실행되는 AudioContext에서 재생될 때 0.5초동안 지속될 두 개의 채널을 가진 스테레오 버퍼를 얻을 것입니다. (22050 프레임 / 44100Hz = 0.5초)
 

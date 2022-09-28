@@ -2,6 +2,7 @@
 title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.ownKeys()`** メソッドは、 `target` オブジェクトが持つプロパティキーの配列を返します。

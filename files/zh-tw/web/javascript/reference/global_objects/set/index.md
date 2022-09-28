@@ -209,7 +209,7 @@ mySet.size;  // 5
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set")}}
+{{Compat}}
 
 ## 參見
 

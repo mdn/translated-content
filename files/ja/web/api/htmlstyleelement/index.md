@@ -2,6 +2,7 @@
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
 ---
+
 {{ApiRef}}
 
 `HTMLStyleElement` インタフェースは {{HTMLElement("style")}} 要素を表すインタフェースです。{{domxref("HTMLElement")}} と {{domxref("LinkStyle")}} のプロパティとメソッドを継承しています。

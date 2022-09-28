@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.shadowOffsetX
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.shadowOffsetX`** 是 Canvas 2D API 描述阴影水平偏移距离的属性。
@@ -91,7 +92,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.shadowOffsetX")}}
+{{Compat}}
 
 ## 参见
 

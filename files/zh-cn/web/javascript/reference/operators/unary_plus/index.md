@@ -2,6 +2,7 @@
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary plus operator (`+`) precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't already.

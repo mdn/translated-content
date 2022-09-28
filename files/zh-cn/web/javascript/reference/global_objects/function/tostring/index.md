@@ -2,6 +2,7 @@
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回一个表示当前函数源代码的字符串。

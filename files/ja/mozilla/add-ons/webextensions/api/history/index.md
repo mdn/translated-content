@@ -2,6 +2,7 @@
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 ---
+
 {{AddonSidebar}}
 
 ブラウザー履歴とやりとりする `history` API を使用します。

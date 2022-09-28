@@ -2,6 +2,7 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
+
 {{APIRef()}}
 
 `localStorage` プロパティはローカルの {{domxref("Storage")}} オブジェクトにアクセスすることができます。 `localStorage` は [`sessionStorage`](/ja/docs/Web/API/Window.sessionStorage) によく似ています。唯一の違いは、`localStorage` に保存されたデータには保持期間の制限はなく、`sessionStorage` に保存されたデータはセッションが終わると同時に（ブラウザが閉じられたときに）クリアされてしまうことです。
@@ -43,7 +44,7 @@ localStorage 項目の削除の文法は以下の通り:
 localStorage.removeItem("myCat");
 ```
 
-> **Note:** **注**: 詳細な使用例は [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+> **Note:** 詳細な使用例は [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
 ## 仕様
 

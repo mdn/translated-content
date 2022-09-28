@@ -204,8 +204,8 @@ The output in the console looks something like this:
 
 ## See also
 
-- [Tools](/pt-BR/docs/Tools "Tools")
-- [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console") - how the Web Console in Firefox handles console API calls
+- [Tools](/pt-BR/docs/Tools)
+- [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
 - [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
 - [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices

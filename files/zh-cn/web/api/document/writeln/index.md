@@ -2,6 +2,7 @@
 title: document.writeln
 slug: Web/API/Document/writeln
 ---
+
 {{ ApiRef() }}
 
 ### 概述

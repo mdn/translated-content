@@ -2,6 +2,7 @@
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
+
 {{JSRef}}
 
 **`Math.hypot()`** 函数返回所有参数的平方和的平方根，即：

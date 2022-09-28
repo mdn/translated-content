@@ -12,7 +12,7 @@ browser-compat:
 
 WebGL (Web Graphics Library) é uma API do JavaScript para renderizar gráficos 3D e 2D dentro de um navegador web compatível sem o uso de plug-ins. O WebGL faz isso introduzindo uma API que está de acordo com o OpenGL ES 2.0 e que pode ser usada em elementos do HTML5 {{HTMLElement("canvas")}}.
 
-O suporte para WebGL está presente no [Firefox](/en-US/Firefox "Firefox 4 for developers") 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari ](http://www.apple.com/safari/)5.1+ e [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. No entanto, o dispositivo do usuário também deve ter um hardware que suporte esses recursos.
+O suporte para WebGL está presente no [Firefox](/en-US/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/) 5.1+ e [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. No entanto, o dispositivo do usuário também deve ter um hardware que suporte esses recursos.
 
 O elemento {{HTMLElement("canvas")}} é também usado pelo [Canvas 2D](/pt-BR/docs/Web/API/Canvas_API) para renderizar gráficos 2D em páginas web.
 

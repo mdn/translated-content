@@ -2,6 +2,7 @@
 title: Document.domain
 slug: Web/API/Document/domain
 ---
+
 {{ApiRef}}{{Deprecated_Header}}
 
 {{domxref("Document")}} 接口的 **`domain`** 属性获取/设置当前文档的原始域部分，常用于[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
@@ -43,7 +44,7 @@ var currentDomain = document.domain;
 
 ### 关闭窗口
 
-如果文档（例如 www\.example.xxx/good.html）的域为“ www\.example.xxx”，则本示例将尝试关闭窗口。
+如果文档（例如 www\.example.xxx/good.html）的域为“www\.example.xxx”，则本示例将尝试关闭窗口。
 
 ```js
 var badDomain = "www.example.xxx";
@@ -60,7 +61,7 @@ if (document.domain == badDomain) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.domain")}}
+{{Compat}}
 
 ### Firefox 备注
 

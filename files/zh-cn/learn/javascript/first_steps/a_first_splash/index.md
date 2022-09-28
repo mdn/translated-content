@@ -459,7 +459,7 @@ guessField.focus();
 浏览器对象如何使用呢，下面我们来小试牛刀。
 
 1. 首先在浏览器中打开你的程序。
-2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)， 并且切换到 JavaScript 控制台的标签页。
+2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)，并且切换到 JavaScript 控制台的标签页。
 3. 输入 `guessField`，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！
 4. 现在输入下面的代码：
 

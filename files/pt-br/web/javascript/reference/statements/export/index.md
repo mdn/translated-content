@@ -13,8 +13,8 @@ Módulos exportados ficam em {{jsxref("Strict_mod", "strict mode")}}, independen
 
 Há dois tipos de exportação:
 
-1.  Exportações Explícitas (Named Exports) (Zero ou mais exports por módulo)
-2.  Exportações Padrão (Default Exports) (Uma por módulo)
+1. Exportações Explícitas (Named Exports) (Zero ou mais exports por módulo)
+2. Exportações Padrão (Default Exports) (Uma por módulo)
 
 ```
 // Exportando recursos individuais

@@ -2,6 +2,7 @@
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
 ---
+
 {{APIRef("Proximity Events")}}{{SeeCompatTable}}
 
 `UserProximityEvent` は、端末の近接センサーによって、端末の近くに物体が存在するかどうかを示します。

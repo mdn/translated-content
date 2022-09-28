@@ -2,6 +2,7 @@
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 84 の変更点をまとめています。Firefox 84 は、2020 年 12 月 15 日にリリースされました。

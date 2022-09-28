@@ -2,6 +2,7 @@
 title: History API
 slug: Web/API/History_API
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 DOM {{ domxref("window") }} 对象通过 {{ domxref("window.history", "history") }} 对象提供了对浏览器的会话历史的访问 (不要与 [WebExtensions history](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history)搞混了)。它暴露了很多有用的方法和属性，允许你在用户浏览历史中向前和向后跳转，同时——从 HTML5 开始——提供了对 history 栈中内容的操作。
@@ -170,7 +171,7 @@ history.replaceState(stateObj, "page 3", "bar2.html");
 
 ## 浏览器兼容性
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,9 +2,10 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 ---
+
 {{GamesSidebar}}
 
-你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。 包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
+你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
 
 ## HTML5 相较于传统的好处
 
@@ -12,9 +13,9 @@ slug: Games/Publishing_games/Game_distribution
 
 ### 多平台兼容
 
-HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。 从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
+HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
 
-你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。 你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
+你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
 
 ### 即时更新
 

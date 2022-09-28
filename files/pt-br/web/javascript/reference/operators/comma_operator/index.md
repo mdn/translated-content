@@ -27,7 +27,7 @@ Você pode usar o operador vírgula quando desejar incluir múltiplas expressõe
 
 ## Exemplo
 
-Se `a` é um array de 2 dimensões com 10 elementos de um lado, o seguinte código usa o operador vírgula para incrementar duas variáveis mutuamente. Note que a vírgula na declaração `var `_**não**_ é o operador vírgula, porque ele não existe dentro de uma expressão. Além disso, ela é uma caractere especial nas declarações `var` para combinar múltiplas delas em uma única. Embora praticamente a vírgula comporte-se quase que igualmente ao operador vírgula. O código imprime os valores dos elementos diagonais da matriz:
+Se `a` é um array de 2 dimensões com 10 elementos de um lado, o seguinte código usa o operador vírgula para incrementar duas variáveis mutuamente. Note que a vírgula na declaração `var` _**não**_ é o operador vírgula, porque ele não existe dentro de uma expressão. Além disso, ela é uma caractere especial nas declarações `var` para combinar múltiplas delas em uma única. Embora praticamente a vírgula comporte-se quase que igualmente ao operador vírgula. O código imprime os valores dos elementos diagonais da matriz:
 
 ```js
 for (var i = 0, j = 9; i <= 9; i++, j--)

@@ -2,6 +2,7 @@
 title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`handler.getOwnPropertyDescriptor()`** は {{jsxref("Object.getOwnPropertyDescriptor()")}} に対するトラップです。

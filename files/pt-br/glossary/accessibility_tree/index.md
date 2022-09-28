@@ -29,7 +29,7 @@ Adicionalmente, a árvore de acessibilidade frequentemente contém informação 
 
 Enquanto continua em forma de rascunho na Web Incubator Community Group, o Modelo de Objeto de Acessibilidade (**[Accessibility Object Model](https://wicg.github.io/aom/explainer.html),** AOM), tem a intenção de incubar APIs que facilitam expressar a semântica de acessibilidade e potencialmente permitir acesso de leitura à árvore de acessibilidade computada.
 
-1.  [Glossário](/pt-BR/docs/Glossario)
+1. [Glossário](/pt-BR/docs/Glossario)
 
-    1.  {{Glossary("Accessibility", "Acessibilidade")}}
-    2.  {{Glossary("ARIA")}}
+    1. {{Glossary("Accessibility", "Acessibilidade")}}
+    2. {{Glossary("ARIA")}}

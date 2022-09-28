@@ -2,6 +2,7 @@
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
+
 ## 引言
 
 你可以通过这个例子知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。

@@ -2,6 +2,7 @@
 title: 'WebSocket: open イベント'
 slug: Web/API/WebSocket/open_event
 ---
+
 {{APIRef}}
 
 `open` イベントは、 `WebSocket` のコネクションが開かれたときに発生します。

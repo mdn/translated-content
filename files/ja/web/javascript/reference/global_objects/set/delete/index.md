@@ -2,6 +2,7 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは、指定された値が設定されていれば、 `Set` オブジェクトから取り除きます。

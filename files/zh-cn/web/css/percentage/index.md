@@ -2,6 +2,7 @@
 title: <percentage>
 slug: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/CSS) 数据类型 `<percentage>` 表述一个百分比值。许多 [CSS 属性](/zh-CN/CSS_Reference) 可以取百分比值，经常用以根据父对象来确定大小。百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着%符号构成。就像其它在 css 里的单位一样，在%和数值之间是不允许有空格的。
@@ -53,4 +54,4 @@ slug: Web/CSS/percentage
 
 ## 浏览器兼容性
 
-{{Compat("css.types.percentage")}}
+{{Compat}}

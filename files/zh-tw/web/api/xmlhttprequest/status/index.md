@@ -44,7 +44,7 @@ xhr.send(null);
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.status")}}
+{{Compat}}
 
 ## See also
 

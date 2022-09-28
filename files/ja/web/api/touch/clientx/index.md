@@ -2,6 +2,7 @@
 title: Touch.clientX
 slug: Web/API/Touch/clientX
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`Touch.clientY`** は読み取り専用プロパティで、タッチ点のビューポートからのスクロールオフセットは含まない相対 Y 座標を返します。

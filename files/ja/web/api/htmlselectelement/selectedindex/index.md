@@ -2,6 +2,7 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** は `long` 値であり、選択されている {{HTMLElement("option")}} 要素のうち、`multiple` の値に応じて最初または最後のものを返します。`-1` の値は選択されている要素がないことを示します。

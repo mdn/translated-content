@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.enable()`** 方法，用于对该上下文开启某种特性。
@@ -57,7 +58,7 @@ gl.isEnabled(gl.DITHER);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.enable")}}
+{{Compat}}
 
 ## 另见
 

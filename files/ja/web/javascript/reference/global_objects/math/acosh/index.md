@@ -2,6 +2,7 @@
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 ---
+
 {{JSRef}}
 
 **`Math.acosh()`** 関数は、数値の双曲線余弦 (ハイパーボリックアークコサイン) を返します。

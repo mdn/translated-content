@@ -2,6 +2,7 @@
 title: ResizeObserver
 slug: Web/API/ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。

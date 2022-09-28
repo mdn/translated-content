@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.uniform[1234][fi][v]()`** 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。
@@ -61,7 +62,7 @@ gl.uniform1f(u_alpha, 0.8);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.uniform1f")}}
+{{Compat}}
 
 ## 另见
 

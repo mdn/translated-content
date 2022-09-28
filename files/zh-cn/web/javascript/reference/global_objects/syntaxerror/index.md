@@ -2,6 +2,7 @@
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
+
 {{JSRef}}
 
 **`SyntaxError`** 对象代表尝试解析语法上不合法的代码的错误。

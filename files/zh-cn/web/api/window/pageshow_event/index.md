@@ -2,6 +2,7 @@
 title: pageshow
 slug: Web/API/Window/pageshow_event
 ---
+
 当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
 
 ## 基本信息
@@ -56,7 +57,7 @@ window.addEventListener('load', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 相关事件
 

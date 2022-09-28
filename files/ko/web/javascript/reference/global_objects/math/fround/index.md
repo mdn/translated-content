@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Math.fround
 ---
 {{JSRef}}
 
-**`Math.fround()`** 함수는 [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format "link to the wikipedia page on single-precision floating-point format") 포맷으로 표현할 수 있는 실수들 중에서 가장 가까운 숫자를 리턴합니다.
+**`Math.fround()`** 함수는 [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) 포맷으로 표현할 수 있는 실수들 중에서 가장 가까운 숫자를 리턴합니다.
 
 ## 문법
 

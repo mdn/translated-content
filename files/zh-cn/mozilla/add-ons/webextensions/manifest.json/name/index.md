@@ -2,6 +2,7 @@
 title: 名称 - name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -33,4 +34,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.name")}}
+{{Compat}}

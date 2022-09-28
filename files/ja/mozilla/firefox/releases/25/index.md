@@ -2,6 +2,7 @@
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 ---
+
 Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 25 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

@@ -2,6 +2,7 @@
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
 ---
+
 {{AddonSidebar}}
 
 ウェブページのテキストを検索し、マッチしたものをハイライトします。

@@ -2,6 +2,7 @@
 title: 'HTMLMedia​Element: play イベント'
 slug: Web/API/HTMLMediaElement/play_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `play` メソッドは `autoplay` 属性の結果として、`paused` プロパティが `true` から `false` に変更されたときに発生します。

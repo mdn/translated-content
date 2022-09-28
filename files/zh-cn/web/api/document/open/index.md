@@ -2,6 +2,7 @@
 title: Document.open()
 slug: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** 方法打开一个要[写入](/zh-CN/docs/Web/API/Document/write)的文档。
@@ -48,7 +49,7 @@ document non-spec'ed parameters to document.open
 
 See [Security check basics](/zh-CN/Security_check_basics) for more about principals.
 
-如果不想在当前文本追加内容， 使用 `open("text/html", "replace") 替换` `open()` .
+如果不想在当前文本追加内容，使用 `open("text/html", "replace")` 替换 `open()`。
 
 ### 针对 Gecko 的注意事项
 

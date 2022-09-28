@@ -2,13 +2,14 @@
 title: 初识 WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/) 使得在支持 HTML 的 [`canvas`](/zh-CN/HTML/Canvas) 标签的浏览器中，不需要安装任何插件，便可以使用基于 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 的 API 在 canvas 中进行 2D 和 3D 渲染。WebGL 程序包括用 JavaScript 写的控制代码，以及在图形处理单元（GPU, Graphics Processing Unit）中执行的着色代码（GLSL，注：GLSL 为 OpenGL 着色语言）。WebGL 元素可以和其他 HTML 元素混合使用，并且可以和网页其他部分或者网页背景结合起来。
 
 本文将向您介绍 WebGL 的基本用法。此处假定您对三维图形方面的数学知识已经有一定的理解，本文也不会试图向您教授 3D 图像概念本身。
 
-本文的代码也可以在这里下载 [webgl-examples GitHub repository](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial) 。
+本文的代码也可以在这里下载 [GitHub 上的 webgl-examples 文件夹](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial)。
 
 [THREE.js](https://threejs.org/)和[BABYLON.js](https://www.babylonjs.com/)等很多框架封装了 WebGL，提供了各个平台之间的兼容性。使用这些框架而非原生的 WebGL 可以更容易地开发 3D 应用和游戏。
 

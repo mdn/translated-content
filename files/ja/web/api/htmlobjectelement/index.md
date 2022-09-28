@@ -2,6 +2,7 @@
 title: HTMLObjectElement
 slug: Web/API/HTMLObjectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLObjectElement`** インターフェイスは、外部リソースを表す {{HTMLElement("object")}} 要素のレイアウトや表示を操作するための特別なプロパティとメソッド（継承によって利用できる {{domxref("HTMLElement")}} インターフェイスのもの以外のもの）を提供するものです。

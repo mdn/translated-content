@@ -2,6 +2,7 @@
 title: 多点触控交互
 slug: Web/API/Touch_events/Multi-touch_interaction
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.

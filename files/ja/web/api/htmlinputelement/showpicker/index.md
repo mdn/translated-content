@@ -2,6 +2,7 @@
 title: HTMLInputElement.showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement.showPicker()`** メソッドは、ブラウザーのピッカーをユーザーに表示します。

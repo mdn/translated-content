@@ -2,6 +2,7 @@
 title: DataTransfer.items
 slug: Web/API/DataTransfer/items
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{domxref("DataTransfer")}}的`items` 属性只读，是拖动操作中 {{domxref("DataTransferItem","数据传输项")}}的{{domxref("DataTransferItemList","列表")}}。该列表包含了操作中每一项目的对应项，如果操作没有项目，则列表为空。

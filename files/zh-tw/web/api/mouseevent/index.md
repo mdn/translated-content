@@ -124,7 +124,7 @@ Click on the button to see how the sample works:
 
 ## 瀏覽器相容性
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## 參見
 

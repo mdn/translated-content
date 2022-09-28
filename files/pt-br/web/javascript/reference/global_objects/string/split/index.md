@@ -200,8 +200,6 @@ O script exibirá o texto a seguir:
 
 {{Compat("javascript.builtins.String.split")}}
 
-##
-
 ## Veja também
 
 - {{jsxref("String.prototype.charAt()")}}

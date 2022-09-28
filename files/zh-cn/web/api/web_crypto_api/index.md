@@ -2,6 +2,7 @@
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
 ---
+
 {{DefaultAPISidebar("Web Crypto API")}}
 
 **Web Crypto API** 为脚本提供加密了一套关于密码（学）的接口，以便用于构建需要使用密码的系统。

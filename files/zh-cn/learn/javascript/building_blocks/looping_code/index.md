@@ -2,6 +2,7 @@
 title: 循环吧代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
@@ -26,7 +27,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 ## 来一起循环
 
-循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>)一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
+循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>) 一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
 
 让我们来想一下下图，这位农夫考虑为他的家庭做一周的食物计划，他或许就需要执行一段循环：
 

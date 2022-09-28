@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement`** インターフェイスは {{domxref("HTMLElement")}} に音声や動画で一般的なメディアに関する基本的な能力の対応に必要なプロパティやメソッドを追加します。

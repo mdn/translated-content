@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/navigator
 l10n:
   sourceCommit: 5b82af59e9723c502cf660fe9c32f9fd8dee49ac
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`navigator`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーに関連付けられた {{domxref("WorkerNavigator")}} を返します。これは特有の navigator オブジェクトであり、大部分は閲覧スコープの {{domxref("Navigator")}} のサブセットですが、ワーカーに合わせたものです。

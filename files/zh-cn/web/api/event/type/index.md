@@ -2,6 +2,7 @@
 title: event.type
 slug: Web/API/Event/type
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **Event.type** 会返回一个字符串，表示该事件对象的事件类型。

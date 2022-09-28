@@ -164,7 +164,7 @@ TypeError: 1 is not an object // ES5 code
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## 參閱
 

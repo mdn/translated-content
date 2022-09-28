@@ -44,7 +44,7 @@ Quando chamado em um documento HTML, `setAttribute` lower-cases its attribute na
 
 Se um atributo especificado já existe, então o valor do atributo é mudado para o valor passado para a função. Se não existe, então o atributo é criado.
 
-Apesar de [`getAttribute()`](/en-US/docs/DOM/element.getAttribute "DOM/element.getAttribute") retornar `null` para atributos ausentes, você precisa usar [`removeAttribute()`](/en-US/docs/DOM/element.removeAttribute "DOM/element.removeAttribute") ao invés de `elt.setAttribute(attr, null)` para remover o atributo. Este último forçará o valor `null` para a string `"null"`, o que não é provavelmente o que você quer.
+Apesar de [`getAttribute()`](/en-US/docs/DOM/element.getAttribute) retornar `null` para atributos ausentes, você precisa usar [`removeAttribute()`](/en-US/docs/DOM/element.removeAttribute) ao invés de `elt.setAttribute(attr, null)` para remover o atributo. Este último forçará o valor `null` para a string `"null"`, o que não é provavelmente o que você quer.
 
 Usar `setAttribute()` para modificar certos atributos, mais notavelmente valor em XUL, funciona inconsistentemente, como atributos específicos de valor padrão. Para acessar ou modificar os valores atuais, você deve usar as propriedades. Por exemplo, use `elt.value` ao invés de `elt.setAttribute('value', val)`.
 

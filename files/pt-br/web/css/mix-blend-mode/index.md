@@ -78,8 +78,6 @@ circle { mix-blend-mode: screen; }
 
 {{Compat("css.properties.mix-blend-mode")}}
 
-##
-
 ## Veja também
 
 - {{cssxref("&lt;blend-mode&gt;")}}

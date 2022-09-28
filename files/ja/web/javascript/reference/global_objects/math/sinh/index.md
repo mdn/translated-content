@@ -2,6 +2,7 @@
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
+
 {{JSRef}}
 
 **`Math.sinh()`** 関数は、引数として与えた数の双曲線正弦 (ハイパーボリックサイン) を返します。これは{{jsxref("Math.E", "定数 e", "", 1)}} を使用して次のように表すことができます。

@@ -2,6 +2,7 @@
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFormElement.enctype`** 属性常用来指明提交表单的内容类型，可选的值如下：

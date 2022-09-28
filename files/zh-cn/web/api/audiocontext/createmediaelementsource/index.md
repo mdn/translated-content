@@ -2,6 +2,7 @@
 title: AudioContext.createMediaElementSource()
 slug: Web/API/AudioContext/createMediaElementSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 接口的 `createMediaElementSource()` 方法用于创建一个新的 {{ domxref("MediaElementAudioSourceNode") }} 对象，输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素，对应的音频即可被播放或者修改。
@@ -77,7 +78,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.createMediaElementSource")}}
+{{Compat}}
 
 ## 相关链接
 

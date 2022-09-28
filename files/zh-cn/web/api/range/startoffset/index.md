@@ -2,6 +2,7 @@
 title: Range.startOffset
 slug: Web/API/Range/startOffset
 ---
+
 {{ ApiRef("Range") }}
 
 **`Range.startOffset`** 是一个只读属性，用于返回一个表示 `Range` 在 `startContainer` 中的起始位置的数字。

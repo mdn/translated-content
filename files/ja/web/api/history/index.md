@@ -2,6 +2,7 @@
 title: History
 slug: Web/API/History
 ---
+
 {{ APIRef("History API") }}
 
 **`History`** インターフェイスで、ブラウザーの*セッション履歴*、つまり現在のページが読み込まれたタブまたはフレームで訪問したページを操作することができます。

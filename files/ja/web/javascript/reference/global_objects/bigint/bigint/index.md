@@ -2,6 +2,7 @@
 title: BigInt() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt()`** コンストラクターは **bigint** 型の値を返します。

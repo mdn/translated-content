@@ -2,6 +2,7 @@
 title: SVG：可缩放矢量图形
 slug: Web/SVG
 ---
+
 {{SVGRef}}
 
 ## 开始学习 SVG

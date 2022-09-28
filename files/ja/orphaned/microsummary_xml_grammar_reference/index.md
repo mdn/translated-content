@@ -3,6 +3,7 @@ title: Microsummary XML grammar reference
 slug: orphaned/Microsummary_XML_grammar_reference
 original_slug: Microsummary_XML_grammar_reference
 ---
+
 ## はじめに
 
 マイクロサマリジェネレータとは、ウェブページから特定の情報を抜き出し、そのページの内容に基づいてそのタイトルが変わるブックマークとして概要を表示するための方法を記述した XML 文書のことです。
@@ -80,7 +81,7 @@ _なし。_
 
 各 [XSLT](ja/XSLT) について、`<stylesheet>` あるいは `<transform>` タグのどちらかを用いたスタイルシート子要素を指定します。これらはどちらも同じ機能を果たします。
 
-> **Note:** **注意：**\<template> 要素は必ずマイクロサマリ名前空間 (`http://www.mozilla.org/microsummaries/0.1`) 内になければなりませんが、その `<stylesheet>`/`<transform>` 子要素は必ず XSLT 名前空間 (`http://www.w3.org/1999/XSL/Transform`) 内になければなりません。
+> **Note:** \<template> 要素は必ずマイクロサマリ名前空間 (`http://www.mozilla.org/microsummaries/0.1`) 内になければなりませんが、その `<stylesheet>`/`<transform>` 子要素は必ず XSLT 名前空間 (`http://www.w3.org/1999/XSL/Transform`) 内になければなりません。
 
 ## `<pages>` 要素
 
@@ -114,7 +115,7 @@ _なし。_
 </pages>
 ```
 
-> **Note:** **注意：**マッチさせたい URL をただ含んでいるだけの URL にマッチしてしまわないようにするためにも、ページの URL の先頭にマッチさせたい正規表現はキャレット (^) から始めなければなりません。例えば、`http://www\.example\.com/` という正規表現は `http://www.example.com/` という URL にも `http://www.evil.com/http://www.example.com/` という URL にもマッチします。しかし、`^http://www\.example\.com/` という正規表現は前者の URL にしかマッチしません。
+> **Note:** マッチさせたい URL をただ含んでいるだけの URL にマッチしてしまわないようにするためにも、ページの URL の先頭にマッチさせたい正規表現はキャレット (^) から始めなければなりません。例えば、`http://www\.example\.com/` という正規表現は `http://www.example.com/` という URL にも `http://www.evil.com/http://www.example.com/` という URL にもマッチします。しかし、`^http://www\.example\.com/` という正規表現は前者の URL にしかマッチしません。
 
 ジェネレータにとって妥当な正規表現の構文の詳細については [Core_JavaScript_1.5_Reference:Global_Objects:RegExp](ja/Core_JavaScript_1.5_Reference/Global_Objects/RegExp) のリファレンスを参照してください。また、[マイクロサマリジェネレータ用正規表現の作成](ja/Creating_regular_expressions_for_a_microsummary_generator) では URL にマッチする正規表現の書き方を一歩一歩解説しています。
 

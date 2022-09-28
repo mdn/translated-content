@@ -2,6 +2,7 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** メソッドは、参照先の文字列が整列順で与えられた文字列より前に来るか、後に来るか、同じであるかを示す数値を返します。

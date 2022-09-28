@@ -7,7 +7,7 @@ translation_of: Web/API/Document/createElementNS
 
 Crea un elemento del DOM con el espacio de nombres URI y un nombre calificado.
 
-Para crear un elemento sin especificar un espacio de nombre URI usa el método [createElement](createElement).
+Para crear un elemento sin especificar un espacio de nombre URI usa el método [createElement](/es/docs/Web/API/Document/createElement).
 
 ## Sintaxis
 
@@ -29,7 +29,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ### Valor de Retorno
 
-El nuevo [`Elemento`](https://developer.mozilla.org/en-US/docs/Web/API/Element).
+El nuevo [`Elemento`](/en-US/docs/Web/API/Element).
 
 ## Namespace URIs válidos
 
@@ -40,7 +40,7 @@ El nuevo [`Elemento`](https://developer.mozilla.org/en-US/docs/Web/API/Element).
 
 ## Ejemplo
 
-El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/XHTML "XHTML") y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL "XUL") extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
+El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/XHTML) y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL) extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
 
 ```xml
 <?xml version="1.0"?>
@@ -85,7 +85,7 @@ El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/d
 
 ## Ver también
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

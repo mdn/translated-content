@@ -2,6 +2,7 @@
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [September 5, 2018](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
