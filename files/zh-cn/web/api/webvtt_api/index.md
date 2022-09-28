@@ -157,7 +157,7 @@ WEBVTT
   - Ta en kopp
   ```
 
-## WebVTT cue 的样式
+## 为 WebVTT cue 添加样式
 
 你可以通过查找与 {{cssxref("::cue")}} 伪元素匹配的元素来设计 WebVTT 样式。
 
