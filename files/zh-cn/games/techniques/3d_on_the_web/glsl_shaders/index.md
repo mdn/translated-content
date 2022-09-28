@@ -83,7 +83,7 @@ void main() {
 </html>
 ```
 
-他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。 {{htmlelement("script")}}元素在包含 Three.js 库的{{htmlelement("head")}}中。我们的代码将写在{{htmlelement("body")}}标签中的 script 标签中：
+其包含了一些基本信息比如文档的 {{htmlelement("title")}}，并且设置了 {{htmlelement("canvas")}} 元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。{{htmlelement("script")}} 元素在包含 Three.js 库的 {{htmlelement("head")}} 中。我们的代码将写在 {{htmlelement("body")}} 标签中的 script 标签中：
 
 1. 首先将包含顶点着色器。
 2. 然后包含片段着色器。
