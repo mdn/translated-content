@@ -2,6 +2,7 @@
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
+
 {{AddonSidebar()}}
 
 単一のメッセージを、自分や別の拡張機能が持つイベントリスナーに送信します。

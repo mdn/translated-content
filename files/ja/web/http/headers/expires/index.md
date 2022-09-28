@@ -2,6 +2,7 @@
 title: Expires
 slug: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 **`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。

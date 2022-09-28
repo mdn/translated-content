@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 > **警告：** 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
 
-`这是一个异步方法，返回Promise对象。`
+这是一个异步方法，返回 `Promise` 对象。
 
 ## 语法
 
@@ -26,9 +26,9 @@ var removingBookmark = browser.bookmarks.remove(
 
 ### 返回值
 
-若方法执行完成，返回一个无参的 `Promise对象。`
+若方法执行完成，返回一个无参的 `Promise` 对象。
 
-若未找到该书签或该空书签文件夹，将返回一个带有错误信息的`Promise对象。`
+若未找到该书签或该空书签文件夹，将返回一个带有错误信息的 `Promise` 对象。
 
 ## 浏览器兼容性
 

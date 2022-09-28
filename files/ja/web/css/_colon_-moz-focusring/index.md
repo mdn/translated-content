@@ -2,6 +2,7 @@
 title: ':-moz-focusring'
 slug: Web/CSS/:-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 **`:-moz-focusring`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 {{cssxref(":focus")}} 擬似クラスに似ていますが、現在フォーカスが当たっていて、*かつ*フォーカスリングやその他のインジケーターがその周りに描かれる場合のみ一致します。

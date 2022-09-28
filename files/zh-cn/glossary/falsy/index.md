@@ -16,7 +16,7 @@ slug: Glossary/Falsy
 | `false`                          | [false](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Future_reserved_keywords_in_older_standards) 关键字                                                                      |
 | 0                                | 数值 [zero](/zh-CN/docs/Web/JavaScript/Data_structures#Number_type)                                                                                                                   |
 | -0                               | 数值 负 [zero](/zh-CN/docs/Web/JavaScript/Data_structures#Number_type)                                                                                                                |
-| 0n                               | 当 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 作为布尔值使用时，遵从其作为数值的规则. `0n` 是 _falsy_ 值。                                                  |
+| 0n                               | 当 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 作为布尔值使用时，遵从其作为数值的规则。`0n` 是 _falsy_ 值。                                                  |
 | "", '', \`\`                       | 这是一个空字符串 (字符串的长度为零). JavaScript 中的字符串可用双引号 **`""`**, 单引号 `''`, 或 [模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals) **` `` `** 定义。 |
 | {{Glossary("null")}}     | [null](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) - 缺少值                                                                                                             |
 | {{Glossary("undefined")}} | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 原始值                                                                                                   |

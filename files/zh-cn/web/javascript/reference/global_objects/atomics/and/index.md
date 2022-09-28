@@ -26,7 +26,7 @@ Atomics.and(typedArray, index, value)
 
 ### 返回值
 
-给定位置的旧值（`typedArray[index]）。`
+给定位置的旧值（`typedArray[index]`）。
 
 ### 错误
 
@@ -45,7 +45,7 @@ Atomics.and(typedArray, index, value)
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-比如，一个按位与如 `5 & 1` 的结果是 `0001，其十进制就是`1`。`
+比如，一个按位与如 `5 & 1` 的结果是 `0001`，其十进制就是 `1`。
 
 ```plain
 5  0101

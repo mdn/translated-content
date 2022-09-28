@@ -2,6 +2,7 @@
 title: column-gap (grid-column-gap)
 slug: Web/CSS/column-gap
 ---
+
 {{CSSRef}}
 
 **`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の段または列の間の隙間 ({{glossary("Gutters","溝")}}) の寸法を設定します。

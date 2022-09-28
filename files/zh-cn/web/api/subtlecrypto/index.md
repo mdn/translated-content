@@ -35,7 +35,7 @@ slug: Web/API/SubtleCrypto
 
 [`generateKey()`](/zh-CN/docs/Web/API/SubtleCrypto/generateKey) 和 [`deriveKey()`](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey) 函数都可以创建一个新的 [`CryptoKey`](/zh-CN/docs/Web/API/CryptoKey) 对象。
 
-不同之处在于 `generateKey()` 每次都会生成一个新的键值对， 而 `deriveKey()` 通过从基础密钥资源中生成一个新的密钥。如果为两个独立的`deriveKey()`提供相同的基础密钥资源，那么你会获得两个具有相同基础值的 `CryptoKey` 对象。如果你想通过密码派生加密密钥，然后从相同的密码派生相同的密钥以解密数据，那么这将会非常有用。
+不同之处在于 `generateKey()` 每次都会生成一个新的键值对，而 `deriveKey()` 通过从基础密钥资源中生成一个新的密钥。如果为两个独立的`deriveKey()`提供相同的基础密钥资源，那么你会获得两个具有相同基础值的 `CryptoKey` 对象。如果你想通过密码派生加密密钥，然后从相同的密码派生相同的密钥以解密数据，那么这将会非常有用。
 
 #### 导入和导出密钥
 

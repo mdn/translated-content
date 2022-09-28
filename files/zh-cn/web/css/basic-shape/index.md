@@ -88,7 +88,7 @@ slug: Web/CSS/basic-shape
 <shape-radius> = <length> | <percentage> | closest-side | farthest-side
 ```
 
-为一个圆形或椭圆形定义一个半径。其省缺值为 `closest-side。`
+为一个圆形或椭圆形定义一个半径。其省缺值为 `closest-side`。
 
 `closest-side` 即图形中心到盒模型最近一条边之间的距离。对于圆形，该值在任意维度都表示最近的一条边。对于椭圆形，该值为半径维度最近的一条边。
 

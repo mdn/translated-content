@@ -2,6 +2,7 @@
 title: border-inline-start
 slug: Web/CSS/border-inline-start
 ---
+
 {{CSSRef}}
 
 **`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

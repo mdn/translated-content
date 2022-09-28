@@ -43,7 +43,7 @@ font-size: inherit;
 ### 值
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`
-  - : 该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的`<font size="1">` 到`<font size="7">（`用户默认字体大小`<font size="3">）类似。`
+  - : 该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的 `<font size="1">` 到 `<font size="7">`（用户默认字体大小 `<font size="3">`）类似。
 - `larger`, `smaller`
   - : 比父元素的字体大或小，使用与上面的关键字的相近缩放比率。
 - `<length>`

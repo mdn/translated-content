@@ -4,6 +4,7 @@ slug: Web/API/Worker/postMessage
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。

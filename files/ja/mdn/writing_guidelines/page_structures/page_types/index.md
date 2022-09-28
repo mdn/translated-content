@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Page_types
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。

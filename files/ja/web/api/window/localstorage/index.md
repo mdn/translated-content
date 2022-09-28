@@ -2,6 +2,7 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
+
 {{APIRef()}}
 
 `localStorage` プロパティはローカルの {{domxref("Storage")}} オブジェクトにアクセスすることができます。 `localStorage` は [`sessionStorage`](/ja/docs/Web/API/Window.sessionStorage) によく似ています。唯一の違いは、`localStorage` に保存されたデータには保持期間の制限はなく、`sessionStorage` に保存されたデータはセッションが終わると同時に（ブラウザが閉じられたときに）クリアされてしまうことです。

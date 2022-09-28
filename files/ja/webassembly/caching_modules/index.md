@@ -4,6 +4,7 @@ slug: WebAssembly/Caching_modules
 l10n:
   sourceCommit: 2c2f8caac8cbf8e41019c01be5635e10fe65f2cd
 ---
+
 {{WebAssemblySidebar}}
 
 > **Warning:** 実験的な {{jsxref("WebAssembly.Module")}} IndexedDB のシリアル化サポートがブラウザーから削除されています。{{bug("1469395")}} と[この仕様の問題](https://github.com/WebAssembly/spec/issues/821)を参照してください。

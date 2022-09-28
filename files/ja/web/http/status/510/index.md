@@ -2,6 +2,7 @@
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`510 Not Extended`** レスポンスステータスコードは、[RFC 2774](https://tools.ietf.org/html/rfc2774) が定義する HTTP 拡張フレームワークのコンテキストで送信されます。

@@ -2,6 +2,7 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 **`X-Frame-Options`** は [HTTP](/en-US/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、{{interwiki("wikipedia", "クリックジャッキング")}}攻撃を防ぐために使用することができます。

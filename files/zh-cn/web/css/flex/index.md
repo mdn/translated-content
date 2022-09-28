@@ -52,8 +52,8 @@ flex: unset;
 
 **单值语法**: 值必须为以下其中之一：
 
-- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作`flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
-- 一个有效的**宽度 ({{cssxref("width")}})**值：它会被当作 `<flex-basis>的值。`
+- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作 `flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
+- 一个有效的 **宽度 ({{cssxref("width")}})** 值：它会被当作 `<flex-basis>` 的值。
 - 关键字[`none`](/zh-CN/docs/Web/CSS/flex#none)，[`auto`](/zh-CN/docs/Web/CSS/flex#auto)或`initial`.
 
 **双值语法**: 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](/zh-CN/docs/Web/CSS/flex-grow) 的值。第二个值必须为以下之一：

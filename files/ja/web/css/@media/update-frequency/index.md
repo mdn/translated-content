@@ -2,6 +2,7 @@
 title: update
 slug: Web/CSS/@media/update-frequency
 ---
+
 {{CSSRef}}
 
 **`update`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末がどれだけの頻度でコンテンツの表示を更新することができるかを調べるために使用することができます。

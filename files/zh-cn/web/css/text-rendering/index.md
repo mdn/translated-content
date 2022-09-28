@@ -45,7 +45,7 @@ text-rendering: unset;
 
     但这个 geometricPrecision 特性——当被渲染引擎完全支持时——会使文本缩放是流畅的。对于大比例的缩放，你可能看到并不太漂亮的文本渲染，但这个字体大小是你期望的，而不是被 Windows 或 Linux 系统四舍五入或向下取整的字体大小。
 
-    **提示**: WebKit 准确地的实现了这个值，但是 Gecko 把这个值按照 `optimizeLegibility 处理。`
+    **提示**: WebKit 准确地的实现了这个值，但是 Gecko 把这个值按照 `optimizeLegibility` 处理。
 
 ## 示例
 

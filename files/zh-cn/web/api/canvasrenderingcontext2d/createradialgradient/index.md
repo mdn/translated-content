@@ -112,8 +112,8 @@ window.addEventListener("load", drawCanvas);
 
 ### Gecko-specific 注解
 
-- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始， 指定非限制的值会抛出 `NOT_SUPPORTED_ERR` ，用来替代 `SYNTAX_ERR。`
-- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR。`
+- 从 Gecko 2.0 {{geckoRelease("2.0")}}开始， 指定非限制的值会抛出 `NOT_SUPPORTED_ERR`，用来替代 `SYNTAX_ERR`。
+- 从 Gecko 5.0 {{geckoRelease("5.0")}}开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR`。
 
 ## 参见
 

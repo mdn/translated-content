@@ -84,7 +84,7 @@ document.domain = "company.com";
 
 ### 교차 출처 접근 허용하기
 
-[CORS](/ko/docs/Web/HTTP/CORS "HTTP/Access_control_CORS")를 사용해 교차 출처 접근을 허용하세요. CORS는 {{glossary("HTTP")}}의 일부로, 어떤 호스트에서 자신의 콘텐츠를 불러갈 수 있는지 서버에 지정할 수 있는 방법입니다.
+[CORS](/ko/docs/Web/HTTP/CORS)를 사용해 교차 출처 접근을 허용하세요. CORS는 {{glossary("HTTP")}}의 일부로, 어떤 호스트에서 자신의 콘텐츠를 불러갈 수 있는지 서버에 지정할 수 있는 방법입니다.
 
 ### 교차 출처 접근 막기
 

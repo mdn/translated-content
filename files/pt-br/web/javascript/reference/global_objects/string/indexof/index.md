@@ -137,8 +137,6 @@ console.log(count);
 
 {{Compat("javascript.builtins.String.indexOf")}}
 
-##
-
 ## Veja também
 
 - {{jsxref("String.prototype.charAt()")}}

@@ -77,7 +77,7 @@ Neste exemplo definimos a função `makeAdder(x)` que toma um único argumento `
 
 Na essência o `makeAdder` trata-se de uma _função fábrica -_ irá construir outras funções que podem adicionar um determinado valor específico a seu argumento. No exemplo acima usamos a fábrica de funções para criar duas novas funções - uma que adiciona 5 ao argumento, e outra que adiciona 10.
 
-Ambas as funções `add5` e `add10`\_ \_``são closures. Compartilham o mesmo corpo de definição de função mas armazenam diferentes ambientes. No ambiente da `add5`, por exemplo, `x`equivale a 5, enquanto na`add10` o valor de x é 10.
+Ambas as funções `add5` e `add10` são closures. Compartilham o mesmo corpo de definição de função mas armazenam diferentes ambientes. No ambiente da `add5`, por exemplo, `x` equivale a 5, enquanto na `add10` o valor de x é 10.
 
 ## Closures na prática
 
@@ -214,7 +214,7 @@ Observe como cada um dos contadores mantém a sua independência em relação ao
 
 ## Criando closures dentro de loops: Um erro comum
 
-Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let "let") no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
+Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
 
 ```html
 <p id="help">Notas úteis aparecerão aqui</p>
@@ -420,4 +420,4 @@ MyObject.prototype.getMessage = function() {
 };
 ```
 
-Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model "Detalhes do modelo de objeto") para mais detalhes.
+Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model) para mais detalhes.

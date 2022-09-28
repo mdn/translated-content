@@ -314,7 +314,7 @@ console.log(a.indexOf('b', 2)); // logs 3
 console.log(a.indexOf('z')); // logs -1, because 'z' was not found
 ```
 
-{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} 和 `indexOf 差不多，但这是从结尾开始，并且是反向搜索。`
+{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} 和 `indexOf` 差不多，但这是从结尾开始，并且是反向搜索。
 
 ```js
 var a = ['a', 'b', 'c', 'd', 'a', 'b'];
@@ -386,7 +386,7 @@ var total = a.reduce(function(first, second) { return first + second; }, 0);
 console.log(total) // Prints 60
 ```
 
-{{jsxref("Array.reduceRight", "reduceRight(callback[, initalvalue])")}} 和 `reduce() 相似，但这从最后一个元素开始的。`
+{{jsxref("Array.reduceRight", "reduceRight(callback[, initalvalue])")}} 和 `reduce()` 相似，但这从最后一个元素开始的。
 
 `reduce` 和 `reduceRight` 是迭代数组方法中最不被人熟知的两个函数.。他们应该使用在那些需要把数组的元素两两递归处理，并最终计算成一个单一结果的算法。
 
@@ -417,7 +417,7 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 ### 数组和正则表达式
 
-当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 [`RegExp.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec), `String.match() 和` `String.split() 的返回值是一个数组。` 使用数组和正则表达式的的更多信息，请看 [Regular Expressions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions).
+当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 [`RegExp.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec), `String.match()` 和 `String.split()` 的返回值是一个数组。使用数组和正则表达式的的更多信息，请看 [Regular Expressions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ### 使用类数组对象 (array-like objects)
 
@@ -473,7 +473,7 @@ console.log(evens); // logs 2,22,30
 var evens = numbers.filter(function(i){return i % 2 === 0;});
 ```
 
-`map()` `和 filter()` 类型的操作可以被组合（等效）为单个数组推导式。这里就有一个过滤出偶数，创建一个它的倍数数组的例子：
+`map()` 和 `filter()` 类型的操作可以被组合（等效）为单个数组推导式。这里就有一个过滤出偶数，创建一个它的倍数数组的例子：
 
 ```js
 var numbers = [1, 2, 3, 21, 22, 30];

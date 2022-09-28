@@ -2,6 +2,7 @@
 title: rect
 slug: Web/SVG/Element/rect
 ---
+
 {{SVGRef}}
 
 ## 概要

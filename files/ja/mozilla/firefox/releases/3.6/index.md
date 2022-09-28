@@ -2,6 +2,7 @@
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
+
 Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
 ## Web サイトとアプリケーション開発者向け

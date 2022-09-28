@@ -3,6 +3,7 @@ title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
 original_slug: Web/API/VRLayer/source
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`source`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスを定義します。

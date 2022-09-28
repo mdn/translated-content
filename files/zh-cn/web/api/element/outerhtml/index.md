@@ -86,11 +86,11 @@ document.documentElement.outerHTML = "test";
 ```js
 let p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName);
-// 显示: "P"
+// 显示："P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 
 console.log(p.nodeName);
-// 仍然为: "P";
+// 仍然为："P";
 ```
 
 ## 规范
