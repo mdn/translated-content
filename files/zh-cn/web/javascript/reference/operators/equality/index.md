@@ -20,12 +20,12 @@ x == y
 相等运算符（`==` 和 `!=`）提供[非严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#非严格相等)语义。这可以大致总结如下:
 
 1. 如果操作数具有相同的类型，则按如下方式进行比较：
-   - Object：仅当两个操作数引用同一个对象时返回 `true`。
-   - String：只有当两个操作数具有相同的字符且顺序相同时才返回 `true`。
-   - Number：如果两个操作数的值相同，则返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任何一个操作数是 `NaN`，返回 `false`；所以，`NaN` 永远不等于 `NaN`。
-   - Boolean：仅当操作数都为 `true` 或都为 `false` 时返回 `true`。
-   - BigInt：仅当两个操作数值相同时返回 `true`。
-   - Symbol：仅当两个操作数引用相同的符号时返回 `true`。
+   - 对象（Object）：仅当两个操作数引用同一个对象时返回 `true`。
+   - 字符串（String）：只有当两个操作数具有相同的字符且顺序相同时才返回 `true`。
+   - 数值（Number）：如果两个操作数的值相同，则返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任何一个操作数是 `NaN`，返回 `false`；所以，`NaN` 永远不等于 `NaN`。
+   - 布尔值（Boolean）：仅当操作数都为 `true` 或都为 `false` 时返回 `true`。
+   - 大整形（BigInt）：仅当两个操作数值相同时返回 `true`。
+   - 符号（Symbol）：仅当两个操作数引用相同的符号时返回 `true`。
 2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
 3. 如果其中一个操作数是对象，另一个是基本类型，按此顺序使用对象的 [`@@toPrimitive()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"default"` 作为提示），[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/toString) 方法将对象转换为基本类型。（这个基本类型转换与[相加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)中使用的转换相同。）
 4. 在这一步，两个操作数都被转换为基本类型（String、Number、Boolean、Symbol 和 BigInt 中的一个）。其余的转换是逐个进行的。
