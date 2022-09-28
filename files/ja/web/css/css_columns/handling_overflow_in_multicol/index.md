@@ -1,13 +1,8 @@
 ---
 title: 段組みでのはみ出しの扱い
 slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
+
 {{CSSRef}}
 
 このガイドでは、段ボックス内部と、コンテナーに収まらないほど多くの内容物がある場合の両方において、段組みがどのようにはみ出しを扱うかを見てみます。

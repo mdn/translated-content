@@ -2,6 +2,7 @@
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -93,7 +94,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.nextElementSibling")}}
+{{Compat}}
 
 ## 相关链接
 

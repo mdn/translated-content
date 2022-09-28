@@ -2,6 +2,7 @@
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 只读属性，返回选区的锚节点（ {{domxref("Selection.anchorNode")}}）起点偏移量的数字。返回值从零开始计数，如果选区从锚节点（{{domxref("Selection.anchorNode")}}）的第一个字符开始，返回值为 0。
@@ -18,7 +19,7 @@ number = sel.anchorOffset
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.anchorOffset")}}
+{{Compat}}
 
 ## 相关内容
 

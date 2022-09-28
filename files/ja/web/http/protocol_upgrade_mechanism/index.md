@@ -1,18 +1,8 @@
 ---
 title: プロトコルのアップグレードメカニズム
 slug: Web/HTTP/Protocol_upgrade_mechanism
-tags:
-  - HTTP
-  - HTTP/2
-  - TLS
-  - WebSocket
-  - WebSockets
-  - アップグレード
-  - ガイド
-  - ネットワーキング
-  - プロトコル
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
+
 {{HTTPSidebar}}
 
 [HTTP/1.1 プロトコル](/ja/docs/Web/HTTP)は、すでに確立された接続を、 {{HTTPHeader("Upgrade")}} ヘッダーフィールドを使用して異なるプロトコルにアップグレードするために使用することができる特殊な仕組みを提供します。

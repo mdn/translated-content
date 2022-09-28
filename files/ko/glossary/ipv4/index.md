@@ -1,7 +1,6 @@
 ---
 title: IPv4
 slug: Glossary/IPv4
-translation_of: Glossary/IPv4
 ---
 IPv4는 {{glossary("Internet", "인터넷")}}기반 통신 {{Glossary("protocol", "프로토콜")}}의 네 번째 버전이며, 널리 보급된 첫 번째 버전이다.
 

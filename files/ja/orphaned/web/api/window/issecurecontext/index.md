@@ -1,15 +1,9 @@
 ---
 title: Window.isSecureContext
 slug: orphaned/Web/API/Window/isSecureContext
-tags:
-  - API
-  - Property
-  - Reference
-  - Security
-  - Window
-translation_of: Web/API/Window/isSecureContext
 original_slug: Web/API/Window/isSecureContext
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`window.isSecureContext`** 読み取り専用プロパティは、コンテキストが [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を必要とする機能を使用できるかどうかを示します。

@@ -10,6 +10,7 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
+
 {{MDNSidebar}}
 
 Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.

@@ -1,14 +1,8 @@
 ---
 title: 値の定義構文
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
-spec-urls: https://drafts.csswg.org/css-values/#value-defs
-translation_of: Web/CSS/Value_definition_syntax
 ---
+
 {{CSSRef}}
 
 **CSS の値の定義構文**は、形式文法であり、 CSS プロパティや関数の有効な値の組み合わせ定義するのに使われます。この構文に加えて、有効な値の組み合わせは意味的な制約で有効値の集まりをさらに制限できます (例えば、数値を正の値に限定します)。

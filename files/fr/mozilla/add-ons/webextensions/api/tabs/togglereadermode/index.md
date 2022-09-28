@@ -12,6 +12,7 @@ tags:
   - toogleReaderMode
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
 ---
+
 {{AddonSidebar()}}
 
 Bascule en mode Lecteur pour l'onglet donné.

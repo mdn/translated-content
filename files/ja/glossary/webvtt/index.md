@@ -1,14 +1,6 @@
 ---
 title: WebVTT
 slug: Glossary/WebVTT
-tags:
-  - Audio
-  - CodingScripting
-  - Glossary
-  - Video
-  - Web
-  - WebVTT
-translation_of: Glossary/WebVTT
 ---
 WebVTT (Web Video Text Tracks) は HTML {{HTMLElement("track")}} 要素とともに文字データのマークアップを行うファイルフォーマットを策定する {{Glossary("W3C")}} 規格です。
 

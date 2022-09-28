@@ -1,14 +1,8 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 **`Object.preventExtensions()`** メソッドはすでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。

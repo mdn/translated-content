@@ -8,6 +8,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'interface **`PerformanceObserverEntryList`** est une liste d'[événements de performance](/fr/docs/Web/API/PerformanceEntry) qui ont été explicitement _observés_ via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).

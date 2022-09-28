@@ -2,6 +2,7 @@
 title: 类
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。
@@ -71,7 +72,7 @@ console.log(Rectangle.name);
 
 ### 构造函数
 
-[constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
+[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
 
 一个构造函数可以使用 `super` 关键字来调用一个父类的构造函数。
 
@@ -247,7 +248,7 @@ class Rectangle {
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 
-更多信息，请看[class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields).
+更多信息，请看[class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
 
 ## 使用 `extends` 扩展子类
 

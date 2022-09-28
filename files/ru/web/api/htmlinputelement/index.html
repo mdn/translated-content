@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLInputElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>Интерфейс <strong><code>HTMLInputElement</code></strong> <span id="result_box" lang="ru"><span class="alt-edited">предоставляет специальные свойства и методы</span></span> (расширяющие интерфейс {{domxref("HTMLElement")}} который также доступен через наследование) для управления размещением и отображением элементов input.</p>
+<p>Интерфейс <strong><code>HTMLInputElement</code></strong> предоставляет специальные свойства и методы (расширяющие интерфейс {{domxref("HTMLElement")}} который также доступен через наследование) для управления размещением и отображением элементов input.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -46,10 +46,10 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>autocomplete</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{htmlattrxref("autocomplete", "input")}} HTML attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} attribute is <span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file</span>, or a button type (<span style="font-family: courier new;">button</span>, <span style="font-family: courier new;">submit</span>, <span style="font-family: courier new;">reset</span>, <span style="font-family: courier new;">image</span>). Possible values are:
+   <td>Reflects the {{htmlattrxref("autocomplete", "input")}} HTML attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} attribute is hidden, checkbox, radio, file, or a button type (button, submit, reset, image). Possible values are:
     <ul>
-     <li><span style="font-family: courier new;">off</span>: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.</li>
-     <li><span style="font-family: courier new;">on</span>: Браузер может автоматически подставить значение основываясь на том, что ранее пользователь вводил в данном в предыдущий раз</li>
+     <li>off: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.</li>
+     <li>on: Браузер может автоматически подставить значение основываясь на том, что ранее пользователь вводил в данном в предыдущий раз</li>
     </ul>
    </td>
   </tr>
@@ -126,7 +126,7 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>height</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("height", "input") }} HTML attribute, which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <span style="font-family: courier new;">image</span>.</td>
+   <td>Reflects the {{ htmlattrxref("height", "input") }} HTML attribute, which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is image.</td>
   </tr>
   <tr>
    <td><code>indeterminate</code></td>
@@ -141,7 +141,7 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>list</code></td>
    <td>{{domxref("HTMLElement")}}</td>
-   <td>Identifies a list of pre-defined options to suggest to the user. The value must be the <strong>id</strong> of a {{HTMLElement("datalist")}} element in the same document. The browser displays only options that are valid values for this input element. This attribute is ignored when the {{htmlattrxref("type","input")}} attribute's value is <span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file</span>, or a button type.</td>
+   <td>Identifies a list of pre-defined options to suggest to the user. The value must be the <strong>id</strong> of a {{HTMLElement("datalist")}} element in the same document. The browser displays only options that are valid values for this input element. This attribute is ignored when the {{htmlattrxref("type","input")}} attribute's value is hidden, checkbox, radio, file, or a button type.</td>
   </tr>
   <tr>
    <td><code>max</code></td>
@@ -173,19 +173,19 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>pattern</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("pattern", "input") }} HTML attribute, containing a regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> or <span style="font-family: courier new;">email</span>; otherwise it is ignored.</td>
+   <td>Reflects the {{ htmlattrxref("pattern", "input") }} HTML attribute, containing a regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is text, search, tel, url or email; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>placeholder</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("placeholder", "input") }} HTML attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> or <span style="font-family: courier new;">email</span>; otherwise it is ignored.</td>
+   <td>Reflects the {{ htmlattrxref("placeholder", "input") }} HTML attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is text, search, tel, url or email; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>readOnly</code></td>
    <td>{{domxref("Boolean")}}</td>
    <td>
     <p>Reflects the {{ htmlattrxref("readonly", "input") }} HTML attribute, indicating that the user cannot modify the value of the control.<br>
-     {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is <span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">range</span>, <span style="font-family: courier new;">color</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file</span>, or a button type.</p>
+     {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is hidden, range, color, checkbox, radio, file, or a button type.</p>
    </td>
   </tr>
   <tr>
@@ -211,17 +211,17 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>size</code></td>
    <td><code>unsigned long</code></td>
-   <td>Reflects the {{ htmlattrxref("size", "input") }} HTML attribute, containing size of the control. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <span style="font-family: courier new;">text</span> or <span style="font-family: courier new;">password</span>, in which case, it is an integer number of characters. {{ HTMLVersionInline(5) }} Applies only when {{htmlattrxref("type","input")}} is set to <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span>, <span style="font-family: courier new;">email</span>, or <span style="font-family: courier new;">password</span>; otherwise it is ignored.</td>
+   <td>Reflects the {{ htmlattrxref("size", "input") }} HTML attribute, containing size of the control. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is text or password, in which case, it is an integer number of characters. {{ HTMLVersionInline(5) }} Applies only when {{htmlattrxref("type","input")}} is set to text, search, tel, url, email, or password; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>src</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("src", "input") }} HTML attribute, which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is <span style="font-family: courier new;">image</span>; otherwise it is ignored.</td>
+   <td>Reflects the {{ htmlattrxref("src", "input") }} HTML attribute, which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is image; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>step</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("step", "input") }} HTML attribute, which works with<strong> </strong>{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string <span style="font-family: courier new;">any</span> or a positive floating point number. If this is not set to <span style="font-family: courier new;">any</span>, the control accepts only values at multiples of the step value greater than the minimum.</td>
+   <td>Reflects the {{ htmlattrxref("step", "input") }} HTML attribute, which works with<strong> </strong>{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string any or a positive floating point number. If this is not set to any, the control accepts only values at multiples of the step value greater than the minimum.</td>
   </tr>
   <tr>
    <td><code>tabIndex</code></td>
@@ -278,7 +278,7 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td><code>width</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{ htmlattrxref("width", "input") }} HTML attribute, which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <span style="font-family: courier new;">image</span>.</td>
+   <td>Reflects the {{ htmlattrxref("width", "input") }} HTML attribute, which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is image.</td>
   </tr>
   <tr>
    <td><code>willValidate</code></td>

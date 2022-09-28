@@ -1,13 +1,8 @@
 ---
 title: 段組みにおける内容物の分割の扱い
 slug: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - Guide
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
 ---
+
 {{CSSRef}}
 
 段組みレイアウトでは、段ボックス間で、ページ付きメディアのページ間と同様に内容が分割されます。どちらのコンテキストでも、 CSS 断片化仕様書のプロパティを用いて、どのように内容を分割するかを制御します。このガイドでは、段組みで断片化がどのように動作するかを見てみます。

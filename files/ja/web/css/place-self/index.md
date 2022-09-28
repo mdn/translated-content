@@ -1,15 +1,8 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-self
-translation_of: Web/CSS/place-self
 ---
+
 {{CSSRef}}
 
 **`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。

@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
-translation_of: Web/API/AudioBufferSourceNode/start
 ---
 {{ APIRef("Web Audio API") }}
 
@@ -28,7 +27,7 @@ source.start();
 source.start(audioCtx.currentTime + 1,3,10);
 ```
 
-> **Note:** **注:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
+> **Note:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
 ### 戻り値
 

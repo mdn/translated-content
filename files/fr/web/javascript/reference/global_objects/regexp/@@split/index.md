@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@split
 ---
+
 {{JSRef}}
 
 La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{jsxref("String")}}) en un tableau de sous-chaînes.

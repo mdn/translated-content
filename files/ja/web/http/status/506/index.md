@@ -1,12 +1,8 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/506
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`506 Variant Also Negotiates`** レスポンスステータスコードは、透過的コンテンツネゴシエーション (**transparent content negotiation**) のコンテキストで提供される場合があります (参照 [RFC 2295](https://tools.ietf.org/html/rfc2295))。このプロトコルは、サーバーが複数のバリアントに対応している場合に、クライアントが与えられたリソースの最良のバリアントを取得することを可能にします。

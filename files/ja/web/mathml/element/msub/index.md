@@ -1,8 +1,8 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
-translation_of: Web/MathML/Element/msub
 ---
+
 {{MathMLRef()}}
 
 MathML の `<msub>` 要素は式に下付きを付けるために用います。
@@ -44,7 +44,7 @@ Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
 ### Gecko-specific notes
 
-- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application ` of the ``superscriptshift ` attribute has been fixed (see {{bug("827713")}} for details).
+- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
 
 ## 仕様
 

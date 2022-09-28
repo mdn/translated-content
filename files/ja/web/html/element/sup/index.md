@@ -1,17 +1,8 @@
 ---
 title: '<sup>: 上付き文字要素'
 slug: Web/HTML/Element/sup
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sup
 ---
+
 {{HTMLRef}}
 
 HTML の **上付き文字要素** (**`<sup>`**) は、表記上の理由で上付き文字として表示するべき行内文字列を指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。

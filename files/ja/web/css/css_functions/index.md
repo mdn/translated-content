@@ -1,17 +1,8 @@
 ---
 title: CSS 関数記法
 slug: Web/CSS/CSS_Functions
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 関数
-  - 関数記法
-  - 関数
-  - リファレンス
-  - 型
-  - データ型
-translation_of: Web/CSS/CSS_Functions
 ---
+
 {{CSSRef}}
 
 **CSS 関数記法**は [CSS 値](/ja/docs/Web/CSS/CSS_Values_and_Units)の一種で、より複雑なデータ型を表現したり、特別なデータ処理や計算を呼び出したりすることができます。

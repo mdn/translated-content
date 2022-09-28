@@ -37,7 +37,7 @@ El ejemplo siguiente muestra un formulario sencillo con etiquetas. Note que cada
 
 ## Etiquetando con ARIA
 
-El elemento HTML {{ HTMLElement("label") }} es apropiado para elementos relacionados a formularios, pero muchos controles de formulario son implementados como un widget dinámico de JavaScript, utilizando {{ HTMLElement("div") }}s o {{ HTMLElement("span") }}s. [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/ "http://www.w3.org/WAI/intro/aria.php"), la especificación **Accessible Rich Internet Applications** de W3C's [Web Accessibility Initiative](http://www.w3.org/WAI/), provee el atributo [`aria-labelledby`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) para estos casos.
+El elemento HTML {{ HTMLElement("label") }} es apropiado para elementos relacionados a formularios, pero muchos controles de formulario son implementados como un widget dinámico de JavaScript, utilizando {{ HTMLElement("div") }}s o {{ HTMLElement("span") }}s. [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/), la especificación **Accessible Rich Internet Applications** de W3C's [Web Accessibility Initiative](http://www.w3.org/WAI/), provee el atributo [`aria-labelledby`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) para estos casos.
 
 El siguiente ejemplo muestra un grupo de radio buttons implementado usando una lista no ordenada. Note que en la línea 3, el elemento {{ HTMLElement("ul") }} define el atributo `aria-labelledby` a `etiqueta_rg1`, el `id` de elemento {{ HTMLElement("h3") }} en la línea 1, que es la etiqueta para el grupo de controles radio.
 
@@ -112,6 +112,6 @@ var validar = function () {
 
 ## Ofreciendo Mensajes de Error Útiles
 
-Lea como usar [alertas ARIA para mejorar formularios](/es/docs/aria/forms/alerts "aria/forms/alerts").
+Lea como usar [alertas ARIA para mejorar formularios](/es/docs/aria/forms/alerts).
 
 Para mayor orientación en el uso de ARIA para la accesibilidad de los formularios, vea el documento [Prácticas de Autoria WAI-ARIA (WAI-ARIA Authoring Practices](http://www.w3.org/TR/wai-aria-practices/)).

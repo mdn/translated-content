@@ -1,16 +1,8 @@
 ---
 title: 'Window: orientationchange イベント'
 slug: Web/API/Window/orientationchange_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Sensors
-  - Window
-  - onorientationchange
-  - イベント
-translation_of: Web/API/Window/orientationchange_event
 ---
+
 {{APIRef}}
 
 `orientationchange` イベントは、端末の向きが変化した時に発生します。

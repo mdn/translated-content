@@ -1,19 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-translation_of: Web/API/MediaTrackSupportedConstraints/volume
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
 

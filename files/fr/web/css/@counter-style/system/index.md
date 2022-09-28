@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/system
 ---
+
 {{CSSRef}}
 
 La descripteur **`system`**, utilisé avec [la règle @](/fr/docs/Web/CSS/R%C3%A8gles_@) {{cssxref("@counter-style")}}, permet de définir l'algorithme utilisé pour convertir la valeur entière d'un compteur en une chaîne de caractères.

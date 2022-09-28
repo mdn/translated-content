@@ -1,12 +1,8 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Reference
-translation_of: Web/HTTP/Headers/Content-Language
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Language`** は {{Glossary("entity header", "エンティティヘッダー")}} で、ユーザが自分の好みの言語に応じて区別できるように、オーディエンス向けの言語を記述するために使用されます。

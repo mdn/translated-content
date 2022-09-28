@@ -1,12 +1,8 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-linecap
 ---
+
 « [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 
 `stroke-linecap` 要素は線を引いた時の開いている部分パスの終端の形状を指定します。

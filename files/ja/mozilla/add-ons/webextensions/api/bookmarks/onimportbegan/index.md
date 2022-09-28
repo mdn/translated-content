@@ -1,18 +1,8 @@
 ---
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportBegan
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
+
 {{AddonSidebar()}}
 
 ブックマークのインポートが開始した際に発火します。

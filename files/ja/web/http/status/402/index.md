@@ -1,15 +1,8 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/402
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 HTTP の **`402 Payment Required`** は、将来使用するために予約されている標準外のクライアントエラーステータスレスポンスコードです。

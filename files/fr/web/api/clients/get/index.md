@@ -10,6 +10,7 @@ tags:
   - get
 translation_of: Web/API/Clients/get
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
 
 ## Syntaxe

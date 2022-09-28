@@ -1,10 +1,6 @@
 ---
 title: Dominator (ドミネーター)
 slug: Glossary/Dominator
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Dominator
 ---
 グラフ理論では、ルートノードからノード B へのすべてのパスがノード A を通過する場合、ノード A はノード B をドミネート (支配) すると言います。
 

@@ -1,7 +1,6 @@
 ---
 title: Sending and retrieving form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
 많은 경우 HTML 폼은 서버에 데이터를 전송할 목적으로 사용된다. 서버는 데이터를 처리하고 사용자에게 응답을 보낼 것이다. 간단한 것 처럼 보이지만 데이터가 서버나 사용자에게 피해를 입히지 않기 위해서는 몇가지를 명심해야한다.
@@ -26,7 +25,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 ##### Examples
 
-첫번째 예제로 데이터는 http\://foo.com로 보낼 것이다.
+첫번째 예제로 데이터는 `http://foo.com` 로 보낼 것이다.
 
 ```html
 <form action="http://foo.com">
@@ -112,8 +111,8 @@ Content-Length 헤더는 바디의 크기를 나태내고, Content-Type 헤더�
 
 물론 http 요청은 절대 사용자에게 표시되지 않는다(파이어폭스 웹 콘솔이나 크롬 개발자 툴을 이용하지 않는이상). 사용자에게 보여지는 것은 호출한 URL뿐이다. 그래서 GET 요청은 사용자에게 URL바에서 데이터를 볼 수있지만, POST 요청은 그러지 못한다. 이것은 두가지 이유에서 매우 중요하다.
 
-1.  만약 패스워드를 전송해야 되는 경우(또는 민간한 데이터의 부분), 절대 URL 바에 데이터를 출력하는 GET 방식을 사용해서는 안된다.
-2.  만약 거대한 데이터를 보내는경우 POST 방식이 선호 된다. 왜냐하면 몇몇 브라우저는 URL들의 크기를 제한하기 떄문이다. 또한 많은 서버들이 URL들의 길이를 제한한다.
+1. 만약 패스워드를 전송해야 되는 경우(또는 민간한 데이터의 부분), 절대 URL 바에 데이터를 출력하는 GET 방식을 사용해서는 안된다.
+2. 만약 거대한 데이터를 보내는경우 POST 방식이 선호 된다. 왜냐하면 몇몇 브라우저는 URL들의 크기를 제한하기 떄문이다. 또한 많은 서버들이 URL들의 길이를 제한한다.
 
 ### 서버측: 데이터 가져오기
 

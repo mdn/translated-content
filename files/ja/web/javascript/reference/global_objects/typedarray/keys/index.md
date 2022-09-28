@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** メソッドは、配列内の各インデックスに対するキーを含む新しい配列イテレーターオブジェクトを返します。

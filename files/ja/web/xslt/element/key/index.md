@@ -1,13 +1,8 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Key
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/key
 ---
+
 {{ XsltRef() }}
 
 `<xsl:key>`要素は、`key( )`関数を使用してスタイルシートの他の場所で使用できる名前付きキーを宣言します。
@@ -16,7 +11,7 @@ translation_of: Web/XSLT/Element/key
 
 ```
 <xsl:key name=NAME match=EXPRESSION
-	use=EXPRESSION />
+  use=EXPRESSION />
 ```
 
 ### 必須属性

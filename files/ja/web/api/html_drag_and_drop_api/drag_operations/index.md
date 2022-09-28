@@ -1,16 +1,9 @@
 ---
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - drag and drop
-  - ドラッグ＆ドロップ
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: DragDrop/Drag_Operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 以下は、ドラッグ＆ドロップ操作が行われる時の各段階についての解説です。
@@ -41,7 +34,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 
 `{{htmlattrxref("draggable")}}` 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために `{{htmlattrxref("draggable")}}` 属性に `false` を設定するという場合がほとんどでしょう。
 
-> **Note:** **注:** 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
+> **Note:** 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
 
 ## ドラッグ操作の開始
 
@@ -214,7 +207,7 @@ function doDragOver(event) {
 }
 ```
 
-この例では、型のリストの中に [text/uri-list](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link "text/uri-list") 型があるかどうかを確認するために `contains` メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。
+この例では、型のリストの中に [text/uri-list](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 型があるかどうかを確認するために `contains` メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。
 
 実際に行われる処理の種類をより適切に示すために、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} や {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティのいずれか、あるいはその両方に値を指定したいと思う事もあるでしょう。当然ですが、イベントをキャンセルするのを忘れると、これらのプロパティの値を変えても何も起こりません。
 
@@ -234,7 +227,7 @@ function doDragOver(event) {
 
 この例において`droparea`クラスの要素は、 {{event("dragenter")}} イベントの中で {{domxref("Event.preventDefault","preventDefault()")}} メソッドが呼ばれて有効なドロップ対象となっている間、 1 ピクセルの黒い枠が表示されます。
 
-> **Note:** **注:** この擬似クラスは {{event("dragover")}} イベントでの状態の変化には反応しませんので、この擬似クラスでの指定を適用させるには {{event("dragenter")}} イベントをキャンセルしなくてはならない事に注意してください。
+> **Note:** この擬似クラスは {{event("dragover")}} イベントでの状態の変化には反応しませんので、この擬似クラスでの指定を適用させるには {{event("dragenter")}} イベントをキャンセルしなくてはならない事に注意してください。
 
 より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{event("dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [image](/ja/XUL/image) または [separator](/ja/XUL/separator) 要素を生成して、 {{event("dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
 
@@ -311,7 +304,7 @@ function doDrop(event) {
 
 ## ドラッグの終了
 
-ドラッグ操作が終了すると、 {{event("dragend")}} イベントがドラッグ元 (` {{event("dragstart")}}` イベントが発行されるのと同じ要素) において発行されます。このイベントは、ドラッグ操作が成功したかキャンセルされたかに関わらず発行されます。どの操作が行われたのかは、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティを参照して知ることができます。
+ドラッグ操作が終了すると、 {{event("dragend")}} イベントがドラッグ元 ({{event("dragstart")}} イベントが発行されるのと同じ要素) において発行されます。このイベントは、ドラッグ操作が成功したかキャンセルされたかに関わらず発行されます。どの操作が行われたのかは、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティを参照して知ることができます。
 
 {{event("dragend")}} イベントにおいて {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値が`none`である場合、ドラッグ操作がキャンセルされたことを意味します。それ以外の場合は、プロパティの値は実際に行われた操作の種類を示します。ドラッグ元はこの情報に基づいて、ドラッグされた項目を「移動」の操作の後に元の場所から削除することができます。 {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} プロパティの値は、ユーザーが（Escape キーを押すなどして）ドラッグ操作をキャンセルした場合は true となり、不正なドロップ先だった場合などの他の理由でドラッグ操作がキャンセルされた場合や、ドロップに成功した場合は false となります。
 

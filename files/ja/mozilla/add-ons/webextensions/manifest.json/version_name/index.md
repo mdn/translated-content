@@ -1,12 +1,8 @@
 ---
 title: version_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

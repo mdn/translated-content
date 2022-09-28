@@ -2,6 +2,7 @@
 title: IDBDatabase.onversionchange
 slug: Web/API/IDBDatabase/versionchange_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBDatabase")}} 中的 **`onversionchange`** 事件处理器能处理版本更新事件，此事件能在任意地方 (很可能在同一台计算机上的另一个窗口/选项卡中) 导致数据库结构更改（{{ domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件 或 {{ domxref("IDBFactory.deleteDatabase")}} 事件）的时候被触发 。
@@ -69,4 +70,4 @@ request.onupgradeneeded = function(event) {
 - 检索与修改数据: {{domxref("IDBObjectStore")}}
 - 使用游标: {{domxref("IDBCursor")}}
 - 参考用例：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
-- [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) 事件
+- [`versionchange`](/zh-CN/docs/Web/API/IDBDatabase/versionchange_event) 事件

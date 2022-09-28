@@ -1,12 +1,9 @@
 ---
 title: Firefox 3 での DOM の改良
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-tags:
-  - DOM
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 original_slug: DOM_improvements_in_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 では、特に、他のブラウザによる独自 DOM 拡張 のサポートに関するものを含む、多くの [Document Object Model](/ja/docs/Web/API/Document_Object_Model) (DOM) 実装が追加されました。この記事は、これらの実装の一覧と詳細なドキュメントへのリンクを提供します。

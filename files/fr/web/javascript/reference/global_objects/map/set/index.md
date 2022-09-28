@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
+
 {{JSRef}}
 
 La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeur` données à un objet `Map`.

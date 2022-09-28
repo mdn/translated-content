@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Number.toFixed
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 **`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。

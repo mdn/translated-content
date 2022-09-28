@@ -1,18 +1,6 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - events
-  - inputType
-  - プロパティ
-translation_of: Web/API/InputEvent/inputType
 ---
 {{APIRef("DOM Events")}}
 
@@ -66,7 +54,7 @@ Try editing the text inside the `<div>` and see what happens.
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **Note:** **注**: もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> **Note:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 

@@ -2,6 +2,7 @@
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
+
 {{JSRef}}
 
 **`Math.pow()`** 函式回傳 `base` 的 `exponent` 次方（幂）值，也就是 `base^exponent`。
@@ -62,7 +63,7 @@ Math.pow(-7, 1/3); // NaN
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## 參見
 

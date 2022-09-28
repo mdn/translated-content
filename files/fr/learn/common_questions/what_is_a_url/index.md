@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/What_is_a_URL
 original_slug: Apprendre/Comprendre_les_URL
 ---
+
 Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôle et leur structure.
 
 <table class="standard-table">

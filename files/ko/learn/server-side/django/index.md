@@ -1,12 +1,6 @@
 ---
 title: Django 웹 프레임워크 (파이썬)
 slug: Learn/Server-side/Django
-tags:
-  - 서버 사이드 프로그래밍
-  - 장고
-  - 초보자
-  - 파이썬
-translation_of: Learn/Server-side/Django
 ---
 {{LearnSidebar}}
 

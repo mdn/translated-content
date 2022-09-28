@@ -1,15 +1,6 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
-tags:
-  - Media Session API
-  - MediaSession
-  - Reference
-  - インターフェイス
-  - オーディオ
-  - ビデオ
-  - メディア
-translation_of: Web/API/MediaSession
 ---
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 

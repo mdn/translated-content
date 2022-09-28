@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.closePath
-translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 {{APIRef}}
 

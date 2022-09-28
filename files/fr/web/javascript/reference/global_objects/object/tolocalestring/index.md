@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.

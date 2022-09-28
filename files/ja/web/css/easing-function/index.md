@@ -1,18 +1,8 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - CSS Data Type
-  - CSS Transitions
-  - Data Type
-  - Layout
-  - Reference
-  - easing-function
-translation_of: Web/CSS/easing-function
 ---
+
 {{CSSRef}}
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、アニメーションの間に一次元の値がどれだけの速さで変化するかを記述する数学的な関数を表します。これにより、アニメーションの速度を期間中に変化させることができます。

@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 {{SeeCompatTable}}
 
 **Web Audio API** 可於 Web App 或網頁上操作並播放音訊檔案。
@@ -61,4 +62,4 @@ Web Audio API 亦可控制音訊的空間定位 (Spatialized) 作業：透過 so
 
 ## 瀏覽器相容性
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}

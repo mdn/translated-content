@@ -1,15 +1,8 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-direction
-translation_of: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`animation-direction`** プロパティは、アニメーション再生の向きを順方向、逆方向、前後反転のいずれにするかを設定します。

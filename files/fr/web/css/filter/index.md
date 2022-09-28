@@ -4,6 +4,7 @@ slug: Web/CSS/filter
 browser-compat: css.properties.filter
 translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`filter`** permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.

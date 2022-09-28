@@ -1,18 +1,8 @@
 ---
 title: '<div>: コンテンツ区分要素'
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
-translation_of: Web/HTML/Element/div
 ---
+
 {{HTMLRef}}
 
 **HTML の コンテンツ区分要素** (**`<div>`**) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる (例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などの何らかのレイアウトモデルが適用されるなど) までは、コンテンツやレイアウトには影響を与えません。

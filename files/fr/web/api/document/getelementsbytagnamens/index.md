@@ -10,6 +10,7 @@ tags:
   - XPath
 translation_of: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{ ApiRef("DOM") }}
 
 {{ fx_minversion_note("3.6","Voir la <a href='\"/en/DOM/element.getElementsByTagNameNS#Notes\"'>section Notes de element.getElementsByTagNameNS</a> pour les changements qui s'appliquent aussi à cet API dans Firefox 3.6.") }}

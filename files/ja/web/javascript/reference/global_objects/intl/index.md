@@ -1,14 +1,8 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - 名前空間
-browser-compat: javascript.builtins.Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
+
 {{JSRef}}
 
 **`Intl`** オブジェクトは、 ECMAScript の国際化 API の名前空間で、言語に依存した文字列の比較、数値の書式化と、日付の書式化を提供します。 **`Intl`** オブジェクトは、いくつかのコンストラクターに加え、国際化コンストラクターや他の言語に関する関数に共通する機能へのアクセスを提供します。

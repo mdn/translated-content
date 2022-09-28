@@ -1,15 +1,8 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - text-decoration
-translation_of: Web/HTML/Element/s
 ---
+
 {{HTMLRef}}
 
 **HTML の `<s>` 要素**は取り消し線を引いた文字列を表示します。 `<s>` 要素はすでに適切または正確ではなくなった事柄を表現します。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。

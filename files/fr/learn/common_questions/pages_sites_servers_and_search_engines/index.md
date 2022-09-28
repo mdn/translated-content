@@ -6,6 +6,7 @@ slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 original_slug: Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche
 ---
+
 Dans cet article, nous démystifions plusieurs notions liées au Web : page web, site web, serveur web et moteur de recherche. Ces termes sont souvent une source de confusion ou utilisés incorrectement : voyons leur signification.
 
 <table class="standard-table">

@@ -1,14 +1,8 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
-translation_of: Web/MathML
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** は、数学的表記を記述し、その構造と内容を表現するための [XML](/ja/docs/Web/XML) マークアップ言語です。

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 > **备注：** Web 内容无法使用此方法。它需要提升权限才能访问。

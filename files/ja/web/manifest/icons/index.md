@@ -1,13 +1,8 @@
 ---
 title: icons
 slug: Web/Manifest/icons
-tags:
-  - アイコン
-  - マニフェスト
-  - ウェブ
-browser-compat: html.manifest.icons
-translation_of: Web/Manifest/icons
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

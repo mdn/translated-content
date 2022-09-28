@@ -1,12 +1,6 @@
 ---
 title: Descriptor (CSS) (記述子)
 slug: Glossary/Descriptor_(CSS)
-tags:
-  - CSS
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-translation_of: Glossary/Descriptor_(CSS)
 l10n:
   sourceCommit: 4222420bb53f7676a1ee70e75676575f8d19c67c
 ---

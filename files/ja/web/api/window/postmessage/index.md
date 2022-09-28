@@ -1,17 +1,8 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
-tags:
-  - API
-  - オリジン間通信
-  - HTML DOM
-  - メソッド
-  - メソッド
-  - Window
-  - postMessage
-browser-compat: api.Window.postMessage
-translation_of: Web/API/Window/postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`window.postMessage()`** は、 {{domxref("Window")}} オブジェクト間で安全にオリジン間通信を可能にするためのメソッドです。例えば、ポップアップとそれを表示したページの間や、iframe とそれが埋め込まれたページの間での通信に使うことができます。
@@ -34,7 +25,7 @@ postMessage(message, targetOrigin, transfer)
 - `targetOrigin`
   - : イベントを配信するこのウィンドウのオリジンを指定します。リテラル文字列 `"*"` (優先順位なし) か URI のどちらかで指定します。イベントが配信される予定時刻に、このウィンドウの文書のスキーム、ホスト名、ポートが `targetOrigin` で指定されたものと一致しない場合、イベントは配信されません。この仕組みにより、メッセージが送信される場所を制御できます。例えば、 `postMessage()` をパスワードを送信するために使用する場合、悪意のある第三者によるパスワードの傍受を防ぐために、この引数がパスワードを含むメッセージの受信予定者と同じオリジンの URI であることが絶対に重要でしょう。 **他のウィンドウの文書がどこにあるものか知っている場合は、 `*` ではなく、常に特定の `targetOrigin` を指定してください。特定のターゲットを指定しないと、悪意のあるサイトに送信したデータが開示されてしまいます。**
 - `transfer` {{optional_Inline}}
-  - : メッセージと一緒に転送される{{Glossary("transferable objects", "転送可能オブジェクト")}}のシーケンスです。これらのオブジェクトの所有権は送信先に移動され、送信元では使えなくなります。
+  - : メッセージと一緒に移譲される{{Glossary("transferable objects", "移譲可能オブジェクト")}}のシーケンスです。これらのオブジェクトの所有権は送信先に移譲され、送信元では使えなくなります。
 
 ### 返値
 

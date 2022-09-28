@@ -1,13 +1,6 @@
 ---
 title: Origin (オリジン)
 slug: Glossary/Origin
-tags:
-  - Glossary
-  - WebMechanics
-  - オリジン
-  - セキュリティ
-  - 用語集
-translation_of: Glossary/Origin
 ---
 ウェブコンテンツの**オリジン** (Origin) は、ウェブコンテンツにアクセスするために使われる {{Glossary("URL")}} の*スキーム* (プロトコル)、 _ホスト_ (ドメイン)、 _ポート_ によって定義されます。スキーム、ホスト、ポートがすべて一致した場合のみ、二つのオブジェクトは同じオリジンであると言えます。
 

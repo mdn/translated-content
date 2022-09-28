@@ -1,13 +1,8 @@
 ---
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
-tags:
-  - XSLT
-  - call-template
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/call-template
 ---
+
 {{ XsltRef() }}
 
 `<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。
@@ -16,7 +11,7 @@ translation_of: Web/XSLT/Element/call-template
 
 ```
 <xsl:call-template name=NAME>
-	<xsl:with-param> [optional]
+  <xsl:with-param> [optional]
 </xsl:call-template>
 ```
 

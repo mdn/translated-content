@@ -1,11 +1,8 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
-tags:
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Accept-Patch
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
@@ -14,7 +11,7 @@ translation_of: Web/HTTP/Headers/Accept-Patch
 
 サポートされていないメディアタイプの {{HTTPMethod("PATCH")}} リクエストを受信したサーバーは、{{HTTPStatus("415")}} `Unsupported Media Type`と、1 つ以上のサポートされているメディアタイプを参照する Accept-Patch ヘッダーで応答する可能性があります。
 
-> **Note:** **注:**- IANA レジストリは、[公式コンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を保持しています。
+> **Note:** - IANA レジストリは、[公式コンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を保持しています。
 >
 > - 標準ではありませんが、他の 2 つのコンテンツエンコーディング `bzip`と`bzip2`が時々使用されます。 これらは、これら 2 つの UNIX プログラムで使用されるアルゴリズムを実装しています。 最初のものは、特許ライセンスの問題のために中止されたことに注意してください。
 

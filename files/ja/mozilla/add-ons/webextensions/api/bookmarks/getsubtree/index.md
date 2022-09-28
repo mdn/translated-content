@@ -1,18 +1,8 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSubTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getSubTree()`** は、ID を指定して {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} を非同期に取得するメソッドです。

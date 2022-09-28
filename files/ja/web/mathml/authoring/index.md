@@ -1,12 +1,8 @@
 ---
 title: MathML の編集
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
-translation_of: Web/MathML/Authoring
 ---
+
 本稿では MathML を用いて数式を表現する方法を説明します。 HTML と同じように、 MathML はタグと属性によって記述されます。文書中に箇条書きや表のような高度な構造がある場合 HTML は煩雑になってしまいますが、幸いなことに単純な記法で表を生成することができるツールや、 WYSIWYG な編集ができるツール、その他さまざまなコンテンツ管理システムであったりと，ウェブページを書き下ろすのに助けになるものはたくさんあります。
 
 数式を表現しようと思うともっと複雑です。数学には分数や平方根、行列など独自のタグが必要になるような構造がいろいろあるからです。ですから、優良な MathML エディターが求められます。以下ではその幾つかについて述べていきます。取り分け、 Mozilla の MathML 開発チームが開発中の [TeXZilla](https://github.com/TeXZilla/) は、 JavaScript 製 Unicode LaTeX-MathML コンバーターであり、本稿で紹介されているような多くの場面で用いられることを想定しています。無論、本稿のツール紹介ではすべてを網羅している訳ではありませんから、是非とも W3C が発行する [MathML ソフトウェア一覧](https://www.w3.org/Math/Software/)をチェックして他のツールも見てみてください。
@@ -203,7 +199,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:

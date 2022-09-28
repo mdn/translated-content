@@ -1,19 +1,8 @@
 ---
 title: フレックスボックスの後方互換性
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-tags:
-  - '@supports'
-  - CSS
-  - CSS 表
-  - フレックスボックス
-  - 浮動
-  - ガイド
-  - 代替
-  - 機能クエリー
-  - フレックスボックス
-  - inline-block
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 ---
+
 {{CSSRef}}
 
 フレックスボックスは最新のブラウザーではとてもよく対応されていますが、いくつかの問題に遭遇する可能性があります。このガイドでは、フレックスボックスがブラウザーでどの程度対応されているかを見て、いくつかの潜在的な問題、リソース、回避策や代替を作成するための方法を見ていきます。

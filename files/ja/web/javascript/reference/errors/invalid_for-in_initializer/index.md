@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - Error
-  - JavaScript
-  - Strict Mode
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外である "for-in loop head declarations may not have initializers" は、 [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) の先頭に初期化構文が含まれていた場合、例えば |`for (var i = 0 in obj)`| のような場合に発生します。これは strict モードの for-in ループでは許可されていません。

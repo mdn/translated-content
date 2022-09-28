@@ -4,6 +4,7 @@ slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
 browser-compat: html.elements.tr
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<tr>`** définit une ligne de cellules dans un tableau. Une ligne peut être constituée d'éléments [`<td>`](/fr/docs/Web/HTML/Element/td) (les données des cellules) et [`<th>`](/fr/docs/Web/HTML/Element/th) (les cellules d'en-têtes).

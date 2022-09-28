@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 original_slug: Améliorations_DOM_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle objet de document](fr/DOM) (DOM), en particulier en ce qui concerne la gestion de ses extensions ajoutées par d'autres navigateurs. Cet article reprend une liste de ces améliorations ainsi que des liens vers une documentation plus détaillée.

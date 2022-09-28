@@ -2,6 +2,7 @@
 title: <summary>
 slug: Web/HTML/Element/summary
 ---
+
 {{HTMLRef}}
 
 ## Summary
@@ -46,7 +47,7 @@ Please see the {{HTMLElement("details")}} page for examples on \<summary>.
 
 ## Browser compatibility
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

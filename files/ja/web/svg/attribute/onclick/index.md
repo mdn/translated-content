@@ -1,13 +1,8 @@
 ---
 title: onclick
 slug: Web/SVG/Attribute/onclick
-tags:
-  - SVG
-  - SVG Attribute
-  - events
-  - イベント
-translation_of: Web/SVG/Attribute/onclick
 ---
+
 {{SVGRef}}
 
 **`onclick`** 属性は、要素がクリックされたときに実行するスクリプトを指定します。

@@ -3,6 +3,7 @@ title: Closures (Fermetures)
 slug: Web/JavaScript/Closures
 translation_of: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 Une **fermeture** est la paire formée d'une fonction et des références à son état environnant (**l'environnement lexical**). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction «&nbsp;capture son environnement&nbsp;»). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.

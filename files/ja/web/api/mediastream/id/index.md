@@ -1,14 +1,6 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
-tags:
-  - MediaStream
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ウェブ
-browser-compat: api.MediaStream.id
-translation_of: Web/API/MediaStream/id
 ---
 {{APIRef("Media Capture and Streams")}}
 

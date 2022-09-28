@@ -2,6 +2,7 @@
 title: DNT
 slug: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 请求首部 **`DNT`** (**D**o **N**ot **T**rack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。

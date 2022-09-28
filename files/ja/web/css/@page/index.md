@@ -1,16 +1,8 @@
 ---
 title: '@page'
 slug: Web/CSS/@page
-tags:
-  - '@page'
-  - At-rule
-  - CSS
-  - レイアウト
-  - Reference
-  - Web
-browser-compat: css.at-rules.page
-translation_of: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 **`@page`** は CSS のアットルールで、文書を印刷するときに一部の CSS プロパティを変更するために使用します。

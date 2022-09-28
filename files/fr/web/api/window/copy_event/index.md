@@ -12,6 +12,7 @@ tags:
   - copy
 translation_of: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 L'événement **`copy`** se déclenche lorsque l'utilisateur lance une action de copie via l'interface utilisateur du nagivateur.
@@ -49,13 +50,11 @@ window.addEventListener('copy', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## Voir aussi
 

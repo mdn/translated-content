@@ -1,17 +1,8 @@
 ---
 title: align-tracks
 slug: Web/CSS/align-tracks
-tags:
-  - CSS
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - align-tracks
-  - grid
-  - masonry
-browser-compat: css.properties.align-tracks
-translation_of: Web/CSS/align-tracks
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

@@ -4,6 +4,7 @@ slug: Web/API/Window/open
 translation_of: Web/API/Window/open
 browser-compat: api.Window.open
 ---
+
 {{APIRef}}
 
 La méthode **`open()`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), charge une ressource indiquée dans un contexte de navigation (onglet, fenêtre ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) nouveau ou existant, avec un nom donné.

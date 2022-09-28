@@ -1,8 +1,8 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-translation_of: Web/SVG/Attribute/fill
 ---
+
 {{SVGRef}}
 
 **`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．

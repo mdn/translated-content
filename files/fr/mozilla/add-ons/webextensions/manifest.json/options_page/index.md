@@ -11,6 +11,7 @@ tags:
   - options_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

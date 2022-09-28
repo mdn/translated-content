@@ -16,7 +16,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing
   - : この記事ではクロスブラウザーテストの概観を提供し始めます。その過程で「ブラウザーテストとは何？」「どんな種類の問題によく出くわしますか？」「テストと、問題の特定・修正の主なアプローチは？」といった質問に答えたりします。
 - [テスト実行戦略](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
   - : 次に、テスト実行について掘り下げ、ターゲット視聴者(例、どのブラウザー、デバイス、その他のセグメントでテストを確実にするのか)を特定し、ローファイテスト戦略(ある範囲のデバイスと仮装マシンにて必要ならアドホックテストを行う)、高度なテスト戦略(専用テストアプリを使った自動化)、ユーザーグループを使ったテストまで見て行きます。
-- [よくある HTML や](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)[ CSS の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+- [よくある HTML や CSS の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
   - : シーンがセットされたら、HTML と CSS コードの中でよく出くわすクロスブラウザー問題と、問題を防いだり、問題発生を修正するのに使えるツールを詳しく見ていきます。これにはコードの lint や、CSS プレフィックスを手渡したり、問題を監視するブラウザーの開発ツールを使ったり、ブラウザーサポート追加に polyfill を使ったり、レスポンシブデザインの問題に取り組んだり、といった事が含まれます
 - [よくある JavaScript の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
   - : 今度はクロスブラウザー JavaScript の問題と、その修正方法を見て行きます。ここにはブラウザーの開発ツールを使って問題を突き止めて修正したり、問題を回避するのに pollyfill やライブラリーを使用したり、古いブラウザーの対応にモダン JavaScript の機能を掴んだり、といった事が含まれます。

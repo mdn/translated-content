@@ -1,13 +1,6 @@
 ---
 title: Denial of Service (サービス拒否)
 slug: Glossary/Denial_of_Service
-tags:
-  - Attack
-  - Denial of Service
-  - Glossary
-  - Intro
-  - Security
-translation_of: Glossary/Denial_of_Service
 ---
 サービス拒否 (DoS, Denial of Service）とは、ネットワーク攻撃のカテゴリーで、サーバーにリクエストを殺到させることによって、利用可能なサーバーリソースを消費させるものです。サーバーの動作が重くなったり、正規のユーザーが利用できなくなったりします。
 

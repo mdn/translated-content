@@ -1,17 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - メソッド
-  - Promise
-  - プロトタイプ
-  - リファレンス
-  - finally
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 **`finally()`** メソッドは {{jsxref("Promise")}} を返します。プロミスが確立したら、満足か拒否かにかかわらず、指定されたコールバック関数が実行されます。これにより、プロミスが成功裏に実行されたか否かに関わりなく、 `Promise` が処理された後に実行されなければならないコードを提供できます。

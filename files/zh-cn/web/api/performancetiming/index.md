@@ -2,6 +2,7 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}
 
 **`PerformanceTiming`** 接口是为保持向后兼容性而保留的传统接口，并且提供了在加载和使用当前页面期间发生的各种事件的性能计时信息。
@@ -60,7 +61,7 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 **`Performance` **接口不包含任何方法。
 
 - {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}
-  - : 是一个 JSON 格式化工具，返回一个 [JSON 对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)，代表具体的 `PerformanceTiming` 对象。
+  - : 是一个 JSON 格式化工具，返回一个 [JSON 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)，代表具体的 `PerformanceTiming` 对象。
 
 ## 规范
 

@@ -1,14 +1,8 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Reference
-  - StyleSheet
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/stylesheet
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 
 `<xsl:stylesheet>` 要素 (または同等の `<xsl:transform>` 要素) は、スタイルシートの最も外側の要素です。
@@ -21,12 +15,12 @@ translation_of: Web/XSLT/Element/stylesheet
 
 ```xml
 <xsl:stylesheet
-	version="NUMBER"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	id="NAME"
-	extension-element-prefixes="LIST-OF-NAMES"
-	exclude-result-prefixes="LIST-OF-NAMES">
-		ENTIRE STYLESHEET
+  version="NUMBER"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  id="NAME"
+  extension-element-prefixes="LIST-OF-NAMES"
+  exclude-result-prefixes="LIST-OF-NAMES">
+    ENTIRE STYLESHEET
 </xsl:stylesheet>
 ```
 

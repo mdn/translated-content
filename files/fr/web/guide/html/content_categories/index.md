@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Guide/HTML/Content_categories
 original_slug: Web/Guide/HTML/Catégories_de_contenu
 ---
+
 Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.
 
 Il y a trois types différents de catégories de contenu :
@@ -42,7 +43,7 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement sous
 
 ### Contenu sectionnant
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](<#Contenu de titre> "#Contenu de titre").
+Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 

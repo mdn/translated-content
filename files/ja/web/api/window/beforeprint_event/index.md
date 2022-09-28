@@ -1,11 +1,8 @@
 ---
 title: 'Window: beforeprint イベント'
 slug: Web/API/Window/beforeprint_event
-tags:
-  - Event
-  - Reference
-translation_of: Web/API/Window/beforeprint_event
 ---
+
 {{APIRef}}
 
 **`beforeprint`** イベントは、関連する文書が印刷される直前や、印刷プレビューが開く直前に発生します。

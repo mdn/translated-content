@@ -1,14 +1,8 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/data
 ---
+
 {{HTMLRef}}
 
 **HTML の `<data>` 要素**は、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、 {{HTMLElement("time")}} 要素を使用する必要があります。

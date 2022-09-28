@@ -1,16 +1,8 @@
 ---
 title: String length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - String
-  - String Length
-  - length
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
+
 {{JSRef}}
 
 **`length`** プロパティは {{jsxref("String")}} オブジェクトの文字列長を UTF-16 コードユニットの数で表します。 `length` は、 string インスタンスの読み取り専用データプロパティです。

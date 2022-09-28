@@ -11,6 +11,7 @@ tags:
   - Web Performance
 translation_of: Web/API/Performance_Timeline
 ---
+
 {{DefaultAPISidebar("Performance Timeline API")}}
 
 L'API **Performance Timeline** définit des extensions de l'interface [`Performance`](/fr/docs/Web/API/Performance) pour prendre en charge les mesures de latence côté client dans les applications. Ces extensions fournissent des interfaces permettant de récupérer les [paramètres de saisie des performances](/fr/docs/Web/API/PerformanceEntry) en fonction de critères de filtrage spécifiques.

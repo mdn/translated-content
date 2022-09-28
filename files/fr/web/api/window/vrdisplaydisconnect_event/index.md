@@ -9,6 +9,7 @@ tags:
   - vrdisplaydisconnect
 translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
+
 {{APIRef("Window")}}
 
 L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est déconnecté de l'ordinateur.
@@ -62,13 +63,11 @@ window.onvrdisplaydisconnect = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentair          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnect', 'vrdisplaydisconnect')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplaydisconnect_event")}}
+{{Compat}}
 
 ## Voir aussi
 

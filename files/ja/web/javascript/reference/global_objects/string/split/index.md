@@ -1,18 +1,8 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - プロトタイプ
-  - メソッド
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 **`split()`** メソッドは、 {{jsxref("String")}} を指定した区切り文字列で分割することにより、文字列の配列に分割します。
@@ -36,7 +26,7 @@ str.split([separator[, limit]])
     - `separator` が文字列の先頭または末尾、またはその両方に現れた場合、配列の先頭、末尾、または先頭と末尾の両方が、それぞれ空文字列になります。
     - `separator` が空文字列 (`""`) の場合、 `str` は個々の UTF-16 「文字」の配列になります。
 
-    > **Warning:** **警告:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の “How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/a/34717402) を参照してください。
+    > **Warning:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の “How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/a/34717402) を参照してください。
 
 - `limit` {{optional_inline}}
 
@@ -151,7 +141,7 @@ console.log(splits)
 
 ### `RegExp` で分割して結果に区切り文字列の一部を含める
 
-`separator` がキャプチャの括弧 ` (``) ` を含む正規表現である場合、一致した結果が配列に含まれます。
+`separator` がキャプチャの括弧 `(` `)` を含む正規表現である場合、一致した結果が配列に含まれます。
 
 ```js
 const myString = 'Hello 1 word. Sentence number 2.'

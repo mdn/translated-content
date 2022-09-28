@@ -4,6 +4,7 @@ slug: Web/CSS/mask-image
 translation_of: Web/CSS/mask-image
 browser-compat: css.properties.mask-image
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.

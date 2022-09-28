@@ -1,16 +1,8 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Caching
-  - HTTP
-  - HTTPResponse
-  - header
-  - キャッシング
-  - ヘッダー
-  - レスポンス
-translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 **`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。

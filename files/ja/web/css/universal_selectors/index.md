@@ -1,13 +1,8 @@
 ---
 title: 全称セレクター
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.universal
-translation_of: Web/CSS/Universal_selectors
 ---
+
 {{CSSRef}}
 
 CSS の**全称セレクター** (universal selector) (`*`) は、すべての種類の要素に一致します。

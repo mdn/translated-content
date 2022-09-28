@@ -1,16 +1,6 @@
 ---
 title: MediaCapabilitiesInfo
 slug: Web/API/MediaCapabilities/encodingInfo
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media Capabilities API
-  - MediaCapabilitiesInfo
-  - Reference
-  - Video
-translation_of: Web/API/MediaCapabilitiesInfo
 original_slug: Web/API/MediaCapabilitiesInfo
 ---
 {{APIRef("Media Capabilities API")}}

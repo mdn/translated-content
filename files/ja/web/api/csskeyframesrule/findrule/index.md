@@ -1,15 +1,6 @@
 ---
 title: CSSKeyframesRule.findRule()
 slug: Web/API/CSSKeyframesRule/findRule
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS アニメーション
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSKeyframesRule.findRule
-translation_of: Web/API/CSSKeyframesRule/findRule
 ---
 {{APIRef("CSSOM") }}
 

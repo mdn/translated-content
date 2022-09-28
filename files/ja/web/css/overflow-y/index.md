@@ -1,15 +1,8 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ボックスモデル
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-y
-translation_of: Web/CSS/overflow-y
 ---
+
 {{CSSRef}}
 
 **`overflow-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素の内容が上下の境界からあふれた場合、どのように表示するのかを設定します。表示しないか、スクロールバーを表示するか、あふれさせるかを設定できます。

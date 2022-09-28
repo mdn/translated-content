@@ -1,12 +1,6 @@
 ---
 title: Site (サイト)
 slug: Glossary/Site
-tags:
-  - Glossary
-  - Security
-  - WebMechanics
-  - 用語集
-translation_of: Glossary/Site
 ---
 ウェブコンテンツの一部であるい*サイト*は、オリジン内にあるホストの*登録可能なドメイン*によって決定されます。これは、*公開接尾辞リスト*を参照して、*公開接尾辞*として数えられるホストの部分を見つけることによって計算されます (e.g. `com`, `org`, `co.uk`)。
 

@@ -1,15 +1,8 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - キーワード
-  - リファレンス
-  - ウェブ
-  - fit-content
-browser-compat: css.properties.width.fit-content
-translation_of: Web/CSS/fit-content
 ---
+
 {{CSSRef}}
 
 **`fit-content`** は `fit-content(stretch)` として動作します。実際には、ボックスは利用可能な空間を使用しますが、{{cssxref("max-content")}} 以上にはならないことを意味します。

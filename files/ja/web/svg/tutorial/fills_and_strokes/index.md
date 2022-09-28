@@ -1,13 +1,8 @@
 ---
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedLiveSamples
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 図形に色を付ける方法としては (オブジェクトに属性を指定することを含む)、インライン [CSS](/ja/docs/Glossary/CSS)、埋め込み CSS セクション、外部 CSS ファイルなどいくつかの方法があります。ほとんどに [SVG](/ja/docs/Glossary/SVG) ではインライン CSS を使用していますが、どの方法にも利点と欠点があります。

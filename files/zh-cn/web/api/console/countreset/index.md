@@ -2,6 +2,7 @@
 title: Console.countReset()
 slug: Web/API/Console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 重置计数器。此函数有一个可选参数 `label`。

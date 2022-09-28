@@ -13,6 +13,7 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
+
 {{AddonSidebar()}}
 
 Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.

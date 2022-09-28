@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` est l'interface qui décrit les gestionnaires d'événements que vous pouvez implémenter dans un objet qui gérera les événements pour un {{ domxref("XMLHttpRequest") }}.
@@ -24,7 +25,7 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 - {{ domxref("XMLHttpRequestEventTarget.onerror") }}
   - : Contient la fonction à appeler lorsqu'une demande rencontre une erreur et que l'événement {{event('error')}} est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onload") }}
-  - : Contient la fonction à appeler lorsqu'une requête HTTP revient après avoir récupéré le contenu avec succès et que l'événement {{event('load')}} est reçu par cet objet.
+  - : Contient la fonction à appeler lorsqu'une requête HTTP revient après avoir récupéré le contenu avec succès et que l'événement [`load`](/fr//docs/Web/API/Window/load_event) est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}
   - : Contient la fonction qui est appelée lorsque la requête HTTP commence à charger des données et que l'événement {{event('loadstart')}} est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
@@ -36,13 +37,11 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire            |
-| ---------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequestEventTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

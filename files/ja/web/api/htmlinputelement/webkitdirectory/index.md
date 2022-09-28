@@ -1,21 +1,8 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
-tags:
-  - API
-  - ファイルシステム API
-  - ファイルとディレクトリー項目 API
-  - ファイル
-  - HTML DOM
-  - HTMLInputElement
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - Web
-  - webkitdirectory
-  - プロパティ
-translation_of: Web/API/HTMLInputElement/webkitdirectory
 ---
+
 {{APIRef("HTML DOM")}}{{non-standard_header}}
 
 **`HTMLInputElement.webkitdirectory`** はプロパティで、 {{htmlattrxref("webkitdirectory", "input")}} という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。

@@ -33,7 +33,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 
 <p>Точки треугольника находятся в координатах (20, 150), (120, 20),и (220, 150).</p>
 
-<pre class="brush: js; highlight:[8]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -52,7 +52,7 @@ ctx.stroke();
 
 <p>Этот пример рисует смайлик, состоящий из трёх не соединённых дуг (под путей).</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p>Хотя <code>closePath()</code> вызывается после создания всех дуг, закрывается только последняя.</p>
 </div>
 
@@ -65,7 +65,7 @@ ctx.stroke();
 
 <p>Первые две дуги создают глаза, последняя создаёт рот.</p>
 
-<pre class="brush: js; highlight:[10]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

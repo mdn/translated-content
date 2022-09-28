@@ -1,14 +1,8 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。

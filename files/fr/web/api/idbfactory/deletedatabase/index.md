@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/deleteDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`deleteDatabase()`**, rattachée à l'interface {{domxref("IDBFactory")}}, permet de demander la suppression d'une base de données. La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération de suppression de façon asynchrone.

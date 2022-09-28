@@ -1,8 +1,8 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
-translation_of: Web/MathML/Element/mover
 ---
+
 {{MathMLRef}}
 
 MathML の `<mover>` 要素はアクセントかリミットを上に載せるために使われます。構文は次の通りです： `<mover> base overscript </mover>`

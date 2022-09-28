@@ -10,6 +10,7 @@ tags:
   - rel
 translation_of: Web/HTML/Attributes/rel
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`rel`** définit la relation entre une ressource liée et le document actuel. Valable sur [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), et [`<form>`](/fr/docs/Web/HTML/Element/Form), les valeurs supportées dépendent de l'élément sur lequel se trouve l'attribut.
@@ -203,90 +204,11 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'links.html#linkTypes', 'l\'attribut rel')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Ajout de <code>opener</code>. Mise en place de <code>noopener</code> par
-        défaut pour <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'links.html#linkTypes', 'l\'attribut rel')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        Ajout de <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-        <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code> et
-        <code>author</code>.<br />Renommage de <code>copyright</code> en
-        <code>license</code>.<br />Suppression de <code>start</code>,
-        <code>chapitre</code>, <code>section</code>, <code>subsection</code> et
-        <code>appendice</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Preload", "#x2.link-type-preload", "preload")}}
-      </td>
-      <td>{{Spec2("Preload")}}</td>
-      <td>Ajout de <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}
-      </td>
-      <td>{{Spec2("Resource Hints")}}</td>
-      <td>
-        Ajout des valeurs <code>dns-prefetch</code>, <code>preconnect</code> et
-        <code>prerender</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td>
-        Ajout de <code>alternate</code>, <code>stylesheet</code>,
-        <code>start</code>, <code>chapter</code>, <code>section</code>,
-        <code>subsection</code>, <code>appendix</code> et
-        <code>bookmark</code>.<br />Renommage de <code>previous</code> par
-        <code>prev</code>.<br />Suppression de <code>top</code> et
-        <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td><p>Obsolète</p></td>
-      <td>
-        Ajout de <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code> et <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>Obsolète</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}
 
 ## Voir aussi
 

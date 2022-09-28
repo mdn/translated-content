@@ -1,30 +1,28 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
+l10n:
+  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
 ---
+
 {{JSRef}}
 
-**`toLocaleString()`** メソッドは、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます (例えばカンマ “,”など)。
+**`toLocaleString()`** メソッドは、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます（例えばカンマ "," など）。
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
 
 ## 構文
 
-```
-arr.toLocaleString([locales[, options]]);
+```js
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
 ```
 
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については {{jsxref("Intl")}} ページを参照してください。
+  - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
 - `options` {{optional_inline}}
   - : 設定プロパティのオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。
 
@@ -32,93 +30,9 @@ arr.toLocaleString([locales[, options]]);
 
 配列の要素を表す文字列です。
 
-## ポリフィル
+## 解説
 
-```js
-// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
-if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      var a = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length >>> 0;
-
-      // 3. Let separator be the String value for the
-      //    list-separator String appropriate for the
-      //    host environment's current locale (this is
-      //    derived in an implementation-defined way).
-      // NOTE: In this case, we will use a comma
-      var separator = ',';
-
-      // 4. If len is zero, return the empty String.
-      if (len === 0) {
-        return '';
-      }
-
-      // 5. Let firstElement be ? Get(A, "0").
-      var firstElement = a[0];
-      // 6. If firstElement is undefined or null, then
-      //  a.Let R be the empty String.
-      // 7. Else,
-      //  a. Let R be ?
-      //     ToString(?
-      //       Invoke(
-      //        firstElement,
-      //        "toLocaleString",
-      //        « locales, options »
-      //       )
-      //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
-
-      // 8. Let k be 1.
-      var k = 1;
-
-      // 9. Repeat, while k < len
-      while (k < len) {
-        // a. Let S be a String value produced by
-        //   concatenating R and separator.
-        var s = r + separator;
-
-        // b. Let nextElement be ? Get(A, ToString(k)).
-        var nextElement = a[k];
-
-        // c. If nextElement is undefined or null, then
-        //   i. Let R be the empty String.
-        // d. Else,
-        //   i. Let R be ?
-        //     ToString(?
-        //       Invoke(
-        //        nextElement,
-        //        "toLocaleString",
-        //        « locales, options »
-        //       )
-        //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
-
-        // e. Let R be a String value produced by
-        //   concatenating S and R.
-        r = s + r;
-
-        // f. Increase k by 1.
-        k++;
-      }
-
-      // 10. Return R.
-      return r;
-    }
-  });
-}
-```
-
-[`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) が利用できないとても古い JavaScript エンジンをサポートする必要がある場合、`Array.prototype` のメソッドを polyfill するのは避けたほうがよいでしょう。それらを列挙不可にすることができないからです。
+`Array.prototype.toLocaleString` メソッドは、その内容を走査し、すべての要素に対s知恵 `toLocaleString` メソッドを、引数 `locales` と `options` を指定して呼び出し、実装で定義された区切り文字 (",") でその結果を連結したものを返します。このメソッド自身は、この 2 つの引数を使用せず、各要素に対する `toLocaleString()` の呼び出しで渡すだけであることに注意してください。区切り文字列の選択はホストの現在のロケールに依存し、 `locales` 引数は使用しません。
 
 ## 例
 
@@ -133,24 +47,21 @@ if (!Array.prototype.toLocaleString) {
 `prices` 配列内の文字列と数値の通貨を常に表示します。
 
 ```js
-var prices = ['￥7', 500, 8123, 12];
+const prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 // "￥7,￥500,￥8,123,￥12"
 ```
 
-さらに多くの例を知りたいなら、 {{jsxref("Intl")}} や {{jsxref("NumberFormat")}}、{{jsxref("DateTimeFormat")}} ページを見てください。
+それ以外の例については、 [`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) や [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) のページを参照してください。
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-animation
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-animation`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les animationsCSS ({{cssxref("animation")}}) sont prises en charge dans leurs versions préfixées. Cette caractéristique est uniquement prise en charge par les navigateurs basés sur WebKit. L'alternative standard correspondante consiste à utiliser {{cssxref("@supports")}}.

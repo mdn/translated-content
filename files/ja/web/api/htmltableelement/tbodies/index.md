@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLTableElement.tBodies
-translation_of: Web/API/HTMLTableElement/tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tBodies`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で {{htmlElement("table")}} の本体を返します。

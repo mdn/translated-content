@@ -1,17 +1,8 @@
 ---
 title: ':left'
 slug: Web/CSS/:left
-tags:
-  - '@page'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - Reference
-  - セレクター
-  - Web
-browser-compat: css.selectors.left
-translation_of: Web/CSS/:left
 ---
+
 {{ CSSRef() }}
 
 **`:left`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/At-rule)で使われ、印刷文書の左側のページすべてを表します。

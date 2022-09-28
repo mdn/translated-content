@@ -2,6 +2,7 @@
 title: Event.bubbles
 slug: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。

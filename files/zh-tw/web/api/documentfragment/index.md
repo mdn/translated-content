@@ -2,6 +2,7 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 **`DocumentFragment`** 介面表示了一個沒有父節點的最小化文件物件。`DocumentFragment` 被當作一種輕量化的 {{domxref("Document")}}，用如同標準文件一般的方式保存片段的文件結構（由節點組成）。關鍵的區別在於文件片段不是真實的 DOM 結構，文件片段的變動並不會影響目前的網頁文件，也不會導致回流（{{Glossary("reflow")}}）或引起任何影響效能的情況發生。
@@ -51,7 +52,7 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}, and imp
 
 ## 瀏覽器相容性
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## 參見
 

@@ -1,15 +1,8 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/CSS_Houdini
-tags:
-  - CSS
-  - Houdini
-  - Experimental
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Houdini
 ---
+
 {{CSSRef}}
 
 **CSS Houdini** は、 CSS エンジンの一部を公開する一連の API です。これにより、開発者は CSS の拡張機能を簡単に作成することができます。これらの拡張機能は、ブラウザーでまだ利用できない機能を代替したり、レイアウトの新しい方法を試したり、クリエイティブな境界線やその他の効果を追加したりするものです。

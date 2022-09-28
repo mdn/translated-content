@@ -2,6 +2,7 @@
 title: 无障碍
 slug: Web/Accessibility
 ---
+
 在 Web 开发无障碍性意味着使尽可能多的人能够使用 Web 站点，即使这些人的能力是有限的。这里我们提供关于开发易访问的内容的信息。
 
 “无障碍性是最常用于描述设施或设施，帮助残疾人，如“轮椅”。这可以扩展到盲文标识、轮椅坡道，音频信号在人行横道，轮廓人行道，网站设计，等等。" [维基百科条目无障碍](http://en.wikipedia.org/wiki/Accessibility)
@@ -29,7 +30,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 
 - [了解 Web 内容无障碍功能指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
   - : 这组文章提供了快速解释，以帮助你了解需要采取的步骤，以符合 W3C web 内容辅助功能指南 2.0 的建议
-- [键盘导航的 JavaScript 小部件](/en/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [键盘导航的 JavaScript 小部件](/zh-CN/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : 直到现在，想要使他们的风格基于\<div> 和 \<span> 的小元素的网络开发人员缺乏适当的技术。无障碍关键是开发人员应该注意的最小无障碍要求的一部分。
 - [ARIA](/zh-CN/docs/Accessibility/ARIA)
   - : 一组文章，学习如何利用 ARIA 使你的 HTML 文档更容易理解。

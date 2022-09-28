@@ -1,9 +1,10 @@
 ---
-title: Handling different text directions
+title: Gérer la directionnalité du texte
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Apprendre/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordures en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web a tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le français) que celles qui se lisent de droite à gauche (comme l'arabe).

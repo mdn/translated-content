@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/Roles/Banner_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_banner
 ---
+
 ### Description
 
 Cette technique présente l’utilisation du rôle [`banner` (en)](https://www.w3.org/TR/wai-aria/roles#banner).

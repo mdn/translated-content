@@ -1,14 +1,8 @@
 ---
 title: '<em>: 強調要素'
 slug: Web/HTML/Element/em
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/em
 ---
+
 {{HTMLRef}}
 
 **HTML の `<em>` 要素**は、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。

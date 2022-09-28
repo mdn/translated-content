@@ -1,13 +1,8 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-translation_of: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Expect`** リクエストヘッダーは、リクエストを正しく扱うためにサーバーが実行する必要があると期待されていることを示します。
@@ -79,5 +74,5 @@ Expect: 100-continue
 
 ## 関連情報
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

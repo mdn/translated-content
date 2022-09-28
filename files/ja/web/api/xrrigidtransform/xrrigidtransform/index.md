@@ -2,6 +2,7 @@
 title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 **`XRRigidTransform()`** コンストラクターは、点またはオブジェクトの位置と向きを表す新しい {{domxref("XRRigidTransform")}} オブジェクトを作成して返します。 特に、`XRRigidTransform` は、空間を横断する座標系間で平行移動するための変換を提供するときに使用されます。

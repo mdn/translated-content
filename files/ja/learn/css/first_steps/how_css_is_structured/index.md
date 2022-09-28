@@ -241,19 +241,19 @@ p {
 
 CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。 CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。
 
-> **Warning:** **重要:** CSS のプロパティと値は大文字と小文字を区別します。それぞれのプロパティと値の組はコロン (`:`) で区切られます。
+> **Warning:** CSS のプロパティと値は大文字と小文字を区別します。それぞれのプロパティと値の組はコロン (`:`) で区切られます。
 
 **以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS 規則を書いてみてください。**
 
-- **{{cssxref("font-size")}}**
-- **{{cssxref("width")}}**
-- **{{cssxref("background-color")}}**
-- **{{cssxref("color")}}**
-- **{{cssxref("border")}}**
+- {{cssxref("font-size")}}
+- {{cssxref("width")}}
+- {{cssxref("background-color")}}
+- {{cssxref("color")}}
+- {{cssxref("border")}}
 
-> **Warning:** **重要**: プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が*無効*なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
+> **Warning:** プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が*無効*なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
 
-> **Warning:** **重要**: CSS (および他のウェブ標準) では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 `color` は `color` と綴るべきであり、 `colour` では動作しません。
+> **Warning:** CSS (および他のウェブ標準) では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 `color` は `color` と綴るべきであり、 `colour` では動作しません。
 
 ### 関数
 
@@ -302,11 +302,11 @@ CSS プロパティを特定の値に設定することが、文書のレイア�
 
 {{EmbedLiveSample('transform_example', '100%', 200)}}
 
-**以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。**
+以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。
 
-- **{{cssxref("transform")}}**
-- **{{cssxref("background-image")}}、特に gradient の値**
-- **{{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値**
+- {{cssxref("transform")}}
+- {{cssxref("background-image")}}、特に gradient の値
+- {{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値
 
 ## アット規則
 
@@ -379,7 +379,7 @@ background-attachment: fixed;
 
 **自分の CSS の練習でこれらの前述) 使用してみて、それがどのように動作するかをよりよく理解するようにしてください。また、様々な値を使って実験してみてください。**
 
-> **Warning:** **警告**: CSS の一括指定を使用する際に、省略した値がどのようにリセットされるかはあまり目立たない側面です。 CSS 一括指定で指定されていない値は初期値に戻ります。これは、 CSS 一括指定で省略された値は、**以前に設定された値を上書きしてしまう**可能性があることを意味します。
+> **Warning:** CSS の一括指定を使用する際に、省略した値がどのようにリセットされるかはあまり目立たない側面です。 CSS 一括指定で指定されていない値は初期値に戻ります。これは、 CSS 一括指定で省略された値は、**以前に設定された値を上書きしてしまう**可能性があることを意味します。
 
 ## コメント
 
@@ -513,18 +513,18 @@ padding- left: 10px;
 
 **CSS のプロパティに対する複数の値どうしを区別するためには、最低でも 1 個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。**
 
-\***\*自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。\*\***
+**自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。**
 
 ## 次のステップ
 
-**ブラウザーが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」 ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)では、ブラウザーが Web ページを生成する過程についてみていきましょう。**
+**ブラウザーが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」](/ja/docs/Learn/CSS/First_steps/How_CSS_works) では、ブラウザーが Web ページを生成する過程についてみていきましょう。**
 
 **{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}**
 
 ## このモジュール内
 
-1.  **[CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)**
-2.  **[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)**
-3.  **[CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)**
-4.  **[CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)**
-5.  **[新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)**
+1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

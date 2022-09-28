@@ -2,6 +2,7 @@
 title: <table>
 slug: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 **HTML**的 **`table` **元素表示表格数据 — 即通过二维数据表表示的信息。
@@ -52,7 +53,7 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何支持<a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        任何支持<a href="/zh-CN/docs/HTML/Content_categories#Flow_content"
           >流内容</a
         >的元素
       </td>
@@ -337,7 +338,7 @@ If the table cannot be broken apart, use a combination of the {{htmlattrxref("id
 
 ## Browser compatibility
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 相关
 

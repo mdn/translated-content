@@ -2,6 +2,7 @@
 title: <select>
 slug: Web/HTML/Element/select
 ---
+
 {{HTMLRef}}
 
 **HTML `<select>` 元素**表示一个提供选项菜单的控件：

@@ -1,14 +1,8 @@
 ---
 title: CSS ボックスモデル
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model
 ---
+
 {{CSSRef}}
 
 **CSS ボックスモデル**は CSS のモジュールの一つで、要素に対して作成され、パディングやマージンを含む長方形のボックス定義します。[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によって配置されます。

@@ -1,16 +1,8 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
-tags:
-  - API
-  - Extensions
-  - Non-standard
-  - Reference
-  - Sidebar
-  - WebExtensions
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
+
 {{AddonSidebar}}
 
 拡張機能のサイドバーのプロパティを取得、設定します。

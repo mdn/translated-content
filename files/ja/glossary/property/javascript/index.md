@@ -1,10 +1,6 @@
 ---
 title: Property (プロパティ) (JavaScript)
 slug: Glossary/property/JavaScript
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/property/JavaScript
 ---
 **JavaScript プロパティ**は、多くの場合データ構造と関連付けられた属性を記述する、オブジェクトの特性です。
 

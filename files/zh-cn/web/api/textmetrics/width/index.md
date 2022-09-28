@@ -2,6 +2,7 @@
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
 ---
+
 {{APIRef("Canvas API")}}
 
 只读的 **`TextMetrics.width`** 属性，包含文本先前的宽度（行内盒子的宽度），使用 CSS 像素计算。
@@ -36,7 +37,7 @@ text.width; // 16;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextMetrics.width")}}
+{{Compat}}
 
 ## 参见
 

@@ -62,7 +62,7 @@ Content-length: 16
 
 <p>Se o recurso de destino não tem uma representação atual e a requisição <code>PUT</code> foi criada com sucesso, então o servidor original deve informar o agente de usuário enviando uma resposta {{HTTPStatus("201")}} (<code>Created</code>).</p>
 
-<pre class="newpage">HTTP/1.1 201 Created
+<pre>HTTP/1.1 201 Created
 Content-Location: /new.html</pre>
 
 <p>Se o recurso de destino tem uma representação atual e essa representação é modificada com sucesso de acordo com o estado de representação em anexo, então o servidor original deve enviar também uma resposta {{HTTPStatus("200")}} (<code>OK</code>) or a {{HTTPStatus("204")}} (<code>No Content</code>) para indicar a conclusão da requisição.</p>

@@ -1,8 +1,8 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
-translation_of: Web/CSS/contain-intrinsic-size
 ---
+
 {{CSSRef}}
 
 `contains-intrinsic-size` CSS プロパティは、[`content-visibility`](/ja/docs/Web/CSS/content-visibility)で指定された要素の自然なサイズを制御します。

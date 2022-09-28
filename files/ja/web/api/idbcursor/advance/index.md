@@ -1,16 +1,6 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - advance
-translation_of: Web/API/IDBCursor/advance
 ---
 {{APIRef("IndexedDB")}}
 

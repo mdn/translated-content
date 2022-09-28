@@ -13,6 +13,7 @@ tags:
   - setPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 ---
+
 {{AddonSidebar()}}
 
 Définit le document HTML à ouvrir en tant que fenêtre contextuelle lorsque l'utilisateur clique sur l'icône de l'action de la page.

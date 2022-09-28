@@ -1,8 +1,8 @@
 ---
 title: vrdisplayconnected
 slug: Web/API/Window/vrdisplayconnect_event
-translation_of: Web/API/Window/vrdisplayconnect_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplayconnected`** イベントは，コンピュータに互換性のある VR デバイスが接続された時に発火します．

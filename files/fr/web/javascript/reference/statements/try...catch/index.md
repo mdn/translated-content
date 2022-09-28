@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.

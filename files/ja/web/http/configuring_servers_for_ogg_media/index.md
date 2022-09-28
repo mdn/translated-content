@@ -1,13 +1,8 @@
 ---
 title: Ogg メディア用のサーバーの設定
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - Media
-  - Ogg
-  - Video
-translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。

@@ -1,14 +1,6 @@
 ---
 title: Round Trip Time (ラウンドトリップタイム)
 slug: Glossary/Round_Trip_Time_(RTT)
-tags:
-  - Beginner
-  - Glossary
-  - Performance
-  - Resource
-  - Round Trip Time
-  - Web Performance
-translation_of: Glossary/Round_Trip_Time_(RTT)
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---

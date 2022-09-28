@@ -17,7 +17,9 @@ translation_of: Web/API/Window/opener
 
 ## 구문
 
-    const openerWindow = window.opener
+```js
+const openerWindow = window.opener
+```
 
 ### 값
 

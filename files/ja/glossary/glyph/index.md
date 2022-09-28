@@ -1,11 +1,6 @@
 ---
 title: Glyph (字体)
 slug: Glossary/Glyph
-tags:
-  - Glossary
-  - SVG
-  - typography
-translation_of: Glossary/Glyph
 ---
 **字体**は、1 つ以上の{{Glossary("character", "文字")}}を視覚的に表現するためにタイポグラフィで使用される用語です。
 

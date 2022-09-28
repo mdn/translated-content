@@ -1,12 +1,6 @@
 ---
 title: CompositionEvent.CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
-tags:
-  - API
-  - CompositionEvent
-  - Constructor
-  - Reference
-translation_of: Web/API/CompositionEvent/CompositionEvent
 ---
 {{APIRef("DOM Events")}}
 

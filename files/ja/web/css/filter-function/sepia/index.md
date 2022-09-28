@@ -1,16 +1,9 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/sepia()
 original_slug: Web/CSS/filter-function/sepia()
-browser-compat: css.types.filter-function.sepia
 ---
+
 {{CSSRef}}
 
 **`sepia()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像をセピア色に、より暖かい、より黄色/茶色がかったの表現に変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
