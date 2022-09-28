@@ -152,12 +152,16 @@ Hay dos tipos de propiedades de objeto que tienen ciertos atributos: la propieda
 
 Asocia una clave con un valor y tiene los siguientes atributos:
 
+**Atributos de una propiedad `data`**
+
 | Atributo         | Tipo                         | Descripción                                                                                                                                                                                                                                            | Valor predeterminado |
 | ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
 | [[Value]]        | Cualquier tipo de JavaScript | El valor recuperado por un captador de acceso `get` a la propiedad.                                                                                                                                                                                    | `undefined`          |
 | [[Writable]]     | `Boolean`                    | Si es `false`, el [[Value]] de la propiedad no se puede cambiar.                                                                                                                                                                                       | `false`              |
 | [[Enumerable]]   | `Boolean`                    | Si es `true`, la propiedad se enumerará en bucles [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Consulta también [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties). | `false`              |
 | [[Configurable]] | `Boolean`                    | Si es `false`, la propiedad no se puede eliminar, no se puede cambiar a una propiedad de acceso descriptor y los atributos que no sean [[Value]] y [[Writable]] no se pueden cambiar.                                                                  | `false`              |
+
+**Atributos obsoletos (a partir de ECMAScript 3, renombrado en ECMAScript 5)**
 
 | Atributo     | Tipo      | Descripción                                       |
 | ------------ | --------- | ------------------------------------------------- |

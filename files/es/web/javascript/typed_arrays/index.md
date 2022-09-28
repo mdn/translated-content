@@ -173,8 +173,8 @@ normalArray.constructor === Array;
 
 ## Ve también
 
-- {{Link("/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding", "Conseguir ArrayBuffers o arreglos tipados a partir de cadenas codificadas en Base64", "#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer")}}
-- {{Link("/en-US/docs/Code_snippets/StringView", "StringView: una representación en C de cadenas basadas en arreglos tipados")}}
+- [Conseguir ArrayBuffers o arreglos tipados a partir de cadenas codificadas en Base64](/es/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
+- [StringView: una representación en C de cadenas basadas en arreglos tipados](/es/docs/Code_snippets/StringView "This is a link to an unwritten page")
 - [Rápida manipulación de píxeles en canvas con arreglos tipados](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [Arreglos tipados: Datos binarios en el navegador](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

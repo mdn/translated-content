@@ -25,7 +25,9 @@ A pesar de que a menudo esto se considera como una de las principales debilidade
 
 Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus **propiedades particulares**). Los objetos en JavaScript poseen un enlace a un objeto prototipo. Cuando intentamos acceder a una propiedad de un objeto, la propiedad no sólo se busca en el propio objeto sino también en el prototipo del objeto, en el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad que coincida con el nombre o se alcance el final de la cadena de prototipos.
 
-> **Nota:** Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se usa para designar el prototipo de `algunObjeto.` A partir de ECMAScript 2015, se accede al `[[Prototype]]` utilizando los accesores {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}}. Esto es equivalente a la propiedad JavaScript `__proto__` que no es estándar pero es el de-facto implementado por los navegadores.No debe confundirse con la propiedad de las funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` a asignar a todas las instancias de los objetos creados por la función dada cuando se utiliza como un constructor. La propiedad **`Object.prototype`** representa el prototipo del objeto {{jsxref("Object")}}.
+> **Nota:** Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se usa para designar el prototipo de `algunObjeto.` A partir de ECMAScript 2015, se accede al `[[Prototype]]` utilizando los accesores {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}}. Esto es equivalente a la propiedad JavaScript `__proto__` que no es estándar pero es el de-facto implementado por los navegadores.
+>
+> No debe confundirse con la propiedad de las funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` a asignar a todas las instancias de los objetos creados por la función dada cuando se utiliza como un constructor. La propiedad **`Object.prototype`** representa el prototipo del objeto {{jsxref("Object")}}.
 
 Esto es lo que ocurre cuando intentamos acceder a una propiedad:
 
