@@ -2,6 +2,7 @@
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`CanvasPattern.setTransform()`** 方法使用 {{domxref("SVGMatrix")}} 对象作为图案的变换矩阵，并在此图案上调用它。
@@ -107,7 +108,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasPattern.setTransform")}}
+{{Compat}}
 
 ## 参见
 

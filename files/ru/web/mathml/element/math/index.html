@@ -5,120 +5,118 @@ translation_of: Web/MathML/Element/math
 ---
 <p>{{MathMLRef()}}</p>
 
-<p><span>Элементом верхнего уровня в MathML является тэг <code>&lt;math&gt;</code> .</span> <span style=""> Каждый допустимый экземпляр MathML должен быть внутри этого контейнера.</span> <span> Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.</span></p>
+<p>Элементом верхнего уровня в MathML является тэг <code>&lt;math&gt;</code>. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.</p>
 
-<h2 id="Атрибуты"><span>Атрибуты</span></h2>
+<h2 id="Атрибуты">Атрибуты</h2>
 
-<p><span>В дополнение к следующим атрибутам, тэг <code>&lt;math&gt;</code> воспринимает любые атрибуты из <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> .</span></p>
+<p>В дополнение к следующим атрибутам, тэг <code>&lt;math&gt;</code> воспринимает любые атрибуты из <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> .</p>
 
 <dl>
  <dt id="attr-class-id-style">class, id, style</dt>
- <dd><span>При условии использования вместе с <a href="https://developer.mozilla.org/en-US/docs/CSS">таблицами стилей</a> .</span></dd>
+ <dd>При условии использования вместе с <a href="https://developer.mozilla.org/en-US/docs/CSS">таблицами стилей</a> .</dd>
  <dt id="attr-dir">dir</dt>
- <dd><span>Указывает направление формулы:</span> <span><code>ltr</code> - слева направо или <code>rtl</code> - справа налево.</span></dd>
+ <dd>Указывает направление формулы: <code>ltr</code> - слева направо или <code>rtl</code> - справа налево.</dd>
  <dt id="attr-href">ref</dt>
- <dd><span>Используется для установки гиперссылки на указанный URI.</span></dd>
- <dt id="attr-mathbackground"><span>mathbackground</span></dt>
- <dd><span>Цвет фона.</span> <span> Вы можете использовать <code>#rgb</code> , <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a> .</span></dd>
- <dt id="attr-mathcolor"><span>mathcolor</span></dt>
- <dd><span>Цвет текста.</span> <span> Вы можете использовать <code>#rgb</code> , <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a> .</span></dd>
+ <dd>Используется для установки гиперссылки на указанный URI.</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>Цвет фона. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a>.</dd>
+ <dt id="attr-mathcolor">mathcolor</dt>
+ <dd>Цвет текста. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a>.</dd>
  <dt id="attr-display">display</dt>
- <dd><span>Этот атрибут определяет способ вывода.</span> Возможные <span>значения:</span>
+ <dd>Этот атрибут определяет способ вывода. Возможные значения:
  <ul>
-  <li><span><code>block</code> - означает, что этот элемент будет отображаться за пределами текущего диапазона текста, как блока, который может быть расположен в любом месте без изменения смысла текста;</span></li>
-  <li><span><code>inline</code> -означает, что этот элемент будет отображаться внутри текущего диапазона текста, и не могут быть перемещены из неё без изменения значения этого текста.</span></li>
+  <li><code>block</code> - означает, что этот элемент будет отображаться за пределами текущего диапазона текста, как блока, который может быть расположен в любом месте без изменения смысла текста;</li>
+  <li><code>inline</code> -означает, что этот элемент будет отображаться внутри текущего диапазона текста, и не могут быть перемещены из неё без изменения значения этого текста.</li>
  </ul>
 
- <p><span>Значение по умолчанию <code>inline</code> .</span></p>
+ <p>Значение по умолчанию <code>inline</code>.</p>
  </dd>
- <dt id="attr-mode">mode {{ deprecated_inline() }} <span title="Это устаревший API больше не используется, но, вероятно, все ещё работают.">
- <i class="icon-thumbs-down-alt"></i>
- </span></dt>
- <dd><span>Устаревшие значение  </span><a href="https://developer.mozilla.org/en-US/docs/MathML/Element/math#attr-display">display attribute</a>.<br>
- <span>Возможные значения: <code>display</code> (который имеет тот же эффект, как <code>display="block"</code> ) и <code>inline</code> .</span></dd>
+ <dt id="attr-mode">mode {{ deprecated_inline() }}</dt>
+ <dd>Устаревшие значение  <a href="https://developer.mozilla.org/en-US/docs/MathML/Element/math#attr-display">display attribute</a>.<br>
+ Возможные значения: <code>display</code> (который имеет тот же эффект, как <code>display="block"</code> ) и <code>inline</code> .</dd>
  <dt id="attr-overflow">overflow</dt>
- <dd><span>Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.</span><br>
- <span>Возможные значения: <code>linebreak</code> (по умолчанию), <code>scroll</code> , <code>elide</code> , <code>truncate</code> , <code>scale</code> .</span></dd>
+ <dd>Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.<br>
+ Возможные значения: <code>linebreak</code> (по умолчанию), <code>scroll</code> , <code>elide</code> , <code>truncate</code> , <code>scale</code> .</dd>
 </dl>
 
-<h2 id="Примеры"><span>Примеры</span></h2>
+<h2 id="Примеры">Примеры</h2>
 
 <p><img alt="Теорема Пифагора" src="https://developer.mozilla.org/files/3157/math.jpg"></p>
 
-<h3 id="Обозначения_HTML5"><span>Обозначения HTML5</span></h3>
+<h3 id="Обозначения_HTML5">Обозначения HTML5</h3>
 
-<pre class="brush: html  language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>MathML in HTML5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<pre class="brush: html  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;MathML in HTML5&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>math</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mrow</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mrow</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mo</span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mo</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>b<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mrow</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mo</span><span class="token punctuation">&gt;</span></span>=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mo</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>c<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mrow</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>math</span><span class="token punctuation">&gt;</span></span>
+  &lt;math&gt;
+    &lt;mrow&gt;
+      &lt;mrow&gt;
+        &lt;msup&gt;
+          &lt;mi&gt;a&lt;/mi&gt;
+          &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;msup&gt;
+          &lt;mi&gt;b&lt;/mi&gt;
+          &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+      &lt;/mrow&gt;
+      &lt;mo&gt;=&lt;/mo&gt;
+      &lt;msup&gt;
+        &lt;mi&gt;c&lt;/mi&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msup&gt;
+    &lt;/mrow&gt;
+  &lt;/math&gt;
 
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
-
-<p> </p>
-
-<h3 id="Обозначения_XHTML"><span>Обозначения XHTML</span></h3>
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <p> </p>
 
-<pre class="brush: xml  language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="token doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/1999/xhtml<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>MathML in XHTML<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>math</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/1998/Math/MathML<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mrow</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mrow</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mo</span><span class="token punctuation">&gt;</span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mo</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>b<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mrow</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mo</span><span class="token punctuation">&gt;</span></span>=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mo</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>msup</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mi</span><span class="token punctuation">&gt;</span></span>c<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mi</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mn</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mn</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>msup</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mrow</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>math</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<h3 id="Обозначения_XHTML">Обозначения XHTML</h3>
 
 <p> </p>
 
-<p><span><strong>Примечания:</strong> XHTML документы с MathML должны быть поданы как <code>application/xhtml+xml</code>.</span> <span> Вы можете легко добиться этого, добавив <code>.xhtml</code> расширение для локальных файлов.</span> <span> Для серверов Apache вы можете <a class="external external-icon" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">настроить <code>.htaccess</code> файл</a> для этого расширения на правильный тип MIME.</span> <span> Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.</span></p>
+<pre class="brush: xml  language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+ &lt;title&gt;MathML in XHTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+    &lt;mrow&gt;
+      &lt;mrow&gt;
+        &lt;msup&gt;
+          &lt;mi&gt;a&lt;/mi&gt;
+          &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;msup&gt;
+          &lt;mi&gt;b&lt;/mi&gt;
+          &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+      &lt;/mrow&gt;
+      &lt;mo&gt;=&lt;/mo&gt;
+      &lt;msup&gt;
+        &lt;mi&gt;c&lt;/mi&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msup&gt;
+    &lt;/mrow&gt;
+  &lt;/math&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p> </p>
+
+<p><strong>Примечания:</strong> XHTML документы с MathML должны быть поданы как <code>application/xhtml+xml</code>. Вы можете легко добиться этого, добавив <code>.xhtml</code> расширение для локальных файлов. Для серверов Apache вы можете <a class="external external-icon" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">настроить <code>.htaccess</code> файл</a> для этого расширения на правильный тип MIME. Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.</p>
 
 <p> </p>
 
@@ -128,40 +126,40 @@ translation_of: Web/MathML/Element/math
 
 <p>{{Compat}}</p>
 
-<h3 id="Особенности_ядра_Gecko"><span>Особенности ядра Gecko</span></h3>
+<h3 id="Особенности_ядра_Gecko">Особенности ядра Gecko</h3>
 
-<p><span>В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> элемента).</span> <span> Тем не менее, <code>displaystyle</code> атрибут не отрабатывается. Его поддержка <a class="external link-https external-icon" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;tl=ru&amp;u=https://bugzilla.mozilla.org/show_bug.cgi%3Fid%3D669719&amp;usg=ALkJrhgLJ8bHaC2M0rCMSujebFa8KEb7lQ">была добавлена</a> ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).</span></p>
+<p>В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> элемента).  Тем не менее, <code>displaystyle</code> атрибут не отрабатывается. Его поддержка <a class="external link-https external-icon" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;tl=ru&amp;u=https://bugzilla.mozilla.org/show_bug.cgi%3Fid%3D669719&amp;usg=ALkJrhgLJ8bHaC2M0rCMSujebFa8KEb7lQ">была добавлена</a> ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).</p>
 
-<p><span>Альтернативные текстовые описания (<code>alttext</code>) или ссылки на альтернативное изображение, (атрибуты <code>altimg</code> , <code>altimg-width</code> , <code>altimg-height</code> и <code>altimg-valign</code>) в настоящее время не реализованы в Gecko.</span></p>
+<p>Альтернативные текстовые описания (<code>alttext</code>) или ссылки на альтернативное изображение, (атрибуты <code>altimg</code> , <code>altimg-width</code> , <code>altimg-height</code> и <code>altimg-valign</code>) в настоящее время не реализованы в Gecko.</p>
 
-<h2 id="Specifications"><span>Спецификации</span></h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col"><span>Спецификация</span></th>
-   <th scope="col"><span>Статус</span></th>
-   <th scope="col"><span>Комментарий</span></th>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td><span><a class="external external-icon" href="http://www.w3.org/TR/MathML3/chapter2.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 3.0</a></span></td>
-   <td><span><span class="spec-REC">Рекомендация</span></span></td>
-   <td><span>Текущая спецификация</span></td>
+   <td><a class="external external-icon" href="http://www.w3.org/TR/MathML3/chapter2.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 3.0</a></td>
+   <td>Рекомендация</td>
+   <td>Текущая спецификация</td>
   </tr>
   <tr>
-   <td><span><a class="external external-icon" href="http://www.w3.org/TR/MathML2/chapter7.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 2.0</a></span></td>
-   <td><span><span class="spec-REC">Рекомендация</span></span></td>
-   <td><span>Начальная спецификация</span></td>
+   <td><a class="external external-icon" href="http://www.w3.org/TR/MathML2/chapter7.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 2.0</a></td>
+   <td>Рекомендация</td>
+   <td>Начальная спецификация</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Смотрите_также"><span>Смотрите также</span></h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><span>HTML-элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" title="HTML &lt;HTML> Элемент (или HTML корневой элемент) представляет собой корень из HTML или документа XHTML. Все остальные элементы должны быть потомками этого элемента."><code>&lt;html&gt;</code></a></span></li>
- <li><span>SVG элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="Элемент SVG могут быть использованы для гнезда автономный SVG фрагмент внутри текущего документа (в том числе в HTML документе) до тех пор, SVG не является корневым элементом. Это автономный фрагмент имеет свой собственный просмотра и свою собственную систему координат."><code>&lt;svg&gt;</code></a></span></li>
- <li><span>Тест-браузер MathML: Для <a class="external link-https external-icon" href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> и <a class="external link-https external-icon" href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></span></li>
+ <li>HTML-элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" title="HTML &lt;HTML> Элемент (или HTML корневой элемент) представляет собой корень из HTML или документа XHTML. Все остальные элементы должны быть потомками этого элемента."><code>&lt;html&gt;</code></a></li>
+ <li>SVG элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="Элемент SVG могут быть использованы для гнезда автономный SVG фрагмент внутри текущего документа (в том числе в HTML документе) до тех пор, SVG не является корневым элементом. Это автономный фрагмент имеет свой собственный просмотра и свою собственную систему координат."><code>&lt;svg&gt;</code></a></li>
+ <li>Тест-браузер MathML: Для <a class="external link-https external-icon" href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> и <a class="external link-https external-icon" href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></li>
 </ul>

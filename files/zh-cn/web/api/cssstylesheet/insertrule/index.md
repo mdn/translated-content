@@ -2,6 +2,7 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleSheet.insertRule()` **方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Restrictions)。
@@ -150,7 +151,7 @@ function addStylesheetRules (decls) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ### 传统浏览器支持
 

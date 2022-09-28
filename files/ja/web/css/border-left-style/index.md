@@ -1,15 +1,8 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-left-style
-translation_of: Web/CSS/border-left-style
 ---
+
 {{CSSRef}}
 
 **`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の {{cssxref("border")}} における線の形状を設定します。

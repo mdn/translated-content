@@ -1,15 +1,6 @@
 ---
 title: 'BroadcastChannel: message イベント'
 slug: Web/API/BroadcastChannel/message_event
-tags:
-  - Communication
-  - Event
-  - EventSource
-  - Reference
-  - events
-  - message
-  - messaging
-translation_of: Web/API/BroadcastChannel/message_event
 ---
 {{APIRef}}
 

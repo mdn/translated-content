@@ -1,17 +1,6 @@
 ---
 title: CSS pixel
 slug: Glossary/CSS_pixel
-tags:
-  - CSS
-  - CSS Pixel
-  - Glossary
-  - height
-  - length
-  - pixel
-  - size
-  - unit
-  - width
-translation_of: Glossary/CSS_pixel
 ---
 **CSS Pixel** —{{Glossary("CSS")}} で接尾辞 `px` とともに示されます— は、人間の目で負担なく快適に見ることができるけれどなるべく小さい、1 ドットの高さや幅におおよそ一致する、長さの単位です。定義によれば、これは閲覧者の目から腕の長さまで離れた位置での、画素密度 96DPI の単一ピクセルの物理的サイズです。
 

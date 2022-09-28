@@ -1,14 +1,8 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-  - contextmenu
-translation_of: Web/HTML/Global_attributes/contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **Warning:** [contextmenu 属性は廃止](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu)されており、今後、すべてのブラウザーから削除される予定です。

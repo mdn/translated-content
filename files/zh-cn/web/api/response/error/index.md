@@ -2,6 +2,7 @@
 title: Response.error()
 slug: Web/API/Response/error
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的`error()`方法返回一个包含网络错误相关信息的新`Response`对象

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 browser-compat: javascript.builtins.WeakRef.deref
 ---
+
 {{JSRef}}
 
 La méthode `deref` renvoie l'objet cible associé à l'objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) courant ou `undefined` si l'objet cible a été récupéré par le ramasse-miettes.

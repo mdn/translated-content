@@ -1,10 +1,6 @@
 ---
 title: Idempotent (べき等)
 slug: Glossary/Idempotent
-tags:
-  - 用語集
-  - WebMechanics
-translation_of: Glossary/Idempotent
 ---
 ある HTTP メソッドが**べき等**であるとは、サーバーが同じ状況にあるとき、特定のリクエストに対して何回でも続けて同じ効果が起こることをいいます。このことは、べき等なメソッドでは (統計を取る際のことを除いて) 副作用が生じるはずではないと言うこともできます 。 適切に実装された {{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}} の各メソッドは**べき等**ですが、{{HTTPMethod("POST")}} メソッドはそうではありません。{{Glossary("Safe/HTTP", "安全な")}}メソッドはすべてべき等です。
 

@@ -1,13 +1,8 @@
 ---
 title: 既定の Accept 値の一覧
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - Accept
-  - コンテンツネゴシエーション
-  - HTTP
-  - リファレンス
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
+
 {{HTTPSidebar}}
 
 この記事では、特定の入力とブラウザーのバージョンにおける HTTP の [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーの既定値について説明します。

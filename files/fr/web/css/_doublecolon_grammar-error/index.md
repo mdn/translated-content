@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::grammar-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément CSS **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.

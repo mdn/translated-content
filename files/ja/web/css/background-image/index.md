@@ -1,15 +1,8 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-image
-translation_of: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。

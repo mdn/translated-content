@@ -4,6 +4,7 @@ slug: Web/CSS/::target-text
 translation_of: Web/CSS/::target-text
 browser-compat: css.selectors.target-text
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les fragments `scroll-to-text`. Il permet aux auteurs de mettre en valeur cette section de texte.

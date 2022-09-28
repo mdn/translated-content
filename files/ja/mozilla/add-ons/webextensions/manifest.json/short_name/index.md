@@ -1,12 +1,8 @@
 ---
 title: short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

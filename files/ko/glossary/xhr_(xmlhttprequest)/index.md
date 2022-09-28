@@ -1,11 +1,6 @@
 ---
 title: XHR (XMLHttpRequest)
 slug: Glossary/XHR_(XMLHttpRequest)
-tags:
-  - API
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/XHR_(XMLHttpRequest)
 ---
 {{domxref("XMLHttpRequest")}}(XHR)은 {{Glossary("AJAX")}} 요청을 생성하는 {{Glossary("JavaScript")}} {{Glossary("API")}}입니다. XHR의 메서드로 {{Glossary("browser", "브라우저")}}와 {{Glossary("server", "서버")}}간의 네트워크 요청을 전송할 수 있습니다.
 

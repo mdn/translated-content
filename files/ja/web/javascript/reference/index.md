@@ -1,20 +1,8 @@
 ---
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - l10n:priority
-  - programming
-translation_of: Web/JavaScript/Reference
 ---
+
 {{JsSidebar}}
 
 MDN のこの JavaScript の章は、JavaScript 言語についての情報倉庫となっています。詳しくは[このリファレンスについて](/ja/docs/Web/JavaScript/Reference/About)を読んでください。

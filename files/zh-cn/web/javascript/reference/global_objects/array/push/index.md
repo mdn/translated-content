@@ -2,6 +2,7 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
+
 {{JSRef}}
 
 **`push()`** 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。
@@ -10,8 +11,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 ## 语法
 
-```plain
-arr.push(element1, ..., elementN)
+```js
+push(element0)
+push(element0, element1)
+push(element0, element1, /* … ,*/ elementN)
 ```
 
 ### 参数
@@ -98,8 +101,9 @@ console.log(obj.length);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

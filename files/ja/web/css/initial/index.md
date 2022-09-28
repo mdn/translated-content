@@ -1,19 +1,8 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - 既定の状態
-  - 初期状態
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - initial
-browser-compat: css.types.global_keywords.initial
-translation_of: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 **`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/initial_value)を設定します。どの CSS プロパティにも適用できます。これは CSS の一括指定である {{cssxref("all")}} を含み、 `initial` を指定して、すべての CSS プロパティを初期値に戻すために使用することができます。

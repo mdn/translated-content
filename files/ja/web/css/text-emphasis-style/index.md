@@ -1,15 +1,8 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-emphasis-style
-translation_of: Web/CSS/text-emphasis-style
 ---
+
 {{CSSRef}}
 
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。

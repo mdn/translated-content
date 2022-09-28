@@ -2,6 +2,7 @@
 title: ':target'
 slug: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 The` :target `[pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes) represents the unique element, if any, with an **id** matching the fragment identifier of the URI of the document..
@@ -204,7 +205,7 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 ## 瀏覽器兼容性
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## 參見
 

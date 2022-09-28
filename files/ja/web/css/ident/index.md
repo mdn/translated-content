@@ -1,8 +1,8 @@
 ---
 title: ident
 slug: Web/CSS/ident
-translation_of: Web/CSS/ident
 ---
+
 {{CSSRef}}
 
 **`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Types) は、 {{glossary("identifier")}} として使用される任意の文字列を意味します。
@@ -25,23 +25,23 @@ translation_of: Web/CSS/ident
 ### 有効な識別子
 
 ```plain example-good
-nono79      	アルファベットと数字の組み合わせ
-ground-level	アルファベットとダッシュの組み合わせ
--test       	ダッシュとそれに続く英数字
---toto      	identifier の様なカスタムプロパティ
-_internal   	アンダースコアとそれに続く英数字
-\22 toto    	Unicode 文字とそれに続く一連の英数字
-bili\.bob   	正しくエスケープされたピリオド
+nono79        アルファベットと数字の組み合わせ
+ground-level  アルファベットとダッシュの組み合わせ
+-test         ダッシュとそれに続く英数字
+--toto        identifier の様なカスタムプロパティ
+_internal     アンダースコアとそれに続く英数字
+\22 toto      Unicode 文字とそれに続く一連の英数字
+bili\.bob     正しくエスケープされたピリオド
 ```
 
 ### 無効な識別子
 
 ```plain example-bad
-34rem   	数字で始まってはいけません
--12rad  	ダッシュで始まって数字が続いてはいけません
-bili.bob	アルファベット、 _、 - のみをエスケープする必要はありません
-'bilibob'	これは {{CSSxRef("&lt;string&gt;")}} になります
-"bilibob"	これは {{CSSxRef("&lt;string&gt;")}} になります
+34rem     数字で始まってはいけません
+-12rad    ダッシュで始まって数字が続いてはいけません
+bili.bob  アルファベット、 _、 - のみをエスケープする必要はありません
+'bilibob'  これは {{CSSxRef("&lt;string&gt;")}} になります
+"bilibob"  これは {{CSSxRef("&lt;string&gt;")}} になります
 ```
 
 ## 仕様

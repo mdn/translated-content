@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:out-of-range
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}} attributes. Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.

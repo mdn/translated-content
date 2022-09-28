@@ -1,10 +1,6 @@
 ---
 title: Request header (リクエストヘッダー)
 slug: Glossary/Request_header
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Request_header
 ---
 **リクエストヘッダー**は、 HTTP リクエストで使用される {{glossary("header", "HTTP ヘッダー")}}であり、メッセージの内容には関連しないものです。 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}}, {{HTTPHeader("If-Modified-Since", "If-*")}} などのリクエストヘッダーは、条件付きリクエストを行うことができます。他の {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}} などはサーバーが回答を作成するための文脈を明確にします。
 

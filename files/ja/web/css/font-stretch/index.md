@@ -1,15 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-stretch
-translation_of: Web/CSS/font-stretch
 ---
+
 {{CSSRef}}
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。

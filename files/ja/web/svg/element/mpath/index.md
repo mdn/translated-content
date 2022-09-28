@@ -1,12 +1,8 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
-tags:
-  - SVGアニメーション
-  - リファレンス
-  - 要素
-translation_of: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 ## 概要
@@ -56,8 +52,8 @@ translation_of: Web/SVG/Element/mpath
 
 ### グローバル属性
 
-- [Core attributes](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Xlink attributes](/ja/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Core attributes](/ja/SVG/Attribute#Core) »
+- [Xlink attributes](/ja/SVG/Attribute#XLink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 専用属性
@@ -66,7 +62,7 @@ translation_of: Web/SVG/Element/mpath
 
 ## DOM インターフェイス
 
-この要素は [`SVGMPathElement`](/ja/DOM/SVGMPathElement "en/DOM/SVGMPathElement") インターフェイスを提供します。
+この要素は [`SVGMPathElement`](/ja/DOM/SVGMPathElement) インターフェイスを提供します。
 
 ## 仕様
 

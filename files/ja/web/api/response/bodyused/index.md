@@ -3,6 +3,7 @@ title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
 original_slug: Web/API/Body/bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 **`bodyUsed`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文が読取済みであるかどうかを示す論理値です。

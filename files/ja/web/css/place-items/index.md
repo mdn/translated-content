@@ -1,16 +1,8 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッドレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-items
-translation_of: Web/CSS/place-items
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティ) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。

@@ -2,6 +2,7 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{ SeeCompatTable() }}
@@ -114,7 +115,7 @@ _继承自父接口 ， {{domxref("HTMLElement")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLDialogElement")}}
+{{Compat}}
 
 ## See also
 

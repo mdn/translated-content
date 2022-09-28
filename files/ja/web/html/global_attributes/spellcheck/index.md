@@ -1,12 +1,8 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`spellcheck`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素でスペルミスのチェックを行うかを定義する列挙型属性です。

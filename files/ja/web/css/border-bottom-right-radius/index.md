@@ -1,15 +1,8 @@
 ---
 title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-right-radius
-translation_of: Web/CSS/border-bottom-right-radius
 ---
+
 {{CSSRef}}
 
 **`border-bottom-right-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の右下の角を丸めます。

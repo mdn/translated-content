@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
+
 {{CSSRef}}
 
 > **Note :** Si vous avez modifié `privacy.resistFingerprinting` à **vrai**, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à `light`.

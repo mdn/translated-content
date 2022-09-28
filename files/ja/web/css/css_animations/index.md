@@ -1,14 +1,8 @@
 ---
 title: CSS アニメーション
 slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS アニメーション
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations
 ---
+
 {{CSSRef}}
 
 **CSS アニメーション** (CSS Animations) は CSS のモジュールの一つで、時間の経過とキーフレームによって CSS プロパティの値を動かすことができます。キーフレームアニメーションの動作は、タイミング関数、時間、繰り返し回数、その他の属性によって制御されます。

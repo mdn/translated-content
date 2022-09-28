@@ -3,6 +3,7 @@ title: var()
 slug: Web/CSS/var
 original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -63,7 +64,7 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## 另请参见
 

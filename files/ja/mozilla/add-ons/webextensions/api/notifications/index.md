@@ -1,14 +1,8 @@
 ---
 title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Notifications
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications
 ---
+
 {{AddonSidebar}}
 
 OS の通知メカニズムを使って、ユーザーへの通知を表示します。この API は OS の通知メカニズムを使うため、OS とユーザー設定によって通知の現れ方やふるまいは変わってきます。

@@ -1,22 +1,8 @@
 ---
 title: CSS カスケード入門
 slug: Web/CSS/Cascade
-tags:
-  - CSS
-  - Cascade
-  - Guide
-  - Introduction
-  - Layout
-  - Cascade layers
-  - specificity
-  - \@layers
-  - Reference
-  - Style
-  - Style sheet
-  - Stylesheets
-spec-urls: https://drafts.csswg.org/css-cascade/
-translation_of: Web/CSS/Cascade
 ---
+
 {{CSSRef}}
 
 **カスケード**は、異なるソースから来るプロパティ値を組み合わせる方法を定義するアルゴリズムです。カスケードでは、複数の[オリジン](#オリジンの種類)や[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言が要素のプロパティに値を設定する場合に、何が優先されるかを定義します。

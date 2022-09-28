@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-repeat
 ---
+
 {{CSSRef}}
 
 La propriété **`mask-repeat`** définit la façon dont les images de masque sont répétées. Une image de masque peut être répétée horizontalement, verticalement, dans les deux directions ou pas du tout.

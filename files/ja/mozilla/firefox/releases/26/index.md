@@ -1,11 +1,8 @@
 ---
 title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
-tags:
-  - Firefox
-  - Firefox 26
-translation_of: Mozilla/Firefox/Releases/26
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 26 は米国時間 2013 年 12 月 10 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/substring
 original_slug: Web/XPath/Fonctions/substring
 ---
+
 {{ XsltRef() }}
 
 La fonction `substring` retourne une partie d'une chaîne donnée.

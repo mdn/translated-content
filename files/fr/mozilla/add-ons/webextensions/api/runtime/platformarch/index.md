@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
+
 {{AddonSidebar()}}
 
 L'architecture du processeur de la machine.

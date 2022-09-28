@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_delete
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_delete
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -1,14 +1,8 @@
 ---
 title: CSS トランジションの使用
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - 上級者
-  - CSS
-  - CSS トランジション
-  - CSS3 トランジション
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}
 
 **CSS トランジション**は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。

@@ -2,6 +2,7 @@
 title: DOMStringMap
 slug: Web/API/DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`DOMStringMap`** 接口在 {{ domxref("HTMLElement.dataset") }} 属性中被用到，被用于容纳和展示元素的自定义属性。
@@ -12,7 +13,7 @@ slug: Web/API/DOMStringMap
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMStringMap")}}
+{{Compat}}
 
 ## 参见
 

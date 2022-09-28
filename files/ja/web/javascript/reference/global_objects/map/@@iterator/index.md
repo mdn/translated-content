@@ -1,16 +1,8 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** プロパティの初期値は、 {{jsxref("Map.prototype.entries()", "entries")}} メソッドの初期値と同じ関数オブジェクトです。

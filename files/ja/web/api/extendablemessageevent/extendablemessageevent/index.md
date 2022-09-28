@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableMessageEvent()`** コンストラクターは、新しい {{domxref("ExtendableMessageEvent")}} オブジェクトのインスタンスを作成します。

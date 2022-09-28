@@ -2,6 +2,7 @@
 title: font
 slug: Web/CSS/font
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -294,4 +295,4 @@ setCss();
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font")}}
+{{Compat}}

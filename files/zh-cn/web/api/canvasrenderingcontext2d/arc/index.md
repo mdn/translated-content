@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arc()`** 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_ ，根据*anticlockwise* （默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
@@ -134,7 +135,7 @@ for (i=0;i<4;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.arc")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,11 +1,6 @@
 ---
 title: CSP
 slug: Glossary/CSP
-tags:
-  - Glossary
-  - HTTP
-  - Infrastructure
-translation_of: Glossary/CSP
 ---
 CSP ([Content Security Policy](/ja/docs/Web/HTTP/CSP)) は特定の種類のウェブサイト関連攻撃 ( {{Glossary("XSS")}} やデータインジェクション) を検出して軽減するのに使われます。
 

@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "redeclaration of formal parameter" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxref("Statements/let", "let")}} 代入文を使用して同じ変数名を再度宣言すると発生します。

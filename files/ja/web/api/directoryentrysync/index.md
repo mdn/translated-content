@@ -4,7 +4,7 @@ slug: Web/API/DirectoryEntrySync
 ---
 {{APIRef("File System API")}}{{Non-standard_header}}
 
-[File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction "en/DOM/File_API/File_System_API") の `DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリを表します。ディレクトリ内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
+[File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) の `DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリを表します。ディレクトリ内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
 
 > **Note:** このインターフェイスは放棄されました。これは標準的なトラックにあり、良い考えではありません。もう使用しないでください。
 
@@ -53,7 +53,7 @@ DirectoryReaderSync createReader (
 
 ##### 戻り値
 
-- [`DirectoryReaderSync`](/ja/DOM/File_API/File_System_API/DirectoryReaderSync "en/DOM/File_API/File_System_API/DirectoryReaderSync")
+- [`DirectoryReaderSync`](/ja/DOM/File_API/File_System_API/DirectoryReaderSync)
   - : ファイルシステム内のディレクトリを表します。
 
 ##### 引数
@@ -96,7 +96,7 @@ void getFile (
 
 ##### 戻り値
 
-- [`FileEntrySync`](/ja/DOM/File_API/File_System_API/FileEntrySync "en/DOM/File_API/File_System_API/FileEntrySync")
+- [`FileEntrySync`](/ja/DOM/File_API/File_System_API/FileEntrySync)
   - : ファイルシステム内のファイルを表します。
 
 ##### 例外
@@ -140,7 +140,7 @@ void getDirectory (
 
 ##### Returns
 
-- [`DirectoryEntrySync`](/ja/DOM/File_API/File_System_API/DirectoryReaderSync "en/DOM/File_API/File_System_API/DirectoryReaderSync")
+- [`DirectoryEntrySync`](/ja/DOM/File_API/File_System_API/DirectoryReaderSync)
   - : ファイルシステム内のディレクトリを表します。
 
 ##### Exceptions
@@ -195,6 +195,6 @@ void removeRecursively (
 
 仕様書: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+リファレンス: [File System API](/ja/DOM/File_API/File_System_API)
 
-イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

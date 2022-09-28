@@ -2,6 +2,7 @@
 title: Location
 slug: Web/HTTP/Headers/Location
 ---
+
 {{HTTPSidebar}}
 
 **`Location`** 首部指定的是需要将页面重新定向至的地址。一般在响应码为 3xx 的响应中才会有意义。

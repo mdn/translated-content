@@ -3,6 +3,7 @@ title: math:lowest()
 slug: Web/EXSLT/math/lowest
 translation_of: Web/EXSLT/math/lowest
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `math:lowest()`  renvoie le nœud qui a la valeur minimale, parmi l'ensemble de nœuds passé en argument (la valeur minimale est calculée à l'aide de [`math:min()`](/fr/docs/Web/EXSLT/math/min)).

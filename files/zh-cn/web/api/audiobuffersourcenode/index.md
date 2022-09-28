@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBufferSourceNode`** 接口继承自 {{domxref("AudioScheduledSourceNode")}}，表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个 ArrayBuffer 对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用 {{domxref("AudioWorkletNode")}} 来实现回放。
@@ -120,7 +121,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

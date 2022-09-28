@@ -2,6 +2,7 @@
 title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 ### 概述

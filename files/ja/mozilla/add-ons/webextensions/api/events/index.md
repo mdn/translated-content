@@ -1,17 +1,8 @@
 ---
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - events
-translation_of: Mozilla/Add-ons/WebExtensions/API/events
 ---
+
 {{AddonSidebar}}
 
 イベントをディスパッチする API から使われる共通の型です。

@@ -1,12 +1,8 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
-tags:
-  - Element
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 **`<foreignObject>`** [SVG](/ja/docs/Web/SVG) 要素は、異なるユーザーエージェントによって描画されるグラフィックコンテンツを持つ外部 XML 名前空間を含めることを可能にします。含まれた外部グラフィックコンテンツは、SVG 変換や合成の対象となります。

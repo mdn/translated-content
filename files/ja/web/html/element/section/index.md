@@ -1,18 +1,8 @@
 ---
 title: '<section>: 汎用セクション要素'
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Section
-  - Web
-translation_of: Web/HTML/Element/section
 ---
+
 {{HTMLRef}}
 
 **HTML の `<section>` 要素**は、文書の自立した一般的なセクション (区間) を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。

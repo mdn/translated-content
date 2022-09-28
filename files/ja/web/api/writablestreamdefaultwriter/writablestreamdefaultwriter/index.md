@@ -1,20 +1,13 @@
 ---
 title: WritableStreamDefaultWriter.WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-translation_of: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`WritableStreamDefaultWriter()`** コンストラクターは、新しい {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンスを作成します。
 
-> **Note:** **注**: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
+> **Note:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
 
 ## 構文
 

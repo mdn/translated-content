@@ -1,17 +1,8 @@
 ---
 title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - getRedirectURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
+
 {{AddonSidebar()}}
 
 リダイレクト URL として利用可能な URL を生成します。

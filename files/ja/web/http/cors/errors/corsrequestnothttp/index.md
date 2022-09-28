@@ -1,19 +1,8 @@
 ---
 title: 'Reason: CORS request not HTTP'
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-tags:
-  - CORS
-  - CORSRequestNotHttp
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## 理由
@@ -32,7 +21,7 @@ Reason: CORS request not HTTP
 
 Firefox 67 以前ではユーザが `file:///` URI を用いてページを開いたとき、ページのオリジンはその開かれたページのあるディレクトリとして定義されていました。同じディレクトリやそのサブディレクトリにあるリソースは、CORS 同一オリジンルールを適用する際には同一オリジンとみなされていました。
 
-Firefox 68 以降では [CVE-2019-11730 ](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)の対策として、 `file:///` URI を用いて開かれたページのオリジンは、それだけのものとして定義されます。つまり、同じディレクトリやそのサブディレクトリにあるリソースは、CORS 同一オリジンルールを満たさなくなりました。この新たな振る舞いは、`privacy.file_unique_origin` 設定を用いてデフォルトで有効になっています。
+Firefox 68 以降では [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730) の対策として、 `file:///` URI を用いて開かれたページのオリジンは、それだけのものとして定義されます。つまり、同じディレクトリやそのサブディレクトリにあるリソースは、CORS 同一オリジンルールを満たさなくなりました。この新たな振る舞いは、`privacy.file_unique_origin` 設定を用いてデフォルトで有効になっています。
 
 ## 関連情報
 

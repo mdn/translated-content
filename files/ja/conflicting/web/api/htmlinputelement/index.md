@@ -1,17 +1,7 @@
 ---
 title: HTMLInputElement.mozGetFileNameArray()
 slug: conflicting/Web/API/HTMLInputElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsBrowserCompatibility
-  - 標準外
-  - リファレンス
-translation_of: Web/API/HTMLInputElement/mozGetFileNameArray
 original_slug: Web/API/HTMLInputElement/mozGetFileNameArray
-browser-compat: api.HTMLInputElement.mozGetFileNameArray
 ---
 {{ APIRef("HTML DOM") }}{{Non-standard_header}}
 

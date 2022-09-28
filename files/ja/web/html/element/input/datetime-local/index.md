@@ -1,21 +1,8 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - 日付
-  - 日付と時刻
-  - 要素
-  - フォーム入力
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - 時刻
-  - datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。

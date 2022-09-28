@@ -27,8 +27,8 @@ console.log(newString);
 
 [`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数が `myText` という文字列の上で実行され、2 つの引数が渡されています:
 
-1.  置換される部分文字列 ('string')。
-2.  置換する部分文字列 ('sausage')。
+1. 置換される部分文字列 ('string')。
+2. 置換する部分文字列 ('sausage')。
 
 この関数が完了 (実行が終了) した時に、関数は置換された新しい文字列を値として返します。上記のコードでは、この戻り値を `newString` 変数に代入しています。
 
@@ -94,8 +94,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 戻り値を返すオリジナルな関数を書いてみましょう。
 
-1.  まず最初に GitHub から [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) ファイルをローカル環境にコピーします。このファイルはシンプルな HTML のページで、文字列入力用の {{htmlelement("input")}} フィールドとパラグラフ（段落）要素を含んでいます。また、{{htmlelement("script")}} 要素があり、この中でページ内の HTML 要素の参照を 2 つの変数で保持させています。このページに対して、テキストボックスに数値を入力したら、入力した数値と関連のある異なる数値を下のパラグラフ要素に表示させるようにしていきます。
-2.  いくつかの関数を `<script>` 要素に追加していきましょう。既に記述されている 2 行の [JavaScript](/ja/docs/Web/JavaScript) のコードの下に、以下の関数定義を追加します。
+1. まず最初に GitHub から [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) ファイルをローカル環境にコピーします。このファイルはシンプルな HTML のページで、文字列入力用の {{htmlelement("input")}} フィールドとパラグラフ（段落）要素を含んでいます。また、{{htmlelement("script")}} 要素があり、この中でページ内の HTML 要素の参照を 2 つの変数で保持させています。このページに対して、テキストボックスに数値を入力したら、入力した数値と関連のある異なる数値を下のパラグラフ要素に表示させるようにしていきます。
+2. いくつかの関数を `<script>` 要素に追加していきましょう。既に記述されている 2 行の [JavaScript](/ja/docs/Web/JavaScript) のコードの下に、以下の関数定義を追加します。
 
     ```js
     function squared(num) {
@@ -120,7 +120,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     `squared()` 関数と `cubed()` 関数は大変わかりやすいでしょう。引数として渡された値の 2 乗や 3 乗を返しています。`factorial()` 関数は渡された数の[階乗](https://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)を返しています。
 
-3.  次に input に入力された数値を出力する処理を追加していきます。イベントハンドラーを既存の関数の下に記述しましょう。
+3. 次に input に入力された数値を出力する処理を追加していきます。イベントハンドラーを既存の関数の下に記述しましょう。
 
     ```js
     input.onchange = function() {
@@ -141,7 +141,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     もしテストが `false` を返した場合、`num` の値は数値です。したがって、数値の 2 乗、3 乗、階乗の値を示す文が、パラグラフ要素内に出力されます。その出力する文章内で必要とする値を計算するために `squared()` 関数、`cubed()` 関数、`factorial()` 関数を呼んでいます。
 
-4.  コードを保存して、それをブラウザーで表示してみましょう。
+4. コードを保存して、それをブラウザーで表示してみましょう。
 
 > **Note:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
 

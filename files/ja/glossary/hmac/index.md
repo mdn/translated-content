@@ -1,12 +1,6 @@
 ---
 title: HMAC
 slug: Glossary/HMAC
-tags:
-  - Cryptography
-  - Glossary
-  - Hash
-  - Security
-translation_of: Glossary/HMAC
 ---
 HMAC は、{{Glossary("cryptography", "暗号的")}}にメッセージを認証するために使用されるプロトコルです。 どのような種類の{{Glossary("Cryptographic hash function", "暗号化関数")}}も使用でき、その強さは基礎となる関数（たとえば SHA1 または MD5）と選択された秘密鍵に依存します。このような組み合わせでは、HMAC-SHA1 などの複合名で HMAC 検証{{Glossary("Algorithm", "アルゴリズム")}}が認識されます。
 

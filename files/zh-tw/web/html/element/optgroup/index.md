@@ -2,6 +2,7 @@
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
+
 ## 總覽
 
 In a Web form, the **HTML `<optgroup>` element** creates a grouping of options within a {{HTMLElement("select")}} element.
@@ -53,7 +54,7 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}
 
 ## 參見
 

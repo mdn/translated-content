@@ -1,16 +1,8 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
-tags:
-  - BiDi
-  - CSS
-  - 実験的
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.dir
-translation_of: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 ---
+
 {{CSSRef}}
 
 **`:dir()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、中に含まれる文字列の方向に基づいて要素を選択します。

@@ -11,7 +11,9 @@ translation_of: Web/API/Screen/unlockOrientation
 
 ## Syntax
 
-    var unlocked = window.screen.unlockOrientation();
+```js
+var unlocked = window.screen.unlockOrientation();
+```
 
 ### Return value
 
@@ -19,11 +21,13 @@ translation_of: Web/API/Screen/unlockOrientation
 
 ## Example
 
-    if (window.screen.unlockOrientation()) {
-      // orientation was unlocked
-    } else {
-      // orientation unlock failed
-    }
+```js
+if (window.screen.unlockOrientation()) {
+  // orientation was unlocked
+} else {
+  // orientation unlock failed
+}
+```
 
 ## Specifications
 

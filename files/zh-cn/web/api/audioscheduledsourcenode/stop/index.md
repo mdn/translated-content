@@ -2,6 +2,7 @@
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioScheduledSourceNode")}} 上的`stop()`方法将声音安排在指定的时间停止播放。如果没有指定时间，声音将立即停止播放。
@@ -53,7 +54,7 @@ osc.stop(context.currentTime + 1);
 
 ## Browser compatibility
 
-{{Compat("api.AudioScheduledSourceNode.stop")}}
+{{Compat}}
 
 ## See also
 

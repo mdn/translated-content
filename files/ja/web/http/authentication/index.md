@@ -1,14 +1,8 @@
 ---
 title: HTTP 認証
 slug: Web/HTTP/Authentication
-tags:
-  - アクセス制御
-  - 認証
-  - ガイド
-  - HTTP
-  - セキュリティ
-translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP はアクセス制御と認証の基本的な枠組みを提供しています。

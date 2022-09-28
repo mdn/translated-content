@@ -1,15 +1,8 @@
 ---
 title: grid-column
 slug: Web/CSS/grid-column
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-column
-translation_of: Web/CSS/grid-column
 ---
+
 {{CSSRef}}
 
 **`grid-column`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、{{glossary("grid column", "グリッド列")}}の中におけるグリッドアイテムの寸法と位置を指定し、線、区間、なし (自動) をグリッド配置に適用することで、{{Glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。

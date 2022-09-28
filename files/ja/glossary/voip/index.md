@@ -1,11 +1,6 @@
 ---
 title: VoIP
 slug: Glossary/VoIP
-tags:
-  - Glossary
-  - Infrastructure
-  - VoIP
-translation_of: Glossary/VoIP
 ---
 VoIP (Voice over Internet Protocol) は、IP (Internet Protocol) ネットワーク上で音声情報の伝送に使用される技術です。一般的な VoIP パッケージには、Skype、MSN Messenger、Yahoo 、その他多くのものが含まれます。VoIP ではすべてデジタルで伝送されます。それらは IP テレフォニーやブロードバンドテレフォニーとしても知られています。VoIP 技術を利用する主な理由は費用です。
 

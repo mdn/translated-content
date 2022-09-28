@@ -2,6 +2,7 @@
 title: HTTP 的重定向
 slug: Web/HTTP/Redirections
 ---
+
 {{HTTPSidebar}}
 
 URL 重定向，也称为 URL 转发，是一种当实际资源，如单个页面、表单或者整个 Web 应用被迁移到新的 URL 下的时候，保持（原有）链接可用的技术。HTTP 协议提供了一种特殊形式的响应—— HTTP 重定向（HTTP redirects）来执行此类操作。

@@ -1,22 +1,11 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Deprecated
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/defaultStatus
 ---
+
 {{APIRef()}}{{deprecated_header}}
 
-> **Note:** **注:**このメソッドは Firefox 23 以降で削除されました。
+> **Note:** このメソッドは Firefox 23 以降で削除されました。
 
 ## 概要
 

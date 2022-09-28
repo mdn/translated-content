@@ -1,12 +1,8 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

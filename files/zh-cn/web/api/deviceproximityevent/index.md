@@ -2,6 +2,7 @@
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
 ---
+
 {{APIRef("Proximity Events")}}{{deprecated_header}}
 
 `DeviceProximityEvent` 接口利用设备的近距离感应器提供有关邻近物品的距离信息。
@@ -31,4 +32,4 @@ window.addEventListener('deviceproximity', function(event) {
 
 - {{event("deviceproximity")}}
 - {{domxref("UserProximityEvent")}}
-- [Proximity API](/en-US/docs/WebAPI/Proximity)
+- [Proximity API](/zh-CN/docs/WebAPI/Proximity)

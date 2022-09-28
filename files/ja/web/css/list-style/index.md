@@ -1,15 +1,8 @@
 ---
 title: list-style
 slug: Web/CSS/list-style
-tags:
-  - CSS
-  - CSS Lists
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.list-style
-translation_of: Web/CSS/list-style
 ---
+
 {{CSSRef}}
 
 **`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。

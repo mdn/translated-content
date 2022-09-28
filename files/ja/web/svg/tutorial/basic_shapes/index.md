@@ -1,12 +1,8 @@
 ---
 title: 基本的な図形
 slug: Web/SVG/Tutorial/Basic_Shapes
-tags:
-  - 初心者
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Basic_Shapes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 
 ほとんどの SVG の描画に使われる基本的な図形がいくつかあります。これらの図形の目的は、その名前からかなり明白です。それらの位置や大きさを決定する引数のいくつかが与えられていますが、要素のリファレンスにはおそらくより正確で完全な説明と、ここでは取り上げない他のプロパティが含まれているでしょう。しかし、これらはほとんどの SVG 文書で使用されるため、ある種の紹介をする必要があります。

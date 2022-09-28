@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLElement
 ---
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement`** 인터페이스는 모든 종류의 [HTML](/ko/docs/Web/HTML "/en-US/docs/Web/HTML") 요소를 나타냅니다. 일부 요소는 이 인터페이스를 직접 구현하지만 나머지 요소는 `HTMLElement`를 상속한 자식 인터페이스를 구현합니다.
+**`HTMLElement`** 인터페이스는 모든 종류의 [HTML](/ko/docs/Web/HTML) 요소를 나타냅니다. 일부 요소는 이 인터페이스를 직접 구현하지만 나머지 요소는 `HTMLElement`를 상속한 자식 인터페이스를 구현합니다.
 
 {{InheritanceDiagram}}
 
@@ -73,7 +73,7 @@ _부모인 {{domxref("Element")}}의 속성을 상속합니다. {{domxref("Globa
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : {{domxref("HTMLPropertiesCollection")}}… 을 반환합니다.
 - {{domxref("HTMLElement.spellcheck")}}
-  - : [철자 검사](/ko/docs/Web/HTML/Global_attributes/spellcheck "en/Controlling_spell_checking_in_HTML_forms")를 제어하는 {{jsxref("Boolean")}} 입니다. 모든 HTML 요소에 존재하지만, 모두에 대해 적용되지는 않습니다.
+  - : [철자 검사](/ko/docs/Web/HTML/Global_attributes/spellcheck)를 제어하는 {{jsxref("Boolean")}} 입니다. 모든 HTML 요소에 존재하지만, 모두에 대해 적용되지는 않습니다.
 - {{domxref("HTMLElement.style")}}
   - : 요소의 스타일 속성의 정의를 나타내는 {{domxref("CSSStyleDeclaration")}} 객체입니다.
 - {{domxref("HTMLElement.tabIndex")}}

@@ -1,15 +1,8 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.inherits
-translation_of: Web/CSS/@property/inherits
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`inherits`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用するときには必要であり、 `@property` で指定されたカスタムプロパティの登録を既定で継承するかどうかを制御します。

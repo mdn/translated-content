@@ -1,15 +1,8 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - Polyfill
-browser-compat: javascript.builtins.Object.values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
 **`Object.values()`** メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの値を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供される場合と同じ順序で配列にして返します。 (違いは、 `for...in` ループではプロパティチェーン上のプロパティも同様に列挙するという点だけです。)

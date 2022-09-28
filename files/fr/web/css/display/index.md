@@ -8,6 +8,7 @@ tags:
   - display
 translation_of: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_Flow_Layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).

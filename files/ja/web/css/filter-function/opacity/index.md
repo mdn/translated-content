@@ -1,16 +1,9 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
-browser-compat: css.types.filter-function.opacity
 ---
+
 {{CSSRef}}
 
 **`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。

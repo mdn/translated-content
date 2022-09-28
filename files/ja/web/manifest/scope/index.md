@@ -1,13 +1,8 @@
 ---
 title: scope
 slug: Web/Manifest/scope
-tags:
-  - マニフェスト
-  - ウェブ
-  - scope
-browser-compat: html.manifest.scope
-translation_of: Web/Manifest/scope
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

@@ -9,6 +9,7 @@ tags:
   - Sélecteurs
 translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.

@@ -126,7 +126,7 @@ Además de las propiedades anteriores, que pueden aplicarse a contenedores flexi
 
 Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")}} a todos nuestros elementos secundarios, con un valor de `1`. Esto hará que todos los elementos crezcan y llenen el contenedor, en lugar de dejar espacio al final. Si hay más espacio, los artículos se ensancharán; si hay menos espacio, se volverán más estrechos. Además, si añades al código otro elemento, todos los elementos se volverán más pequeños para dejarle espacio; ajustarán el tamaño para ocupar la misma cantidad de espacio, cualquiera que sea.
 
-##
+## Ejemplo
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -200,7 +200,7 @@ Una vez más, puedes activar el diseño de páginas web en cuadrícula con un va
 
 Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explícitamente en lugar de confiar en el comportamiento de colocación automática que hemos visto arriba. En el segundo ejemplo, hemos definido la misma cuadrícula, pero esta vez con tres elementos secundarios. Hemos establecido la línea de inicio y final de cada elemento con las propiedades {{cssxref ("grid-column")}} y {{cssxref ("grid-row")}}. Esto hace que los elementos abarquen varios tramos.
 
-##
+## Ejemplo
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -471,7 +471,7 @@ En este ejemplo nuestro HTML tiene tres párrafos de texto para poder tener una 
 <p>Párrafo 3.</p>
 ```
 
-##
+## Ejemplo
 
 ```html hidden
 <h1>Posicionamiento fijo</h1>
@@ -647,7 +647,7 @@ En el ejemplo siguiente comenzamos con un bloque de HTML dentro de un elemento `
 </div>
 ```
 
-##
+## Ejemplo
 
 Utilizamos un `column-width` de 200 píxeles en ese contenedor, que crea en el navegador tantas columnas de 200 píxeles como quepan en el contenedor y luego comparte el espacio restante entre las columnas creadas.
 

@@ -1,14 +1,6 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-  - Graphics
-  - SVG
-  - l10n:priority
-translation_of: Glossary/SVG
 ---
 _Scalable Vector Graphics_ (**SVG**) は {{Glossary("XML")}} の文法に基づいた 2 次元ベクター画像フォーマットです。
 

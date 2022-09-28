@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/EventLoop
 original_slug: Web/JavaScript/Concurrence_et_boucle_des_événements
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript gère la concurrence grâce à une « boucle d'événements ». Ce modèle est différent de la gestion faite par des langages comme C ou Java.

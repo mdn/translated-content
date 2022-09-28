@@ -1,14 +1,8 @@
 ---
 title: CSS 表示方法
 slug: Web/CSS/CSS_Display
-tags:
-  - CSS
-  - CSS 表示方法
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Display
 ---
+
 {{CSSRef}}
 
 **CSS 表示方法** (CSS Display) は CSS のモジュールの一つで、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。

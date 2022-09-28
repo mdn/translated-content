@@ -1,14 +1,8 @@
 ---
 title: 'HTML: HyperText Markup Language'
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML5
-  - Landing
-  - Web
-  - l10n:priority
-translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** (HyperText Markup Language) はウェブのもっとも基本的な構成要素です。 HTML はウェブページの基本レイアウトに従ってウェブページの*コンテンツ*を記述し定義するものです。 HTML に隣接する他の技術としては、ウェブページの表示や表現を記述するもの ([CSS](/ja/docs/Web/CSS)) または機能や振る舞いを記述するもの ([JavaScript](/ja/docs/Web/JavaScript)) があります。

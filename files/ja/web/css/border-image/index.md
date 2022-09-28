@@ -1,15 +1,8 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-image
-translation_of: Web/CSS/border-image
 ---
+
 {{CSSRef}}
 
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。

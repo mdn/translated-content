@@ -1,30 +1,8 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-tags:
-  - Element
-  - Experimental
-  - HTML
-  - HTML interactive elements
-  - Navigation
-  - Reference
-  - Site Navigation
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menu
-  - menus
-  - HTML 対話型コンテンツ
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - サイトナビゲーション
-  - メニュー
-  - ユーザーインターフェイス
-  - 要素
-translation_of: Web/HTML/Element/menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。

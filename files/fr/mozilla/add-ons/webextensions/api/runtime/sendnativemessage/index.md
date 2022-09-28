@@ -13,6 +13,7 @@ tags:
   - sendNativeMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
+
 {{AddonSidebar()}}
 
 Envoie un seul message d'une extension à une application native.

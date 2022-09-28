@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Counter_Styles
 ---
+
 {{cssref}}
 
 **_CSS Counter Styles_** est un module CSS qui permet de définir ses propres styles pour les compteurs utilisés dans les listes numérotées.

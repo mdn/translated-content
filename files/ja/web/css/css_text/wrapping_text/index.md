@@ -1,15 +1,8 @@
 ---
 title: テキストの分割と折り返し
 slug: Web/CSS/CSS_Text/Wrapping_Text
-tags:
-  - CSS
-  - CSS テキスト
-  - Guide
-  - overflow
-  - overflow-wrap
-  - word-break
-translation_of: Web/CSS/CSS_Text/Wrapping_Text
 ---
+
 {{CSSRef}}
 
 このガイドは CSS で管理することができるテキストのはみ出しの様々な方法を説明します。

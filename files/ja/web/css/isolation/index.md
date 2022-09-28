@@ -1,16 +1,8 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - CSS プロパティ
-  - 合成と混合
-  - NeedsContent
-  - isolation
-  - recipe:css-property
-browser-compat: css.properties.isolation
-translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。

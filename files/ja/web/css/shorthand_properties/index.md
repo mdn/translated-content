@@ -1,16 +1,8 @@
 ---
 title: 一括指定プロパティ
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
-translation_of: Web/CSS/Shorthand_properties
 ---
+
 {{CSSRef}}
 
 **一括指定プロパティ** (shorthand property) は、他の幾つかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。

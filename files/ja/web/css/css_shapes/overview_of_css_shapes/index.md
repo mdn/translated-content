@@ -1,14 +1,8 @@
 ---
 title: CSS シェイプの概要
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
-tags:
-  - CSS
-  - CSS シェイプ
-  - ガイド
-  - 概要
-  - シェイプ
-translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
+
 {{CSSRef}}
 
 [CSS シェイプレベル 1 仕様書](https://www.w3.org/TR/css-shapes/)は、 CSS における幾何学的な図形 (シェイプ) を記述しています。仕様書のレベル 1 は、浮動状態のアイテムに適用するように設計されています。この記事では、シェイプを使用して何ができるのかの概要を紹介します。

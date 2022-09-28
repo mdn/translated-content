@@ -2,6 +2,7 @@
 title: 弹性盒子
 slug: Learn/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 弹性盒子是一种用于按行或按列布局元素的一维布局方法。元素可以膨胀以填充额外的空间，收缩以适应更小的空间。本文将解释所有的基本原理。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Flexbox
       <th scope="row">前提：</th>
       <td>
         HTML 基础 (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >)，和了解 CSS 如何工作的 (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>
@@ -41,7 +42,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 一个简单的例子
 
-在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，您应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地 。在现代浏览器里打开它（比如 Firefox、Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
+在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，您应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox、Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
 
 你可以看到这个页面有一个含有顶级标题的 {{htmlelement("header")}} 元素，和一个包含三个 {{htmlelement("article")}} 的 {{htmlelement("section")}} 元素。我们将使用这些来创建一个非常的标准三列布局，如下所示：
 

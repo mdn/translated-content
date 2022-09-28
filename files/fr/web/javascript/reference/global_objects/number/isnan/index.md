@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isNaN
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en argument est {{jsxref("NaN")}}, avec un type {{jsxref("Number")}}. Cette version est plus robuste que la méthode de l'objet global {{jsxref("isNaN")}}.

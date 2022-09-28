@@ -1,13 +1,8 @@
 ---
 title: グリッドレイアウトの基本概念
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
+
 {{CSSRef}}
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)は、二次元グリッドシステムを CSS にもたらします。グリッドは、主要なページ領域や小さなユーザーインターフェイス要素のレイアウトに利用できます。この記事では、 CSS グリッドレイアウトと、 CSS Grid Layout Level 1 仕様の一部の用語について紹介します。この記事では、その概要を紹介し、この一連のガイドの残りで詳細を説明します。
@@ -463,7 +458,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 Firefox の開発者ツールで[グリッドインスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)が使えることを忘れないでください。アイテムがグリッド線に対してどのように配置されるか知ることができます。
 
-### 線によるの配置の一括指定
+### 線による配置の一括指定
 
 上記で使用した個別指定の値は、列の場合は {{cssxref("grid-column")}} で 1 行に、行の場合は {{cssxref("grid-row")}} で 1 行に圧縮できます。次の例では、先ほどのコードと同じ位置関係を、はるかに少ない CSS で実現しています。フォワードスラッシュ文字 (`/`) の前の値が開始行、後の値が終了行となります。
 

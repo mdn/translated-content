@@ -1,13 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/Accept
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Accept`** リクエストヘッダーは、クライアントが理解できるコンテンツタイプを [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で伝えます。 [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案のうちの一つを選択し、それを使用してクライアントに {{HTTPHeader("Content-Type")}} レスポンスヘッダーで選択を伝えます。ブラウザーはリクエストを行う場面に応じて適切な値をこのヘッダーに設定します。 CSS スタイルシートを取得するときは、画像、動画、スクリプトを取得するときとは異なる値をリクエストで設定します。

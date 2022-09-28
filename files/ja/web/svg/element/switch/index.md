@@ -1,15 +1,8 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
-  - SVG コンテナー
-  - 要素
-translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 **`<switch>`** は [SVG](/ja/docs/Web/SVG) の要素で、その直接の子要素の {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} 属性を順に評価し、これらの属性が true と評価された最初の子要素を描画します。他の直接の子要素はバイパスされ、描画されません。子要素が {{SVGElement("g")}} のようなコンテナー要素であった場合、そのサブツリーも処理されたり描画されたりするか、バイパスされたり描画されなかったりします。

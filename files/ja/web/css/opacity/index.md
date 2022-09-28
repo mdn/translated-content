@@ -1,15 +1,8 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS プロパティ
-  - 不透明度
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.opacity
-translation_of: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 **`opacity`** は CSS のプロパティで、要素の不透明度を設定します。不透明度は要素の裏にあるコンテンツが隠れる度合いであり、透明度の逆です。

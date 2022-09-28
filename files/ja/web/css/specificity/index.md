@@ -1,15 +1,8 @@
 ---
 title: 詳細度
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
-translation_of: Web/CSS/Specificity
 ---
+
 {{CSSRef}}
 
 **詳細度** (Specificity) は、ある要素に最も関連性の高い CSS 宣言を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、CSS セレクターの重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。

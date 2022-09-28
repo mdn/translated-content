@@ -13,6 +13,7 @@ tags:
   - track
 translation_of: Web/API/VideoTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}. L'utilisation la plus courante à un objet `VideoTrack` est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.

@@ -1,12 +1,8 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG 属性
-translation_of: Web/SVG/Attribute/id
 ---
+
 {{SVGRef}}
 
 **`id`** 属性は要素に固有の名前を割り当てます。

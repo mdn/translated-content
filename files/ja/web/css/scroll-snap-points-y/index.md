@@ -1,16 +1,8 @@
 ---
 title: scroll-snap-points-y
 slug: Web/CSS/scroll-snap-points-y
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - 非推奨
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-points-y
-translation_of: Web/CSS/scroll-snap-points-y
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-points-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用先のスクロールコンテナーの内容物におけるスナップ点の垂直位置を定義します。

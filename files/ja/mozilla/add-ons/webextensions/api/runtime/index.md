@@ -1,17 +1,8 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
 このモジュールは拡張機能と、それを実行する環境についての情報を提供します。

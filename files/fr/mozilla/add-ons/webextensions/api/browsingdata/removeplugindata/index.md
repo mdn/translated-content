@@ -12,6 +12,7 @@ tags:
   - removePluginData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
+
 {{AddonSidebar()}}
 
 Efface les données stockées par les plugins du navigateur.

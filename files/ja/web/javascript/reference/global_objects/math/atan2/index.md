@@ -1,13 +1,8 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
+
 {{JSRef}}
 
 **`Math.atan2()`** 関数は、`Math.atan2(y, x)` に対して点 (0, 0) から点 (x, y) までの半直線と、正の x 軸の間の平面上での角度 (ラジアン単位) を返します。

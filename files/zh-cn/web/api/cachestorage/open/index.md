@@ -2,6 +2,7 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个 resolve 为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
@@ -55,7 +56,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## See also
 

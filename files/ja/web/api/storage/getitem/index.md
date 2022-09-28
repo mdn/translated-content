@@ -2,6 +2,7 @@
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの `getItem()` メソッドはキーの名称を渡すと、そのキーに対する値を返します。
@@ -41,7 +42,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** **注記**: 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **Note:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様
 

@@ -1,11 +1,8 @@
 ---
 title: 'false'
 slug: Web/XPath/Functions/false
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/false
 ---
+
 {{ XsltRef() }}
 
 `false` 関数は論理値 false を返します。

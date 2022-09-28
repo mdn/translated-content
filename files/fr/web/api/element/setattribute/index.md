@@ -3,6 +3,7 @@ title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
 translation_of: Web/API/Element/setAttribute
 ---
+
 {{APIRef("DOM")}}
 
 Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. Si l'attribut existe déjà, la valeur est mise à jour ; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.

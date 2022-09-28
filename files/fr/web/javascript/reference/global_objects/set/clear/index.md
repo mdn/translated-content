@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/clear
 ---
+
 {{JSRef}}
 
 La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `Set`.

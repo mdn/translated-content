@@ -11,6 +11,7 @@ tags:
   - x
 translation_of: Web/API/DOMPointReadOnly/x
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`x`** de l'interface **`DOMPointReadOnly`** représente la coordonnée x d'un point.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après OU logique (`x ||= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à faux (_falsy_)](/fr/docs/Glossary/Falsy).

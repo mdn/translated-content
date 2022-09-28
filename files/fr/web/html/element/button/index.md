@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/button
 browser-compat: html.elements.button
 ---
+
 {{HTMLRef}}
 
 L'élément **`<button>`** représente un bouton cliquable, utilisé pour soumettre [des formulaires](/fr/docs/Learn/Forms) ou n'importe où dans un document pour une fonctionnalité de bouton accessible et standard. Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de [l'agent utilisateur](/fr/docs/Glossary/User_agent), mais vous pouvez modifier l'apparence des boutons avec [CSS](/fr/docs/Web/CSS).

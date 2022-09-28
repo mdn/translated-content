@@ -1,12 +1,6 @@
 ---
 title: Signature (署名 (セキュリティ) )
 slug: Glossary/Signature/Security
-tags:
-  - 暗号
-  - 用語集
-  - プライバシー
-  - セキュリティ
-translation_of: Glossary/Signature/Security
 ---
 **署名** もしくは*デジタル署名*とは、メッセージが正当であることを示す {{glossary("protocol", "プロトコル")}} です。
 

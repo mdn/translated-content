@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Progressive_Enhancement
 original_slug: Glossaire/Amélioration_progressive
 ---
+
 L'**amélioration progressive** est une philosophie de conception centrée sur la fourniture d'une base de contenu et de fonctionnalités essentielles au plus grand nombre possible d'utilisateurs, tout en allant au-delà et en offrant la meilleure expérience possible aux utilisateurs des navigateurs les plus modernes capables d'exécuter tout le code requis .
 
 La [détection de fonctionnalités](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) est généralement utilisée pour déterminer si les navigateurs peuvent gérer le contenu de haut niveau ou non, les [polyfills](/fr/docs/Glossaire/Polyfill) étant souvent utilisés pour intégrer des fonctionnalités manquantes avec JavaScript.

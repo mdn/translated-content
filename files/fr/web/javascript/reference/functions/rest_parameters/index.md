@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Reference/Fonctions/paramètres_du_reste
 ---
+
 {{jsSidebar("Functions")}}
 
 Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau.

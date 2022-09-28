@@ -1,16 +1,8 @@
 ---
 title: '::-moz-progress-bar'
 slug: Web/CSS/::-moz-progress-bar
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/::-moz-progress-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-moz-progress-bar`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 {{HTMLElement("progress")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)

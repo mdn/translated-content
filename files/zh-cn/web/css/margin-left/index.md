@@ -2,6 +2,7 @@
 title: margin-left
 slug: Web/CSS/margin-left
 ---
+
 {{CSSRef()}}
 
 ## Summary

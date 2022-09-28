@@ -1,12 +1,8 @@
 ---
 title: 一貫性のあるリストのインデント
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - ガイド
-  - NeedsUpdate
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
+
 {{CSSRef}}
 
 リストのスタイル変更でよくあるのが、インデントの幅 (リスト項目がどれだけ右に移動するか) の変更です。あるブラウザーではうまくいっても、別のブラウザーでは同じ効果が得られないことが多いので、これには不満が残ります。例えば、リストに左マージンをなくすと、Internet Explorer ではリストが移動しますが、Gecko ベースのブラウザーでは頑固に固定されてしまいます。この記事では、起こりうる問題を理解し、それを回避する方法をご紹介します。

@@ -1,16 +1,8 @@
 ---
 title: カスタム要素の使用
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - クラス
-  - ガイド
-  - HTML
-  - ウェブコンポーネント
-  - autonomous
-  - カスタム要素
-  - customized
-translation_of: Web/Web_Components/Using_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 ウェブコンポーネント標準の主な特徴の 1 つは、 HTML ページに機能をカプセル化するカスタム要素を作成できることで、カスタムページの機能を提供する要素の長いネストしたバッチを作成する必要がありません。この記事では、 Custom Elements API の使い方を紹介します。

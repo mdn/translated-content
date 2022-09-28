@@ -17,7 +17,9 @@ browser-compat: javascript.builtins.TypedArray.values
 
 ## 구문
 
-    arr.values()
+```js
+arr.values()
+```
 
 ## 예
 

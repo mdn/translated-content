@@ -4,6 +4,7 @@ slug: Web/HTML/Element/frame
 translation_of: Web/HTML/Element/frame
 browser-compat: html.elements.frame
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).

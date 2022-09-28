@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`lastEventID`** 読み取り専用プロパティは、サーバー送信イベント（[server-sent events](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)）で、イベントソースの最後のイベント ID を表します。 これは空の文字列です。

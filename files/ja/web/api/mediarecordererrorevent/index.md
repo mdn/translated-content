@@ -1,23 +1,6 @@
 ---
 title: MediaRecorderErrorEvent
 slug: Web/API/MediaRecorderErrorEvent
-tags:
-  - AV
-  - Audio
-  - Error
-  - Event
-  - Interface
-  - Media
-  - MediaRecorderErrorEvent
-  - MediaStream
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Audio
-  - Recording Media
-  - Recording Video
-  - Video
-  - WebRTC
-translation_of: Web/API/MediaRecorderErrorEvent
 ---
 {{APIRef("MediaStream Recording")}}
 

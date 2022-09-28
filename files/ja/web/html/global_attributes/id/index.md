@@ -1,15 +1,8 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Web
-  - id
-  - グローバル属性
-translation_of: Web/HTML/Global_attributes/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`id`** {{glossary("global attribute", "グローバル属性")}}は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク ([フラグメント識別子](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)を使用)、スクリプト、スタイル ({{glossary("CSS")}} を使用) で要素を特定することです。

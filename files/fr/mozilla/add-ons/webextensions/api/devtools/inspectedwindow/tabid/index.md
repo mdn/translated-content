@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
+
 {{AddonSidebar()}}
 
 L'ID de {{WebExtAPIRef("tabs.Tab", "tab")}} est que cette instance des devtools est jointe, représenté comme un nombre.

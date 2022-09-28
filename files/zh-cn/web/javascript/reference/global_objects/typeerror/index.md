@@ -2,6 +2,7 @@
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
+
 {{JSRef}}
 
 **`TypeError（类型错误）`** 对象用来表示值的类型非预期类型时发生的错误。

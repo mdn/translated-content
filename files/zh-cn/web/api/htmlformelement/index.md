@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。
@@ -48,7 +49,7 @@ _这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
 - {{domxref("HTMLFormElement.reset()")}}
   - : Resets the forms to its initial state.
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](https://developer.mozilla.org/en-US/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/zh-CN/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
 
 ## Examples
 
@@ -177,7 +178,7 @@ If you want to know how to serialize and submit a form using the [`XMLHttpReques
 
 ## Browser compatibility
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## See also
 

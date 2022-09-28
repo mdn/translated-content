@@ -1,7 +1,6 @@
 ---
 title: Tree shaking
 slug: Glossary/Tree_shaking
-translation_of: Glossary/Tree_shaking
 ---
 **Tree shaking** とは実行されないコードを削除することで、JavaScript の文脈で利用される用語です。
 

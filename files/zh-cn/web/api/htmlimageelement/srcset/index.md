@@ -2,6 +2,7 @@
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} 的 **`srcset`** 的值是一个字符串，用来定义一个或多个图像候选地址，以 `,`分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}} 的属性。
@@ -46,7 +47,7 @@ let srcset = htmlImageElement.srcset;
 
 这里，为宽度为 32 像素和 64 像素以及像素密度为 2 倍和 3 倍的图标提供了选项。备用图像以 SVG 文件的形式提供，它可在所有情况下使用。请注意，图像候选可使用不同的图像类型。
 
-有关可用于 {{HTMLElement("img")}} 元素的图像格式的详细信息，请参阅 [图片文件类型和格式指南](/en-US/docs/Web/Media/Formats/Image_types) 。
+有关可用于 {{HTMLElement("img")}} 元素的图像格式的详细信息，请参阅 [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types) 。
 
 ## 例子
 
@@ -100,7 +101,7 @@ box.appendChild(newElem);
 
 {{EmbedLiveSample("Example", 640, 320)}}
 
-有关其他示例，请参阅我们的[响应式图片](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南。
+有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南。
 
 ## 规范
 
@@ -108,10 +109,10 @@ box.appendChild(newElem);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.srcset")}}
+{{Compat}}
 
 ## See also
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Images in HTML](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format guide](/zh-CN/docs/Web/Media/Formats/Image_types)

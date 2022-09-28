@@ -3,6 +3,7 @@ title: コミュニティでの作業
 slug: orphaned/MDN/Community/Working_in_community
 original_slug: MDN/Community/Working_in_community
 ---
+
 {{MDNSidebar}}
 
 MDN の文書に関連して行われる、意味をなす規模での貢献の大部分は、いかに MDN コミュニティの一員として作業するかを知ることだといえます。この記事ではあなたが行う他の文書作成者、開発チームとのやりとりの多くで役に立つコツを紹介します。
@@ -31,7 +32,7 @@ Mozilla コミュニティで作業する際の品行に関する、一般的な
 
 > Hi, **MrBigglesworth**, I've been noticing your contributions to **the Wormhole API documentation**, and it's fantastic to have your help! I particularly like **the way you balanced your level of detail with readability**. That said, though, you could make these articles even better and more helpful if you **added the correct tags to the pages** as you go.
 >
-> **See the MDN tagging guide (https\://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) for details.**
+> **See the MDN tagging guide (<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag>) for details.**
 >
 > Thanks again, and I look forward to your future contributions!
 
@@ -59,7 +60,7 @@ MDN で問題を見つけたり、質問したりしたい場合は [GitHub spri
 
 電子メールアドレスを持っている場合は、他の人々とプライベートなメール交換をすることもあります。
 
-> **Note:** **注記:** 一般的に、あなたが文書化している技術に関する文書に誰かが電子メールアドレスを投稿した場合、個人的に電子メールアドレスを示された場合、あるいは広く知られた電子メールである場合は、受け入れ可能な "最初の連絡手段" が電子メールになります。あなたがそれを探し出さなければならない場合は、他に試みる連絡手段がまったくない場合を除いて、始めに Matrix やメーリングリストを使用する許可を得ることを試みましょう。
+> **Note:** 一般的に、あなたが文書化している技術に関する文書に誰かが電子メールアドレスを投稿した場合、個人的に電子メールアドレスを示された場合、あるいは広く知られた電子メールである場合は、受け入れ可能な "最初の連絡手段" が電子メールになります。あなたがそれを探し出さなければならない場合は、他に試みる連絡手段がまったくない場合を除いて、始めに Matrix やメーリングリストを使用する許可を得ることを試みましょう。
 
 ### コンテンツの状態を示すツール
 
@@ -86,7 +87,7 @@ MDN 文書作成コミュニティのメンバーとして、開発者と管理�
 
 文書作成やのコミュニティは大規模です。きわめて頻繁に、あるいは大規模に貢献する方は比較的少数ですが、ときどき貢献する人々は数十人から数百人います。幸い、この方々は全体的にウェブ、Mozilla、文書化が純粋に好きなすばらしい人たちであり、交流することはほぼ容易です。
 
-MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community "Project:MDN/Contributing/Join_the_community") の記事をご覧ください。
+MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community) の記事をご覧ください。
 
 他の執筆者と直接対話する機会が最も多い場所は [Discourse フォーラム](https://discourse.mozilla.org/c/mdn)です。
 

@@ -1,20 +1,8 @@
 ---
 title: ':where()'
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.where
-translation_of: Web/CSS/:where
 ---
+
 {{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。

@@ -1,15 +1,8 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Browser
-  - HTTP
-  - Reference
-  - Status code
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`404 Not Found`** は、サーバーがリクエストされたリソースを見つけることができない時のクライアントエラーのレスポンスコードです。 404 ページにつながるリンクは、壊れたリンクまたは死んだリンクと呼ばれ、[リンク腐敗](https://en.wikipedia.org/wiki/Link_rot)の影響を受ける可能性があります。

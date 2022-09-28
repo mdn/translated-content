@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt32
 ---
+
 {{JSRef}}
 
 La méthode **`getInt32()`** permet de lire un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

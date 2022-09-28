@@ -1,17 +1,8 @@
 ---
 title: HTTP ヘッダー
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Networking
-  - Reference
-  - header
-  - ネットワーク
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 **HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。

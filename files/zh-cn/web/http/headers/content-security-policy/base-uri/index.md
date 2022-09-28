@@ -2,6 +2,7 @@
 title: 'CSP: base-uri'
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议 {{HTTPHeader("Content-Security-Policy")}} 首部字段中的 **`base-uri`** 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。

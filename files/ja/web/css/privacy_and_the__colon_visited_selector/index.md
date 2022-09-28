@@ -1,15 +1,8 @@
 ---
 title: プライバシーと :visited セレクター
 slug: Web/CSS/Privacy_and_the_:visited_selector
-tags:
-  - CSS
-  - Guide
-  - Pseudo-class
-  - Reference
-  - Security
-  - Selectors
-translation_of: Web/CSS/Privacy_and_the_:visited_selector
 ---
+
 {{cssref}}
 
 およそ 2010 年よりも前、 [CSS](/ja/docs/Web/CSS) の {{cssxref(":visited")}} セレクターによって、ウェブサイトがユーザーの閲覧履歴を明らかにし、ユーザーがどのサイトを訪問したかを把握することができました。これは {{domxref("window.getComputedStyle")}} およびその他の技術を用いて行われていました。この処理はすばやく実行され、ユーザーがどこを訪れたかを特定できるだけでなく、ユーザーの身元に関する多くの情報を推測することも可能になりました。

@@ -2,6 +2,7 @@
 title: RTCPeerConnection.iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.iceConnectionState`** 是一个只读属性，用于描述连接的 ICE 连接状态，返回值为枚举类型。
@@ -41,4 +42,4 @@ var state = pc.iceConnectionState;
 
 ## 参考文档
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

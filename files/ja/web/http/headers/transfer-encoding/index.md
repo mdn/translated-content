@@ -1,13 +1,8 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Transfer-Encoding`** ヘッダーは、{{Glossary("Payload body","ペイロード本文")}}をユーザーに安全に転送するために使われる符号化方式を指定します。

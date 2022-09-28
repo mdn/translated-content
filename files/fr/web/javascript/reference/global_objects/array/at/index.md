@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/at
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
 browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 La méthode **`at()`** prend un entier en argument et renvoie l'élément du tableau situé à cet indice. Des valeurs entières positives ou négatives peuvent être utilisées en argument. Dans ce dernier cas, la recherche est effectuée depuis la fin du tableau.

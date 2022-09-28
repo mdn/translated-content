@@ -1,17 +1,8 @@
 ---
 title: WebSocket クライアントアプリケーションの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - Client
-  - Example
-  - ガイド
-  - ネットワーク
-  - ウェブソケット API
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
 {{APIRef("Websockets API")}}
 
 WebSocket クライアントアプリケーションは [WebSocket API](/ja/docs/Web/API/WebSockets_API) を使用して、 WebSocket プロトコルを経由して [WebSocket サーバー](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)と通信します。

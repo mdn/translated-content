@@ -1,16 +1,8 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - Advanced
-  - Intermediate
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
+
 {{JSRef}}
 
 **`padStart()`** メソッドは、結果の文字列が指定した長さになるように、現在の文字列を他の文字列で (必要に応じて繰り返して) 延長します。延長は、現在の文字列の先頭から適用されます。
@@ -28,7 +20,7 @@ str.padStart(targetLength [, padString])
 - `targetLength`
   - : 現在の `str` の延長後に返される文字列の長さです。この値が `str.length` よりも短い場合、 `str` がそのまま返されます。
 - `padString` {{optional_inline}}
-  - : 現在の `str` を延長するための文字列です。 `padString` が `targetLength` より長い場合は、右からその長さ分が切り捨てられます。この引数の既定値は、 "` `" (`U+0020 'SPACE'`) です。
+  - : 現在の `str` を延長するための文字列です。 `padString` が `targetLength` より長い場合は、右からその長さ分が切り捨てられます。この引数の既定値は、 " " (`U+0020 'SPACE'`) です。
 
 ### 返値
 

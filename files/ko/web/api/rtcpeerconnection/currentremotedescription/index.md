@@ -13,7 +13,9 @@ translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 
 ## Syntax
 
-    sessionDescription = RTCPeerConnection.currentRemoteDescription;
+```js
+sessionDescription = RTCPeerConnection.currentRemoteDescription;
+```
 
 ### 반환 값
 

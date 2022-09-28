@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 
 ## 구문
 
-    mySet.forEach(callback[, thisArg])
+```js
+mySet.forEach(callback[, thisArg])
+```
 
 ### 매개변수
 
