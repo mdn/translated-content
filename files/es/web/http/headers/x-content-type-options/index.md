@@ -29,7 +29,8 @@ Los evaluadores de seguridad del sitio suelen esperar que este encabezado aparez
 ## Directivas
 
 - `nosniff`
-  - : Bloquea una solicitud si el tipo solicitado es\* "`style`" y el tipo MIME no es "`text/css`", o
+  - : Bloquea una solicitud si el tipo solicitado es
+    - "`style`" y el tipo MIME no es "`text/css`", o
     - "`script`" y el tipo MIME no es un [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
 ## Especificaciones

@@ -7,7 +7,11 @@ tags:
   - solicitud
 translation_of: Web/HTTP/Headers/Cookie
 ---
-{{HTTPSidebar}}El encabezado **`Cookie`** de una solicitud HTTP contiene [cookies HTTP ](/es/docs/Web/HTTP/Cookies)almacenadas y enviadas previamente por el servidor con el encabezado (_**`header`**_) {{HTTPHeader("Set-Cookie")}}Los encabezados `Cookie` puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.
+{{HTTPSidebar}}
+
+El encabezado **`Cookie`** de una solicitud HTTP contiene [cookies HTTP ](/es/docs/Web/HTTP/Cookies)almacenadas y enviadas previamente por el servidor con el encabezado (_**`header`**_) {{HTTPHeader("Set-Cookie")}}
+
+Los encabezados `Cookie` puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.
 
 | Header type                                      | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

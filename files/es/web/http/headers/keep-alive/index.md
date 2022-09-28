@@ -25,7 +25,8 @@ El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma 
 ## Directivas
 
 - _parámetros_
-  - : Lista de parámetros separados por coma, cada uno consiste en un identificador y un valor separado por el signo igual (`'='`). Es posible establecer los siguientes identificadores:\* `timeout`: indica la cantidad de tiempo _mínima_ en la cual una conexión ociosa se debe mantener abierta (en segundos). Nótese que los _timeouts_ mas largos que el _timeout_ de TCP pueden ser ignorados si no se establece un mensaje de _TCP keep-alive_ en la capa de transporte.
+  - : Lista de parámetros separados por coma, cada uno consiste en un identificador y un valor separado por el signo igual (`'='`). Es posible establecer los siguientes identificadores:
+    - `timeout`: indica la cantidad de tiempo _mínima_ en la cual una conexión ociosa se debe mantener abierta (en segundos). Nótese que los _timeouts_ mas largos que el _timeout_ de TCP pueden ser ignorados si no se establece un mensaje de _TCP keep-alive_ en la capa de transporte.
     - `max`: indica el número máximo de peticiones que pueden ser enviadas en esta conexión antes de que sea cerrada. Si es `0`, este valor es ignorado para las conexiones no segmentadas, ya que se enviara otra solicitud en la próxima respuesta. Una canalización de HTTP puede ser usada para limitar la división.
 
 ## Ejemplos
