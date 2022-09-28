@@ -159,7 +159,7 @@ WEBVTT
 
 ## 为 WebVTT cue 添加样式
 
-你可以通过查找与 {{cssxref("::cue")}} 伪元素匹配的元素来设计 WebVTT 样式。
+你可以通过查找与 {{cssxref("::cue")}} 伪元素匹配的元素来为 WebVTT 添加样式。
 
 ### 在网页中使用 CSS 定义样式
 
