@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
 
 ## Resumen
 
-El método `Object.keys()` devuelve un array de las propiedades **`names` **de un objeto, en el mismo orden como se obtienen en un loop normal
+El método `Object.keys()` devuelve un array de las propiedades **`names`** de un objeto, en el mismo orden como se obtienen en un loop normal
 
 ## Sintaxis
 

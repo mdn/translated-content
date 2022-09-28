@@ -20,31 +20,31 @@ El valor primitivo del objeto especificado.
 
 ## Descripción
 
-JavaScript utiliza el método valueOf para convertir un objeto a un valor primitivo. Raramente usted necesitará invocar el método valueOf por su cuenta; JavaScript lo realizará de forma automática cuando encuentre un objeto, donde un valor primitivo es esperado.
+JavaScript utiliza el método `valueOf` para convertir un objeto a un valor primitivo. Raramente usted necesitará invocar el método `valueOf` por su cuenta; JavaScript lo realizará de forma automática cuando encuentre un objeto, donde un valor primitivo es esperado.
 
-Por defecto, el método valueOf es heredado por cada objeto descendiente de {{jsxref("Object")}}. Cada objeto incorporado en el núcleo del lenguaje sobreescribe este método para retornar un valor apropiado. Si un objeto no tiene un valor primitivo, valueOf devuelve el objeto en sí.
+Por defecto, el método `valueOf` es heredado por cada objeto descendiente de {{jsxref("Object")}}. Cada objeto incorporado en el núcleo del lenguaje sobreescribe este método para retornar un valor apropiado. Si un objeto no tiene un valor primitivo, `valueOf` devuelve el objeto en sí.
 
-Puede utilizar valueOf dentro de su propio código para convertir un objeto incorporado en el núcleo del lenguaje en un valor primitivo. Cuando usted crea un objeto personalizado, puede sobreescribir el comportamiento de Object.prototype.valueOf() para invocar un método personalizado, en vez de utilizar el método por defecto {{jsxref("Object")}}.
+Puede utilizar `valueOf` dentro de su propio código para convertir un objeto incorporado en el núcleo del lenguaje en un valor primitivo. Cuando usted crea un objeto personalizado, puede sobreescribir el comportamiento de `Object.prototype.valueOf()` para invocar un método personalizado, en vez de utilizar el método por defecto {{jsxref("Object")}}.
 
 ### Sobreescribiendo `valueOf` para objetos personalizados
 
-Puede crear una función para ser invocada en lugar de utilizar el método valueOf por defecto. Su función no debe contener ningún parámetro.
+Puede crear una función para ser invocada en lugar de utilizar el método `valueOf` por defecto. Su función no debe contener ningún parámetro.
 
-Suponga que tiene un objeto de tipo myNumberType y usted quiere crear un método valueOf para este. El código a continuación asigna una función personalizada al método valueOf:
+Suponga que tiene un objeto de tipo `myNumberType` y usted quiere crear un método `valueOf` para este. El código a continuación asigna una función personalizada al método `valueOf`:
 
 ```js
 myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 ```
 
-Al tener el código anterior funcionando, cada vez que un objeto de tipo myNumberType es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.
+Al tener el código anterior funcionando, cada vez que un objeto de tipo `myNumberType` es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.
 
-El método valueOf es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:
+El método `valueOf` es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:
 
 ```js
 myNumber.valueOf()
 ```
 
-> **Nota:**Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método valueOf. Todos los objetos pueden ser convertidos a string, si solo "[object _type_]". Pero muchos objetos no se pueden convertir a number, boolean o function.
+> **Nota:** Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método `valueOf`. Todos los objetos pueden ser convertidos a string, si solo "`[object _type_]`". Pero muchos objetos no se pueden convertir a number, boolean o function.
 
 ## Ejemplos
 
