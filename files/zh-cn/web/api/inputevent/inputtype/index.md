@@ -2,6 +2,7 @@
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
 ---
+
 {{APIRef("DOM Events")}}
 
 {{domxref("InputEvent")}} 接口中的只读属性 **`inputType`** 返回对可编辑内容所做更改的类型。可能的更改包括插入、删除和格式化文本。

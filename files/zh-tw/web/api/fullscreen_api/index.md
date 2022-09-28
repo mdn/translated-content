@@ -2,6 +2,7 @@
 title: 使用全螢幕模式
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。

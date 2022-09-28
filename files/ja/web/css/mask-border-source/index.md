@@ -1,18 +1,8 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-source
-translation_of: Web/CSS/mask-border-source
 ---
+
 {{CSSRef}}
 
 **`mask-border-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)を生成するのに使われる元の画像を設定します。

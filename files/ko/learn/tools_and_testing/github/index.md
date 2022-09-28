@@ -1,11 +1,6 @@
 ---
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - GitHub
-  - git
-  - 깃허브
-translation_of: Learn/Tools_and_testing/GitHub
 ---
 {{LearnSidebar}}
 

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
+
 {{AddonSidebar()}}
 
 Vérifiez si l'extension a les permissions listées dans l'objet  {{WebExtAPIRef("permissions.Permissions")}}.

@@ -1,18 +1,8 @@
 ---
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onmessage
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
+
 {{AddonSidebar()}}このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。例えば、次のような場面で使います。
 
 - [コンテンツスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)の中で、 [バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)からのメッセージを受け取る。

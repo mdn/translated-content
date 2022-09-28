@@ -3,6 +3,7 @@ title: SpeechRecognition.serviceURI
 slug: orphaned/Web/API/SpeechRecognition/serviceURI
 original_slug: Web/API/SpeechRecognition/serviceURI
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`serviceURI`** プロパティは現在の `SpeechRecognition` が利用している音声認識の場所を指定しています。デフォルト値はユーザーの音声サービスです。

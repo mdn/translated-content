@@ -1,15 +1,6 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
-tags:
-  - API
-  - CSSOM
-  - CSSValue
-  - Interface
-  - NeedsExample
-  - Obsolete
-  - Reference
-translation_of: Web/API/CSSValue
 ---
 {{APIRef("CSSOM")}}
 

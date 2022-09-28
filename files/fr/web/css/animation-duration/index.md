@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-duration
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-duration`** définit la durée d'une animation pour parcourir un cycle.

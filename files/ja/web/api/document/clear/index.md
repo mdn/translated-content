@@ -16,7 +16,7 @@ document.clear();
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
 
 ## ブラウザーの互換性
 

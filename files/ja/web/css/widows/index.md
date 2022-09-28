@@ -1,16 +1,8 @@
 ---
 title: widows
 slug: Web/CSS/widows
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.widows
-translation_of: Web/CSS/widows
 ---
+
 {{CSSRef}}
 
 **`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。</p>

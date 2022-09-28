@@ -1,15 +1,6 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
-page-type: web-api-interface
-tags:
-  - API
-  - AudioListener
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioListener
-translation_of: Web/API/AudioListener
 ---
 {{ APIRef("Web Audio API") }}
 

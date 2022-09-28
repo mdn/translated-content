@@ -2,6 +2,7 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
+
 {{JSRef}}
 
 **symbol** 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。`Symbol()` 函数会返回 **symbol** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new Symbol()`"。
@@ -74,9 +75,9 @@ typeof symObj;  // "object"
 除了自己创建的 symbol，JavaScript 还内建了一些在 ECMAScript 5 之前没有暴露给开发者的 symbol，它们代表了内部语言行为。它们可以使用以下属性访问：
 
 - 迭代 symbols {{jsxref("Symbol.iterator")}}
-  - : 一个返回一个对象默认迭代器的方法。被 [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 使用。
+  - : 一个返回一个对象默认迭代器的方法。被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 使用。
 - {{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}
-  - : 一个返回对象默认的异步迭代器的方法。被 [`for await of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) 使用。
+  - : 一个返回对象默认的异步迭代器的方法。被 [`for await of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 使用。
 - 正则表达式 symbols {{jsxref("Symbol.match")}}
   - : 一个用于对字符串进行匹配的方法，也用于确定一个对象是否可以作为正则表达式使用。被 {{jsxref("String.prototype.match()")}} 使用。
 - {{jsxref("Symbol.replace")}}

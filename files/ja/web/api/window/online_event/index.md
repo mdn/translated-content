@@ -1,15 +1,9 @@
 ---
 title: Document.ononline
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/ononline
 original_slug: Web/API/Document/ononline
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.online`** イベントは、ブラウザーがオンラインモードとオフラインモードの間で切り替わったときに、それぞれのページの {{HtmlElement("body")}} で発生します。加えて、イベントは `document.body` から `document` に向けて、 `window` までバブリングします。どちらのイベントもキャンセル不可能です (ユーザーがオンラインになったり、オフラインに移行したりするのを妨げることはできません)。
@@ -31,4 +25,4 @@ original_slug: Web/API/Document/ononline
 ## 関連情報
 
 - [online および offline イベント](/ja/docs/Online_and_offline_events)
-- [WHATWG Web App Specification](http://www.whatwg.org/specs/web-apps/current-work/#event-online)
+- [WHATWG Web App Specification](https://www.whatwg.org/specs/web-apps/current-work/#event-online)

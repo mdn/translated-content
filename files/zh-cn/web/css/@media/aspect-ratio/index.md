@@ -2,13 +2,14 @@
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 ---
+
 {{cssref}}
 
 **`aspect-ratio`** [CSS](/zh-CN/docs/CSS) [媒体属性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试 {{glossary("viewport")}} 的宽高比。
 
 ## 语法
 
-宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用**`min-aspect-ratio`**和**`max-aspect-ratio`**分别查询最小和最大的值。
+宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用 **`min-aspect-ratio`** 和 **`max-aspect-ratio`** 分别查询最小和最大的值。
 
 ## 示例
 
@@ -57,4 +58,4 @@ slug: Web/CSS/@media/aspect-ratio
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.aspect-ratio")}}
+{{Compat}}

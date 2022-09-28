@@ -1,14 +1,8 @@
 ---
 title: 剰余 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.remainder
-translation_of: Web/JavaScript/Reference/Operators/Remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 剰余演算子 (`%`) は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときに残った剰余を返します。これは常に被除数の符号を取ります。

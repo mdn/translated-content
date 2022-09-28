@@ -96,7 +96,7 @@ Por ejemplo:
 
 Un reproductor de audio tenderá a reproducir directamente un track de audio. Por ejemplo un archivo MP3 u Ogg. No necesitan contenedores.
 
-> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
+> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
 
 Los formatos anteriores existen para comprimir los archivos de audio y video volviéndolos manejables (el tamaño sin comprimir es muy grande). Los browsers contienen diferentes **{{Glossary("Codec","Codecs")}}**, como Vorbis o H.264, los cuales son usados para convertir el sonido y video comprimidos en binario y viceversa. Pero desafortunadamente, como indicamos antes, no todos los browsers soportan los mismos codecs, por lo tanto, habrá que proveer varios archivos para cada producción multimedia. Si te falta el codec correcto para decodificar el medio, simplemente no se reproducirá.
 
@@ -112,7 +112,7 @@ Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado (
 </video>
 ```
 
-Tomamos el atributo `src` del tag `<video>` y en su lugar incluimos elementos separados {{htmlelement("source")}} que apuntan a sus propias fuentes. En este caso el browser irá a los elementos `<source> y `reproducirá el primero de los elementos que el codec soporte. Incluir fuentes WebM y MP4 debería bastar para reproducir el video en la mayoría de los browsers en estos días.
+Tomamos el atributo `src` del tag `<video>` y en su lugar incluimos elementos separados {{htmlelement("source")}} que apuntan a sus propias fuentes. En este caso el browser irá a los elementos `<source>` y reproducirá el primero de los elementos que el codec soporte. Incluir fuentes WebM y MP4 debería bastar para reproducir el video en la mayoría de los browsers en estos días.
 
 Cada elemento `<source>` tambien tiene un atributo `type` . Esto es opcional, pero se recomienda que se incluyan, ya que contienen {{glossary("MIME type","MIME types")}} de los archivos de vídeo y los navegadores pueden leerlos y omitir inmediatamente los vídeos que no tienen. Si no estan incluidos, los navegadores cargarán e intentarán reproducir cada archivo hasta que encuentren uno que funcione, lo que llevará aún más tiempo y recursos.
 
@@ -137,7 +137,7 @@ Esto nos dará un resultado que se parece a esto:
 ![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Las nuevas características son:
 
 - {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
-  - : Puede controlar el tamanño con estos atributos o con [CSS](https://developer.mozilla.org/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
+  - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
 - {{htmlattrxref("autoplay","video")}}
   - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
 - {{htmlattrxref("loop","video")}}
@@ -242,8 +242,8 @@ This is the second.
 
 To get this displayed along with the HTML media playback, you need to:
 
-1.  Save it as a `.vtt` file in a sensible place.
-2.  Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
+1. Save it as a `.vtt` file in a sensible place.
+2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 
@@ -271,11 +271,11 @@ If you are unable to source any video or audio, then you can feel free to use ou
 
 We would like you to:
 
-1.  Save your audio and video files in a new directory on your computer.
-2.  Create a new HTML file in the same directory, called `index.html`.
-3.  Add `<audio>` and `<video>` elements to the page; make them display the default browser controls.
-4.  Give both of them `<source>` elements so that browsers will find the audio format they support best and load it. These should include `type` attributes.
-5.  Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+1. Save your audio and video files in a new directory on your computer.
+2. Create a new HTML file in the same directory, called `index.html`.
+3. Add `<audio>` and `<video>` elements to the page; make them display the default browser controls.
+4. Give both of them `<source>` elements so that browsers will find the audio format they support best and load it. These should include `type` attributes.
+5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
 For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
 

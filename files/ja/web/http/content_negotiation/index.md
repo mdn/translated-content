@@ -1,14 +1,8 @@
 ---
 title: コンテンツ交渉
 slug: Web/HTTP/Content_negotiation
-tags:
-  - コンテンツ交渉
-  - コンテンツ交渉リファレンス
-  - HTTP
-  - リファレンス
-  - コンテンツ交渉
-translation_of: Web/HTTP/Content_negotiation
 ---
+
 {{HTTPSidebar}}
 
 [HTTP](/ja/docs/Glossary/HTTP) において**コンテンツ交渉** (content negotiation) は、同じ URI におけるさまざまな{{Glossary("Representation header","表現")}}のリソースを提供するために使用する仕組みであり、ユーザーエージェントはどのリソースがユーザーにもっとも適しているか (例えば文書の言語はどれか、画像形式はどれか、コンテンツエンコード方式はどれか) を指定することができます。

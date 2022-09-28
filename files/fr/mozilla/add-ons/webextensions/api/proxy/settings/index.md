@@ -13,6 +13,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 original_slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier les paramètres de proxy du navigateur.

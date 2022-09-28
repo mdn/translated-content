@@ -2,6 +2,7 @@
 title: Response.redirected
 slug: Web/API/Response/redirected
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口中只读的 **`redirected`** 属性表明该响应是否为一个重定向的请求的结果。

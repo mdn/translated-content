@@ -1,12 +1,8 @@
 ---
 title: グリッドレイアウトと他のレイアウト方法との関係
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
+
 {{CSSRef}}
 
 CSS グリッドレイアウトはレイアウトを行うための完全なシステムの一部として、 CSS の他の機能と一緒に動作するよう設計されました。このガイドでは、既に使われている他の技術と、どのようにグリッドが適合するかを説明します。

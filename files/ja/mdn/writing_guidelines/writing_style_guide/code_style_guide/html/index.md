@@ -3,6 +3,7 @@ title: HTML のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
+
 {{MDNSidebar}}
 
 以下のガイドラインでは、MDN Web Docs のコードの例で HTML をどのように記述するのかを扱います。

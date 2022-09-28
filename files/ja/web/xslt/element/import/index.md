@@ -1,13 +1,8 @@
 ---
 title: <xsl:import>
 slug: Web/XSLT/Element/import
-tags:
-  - XSLT
-  - import
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/import
 ---
+
 {{ XsltRef() }}
 
 `<xsl:import>` 要素はあるスタイルシートの内容を別のスタイルシートにインポートするための最上位要素です。一般に、インポートしたスタイルシートの内容は、インポートするスタイルシートの内容よりもインポートの優先度が低くなります。これは `<xsl:include>` とは対照的です。ここでインクルードされたスタイルシートの内容は、インクルードするスタイルシートの内容とまったく同じです。

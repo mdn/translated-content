@@ -1,17 +1,8 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - プロパティ
-  - offset-position
-  - recipe:css-property
-browser-compat: css.properties.offset-position
-translation_of: Web/CSS/offset-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`offset-position`** は CSS のプロパティで、 {{cssxref("offset-path")}} の[初期位置](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position)を定義します。

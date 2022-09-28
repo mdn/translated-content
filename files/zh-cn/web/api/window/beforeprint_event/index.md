@@ -2,6 +2,7 @@
 title: beforeprint
 slug: Web/API/Window/beforeprint_event
 ---
+
 当相关联的文档即将打印或预览以进行打印时，将触发 beforeprint 事件。
 
 ## 基本信息

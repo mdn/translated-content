@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/format
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur formate une date selon les options de locale et de format de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.

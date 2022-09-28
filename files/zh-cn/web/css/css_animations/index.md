@@ -2,6 +2,7 @@
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Animations** 是 CSS 的一个模块，它定义了如何用关键帧来随时间推移对 CSS 属性的值进行动画处理。关键帧动画的行为可以通过指定它们的持续时间，它们的重复次数以及它们如何重复来控制。
@@ -39,7 +40,7 @@ slug: Web/CSS/CSS_Animations
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## 参考
 

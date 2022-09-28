@@ -1,10 +1,8 @@
 ---
 title: 一般的な XSLT エラー
 slug: Web/XSLT/Common_errors
-tags:
-  - XSLT
-translation_of: Web/XSLT/Common_errors
 ---
+
 ### MIME タイプ
 
 サーバーは、XML mime タイプの`text/xml`または`application/xml`のソースとスタイルシートの両方を送信する必要があります。 現在のタイプを調べるには、Mozilla でファイルを読み込み、ページ情報を見てください。 または、ダウンロードツールを使用してください。これらのツールは通常、MIME タイプを示します。

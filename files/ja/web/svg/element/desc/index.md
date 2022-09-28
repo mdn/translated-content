@@ -1,12 +1,8 @@
 ---
 title: desc
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
-translation_of: Web/SVG/Element/desc
 ---
+
 {{SVGRef}}
 
 SVG 描画における各コンテナ要素またはグラフィック要素は、説明がテキストのみの **`<desc>`** 要素を用いる説明を供給することができます。

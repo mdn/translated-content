@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-bottom`** est une propriété qui permet de définir le remplissage sur le côté bas entre l'élément et la zone de défilement.

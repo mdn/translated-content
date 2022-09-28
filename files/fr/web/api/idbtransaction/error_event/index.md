@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/IDBDatabase/onerror
 original_slug: Web/API/IDBDatabase/onerror
 ---
+
 {{APIRef("IndexedDB")}}
 
 Le gestionnaire d'événement **`onerror`**, rattaché à l'interface `IDBDatabase`, s’exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.

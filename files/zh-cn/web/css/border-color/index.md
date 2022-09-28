@@ -2,6 +2,7 @@
 title: border-color
 slug: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 ## 概括

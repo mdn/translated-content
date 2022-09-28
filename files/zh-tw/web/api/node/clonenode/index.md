@@ -2,6 +2,7 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.cloneNode()`** 方法會回傳一個呼叫此方法之節點物件的拷貝。
@@ -50,4 +51,4 @@ To clone a node for appending to a different document, use {{domxref("Document.i
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

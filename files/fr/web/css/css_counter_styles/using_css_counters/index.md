@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 Les **compteurs CSS** sont des variables dont les valeurs sont incrémentées par les règles CSS et qui permettent de savoir combien de fois elles sont utilisées. Cela permet par exemple d'adapter la mise en forme du contenu en fonction de son emplacement dans le document.

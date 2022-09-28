@@ -1,18 +1,8 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask
-translation_of: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、指定された位置での画像のマスクまたは切り取りによって要素を (部分的または全体的に) 隠します。

@@ -1,7 +1,6 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-translation_of: Glossary/HTTP
 ---
 The HyperText Transfer Protocol (**HTTP**) 는 기본적으로 하이퍼미디어 문서를 전송하는 네트워크 {{glossary("프로토콜")}} 입니다. 사람들이 읽을 수 있도록 브라우저와 서버 사이에 존재하죠. 현재 버전의 HTTP 규격은 [HTTP/2](/ko/docs/Glossary/HTTP_2)입니다.
 

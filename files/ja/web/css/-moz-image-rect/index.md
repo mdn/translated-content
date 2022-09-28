@@ -1,16 +1,8 @@
 ---
 title: '-moz-image-rect'
 slug: Web/CSS/-moz-image-rect
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 画像
-  - CSS:Mozilla 拡張
-  - 関数
-  - 標準外
-  - リファレンス
-browser-compat: css.types.-moz-image-rect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 **`-moz-image-rect`** は [CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-image")}} に対する値で、大きな画像の一部を背景として使用することができます。

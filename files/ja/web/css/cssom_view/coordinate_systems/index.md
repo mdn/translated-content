@@ -1,16 +1,8 @@
 ---
 title: 座標系
 slug: Web/CSS/CSSOM_View/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - 座標系
-  - 座標
-  - ガイド
-  - レイアウト
-  - NeedsContent
 ---
+
 {{CSSRef}}
 
 グラフィックのコンテキストでピクセルの位置を指定する場合（ちょうど{{interwiki("wikipedia", "代数学") }}で座標系を指定する場合と同様）、その位置はコンテキスト内の固定点を基準として定義されます。この固定点は{{interwiki("wikipedia", "原点_(数学)", "原点")}}と呼ばれています。位置は、コンテキストの各次元に沿った原点からのピクセル単位のオフセットで指定されます。

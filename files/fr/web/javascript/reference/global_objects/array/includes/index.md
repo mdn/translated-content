@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/includes
 ---
+
 {{JSRef}}
 
 La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.

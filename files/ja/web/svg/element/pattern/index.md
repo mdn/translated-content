@@ -1,13 +1,8 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - 要素
-  - SVG
-  - SVG コンテナー
-browser-compat: svg.elements.pattern
-translation_of: Web/SVG/Element/pattern
 ---
+
 {{SVGRef}}
 
 **`<pattern>`** 要素は、ある領域をカバーするために、x座標とy座標の間隔を繰り返して (「タイル」) 再描画することができるグラフィックオブジェクトを定義します。

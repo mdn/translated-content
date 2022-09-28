@@ -13,6 +13,7 @@ tags:
   - onVisitRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-width`** définit l'épaisseur de la bordure pour le côté haut d'une boîte.

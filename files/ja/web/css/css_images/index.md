@@ -1,14 +1,8 @@
 ---
 title: CSS 画像
 slug: Web/CSS/CSS_Images
-tags:
-  - CSS
-  - CSS 画像
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Images
 ---
+
 {{CSSRef}}
 
 **CSS 画像** (CSS Images) は CSS のモジュールの一つで、どのような種類の画像が利用できるか ({{CSSxRef("&lt;image&gt;")}} 型、その中の URL、グラデーション、その他の種類の画像)、どのように大きさを変更するか、様々なレイアウトモデルで画像やその他の置換コンテンツが応答するかを定義します。

@@ -7,6 +7,7 @@ browser-compat: api.SharedWorker.SharedWorker
 l10n:
   sourceCommit: abaa8b38ddf68a2b468e2b46e56b277db25f16cf
 ---
+
 {{APIRef("Web Workers API")}}
 
 Le constructeur **`SharedWorker()`** crée un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) qui exécute le script depuis l'URL indiquée. Le script doit respecter la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).

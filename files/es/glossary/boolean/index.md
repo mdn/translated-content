@@ -18,4 +18,4 @@ En ciencias de informática, un **boolean** es un dato lógico que solo puede te
 ### Referencia técnica
 
 - El objeto global de JavaScript: {{jsxref("Boolean")}}
-- [Tipos de datos y estructura de datos en JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) (en inglés)
+- [Tipos de datos y estructura de datos en JavaScript](/en-US/docs/Web/JavaScript/Data_structures) (en inglés)

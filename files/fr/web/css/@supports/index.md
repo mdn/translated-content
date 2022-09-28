@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 La règle **`@supports`** permet de définir des déclarations qui dépendent de la prise en charge du navigateur d'une ou plusieurs fonctionnalités CSS. Cette condition est définie par un ensemble de paires de propriété/valeur qui forment une combinaison de conjonctions, disjonctions, négations. Une telle condition est appelée « condition de prise en charge » (ou _supports condition_).

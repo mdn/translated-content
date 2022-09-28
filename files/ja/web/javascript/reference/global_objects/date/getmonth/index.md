@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
+
 {{JSRef}}
 
 **`getMonth()`** メソッドは、地方時に基づき、指定された日付の「月」を表す 0 を基点とした値 (すなわち 0 が年の最初の月を示す) を返します。
@@ -38,7 +32,7 @@ var month = Xmas95.getMonth();
 console.log(month); // 11
 ```
 
-> **Note:** **注:** 必要であれば、月の完全な名前 (例えば `January` ) は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> **Note:** 必要であれば、月の完全な名前 (例えば `January` ) は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
 > var options = { month: 'long'};

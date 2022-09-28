@@ -1,16 +1,8 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.hover
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef }}
 
 **`:hover`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーがポインティングデバイスで要素に反応したものの、アクティブ化する必要がないものを選択します。普通はユーザーがカーソル (マウスポインター) を要素の上でかざしたときにそうなります。

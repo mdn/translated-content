@@ -1,13 +1,8 @@
 ---
 title: セレクターリスト
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - セレクター
-  - セレクターリスト
-browser-compat: css.selectors.list
-translation_of: Web/CSS/Selector_list
 ---
+
 {{CSSRef}}
 
 CSS の **セレクターリスト** (selector list) (`,`) は，すべての一致するノードを選択します。

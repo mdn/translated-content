@@ -13,6 +13,7 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 ---
+
 {{AddonSidebar()}}
 
 Le type `InteruptReason` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.

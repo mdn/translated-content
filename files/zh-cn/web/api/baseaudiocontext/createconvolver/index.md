@@ -2,6 +2,7 @@
 title: AudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的方法`createConvolver()能创建一个`{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 [Convolution 规范定义](http://webaudio.github.io/web-audio-api/#background-3) 中查看更多信息。
@@ -59,8 +60,8 @@ convolver.buffer = concertHallBuffer;
 
 ## 浏览器兼容
 
-{{Compat("api.BaseAudioContext.createConvolver")}}
+{{Compat}}
 
 ## 另见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

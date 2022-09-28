@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 original_slug: Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError
 ---
+
 {{AddonSidebar()}}
 
 Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur `onRequest`.

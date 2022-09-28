@@ -4,6 +4,7 @@ slug: Web/CSS/@layer
 translation_of: Web/CSS/@layer
 browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.

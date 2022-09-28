@@ -1,18 +1,6 @@
 ---
 title: StorageEstimate
 slug: conflicting/Web/API/StorageManager/estimate
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageEstimate
-  - Usage
-translation_of: Web/API/StorageEstimate
 original_slug: Web/API/StorageEstimate
 ---
 {{securecontext_header}}{{APIRef("Storage")}}

@@ -1,13 +1,8 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
-tags:
-  - General Header
-  - HTTP
-  - HTTP Header
-  - Reference
-translation_of: Web/HTTP/Headers/Keep-Alive
 ---
+
 {{HTTPSidebar}}
 
 **`Keep-Alive`** 一般ヘッダーは、送信者が接続の仕組みや、タイムアウト値と最大リクエスト数の設定に使用される可能性があることをヒントとすることができます。

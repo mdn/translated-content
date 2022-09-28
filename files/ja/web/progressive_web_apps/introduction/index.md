@@ -1,19 +1,8 @@
 ---
 title: プログレッシブウェブアプリの紹介
 slug: Web/Progressive_web_apps/Introduction
-tags:
-  - Applications
-  - Guide
-  - Intermediate
-  - Introduction
-  - PWA
-  - Progressive web apps
-  - Service Worker
-  - js13kGames
-  - progressive
-  - web manifest
-translation_of: Web/Progressive_web_apps/Introduction
 ---
+
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 この記事ではプログレッシブウェブアプリ (Progressive Web Apps, PWA) を紹介し、それが何なのか、また普通のウェブアプリよりもどのような利点があるのかを説明します。

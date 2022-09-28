@@ -3,6 +3,7 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 translation_of: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface  **`HTMLImageElement`** fournit des propriétés et des méthodes spéciales pour manipuler la mise en page et la présentation des éléments {{HTMLElement("img")}} .

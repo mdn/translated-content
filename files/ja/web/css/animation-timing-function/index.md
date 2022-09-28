@@ -1,15 +1,8 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。

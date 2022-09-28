@@ -2,6 +2,7 @@
 title: <nobr>
 slug: Web/HTML/Element/nobr
 ---
+
 {{non-standard_header}}
 
 ## 概述

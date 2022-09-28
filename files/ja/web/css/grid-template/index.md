@@ -1,15 +1,8 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-template
-translation_of: Web/CSS/grid-template
 ---
+
 {{CSSRef}}
 
 **`grid-template`** は CSS のプロパティで、[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティとして {{glossary("grid column", "grid columns")}}、{{glossary("grid rows", "rows")}}、{{glossary("grid areas", "areas")}} を定義します。

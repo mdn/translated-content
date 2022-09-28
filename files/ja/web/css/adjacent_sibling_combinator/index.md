@@ -1,14 +1,8 @@
 ---
 title: 隣接兄弟結合子
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.adjacent_sibling
-translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 **隣接兄弟結合子** (adjacent sibling combinator, `+`) は 2 つのセレクターを接続し、 2 つ目の要素が 1 つ目の要素の _直後_ にあって、両者が同じ親{{DOMxRef("element", "要素")}}の子同士である場合に一致します。

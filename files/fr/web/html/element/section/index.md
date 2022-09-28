@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/section
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<section>`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
@@ -110,15 +111,11 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |              |
-| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## Voir aussi
 

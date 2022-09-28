@@ -8,8 +8,8 @@ slug: Glossary/Favicon
 
 ファビコンはユーザエクスペリエンスを向上させ、ブランドの一貫性を保つために使用されます。例えば使い慣れたアイコンがブラウザのアドレスバーに表示されるのを見ることで、ユーザは自分が適切な場所 (_訳注:WEB ページなど_) にいることを理解します。
 
-1.  Wikipedia 上の {{interwiki("wikipedia", "Favicon", "Favicon")}}
-2.  ツール
+1. Wikipedia 上の {{interwiki("wikipedia", "Favicon", "Favicon")}}
+2. ツール
 
-    1.  [Free favicon generator](https://favicon.io/)
-    2.  [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)
+    1. [Free favicon generator](https://favicon.io/)
+    2. [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)

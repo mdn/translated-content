@@ -1,16 +1,8 @@
 ---
 title: フレックスアイテムの折り返しのマスター
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-tags:
-  - CSS
-  - Flex
-  - ガイド
-  - collapsed items
-  - フレックスボックス
-  - grid
-  - 折り返し
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
+
 {{CSSRef}}
 
 フレックスボックスは一次元のレイアウトとして設計されており、つまりアイテムを行または列として扱います。 — しかし、同時ではありません。しかし、フレックスアイテムを新しい行に折り返し、 {{cssxref("flex-direction")}} が `row` の場合は新しい行を、 `flex-direction` が `column` の場合は新しい列を生成します。このガイドでは、これがどのように動作するのか、何のために設計されているのか、どのような場合にフレックスボックスより [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)が必要になるかを説明します。

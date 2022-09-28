@@ -1,15 +1,8 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - CSS 基本ユーザーインターフェイス
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.resize
-translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。

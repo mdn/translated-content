@@ -8,7 +8,7 @@ slug: Web/API/DeviceMotionEvent
 
 `DeviceMotionEvent` はウェブ開発者にデバイスの位置と向きの変更スピードの情報を提供します。
 
-> **Warning:** **警告:** 現在、Firefox と Chrome は同じ方法で座標を処理しません。これらを使用する際は、注意してください。
+> **Warning:** 現在、Firefox と Chrome は同じ方法で座標を処理しません。これらを使用する際は、注意してください。
 
 ## コンストラクター
 
@@ -50,4 +50,4 @@ window.addEventListener('devicemotion', function(event) {
 - {{ domxref("DeviceMotionEvent") }}
 - {{ event("devicemotion") }}
 - [デバイスの方向検出](/ja/docs/WebAPI/Detecting_device_orientation)
-- [向きと動作データの説明](/ja/DOM/Orientation_and_motion_data_explained "向きと動作データの説明")
+- [向きと動作データの説明](/ja/DOM/Orientation_and_motion_data_explained)

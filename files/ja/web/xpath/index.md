@@ -1,17 +1,8 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - CSS セレクター
-  - DOM
-  - JXON
-  - Landing
-  - Path
-  - XML
-  - XPath
-  - XSLT
-translation_of: Web/XPath
 ---
+
 {{XSLTRef}}
 
 XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で [XML](/ja/docs/Web/XML/XML_introduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。

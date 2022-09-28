@@ -2,6 +2,7 @@
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the {{domxref("PerformanceEntry","performance entry")}}.
@@ -84,4 +85,4 @@ function check_PerformanceEntry(obj) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry.duration")}}
+{{Compat}}

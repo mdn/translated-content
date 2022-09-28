@@ -3,6 +3,7 @@ title: 互联网是如何工作的
 slug: Learn/Common_questions/How_does_the_Internet_work
 original_slug: learn/How_the_Internet_works
 ---
+
 这篇文章讨论什么是互联网以及它是如何工作的。
 
 <table class="learn-box standard-table">
@@ -39,7 +40,7 @@ original_slug: learn/How_the_Internet_works
 
 当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) 还是无线方式（比如 [WiFi](http://en.wikipedia.org/wiki/WiFi) 或 [蓝牙](http://en.wikipedia.org/wiki/Bluetooth) )。所有现代电脑都支持这些连接。
 
-> **备注：** 接下来的内容，我们将只谈论有线连接， 而无线连接的原理与此相同。
+> **备注：** 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
 
 ![Two computers linked together](internet-schema-1.png)
 

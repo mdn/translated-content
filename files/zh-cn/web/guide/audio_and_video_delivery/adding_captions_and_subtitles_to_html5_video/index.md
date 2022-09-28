@@ -3,7 +3,8 @@ title: Adding captions and subtitles to HTML5 video
 slug: >-
   Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
-在其他文章中我们学会了如何使用{{domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [创建视频播放器](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player)以及如何给视频播放器 [添加样式](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics). 本文将介绍如何用 {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} 和 {{ htmlelement("track") }} 元素为视频添加字幕和翻译
+
+在其他文章中我们学会了如何使用{{domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [创建视频播放器](/zh-CN/Apps/Build/Manipulating_media/cross_browser_video_player)以及如何给视频播放器 [添加样式](/zh-CN/Apps/Build/Manipulating_media/Video_player_styling_basics). 本文将介绍如何用 {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} 和 {{ htmlelement("track") }} 元素为视频添加字幕和翻译
 
 ## 案例
 

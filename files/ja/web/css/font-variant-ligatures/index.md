@@ -1,15 +1,8 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.font-variant-ligatures
-translation_of: Web/CSS/font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 **`font-variant-ligatures`** は CSS のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。

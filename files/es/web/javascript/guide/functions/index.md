@@ -124,7 +124,7 @@ if (num === 0) {
 
 Además de definir funciones como se describe aquí, también puedes usar el constructor {{JSxRef("Function")}} para crear funciones a partir de una cadena en tiempo de ejecución, muy al estilo de {{JSxRef("eval", "eval()")}}.
 
-Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en {{JSxRef("../Guide/Working_with_Objects", "Trabajar con objetos")}}.
+Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en {{JSxRef("Guide/Working_with_Objects", "Trabajar con objetos")}}.
 
 ## Llamar funciones
 
@@ -148,18 +148,17 @@ function square(n) { return n * n }
 
 El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
 
-> **Nota:** **Nota**: Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.```js example-bad
+> **Nota:** Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.
+>
+> ```js example-bad
 > console.log(square) // square se eleva con un valor inicial undefined.
 > console.log(square(5)) // Error de tipo no detectado: square no es una función
 > const square = function(n) {
 > return n \* n;
 > }
->
-> ```
->
 > ```
 
-Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en {{JSxRef("../Guide/Working_with_Objects", "Trabajar con objetos", "#Objetos_y_propiedades")}} es un ejemplo de una función que toma un objeto como argumento.
+Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en {{JSxRef("Guide/Working_with_Objects", "Trabajar con objetos", "#Objetos_y_propiedades")}} es un ejemplo de una función que toma un objeto como argumento.
 
 Una función se puede llamar a sí misma. Por ejemplo, aquí hay una función que calcula factoriales de forma recursiva:
 
@@ -227,9 +226,9 @@ getScore(); // Devuelve "Chamahk anotó 5"
 
 Una función se puede referir y llamarse a sí misma. Hay tres formas de que una función se refiera a sí misma:
 
-1.  El nombre de la función
-2.  {{JSxRef("Funciones/arguments/callee", "arguments.callee")}}
-3.  Una variable dentro del ámbito que se refiere a la función
+1. El nombre de la función
+2. {{JSxRef("Funciones/arguments/callee", "arguments.callee")}}
+3. Una variable dentro del ámbito que se refiere a la función
 
 Por ejemplo, considera la siguiente definición de función:
 
@@ -241,9 +240,9 @@ var foo = function bar() {
 
 Dentro del cuerpo de la función, todos los siguientes son equivalentes:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Una función que se llama a sí misma se conoce como una _función recursiva_. En cierto modo, la recursividad es análoga a un bucle. Ambas ejecutan el mismo código varias veces y ambas requieren una condición (para evitar un bucle infinito, o más bien, una recursividad infinita en este caso).
 
@@ -389,9 +388,9 @@ En este ejemplo, `C` accede a `y` de `B` y a `x` de `A`.
 
 Esto se puede hacer porque:
 
-1.  `B` forma un cierre que incluye a `A` (es decir, `B` puede acceder a los argumentos y variables de `A`).
-2.  `C` forma un cierre que incluye a `B`.
-3.  Debido a que el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos _y variables_ de `B` _y_ de `A`. En otras palabras, `C` _encadena_ los ámbitos de `B` y `A`, _en ese orden_.
+1. `B` forma un cierre que incluye a `A` (es decir, `B` puede acceder a los argumentos y variables de `A`).
+2. `C` forma un cierre que incluye a `B`.
+3. Debido a que el cierre de `B` incluye a `A`, el cierre de `C` incluye a `A`, `C` puede acceder a los argumentos _y variables_ de `B` _y_ de `A`. En otras palabras, `C` _encadena_ los ámbitos de `B` y `A`, _en ese orden_.
 
 Sin embargo, lo contrario no es cierto. `A` no puede acceder a `C`, porque `A` no puede acceder a ningún argumento o variable de `B`, del que `C` es una variable. Por lo tanto, `C` permanece privado solo para `B`.
 
@@ -485,17 +484,18 @@ var getCode = (function() {
 getCode();    // Devuelve el apiCode
 ```
 
-> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).```js example-bad
+> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
+>
+> Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
+>
+> ```js example-bad
 > var createPet = function(name) { // La función externa define una variable llamada "name".
-> return {
-> setName: function(name) { // La función envolvente también define una variable llamada "name".
-> name = name; // ¿Cómo accedemos al "name" definido por la función externa?
+>   return {
+>     setName: function(name) { // La función envolvente también define una variable llamada "name".
+>       name = name; // ¿Cómo accedemos al "name" definido por la función externa?
+>     }
+>   }
 > }
-> }
-> }
->
-> ```
->
 > ```
 
 ## Usar el objeto `arguments`
@@ -596,7 +596,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Funciones Flecha
 
-Una {{JSxRef("Funciones/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operadores/this", "this")}}, {{JSxRef("Funciones/arguments", "arguments")}}, {{JSxRef("Operadores/super", "super")}} o {{JSxRef("../Operadores/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+Una {{JSxRef("Funciones/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operadores/this", "this")}}, {{JSxRef("Funciones/arguments", "arguments")}}, {{JSxRef("Operadores/super", "super")}} o {{JSxRef("Operadores/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
 Dos factores influyeron en la introducción de las funciones flecha: _funciones más cortas_ y _no vinculantes_ de `this`.
 

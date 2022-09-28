@@ -1,17 +1,8 @@
 ---
 title: scroll-snap-type-y
 slug: Web/CSS/scroll-snap-type-y
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - NeedsExample
-  - Non-standard
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-type-y
-translation_of: Web/CSS/scroll-snap-type-y
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-type-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーの垂直軸にスナップ点がある場合に、どの程度厳密に実行されるかを定義します。

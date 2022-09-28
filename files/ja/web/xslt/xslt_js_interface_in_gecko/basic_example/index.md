@@ -1,10 +1,8 @@
 ---
 title: 基本的な例
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 ---
+
 ## 基本的な例
 
 基本的な例では、XML ファイルを読み込んで XSL 変換を適用します。これらは、[Netscape Gecko の XSLT](/ja/docs/Web/API/XSLTProcessor)の[HTML 生成](/ja/docs/XSLT_in_Gecko/Generating_HTML)例で使用されているのと同じファイルです。XML ファイルはアーティクルを記述し、XSL ファイルは情報を表示用にフォーマットします。

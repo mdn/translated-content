@@ -1,14 +1,8 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-rows
-translation_of: Web/CSS/grid-auto-rows
 ---
+
 {{CSSRef}}
 
 **`grid-auto-rows`** は CSS のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。

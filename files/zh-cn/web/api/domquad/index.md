@@ -2,6 +2,7 @@
 title: DOMQuad
 slug: Web/API/DOMQuad
 ---
+
 {{SeeCompatTable}}{{APIRef("Geometry Interfaces")}}
 
 DOMQuad 是四 DOMPoints 的集合，用于定义任意四边形的角。返回 DOMQuads 允许 getBoxQuads () 即使存在任意 2D 或 3D 转换，也可以返回准确的信息。它有一个方便的边界属性返回 DOMRectReadOnly 的那些情况下，你只需要一个轴对齐的边框。
@@ -31,4 +32,4 @@ DOMQuad 是四 DOMPoints 的集合，用于定义任意四边形的角。返回 
 
 ## Browser compatibility
 
-{{Compat("api.DOMQuad")}}
+{{Compat}}

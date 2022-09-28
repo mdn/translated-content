@@ -2,6 +2,7 @@
 title: Window.sidebar
 slug: Web/API/Window/sidebar
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 Returns a sidebar object, which contains several methods for registering add-ons with the browser.
@@ -25,7 +26,7 @@ The sidebar object returned has the following methods:
       <td rowspan="2">
         Obsolete since Firefox 23 (only present in SeaMonkey).<br />End users
         can use the "load this bookmark in the sidebar" option instead. Also see
-        <a href="/en-US/docs/Mozilla/Creating_a_Firefox_sidebar"
+        <a href="/zh-TW/docs/Mozilla/Creating_a_Firefox_sidebar"
           >Creating a Firefox sidebar.</a
         >
       </td>
@@ -45,7 +46,7 @@ The sidebar object returned has the following methods:
       <td colspan="2">
         Installs a search provider (OpenSearch).
         <a
-          href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_OpenSearch_plugins"
+          href="/zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_OpenSearch_plugins"
           >Adding OpenSearch search engines </a
         >contains more details. Added in Firefox 2.
       </td>
@@ -61,7 +62,7 @@ The sidebar object returned has the following methods:
       <td colspan="2">
         Installs a search engine (Sherlock).
         <a
-          href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_Sherlock_plugins"
+          href="/zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_Sherlock_plugins"
           >Adding Sherlock search engines </a
         >contains more details.
       </td>

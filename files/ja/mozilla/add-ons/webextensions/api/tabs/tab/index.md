@@ -1,8 +1,8 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
+
 {{AddonSidebar()}}
 
 **`tabs.Tab`**型はタブについての情報を含んでいます。これはタブの中のコンテンツについての情報へのアクセスを提供します。例えば、コンテンツはどれくらいの大きさか、どのような特別な状態もしくは制限が有効になっているか、など。

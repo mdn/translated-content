@@ -1,20 +1,8 @@
 ---
 title: '<mark>: 文字列マーク要素'
 slug: Web/HTML/Element/mark
-tags:
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - ウェブ
-  - マーク
-  - 強調
-  - 要素
-translation_of: Web/HTML/Element/mark
 ---
+
 {{HTMLRef}}
 
 **HTML の文字列マーク要素** (**`<mark>`**) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。

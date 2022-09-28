@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 3: 使用模型'
 slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
 
 <table class="learn-box standard-table">
@@ -9,7 +10,7 @@ slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>
@@ -25,7 +26,7 @@ slug: Learn/Server-side/Django/Models
 
 Django 网络应用通过作为模型被参照的 Python 对象访问并管理数据。模型定义了储存数据的结构，包括域类型和可能的最大值，默认值，可选择的列表，帮助理解文档的文本，表格内的标签文本，等等。模型的定义是独立于数据库的——你可以为你自己的项目设置选择一种。一旦你已经选择了你想用的数据库，你不需要直接谈论它——你只是写出你的模型结构和其他代码，然后 Django 会为你处理所有繁琐的和数据库打交道的工作。
 
-这个教程展示了如何定义并访问 [LocalLibrary website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的模型。
+这个教程展示了如何定义并访问 [LocalLibrary website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的模型。
 
 ## 设计 LocalLibaray 模型
 
@@ -41,7 +42,7 @@ Django 网络应用通过作为模型被参照的 Python 对象访问并管理�
 
 思考着以上内容，以下的 UML 关系表显示了我们在该例子里定义的模型。如上所述哦，我们已经为书籍（大概的细节），书籍实例（物理副本是否可获取状态）和作者创建了模型。我们也决定了为流派而创建的模型，所以变量值可以通过管理界面获取。此外，我们决定了不创建 `BookInstance:status`的模型——我们已经硬编码了这个值 (`LOAN_STATUS`) 因为我们不期望这些被改变。通过每个方框你可以看到模型名字，值域名和类型，还有方法和返回的类型。
 
-这个图表也显示了模型之间的关系，including their _multiplicities_. 这些在图表里每个模型边上的数字（最大和最小）显示了他们的关系。 例如，链接 Book 和 Genre 两个盒子的线表示它们是关联的。 靠近 Book 模型的数字显示一本书必须有一个或多个 Genre（要多少有多少），然而另一端靠近 Genre 的数字显示了它可以有零或无数本相关的书籍。
+这个图表也显示了模型之间的关系，including their _multiplicities_. 这些在图表里每个模型边上的数字（最大和最小）显示了他们的关系。例如，链接 Book 和 Genre 两个盒子的线表示它们是关联的。靠近 Book 模型的数字显示一本书必须有一个或多个 Genre（要多少有多少），然而另一端靠近 Genre 的数字显示了它可以有零或无数本相关的书籍。
 
 ![LocalLibrary Model UML - v3](https://mdn.mozillademos.org/files/14021/local_library_model_uml_v0_1.png)
 

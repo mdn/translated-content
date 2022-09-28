@@ -1,11 +1,8 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill-opacity
 ---
+
 {{SVGRef}}
 
 **`fill-opacity`** 属性は、図形に適用されるペイントサーバー(_色_, _勾配_, _パターン_, 等)の不透明度を定義するプレゼンテーション属性です。

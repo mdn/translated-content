@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`scrollbar-color`** permet à un auteur de définir la couleur utilisée pour le curseur et la piste (la ligne sur laquelle se déplace le curseur) de la barre de défilement.

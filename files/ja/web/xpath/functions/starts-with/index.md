@@ -1,11 +1,8 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/starts-with
 ---
+
 {{ XsltRef() }}
 
 `starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。

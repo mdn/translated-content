@@ -1,7 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_wasm
-translation_of: WebAssembly/existing_C_to_wasm
 ---
 {{WebAssemblySidebar}}
 
@@ -12,7 +11,7 @@ WebAssembly의 핵심 Use-case는 기존의 C 라이브러리 생태계를 사�
 예를 들어, WebP 용 인코더를 컴파일 해 봅시다. WebP(웹용 이미지 포맷) 코덱의 소스는 C로 작성되었으며 [GitHub에서 사용가능](https://github.com/webmproject/libwebp)할뿐 아니라 광범위한 [API documentation](https://developers.google.com/speed/webp/docs/api)로도 제공됩니다. 꽤 좋은 출발점입니다.
 
 ```bash
-$ git clone https://github.com/webmproject/libwebp
+git clone https://github.com/webmproject/libwebp
 ```
 
 간단히 시작하려면 `webp.c`라는 C 파일을 작성하여 `encode.h`의 `WebPGetEncoderVersion()` 을 JavaScript로 노출 시키십시오.

@@ -1,13 +1,8 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - HTML
-  - Reference
-  - hidden
-  - グローバル属性
-translation_of: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`hidden`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は、要素はまだ、あるいはもはや*関連性*がないことを示す論理型属性です。例えば、ログインのプロセスが完了するまで使えない要素を隠すために使用できます。ブラウザーは、 `hidden` 属性を設定している要素を表示しません。

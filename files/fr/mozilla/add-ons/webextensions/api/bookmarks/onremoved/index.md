@@ -13,6 +13,7 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.

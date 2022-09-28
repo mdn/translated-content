@@ -2,6 +2,7 @@
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.getResponseHeader()**方法返回包含指定响应头文本的字符串。
@@ -45,11 +46,11 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.getResponseHeader")}}
+{{Compat}}
 
 ## 参见
 
-- 如何使用[XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- 如何使用[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}

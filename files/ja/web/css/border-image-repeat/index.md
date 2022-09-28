@@ -1,15 +1,8 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-image-repeat
-translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/border-image)に合うように合わせるかを定義します。

@@ -1,20 +1,8 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-translation_of: Web/API/WebXR_Device_API
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 **WebXR** は、仮想世界を提示するため（**仮想現実**、virtual reality、または **VR**）に、またはグラフィック画像を現実世界に追加するため（**拡張現実**、augmented reality、または **AR**）に設計されたハードウェアへの 3D シーンのレンダリングをサポートするために一緒に使用される標準のグループです。 **WebXR デバイス API** は WebXR 機能セットのコアを実装し、出力デバイスの選択を管理し、適切なフレームレートで選択したデバイスに 3D シーンをレンダリングし、入力コントローラーを使用して作成されたモーションベクトルを管理します。

@@ -3,6 +3,7 @@ title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
 original_slug: Web/Security/子资源完整性
 ---
+
 **子资源完整性**(SRI) 是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。
 
 ## SRI 如何工作
@@ -72,7 +73,7 @@ Content-Security-Policy: require-sri-for style;
 
 ### 在 script 标签中增加 SRI
 
-你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 https\://example.com/example-framework.js 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
+你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 `https://example.com/example-framework.js` 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
 
 ```html
 <script src="https://example.com/example-framework.js"

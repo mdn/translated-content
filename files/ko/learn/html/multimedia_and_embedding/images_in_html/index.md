@@ -1,7 +1,6 @@
 ---
 title: HTML의 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
@@ -159,7 +158,9 @@ Image titles aren't essential to include. It is often better to include such sup
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Earlier we said to never hotlink to images on other servers, but this is just for learning purposes, so we'll let you off this one time.
 

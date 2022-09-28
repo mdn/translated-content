@@ -1,14 +1,8 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
-tags:
-  - 要素
-  - リファレンス
-  - SVG
-  - SVG グラデーション
-browser-compat: svg.elements.stop
-translation_of: Web/SVG/Element/stop
 ---
+
 {{SVGRef}}
 
 SVG の **`<stop>`** 要素は、グラデーションで使用する色と位置を定義します。この要素は常に {{SVGElement("linearGradient")}} または {{SVGElement("radialGradient")}} 要素の子です。

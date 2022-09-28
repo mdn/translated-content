@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
+
 {{JSRef}}
 
 Le constructeur **`WeakRef`** crée un objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)

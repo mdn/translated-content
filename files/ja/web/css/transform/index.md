@@ -1,15 +1,8 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 座標変換
-  - recipe:css-property
-browser-compat: css.properties.transform
-translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。

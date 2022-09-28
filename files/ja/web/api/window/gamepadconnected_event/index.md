@@ -1,8 +1,8 @@
 ---
 title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
-translation_of: Web/API/Window/gamepadconnected_event
 ---
+
 `gamepadconnected` イベントは、ゲームパッドが接続されたことをブラウザが検出したとき、またはゲームパッドのボタン/軸が初めて使用されたときに発生します。
 
 ## 一般的な情報

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Data_structures
 translation_of: Web/JavaScript/Data_structures
 original_slug: Web/JavaScript/Structures_de_données
 ---
+
 {{jsSidebar("More")}}
 
 Les langages de programmation disposent de structures de données natives. Selon les langages, les structures mises à disposition peuvent être différentes. Dans cet article, on listera les structures de données natives en JavaScript. On détaillera leurs propriétés et les façons de les utiliser voire de les combiner. Dans certains cas, on comparera ces structures avec celles d'autres langages.

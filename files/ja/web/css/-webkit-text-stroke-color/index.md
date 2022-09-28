@@ -1,16 +1,8 @@
 ---
 title: '-webkit-text-stroke-color'
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-text-stroke-color
-translation_of: Web/CSS/-webkit-text-stroke-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-text-stroke-color`** は CSS のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/color_value)を示します。このプロパティが設定されない場合、 {{cssxref("color")}} プロパティの値が使用されます。

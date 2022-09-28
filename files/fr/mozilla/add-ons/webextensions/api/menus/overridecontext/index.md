@@ -11,6 +11,7 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
+
 {{AddonSidebar}}
 
 Masquer tous les éléments de menu par défaut de Firefox en faveur d'un menu contextuel personnalisé.

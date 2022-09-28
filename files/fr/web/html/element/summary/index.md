@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
@@ -133,14 +134,11 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}         | {{Spec2('HTML5.1')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## Voir aussi
 

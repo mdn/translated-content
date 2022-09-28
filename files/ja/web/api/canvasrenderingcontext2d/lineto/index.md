@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-browser-compat: api.CanvasRenderingContext2D.lineTo
-translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 {{APIRef}}
 

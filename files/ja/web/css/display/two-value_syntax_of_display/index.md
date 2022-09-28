@@ -1,13 +1,8 @@
 ---
 title: display の新しい 2 値構文への対応
 slug: Web/CSS/display/two-value_syntax_of_display
-tags:
-  - CSS
-  - 例
-  - 実験的
-  - ガイド
-  - 中級者
 ---
+
 {{CSSRef}}
 
 [CSS Display Module Level 3](https://drafts.csswg.org/css-display/) では、[`display`](/ja/docs/Web/CSS/display) プロパティの 2 値構文について記述しています。このガイドでは、この構文の変更について、その理由も含めて説明します。また、 `display` プロパティに組み込まれた後方互換性についても詳しく説明します。

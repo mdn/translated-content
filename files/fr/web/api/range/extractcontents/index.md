@@ -3,6 +3,7 @@ title: Range.extractContents()
 slug: Web/API/Range/extractContents
 translation_of: Web/API/Range/extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.extractContents()`** déplace le contenu du {{ domxref("Range") }} depuis l’arbre du document dans un {{ domxref("DocumentFragment") }}.

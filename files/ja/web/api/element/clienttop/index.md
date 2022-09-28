@@ -2,6 +2,7 @@
 title: Element.clientTop
 slug: Web/API/Element/clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 要素の上境界の幅をピクセル数で表します。これは要素の読み取り専用で整数型のプロパティです。

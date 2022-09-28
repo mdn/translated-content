@@ -79,7 +79,7 @@ GitHub にコードをアップロードする最良の方法は、コマンド�
     ```
 
 4. ここで、リポジトリーの GitHub Pages を有効にする必要があります。これを行うには、リポジトリーのトップページから _Settings_ を選び、左のサイドバーから _Pages_ を選択します。 *Source* の下にある "main" ブランチを選びます。ページが更新されるはずです。
-5. GitHub Pages セクションに再度アクセスすると、"Your site is ready to be published at https\://xxxxxx." という行が表示されるはずです。
+5. GitHub Pages セクションに再度アクセスすると、`Your site is ready to be published at https://xxxxxx.` という行が表示されるはずです。
 6. この URL をクリックすると、ホームページが `index.html` という名前であれば、例のライブバージョンに移動するはずです - このエントリーポイントに既定値で移動します。もし、あなたのサイトのエントリーポイントが何か別のもの、例えば `myPage.html` と呼ばれている場合は、 `https://xxxxxx/myPage.html` にアクセスする必要があります。
 
 ### GitHub の詳細

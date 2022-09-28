@@ -1,13 +1,8 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseFloat()`** 関数は、引数を (必要に応じてまず文字列に変換してから) 解釈し、浮動小数点値を返します。

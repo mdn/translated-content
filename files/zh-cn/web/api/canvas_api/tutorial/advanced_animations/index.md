@@ -2,6 +2,7 @@
 title: 高级动画
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
+
 {{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 在上一章，我们制作了[基本动画](/zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations)以及逐步了解了让物件移动的方法。在这一部分，我们将会对运动有更深的了解并学会添加一些符合物理的运动以让我们的动画更加高级。
@@ -295,7 +296,7 @@ ball.draw();
 
 ## 添加鼠标控制
 
-为了更好地控制小球，我们可以用 [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove)事件让它跟随鼠标活动。下面例子中，[click](/zh-CN/docs/Web/Events/click) 事件会释放小球然后让它重新跳起。
+为了更好地控制小球，我们可以用 [`mousemove`](/zh-CN/docs/Web/Reference/Events/mousemove)事件让它跟随鼠标活动。下面例子中，[click](/zh-CN/docs/Web/Events/click) 事件会释放小球然后让它重新跳起。
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

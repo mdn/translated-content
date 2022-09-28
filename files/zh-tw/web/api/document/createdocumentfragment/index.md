@@ -2,6 +2,7 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 建立新的 {{domxref("DocumentFragment")}}.
@@ -58,7 +59,7 @@ element.appendChild(fragment);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## 更多參考
 

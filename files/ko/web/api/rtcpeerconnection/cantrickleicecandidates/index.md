@@ -13,11 +13,13 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 ## Syntax
 
-     var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+```js
+ var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+```
 
 ### 값
 
-{{jsxref("Boolean")}}는 원격 유저가 trickled ICE candidate를 수용 할 수 있으면 `true `값이고, 그렇지 않으면 `false `값 입니다. 이미 원격 유저가 생성되었으면, 이 값은 `null` 입니다.
+{{jsxref("Boolean")}}는 원격 유저가 trickled ICE candidate를 수용 할 수 있으면 `true` 값이고, 그렇지 않으면 `false` 값 입니다. 이미 원격 유저가 생성되었으면, 이 값은 `null` 입니다.
 
 > **참고:** **참조:** 이 속성의 값은 로컬 피어가 {{domxref("RTCPeerConnection.setRemoteDescription()")}}를 호출하게 되면 결정됩니다. 여기에서 제공된 정보를 사용해서 ICE agent가 원격 유저가 trickled ICE candidate를 지원하는지에 대한 여부를 결정해줍니다.
 

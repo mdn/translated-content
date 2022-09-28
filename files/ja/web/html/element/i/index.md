@@ -1,14 +1,6 @@
 ---
 title: '<i>: 慣用的なテキスト要素'
 slug: Web/HTML/Element/i
-tags:
-  - 要素
-  - HTML
-  - HTML 文字レベルの意味付け
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.i
-translation_of: Web/HTML/Element/i
 ---
 
 {{HTMLRef}}

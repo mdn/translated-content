@@ -1,15 +1,8 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-column-end
-translation_of: Web/CSS/grid-column-end
 ---
+
 {{CSSRef}}
 
 **`grid-column-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のブロックの末尾側の端を指定します。

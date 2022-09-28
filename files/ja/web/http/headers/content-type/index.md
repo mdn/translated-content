@@ -1,17 +1,8 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - HTTP
-  - HTTP header
-  - Representation header
-  - Reference
-  - 表現ヘッダー
-  - ヘッダー
-browser-compat: http.headers.Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 表現ヘッダーは、リソースの{{Glossary("MIME type","メディア種別")}}を示すために使用します。</p>

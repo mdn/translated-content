@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.

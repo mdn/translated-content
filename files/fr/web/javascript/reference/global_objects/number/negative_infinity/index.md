@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 La propriété **`Number.NEGATIVE_INFINITY`** représente l'infini négatif.

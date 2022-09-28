@@ -1,8 +1,8 @@
 ---
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
-translation_of: Web/API/Web_Periodic_Background_Synchronization_API
 ---
+
 {{securecontext_header}}
 
 {{DefaultAPISidebar("Periodic Background Sync")}}

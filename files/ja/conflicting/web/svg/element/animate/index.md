@@ -1,12 +1,6 @@
 ---
 title: animateColor
 slug: conflicting/Web/SVG/Element/animate
-tags:
-  - Deprecated
-  - Element
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/animateColor
 original_slug: Web/SVG/Element/animateColor
 ---
 {{SVGRef}}{{deprecated_header}}
@@ -47,7 +41,7 @@ original_slug: Web/SVG/Element/animateColor
 
 ## DOM インターフェース
 
-この要素は [`SVGAnimateColorElement`](/ja/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement") インターフェースを提供します。
+この要素は [`SVGAnimateColorElement`](/ja/docs/DOM/SVGAnimateColorElement) インターフェースを提供します。
 
 ## 仕様
 

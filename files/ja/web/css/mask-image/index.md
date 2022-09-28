@@ -1,16 +1,8 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-image
-translation_of: Web/CSS/mask-image
 ---
+
 {{CSSRef}}
 
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。

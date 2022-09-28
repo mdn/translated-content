@@ -1,14 +1,8 @@
 ---
 title: 加算 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
+
 {{jsSidebar("Operators")}}
 
 加算演算子 (`+`) は、数値オペランドの合計または文字列の連結を生成します。

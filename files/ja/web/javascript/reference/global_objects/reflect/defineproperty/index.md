@@ -1,14 +1,8 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。

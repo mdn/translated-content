@@ -2,6 +2,7 @@
 title: JavaScript 中的相等性判断
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015 中有四种相等算法：

@@ -16,7 +16,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
 
 <p>Интернационализированное расширение может содержать такие же элементы, как и любое другое расширение — <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">фоновые скрипты</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">встраиваемые скрипты</a>, и т. д. — а также дополнительные инструменты, позволяющие переключаться между разными локализациями. Их можно представить следующим деревом директорий:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>корневая-директория-расширения/
   <ul>
    <li>_locales
@@ -237,7 +237,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Рассмотрим следующий пример:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>корневая-директория-расширения/
   <ul>
    <li>_locales
@@ -264,7 +264,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       <ul>
        <li>messages.json
         <ul>
-         <li><code>{ "colorLocalised": { "message": "<span lang="fr">couleur</span>", "description": "Color." }, ...}</code></li>
+         <li><code>{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}</code></li>
         </ul>
        </li>
       </ul>

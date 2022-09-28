@@ -5,6 +5,7 @@ translation_of: Web/API/HTMLInputElement
 page-type: web-api-interface
 browser-compat: api.HTMLInputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLInputElement`** fournit les propriétés et les méthodes pour manipuler les options, la disposition et la présentation des éléments [`<input>`](/fr/docs/Web/HTML/Element/input).

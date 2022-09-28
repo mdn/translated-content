@@ -1,13 +1,8 @@
 ---
 title: 段組みレイアウトでのボックス配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
-tags:
-  - CSS
-  - ガイド
-  - ボックス配置
-  - 段組み
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 ---
+
 {{CSSRef}}
 
 [ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、[段組みレイアウト](/ja/docs/Web/CSS/CSS_Columns)のコンテキストにおいてボックス配置がどのように働くかを探ります。このページとしての目的は、段組みレイアウトとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを合わせてお読みください。

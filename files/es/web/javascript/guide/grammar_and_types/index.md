@@ -51,7 +51,7 @@ La sintaxis de los **comentarios** es la misma que en C++ y en muchos otros leng
 
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
-> **Nota:** **Nota**: También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
+> **Nota:** También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
 
 ## Declaraciones
 
@@ -144,7 +144,7 @@ console.log(n * 32); // Registrará 0 en la consola
 
 Cuando declaras una variable fuera de cualquier función, se denomina variable _global_, porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable _local_, porque solo está disponible dentro de esa función.
 
-JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", "Checar")}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
+JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", "Checar")}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
 
 Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de `x` no se limita al bloque de instrucciones `if` inmediato.
 
@@ -304,13 +304,13 @@ El último estándar ECMAScript define ocho tipos de datos:
 
 - Siete tipos de datos que son {{Glossary("Primitive", "primitivos")}}:
 
-  1.  {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
-  2.  {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
-  3.  {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
-  4.  {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
-  5.  {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
-  6.  {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
-  7.  {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
+  1. {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
+  2. {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
+  3. {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
+  4. {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
+  5. {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
+  6. {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
+  7. {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
 
 - y {{Glossary("Object")}}
 
@@ -395,11 +395,11 @@ El siguiente ejemplo crea el arreglo `coffees` con tres elementos y `length` de 
 let coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("../Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
+> **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
 
 Si creas un arreglo utilizando un literal en un script de nivel superior, JavaScript interpreta el arreglo cada vez que evalúa la expresión que contiene el arreglo literal. Además, cada vez que llamas a una función se crea un literal usado en ella.
 
-> **Nota:** Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("../Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
+> **Nota:** Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
 
 #### Comas adicionales en arreglos literales
 
@@ -458,10 +458,12 @@ Los tipos {{JSxRef("Number")}} y {{JSxRef("BigInt")}} se pueden escribir en deci
 
 Aquí tienes algunos ejemplos de literales numéricos:
 
-    0, 117, -345, 123456789123456789n             (decimal, base 10)
-    015, 0001, -0o77, 0o777777777777n             (octal, base 8)
-    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
-    0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
+0, 117, -345, 123456789123456789n             (decimal, base 10)
+015, 0001, -0o77, 0o777777777777n             (octal, base 8)
+0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
+0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
 
 Para obtener más información, consulta {{JSxRef("Gramatica_lexica", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
 
@@ -478,14 +480,18 @@ La parte del exponente es una "`e`" o "`E`" seguida de un número entero, que pu
 
 Específicamente, la sintaxis es:
 
-    [(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
+[(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
 
 Por ejemplo:
 
-    3.1415926
-    -.123456789
-    -3.1E+12
-    .1e-23
+```
+3.1415926
+-.123456789
+-3.1E+12
+.1e-23
+```
 
 ### Objetos literales
 
@@ -561,7 +567,7 @@ var obj = {
 
 ### Expresiones regulares («RegExp») literales
 
-Un expresión regular literal (que se define en detalle {{JSxRef("../Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
+Un expresión regular literal (que se define en detalle {{JSxRef("Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
 
 ```js
 var re = /ab+c/;
@@ -659,7 +665,9 @@ console.log(quote);
 
 El resultado de esto sería:
 
-    El leyó "La cremación de Sam McGee" de R.W. Service.
+```
+El leyó "La cremación de Sam McGee" de R.W. Service.
+```
 
 Para incluir una barra invertida literal dentro de una cadena, debes escapar el caracter de barra invertida. Por ejemplo, para asignar la ruta del archivo `c:\temp` a una cadena, usa lo siguiente:
 
@@ -701,10 +709,10 @@ y foo también.`
 
 Este capítulo se enfoca en la sintaxis básica para los tipos y las declaraciones. Para aprender mas acerca de las construcciones en el lenguaje JavaScript, ve también los siguientes capítulos en esta guía:
 
-- {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
-- {{JSxRef("../Guide/Bucles_e_iteracion", "Bucles e iteración")}}
-- {{JSxRef("../Guide/Funciones", "Funciones")}}
-- {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}}
+- {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
+- {{JSxRef("Guide/Bucles_e_iteracion", "Bucles e iteración")}}
+- {{JSxRef("Guide/Funciones", "Funciones")}}
+- {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}}
 
 En el próximo capítulo, veremos las construcciones de control de flujo y el manejo de errores.
 

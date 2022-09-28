@@ -1,20 +1,8 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS 封じ込め
-  - CSS プロパティ
-  - レイアウト
-  - NeedsExample
-  - Paint
-  - リファレンス
-  - Style
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.contain
-translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 **`contain`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素とその内容が、できる限り多く、文書ツリーの他の部分から*独立している*ことを示します。これによってブラウザーがレイアウト、スタイル、描画、寸法、およびその組み合わせの再計算を、ページ全体ではなく DOM の限られた領域に対して行うことで、性能上の明らかな利点をもたらします。

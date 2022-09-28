@@ -1,13 +1,8 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.builtins.undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバルの **`undefined`** プロパティはプリミティブ値の `{{Glossary("Undefined", "undefined")}}` を表します。これは JavaScript における{{Glossary("Primitive", "プリミティブ型")}}の一つです。

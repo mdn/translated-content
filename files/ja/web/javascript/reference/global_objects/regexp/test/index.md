@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
+
 {{JSRef}}
 
 **`test()`** メソッドは、正規表現と指定された文字列の一致を調べるための検索を実行します。 `true` または `false` を返します。

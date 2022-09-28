@@ -1,25 +1,8 @@
 ---
 title: HTTP Cookie の使用
 slug: Web/HTTP/Cookies
-tags:
-  - 広告
-  - ブラウザー
-  - Cookie
-  - Cookies Article
-  - ガイド
-  - HTTP
-  - 履歴
-  - JavaScript
-  - プライバシー
-  - プロトコル
-  - サーバー
-  - ストレージ
-  - ウェブ開発
-  - データ
-  - リクエスト
-  - 追跡
-translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 **HTTP Cookie** (ウェブ Cookie、ブラウザー Cookie) は、サーバーがユーザーのウェブブラウザーに送信する小さなデータであり、ブラウザーに保存され、その後のリクエストと共に同じサーバーへ返送されます。一般的には、 2 つのリクエストが同じブラウザーから送信されたものであるかを知るために使用されます。例えば、ユーザーのログイン状態を維持することができます。 Cookie は、[ステートレス](/ja/docs/Web/HTTP/Overview#http_はステートレスであるがセッションレスではない)な HTTP プロトコルのためにステートフルな情報を記憶します。

@@ -8,20 +8,20 @@ slug: Glossary/TLS
 
 > **Note:** TLS 1.0 と 1.1 への対応は、2020 年の初頭にすべての主要なブラウザーから削除される予定です。今後はウェブサーバーが TLS 1.2 や 1.3 に対応していることを確認する必要があります。 Firefox はバージョン 74 時点で、古いバージョンの TLS を使用しているサーバーに接続する場合に [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーを返すようになる予定です ({{bug(1606734)}})。
 
-1.  仕様書
+1. 仕様書
 
-    1.  [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
+    1. [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 
-2.  Wikipedia の記事
+2. Wikipedia の記事
 
-    1.  {{Interwiki("wikipedia", "Transport Layer Security")}}
+    1. {{Interwiki("wikipedia", "Transport Layer Security")}}
 
-3.  関連情報
+3. 関連情報
 
-    1.  [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
-    2.  [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+    1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
+    2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
-4.  [用語集](/ja/docs/Glossary)
+4. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("HTTPS")}}
-    2.  {{Glossary("SSL")}}
+    1. {{Glossary("HTTPS")}}
+    2. {{Glossary("SSL")}}

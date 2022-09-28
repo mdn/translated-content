@@ -1,17 +1,8 @@
 ---
 title: 'WebSocket: close イベント'
 slug: Web/API/WebSocket/close_event
-tags:
-  - API
-  - Event
-  - リファレンス
-  - ウェブ
-  - WebSocket
-  - close
-  - イベント
-browser-compat: api.WebSocket.close_event
-translation_of: Web/API/WebSocket/close_event
 ---
+
 {{APIRef}}
 
 `close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。

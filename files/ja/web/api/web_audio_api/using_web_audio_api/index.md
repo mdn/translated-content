@@ -1,22 +1,8 @@
 ---
 title: Web Audio API の使用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
-  - ガイド
-  - 再生
-  - 音声
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 [Web Audio API](/ja/docs/Web/API/Web_Audio_API) の入門を見てみましょう。ここではいくつかの概念を短く確認してから、簡単な boombox の例で、音声トラックの読み込み、再生と一時停止、音量やステレオ位置の変更の方法を学びましょう。

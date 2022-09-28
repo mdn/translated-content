@@ -1,17 +1,8 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - offset-rotate
-  - recipe:css-property
-browser-compat: css.properties.offset-rotate
-translation_of: Web/CSS/offset-rotate
 ---
+
 {{CSSRef}}
 
 **`offset-rotate`** は CSS のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。

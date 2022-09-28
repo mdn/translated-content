@@ -2,6 +2,7 @@
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCSessionDescription`** 接口描述连接或潜在连接的一端的配置方式。 每一个`RTCSessionDescription` 由一个描述类型组成，该描述类型指示它所描述的请求/应答协商过程的{{Glossary("SDP")}} 协议的相关描述。
@@ -69,5 +70,5 @@ signalingChannel.onmessage = function (evt) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}

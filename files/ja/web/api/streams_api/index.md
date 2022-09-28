@@ -2,6 +2,7 @@
 title: Streams API
 slug: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}
 
 Streams API を使用すると、JavaScript がネットワーク経由で受信したデータのストリームにプログラムでアクセスし、開発者の希望どおりに処理できます。
@@ -24,7 +25,7 @@ Streams の基本的な使用法は、応答をストリームとして利用可
 
 {{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。
 
-> **Note:** **注**: ストリームの理論と実践の詳細については、[Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
+> **Note:** ストリームの理論と実践の詳細については、[Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
 
 ## ストリームのインターフェイス
 
@@ -62,7 +63,7 @@ Streams の基本的な使用法は、応答をストリームとして利用可
 
 ### ByteStream 関連のインターフェイス
 
-> **Warning:** **重要**: これらはまだどこにも実装されておらず、仕様の詳細が実装に十分な完成状態にあるかどうかについて疑問が提起されています。 これは時間とともに変化する可能性があります。
+> **Warning:** これらはまだどこにも実装されておらず、仕様の詳細が実装に十分な完成状態にあるかどうかについて疑問が提起されています。 これは時間とともに変化する可能性があります。
 
 - {{domxref("ReadableStreamBYOBReader")}}
   - : 開発者が提供するストリームデータの読み取りに使用できる BYOB（bring your own buffer、独自のバッファを持ち込む）リーダーを表します（カスタムの {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターなど）。

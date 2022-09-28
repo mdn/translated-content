@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.moveTo
-translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
 {{APIRef}}
 

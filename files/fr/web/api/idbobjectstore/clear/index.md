@@ -3,6 +3,7 @@ title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
 translation_of: Web/API/IDBObjectStore/clear
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`clear()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet {{domxref("IDBObjectStore","relié")}}.

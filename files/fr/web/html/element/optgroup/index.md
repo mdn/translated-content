@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/optgroup
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer un groupe d'options parmi lesquelles on peut choisir dans un élément {{HTMLElement("select")}}.
@@ -92,15 +93,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}         | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -37,9 +37,9 @@ translation_of: Web/API/Service_Worker_API
 
 서비스 워커를 살펴보면 다음과 같은 생명주기를 볼 수 있습니다.
 
-1.  다운로드
-2.  설치
-3.  활성화
+1. 다운로드
+2. 설치
+3. 활성화
 
 서비스 워커가 제어하는 사이트/페이지에 사용자가 처음 접근하는 순간 서비스 워커가 즉시 다운로드됩니다.
 
@@ -118,7 +118,7 @@ translation_of: Web/API/Service_Worker_API
 - {{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}
   - : Represents a service worker registration.
 - {{DOMxRef("ServiceWorkerState")}} {{Experimental_Inline}}
-  - : Associated with its [`ServiceWorker`](/ko/docs/Web/API/ServiceWorker "The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.")'s state.
+  - : Associated with its [`ServiceWorker`](/ko/docs/Web/API/ServiceWorker)'s state.
 - {{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}
   - : The SyncEvent interface represents a sync action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 - {{DOMxRef("SyncManager")}} {{Non-standard_Inline}}

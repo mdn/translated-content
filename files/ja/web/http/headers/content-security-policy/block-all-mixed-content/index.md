@@ -1,18 +1,8 @@
 ---
 title: 'CSP: block-all-mixed-content'
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Mixed Content
-  - Reference
-  - Security
-  - block-all-mixed-content
-browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
-translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **Warning:** このディレクティブは、仕様上、廃止されたものとしてマークされています。すべての混合コンテンツは、自動アップグレードできない場合、ブロックされるようになりました。

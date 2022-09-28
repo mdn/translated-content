@@ -68,9 +68,9 @@ Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/
 
 El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), y describía el uso combinado de tres técnicas.
 
-1.  La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
-2.  La segunda técnica era la idea de las [imágenes fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3.  El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Media_Queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
+2. La segunda técnica era la idea de las [imágenes fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
+3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Media_Queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
 
 Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
 
@@ -104,7 +104,9 @@ Al usar una cuadrícula flexible, solo necesitas añadir un punto de interrupci�
 
 En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn/CSS/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
 
-    target / context = result
+```
+target / context = result
+```
 
 Por ejemplo, si el tamaño de nuestra columna de destino es de 60 píxeles y el contexto (o contenedor) en el que se encuentra es de 960 píxeles, dividimos 60 por 960 para obtener un valor que podemos usar en nuestro CSS, después de mover el separador de cifras decimales dos posiciones a la derecha.
 

@@ -1,16 +1,8 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.muted
-translation_of: Web/API/HTMLMediaElement/muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.muted`** は、メディア要素がミュートされているかどうかを示します。

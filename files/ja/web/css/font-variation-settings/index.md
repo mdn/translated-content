@@ -1,15 +1,8 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variation-settings
-translation_of: Web/CSS/font-variation-settings
 ---
+
 {{CSSRef}}
 
 **`font-variation-settings`** は CSS のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)に対する低水準の制御を提供します。

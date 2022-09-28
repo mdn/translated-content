@@ -1,17 +1,8 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-tags:
-  - HTML
-  - HTML フォーム
-  - Reference
-  - checkbox
-  - チェックボックス
-  - フォーム
-  - 入力型
-  - 要素
-translation_of: Web/HTML/Element/input/checkbox
 ---
+
 {{HTMLRef}}
 
 {{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して (または選択せずに) 送信することができます。
@@ -300,6 +291,7 @@ otherCheckbox.addEventListener('change', () => {
 ```
 
 ### 結果
+
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
 ## 仕様書

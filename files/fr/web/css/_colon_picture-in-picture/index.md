@@ -6,6 +6,7 @@ browser-compat: css.selectors.picture-in-picture
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:picture-in-picture`** cible les éléments qui sont présentement affichés en incrustation vidéo (<i lang="en">picture-in-picture</i>).

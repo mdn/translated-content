@@ -2,6 +2,7 @@
 title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataEvent.dataTransfer`** 屬性保留了拖曳操作中的資料（指向一個 {{domxref("DataTransfer")}} 物件）。
@@ -40,4 +41,4 @@ dragTarget.addEventListener("dragend", function(ev) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.DragEvent.dataTransfer")}}
+{{Compat}}

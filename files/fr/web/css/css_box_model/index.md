@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model
 original_slug: Web/CSS/Modèle_de_boîte_CSS
 ---
+
 {{CSSRef}}
 
 **Le modèle de boîte CSS** (_Basic Box Model_ en anglais) est un module CSS qui définit les boîtes rectangulaires (y compris leurs zones de remplissage (_padding_) et de marges) qui sont générées pour disposer les éléments selon leur modèle de mise en forme visuelle.

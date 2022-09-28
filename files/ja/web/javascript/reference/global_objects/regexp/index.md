@@ -1,16 +1,8 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - クラス
-  - JavaScript
-  - リファレンス
-  - RegExp
-  - 正規表現
-  - ポリフィル
-browser-compat: javascript.builtins.RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** オブジェクトは、パターンでテキストを検索するために使用します。

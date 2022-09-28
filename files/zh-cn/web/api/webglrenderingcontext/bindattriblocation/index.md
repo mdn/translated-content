@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 WebGL API 的 WebGLRenderingContext.bindAttribLocation（）方法将通用顶点索引绑定到属性变量。

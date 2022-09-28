@@ -1,15 +1,8 @@
 ---
 title: CSS 論理的プロパティと値
 slug: Web/CSS/CSS_Logical_Properties
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - Landing
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
+
 {{CSSRef}}
 
 **CSS 論理的プロパティと値** (CSS Logical Properties and Values) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、論理的プロパティと値を導入して、物理的ではなく論理的に方向や寸法をマッピングして、レイアウトを制御することができるようにします。

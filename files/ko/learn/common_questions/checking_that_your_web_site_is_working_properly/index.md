@@ -1,7 +1,6 @@
 ---
 title: 웹 사이트가 제대로 동작하는지 확인하는 방법
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Learn/Common_questions/웹_사이트가_제대로_동작하는지_확인
 ---
 이번에는 웹사이트 동작과 관련한 다양한 문제해결 단계와 그 문제들을 해결하기 위한 방법들을 알아보겠습니다.
@@ -58,7 +57,7 @@ There's the problem, that "404" at the bottom. "404" means "resource not found",
 
 Servers respond with a status message whenever they receive a request. Here are the most common statuses:
 
-- **<span id="cke_bm_110S" class="hidden"></span>200: OK**
+- **200: OK**
   - : The resource you asked for was delivered.
 - **301: Moved permanently**
   - : The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.

@@ -1,15 +1,8 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
+
 {{JSRef}}
 
 **`Uint8Array`** は型付き配列で、 8 ビット符号なし整数値の配列を表します。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。

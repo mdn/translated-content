@@ -1,13 +1,8 @@
 ---
 title: <tspan>
 slug: Web/SVG/Element/tspan
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
-translation_of: Web/SVG/Element/tspan
 ---
+
 {{SVGRef}}
 
 SVG の **`<tspan>`** 要素は、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
