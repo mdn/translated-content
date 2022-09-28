@@ -42,9 +42,13 @@ background-clip: unset;
 - `text` {{experimental_inline}}
   - : L'arrière-plan est limité (rogné) au texte en premier plan.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

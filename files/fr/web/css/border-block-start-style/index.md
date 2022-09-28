@@ -35,9 +35,13 @@ border-block-start-style: groove;
 - `<'border-style'>`
   - : Le style utilisé pour la ligne de la bordure, voir {{cssxref("border-style")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -39,9 +39,13 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 - `isolate`
   - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

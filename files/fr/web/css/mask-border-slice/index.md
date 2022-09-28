@@ -67,9 +67,13 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 - `fill`
   - : La zone centrale est conservée ; sa largeur et sa hauteur correspondent aux dimensions utilisées pour les régions haute et gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 

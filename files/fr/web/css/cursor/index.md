@@ -350,9 +350,13 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Notes d'utilisation
 

@@ -48,9 +48,13 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 - `<'column-count'>`
   - : Une quantité (type {{cssxref("&lt;integer&gt;")}}) strictement positive qui décrit le nombre idéal de colonnes parmi lesquelles disposer le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas une valeur automatique, cette valeur indique simplement le nombre maximal de colonnes.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

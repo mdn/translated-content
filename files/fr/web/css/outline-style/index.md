@@ -56,9 +56,13 @@ outline-style: unset;
 - `outset`
   - : La forme obtenue est opposée à `inset` : la bordure semble ressortir du document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

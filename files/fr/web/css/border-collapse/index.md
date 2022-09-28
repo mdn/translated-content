@@ -40,9 +40,13 @@ La propriété `border-collapse` est définie avec un seul mot-clé parmi ceux d
 - `separate`
   - : Un mot-clé qui indique que le modèle des bordures séparées doit être utilisé. C'est la valeur par défaut.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

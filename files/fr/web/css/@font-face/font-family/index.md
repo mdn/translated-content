@@ -29,9 +29,13 @@ font-family: exemplepolice;
 - `<family-name>`
   - : Définit le nom de la police de caractères.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

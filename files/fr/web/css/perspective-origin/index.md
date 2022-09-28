@@ -57,9 +57,13 @@ perspective-origin: unset;
     - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
     - `bottom` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

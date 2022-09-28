@@ -41,9 +41,13 @@ text-decoration: unset;
 - {{cssxref("text-decoration-style")}}
   - : Cette valeur indique le style à utiliser pour la décoration.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

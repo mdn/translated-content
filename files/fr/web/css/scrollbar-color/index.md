@@ -81,9 +81,13 @@ scrollbar-color: unset;
 
     > **Note :** Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

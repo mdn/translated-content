@@ -32,9 +32,13 @@ border-block-start-width: thick;
 - `<'border-width'>`
   - : Voir {{cssxref("border-width")}}
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

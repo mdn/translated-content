@@ -53,9 +53,13 @@ border-color: inherit;
 - `inherit`
   - : Un mot-clé qui indique que les quatre valeurs sont héritées depuis la valeur calculée de la propriété pour l'élément parent.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

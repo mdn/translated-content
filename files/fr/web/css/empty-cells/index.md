@@ -38,9 +38,13 @@ Cette propriété se définit avec l'un des mots-clés suivants.
 - `hide`
   - : Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

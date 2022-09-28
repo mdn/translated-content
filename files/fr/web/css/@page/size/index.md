@@ -78,6 +78,14 @@ size: A4 portrait;
     - `ledger`
       - : Ce mot-clé correspond à la taille standard des pages d'un livre en grand format aux États-Unis. Cela correspond à : 11in x 17in.
 
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ```css

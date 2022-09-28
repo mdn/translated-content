@@ -63,9 +63,13 @@ La propriété `text-align` peut être définie grâce à l'un des mots-clés de
 - {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
   - : Lorsque cette valeur est appliquée sur une cellule de tableau, elle indique le caractère sur lequel doit être aligné le contenu de la cellule.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

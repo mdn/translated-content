@@ -43,9 +43,13 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 - `invert`
   - : Afin de s'assurer que la bordure est visible, on applique une inversion de couleur avec l'arrière-plan. Cela permet de renforcer le contraste, quelle que soit la couleur de l'arrière-plan. Cette valeur ne doit pas nécessairement être supportée par les navigateurs. Si elle ne l'est pas, ils considèreront la règle comme invalide.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

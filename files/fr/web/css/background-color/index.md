@@ -57,9 +57,13 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 - `<color>`
   - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur uniforme de l'arrière-plan. Même si une ou plusieurs images sont définies grâce à {{cssxref("background-image")}}, la couleur peut avoir un impact en fonction de la transparence des images. De façon générale, c'est une bonne pratique que de définir une couleur malgré la présence d'image pour prévenir aux problèmes de chargement des images.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

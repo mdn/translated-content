@@ -30,9 +30,13 @@ scroll-snap-destination: unset;
 - `<position>`
   - : Définit le décalage entre le bord du viewport du conteneur et le point d'accroche à utiliser lors du défilement. La première valeur indique la coordonnée horizontale et la seconde indique la coordonnée verticale.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

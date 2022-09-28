@@ -64,9 +64,13 @@ background-position-x: unset;
 - `<percentage>`
   - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan, proportionnellement à la largeur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 

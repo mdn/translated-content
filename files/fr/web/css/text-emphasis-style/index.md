@@ -58,9 +58,13 @@ text-emphasis-style: unset;
 - `<string>`
   - : Utilise la chaîne fournie comme marque. Attention, l'agent utilisateur peut tronquer la chaîne ou choisir d'ignorer les chaînes qui ont plus d'un graphème. Il est donc conseillé de n'utiliser qu'une seule lettre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

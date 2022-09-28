@@ -48,9 +48,13 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 - `ideographic`
   - : La première lettre est centrée par rapport à la N-ième ligne utilisée pour la lettrine.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

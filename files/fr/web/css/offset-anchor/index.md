@@ -50,9 +50,13 @@ offset-anchor: unset;
 - `<position>`
   - : Une position ({{cssxref("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{cssxref("&lt;position&gt;")}} et {{cssxref("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour `<position>`, excepté pour `background(-position)`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -36,9 +36,13 @@ text-emphasis-color: unset;
 - `<color>`
   - : Définit la couleur utilisée pour les marques. Si on ne définit pas de couleur, ce sera la couleur courante du texte qui sera utilisée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -34,9 +34,13 @@ font-kerning: unset;
 - `none`
   - : Ce mot-clé empêche le navigateur d'utiliser l'information de crénage stockée dans la police.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

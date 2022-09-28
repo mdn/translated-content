@@ -20,11 +20,13 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 Lorsque la valeur du descripteur `system` est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`, c'est le descripteur `symbols` qui est utilisé à la place de `additive-symbols` afin de définir les symboles utilisés pour le compteur.
 
-## Syntaxe
+## Définition formelle
 
-### Syntaxe formelle
+{{CSSInfo}}
 
-{{csssyntax}}
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -104,9 +104,13 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
 - `left`
   - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

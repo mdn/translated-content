@@ -55,9 +55,13 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 - `<'outline-color'>`
   - : Depuis Gecko 1.9 (Firefox 3), la valeur de la propriété {{cssxref("color")}} de l'élément est utilisée. Voir {{cssxref("outline-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

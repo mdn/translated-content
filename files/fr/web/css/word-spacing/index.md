@@ -45,9 +45,13 @@ word-spacing: unset;
 - `<percentage>`
   - : Une valeur en pourcentages définit la taille de l'inter-mot à utiliser par rapport à la position du prochain caractère (si on utilise `-100%`, l'espace sera nul et si on utilise `100%`, il sera doublé). Voir {{cssxref("&lt;percentage&gt;")}} pour les différentes valeurs et unités possibles.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 

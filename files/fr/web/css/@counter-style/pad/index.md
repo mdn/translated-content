@@ -28,9 +28,13 @@ pad: 3 "0";
 - `<integer> && <symbol>`
   - : La composante `<integer>` indique la longueur minimale du marqueur. La valeur doit être positive. Si la représentation du marqueur est plus courte, elle sera complétée avec la valeur indiquée par la composante `<symbol>`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -34,9 +34,13 @@ overflow-anchor: unset;
 - `none`
   - : L'élément ne sera pas sélectionné comme ancre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

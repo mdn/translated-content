@@ -42,9 +42,13 @@ inset-block-start: unset;
 
 La propriété `inset-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

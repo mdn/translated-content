@@ -66,9 +66,13 @@ grid-column-end: unset;
 
     `<custom-ident>` ne peut pas prendre la valeur `span`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

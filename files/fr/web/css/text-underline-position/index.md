@@ -58,9 +58,13 @@ Cette propriété est héritée sur les différents éléments et n'est pas réi
 - `below`{{non-standard_inline}}
   - : Ce mot-clé force la ligne à être dessinée sous le texte. Lorsqu'on utilise un texte alphabétique, la valeur `auto` aura un effet semblable.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

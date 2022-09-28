@@ -43,9 +43,13 @@ Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la p
 
 La propriété `inset-block` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

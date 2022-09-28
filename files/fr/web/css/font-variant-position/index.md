@@ -43,9 +43,13 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 - `super`
   - : Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

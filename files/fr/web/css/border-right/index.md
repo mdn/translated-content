@@ -59,9 +59,13 @@ border-right: medium dashed green;
 - `<color>`
   - : Voir {{cssxref("border-right-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

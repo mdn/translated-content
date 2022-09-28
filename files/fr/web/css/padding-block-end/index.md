@@ -39,9 +39,13 @@ padding-block-end: unset;
 
 La propriété `padding-block-end` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

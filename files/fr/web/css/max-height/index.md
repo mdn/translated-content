@@ -57,9 +57,13 @@ max-height: unset;
 - `fit-content` {{experimental_inline}}
   - : Un synonyme pour `max-content`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

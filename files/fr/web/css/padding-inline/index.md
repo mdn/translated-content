@@ -39,9 +39,13 @@ Ces valeurs peuvent être définies individuellement grâce aux propriétés dé
 
 La propriété `padding-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

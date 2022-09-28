@@ -43,9 +43,13 @@ rotate: 1 1 1 90deg;
 - `none`
   - : Cette valeur indique qu'aucune rotation ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -65,9 +65,13 @@ right: unset;
 - `inherit`
   - : Un mot-clé indiquant que la valeur est identique à la valeur calculée de l'élément parent (qui peut ne pas être sont bloc contenant). Cette valeur calculée est manipulée comme si elle était de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou comme si elle était le mot-clé `auto`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -23,9 +23,13 @@ fallback: lower-alpha;
 fallback: custom-gangnam-style;
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

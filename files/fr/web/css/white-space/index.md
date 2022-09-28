@@ -108,9 +108,13 @@ Le tableau qui suit résume le comportement des différentes valeurs :
   </tbody>
 </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -57,9 +57,13 @@ La propriété `box-sizing` peut être définie avec l'un des mots-clés suivant
 
     Ici, les dimensions de l'élément sont calculées comme suit : _largeur = bordure + marge interne + largeur du contenu_, et _hauteur = bordure + marge interne + hauteur du contenu_.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 > **Note :** La valeur `padding-box` a été dépréciée.
 

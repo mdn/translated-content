@@ -42,9 +42,13 @@ translate: 50% 105px 5rem;
 - `none`
   - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

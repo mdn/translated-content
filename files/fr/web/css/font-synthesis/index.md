@@ -46,9 +46,13 @@ Cette propriété peut prendre l'une des formes suivantes :
 - `style`
   - : Ce mot-clé indique qu'une fonte italique peut être synthétisée si besoin.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

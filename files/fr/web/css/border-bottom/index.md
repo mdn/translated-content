@@ -59,9 +59,13 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 - `<color>`
   - : Voir {{cssxref("border-bottom-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

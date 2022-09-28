@@ -40,9 +40,13 @@ offset-rotate: .5turn;
 - `reverse`
   - : L'élément est tourné de façon similaire à `auto`, mais fait face à la direction opposée. Cette valeur est équivalente à `auto 180deg`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

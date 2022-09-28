@@ -37,9 +37,13 @@ La propriété `border-block` peut être utilisée avec une ou plusieurs de ces 
 - `<'color'>`
   - : La couleur de la bordure. Voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

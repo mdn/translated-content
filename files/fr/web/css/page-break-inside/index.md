@@ -34,9 +34,13 @@ page-break-inside: unset;
 - `avoid`
   - : L'agent utilisateur évite d'insérer un saut de page au sein de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Alias avec `break-inside`
 

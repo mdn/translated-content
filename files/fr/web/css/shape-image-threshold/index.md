@@ -35,9 +35,13 @@ shape-image-threshold: unset;
 - `<number>`
   - : Un nombre ({{cssxref("&lt;number&gt;")}}) représentant le seuil utilisé pour extraire une forme d'une image. La forme est définie par les pixels dont la valeur du canal alpha est supérieur au seuil indiqué. Un seuil qui est inférieur à 0.0 (transparence totale) ou supérieur à 1.0 (opacité totale) sera ramené dans cet intervalle.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

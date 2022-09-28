@@ -59,9 +59,13 @@ scroll-snap-type: unset;
 - `proximity`
   - : Le _viewport_ visuel du conteneur peut s'accrocher à un point d'accroche si aucun défilement n'est en cours, selon les paramètres de défilement de l'agent utilisateur. Si du contenu est ajouté, déplacé, supprimé ou redimensionne, le décalage induit peut être ajusté pour rester sur ce point d'accroche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

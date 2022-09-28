@@ -75,9 +75,13 @@ La propriété `width` se définit avec
     - La largeur intrinsèque minimum
     - Le minimum entre la largeur intrinsèque préférée et la largeur disponible
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

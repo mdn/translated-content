@@ -41,9 +41,13 @@ grid-template-areas: unset;
 - `<string>+`
   - : Un ligne est créée pour chaque chaîne. Une colonne est créée pour chaque composant de la chaîne de caractères. Si on a un même composant réutilisé sur différentes lignes, cela créera une cellule sur les différentes lignes et colonnes. Il est nécessaire que ces cellules forment un rectangle, sinon, la déclaration est invalide. Voir {{cssxref("&lt;string&gt;")}} pour plus d'informations sur les valeurs de ce type.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 

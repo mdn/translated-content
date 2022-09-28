@@ -56,9 +56,13 @@ min-width: unset;
 - `fit-content` {{experimental_inline}}
   - : La largeur calculée par `min(max-content, max(min-content, fill-available))`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -63,9 +63,13 @@ La propriété `line-height` peut être définie grâce :
 - `-moz-block-height` {{non-standard_inline}}
   - : La hauteur de la ligne correspond à la hauteur du contenu pour le bloc courant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

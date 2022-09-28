@@ -52,9 +52,13 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
 - \<rayon-de-flou>
   - : Optionnel. C'est une valeur {{cssxref("&lt;length&gt;")}}). Plus la valeur sera élevée, plus le flou sera important ; l'ombre deviendra plus large et plus légère. Si non utilisée, elle a pour défaut `0`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

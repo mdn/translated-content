@@ -41,6 +41,14 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 - {{cssxref("integer")}}
   - : Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.
 
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ### HTML

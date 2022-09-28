@@ -36,9 +36,13 @@ ruby-position: unset;
 - `inter-character`
   - : Un mot-clé qui indique que les annotations ruby doivent être placées entre les différents caractères.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

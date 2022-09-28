@@ -53,9 +53,13 @@ Cette propriété se définit grâce à :
 - `none`
   - : Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur. Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -64,9 +64,13 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 - `-moz-hidden-unscrollable` {{non-standard_inline}}
   - : Principalement utilisé en interne et par les thèmes. Cela désactive le défilement pour les éléments XML racines `<html>`, `<body>` (avec les flèches du clavier et la roue de la souris).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

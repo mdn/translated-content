@@ -44,9 +44,13 @@ Elle est liée aux propriétés {{cssxref("inset-block-start")}}, {{cssxref("ins
 
 La propriété `inset-inline-end` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

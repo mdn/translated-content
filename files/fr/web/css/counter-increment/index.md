@@ -52,9 +52,13 @@ La propriété `counter-increment` peut être définie de deux façons :
 - `none`
   - : Aucun compteur n'est incrémenté. Cette valeur est utilisée comme valeur par défaut et permet également d'annuler des incréments décrits par des règles moins spécifiques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

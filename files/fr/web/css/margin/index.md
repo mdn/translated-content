@@ -60,9 +60,13 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 - `auto`
   - : `auto` est remplacé par une valeur adaptée (il peut être utilisé pour centrer les blocs, par exemple, `div { width:50%; margin:0 auto; }` permet de centrer un conteneur `div` horizontalement).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

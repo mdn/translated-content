@@ -34,9 +34,13 @@ text-decoration-skip: unset;
 - `auto`
   - : La valeur par défaut : la ligne (au dessus ou en dessous du texte) est uniquement dessinée de façon à ne pas être proche des jambages ou hampes des glyphes. Autrement dit, la ligne est interrompue à chaque fois qu'elle croise un glyphe. ![An example of "text-decoration-skip: ink;".](decoration-skip-ink.png)
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

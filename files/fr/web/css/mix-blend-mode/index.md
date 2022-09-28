@@ -42,9 +42,13 @@ mix-blend-mode: unset;
 - `<blend-mode>`
   - : Indique comment la fusion des modes doit intervenir (cf. {{cssxref("&lt;blend-mode&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

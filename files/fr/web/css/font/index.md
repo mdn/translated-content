@@ -132,9 +132,13 @@ Si `font` est définie comme une propriété raccourcie :
 
     La plupart du temps, les navigateurs implémentent d'autres valeurs, préfixées. Par exemple, Gecko implémente `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list` and `-moz-field`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

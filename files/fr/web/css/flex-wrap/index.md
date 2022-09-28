@@ -37,9 +37,13 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

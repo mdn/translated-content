@@ -59,9 +59,13 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 - `<color>`
   - : Voir {{cssxref("border-top-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

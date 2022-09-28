@@ -44,9 +44,13 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 - `<'column-rule-color'>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

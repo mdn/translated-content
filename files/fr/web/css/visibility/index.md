@@ -47,9 +47,13 @@ La propriété `visibility` est définie avec l'un des mots-clés suivants.
     - Pour les éléments XUL, la taille calculée des éléments vaut toujours zéro, quel que soit les autres styles qui pourraient affecter la taille, les marges continuent de s'appliquer.
     - Pour les autres éléments, `collapse` est traité comme `hidden`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Interpolation
 

@@ -36,9 +36,13 @@ margin-block-end: inherit;
 
 La propriété `margin-block-end` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -39,9 +39,13 @@ border-block-start-color: inherit;
 - `<'border-color'>`
   - : Voir {{cssxref("border-color")}}
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -32,9 +32,13 @@ La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la c
 - `<color>`
   - : La couleur du contour (cf. {{cssxref("&lt;color&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

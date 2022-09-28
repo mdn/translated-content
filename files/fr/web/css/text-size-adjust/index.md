@@ -48,9 +48,13 @@ La propriété `text-size-adjust` est définie avec le mot-clé `none` ou le mot
 - `<percentage>`
   - : Une valeur exprimée en pourcentages (type de données {{cssxref("&lt;percentage&gt;")}}. Cette valeur est synonyme du mot-clé `auto` et ajoute comme information le taux d'amplification à utiliser sur la police avec l'algorithme.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 

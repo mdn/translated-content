@@ -52,9 +52,13 @@ Un effet très visible est : `text-rendering : optimizeLegibility;` qui active l
 
     WebKit applique précisément la valeur définie, mais Gecko traite la valeur de la même manière que `optimizeLegibility`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

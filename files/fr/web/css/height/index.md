@@ -64,9 +64,13 @@ height: unset;
     - La hauteur minimale intrinsèque.
     - Le minimum entre la hauteur intrinsèque préférrée et la hauteur disponible
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 

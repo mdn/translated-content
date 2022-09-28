@@ -34,9 +34,13 @@ border-inline-end-style: groove;
 - `<'border-style'>`
   - : Le style utilisé pour la ligne de la bordure sur ce côté, voir {{cssxref("border-style")}}
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

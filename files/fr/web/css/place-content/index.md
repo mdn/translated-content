@@ -75,7 +75,11 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
 - `stretch`
   - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe correspondant, tous les éléments dimensionnés automatiquement seront étirés de la même façon (et pas de façon proportionnelle) tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes) afin que la taille de l'ensemble des éléments soit exactement celle du conteneur.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 

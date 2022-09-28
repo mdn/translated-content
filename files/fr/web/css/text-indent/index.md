@@ -52,9 +52,13 @@ text-indent: unset;
 - `hanging` {{experimental_inline}}
   - : Inverse les lignes indentées. Toutes les lignes, sauf la première, seront indentées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

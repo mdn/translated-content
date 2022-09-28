@@ -38,9 +38,13 @@ mask-border-source: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : Une référence vers une image qu'on utilise pour le masque de la bordure.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

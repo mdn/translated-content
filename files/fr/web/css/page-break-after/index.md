@@ -65,9 +65,13 @@ Si pour des raisons de compatibilité, on doit traiter `page-break-after` comme 
 - `verso` {{experimental_inline}}
   - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -40,9 +40,13 @@ Cette propriété est définie avec le mot-clé `normal` ou avec une chaîne de 
 - `<string>`
   - : Cette chaîne de caractère force le navigateur à utiliser les glyphes de la langue correspondante. Les valeurs qui peuvent être utilisées sont [les valeurs du système de langue OpenType](https://www.microsoft.com/typography/otspec/languagetags.htm).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -34,9 +34,13 @@ border-block-end-style: groove;
 - `<'border-style'>`
   - : Le style de la ligne pour la bordure, voir {{cssxref("border-style")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

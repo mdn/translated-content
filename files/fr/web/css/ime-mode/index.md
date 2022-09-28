@@ -54,9 +54,13 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 - `disabled`
   - : L'éditeur de méthode d'entrée est désactivé et ne peut pas être activé par l'utilisateur.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

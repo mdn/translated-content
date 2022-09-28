@@ -43,9 +43,13 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
     - La déclaration provient de l'auteur (du document)
       - : Le moteur remonte [la cascade](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_cascade_et_l_h%C3%A9ritage) au niveau de l'utilisateur afin de calculer la valeur comme si aucune règle ne provenait du document pour cette propriété.Cette origine inclue [les origines des surcharges DOM et des animations](https://www.w3.org/TR/css-cascade-4/#origin).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

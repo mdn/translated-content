@@ -64,9 +64,13 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
 - `<color>`
   - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui fournit la couleur pour les éléments textuels de l'élément.
 
-### Formal syntax
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

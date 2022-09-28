@@ -52,9 +52,13 @@ La propriété `break-inside` se définit avec un mot-clé parmi ceux de la list
 - `avoid-region` {{experimental_inline}}
   - : Cette valeur interdit toute rupture de région au sein de la boîte.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Synonymes pour `page-break-inside`
 

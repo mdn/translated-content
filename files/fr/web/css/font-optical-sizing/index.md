@@ -36,9 +36,13 @@ font-optical-sizing: unset;
 - `auto`
   - : L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

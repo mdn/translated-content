@@ -64,9 +64,13 @@ top: unset;
     - Pour les éléments positionnés de façon absolue, la position de l'élément en fonction de la propriété {{cssxref("bottom")}} et qui traite `height: auto` comme une hauteur basée sur le contenu. Si `bottom`vaut également `auto`, l'élément est positionné verticalement comme s'il avait été un élément statique.
     - Pour les éléments positionnés de façon relative, le décalage de l'élément par rapport à sa position originale, basée sur la propriété {{cssxref("bottom")}}. Si `bottom` vaut également `auto`, aucun décalage n'est appliqué.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

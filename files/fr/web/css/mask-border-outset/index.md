@@ -53,9 +53,13 @@ La propriété `mask-border-outset` peut être utilisée avec une, deux, trois o
 - {{cssxref("&lt;number&gt;")}}
   - : Le décalage du masque, exprimé comme un multiple de {{cssxref("border-width")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 

@@ -74,9 +74,13 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
     ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

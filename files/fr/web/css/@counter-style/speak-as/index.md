@@ -50,9 +50,13 @@ speak-as: <counter-style-name>;
 - `<counter-style-name>`
   - : Si la valeur du descripteur est le nom d'un autre style de compteur, ce sera la valeur de `speak-as` de ce style qui sera utilisée. Si la style visé n'existe pas, cette valeur sera alors synonyme de `auto`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

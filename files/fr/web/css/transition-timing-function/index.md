@@ -98,9 +98,13 @@ transition-timing-function: unset;
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

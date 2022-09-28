@@ -55,9 +55,13 @@ On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px
 
     `0` entraînera une haute nulle pour le texte (qui sera donc caché). Pour d'anciens navigateurs, comme Firefox avant la version 40, `0` était géré comme `none`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

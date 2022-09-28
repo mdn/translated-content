@@ -72,9 +72,13 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 - `none`
   - : Aucune transformation ne sera appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 > **Note :** Si on utilise plusieurs fonctions dont [`perspective()`](</fr/docs/Web/CSS/transform-function/perspective()>), celle-ci devra apparaître en premier.
 

@@ -35,9 +35,13 @@ order: unset;
 - `<integer>`
   - : Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

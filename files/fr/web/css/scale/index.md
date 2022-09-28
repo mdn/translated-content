@@ -38,9 +38,13 @@ scale: 2 0.5 2;
 - `none`
   - : Cette valeur indique qu'aucune mise à l'échelle ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

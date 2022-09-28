@@ -30,9 +30,13 @@ The border width in the other dimension can be set with {{cssxref("border-block-
 - `<'border-width'>`
   - : La largeur de la bordure. Voir {{ cssxref("border-width") }}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

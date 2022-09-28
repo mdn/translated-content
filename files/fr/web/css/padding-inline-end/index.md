@@ -39,9 +39,13 @@ padding-inline-end: unset;
 
 La propriété `padding-inline-end` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

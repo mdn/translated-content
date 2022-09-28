@@ -84,9 +84,13 @@ Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter
 - `avoid-region` {{experimental_inline}}
   - : Empêche toute rupture de région après boîte de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Synonymes pour `page-break-after`
 

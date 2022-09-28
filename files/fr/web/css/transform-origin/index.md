@@ -106,9 +106,13 @@ Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

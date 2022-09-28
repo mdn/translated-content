@@ -39,9 +39,13 @@ La propriété `transform-box` est définie grâce à l'un des mots-clés suivan
 - `view-box`
   - : Le plus proche _viewport_ {{Glossary("SVG")}} est utilisé comme boîte de référence. Si l'attribut {{SVGAttr("viewBox")}} est défini pour le _viewport_ de l'élément, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte de référence sont définies avec les valeurs de hauteur et largeur de l'attribut `viewBox`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 

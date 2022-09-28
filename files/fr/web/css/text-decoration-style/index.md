@@ -49,9 +49,13 @@ text-decoration-style: unset;
 - `wavy`
   - : Dessine une ligne ondulée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

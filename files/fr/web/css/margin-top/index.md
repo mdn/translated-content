@@ -46,9 +46,13 @@ Le mot-clé `auto` ou une valeur de longueur (`<length>`) ou de pourcentage (`<p
 - `auto`
   - : Voir {{cssxref("margin")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

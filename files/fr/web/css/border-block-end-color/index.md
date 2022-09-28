@@ -39,9 +39,13 @@ border-block-end-color: inherit;
 - `<'border-color'>`
   - : La couleur utilisée pour la bordure, voir {{cssxref("border-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

@@ -40,9 +40,13 @@ transform-style: unset;
 - `preserve-3d`
   - : Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 

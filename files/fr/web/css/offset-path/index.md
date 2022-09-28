@@ -66,9 +66,13 @@ offset-path: unset;
 - `none`
   - : Aucun chemin de mouvement n'est indiqué.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

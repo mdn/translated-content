@@ -35,9 +35,13 @@ Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{c
 - `<symbol>`
   - : Représente le symbole à utiliser pour le système de comptage. La valeur du descripteur `symbols` peut être :
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

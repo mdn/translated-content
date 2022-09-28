@@ -141,9 +141,13 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

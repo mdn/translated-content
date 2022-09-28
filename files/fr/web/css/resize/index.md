@@ -50,9 +50,13 @@ La propriété `resize` peut être définie avec l'un des mots-clés suivants.
 
 > **Note :** `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

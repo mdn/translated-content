@@ -31,9 +31,13 @@ border-inline-end-width: thick;
 - `<'border-width'>`
   - : La largeur de la bordure, voir {{cssxref("border-width")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

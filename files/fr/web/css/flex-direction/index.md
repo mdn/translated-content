@@ -53,9 +53,13 @@ flex-direction: unset;
 - `column-reverse`
   - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

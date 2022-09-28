@@ -248,9 +248,13 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 - `<single-animation-play-state>`
   - : Si l'animation est lancée ou non, cf. {{cssxref("animation-play-state")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

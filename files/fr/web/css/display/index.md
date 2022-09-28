@@ -114,9 +114,13 @@ On pourra obtenir un comportement équivalent en écrivant cela avec une seule v
 }
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

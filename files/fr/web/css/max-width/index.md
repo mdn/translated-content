@@ -55,9 +55,13 @@ max-width: unset;
 - `none`
   - : Il n'y a pas de maximum pour la largeur. C'est la valeur par défaut.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

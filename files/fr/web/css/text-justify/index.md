@@ -37,9 +37,13 @@ La propriété `text-justify` peut être définie grâce à l'un des mots-clés 
 - `distribute` {{deprecated_inline}}
   - : Même effet que `inter-character` ; cette valeur sert uniquement à de fins de compatibilité.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

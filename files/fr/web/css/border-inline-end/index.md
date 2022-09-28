@@ -42,9 +42,13 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 - `<'color'>`
   - : La couleur de la bordure sur ce côté, voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

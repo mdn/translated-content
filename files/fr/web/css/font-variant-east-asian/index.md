@@ -59,9 +59,13 @@ font-variant-east-asian: unset;
     - `proportional-width` qui active l'ensemble de caractères d'Asie orientale qui n'ont pas tous la même largeur. Elle correspond aux valeurs OpenType `pwid`.
     - `full-width` qui active l'ensemble de caractères d'Asie orientale où les caractères ont tous la même taille et forme carrée. Elle correspond aux valeurs OpenType `fwid`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

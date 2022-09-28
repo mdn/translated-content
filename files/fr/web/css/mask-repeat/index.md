@@ -123,9 +123,13 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

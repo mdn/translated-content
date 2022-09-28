@@ -63,9 +63,13 @@ Pour des raisons de compatibilité, si on traite `page-break-before` comme un sy
 - `verso` {{experimental_inline}}
   - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

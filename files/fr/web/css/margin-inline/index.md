@@ -39,9 +39,13 @@ Cette propriété est une propriété raccourcie pour les deux propriétés logi
 
 La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

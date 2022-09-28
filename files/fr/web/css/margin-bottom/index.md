@@ -46,9 +46,13 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 - `auto`
   - : Voir {{cssxref("margin")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

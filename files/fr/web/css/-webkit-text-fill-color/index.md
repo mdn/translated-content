@@ -28,9 +28,13 @@ La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour 
 - `<color>`
   - : La couleur utilisée pour colorer les lettres du texte.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
