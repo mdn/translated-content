@@ -1,19 +1,6 @@
 ---
 title: AudioTrackList.length
 slug: Web/API/AudioTrackList/length
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - length
-  - list
-  - track
-translation_of: Web/API/AudioTrackList/length
 ---
 {{APIRef("HTML DOM")}}
 

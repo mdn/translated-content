@@ -1,17 +1,8 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
-translation_of: Web/API/Web_Speech_API
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
 Web Speech API は、音声データをウェブアプリに組み入れることを可能にします。Web Speech API は、SpeechSynthesis (Text-to-Speech; 音声合成) と SpeechRecognition (Asynchronous Speech Recognition; 非同期音声認識) の 2 つの部分から成り立っています。

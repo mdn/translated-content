@@ -1,18 +1,8 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-outset
-translation_of: Web/CSS/mask-border-outset
 ---
+
 {{CSSRef}}
 
 **`mask-border-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の境界ボックスからの距離を指定します。

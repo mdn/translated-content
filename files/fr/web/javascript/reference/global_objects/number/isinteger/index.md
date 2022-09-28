@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isInteger
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un nombre entier.

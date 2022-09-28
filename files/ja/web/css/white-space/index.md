@@ -1,16 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-  - white-space
-browser-compat: css.properties.white-space
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 **`white-space`** は CSS のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。

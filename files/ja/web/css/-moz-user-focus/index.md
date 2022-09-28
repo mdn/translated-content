@@ -1,17 +1,8 @@
 ---
 title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
-tags:
-  - '-moz-user-focus'
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-user-focus
-translation_of: Web/CSS/-moz-user-focus
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 **`-moz-user-focus`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素がフォーカスを持つことができるかどうかを示すために使用されます。

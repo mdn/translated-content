@@ -1,16 +1,8 @@
 ---
 title: '<head>: 文書メタデータ (ヘッダー) 要素'
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/head
-browser-compat: html.elements.head
 ---
+
 {{HTMLRef}}
 
 **HTML の `<head>` 要素**は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。

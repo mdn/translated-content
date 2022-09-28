@@ -1,20 +1,8 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Reset Button
-  - reset
-translation_of: Web/HTML/Element/input/reset
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。

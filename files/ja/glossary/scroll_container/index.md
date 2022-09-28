@@ -1,10 +1,6 @@
 ---
 title: Scroll container (スクロールコンテナー)
 slug: Glossary/Scroll_container
-tags:
-  - スクロールコンテナー
-  - 用語集
-translation_of: Glossary/Scroll_container
 ---
 **スクロールコンテナー** (scroll container) は、コンテナーに `overflow: scroll` を適用するか、 `overflow: auto` であふれるほどの量のコンテンツがあるときに生成されます。
 

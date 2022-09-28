@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 La propriété **`hyphens`** indique au navigateur comment gérer les traits d'union lors des sauts de ligne. Grâce à elle, on peut empêcher l'utilisation des traits d'union en fin de ligne, contrôler quand ils sont ajoutés ou laisser le navigateur décider.

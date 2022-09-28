@@ -1,11 +1,6 @@
 ---
 title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Page_structures/Code_examples
 original_slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 

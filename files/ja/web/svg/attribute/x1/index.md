@@ -1,22 +1,8 @@
 ---
 title: x1
 slug: Web/SVG/Attribute/x1
-tags:
-  - Drawing Lines
-  - Gradients
-  - LInes
-  - SVG
-  - SVG Attribute
-  - SVG Gradients
-  - SVGグラデーション
-  - SVG属性
-  - Vector Graphics
-  - グラデーション
-  - ベクター画像
-  - 描画
-  - 直線
-translation_of: Web/SVG/Attribute/x1
 ---
+
 {{SVGRef}}
 
 **`x1`** 属性は、二つ以上の座標を必要とする SVG 要素を描画するための一つ目の x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。

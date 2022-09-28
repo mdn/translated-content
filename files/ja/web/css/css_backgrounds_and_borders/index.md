@@ -1,13 +1,8 @@
 ---
 title: CSS 背景と境界
 slug: Web/CSS/CSS_Backgrounds_and_Borders
-tags:
-  - CSS
-  - CSS 背景と境界
-  - Reference
-  - 概要
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 ---
+
 {{CSSRef}}
 
 **CSS 背景と境界**モジュールでスタイル付けをすると、背景を色や画像で埋めたり (クリッピングや寸法の変更も) 他の加工を行ったりすることができます。これらのスタイルでは、境界を線や画像で装飾したり、四角くしたり丸くしたりすることもできます。(さらに、要素ボックスに影をつけて装飾することもできます)。

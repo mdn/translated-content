@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Reference/Instructions/let
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.

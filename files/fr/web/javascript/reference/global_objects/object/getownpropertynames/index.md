@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).

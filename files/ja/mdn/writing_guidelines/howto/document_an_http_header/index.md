@@ -1,13 +1,9 @@
 ---
 title: HTTP ヘッダーの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
-tags:
-  - Howto
-  - MDN
-  - Meta
-translation_of: MDN/Contribute/Howto/Document_an_HTTP_header
 original_slug: MDN/Contribute/Howto/Document_an_HTTP_header
 ---
+
 {{MDNSidebar}}
 
 MDN の [HTTP ヘッダーリファレンス](/ja/docs/Web/HTTP/Headers) は、ハイパーテキスト転送プロトコル ([HTTP](/ja/docs/Web/HTTP)) のリクエストメッセージとレスポンスメッセージのヘッダーセクションの構成要素である HTTP のヘッダーフィールドを記述します。 HTTP トランザクションの操作引数を定義します。このページでは、 HTTP ヘッダーに対応する新しい MDN リファレンスページを作成する方法を説明します。

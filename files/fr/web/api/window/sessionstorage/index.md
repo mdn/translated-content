@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/Window/sessionStorage
 ---
+
 {{APIRef}}
 
 La propriété `sessionStorage` permet d'utiliser un objet {{domxref("Storage")}} valable pour la session de navigation en cours et pour les pages du même domaine que la page actuelle. L'objet global `sessionStorage` est similaire à {{domxref("Window.localStorage")}}, à la différence que les données enregistrées dans `sessionStorage` ont une durée vie limitée et expirent à la fin de la session de navigation actuelle. Une session de navigation dure aussi longtemps que le navigateur est ouvert et s'étend sur plusieurs chargements, rechargements et restaurations de pages. En revanche, une session de navigation n'est valable que pour le contexte de navigation actuel, c'est-à-dire que le fait d'**ouvrir une page dans un nouvel onglet ou dans une nouvelle fenêtre provoquera l'initialisation d'une nouvelle session de navigation**, ce qui diffère du comportement des sessions utilisant des cookies.
@@ -63,15 +64,11 @@ champ.addEventListener("change", function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("HTML WHATWG", "webstorage.html#dom-sessionstorage", "sessionStorage")}} | {{Spec2("HTML WHATWG")}} |             |
+{{Specifications}}
 
-## Compatilibité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Window.sessionStorage")}}
-
-Chaque navigateur attribue des capacités de stockage limitées pour `localStorage` et `sessionStorage`. Vous en trouverez certaines dans ce [récapitulatif de tests des capacités de stockage attribuées en fonction du navigateur](http://dev-test.nemikor.com/web-storage/support-test/).
+{{Compat}}
 
 ## Voir aussi
 

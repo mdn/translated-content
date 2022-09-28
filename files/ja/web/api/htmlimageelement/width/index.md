@@ -1,20 +1,8 @@
 ---
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - size
-  - width
-browser-compat: api.HTMLImageElement.width
-translation_of: Web/API/HTMLImageElement/width
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`width`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixel", "CSS ピクセル")}}で、それ以外は画像のピクセル密度補正後の幅を表します。

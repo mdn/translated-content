@@ -1,15 +1,8 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - アットルール
-  - CSS
-  - 条件付き
-  - リファレンス
-browser-compat: css.at-rules.media
-translation_of: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。

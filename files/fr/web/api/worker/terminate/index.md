@@ -3,6 +3,7 @@ title: Worker.terminate()
 slug: Web/API/Worker/terminate
 translation_of: Web/API/Worker/terminate
 ---
+
 {{ apiref("Worker") }}
 
 La méthode **`terminate()`** de l'interface {{domxref("Worker")}} termine immédiatement le {{domxref("Worker")}}. Cette interruption ne permet pas au worker de finaliser ses opérations, il est juste arrêté sur le champ.
@@ -33,13 +34,11 @@ myWorker.terminate();
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.terminate()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## Voir aussi
 

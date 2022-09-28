@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) initialise et crée le magasin de données de l'objet tampon.
@@ -100,52 +101,11 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.5", "bufferData")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>
-        <p>Page man de l’API OpenGL ES 3 (similaire).</p>
-        Ajoute les noouveaux tampons <code>cible</code> :<br /><code
-          >gl.COPY_READ_BUFFER</code
-        >,<br /><code>gl.COPY_WRITE_BUFFER</code>,<br /><code
-          >gl.TRANSFORM_FEEDBACK_BUFFER</code
-        >,<br /><code>gl.UNIFORM_BUFFER</code>,<br /><code
-          >gl.PIXEL_PACK_BUFFER</code
-        >,<br /><code>gl.PIXEL_UNPACK_BUFFER</code><br /><br />Ajoute les
-        nouvelles indications d'<code>utilisation</code> :<br /><code
-          >gl.STATIC_READ</code
-        >,<br /><code>gl.DYNAMIC_READ</code>,<br /><code>gl.STREAM_READ</code
-        >,<br /><code>gl.STATIC_COPY</code>,<br /><code>gl.DYNAMIC_COPY</code
-        >,<br /><code>gl.STREAM_COPY</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## Voir aussi
 

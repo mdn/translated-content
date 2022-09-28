@@ -1,27 +1,13 @@
 ---
 title: FileSystemEntrySync
-slug: >-
-  conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
-tags:
-  - API
-  - EntrySync
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - FileSystemEntrySync
-  - インターフェイス
-  - オフライン
-  - ファイルシステム
-  - リファレンス
-  - 非標準
-translation_of: Web/API/FileSystemEntrySync
+slug: conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
 original_slug: Web/API/FileSystemEntrySync
 ---
 {{APIRef("File System API")}}{{Non-standard_header()}}
 
 File and Directory Entries API の`FileSystemEntrySync` インターフェイスは、ファイルシステム内のエントリを表します。 {{domxref("FileEntrySync")}} か {{domxref("DirectoryEntry")}} のいずれかになります。 ファイルのコピー、移動、削除、および読み込みを含むファイルの操作方法や、ファイル名やルートからエントリまでのパスなど、それが指すファイルに関する情報が含まれています。
 
-> **Warning:** **警告:** この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。
+> **Warning:** この API は決して受け入れられず、標準化もされませんでした。さまざまなブラウザが [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) (ファイルシステム API とも呼ばれます) を実装していますが、使用を避けるようにしてください。
 
 ## 基本のコンセプト
 
@@ -70,7 +56,7 @@ Metadata getMetada ()
 
 ##### 例外
 
-このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException) が発生する可能性があります。
 
 | 例外                | 説明                                                                        |
 | ------------------- | --------------------------------------------------------------------------- |
@@ -110,7 +96,7 @@ FileSystemEntrySync moveTo (
 
 ##### 例外
 
-このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException) が発生する可能性があります。
 
 <table class="standard-table">
   <thead>
@@ -177,7 +163,7 @@ void copyTo (
 
 ##### 例外
 
-このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException "en/DOM/File_API/File_System_API/FileException") が発生する可能性があります。
+このメソッドは、次のコードで [FileException](/ja/DOM/File_API/File_System_API/FileException) が発生する可能性があります。
 
 <table class="standard-table">
   <thead>
@@ -230,7 +216,7 @@ void copyTo (
 
 ### toURL()
 
-このエントリを識別するために使用できる URL を返します。これは `src` や `href` 属性を埋めるために使用できる新しい URL スキーム、 `filesystem:`を公開しています。たとえば、イメージを表示しその [fileEntry](/ja/DOM/File_API/File_System_API/FileEntry "en/DOM/File_API/File_System_API/FileEntry") を持つ場合、 `toURL()` を呼び出すと、イメージファイルのファイルシステム URL が得られます。
+このエントリを識別するために使用できる URL を返します。これは `src` や `href` 属性を埋めるために使用できる新しい URL スキーム、 `filesystem:`を公開しています。たとえば、イメージを表示しその [fileEntry](/ja/DOM/File_API/File_System_API/FileEntry) を持つ場合、 `toURL()` を呼び出すと、イメージファイルのファイルシステム URL が得られます。
 あなたは `filesystem:http://example.com/temporary/lolcat.png` のようなものを手に入れます。
 
 ファイルシステムの URL の有効期限はありません。このメソッドはディスク上の場所を記述しているため、URL はその場所が存在する限り有効です。あなたはファイルを削除して再作成することができます。
@@ -272,7 +258,7 @@ void remove (
 
 ##### 例外
 
-このメソッドは、次のコードと [FileException](/ja/docs/Web/API/FileException "en/DOM/File_API/File_System_API/FileException") を発生させることができます。
+このメソッドは、次のコードと [FileException](/ja/docs/Web/API/FileException) を発生させることができます。
 
 | 例外                          | 説明                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -282,7 +268,7 @@ void remove (
 
 ### getParent()
 
-エントリを含む親 [`DirectoryEntrySync`](/ja/docs/Web/API/DirectoryEntrySync "https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync") を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。
+エントリを含む親 [`DirectoryEntrySync`](/ja/docs/Web/API/DirectoryEntrySync) を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。
 
 ```
 void getParent ();
@@ -294,7 +280,7 @@ void getParent ();
 
 ##### 戻り値
 
-- [`DirectoryEntrySync`](/ja/DOM/File_API/File_System_API/DirectoryEntrySync "en/DOM/File_API/File_System_API/DirectoryEntrySync")
+- [`DirectoryEntrySync`](/ja/DOM/File_API/File_System_API/DirectoryEntrySync)
   - : ファイルシステム内のディレクトリを表すオブジェクト。
 
 ##### 例外
@@ -309,6 +295,6 @@ void getParent ();
 
 仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+リファレンス: [File System API](/ja/DOM/File_API/File_System_API)
 
-イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

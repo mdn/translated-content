@@ -1,14 +1,8 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - main
-translation_of: Web/HTML/Element/main
 ---
+
 {{HTMLRef}}
 
 **HTML の `<main>` 要素**は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。

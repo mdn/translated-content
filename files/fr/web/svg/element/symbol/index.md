@@ -6,6 +6,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/symbol
 ---
+
 {{SVGRef}}
 
 L'élément **`<symbol>`** est utilisé pour définir un template de graphique pouvant être instancié par un élément {{SVGElement("use")}}.
@@ -88,11 +89,8 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire                                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SymbolElement', '&lt;symbol&gt;')}}     | {{Spec2('SVG2')}} | Permet aux propriétés de géométrie d'être spécifiées sur un symbole |
-| {{SpecName('SVG1.1', 'struct.html#SymbolElement', '&lt;symbol&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.symbol")}}
+{{Compat}}

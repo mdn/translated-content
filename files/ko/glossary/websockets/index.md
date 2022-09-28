@@ -1,7 +1,6 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-translation_of: Glossary/WebSockets
 ---
 _WebSocket_ 은 언제든지 데이터를 교환할 수 있도록 {{Glossary("Server", "서버")}}와 클라이언트 간의 지속적인 {{Glossary("TCP")}} 연결을 허용하는 {{Glossary("protocol", "프로토콜")}}이다.
 

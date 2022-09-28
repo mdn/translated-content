@@ -1,14 +1,6 @@
 ---
 title: I18N(国際化対応)
 slug: Glossary/I18N
-tags:
-  - Beginner
-  - Credibility
-  - Glossary
-  - Internationalization
-  - OpenPractices
-  - i18n
-translation_of: Glossary/I18N
 ---
 i18n("internationalization"という 20 文字の単語より)(国際化対応)は、製品やサービスをどんなターゲット文化にも容易に適応させるベストプラクティスです。
 

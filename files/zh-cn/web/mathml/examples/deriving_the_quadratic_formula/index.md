@@ -2,6 +2,7 @@
 title: 'MathML: Deriving the Quadratic Formula'
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
+
 {{MathMLRef}}
 
 本页概述了二次方程式的推导过程。

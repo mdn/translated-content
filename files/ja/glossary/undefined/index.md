@@ -1,12 +1,6 @@
 ---
 title: undefined
 slug: Glossary/undefined
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - NeedsContent
-translation_of: Glossary/undefined
 ---
 `undefined`は、宣言のみが行われた{{glossary("variable", "変数")}}、あるいは実{{Glossary("Argument","引数")}}が存在しない仮引数に自動的に割り当てられる{{Glossary("primitive", "プリミティブ値")}}のことです。
 

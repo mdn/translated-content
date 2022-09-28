@@ -1,19 +1,6 @@
 ---
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - MovementX
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - mouse lock
-  - pointer lock
-translation_of: Web/API/MouseEvent/movementX
-browser-compat: api.MouseEvent.movementX
 ---
 {{APIRef("DOM Events")}}
 

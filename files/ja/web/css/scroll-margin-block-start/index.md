@@ -1,15 +1,8 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
-tags:
-  - 初心者
-  - CSS
-  - Example
-  - recipe:css-property
-  - scroll-margin-block-start
-browser-compat: css.properties.scroll-margin-block-start
-translation_of: Web/CSS/scroll-margin-block-start
 ---
+
 {{CSSRef}}
 
 `scroll-margin-block-start` プロパティは、スクロールスナップ領域のインライン方向における先頭側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。

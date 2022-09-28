@@ -8,6 +8,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/perspective
 ---
+
 {{CSSRef}}
 
 La propriété **`perspective`** détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété.

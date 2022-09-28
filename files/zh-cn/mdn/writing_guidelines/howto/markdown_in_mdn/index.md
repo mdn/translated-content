@@ -2,6 +2,7 @@
 title: 如何使用 markdown 来撰写文档
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 ---
+
 {{MDNSidebar}}
 
 本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
@@ -404,6 +405,7 @@ const greeting = "I'm a bad example";
 ```plain
 Heading 1 | Heading 2 | Heading 3
  --- | --- | ---
+
 cell 1    | cell 2    | cell 3
 cell 4    | cell 5    | cell 6
 ```

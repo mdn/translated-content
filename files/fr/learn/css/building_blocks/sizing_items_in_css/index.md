@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 original_slug: Apprendre/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.
 
 <table class="standard-table">
@@ -63,7 +64,7 @@ De bien des manières, les pourcentages agissent de la même manière que les un
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
-En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la ` <div``> ` aurait normalement occupé dans l'élément parent.
+En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la `<div>` aurait normalement occupé dans l'élément parent.
 
 ### Marges et remplissage en pourcentages
 

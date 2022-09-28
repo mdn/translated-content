@@ -2,6 +2,7 @@
 title: '::-webkit-scrollbar'
 slug: 'Web/CSS/::-webkit-scrollbar'
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 `::-webkit-scrollbar` CSS 伪类元素会影响设置了 `overflow:scroll;` 的元素的滚动条样式。

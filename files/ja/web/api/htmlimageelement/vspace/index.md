@@ -1,27 +1,8 @@
 ---
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - Vertical
-  - bottom
-  - img
-  - margin
-  - space
-  - spacing
-  - top
-  - vspace
-  - 非推奨
-browser-compat: api.HTMLImageElement.vspace
-translation_of: Web/API/HTMLImageElement/vspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`vspace`** は {{domxref("HTMLImageElement")}} インターフェイスの廃止されたプロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の上下に空ける空間のピクセル数を指定します。

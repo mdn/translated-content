@@ -1,14 +1,8 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
-tags:
-  - 属性セレクター
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.attribute
-translation_of: Web/CSS/Attribute_selectors
 ---
+
 {{CSSRef}}
 
 CSS の**属性セレクター** (attribute selector) は、指定された属性が存在するかどうか、またはその値に基づいて要素を選択します。

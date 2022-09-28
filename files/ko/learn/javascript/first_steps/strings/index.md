@@ -1,18 +1,6 @@
 ---
 title: 문자열 다루기 — 문자열
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Join
-  - Quotes
-  - concatenation
-  - l10n:priority
-  - strings
-translation_of: Learn/JavaScript/First_steps/Strings
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 

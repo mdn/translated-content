@@ -2,6 +2,7 @@
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserverEntry`** インターフェイスは、 {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} コンストラクターのコールバック関数に渡されるオブジェクトを表します。これにより、監視対象の {{domxref("Element")}} または {{domxref("SVGElement")}} の新しい寸法にアクセスすることができます。

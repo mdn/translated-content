@@ -1,18 +1,8 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Privacy
-  - Reference
-  - Referrer-Policy
-  - Response
-  - Response Header
-  - referrer
-browser-compat: http.headers.Referrer-Policy
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 **`Referrer-Policy`** は {{glossary("HTTP header", "HTTP ヘッダー")}}で、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
@@ -107,58 +97,58 @@ CSS はスタイルシートから参照されるリソースにアクセスす�
 
 | 基点の文書            | 移動先 | 使用されるリファラー   |
 | ------------------------ | ------------- | --------------- |
-| https://example.com/page | _すべての場所_    | _（リファラーなし）_ |
+| `https://example.com/page` | _すべての場所_    | _（リファラーなし）_ |
 
 ### `no-referrer-when-downgrade`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/page |
-| https://example.com/page | **http**://example.com        | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
+| `https://example.com/page` | **http**://example.com        | _（リファラーなし）_          |
 
 ### `origin`
 
 | 基点の文書            | 移動先 | 使用されるリファラー        |
 | ------------------------ | ------------- | -------------------- |
-| https://example.com/page | _すべての場所_    | https://example.com/ |
+| `https://example.com/page` | _すべての場所_    | `https://example.com/` |
 
 ### `origin-when-cross-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/     |
-| https://example.com/page | **http**://example.com/page   | https://example.com/     |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com/page   | `https://example.com/`     |
 
 ### `same-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | _（リファラーなし）_          |
 
 ### `strict-origin`
 
 | 基点の文書               | 移動先          | 使用されるリファラー        |
 | --------------------------- | ---------------------- | -------------------- |
-| https://example.com/page    | https://mozilla.org    | https://example.com/ |
-| https://example.com/page    | **http**://example.com | _（リファラーなし）_      |
-| **http**://example.com/page | _すべての場所_             | http://example.com/  |
+| `https://example.com/page`    | `https://mozilla.org`    | `https://example.com/` |
+| `https://example.com/page`    | **http**://example.com | _（リファラーなし）_      |
+| **http**://example.com/page | _すべての場所_             | `http://example.com/`  |
 
 ### `strict-origin-when-cross-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/     |
-| https://example.com/page | **http**://example.com        | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com        | _（リファラーなし）_          |
 
 ### `unsafe-url`
 
 | 基点の文書                  | 移動先 | 使用されるリファラー                  |
 | ------------------------------ | ------------- | ------------------------------ |
-| https://example.com/page?q=123 | _すべての場所_    | https://example.com/page?q=123 |
+| `https://example.com/page?q=123` | _すべての場所_    | `https://example.com/page?q=123` |
 
 ### 代替ポリシーの指定
 

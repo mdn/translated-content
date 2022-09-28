@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getUint32
 ---
+
 {{JSRef}}
 
 La méthode **`getUint32()`** permet de lire un entier non-signé sur 32 bits (type _unsigned long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

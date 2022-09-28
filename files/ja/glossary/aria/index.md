@@ -1,10 +1,6 @@
 ---
 title: ARIA
 slug: Glossary/ARIA
-tags:
-  - Accesibility
-  - Glossary
-translation_of: Glossary/ARIA
 ---
 **ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) は、支援技術の {{Glossary("W3C")}} 仕様で、ユーザーに応じてセマンティクスやその他のメタデータを {{Glossary("HTML")}} へ付加します。
 

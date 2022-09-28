@@ -2,6 +2,7 @@
 title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`MediaSource()`** 是 {{domxref("MediaSource")}} 的构造函数，返回一个没有分配 source buffers 新的 `MediaSource` 对象。

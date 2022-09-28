@@ -1,16 +1,8 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Experimental
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-align-last
-translation_of: Web/CSS/text-align-last
 ---
+
 {{CSSRef}}
 
 **`text-align-last`** は CSS のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。

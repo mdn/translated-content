@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-block
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overflow-block`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'un élément de bloc sur les bords de bloc (ceux orthogonaux au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.

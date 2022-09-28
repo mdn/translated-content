@@ -1,7 +1,6 @@
 ---
 title: How do you upload files to a web server?
 slug: Learn/Common_questions/Upload_files_to_a_web_server
-translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 ---
 본 글은 어떻게 {{Glossary("FTP")}} 도구를 사용하여 사이트를 발행(publish) 할 수 있는지를 다루고 있습니다.
 
@@ -52,8 +51,8 @@ _아직 좋은 예제가 없습니다. 누군가 나서 주세요([Please, consi
 
 FireFTP를 새로운 탭에서 열어보세요. 파이어폭스에서 열기 위한 방법도 두가지 있습니다.
 
-1.  **Firefox menu ![](https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
-2.  **Tools** ➤ **Web Develope**r ➤ **FireFTP**
+1. **Firefox menu ![](https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
+2. **Tools** ➤ **Web Develope**r ➤ **FireFTP**
 
 이제 다음과 같이 보이게 될겁니다.
 

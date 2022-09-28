@@ -1,16 +1,8 @@
 ---
 title: ':nth-last-child()'
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-last-child
-translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 **`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。

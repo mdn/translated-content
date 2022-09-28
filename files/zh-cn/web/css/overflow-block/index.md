@@ -2,6 +2,7 @@
 title: overflow-block
 slug: Web/CSS/overflow-block
 ---
+
 {{CSSRef}}
 
 The **`overflow-block`** [CSS](/zh-CN/docs/Web/CSS) property sets what shows when content overflows the block start and block end edges of a box. This may be nothing, a scroll bar, or the overflow content.
@@ -104,7 +105,7 @@ The `overflow-block` property is specified as a single keyword chosen from the l
 
 ## Browser compatibility
 
-{{Compat("css.properties.overflow-block")}}
+{{Compat}}
 
 ## See also
 

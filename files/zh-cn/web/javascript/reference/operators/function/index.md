@@ -2,6 +2,7 @@
 title: 函数表达式
 slug: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function`** 关键字可以用来在一个表达式中定义一个函数。

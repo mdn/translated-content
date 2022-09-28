@@ -1,13 +1,6 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.localName
-translation_of: Web/API/Attr/localName
 ---
 {{APIRef("DOM")}}
 

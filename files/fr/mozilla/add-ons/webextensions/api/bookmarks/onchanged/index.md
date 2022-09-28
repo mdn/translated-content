@@ -13,6 +13,7 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
+
 {{AddonSidebar}}
 
 Mise en place quand il y a un changement à :

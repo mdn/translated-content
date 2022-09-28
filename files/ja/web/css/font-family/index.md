@@ -1,15 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-family
-translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS の **`font-family`** プロパティは、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。

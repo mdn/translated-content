@@ -1,21 +1,8 @@
 ---
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Capture DOM Elements
-  - Method
-  - Reference
-  - Video
-  - captureStream
-browser-compat: api.HTMLMediaElement.captureStream
-translation_of: Web/API/HTMLMediaElement/captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
 **`captureStream()`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、このメディア要素でレンダリングされているコンテンツのリアルタイムキャプチャをストリーミングしている {{domxref('MediaStream')}} オブジェクトを返します。

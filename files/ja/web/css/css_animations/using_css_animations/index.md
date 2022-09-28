@@ -1,14 +1,8 @@
 ---
 title: CSS アニメーションの使用
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - 上級者
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
+
 {{CSSRef}}
 
 **CSS アニメーション**により、ある CSS のスタイル設定を別の設定へと遷移させることができます。アニメーションは、2 種類の要素で構成されています。 それは、アニメーションについて記述するスタイルと、アニメーションの先頭と末尾の CSS スタイルを示すキーフレームです。 同様に、アニメーション途中の通過点となるスタイルを示すこともできます。

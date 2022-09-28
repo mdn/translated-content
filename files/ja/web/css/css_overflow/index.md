@@ -1,14 +1,8 @@
 ---
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_Overflow
-tags:
-  - CSS
-  - ガイド
-  - overflow
-  - スクロールバー
-  - スクロール
-translation_of: Web/CSS/CSS_Overflow
 ---
+
 {{CSSRef}}
 
 **CSS オーバーフロー**モジュールは、視覚メディアにおけるスクロール可能なオーバーフローの処理に関連した CSS の機能を含んでいます。 CSS では、ボックスの内容がボックスの辺の 1 つ以上を越えてはみ出した場合にオーバーフローが発生します。

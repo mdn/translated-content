@@ -1,15 +1,8 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.margin-left
-translation_of: Web/CSS/margin-left
 ---
+
 {{CSSRef}}
 
 **`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。

@@ -1,10 +1,6 @@
 ---
 title: Shim (シム)
 slug: Glossary/Shim
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Shim
 l10n:
   sourceCommit: 0ed71747051ea80a842c7b4dc16765cf97ad2122
 ---

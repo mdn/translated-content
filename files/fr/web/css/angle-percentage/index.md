@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/angle-percentage
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<angle-percentage>`** représente une valeur qui peut être une valeur de type {{cssxref("angle")}} ou une valeur de type {{cssxref("percentage")}}.

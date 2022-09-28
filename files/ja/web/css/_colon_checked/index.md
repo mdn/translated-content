@@ -1,21 +1,8 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - Checked
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - Toggled
-  - ウェブ
-  - button
-  - checkbox
-  - radio
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 **`:checked`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、**ラジオボタン** ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio))、 **チェックボックス** ([`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox))、 **オプションボタン** ({{HTMLElement("select")}} の中の {{HTMLElement("option")}}) 要素がチェックされていたり `on` の状態にあったりすることを表します。

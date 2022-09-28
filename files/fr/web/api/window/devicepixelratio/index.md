@@ -3,6 +3,7 @@ title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 translation_of: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 La propriété en lecture seule `Window.devicePixelRatio` retourne le rapport entre la taille (verticale) d'un pixel physique sur le périphérique d'affichage et la taille d'un pixel indépendant du matériel (abrégé en anglais "dips").
@@ -17,13 +18,11 @@ valeur = window.devicePixelRatio;
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSSOM View", "#dom-window-devicepixelratio", "Window.devicePixelRatio")}} | {{Spec2("CSSOM View")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.devicePixelRatio")}}
+{{Compat}}
 
 ## Voir aussi
 

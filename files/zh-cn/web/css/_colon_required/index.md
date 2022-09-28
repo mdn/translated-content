@@ -2,6 +2,7 @@
 title: ':required'
 slug: Web/CSS/:required
 ---
+
 {{ CSSRef() }}
 
 ## 摘要
@@ -24,7 +25,7 @@ slug: Web/CSS/:required
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## 参见
 

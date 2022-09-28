@@ -2,6 +2,7 @@
 title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 ---
+
 fullscreenchange 事件当浏览器进入或离开全屏时触发。
 
 ## General info
@@ -48,7 +49,7 @@ document.addEventListener("fullscreenchange", function( event ) {
 
 ## Related Events
 
-- [`fullscreenerror`](/en-US/docs/Mozilla_event_reference/fullscreenerror)
+- [`fullscreenerror`](/zh-CN/docs/Mozilla_event_reference/fullscreenerror)
 
 ## 规范
 
@@ -56,4 +57,4 @@ document.addEventListener("fullscreenchange", function( event ) {
 
 ## See also
 
-- [Using fullscreen mode](/en-US/docs/DOM/Using_full-screen_mode)
+- [Using fullscreen mode](/zh-CN/docs/DOM/Using_full-screen_mode)

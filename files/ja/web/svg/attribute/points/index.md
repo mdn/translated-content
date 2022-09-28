@@ -1,8 +1,8 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
-translation_of: Web/SVG/Attribute/points
 ---
+
 {{SVGRef}}
 
 **`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における X 座標と Y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。

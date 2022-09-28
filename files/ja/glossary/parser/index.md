@@ -1,10 +1,6 @@
 ---
 title: Parser (パーサー)
 slug: Glossary/Parser
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Parser
 ---
 **パーサー**は、ソースコードファイルを{{glossary("parse","解析")}}するコンパイラまたはインタプリタのモジュールです。
 

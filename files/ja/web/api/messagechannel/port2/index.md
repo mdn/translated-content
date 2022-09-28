@@ -1,14 +1,6 @@
 ---
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - MessageChannel
-  - Property
-  - Reference
-translation_of: Web/API/MessageChannel/port2
 ---
 {{APIRef("HTML DOM")}}
 

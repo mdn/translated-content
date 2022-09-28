@@ -2,6 +2,7 @@
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** 是一个内置的对象，它提供拦截 JavaScript 操作的方法。这些方法与[proxy handlers](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)的方法相同。`Reflect`不是一个函数对象，因此它是不可构造的。
@@ -41,7 +42,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 - {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
   - : 将值分配给属性的函数。返回一个{{jsxref("Boolean")}}，如果更新成功，则返回`true`。
 - {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
-  - : 设置对象原型的函数。返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回`true。`
+  - : 设置对象原型的函数。返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回 `true`。
 
 ## Examples
 

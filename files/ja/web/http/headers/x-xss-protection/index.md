@@ -1,14 +1,8 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Reference
-  - XSS
-  - セキュリティ
-  - ヘッダー
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`X-XSS-Protection`** レスポンスヘッダーは Internet Explorer, Chrome, Safari の機能で、反射型クロスサイトスクリプティング ({{Glossary("XSS")}}) 攻撃を検出したときに、ページの読み込みを停止するためのものです。強い {{HTTPHeader("Content-Security-Policy")}} をサイトが実装して、インライン JavaScript の使用を無効にしていれば (`'unsafe-inline'`)、現在のブラウザーではこれらの防御は大枠で不要なものですが、まだ {{Glossary("CSP")}} に対応していない古いウェブブラウザーを使用しているユーザーには防御になります。

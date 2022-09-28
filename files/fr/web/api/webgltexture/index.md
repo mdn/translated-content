@@ -7,6 +7,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLTexture
 ---
+
 {{APIRef("WebGL")}}
 
 L'interface WebGLTexture fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet de texture opaque fournissant un stockage et un état pour les opérations de texturation.
@@ -32,13 +33,11 @@ var texture = gl.createTexture();
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire          |
-| ------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.9", "WebGLTexture")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLTexture")}}
+{{Compat}}
 
 ## Voir aussi
 

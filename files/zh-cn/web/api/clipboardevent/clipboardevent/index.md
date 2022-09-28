@@ -2,6 +2,7 @@
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
 **`ClipboardEvent()`** 构造函数返回一个新建的 {{domxref("ClipboardEvent")}} 对象，这个对象表示与修改剪切板相关的事件，这些事件包括 {{event("cut")}} 、 {{event("copy")}} 和 {{event("paste")}} 事件。
@@ -32,7 +33,7 @@ _`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ 
 
 ## 浏览器兼容性
 
-{{Compat("api.ClipboardEvent.ClipboardEvent")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -16,7 +16,7 @@ translation_of: Web/API/Document/querySelector
 
 <p>{{domxref("Document")}} метод <code><strong>querySelector()</strong></code> возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение <code>null</code>.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание</strong>: Сопоставление выполняется с использованием обхода по предварительному порядку в глубину узлов документа, начиная с первого элемента в разметке документа и повторяя последовательные узлы по порядку количества дочерних узлов.</p>
 </div>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/Document/querySelector
  <dd>{{domxref("DOMString")}}, содержащий один или более селекторов для сопоставления. Эта строка должна быть допустимой строкой селектора CSS; если же нет, генерируется исключение <code>SYNTAX_ERR</code>. Смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Расположение элементов DOM с использованием селекторов</a> для того, чтобы узнать больше о селекторах и о том, как ими управлять.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS должны быть экранированы символом обратной косой черты. Поскольку JavaScript также использует экранирование символом обратной косой черты, будьте особенно внимательны при написании строковых литералов с использованием этих символов. См. <a href="#escaping_special_characters">Escaping special characters</a> для получения дополнительной информации.</p>
 </div>
 

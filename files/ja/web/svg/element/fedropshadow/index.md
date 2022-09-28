@@ -1,13 +1,8 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
-tags:
-  - Element
-  - Filters
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/feDropShadow
 ---
+
 {{SVGRef}}
 
 SVG の **`<feDropShadow>`** フィルタープリミティブは、入力画像のドロップシャドウを生成します。これは {{SVGElement('filter')}} 要素の中でのみ使用できます。

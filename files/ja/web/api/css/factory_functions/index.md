@@ -1,14 +1,6 @@
 ---
 title: CSS 数値ファクトリー関数
 slug: Web/API/CSS/factory_functions
-tags:
-  - API
-  - CSS
-  - CSS API
-  - Houdini
-  - リファレンス
-  - ファクトリー関数
-translation_of: Web/API/CSS/factory_functions
 ---
 {{SeeCompatTable}}
 

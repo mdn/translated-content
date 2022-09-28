@@ -1,17 +1,8 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Deprecated
-  - Element
-  - Experimental
-  - HTML
-  - HTML5
-  - Reference
-  - Web
-browser-compat: html.elements.hgroup
-translation_of: Web/HTML/Element/hgroup
 ---
+
 {{HTMLRef}}
 
 > **Warning:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
@@ -93,7 +84,7 @@ translation_of: Web/HTML/Element/hgroup
 
 このようなアウトラインの (理論的ではない) *描画*ビューを生成するために、マルチレベルの性質を伝えるため `<hgroup>` の見出しをどのように描画するかについて、レンダリングツールのデザインでいくつかの選択が必要です。例えば以下のように、描画されたアウトラインで `<hgroup>` を表示するさまざまな方法が考えられます:
 
-- 主見出しの後および最初の副次的な見出しの前にコロンと空白 (“`: `”) または同様の句読点を置く形で (および同じまたは同様の句読点を、他の副次的な見出しの前に置いて) `<hgroup>` を描画されたアウトラインで表示する
+- 主見出しの後および最初の副次的な見出しの前にコロンと空白 (": ") または同様の句読点を置く形で (および同じまたは同様の句読点を、他の副次的な見出しの前に置いて) `<hgroup>` を描画されたアウトラインで表示する
 - 主見出しの後に、括弧でくくった副次的な見出しを置く形で、`<hgroup>` を描画されたアウトラインで表示する
 
 以下の HTML 文書で考えてみましょう。
@@ -122,7 +113,7 @@ translation_of: Web/HTML/Element/hgroup
 
 あるいは、以下のようにアウトラインを描画することもできるでしょう。
 
-![<hgroup> 要素を含む描画されたアウトライン、第二の見出しの周りに括弧がある](outline-paren.png)
+![\<hgroup> 要素を含む描画されたアウトライン、第二の見出しの周りに括弧がある](outline-paren.png)
 
 ここでは主見出し「_HTML_」の後に、括弧でくくった副次的な見出し「 _(Living Standard — Last Updated 12 August 2016)_」があります。
 

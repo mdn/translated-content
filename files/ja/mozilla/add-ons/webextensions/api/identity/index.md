@@ -1,15 +1,8 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
+
 {{AddonSidebar}}
 
 identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。
@@ -31,7 +24,7 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 ### リダイレクト URL を取得する
 
-[リダイレクト URL ](https://www.oauth.com/oauth2-servers/redirect-uris/)は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。
+[リダイレクト URL](https://www.oauth.com/oauth2-servers/redirect-uris/) は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。
 
 {{WebExtAPIRef("identity.getRedirectURL()")}}を呼び出すことでリダイレクト URL を取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)するたびに、異なるリダイレクト URL を取得することになります)。
 

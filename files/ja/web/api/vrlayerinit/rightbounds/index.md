@@ -1,20 +1,9 @@
 ---
 title: VRLayerInit.rightBounds
 slug: Web/API/VRLayerInit/rightBounds
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - rightBounds
-translation_of: Web/API/VRLayerInit/rightBounds
 original_slug: Web/API/VRLayer/rightBounds
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`rightBounds`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの右側のテクスチャ境界を定義します。

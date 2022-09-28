@@ -1,19 +1,8 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-page-type: web-api-interface
-tags:
-  - API
-  - セル
-  - HTML DOM
-  - HTMLTableCellElement
-  - インターフェイス
-  - リファレンス
-  - 表のセル
-  - 表
-browser-compat: api.HTMLTableCellElement
-translation_of: Web/API/HTMLTableCellElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableCellElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて）表のセルのレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。

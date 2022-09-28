@@ -1,12 +1,6 @@
 ---
 title: CharacterData.nextElementSibling
 slug: Web/API/CharacterData/nextElementSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.CharacterData.nextElementSibling
-translation_of: Web/API/CharacterData/nextElementSibling
 ---
 {{APIRef("DOM")}}
 

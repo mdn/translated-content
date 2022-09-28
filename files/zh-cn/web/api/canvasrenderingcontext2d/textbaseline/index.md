@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textBaseline`** 是 Canvas 2D API 描述绘制文本时，当前文本基线的属性。
@@ -99,7 +100,7 @@ baselines.forEach(function (baseline, index) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.textBaseline")}}
+{{Compat}}
 
 ## 参见
 

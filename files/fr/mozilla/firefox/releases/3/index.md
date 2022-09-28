@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3
 original_slug: Mozilla/Firefox/Versions/3
 ---
+
 {{FirefoxSidebar}}
 
 Pour les développeurs qui désirent prendre connaissance de toutes les nouvelles fonctionnalités de Firefox 3, c'est ici qu'il convient de commencer. Cet article fournit la liste des nouveaux articles couvrant les fonctionnalités qui ont été ajoutées à Firefox 3. Même s'il ne couvre pas nécessairement chaque petite modification, il vous aidera à découvrir les améliorations majeures.

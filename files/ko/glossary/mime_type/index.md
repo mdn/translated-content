@@ -1,10 +1,6 @@
 ---
 title: MIME type
 slug: Glossary/MIME_type
-tags:
-  - WebMechanics
-  - 용어 해설
-translation_of: Glossary/MIME_type
 ---
 과거에는 **MIME type**으로 불렸지만 지금은 "media type"으로 사용한다. 때때로는 "content type"이라고도 불리기도 한다. **MIME type**은 파일의 형식을 나타내는 문자열로 파일과 같이 송신되는데 content의 형식을 나타내기 위해 사용한다. 예를 들면 오디오 파일은 audio/ogg로 그림 파일은 image/png로 분류할 수 있다.
 

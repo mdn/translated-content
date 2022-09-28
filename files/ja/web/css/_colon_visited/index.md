@@ -1,15 +1,8 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーがすでに訪問したリンクを表します。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。

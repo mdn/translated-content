@@ -1,19 +1,8 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - Firefox
-  - Mozilla
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors:-moz-drag-over
-translation_of: Web/CSS/:-moz-drag-over
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`:-moz-drag-over`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが呼び出された時に要素に一致します。

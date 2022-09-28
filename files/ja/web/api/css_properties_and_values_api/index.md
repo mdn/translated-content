@@ -1,9 +1,6 @@
 ---
 title: CSS Properties and Values API
 slug: Web/API/CSS_Properties_and_Values_API
-tags:
-  - Houdini
-translation_of: Web/API/CSS_Properties_and_Values_API
 ---
 CSS Properties and Values API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）を使用すると、開発者は {{cssxref('--*', 'CSS カスタムプロパティ')}}を明示的に定義して、プロパティ型のチェック、デフォルト値、および値を継承するまたは継承しないプロパティを許可できます。
 

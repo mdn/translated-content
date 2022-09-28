@@ -1,14 +1,8 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
+
 {{JSRef}}
 
 **`Date.parse()`** メソッドは、日時を表す文字列を解釈し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表すミリ秒単位の数値を返します。または、文字列を解釈できなかったり不正な日付 (例えば 2015-02-31) が指定された場合 `NaN` を返します。

@@ -233,9 +233,11 @@ ul {
 
 Podría reemplazarse por esto:
 
-    ul {
-      list-style: square url(example.png) inside;
-    }
+```css
+ul {
+  list-style: square url(example.png) inside;
+}
+```
 
 Los valores pueden escribirse en cualquier orden, y puedes usar uno, dos o los tres (los valores por defecto que se utilizan para las propiedades que no están incluidas son `disc`, `none` y `outside`). Si se especifican tanto `type` como `image`, el tipo se usa como una segunda opción en el caso de que la imagen no sea posible cargar la imagen por cualquier motivo.
 
@@ -302,10 +304,10 @@ Da el resultado siguiente:
 
 En esta sesión de aprendizaje activo, queremos que tomes lo que has aprendido arriba y pruebes a aplicar estilo a una lista anidada. Te hemos provisto con un HTML, y queremos que hagas lo siguiente:
 
-1.  Poner viñetas cuadradas en la lista no ordenada.
-2.  Establecer un interlineado de 1,5 con respecto al tamaño de la letra tanto para la lista ordenada como para la lista no ordenada.
-3.  Poner letras minúsculas en la lista ordenada.
-4.  Juega con el ejemplo, libremente y cuanto quieras, experimenta con los tipos de viñetas, los espacios, o cualquier otra cosa con que te encuentres.
+1. Poner viñetas cuadradas en la lista no ordenada.
+2. Establecer un interlineado de 1,5 con respecto al tamaño de la letra tanto para la lista ordenada como para la lista no ordenada.
+3. Poner letras minúsculas en la lista ordenada.
+4. Juega con el ejemplo, libremente y cuanto quieras, experimenta con los tipos de viñetas, los espacios, o cualquier otra cosa con que te encuentres.
 
 Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para ver una posible solución.
 

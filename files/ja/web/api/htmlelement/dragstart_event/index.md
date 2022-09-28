@@ -1,15 +1,8 @@
 ---
 title: 'HTMLElement: dragstart イベント'
 slug: Web/API/HTMLElement/dragstart_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
-browser-compat: api.HTMLElement.dragstart_event
-translation_of: Web/API/HTMLElement/dragstart_event
 ---
+
 {{APIRef}}
 
 `dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。

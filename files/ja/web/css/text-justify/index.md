@@ -1,16 +1,8 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-  - text-justify
-browser-compat: css.properties.text-justify
-translation_of: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
 **`text-justify`** は CSS のプロパティで、要素に {{cssxref("text-align")}}`: justify;` が設定された時にテキストに適用される両端揃えの種類を設定します。

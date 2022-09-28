@@ -22,7 +22,9 @@ translation_of: Web/API/URL/origin
 
 ## 구문
 
-    const originString = url.origin
+```js
+const originString = url.origin
+```
 
 ### 값
 

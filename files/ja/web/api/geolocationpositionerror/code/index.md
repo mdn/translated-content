@@ -2,6 +2,7 @@
 title: GeolocationPositionError.code
 slug: Web/API/GeolocationPositionError/code
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPositionError.code`** は読み取り専用プロパティで、 `unsigned short` でエラーコードを表します。

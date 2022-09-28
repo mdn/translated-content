@@ -1,16 +1,8 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 書字方向
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.text-combine-upright
-translation_of: Web/CSS/text-combine-upright
 ---
+
 {{CSSRef}}
 
 **`text-combine-upright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一文字分の空間に挿入する文字の組み合わせを設定します。組み合わせたテキストが 1em の幅より広い場合、ユーザーエージェントはコンテンツを 1em の幅に収めなければなりません。合成結果は、レイアウトおよび装飾においてグリフ一文字として扱われます。このプロパティは、縦書きモードでのみ効果があります。

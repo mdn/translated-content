@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 ---
+
 {{CSSRef}}
 
 En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans [le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). La disposition de chaque boîte est dictée par :

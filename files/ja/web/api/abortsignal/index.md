@@ -1,14 +1,6 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - インターフェース
-  - リファレンス
-  - 実験的
-translation_of: Web/API/AbortSignal
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
@@ -65,7 +57,7 @@ function fetchVideo() {
 }
 ```
 
-> **Note:** **注記**: `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
+> **Note:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
 
 > **Warning:** 現在のバージョンの Firefox は、`DOMException` で失敗します。
 

@@ -2,6 +2,7 @@
 title: <section>
 slug: Web/HTML/Element/section
 ---
+
 {{HTMLRef}}
 
 **HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
@@ -152,7 +153,7 @@ slug: Web/HTML/Element/section
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## 参见
 

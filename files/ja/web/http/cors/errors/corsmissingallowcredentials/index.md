@@ -1,20 +1,8 @@
 ---
 title: 'Reason: expected ‘true’ in CORS header ‘Access-Control-Allow-Credentials’'
 slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
-tags:
-  - CORS
-  - CORSMissingAllowCredentials
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

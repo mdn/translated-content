@@ -9,6 +9,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 original_slug: Web/JavaScript/Reference/Instructions/if...else
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`if`** exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.

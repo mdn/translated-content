@@ -1,21 +1,8 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-tags:
-  - Align
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - CSS プロパティ
-  - Experimental
-  - Graphics
-  - Layout
-  - NeedsL
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS の **`initial-letter-align`** プロパティは、段落内の最初の文字の配置を指定します。

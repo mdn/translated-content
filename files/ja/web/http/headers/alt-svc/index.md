@@ -1,13 +1,8 @@
 ---
 title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
-tags:
-  - HTTP
-  - HTTP Header
-  - NeedsCompatTable
-  - Reference
-translation_of: Web/HTTP/Headers/Alt-Svc
 ---
+
 {{HTTPSidebar}}
 
 **`Alt-Svc`** は HTTP のレスポンスヘッダーで、同じリソースに到達できる代替サービスを宣伝するために使用します。 代替サービスは、プロトコル/ホスト/ポートの組み合わせによって定義します。

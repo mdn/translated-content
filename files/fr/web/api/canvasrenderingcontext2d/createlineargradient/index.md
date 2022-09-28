@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.createLinearGradient()`** de l'API Canvas 2D crée un gradient le long de la ligne donnée par les coordonnées représentées par les paramètres.

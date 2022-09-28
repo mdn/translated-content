@@ -1,10 +1,6 @@
 ---
 title: DSL (ドメイン固有言語)
 slug: Glossary/DSL/Domain_specific_language
-tags:
-  - CodingScripting
-  - Glossary
-  - ProgrammingLanguage
 ---
 **DSL（ドメイン固有言語）** とは、あるアプリケーションドメイン内の特定の問題に対処するために設計された、範囲が限定されたコンピューター言語の一種です。
 

@@ -1,13 +1,8 @@
 ---
 title: 'HTML 属性: multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-translation_of: Web/HTML/Attributes/multiple
 ---
+
 {{HTMLSidebar}}
 
 論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効で、ユーザーが複数の値を選択する方法はフォームコントロールに依存します。

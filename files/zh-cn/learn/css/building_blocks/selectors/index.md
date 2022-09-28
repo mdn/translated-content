@@ -2,6 +2,7 @@
 title: CSS 选择器
 slug: Learn/CSS/Building_blocks/Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 {{Glossary("CSS")}}中，选择器用来指定网页上我们想要样式化的{{glossary("HTML")}}元素。有 CSS 选择器提供了很多种方法，所以在选择要样式化的元素时，我们可以做到很精细的地步。本文和本文的子篇中，我们将会详细地讲授选择器的不同使用方式，并了解它们的工作原理。
@@ -75,7 +76,7 @@ h1,
 }
 ```
 
-在下面的实时示例中，试着把两个有 ID 声明的选择器组合起来。外观在组合起来以后应该还是一样的。
+在下面的实时示例中，试着把两个有相同声明的选择器组合起来。外观在组合起来以后应该还是一样的。
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
 

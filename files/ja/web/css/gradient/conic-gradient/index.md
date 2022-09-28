@@ -1,20 +1,9 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/conic-gradient()
 original_slug: Web/CSS/gradient/conic-gradient()
-browser-compat: css.types.image.gradient.conic-gradient
 ---
+
 {{CSSRef}}
 
 **`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや色相環などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。

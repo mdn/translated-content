@@ -14,6 +14,7 @@ tags:
 translation_of: Learn
 original_slug: Apprendre
 ---
+
 {{LearnSidebar}}
 
 Bienvenue dans l'Espace d'apprentissage (_Learning Area_) de MDN. Cet ensemble d'articles a pour but de fournir aux développeurs web débutants tout ce dont ils ont besoin pour commencer à développer des sites web simples.

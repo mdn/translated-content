@@ -2,6 +2,7 @@
 title: Console.table()
 slug: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 将数据以表格的形式显示。

@@ -1,13 +1,8 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - HTML
-  - Reference
-  - グローバル属性
-  - リファレンス
-translation_of: Web/HTML/Global_attributes/style
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`style`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を包含します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。

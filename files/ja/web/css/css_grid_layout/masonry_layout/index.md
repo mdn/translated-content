@@ -1,13 +1,8 @@
 ---
 title: 組積レイアウト
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - 実験的
-  - 組積
-translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ---
+
 {{CSSRef}}
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)仕様書の Level 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、組積 (masonry) レイアウトとは何か、どのように使用するかについて詳しく説明します。

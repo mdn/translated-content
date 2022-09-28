@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/Media_Queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.

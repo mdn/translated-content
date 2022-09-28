@@ -1,17 +1,8 @@
 ---
 title: フレックスアイテムの並べ替え
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-tags:
-  - アクセシビリティ
-  - CSS
-  - Flex
-  - ガイド
-  - 方向
-  - フレックスボックス
-  - order
-  - reverse
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
+
 {{CSSRef}}
 
 フレックスボックスやグリッドといった新しいレイアウト方式には、コンテンツの順序を制御する機能があります。この記事では、フレックスボックスを使っている場合にコンテンツの見た目上の順序を変更する方法について見ていきます。またアクセシビリティの観点における、アイテム順の変更による影響についても考察します。

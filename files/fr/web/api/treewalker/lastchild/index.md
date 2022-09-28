@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/lastChild
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.lastChild()`** déplace le {{domxref("Node")}} courant au dernier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle retourne `null` et le noeud courant reste inchangé.

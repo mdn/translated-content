@@ -1,20 +1,8 @@
 ---
 title: 'ページの生成: ブラウザーの動作の仕組み'
 slug: Web/Performance/How_browsers_work
-tags:
-  - Browsers
-  - Compositing
-  - Critical rendering path
-  - DNS Lookup
-  - Navigation
-  - Page load
-  - Painting
-  - SSL/TLS Handshake
-  - TCP handshake
-  - Web Performance
-  - render
-translation_of: Web/Performance/How_browsers_work
 ---
+
 ユーザーは、読み込みが速く、スムーズに操作できるコンテンツを、ウェブで体験することを求めています。したがって、開発者はこれらふたつの目標を達成するために努力しなければいけません。
 
 どうやって性能そして体感性能を改善するか理解するためには、ブラウザーがどのように動作するかを理解することが役に立ちます。

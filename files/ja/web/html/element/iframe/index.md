@@ -1,21 +1,8 @@
 ---
 title: '<iframe>: インラインフレーム要素'
 slug: Web/HTML/Element/iframe
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
-translation_of: Web/HTML/Element/iframe
 ---
+
 {{HTMLRef}}
 
 **HTML のインラインフレーム要素 (`<iframe>`)** は、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。

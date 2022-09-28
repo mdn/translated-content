@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-template-areas
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-template-areas`** permet de définir des zones de grille nommées.

@@ -12,6 +12,7 @@ tags:
   - removeCookies
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
+
 {{AddonSidebar()}}
 
 Efface les cookies du navigateur

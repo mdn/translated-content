@@ -1,19 +1,8 @@
 ---
 title: 'CSP: object-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Object
-  - Reference
-  - Security
-  - object-src
-  - source
-browser-compat: http.headers.Content-Security-Policy.object-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} の `**object-src**` ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。

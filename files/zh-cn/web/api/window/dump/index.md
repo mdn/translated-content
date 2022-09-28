@@ -2,6 +2,7 @@
 title: Window.dump()
 slug: Web/API/Window/dump
 ---
+
 {{ ApiRef() }}
 
 {{Non-standard_header}}
@@ -22,7 +23,7 @@ dump(message);
 
 ## 注解
 
-`dump()`的常见用途是调试 JavaScript。`dump`如果使用`console`选项启动了 Firefox 进程，则将消息发送到系统控制台（本地控制台）。如果`console`未指定该选项，则输出到对应终端。dump() 的输出不会发送到[浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。输出可以使用[console.log（）](/zh-CN/docs/Web/API/Console.log)发送到[浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。特殊的代码还能将消息记录到[错误控制台](/zh-CN/docs/Error_Console) / [浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。[`Components.utils.reportError`](https://developer.mozilla.org/en-US/docs/Components.utils.reportError)[`nsIConsoleService`](https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService)
+`dump()`的常见用途是调试 JavaScript。`dump`如果使用`console`选项启动了 Firefox 进程，则将消息发送到系统控制台（本地控制台）。如果`console`未指定该选项，则输出到对应终端。dump() 的输出不会发送到[浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。输出可以使用[console.log（）](/zh-CN/docs/Web/API/Console.log)发送到[浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。特殊的代码还能将消息记录到[错误控制台](/zh-CN/docs/Error_Console) / [浏览器控制台](/zh-CN/docs/Tools/Browser_Console)。[`Components.utils.reportError`](/zh-CN/docs/Components.utils.reportError)[`nsIConsoleService`](/zh-CN/docs/XPCOM_Interface_Reference/nsIConsoleService)
 
 `dump()`也可用于使用 JavaScript 实现的 XPCOM 组件，尽管 {{domxref("window")}} 不是组件中的全局对象。它也明确地在[沙箱中提供](/zh-CN/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object)。但是，这种使用`dump`不受下面提到的偏好的影响 --- 它将始终显示出来。因此，建议您自己检查此偏好或使用自己的调试偏好，以确保在根本不感兴趣的情况下，不会向用户的控制台发送大量调试内容。请注意，`dump`XPCOM 组件的输出将转到`stderr`，而`dump`其他地方将输出`stdout`。
 

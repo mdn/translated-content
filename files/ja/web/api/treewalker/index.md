@@ -1,13 +1,8 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-browser-compat: api.TreeWalker
-translation_of: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。

@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`source`** 読み取り専用プロパティは、メッセージの送信元の {{domxref("Client")}} オブジェクトへの参照を返します。
@@ -53,5 +54,5 @@ self.onmessage = function(e) {
 
 - [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？ ](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)

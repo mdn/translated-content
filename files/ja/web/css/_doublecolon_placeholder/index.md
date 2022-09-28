@@ -1,15 +1,8 @@
 ---
 title: '::placeholder'
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.placeholder
-translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の{{htmlattrxref("placeholder","input","プレイスホルダー文字列",1)}}を表します。

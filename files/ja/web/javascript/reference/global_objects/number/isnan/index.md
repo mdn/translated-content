@@ -1,16 +1,8 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Number
-  - isNaN
-  - ポリフィル
-browser-compat: javascript.builtins.Number.isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef}}
 
 **`Number.isNaN()`** メソッドは、渡された値が {{jsxref("NaN")}} であり、かつその型が {{jsxref("Number")}} であるかどうかを判断します。元となるグローバルの {{jsxref("isNaN", "isNaN()")}} よりも堅牢な版です。

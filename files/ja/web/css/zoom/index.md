@@ -1,15 +1,8 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.zoom
-translation_of: Web/CSS/zoom
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **_`zoom`_** は [CSS](/ja/docs/Web/CSS) の標準外のプロパティで、要素の拡大率を制御するために使用することができます。できれば、このプロパティの代わりに {{cssxref("transform-function/scale", "transform: scale()")}} を使用してください。ただし、 CSS 座標変換とは異なり、 `zoom` は要素のレイアウト時の大きさに影響します。

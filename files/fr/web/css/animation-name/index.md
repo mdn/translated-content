@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-name
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-name`** définit une liste d'animations qui doivent être appliquées à l'élément ciblé. Chaque nom indique une règle @ {{cssxref("@keyframes")}} qui définit les valeurs des propriétés pour la séquence.

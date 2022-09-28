@@ -1,22 +1,8 @@
 ---
 title: 'メディアの種類と形式のガイド: 画像、音声、動画コンテンツ'
 slug: Web/Media/Formats
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Containers
-  - File Types
-  - Files
-  - Filetypes
-  - Landing
-  - Media
-  - Types
-  - Video
-  - Web
-  - formats
-translation_of: Web/Media/Formats
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
 ほぼ最初の頃から、ウェブは何らかの形で視覚メディアのプレゼンテーションに対応してきました。当初、これらの機能は制限されていましたが、さまざまなブラウザーがウェブ上の静止画や動画の画像を含むことに関する問題に対して独自の解決策を見つけたため、有機的に拡張されました。現代のウェブは、メディアのプレゼンテーションや操作をサポートする強力な機能を備えており、さまざまな種類のコンテンツに対応するいくつかのメディア関連 API を備えています。一般的に、ブラウザーが対応するメディア形式は、ブラウザーの作成者に委ねられており、ウェブ開発者の作業を複雑にしています。

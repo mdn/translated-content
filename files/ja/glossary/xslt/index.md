@@ -1,12 +1,6 @@
 ---
 title: XSLT
 slug: Glossary/XSLT
-tags:
-  - CodingScripting
-  - Glossary
-  - XML
-  - XSLT
-translation_of: Glossary/XSLT
 l10n:
   sourceCommit: ba6c97a742adb97092d5b20804bf9c462f3b84f3
 ---

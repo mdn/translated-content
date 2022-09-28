@@ -1,17 +1,8 @@
 ---
 title: 'CSP: report-to'
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
-tags:
-  - CSP
-  - Content Security Policy
-  - Content-Security-Policy
-  - HTTP
-  - Reporting
-  - Security
-  - report-to
-browser-compat: http.headers.Content-Security-Policy.report-to
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
+
 {{HTTPSidebar}}
 
 `Content-Security-Policy` の **_`Report-To`_** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。

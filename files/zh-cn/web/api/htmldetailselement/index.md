@@ -2,6 +2,7 @@
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLDetailsElement`** 接口提供了特殊的属性 (除了常规的 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承获得这些属性) 用于操作 {{HTMLElement("details")}} 元素.
@@ -26,7 +27,7 @@ _没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLDetailsElement")}}
+{{Compat}}
 
 ## 另见
 

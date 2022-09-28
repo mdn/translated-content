@@ -1,19 +1,8 @@
 ---
 title: プログラムによるメディアクエリーの評価
 slug: Web/CSS/Media_Queries/Testing_media_queries
-tags:
-  - 上級者
-  - CSS
-  - DOM
-  - ガイド
-  - JavaScript
-  - メディアクエリー
-  - MediaQueryList
-  - レスポンシブデザイン
-  - ウェブ
-  - matchMedia
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 ---
+
 {{CSSRef}}
 
 {{Glossary("DOM")}} では、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の結果を {{domxref("MediaQueryList")}} インターフェイスおよびそのメソッドやプロパティを用いてプログラムからで調べることができる機能を備えています。 `MediaQueryList` オブジェクトを作成すると、クエリーの結果を確認したり、結果が変化したときに自動的に通知を受け取ったりすることができます。

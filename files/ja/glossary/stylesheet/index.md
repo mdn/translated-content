@@ -1,10 +1,6 @@
 ---
 title: スタイルシート(Stylesheet)
 slug: Glossary/Stylesheet
-tags:
-  - Glossary
-  - StyleSheet
-translation_of: Glossary/Stylesheet
 ---
 **スタイルシート(stylesheet)** はレイアウトを規定しウェブページまたはドキュメントをデザインする一連の CSS ルールです。*内的*スタイルシートはウェブドキュメントの{{htmlelement("head","ヘッダー要素")}}内の{{htmlelement("style","スタイル情報要素")}}内に置かれ、*外的*スタイルシートは別の`.css` ファイルの中に置かれ、ドキュメントヘッダーの{{htmlelement("link","リンク要素")}}内で参照することによりドキュメントに適用されます。
 

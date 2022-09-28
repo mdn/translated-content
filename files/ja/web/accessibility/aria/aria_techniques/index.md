@@ -1,13 +1,6 @@
 ---
 title: 'ARIA を使用する: ロール、ステート、プロパティ'
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 ## ロール
 
@@ -41,7 +34,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 
 - Combobox
 - [Grid](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role) （[row](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role), [gridcell](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role), rowheader, columnheader ロールを含む）
-- [Listbox ](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role)（option ロールを含む）
+- [Listbox](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role)（option ロールを含む）
 - Menu
 - Menubar
 - [Radiogroup （radio ロールを参照）](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)

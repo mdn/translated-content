@@ -1,13 +1,8 @@
 ---
 title: HTTP の圧縮
 slug: Web/HTTP/Compression
-tags:
-  - Guide
-  - HTTP
-  - ガイド
-  - 圧縮
-translation_of: Web/HTTP/Compression
 ---
+
 {{HTTPSidebar}}
 
 **圧縮**は、ウェブサイトのパフォーマンスを向上させるための重要な手段です。ドキュメントによっては、必要な帯域を最大 70% 削減するほどサイズが縮減します。長年かけてアルゴリズムはより効率的になり、またクライアントおよびサーバーが新たなアルゴリズムをサポートしました。

@@ -2,6 +2,7 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `utf-8`、`iso-8859-2`、`koi8`、`cp1261`，`gbk` 等等。解码器将字节流作为输入，并提供代码点流作为输出。
@@ -67,12 +68,12 @@ _`TextDecoder` 接口不继承任何方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ## 相关链接
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) –基于类型数组的字符串的类似 C 的表示形式
+- [`StringView`](/zh-CN/Add-ons/Code_snippets/StringView) –基于类型数组的字符串的类似 C 的表示形式
 - 一个[垫片](http://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [`Components.utils.importGlobalProperties`](/en-US/docs/Components.utils.importGlobalProperties)
+- [`Components.utils.importGlobalProperties`](/zh-CN/docs/Components.utils.importGlobalProperties)
 - [Node.js 支持从 v11.0.0 全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)

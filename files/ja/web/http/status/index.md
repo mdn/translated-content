@@ -1,15 +1,8 @@
 ---
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - ランディング
-  - 概要
-  - リファレンス
-  - ステータスコード
-  - ウェブ
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。

@@ -2,11 +2,12 @@
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要
 
-**`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) 属性定义在滚动容器中的一个临时点（snap point）如何被严格的执行。
+**`scroll-snap-type`** [CSS](/zh-CN/docs/Web/CSS) 属性定义在滚动容器中的一个临时点（snap point）如何被严格的执行。
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
 
@@ -225,4 +226,4 @@ html, body, .holster {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-type")}}
+{{Compat}}

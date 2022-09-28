@@ -1,10 +1,8 @@
 ---
 title: オプションページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
+
 {{AddonSidebar}}
 
 オプションページでは、ユーザーから変更できるような拡張機能の設定画面を定義することができます。ユーザーはアドオンマネージャーを通じて、アドオンのオプションページにアクセスすることができます。

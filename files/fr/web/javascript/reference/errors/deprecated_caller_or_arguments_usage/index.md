@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_caller_or_arguments_usage
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

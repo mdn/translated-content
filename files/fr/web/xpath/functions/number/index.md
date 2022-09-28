@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/number
 original_slug: Web/XPath/Fonctions/number
 ---
+
 {{ XsltRef() }}
 
 La fonction `number` convertit un objet en un nombre et retourne ce nombre.

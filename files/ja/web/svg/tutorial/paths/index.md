@@ -1,14 +1,8 @@
 ---
 title: Paths
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - Intermediate
-  - SVG
-  - SVG チュートリアル
-  - SVG:Tutorial
-  - 中級者向け
-translation_of: Web/SVG/Tutorial/Paths
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 {{SVGElement('path')}} 要素は、 SVG の[基本図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)ライブラリの中でもっとも強力な要素です。これは、直線、曲線、弧などを作成するために用いることができます。
@@ -286,6 +280,6 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 円弧は、図面の中で円や楕円のピースを簡単に作成する方法です。例えば、円グラフでは、各ピースごとに異なる円弧が必要になります。
 
-から SVG に移行する場合、弧は習得するのが最も難しいものですが、はるかに強力なものになります。完全な円と楕円だけは、 SVG の円弧が苦手な形状です。円の周りを回るあらゆるパスの始点と終点が同じ点であるため、選択できる円の数は無限にあり、実際のパスは不定になるからです。パスの始点と終点を少しずらして、別のパスセグメントでつなぐことで近いものを描くことができます。例えば、半円ごとに円弧を描くことも可能です。このような場合は、実際の {{SVGElement("circle")}} や {{SVGElement("ellipse")}} ノードを使った方が簡単なことが多いです。<http://codepen.io/lingtalfi/pen/yaLWJG> のインタラクティブなデモは、 SVG の円弧の背後にある概念を理解するのに役立つかもしれません。 (Chrome と Firefox のみでテストしました。お使いのブラウザでは動作しないかもしれません)。
+ {{HTMLElement("canvas")}} から SVG に移行する場合、弧は習得するのが最も難しいものですが、はるかに強力なものになります。完全な円と楕円だけは、 SVG の円弧が苦手な形状です。円の周りを回るあらゆるパスの始点と終点が同じ点であるため、選択できる円の数は無限にあり、実際のパスは不定になるからです。パスの始点と終点を少しずらして、別のパスセグメントでつなぐことで近いものを描くことができます。例えば、半円ごとに円弧を描くことも可能です。このような場合は、実際の {{SVGElement("circle")}} や {{SVGElement("ellipse")}} ノードを使った方が簡単なことが多いです。<http://codepen.io/lingtalfi/pen/yaLWJG> のインタラクティブなデモは、 SVG の円弧の背後にある概念を理解するのに役立つかもしれません。 (Chrome と Firefox のみでテストしました。お使いのブラウザでは動作しないかもしれません)。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

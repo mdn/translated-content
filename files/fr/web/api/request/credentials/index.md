@@ -8,6 +8,7 @@ tags:
   - request
 translation_of: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 La propriété en lecture seule **`credentials`**, de l'interface {{domxref("Request")}}, indique si l'agent utilisateur doit envoyer des cookies de l'autre domaine dans le cas de requêtes CORS. Ceci est similaire au flag `withCredentials` de XHR, mais peut prendre trois valeurs possibles (contre deux pour XHR) :

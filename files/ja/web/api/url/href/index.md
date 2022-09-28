@@ -1,14 +1,8 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - href
-translation_of: Web/API/URL/href
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`href`** プロパティは、URL 全体を含む {{domxref("USVString")}} です。

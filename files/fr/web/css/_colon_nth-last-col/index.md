@@ -4,6 +4,7 @@ slug: Web/CSS/:nth-last-col
 translation_of: Web/CSS/:nth-last-col
 browser-compat: css.selectors.nth-last-col
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-col()`** est conçue pour les tableaux et les grilles. Elle accepte les notations de type `An+B` telles qu'utilisées avec le sélecteur {{Cssxref(":nth-child")}}, ce qui permet de cibler plusieurs colonnes en comptant à partir de la fin du jeu de colonnes. Les valeurs _odd_ et _even_ sont aussi valides.

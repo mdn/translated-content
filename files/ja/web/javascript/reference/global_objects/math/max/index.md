@@ -1,13 +1,8 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
+
 {{JSRef}}
 
 **`Math.max()`** 関数は、入力引数として与えられた 0 個以上の数値のうち最大の数を返します。

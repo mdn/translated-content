@@ -1,14 +1,6 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
-tags:
-  - API
-  - Cryptgraphy
-  - Property
-  - Read-only
-  - Reference
-  - Web Crypt API
-translation_of: Web/API/Crypto/subtle
 ---
 {{APIRef("Web Crypto API")}}
 

@@ -2,6 +2,7 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`instanceof`** **运算符**用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。

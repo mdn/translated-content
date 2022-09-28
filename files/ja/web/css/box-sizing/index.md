@@ -1,23 +1,8 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - Boxes
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - border-box
-  - box model
-  - box-sizing
-  - content-box
-  - height
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.box-sizing
-translation_of: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。

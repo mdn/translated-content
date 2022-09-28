@@ -2,6 +2,7 @@
 title: <input type="text">
 slug: Web/HTML/Element/Input/text
 ---
+
 {{HTMLRef}}
 
 `{{HTMLElement("input")}}` 元素的**`text`** 类型创建基础的单行文本框。
@@ -370,5 +371,5 @@ input:valid+span:after {
 
 - [HTML Forms](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Multi-line text inputmaxlength

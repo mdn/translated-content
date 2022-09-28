@@ -1,15 +1,9 @@
 ---
 title: ウィジェット
 slug: conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
-tags:
-  - Accessibility
-  - JavaScript
-  - Landing
-  - NeedsUpdate
-translation_of: Web/Accessibility/ARIA/widgets
 original_slug: Web/Accessibility/ARIA/widgets
 ---
-> **Warning:** 警告: 更新が必要
+> **Warning:** 更新が必要
 
 ## 入門
 
@@ -42,8 +36,8 @@ original_slug: Web/Accessibility/ARIA/widgets
 
 ## ライトボックス
 
-- [WCAG 2.0 and ARIA-](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)[conformant](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table)[ lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
-- <a class="external free" href="http://majx-js.digissime.net/js/popin/" rel="nofollow">http://majx-js.digissime.net/js/popin/</a>
+- [WCAG 2.0 and ARIA-](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)[conformant](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table) [lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
+- <http://majx-js.digissime.net/js/popin/>
 
 ## フォーム検証
 

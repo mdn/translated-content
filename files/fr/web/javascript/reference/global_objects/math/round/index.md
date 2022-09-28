@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/round
 ---
+
 {{JSRef}}
 
 La fonction **`Math.round()`** retourne la valeur d'un nombre arrondi à l'entier le plus proche.

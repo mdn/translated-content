@@ -1,7 +1,6 @@
 ---
 title: MediaStreamConstraints
 slug: conflicting/Web/API/MediaDevices/getUserMedia
-translation_of: Web/API/MediaStreamConstraints
 original_slug: Web/API/MediaStreamConstraints
 ---
 {{APIRef("Media Capture and Streams")}}**`MediaStreamConstraints`**のオブジェクトは、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}を呼び出した時に返される{{domxref("MediaStream")}}に含まれるトラックの種類が何であるかを知るため、また、これらのトラック設定の制約を確立するために使用されます。制約がどのようにして動作するのかについての詳細は、[Capabilities, constraints, and settings](/ja/docs/Web/API/Media_Streams_API/Constraints) (英語)をお読みください。

@@ -1,13 +1,8 @@
 ---
 title: Map() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 ---
+
 {{JSRef}}
 
 **`Map()` コンストラクター**は、 {{jsxref("Map")}} オブジェクトを生成します。

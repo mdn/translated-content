@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 ---
+
 {{AddonSidebar()}}
 
 Obtient des informations sur toutes les fenêtres ouvertes, en les passant dans un rappel.

@@ -2,6 +2,7 @@
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## 摘要
@@ -54,7 +55,7 @@ window.scrollBy({
 
 ## 注意
 
-[window.scrollBy](/en-US/docs/DOM/Window.scrollBy) 滚动指定的距离，而 [window.scroll](/en-US/docs/DOM/Window.scroll) 滚动至文档中的绝对位置。另外还有 [window.scrollByLines](/en-US/docs/DOM/Window.scrollByLines), [window.scrollByPages](/en-US/docs/DOM/Window.scrollByPages)
+[window.scrollBy](/zh-CN/docs/DOM/Window.scrollBy) 滚动指定的距离，而 [window.scroll](/zh-CN/docs/DOM/Window.scroll) 滚动至文档中的绝对位置。另外还有 [window.scrollByLines](/zh-CN/docs/DOM/Window.scrollByLines), [window.scrollByPages](/zh-CN/docs/DOM/Window.scrollByPages)
 
 ## 规范
 

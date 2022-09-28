@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asinh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.asinh()`** renvoie l'arc sinus hyperbolique d'un nombre :

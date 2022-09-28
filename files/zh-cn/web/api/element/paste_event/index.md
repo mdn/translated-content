@@ -2,9 +2,10 @@
 title: 'Element: paste 事件'
 slug: Web/API/Element/paste_event
 ---
+
 {{APIRef}}
 
-当用户在浏览器用户界面发起“粘贴”操作时，会触发**`paste`**事件。
+当用户在浏览器用户界面发起“粘贴”操作时，会触发 **`paste`** 事件。
 
 ```
 冒泡                 是
@@ -16,7 +17,7 @@ slug: Web/API/Element/paste_event
 事件处理属性          {{domxref("HTMLElement/onpaste", "onpaste")}}
 ```
 
-如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) 属性设置为 `true 的元素`），则默认操作是将剪贴板的内容插入光标所在位置的文档中。
+如果光标位于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或者 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性设置为 `true 的元素`），则默认操作是将剪贴板的内容插入光标所在位置的文档中。
 
 事件处理程序可以通过调用事件的 `clipboardData` 属性上的 {{domxref("DataTransfer/getData", "getData()")}}访问剪贴板内容。
 

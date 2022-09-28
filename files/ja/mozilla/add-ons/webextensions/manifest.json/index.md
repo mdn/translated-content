@@ -1,12 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 manifest.json ファイルは、WebExtension API を使う拡張機能に必ず含めなければならない唯一のファイルです。
@@ -37,7 +33,7 @@ browser.runtime.getManifest().version;
 
 下記のブロックには一般的な manifest keys の基本文法を示します。
 
-> **Note:** **注:** これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
+> **Note:** これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
 
 完全な例は [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) を見てください。
 
