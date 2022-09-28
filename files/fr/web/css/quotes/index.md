@@ -72,16 +72,11 @@ q {
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires        |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSS3 Content", "#quotes", "quotes")}}             | {{Spec2("CSS3 Content")}} |                     |
-| {{SpecName('CSS2.1', 'generate.html#quotes', 'quotes')}} | {{Spec2('CSS2.1')}}         | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.quotes")}}
+{{Compat}}
 
 ## Voir aussi
 

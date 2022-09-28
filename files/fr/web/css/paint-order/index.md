@@ -94,12 +94,8 @@ text {
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'painting.html#PaintOrder', 'paint-order')}} | {{Spec2('SVG2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.paint-order")}}
+{{Compat}}

@@ -126,18 +126,11 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `heigh
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                                                                                             |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}         | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `available`, `fit-content`.                                                                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}             | {{Spec2('CSS3 Transitions')}} | `height` peut désormais être animée.                                                                                                                     |
-| {{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}} | {{Spec2('CSS2.1')}}                 | Ajout de la prise en charge des valeurs de type {{cssxref("&lt;length&gt;")}} et précision sur les éléments auxquels la propriété s'applique. |
-| {{SpecName('CSS1', '#height', 'height')}}                                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.height")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -72,15 +72,11 @@ Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{c
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.symbols")}}
+{{Compat}}
 
 ## Voir aussi
 

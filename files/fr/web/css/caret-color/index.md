@@ -70,15 +70,11 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}} | {{Spec2("CSS3 UI")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.caret-color")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -86,15 +86,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('CSS3 Text', '#text-justify-property', 'text-justify')}} | {{Spec2('CSS3 Text')}} |              |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilité des navigateurs
 
-## Compatibilité avec les navigateurs
-
-{{Compat("css.properties.text-justify")}}
+{{Compat}}
 
 ## Voir aussi
 

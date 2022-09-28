@@ -86,15 +86,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                             |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement significatif                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | `margin-top` peut désormais être animée.                 |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-top")}}
+{{Compat}}

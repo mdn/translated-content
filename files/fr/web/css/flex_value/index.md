@@ -27,13 +27,11 @@ Le type de donnée `<flex>` est défini par un nombre ({{cssxref("&lt;number&gt;
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaire         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Grid", "#typedef-flex", "&lt;flex&gt;")}} | {{Spec2("CSS Grid")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

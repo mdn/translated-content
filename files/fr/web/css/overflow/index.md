@@ -146,16 +146,11 @@ p.auto {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | La syntaxe permet désormais d'utiliser une ou deux valeurs. |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -80,15 +80,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-inline", "inset-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset-inline")}}
+{{Compat}}
 
 ## Voir aussi
 

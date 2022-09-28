@@ -74,16 +74,11 @@ border-bottom-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-color', 'border-bottom-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom-color', 'border-bottom-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-color")}}
+{{Compat}}
 
 ## Voir aussi
 

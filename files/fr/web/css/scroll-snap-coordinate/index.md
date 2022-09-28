@@ -134,12 +134,8 @@ scroll-snap-coordinate: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                           | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-coordinate")}}
+{{Compat}}

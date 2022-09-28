@@ -632,15 +632,11 @@ circle {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode')}} | {{Spec2('Compositing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

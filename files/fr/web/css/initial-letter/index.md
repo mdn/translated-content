@@ -74,12 +74,8 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Inline', '#sizing-drop-initials', 'initial-letter')}} | {{Spec2('CSS3 Inline')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.initial-letter")}}
+{{Compat}}

@@ -71,15 +71,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start-color", "border-inline-start-color")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-start-color")}}
+{{Compat}}
 
 ## Voir aussi
 

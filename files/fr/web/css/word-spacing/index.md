@@ -85,15 +85,8 @@ La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas p
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-word-spacing', 'word-spacing')}}         | {{Spec2('CSS3 Text')}}             | Remplace les valeurs précédentes avec une valeur `<spacing-limit>` qui définit la même valeur et la valeur `<percentage>` et permet d'avoir trois valeurs pour décrire un optimum, un minimum, et un maximum. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'word-spacing')}}         | {{Spec2('CSS3 Transitions')}} | `word-spacing` peut désormais être animé.                                                                                                                                                                     |
-| {{SpecName('CSS2.1', 'text.html#propdef-word-spacing', 'word-spacing')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                                                                                                                                                                                             |
-| {{SpecName('CSS1', '#word-spacing', 'word-spacing')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.word-spacing")}}
+{{Compat}}

@@ -138,22 +138,11 @@ align-self: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
-| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}         | {{Spec2("CSS3 Flexbox")}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions avec les boîtes flexibles (_Flexbox_)
-
-{{Compat("css.properties.align-self.flex_context")}}
-
-### Prise en charge pour les dispositions avec les grilles CSS
-
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

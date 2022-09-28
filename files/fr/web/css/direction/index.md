@@ -71,16 +71,11 @@ blockquote {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.direction")}}
+{{Compat}}
 
 ## Voir aussi
 

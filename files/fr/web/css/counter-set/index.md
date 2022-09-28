@@ -67,15 +67,11 @@ h1 {
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Lists', '#counter-set', 'counter-set')}} | {{Spec2('CSS3 Lists')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-set")}}
+{{Compat}}
 
 ## Voir aussi
 

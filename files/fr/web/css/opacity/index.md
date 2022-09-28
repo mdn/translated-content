@@ -134,16 +134,11 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaires                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | `opacity` peut désormais être animée. |
-| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}                 | {{Spec2('CSS3 Colors')}}         | Définition initiale.                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Voir aussi
 

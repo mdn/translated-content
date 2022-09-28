@@ -42,12 +42,8 @@ scroll-margin: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin", "scroll-margin")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin")}}
+{{Compat}}

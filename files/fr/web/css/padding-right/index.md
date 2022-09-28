@@ -74,18 +74,11 @@ padding-right: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding-right')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.                           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-right')}} | {{Spec2('CSS3 Transitions')}} | `padding-right` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                           |
-| {{Specname('CSS1', '#padding-right', 'padding-right')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-right")}}
+{{Compat}}
 
 ## Voir aussi
 

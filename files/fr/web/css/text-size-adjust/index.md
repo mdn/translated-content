@@ -54,15 +54,11 @@ La propriété `text-size-adjust` est définie avec le mot-clé `none` ou le mot
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS Text Size Adjust", "#adjustment-control", "text-size-adjust")}} | {{Spec2("CSS Text Size Adjust")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-size-adjust")}}
+{{Compat}}
 
 ## Voir aussi
 

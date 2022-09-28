@@ -59,12 +59,8 @@ La propriété `mask-border-outset` peut être utilisée avec une, deux, trois o
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#propdef-mask-border-outset", "mask-border-outset")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilité des navigateurs
 
-## Compatiblité des navigateurs
-
-TBD
+{{Compat}}

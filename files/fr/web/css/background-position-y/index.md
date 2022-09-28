@@ -69,15 +69,11 @@ background-position-y: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-y')}} | {{Spec2('CSS4 Backgrounds')}} | Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-position-y")}}
+{{Compat}}
 
 ## Voir aussi
 

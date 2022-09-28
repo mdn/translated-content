@@ -132,17 +132,11 @@ p.absolu {
 
 ## Spécifications
 
-| Spécification                                                                | État                                     | Commentaires                                                           |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'top')}} | {{Spec2('CSS3 Transitions')}} | `top` peut désormais être animée.                                      |
-| {{SpecName('CSS3 Positioning', '#propdef-top', 'top')}}     | {{Spec2('CSS3 Positioning')}} | Description du comportement pour le positionnement adhérent (_sticky_) |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-top', 'top')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.top")}}
+{{Compat}}
 
 ## Voir aussi
 

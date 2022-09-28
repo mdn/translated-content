@@ -58,15 +58,11 @@ Lorsque la valeur du descripteur `system` est `cyclic`, `numeric`, `alphabetic`,
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.additive-symbols")}}
+{{Compat}}
 
 ## Voir aussi
 

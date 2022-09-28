@@ -98,17 +98,11 @@ style {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}     | {{Spec2('CSS3 Backgrounds')}} | La prise en charge du mot-clé `transparent` est retirée car celui-ci est désormais intégré au type {{cssxref("&lt;color&gt;")}}. En pratique, cela n'a pas d'impact. Bien que {{cssxref("border-image")}} ne puisse être définie via `border`, cette dernière la réinitialise quand même avec sa valeur initiale (`none`). |
-| {{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}} | {{Spec2('CSS2.1')}}                 | Le mot-clé `inherit` peut être utilisé et `transparent` est considéré comme une couleur valide.                                                                                                                                                                                                                                             |
-| {{SpecName('CSS1', '#border', 'border')}}                                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                                                                                                                                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -121,17 +121,11 @@ div#fix {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                       |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}     | {{Spec2('CSS3 Transitions')}} | `bottom` peut désormais être animée.                               |
-| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.bottom")}}
+{{Compat}}
 
 ## Voir aussi
 

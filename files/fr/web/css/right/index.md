@@ -106,17 +106,11 @@ right: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaire                                                           |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'right')}} | {{Spec2('CSS3 Transitions')}} | Définit `right` comme pouvant être animée.                            |
-| {{SpecName('CSS3 Positioning', '#propdef-right', 'right')}} | {{Spec2('CSS3 Positioning')}} | Description du comportement pour le comportement adhérent (_sticky_). |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-right', 'right')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.right")}}
+{{Compat}}
 
 ## Voir aussi
 

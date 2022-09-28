@@ -108,15 +108,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                      |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text', '#text-indent-property', 'text-indent')}} | {{Spec2('CSS3 Text')}}             | Ajout des mots-clés `hanging` et `each-line`.                                                     |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-indent')}} | {{Spec2('CSS3 Transitions')}} | `text-indent` peut être animée.                                                                   |
-| {{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}} | {{Spec2('CSS2.1')}}                 | The behavior with `display: inline-block` and anonymous block boxes have been explicitly defined. |
-| {{SpecName('CSS1', '#text-indent', 'text-indent')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-indent")}}
+{{Compat}}

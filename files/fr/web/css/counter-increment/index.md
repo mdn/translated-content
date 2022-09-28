@@ -88,16 +88,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#propdef-counter-increment", "counter-increment")}}             | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#propdef-counter-increment", "counter-increment")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ## Voir aussi
 

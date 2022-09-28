@@ -95,15 +95,11 @@ scrollbar-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS Scrollbars", "#scrollbar-width", "scrollbar-width")}} | {{Spec2("CSS Scrollbars")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scrollbar-width")}}
+{{Compat}}
 
 ## Voir aussi
 

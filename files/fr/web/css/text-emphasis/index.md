@@ -100,15 +100,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -91,12 +91,8 @@ td, th {
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#empty-cells', 'empty-cells')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.empty-cells")}}
+{{Compat}}

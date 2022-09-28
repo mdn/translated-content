@@ -86,15 +86,11 @@ La propriété `flex-shrink` est définie grâce à une valeur de type [`<number
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires         |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-shrink', 'flex-shrink')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Voir aussi
 

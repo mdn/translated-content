@@ -51,15 +51,11 @@ Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les dif
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-image-source', 'border-image-source')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-image-source")}}
+{{Compat}}
 
 ## Voir aussi
 

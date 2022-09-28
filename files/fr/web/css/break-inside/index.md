@@ -108,20 +108,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                                |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-within', 'break-inside')}}                             | {{Spec2('CSS3 Fragmentation')}} | Aucune modification.                        |
-| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-inside')}}                             | {{Spec2('CSS3 Regions')}}         | Ajout de la gestion des ruptures de région. |
-| {{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-inside')}} | {{Spec2('CSS3 Multicol')}}     | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.break-inside", 4)}}
-
-### Notes relatives à la compatibilité
-
-Avant Firefox 65, l'ancienne propriété {{cssxref("page-break-inside")}} fonctionnait dans Firefox en empêchant les ruptures de colonnes et de pages. On utilisera les deux propriétés afin d'obtenir une rétrocompatibilité avec ces versions.
-
-Pour les anciens navigateurs basés sur WebKit, on peut utiliser la propriété préfixée `-webkit-column-break-inside` afin de contrôler les ruptures de colonne.
+{{Compat}}

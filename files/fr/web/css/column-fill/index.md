@@ -78,12 +78,8 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#cf', 'column-fill')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-fill")}}
+{{Compat}}

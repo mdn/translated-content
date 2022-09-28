@@ -125,15 +125,11 @@ Avec ce CSS, on obtient le résultat suivant :
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}} | {{Spec2('CSS3 Ruby')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.ruby-align")}}
+{{Compat}}
 
 ## Voir aussi
 

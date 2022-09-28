@@ -96,15 +96,11 @@ La prise en charge de cette fonctionnalité par les outils d'assistance est actu
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-speak-as', 'speak-as')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.speak-as")}}
+{{Compat}}
 
 ## Voir aussi
 

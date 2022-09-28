@@ -114,12 +114,8 @@ Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est 
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS Scrollbars", "#scrollbar-color", "scrollbar-color")}} | {{Spec2("CSS Scrollbars")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}

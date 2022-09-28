@@ -73,17 +73,11 @@ p:first-child {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                                                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}} | {{Spec2('CSS3 Fragmentation')}} | Extension de `widows` qui peut désormais être appliqué à n'importe quel type de fragment : pages, régions ou colonnes. |
-| {{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}     | {{Spec2('CSS3 Multicol')}}     | Recommandation d'utiliser `widows` avec les colonnes.                                                                  |
-| {{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}         | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.widows")}}
+{{Compat}}
 
 ## Voir aussi
 

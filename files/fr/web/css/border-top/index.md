@@ -89,14 +89,8 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-top', 'border-top')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-top-color")}} s'applique. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-top', 'border-top')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                        |
-| {{SpecName('CSS1', '#border-top', 'border-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top")}}
+{{Compat}}

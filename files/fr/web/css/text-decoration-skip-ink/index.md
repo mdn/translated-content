@@ -63,12 +63,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS4 Text Decoration", "#text-decoration-skip-ink-property", "text-decoration-skip-ink")}} | {{Spec2("CSS4 Text Decoration")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-skip-ink")}}
+{{Compat}}

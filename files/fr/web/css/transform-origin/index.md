@@ -299,15 +299,11 @@ transform-origin: 100% -30%;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Voir aussi
 

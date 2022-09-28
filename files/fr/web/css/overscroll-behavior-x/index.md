@@ -64,15 +64,11 @@ main > div {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}} | {{Spec2('Overscroll Behavior')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overscroll-behavior-x")}}
+{{Compat}}
 
 ## Voir aussi
 

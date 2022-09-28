@@ -83,15 +83,11 @@ text-align-last: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#text-align-last-property', 'text-align-last')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-align-last")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -53,15 +53,11 @@ Voici le résultat obtenu avec une capture d'écran :
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS Rhythmic Sizing', '#line-height-step', 'line-height-step')}} | {{Spec2('CSS Rhythmic Sizing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height-step")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -135,18 +135,11 @@ ul {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                             | Commentaires                                                                                         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-shorthand-keyword")}}         | {{Spec2("CSS Logical Properties")}} | Ajout du mot-clé `logical`.                                                                          |
-| {{SpecName("CSS3 Backgrounds", "#border-color", "border-color")}}             | {{Spec2('CSS3 Backgrounds')}}         | Le mot-clé `transparent` a été retiré pour être ajouté au type {{cssxref("&lt;color&gt;")}}. |
-| {{SpecName("CSS2.1", "box.html#border-color-properties", "border-color")}} | {{Spec2('CSS2.1')}}                         | Cette propriété est désormais une propriété raccourcie.                                              |
-| {{SpecName("CSS1", "#border-color", "border-color")}}                             | {{Spec2('CSS1')}}                         | Définition initiale.                                                                                 |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-color")}}
+{{Compat}}
 
 ## Voir aussi
 

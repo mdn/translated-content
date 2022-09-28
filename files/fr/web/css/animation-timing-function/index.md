@@ -235,15 +235,11 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                 | Commentaires          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Définition initiale.. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## Voir aussi
 

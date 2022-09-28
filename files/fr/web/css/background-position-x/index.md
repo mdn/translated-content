@@ -70,15 +70,11 @@ background-position-x: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-x')}} | {{Spec2('CSS4 Backgrounds')}} | Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-position-x")}}
+{{Compat}}
 
 ## Voir aussi
 

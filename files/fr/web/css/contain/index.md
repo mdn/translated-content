@@ -62,15 +62,11 @@ Cette propriété s'avère utile pour les pages qui contiennent de nombreux comp
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Containment')}} | {{Spec2('CSS Containment')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## Voir aussi
 

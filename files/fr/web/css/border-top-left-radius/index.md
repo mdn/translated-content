@@ -96,15 +96,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top-left-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

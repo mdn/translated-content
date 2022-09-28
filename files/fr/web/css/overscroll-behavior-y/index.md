@@ -58,15 +58,11 @@ Voir {{cssxref("overscroll-behavior")}}  pour un exemple complet et plus de dét
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-y', 'overscroll-behavior-y')}} | {{Spec2('Overscroll Behavior')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overscroll-behavior-y")}}
+{{Compat}}
 
 ## Voir aussi
 

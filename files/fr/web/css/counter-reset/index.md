@@ -95,16 +95,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}                         | {{Spec2('CSS3 Lists')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}
 
 ## Voir aussi
 

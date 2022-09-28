@@ -78,17 +78,11 @@ body {
 
 ## Spécifications
 
-Jusqu'à ce que le CSSWG publie son propre brouillon, la spécification est consutable sur [le dépôt GitHub du WICG](https://wicg.github.io/overscroll-behavior/).
-
-| Spécification                                                                                                                | État                                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------ |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('CSS Overscroll Behavior')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overscroll-behavior")}}
+{{Compat}}
 
 ## Voir aussi
 

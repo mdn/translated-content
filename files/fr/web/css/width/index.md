@@ -178,18 +178,11 @@ Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                                 |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}     | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `available`, `fit-content`, `border-box` et `content-box`. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}         | {{Spec2('CSS3 Transitions')}} | `width` peut désormais être animée.                                                                          |
-| {{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}} | {{Spec2('CSS2.1')}}                 | Précision sur les éléments auxquels peuvent être appliquée la propriété.                                     |
-| {{SpecName('CSS1', '#width', 'width')}}                                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## Voir aussi
 

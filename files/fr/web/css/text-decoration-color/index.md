@@ -76,15 +76,11 @@ text-decoration-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaires                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-color-property', 'text-decoration-color')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}
 
 ## Voir aussi
 

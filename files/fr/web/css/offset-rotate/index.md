@@ -90,14 +90,8 @@ div:nth-child(3) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-rotate-property', 'offset-rotate')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
-
-> **Note :** Les versions antérieures de la spécification utilisait le nom `motion-rotation` pour cette propriété.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-rotate")}}
+{{Compat}}

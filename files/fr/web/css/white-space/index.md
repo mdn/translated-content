@@ -173,16 +173,11 @@ pre {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                                                |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Définition de l'algorithme des césures de ligne et ajout de `break-spaces`. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Définition initiale.                                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 ## Voir aussi
 

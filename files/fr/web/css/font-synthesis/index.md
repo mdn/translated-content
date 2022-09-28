@@ -70,12 +70,8 @@ Cette propriété peut prendre l'une des formes suivantes :
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-synthesis', 'font-synthesis')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-synthesis")}}
+{{Compat}}

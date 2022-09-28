@@ -209,14 +209,8 @@ Si `font` est définie comme une propriété raccourcie :
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                   |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-prop', 'font')}}                         | {{Spec2('CSS3 Fonts')}} | Prise en charge des valeurs de `font-stretch`. |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight')}} | {{Spec2('CSS2.1')}}         | Prise en charge des mots-clés.                 |
-| {{SpecName('CSS1', '#font', 'font')}}                                         | {{Spec2('CSS1')}}         | Définition initiale.                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font")}}
+{{Compat}}

@@ -89,15 +89,11 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#isolation', 'Isolation')}} | {{Spec2('Compositing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## Voir aussi
 

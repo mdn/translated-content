@@ -74,18 +74,11 @@ padding-left: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                               |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding-left')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.                          |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-left')}}     | {{Spec2('CSS3 Transitions')}} | `padding-left` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                          |
-| {{Specname('CSS1', '#padding-left', 'padding-left')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                       |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-left")}}
+{{Compat}}
 
 ## Voir aussi
 

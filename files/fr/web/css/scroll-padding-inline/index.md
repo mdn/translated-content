@@ -47,14 +47,10 @@ scroll-padding-inline: unset;
 
 {{csssyntax}}
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-inline", "scroll-padding-inline")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-padding-inline")}}
+{{Compat}}

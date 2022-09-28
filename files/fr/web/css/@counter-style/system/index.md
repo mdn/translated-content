@@ -316,15 +316,11 @@ Ce descripteur peut prendre l'une de ces trois formes :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.system")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -81,15 +81,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                           | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-inline-end", "inset-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset-inline-end")}}
+{{Compat}}
 
 ## Voir aussi
 

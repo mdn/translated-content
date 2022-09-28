@@ -174,13 +174,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.basic-shape")}}
+{{Compat}}
 
 ## Voir aussi
 

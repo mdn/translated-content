@@ -135,17 +135,11 @@ De grandes portions de texte utilisant `text-transform` avec la valeur `uppercas
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS3 Text')}} | Par rapport à {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, la spécification s'étend aux caractères Unicode des catégories générales Nombre et Lettre. Le comportement de `capitalize` est modifié pour ignorer les éventuels symboles ou caractères de ponctuations utilisés. Les mots-clés `full-width` et `full-size-kana` sont ajoutés afin de pouvoir mélanger harmonieusement les caractères alphabétiques et les caractères idéographiques. |
-| {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}} | {{Spec2('CSS2.1')}}     | Par rapport à {{SpecName('CSS1', '#text-transform', 'text-transform')}}, étend la spécifications aux lettres non latines et aux scripts bicaméraux.                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('CSS1', '#text-transform', 'text-transform')}}         | {{Spec2('CSS1')}}     | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Voir aussi
 

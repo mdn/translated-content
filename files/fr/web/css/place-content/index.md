@@ -195,23 +195,11 @@ direction.addEventListener("change", function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-place-content", "place content")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.place-content")}}
-
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.place-content.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.place-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

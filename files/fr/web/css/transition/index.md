@@ -70,15 +70,11 @@ Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les tr
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Voir aussi
 

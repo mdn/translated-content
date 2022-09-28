@@ -104,15 +104,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#animation-direction', 'animation-direction')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## Voir aussi
 

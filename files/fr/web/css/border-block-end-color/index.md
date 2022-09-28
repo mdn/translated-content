@@ -75,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-color", "border-block-end-color")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-end-color")}}
+{{Compat}}
 
 ## Voir aussi
 

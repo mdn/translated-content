@@ -70,15 +70,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Overflow", "#propdef--webkit-line-clamp", "-webkit-line-clamp")}} | {{Spec2("CSS3 Overflow")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-line-clamp")}}
+{{Compat}}
 
 ## Voir aussi
 

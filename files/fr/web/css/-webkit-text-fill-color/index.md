@@ -56,16 +56,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                                   | État                                        | Commentaires                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#the-webkit-text-fill-color', '-webkit-text-fill-color')}}                                                                                                                                                    | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Référence CSS Safari -webkit-text-fill-color' dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-fill-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-text-fill-color")}}
+{{Compat}}
 
 ## Voir aussi
 

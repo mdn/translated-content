@@ -106,13 +106,8 @@ p { font: 1.5em "Times New Roman", "Georgia", "Palatino", serif }
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                   | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'painting.html#TextRenderingProperty', 'text-rendering')}} | {{Spec2('SVG2')}} | Aucune modification. |
-| {{SpecName('SVG1.1', 'painting.html#TextRenderingProperty', 'text-rendering')}} | {{Spec2('SVG1.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-rendering")}}
+{{Compat}}

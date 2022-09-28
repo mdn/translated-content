@@ -123,15 +123,11 @@ section {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-anchor-property', 'offset-anchor')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

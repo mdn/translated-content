@@ -52,14 +52,11 @@ li:last-child {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                 |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS4 Selectors')}} | Il n'est plus obligatoire que l'élément ciblé ait un parent. |
-| {{SpecName('CSS3 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Voir aussi
 

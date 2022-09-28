@@ -88,17 +88,11 @@ border-bottom-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                       |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-bottom-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-bottom-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.               |
-| {{SpecName('CSS1', '#border-left-width', 'border-bottom-width')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-width")}}
+{{Compat}}
 
 ## Voir aussi
 

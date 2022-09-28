@@ -75,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                           | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-inline-end", "padding-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-inline-end")}}
+{{Compat}}
 
 ## Voir aussi
 

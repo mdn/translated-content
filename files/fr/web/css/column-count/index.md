@@ -75,15 +75,11 @@ column-count: unset;
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#cc', 'column-count')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-count")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -88,16 +88,11 @@ border-top-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                       |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-top-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-top-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top-width")}}
+{{Compat}}
 
 ## Voir aussi
 

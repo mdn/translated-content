@@ -127,15 +127,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#shape-outside-property', 'shape-outside')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.shape-outside")}}
+{{Compat}}
 
 ## Voir aussi
 

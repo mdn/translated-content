@@ -33,7 +33,7 @@ Selon la spécification :
 
 Aussi, la spécification indique aux agents utilisateurs de ne pas prendre en charge `ime-mode` et il est déconseillé d'utiliser cette propriété dans des feuilles de styles.
 
-La propriété `ime-mode` est partiellement implémentée et de façon hétérogène entre les différents navigateurs. Elle est apparue sous la forme d'une extension Microsoft avec Internet Explorer 5 : {{spec("http://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}.
+La propriété `ime-mode` est partiellement implémentée et de façon hétérogène entre les différents navigateurs. Elle est apparue sous la forme d'une extension Microsoft avec Internet Explorer 5 : `-ms-ime-mode`.
 
 > **Note :** Il n'est, en général, pas pertinent de modifier le mode IME d'un site. Cette propriété ne devrait être utilisée que pour des applications web privées ou pour annuler une modification de cette propriété par du code historique.
 
@@ -68,16 +68,8 @@ Cet exemple désactive l'IME pour un champ donné (par exemple pour saisir des d
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                   |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#input-method-editor', 'ime-mode')}} | {{Spec2('CSS3 Basic UI')}} | Définition initiale. Rend `ime-mode` obsolète. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.ime-mode")}}
-
-## Voir aussi
-
-- La propriété Microsoft avec un suffixe propriétaire IE5 {{spec("http://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}
+{{Compat}}

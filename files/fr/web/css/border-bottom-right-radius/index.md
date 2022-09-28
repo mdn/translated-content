@@ -98,18 +98,13 @@ div {
 ### Résultat
 
 {{EmbedLiveSample("Exemples","200","540")}}
-
 ## Spécifications
 
-| Spécification                                                                                                                | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-right-radius', 'border-bottom-right-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-right-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

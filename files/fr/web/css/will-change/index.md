@@ -96,12 +96,8 @@ Cela peut toutefois être pertinent d'inclure `will-change` dans la feuille de s
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}

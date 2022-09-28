@@ -140,16 +140,11 @@ L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par dé
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires                 |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------------------------- |
-| {{SpecName('CSS4 Cascade', '#all-shorthand', 'all')}} | {{Spec2('CSS4 Cascade')}} | Ajout de la valeur `revert`. |
-| {{SpecName('CSS3 Cascade', '#all-shorthand', 'all')}} | {{Spec2('CSS3 Cascade')}} | Définition initiale.         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.all")}}
+{{Compat}}
 
 ## Voir aussi
 

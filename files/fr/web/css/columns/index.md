@@ -88,12 +88,8 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#columns', 'columns')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.columns")}}
+{{Compat}}

@@ -78,15 +78,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-box', 'transform-box')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform-box")}}
+{{Compat}}
 
 ## Voir aussi
 

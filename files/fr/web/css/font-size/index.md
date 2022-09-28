@@ -207,15 +207,8 @@ Les unités `em` et `ex` pour la propriété {{Cssxref("font-size")}} sont relat
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | Aucune modification.                    |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | `font-size` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                    |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

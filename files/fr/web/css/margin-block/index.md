@@ -75,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-block", "margin-block")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-block")}}
+{{Compat}}
 
 ## Voir aussi
 

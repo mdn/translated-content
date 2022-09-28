@@ -116,15 +116,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap')}} | {{Spec2('CSS3 Text')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-wrap")}}
+{{Compat}}
 
 ## Voir aussi
 

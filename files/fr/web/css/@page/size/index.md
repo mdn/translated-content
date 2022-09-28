@@ -96,15 +96,11 @@ size: A4 portrait;
 
 ## Spécifications
 
-| Spécification                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Paged Media', '#size', 'size')}} | {{Spec2('CSS3 Paged Media')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.page.size")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -48,12 +48,8 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Fonts', '#font-rend-desc', 'font-variation-settings')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-variation-settings")}}
+{{Compat}}

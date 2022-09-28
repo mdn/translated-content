@@ -75,17 +75,13 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 
 {{EmbedLiveSample("Exemples")}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## Voir aussi
 

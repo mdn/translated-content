@@ -64,13 +64,8 @@ outline-offset: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                   | Commentaires                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset')}} | {{Spec2('CSS3 Transitions')}} | `outline-offset` peut désormais être animée. |
-| {{SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset')}}     | {{Spec2('CSS3 Basic UI')}}     | Définition initiale.                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

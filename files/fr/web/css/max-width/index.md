@@ -101,17 +101,11 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width')}} | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `fit-content` et `fill-available`. Les deux brouillons de spécifications CSS3 Box et CSS3 Writing Modes définissaient ces mots-clés mais ont été remplacées par cette spécification. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'max-width')}}     | {{Spec2('CSS3 Transitions')}} | `max-width` peut désormais être animée.                                                                                                                                                                                                |
-| {{SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.max-width")}}
+{{Compat}}
 
 ## Voir aussi
 

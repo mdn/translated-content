@@ -120,13 +120,8 @@ La valeur `auto` indique une bordure sur mesure selon l'interface du système d'
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                    |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}             | {{Spec2('CSS3 Basic UI')}} | La valeur `auto` a été ajoutée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}} | {{Spec2('CSS2.1')}}             | Définition initiale.            |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-style")}}
+{{Compat}}

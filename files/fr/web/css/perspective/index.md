@@ -219,15 +219,11 @@ th, p, td {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{Specname('CSS Transforms 2', '#propdef-perspective', 'perspective')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.perspective")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -274,11 +274,7 @@ Voir également [cet exemple JSFiddle](https://jsfiddle.net/go392m5s/) qui illus
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Basic UI', "#appearance-switching", "appearance")}} | {{Spec2('CSS3 Basic UI')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

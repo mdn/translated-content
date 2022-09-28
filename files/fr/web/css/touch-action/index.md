@@ -109,17 +109,11 @@ Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela 
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                             | {{Spec2('Compat')}}                     | Ajout de la valeur `pinch-zoom` pour la propriété.                                 |
-| {{SpecName('Pointer Events 2 Ext', '#additional-touch-action-values', 'touch-action')}} | {{Spec2('Pointer Events 2 Ext')}} | Ajout des valeurs `pan-left`, `pan-right`, `pan-up`, `pan-down` pour la propriété. |
-| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}         | {{Spec2('Pointer Events')}}         | Définition initiale.                                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("css.properties.touch-action")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -200,12 +200,8 @@ scroll-snap-type: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-stop", "scroll-snap-stop")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-stop")}}
+{{Compat}}

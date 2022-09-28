@@ -139,18 +139,11 @@ Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}         | Définition de la valeur `collapse` pour les éléments flexibles. |
-| {{SpecName('CSS3 Box', '#visibility-prop', 'visibility')}}             | {{Spec2('CSS3 Box')}}             | Aucune modification.                                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | `visibility` peut désormais être animée.                        |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale.                                            |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}
 
 ## Voir aussi
 

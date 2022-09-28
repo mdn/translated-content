@@ -102,15 +102,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-iteration-count")}}
+{{Compat}}
 
 ## Voir aussi
 

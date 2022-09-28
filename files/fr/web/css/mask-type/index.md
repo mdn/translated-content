@@ -100,21 +100,17 @@ La propriété `mask-type` est définie avec un mot-clé parmi ceux définis ci-
 }
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample('Définir_un_masque_de_luminance', '100%', '102')}}
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS Masks', '#the-mask-type', 'mask-type')}} | {{Spec2('CSS Masks')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-type")}}
+{{Compat}}
 
 ## Voir aussi
 

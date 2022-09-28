@@ -73,13 +73,8 @@ En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via 
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                                                                          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS4 Fonts')}} | Ajoute la possibilité d'utiliser le mot-clé `oblique` suivi par une valeur angulaire. |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

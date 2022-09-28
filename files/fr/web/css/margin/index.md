@@ -138,18 +138,11 @@ Les marges haute et basse des éléments sont parfois fusionnées en une seule m
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                             |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#margin', 'margin')}}                         | {{Spec2('CSS3 Box')}}             | Aucun changement significatif.                           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin')}}     | {{Spec2('CSS3 Transitions')}} | `margin` peut désormais être animée.                     |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin')}} | {{Spec2('CSS2.1')}}                 | Retrait de l'effet sur les éléments en ligne (_inline_). |
-| {{SpecName('CSS1', '#margin', 'margin')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Voir aussi
 

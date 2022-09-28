@@ -252,15 +252,11 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                 | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## Voir aussi
 

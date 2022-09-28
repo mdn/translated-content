@@ -103,15 +103,11 @@ La propriété `overflow-block` se définit avec un mot-clé parmi ceux de la li
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-block', 'overflow-block')}} | {{Spec2('CSS3 Overflow')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-block")}}
+{{Compat}}
 
 ## Voir aussi
 

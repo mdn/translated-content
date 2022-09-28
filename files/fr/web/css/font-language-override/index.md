@@ -74,15 +74,11 @@ p.para2 {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-language-override', 'font-language-override')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -396,12 +396,7 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires                                                                  |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#cursor', 'cursor')}}         | {{Spec2('CSS3 Basic UI')}} | Ajout de plusieurs mots-clés et de la syntaxe de positionnement pour `url()`. |
-| {{SpecName('CSS2.1', 'ui.html#cursor-props', 'cursor')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

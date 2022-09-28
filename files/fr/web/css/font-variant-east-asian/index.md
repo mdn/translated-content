@@ -87,12 +87,8 @@ exemple {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-east-asian', 'font-variant-east-asian')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variant-east-asian")}}
+{{Compat}}

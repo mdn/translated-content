@@ -99,14 +99,8 @@ span {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}     | {{Spec2('CSS3 Transitions')}} | `outline-width` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-width")}}
+{{Compat}}

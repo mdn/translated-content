@@ -119,16 +119,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                           | Commentaires                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#resize', 'resize')}} | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `block` et `inline`. |
-| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}}             | {{Spec2('CSS3 Basic UI')}}             | Définition initiale.                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## Voir aussi
 

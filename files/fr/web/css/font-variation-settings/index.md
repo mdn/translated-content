@@ -119,15 +119,11 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Fonts', '#low-level-font-variation-settings-control-the-font-variation-settings-property', 'font-variation-settings')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variation-settings")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -78,15 +78,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-line")}}
+{{Compat}}
 
 ## Voir aussi
 

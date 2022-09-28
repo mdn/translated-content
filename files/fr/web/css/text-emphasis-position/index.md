@@ -157,15 +157,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-position-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-position")}}
+{{Compat}}
 
 ## Voir aussi
 

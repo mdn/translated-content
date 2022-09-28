@@ -142,15 +142,11 @@ Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin e
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-path")}}
+{{Compat}}
 
 ## Voir aussi
 

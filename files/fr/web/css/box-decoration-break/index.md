@@ -127,15 +127,11 @@ Si on applique `box-decoration-break:clone`, voici le résultat :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-decoration', 'box-decoration-break')}} | {{Spec2('CSS3 Fragmentation')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-decoration-break")}}
+{{Compat}}
 
 ## Voir aussi
 

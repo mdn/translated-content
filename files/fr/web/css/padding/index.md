@@ -89,18 +89,11 @@ h3 {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding')}} | {{Spec2('CSS3 Transitions')}} | `padding` peut être animée. |
-| {{SpecName('CSS2.1', 'box.html#propdef-padding', 'padding')}}     | {{Spec2('CSS2.1')}}                 | Aucun changement.           |
-| {{Specname('CSS1', '#padding', 'padding')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding")}}
+{{Compat}}
 
 ## Voir aussi
 

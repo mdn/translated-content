@@ -70,17 +70,13 @@ La propriété `text-orientation` peut valoir l'un des mots-clés suivants.
 
 {{EmbedLiveSample("Exemples","100%",200)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                                   | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}} | {{Spec2('CSS3 Writing Modes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-orientation")}}
+{{Compat}}
 
 ## Voir aussi
 

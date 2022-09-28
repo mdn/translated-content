@@ -115,15 +115,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## Voir aussi
 

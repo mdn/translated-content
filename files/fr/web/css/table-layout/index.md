@@ -87,12 +87,8 @@ td {
 
 ## Spécifications
 
-| Spécification                                                                            | État                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#width-layout', 'table-layout')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.table-layout")}}
+{{Compat}}

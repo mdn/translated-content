@@ -122,13 +122,8 @@ Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le st
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | Aucun changement.    |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

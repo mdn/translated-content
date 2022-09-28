@@ -140,17 +140,11 @@ Il est nécessaire d'utiliser une valeur minimale de `1.5` pour la propriété `
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}         | {{Spec2('CSS3 Transitions')}} | `line-height` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                         |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height")}}
+{{Compat}}
 
 ## Voir aussi
 

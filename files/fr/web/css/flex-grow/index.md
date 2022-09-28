@@ -89,15 +89,11 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox','#flex-grow-property','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 ## Voir aussi
 

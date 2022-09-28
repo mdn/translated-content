@@ -62,15 +62,11 @@ Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'articl
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition-property")}}
+{{Compat}}
 
 ## Voir aussi
 

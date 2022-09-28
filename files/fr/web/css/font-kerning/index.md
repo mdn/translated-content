@@ -81,15 +81,11 @@ nokern.textContent = input.value;
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
 ## Voir aussi
 

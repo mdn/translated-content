@@ -117,16 +117,11 @@ Pour en savoir plus :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.                         |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Ajout des fonctions de transformation en 3D. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## Voir aussi
 

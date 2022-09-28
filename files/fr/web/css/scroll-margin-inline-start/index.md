@@ -40,12 +40,8 @@ scroll-margin-inline-start: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-inline-start", "scroll-margin-inline-start")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-inline-start")}}
+{{Compat}}

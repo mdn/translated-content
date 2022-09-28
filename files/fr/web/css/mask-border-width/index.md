@@ -68,12 +68,8 @@ La propriété `mask-border-width` peut être définie avec une, deux, trois ou 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#propdef-mask-border-width", "mask-border-width")}} | {{Spec2("CSS Masks")}} | Définition intiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-TBD
+{{Compat}}

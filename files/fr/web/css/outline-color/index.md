@@ -85,17 +85,11 @@ Le ratio de contraste est déterminé en comparaisant les luminosités des deux 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                                   | Commentaires                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-color', 'outline-color')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-color')}}     | {{Spec2('CSS3 Transitions')}} | `outline-color` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-color', 'outline-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-color")}}
+{{Compat}}
 
 ## Voir aussi
 

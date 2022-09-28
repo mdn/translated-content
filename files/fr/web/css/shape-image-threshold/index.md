@@ -83,15 +83,11 @@ Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#shape-image-threshold-property', 'shape-image-threshold')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.shape-image-threshold")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -72,15 +72,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-block-end", "margin-block-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-block-end")}}
+{{Compat}}
 
 ## Voir aussi
 

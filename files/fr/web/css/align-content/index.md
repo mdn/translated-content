@@ -240,24 +240,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}} | {{Spec2("CSS3 Box Alignment")}} | Ajout des valeurs `[ first \| last ]? baseline`, `start`, `end`, `left`, `right` et `unsafe \| safe`. |
-| {{SpecName("CSS3 Flexbox", "#align-content", "align-content")}}                     | {{Spec2("CSS3 Flexbox")}}         | Définition initiale.                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.align-content")}}
-
-### Prise en charge pour les dispositions flexibles (_Flexbox_)
-
-{{Compat("css.properties.align-content.flex_context")}}
-
-### Prise en charge pour les dispositions avec les grilles CSS
-
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

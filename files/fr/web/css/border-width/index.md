@@ -139,17 +139,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe. La modification du type de données {{cssxref("&lt;length&gt;")}} impacte cette propriété. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}} | {{Spec2('CSS2.1')}}                 | Ajout de la contrainte indiquant que la signification des valeurs doit être constante au sein d'un document.                      |
-| {{SpecName('CSS1', '#border-width', 'border-width')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-width")}}
+{{Compat}}
 
 ## Voir aussi
 

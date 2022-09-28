@@ -134,15 +134,11 @@ IE11 ne prend pas en charge le placement automatique des objets sur la grille.To
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column", "grid-column")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-column")}}
+{{Compat}}
 
 ## Voir aussi
 

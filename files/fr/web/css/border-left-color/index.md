@@ -74,16 +74,11 @@ border-left-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-color', 'border-color')}}             | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#border-color-properties', 'border-left-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-left-color")}}
+{{Compat}}
 
 ## Voir aussi
 
