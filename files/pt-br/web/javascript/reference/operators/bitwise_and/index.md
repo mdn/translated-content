@@ -1,7 +1,6 @@
 ---
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-browser-compat: javascript.operators.bitwise_and
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
@@ -41,7 +40,6 @@ A tabela verdade para a operação AND é:
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-
 ```
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
@@ -49,13 +47,12 @@ A tabela verdade para a operação AND é:
 14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 ```
 
-
 A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz 
 `0` . 
 
 ## Exemplos 
 
-### Usando bitwase AND  
+### Usando bitwase AND
 
 ``` js 
 //  5: 00000000000000000000000000000101 
@@ -63,7 +60,7 @@ A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
 5  e  2 ; // 0 
 ``` 
 
-## Especificações 
+## Especificações
 
 {{Specifications}}
 
