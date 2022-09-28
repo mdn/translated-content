@@ -124,7 +124,7 @@ Puede resultar tentador utilizar cadenas para representar datos complejos. Hacer
 
 - Es fácil construir cadenas complejas con concatenación.
 - Las cadenas son fáciles de depurar (lo que ves impreso siempre es lo que está en la cadena).
-- Las cadenas son el denominador común de muchas APIs ([campos de entrada —`input`s—](/es/docs/Web/API/HTMLInputElement "HTMLInputElement"), [valores de almacenamiento local](/es/docs/Storage "Storage"), respuestas [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest "Usa objetos XMLHttpRequest (XHR) para interactuar con servidores. Puedes recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo parte de su contenido sin interrumpir lo que el usuario está haciendo.") cuando se usa `responseText`, etc.) y puede resultar tentador trabajar solo con cadenas.
+- Las cadenas son el denominador común de muchas APIs ([campos de entrada —`input`s—](/es/docs/Web/API/HTMLInputElement), [valores de almacenamiento local](/es/docs/Storage), respuestas [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest "Usa objetos XMLHttpRequest (XHR) para interactuar con servidores. Puedes recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo parte de su contenido sin interrumpir lo que el usuario está haciendo.") cuando se usa `responseText`, etc.) y puede resultar tentador trabajar solo con cadenas.
 
 Con las convenciones, es posible representar cualquier estructura de datos en una cadena. Esto no la convierte en una buena idea. Por ejemplo, con un separador, se podría emular una lista (mientras que un arreglo de JavaScript sería más adecuado). Desafortunadamente, cuando el separador se usa en uno de los elementos de la "lista", la lista se rompe. Se puede elegir un caracter de escape, etc. Todo esto requiere convenciones y crea una innecesaria carga de mantenimiento.
 
@@ -192,9 +192,9 @@ Al representar fechas, la mejor opción es utilizar la utilidad [`Date` incorpor
 
 ### Colecciones indexadas: arreglos y arreglos tipados
 
-[Los arreglos](/es/docs/JavaScript/Reference/Global_Objects/Array "Array") son objetos regulares para los que existe una relación particular entre las propiedades de clave entera y la Propiedad `length`.
+[Los arreglos](/es/docs/JavaScript/Reference/Global_Objects/Array) son objetos regulares para los que existe una relación particular entre las propiedades de clave entera y la Propiedad `length`.
 
-Además, los arreglos heredan de `Array.prototype`, que les proporciona un puñado de convenientes métodos para manipular arreglos. Por ejemplo, [`indexOf`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf "es/JavaScript/Reference/Global_Objects/Array/indexOf") (buscando un valor en el arreglo) o [`push`](/es/docs/JavaScript/Reference/Global_Objects/Array/push "es/JavaScript/Reference/Global_Objects/Array/push") (agrega un elemento al arreglo), y así sucesivamente. Esto hace que el `Array` sea un candidato perfecto para representar listas o conjuntos.
+Además, los arreglos heredan de `Array.prototype`, que les proporciona un puñado de convenientes métodos para manipular arreglos. Por ejemplo, [`indexOf`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (buscando un valor en el arreglo) o [`push`](/es/docs/JavaScript/Reference/Global_Objects/Array/push) (agrega un elemento al arreglo), y así sucesivamente. Esto hace que el `Array` sea un candidato perfecto para representar listas o conjuntos.
 
 Los [Arreglos tipados](/es/docs/Web/JavaScript/Typed_arrays) son nuevos en JavaScript con ECMAScript 2015 y presentan una vista similar a un arreglo de un búfer de datos binarios subyacente. La siguiente tabla ayuda a determinar los tipos de datos equivalentes en C:
 

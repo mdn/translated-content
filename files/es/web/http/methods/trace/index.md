@@ -19,7 +19,9 @@ El destino final de la petición debería devolver el mensaje recibido, excluyen
 
 ## Sintaxis
 
-    TRACE /index.html
+```
+TRACE /index.html
+```
 
 ## Especificaciones
 

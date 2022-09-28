@@ -12,7 +12,9 @@ El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la caden
 
 ## Sintaxis
 
-    prototypeObj.isPrototypeOf(obj)
+```
+prototypeObj.isPrototypeOf(obj)
+```
 
 ### Parámetros
 

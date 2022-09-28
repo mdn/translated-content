@@ -22,7 +22,9 @@ Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **va
 
 ## Sintaxis
 
-    arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+```
+arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+```
 
 ### Parámetros
 
@@ -50,9 +52,9 @@ Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índic
 
 _`callback`_ se invoca con tres argumentos:
 
-1.  El valor del elemento
-2.  El índice del elemento
-3.  El Array que será recorrido.
+1. El valor del elemento
+2. El índice del elemento
+3. El Array que será recorrido.
 
 Si el parámetro `thisArg` es provisto a findIndex, entonces será usado como el this para cada invocación del `callback`. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado.
 

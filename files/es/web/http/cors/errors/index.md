@@ -25,16 +25,18 @@ If the CORS configuration isn't setup correctly, the browser console will presen
 
 To understand the underlying issue with the CORS configuration, you need to find out which request is at fault and why. These steps may help you do so:
 
-1.  Navigate to the web site or web app in question and open the [Developer Tools](/es/docs/Tools).
-2.  Now try to reproduce the failing transaction and check the [console](/es/docs/Tools/Web_Console) if you are seeing a CORS violation error message. It will probably look like this:
+1. Navigate to the web site or web app in question and open the [Developer Tools](/es/docs/Tools).
+2. Now try to reproduce the failing transaction and check the [console](/es/docs/Tools/Web_Console) if you are seeing a CORS violation error message. It will probably look like this:
 
 ![Firefox console showing CORS error](https://mdn.mozillademos.org/files/16050/cors-error2.png)
 
 The text of the error message will be something similar to the following:
 
-    Cross-Origin Request Blocked: The Same Origin Policy disallows
-    reading the remote resource at https://some-url-here. (Reason:
-    additional information here).
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows
+reading the remote resource at https://some-url-here. (Reason:
+additional information here).
+```
 
 > **Nota:** **Note:** For security reasons, specifics about what went wrong with a CORS request _are not available to JavaScript code_. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.
 

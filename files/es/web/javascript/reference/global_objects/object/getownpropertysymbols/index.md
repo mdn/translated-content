@@ -16,7 +16,9 @@ El método **`Object.getOwnPropertySymbols()`** regresa una colección de todos 
 
 ## Síntaxis
 
-    Object.getOwnPropertySymbols(obj)
+```
+Object.getOwnPropertySymbols(obj)
+```
 
 ### Parametros
 

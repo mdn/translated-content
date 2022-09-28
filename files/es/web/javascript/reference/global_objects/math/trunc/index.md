@@ -16,7 +16,9 @@ La función **`Math.trunc()`** devuelve la parte entera de un numero removiendo 
 
 ## Sintaxis.
 
-    Math.trunc(x)
+```
+Math.trunc(x)
+```
 
 ### Parámetros.
 

@@ -107,11 +107,13 @@ Este script se cargara en las páginas que coincidan con el patrón dado en el p
 
 Primero, verifica que tienes todos los archivos en su lugar:
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+```
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
+```
 
 ### Instalación
 

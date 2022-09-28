@@ -10,7 +10,9 @@ El método **`Object.seal()`** sella un objeto, previniendo que puedan añadirse
 
 ## Sintaxis
 
-    Object.seal(obj)
+```
+Object.seal(obj)
+```
 
 ### Parámetros
 
