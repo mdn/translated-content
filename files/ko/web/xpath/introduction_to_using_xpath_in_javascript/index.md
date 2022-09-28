@@ -55,7 +55,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
-Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object. 
+Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
 var xpEvaluator = new XPathEvaluator(); 
@@ -192,7 +192,7 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 단순 형( `NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE` ) 가운데 하나일 수도 있습니다, 하지만, 만약 반환되는 결과형이 node-set이면 오직 `UNORDERED_NODE_ITERATOR_TYPE`입니다.
 
-평가 뒤 형을 결정하기 위해서, 우리는 `XPathResult` 개체의 `resultType` 속성을 씁니다. 이 속성의 [상수](#XPathResult_Defined_Constants)값은 부록에서 정의합니다. 
+평가 뒤 형을 결정하기 위해서, 우리는 `XPathResult` 개체의 `resultType` 속성을 씁니다. 이 속성의 [상수](#XPathResult_Defined_Constants)값은 부록에서 정의합니다.
 
 None Yet =====Any_Type 예=====
 
@@ -235,14 +235,14 @@ while (thisHeading) {
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```
