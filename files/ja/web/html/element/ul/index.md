@@ -83,7 +83,7 @@ slug: Web/HTML/Element/ul
 
   - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
-    > **Warning:** **警告:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
+    > **Warning:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
 
 - {{ htmlattrdef("type") }} {{Deprecated_inline}}
 
@@ -97,7 +97,7 @@ slug: Web/HTML/Element/ul
 
     この属性が存在せず、 [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。
 
-    > **Warning:** **警告:** この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
+    > **Warning:** この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
 
 ## 使用上のメモ
 
