@@ -67,9 +67,9 @@ La {{web.link("/es/docs/Web/API/Web_Storage_API", "API de almacenamiento web")}}
 
 Te mostramos como:
 
-1.  Primero, ve a nuestra [plantilla en blanco de almacenamiento web](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) en GitHub (abre esto en una nueva pestaña).
-2.  Abre la consola JavaScript de las herramientas de desarrollo de tu navegador.
-3.  Todos tus datos de almacenamiento web están contenidos en dos estructuras similares a objetos dentro del navegador: {{domxref("Window.sessionStorage", "sessionStorage")}} y {{domxref("Window.localStorage", "localStorage")}}. El primero conserva los datos mientras el navegador está abierto (los datos se pierden cuando se cierra el navegador) y el segundo conserva los datos incluso después de que el navegador se cierra y luego se vuelve a abrir. Usaremos el segundo en este artículo, ya que generalmente es más útil.
+1. Primero, ve a nuestra [plantilla en blanco de almacenamiento web](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) en GitHub (abre esto en una nueva pestaña).
+2. Abre la consola JavaScript de las herramientas de desarrollo de tu navegador.
+3. Todos tus datos de almacenamiento web están contenidos en dos estructuras similares a objetos dentro del navegador: {{domxref("Window.sessionStorage", "sessionStorage")}} y {{domxref("Window.localStorage", "localStorage")}}. El primero conserva los datos mientras el navegador está abierto (los datos se pierden cuando se cierra el navegador) y el segundo conserva los datos incluso después de que el navegador se cierra y luego se vuelve a abrir. Usaremos el segundo en este artículo, ya que generalmente es más útil.
 
     El método {{domxref("Storage.setItem()")}} te permite guardar un elemento de datos en el almacenamiento; toma dos parámetros: el nombre del elemento y su valor. Intenta escribir esto en tu consola de JavaScript (cambia el valor a tu propio nombre, si lo deseas):
 
@@ -77,7 +77,7 @@ Te mostramos como:
     localStorage.setItem('nombre','Chris');
     ```
 
-4.  El método {{domxref("Storage.getItem()")}} toma un parámetro, el nombre de un elemento de datos que deseas recuperar, y devuelve el valor del elemento. Ahora escribe estas líneas en tu consola JavaScript:
+4. El método {{domxref("Storage.getItem()")}} toma un parámetro, el nombre de un elemento de datos que deseas recuperar, y devuelve el valor del elemento. Ahora escribe estas líneas en tu consola JavaScript:
 
     ```js
     let miNombre = localStorage.getItem('nombre');
@@ -86,7 +86,7 @@ Te mostramos como:
 
     Al escribir en la segunda línea, deberías ver que la variable `miNombre` ahora contiene el valor del elemento de datos `nombre`.
 
-5.  El método {{domxref("Storage.removeItem()")}} toma un parámetro, el nombre de un elemento de datos que desea eliminar, y elimina ese elemento del almacenamiento web. Escribe las siguientes líneas en tu consola JavaScript:
+5. El método {{domxref("Storage.removeItem()")}} toma un parámetro, el nombre de un elemento de datos que desea eliminar, y elimina ese elemento del almacenamiento web. Escribe las siguientes líneas en tu consola JavaScript:
 
     ```js
     localStorage.removeItem('nombre');
@@ -100,8 +100,8 @@ Te mostramos como:
 
 Una característica clave del almacenamiento web es que los datos persisten entre las cargas de la página (e incluso cuando el navegador está apagado, en el caso de `localStorage`). Veamos esto en acción.
 
-1.  Abre nuestra plantilla en blanco de almacenamiento web nuevamente, ¡pero esta vez en un navegador diferente al que tiene abierto este tutorial!; Esto hará que sea más fácil de manejar.
-2.  Escribe estas líneas en la consola JavaScript del navegador:
+1. Abre nuestra plantilla en blanco de almacenamiento web nuevamente, ¡pero esta vez en un navegador diferente al que tiene abierto este tutorial!; Esto hará que sea más fácil de manejar.
+2. Escribe estas líneas en la consola JavaScript del navegador:
 
     ```js
     localStorage.setItem('nombre','Chris');
@@ -111,8 +111,8 @@ Una característica clave del almacenamiento web es que los datos persisten entr
 
     Deberías ver el nombre del elemento devuelto.
 
-3.  Ahora cierre el navegador y ábrelo de nuevo.
-4.  Ingresa las siguientes líneas nuevamente:
+3. Ahora cierre el navegador y ábrelo de nuevo.
+4. Ingresa las siguientes líneas nuevamente:
 
     ```js
     let miNombre = localStorage.getItem('nombre');
@@ -137,9 +137,9 @@ Puede encontrar el HTML de ejemplo en [personal-greeting.html](https://github.co
 
 Construyamos el ejemplo para que puedas entender cómo funciona.
 
-1.  Primero, haz una copia local de nuestro archivo [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) en un nuevo directorio en tu computadora.
-2.  A continuación, observa cómo nuestro HTML hace referencia a un archivo JavaScript llamado `index.js` (ve la línea 40). Necesitamos crearlo y escribir nuestro código JavaScript en él. Cree un archivo `index.js` en el mismo directorio que tu archivo HTML.
-3.  Comenzaremos creando referencias a todas las características HTML que necesitamos manipular en este ejemplo; las crearemos todas como constantes, ya que estas referencias no necesitan cambiar en el ciclo de vida de la aplicación. Agrega las siguientes líneas a tu archivo JavaScript:
+1. Primero, haz una copia local de nuestro archivo [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) en un nuevo directorio en tu computadora.
+2. A continuación, observa cómo nuestro HTML hace referencia a un archivo JavaScript llamado `index.js` (ve la línea 40). Necesitamos crearlo y escribir nuestro código JavaScript en él. Cree un archivo `index.js` en el mismo directorio que tu archivo HTML.
+3. Comenzaremos creando referencias a todas las características HTML que necesitamos manipular en este ejemplo; las crearemos todas como constantes, ya que estas referencias no necesitan cambiar en el ciclo de vida de la aplicación. Agrega las siguientes líneas a tu archivo JavaScript:
 
     ```js
     // crea las constantes necesarias
@@ -154,7 +154,7 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
     const personalGreeting = document.querySelector('.personal-greeting');
     ```
 
-4.  A continuación, necesitamos incluir un pequeño escucha de eventos para evitar que el formulario se envíe cuando se presiona el botón de envío, ya que este no es el comportamiento que queremos. Agrega este fragmento debajo de tu código anterior:
+4. A continuación, necesitamos incluir un pequeño escucha de eventos para evitar que el formulario se envíe cuando se presiona el botón de envío, ya que este no es el comportamiento que queremos. Agrega este fragmento debajo de tu código anterior:
 
     ```js
     // Evita que el formulario se envíe cuando se presiona un botón
@@ -163,7 +163,7 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
     });
     ```
 
-5.  Ahora necesitamos agregar un escucha de eventos, cuya función controladora se ejecutará cuando se haga clic en el botón "Saludar". Los comentarios explican en detalle qué hace cada bit, pero en esencia aquí tomamos el nombre que el usuario ingresó en el cuadro de entrada de texto y lo guardamos en el almacenamiento web usando `setItem()`, luego ejecutamos una función llamada `nameDisplayCheck()` que se encargará de actualizar el texto real del sitio web. Agrega esto al final de tu código:
+5. Ahora necesitamos agregar un escucha de eventos, cuya función controladora se ejecutará cuando se haga clic en el botón "Saludar". Los comentarios explican en detalle qué hace cada bit, pero en esencia aquí tomamos el nombre que el usuario ingresó en el cuadro de entrada de texto y lo guardamos en el almacenamiento web usando `setItem()`, luego ejecutamos una función llamada `nameDisplayCheck()` que se encargará de actualizar el texto real del sitio web. Agrega esto al final de tu código:
 
     ```js
     // ejecuta la función cuando se hace clic en el botón 'Saludar'
@@ -176,7 +176,7 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
     });
     ```
 
-6.  En este punto, también necesitamos un controlador de eventos para ejecutar una función cuando se hace clic en el botón "Olvidar"; esto solo se muestra después de hacer clic en el botón "Saludar" (los dos estados del formulario se alternan hacia adelante y hacia atrás). En esta función, eliminamos el elemento `name` del almacenamiento web usando `removeItem()`, luego ejecutamos nuevamente `nameDisplayCheck()` para actualizar la pantalla. Agrega esto al final:
+6. En este punto, también necesitamos un controlador de eventos para ejecutar una función cuando se hace clic en el botón "Olvidar"; esto solo se muestra después de hacer clic en el botón "Saludar" (los dos estados del formulario se alternan hacia adelante y hacia atrás). En esta función, eliminamos el elemento `name` del almacenamiento web usando `removeItem()`, luego ejecutamos nuevamente `nameDisplayCheck()` para actualizar la pantalla. Agrega esto al final:
 
     ```js
     // ejecuta la función cuando se hace clic en el botón 'Olvidar'
@@ -189,7 +189,7 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
     });
     ```
 
-7.  Ahora es el momento de definir la propia función `nameDisplayCheck()`. Aquí verificamos si el elemento de nombre se ha guardado en el almacenamiento web utilizando `localStorage.getItem('name')` como prueba condicional. Si se ha guardado, esta llamada se evaluará como `true`; si no, será `false`. Si es `true`, mostramos un saludo personalizado, mostramos la parte "Olvidar" del formulario y ocultamos la parte "Saludar" del formulario. Si es `false`, mostramos un saludo genérico y hacemos lo contrario. Nuevamente, pon el siguiente código en la parte inferior:
+7. Ahora es el momento de definir la propia función `nameDisplayCheck()`. Aquí verificamos si el elemento de nombre se ha guardado en el almacenamiento web utilizando `localStorage.getItem('name')` como prueba condicional. Si se ha guardado, esta llamada se evaluará como `true`; si no, será `false`. Si es `true`, mostramos un saludo personalizado, mostramos la parte "Olvidar" del formulario y ocultamos la parte "Saludar" del formulario. Si es `false`, mostramos un saludo genérico y hacemos lo contrario. Nuevamente, pon el siguiente código en la parte inferior:
 
     ```js
     // definir la función nameDisplayCheck()
@@ -214,7 +214,7 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
     }
     ```
 
-8.  Por último, pero no menos importante, debemos ejecutar la función `nameDisplayCheck()` cada vez que se carga la página. Si no hacemos esto, el saludo personalizado no persistirá en las recargas de la página. Agrega lo siguiente al final de tu código:
+8. Por último, pero no menos importante, debemos ejecutar la función `nameDisplayCheck()` cada vez que se carga la página. Si no hacemos esto, el saludo personalizado no persistirá en las recargas de la página. Agrega lo siguiente al final de tu código:
 
     ```js
     document.body.onload = nameDisplayCheck;
@@ -244,15 +244,15 @@ Cada nota tiene un título y un cuerpo de texto, cada uno editable individualmen
 
 ### Primeros pasos
 
-1.  En primer lugar, haz copias locales de nuestros archivos [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css) y [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) en un nuevo directorio en tu máquina.
-2.  Échale un vistazo a los archivos. Verás que el HTML es bastante simple: un sitio web con encabezado y pie de página, así como un área de contenido principal que contiene un lugar para mostrar notas y un formulario para ingresar nuevas notas en la base de datos. El CSS proporciona un estilo simple para aclarar lo que está sucediendo. El archivo JavaScript contiene cinco constantes declaradas que contienen referencias al elemento {{htmlelement("ul")}} en el que se mostrarán las notas, el título y el cuerpo de elementos {{htmlelement("input")}}, el {{htmlelement("form")}} en sí mismo, y el {{htmlelement("button")}}.
-3.  Cambia el nombre de tu archivo JavaScript a `index.js`. Ahora estás listo para comenzar a agregarle código.
+1. En primer lugar, haz copias locales de nuestros archivos [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css) y [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) en un nuevo directorio en tu máquina.
+2. Échale un vistazo a los archivos. Verás que el HTML es bastante simple: un sitio web con encabezado y pie de página, así como un área de contenido principal que contiene un lugar para mostrar notas y un formulario para ingresar nuevas notas en la base de datos. El CSS proporciona un estilo simple para aclarar lo que está sucediendo. El archivo JavaScript contiene cinco constantes declaradas que contienen referencias al elemento {{htmlelement("ul")}} en el que se mostrarán las notas, el título y el cuerpo de elementos {{htmlelement("input")}}, el {{htmlelement("form")}} en sí mismo, y el {{htmlelement("button")}}.
+3. Cambia el nombre de tu archivo JavaScript a `index.js`. Ahora estás listo para comenzar a agregarle código.
 
 ### Configuración inicial de la base de datos
 
 Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base de datos.
 
-1.  Debajo de las declaraciones constantes, agrega las siguientes líneas:
+1. Debajo de las declaraciones constantes, agrega las siguientes líneas:
 
     ```js
     // Crea una instancia de un objeto db para que almacenemos la base de datos abierta
@@ -261,7 +261,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
     Aquí estamos declarando una variable llamada `db`, que luego se usará para almacenar un objeto que representa nuestra base de datos. Usaremos esto en algunos lugares, por lo que hemos declarado globalmente aquí para facilitar las cosas.
 
-2.  A continuación, agrega lo siguiente al final de tu código:
+2. A continuación, agrega lo siguiente al final de tu código:
 
     ```js
     window.onload = function() {
@@ -271,7 +271,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
     Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento {{event("load")}} de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
 
-3.  Dentro del controlador `window.onload`, agrega lo siguiente:
+3. Dentro del controlador `window.onload`, agrega lo siguiente:
 
     ```js
     // Abre nuestra base de datos; se crea si aún no existe
@@ -285,7 +285,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
     > **Nota:** El número de versión es importante. Si deseas actualizar tu base de datos (por ejemplo, cambiando la estructura de la tabla), debes ejecutar tu código nuevamente con un número de versión aumentado, un esquema diferente especificado dentro del controlador `onupgradeneeded` (ve más abajo), etc. No cubriremos la actualización de bases de datos en este sencillo tutorial.
 
-4.  Ahora agrega los siguientes controladores de eventos justo debajo de tu adición anterior, nuevamente dentro del controlador `window.onload`:
+4. Ahora agrega los siguientes controladores de eventos justo debajo de tu adición anterior, nuevamente dentro del controlador `window.onload`:
 
     ```js
     // un controlador de error significa que la base de datos no se abrió correctamente
@@ -309,7 +309,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
     El controlador {{domxref("IDBRequest.onsuccess", "request.onsuccess")}} por otro lado se ejecutará si la solicitud regresa con éxito, lo que significa que la base de datos se abrió correctamente. Si este es el caso, un objeto que representa la base de datos abierta pasa a estar disponible en la propiedad {{domxref("IDBRequest.result", "request.result")}}, lo que nos permite manipular la base de datos. Almacenamos esto en la variable `db` que creamos anteriormente para su uso posterior. También ejecutamos una función personalizada llamada `displayData()`, que muestra los datos en la base de datos dentro de {{HTMLElement("ul")}}. Lo ejecutamos ahora para que las notas que ya están en la base de datos se muestren tan pronto como se cargue la página. Verás esto definido más adelante.
 
-5.  Finalmente, en esta sección, agregaremos probablemente el controlador de eventos más importante para configurar la base de datos: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupgradeneeded")}}. Este controlador se ejecuta si la base de datos aún no se ha configurado, o si la base de datos se abre con un número de versión mayor que la base de datos almacenada existente (al realizar una actualización). Agrega el siguiente código, debajo de tu controlador anterior:
+5. Finalmente, en esta sección, agregaremos probablemente el controlador de eventos más importante para configurar la base de datos: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupgradeneeded")}}. Este controlador se ejecuta si la base de datos aún no se ha configurado, o si la base de datos se abre con un número de versión mayor que la base de datos almacenada existente (al realizar una actualización). Agrega el siguiente código, debajo de tu controlador anterior:
 
     ```js
     // Configura las tablas de la base de datos si esto aún no se ha hecho
@@ -529,7 +529,7 @@ Para demostrar cómo hacerlo, hemos escrito otro ejemplo llamado [almacenaje de 
 
 Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran parte es similar al ejemplo anterior y el código está bien comentado.
 
-1.  Para este ejemplo simple, hemos almacenado los nombres de los videos para buscarlos en un arreglo de objetos:
+1. Para este ejemplo simple, hemos almacenado los nombres de los videos para buscarlos en un arreglo de objetos:
 
     ```js
     const videos = [
@@ -542,7 +542,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
     ];
     ```
 
-2.  Para empezar, una vez que la base de datos se abre con éxito, ejecutamos una función `init()`. Esto recorre los diferentes nombres de video, tratando de cargar un registro identificado por cada nombre de la base de datos de `videos`.
+2. Para empezar, una vez que la base de datos se abre con éxito, ejecutamos una función `init()`. Esto recorre los diferentes nombres de video, tratando de cargar un registro identificado por cada nombre de la base de datos de `videos`.
 
     Si cada video se encuentra en la base de datos (se verifica fácilmente al ver si `request.result` se evalúa como `true`; si el registro no está presente, será `undefined`), sus archivos de video (almacenados como blobs) y el nombre del video se pasan directamente a la función `displayVideo()` para colocarlos en la interfaz de usuario. De lo contrario, el nombre del video se pasa a la función `fetchVideoFromNetwork()` para ... ¡adivinaste!: recupera el video de la red.
 
@@ -568,7 +568,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
     }
     ```
 
-3.  El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
+3. El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
 
     Sin embargo, tenemos un problema aquí: estas dos solicitudes son asíncronas, pero solo queremos intentar mostrar o almacenar el video cuando ambas promesas se hayan cumplido. Afortunadamente, hay un método incorporado que maneja este problema: {{jsxref("Promise.all()")}}. Este toma un argumento, referencias a todas las promesas individuales que deseas verificar para su cumplimiento colocadas en un arreglo, y en sí mismo se basa en promesas.
 
@@ -591,7 +591,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
     });
     ```
 
-4.  Veamos primero `storeVideo()`. Esto es muy similar al patrón que viste en el ejemplo anterior para agregar datos a la base de datos: abrimos una transacción `readwrite` y obtenemos una referencia a nuestro almacén de objetos `videos_os`, creamos un objeto que representa el registro para agregar a la base de datos, luego simplemente lo agrega usando {{domxref("IDBObjectStore.add()")}}.
+4. Veamos primero `storeVideo()`. Esto es muy similar al patrón que viste en el ejemplo anterior para agregar datos a la base de datos: abrimos una transacción `readwrite` y obtenemos una referencia a nuestro almacén de objetos `videos_os`, creamos un objeto que representa el registro para agregar a la base de datos, luego simplemente lo agrega usando {{domxref("IDBObjectStore.add()")}}.
 
     ```js
     función storeVideo(mp4Blob, webmBlob, nombre) {
@@ -612,7 +612,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
     };
     ```
 
-5.  Por último, pero no menos importante, tenemos `displayVideo()`, que crea los elementos DOM necesarios para insertar el video en la interfaz de usuario y luego los agrega a la página. Las partes más interesantes de esto son las que se muestran a continuación: para mostrar realmente nuestros blobs de video en un elemento `<video>`, necesitamos crear URL de objeto (URL internas que apuntan a los blobs de video almacenados en la memoria) utilizando el método {{domxref("URL.createObjectURL()")}}. Una vez hecho esto, podemos configurar las URL del objeto para que sean los valores de los atributos `src` de nuestro elemento {{htmlelement("source")}}, y funciona bien.
+5. Por último, pero no menos importante, tenemos `displayVideo()`, que crea los elementos DOM necesarios para insertar el video en la interfaz de usuario y luego los agrega a la página. Las partes más interesantes de esto son las que se muestran a continuación: para mostrar realmente nuestros blobs de video en un elemento `<video>`, necesitamos crear URL de objeto (URL internas que apuntan a los blobs de video almacenados en la memoria) utilizando el método {{domxref("URL.createObjectURL()")}}. Una vez hecho esto, podemos configurar las URL del objeto para que sean los valores de los atributos `src` de nuestro elemento {{htmlelement("source")}}, y funciona bien.
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {

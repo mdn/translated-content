@@ -57,7 +57,7 @@ Juguemos un poco con algunos números para ponernos al día con la sintaxis bás
 
 **[Abrir en una ventana nueva](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
-1.  Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
+1. Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
 
     ```js
     var myInt = 5;
@@ -66,8 +66,8 @@ Juguemos un poco con algunos números para ponernos al día con la sintaxis bás
     myFloat;
     ```
 
-2.  Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.
-3.  Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
+2. Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.
+3. Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
 
     ```js
     typeof myInt;
@@ -92,7 +92,7 @@ Los operadores aritméticos son operadores básicos que usamos para hacer sumas:
 
 Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.
 
-1.  Primero, trata entrando un ejemplo simple por tu cuenta, como
+1. Primero, trata entrando un ejemplo simple por tu cuenta, como
 
     ```js
     10 + 7
@@ -100,7 +100,7 @@ Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustarí
     60 % 3
     ```
 
-2.  Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
+2. Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
 
     ```js
     var num1 = 10;
@@ -109,7 +109,7 @@ Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustarí
     num2 / num1;
     ```
 
-3.  Por último, trate entrando algunas expresiones complejas, como:
+3. Por último, trate entrando algunas expresiones complejas, como:
 
     ```js
     5 + 10 * 3;

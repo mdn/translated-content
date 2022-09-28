@@ -25,11 +25,11 @@ Iniciemos poniendo a prueba sus conocimientos acerca de los operadores matemáti
 
 Asi que intente realizar la actualización del código descrito abajo para crear el ejemplo terminado, siguendo estos pasos:
 
-1.  Crea cuatro variables que contengan numeros. Llama a las variables razonablemente.
-2.  Agrega las dos primeras variables juntas y guarda el resultado en otra variable.
-3.  Subtract the fourth variable from the third and store the result in another variable.
-4.  Multiply the results from the last two steps together, storing the result in a variable called `finalResult`. The product should be 48. If it isn't, you'll have to adjust some of the initial input values.
-5.  Finally, write a calculation that checks whether `finalResult` is an even number. Store the result in a variable called `evenOddResult`.
+1. Crea cuatro variables que contengan numeros. Llama a las variables razonablemente.
+2. Agrega las dos primeras variables juntas y guarda el resultado en otra variable.
+3. Subtract the fourth variable from the third and store the result in another variable.
+4. Multiply the results from the last two steps together, storing the result in a variable called `finalResult`. The product should be 48. If it isn't, you'll have to adjust some of the initial input values.
+5. Finally, write a calculation that checks whether `finalResult` is an even number. Store the result in a variable called `evenOddResult`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
@@ -43,10 +43,10 @@ What do we want? After multiplying the two results together and formatting the r
 
 Try updating the live code below to recreate the finished example, following these steps:
 
-1.  Write a calculation that multiples `result` and `result2` together and assigns the result back to `result`. This will require assignment shorthand.
-2.  Write a line of code that takes result and formats it to 2 decimal places, storing the result of this in a variable called `finalResult`.
-3.  Check the data type of `finalResult` using `typeof`; you'll probably see that it is actually of `string` type! Write a line of code that converts it to a `number` type, storing the result in a variable called `finalNumber`.
-4.  The value of `finalNumber` needs to be `10.42`. Go back and update the original calculations you were provided with so that they give this final result. Don't update the numbers or the operators.
+1. Write a calculation that multiples `result` and `result2` together and assigns the result back to `result`. This will require assignment shorthand.
+2. Write a line of code that takes result and formats it to 2 decimal places, storing the result of this in a variable called `finalResult`.
+3. Check the data type of `finalResult` using `typeof`; you'll probably see that it is actually of `string` type! Write a line of code that converts it to a `number` type, storing the result in a variable called `finalNumber`.
+4. The value of `finalNumber` needs to be `10.42`. Go back and update the original calculations you were provided with so that they give this final result. Don't update the numbers or the operators.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
@@ -66,8 +66,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Math 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

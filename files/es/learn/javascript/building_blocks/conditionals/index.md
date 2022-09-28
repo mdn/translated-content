@@ -30,7 +30,7 @@ Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan
 
 Echemos un vistazo a la declaración condicional más común que usarás en JavaScript.
 
-— El humilde [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[ statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
+— El humilde [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Sintaxis if ... else básica.
 
@@ -46,11 +46,11 @@ if (condición) {
 
 Aquí tenemos:
 
-1.  La palabra clave `if` seguida de unos paréntesis.
-2.  Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
-3.  Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
-4.  La palabra clave `else`.
-5.  Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
+1. La palabra clave `if` seguida de unos paréntesis.
+2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
+3. Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
+4. La palabra clave `else`.
+5. Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
 
 Este código es fácil de leer — está diciendo "**si (if)** la **condición** retorna verdadero (`true)`, entonces ejecute el código A, **sino (else)** ejecute el código B"
 
@@ -137,10 +137,10 @@ function establecerClima() {
 
 {{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.
-2.  En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función ` establecerClima``(). `
-3.  Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
-4.  La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
+1. Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.
+2. En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función ` establecerClima``(). `
+3. Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
+4. La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
 
 > **Nota:** Puedes encontrar [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (También podrás verlo [correr en vivo](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html).)
 
@@ -198,7 +198,7 @@ Aunque el código funciona en conjunto, cada declaración `if...else` funciona c
 
 ### Operadores lógicos: AND, OR y NOT
 
-Si quieres probar multiples condiciones sin escribir declaraciones `if...else `anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators/Logical_Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
+Si quieres probar multiples condiciones sin escribir declaraciones `if...else`anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators/Logical_Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
 
 - `&&` — AND; le permite encadenar dos o más expresiones para que todas ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
 - `||` — OR; le permite encadenar dos o más expresiones para que una o más de ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
@@ -263,7 +263,7 @@ if (x === 5 || x === 7 || x === 10 ||x === 20) {
 
 ## Declaraciones con switch
 
-`El `condicional` if...else` hace un buen trabajo permitiéndonos realizar un buen código, pero esto viene con sus desventajas. Hay variedad de casos donde necesitarás realizar varias elecciones, y cada una requiere una cantidad razonable de código para ser ejecutado y/o sus condicionales son complejas (i.e. operadores lógicos múltiples). Para los casos en los que solo se desea establecer una variable para una determinada opción de valores o imprimir una declaración particular dependiendo de una condición, la sintaxis puede ser un poco engorrosa, especialmente si se tiene una gran cantidad de opciones.
+`El`condicional`if...else` hace un buen trabajo permitiéndonos realizar un buen código, pero esto viene con sus desventajas. Hay variedad de casos donde necesitarás realizar varias elecciones, y cada una requiere una cantidad razonable de código para ser ejecutado y/o sus condicionales son complejas (i.e. operadores lógicos múltiples). Para los casos en los que solo se desea establecer una variable para una determinada opción de valores o imprimir una declaración particular dependiendo de una condición, la sintaxis puede ser un poco engorrosa, especialmente si se tiene una gran cantidad de opciones.
 
 Para estos casos los [`switch` statements](/es/docs/Web/JavaScript/Reference/Statements/switch) son de gran ayuda — toman una sola expresión / valor como una entrada, y luego pasan a través de una serie de opciones hasta que encuentran una que coincida con ese valor, ejecutando el código correspondiente que va junto con ella. Aquí hay un pseudocódigo más para hacerte una idea:
 
@@ -286,13 +286,13 @@ switch (expresion) {
 
 Aquí tenemos:
 
-1.  `La palabra clave switch`, seguida por un conjunto de paréntesis.
-2.  Una expresión o valor dentro de los paréntesis.
-3.  La palabra clave `case`, seguida de una elección con la expresión / valor que podría ser, seguido de dos puntos.
-4.  Algún código a correr si la elección coincide con la expresión.
-5.  Un declaración llamada `break`, seguida de un punto y coma. Si la elección previa coincide con la expresión / valor, el explorador dejará de ejecutar el bloque de código aquí, y continuará a la siguiente línea de código. Si la opción anterior coincide con la expresión / valor, aquí el navegador deja de ejecutar el bloque de código y pasa a cualquier código que aparezca debajo de la declaración de `switch`.
-6.  Como muchos otros casos, los que quieras.
-7.  La palabra clave `default`, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use `break` porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.
+1. `La palabra clave switch`, seguida por un conjunto de paréntesis.
+2. Una expresión o valor dentro de los paréntesis.
+3. La palabra clave `case`, seguida de una elección con la expresión / valor que podría ser, seguido de dos puntos.
+4. Algún código a correr si la elección coincide con la expresión.
+5. Un declaración llamada `break`, seguida de un punto y coma. Si la elección previa coincide con la expresión / valor, el explorador dejará de ejecutar el bloque de código aquí, y continuará a la siguiente línea de código. Si la opción anterior coincide con la expresión / valor, aquí el navegador deja de ejecutar el bloque de código y pasa a cualquier código que aparezca debajo de la declaración de `switch`.
+6. Como muchos otros casos, los que quieras.
+7. La palabra clave `default`, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use `break` porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.
 
 > **Nota:** No tiene que incluir la sección `default`; se puede omitir con seguridad si no hay posibilidades de que la expresión termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.
 
@@ -344,7 +344,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:** Tambien puedes[ encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
+> **Nota:** Tambien puedes[encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
 
 ## Operador Ternario
 
@@ -409,8 +409,8 @@ En este ejemplo, nos ayudará a terminar una aplicación de calendario simple. E
 
 Necesitamos que escriba una declaración condicional dentro de la función del controlador `onchange` justo debajo del comentario `// ADD CONDITIONAL HERE.` Debería:
 
-1.  Mire el mes seleccionado (almacenado en la variable `choice`. Este será el valor del elemento `<select>` después de que cambie el valor, por ejemplo "January")
-2.  Establezca una variable llamada `days` para que sea igual al número de días del mes seleccionado. Para hacer esto, tendrá que buscar el número de días en cada mes del año. Puede ignorar los años bisiestos a los efectos de este ejemplo.
+1. Mire el mes seleccionado (almacenado en la variable `choice`. Este será el valor del elemento `<select>` después de que cambie el valor, por ejemplo "January")
+2. Establezca una variable llamada `days` para que sea igual al número de días del mes seleccionado. Para hacer esto, tendrá que buscar el número de días en cada mes del año. Puede ignorar los años bisiestos a los efectos de este ejemplo.
 
 Sugerencias:
 

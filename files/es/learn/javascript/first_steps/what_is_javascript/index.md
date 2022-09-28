@@ -185,9 +185,9 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
 
 ### JavaScript interno
 
-1.  En primer lugar, haz una copia local de nuestro archivo de ejemplo [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Guárdalo en un directorio en algún lugar accesible.
-2.  Abre el archivo en tu navegador web y en tu editor de texto. Verás que el HTML crea una página web simple que contiene un botón en el que se puede hacer clic.
-3.  A continuación, ve a tu editor de texto y agrega lo siguiente en tu `head`, justo antes de tu etiqueta de cierre `</head>`:
+1. En primer lugar, haz una copia local de nuestro archivo de ejemplo [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Guárdalo en un directorio en algún lugar accesible.
+2. Abre el archivo en tu navegador web y en tu editor de texto. Verás que el HTML crea una página web simple que contiene un botón en el que se puede hacer clic.
+3. A continuación, ve a tu editor de texto y agrega lo siguiente en tu `head`, justo antes de tu etiqueta de cierre `</head>`:
 
     ```html
     <script>
@@ -197,7 +197,7 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
     </script>
     ```
 
-4.  Ahora agregaremos algo de JavaScript dentro de nuestro elemento {{htmlelement("script")}} para que la página haga algo más interesante — agrega el siguiente código justo debajo de la línea "// El código JavaScript va aquí":
+4. Ahora agregaremos algo de JavaScript dentro de nuestro elemento {{htmlelement("script")}} para que la página haga algo más interesante — agrega el siguiente código justo debajo de la línea "// El código JavaScript va aquí":
 
     ```js
     document.addEventListener("DOMContentLoaded", function() {
@@ -215,7 +215,7 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
     });
     ```
 
-5.  Guarda tu archivo y actualiza el navegador — ahora deberías ver que cuando haces clic en el botón, se genera un nuevo párrafo y se coloca debajo.
+5. Guarda tu archivo y actualiza el navegador — ahora deberías ver que cuando haces clic en el botón, se genera un nuevo párrafo y se coloca debajo.
 
 > **Nota:** Si tu ejemplo no parece funcionar, sigue los pasos nuevamente y verifica que hiciste todo bien. ¿Guardaste tu copia local del código de inicio como un archivo `.html`? ¿Agregaste tu elemento {{htmlelement("script")}} justo antes de la etiqueta `</head>`? ¿Ingresaste el JavaScript exactamente como se muestra? **JavaScript distingue entre mayúsculas y minúsculas y es muy exigente, por lo que debes ingresar la sintaxis exactamente como se muestra; de lo contrario, es posible que no funcione.**
 
@@ -225,14 +225,14 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
 
 Esto funciona muy bien, pero ¿y si quisiéramos poner nuestro JavaScript en un archivo externo? Exploremos esto ahora.
 
-1.  Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML del ejemplo. Como nombre ponle `script.js`; asegúrate de que el nombre tenga la extensión `.js`, ya que así es como se reconoce como JavaScript.
-2.  Reemplaza tu elemento {{htmlelement("script")}} actual con lo siguiente:
+1. Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML del ejemplo. Como nombre ponle `script.js`; asegúrate de que el nombre tenga la extensión `.js`, ya que así es como se reconoce como JavaScript.
+2. Reemplaza tu elemento {{htmlelement("script")}} actual con lo siguiente:
 
     ```html
     <script src="script.js" defer></script>
     ```
 
-3.  Dentro de `script.js`, agrega el siguiente script:
+3. Dentro de `script.js`, agrega el siguiente script:
 
     ```js
     function createParagraph() {
@@ -248,7 +248,7 @@ Esto funciona muy bien, pero ¿y si quisiéramos poner nuestro JavaScript en un 
     }
     ```
 
-4.  Guarda y actualiza tu navegador, ¡y deberías ver lo mismo! Funciona igual, pero ahora tenemos nuestro JavaScript en un archivo externo. Por lo general, esto es bueno en términos de organización de tu código y para hacerlo reutilizable en varios archivos HTML. Además, el HTML es más fácil de leer sin grandes trozos de script en él.
+4. Guarda y actualiza tu navegador, ¡y deberías ver lo mismo! Funciona igual, pero ahora tenemos nuestro JavaScript en un archivo externo. Por lo general, esto es bueno en términos de organización de tu código y para hacerlo reutilizable en varios archivos HTML. Además, el HTML es más fácil de leer sin grandes trozos de script en él.
 
 > **Nota:** Puedes ver esta versión en GitHub como [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) y [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([verla en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 

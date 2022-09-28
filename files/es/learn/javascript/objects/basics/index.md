@@ -88,7 +88,7 @@ var nombreObjeto = {
 }
 ```
 
-El valor de un miembro de un objeto puede ser prácticamente cualquier cosa: en nuestro objeto `persona `tenemos una cadena de texto, un número, dos arreglos y dos funciones. Los primeros cuatro elementos son elementos de datos y se denominan **propiedades** del objeto. Los dos últimos elementos son funciones que le permiten al objeto hacer algo con esos datos, y se les denomina **métodos** del objeto.
+El valor de un miembro de un objeto puede ser prácticamente cualquier cosa: en nuestro objeto `persona`tenemos una cadena de texto, un número, dos arreglos y dos funciones. Los primeros cuatro elementos son elementos de datos y se denominan **propiedades** del objeto. Los dos últimos elementos son funciones que le permiten al objeto hacer algo con esos datos, y se les denomina **métodos** del objeto.
 
 Un objeto como este se conoce como un **objeto literal** — literalmente hemos escrito el contenido del objeto tal como lo fuimos creando. Esto está en contraste con los objetos instanciados de las clases, que veremos más adelante.
 

@@ -80,7 +80,7 @@ Las distintas APIs de JavaScript funcionan de forma ligeramente diferente, pero 
 
 Las APIs interactúan con tu código usando uno o más [Objetos JavaScript,](/es/docs/Learn/JavaScript/Objects) que sirven como contenedores para los datos que usa la API (contenidos en las propiedades del objeto), y la funcionalidad que la API provee (contenida en los métodos del objeto).
 
-> **Nota:** si no estás familiarizado en cómo trabajar con objetos, deberías volver atrás y revisar el módulo de [objetos JavaScript ](/es/docs/Learn/JavaScript/Objects)antes de seguir.
+> **Nota:** si no estás familiarizado en cómo trabajar con objetos, deberías volver atrás y revisar el módulo de [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)antes de seguir.
 
 Volvamos al ejemplo de la API de Geolocalización, que es una API muy simple que consiste en unos pocos objetos sencillos:
 

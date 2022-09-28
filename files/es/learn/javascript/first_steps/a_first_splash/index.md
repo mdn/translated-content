@@ -159,30 +159,30 @@ Imaginemos que tu jefe te ha dado el siguiente resumen para crear este juego:
 
 Al observar este resumen, lo primero que podemos hacer es comenzar a desglosar el proyecto en tareas simples y realizables, con la mayor mentalidad de programador posible:
 
-1.  Generar un número aleatorio entre 1 y 100.
-2.  Registrar el número del intento en el que el jugador se encuentre. Empezando en 1.
-3.  Darle al jugador una forma de adivinar cuál es el número.
-4.  Una vez que se ha introducido el número, registrarlo en alguna parte para que el jugador pueda ver sus intentos previos.
-5.  A continuación, comprobar si el número es correcto.
-6.  Si es correcto:
+1. Generar un número aleatorio entre 1 y 100.
+2. Registrar el número del intento en el que el jugador se encuentre. Empezando en 1.
+3. Darle al jugador una forma de adivinar cuál es el número.
+4. Una vez que se ha introducido el número, registrarlo en alguna parte para que el jugador pueda ver sus intentos previos.
+5. A continuación, comprobar si el número es correcto.
+6. Si es correcto:
 
-    1.  Mostrar un mensaje de felicitaciones.
-    2.  Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
-    3.  Mostrar un control que permita al jugador volver a empezar el juego.
+    1. Mostrar un mensaje de felicitaciones.
+    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
+    3. Mostrar un control que permita al jugador volver a empezar el juego.
 
-7.  Si es incorrecto y al jugador todavía le quedan intentos:
+7. Si es incorrecto y al jugador todavía le quedan intentos:
 
-    1.  Decirle al jugador que ha fallado.
-    2.  Dejar que el jugador lo intente de nuevo.
-    3.  Incrementa el número de intentos en 1.
+    1. Decirle al jugador que ha fallado.
+    2. Dejar que el jugador lo intente de nuevo.
+    3. Incrementa el número de intentos en 1.
 
-8.  Si el jugador falla y no le quedan turnos:
+8. Si el jugador falla y no le quedan turnos:
 
-    1.  Decirle al jugador que el juego se ha terminado.
-    2.  Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
-    3.  Mostrar un control que permita al jugador volver a empezar el juego.
+    1. Decirle al jugador que el juego se ha terminado.
+    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
+    3. Mostrar un control que permita al jugador volver a empezar el juego.
 
-9.  Una vez que el juego se reinicia, asegúrate de que la lógica del juego y la IU (interfaz de usuario) se restablezcan por completo, luego vuelve al paso 1.
+9. Una vez que el juego se reinicia, asegúrate de que la lógica del juego y la IU (interfaz de usuario) se restablezcan por completo, luego vuelve al paso 1.
 
 Veamos cómo podemos trasformar estos pasos en código, construyendo el ejemplo y explorando las características de JavaScript a medida que avanzamos.
 
@@ -364,7 +364,7 @@ Esto es un montón de código — ¡uf! Repasemos cada sección y expliquemos lo
   guessCount === 1
   ```
 
-  Si es así, hacemos que el contenido del texto del párrafo de intentos sea igual a "`Intentos previos: `". Si no, no lo hacemos.
+  Si es así, hacemos que el contenido del texto del párrafo de intentos sea igual a "`Intentos previos:`". Si no, no lo hacemos.
 
 - La línea 6 agrega el valor actual de `userGuess` al final del párrafo `guesses`, más un espacio en blanco para que haya un espacio entre cada intento mostrado.
 - El siguiente bloque (líneas 8-24 arriba) realiza algunas comprobaciones:
@@ -457,9 +457,9 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 
 ¿Que sucedió? Los números `1` a `20` se imprimieron en tu consola. Esto se debió al bucle. Un bucle `for` toma tres valores (argumentos) de entrada:
 
-1.  **Un valor inicial**: En este caso, comenzamos a contar en 1, pero este podría ser cualquier número que desees. También puedes reemplazar la letra `i` con cualquier nombre que desees, pero por convención se usa `i` porque es corto y fácil de recordar.
-2.  **Una condición de salida**: Aquí hemos especificado `i < 21` — el ciclo continuará hasta que `i` no sea menor que 21. Cuando `i` llegue a 21, el bucle ya no se ejecutará.
-3.  **Un incremento**: Hemos especificado `i++`, que significa "agrega 1 a i". El ciclo se ejecutará una vez por cada valor de `i`, hasta que `i` alcance un valor de 21 (como se explicó anteriormente). En este caso, simplemente imprimimos el valor de `i` en la consola en cada iteración usando {{domxref("console.log", "console.log()")}}.
+1. **Un valor inicial**: En este caso, comenzamos a contar en 1, pero este podría ser cualquier número que desees. También puedes reemplazar la letra `i` con cualquier nombre que desees, pero por convención se usa `i` porque es corto y fácil de recordar.
+2. **Una condición de salida**: Aquí hemos especificado `i < 21` — el ciclo continuará hasta que `i` no sea menor que 21. Cuando `i` llegue a 21, el bucle ya no se ejecutará.
+3. **Un incremento**: Hemos especificado `i++`, que significa "agrega 1 a i". El ciclo se ejecutará una vez por cada valor de `i`, hasta que `i` alcance un valor de 21 (como se explicó anteriormente). En este caso, simplemente imprimimos el valor de `i` en la consola en cada iteración usando {{domxref("console.log", "console.log()")}}.
 
 Ahora veamos el ciclo en nuestro juego de adivinan el número — lo siguiente está dentro de la función `resetGame()`:
 
@@ -504,10 +504,10 @@ Las variables que no contienen referencias a elementos de formulario no dispondr
 
 Juguemos un poco con algunos objetos del navegador.
 
-1.  En primer lugar, abre tu programa en un navegador.
-2.  A continuación, abre las [herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) y asegúrate de que la pestaña de la consola JavaScript esté abierta.
-3.  Escribe `guessField` y la consola te mostrará que la variable contiene un elemento {{htmlelement("input")}}. También notarás que la consola te ayuda completando automáticamente los nombres de los objetos que existen dentro del entorno de ejecución, ¡incluidas tus variables!
-4.  Ahora escribe lo siguiente:
+1. En primer lugar, abre tu programa en un navegador.
+2. A continuación, abre las [herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) y asegúrate de que la pestaña de la consola JavaScript esté abierta.
+3. Escribe `guessField` y la consola te mostrará que la variable contiene un elemento {{htmlelement("input")}}. También notarás que la consola te ayuda completando automáticamente los nombres de los objetos que existen dentro del entorno de ejecución, ¡incluidas tus variables!
+4. Ahora escribe lo siguiente:
 
     ```js
     guessField.value = 'Hola';
@@ -515,8 +515,8 @@ Juguemos un poco con algunos objetos del navegador.
 
     La propiedad `value` representa el valor actual ingresado en el campo de texto. Verás que al ingresar este comando, ¡hemos cambiado este valor!
 
-5.  Ahora intenta escribir `guesses` en la consola y presiona Intro. La consola te muestra que la variable contiene un elemento {{htmlelement("p")}}.
-6.  Ahora intenta ingresar la siguiente línea:
+5. Ahora intenta escribir `guesses` en la consola y presiona Intro. La consola te muestra que la variable contiene un elemento {{htmlelement("p")}}.
+6. Ahora intenta ingresar la siguiente línea:
 
     ```js
     guesses.value
@@ -524,13 +524,13 @@ Juguemos un poco con algunos objetos del navegador.
 
     El navegador devuelve `undefined`, porque los párrafos no tienen la propiedad `value`.
 
-7.  Para cambiar el texto dentro de un párrafo, necesitas la propiedad {{domxref("Node.textContent", "textContent")}} en su lugar. Prueba esto:
+7. Para cambiar el texto dentro de un párrafo, necesitas la propiedad {{domxref("Node.textContent", "textContent")}} en su lugar. Prueba esto:
 
     ```js
     guesses.textContent = '¿Dónde está mi párrafo?';
     ```
 
-8.  Ahora, solo por diversión. Intenta ingresar las siguientes líneas, una por una:
+8. Ahora, solo por diversión. Intenta ingresar las siguientes líneas, una por una:
 
     ```js
     guesses.style.backgroundColor = 'yellow';

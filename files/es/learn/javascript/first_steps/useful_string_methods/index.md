@@ -166,7 +166,7 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
 ### Encontrar una subcadena dentro de una cadena y extraerla
 
-1.  Algunas veces querrás encontrar si hay una cadena más pequeña dentro de una más grande (generalmente decimos _si una subcadena está presente dentro de una cadena_). Esto se puede hacer utilizando el método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que toma un único [parámetro](/es/docs/Glossary/Parameter) — la subcadena que deseas buscar. Intenta esto:
+1. Algunas veces querrás encontrar si hay una cadena más pequeña dentro de una más grande (generalmente decimos _si una subcadena está presente dentro de una cadena_). Esto se puede hacer utilizando el método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que toma un único [parámetro](/es/docs/Glossary/Parameter) — la subcadena que deseas buscar. Intenta esto:
 
     ```js
     browserType.indexOf('zilla');
@@ -174,7 +174,7 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
     Esto nos dá un resultado de 2, porque la subcadena "zilla" comienza en la posición 2 (0, 1, 2 — por tanto 3 caracteres en total) dentro de "mozilla". Tal código podría usarse para filtrar cadena. Por ejemplo, podemos tener una lista de direcciones web y solo queremos imprimir las que contienen "mozilla".
 
-2.  Esto se puede hacer de otra manera, que posiblemente sea aún más efectiva. Intenta lo siguiente:
+2. Esto se puede hacer de otra manera, que posiblemente sea aún más efectiva. Intenta lo siguiente:
 
     ```js
     browserType.indexOf('vanilla');
@@ -190,7 +190,7 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
     }
     ```
 
-3.  Cuando sabes donde comienza una subcadena dentro de una cadena, y sabes hasta cuál caracter deseas que termine, puede usarse {{jsxref("String.prototype.slice()", "slice()")}} para extraerla. Prueba lo siguiente:
+3. Cuando sabes donde comienza una subcadena dentro de una cadena, y sabes hasta cuál caracter deseas que termine, puede usarse {{jsxref("String.prototype.slice()", "slice()")}} para extraerla. Prueba lo siguiente:
 
     ```js
     browserType.slice(0,3);
@@ -198,7 +198,7 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
     Esto devuelve "moz" — El primer parámetro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído. Por lo tanto, el corte ocurre desde la primera posición en adelante, pero excluyendo la última posición. En este ejemplo, dado que el índice inicial es 0, el segundo parámetro es igual a la longitud de la cadena que se devuelve.
 
-4.  Además, si sabes que deseas extraer todos los caracteres restantes de una cadena después de cierto caracter, ¡no necesitas incluir el segundo parámetro! En cambio, solo necesitas incluir la posición del caracter desde donde deseas extraer los caracteres restante en la cadena. Prueba lo siguiente:
+4. Además, si sabes que deseas extraer todos los caracteres restantes de una cadena después de cierto caracter, ¡no necesitas incluir el segundo parámetro! En cambio, solo necesitas incluir la posición del caracter desde donde deseas extraer los caracteres restante en la cadena. Prueba lo siguiente:
 
     ```js
     browserType.slice(2);
@@ -242,9 +242,9 @@ Cada ejemplo viene con un botón de "Reset" , Que puedes utilizar para reestable
 
 En el primer ejercicio, comenzamos de manera simple — tenemos una matríz de mensajes de tarjetas de felicitación, pero queremos ordenarlos para que aparezcan solo los mensajes de Navidad. Queremos que completes un test condicional dentro de la estructura `if( ... )`, para comprobar cada cadena y solo imprimirla en la lista si es un mensaje de Navidad.
 
-1.  Primero piensa en cómo puedes probar si el mensaje en cada caso es un mensaje de Navidad. ¿Qué cadena está presente en todos esos mensajes, y qué método podrías usar para comprobar si está presente?
-2.  A continuación, deberá escribir un test condicional de la forma _operand1 operator operand2_. ¿Es lo que está a la izquierda igual a lo que está a la derecha? O en este caso, ¿el método llamado a la izquierda devuelve el resultado a la derecha?
-3.  Sugerencia: En este caso, probablemente sea más útil comprobar si la llamada al método _no es_ igual a un determinado resultado.
+1. Primero piensa en cómo puedes probar si el mensaje en cada caso es un mensaje de Navidad. ¿Qué cadena está presente en todos esos mensajes, y qué método podrías usar para comprobar si está presente?
+2. A continuación, deberá escribir un test condicional de la forma _operand1 operator operand2_. ¿Es lo que está a la izquierda igual a lo que está a la derecha? O en este caso, ¿el método llamado a la izquierda devuelve el resultado a la derecha?
+3. Sugerencia: En este caso, probablemente sea más útil comprobar si la llamada al método _no es_ igual a un determinado resultado.
 
 ```html hidden
 <h2>Live output</h2>
@@ -395,10 +395,10 @@ textarea.onkeyup = function(){
 
 En este ejercicio tenemos los nombres de las ciudades del Reino Unido, Pero las mayúsculas estan completamente desordenadas. Queremos que los cambies para que estén en minúscula, a excepción de la primera letra. Una buena manera de hacerlo es:
 
-1.  Convierte la totalidad de la cadena contenida en la variable `input` a minúsculas y guárdalas en una nueva variable.
-2.  Toma la primera letra de la cadena en esta nueva variable y guárdala en otra variable.
-3.  Usando esta última variable como una subcadena, reemplaza la primera letra de la cadena en minúscula con la subcadena en mayúscula. Almacena el resultado de este procedimiento de reemplazo en otra nueva variable.
-4.  Cambia el valor de la variable `result` a igual al resultado final. en vez de `input`.
+1. Convierte la totalidad de la cadena contenida en la variable `input` a minúsculas y guárdalas en una nueva variable.
+2. Toma la primera letra de la cadena en esta nueva variable y guárdala en otra variable.
+3. Usando esta última variable como una subcadena, reemplaza la primera letra de la cadena en minúscula con la subcadena en mayúscula. Almacena el resultado de este procedimiento de reemplazo en otra nueva variable.
+4. Cambia el valor de la variable `result` a igual al resultado final. en vez de `input`.
 
 > **Nota:** Una pista — los parámetros de los métodos de cadena no tienen que ser literales de cadenas; también pueden ser variables, o incluso variables con un método invocados en ellas.
 
@@ -556,11 +556,11 @@ MAN: Manchester Piccadilly
 
 Recomendamos hacerlo así:
 
-1.  Extrae las tres letras del código de estación y almacénalo en una nueva variable.
-2.  Encuentra el número de índice de caracter del punto y coma.
-3.  Extrae el nombre de la estación legible por humanos utilizando el número de índice de caracter del punto y coma a modo de referencia y guardalo en una nueva variable.
-4.  Concatenar las dos nuevas variables y un literal de cadena para hacer la cadena final.
-5.  Cambia el valor de la variable de `result` a igual a la cadena final, no a `input`.
+1. Extrae las tres letras del código de estación y almacénalo en una nueva variable.
+2. Encuentra el número de índice de caracter del punto y coma.
+3. Extrae el nombre de la estación legible por humanos utilizando el número de índice de caracter del punto y coma a modo de referencia y guardalo en una nueva variable.
+4. Concatenar las dos nuevas variables y un literal de cadena para hacer la cadena final.
+5. Cambia el valor de la variable de `result` a igual a la cadena final, no a `input`.
 
 ```html hidden
 <h2>Live output</h2>

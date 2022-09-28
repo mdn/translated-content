@@ -135,34 +135,34 @@ Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de 
 
 Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas.
 
-1.  Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
+1. Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
 
     ```js
     let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping;
     ```
 
-2.  En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
+2. En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
 
     ```js
     let sequence = [1, 1, 2, 3, 5, 8, 13];
     let random = ['tree', 795, [0, 1, 2]];
     ```
 
-3.  Intenta creando un par de matrices por tu cuenta, antes de continuar.
+3. Intenta creando un par de matrices por tu cuenta, antes de continuar.
 
 ### Accediendo y modificando elementos de la matriz
 
 Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character).
 
-1.  Ingresa lo siguiente en tu consola:
+1. Ingresa lo siguiente en tu consola:
 
     ```js
     shopping[0];
     // returns "bread"
     ```
 
-2.  también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
+2. también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
 
     ```js
     shopping[0] = 'tahini';
@@ -172,13 +172,13 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
 
     > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
-3.  Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+3. Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
     ```js
     random[2][2];
     ```
 
-4.  Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
+4. Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
 
 ### Encontrar la longitud de una matriz
 
@@ -200,9 +200,9 @@ for (var i = 0; i < sequence.length; i++) {
 
 Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemente, éste código dice:
 
-1.  Comienza el bucle en el elemento de la posición 0 en la matriz.
-2.  Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
-3.  Para cada elemento, imprime en la consola del navegador con [`console.log()`](/en-US/docs/Web/API/Console/log).
+1. Comienza el bucle en el elemento de la posición 0 en la matriz.
+2. Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
+3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/en-US/docs/Web/API/Console/log).
 
 ## Alguno métodos de matriz útiles
 
@@ -214,20 +214,20 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
 
 > **Nota:** Bien, esto es técnicamente un método de cadena, no un método de matriz, pero lo hemos incluido con las matrices, ya que va bien aquí.
 
-1.  Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
+1. Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
 
     ```js
     let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  Ahora dividámoslo en cada coma:
+2. Ahora dividámoslo en cada coma:
 
     ```js
     let myArray = myData.split(',');
     myArray;
     ```
 
-3.  Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
+3. Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
 
     ```js
     myArray.length;
@@ -236,14 +236,14 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
     myArray[myArray.length-1]; // the last item in the array
     ```
 
-4.  También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
+4. También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
 
     ```js
     let myNewString = myArray.join(',');
     myNewString;
     ```
 
-5.  Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
+5. Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
 
     ```js
     let dogNames = ['Rocket','Flash','Bella','Slugger'];
@@ -260,7 +260,7 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
 
-1.  primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
+1. primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
 
     ```js
     myArray.push('Cardiff');
@@ -269,7 +269,7 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
     myArray;
     ```
 
-2.  La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
+2. La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
 
     ```js
     let newLength = myArray.push('Bristol');
@@ -277,13 +277,13 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
     newLength;
     ```
 
-3.  Eliminar el último elemento de una matriz es tan simple como ejecutar `pop()` en ella. Prueba esto:
+3. Eliminar el último elemento de una matriz es tan simple como ejecutar `pop()` en ella. Prueba esto:
 
     ```js
     myArray.pop();
     ```
 
-4.  El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
+4. El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
 
     ```js
     let removedItem = myArray.pop();
@@ -293,14 +293,14 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio de la matriz, no al final.
 
-1.  Primero `unshift()` — prueba el siguiente comando:
+1. Primero `unshift()` — prueba el siguiente comando:
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  Ahora `shift()`; prueba estos!
+2. Ahora `shift()`; prueba estos!
 
     ```js
     let removedItem = myArray.shift();
@@ -312,12 +312,12 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
 
 Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
 
-1.  Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
-2.  En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el bucle que el [bucle for](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
-3.  justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Converting between strings and arrays](#converting_between_strings_and_arrays) de este artículo.
-4.  Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
-5.  Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) para hacer esto.
-6.  Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la ionformación correcta artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
+1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
+2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el bucle que el [bucle for](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
+3. justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Converting between strings and arrays](#converting_between_strings_and_arrays) de este artículo.
+4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
+5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) para hacer esto.
+6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la ionformación correcta artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
 
 ```html hidden
 <h2>Live output</h2>
@@ -485,8 +485,8 @@ En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un
 
 Para completar la aplicación necesitamos:
 
-1.  Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio de la matriz. Esto se puede recuperar usando `searchInput.value`.
-2.  Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final de la matriz.
+1. Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio de la matriz. Esto se puede recuperar usando `searchInput.value`.
+2. Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final de la matriz.
 
 ```html hidden
 <h2>Live output</h2>

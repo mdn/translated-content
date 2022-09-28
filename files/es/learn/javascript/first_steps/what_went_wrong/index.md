@@ -39,8 +39,8 @@ Bueno, tampoco es _así de simple_ — a medida que profundices hay algunas otra
 
 Para empezar, regresemos a nuestro juego de adivinan el número — excepto que esta vez vamos a explorar una versión que tiene algunos errores insertados deliberadamente. Ve a GitHub y haz una copia local de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (puedes verlo [en vivo aquí](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
 
-1.  Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.
-2.  Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!
+1. Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.
+2. Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!
 
 > **Nota:** ¡Posiblemente tengas tu propia versión del ejemplo del juego que no funciona, y quizás la quieras arreglar! Aún así nos gustaría que en el artículo trabajes con nuestra versión, para que puedas aprender las técnicas que estamos enseñando. Después puedes tratar de arreglar tu ejemplo.
 
@@ -50,8 +50,8 @@ En este punto, consultemos la consola del desarrollador para ver si podemos ver 
 
 Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
-1.  Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
-2.  Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
+1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
+2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
     - Una "x" roja para indicar que se trata de un error.
     - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
@@ -59,40 +59,40 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
     - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
     - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
 
-3.  Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
+3. Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
 
     ```js
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4.  El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
-5.  Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
+4. El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
+5. Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
 
 > **Nota:** Échale un vistazo a nuestra página de referencia [TypeError: "x" no es una función](/es/docs/Web/JavaScript/Reference/Errors/Not_a_function) para obtener más detalles sobre este error.
 
 ### Errores sintácticos, segunda ronda
 
-1.  Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
-2.  Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
-3.  Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
+1. Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
+2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
+3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
     > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
     > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
 
-4.  Échale un vistazo a la línea 78 y verás el siguiente código:
+4. Échale un vistazo a la línea 78 y verás el siguiente código:
 
     ```js
     lowOrHi.textContent = '¡El número es muy grande!';
     ```
 
-5.  Esta línea está intentando establecer la propiedad `textContent` de la constante `lowOrHi` en una cadena de texto, pero no funciona porque `lowOrHi` no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de `lowOrHi` en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
+5. Esta línea está intentando establecer la propiedad `textContent` de la constante `lowOrHi` en una cadena de texto, pero no funciona porque `lowOrHi` no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de `lowOrHi` en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
 
     ```js
     const lowOrHi = document.querySelector('lowOrHi');
     ```
 
-6.  En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es `null` después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
+6. En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es `null` después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
 
     ```js
     console.log(lowOrHi);
@@ -100,23 +100,23 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
     > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7.  Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
-8.  Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
     ```js
     <p class="lowOrHi"></p>
     ```
 
-9.  Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
+9. Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
 10. Ahora guarda y refresca nuevamente, y tu declaración `console.log()` debería devolver el elemento `<p>` que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea `console.log()`, o mantenerla como referencia más adelante — tu elección.
 
 > **Nota:** Consulta nuestra página de referencia [TypeError: "x" (no) es "y"](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para obtener más detalles sobre este error.
 
 ### Errores sintácticos, tercera ronda
 
-1.  Ahora, si intentas jugar de nuevo, deberías tener más éxito — el juego debería funcionar absolutamente bien, hasta que termines el juego, ya sea adivinando el número correcto o porque agotaste los intentos.
-2.  En ese momento, el juego vuelve a fallar y lanza el mismo error que obtuvimos al principio: "`TypeError: resetButton.addeventListener no es una función`". Sin embargo, esta vez aparece como procedente de la línea 94.
-3.  Mirando la línea número 94, es fácil ver que hemos cometido el mismo error aquí. Nuevamente, solo necesitamos cambiar `addeventListener` a `.addEventListener`. Hazlo ahora.
+1. Ahora, si intentas jugar de nuevo, deberías tener más éxito — el juego debería funcionar absolutamente bien, hasta que termines el juego, ya sea adivinando el número correcto o porque agotaste los intentos.
+2. En ese momento, el juego vuelve a fallar y lanza el mismo error que obtuvimos al principio: "`TypeError: resetButton.addeventListener no es una función`". Sin embargo, esta vez aparece como procedente de la línea 94.
+3. Mirando la línea número 94, es fácil ver que hemos cometido el mismo error aquí. Nuevamente, solo necesitamos cambiar `addeventListener` a `.addEventListener`. Hazlo ahora.
 
 ## Un error de lógica
 
@@ -124,7 +124,7 @@ En este punto, el juego debería trabajar bien, sin embargo, después de jugar v
 
 Obviamente hay un problema en la lógica del juego en alguna parte — el juego no devuelve un error; simplemente no está jugando bien.
 
-1.  Busca la variable `randomNumber` y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
+1. Busca la variable `randomNumber` y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
 
     ```js
     let randomNumber = Math.floor(Math.random()) + 1;
@@ -132,16 +132,17 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 
     Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-2.  ```js
+2. ```js
     randomNumber = Math.floor(Math.random()) + 1;
     ```
-3.  Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
+
+3. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
     ```js
     console.log(randomNumber);
     ```
 
-4.  Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
+4. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
 ### Desentrañando la lógica
 

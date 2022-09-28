@@ -148,7 +148,7 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
 
 ### Creando una cadena
 
-1.  Para comenzar, ingresa las siguientes líneas:
+1. Para comenzar, ingresa las siguientes líneas:
 
     ```js
     var string = 'La revolución no será televisada.';
@@ -157,7 +157,7 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
 
     Al igual que con los números, declaramos una variable, iniciandola con el valor de una cadena, y luego retornamos dicho valor. La única diferencia es que al escribir una cadena, necesitas envolverla con comillas.
 
-2.  Si no lo haces, u olvidas una de las comillas, obtendrás un error. Intenta ingresando las siguientes líneas:
+2. Si no lo haces, u olvidas una de las comillas, obtendrás un error. Intenta ingresando las siguientes líneas:
 
     ```js example-bad
     var malString = Esto es una prueba;
@@ -167,7 +167,7 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
 
     Estas líneas no funcionan porque el texto sin comillas alrededor es tomado como nombre de una variable, propiedad, palabra reservada, o algo similar. Si el navegador no las encuentra, entonces se recibe un error( ej. "missing ; before statement"). Si el navegador puede ver dónde comienza una cadena, pero no dónde termine, como se indica en la segunda oración, devuelve error (con "unterminated string literal"). Si tu programa devuelve estos errores, revisa desde el inicio que todas tus cadenas posean sus comillas.
 
-3.  Lo siguiente funcionará si previamente definiste la variable `string` — inténtalo:
+3. Lo siguiente funcionará si previamente definiste la variable `string` — inténtalo:
 
     ```js
     var maltring = string;
@@ -178,7 +178,7 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
 
 ### Comillas simples vs. comillas dobles
 
-1.  En JavaScript, puedes escoger entre comillas simple y dobles para envolver tus cadenas. Ambas funcionarán correctamente:
+1. En JavaScript, puedes escoger entre comillas simple y dobles para envolver tus cadenas. Ambas funcionarán correctamente:
 
     ```js
     var simp = 'Comillas simples.';
@@ -187,13 +187,13 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
     dobl;
     ```
 
-2.  Hay muy poca diferencia entre las dos, y la que utilices dependerá de tus preferencias personales. Sin embargo, deberías de elegir una y mantenerla; usar diferentes tipos de comillas en el código podría llegar a ser confuso, especialmente si utilizas diferentes comillas en la misma cadena. El siguiente ejemplo devolverá un error:
+2. Hay muy poca diferencia entre las dos, y la que utilices dependerá de tus preferencias personales. Sin embargo, deberías de elegir una y mantenerla; usar diferentes tipos de comillas en el código podría llegar a ser confuso, especialmente si utilizas diferentes comillas en la misma cadena. El siguiente ejemplo devolverá un error:
 
     ```js example-bad
     var badQuotes = 'What on earth?";
     ```
 
-3.  El navegador pensará que la cadena no se ha cerrado correctamente, porque el otro tipo de cita que no estás usando, puede aparecer en la cadena. Por ejemplo, en estos dos casos su uso es correcto:
+3. El navegador pensará que la cadena no se ha cerrado correctamente, porque el otro tipo de cita que no estás usando, puede aparecer en la cadena. Por ejemplo, en estos dos casos su uso es correcto:
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';
@@ -202,7 +202,7 @@ A primera vista, las cadenas se tratan de forma similar a los números, pero cua
     dblSgl;
     ```
 
-4.  Sin embargo, no puedes usar el mismo tipo de comillas en el interior de una cadena que ya las tiene en los extremos. Lo siguiente devuelve error, porque confunde al navegador respecto de dónde termina la cadena:
+4. Sin embargo, no puedes usar el mismo tipo de comillas en el interior de una cadena que ya las tiene en los extremos. Lo siguiente devuelve error, porque confunde al navegador respecto de dónde termina la cadena:
 
     ```js example-bad
     var bigmouth = 'I've got no right to take my place...';
@@ -223,7 +223,7 @@ Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma,
 
 ## Concatenando cadenas
 
-1.  Concatenar es una elegante palabra de la programación que significa: "unir". Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Vamos a probar un ejemplo en nuestra consola.
+1. Concatenar es una elegante palabra de la programación que significa: "unir". Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Vamos a probar un ejemplo en nuestra consola.
 
     ```js
     var one = 'Hello, ';
@@ -234,14 +234,14 @@ Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma,
 
     El resultado de este código es una variable llamada `joined`, que contiene el valor: "Hello, how are you?" ("Hola, cómo estas?").
 
-2.  En la última instancia del código, unimos dos strings, pero lo puedes hacer con cuantas desees, mientras que incluyas el símbolo de `+` entre ellas. Prueba esto:
+2. En la última instancia del código, unimos dos strings, pero lo puedes hacer con cuantas desees, mientras que incluyas el símbolo de `+` entre ellas. Prueba esto:
 
     ```js
     var multiple = one + one + one + one + two;
     multiple;
     ```
 
-3.  También puedes usar una combinación de variables y strings reales. Prueba esto:
+3. También puedes usar una combinación de variables y strings reales. Prueba esto:
 
     ```js
     var response = one + 'I am fine — ' + two;
@@ -273,7 +273,7 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
 
 ### Números versus cadenas
 
-1.  Entonces, ¿qué sucede cuando intentamos agregar (o concatenar) un string y un número? Vamos a probar en la consola:
+1. Entonces, ¿qué sucede cuando intentamos agregar (o concatenar) un string y un número? Vamos a probar en la consola:
 
     ```js
     'Front ' + 242;
@@ -281,14 +281,14 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
 
     Podrías esperar que diera un error, pero funciona a la perfección. Tratar de representar un string como un número no tiene sentido, pero representar un número como string si que lo tiene, así que el navegador convierte el número en una string y las muestra juntas.
 
-2.  Incluso puedes hacer esto con dos números — puedes forar un número para que se convierta en una string envolviéndolo entre comillas. Prueba lo siguiente (estamos utilizando el operador `typeof` para verificar si la variable es un número o una cadena):
+2. Incluso puedes hacer esto con dos números — puedes forar un número para que se convierta en una string envolviéndolo entre comillas. Prueba lo siguiente (estamos utilizando el operador `typeof` para verificar si la variable es un número o una cadena):
 
     ```js
     var myDate = '19' + '67';
     typeof myDate;
     ```
 
-3.  Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
+3. Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
 
     - El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
 

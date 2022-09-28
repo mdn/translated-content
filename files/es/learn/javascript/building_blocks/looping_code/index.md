@@ -156,14 +156,14 @@ for (inicializador; condición de salida; expresión final) {
 
 Aquí tenemos:
 
-1.  La palabra reservada `for`, seguida por algunos paréntesis.
-2.  Dentro de los paréntesis tenemos tres ítems, separados por punto y coma (;):
+1. La palabra reservada `for`, seguida por algunos paréntesis.
+2. Dentro de los paréntesis tenemos tres ítems, separados por punto y coma (;):
 
-    1.  Un **inicializador** - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama **contador** o **variable de conteo**.
-    2.  Una **condición de salida** - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.
-    3.  Una **expresión final** - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.
+    1. Un **inicializador** - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama **contador** o **variable de conteo**.
+    2. Una **condición de salida** - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.
+    3. Una **expresión final** - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.
 
-3.  Algunos corchetes curvos que contienen un bloque de código - este código se ejecutará cada vez que se repita el bucle.
+3. Algunos corchetes curvos que contienen un bloque de código - este código se ejecutará cada vez que se repita el bucle.
 
 Observa un ejemplo real para poder entender esto más claramente.
 
@@ -219,15 +219,15 @@ Esto nos da el siguiente resultado:
 
 Esto muestra un bucle siendo usado para iterar sobre los elementos de un arreglo (matriz), y hacer algo con cada uno de ellos - un patrón muy común en JavaScript. Aquí:
 
-1.  El iterador, `i`, inicia en `0` (`var i = 0`).
-2.  Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo `cats`. Esto es importante - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras `i < cats.length` sea verdadero, el bucle seguirá ejecutándose.
-3.  Dentro del bucle, concatenamos el elemento del bucle actual (`cats[i]` es `cats[lo que sea i en ese momento]`) junto con una coma y un espacio, al final de la variable `info`. Así:
+1. El iterador, `i`, inicia en `0` (`var i = 0`).
+2. Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo `cats`. Esto es importante - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras `i < cats.length` sea verdadero, el bucle seguirá ejecutándose.
+3. Dentro del bucle, concatenamos el elemento del bucle actual (`cats[i]` es `cats[lo que sea i en ese momento]`) junto con una coma y un espacio, al final de la variable `info`. Así:
 
-    1.  Durante la primera ejecución, `i = 0`, así `cats[0] + ', '` se concatenará con la información ("Bill, ").
-    2.  Durante la segunda ejecución, `i = 1`, así `cats[1] + ', '` agregará el siguiente nombre ("Jeff, ").
-    3.  Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (`i++`), entonces el proceso comenzará de nuevo.
+    1. Durante la primera ejecución, `i = 0`, así `cats[0] + ', '` se concatenará con la información ("Bill, ").
+    2. Durante la segunda ejecución, `i = 1`, así `cats[1] + ', '` agregará el siguiente nombre ("Jeff, ").
+    3. Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (`i++`), entonces el proceso comenzará de nuevo.
 
-4.  Cuando `i` sea igual a `cats.length`, el bucle se detendrá, y el navegador se moverá al siguiente segmento de código bajo el bucle.
+4. Cuando `i` sea igual a `cats.length`, el bucle se detendrá, y el navegador se moverá al siguiente segmento de código bajo el bucle.
 
 > **Nota:** Hemos programado la condición de salidad como `i < cats.length`, y no como `i <= cats.length`, porque los computadores cuentan desde 0, no 1 - inicializamos la variable i en 0, para llegar a `i = 4` (el índice del último elemento del arreglo). `cats.length` responde 5, ya que existen 5 elementos en el arreglo, pero no queremos que i = 5, dado que respondería `undefined` para el último elemento (no existe un elemento en el arreglo con un índice 5). for the last item (there is no array item with an index of 5). Por ello, queremos llegar a 1 menos que `cats.length` (`i <`), que no es lo mismo que `cats.length` (`i <=`).
 
@@ -340,16 +340,16 @@ btn.addEventListener('click', function() {
 
 {{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
-2.  Next, we attach an event listener to the button (`btn`), so that when it is pressed, some code is run to perform the search and return the results.
-3.  We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
-4.  Now onto the interesting part, the for loop:
+1. First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
+2. Next, we attach an event listener to the button (`btn`), so that when it is pressed, some code is run to perform the search and return the results.
+3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
+4. Now onto the interesting part, the for loop:
 
-    1.  We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
-    2.  Inside the loop we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
-    3.  We then use a conditional statement to test whether `splitContact[0]` (the contact's name) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
+    1. We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
+    2. Inside the loop we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
+    3. We then use a conditional statement to test whether `splitContact[0]` (the contact's name) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
-5.  If the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.
+5. If the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.
 
 > **Nota:** Note: You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -420,10 +420,10 @@ Here's the output:
 
 {{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
-2.  Inside the loop, we find the square root of each number using [Math.sqrt(i)](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
-3.  If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4.  If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
+2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
+3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
+4. If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
 > **Nota:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 

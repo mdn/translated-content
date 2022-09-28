@@ -24,9 +24,9 @@ En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side
 
 Para comenzar haga una copia en su computador de los archivos: [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Estos contienen:
 
-1.  Un documento HTML sencillo con un elemento \<h1>, un elemento \<canvas> en el que podamos dibujar los gráficos y otros elementos para aplicar los estilos CSS y el código JavaScript.
-2.  Algunos estilos sencillos que servirán para ubicar el elemento `<h1>`, ocultar la barra de desplazamiento y los margenes del borde de la página (para que luzca mejor).
-3.  Un archivo JavaScript que sirve para definir el elemento `<canvas>` y las funciones que vamos a usar.
+1. Un documento HTML sencillo con un elemento \<h1>, un elemento \<canvas> en el que podamos dibujar los gráficos y otros elementos para aplicar los estilos CSS y el código JavaScript.
+2. Algunos estilos sencillos que servirán para ubicar el elemento `<h1>`, ocultar la barra de desplazamiento y los margenes del borde de la página (para que luzca mejor).
+3. Un archivo JavaScript que sirve para definir el elemento `<canvas>` y las funciones que vamos a usar.
 
 La primera parte del script es:
 
@@ -107,15 +107,15 @@ Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla uti
 
 Ya se puede empezar a testear el objeto.
 
-1.  Guarde el código hasta ahora, y cargue el archivo HTML en un navegador.
-2.  Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del _canvas_ modifique sus dimensiones adaptándose al _viewport_ con la consola abierta.
-3.  Teclee lo siguiente en la consola para crear una nueva pelota.
+1. Guarde el código hasta ahora, y cargue el archivo HTML en un navegador.
+2. Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del _canvas_ modifique sus dimensiones adaptándose al _viewport_ con la consola abierta.
+3. Teclee lo siguiente en la consola para crear una nueva pelota.
 
     ```js
     var testBall = new Ball(50, 100, 4, 4, 'blue', 10);
     ```
 
-4.  Pruebe a llamar a las variables miembro:
+4. Pruebe a llamar a las variables miembro:
 
     ```js
     testBall.x
@@ -124,7 +124,7 @@ Ya se puede empezar a testear el objeto.
     testBall.draw()
     ```
 
-5.  Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del _canvas_.
+5. Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del _canvas_.
 
 ### Actualizando los datos de la pelota
 
@@ -231,7 +231,7 @@ Eso es todo para la parte básica — pruebe a guardar el código y refrescar el
 
 Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro código. Así las pelotas, sabrán cuando chocan unas contra otras.
 
-1.  El primer paso, será añadir el código a continuación a continuación de donde se definió el método `update()`. (en código de `Ball.prototype.update`)
+1. El primer paso, será añadir el código a continuación a continuación de donde se definió el método `update()`. (en código de `Ball.prototype.update`)
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -256,13 +256,13 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
     - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
     - En este caso, únicamente se define la propiedad de `color` para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
-2.  También es necesario llamar este método en cada instante de la animación. `balls[i].update();` en la línea:
+2. También es necesario llamar este método en cada instante de la animación. `balls[i].update();` en la línea:
 
     ```js
     balls[i].collisionDetect();
     ```
 
-3.  Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
+3. Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
 
 > **Nota:** Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la [version_final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (y también ver como funciona al [ejecutarla](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 

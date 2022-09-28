@@ -158,7 +158,7 @@ const miObjeto= {
 - [¿Cómo se registra un valor en la consola de JavaScript?](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
 - [¿Cómo se usan los puntos de interrupción y otras funciones de depuración de JavaScript?](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
 
-Para obtener más información sobre la depuración de JavaScript, consulte [Manejo de problemas comunes de JavaScript ](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript); Consulte también [Otros errores comunes](/es/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors) para obtener una descripción de los errores comunes.
+Para obtener más información sobre la depuración de JavaScript, consulte [Manejo de problemas comunes de JavaScript](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript); Consulte también [Otros errores comunes](/es/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors) para obtener una descripción de los errores comunes.
 
 ### Tomar decisiones en el código
 
@@ -214,7 +214,7 @@ Para obtener más información sobre la depuración de JavaScript, consulte [Man
 
 - [¿Qué son los controladores de eventos y cómo los usa?](/es/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties)
 - [¿Qué son los controladores de eventos en línea?](/es/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
-- [¿Qué hace la función `addEventListener() `y cómo la usa?](</es/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()>)
+- [¿Qué hace la función `addEventListener()`y cómo la usa?](</es/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()>)
 - [¿Qué mecanismo debo usar para agregar código de evento a mis páginas web?](/es/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
 - [¿Qué son los objetos de evento y cómo los usa?](/es/docs/Learn/JavaScript/Building_blocks/Events#Event_objects)
 - [¿Cómo se previene el comportamiento de evento predeterminado?](/es/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour)

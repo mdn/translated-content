@@ -97,13 +97,13 @@ Así que `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., están 
 
 > **Nota:** Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
 
-1.  Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
+1. Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
 
     ```js
     Person.prototype
     ```
 
-2.  El resultado no le mostrará mucho - después de todo, no hemos definido nada en el prototipo de nuestro constructor personalizado! Por defecto, el prototipo de un constructor siempre comienza vacío. Ahora intente lo siguiente:
+2. El resultado no le mostrará mucho - después de todo, no hemos definido nada en el prototipo de nuestro constructor personalizado! Por defecto, el prototipo de un constructor siempre comienza vacío. Ahora intente lo siguiente:
 
     ```js
     Object.prototype
@@ -119,19 +119,19 @@ var myString = 'Esto es mi String.';
 
 `myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype `es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this `apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype `es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> **Advertencia:** **Importante**: La propiedad `prototype`es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this`apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype`es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 
 Anteriormente mostramos cómo [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
 
-1.  Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
+1. Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  Lo que hace create() es crear un nuevo objeto a partir de un objeto prototipo específico. Aquí, la person2 se crea utilizando la person1 como objeto prototipo. Puede comprobarlo introduciendo lo siguiente en la consola:
+2. Lo que hace create() es crear un nuevo objeto a partir de un objeto prototipo específico. Aquí, la person2 se crea utilizando la person1 como objeto prototipo. Puede comprobarlo introduciendo lo siguiente en la consola:
 
     ```js
     person2.__proto__
@@ -141,11 +141,11 @@ Esto devolverá el objeto Persona.
 
 ## La propiedad constructor
 
-Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor `apunta a la función constructor original.
+Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor`apunta a la función constructor original.
 
-Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1 `como para los objetos `person2`.
+Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1`como para los objetos `person2`.
 
-1.  Por ejemplo, pruebe estos comandos en la consola:
+1. Por ejemplo, pruebe estos comandos en la consola:
 
     ```js
     person1.constructor
@@ -156,13 +156,13 @@ Como verá en la siguiente sección, las propiedades definidas en la propiedad P
 
     Un truco interesante es que se puede añadir paréntesis al final de la propiedad `constructor` (añadiendo todos los parámetros requeridos) para crear otra instancia desde ese constructor. Después de todo, el constructor es una función, por lo que puede ser invocada usando paréntesis; solamente se necesita incluir la palabra clave `new` para especificar que se quiere usar la función como un constructor.
 
-2.  Inténtese esto en la consola:
+2. Inténtese esto en la consola:
 
     ```js
     let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  Ahora intente acceder a las características del nuevo objeto, como:
+3. Ahora intente acceder a las características del nuevo objeto, como:
 
     ```js
     person3.name.first
@@ -190,7 +190,7 @@ person1.constructor.name
 
 Vamos a echar un vistazo a un ejemplo para modificar la propiedad `prototype` de una función constructor (los métodos añadidos a la propiedad prototipo están disponibles en todas las instancias de los objetos creados a partir del constructor).
 
-1.  Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
+1. Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
 
     ```js
     Person.prototype.farewell = function() {
@@ -198,7 +198,7 @@ Vamos a echar un vistazo a un ejemplo para modificar la propiedad `prototype` de
     };
     ```
 
-2.  Guarda el código y abre la página en el navegador, e ingresa lo siguiente en la entrada de texto.
+2. Guarda el código y abre la página en el navegador, e ingresa lo siguiente en la entrada de texto.
 
     ```js
     person1.farewell();
