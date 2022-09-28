@@ -8,11 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 | Tipo        | `Object` |
 | ----------- | -------- |
 | Obligatorio | No       |
-| Ejemplo     | ```json  |
-
-"icons": { "48": "icon.png", "96": "icon@2x.png" }
-
-````|
+| Ejemplo     | <pre lang="json">"icons": {<br>  "48": "icon.png",<br>  "96": "icon@2x.png"<br>}</pre> |
 
 La propiedad `icons` especifica los iconos de tu extensión. Esos iconos se usarán para representar la extensión en componentes como el Administrador de complementos.
 

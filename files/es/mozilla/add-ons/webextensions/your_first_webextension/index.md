@@ -62,15 +62,14 @@ El parámetro más interesante aquí es [`content_scripts`](/es/Add-ons/WebExten
 - [Aprenda más acerca de los scripts contenidos.](/es/Add-ons/WebExtensions/Content_scripts)
 - [Aprenda más acerca de los patrones coincidentes](/es/Add-ons/WebExtensions/Match_patterns).
 
-> **Advertencia:** [En algunas situaciones usted necesita especificar un ID para su extensión](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/Add-ons/WebExtensions/manifest.json/applications) en el `manifest.json` y configure la propiedad `gecko.id`:```json
+> **Advertencia:** [En algunas situaciones usted necesita especificar un ID para su extensión](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/Add-ons/WebExtensions/manifest.json/applications) en el `manifest.json` y configure la propiedad `gecko.id`:
+>
+> ```json
 > "applications": {
-> "gecko": {
-> "id": "borderify@example.com"
+>   "gecko": {
+>     "id": "borderify@example.com"
+>   }
 > }
-> }
->
-> ```
->
 > ```
 
 ### icons/border-48.png
