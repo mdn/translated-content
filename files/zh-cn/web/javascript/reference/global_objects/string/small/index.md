@@ -19,7 +19,7 @@ str.small()
 
 ## 描述
 
-`small()` 方法会 将一个字符串嵌入到`<small>` 标签中： `"<small>str</small>"。`
+`small()` 方法会 将一个字符串嵌入到`<small>` 标签中： `"<small>str</small>"`。
 
 ## 示例
 
