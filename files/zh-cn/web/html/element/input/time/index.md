@@ -7,7 +7,7 @@ slug: Web/HTML/Element/Input/time
 
 类型为 **`time`** 的 {{htmlelement("input")}} 元素，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。
 
-控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)。
+控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text)。
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -542,5 +542,5 @@ minuteSelect.onchange = setMinutesToZero;
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
 - [日期时间选择器教程](/zh-CN/docs/Learn/Forms/HTML5_input_types#日期和时间选择器)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/Input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/Input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
