@@ -65,12 +65,12 @@ function printEntries(arr) {
 // === impreso ===
 ```
 
-Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties "Relationship between length and numerical properties").
+Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 
 - `Sobrescribir`: si este atributo se establece en `false`, el valor de la propiedad no se puede cambiar.
-- `Configurable`: si este atributo se establece en `false`, cualquier intento de eliminar la propiedad o cambiar sus atributos (`Sobrescribir`, `Configurable `o `Numerable`) fallará.
+- `Configurable`: si este atributo se establece en `false`, cualquier intento de eliminar la propiedad o cambiar sus atributos (`Sobrescribir`, `Configurable` o `Numerable`) fallará.
 - `Numerable`: si este atributo se establece en `true`, la propiedad se repetirá durante los bucles [for](/es/docs/Web/JavaScript/Reference/Statements/for) o [for..in](/es/docs/Web/JavaScript/Reference/Statements/for...in).
 
 ## Ejemplos

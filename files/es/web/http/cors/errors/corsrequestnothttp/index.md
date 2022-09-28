@@ -7,7 +7,9 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 ## Razón
 
-    Reason: CORS request not HTTP
+```
+Reason: CORS request not HTTP
+```
 
 ## ¿Qué está mal?
 

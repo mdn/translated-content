@@ -17,7 +17,9 @@ El método **`Object.getPrototypeOf()`** devuelve el prototipo (es decir, el val
 
 ## Sintaxis
 
-    Object.getPrototypeOf(obj)
+```
+Object.getPrototypeOf(obj)
+```
 
 ### Parámetros
 

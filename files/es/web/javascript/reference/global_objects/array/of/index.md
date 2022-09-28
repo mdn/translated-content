@@ -26,14 +26,18 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 ## Sintaxis
 
-    Array.of(elemento0[, elemento1[, ...[, elementoN]]])
+```
+Array.of(elemento0[, elemento1[, ...[, elementoN]]])
+```
 
 ### Parámetros
 
 - `elementoN`
   - : Valores con los que se creará el Array en su respectivo indice.
-- ### Valor de retorno
-  - : Una nueva instancia de {{jsxref("Array")}}.
+
+### Valor de retorno
+
+Una nueva instancia de {{jsxref("Array")}}.
 
 ## Descripción
 

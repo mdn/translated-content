@@ -27,23 +27,27 @@ El mismo mecanismo de desafío y respuesta puede ser usada para _autenticación 
 
 ### Prohibición de Acceso (Access Forbbiden)
 
-Si el servidor proxy recibe unas credenciales válidas que no son adecuadas para acceder a un determinado recurso, el servidor respondera con el código de estado {{HTTPStatus("403")}} `Forbidden.`Diferente al código de estado {{HTTPStatus("401")}} `Unauthorized` o {{HTTPStatus("407")}} `Proxy Authentication Required, `donde la autenticación es imposible para ese usuario.
+Si el servidor proxy recibe unas credenciales válidas que no son adecuadas para acceder a un determinado recurso, el servidor respondera con el código de estado {{HTTPStatus("403")}} `Forbidden`. Diferente al código de estado {{HTTPStatus("401")}} `Unauthorized` o {{HTTPStatus("407")}} `Proxy Authentication Required`, donde la autenticación es imposible para ese usuario.
 
 ### Cabeceras `WWW-Authenticate` y `Proxy-Authenticate`
 
 Las cabeceras de respuesta {{HTTPHeader("WWW-Authenticate")}} y {{HTTPHeader("Proxy-Authenticate")}} definen el método de autenticación que debe ser usado para obtener acceso a un recurso. Ellas especifican que esquema de autenticación debe ser usado para que el cliente que quiera autenticarse sepa como hacerlo. La síntaxis para estas cabeceras es la siguiente:
 
-    WWW-Authenticate: <type> realm=<realm>
-    Proxy-Authenticate: <type> realm=<realm>
+```
+WWW-Authenticate: <type> realm=<realm>
+Proxy-Authenticate: <type> realm=<realm>
+```
 
-En el ejemplo, `<type> `es el esquema de autenticación ("Basic" es el esquema de autenticación mas usado e introducido en [esta página mas abajo](/es/docs/Web/HTTP/Authentication#Basic_authentication_scheme)). La palabra _realm_ es usada para describir el área que protegida o para indicar el alance de la protección. Puede ser un mensaje como "Access to the staging site" o algo similar, pero que sea explicativo para que el usuario sepa que espacio intenta acceder.
+En el ejemplo, `<type>` es el esquema de autenticación ("Basic" es el esquema de autenticación mas usado e introducido en [esta página mas abajo](/es/docs/Web/HTTP/Authentication#Basic_authentication_scheme)). La palabra _realm_ es usada para describir el área que protegida o para indicar el alance de la protección. Puede ser un mensaje como "Access to the staging site" o algo similar, pero que sea explicativo para que el usuario sepa que espacio intenta acceder.
 
 ### `Cabeceras Authorization` y `Proxy-Authorization`
 
 La cabecera de consulta {{HTTPHeader("Authorization")}} y {{HTTPHeader("Proxy-Authorization")}} contiene las credenciales para autenticar a un user agent con un servidor (proxy). Aquí, el tipo es necesario necesario siguiendo las credenciales que pueden estar codificadas o encriptadas dependiendo de que tipo de esquema de autenticación se esté usando:
 
-    Authorization: <type> <credentials>
-    Proxy-Authorization: <type> <credentials>
+```
+Authorization: <type> <credentials>
+Proxy-Authorization: <type> <credentials>
+```
 
 ### Esquemas de autenticación
 
@@ -72,32 +76,40 @@ Para proteger por contraseña un directorio en un servidor Apache, necesitas usa
 
 El fichero .htaccess normalmente tiene esta forma:
 
-    AuthType Basic
-    AuthName "Access to the staging site"
-    AuthUserFile /path/to/.htpasswd
-    Require valid-user
+```
+AuthType Basic
+AuthName "Access to the staging site"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+```
 
-El fichero .htaccess hace una referencia al fichero .htpasswd, que contiene en cada línea un nombre de usuario y su respectiva contraseña separadas por dos puntos (":"). En este ejemplo no puedes ver la contraseña porque está [encriptada ](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html)(utilizando md5 en este caso). Además, puedes nombrar el fichero .htpasswd de forma diferente si tu quieres, pero teniendo en cuenta que no debería ser accesible por nadie. (Apache está configurado normalmente para prevenir el acceso a ficheros .ht\*).
+El fichero .htaccess hace una referencia al fichero .htpasswd, que contiene en cada línea un nombre de usuario y su respectiva contraseña separadas por dos puntos (":"). En este ejemplo no puedes ver la contraseña porque está [encriptada](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (utilizando md5 en este caso). Además, puedes nombrar el fichero .htpasswd de forma diferente si tu quieres, pero teniendo en cuenta que no debería ser accesible por nadie. (Apache está configurado normalmente para prevenir el acceso a ficheros .ht\*).
 
-    aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-    user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
+aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
 
 ### Restringiendo acceso con nginx y autenticación básica
 
 En el caso de nginx necesitarás especificar la localización a proteger y usar la directiva **auth_basic**, que provee el nombre del área protegida. La directiva **auth_basic_user_file** apunta al fichero .htpasswd que contiene las credenciales de usuario encriptadas, como en el ejemplo de Apache de mas arriba.
 
-    location /status {
-        auth_basic           "Access to the staging site";
-        auth_basic_user_file /etc/apache2/.htpasswd;
-    }
+```
+location /status {
+    auth_basic           "Access to the staging site";
+    auth_basic_user_file /etc/apache2/.htpasswd;
+}
+```
 
 ### Acceso usando credenciales en la URL
 
 Muchos clientes también le permiten evitar el mensaje de inicio de sesión enviando el usuario y la contraseña codificados por la URL.
 
-    https://username:password@www.example.com/
+```
+https://username:password@www.example.com/
+```
 
-**El uso de estas URLs está obsoleto.** En Chrome, la cadena usuario:contraseña@ dentro de URLs incluso es [cortada ](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)por razones de seguridad. En Firefox se comprueba si el sitio actualmente requiere una autenticación, y de no ser así, Firefox avisará al usuario con un mensaje "Está a punto de iniciar sesión en el sitiio "www\.example.com" con el usuario "username", pero el sitiio web no requiere autenticación. Puede ser un intento de engañarlo.".
+**El uso de estas URLs está obsoleto.** En Chrome, la cadena usuario:contraseña@ dentro de URLs incluso es [cortada](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)por razones de seguridad. En Firefox se comprueba si el sitio actualmente requiere una autenticación, y de no ser así, Firefox avisará al usuario con un mensaje "Está a punto de iniciar sesión en el sitiio "www\.example.com" con el usuario "username", pero el sitiio web no requiere autenticación. Puede ser un intento de engañarlo.".
 
 ## Ver también
 

@@ -18,7 +18,9 @@ El método **`push()`** añade uno o más elementos al final de un array y devue
 
 ## Sintaxis
 
-    arr.push(element1[, ...[, elementN]])
+```
+arr.push(element1[, ...[, elementN]])
+```
 
 ### Parámetros
 

@@ -48,7 +48,7 @@ var miFunc = creaFunc();
 miFunc();
 ```
 
-Si se ejecuta este código tendrá exactamente el mismo efecto que el ejemplo anterior: se mostrará el texto "Mozilla" en un cuadro de alerta de Javascript. Lo que lo hace diferente (e interesante) es que la función externa nos ha devuelto la función interna ` muestraNombre`` ()  `antes de ejecutarla.
+Si se ejecuta este código tendrá exactamente el mismo efecto que el ejemplo anterior: se mostrará el texto "Mozilla" en un cuadro de alerta de Javascript. Lo que lo hace diferente (e interesante) es que la función externa nos ha devuelto la función interna `muestraNombre()`antes de ejecutarla.
 
 Puede parecer poco intuitivo que este código funcione. Normalmente, las variables locales dentro de una función sólo existen mientras dura la ejecución de dicha función. Una vez que `creaFunc()` haya terminado de ejecutarse, es razonable suponer que no se pueda ya acceder a la variable `nombre`. Dado que el código funciona como se esperaba, esto obviamente no es el caso.
 
@@ -70,9 +70,9 @@ console.log(suma5(2));  // muestra 7
 console.log(suma10(2)); // muestra 12
 ```
 
-En este ejemplo, hemos definido una función ` creaSumador``(x) ` que toma un argumento único `x` y devuelve una nueva función. Esa nueva función toma un único argumento `y`, devolviendo la suma de `x` + `y`.
+En este ejemplo, hemos definido una función ` creaSumador(x) ` que toma un argumento único `x` y devuelve una nueva función. Esa nueva función toma un único argumento `y`, devolviendo la suma de `x` + `y`.
 
-En esencia, ` creaSumador``  `es una fábrica de función: crea funciones que pueden sumar un valor específico a su argumento. En el ejemplo anterior utilizamos nuestra fábrica de función para crear dos nuevas funciones: una que agrega 5 a su argumento y otra que agrega 10.
+En esencia, `creaSumador` es una fábrica de función: crea funciones que pueden sumar un valor específico a su argumento. En el ejemplo anterior utilizamos nuestra fábrica de función para crear dos nuevas funciones: una que agrega 5 a su argumento y otra que agrega 10.
 
 `suma5` y `suma10` son ambos closures. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos. En el entorno `suma5`, `x` es 5. En lo que respecta a `suma10`, `x` es 10.
 
@@ -136,7 +136,7 @@ Lenguajes como Java ofrecen la posibilidad de declarar métodos privados, es dec
 
 JavaScript no proporciona una forma nativa de hacer esto, pero es posible emular métodos privados utilizando closures. Los métodos privados no son sólo útiles para restringir el acceso al código: también proporcionan una poderosa manera de administrar tu espacio de nombres global, evitando que los métodos no esenciales embrollen la interfaz pública de tu código.
 
-Aquí vemos cómo definir algunas funciones públicas que pueden acceder a variables y funciones privadas utilizando closures. A esto se le conoce también como el [patrón módulo](http://www.google.com/search?q=javascript+patron+modulo "javascript patron modulo"):
+Aquí vemos cómo definir algunas funciones públicas que pueden acceder a variables y funciones privadas utilizando closures. A esto se le conoce también como el [patrón módulo](http://www.google.com/search?q=javascript+patron+modulo):
 
 ```js
 var Counter = (function() {
@@ -203,13 +203,13 @@ alert(Counter1.value()); /* Muestra 1 */
 alert(Counter2.value()); /* Muestra 0 */
 ```
 
-Ten en cuenta que cada uno de los dos contadores mantiene su independencia del otro. Su entorno durante la llamada de la función `makeCounter()` es diferente cada vez. La variable del closure llamada `privateCounter `contiene una instancia diferente cada vez.
+Ten en cuenta que cada uno de los dos contadores mantiene su independencia del otro. Su entorno durante la llamada de la función `makeCounter()` es diferente cada vez. La variable del closure llamada `privateCounter` contiene una instancia diferente cada vez.
 
 Utilizar closures de este modo proporciona una serie de beneficios que se asocian normalmente con la programación orientada a objectos, en particular la encapsulación y la ocultación de datos.
 
 ## Creando closures en loops: Un error común
 
-Antes de la introducción de la palabra clave [`let`](/es/docs/JavaScript/Reference/Statements/let "let") en JavaScript 1.7, un problema común con closures ocurría cuando se creaban dentro de un bucle 'loop'. Veamos el siguiente ejemplo:
+Antes de la introducción de la palabra clave [`let`](/es/docs/JavaScript/Reference/Statements/let) en JavaScript 1.7, un problema común con closures ocurría cuando se creaban dentro de un bucle 'loop'. Veamos el siguiente ejemplo:
 
 ```html
 <p id="help">Helpful notes will appear here</p>
@@ -336,4 +336,4 @@ MyObject.prototype.getMessage = function() {
 };
 ```
 
-En los dos ejemplos anteriores, todos los objetos comparten el prototipo heredado y no se van a definir los métodos cada vez que se crean de objetos. Ver [Detalles del Modelo de Objetos](/es/docs/Web/JavaScript/Guide/Details_of_the_Object_Model "en-US/docs/JavaScript/Guide/Details of the Object Model") para más información.
+En los dos ejemplos anteriores, todos los objetos comparten el prototipo heredado y no se van a definir los métodos cada vez que se crean de objetos. Ver [Detalles del Modelo de Objetos](/es/docs/Web/JavaScript/Guide/Details_of_the_Object_Model) para más información.

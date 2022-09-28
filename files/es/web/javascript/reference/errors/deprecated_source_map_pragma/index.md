@@ -57,5 +57,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## Vea También
 
-- [Como utilizar un mapa de Fuentes - Documentación de Herramientas de Firefox](/es/docs/Tools/Debugger/How_to/Use_a_source_map)[](/es/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [Como utilizar un mapa de Fuentes - Documentación de Herramientas de Firefox](/es/docs/Tools/Debugger/How_to/Use_a_source_map)
 - [Introducción a las fuentes – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

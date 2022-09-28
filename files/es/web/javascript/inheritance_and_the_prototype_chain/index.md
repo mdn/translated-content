@@ -61,13 +61,13 @@ console.log(o.d); // undefined
 // No se encontró la propiedad, se devuelve undefined
 ```
 
-Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters "Defining Getters and Setters").
+Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters).
 
 ### Heredando "métodos"
 
 JavaScript no tiene "métodos" en la forma que los lenguajes basados en clases los define. En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, viéndose afectada por el solapamiento de propiedades como se muestra anteriormente (siendo, en este caso, una especie de _redefinición de métodos_).
 
-Cuando una función heredada se ejecuta, el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this "this") apunta al objeto que hereda, no al prototipo en el que la función es una propiedad.
+Cuando una función heredada se ejecuta, el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) apunta al objeto que hereda, no al prototipo en el que la función es una propiedad.
 
 ```js
 var o = {
@@ -133,19 +133,21 @@ console.log( hacerAlgo.prototype );
 
 El resultado:
 
-    {
-        foo: "bar",
-        constructor: ƒ hacerAlgo(),
-        __proto__: {
-            constructor: ƒ Object(),
-            hasOwnProperty: ƒ hasOwnProperty(),
-            isPrototypeOf: ƒ isPrototypeOf(),
-            propertyIsEnumerable: ƒ propertyIsEnumerable(),
-            toLocaleString: ƒ toLocaleString(),
-            toString: ƒ toString(),
-            valueOf: ƒ valueOf()
-        }
+```
+{
+    foo: "bar",
+    constructor: ƒ hacerAlgo(),
+    __proto__: {
+        constructor: ƒ Object(),
+        hasOwnProperty: ƒ hasOwnProperty(),
+        isPrototypeOf: ƒ isPrototypeOf(),
+        propertyIsEnumerable: ƒ propertyIsEnumerable(),
+        toLocaleString: ƒ toLocaleString(),
+        toString: ƒ toString(),
+        valueOf: ƒ valueOf()
     }
+}
+```
 
 Ahora podemos usar el operador `new` para crear una instancia de `hacerAlgo()` basado en este prototipo. Para usar el operador `new`, llama la función normalmente pero añadiendo el prefijo `new`. Llamar a la función con el operador `new` devuelve un objeto que es una instancia de la función. Entonces las propiedades pueden ser añadidas a este objeto.
 
@@ -246,7 +248,7 @@ function f(){
 
 ### Con un constructor
 
-Un "constructor" en JavaScript es "solo" una función que pasa a ser llamada con el [operador new](/es/docs/Web/JavaScript/Reference/Operators/new "new").
+Un "constructor" en JavaScript es "solo" una función que pasa a ser llamada con el [operador new](/es/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 function Graph() {
@@ -322,9 +324,9 @@ El tiempo de búsqueda para las propiedades que están en lo alto de la cadena d
 
 También, cuando iteramos sobre las propiedades de un objeto, cada propiedad enumerable que se encuentra en la cadena de prototipo será enumerada.
 
-Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") que todos los objetos heredan de` Object.prototype`.
+Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) que todos los objetos heredan de `Object.prototype`.
 
-[`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") es la única cosa en JavaScript que se ocupa de las propiedades y no atraviesa la cadena de prototipos.
+[`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) es la única cosa en JavaScript que se ocupa de las propiedades y no atraviesa la cadena de prototipos.
 
 Nota: Esto **no** es suficiente para chequear si una propiedad esta [`undefined`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined). la propiedad podría existir, pero el valor justamente sucede que esta seteado como `undefined`.
 
@@ -401,7 +403,7 @@ Si, en el ejemplo de arriba, pones `var a1 = new A(); var a2 = new A();` entonce
 
 resumiendo, `prototype` es para tipos, mientras que `Object.getPrototypeOf()` es lo mismo para instancias.
 
-`[[Prototype]]` es visto como _recursivo_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., hasta que se encuentra o `Object.getPrototypeOf `retornará null.
+`[[Prototype]]` es visto como _recursivo_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., hasta que se encuentra o `Object.getPrototypeOf` retornará null.
 
 Entonces, cuando llamas
 
