@@ -68,21 +68,21 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 DOM 操作の学習スタートは、実践的な例から始めましょう。
 
-1.  [dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) と [image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png) のローカルコピーを一緒に作成して下さい。
-2.  `<script></script>` 要素を、閉じ`</body>`タグのすぐ上に追加して下さい。
-3.  DOM の中の要素を操作するため、まず DOM を選びだしてこれへの参照を変数に保存する必要があります。script 要素の中に、次の行を追加して下さい:
+1. [dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) と [image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png) のローカルコピーを一緒に作成して下さい。
+2. `<script></script>` 要素を、閉じ`</body>`タグのすぐ上に追加して下さい。
+3. DOM の中の要素を操作するため、まず DOM を選びだしてこれへの参照を変数に保存する必要があります。script 要素の中に、次の行を追加して下さい:
 
     ```js
     const link = document.querySelector('a');
     ```
 
-4.  要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェース、さらにその汎化した親のインターフェース {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい:
+4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェース、さらにその汎化した親のインターフェース {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい:
 
     ```js
     link.textContent = 'Mozilla Developer Network';
     ```
 
-5.  クリックされたときに変な場所に行かないよう、リンクが指す先の URL も変えておくべきでしょう。また下に、以下の行を追加して下さい:
+5. クリックされたときに変な場所に行かないよう、リンクが指す先の URL も変えておくべきでしょう。また下に、以下の行を追加して下さい:
 
     ```js
     link.href = 'https://developer.mozilla.org';
@@ -101,32 +101,32 @@ JavaScript あるあるですが、要素を選んで変数に保存する方法
 
 ここまでで、どんな事ができるのかちょっと見えてきたと思いますが、さらに進んで新しい要素を作る方法を見ていきましょう。
 
-1.  今の例題に戻って、{{htmlelement("section")}} 要素を掴むところから始めましょう — すでに書いてあるスクリプトの下に次のコードを追加して下さい(この先の他の行についても、同じようにやって下さい):
+1. 今の例題に戻って、{{htmlelement("section")}} 要素を掴むところから始めましょう — すでに書いてあるスクリプトの下に次のコードを追加して下さい(この先の他の行についても、同じようにやって下さい):
 
     ```js
     const sect = document.querySelector('section');
     ```
 
-2.  {{domxref("Document.createElement()")}} を使って新しいパラグラフを作り、前やったのと同じ方法でテキストを入れてやりましょう:
+2. {{domxref("Document.createElement()")}} を使って新しいパラグラフを作り、前やったのと同じ方法でテキストを入れてやりましょう:
 
     ```js
     const para = document.createElement('p');
     para.textContent = 'We hope you enjoyed the ride.';
     ```
 
-3.  この新しいパラグラフを section の最後に {{domxref("Node.appendChild()")}} を使って追加できます:
+3. この新しいパラグラフを section の最後に {{domxref("Node.appendChild()")}} を使って追加できます:
 
     ```js
     sect.appendChild(para);
     ```
 
-4.  このパートの締めとして、文章がうまいことまとまるように、リンクを含んでいるパラグラフに対してテキストノードを追加しましょう。まずテキストノードを {{domxref("Document.createTextNode()")}} を使って作成します:
+4. このパートの締めとして、文章がうまいことまとまるように、リンクを含んでいるパラグラフに対してテキストノードを追加しましょう。まずテキストノードを {{domxref("Document.createTextNode()")}} を使って作成します:
 
     ```js
     const text = document.createTextNode(' — the premier source for web development knowledge.');
     ```
 
-5.  リンクを含んだパラグラフへの参照を取り出して、そこにテキストノードを追加します:
+5. リンクを含んだパラグラフへの参照を取り出して、そこにテキストノードを追加します:
 
     ```js
     const linkPara = document.querySelector('p');
@@ -175,7 +175,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 まずは、動的にスタイルを指定したい要素に、インラインスタイルを直接追加するやり方です。これには {{domxref("HTMLElement.style")}} プロパティを使い、このプロパティはドキュメント中の各素要のインラインスタイル情報を保持しています。このオブジェクトのプロパティを更新すれば要素のスタイルを直接変更できます。
 
-1.  例として、作成中の例題に以下の行を追加してみて下さい:
+1. 例として、作成中の例題に以下の行を追加してみて下さい:
 
     ```js
     para.style.color = 'white';
@@ -185,7 +185,7 @@ linkPara.parentNode.removeChild(linkPara);
     para.style.textAlign = 'center';
     ```
 
-2.  ページをリロードすると指定のパラグラフにスタイルが適用されているはずです。ブラウザーの [Page Inspector や DOM inspector](/ja/docs/Tools/Page_Inspector) からパラグラフを見ると、言うまでもなく上の行がドキュメントのインラインスタイルに追加されているはずです:
+2. ページをリロードすると指定のパラグラフにスタイルが適用されているはずです。ブラウザーの [Page Inspector や DOM inspector](/ja/docs/Tools/Page_Inspector) からパラグラフを見ると、言うまでもなく上の行がドキュメントのインラインスタイルに追加されているはずです:
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
@@ -195,10 +195,10 @@ linkPara.parentNode.removeChild(linkPara);
 
 ドキュメントのスタイルを動的にいじる際によく使われる別のやり方をこれから見ていきましょう。
 
-1.  さっき JavaScript に追加した 5 行を削除します。
-2.  HTML の {{htmlelement("head")}} の中に、以下を追加します:
+1. さっき JavaScript に追加した 5 行を削除します。
+2. HTML の {{htmlelement("head")}} の中に、以下を追加します:
 
-    ```
+    ```html
     <style>
     .highlight {
       color: white;
@@ -210,13 +210,13 @@ linkPara.parentNode.removeChild(linkPara);
     </style>
     ```
 
-3.  さて、多くの HTML 操作においてとても役に立つメソッドをお見せします — {{domxref("Element.setAttribute()")}} — これはに二つの引数、要素に設定したい属性名と、属性に設定したい値、を与えます。この場合だと、我々のパラグラフにクラス名、highlight をセットします:
+3. さて、多くの HTML 操作においてとても役に立つメソッドをお見せします — {{domxref("Element.setAttribute()")}} — これはに二つの引数、要素に設定したい属性名と、属性に設定したい値、を与えます。この場合だと、我々のパラグラフにクラス名、highlight をセットします:
 
     ```js
     para.setAttribute('class', 'highlight');
     ```
 
-4.  ページをリロードしても何も変わりません — パラグラフには CSS が今も適用されていますが、今回はクラスを指定して CSS ルールが選んでいて、インライン CSS スタイルによるものではありません。
+4. ページをリロードしても何も変わりません — パラグラフには CSS が今も適用されていますが、今回はクラスを指定して CSS ルールが選んでいて、インライン CSS スタイルによるものではありません。
 
 どうやるかはあなた次第です。それぞれに利点と欠点があります。最初のやり方は少ない設定ですみ、簡単な場合には向いていますが、二つ目のやり方はずっときれいです (よくないやり方とされる、CSS と JavaScript の混在やインラインスタイルの使用がありません)。もっと大規模で複雑なアプリを作り始めたら、多分二つ目のやり方をよく使うようになると思いますが、結局はホントにあなた次第です。
 
@@ -234,7 +234,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 まずは [window-resize-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example.html) と [bgtile.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/bgtile.png) ファイルのローカルコピーを作成して下さい。読み込んで見てみて下さい — 背景に画像がタイル表示された、{{htmlelement("div")}} 要素が画面に小さく表示されているでしょう。この領域が、私たちのアプリの UI 領域だとしていきます。
 
-1.  まず最初に、div への参照を取得し、ビューポート (ドキュメントが表示されている内側のウィンドウです) の幅と高さを取得して、これらを変数に保存します。便利なことに幅と高さの値は {{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} プロパティにあります。以下の行を、もう書いてある {{htmlelement("script")}} の中に書き足します:
+1. まず最初に、div への参照を取得し、ビューポート (ドキュメントが表示されている内側のウィンドウです) の幅と高さを取得して、これらを変数に保存します。便利なことに幅と高さの値は {{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} プロパティにあります。以下の行を、もう書いてある {{htmlelement("script")}} の中に書き足します:
 
     ```js
     const div = document.querySelector('div');
@@ -242,15 +242,15 @@ linkPara.parentNode.removeChild(linkPara);
     let winHeight = window.innerHeight;
     ```
 
-2.  次は、動的に div の幅と高さをビューポートのものと同じにします。次の二行を、さっき追加した部分の後に書き足して下さい:
+2. 次は、動的に div の幅と高さをビューポートのものと同じにします。次の二行を、さっき追加した部分の後に書き足して下さい:
 
     ```js
     div.style.width = winWidth + 'px';
     div.style.height = winHeight + 'px';
     ```
 
-3.  保存してブラウザーで読み直してみて下さい — どんな大きさの画面を使っているのであれ、div がビューポートと同じ大きさになったはずです。ウィンドウが大きくなるようにリサイズしてみても、div の大きさは変わらないはずです — 一度しか大きさを設定していないからです。
-4.  ウィンドウがリサイズされた時に div もリサイズされるよう、イベントを使ってみるのはどうでしょう? {{domxref("Window")}} オブジェクトにはリサイズされた時に呼ばれるイベントがあって、ウィンドウがリサイズされる毎発火します — この機能を {{domxref("Window.onresize")}} イベントハンドラーから使って、リサイズされる毎私たちのコードが再実行されるようにしてみましょう。あなたのコードの最後に以下を書き足して下さい:
+3. 保存してブラウザーで読み直してみて下さい — どんな大きさの画面を使っているのであれ、div がビューポートと同じ大きさになったはずです。ウィンドウが大きくなるようにリサイズしてみても、div の大きさは変わらないはずです — 一度しか大きさを設定していないからです。
+4. ウィンドウがリサイズされた時に div もリサイズされるよう、イベントを使ってみるのはどうでしょう? {{domxref("Window")}} オブジェクトにはリサイズされた時に呼ばれるイベントがあって、ウィンドウがリサイズされる毎発火します — この機能を {{domxref("Window.onresize")}} イベントハンドラーから使って、リサイズされる毎私たちのコードが再実行されるようにしてみましょう。あなたのコードの最後に以下を書き足して下さい:
 
     ```js
     window.onresize = function() {
@@ -277,15 +277,15 @@ linkPara.parentNode.removeChild(linkPara);
 
 この課題を完了させるには、以下のステップに従い、上で説明した通りに買い物リストが動くようにして下さい。
 
-1.  まず私たちが用意した [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) 初期ファイルをダウンロードしてローカルコピーをどこかに作成します。最小限の CSS、ラベルのついたリスト、input とボタン、空のリストと {{htmlelement("script")}} 要素が書いてあるはずです。この先書き足していくものは全部 script の中に書きます。
-2.  ({{htmlelement("ul")}}) と {{htmlelement("input")}} と {{htmlelement("button")}} 要素への参照を保持する 3 つの変数を作成します。
-3.  ボタンがクリックされた時の応答として走らせる [関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions) を作成します。
-4.  関数本体は、input 要素の現在の [値](/ja/docs/Web/API/HTMLInputElement#Properties)を変数に保存するところから始めます。
-5.  次に、input 要素の値に空文字列(`''`)を代入して、input 要素を空にします。
-6.  3 つの要素を作成します — リスト項目({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。
-7.  span と button をリスト項目 li の子に追加します。
-8.  span のテキストコンテントに、先程保存した input 要素の値を代入し、ボタンのテキストコンテントを「削除」にします。
-9.  できたリスト項目をリストの子に追加します。
+1. まず私たちが用意した [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) 初期ファイルをダウンロードしてローカルコピーをどこかに作成します。最小限の CSS、ラベルのついたリスト、input とボタン、空のリストと {{htmlelement("script")}} 要素が書いてあるはずです。この先書き足していくものは全部 script の中に書きます。
+2. ({{htmlelement("ul")}}) と {{htmlelement("input")}} と {{htmlelement("button")}} 要素への参照を保持する 3 つの変数を作成します。
+3. ボタンがクリックされた時の応答として走らせる [関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions) を作成します。
+4. 関数本体は、input 要素の現在の [値](/ja/docs/Web/API/HTMLInputElement#Properties)を変数に保存するところから始めます。
+5. 次に、input 要素の値に空文字列(`''`)を代入して、input 要素を空にします。
+6. 3 つの要素を作成します — リスト項目({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。
+7. span と button をリスト項目 li の子に追加します。
+8. span のテキストコンテントに、先程保存した input 要素の値を代入し、ボタンのテキストコンテントを「削除」にします。
+9. できたリスト項目をリストの子に追加します。
 10. 削除ボタンにイベントハンドラーを追加して、クリックされたらボタンが含まれているリスト項目全体を削除するようにします。
 11. 最後に、[`focus()`](/ja/docs/Web/API/HTMLElement/focus)メソッドを使って input 要素にフォーカスし、次の買い物リスト商品をすぐに入力できるようにします。
 

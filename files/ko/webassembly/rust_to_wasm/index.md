@@ -1,11 +1,6 @@
 ---
 title: Rust를 WebAssembly로 컴파일하기
 slug: WebAssembly/Rust_to_wasm
-tags:
-  - rust
-  - 웹어셈블리
-  - 컴파일
-translation_of: WebAssembly/Rust_to_wasm
 ---
 {{WebAssemblySidebar}}
 

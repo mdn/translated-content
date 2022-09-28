@@ -1,15 +1,8 @@
 ---
 title: UIEvent.initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - UIEvent
-browser-compat: api.UIEvent.initUIEvent
 ---
+
 {{APIRef("DOM Events")}} {{deprecated_header}}
 
 **`UIEvent.initUIEvent()`** メソッドは、一度作成された UI イベントを初期化します。

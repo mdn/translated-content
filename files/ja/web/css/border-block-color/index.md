@@ -1,15 +1,6 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-block-color
-translation_of: Web/CSS/border-block-color
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: Performance.now()
 slug: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 **`performance.now()`**方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}} 。
@@ -75,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## 相关链接
 

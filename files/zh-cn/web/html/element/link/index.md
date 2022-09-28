@@ -2,6 +2,7 @@
 title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
 ---
+
 {{HTMLRef}}
 
 **HTML 外部资源链接元素** (**`<link>`**) 规定了当前文档与外部资源的关系。该元素最常用于链接[样式表](/zh-CN/docs/Glossary/CSS)，此外也可以被用来创建站点图标 (比如 PC 端的 “favicon” 图标和移动设备上用以显示在主屏幕的图标) 。
@@ -262,7 +263,7 @@ function sheetError() {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.link", 3)}}
+{{Compat}}
 
 ## 请参阅
 

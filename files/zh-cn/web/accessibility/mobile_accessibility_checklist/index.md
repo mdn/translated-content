@@ -2,6 +2,7 @@
 title: 移动无障碍清单
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
 该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 
 ## 颜色
@@ -36,7 +37,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - 应用中，每个展示的非文本元素都**必须**提供等效文本。
 
-  - 恰当的位置使用 _alt_ 和 _title_ （请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
+  - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
   - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
 - **必须**避免文本图像。

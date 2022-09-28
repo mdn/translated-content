@@ -2,6 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML元素")}}接口）用于管理输入元素的布局和外观。
@@ -216,7 +217,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange"
+          ><a href="/zh-CN/docs/Web/API/HTMLInputElement/setSelectionRange"
             >setSelectionRange()</a
           ></code
         >
@@ -293,11 +294,11 @@ slug: Web/API/HTMLInputElement
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 
 - {{domxref("HTMLInputElement.mozSetFileArray()")}}{{non-standard_inline}}
-  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/zh-CN/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/en-US/Firefox/Multiprocess_Firefox/The_message_manager).
+  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/zh-CN/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/zh-CN/Firefox/Multiprocess_Firefox/The_message_manager).
 - {{domxref("HTMLInputElement.mozGetFileNameArray()")}}{{non-standard_inline}}
   - : Returns an array of all the file names from the input.
 - {{domxref("HTMLInputElement.mozSetFileNameArray()")}}{{non-standard_inline}}
-  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
+  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/zh-CN/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
 
 ## 规范
 
@@ -305,7 +306,7 @@ slug: Web/API/HTMLInputElement
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 参见
 

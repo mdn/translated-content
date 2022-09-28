@@ -2,6 +2,7 @@
 title: 缓存已编译的 WebAssembly 模块
 slug: WebAssembly/Caching_modules
 ---
+
 {{WebAssemblySidebar}}
 
 对于提高应用的性能来说，缓存是很有用的——我们可以在客户端存储已编译的 WebAssembly 模块，从而可以避免每次都下载和编译它们。本文解释了这方面的最佳实践。

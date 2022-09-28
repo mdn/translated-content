@@ -1,16 +1,6 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
-tags:
-  - Media
-  - MediaStream
-  - メディアストリーム API
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - getTrackById
-browser-compat: api.MediaStream.getTrackById
-translation_of: Web/API/MediaStream/getTrackById
 ---
 {{APIRef("Media Capture and Streams")}}
 

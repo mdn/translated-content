@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Manifest) qui peut être appliqué à la ressource.

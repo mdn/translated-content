@@ -1,13 +1,6 @@
 ---
 title: CaretPosition
 slug: Web/API/CaretPosition
-tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Interface
-  - Reference
-translation_of: Web/API/CaretPosition
 ---
 {{SeeCompatTable}} {{ APIRef("CSSOM") }}
 

@@ -2,6 +2,7 @@
 title: isolation
 slug: Web/CSS/isolation
 ---
+
 {{CSSRef()}}
 
 ## 概述
@@ -78,7 +79,7 @@ isolation: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## 参见
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-child`** permet de cibler un élément qui est le dernier enfant de son parent.

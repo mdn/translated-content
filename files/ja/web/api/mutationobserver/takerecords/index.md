@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
-translation_of: Web/API/MutationObserver/takeRecords
 ---
 {{APIRef("DOM WHATWG")}}
 
@@ -21,7 +20,7 @@ const mutationRecords = mutationObserver.takeRecords()
 
 {{domxref("MutationRecord")}} オブジェクトの配列で、そのそれぞれがドキュメントの DOM ツリーの監視された部分に適用された変更を記述します。
 
-> **Note:** **注:** 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 `takeRecords()`をコールした後は空のままになります。
+> **Note:** 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 `takeRecords()`をコールした後は空のままになります。
 
 ## 例
 

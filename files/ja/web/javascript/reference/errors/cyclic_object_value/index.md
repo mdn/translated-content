@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "cyclic object value" は、 [JSON](https://www.json.org/) の中にオブジェクトの参照が見つかったときに発生します。 {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。

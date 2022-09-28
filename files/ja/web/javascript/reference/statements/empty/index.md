@@ -1,12 +1,8 @@
 ---
 title: 空文
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 **空文** は、JavaScript 構文で文が想定されているときに、文を用意しないために使います。

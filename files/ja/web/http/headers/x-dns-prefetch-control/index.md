@@ -1,13 +1,6 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-tags:
-  - DNS
-  - HTTP
-  - X-DNS-Prefetch-Control
-  - header
-translation_of: Web/HTTP/Headers/X-DNS-Prefetch-Control
-browser-compat: http.headers.X-DNS-Prefetch-Control
 ---
 {{HTTPSidebar}}
 

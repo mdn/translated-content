@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 ---
+
 {{AddonSidebar()}}Met en évidence (sélectionné) un ou plusieurs onglets. Les onglets sont spécifiés à l'aide d'un identifiant de fenêtre et d'une plage d'indices de tabulation.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

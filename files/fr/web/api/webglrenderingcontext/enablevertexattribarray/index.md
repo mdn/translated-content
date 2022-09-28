@@ -17,6 +17,7 @@ tags:
   - sommet
 translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode {{domxref ("WebGLRenderingContext")}} **`enableVertexAttribArray()` -** qui fait partie de l'API WebGL - active le tableau générique des attributs de sommet à l'indice spécifié dans la liste des tableaux d'attributs.

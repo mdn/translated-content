@@ -1,15 +1,6 @@
 ---
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - UI セレクター
-browser-compat: css.selectors.out-of-range
-translation_of: Web/CSS/:out-of-range
 ---
 {{CSSRef}}
 

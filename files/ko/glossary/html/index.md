@@ -1,12 +1,6 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - l10n:priority
-translation_of: Glossary/HTML
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 **HTML**(Hypertext Markup Language)은 웹페이지의 구조를 지정하는 기술적인 언어입니다.

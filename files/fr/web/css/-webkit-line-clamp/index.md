@@ -6,6 +6,7 @@ tags:
   - Propriété
 translation_of: Web/CSS/-webkit-line-clamp
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`-webkit-line-clamp`** permet de limiter l'affichage du contenu d'un bloc à un nombre donné de lignes.

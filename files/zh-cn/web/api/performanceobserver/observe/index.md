@@ -2,6 +2,7 @@
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref("PerformanceObserver", "性能监测对象")}} 的 **`observe()`** 方法用于观察传入的参数中指定的性能条目类型的集合。当记录一个指定类型的性能条目时，性能监测对象的回调函数将会被调用。

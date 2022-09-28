@@ -2,6 +2,7 @@
 title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 14 shipped on July 17, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
@@ -45,7 +46,7 @@ _No change._
 
 ### HTTP
 
-- Gecko 开始支持新的[HTTP](/zh-CN/HTTP) [`308`永久重定向](/zh-CN/HTTP/HTTP_response_codes#308) 状态码。由于 Gecko 并不区分永久重定向和零食重定向，所以该状态码的表现行为和[`307 临时重定向`](/zh-CN/HTTP/HTTP_response_codes#307)状态码是一样的，和 302 以及 301 状态码的区别是，它们禁止用户代理改变重定之后的 HTTP 方法 (` POST还是``POST `, `GET`还是`GET`).
+- Gecko 开始支持新的[HTTP](/zh-CN/HTTP) [`308`永久重定向](/zh-CN/HTTP/HTTP_response_codes#308) 状态码。由于 Gecko 并不区分永久重定向和零食重定向，所以该状态码的表现行为和[`307 临时重定向`](/zh-CN/HTTP/HTTP_response_codes#307)状态码是一样的，和 302 以及 301 状态码的区别是，它们禁止用户代理改变重定之后的 HTTP 方法 (`POST` 还是 `POST`, `GET` 还是 `GET`).
 
 ## Changes for Mozilla and add-on developers
 
@@ -59,7 +60,7 @@ _No change._
 
 ### XUL
 
-- 在 {{ XULElem("window") }}元素上添加了新的 {{ XULAttr("fullscreenbutton") }}属性; 将该属性设置为`true,会在`窗口上添加一个进入全屏模式的按钮。
+- 在 `<window>` 元素上添加了新的 `fullscreenbutton` 属性；将该属性设置为`true`，会在窗口上添加一个进入全屏模式的按钮。
 
 ### 接口
 

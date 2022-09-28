@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript からその内容にアクセスできるようにしたりします。

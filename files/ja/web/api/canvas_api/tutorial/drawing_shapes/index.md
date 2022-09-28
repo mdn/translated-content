@@ -1,15 +1,6 @@
 ---
 title: キャンバスでの図形の描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML キャンバス
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

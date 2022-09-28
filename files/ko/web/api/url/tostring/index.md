@@ -17,7 +17,9 @@ translation_of: Web/API/URL/toString
 
 ## 구문
 
-    href = url.toString()
+```js
+href = url.toString()
+```
 
 ### 반환 값
 

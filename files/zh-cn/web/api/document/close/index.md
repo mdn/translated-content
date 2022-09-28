@@ -2,6 +2,7 @@
 title: Document.close()
 slug: Web/API/Document/close
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.close()`** 用于结束由 对文档的 {{domxref("Document.write()")}} 写入操作，这种写入操作一般由 {{domxref("Document.open()")}} 打开。
@@ -31,4 +32,4 @@ document.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.close")}}
+{{Compat}}

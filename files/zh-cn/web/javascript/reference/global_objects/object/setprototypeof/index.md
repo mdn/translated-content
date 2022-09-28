@@ -2,6 +2,7 @@
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **Object.setPrototypeOf()** 方法设置一个指定的对象的原型（即，内部 `[[Prototype]]` 属性）到另一个对象或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。

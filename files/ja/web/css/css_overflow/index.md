@@ -1,13 +1,6 @@
 ---
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_Overflow
-tags:
-  - CSS
-  - ガイド
-  - overflow
-  - スクロールバー
-  - スクロール
-translation_of: Web/CSS/CSS_Overflow
 ---
 {{CSSRef}}
 

@@ -1,14 +1,8 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
-translation_of: Web/API/URLSearchParams/get
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェースの **`get()`** メソッドは、指定された検索パラメーターに関連付けられた最初の値を返します。

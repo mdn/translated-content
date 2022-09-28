@@ -3,11 +3,12 @@ title: How to properly tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **Article tags** are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.
 
-For a help with the user interface for editing tags, see the [tagging section](/en-US/docs/MDN/Contribute/Editor/Basics#The_tags_box) in our editor guide.
+For a help with the user interface for editing tags, see the [tagging section](/zh-TW/docs/MDN/Contribute/Editor/Basics#The_tags_box) in our editor guide.
 
 Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
@@ -75,7 +76,7 @@ While there's some room for flexibility here as we identify new topic areas, we 
 - `Tools`
 - `Web`
 
-In general, your topic identification tag should be the name of an interface with a number of related pages (like [Node](/en-US/docs/Web/API/Node), which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with `Graphics` and `WebGL`, for example, but a page about {{HTMLElement("canvas")}} with `HTML`, `Element`, `Canvas`, and `Graphics`.
+In general, your topic identification tag should be the name of an interface with a number of related pages (like [Node](/zh-TW/docs/Web/API/Node), which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with `Graphics` and `WebGL`, for example, but a page about {{HTMLElement("canvas")}} with `HTML`, `Element`, `Canvas`, and `Graphics`.
 
 ### Technology status
 
@@ -96,7 +97,7 @@ Here are possible values for these tags:
 - `Certified Only`
   - : The API only works in certified code.
 
-These tags are no excuse to leave out the [compatibility table](/en-US/docs/Project:Compatibility_tables) in your article!
+These tags are no excuse to leave out the [compatibility table](/zh-TW/docs/Project:Compatibility_tables) in your article!
 
 ### Skill level
 
@@ -118,9 +119,9 @@ The writing community uses tags to label articles as requiring specific types of
 - `NeedsContent`
   - : The article is a stub, or is otherwise lacking information. This tag means that someone should review the content and add more details and/or finish writing the article.
 - `NeedsExample`
-  - : The article needs one or more examples created to help illustrate the article's point. These examples should use the [live sample system](/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples).
+  - : The article needs one or more examples created to help illustrate the article's point. These examples should use the [live sample system](/zh-TW/docs/Project:MDN/Contributing/How_to_help/Code_samples).
 - `NeedsLiveSamples`
-  - : The article has one or more examples that need to be updated to use the [live sample system](/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples).
+  - : The article has one or more examples that need to be updated to use the [live sample system](/zh-TW/docs/Project:MDN/Contributing/How_to_help/Code_samples).
 - `NeedsUpdate`
   - : The content is out of date and needs to updating.
 - `l10n:exclude`
@@ -179,7 +180,7 @@ So to each page you assign tags from several tag types, for example
 There are several kinds of tag problems you can help fix:
 
 - No tags
-  - : Generally articles should have at _least_ a "[category](/en-US/docs/Project:MDN/Contributing/Tagging_standards#Category)" tag and a "[topic](/en-US/docs/Project:MDN/Contributing/Tagging_standards#Topic)" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!
+  - : Generally articles should have at _least_ a "[category](/zh-TW/docs/Project:MDN/Contributing/Tagging_standards#Category)" tag and a "[topic](/zh-TW/docs/Project:MDN/Contributing/Tagging_standards#Topic)" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!
 - Tags that don't follow our tagging standards
   - : Please fix any documents whose tags don't follow the standards on this page.
     Note that due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), some localized tags (such as `Référence`) may show up on some English pages. These tags are likely to reappear even if you delete them; don't bother trying to fix them until the Kuma bug is fixed.
@@ -190,4 +191,4 @@ There are several kinds of tag problems you can help fix:
 - Tag spam
   - : This insidious beast is the most revolting tag problem of all: some Web vermin has deposited its droppings in the page tags (like "Free warez!" or "Hey I was browsing your site and wanted to ask you if you could help me solve this problem I'm having with Flash crashing all the time"). We've got to delete these right away!
 
-If you see one (or more) of these problems, please [log into MDN](/en-US/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN) and click EDIT at the top right of the MDN window. Once the editor loads up, scroll down to the bottom of the page, where you'll see the tag box. For more details on the tagging interface, see "[The tags box](/en-US/docs/Project:MDN/Contributing/Editor_guide#The_tags_box)" in the [MDN editor guide](/en-US/docs/Project:MDN/Contributing/Editor_guide).
+If you see one (or more) of these problems, please [log into MDN](/zh-TW/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN) and click EDIT at the top right of the MDN window. Once the editor loads up, scroll down to the bottom of the page, where you'll see the tag box. For more details on the tagging interface, see "[The tags box](/zh-TW/docs/Project:MDN/Contributing/Editor_guide#The_tags_box)" in the [MDN editor guide](/zh-TW/docs/Project:MDN/Contributing/Editor_guide).

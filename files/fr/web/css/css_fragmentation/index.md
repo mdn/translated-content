@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Fragmentation
 ---
+
 {{cssref}}
 
 **_CSS Fragmentation_** est un module CSS qui décrit la façon dont le contenu est divisé (fragmenté) entre plusieurs [pages](/fr/docs/Web/CSS/Paged_Media), régions ou [colonnes](/fr/docs/Web/CSS/CSS_Columns).

@@ -3,6 +3,7 @@ title: 執筆スタイルガイド
 slug: MDN/Writing_guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 この執筆スタイルガイドは、MDN Web Docs でコンテンツをどのように書き、整理し、綴り、形式を整え るべきかを記述したものです。

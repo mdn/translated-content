@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/getAllKeys
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBIndex")}}, permet de récupérer les clés de tous les objets contenus dans l'index et de les enregistrer dans la propriété `result` de l'objet renvoyé par la méthode.

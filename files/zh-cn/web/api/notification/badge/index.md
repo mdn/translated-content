@@ -2,6 +2,7 @@
 title: Notification.badge
 slug: Web/API/notification/badge
 ---
+
 {{SeeCompatTable}}{{APIRef("Notifications API")}}
 
 当没有足够的空间来显示通知本身时，{{domxref("Notification")}}接口的 **`badge`** 属性返回用于表示通知的图像 URL。

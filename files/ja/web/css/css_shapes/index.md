@@ -1,16 +1,6 @@
 ---
 title: CSS シェイプ
 slug: Web/CSS/CSS_Shapes
-tags:
-  - 境界
-  - CSS
-  - CSS シェイプ
-  - ガイド
-  - 概要
-  - Reference
-  - シェイプ
-  - wrapping
-translation_of: Web/CSS/CSS_Shapes
 ---
 {{CSSRef}}
 

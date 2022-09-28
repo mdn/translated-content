@@ -1,13 +1,6 @@
 ---
 title: location.origin
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.origin
-translation_of: Web/API/Location/origin
 ---
 {{APIRef("Location")}}
 

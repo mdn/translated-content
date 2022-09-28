@@ -2,6 +2,7 @@
 title: background
 slug: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}
 
 **`background`** 是一种 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。
@@ -104,7 +105,7 @@ background: no-repeat center/80% url("../img/image.png");
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background")}}
+{{Compat}}
 
 ## 参见
 

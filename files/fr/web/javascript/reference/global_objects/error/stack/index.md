@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété non-standard **`stack`** des objets {{jsxref("Error")}} fournit une trace des fonctions qui ont été appelées, dans quel ordre, depuis quelle ligne de quel fichier, et avec quels arguments. La chaine de pile remonte des appels les plus récents jusqu'aux plus anciens, ramenant à l'appel original de la portée globale.

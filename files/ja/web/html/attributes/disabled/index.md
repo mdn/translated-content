@@ -1,14 +1,6 @@
 ---
 title: 'HTML 属性: disabled'
 slug: Web/HTML/Attributes/disabled
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - フォーム
-  - required
-spec-urls: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
-translation_of: Web/HTML/Attributes/disabled
 ---
 
 {{HTMLSidebar}}

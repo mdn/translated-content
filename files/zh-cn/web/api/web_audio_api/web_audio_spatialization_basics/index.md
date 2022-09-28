@@ -2,6 +2,7 @@
 title: Web audio 空间化基础
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
+
 正如大量的各种声音处理（或者其他）选择是不够的，WebAduioAPI 也包含了一些工具，可以让你模仿听众在声源周围移动时的声音差异，例如当你在 3D 游戏声源中移动时声音的平移。官方名词称为 **空间化**，这篇文章将会介绍如何实现这样一个系统的基础知识。
 
 ## 空间化的基础知识
@@ -94,7 +95,7 @@ const distanceModel = 'linear';
 const maxDistance = 10000;
 ```
 
-还有一个参考距离 ([`refDistance`](/en-US/docs/Web/API/PannerNode/refDistance))，由距离模型使用。我们也可以将其保持为默认值 `1`：
+还有一个参考距离 ([`refDistance`](/zh-CN/docs/Web/API/PannerNode/refDistance))，由距离模型使用。我们也可以将其保持为默认值 `1`：
 
 ```js
 const refDistance = 1;
@@ -220,7 +221,7 @@ case 'forward':
 break;
 ```
 
-然而，我们的旋转值稍为复杂，因为我们需要在周围移动声音。我们不仅需要更新两个轴值（例如，如果围绕 x 轴旋转对象，则更新该对象的 y 和 z 坐标），还需要为此进行更多的数学运算。旋转是一个圆圈，我们需要 [`Math.sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 和 [`Math.cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) 来帮助我们绘制这个圆圈。
+然而，我们的旋转值稍为复杂，因为我们需要在周围移动声音。我们不仅需要更新两个轴值（例如，如果围绕 x 轴旋转对象，则更新该对象的 y 和 z 坐标），还需要为此进行更多的数学运算。旋转是一个圆圈，我们需要 [`Math.sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 和 [`Math.cos`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) 来帮助我们绘制这个圆圈。
 让我们设置一个旋转速率，我们将会将它转换为弧度范围的值，以便稍后在 `Math.sin` 和 `Math.cos` 中使用，当我们在旋转我们的 boombox ，需要计算出新的坐标时：
 
 ```js

@@ -1,20 +1,8 @@
 ---
 title: 条件 (三項) 演算子
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - 条件
-  - Decision
-  - JS
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - else
-  - if
-  - 三項
-browser-compat: javascript.operators.conditional
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
 **条件 (三項) 演算子**は JavaScript では唯一の、3 つのオペランドをとる演算子です。条件に続いて疑問符 (`?`)、そして条件が{{Glossary("truthy", "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{Glossary("falsy", "偽値")}}であった場合に実行する式が最後に来ます。この演算子は、 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の代替としてよく用いられます。

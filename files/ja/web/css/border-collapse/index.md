@@ -1,15 +1,6 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-collapse
-translation_of: Web/CSS/border-collapse
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: RTCStatsReport
 slug: Web/API/RTCStatsReport
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCStatsReport`** 接口提供了通过调用 {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}，和 {{domxref("RTCRtpSender.getStats()")}} 这三个方法之一所获得的统计报告。该统计报告包含统计类别字符串名称到包含相应统计数据的对象的映射。
@@ -38,6 +39,6 @@ _... 即将到来 ..._
 
 ## 参见
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}}

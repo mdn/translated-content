@@ -1,16 +1,8 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
+
 {{JSRef}}
 
 旧来の **$1, $2, $3, $4, $5, $6, $7, $8, $9** プロパティは、正規表現の静的かつ読み取り専用プロパティで、括弧で括られた部分文字列に一致したものを含みます。
@@ -38,8 +30,6 @@ str.replace(re, '$2, $1'); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
-
-###
 
 次のスクリプトは、 {{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
 

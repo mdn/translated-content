@@ -2,6 +2,7 @@
 title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩 Colors
@@ -299,7 +300,7 @@ draw();
 
 #### `lineJoin` 属性的例子
 
-![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter。`默认是 ` miter``。 `
+![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter`。默认是 `miter`。
 
 这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter` 的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 

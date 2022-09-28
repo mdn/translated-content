@@ -1,15 +1,8 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - プロトタイプ
-browser-compat: javascript.builtins.Promise.then
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
+
 {{JSRef}}
 
 **`then()`** メソッドは {{jsxref("Promise")}} を返します。最大 2 つの引数として、 `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。

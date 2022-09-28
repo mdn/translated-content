@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/constructor
 browser-compat: javascript.classes.constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 La méthode **`constructor`** est une méthode qui est utilisée pour créer et initialiser un objet lorsqu'on utilise le mot clé [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class).

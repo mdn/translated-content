@@ -2,6 +2,7 @@
 title: error
 slug: Web/API/Element/error_event
 ---
+
 {{APIRef}}
 
 当一个资源加载失败或无法使用时，会在{{domxref("Element")}}对象上触发`error`事件。例如当脚本执行错误、或图片无法找到或图片无效时。
@@ -112,7 +113,7 @@ imgError.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.error_event")}}
+{{Compat}}
 
 ## 参阅
 

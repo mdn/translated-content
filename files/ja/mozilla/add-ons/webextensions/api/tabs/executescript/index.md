@@ -1,18 +1,8 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - executeScript
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
+
 {{AddonSidebar()}}
 
 JavaScript のコードをページに挿入します。

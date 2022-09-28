@@ -1,15 +1,6 @@
 ---
 title: CSS properties and values API の使用
 slug: Web/API/CSS_Properties_and_Values_API/guide
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values
-  - Guide
-  - Houdini
-  - JavaScript
-  - Learn
-translation_of: Web/API/CSS_Properties_and_Values_API/guide
 ---
 {{SeeCompatTable}} **CSS Properties and Values API**（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）は、{{cssxref('--*', 'CSS カスタムプロパティ')}}の登録を可能にし、プロパティ型のチェック、デフォルト値、および値を継承するまたは継承しないプロパティを許可します。
 
@@ -17,7 +8,7 @@ translation_of: Web/API/CSS_Properties_and_Values_API/guide
 
 カスタムプロパティを登録すると、カスタムプロパティの振る舞い（許可される型、カスタムプロパティがその値を継承するかどうか、カスタムプロパティのデフォルト値は何か）をブラウザーに指示できます。 プロパティを登録するには、JavaScript と CSS の 2 つの方法があります。
 
-> **Note:** **注**: JavaScript オプションには使える実装があります。 CSS オプションにはありません。
+> **Note:** JavaScript オプションには使える実装があります。 CSS オプションにはありません。
 
 ### CSS.registerProperty
 

@@ -39,8 +39,8 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
 
 However, this approach has some limitations. To build more complex apps, you’ll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
-1.  Node.js 8.11+ installed.
-2.  npm or yarn.
+1. Node.js 8.11+ installed.
+2. npm or yarn.
 
 > **Note:** If you don't have the above installed, find out [more about installing npm and Node.js](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
 
@@ -64,38 +64,38 @@ We’ll look at using this below.
 
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
 
-1.  In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
-2.  Use the arrow keys and&#x20;
+1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
+2. Use the arrow keys and&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to select the "Manually select features" option.
 
-3.  The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
+3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to proceed.
 
-4.  Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
+4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;again. This will help us catch common errors, but not be overly opinionated.
 
-5.  Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
+5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to continue.
 
-6.  Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
+6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
 
     <kbd>Enter</kbd>
 
     .
 
-7.  Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
+7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
 
     <kbd>y</kbd>
 

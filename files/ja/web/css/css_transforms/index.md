@@ -1,13 +1,6 @@
 ---
 title: CSS 座標変換
 slug: Web/CSS/CSS_Transforms
-tags:
-  - CSS
-  - CSS 座標変換
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Transforms
 ---
 {{CSSRef}}
 

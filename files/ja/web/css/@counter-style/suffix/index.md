@@ -1,15 +1,6 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.suffix
-translation_of: Web/CSS/@counter-style/suffix
 ---
 {{CSSRef}}
 

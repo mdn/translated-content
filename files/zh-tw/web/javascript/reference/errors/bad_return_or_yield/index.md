@@ -2,6 +2,7 @@
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 訊息

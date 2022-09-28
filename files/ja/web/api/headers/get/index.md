@@ -1,16 +1,8 @@
 ---
 title: Headers.get()
 slug: Web/API/Headers/get
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Headers
-  - Method
-  - Reference
-  - get
-translation_of: Web/API/Headers/get
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} インターフェイスの **`get()`** メソッドは、指定された名前の `Headers` オブジェクト内のヘッダーのすべての値の ByteString を返します。要求されたヘッダーが `Headers` オブジェクトに存在しない場合、`null` を返します。
@@ -56,7 +48,7 @@ myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // "deflate,gzip" を返します
 ```
 
-> **Note:** **注**: {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は `Headers` オブジェクトに追加された最初の値のみを返します。最新の仕様では `getAll()` が削除され、すべての値を返すように `get()` が更新されました。
+> **Note:** {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は `Headers` オブジェクトに追加された最初の値のみを返します。最新の仕様では `getAll()` が削除され、すべての値を返すように `get()` が更新されました。
 
 ## 仕様書
 

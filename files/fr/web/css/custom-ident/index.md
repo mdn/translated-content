@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/custom-ident
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<custom-ident>`** permet de représenter des chaînes de caractères arbitraires définies par l'utilisateur et qui sont utilisées comme identifiants. Ce type de données est sensible à la casse et pour chaque contexte d'utilisation, plusieurs valeurs sont exclues afin d'éviter des ambiguïtés et des erreurs.

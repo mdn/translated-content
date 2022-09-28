@@ -1,17 +1,9 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - import
-  - import.meta
-translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 **`import.meta`** オブジェクトはコンテキスト固有のメタデータを JavaScript のモジュールに公開します。これには、モジュールの URL のようなモジュールに関する情報が含まれています。

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/number
 translation_of: Web/HTML/Element/input/number
 browser-compat: html.elements.input.input-number
 ---
+
 {{HTMLRef("Input_types")}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`number`** permettent à une utilisatrice ou un utilisateur de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.

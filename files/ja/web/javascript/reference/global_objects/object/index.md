@@ -1,13 +1,8 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Class
-  - JavaScript
-  - Object
-browser-compat: javascript.builtins.Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
+
 {{JSRef}}
 
 **`Object`** クラスは [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)の一つを表します。これは様々なキー付きコレクションとより複雑な実態を格納するために使用されます。 Object は {{jsxref("Object/Object", "Object()")}} コンストラクターまたは[オブジェクト初期化子/リテラル構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を使用して生成することができます。

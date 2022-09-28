@@ -10,6 +10,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}} {{Deprecated_header}}
 
 > **Attention :** document.registerElement() est déprécié en faveur de [customElements.define()](/fr/docs/Web/API/CustomElementRegistry/define).

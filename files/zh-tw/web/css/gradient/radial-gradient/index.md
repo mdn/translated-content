@@ -3,6 +3,7 @@ title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 original_slug: Web/CSS/radial-gradient
 ---
+
 {{CSSRef}}
 
 CSS radial-gradient() 函數創建了一個圖片，其由一個從原點輻射開的在兩個或者多個顏色之前的漸變組成。這個方法得到的是一個 CSS[`<gradient>`](/zh-TW/docs/Web/CSS/gradient)數據類型的物件，其是 [`<image>`](/zh-TW/docs/Web/CSS/image) 的一種。

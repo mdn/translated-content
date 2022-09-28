@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.filter
 slug: Web/API/CanvasRenderingContext2D/filter
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **`CanvasRenderingContext2D.filter`** 是 Canvas 2D API 提供模糊、灰度等过滤效果的属性。它类似于 CSS [`filter`](/zh-CN/docs/Web/CSS/filter) 属性，并且接受相同的函数。
@@ -121,7 +122,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.filter")}}
+{{Compat}}
 
 ## 参见
 

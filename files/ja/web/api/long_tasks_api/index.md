@@ -1,18 +1,6 @@
 ---
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Long Tasks API
-  - Overview
-  - Performance
-  - PerformanceLongTaskTiming
-  - Reference
-  - TaskAttributionTiming
-  - Web Performance
-translation_of: Web/API/Long_Tasks_API
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 

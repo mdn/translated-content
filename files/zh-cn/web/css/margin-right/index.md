@@ -2,6 +2,7 @@
 title: margin-right
 slug: Web/CSS/margin-right
 ---
+
 {{CSSRef}}
 
 ## 摘要

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-family
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-family`** permet aux auteurs d'un document de définir la police de caractères à utiliser au sein d'une règle @ {{cssxref("@font-face")}}.

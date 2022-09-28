@@ -1,16 +1,6 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - offset-rotate
-  - recipe:css-property
-browser-compat: css.properties.offset-rotate
-translation_of: Web/CSS/offset-rotate
 ---
 {{CSSRef}}
 

@@ -9,6 +9,7 @@ tags:
   - Types
 translation_of: Web/API/Node/nodeType
 ---
+
 {{APIRef("DOM")}}La propriété en lecture seule **`Node.nodeType`** représente le type du noeud.
 
 ## Description

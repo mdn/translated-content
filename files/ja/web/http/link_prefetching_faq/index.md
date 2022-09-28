@@ -1,17 +1,6 @@
 ---
 title: リンク先読みの FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - Gecko
-  - HTML
-  - HTTP
-  - Link
-  - Necko
-  - Performance
-  - Web Development
-  - 先読み
-  - 移行
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
 ### リンクの先読みとは?
 
@@ -60,7 +49,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 はい。ここで述べているリンクの先読み機能は、既存のウェブ標準に違反していません。実際、HTML 4.01 仕様書では新たなリンク形式の定義が明確に許されています([Section 6.12: Link types を参照](http://www.w3.org/TR/html4/types.html#type-links))。しかし、Mozilla で採用した手法自体はまだ標準化されていません。 Internet Draft を現在準備中です。
 
-この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの [section §5.11.3.13. Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) を参照してください。
+この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの [section §5.11.3.13. Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) を参照してください。
 
 ### ブラウザーのアイドル時間はどのように判定されますか?
 

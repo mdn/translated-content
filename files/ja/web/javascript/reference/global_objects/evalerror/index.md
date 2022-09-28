@@ -1,14 +1,8 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Class
-  - EvalError
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
 **`EvalError`** オブジェクトは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関するエラーを示します。この例外はもう JavaScript からは発生しなくなっていますが、互換性のために `EvalError` オブジェクトが残っています。

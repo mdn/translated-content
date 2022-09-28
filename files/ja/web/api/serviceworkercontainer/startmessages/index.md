@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`startMessages()`** メソッドは、サービスワーカーからその制御下にあるページにディスパッチされるメッセージの流れを明示的に開始します（例えば、{{domxref("Client.postMessage()")}} を介して送信されます）。 これは、ページのコンテンツの読み込みが完了する前であっても、送信されたメッセージに早く反応するために使用できます。

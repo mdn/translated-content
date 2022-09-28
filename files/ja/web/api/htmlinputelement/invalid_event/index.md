@@ -1,17 +1,8 @@
 ---
 title: 'HTMLInputElement: invalid イベント'
 slug: Web/API/HTMLInputElement/invalid_event
-tags:
-  - API
-  - 制約検証 API
-  - 制約検証
-  - イベント
-  - フォーム
-  - リファレンス
-  - invalid
-browser-compat: api.HTMLInputElement.invalid_event
-translation_of: Web/API/HTMLInputElement/invalid_event
 ---
+
 {{APIRef}}
 
 **`invalid`** イベントは、送信可能な要素が制約の検証を受け、制約を満たしていない場合に発行されます。
@@ -41,7 +32,7 @@ translation_of: Web/API/HTMLInputElement/invalid_event
 
 {{domxref("Element/blur_event", "blur")}} ではチェックが行われません。
 
-## 例<
+## 例
 
 フォームが無効な値で送信された場合、送信可能な要素がチェックされ、エラーが見つかった場合、無効な要素で `invalid` イベントが発生します。この例では、入力に無効な値があったために `invalid` イベントが発生した場合、無効な値がログに記録されます。
 

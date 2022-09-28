@@ -1,12 +1,6 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/merror
 ---
 {{MathMLRef}}
 

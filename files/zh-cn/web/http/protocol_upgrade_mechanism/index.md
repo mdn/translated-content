@@ -2,6 +2,7 @@
 title: 协议升级机制
 slug: Web/HTTP/Protocol_upgrade_mechanism
 ---
+
 {{HTTPSidebar}}
 
 [HTTP 协议](/zh-CN/docs/Web/HTTP) 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。
@@ -16,7 +17,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 
 特别这个请求需要添加两项额外的 header：
 
-- [`Connection: Upgrade`](/en-US/docs/Web/HTTP/Headers/Connection)
+- [`Connection: Upgrade`](/zh-CN/docs/Web/HTTP/Headers/Connection)
   - : 设置 `Connection` 头的值为 `"Upgrade"` 来指示这是一个升级请求。
 - [`Upgrade: protocols`](/zh-CN/docs/Web/HTTP/Headers/Upgrade)
   - : `Upgrade` 头指定一项或多项协议名，按优先级排序，以逗号分隔。

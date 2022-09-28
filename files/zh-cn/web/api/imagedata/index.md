@@ -2,6 +2,7 @@
 title: ImageData
 slug: Web/API/ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 **`ImageData`** 接口描述 {{HTMLElement("canvas")}} 元素的一个隐含像素数据的区域。使用 {{domxref("ImageData.ImageData", "ImageData()")}} 构造函数创建或者使用和 canvas 在一起的 {{domxref("CanvasRenderingContext2D")}} 对象的创建方法： {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 和 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}。也可以使用 {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} 设置 canvas 的一部分。
@@ -27,7 +28,7 @@ slug: Web/API/ImageData
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData")}}
+{{Compat}}
 
 ## 参见
 

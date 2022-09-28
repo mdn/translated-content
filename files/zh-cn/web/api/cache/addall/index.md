@@ -2,6 +2,7 @@
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 ## 概要
@@ -66,7 +67,7 @@ this.addEventListener('install', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.addAll")}}
+{{Compat}}
 
 ## 参见
 

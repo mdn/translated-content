@@ -1,14 +1,6 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.table-layout
-translation_of: Web/CSS/table-layout
 ---
 {{CSSRef}}
 

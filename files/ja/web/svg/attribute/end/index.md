@@ -1,11 +1,6 @@
 ---
 title: end
 slug: Web/SVG/Attribute/end
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/end
 ---
 {{SVGRef}}
 

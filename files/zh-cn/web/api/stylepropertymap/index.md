@@ -2,6 +2,7 @@
 title: StylePropertyMap
 slug: Web/API/StylePropertyMap
 ---
+
 {{APIRef("CSS Typed Object Model API")}} {{SeeCompatTable}}
 
 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_Object_Model_API) 的 **`StylePropertyMap`** 接口提供了 CSS 声明块的表示，该声明块可以替代 {{DOMxRef("CSSStyleDeclaration")}}。
@@ -31,4 +32,4 @@ _从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.StylePropertyMap")}}
+{{Compat}}

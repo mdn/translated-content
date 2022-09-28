@@ -2,6 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{ JSRef }}
 
 **`Set`** 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。

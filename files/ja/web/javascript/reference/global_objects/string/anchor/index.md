@@ -1,16 +1,8 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`anchor()`** メソッドは、 `<a name="...">` 開始タグで始まり、いくらかのテキストが続き、 `</a>` 終了タグで終わる文字列を生成します。

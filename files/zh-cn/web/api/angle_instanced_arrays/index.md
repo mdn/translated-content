@@ -2,6 +2,7 @@
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 `ANGLE_instanced_arrays`是属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一个扩展 API，它允许多次绘制相同的对象或相似对象组，前提是它们共享相同的顶点数据、基本图形的个数和类型。WebGL 的扩展都能使用{{domxref("WebGLRenderingContext.getExtension()")}} 这个方法。更多详细信息，请参考 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)_（WebGL 使用教程）里的_[Using Extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) _（使用扩展）_。
@@ -42,7 +43,7 @@ var ext = gl.getExtension("ANGLE_instanced_arrays");
 
 ## 浏览器兼容性
 
-{{Compat("api.ANGLE_instanced_arrays")}}
+{{Compat}}
 
 ## 相关链接
 

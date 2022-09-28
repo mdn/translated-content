@@ -1,17 +1,8 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparison
-  - Condition
-  - Conditional
-  - ECMAScript 2015
-  - Equality
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
+
 {{JSRef}}
 
 **`Object.is()`** メソッドは 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)であるかどうかを判定します。

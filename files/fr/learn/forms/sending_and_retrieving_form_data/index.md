@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
@@ -66,7 +67,7 @@ L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'en
 
 Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
 
-Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
+Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
 
 ```html
 <form action="http://foo.com">

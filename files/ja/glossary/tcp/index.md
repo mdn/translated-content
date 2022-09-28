@@ -6,16 +6,16 @@ slug: Glossary/TCP
 
 TCP の役割は、パケットがエラーなく信頼性高く配信されることを保証することです。 TCP には輻輳制御があり、初期要件が小さいものから、コンピューター、サーバー、ネットワークが対応している帯域の水準まで大きさが拡大します。
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("IPv4")}}
-    2.  {{Glossary("IPv6")}}
-    3.  {{Glossary("Packet", "パケット")}}
+    1. {{Glossary("IPv4")}}
+    2. {{Glossary("IPv6")}}
+    3. {{Glossary("Packet", "パケット")}}
 
-2.  Wikipedia の記事
+2. Wikipedia の記事
 
-    1.  {{Interwiki("wikipedia", "Transmission Control Protocol")}}
+    1. {{Interwiki("wikipedia", "Transmission Control Protocol")}}
 
-3.  関連情報
+3. 関連情報
 
-    1.  [HTTP の概要](/ja/docs/Web/HTTP/Overview)
+    1. [HTTP の概要](/ja/docs/Web/HTTP/Overview)

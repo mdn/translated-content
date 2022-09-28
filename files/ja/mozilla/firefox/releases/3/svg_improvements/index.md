@@ -1,12 +1,9 @@
 ---
 title: Firefox 3 における SVG の改良
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
-tags:
-  - Firefox 3
-  - SVG
-translation_of: Mozilla/Firefox/Releases/3/SVG_improvements
 original_slug: SVG_improvements_in_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 では、以前のバージョンの Firefox よりも改善された [Scalable Vector Graphics](/ja/docs/Web/SVG) (SVG) サポートが追加されました。これらの機能は、別の場所で文書化されていますが、この記事は、便利な一覧を提供することで、どの機能が Firefox 3 で追加されたのかを判別しやすくします。

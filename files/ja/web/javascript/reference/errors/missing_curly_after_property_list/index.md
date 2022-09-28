@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing } after property list'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing } after property list" は、[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の構文のどこかに間違いがあった場合に発生します。実際に中括弧がない可能性もありますが、カンマを忘れている可能性もあります。

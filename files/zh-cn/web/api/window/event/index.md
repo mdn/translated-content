@@ -2,6 +2,7 @@
 title: Window.event
 slug: Web/API/Window/event
 ---
+
 {{APIRef}}
 
 {{ Non-standard_header() }}
@@ -16,7 +17,7 @@ slug: Web/API/Window/event
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.event")}}
+{{Compat}}
 
 ## 更多资料
 

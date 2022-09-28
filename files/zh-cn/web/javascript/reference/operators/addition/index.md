@@ -3,6 +3,7 @@ title: 相加运算符 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Reference/Operators/相加
 ---
+
 {{jsSidebar("相加运算符")}}
 
 相加运算符 (`+`) 用于对两个操作数进行相加运算，如果操作数中有一方为字符串，则该运算符将两个操作数连接成一个字符串。
@@ -53,12 +54,12 @@ false + false // 0
 
 ## 参考
 
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

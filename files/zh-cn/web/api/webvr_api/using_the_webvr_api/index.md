@@ -22,8 +22,8 @@ Once your environment is set up, try visiting one of our [MozVR projects](http:/
 > **备注：** For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
 > 注意：更深层次的信息，请 check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup) 以获取更详细的内容。
 
-> **备注：** There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
-> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
+> **备注：** There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
+> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
 
 ## Introducing a simple demo<br>简单示例介绍
 

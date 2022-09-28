@@ -1,20 +1,6 @@
 ---
 title: 整形コンテキストの紹介
 slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-tags:
-  - BFC
-  - Block Formatting Context
-  - CSS
-  - Formatting contexts
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
-  - ガイド
-  - ブロック整形コンテキスト
-  - 中級者
-  - 整形コンテキスト
-translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 {{CSSRef}}
 
@@ -38,7 +24,7 @@ translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 - 表のセル、または `display: table-cell` が指定された要素で、 `display: table-*` プロパティを使用して生成された無名の表のセルを含む
 - テーブルのキャプション、または `display: table-caption` が付いた要素
 - `overflow` が `visible` 以外の値であるブロック要素
-- `display: flow-root` または `display: flow-root list-item `の要素
+- `display: flow-root` または `display: flow-root list-item` の要素
 - {{cssxref("contain", "contain: layout", "#layout")}}, `content`, `strict` のいずれかの要素
 - {{Glossary("flex item", "フレックスアイテム")}}
 - グリッドアイテム

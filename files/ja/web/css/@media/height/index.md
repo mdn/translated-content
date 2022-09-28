@@ -1,14 +1,6 @@
 ---
 title: height
 slug: Web/CSS/@media/height
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.height
-translation_of: Web/CSS/@media/height
 ---
 {{CSSRef}}
 

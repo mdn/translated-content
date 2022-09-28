@@ -1,7 +1,6 @@
 ---
 title: 모바일 접근성
 slug: Learn/Accessibility/Mobile
-translation_of: Learn/Accessibility/Mobile
 original_slug: Learn/접근성/모바일
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

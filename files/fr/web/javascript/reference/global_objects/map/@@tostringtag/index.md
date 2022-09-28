@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
+
 {{JSRef}}
 
 La propriété **`Map[@@toStringTag]`** vaut "Map" initialement.

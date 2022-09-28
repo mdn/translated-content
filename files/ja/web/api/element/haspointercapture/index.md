@@ -2,6 +2,7 @@
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} インターフェイスの **`hasPointerCapture()`** メソッドは、それを呼び出した要素が、与えられたポインタ ID によって識別されるポインタに対するポインタキャプチャを持つかどうかを示します。

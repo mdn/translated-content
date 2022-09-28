@@ -1,8 +1,8 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
-translation_of: Web/API/Web_Crypto_API
 ---
+
 {{DefaultAPISidebar("Web Crypto API")}}
 
 **Web Crypto API** は、暗号化を使用してシステムを構築するためにスクリプトが暗号化プリミティブを使用することを可能にするインターフェイスです。

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 La propriété **`white-space`** est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.

@@ -2,6 +2,7 @@
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
 ---
+
 {{HTMLRef}}
 
 **HTML `<picture>` 元素** 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。
@@ -96,7 +97,7 @@ The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset)
 
 ## 瀏覽器支援度
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## 相關資源
 

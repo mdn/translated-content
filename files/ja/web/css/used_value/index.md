@@ -1,12 +1,6 @@
 ---
 title: 使用値
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#used-value
-translation_of: Web/CSS/used_value
 ---
 {{CSSRef}}
 

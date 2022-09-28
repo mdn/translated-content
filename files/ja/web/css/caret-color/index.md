@@ -1,22 +1,6 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - Editing
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - Text Editing
-  - caret
-  - caret-color
-  - contenteditable
-  - recipe:css-property
-translation_of: Web/CSS/caret-color
-browser-compat: css.properties.caret-color
 ---
 {{CSSRef}}
 

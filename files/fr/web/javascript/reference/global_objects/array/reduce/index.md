@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduce
 ---
+
 {{JSRef}}
 
 La méthode **`reduce()`** applique une fonction qui est un « accumulateur » et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 La propriété **`max-height`** est utilisée pour définir la hauteur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("height")}} de devenir supérieure à la valeur spécifiée par `max-height` (autrement dit, `max-height` est une borne supérieure pour `height`).

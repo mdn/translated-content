@@ -11,6 +11,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
+
 {{AddonSidebar()}}
 
 Désinstalle l'appel de l'extension.

@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`installing`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がインストール中 (`installing`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。

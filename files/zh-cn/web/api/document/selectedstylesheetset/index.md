@@ -2,6 +2,7 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 ---
+
 {{ APIRef("DOM") }}
 
 表示当前使用的样式表集合的名称
@@ -14,7 +15,7 @@ currentStyleSheetSet = document.selectedStyleSheetSet
 document.selectedStyleSheet = newStyleSheetSet
 ```
 
-返回时，currentStyleSheetSet 表示当前使用的样式表集合的名称。 你也可以使用这个属性设置当前样式表集。
+返回时，currentStyleSheetSet 表示当前使用的样式表集合的名称。你也可以使用这个属性设置当前样式表集。
 
 设置这个属性的值相当于用`currentStyleSheetSet 的值`调用 {{ domxref("document.enableStyleSheetsForSet()") }}，然后将`lastStyleSheetSet` 的值设置为该值。
 

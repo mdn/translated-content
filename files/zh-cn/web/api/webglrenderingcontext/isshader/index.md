@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.isShader()
 slug: Web/API/WebGLRenderingContext/isShader
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.isShader()`** 方法，在传入的 {{domxref("WebGLShader")}} 有效时返回 `true` ，否则返回 `false` 。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.isShader()`** 方法，在传入的 {{domxref("WebGLShader")}} 有效时返回 `true` ，否则返回 `false` 。
 
 ## 语法
 
@@ -41,7 +42,7 @@ gl.isShader(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isShader")}}
+{{Compat}}
 
 ## 参阅
 

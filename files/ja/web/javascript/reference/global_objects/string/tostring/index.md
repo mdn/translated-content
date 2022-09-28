@@ -1,14 +1,8 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは指定されたオブジェクトを表す文字列を返します。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/parse
 ---
+
 {{JSRef}}
 
 La méthode **`JSON.parse()`** analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne. On peut éventuellement utiliser cette fonction avec un paramètre de modification permettant de traiter l'objet avant qu'il soit renvoyé.

@@ -379,4 +379,4 @@ JavaScript 変数にオブジェクトを納めさえすれば、スタイルプ
 - 著者
   - : Marcio Galli
 - 引用元
-  - : https\://web.archive.org/web/20000815054125/https\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <https://web.archive.org/web/20000815054125/https://mozilla.org/docs/dom/technote/tn-dom-table/>

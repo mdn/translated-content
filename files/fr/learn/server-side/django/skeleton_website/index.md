@@ -13,6 +13,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Ce second article de la série [didactique Django](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
@@ -373,7 +374,7 @@ Le squelette du site web est entièrement construit à ce stade. Désormais, vou
 
 Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.
 
-## A voir aussi...
+## Voir aussi
 
 - [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.

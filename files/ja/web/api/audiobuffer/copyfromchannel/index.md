@@ -1,22 +1,6 @@
 ---
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
-tags:
-  - API
-  - 音声
-  - AudioBuffer
-  - コピー
-  - フレーム
-  - メソッド
-  - リファレンス
-  - Samples
-  - ウェブ音声
-  - ウェブ音声 API
-  - copy
-  - copyFromChannel
-  - 音
-browser-compat: api.AudioBuffer.copyFromChannel
-translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
 {{APIRef("Web Audio API")}}
 

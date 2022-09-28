@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/DeviceMotionEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 ## Résumé
@@ -54,8 +55,10 @@ window.addEventListener('devicemotion', function(event) {
 
 ## Voir aussi
 
-- {{ event("deviceorientation") }}
-- {{ domxref("DeviceMotionEvent") }}
-- {{ event("devicemotion") }}
-- [Détection de l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
+- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
+- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
+- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
+- [`Accelerometer`](/fr/docs/Web/API/Accelerometer)
+- [`LinearAccelerationSensor`](/fr/docs/Web/API/LinearAccelerationSensor)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/Events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)

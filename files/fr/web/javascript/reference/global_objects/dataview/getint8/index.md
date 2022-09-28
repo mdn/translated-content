@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt8
 ---
+
 {{JSRef}}
 
 La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
