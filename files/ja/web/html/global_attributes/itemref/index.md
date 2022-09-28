@@ -2,6 +2,7 @@
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。

@@ -2,6 +2,7 @@
 title: list-style-type
 slug: Web/CSS/list-style-type
 ---
+
 {{CSSRef}}
 
 **`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。

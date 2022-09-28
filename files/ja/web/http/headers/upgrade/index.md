@@ -2,6 +2,7 @@
 title: Upgrade
 slug: Web/HTTP/Headers/Upgrade
 ---
+
 {{HTTPSidebar}}
 
 HTTP 1.1 (専用) の `Upgrade` ヘッダーは、すでに確立されたクライアントとサーバー間のプロトコルを、異なるプロトコルに（同じ転送プロトコルを通じて）アップグレードするために使用することができます。例えば、クライアントが HTTP 1.1 から HTTP 2.0 へ、または HTTP や HTTPS のコネクションを WebSocket へアップグレードすることができます。

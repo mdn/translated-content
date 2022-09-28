@@ -2,6 +2,7 @@
 title: offset-path
 slug: Web/CSS/offset-path
 ---
+
 {{CSSRef}}
 
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる移動経路と、親コンテナーまたは SVG 座標系の中での要素の配置を指定します。

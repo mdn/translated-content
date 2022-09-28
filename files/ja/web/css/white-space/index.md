@@ -2,6 +2,7 @@
 title: white-space
 slug: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 **`white-space`** は CSS のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。

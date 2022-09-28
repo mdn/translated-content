@@ -2,6 +2,7 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 **User-Agent** {{Glossary("request header", "リクエストヘッダー")}}は、サーバーやネットワークピアがアプリケーション、オペレーティングシステム、ベンダーや、リクエストしている{{Glossary("user agent", "ユーザーエージェント")}}のバージョン等を識別できるようにする特性文字列です。

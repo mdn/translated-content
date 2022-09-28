@@ -2,6 +2,7 @@
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
 ---
+
 {{SVGRef}}
 
 **`stop-color`** 属性は、グラデーションの色停止点で使用する色を示します。

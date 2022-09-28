@@ -2,6 +2,7 @@
 title: <msup>
 slug: Web/MathML/Element/msup
 ---
+
 {{MathMLRef()}}
 
 MathML の `<msup>` 要素は，式に上付きを付けるために用います。

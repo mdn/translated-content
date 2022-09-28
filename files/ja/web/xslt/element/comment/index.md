@@ -2,6 +2,7 @@
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
 ---
+
 {{ XsltRef() }}
 
 `<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。

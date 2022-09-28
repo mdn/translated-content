@@ -2,6 +2,7 @@
 title: CSS セレクター
 slug: Web/CSS/CSS_Selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 **CSS セレクター**は、一連の CSS のルールが適用される要素を定義します。

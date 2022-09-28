@@ -3,6 +3,7 @@ title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
 original_slug: Web/CSS/gradient/repeating-conic-gradient()
 ---
+
 {{CSSRef}}
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 ([単一のグラデーション](conic-gradient())ではなく) 繰り返しのグラデーションからなる、色の遷移が (中心から[放射状に広がるのではなく](repeating-radial-gradient\(\))) 中心点の周りを回転する画像を生成します。

@@ -2,6 +2,7 @@
 title: <transform-function>
 slug: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 **`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/CSS_Functions)は、二次元または三次元空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。

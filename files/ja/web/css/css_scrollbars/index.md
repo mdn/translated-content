@@ -2,6 +2,7 @@
 title: CSS スクロールバー
 slug: Web/CSS/CSS_Scrollbars
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS スクロールバー** (CSS Scrollbars) は、 2000 年に Windows の IE 5.5 で導入され、廃止されたスクロールバーの色のプロパティを標準化するためのものです。
