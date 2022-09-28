@@ -43,7 +43,7 @@ Math.abs(Infinity); // Infinity
 
 ### 强制转换参数
 
-`Math.abs()` 将其参数强制为数字。非强制值将变成 `NaN`，使 `Math.abs()` 也返回 `NaN`。
+`Math.abs()` 将其参数强制转换为数字。无法强制转换的值将变成 `NaN`，使 `Math.abs()` 也返回 `NaN`。
 
 ```js
 Math.abs("-1"); // 1
