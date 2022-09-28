@@ -18,7 +18,7 @@ slug: Web/CSS/padding
 
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}}
+- {{cssxref("padding-right")}}
 - {{cssxref("padding-top")}}
 
 ## 構文
