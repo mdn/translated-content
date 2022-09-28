@@ -15,7 +15,9 @@ Lanza una excepcion definida por el usuario.
 
 ## Sintaxis
 
-    throw expresion;
+```
+throw expresion;
+```
 
 - `expresion`
   - : Expresión a lanzar.
@@ -137,16 +139,18 @@ e = verificarCodigoPostal("95060 1234");  // devuelve 95060 1234
 
 Puede usar `throw` para volver a lanzar una excepción después de cogerla. El siguiente ejemplo coge una excepción con un valor numérico y la vuelve a lanzar si el valor es superior a 50. La excepción relanzada propaga hacia arriba la función adjunta o a un nivel superior para que el usuario pueda verla.
 
-    try {
-       throw n; // lanza una excepción con un valor numérico
-    } catch (excepcion) {
-       if (excepcion <= 50) {
-          // sentencias para manejar la excepción 1-50
-       } else {
-          // no se puede manejar esta excepción, así que se vuelve a lanzar
-          throw excepcion;
-       }
-    }
+```js
+try {
+  throw n; // lanza una excepción con un valor numérico
+} catch (excepcion) {
+  if (excepcion <= 50) {
+    // sentencias para manejar la excepción 1-50
+  } else {
+    // no se puede manejar esta excepción, así que se vuelve a lanzar
+    throw excepcion;
+  }
+}
+```
 
 ## Vea También
 

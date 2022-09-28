@@ -15,7 +15,9 @@ El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ 
 
 ## Sintaxis
 
-    dateObj.toISOString()
+```
+dateObj.toISOString()
+```
 
 ### Valor devuelto
 

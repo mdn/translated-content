@@ -10,7 +10,9 @@ El método **`getMinutes()`** devuelve los minutos de la fecha especificada en f
 
 ## Sintaxis
 
-    dateObj.getMinutes()
+```
+dateObj.getMinutes()
+```
 
 ### Parámetros
 

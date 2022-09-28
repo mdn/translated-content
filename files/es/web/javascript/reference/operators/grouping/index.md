@@ -14,7 +14,9 @@ El operador de agrupación `( )` controla la precedencia de las expresiones a ev
 
 ## Sintaxis
 
-     ( )
+```
+( )
+```
 
 ## Descripción
 

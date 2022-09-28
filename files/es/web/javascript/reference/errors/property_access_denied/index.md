@@ -12,7 +12,9 @@ translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 
 ## Mensaje
 
-    Error: Permission denied to access property "x"
+```
+Error: Permission denied to access property "x"
+```
 
 ## Tipo de error
 

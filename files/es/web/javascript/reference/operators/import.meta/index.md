@@ -10,7 +10,9 @@ El objeto **`import.meta`** expone el contenido especifico de la metadata al mó
 
 ## Syntax
 
-    import.meta
+```
+import.meta
+```
 
 ## Descripción
 
