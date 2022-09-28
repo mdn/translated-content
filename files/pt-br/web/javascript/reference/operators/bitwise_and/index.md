@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 {{jsSidebar("Operadores")}} 
 
-O operador bitwise AND (`&`) retorna `1` em cada posição do bit em que os bits corrrespondentes de ambos os operandos são `1`
+O operador bitwise AND (`&`) retorna `1` em cada posição do bit em que os bits corrrespondentes de ambos os operandos são `1`.
 
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}} 
