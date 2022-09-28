@@ -12,4 +12,4 @@ XInclude は、文書に他の文書または他の文書の一部を含めら�
 ## 関連情報
 
 - [XInclude standard](https://www.w3.org/TR/xinclude-11/)
-- [`XPath`](/en-US/docs/Web/XPath)
+- [`XPath`](/ja/docs/Web/XPath)
