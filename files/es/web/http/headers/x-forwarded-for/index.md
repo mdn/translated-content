@@ -19,7 +19,9 @@ Una versión estandarizada de esta cabecera es la cabecera HTTP {{HTTPHeader("Fo
 
 ## Sintaxis
 
-    X-Forwarded-For: <client>, <proxy1>, <proxy2>
+```
+X-Forwarded-For: <client>, <proxy1>, <proxy2>
+```
 
 ## Directivas
 
@@ -30,16 +32,20 @@ Una versión estandarizada de esta cabecera es la cabecera HTTP {{HTTPHeader("Fo
 
 ## Ejemplos
 
-    X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
+```
+X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
 
-    X-Forwarded-For: 203.0.113.195
+X-Forwarded-For: 203.0.113.195
 
-    X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
+X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
+```
 
 Otras formas no estándar:
 
-    # Usado para algunos servicios de Google
-    X-ProxyUser-Ip: 203.0.113.19
+```
+# Usado para algunos servicios de Google
+X-ProxyUser-Ip: 203.0.113.19
+```
 
 ## Especificaciones
 

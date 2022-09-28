@@ -167,24 +167,26 @@ Una vez completado el proceso, `cd` a la carpeta `moz-todo-react` y ejecuta el c
 
 create-react-app nos provee todo lo que necesitamos para desarrollar una aplicación React. Su estructura inicial de archivos luce así:
 
-    moz-todo-react
-    ├── README.md
-    ├── node_modules
-    ├── package.json
-    ├── package-lock.json
-    ├── .gitignore
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.html
-    │   └── manifest.json
-    └── src
-        ├── App.css
-        ├── App.js
-        ├── App.test.js
-        ├── index.css
-        ├── index.js
-        ├── logo.svg
-        └── serviceWorker.js
+```
+moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+```
 
 La carpeta **`src`** es donde pasaremos la mayor parte de nuestro tiempo, ya que es donde reside el código fuente de nuestra aplicación.
 

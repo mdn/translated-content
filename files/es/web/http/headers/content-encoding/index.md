@@ -18,11 +18,13 @@ Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar
 
 ## Sintaxis
 
-    Content-Encoding: gzip
-    Content-Encoding: compress
-    Content-Encoding: deflate
-    Content-Encoding: identity
-    Content-Encoding: br
+```
+Content-Encoding: gzip
+Content-Encoding: compress
+Content-Encoding: deflate
+Content-Encoding: identity
+Content-Encoding: br
+```
 
 ## Directivas
 
@@ -44,11 +46,15 @@ Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar
 
 En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.
 
-    Accept-Encoding: gzip, deflate
+```
+Accept-Encoding: gzip, deflate
+```
 
 El servidor responde con el esquema usado, indicado por la cabecera de respuesta `Content-Encoding`.
 
-    Content-Encoding: gzip
+```
+Content-Encoding: gzip
+```
 
 Ten en cuenta que el servidor no está obligado a usar algun método de compresión. La compresión depende directamente de la configuración del servidor y los módulos que utilice.
 

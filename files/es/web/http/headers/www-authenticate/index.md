@@ -15,7 +15,9 @@ La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} 
 
 ## Syntax
 
-    WWW-Authenticate: <type> realm=<realm>
+```
+WWW-Authenticate: <type> realm=<realm>
+```
 
 ## Directives
 
@@ -30,9 +32,11 @@ La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} 
 
 Típicamente, la respuesta del servidor contiene una cabecera `WWW-Authenticate` que se parece a estas:
 
-    WWW-Authenticate: Basic
+```
+WWW-Authenticate: Basic
 
-    WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+```
 
 Vea también [HTTP authentication](/es/docs/Web/HTTP/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
 

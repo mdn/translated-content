@@ -18,8 +18,10 @@ En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el c
 
 ## Sintaxis
 
-    Content-Type: text/html; charset=utf-8
-    Content-Type: multipart/form-data; boundary=something
+```
+Content-Type: text/html; charset=utf-8
+Content-Type: multipart/form-data; boundary=something
+```
 
 ## Directivas
 
@@ -46,20 +48,22 @@ En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario
 
 La solicitud se visualiza algo como esto (si tienes poco interes en los headers omite esto)
 
-    POST /foo HTTP/1.1
-    Content-Length: 68137
-    Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+```
+POST /foo HTTP/1.1
+Content-Length: 68137
+Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 
-    ---------------------------974767299852498929531610575
-    Content-Disposition: form-data; name="description"
+---------------------------974767299852498929531610575
+Content-Disposition: form-data; name="description"
 
-    some text
-    ---------------------------974767299852498929531610575
-    Content-Disposition: form-data; name="myFile"; filename="foo.txt"
-    Content-Type: text/plain
+some text
+---------------------------974767299852498929531610575
+Content-Disposition: form-data; name="myFile"; filename="foo.txt"
+Content-Type: text/plain
 
-    (content of the uploaded file foo.txt)
-    ---------------------------974767299852498929531610575
+(content of the uploaded file foo.txt)
+---------------------------974767299852498929531610575
+```
 
 ## Especificaciones
 

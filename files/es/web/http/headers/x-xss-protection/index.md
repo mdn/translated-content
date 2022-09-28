@@ -19,10 +19,12 @@ El encabezado de respuesta HTTP **`X-XSS-Protection`** es una característica de
 
 ## Sintaxis
 
-    X-XSS-Protection: 0
-    X-XSS-Protection: 1
-    X-XSS-Protection: 1; mode=block
-    X-XSS-Protection: 1; report=<reporting-uri>
+```
+X-XSS-Protection: 0
+X-XSS-Protection: 1
+X-XSS-Protection: 1; mode=block
+X-XSS-Protection: 1; report=<reporting-uri>
+```
 
 - 0
   - : Desativa el filtro XSS.

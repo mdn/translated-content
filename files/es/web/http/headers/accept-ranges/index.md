@@ -13,8 +13,10 @@ En caso de estar presente un encabezado de respuesta `Accept-Ranges`, el navegad
 
 ## Sintaxis
 
-    Accept-Ranges: bytes
-    Accept-Ranges: none
+```
+Accept-Ranges: bytes
+Accept-Ranges: none
+```
 
 ## Directivas
 
@@ -25,7 +27,9 @@ En caso de estar presente un encabezado de respuesta `Accept-Ranges`, el navegad
 
 ## Ejemplos
 
-    Accept-Ranges: bytes
+```
+Accept-Ranges: bytes
+```
 
 ## Especificaciones
 

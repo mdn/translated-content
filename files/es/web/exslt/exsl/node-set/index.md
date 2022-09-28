@@ -15,7 +15,9 @@ Puedes usar también `exsl:node-set()` para transformar cadenas en nodos de text
 
 ### Sintaxis
 
-    exsl:node-set(objeto)
+```
+exsl:node-set(objeto)
+```
 
 ### Argumentos
 

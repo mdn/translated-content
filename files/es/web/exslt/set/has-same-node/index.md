@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/has-same-node
 
 ### Sintaxis
 
-    set:has-same-node(conjuntoNodos1,conjuntoNodos2)
+```
+set:has-same-node(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Argumentos
 

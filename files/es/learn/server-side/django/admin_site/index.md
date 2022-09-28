@@ -94,7 +94,7 @@ python3 manage.py runserver
 
 ## Iniciar sesión y usar el sitio
 
-Para iniciar sesión en el sitio, ve a la URL _/admin_ (e.j. [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/)) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página _login_, y entonces volverás a la URL de _/admin_ después de haber ingresado tus datos).
+Para iniciar sesión en el sitio, ve a la URL _/admin_ (e.j. `http://127.0.0.1:8000/admin`) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página _login_, y entonces volverás a la URL de _/admin_ después de haber ingresado tus datos).
 
 Esta parte del sitio muestra todos tus modelos, agrupados por aplicación instalada. Puedes hacer click en un nombre de modelo para ir a una pantalla que lista todos los registros asociados, y además puedes hacer click sobre esos registros para editarlos. También puedes hacer click directamente sobre el vínculo **Añadir** a continuación de cada modelo para comenzar a crear un registro de ese tipo.
 
@@ -173,14 +173,14 @@ class AuthorAdmin(admin.ModelAdmin):
 admin.site.register(Author, AuthorAdmin)
 ```
 
-Ahora añadiremos clases `ModelAdmin `para `Book`, y `BookInstance`. De nuevo, debemos comentar nuestros registros originales:
+Ahora añadiremos clases `ModelAdmin` para `Book`, y `BookInstance`. De nuevo, debemos comentar nuestros registros originales:
 
 ```python
 #admin.site.register(Book)
 #admin.site.register(BookInstance)
 ```
 
-Ahora, para crear y registar los nuevos modelos usaremos, para propósitos de esta demostración, la expresión `@register `para registrar los modelos (hace exactamente lo mismo que `admin.site.register()`):
+Ahora, para crear y registar los nuevos modelos usaremos, para propósitos de esta demostración, la expresión `@register` para registrar los modelos (hace exactamente lo mismo que `admin.site.register()`):
 
 ```python
 # Register the Admin classes for Book using the decorator
@@ -202,7 +202,7 @@ Al momento todas nuestras clases de administración estás vacías (observa "pas
 
 La _LocalLibrary_ actualmente lista todos los autores usando el nombre generado por el método `__str__()` del modelo. Esto funciona bien cuando solo tienes unos pocos autores, pero una vez que tienes muchos puedes terminar teniendo duplicados. Para diferenciarlos, o simplemente para mostrar información más interesante sobre cada autor, puedes usar [list_display](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) para añadir otros campos a la vista.
 
-Reemplaza tu clase `AuthorAdmin `con el código de abajo. Los nombres de campos a ser desplegados en la lista están declarados en una tupla en el orden requerido, como se muestra (estos son los mismos nombres especificados en tu modelo original).
+Reemplaza tu clase `AuthorAdmin` con el código de abajo. Los nombres de campos a ser desplegados en la lista están declarados en una tupla en el orden requerido, como se muestra (estos son los mismos nombres especificados en tu modelo original).
 
 ```python
 class AuthorAdmin(admin.ModelAdmin):
@@ -222,7 +222,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Desafortunadamente, no podemos especificar directamente el campo `genre` en `list_display` porque es un campo `ManyToManyField` (Django previene esto porque habría un alto "costo" de acceso a base de datos si lo hiciera). En lugar de eso, definiremos una función `display_genre` para obtener la información como una cadena (esta es la función que hemos llamado arriba; la definiremos más abajo).
 
-> **Nota:** Obtener el `genre `podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones -- por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
+> **Nota:** Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones -- por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
 
 Añade el siguiente código en tu modelo `Book` (**models.py**). Esto crea una cadena con los tres primeros valores del campo `genre` (si existen) y crea una `short_description` (descripción corta) que puede ser usada en el sitio de administración por este método.
 
@@ -264,7 +264,7 @@ Por defecto, las vistas detalladas organizan todos los campos verticalmente, en 
 
 #### Controlando qué campos son desplegados y ordenados
 
-Actualiza tu clase `AuthorAdmin `para añadir la línea `fields`, como se muestra abajo (en negrita):
+Actualiza tu clase `AuthorAdmin` para añadir la línea `fields`, como se muestra abajo (en negrita):
 
 ```python
 class AuthorAdmin(admin.ModelAdmin):
@@ -335,8 +335,8 @@ En este caso, todo lo que hemos hecho es declarar nuestra clase encadenada tabul
 
 Hemos aprendido mucho en esta sección, así que es hora de que intentes algunas cosas.
 
-1.  Para la vista de lista de `BookInstance`, añade código para desplegar el libro, estado, fecha de devolución e id (en lugar del texto por defecto de `__str__()`).
-2.  Añade una lista encadenada de ítems `Book` (libros) a la vista detallada de `Author` usando el mismo método que usamos para `Book`/`BookInstance`.
+1. Para la vista de lista de `BookInstance`, añade código para desplegar el libro, estado, fecha de devolución e id (en lugar del texto por defecto de `__str__()`).
+2. Añade una lista encadenada de ítems `Book` (libros) a la vista detallada de `Author` usando el mismo método que usamos para `Book`/`BookInstance`.
 
 ## Resumen
 
@@ -345,7 +345,7 @@ Hemos aprendido mucho en esta sección, así que es hora de que intentes algunas
 ## Siguientes lecturas
 
 - [Escribiendo tu primera aplicación Django, parte 2: Introducción a Django Admin](https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin) (Django docs)
-- [El sitio de administración de Django ](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)(Django Docs)
+- [El sitio de administración de Django](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 

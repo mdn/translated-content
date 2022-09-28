@@ -14,7 +14,9 @@ Un nodo tiene este valor mínimo si convirtiendo su valor de cadena a número ig
 
 ## Sintaxis
 
-    math:lowest(conjuntoNodos)
+```
+math:lowest(conjuntoNodos)
+```
 
 ### Argumentos
 

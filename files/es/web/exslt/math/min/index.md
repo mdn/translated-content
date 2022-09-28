@@ -15,7 +15,9 @@ Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se 
 
 ## Sintaxis
 
-    math:min(conjuntoNodos)
+```
+math:min(conjuntoNodos)
+```
 
 ### Argumentos
 
