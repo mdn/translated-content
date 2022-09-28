@@ -10,114 +10,110 @@ tags:
   - Principiante
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
-<div>
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>
-</div>
+{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-<p class="summary">En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si se observa en la mañana, se despliega una gráfica del amanecer; muestra estrellas y una luna si es de noche. En este artículo, exploraremos cómo las llamadas declaraciones condicionales funcionan en JavaScript.</p>
+En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si se observa en la mañana, se despliega una gráfica del amanecer; muestra estrellas y una luna si es de noche. En este artículo, exploraremos cómo las llamadas declaraciones condicionales funcionan en JavaScript.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisitos:</th>
-   <td>Conocimientos básicos de informática, básico entendimiento de HTML y CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript primeros pasos</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Entender como se usan las extructuras condicionales en JavaScript. </td>
-  </tr>
- </tbody>
-</table>
+| Prerequisitos: | Conocimientos básicos de informática, básico entendimiento de HTML y CSS, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps). |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:      | Entender como se usan las extructuras condicionales en JavaScript.                                                                            |
 
-<h2 id="Puedes_hacerlo_en_una_condición..!">Puedes hacerlo en una condición..!</h2>
+## Puedes hacerlo en una condición..!
 
-<p>Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan sus vidas, desde la más insignificante ("¿Debería comer una galleta o dos?") hasta la más grande (¿Debería quedarme en mi país y trabajar en la granja de mi padre, o debería mudarme a Estados Unidos y estudiar astrofísica?). </p>
+Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan sus vidas, desde la más insignificante ("¿Debería comer una galleta o dos?") hasta la más grande (¿Debería quedarme en mi país y trabajar en la granja de mi padre, o debería mudarme a Estados Unidos y estudiar astrofísica?).
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
+![](https://mdn.mozillademos.org/files/13703/cookie-choice-small.png)
 
-<h2 id="Declaraciones_if_..._else">Declaraciones if ... else </h2>
+## Declaraciones if ... else
 
-<p>Echemos un vistazo a la declaración condicional más común que usarás en JavaScript.</p>
+Echemos un vistazo a la declaración condicional más común que usarás en JavaScript.
 
-<p> — El humilde <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"> statement</a>.</p>
+— El humilde [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[ statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
 
-<h3 id="Sintaxis_if_..._else_básica.">Sintaxis if ... else básica. </h3>
+### Sintaxis if ... else básica.
 
-<p>Una sintaxis básica <code>if...else</code> luce así. {{glossary("pseudocode")}}:</p>
+Una sintaxis básica `if...else` luce así. {{glossary("pseudocode")}}:
 
-<pre class="notranslate">if (condición) {
+```
+if (condición) {
   código a ejecutar si la condición es verdadera
 } else {
   ejecuta este otro código si la condición es falsa
-}</pre>
+}
+```
 
-<p>Aquí tenemos:</p>
+Aquí tenemos:
 
-<ol>
- <li>La palabra clave <code>if</code> seguida de unos paréntesis.</li>
- <li>Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los  <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">operadores de comparación</a> que hemos hablado en el módulo anterior y retorna un valor <code>true</code> o <code>false (verdadero o falso)</code>.</li>
- <li>Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna <code>true</code>.</li>
- <li>La palabra clave <code>else</code>.</li>
- <li>Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es <code>true</code>.</li>
-</ol>
+1.  La palabra clave `if` seguida de unos paréntesis.
+2.  Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
+3.  Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
+4.  La palabra clave `else`.
+5.  Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
 
-<p>Este código es fácil de leer —  está diciendo "<strong>si (if) </strong> la <strong>condición</strong> retorna verdadero (<code>true)</code>,  entonces ejecute el código A, <strong>sino (else)</strong>  ejecute el código B"</p>
+Este código es fácil de leer — está diciendo "**si (if)** la **condición** retorna verdadero (`true)`, entonces ejecute el código A, **sino (else)** ejecute el código B"
 
-<p>Habrás notado que no tienes que incluir <code>else</code> y el segundo bloque de llaves — La siguiente declaración también es perfectmaente legal. </p>
+Habrás notado que no tienes que incluir `else` y el segundo bloque de llaves — La siguiente declaración también es perfectmaente legal.
 
-<pre class="notranslate">if (condición) {
+```
+if (condición) {
   ejecuta el código de al ser verdadera la condición
 }
 
-ejecuta otro código</pre>
+ejecuta otro código
+```
 
-<p>Sin embargo, hay que ser cuidadosos — en este caso, el segundo bloque no es controlado por una declaración condicional, así que <strong>siempre</strong> se ejecutará, sin importar si la condicional devuelve <code>true</code> o <code>false</code>. Esto no es necesariemente algo malo, pero puede ser algo que no quieras —  a menudo desearás ejecutar un bloque de código u otro, no ambos.</p>
+Sin embargo, hay que ser cuidadosos — en este caso, el segundo bloque no es controlado por una declaración condicional, así que **siempre** se ejecutará, sin importar si la condicional devuelve `true` o `false`. Esto no es necesariemente algo malo, pero puede ser algo que no quieras — a menudo desearás ejecutar un bloque de código u otro, no ambos.
 
-<p>Como punto final, habrán ocaciones donde veas delcaraciones  <code>if...else</code> escritas sin un conjunto de llaves, de esta manera:</p>
+Como punto final, habrán ocaciones donde veas delcaraciones `if...else` escritas sin un conjunto de llaves, de esta manera:
 
-<pre class="notranslate">if (condición) ejecuta código de ser verdadero (true)
-else ejecuta este otro código </pre>
+```
+if (condición) ejecuta código de ser verdadero (true)
+else ejecuta este otro código
+```
 
-<p>Este código es perfectamente valido, pero no es recomendado usarlo — es mucho más fácil leer el código y determinar qué sucede haciendo uso de  las llaves para delimitar los bloques de código y usar varias líneas y sangrías.</p>
+Este código es perfectamente valido, pero no es recomendado usarlo — es mucho más fácil leer el código y determinar qué sucede haciendo uso de las llaves para delimitar los bloques de código y usar varias líneas y sangrías.
 
-<h3 id="Un_ejemplo_real">Un ejemplo real</h3>
+### Un ejemplo real
 
-<p>Para comprender mejor la sintaxis,  realicemos un ejemplo real. Imagínese a un niño a quien su madre o padre le pide ayuda con una tarea. El padre podría decir: "¡Hola, cariño! Si me ayudas yendo y haciendo las compras, te daré un subsidio adicional para que puedas pagar ese juguete que querías". En JavaScript, podríamos representar esto así:</p>
+Para comprender mejor la sintaxis, realicemos un ejemplo real. Imagínese a un niño a quien su madre o padre le pide ayuda con una tarea. El padre podría decir: "¡Hola, cariño! Si me ayudas yendo y haciendo las compras, te daré un subsidio adicional para que puedas pagar ese juguete que querías". En JavaScript, podríamos representar esto así:
 
-<pre class="brush: js notranslate">let compraRealizada = false;
+```js
+let compraRealizada = false;
 
 if (compraRealizada === true) {
   let subsidioAdicional = 10;
 } else {
   let subsidioAdicional = 5;
-}</pre>
+}
+```
 
-<p>La variable <code>compraRealizada</code> escrita en este código dará siempre como resultado un retorno de valor  <code>false</code>,  lo cuál significa una desilusión para nuestro pobre hijo. Depende de nosotros proporcionar un mecanismo para que el padre cambie el valor de la variable <code>compraRealizada</code> a <code>true</code> si el niño realizó la compra.</p>
+La variable `compraRealizada` escrita en este código dará siempre como resultado un retorno de valor `false`, lo cuál significa una desilusión para nuestro pobre hijo. Depende de nosotros proporcionar un mecanismo para que el padre cambie el valor de la variable `compraRealizada` a `true` si el niño realizó la compra.
 
-<div class="note">
-<p><strong>Nota</strong>: Podrás ver una versión más completa de <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">este ejemplo en GitHub</a> (también podrás verlo <a href="https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">corriendo en vivo.</a>)</p>
-</div>
+> **Nota:** Podrás ver una versión más completa de [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (también podrás verlo [corriendo en vivo.](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html))
 
-<h3 id="else_if">else if</h3>
+### else if
 
-<p>El último ejemplo nos proporcionó dos opciones o resultados, pero ¿qué ocurre si queremos más de dos?</p>
+El último ejemplo nos proporcionó dos opciones o resultados, pero ¿qué ocurre si queremos más de dos?
 
-<p>Hay una forma de encadenar  opciones / resultados adicionales extras a <code>if...else</code> — usando <code>else if</code>. Cada opción extra requiere un bloque adicional para poner en medio de bloque <code>if() { ... }</code> y <code>else { ... }</code> — Vea el siguiente ejemplo un poco más complicado, que podría ser parte de una aplicación para un simple pronóstico del tiempo:</p>
+Hay una forma de encadenar opciones / resultados adicionales extras a `if...else` — usando `else if`. Cada opción extra requiere un bloque adicional para poner en medio de bloque `if() { ... }` y `else { ... }` — Vea el siguiente ejemplo un poco más complicado, que podría ser parte de una aplicación para un simple pronóstico del tiempo:
 
-<pre class="brush: html notranslate">&lt;label for="clima"&gt;Seleccione el tipo de clima de hoy: &lt;/label&gt;
-&lt;select id="clima"&gt;
-  &lt;option value=""&gt;--Haga una elección--&lt;/option&gt;
-  &lt;option value="soleado"&gt;Soleado&lt;/option&gt;
-  &lt;option value="lluvioso"&gt;Lluvioso&lt;/option&gt;
-  &lt;option value="nevando"&gt;Nevando&lt;/option&gt;
-  &lt;option value="nublado"&gt;Nublado&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="clima">Seleccione el tipo de clima de hoy: </label>
+<select id="clima">
+  <option value="">--Haga una elección--</option>
+  <option value="soleado">Soleado</option>
+  <option value="lluvioso">Lluvioso</option>
+  <option value="nevando">Nevando</option>
+  <option value="nublado">Nublado</option>
+</select>
 
-&lt;p&gt;&lt;/p&gt;</pre>
+<p></p>
+```
 
-<pre class="brush: js notranslate">let seleccionar = document.querySelector('select');
+```js
+let seleccionar = document.querySelector('select');
 let parrafo = document.querySelector('p');
 
 seleccionar.addEventListener('change', establecerClima);
@@ -137,134 +133,142 @@ function establecerClima() {
     parrafo.textContent = '';
   }
 }
+```
 
-</pre>
+{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+1.  Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.
+2.  En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento `<select>` así cuando su valor cambie se ejecuta la función ` establecerClima``(). `
+3.  Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
+4.  La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
 
-<ol>
- <li>Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite realizar varias elecciones sobre el clima, y un parrafo simple.</li>
- <li>En el JavaScript, estamos almacenando una referencia para ambos elementos {{htmlelement("select")}} y {{htmlelement("p")}} , y añadiendo un Event Listener o en español un Detector de Eventos al elemento <code>&lt;select&gt;</code>  así cuando su valor cambie se ejecuta la función <code>establecerClima</code><code>().</code></li>
- <li>Cuando la función es ejecutada, primero establecemos la variable <code>eleccion</code> con el valor obtenido del elemento <code>&lt;select&gt;.</code> Luego usamos una declaración condicinal  para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable <code>eleccion</code>. Note  como todas las condicinales son probadas en los bloques <code>else if() {...}</code> , a excepción del primero, el cual es probado en el primer bloque <code>if() {...}</code>.</li>
- <li>La ultima elección,  dentro del bloque <code>else {...}</code>, es básicamente  el "último recurso" como opción—  El código dentro de este bloque se ejecutará si nunguna de las condiciones es <code>true</code>. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo  "--Haga una elección--" mostrado al inicio.</li>
-</ol>
+> **Nota:** Puedes encontrar [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (También podrás verlo [correr en vivo](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html).)
 
-<div class="note">
-<p><strong>Nota</strong>: Puedes encontrar <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html"> este ejemplo en GitHub</a> (También podrás verlo <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">correr en vivo</a>.)</p>
-</div>
+### Una nota en los operadores de comparación
 
-<h3 id="Una_nota_en_los_operadores_de_comparación">Una nota en los operadores de comparación </h3>
+Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators). Nuestras opciones son:
 
-<p>Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">Matématica básica en JavaScript — Números y operadores</a>. Nuestras opciones son:</p>
+- `===` y `!==` — prueba si un valor es exactamente igual a otro, o sino es indentico a otro valor.
+- `<` y `>` — prueba si un valor es menor o mayor que otro.
+- `<=` y `>=` — prueba si un valor es menor e igual o mayor e igual que otro.
 
-<ul>
- <li><code>===</code> y <code>!==</code> — prueba si un valor es exactamente igual a otro, o sino es indentico a otro valor.</li>
- <li><code>&lt;</code> y <code>&gt;</code> — prueba si un valor es menor o mayor que otro.</li>
- <li><code>&lt;=</code> y <code>&gt;=</code> — prueba si un valor es menor e igual o mayor e igual que otro.</li>
-</ul>
+> **Nota:** Revisa el material en los enlaces previos para refrescar la memoria en estos temas.
 
-<div class="note">
-<p><strong>Nota</strong>: Revisa el material en los enlaces previos para refrescar la memoria en estos temas. </p>
-</div>
+Queremos hacer una mención especial al probar los valores (`true`/`false`) , y un patrón común que te encontrarás una y otra vez. Cualquier valor que no sea `false`, `undefined`, `null`, `0`, `NaN`, o una cadena vacía string (`''`) realmente retorna el valor `true` cuando es probada como una declaración condicional, por lo tanto puedes simplemente usar el nombre de una variable para probar si es `true`, o si al menos existe (i.e. no está definido.) Por ejemplo:
 
-<p>Queremos hacer una mención especial al probar los valores  (<code>true</code>/<code>false</code>) , y un patrón común que te encontrarás una y otra vez. Cualquier valor que no sea <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>,  o una cadena vacía string (<code>''</code>) realmente retorna el valor <code>true</code> cuando es probada como una declaración condicional, por lo tanto puedes simplemente usar el nombre de una variable para probar si es  <code>true</code>, o si al menos existe  (i.e. no está definido.) Por ejemplo:</p>
-
-<pre class="brush: js notranslate">let queso = 'Cheddar';
+```js
+let queso = 'Cheddar';
 
 if (queso) {
   console.log('¡Siii! Hay queso para hacer tostadas con queso.');
 } else {
   console.log('No hay tostadas con queso para ti hoy :(.');
-}</pre>
+}
+```
 
-<p>En el ejemplo anterior la variable <code>queso</code> contiene el valor 'Cheddar', y como su valor está definido o no es <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code> y <code>(' ')</code> es considerado como <code>true</code> lo cual hará mostrar el mensaje dentro del primer bloque de llaves. </p>
+En el ejemplo anterior la variable `queso` contiene el valor 'Cheddar', y como su valor está definido o no es `false`, `undefined`, `null`, `0`, `NaN` y `(' ')` es considerado como `true` lo cual hará mostrar el mensaje dentro del primer bloque de llaves.
 
-<p>Y, devolviéndonos al ejemplo previo del niño haciendo las compras para su padre, lo podrías haber escrito así:</p>
+Y, devolviéndonos al ejemplo previo del niño haciendo las compras para su padre, lo podrías haber escrito así:
 
-<pre class="brush: js notranslate">let compraRealizada = false;
+```js
+let compraRealizada = false;
 
 if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
    let subsidioAdicional = 10;
 } else {
    let subsidioAdicional = 5;
-}</pre>
+}
+```
 
-<h3 id="Anidando_if_..._else">Anidando if ... else</h3>
+### Anidando if ... else
 
-<p>Está perfectamente permitido poner una declaración  <code>if...else</code> dentro de otra declaración <code>if...else</code> —  para anidarlas. Por ejemplo, podemos actualizar nuestra aplicación del clima para mostrar una serie de opciones dependiendo de cual sea la temperatura:</p>
+Está perfectamente permitido poner una declaración `if...else` dentro de otra declaración `if...else` — para anidarlas. Por ejemplo, podemos actualizar nuestra aplicación del clima para mostrar una serie de opciones dependiendo de cual sea la temperatura:
 
-<pre class="brush: js notranslate">if (elección === 'soleado') {
-  if (temperatura &lt; 86) {
+```js
+if (elección === 'soleado') {
+  if (temperatura < 86) {
     parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.';
-  } else if (temperatura &gt;= 86) {
+  } else if (temperatura >= 86) {
     parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte bloqueador solar.';
   }
-}</pre>
+}
+```
 
-<p>Aunque el código funciona en conjunto, cada declaración  <code>if...else</code> funciona complentamente independiente del otro.</p>
+Aunque el código funciona en conjunto, cada declaración `if...else` funciona complentamente independiente del otro.
 
-<h3 id="Operadores_lógicos_AND_OR_y_NOT">Operadores lógicos: AND, OR y NOT</h3>
+### Operadores lógicos: AND, OR y NOT
 
-<p>Si quieres probar multiples condiciones sin escribir declaraciones  <code>if...else </code>anidados,  los <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">operadores lógicos</a>  pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:</p>
+Si quieres probar multiples condiciones sin escribir declaraciones `if...else `anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators/Logical_Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
 
-<ul>
- <li><code>&amp;&amp;</code> — AND;  le permite encadenar dos o más expresiones para que todas ellas se tengan que evaluar individualmente  <code>true</code> para que expresión entera retorne <code>true</code>.</li>
- <li><code>||</code> — OR; le permite encadenar dos o más expresiones para que una o más de ellas se tengan que evaluar individualmente <code>true</code> para que expresión entera retorne <code>true</code>.</li>
-</ul>
+- `&&` — AND; le permite encadenar dos o más expresiones para que todas ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
+- `||` — OR; le permite encadenar dos o más expresiones para que una o más de ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
 
-<p>Para poner un ejemplo de  AND, el anterior código puede ser reescrito de esta manera:</p>
+Para poner un ejemplo de AND, el anterior código puede ser reescrito de esta manera:
 
-<pre class="brush: js notranslate">if (eleccion === 'soleado' &amp;&amp; temperatura &lt; 86) {
+```js
+if (eleccion === 'soleado' && temperatura < 86) {
   parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.';
-} else if (eleccion === 'soleado' &amp;&amp; temperatura &gt;= 86) {
+} else if (eleccion === 'soleado' && temperatura >= 86) {
   parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte bloqueador solar.';
-}</pre>
+}
+```
 
-<p>Así que por ejemplo, el primer bloque solo se ejecutará si la variable <code>eleccion === 'soleado'</code> <em>y </em><code>temperatura &lt; 86</code> devuelven un valor verdadero o <code>true</code>.</p>
+Así que por ejemplo, el primer bloque solo se ejecutará si la variable `eleccion === 'soleado'` _y_ `temperatura < 86` devuelven un valor verdadero o `true`.
 
-<p>Observemos un ejemplo rápido del operador OR:</p>
+Observemos un ejemplo rápido del operador OR:
 
-<pre class="brush: js notranslate">if (carritoDeHelados || estadoDeLaCasa === 'en llamas') {
+```js
+if (carritoDeHelados || estadoDeLaCasa === 'en llamas') {
   console.log('Debes salir de la casa rápidamente.');
 } else {
   console.log('Es mejor que te quedes dentro de casa');
-}</pre>
+}
+```
 
-<p>El último tipo de operador lógico, NOT, es expresado con el operador <code>!</code>, puede ser usado para negar una expresión. Vamos a combinarlo con el operador OR en el siguiente ejemplo:</p>
+El último tipo de operador lógico, NOT, es expresado con el operador `!`, puede ser usado para negar una expresión. Vamos a combinarlo con el operador OR en el siguiente ejemplo:
 
-<pre class="brush: js notranslate">if (!(carritoDeHelados || estadoDeLaCasa === 'en llamas')) {
+```js
+if (!(carritoDeHelados || estadoDeLaCasa === 'en llamas')) {
   console.log('Es mejor que te quedes dentro de casa');
 } else {
   console.log('Debes salir de la casa rápidamente.');
-}</pre>
+}
+```
 
-<p>En el anterior ejemplo, si las declaraciones del operador OR retornan un valor <code>true</code>,  el operador NOT negará toda la expresión dentro de los paréntesis, por lo tanto retornará un valor <code>false</code>.</p>
+En el anterior ejemplo, si las declaraciones del operador OR retornan un valor `true`, el operador NOT negará toda la expresión dentro de los paréntesis, por lo tanto retornará un valor `false`.
 
-<p>Puedes combinar los operadores que quieras dentro de las sentencias, en cualquier estructura. El siguiente ejemplo ejecuta el código dentro del condicional solo si ambas sentencias OR devuelven verdadero, lo que significa que la instrucción general AND devolverá verdadero:</p>
+Puedes combinar los operadores que quieras dentro de las sentencias, en cualquier estructura. El siguiente ejemplo ejecuta el código dentro del condicional solo si ambas sentencias OR devuelven verdadero, lo que significa que la instrucción general AND devolverá verdadero:
 
-<pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (logueado || nombreUsuario === 'Steve')) {
+```js
+if ((x === 5 || y > 3 || z <= 10) && (logueado || nombreUsuario === 'Steve')) {
   // ejecuta el código
-}</pre>
+}
+```
 
-<p>Un error comun cuando se utiliza el operador OR en las declaraciones condicionales es intentar verificar el valor de la variable una sola vez, y luego darle una lista de valores que podrían retornar verdadero separados por  operadores ||. Por ejemplo:</p>
+Un error comun cuando se utiliza el operador OR en las declaraciones condicionales es intentar verificar el valor de la variable una sola vez, y luego darle una lista de valores que podrían retornar verdadero separados por operadores ||. Por ejemplo:
 
-<pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
+```js example-bad
+if (x === 5 || 7 || 10 || 20) {
   // ejecuta mi código
-}</pre>
+}
+```
 
-<p>En este caso la condición  <code>if(...)</code>  siempre evaluará a verdadero siendo que  7 (u otro valor que no sea 0) siempre será verdadero. Esta condición lo que realmente está diciendo es que "if x es igual a 5, o 7 es verdadero— lo cual siempre es". ¡Esto no es lógicamente lo que queremos!  Para hacer que esto funcione, tenemos que especificar una prueba completa para cada lado del operador OR:</p>
+En este caso la condición `if(...)` siempre evaluará a verdadero siendo que 7 (u otro valor que no sea 0) siempre será verdadero. Esta condición lo que realmente está diciendo es que "if x es igual a 5, o 7 es verdadero— lo cual siempre es". ¡Esto no es lógicamente lo que queremos! Para hacer que esto funcione, tenemos que especificar una prueba completa para cada lado del operador OR:
 
-<pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
+```js
+if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // ejecuta mi código
-}</pre>
+}
+```
 
-<h2 id="Declaraciones_con_switch">Declaraciones con switch</h2>
+## Declaraciones con switch
 
-<p><code>El </code>condicional<code> if...else</code> hace un buen trabajo permitiéndonos realizar un buen código, pero esto viene con sus desventajas.  Hay variedad de casos donde necesitarás realizar varias elecciones, y cada una requiere una cantidad razonable de código para ser ejecutado y/o sus condicionales son complejas (i.e. operadores lógicos múltiples). Para los casos en los que solo se desea establecer una variable para una determinada opción de valores o imprimir una declaración particular dependiendo de una condición, la sintaxis puede ser un poco engorrosa, especialmente si se tiene una gran cantidad de opciones.</p>
+`El `condicional` if...else` hace un buen trabajo permitiéndonos realizar un buen código, pero esto viene con sus desventajas. Hay variedad de casos donde necesitarás realizar varias elecciones, y cada una requiere una cantidad razonable de código para ser ejecutado y/o sus condicionales son complejas (i.e. operadores lógicos múltiples). Para los casos en los que solo se desea establecer una variable para una determinada opción de valores o imprimir una declaración particular dependiendo de una condición, la sintaxis puede ser un poco engorrosa, especialmente si se tiene una gran cantidad de opciones.
 
-<p>Para estos casos los <a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code> statements</a> son de gran ayuda — toman una sola expresión / valor como una entrada, y luego pasan a través de una serie de opciones hasta que encuentran una que coincida con ese valor, ejecutando el código correspondiente que va junto con ella. Aquí hay un pseudocódigo más para hacerte una idea:</p>
+Para estos casos los [`switch` statements](/es/docs/Web/JavaScript/Reference/Statements/switch) son de gran ayuda — toman una sola expresión / valor como una entrada, y luego pasan a través de una serie de opciones hasta que encuentran una que coincida con ese valor, ejecutando el código correspondiente que va junto con ella. Aquí hay un pseudocódigo más para hacerte una idea:
 
-<pre class="notranslate">switch (expresion) {
+```
+switch (expresion) {
   case choice1:
     ejecuta este código
     break;
@@ -277,40 +281,40 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
   default:
     por si acaso, corre este código
-}</pre>
+}
+```
 
-<p>Aquí tenemos:</p>
+Aquí tenemos:
 
-<ol>
- <li><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">La palabra clave </span></font>switch</code>, seguida por un conjunto de paréntesis.</li>
- <li>Una expresión o valor dentro de los paréntesis.</li>
- <li>La palabra clave <code>case</code>, seguida de una elección con la expresión / valor que podría ser, seguido de dos puntos.</li>
- <li>Algún código a correr si la elección coincide con la expresión.</li>
- <li>Un declaración llamada <code>break</code>,  seguida de un punto y coma. Si la elección previa coincide con la expresión / valor, el explorador dejará de ejecutar el bloque de código aquí, y continuará a la siguiente línea de código. Si la opción anterior coincide con la expresión / valor, aquí el navegador deja de ejecutar el bloque de código  y pasa a cualquier código que aparezca debajo de la declaración de <code>switch</code>.</li>
- <li>Como muchos otros casos, los que quieras.</li>
- <li>La palabra clave <code>default</code>, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use <code>break</code> porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.</li>
-</ol>
+1.  `La palabra clave switch`, seguida por un conjunto de paréntesis.
+2.  Una expresión o valor dentro de los paréntesis.
+3.  La palabra clave `case`, seguida de una elección con la expresión / valor que podría ser, seguido de dos puntos.
+4.  Algún código a correr si la elección coincide con la expresión.
+5.  Un declaración llamada `break`, seguida de un punto y coma. Si la elección previa coincide con la expresión / valor, el explorador dejará de ejecutar el bloque de código aquí, y continuará a la siguiente línea de código. Si la opción anterior coincide con la expresión / valor, aquí el navegador deja de ejecutar el bloque de código y pasa a cualquier código que aparezca debajo de la declaración de `switch`.
+6.  Como muchos otros casos, los que quieras.
+7.  La palabra clave `default`, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use `break` porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.
 
-<div class="note">
-<p><strong>Nota</strong>: No tiene que incluir la sección <code>default</code>; se puede omitir con seguridad si no hay posibilidades de que la expresión  termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.</p>
-</div>
+> **Nota:** No tiene que incluir la sección `default`; se puede omitir con seguridad si no hay posibilidades de que la expresión termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.
 
-<h3 id="Un_ejemplo_con_switch">Un ejemplo con switch</h3>
+### Un ejemplo con switch
 
-<p>Let's have a look at a real example — we'll rewrite our weather forecast application to use a switch statement instead:</p>
+Let's have a look at a real example — we'll rewrite our weather forecast application to use a switch statement instead:
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
-&lt;select id="weather"&gt;
-  &lt;option value=""&gt;--Make a choice--&lt;/option&gt;
-  &lt;option value="sunny"&gt;Sunny&lt;/option&gt;
-  &lt;option value="rainy"&gt;Rainy&lt;/option&gt;
-  &lt;option value="snowing"&gt;Snowing&lt;/option&gt;
-  &lt;option value="overcast"&gt;Overcast&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="weather">Select the weather type today: </label>
+<select id="weather">
+  <option value="">--Make a choice--</option>
+  <option value="sunny">Sunny</option>
+  <option value="rainy">Rainy</option>
+  <option value="snowing">Snowing</option>
+  <option value="overcast">Overcast</option>
+</select>
 
-&lt;p&gt;&lt;/p&gt;</pre>
+<p></p>
+```
 
-<pre class="brush: js notranslate">let select = document.querySelector('select');
+```js
+let select = document.querySelector('select');
 let para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -335,39 +339,45 @@ function setWeather() {
     default:
       para.textContent = '';
   }
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<div class="note">
-<p><strong>Nota</strong>: Tambien puedes<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html"> encontrar este ejemplo en GitHub</a> (tambien puedes verlo <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">en ejecución aquí</a>.)</p>
-</div>
+> **Nota:** Tambien puedes[ encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
 
-<h2 id="Operador_Ternario">Operador Ternario</h2>
+## Operador Ternario
 
-<p>Hay una última sintaxis que queremos presentarte antes de que juegues con algunos ejemplos. El <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">operador ternario o condicional</a> es una pequeña sintaxis que prueba una condición y devuelve un valor/expresión, si es <code>true</code>, y otro si es <code>false</code> — Esto puede ser útil en algunas situaciones, y puede ocupar mucho menos código que un bloque <code>if...else</code> si simplemente tienes dos opciones que se eligen a través de una condición <code>true</code>/<code>false</code>. El pseudocódigo se ve así:</p>
+Hay una última sintaxis que queremos presentarte antes de que juegues con algunos ejemplos. El [operador ternario o condicional](/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) es una pequeña sintaxis que prueba una condición y devuelve un valor/expresión, si es `true`, y otro si es `false` — Esto puede ser útil en algunas situaciones, y puede ocupar mucho menos código que un bloque `if...else` si simplemente tienes dos opciones que se eligen a través de una condición `true`/`false`. El pseudocódigo se ve así:
 
-<pre class="notranslate">( condición ) ? ejecuta este código : ejecuta este código en su lugar</pre>
+```
+( condición ) ? ejecuta este código : ejecuta este código en su lugar
+```
 
-<p>Veamos un ejemplo simple:</p>
+Veamos un ejemplo simple:
 
-<pre class="brush: js notranslate">let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
+```js
+let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+```
 
-<p>Aquí tenemos una variable llamada <code>isBirthday</code> — si esta es <code>true</code>, le damos a nuestro invitado un mensaje de feliz cumpleaños; si no, le damos el saludo diario estándar.</p>
+Aquí tenemos una variable llamada `isBirthday` — si esta es `true`, le damos a nuestro invitado un mensaje de feliz cumpleaños; si no, le damos el saludo diario estándar.
 
-<h3 id="Ejemplo_con_operador_ternario">Ejemplo con operador ternario</h3>
+### Ejemplo con operador ternario
 
-<p>No solo puedes establecer valores variables con el operador ternario; También puedes ejecutar funciones o líneas de código — lo que quieras. El siguiente ejemplo muestra un selector de tema simple donde el estilo del sitio se aplica utilizando un operador ternario.</p>
+No solo puedes establecer valores variables con el operador ternario; También puedes ejecutar funciones o líneas de código — lo que quieras. El siguiente ejemplo muestra un selector de tema simple donde el estilo del sitio se aplica utilizando un operador ternario.
 
-<pre class="brush: html notranslate">&lt;label for="theme"&gt;Select theme: &lt;/label&gt;
-&lt;select id="theme"&gt;
-  &lt;option value="white"&gt;White&lt;/option&gt;
-  &lt;option value="black"&gt;Black&lt;/option&gt;
-&lt;/select&gt;
+```html
+<label for="theme">Select theme: </label>
+<select id="theme">
+  <option value="white">White</option>
+  <option value="black">Black</option>
+</select>
 
-&lt;h1&gt;This is my website&lt;/h1&gt;</pre>
+<h1>This is my website</h1>
+```
 
-<pre class="brush: js notranslate">let select = document.querySelector('select');
+```js
+let select = document.querySelector('select');
 let html = document.querySelector('html');
 document.body.style.padding = '10px';
 
@@ -379,74 +389,64 @@ function update(bgColor, textColor) {
 select.onchange = function() {
   ( select.value === 'black' ) ? update('black','white') : update('white','black');
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-<p>Aquí tenemos un elemento {{htmlelement('select')}} para elegir un tema (blanco o negro), más un simple (black or white), plus a simple {{htmlelement('h1')}} para mostrar el título de un sitio web. También tenemos una función llamada <code>update()</code>, que toma dos colores como parámetros (entradas). El color de fondo del sitio web se establece en el primer color proporcionado y el color del texto se establece en el segundo color proporcionado.</p>
+Aquí tenemos un elemento {{htmlelement('select')}} para elegir un tema (blanco o negro), más un simple (black or white), plus a simple {{htmlelement('h1')}} para mostrar el título de un sitio web. También tenemos una función llamada `update()`, que toma dos colores como parámetros (entradas). El color de fondo del sitio web se establece en el primer color proporcionado y el color del texto se establece en el segundo color proporcionado.
 
-<p>Finalmente, también tenemos un detector de eventos <a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> que sirve para ejecutar una función que contiene un operador ternario. Comienza con una condición de prueba — <code>select.value === 'black'</code>. Si esto devuelve <code>true</code>, ejecutamos la función <code>update()</code> con parámetros de blanco y negro, lo que significa que terminamos con un color de fondo negro y un color de texto blanco. Si devuelve <code>false</code>, ejecutamos las función <code>update()</code> con parámetros de blanco y negro, lo que significa que el color del sitio está invertido.</p>
+Finalmente, también tenemos un detector de eventos [onchange](/es/docs/Web/API/GlobalEventHandlers/onchange) que sirve para ejecutar una función que contiene un operador ternario. Comienza con una condición de prueba — `select.value === 'black'`. Si esto devuelve `true`, ejecutamos la función `update()` con parámetros de blanco y negro, lo que significa que terminamos con un color de fondo negro y un color de texto blanco. Si devuelve `false`, ejecutamos las función `update()` con parámetros de blanco y negro, lo que significa que el color del sitio está invertido.
 
-<div class="note">
-<p><strong>Nota</strong>: También puedes <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">encontrar este ejemplo en GitHub</a> (y verlo <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">en ejecución aquí</a>.)</p>
+> **Nota:** También puedes [encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (y verlo [en ejecución aquí](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
+
+## Aprendizaje activo: Un calendario simple
+
+En este ejemplo, nos ayudará a terminar una aplicación de calendario simple. En el código tienes:
+
+- Un elemento {{htmlelement("select")}} para permitir al usuario elegir entre direfentes meses.
+- Un controlador de eventos `onchange` para detectar cuándo se cambia el valor seleccionado en el menú de `<select>`.
+- Una función llamada `createCalendar()` que dibuja el calendario y muestra el mes correcto en el elemento {{htmlelement("h1")}}.
+
+Necesitamos que escriba una declaración condicional dentro de la función del controlador `onchange` justo debajo del comentario `// ADD CONDITIONAL HERE.` Debería:
+
+1.  Mire el mes seleccionado (almacenado en la variable `choice`. Este será el valor del elemento `<select>` después de que cambie el valor, por ejemplo "January")
+2.  Establezca una variable llamada `days` para que sea igual al número de días del mes seleccionado. Para hacer esto, tendrá que buscar el número de días en cada mes del año. Puede ignorar los años bisiestos a los efectos de este ejemplo.
+
+Sugerencias:
+
+- Se le aconseja que utilice el operador lógico OR para agrupar varios meses en una sola condición; Muchos de ellos comparten el mismo número de días.
+- Piense qué número de días es le más común y utilícelo como valor predeterminado.
+
+Si comete un error, siempre puede restablecer el ejemplo con el botón "Reset". Si se queda realmente atascado, presione "Show solution" para ver una solución.
+
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="height: 500px;overflow: auto;">
+  <label for="month">Select month: </label>
+  <select id="month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select>
+
+  <h1></h1>
+
+  <ul></ul>
 </div>
 
-<h2 id="Aprendizaje_activo_Un_calendario_simple">Aprendizaje activo: Un calendario simple</h2>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<p>En este ejemplo, nos ayudará a terminar una aplicación de calendario simple. En el código tienes:</p>
-
-<ul>
- <li>Un elemento {{htmlelement("select")}} para permitir al usuario elegir entre direfentes meses.</li>
- <li>Un controlador de eventos <code>onchange</code> para detectar cuándo se cambia el valor seleccionado en el menú de <code>&lt;select&gt;</code>.</li>
- <li>Una función llamada <code>createCalendar()</code> que dibuja el calendario y muestra el mes correcto en el elemento {{htmlelement("h1")}}.</li>
-</ul>
-
-<p>Necesitamos que escriba una declaración condicional dentro de la función del controlador <code>onchange</code> justo debajo del comentario <code>// ADD CONDITIONAL HERE.</code> Debería:</p>
-
-<ol>
- <li>Mire el mes seleccionado (almacenado en la variable <code>choice</code>. Este será el valor del elemento <code>&lt;select&gt;</code> después de que cambie el valor, por ejemplo "January")</li>
- <li>Establezca una variable llamada <code>days</code> para que sea igual al número de días del mes seleccionado. Para hacer esto, tendrá que buscar el número de días en cada mes del año. Puede ignorar los años bisiestos a los efectos de este ejemplo.</li>
-</ol>
-
-<p>Sugerencias:</p>
-
-<ul>
- <li>Se le aconseja que utilice el operador lógico OR para agrupar varios meses en una sola condición; Muchos de ellos comparten el mismo número de días.</li>
- <li>Piense qué número de días es le más común y utilícelo como valor predeterminado.</li>
-</ul>
-
-<p>Si comete un error, siempre puede restablecer el ejemplo con el botón "Reset". Si se queda realmente atascado, presione "Show solution" para ver una solución.</p>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
-  &lt;label for="month"&gt;Select month: &lt;/label&gt;
-  &lt;select id="month"&gt;
-    &lt;option value="January"&gt;January&lt;/option&gt;
-    &lt;option value="February"&gt;February&lt;/option&gt;
-    &lt;option value="March"&gt;March&lt;/option&gt;
-    &lt;option value="April"&gt;April&lt;/option&gt;
-    &lt;option value="May"&gt;May&lt;/option&gt;
-    &lt;option value="June"&gt;June&lt;/option&gt;
-    &lt;option value="July"&gt;July&lt;/option&gt;
-    &lt;option value="August"&gt;August&lt;/option&gt;
-    &lt;option value="September"&gt;September&lt;/option&gt;
-    &lt;option value="October"&gt;October&lt;/option&gt;
-    &lt;option value="November"&gt;November&lt;/option&gt;
-    &lt;option value="December"&gt;December&lt;/option&gt;
-  &lt;/select&gt;
-
-  &lt;h1&gt;&lt;/h1&gt;
-
-  &lt;ul&gt;&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 var select = document.querySelector('select');
 var list = document.querySelector('ul');
 var h1 = document.querySelector('h1');
@@ -462,7 +462,7 @@ select.onchange = function() {
 function createCalendar(days, choice) {
   list.innerHTML = '';
   h1.textContent = choice;
-  for (var i = 1; i &lt;= days; i++) {
+  for (var i = 1; i <= days; i++) {
     var listItem = document.createElement('li');
     listItem.textContent = i;
     list.appendChild(listItem);
@@ -470,15 +470,16 @@ function createCalendar(days, choice) {
 }
 
 createCalendar(31,'January');
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css notranslate">.output * {
+```css hidden
+.output * {
   box-sizing: border-box;
 }
 
@@ -515,9 +516,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -546,7 +549,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(var i = 1; i &lt;= days; i++) {\n var listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(var i = 1; i <= days; i++) {\n var listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -592,44 +595,40 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
+
+{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
+
+## Aprendizaje activo: Más opciones de colores!
+
+In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement that will allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
+
+- It should accept the `choice` variable as its input expression.
+- For each case, the choice should equal one of the possible values that can be selected, i.e. white, black, purple, yellow, or psychedelic. Note that the values are case sensitive, and should equal the `<option>` element `value` values rather than the visual labels.
+- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes.
+
+If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
+
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="height: 300px;">
+  <label for="theme">Select theme: </label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="psychedelic">Psychedelic</option>
+  </select>
+
+  <h1>This is my website</h1>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<h2 id="Aprendizaje_activo_Más_opciones_de_colores!">Aprendizaje activo: Más opciones de colores!</h2>
-
-<p>In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement that will allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the <code>// ADD SWITCH STATEMENT</code> comment:</p>
-
-<ul>
- <li>It should accept the <code>choice</code> variable as its input expression.</li>
- <li>For each case, the choice should equal one of the possible values that can be selected, i.e. white, black, purple, yellow, or psychedelic. Note that the values are case sensitive, and should equal the <code>&lt;option&gt;</code> element <code>value</code> values rather than the visual labels.</li>
- <li>For each case, the <code>update()</code> function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes. </li>
-</ul>
-
-<p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-&lt;div class="output" style="height: 300px;"&gt;
-  &lt;label for="theme"&gt;Select theme: &lt;/label&gt;
-  &lt;select id="theme"&gt;
-    &lt;option value="white"&gt;White&lt;/option&gt;
-    &lt;option value="black"&gt;Black&lt;/option&gt;
-    &lt;option value="purple"&gt;Purple&lt;/option&gt;
-    &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
-    &lt;option value="psychedelic"&gt;Psychedelic&lt;/option&gt;
-  &lt;/select&gt;
-
-  &lt;h1&gt;This is my website&lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 450px;width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 var select = document.querySelector('select');
 var html = document.querySelector('.output');
 
@@ -642,15 +641,16 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}&lt;/textarea&gt;
+}</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -668,9 +668,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -745,34 +747,30 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Conclusión">Conclusión</h2>
+## Conclusión
 
-<p>¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o <a href="/en-US/Learn#Contact_us">contáctanos</a> para solicitar ayuda.</p>
+¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/en-US/Learn#Contact_us) para solicitar ayuda.
 
-<h2 id="Revisa_también">Revisa también</h2>
+## Revisa también
 
-<ul>
- <li><a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">Comparison operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">Conditional statements in detail</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Conditional (ternary) operator reference</a></li>
-</ul>
+- [Comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
+- [Conditional statements in detail](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [if...else reference](/es/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Conditional (ternary) operator reference](/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-<p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>
+{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
-<h2 id="En_este_módulo">En este módulo</h2>
+## En este módulo
 
-<ul>
- <li><a href="/es/docs/Learn/JavaScript/Building_blocks/conditionals">Tomando decisiones en tu código - Condicionales</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
-</ul>
+- [Tomando decisiones en tu código - Condicionales](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)

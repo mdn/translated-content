@@ -4,196 +4,190 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</div>
+En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.
 
-<p class="summary">En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.</p>
+| Pre-requisitos: | Conocimientos básicos de computadores. Entendimiento básico de HTML y CSS. Familiaridad con los conceptos básicos de JavaScript (vea [Primeros Pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Elementos básicos de JavaScript](/es/docs/Learn/JavaScript/Building_blocks)) y OOJS (vea [Conceptos básicos de los objetos JavaScript](/es/docs/Learn/JavaScript/Objects/Basics)). |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivos:      | Ganar experiencia en el uso de objetos y el uso de programación orientada a objetos en un contexto realista.                                                                                                                                                                                                                                                                                      |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Pre-requisitos:</th>
-   <td>Conocimientos básicos de computadores. Entendimiento básico de HTML y CSS. Familiaridad con los conceptos básicos de JavaScript (vea <a href="/es/docs/Learn/JavaScript/First_steps">Primeros Pasos con JavaScript</a> y <a href="/es/docs/Learn/JavaScript/Building_blocks">Elementos básicos de JavaScript</a>)  y OOJS (vea <a href="/es/docs/Learn/JavaScript/Objects/Basics">Conceptos básicos de los objetos JavaScript</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivos:</th>
-   <td>Ganar experiencia en el uso de objetos y el uso de programación orientada a objetos en un contexto realista.</td>
-  </tr>
- </tbody>
-</table>
+## Lanzemos algunas pelotas
 
-<h2 id="Lanzemos_algunas_pelotas">Lanzemos algunas pelotas</h2>
+Es éste artículo escribiremos un programa demo del juego clásico de pelotas que rebotan para mostrar la gran útilidad de los objetos en JavaScript. En éste demo las pelotas rebotaran en la pantalla y cambiaran de color cuando choquen unas con otras. Así, al final del ejemplo tendremos algo como esto:
 
-<p>Es éste artículo escribiremos un programa demo del juego clásico de pelotas que rebotan para mostrar la gran útilidad de los objetos en JavaScript. En éste demo las pelotas rebotaran en la pantalla y cambiaran de color cuando choquen unas con otras. Así, al final del ejemplo tendremos algo como esto:</p>
+![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13865/bouncing-balls.png" style="display: block; height: 614px; margin: 0px auto; width: 800px;"></p>
+En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
 
-<ol>
-</ol>
+## Primeros pasos
 
-<p>En este ejemplo se utilizará <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Canvas API</a> para dibujar las pelotas en la pantalla y la API <a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como <strong>detección de colisiones</strong>). </p>
+Para comenzar haga una copia en su computador de los archivos: [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Estos contienen:
 
-<h2 id="Primeros_pasos">Primeros pasos</h2>
+1.  Un documento HTML sencillo con un elemento \<h1>, un elemento \<canvas> en el que podamos dibujar los gráficos y otros elementos para aplicar los estilos CSS y el código JavaScript.
+2.  Algunos estilos sencillos que servirán para ubicar el elemento `<h1>`, ocultar la barra de desplazamiento y los margenes del borde de la página (para que luzca mejor).
+3.  Un archivo JavaScript que sirve para definir el elemento `<canvas>` y las funciones que vamos a usar.
 
-<p>Para comenzar haga una copia en su computador de los archivos:  <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a></code>, y <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a></code>. Estos contienen:</p>
+La primera parte del script es:
 
-<ol>
- <li>Un documento HTML sencillo con un elemento &lt;h1&gt;, un elemento &lt;canvas&gt; en el que podamos dibujar los gráficos y otros elementos para aplicar los estilos CSS y el código JavaScript. </li>
- <li>Algunos estilos sencillos que servirán para ubicar el elemento <code>&lt;h1&gt;</code>, ocultar la barra de desplazamiento y los margenes del borde de la página (para que luzca mejor).</li>
- <li>Un archivo JavaScript que sirve para definir el elemento <code>&lt;canvas&gt;</code> y las funciones que vamos a usar.</li>
-</ol>
-
-<p>La primera parte del script es:</p>
-
-<pre class="brush: js">var canvas = document.querySelector('canvas');
+```js
+var canvas = document.querySelector('canvas');
 
 var ctx = canvas.getContext('2d');
 
 var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;</pre>
+var height = canvas.height = window.innerHeight;
+```
 
-<p>Este script obtiene una referencia del elemento <code>&lt;canvas&gt;</code>, luego llama al método <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable  (<code>ctx</code>) es el objeto que representa directamente el área de dibujo del <code>&lt;canvas&gt;</code> y permite dibujar elementos 2D en él. </p>
+Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
 
-<p>A continuación se da valor a las variables <code>width</code> and <code>height</code> que corresponden al ancho y alto del elemento <em>canvas</em> (representado por las propiedades <code>canvas.width</code> y <code>canvas.height</code>), de manera que el alto y ancho coincidan con el alto y ancho del navegador (<em>viewport</em>)  cuyos valores se obtienen directamente de las propiedades <em>window.innerWidth </em>y <em>window.innerHeight</em>.</p>
+A continuación se da valor a las variables `width` and `height` que corresponden al ancho y alto del elemento _canvas_ (representado por las propiedades `canvas.width` y `canvas.height`), de manera que el alto y ancho coincidan con el alto y ancho del navegador (_viewport_) cuyos valores se obtienen directamente de las propiedades _window\.innerWidth_ y _window\.innerHeight_.
 
-<p>Puede ver que en el código se encadenan varias asignaciones, para obtener valores más rápidamente. Esto se puede hacer.</p>
+Puede ver que en el código se encadenan varias asignaciones, para obtener valores más rápidamente. Esto se puede hacer.
 
-<p>La última parte del script, es la siguiente:</p>
+La última parte del script, es la siguiente:
 
-<pre class="brush: js">function random(min, max) {
+```js
+function random(min, max) {
   var num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
-}</pre>
+}
+```
 
-<p>Esta función recibe dos números como argumentos de entrada (valor mínimo y maximo) y devuelve un número aleatorio entre ellos.</p>
+Esta función recibe dos números como argumentos de entrada (valor mínimo y maximo) y devuelve un número aleatorio entre ellos.
 
-<h2 id="Modelando_una_pelota_en_nuestro_programa">Modelando una pelota en nuestro programa</h2>
+## Modelando una pelota en nuestro programa
 
-<p>Nuestro programa tendrá montones de pelotas rebotando por toda la pantalla. Ya que todas las pelotas tendrán el mismo comportamiento, tiene sentido representarlas con un objeto. Empezamos definiendo un constructor para el objeto pelota (<em>Ball</em>), en nuestro código.</p>
+Nuestro programa tendrá montones de pelotas rebotando por toda la pantalla. Ya que todas las pelotas tendrán el mismo comportamiento, tiene sentido representarlas con un objeto. Empezamos definiendo un constructor para el objeto pelota (_Ball_), en nuestro código.
 
-<pre class="brush: js">function Ball(x, y, velX, velY, color, size) {
+```js
+function Ball(x, y, velX, velY, color, size) {
   this.x = x; //posición horizontal
   this.y = y; //posición vertical
   this.velX = velX; //velocidad horizontal
   this.velY = velY; //velocidad vertical
   this.color = color; //color
   this.size = size; //tamaño
-}</pre>
+}
+```
 
-<p>Aquí incluimos algunos parámetros que serán las propiedades que cada pelota necesita para funcionar en nuestro programa: </p>
+Aquí incluimos algunos parámetros que serán las propiedades que cada pelota necesita para funcionar en nuestro programa:
 
-<ul>
- <li>las coordenadas  <code>x</code> e <code>y</code>— correspondientes a la posición horizontal y vertical de la pelota. Estas pueden variar entre un valor 0 (el la esquina superior izquierda) hasta el valor del ancho y alto del navegador ( esquina inferior derecha).</li>
- <li>velocidad horizontal y vertical (<code>velX</code> y <code>velY</code>) — cada pelota tiene una velocidad vertical y horizontal; en la parte práctica, estos valores se añadirán a las coordenadas x e y cuando animemos el movimiento de las pelotas, así en cada incremento de visualización de <em>frame</em>, se desplazarán esta cantidad.</li>
- <li><code>color</code> — cada pelota posee un color.</li>
- <li><code>size</code> — cada pelota tiene un tamaño, este será su radio en pixels.</li>
-</ul>
+- las coordenadas `x` e `y`— correspondientes a la posición horizontal y vertical de la pelota. Estas pueden variar entre un valor 0 (el la esquina superior izquierda) hasta el valor del ancho y alto del navegador ( esquina inferior derecha).
+- velocidad horizontal y vertical (`velX` y `velY`) — cada pelota tiene una velocidad vertical y horizontal; en la parte práctica, estos valores se añadirán a las coordenadas x e y cuando animemos el movimiento de las pelotas, así en cada incremento de visualización de _frame_, se desplazarán esta cantidad.
+- `color` — cada pelota posee un color.
+- `size` — cada pelota tiene un tamaño, este será su radio en pixels.
 
-<p>Con esto se resuelven las propiedades del objeto, ¿Pero qué hacemos con los métodos? Ya que queremos que las pelotas realicen algo en nuestro programa. </p>
+Con esto se resuelven las propiedades del objeto, ¿Pero qué hacemos con los métodos? Ya que queremos que las pelotas realicen algo en nuestro programa.
 
-<h3 id="Dibujando_las_pelotas">Dibujando las pelotas</h3>
+### Dibujando las pelotas
 
-<p>Para dibujar, añadiremos el siguiente método <code>draw()</code> al prototipo del objeto <code>Ball():</code></p>
+Para dibujar, añadiremos el siguiente método `draw()` al prototipo del objeto `Ball():`
 
-<pre class="brush: js">Ball.prototype.draw = function() {
+```js
+Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}</pre>
+}
+```
 
-<p>Con esta función cada objeto pelota <code>Ball()</code> puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (<code>ctx</code>)  </p>
+Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (`ctx`)
 
-<ul>
- <li>Primero usamos <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> para declarar que empezaremos a dibujar una forma en el <em>canvas</em>.</li>
- <li>A continuación usamos el <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> para definir el color de la forma. Haremos que coincida con la propiedad <code>color.</code></li>
- <li>A continuación con el método <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> se traza un arco. Sus parámetros son:
-  <ul>
-   <li>La posición <code>x</code> e <code>y</code> del centro del arco. Corresponderán a las coordenadas  del centro de la pelota.</li>
-   <li>El radio del arco - que vendrá dado por la propiedad de tamaño <code>size</code> de la pelota.</li>
-   <li>Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y <code>2*PI</code> . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría <code>PI</code>.</li>
-  </ul>
- </li>
- <li>Por último con el método <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code>. </li>
-</ul>
+- Primero usamos [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
+- A continuación usamos el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
+- A continuación con el método [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
 
-<p>Ya se puede empezar a testear el objeto.</p>
+  - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
+  - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
+  - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
 
-<ol>
- <li>Guarde el código hasta ahora, y cargue el archivo HTML en un navegador.</li>
- <li>Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del <em>canvas</em> modifique sus dimensiones adaptándose al <em>viewport</em> con la consola abierta. </li>
- <li>Teclee lo siguiente en la consola para crear una nueva pelota.
-  <pre class="brush: js">var testBall = new Ball(50, 100, 4, 4, 'blue', 10);</pre>
- </li>
- <li>Pruebe a llamar a las variables miembro:
-  <pre class="brush: js">testBall.x
-testBall.size
-testBall.color
-testBall.draw()</pre>
- </li>
- <li>Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del <em>canvas</em>. </li>
-</ol>
+- Por último con el método [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
-<h3 id="Actualizando_los_datos_de_la_pelota">Actualizando los datos de la pelota</h3>
+Ya se puede empezar a testear el objeto.
 
-<p>Ahora podemos dibujar una pelota en una posición dada, pero para empezar a moverla, se necesita una función de actualización de algún tipo. Podemos añadir el código a continuación, al final del archivo de JavaScript, para añidir un método de actualización <code>update()</code> en el prototipo de la clase <code>Ball()</code></p>
+1.  Guarde el código hasta ahora, y cargue el archivo HTML en un navegador.
+2.  Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del _canvas_ modifique sus dimensiones adaptándose al _viewport_ con la consola abierta.
+3.  Teclee lo siguiente en la consola para crear una nueva pelota.
 
-<pre class="brush: js">Ball.prototype.update = function() {
-  if ((this.x + this.size) &gt;= width) {
+    ```js
+    var testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+    ```
+
+4.  Pruebe a llamar a las variables miembro:
+
+    ```js
+    testBall.x
+    testBall.size
+    testBall.color
+    testBall.draw()
+    ```
+
+5.  Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del _canvas_.
+
+### Actualizando los datos de la pelota
+
+Ahora podemos dibujar una pelota en una posición dada, pero para empezar a moverla, se necesita una función de actualización de algún tipo. Podemos añadir el código a continuación, al final del archivo de JavaScript, para añidir un método de actualización `update()` en el prototipo de la clase `Ball()`
+
+```js
+Ball.prototype.update = function() {
+  if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
 
-  if ((this.x - this.size) &lt;= 0) {
+  if ((this.x - this.size) <= 0) {
     this.velX = -(this.velX);
   }
 
-  if ((this.y + this.size) &gt;= height) {
+  if ((this.y + this.size) >= height) {
     this.velY = -(this.velY);
   }
 
-  if ((this.y - this.size) &lt;= 0) {
+  if ((this.y - this.size) <= 0) {
     this.velY = -(this.velY);
   }
 
   this.x += this.velX;
   this.y += this.velY;
-}</pre>
+}
+```
 
-<p>Las cuatro primeras partes de la función verifican si la pelota ha alcanzado el borde del <em>canvas</em>. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (<code>velY</code> positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (<code>velY</code> negativa).</p>
+Las cuatro primeras partes de la función verifican si la pelota ha alcanzado el borde del _canvas_. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (`velY` positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (`velY` negativa).
 
-<p>Los cuatro posibles casos son: </p>
+Los cuatro posibles casos son:
 
-<ul>
- <li>Verificar si la coordenada <code>x</code> es mayor que el ancho del <em>canvas</em> (la pelota está saliendo por el borde derecho).</li>
- <li>Verificar si la coordenada <code>x</code> es menor que la coordenada 0 (la pelota está saliendo por el borde izquierdo)</li>
- <li>Verificar si la coordenada <code>y</code> es mayor que la altura del <em>canvas</em> (la pelota está saliendo por el borde inferior).</li>
- <li>Verificar si la coordenada <code>y</code> es menor que la coordenada 0 ( la pelota está saliendo por el borde superior).</li>
-</ul>
+- Verificar si la coordenada `x` es mayor que el ancho del _canvas_ (la pelota está saliendo por el borde derecho).
+- Verificar si la coordenada `x` es menor que la coordenada 0 (la pelota está saliendo por el borde izquierdo)
+- Verificar si la coordenada `y` es mayor que la altura del _canvas_ (la pelota está saliendo por el borde inferior).
+- Verificar si la coordenada `y` es menor que la coordenada 0 ( la pelota está saliendo por el borde superior).
 
-<p>En cada caso, se ha tenido en cuenta el tamaño (<code>size</code>) de la pelota en los cálculos, ya que las coordenadas <code>x</code> e <code>y</code> corresponden al centro de la pelota, pero lo que queremos ver es el borde de la pelota cuando choca con el perímetro del <em>canvas</em> — que la pelota rebote, cuando está a medio camino fuera de el —.</p>
+En cada caso, se ha tenido en cuenta el tamaño (`size`) de la pelota en los cálculos, ya que las coordenadas `x` e `y` corresponden al centro de la pelota, pero lo que queremos ver es el borde de la pelota cuando choca con el perímetro del _canvas_ — que la pelota rebote, cuando está a medio camino fuera de el —.
 
-<p>Las dos últimas líneas de código, suman  la velocidad en x (<code>velX</code>) al valor de la coordenada <code>x</code>  , y el valor de la velocidad en y (<code>velY</code>)  a la coordenada <code>y</code> —  con esto se consigue el efecto de que la pelota se mueva cada vez que este método es llamado. </p>
+Las dos últimas líneas de código, suman la velocidad en x (`velX`) al valor de la coordenada `x` , y el valor de la velocidad en y (`velY`) a la coordenada `y` — con esto se consigue el efecto de que la pelota se mueva cada vez que este método es llamado.
 
-<p>Llegados a este punto: ¡continuemos, con las animaciones!</p>
+Llegados a este punto: ¡continuemos, con las animaciones!
 
-<h2 id="Animando_las_pelotas">Animando las pelotas</h2>
+## Animando las pelotas
 
-<p>Hagamos esto divertido! Ahora vamos a empezar a añadir pelotas al canvas, y animándolas.</p>
+Hagamos esto divertido! Ahora vamos a empezar a añadir pelotas al canvas, y animándolas.
 
-<p>1. Primero, necesitamos algún sitio donde guardas las pelotas. El siguiente arreglo hará esta función — añádela al final de tu código. </p>
+1\. Primero, necesitamos algún sitio donde guardas las pelotas. El siguiente arreglo hará esta función — añádela al final de tu código.
 
-<pre class="brush: js" dir="rtl">var balls = [];</pre>
+```js
+var balls = [];
+```
 
-<p>Todos los programas que generan animaciones normalmente tienen un bucle de animación, que sirve para actualizar los datos del programa, para entonces generar la imagen correspondiente; esta es la estrategia básica para la mayor parte de juegos y programas similares. </p>
+Todos los programas que generan animaciones normalmente tienen un bucle de animación, que sirve para actualizar los datos del programa, para entonces generar la imagen correspondiente; esta es la estrategia básica para la mayor parte de juegos y programas similares.
 
-<p>2. Añadamos las siguientes instrucciones al final del código: </p>
+2\. Añadamos las siguientes instrucciones al final del código:
 
-<pre class="brush: js">function loop() {
+```js
+function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
 
-  while (balls.length &lt; 25) {
+  while (balls.length < 25) {
     var size = random(10,20);
     var ball = new Ball(
       // la posición de las pelotas, se dibujará al menos siempre
@@ -209,94 +203,90 @@ testBall.draw()</pre>
     balls.push(ball);
   }
 
-  for (var i = 0; i &lt; balls.length; i++) {
+  for (var i = 0; i < balls.length; i++) {
     balls[i].draw();
     balls[i].update();
   }
 
   requestAnimationFrame(loop);
-}</pre>
+}
+```
 
-<p>Nuestra función de bucle: <code>loop()</code>, hace lo siguiente: </p>
+Nuestra función de bucle: `loop()`, hace lo siguiente:
 
-<ul>
- <li>Define el color de relleno del canvas como negro semi-transparente, entonces dibuja un rectángulo en todo el ancho y alto del canvas, usando <code>fillRect()</code>, (los cuatro parámetros definen las coordenadas de origen, el ancho y el alto del rectángulo). Esto es para cubrir el dibujo del instante anterior antes de actualizar el nuevo dibujo. Si no se realiza este paso, resultará en las imágenes se irán apilando y veremos una especie de serpientes según se mueven por el canvas en vez de las pelotas moviéndose!  El color de relleno se define como semitransparente, <code>rgba(0,0,0,0.25)</code>, lo que nos permite que podamos intuir algunos de los dibujos de instantes anteriores, con lo que podremos recrear un poco el efecto de estelas detrás de las pelotas, según se mueven. Pruebe a variar este número para ver como resulta el efecto.   </li>
- <li>Se crea una nueva instancia de la pelota <code>Ball()</code> usando un número aleatorio mediante la función  <code>random()</code>, entonces se añade este elemento al final del arreglo de las pelotas,  <code>push()</code>,  pero unicamente si el número de pelotas es menor que 25. Así cuando tengamos 25 pelotas en la pantalla, no crearemos nuevas pelotas. Pruebe a variar el número de pelotas en el código: <code>balls.length &lt; 25</code>. Dependiendo de la capacidad de procesamiento del navegador, un número de pelotas muy alto podría ralentizar significativamente la animación. ¡asi que cuidado! </li>
- <li>Se recorre el  bucle por todo el conjunto de pelotas <code>balls</code> y se ejecuta el método para dibujar, <code>draw()</code>, cada una de las pelotas, y actualizar sus datos, <code>update()</code>, en cada una de ellas, así se conservarán las nuevas posiciones y velocidades para el siguiente intervalo de animación.</li>
- <li>Se ejecuta la función de nuevo mediante el método <code>requestAnimationFrame()</code> - cuando este método está continuamente ejecutándose y llama a la misma función, esto ejecutará la función de animación un determinado número de veces por segundo para crear una animación fluida. Esto se realiza normalmente de forma recursiva — lo que quiere decir que la función se llama a sí misma cada vez que se ejecuta, de esa manera se ejecutará una y otra vez de forma continua. </li>
-</ul>
+- Define el color de relleno del canvas como negro semi-transparente, entonces dibuja un rectángulo en todo el ancho y alto del canvas, usando `fillRect()`, (los cuatro parámetros definen las coordenadas de origen, el ancho y el alto del rectángulo). Esto es para cubrir el dibujo del instante anterior antes de actualizar el nuevo dibujo. Si no se realiza este paso, resultará en las imágenes se irán apilando y veremos una especie de serpientes según se mueven por el canvas en vez de las pelotas moviéndose! El color de relleno se define como semitransparente, `rgba(0,0,0,0.25)`, lo que nos permite que podamos intuir algunos de los dibujos de instantes anteriores, con lo que podremos recrear un poco el efecto de estelas detrás de las pelotas, según se mueven. Pruebe a variar este número para ver como resulta el efecto.
+- Se crea una nueva instancia de la pelota `Ball()` usando un número aleatorio mediante la función `random()`, entonces se añade este elemento al final del arreglo de las pelotas, `push()`, pero unicamente si el número de pelotas es menor que 25. Así cuando tengamos 25 pelotas en la pantalla, no crearemos nuevas pelotas. Pruebe a variar el número de pelotas en el código: `balls.length < 25`. Dependiendo de la capacidad de procesamiento del navegador, un número de pelotas muy alto podría ralentizar significativamente la animación. ¡asi que cuidado!
+- Se recorre el bucle por todo el conjunto de pelotas `balls` y se ejecuta el método para dibujar, `draw()`, cada una de las pelotas, y actualizar sus datos, `update()`, en cada una de ellas, así se conservarán las nuevas posiciones y velocidades para el siguiente intervalo de animación.
+- Se ejecuta la función de nuevo mediante el método `requestAnimationFrame()` - cuando este método está continuamente ejecutándose y llama a la misma función, esto ejecutará la función de animación un determinado número de veces por segundo para crear una animación fluida. Esto se realiza normalmente de forma recursiva — lo que quiere decir que la función se llama a sí misma cada vez que se ejecuta, de esa manera se ejecutará una y otra vez de forma continua.
 
-<p>3. Por último, pero no menos importante, añadimos la siguiente línea, al final del código.-- es necesario llamar a la función inicialmente para que la animación comience. </p>
+3\. Por último, pero no menos importante, añadimos la siguiente línea, al final del código.-- es necesario llamar a la función inicialmente para que la animación comience.
 
-<pre class="brush: js">loop();</pre>
+```js
+loop();
+```
 
-<p>Eso es todo para la parte básica — pruebe a guardar el código y refrescar el navegador para comprobar si aparecen las pelotas rebotando!</p>
+Eso es todo para la parte básica — pruebe a guardar el código y refrescar el navegador para comprobar si aparecen las pelotas rebotando!
 
-<h2 id="Añadiendo_la_detección_de_colisiones">Añadiendo la detección de colisiones</h2>
+## Añadiendo la detección de colisiones
 
-<p>Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro código. Así las pelotas, sabrán cuando chocan unas contra otras.</p>
+Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro código. Así las pelotas, sabrán cuando chocan unas contra otras.
 
-<ol>
- <li>El primer paso, será añadir el código a continuación a continuación de donde se definió el método  <code>update()</code>. (en código de <code>Ball.prototype.update</code>)
+1.  El primer paso, será añadir el código a continuación a continuación de donde se definió el método `update()`. (en código de `Ball.prototype.update`)
 
-  <pre class="brush: js">Ball.prototype.collisionDetect = function() {
-  for (var j = 0; j &lt; balls.length; j++) {
-    if (!(this === balls[j])) {
-      var dx = this.x - balls[j].x;
-      var dy = this.y - balls[j].y;
-      var distance = Math.sqrt(dx * dx + dy * dy);
+    ```js
+    Ball.prototype.collisionDetect = function() {
+      for (var j = 0; j < balls.length; j++) {
+        if (!(this === balls[j])) {
+          var dx = this.x - balls[j].x;
+          var dy = this.y - balls[j].y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance &lt; this.size + balls[j].size) {
-        balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+          if (distance < this.size + balls[j].size) {
+            balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+          }
+        }
       }
     }
-  }
-}</pre>
+    ```
 
-  <p>Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.  </p>
+    Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
 
-  <ul>
-   <li>Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle <code>for</code> para recorrer todas las pelotas.</li>
-   <li>Dentro del bucle, usamos un <code>if</code>  para comprobar si la pelota que estamos mirando en ese ciclo del bucle <code>for</code> es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador <code>!</code> para indicar una negación en la comparación, así que el código dentro de la condición  solo se ejecuta si estamos mirando dos pelotas distintas.</li>
-   <li>Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen.  Esto se explica mejor en el enlace <a href="/en-US/docs/Games/Techniques/2D_collision_detection">detección de colision 2D</a>.</li>
-   <li>En este caso, únicamente se define la propiedad de <code>color</code> para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>, <a href="http://brm.io/matter-js/">matter.js</a>, <a href="http://phaser.io/">Phaser</a>, etc.</li>
-  </ul>
- </li>
- <li>También es necesario llamar este método en cada instante de la animación. <code>balls[i].update();</code> en la línea:
-  <pre class="brush: js">balls[i].collisionDetect();</pre>
- </li>
- <li>Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.</li>
-</ol>
+    - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
+    - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
+    - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
+    - En este caso, únicamente se define la propiedad de `color` para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
-<div class="note">
-<p><strong>Nota</strong>: Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">version_final</a> (y también ver como funciona al <a href="http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html">ejecutarla</a>).</p>
-</div>
+2.  También es necesario llamar este método en cada instante de la animación. `balls[i].update();` en la línea:
 
-<h2 id="Resumen">Resumen</h2>
+    ```js
+    balls[i].collisionDetect();
+    ```
 
-<p>Esperamos que se haya divertido escribiendo su propio mundo de pelotas que chocan aleatoriamente, usando objetos y programación orientada a objetos. Esto debería haberle dado una práctica útil y haber sido un buen ejemplo. </p>
+3.  Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
 
-<h2 id="Lea_también">Lea también</h2>
+> **Nota:** Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la [version_final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (y también ver como funciona al [ejecutarla](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> — una guia de principiante para usar el canvas 2D.</li>
- <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
- <li><a href="/en-US/docs/Games/Techniques/2D_collision_detection">2D detección de colisiones</a></li>
- <li><a href="/en-US/docs/Games/Techniques/3D_collision_detection">3D detección de colisiones</a></li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">2D juego de ruptura usando sólo JavaScript</a> — un gran tutorial para principiantes sobre como construir un juego 2D.</li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">2D juego de ruptura usando Phaser</a> — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript. </li>
-</ul>
+## Resumen
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</p>
+Esperamos que se haya divertido escribiendo su propio mundo de pelotas que chocan aleatoriamente, usando objetos y programación orientada a objetos. Esto debería haberle dado una práctica útil y haber sido un buen ejemplo.
 
-<h2 id="En_este_módulo">En este módulo</h2>
+## Lea también
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Conceptos básicos de los objetos JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript orientado a objetos para principiantes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototipos de objetos</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Herencia en JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Trabajando con datos JSON</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Ejercicio práctico de construcción de objetos</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Añadiendo características a nuestra demo de bouncing balls</a></li>
-</ul>
+- [Canvas tutorial](/es/docs/Web/API/Canvas_API/Tutorial) — una guia de principiante para usar el canvas 2D.
+- [requestAnimationFrame()](/es/docs/Web/API/window/requestAnimationFrame)
+- [2D detección de colisiones](/es/docs/Games/Techniques/2D_collision_detection)
+- [3D detección de colisiones](/es/docs/Games/Techniques/3D_collision_detection)
+- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
+- [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
+
+{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+
+## En este módulo
+
+- [Conceptos básicos de los objetos JavaScript](/es/docs/Learn/JavaScript/Objects/Basics)
+- [JavaScript orientado a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Prototipos de objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
+- [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
+- [Ejercicio práctico de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [Añadiendo características a nuestra demo de bouncing balls](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

@@ -12,48 +12,37 @@ tags:
   - Union
   - Unir
   - concatenación
-  - 'l10n:priority'
+  - l10n:priority
   - strings
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
-<p id="Manejo_de_texto_—_cadenas_en_JavaScript">{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</div>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<p class="summary"><span id="result_box" lang="es"><span>A continuación, centraremos nuestra atención en las </span></span>cadenas<span lang="es"><span> de caracteres (<code>string</code>s)</span></span><span lang="es"><span>: así es como se llaman los fragmentos de texto en programación.</span> <span>En este artículo veremos todas las cosas comunes que realmente deberías saber sobre </span></span>cadenas<span lang="es"><span> de caracteres al aprender JavaScript, como crear cadenas, comillas en cadenas y unir cadenas.</span></span></p>
+A continuación, centraremos nuestra atención en las cadenas de caracteres (`string`s): así es como se llaman los fragmentos de texto en programación. En este artículo veremos todas las cosas comunes que realmente deberías saber sobre cadenas de caracteres al aprender JavaScript, como crear cadenas, comillas en cadenas y unir cadenas.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisitos:</th>
-   <td>Conocimientos básicos de informática, una comprensión básica de HTML y CSS y de lo que es JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectivo:</th>
-   <td><span id="result_box" lang="es"><span>Familiarizarte con los aspectos básicos de las </span></span>cadenas<span lang="es"><span> de caracteres en JavaScript.</span></span></td>
-  </tr>
- </tbody>
-</table>
+| Prerequisitos: | Conocimientos básicos de informática, una comprensión básica de HTML y CSS y de lo que es JavaScript. |
+| -------------- | ----------------------------------------------------------------------------------------------------- |
+| Objectivo:     | Familiarizarte con los aspectos básicos de las cadenas de caracteres en JavaScript.                   |
 
-<h2 id="El_poder_de_las_palabras"><span class="short_text" id="result_box" lang="es"><span>El poder de las palabras</span></span></h2>
+## El poder de las palabras
 
-<p>Las palabras son muy importantes para los humanos — son una parte fundamental de nuestra comunicación. Dado que la Web es un medio en gran parte basado en texto diseñado para permitir a los humanos comunicarse y compartir información, es útil para nosotros tener control sobre las palabras que aparecen en él. {{glossary("HTML")}} proporciona estructura y significado a nuestro texto, {{glossary("CSS")}} nos permite personalizarlo con precisión, y JavaScript contiene una serie de funciones para manipular cadenas, crear mensajes personalizados de bienvenida, mostrar las etiquetas de texto adecuadas cuando sea necesario, organizar los términos en el orden deseado y mucho más.</p>
+Las palabras son muy importantes para los humanos — son una parte fundamental de nuestra comunicación. Dado que la Web es un medio en gran parte basado en texto diseñado para permitir a los humanos comunicarse y compartir información, es útil para nosotros tener control sobre las palabras que aparecen en él. {{glossary("HTML")}} proporciona estructura y significado a nuestro texto, {{glossary("CSS")}} nos permite personalizarlo con precisión, y JavaScript contiene una serie de funciones para manipular cadenas, crear mensajes personalizados de bienvenida, mostrar las etiquetas de texto adecuadas cuando sea necesario, organizar los términos en el orden deseado y mucho más.
 
-<p>Casi todos los programas que hemos mostrado hasta ahora en el curso han involucrado alguna manipulación de cadenas.</p>
+Casi todos los programas que hemos mostrado hasta ahora en el curso han involucrado alguna manipulación de cadenas.
 
-<h2 id="Cadenas_—_las_bases">Cadenas — las bases</h2>
+## Cadenas — las bases
 
-<p>A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir la consola</a> en una pestaña o ventana separada, o usar la <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola de desarrollo del navegador</a> si así lo prefieres).</p>
+A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes [abrir la consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separada, o usar la [consola de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) si así lo prefieres).
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Consola JavaScript&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Consola JavaScript</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -101,14 +90,14 @@ translation_of: Learn/JavaScript/First_steps/Strings
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -116,12 +105,12 @@ translation_of: Learn/JavaScript/First_steps/Strings
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class','input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length &gt; 1) {
+      if(document.querySelectorAll('div').length > 1) {
         inputForm.focus();
       }
 
@@ -151,149 +140,192 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
-</div>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-<h3 id="Creando_una_cadena">Creando una cadena</h3>
+### Creando una cadena
 
-<ol>
- <li>Para comenzar, ingresa las siguientes líneas:
-  <pre class="brush: js notranslate">var string = 'La revolución no será televisada.';
-string;</pre>
-  Al igual que con los números, declaramos una variable, iniciandola con el valor de una cadena, y luego retornamos dicho valor. La única diferencia es que al escribir una cadena, necesitas envolverla con comillas.</li>
- <li>Si no lo haces, u olvidas una de las comillas, obtendrás un error. Intenta ingresando las siguientes líneas:
-  <pre class="brush: js example-bad notranslate">var malString = Esto es una prueba;
-var malString = 'Esto es una prueba;
-var malString = Esto es una prueba';</pre>
-  Estas líneas no funcionan porque el texto sin comillas alrededor es tomado como nombre de una variable, propiedad, palabra reservada, o algo similar. Si el navegador no las encuentra, entonces se recibe un error( ej. "missing ; before statement"). Si el navegador puede ver dónde comienza una cadena, pero no dónde termine, como se indica en la segunda oración, devuelve error (con "unterminated string literal"). Si tu programa devuelve estos errores, revisa desde el inicio que todas tus cadenas posean sus comillas.</li>
- <li>Lo siguiente funcionará si previamente definiste la variable <code>string</code> — inténtalo:
-  <pre class="brush: js notranslate">var maltring = string;
-malString;</pre>
-  <code>malString</code> ahora tiene el mismo valor que <code>string</code>.</li>
-</ol>
+1.  Para comenzar, ingresa las siguientes líneas:
 
-<h3 id="Comillas_simples_vs._comillas_dobles">Comillas simples vs. comillas dobles</h3>
+    ```js
+    var string = 'La revolución no será televisada.';
+    string;
+    ```
 
-<ol>
- <li>En JavaScript, puedes escoger entre comillas simple y dobles para envolver tus cadenas. Ambas funcionarán correctamente:
-  <pre class="brush: js notranslate">var simp = 'Comillas simples.';
-var dobl = "Comillas dobles.";
-simp;
-dobl;</pre>
- </li>
- <li>Hay muy poca diferencia entre las dos, y la que utilices dependerá de tus preferencias personales. Sin embargo, deberías de elegir una y mantenerla; usar diferentes tipos de comillas en el código podría llegar a ser confuso, especialmente si utilizas diferentes comillas en la misma cadena. El siguiente ejemplo devolverá un error:
-  <pre class="brush: js example-bad notranslate">var badQuotes = 'What on earth?";</pre>
- </li>
- <li>El navegador pensará que la cadena no se ha cerrado correctamente, porque el otro tipo de cita que no estás usando, puede aparecer en la cadena. Por ejemplo, en estos dos casos su uso es correcto:
-  <pre class="brush: js notranslate">var sglDbl = 'Would you eat a "fish supper"?';
-var dblSgl = "I'm feeling blue.";
-sglDbl;
-dblSgl;</pre>
- </li>
- <li>Sin embargo, no puedes usar el mismo tipo de comillas en el interior de una cadena que ya las tiene en los extremos. Lo siguiente devuelve error, porque confunde al navegador respecto de dónde termina la cadena:
-  <pre class="brush: js example-bad notranslate">var bigmouth = 'I've got no right to take my place...';</pre>
-  Lo que nos lleva directamente al siguiente tema.</li>
-</ol>
+    Al igual que con los números, declaramos una variable, iniciandola con el valor de una cadena, y luego retornamos dicho valor. La única diferencia es que al escribir una cadena, necesitas envolverla con comillas.
 
-<h3 id="Escapando_caracteres_en_una_cadena">Escapando caracteres en una cadena</h3>
+2.  Si no lo haces, u olvidas una de las comillas, obtendrás un error. Intenta ingresando las siguientes líneas:
 
-<p>Para solucionar nuestro problema anterior, necesitamos "escapar" el asunto de las comillas. Escapar caracteres significa que les hacemos algo para asegurarnos que sean reconocidos como texto, y no parte del código. En JavaScript, colocamos una barra invertida justo antes del caracter. Intenta ésto:</p>
+    ```js example-bad
+    var malString = Esto es una prueba;
+    var malString = 'Esto es una prueba;
+    var malString = Esto es una prueba';
+    ```
 
-<pre class="brush: js notranslate">var bigmouth = 'I\'ve got no right to take my place...';
-bigmouth;</pre>
+    Estas líneas no funcionan porque el texto sin comillas alrededor es tomado como nombre de una variable, propiedad, palabra reservada, o algo similar. Si el navegador no las encuentra, entonces se recibe un error( ej. "missing ; before statement"). Si el navegador puede ver dónde comienza una cadena, pero no dónde termine, como se indica en la segunda oración, devuelve error (con "unterminated string literal"). Si tu programa devuelve estos errores, revisa desde el inicio que todas tus cadenas posean sus comillas.
 
-<p>Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma, ej. <code>\"</code>, y hay varios códigos más. Ve a <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notación de Escape</a> para más detalles.</p>
+3.  Lo siguiente funcionará si previamente definiste la variable `string` — inténtalo:
 
-<h2 id="Concatenando_cadenas">Concatenando cadenas</h2>
+    ```js
+    var maltring = string;
+    malString;
+    ```
 
-<ol>
- <li>Concatenar es una elegante palabra de la programación que significa: "unir". Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Vamos a probar un ejemplo en nuestra consola.
-  <pre class="brush: js notranslate">var one = 'Hello, ';
-var two = 'how are you?';
-var joined = one + two;
-joined;</pre>
-  El resultado de este código es una variable llamada <code>joined</code>, que contiene el valor: "Hello, how are you?" ("Hola, cómo estas?").</li>
- <li>En la última instancia del código, unimos dos strings, pero lo puedes hacer con cuantas desees, mientras que incluyas el símbolo de <code>+</code> entre ellas. Prueba esto:
-  <pre class="brush: js notranslate">var multiple = one + one + one + one + two;
-multiple;</pre>
- </li>
- <li>También puedes usar una combinación de variables y strings reales. Prueba esto:
-  <pre class="brush: js notranslate">var response = one + 'I am fine — ' + two;
-response;</pre>
- </li>
-</ol>
+    `malString` ahora tiene el mismo valor que `string`.
 
-<div class="note">
-<p><strong>Nota</strong>: Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama <strong>string literal</strong>.</p>
-</div>
+### Comillas simples vs. comillas dobles
 
-<h3 id="La_concatenación_en_contexto">La concatenación en contexto</h3>
+1.  En JavaScript, puedes escoger entre comillas simple y dobles para envolver tus cadenas. Ambas funcionarán correctamente:
 
-<p>Vamos a revisar la concatenación que usamos en la siguiente acción — veamos este ejemplo ya citado previamente en el curso:</p>
+    ```js
+    var simp = 'Comillas simples.';
+    var dobl = "Comillas dobles.";
+    simp;
+    dobl;
+    ```
 
-<pre class="brush: html notranslate">&lt;button&gt;Press me&lt;/button&gt;</pre>
+2.  Hay muy poca diferencia entre las dos, y la que utilices dependerá de tus preferencias personales. Sin embargo, deberías de elegir una y mantenerla; usar diferentes tipos de comillas en el código podría llegar a ser confuso, especialmente si utilizas diferentes comillas en la misma cadena. El siguiente ejemplo devolverá un error:
 
-<pre class="brush: js notranslate">var button = document.querySelector('button');
+    ```js example-bad
+    var badQuotes = 'What on earth?";
+    ```
+
+3.  El navegador pensará que la cadena no se ha cerrado correctamente, porque el otro tipo de cita que no estás usando, puede aparecer en la cadena. Por ejemplo, en estos dos casos su uso es correcto:
+
+    ```js
+    var sglDbl = 'Would you eat a "fish supper"?';
+    var dblSgl = "I'm feeling blue.";
+    sglDbl;
+    dblSgl;
+    ```
+
+4.  Sin embargo, no puedes usar el mismo tipo de comillas en el interior de una cadena que ya las tiene en los extremos. Lo siguiente devuelve error, porque confunde al navegador respecto de dónde termina la cadena:
+
+    ```js example-bad
+    var bigmouth = 'I've got no right to take my place...';
+    ```
+
+    Lo que nos lleva directamente al siguiente tema.
+
+### Escapando caracteres en una cadena
+
+Para solucionar nuestro problema anterior, necesitamos "escapar" el asunto de las comillas. Escapar caracteres significa que les hacemos algo para asegurarnos que sean reconocidos como texto, y no parte del código. En JavaScript, colocamos una barra invertida justo antes del caracter. Intenta ésto:
+
+```js
+var bigmouth = 'I\'ve got no right to take my place...';
+bigmouth;
+```
+
+Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma, ej. `\"`, y hay varios códigos más. Ve a [Notación de Escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) para más detalles.
+
+## Concatenando cadenas
+
+1.  Concatenar es una elegante palabra de la programación que significa: "unir". Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Vamos a probar un ejemplo en nuestra consola.
+
+    ```js
+    var one = 'Hello, ';
+    var two = 'how are you?';
+    var joined = one + two;
+    joined;
+    ```
+
+    El resultado de este código es una variable llamada `joined`, que contiene el valor: "Hello, how are you?" ("Hola, cómo estas?").
+
+2.  En la última instancia del código, unimos dos strings, pero lo puedes hacer con cuantas desees, mientras que incluyas el símbolo de `+` entre ellas. Prueba esto:
+
+    ```js
+    var multiple = one + one + one + one + two;
+    multiple;
+    ```
+
+3.  También puedes usar una combinación de variables y strings reales. Prueba esto:
+
+    ```js
+    var response = one + 'I am fine — ' + two;
+    response;
+    ```
+
+> **Nota:** Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
+
+### La concatenación en contexto
+
+Vamos a revisar la concatenación que usamos en la siguiente acción — veamos este ejemplo ya citado previamente en el curso:
+
+```html
+<button>Press me</button>
+```
+
+```js
+var button = document.querySelector('button');
 
 button.onclick = function() {
   var name = prompt('What is your name?');
   alert('Hello ' + name + ', nice to see you!');
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
 
-<p>Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada <code>name (nombre)</code>. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable <code>name (</code>nombre). </p>
+Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name (`nombre).
 
-<h3 id="Números_versus_cadenas">Números versus cadenas</h3>
+### Números versus cadenas
 
-<ol>
- <li>Entonces, ¿qué sucede cuando intentamos agregar (o concatenar) un string y un número? Vamos a probar en la consola:
-  <pre class="brush: js notranslate">'Front ' + 242;
-</pre>
-  Podrías esperar que diera un error, pero funciona a la perfección. Tratar de representar un string como un número no tiene sentido, pero representar un número como string si que lo tiene, así que el navegador convierte el número en una string y las muestra juntas. </li>
- <li>Incluso puedes hacer esto con dos números — puedes forar un número para que se convierta en una string envolviéndolo entre comillas. Prueba lo siguiente (estamos utilizando el operador <code>typeof</code> para verificar si la variable es un número o una cadena):
-  <pre class="brush: js notranslate">var myDate = '19' + '67';
-typeof myDate;</pre>
- </li>
- <li>Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
-  <ul>
-   <li>El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
-    <pre class="brush: js notranslate">var myString = '123';
-var myNum = Number(myString);
-typeof myNum;</pre>
-   </li>
-   <li>Por otra parte, cada número tiene un método llamado  <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> que convertirá el equivalente en una string. Prueba esto:
-    <pre class="brush: js notranslate">var myNum = 123;
-var myString = myNum.toString();
-typeof myString;</pre>
-   </li>
-  </ul>
-  Estas construcciones pueden ser muy útiles en ciertas situaciones. Por ejemplo, si un usuario introduce un número en un campo de texto de un formulario, será un string. Sin embargo, si quieres añadir ese número a algo, lo necesitas convertir a número, así que puedes usar esta construcción para hacerlo. Hicimos exactamente esto en el ejercicio de ejemplo: Juego adivina el número en la línea 54 (<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">Juego Adivina el número, en la línea 54</a>).</li>
-</ol>
+1.  Entonces, ¿qué sucede cuando intentamos agregar (o concatenar) un string y un número? Vamos a probar en la consola:
 
-<h2 id="Prueba_tus_habilidades_2">Prueba tus habilidades</h2>
+    ```js
+    'Front ' + 242;
+    ```
 
-<p id="Prueba_tus_habilidades">Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve <a href="/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">Prueba tus habilidades: Strings</a>. Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.</p>
+    Podrías esperar que diera un error, pero funciona a la perfección. Tratar de representar un string como un número no tiene sentido, pero representar un número como string si que lo tiene, así que el navegador convierte el número en una string y las muestra juntas.
 
-<h2 id="Conclusión">Conclusión</h2>
+2.  Incluso puedes hacer esto con dos números — puedes forar un número para que se convierta en una string envolviéndolo entre comillas. Prueba lo siguiente (estamos utilizando el operador `typeof` para verificar si la variable es un número o una cadena):
 
-<p>Esto es lo básico que debes saber sobre las cadenas o <code>string</code>s en JavaScript. En el siguiente artículo desarrollaremos más sobre esto, observando métodos de construcción de strings disponibles en JavaScript y cómo podemos usarlos para manipular nuestras cadenas de la forma que queremos. </p>
+    ```js
+    var myDate = '19' + '67';
+    typeof myDate;
+    ```
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</p>
+3.  Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
 
-<h2 id="En_este_módulo">En este módulo</h2>
+    - El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
 
-<ul>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript">¿Qué es JavaScript?</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/A_first_splash">Un primer acercamiento a JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/What_went_wrong">¿Qué salió mal? Corrigiendo JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Variables">Guardando la información que necesitas— Variables</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Math">Matemáticas básicas en JavaScript — números y operadores</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Strings">Manejo de texto — cadenas en JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Arrays">Arreglos</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Silly_story_generator" rel="nofollow">Evaluaciones: Generador de historias absurdas</a></li>
-</ul>
+      ```js
+      var myString = '123';
+      var myNum = Number(myString);
+      typeof myNum;
+      ```
+
+    - Por otra parte, cada número tiene un método llamado [`toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que convertirá el equivalente en una string. Prueba esto:
+
+      ```js
+      var myNum = 123;
+      var myString = myNum.toString();
+      typeof myString;
+      ```
+
+    Estas construcciones pueden ser muy útiles en ciertas situaciones. Por ejemplo, si un usuario introduce un número en un campo de texto de un formulario, será un string. Sin embargo, si quieres añadir ese número a algo, lo necesitas convertir a número, así que puedes usar esta construcción para hacerlo. Hicimos exactamente esto en el ejercicio de ejemplo: Juego adivina el número en la línea 54 ([Juego Adivina el número, en la línea 54](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54)).
+
+## Prueba tus habilidades
+
+Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
+
+## Conclusión
+
+Esto es lo básico que debes saber sobre las cadenas o `string`s en JavaScript. En el siguiente artículo desarrollaremos más sobre esto, observando métodos de construcción de strings disponibles en JavaScript y cómo podemos usarlos para manipular nuestras cadenas de la forma que queremos.
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+
+## En este módulo
+
+- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [¿Qué salió mal? Corrigiendo JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Guardando la información que necesitas— Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
+- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
+- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
+- [Métodos útiles para el manejo de cadenas](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
+- [Evaluaciones: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

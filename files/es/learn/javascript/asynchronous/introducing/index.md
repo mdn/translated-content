@@ -11,45 +11,37 @@ tags:
 translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
-<div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
 
-<p>En este artículo, repasaremos una serie de conceptos importantes relacionados con la programación asincrónica y cómo se ve esto en los navegadores web y JavaScript. Debe comprender estos conceptos antes de trabajar con los demás artículos del módulo.</p>
+En este artículo, repasaremos una serie de conceptos importantes relacionados con la programación asincrónica y cómo se ve esto en los navegadores web y JavaScript. Debe comprender estos conceptos antes de trabajar con los demás artículos del módulo.
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Pre-requisitos:</th>
-   <td>Literatura básica de computadora, un razonable entendimiento de los fundamentos de JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Entender los conceptos básicos detrás de la programación asincrónica, y cómo se manifiesta en los exploradores web y JavaScript.</td>
-  </tr>
- </tbody>
-</table>
+| Pre-requisitos: | Literatura básica de computadora, un razonable entendimiento de los fundamentos de JavaScript.                                   |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:       | Entender los conceptos básicos detrás de la programación asincrónica, y cómo se manifiesta en los exploradores web y JavaScript. |
 
-<h2 id="¿Asincrónico">¿Asincrónico?</h2>
+## ¿Asincrónico?
 
-<p>Normalmente, el código de un programa determinado se ejecuta directamente, y solo sucede una cosa a la vez. Si una función se basa en el resultado de otra función, tiene que esperar a que la otra función termine y regrese, y hasta que eso suceda, todo el programa se detiene esencialmente desde la perspectiva del usuario.</p>
+Normalmente, el código de un programa determinado se ejecuta directamente, y solo sucede una cosa a la vez. Si una función se basa en el resultado de otra función, tiene que esperar a que la otra función termine y regrese, y hasta que eso suceda, todo el programa se detiene esencialmente desde la perspectiva del usuario.
 
-<p>Los usuarios de Mac, por ejemplo, a veces experimentan esto como un cursor giratorio multicolor (o "beachball" - "bola de playa" - como es llamado frecuentemente). Este cursor es la manera que tiene el sistema operativo de decir "el actual programa que está usando tiene que parar y esperar que algo termine, y está tomando tanto tiempo que me preocupa que pienses qué está sucediendo."</p>
+Los usuarios de Mac, por ejemplo, a veces experimentan esto como un cursor giratorio multicolor (o "beachball" - "bola de playa" - como es llamado frecuentemente). Este cursor es la manera que tiene el sistema operativo de decir "el actual programa que está usando tiene que parar y esperar que algo termine, y está tomando tanto tiempo que me preocupa que pienses qué está sucediendo."
 
-<p><img alt="Multi-colored macOS beachball busy spinner" src="https://mdn.mozillademos.org/files/16577/beachball.jpg" style="display: block; float: left; height: 256px; margin: 0px 30px 0px 0px; width: 250px;"></p>
+![Multi-colored macOS beachball busy spinner](https://mdn.mozillademos.org/files/16577/beachball.jpg)
 
-<p>Esto es una experiencia frustrante y no es un buen uso del poder de procesamiento de una computadora - especialmente en una era donde las computadoras tienen múltiples procesadores disponibles. No tiene sentido sentarse allí a esperar algo cuando podrías dejar que la otra tarea se ejecute en otro procesador y le notifique cuando termine. Mientras tanto, esto le permitiría terminar otros trabajos, lo cual es la base de la <strong>programación asincrónica</strong>. Depende del entorno de programación que esté usando (exploradores web, en caso de desarrollo web) proveer de APIs que le permitan ejecutar dichas tareas de manera asincrónica.</p>
+Esto es una experiencia frustrante y no es un buen uso del poder de procesamiento de una computadora - especialmente en una era donde las computadoras tienen múltiples procesadores disponibles. No tiene sentido sentarse allí a esperar algo cuando podrías dejar que la otra tarea se ejecute en otro procesador y le notifique cuando termine. Mientras tanto, esto le permitiría terminar otros trabajos, lo cual es la base de la **programación asincrónica**. Depende del entorno de programación que esté usando (exploradores web, en caso de desarrollo web) proveer de APIs que le permitan ejecutar dichas tareas de manera asincrónica.
 
-<h2 id="Código_de_bloqueo_Blocking">Código de bloqueo (Blocking)</h2>
+## Código de bloqueo (Blocking)
 
-<p>Las técnicas asincrónicas son muy útiles, particularmente en programación web. Cuando una app web se ejecuta en el navegador y ejecuta un gran bloque de código sin retornar el control al navegador, este mismo puede parecer que se congela. Esto es llamado <strong>blocking</strong>; el navegador es bloqueado para que el usuario pueda seguir interactuando y realizando otras tareas hasta que la app web retorne el control sobre el procesador.</p>
+Las técnicas asincrónicas son muy útiles, particularmente en programación web. Cuando una app web se ejecuta en el navegador y ejecuta un gran bloque de código sin retornar el control al navegador, este mismo puede parecer que se congela. Esto es llamado **blocking**; el navegador es bloqueado para que el usuario pueda seguir interactuando y realizando otras tareas hasta que la app web retorne el control sobre el procesador.
 
-<p>Vamos a ver algunos ejemplos que muestren lo que significa blocking.</p>
+Vamos a ver algunos ejemplos que muestren lo que significa blocking.
 
-<p>En nuestro ejemplo <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">véalo en vivo</a>), agregamos un detector del evento click ("click event listener") a un botón con el fin de que cuando sea clickeado, ejecute una operación de un gran consumo de tiempo (calcula 10 millones de fechas y luego muestra la última en la consola) y luego agrega un párrafo al DOM:</p>
+En nuestro ejemplo [simple-sync.html](https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html) ([véalo en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html)), agregamos un detector del evento click ("click event listener") a un botón con el fin de que cuando sea clickeado, ejecute una operación de un gran consumo de tiempo (calcula 10 millones de fechas y luego muestra la última en la consola) y luego agrega un párrafo al DOM:
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
-btn.addEventListener('click', () =&gt; {
+```js
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
   let myDate;
-  for(let i = 0; i &lt; 10000000; i++) {
+  for(let i = 0; i < 10000000; i++) {
     let date = new Date();
     myDate = date
   }
@@ -59,23 +51,21 @@ btn.addEventListener('click', () =&gt; {
   let pElem = document.createElement('p');
   pElem.textContent = 'This is a newly-added paragraph.';
   document.body.appendChild(pElem);
-});</pre>
+});
+```
 
-<p>Cuando ejecute el ejemplo, abra su consola de JavaScript y haga click en el botón — notará que el párrafo no aparece hasta que las fechas hayan sido calculadas en su totalidad y el mensaje en la consola haya sido logueado. EL código se ejecuta en el orden en que aparece (de arriba hacia abajo), y la última operación no se ejecuta hasta que la anterior haya terminado.</p>
+Cuando ejecute el ejemplo, abra su consola de JavaScript y haga click en el botón — notará que el párrafo no aparece hasta que las fechas hayan sido calculadas en su totalidad y el mensaje en la consola haya sido logueado. EL código se ejecuta en el orden en que aparece (de arriba hacia abajo), y la última operación no se ejecuta hasta que la anterior haya terminado.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: El ejemplo anterior es poco realista. ¡Nunca se van a calcular 10 millones de fechas en una app web real! Sin embargo, sirve para dar una idea básica.</p>
-</div>
+> **Nota:** El ejemplo anterior es poco realista. ¡Nunca se van a calcular 10 millones de fechas en una app web real! Sin embargo, sirve para dar una idea básica.
 
-<p>En nuestro segundo ejemplo, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">véalo en vivo</a>), se simula algo un poco más realista con el que se puede encontrar en una página real. Se bloquea la interacción del usuario con la carga ("rendering") de la UI. En este ejemplo, se tienen dos botones:</p>
+En nuestro segundo ejemplo, [simple-sync-ui-blocking.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html) ([véalo en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html)), se simula algo un poco más realista con el que se puede encontrar en una página real. Se bloquea la interacción del usuario con la carga ("rendering") de la UI. En este ejemplo, se tienen dos botones:
 
-<ul>
- <li>Un botón "Fill canvas" que cuando es clickeado llena con 1 millón de círculos azules al {{htmlelement("canvas")}} disponible.</li>
- <li>Un botón "Click me for alert" que cuando es clickeado muestra un mensaje de alerta.</li>
-</ul>
+- Un botón "Fill canvas" que cuando es clickeado llena con 1 millón de círculos azules al {{htmlelement("canvas")}} disponible.
+- Un botón "Click me for alert" que cuando es clickeado muestra un mensaje de alerta.
 
-<pre class="brush: js notranslate">function expensiveOperation() {
-  for(let i = 0; i &lt; 1000000; i++) {
+```js
+function expensiveOperation() {
+  for(let i = 0; i < 1000000; i++) {
     ctx.fillStyle = 'rgba(0,0,255, 0.2)';
     ctx.beginPath();
     ctx.arc(random(0, canvas.width), random(0, canvas.height), 10, degToRad(0), degToRad(360), false);
@@ -85,79 +75,90 @@ btn.addEventListener('click', () =&gt; {
 
 fillBtn.addEventListener('click', expensiveOperation);
 
-alertBtn.addEventListener('click', () =&gt;
+alertBtn.addEventListener('click', () =>
   alert('You clicked me!')
-);</pre>
+);
+```
 
-<p>Si se clickea el primer botón y rápidamente se clickea el segundo, se verá que la alerta no aparece hasta que los círculos hayan terminado de representarse. La primer operación blockea a la segunda hasta que esta haya terminado de ejecutarse.</p>
+Si se clickea el primer botón y rápidamente se clickea el segundo, se verá que la alerta no aparece hasta que los círculos hayan terminado de representarse. La primer operación blockea a la segunda hasta que esta haya terminado de ejecutarse.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: OK, nuestro caso es feo y estamos fingiendo el efecto de bloqueo, pero es un problema común con el que los desarrolladores de aplicaciones reales batallan todo el tiempo.</p>
-</div>
+> **Nota:** OK, nuestro caso es feo y estamos fingiendo el efecto de bloqueo, pero es un problema común con el que los desarrolladores de aplicaciones reales batallan todo el tiempo.
 
-<p>¿Por qué es esto? La respuesta es porque JavaScript, en general, es de <strong>"un solo hilo" (single-threaded)</strong>. En este punto, se tiene que introduce el concepto de <strong>"hilos" (threads)</strong>.</p>
+¿Por qué es esto? La respuesta es porque JavaScript, en general, es de **"un solo hilo" (single-threaded)**. En este punto, se tiene que introduce el concepto de **"hilos" (threads)**.
 
-<h2 id="Threads">Threads</h2>
+## Threads
 
-<p>Un <strong>hilo (thread)</strong> es básicamente un proceso simple que un programa puede usar para completar tareas ("tasks"). Cada hilo solo puede realizar una tarea a la vez:</p>
+Un **hilo (thread)** es básicamente un proceso simple que un programa puede usar para completar tareas ("tasks"). Cada hilo solo puede realizar una tarea a la vez:
 
-<pre class="notranslate">Task A --&gt; Task B --&gt; Task C</pre>
+```
+Task A --> Task B --> Task C
+```
 
-<p>Cada tarea se va a ejecutar secuencialmente; una tarea tiene que completarse antes de que la próxima empiece.</p>
+Cada tarea se va a ejecutar secuencialmente; una tarea tiene que completarse antes de que la próxima empiece.
 
-<p>Como se dijo previamente, muchas computadores actualmente tienen múltiples procesadores, por lo que pueden realizar múltiples tareas a la vez. Los lenguajes de programación que pueden manejar múltiples hilos pueden usar múltiples procesadores para completar múltiples tareas en simultáneo. </p>
+Como se dijo previamente, muchas computadores actualmente tienen múltiples procesadores, por lo que pueden realizar múltiples tareas a la vez. Los lenguajes de programación que pueden manejar múltiples hilos pueden usar múltiples procesadores para completar múltiples tareas en simultáneo.
 
-<pre class="notranslate">Thread 1: Task A --&gt; Task B
-Thread 2: Task C --&gt; Task D</pre>
+```
+Thread 1: Task A --> Task B
+Thread 2: Task C --> Task D
+```
 
-<h3 id="JavaScript_es_single-threaded">JavaScript es single-threaded</h3>
+### JavaScript es single-threaded
 
-<p>JavScript es tradicionalmente single-threaded. Aún con múltiples procesadores, solo se puede ejecutar tareas en un solo hilo, llamado el <strong>hilo principal (main thread)</strong>. El ejemplo de arriba se ejecuta de la siguiente manera:</p>
+JavScript es tradicionalmente single-threaded. Aún con múltiples procesadores, solo se puede ejecutar tareas en un solo hilo, llamado el **hilo principal (main thread)**. El ejemplo de arriba se ejecuta de la siguiente manera:
 
-<pre class="notranslate">Main thread: Render circles to canvas --&gt; Display alert()</pre>
+```
+Main thread: Render circles to canvas --> Display alert()
+```
 
-<p>Después de un tiempo, JavaScript ganó algunas herramientas que ayudaron con dichos problemas. <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> permiten que se envíe parte del procesamiento de JavaScript a un hilo separado, llamado worker con el fin de que puedan ejecutar múltiples pedazos de JavaScript en simultáneo. Generalmente se usará un worker para ejectuar procesos de mucho consumo del hilo principal (main thread) con el fin de que no se bloquee la interacción del usuario.</p>
+Después de un tiempo, JavaScript ganó algunas herramientas que ayudaron con dichos problemas. [Web workers](/es/docs/Web/API/Web_Workers_API) permiten que se envíe parte del procesamiento de JavaScript a un hilo separado, llamado worker con el fin de que puedan ejecutar múltiples pedazos de JavaScript en simultáneo. Generalmente se usará un worker para ejectuar procesos de mucho consumo del hilo principal (main thread) con el fin de que no se bloquee la interacción del usuario.
 
-<pre class="notranslate">  Main thread: Task A --&gt; Task C
-Worker thread: Expensive task B</pre>
+```
+  Main thread: Task A --> Task C
+Worker thread: Expensive task B
+```
 
-<p>Con esto en mente, miremos el ejemplo <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">véalo ejecutándose en vivo</a>) nuevamente con la consola de JavaScript del navegador abierta. Esto es una re-escritura del ejemplo anterior que calculaba 10 millones de fechas en hilos worker separados. Ahora si se clickea el botón, el navegador tiene permitido mostrar el párrafo antes de que las fechas haya terminado de calcularse. La primer operación ya no bloquea a la segunda.</p>
+Con esto en mente, miremos el ejemplo [simple-sync-worker.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html) ([véalo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html)) nuevamente con la consola de JavaScript del navegador abierta. Esto es una re-escritura del ejemplo anterior que calculaba 10 millones de fechas en hilos worker separados. Ahora si se clickea el botón, el navegador tiene permitido mostrar el párrafo antes de que las fechas haya terminado de calcularse. La primer operación ya no bloquea a la segunda.
 
-<h2 id="Código_asincrónico">Código asincrónico</h2>
+## Código asincrónico
 
-<p>Los web workers son muy útiles, pero tienen limitaciones. La mayor es que no pueden acceder al {{Glossary("DOM")}} — no se puede logar que un worker modifique directamente algo de la UI. No se puede representar 1 millón de círculos azules en un worker; básicamente solo puede hacer el cálculo numérico.</p>
+Los web workers son muy útiles, pero tienen limitaciones. La mayor es que no pueden acceder al {{Glossary("DOM")}} — no se puede logar que un worker modifique directamente algo de la UI. No se puede representar 1 millón de círculos azules en un worker; básicamente solo puede hacer el cálculo numérico.
 
-<p>El segundo problema es que a pesar de que el código se ejecuta en un worker no es bloqueador, es simplemente sincrónico. Esto se convierte en un problema cuando una función depender en los resultados de múltiples procesos previos para funcionar. Considere el siguiente diagrama de hilos:</p>
+El segundo problema es que a pesar de que el código se ejecuta en un worker no es bloqueador, es simplemente sincrónico. Esto se convierte en un problema cuando una función depender en los resultados de múltiples procesos previos para funcionar. Considere el siguiente diagrama de hilos:
 
-<pre class="notranslate">Main thread: Task A --&gt; Task B</pre>
+```
+Main thread: Task A --> Task B
+```
 
-<p>En este caso, digamos que la Tarea A (Task A) está haciendo algo como buscando una imagen de un servidor y la Tarea B (Task B) luego hace algo con la imagen, como aplicarle un filtro. Si se ejecuta la Tarea A y luego inmediatamente se trata de ejecutar la Tarea B, se obtendrá un error, porque la imagen todavía no estará disponible.</p>
+En este caso, digamos que la Tarea A (Task A) está haciendo algo como buscando una imagen de un servidor y la Tarea B (Task B) luego hace algo con la imagen, como aplicarle un filtro. Si se ejecuta la Tarea A y luego inmediatamente se trata de ejecutar la Tarea B, se obtendrá un error, porque la imagen todavía no estará disponible.
 
-<pre class="notranslate">  Main thread: Task A --&gt; Task B --&gt; |Task D|
-Worker thread: Task C -----------&gt; |      |</pre>
+```
+  Main thread: Task A --> Task B --> |Task D|
+Worker thread: Task C -----------> |      |
+```
 
-<p>En este caso, digamos que la Tarea D hace uso de los resultados de la Tarea B y la Tarea C. Se se puede garantizar que esos resultados estarán disponibles al mismo tiempo, entonces tal vez estemos OK, pero es poco probable. Si la Tarea D trata de ejecutarse cuando uno de sus inputs no está disponible, disparará un error.</p>
+En este caso, digamos que la Tarea D hace uso de los resultados de la Tarea B y la Tarea C. Se se puede garantizar que esos resultados estarán disponibles al mismo tiempo, entonces tal vez estemos OK, pero es poco probable. Si la Tarea D trata de ejecutarse cuando uno de sus inputs no está disponible, disparará un error.
 
-<p>Para arreglar dichos problemas, los navegadores nos permiten ejecutar ciertas operaciones asincrónicamente. Características como las <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> (Promesas) permiten establecer la ejecución de una operación (por ejemplo, buscar una imagen desde un servidor), y luego esperar hasta que el resultado sea retornado antes de ejecutar otra operación. </p>
+Para arreglar dichos problemas, los navegadores nos permiten ejecutar ciertas operaciones asincrónicamente. Características como las [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) (Promesas) permiten establecer la ejecución de una operación (por ejemplo, buscar una imagen desde un servidor), y luego esperar hasta que el resultado sea retornado antes de ejecutar otra operación.
 
-<pre class="notranslate">Main thread: Task A                   Task B
-    Promise:      |__async operation__|</pre>
+```
+Main thread: Task A                   Task B
+    Promise:      |__async operation__|
+```
 
-<p>Como la operación está sucediendo en otro lugar, el hilo principal no está bloqueado mientras la operación asincrónica está siendo procesada.</p>
+Como la operación está sucediendo en otro lugar, el hilo principal no está bloqueado mientras la operación asincrónica está siendo procesada.
 
-<p>Vamos a empezar a ver cómo se puede escribir código asincrónico en el próximo artículo. Cosas emocionantes, ¿eh? ¡Siga leyendo!</p>
+Vamos a empezar a ver cómo se puede escribir código asincrónico en el próximo artículo. Cosas emocionantes, ¿eh? ¡Siga leyendo!
 
-<h2 id="Conclusión">Conclusión</h2>
+## Conclusión
 
-<p>El diseño del software moderno gira cada más entorno a la programación asincrónica, para permiterle a los programas hacer más de una cosa a la vez. A medida que use nuevas y más poderosas APIs, encontrará más casos donde la única forma de realizar las cosas es asincrónicamente. Era muy difícil escribir el código asincrónico. Todavía lleva tiempo acostumbrarse, pero se ha vuelto mucho más sencillo. En el resto de este módulo, exploraremos porqué el código asincrónico importa y cómo diseñar código que evite algunos de los problemas que hemos descrito en este artículo.</p>
+El diseño del software moderno gira cada más entorno a la programación asincrónica, para permiterle a los programas hacer más de una cosa a la vez. A medida que use nuevas y más poderosas APIs, encontrará más casos donde la única forma de realizar las cosas es asincrónicamente. Era muy difícil escribir el código asincrónico. Todavía lleva tiempo acostumbrarse, pero se ha vuelto mucho más sencillo. En el resto de este módulo, exploraremos porqué el código asincrónico importa y cómo diseñar código que evite algunos de los problemas que hemos descrito en este artículo.
 
-<h2 id="En_este_módulo">En este módulo</h2>
+## En este módulo
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">Conceptos generales de programación asincrónica</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducción a JavaScript asincrónico</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">JavaScript asincrónico cooperativo: Timeouts e intervalos</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Programación asincrónica elegante con Promesas</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Programación asincrónica más sencilla con async y await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Eligiendo el correcto enfoque</a></li>
-</ul>
+- [Conceptos generales de programación asincrónica](/es/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [Introducción a JavaScript asincrónico](/es/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [JavaScript asincrónico cooperativo: Timeouts e intervalos](/es/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Programación asincrónica elegante con Promesas](/es/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Programación asincrónica más sencilla con async y await](/es/docs/Learn/JavaScript/Asynchronous/Async_await)
+- [Eligiendo el correcto enfoque](/es/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

@@ -3,44 +3,31 @@ title: Arrays
 slug: Learn/JavaScript/First_steps/Arrays
 translation_of: Learn/JavaScript/First_steps/Arrays
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
+## Arreglos o Matrices
 
-<h2 id="Arreglos_o_Matrices">Arreglos o Matrices</h2>
+En este último artículo de este módulo, veremos las matrices — una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear una matriz, recuperar, agregar y eliminar elementos almacenados en una matriz, y más.
 
-<p class="summary">En este último artículo de este módulo, veremos las matrices — una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear una matriz, recuperar, agregar y eliminar elementos almacenados en una matriz, y más.</p>
+| Prerrequisitos: | Conocimientos básicos de informática, una comprensión básica de HTML y CSS, una idea de lo que es JavaScript. |
+| --------------- | ------------------------------------------------------------------------------------------------------------- |
+| Objectivo:      | Para entender qué son las matrices y cómo manipularlas en JavaScript.                                         |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerrequisitos:</th>
-   <td>Conocimientos básicos de informática, una comprensión básica de HTML y CSS, una idea de lo que es JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectivo:</th>
-   <td>Para entender qué son las matrices y cómo manipularlas en JavaScript.</td>
-  </tr>
- </tbody>
-</table>
+## ¿Qué es una matriz?
 
-<h2 id="¿Qué_es_una_matriz">¿Qué es una matriz?</h2>
+Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Los objetos de matriz pueden almacenarse en variables y tratarse de la misma manera que cualquier otro tipo de valor, la diferencia es que podemos acceder individualmente a cada valor dentro de la lista y hacer cosas útiles y eficientes con la lista, como recorrerlo con un bucle y hacer una misma cosa a cada valor. Tal vez tenemos una serie de productos y sus precios almacenados en una matriz, y queremos recorrerlos e imprimirlos en una factura, sumando todos los precios e imprimiendo el total en la parte inferior.
 
-<p>Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Los objetos de matriz pueden almacenarse en variables y tratarse de la misma manera que cualquier otro tipo de valor, la diferencia es que podemos acceder individualmente a cada valor dentro de la lista y hacer cosas útiles y eficientes con la lista, como recorrerlo con un bucle y hacer una misma cosa a cada valor. Tal vez tenemos una serie de productos y sus precios almacenados en una matriz, y queremos recorrerlos e imprimirlos en una factura, sumando todos los precios e imprimiendo el total en la parte inferior.</p>
+Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.
 
-<p>Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.</p>
+Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), si lo prefieres).
 
-<p>Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir en consola</a> en una pestaña o ventana separadas, o usar la <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">consola de desarrollador de navegador</a>, si lo prefieres).</p>
-
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;JavaScript console&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -88,14 +75,14 @@ translation_of: Learn/JavaScript/First_steps/Arrays
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -103,12 +90,12 @@ translation_of: Learn/JavaScript/First_steps/Arrays
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class','input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length &gt; 1) {
+      if(document.querySelectorAll('div').length > 1) {
         inputForm.focus();
       }
 
@@ -138,188 +125,218 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
-</div>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-<h3 id="Creando_una_matriz">Creando una matriz</h3>
+### Creando una matriz
 
-<p>Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas.</p>
+Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas.
 
-<ol>
- <li>Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
-  <pre class="brush: js">let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-shopping;</pre>
- </li>
- <li>En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
-  <pre class="brush: js">let sequence = [1, 1, 2, 3, 5, 8, 13];
-let random = ['tree', 795, [0, 1, 2]];</pre>
- </li>
- <li>Intenta creando un par de matrices por tu cuenta, antes de continuar.</li>
-</ol>
+1.  Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
 
-<h3 id="Accediendo_y_modificando_elementos_de_la_matriz">Accediendo y modificando elementos de la matriz</h3>
+    ```js
+    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    shopping;
+    ```
 
-<p>Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que <a href="/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">accediste a las letras de una cadena</a>.</p>
+2.  En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
 
-<ol>
- <li>Ingresa lo siguiente en tu consola:
-  <pre class="brush: js">shopping[0];
-// returns "bread"</pre>
- </li>
- <li>también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
-  <pre class="brush: js">shopping[0] = 'tahini';
-shopping;
-// shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
+    ```js
+    let sequence = [1, 1, 2, 3, 5, 8, 13];
+    let random = ['tree', 795, [0, 1, 2]];
+    ```
 
-  <div class="note"><strong>Nota</strong>: Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!</div>
- </li>
- <li>Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz <code>random</code> (ver sección anterior), podríamos hacer algo como esto:
-  <pre class="brush: js">random[2][2];</pre>
- </li>
- <li>Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.</li>
-</ol>
+3.  Intenta creando un par de matrices por tu cuenta, antes de continuar.
 
-<h3 id="Encontrar_la_longitud_de_una_matriz">Encontrar la longitud de una matriz</h3>
+### Accediendo y modificando elementos de la matriz
 
-<p>Puedes averiguar la longitud de una matriz (cuántos elementos contiene) exactamente de la misma manera que determinas la longitud (en caracteres) de una cadena— utilizando la propiedad {{jsxref("Array.prototype.length","length")}}. Prueba lo siguiente:</p>
+Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character).
 
-<pre class="brush: js">sequence.length;
-// should return 7</pre>
+1.  Ingresa lo siguiente en tu consola:
 
-<p>Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos de la matriz. Así por ejemplo:</p>
+    ```js
+    shopping[0];
+    // returns "bread"
+    ```
 
-<pre class="brush: js">let sequence = [1, 1, 2, 3, 5, 8, 13];
-for (var i = 0; i &lt; sequence.length; i++) {
+2.  también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
+
+    ```js
+    shopping[0] = 'tahini';
+    shopping;
+    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+    ```
+
+    > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
+
+3.  Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+
+    ```js
+    random[2][2];
+    ```
+
+4.  Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
+
+### Encontrar la longitud de una matriz
+
+Puedes averiguar la longitud de una matriz (cuántos elementos contiene) exactamente de la misma manera que determinas la longitud (en caracteres) de una cadena— utilizando la propiedad {{jsxref("Array.prototype.length","length")}}. Prueba lo siguiente:
+
+```js
+sequence.length;
+// should return 7
+```
+
+Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos de la matriz. Así por ejemplo:
+
+```js
+let sequence = [1, 1, 2, 3, 5, 8, 13];
+for (var i = 0; i < sequence.length; i++) {
   console.log(sequence[i]);
-}</pre>
+}
+```
 
-<p>Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemente, éste código dice:</p>
+Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemente, éste código dice:
 
-<ol>
- <li>Comienza el bucle en el elemento de la posición 0 en la matriz.</li>
- <li>Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.</li>
- <li>Para cada elemento, imprime en la consola del navegador con <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code>.</li>
-</ol>
+1.  Comienza el bucle en el elemento de la posición 0 en la matriz.
+2.  Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
+3.  Para cada elemento, imprime en la consola del navegador con [`console.log()`](/en-US/docs/Web/API/Console/log).
 
-<h2 id="Alguno_métodos_de_matriz_útiles">Alguno métodos de matriz útiles</h2>
+## Alguno métodos de matriz útiles
 
-<p>En esta sección veremos algunos métodos bastante útiles relacionados con matrices que nos permiten dividir cadenas en elementos de matriz y viceversa, y agregar nuevos elementos en matrices.</p>
+En esta sección veremos algunos métodos bastante útiles relacionados con matrices que nos permiten dividir cadenas en elementos de matriz y viceversa, y agregar nuevos elementos en matrices.
 
-<h3 id="Conversión_entre_matrices_y_cadenas">Conversión entre matrices y cadenas</h3>
+### Conversión entre matrices y cadenas
 
-<p>A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en una matriz.</p>
+A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en una matriz.
 
-<div class="note">
-<p><strong>Nota</strong>: Bien, esto es técnicamente un método de cadena, no un método de matriz, pero lo hemos incluido con las matrices, ya que va bien aquí.</p>
+> **Nota:** Bien, esto es técnicamente un método de cadena, no un método de matriz, pero lo hemos incluido con las matrices, ya que va bien aquí.
+
+1.  Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
+
+    ```js
+    let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+    ```
+
+2.  Ahora dividámoslo en cada coma:
+
+    ```js
+    let myArray = myData.split(',');
+    myArray;
+    ```
+
+3.  Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
+
+    ```js
+    myArray.length;
+    myArray[0]; // the first item in the array
+    myArray[1]; // the second item in the array
+    myArray[myArray.length-1]; // the last item in the array
+    ```
+
+4.  También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
+
+    ```js
+    let myNewString = myArray.join(',');
+    myNewString;
+    ```
+
+5.  Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
+
+    ```js
+    let dogNames = ['Rocket','Flash','Bella','Slugger'];
+    dogNames.toString(); //Rocket,Flash,Bella,Slugger
+    ```
+
+### Agregar y eliminar elementos de la matriz
+
+Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos de la matriz — echemos un vistazo a esto ahora. Usaremos la matriz `myArray` con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea la matriz en tu consola:
+
+```js
+let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
+```
+
+Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
+
+1.  primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
+
+    ```js
+    myArray.push('Cardiff');
+    myArray;
+    myArray.push('Bradford', 'Brighton');
+    myArray;
+    ```
+
+2.  La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
+
+    ```js
+    let newLength = myArray.push('Bristol');
+    myArray;
+    newLength;
+    ```
+
+3.  Eliminar el último elemento de una matriz es tan simple como ejecutar `pop()` en ella. Prueba esto:
+
+    ```js
+    myArray.pop();
+    ```
+
+4.  El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
+
+    ```js
+    let removedItem = myArray.pop();
+    myArray;
+    removedItem;
+    ```
+
+{{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio de la matriz, no al final.
+
+1.  Primero `unshift()` — prueba el siguiente comando:
+
+    ```js
+    myArray.unshift('Edinburgh');
+    myArray;
+    ```
+
+2.  Ahora `shift()`; prueba estos!
+
+    ```js
+    let removedItem = myArray.shift();
+    myArray;
+    removedItem;
+    ```
+
+## Aprendizaje activo: ¡Imprimiendo esos productos!
+
+Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
+
+1.  Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
+2.  En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el bucle que el [bucle for](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
+3.  justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Converting between strings and arrays](#converting_between_strings_and_arrays) de este artículo.
+4.  Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
+5.  Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) para hacer esto.
+6.  Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la ionformación correcta artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 150px;">
+
+<ul>
+
+</ul>
+
+<p></p>
+
 </div>
 
-<ol>
- <li>Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
-  <pre class="brush: js">let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';</pre>
- </li>
- <li>Ahora dividámoslo en cada coma:
-  <pre class="brush: js">let myArray = myData.split(',');
-myArray;</pre>
- </li>
- <li>Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
-  <pre class="brush: js">myArray.length;
-myArray[0]; // the first item in the array
-myArray[1]; // the second item in the array
-myArray[myArray.length-1]; // the last item in the array</pre>
- </li>
- <li>También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
-  <pre class="brush: js">let myNewString = myArray.join(',');
-myNewString;</pre>
- </li>
- <li>Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. <code>toString()</code> es posiblemente  más simple que <code>join()</code> ya que no toma un parámetro, pero es más limitado. Con <code>join()</code> puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
-  <pre class="brush: js">let dogNames = ['Rocket','Flash','Bella','Slugger'];
-dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
- </li>
-</ol>
+<h2>Editable code</h2>
 
-<h3 id="Agregar_y_eliminar_elementos_de_la_matriz">Agregar y eliminar elementos de la matriz</h3>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<p>Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos de la matriz — echemos un vistazo a esto ahora. Usaremos la matriz <code>myArray</code> con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea la matriz en tu consola:</p>
-
-<pre class="brush: js">let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];</pre>
-
-<p>Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.</p>
-
-<ol>
- <li>primero usemos <code>push()</code> — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
-
-  <pre class="brush: js">myArray.push('Cardiff');
-myArray;
-myArray.push('Bradford', 'Brighton');
-myArray;
-</pre>
- </li>
- <li>La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
-  <pre class="brush: js">let newLength = myArray.push('Bristol');
-myArray;
-newLength;</pre>
- </li>
- <li>Eliminar el último elemento de una matriz es tan simple como ejecutar <code>pop()</code> en ella. Prueba esto:
-  <pre class="brush: js">myArray.pop();</pre>
- </li>
- <li>El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
-  <pre class="brush: js">let removedItem = myArray.pop();
-myArray;
-removedItem;</pre>
- </li>
-</ol>
-
-<p>{{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de <code>push()</code> y <code>pop()</code>, respectivamente, excepto que funcionan al principio de la matriz, no al final.</p>
-
-<ol>
- <li>Primero <code>unshift()</code> — prueba el siguiente comando:
-
-  <pre class="brush: js">myArray.unshift('Edinburgh');
-myArray;</pre>
- </li>
- <li>Ahora <code>shift()</code>; prueba estos!
-  <pre class="brush: js">let removedItem = myArray.shift();
-myArray;
-removedItem;</pre>
- </li>
-</ol>
-
-<h2 id="Aprendizaje_activo_¡Imprimiendo_esos_productos!">Aprendizaje activo: ¡Imprimiendo esos productos!</h2>
-
-<p>Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:</p>
-
-<ol>
- <li>Debajo de <code>// number 1</code> hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda <code>products</code>.</li>
- <li>En la misma línea que el comentario <code>// number 2</code> es el comienzo de un ciclo for. En esta línea, actualmente tenemos <code>i &lt;= 0</code>, que es una prueba condicional que hace que el bucle que el <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">bucle for</a> se detenga inmediatamente, porque dice "detener cuando <code>i</code> es menor o igual 0", y  <code>i</code> comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando <code>i</code> no sea inferior a la longitud la matriz <code>products</code> .</li>
- <li>justo debajo del comentario <code>// number 3</code> queremos que escriba una línea de código que divide el elemento actual de la matriz (<code>nombre:precio</code>) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos de cadenas útiles</a> para obtener ayuda o, mejor aún, consulte la sección <a href="#converting_between_strings_and_arrays">Converting between strings and arrays</a> de este artículo.</li>
- <li>Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el <a href="/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">primer artículo de cadenas</a>.</li>
- <li>Hay una variable llamada <code>total</code> que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de <code>// number 4</code>) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">operador de asignación</a> para hacer esto.</li>
- <li>Queremos que cambies la línea justo de bajo <code>// number 5</code> para que la variable <code>itemText</code> se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la ionformación correcta artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.</li>
-</ol>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 150px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 410px;width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 var list = document.querySelector('.output ul');
 var totalBox = document.querySelector('.output p');
 var total = 0;
@@ -332,7 +349,7 @@ totalBox.textContent = '';
                 'Trousers:31.99'
                 'Shoes:23.99';
 
-for (var i = 0; i &lt;= 0; i++) { // number 2
+for (var i = 0; i <= 0; i++) { // number 2
   // number 3
 
   // number 4
@@ -346,15 +363,16 @@ for (var i = 0; i &lt;= 0; i++) { // number 2
 }
 
 totalBox.textContent = 'Total: $' + total.toFixed(2);
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -383,7 +401,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i &lt; products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -430,9 +448,11 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<pre class="brush: css">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -450,48 +470,42 @@ h2 {
 body {
   margin: 10px;
   background-color: #f5f9fa;
-}</pre>
+}
+```
+
+{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}
+
+## Aprendizaje Activo: Top 5 búsquedas
+
+Un buen uso para los métodos de matriz como {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} es cuando estás manteniendo un registro de elementos actualmente activos en una aplicación web. En una escena animada por ejemplo, es posible que tengas una matriz de objetos que representan los gráficos de fondo que se muestran actualmente, y es posible que sólo desees que se muestren 50 a la vez, por razones de rendimiento o desorden. A medida que se crean y agregan nuevos objetos a la matriz, se puede eliminar los más antiguos de la matriz para mantener el número deseado.
+
+En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un sitio de búsqueda falso, con un cuadro de búsqueda. La idea es que cuando los términos se ingresan en un cuadro de búsqueda, se muetren el top 5 de términos de búsqueda previos en la lista. Cuando el número de términos supera el 5, el último término comienza a borrarse cada vez que agregas un nuevo término a la parte superior, por lo que siempre se muestran los 5 términos anteriores.
+
+> **Nota:** En una aplicación de búsqueda real, probablemente puedas hacer clic en los términos de búsqueda anteriores para volver a los términos de búsqueda anteriores y ¡se motrarán los resultados de búsqueda reales! Solamente lo mantendremos simple por ahora.
+
+Para completar la aplicación necesitamos:
+
+1.  Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio de la matriz. Esto se puede recuperar usando `searchInput.value`.
+2.  Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final de la matriz.
+
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="min-height: 150px;">
+
+<input type="text"><button>Search</button>
+
+<ul>
+
+</ul>
+
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}</p>
+<h2>Editable code</h2>
 
-<h2 id="Aprendizaje_Activo_Top_5_búsquedas">Aprendizaje Activo: Top 5 búsquedas</h2>
-
-<p>Un buen uso para los métodos de matriz como {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} es cuando estás manteniendo un registro de elementos actualmente activos en una aplicación web. En una escena animada por ejemplo, es posible que tengas una matriz de objetos que representan los gráficos de fondo que se muestran actualmente, y es posible que sólo desees que se muestren 50 a la vez, por razones de rendimiento o desorden. A medida que se crean y agregan nuevos objetos a la matriz, se puede eliminar los más antiguos de la matriz para mantener el número deseado.</p>
-
-<p>En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un sitio de búsqueda falso, con un cuadro de búsqueda. La idea es que cuando los términos se ingresan en un cuadro de búsqueda, se muetren el top 5 de términos de búsqueda previos en la lista. Cuando el número de términos supera el 5, el último término comienza a borrarse cada vez que agregas un nuevo término a la parte superior, por lo que siempre se muestran los 5 términos anteriores.</p>
-
-<div class="note">
-<p><strong>Nota</strong>: En una aplicación de búsqueda real, probablemente puedas hacer clic en los términos de búsqueda anteriores para volver a los términos de búsqueda anteriores y ¡se motrarán los resultados de búsqueda reales! Solamente lo mantendremos simple por ahora.</p>
-</div>
-
-<p>Para completar la aplicación necesitamos:</p>
-
-<ol>
- <li>Agregar una línea debajo del comentario <code>// number 1</code> que agrega el valor actual ingresado en la entrada de la búsqueda al inicio de la matriz. Esto se puede recuperar usando <code>searchInput.value</code>.</li>
- <li>Agrega una línea debajo del comentario <code>// number 2</code> que elimina el valor actualmente al final de la matriz.</li>
-</ol>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
-&lt;div class="output" style="min-height: 150px;"&gt;
-
-&lt;input type="text"&gt;&lt;button&gt;Search&lt;/button&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
 
-&lt;textarea id="code" class="playable-code" style="height: 370px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 var list = document.querySelector('.output ul');
 var searchInput = document.querySelector('.output input');
 var searchBtn = document.querySelector('.output button');
@@ -510,7 +524,7 @@ searchBtn.onclick = function() {
     list.innerHTML = '';
 
     // loop through the array, and display all the search terms in the list
-    for (var i = 0; i &lt; myHistory.length; i++) {
+    for (var i = 0; i < myHistory.length; i++) {
       itemText = myHistory[i];
       var listItem = document.createElement('li');
       listItem.textContent = itemText;
@@ -518,7 +532,7 @@ searchBtn.onclick = function() {
     }
 
     // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length &gt;= 5) {
+    if (myHistory.length >= 5) {
       // number 2
 
     }
@@ -528,14 +542,16 @@ searchBtn.onclick = function() {
     searchInput.focus();
   }
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -553,9 +569,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -584,7 +602,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i &lt; myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length &gt;= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -630,36 +648,32 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Conclusión">Conclusión</h2>
+## Conclusión
 
-<p>Después de leer este artículo, estamos seguros de que estaras de acuerdo en que las matrices parecen bastante útiles; las verás aparecer en todas partes en JavaScript, a menudo en asociación con bucles para hacer una misma cosa con cada elemento de la matriz. Te enseñaremos todos los aspectos básicos útiles que hay que conocer sobre los bucles en el siguiente módulo, pero por ahora debes darte un aplauso y tomarte un merecido descanso; ¡has trabajado en todos los artículos de este módulo!</p>
+Después de leer este artículo, estamos seguros de que estaras de acuerdo en que las matrices parecen bastante útiles; las verás aparecer en todas partes en JavaScript, a menudo en asociación con bucles para hacer una misma cosa con cada elemento de la matriz. Te enseñaremos todos los aspectos básicos útiles que hay que conocer sobre los bucles en el siguiente módulo, pero por ahora debes darte un aplauso y tomarte un merecido descanso; ¡has trabajado en todos los artículos de este módulo!
 
-<p>Lo único que queda por hacer es trabajar a través de la evaluación de este módulo, que te pondrá a prueba tu comprensión de los de los artículos anteriores.</p>
+Lo único que queda por hacer es trabajar a través de la evaluación de este módulo, que te pondrá a prueba tu comprensión de los de los artículos anteriores.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a> — an advanced level guide to arrays and their cousins, typed arrays.</li>
- <li>{{jsxref("Array")}} — the <code>Array</code> object reference page — for a detailed reference guide to the features discussed in this page, and many more.</li>
-</ul>
+- [Indexed collections](/es/docs/Web/JavaScript/Guide/Indexed_collections) — an advanced level guide to arrays and their cousins, typed arrays.
+- {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-<h2 id="En_este_módulo">En este módulo</h2>
+## En este módulo
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript">¿Qué es JavaScript?</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/A_first_splash">Un primer acercamiento a JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_went_wrong">¿Qué salió mal? Troubleshooting JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables">Guardando la información que necesitas— Variables</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas">Matemáticas básicas en JavaScript — números y operadores</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Strings">Manejo de texto — cadenas en JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Arrays">Arreglos</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Silly_story_generator" rel="nofollow">Evaluaciones: Generador de historias absurdas</a></li>
-</ul>
+- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript)
+- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [¿Qué salió mal? Troubleshooting JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Guardando la información que necesitas— Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
+- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas)
+- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
+- [Métodos útiles para el manejo de cadenas](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
+- [Evaluaciones: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

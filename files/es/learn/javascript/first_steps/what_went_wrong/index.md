@@ -15,254 +15,253 @@ tags:
   - Tutorial
   - console.log
   - depurar
-  - 'l10n:priority'
+  - l10n:priority
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
-<div>{{LearnSidebar}}</div>
-
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</div>
-
-<p class="summary">Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.</p>
-
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerrequisitos:</th>
-   <td>Conocimientos básicos de informática, comprensión básica de HTML y CSS, comprensión de lo que es JavaScript.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Para ganar habilidad y confianza para comenzar a solucionar problemas en tu propio código.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Tipos_de_errores">Tipos de errores</h2>
-
-<p>En general, cuando haces algo mal en el código, hay dos tipos principales de errores con los que te encontrarás:</p>
-
-<ul>
- <li><strong>Errores de sintaxis</strong>: estos son errores de ortografía en tu código que provocan que tu programa no se ejecute en absoluto, o que deje de funcionar a mitad del camino — por lo general, también te proporcionarán algunos mensajes de error. Normalmente no es tan difícil corregirlos, ¡siempre y cuando estés familiarizado con las herramientas adecuadas y sepas qué significan los mensajes de error!</li>
- <li><strong>Errores lógicos</strong>: Estos son errores en los que la sintaxis realmente es correcta pero el código no hace lo que pretendías, lo cual significa que el programa se ejecuta pero da resultados incorrectos. A menudo, estos son más difíciles de arreglar que los errores sintácticos, ya que generalmente no hay un mensaje de error que te pueda orientar hacia la fuente del error.</li>
-</ul>
-
-<p>Bueno, tampoco es <em>así de simple</em> — a medida que profundices hay algunas otras diferencias. Pero las clasificaciones anteriores funcionarán en esta temprana etapa de tu carrera. Veremos ambos tipos en el futuro.</p>
-
-<h2 id="Un_ejemplo_erróneo">Un ejemplo erróneo</h2>
-
-<p>Para empezar, regresemos a nuestro juego de adivinan el número — excepto que esta vez vamos a explorar una versión que tiene algunos errores insertados deliberadamente. Ve a GitHub y haz una copia local de <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a> (puedes verlo <a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">en vivo aquí</a>).</p>
-
-<ol>
- <li>Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.</li>
- <li>Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!</li>
-</ol>
-
-<div class="note">
-<p><strong>Nota</strong>: ¡Posiblemente tengas tu propia versión del ejemplo del juego que no funciona, y quizás la quieras arreglar! Aún así nos gustaría que en el artículo trabajes con nuestra versión, para que puedas aprender las técnicas que estamos enseñando. Después puedes tratar de arreglar tu ejemplo.</p>
-</div>
-
-<p>En este punto, consultemos la consola del desarrollador para ver si podemos ver algún informe de error de sintaxis y luego tratar de solucionarlo. Abajo aprenderás cómo.</p>
-
-<h2 id="Solucionar_errores_de_sintaxis">Solucionar errores de sintaxis</h2>
-
-<p>Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola JavaScript de las herramientas para desarrolladores</a> (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.</p>
-
-<ol>
- <li>Ve a la pestaña dónde tienes abierto <code>number-game-errors.html</code> y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: <img alt="" src="https://mdn.mozillademos.org/files/13496/not-a-function.png" style="display: block; margin: 0 auto;"></li>
- <li>Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
-  <ul>
-   <li>Una "x" roja para indicar que se trata de un error.</li>
-   <li>Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"</li>
-   <li>Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.</li>
-   <li>El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.</li>
-   <li>El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.</li>
-  </ul>
- </li>
- <li>Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
-  <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
- </li>
- <li>El mensaje de error dice "<code>guessSubmit.addeventListener no es una función</code>", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn <em>nombre-de-característica</em>". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: <code><a href="/es/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
- <li>Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar <code>addeventListener</code> a <code>addEventListener</code> debería solucionar este problema. Hazlo ahora.</li>
-</ol>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
-<div class="note">
-<p><strong>Nota</strong>: Échale un vistazo a nuestra página de referencia <a href="/es/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" no es una función</a> para obtener más detalles sobre este error.</p>
-</div>
+Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.
 
-<h3 id="Errores_sintácticos_segunda_ronda">Errores sintácticos, segunda ronda</h3>
+| Prerrequisitos: | Conocimientos básicos de informática, comprensión básica de HTML y CSS, comprensión de lo que es JavaScript. |
+| --------------- | ------------------------------------------------------------------------------------------------------------ |
+| Objetivo:       | Para ganar habilidad y confianza para comenzar a solucionar problemas en tu propio código.                   |
 
-<ol>
- <li>Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.</li>
- <li>Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! <img alt="" src="https://mdn.mozillademos.org/files/13498/variable-is-null.png" style="display: block; margin: 0 auto;"></li>
- <li>Esta vez, el error que se informa es "<code>TypeError: lowOrHi es nulo</code>", en la línea 78.
-  <div class="note"><strong>Nota</strong>: <code><a href="/es/docs/Glossary/Null">Null</a></code> es un valor especial que significa "nada" o "sin valor". Por lo tanto, <code>lowOrHi</code> ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.</div>
+## Tipos de errores
 
-  <div class="note"><strong>Nota</strong>: Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque <code>checkGuess() {...}</code>). Como pronto aprenderás con más detalle en nuestro <a href="/es/docs/Learn/JavaScript/Building_blocks/Functions">artículo de funciones</a>, el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función <code>checkGuess()</code> se ejecutó en la línea 86.</div>
- </li>
- <li>Échale un vistazo a la línea 78 y verás el siguiente código:
-  <pre class="brush: js notranslate">lowOrHi.textContent = '¡El número es muy grande!';</pre>
- </li>
- <li>Esta línea está intentando establecer la propiedad <code>textContent</code> de la constante <code>lowOrHi</code> en una cadena de texto, pero no funciona porque <code>lowOrHi</code> no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de <code>lowOrHi</code> en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
-  <pre class="brush: js notranslate">const lowOrHi = document.querySelector('lowOrHi');</pre>
- </li>
- <li>En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es <code>null</code> después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
-  <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
+En general, cuando haces algo mal en el código, hay dos tipos principales de errores con los que te encontrarás:
 
-  <div class="note">
-  <p><strong>Nota</strong>: <code><a href="/es/docs/Web/API/Console/log">console.log()</a></code> es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de <code>lowOrHi</code> en la consola tan pronto como intentemos configurarlo en la línea 48.</p>
-  </div>
- </li>
- <li>Guarda y refresca, y ahora deberías ver el resultado de <code>console.log()</code> en tu consola. <img alt="" src="https://mdn.mozillademos.org/files/13494/console-log-output.png" style="display: block; margin: 0 auto;">Efectivamente, el valor de <code>lowOrHi</code>es <code>null</code> en este punto, así que definitivamente hay un problema con la línea 48.</li>
- <li>Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método <code><a href="/es/docs/Web/API/Document/querySelector">document.querySelector()</a></code> para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
-  <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
- </li>
- <li>Entonces necesitamos un selector de clase aquí, que comienza con un punto (<code>.</code>), pero el selector que se pasa al método <code>querySelector()</code> en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar <code>lowOrHi</code> a <code>.lowOrHi</code> en la línea 48.</li>
- <li>Ahora guarda y refresca nuevamente, y tu declaración <code>console.log()</code> debería devolver el elemento <code>&lt;p&gt;</code> que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea <code>console.log()</code>, o mantenerla como referencia más adelante — tu elección.</li>
-</ol>
+- **Errores de sintaxis**: estos son errores de ortografía en tu código que provocan que tu programa no se ejecute en absoluto, o que deje de funcionar a mitad del camino — por lo general, también te proporcionarán algunos mensajes de error. Normalmente no es tan difícil corregirlos, ¡siempre y cuando estés familiarizado con las herramientas adecuadas y sepas qué significan los mensajes de error!
+- **Errores lógicos**: Estos son errores en los que la sintaxis realmente es correcta pero el código no hace lo que pretendías, lo cual significa que el programa se ejecuta pero da resultados incorrectos. A menudo, estos son más difíciles de arreglar que los errores sintácticos, ya que generalmente no hay un mensaje de error que te pueda orientar hacia la fuente del error.
 
-<div class="note">
-<p><strong>Nota</strong>: Consulta nuestra página de referencia <a href="/es/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" (no) es "y"</a> para obtener más detalles sobre este error.</p>
-</div>
+Bueno, tampoco es _así de simple_ — a medida que profundices hay algunas otras diferencias. Pero las clasificaciones anteriores funcionarán en esta temprana etapa de tu carrera. Veremos ambos tipos en el futuro.
 
-<h3 id="Errores_sintácticos_tercera_ronda">Errores sintácticos, tercera ronda</h3>
+## Un ejemplo erróneo
 
-<ol>
- <li>Ahora, si intentas jugar de nuevo, deberías tener más éxito — el juego debería funcionar absolutamente bien, hasta que termines el juego, ya sea adivinando el número correcto o porque agotaste los intentos.</li>
- <li>En ese momento, el juego vuelve a fallar y lanza el mismo error que obtuvimos al principio: "<code>TypeError: resetButton.addeventListener no es una función</code>". Sin embargo, esta vez aparece como procedente de la línea 94.</li>
- <li>Mirando la línea número 94, es fácil ver que hemos cometido el mismo error aquí. Nuevamente, solo necesitamos cambiar <code>addeventListener</code> a <code>.addEventListener</code>. Hazlo ahora.</li>
-</ol>
+Para empezar, regresemos a nuestro juego de adivinan el número — excepto que esta vez vamos a explorar una versión que tiene algunos errores insertados deliberadamente. Ve a GitHub y haz una copia local de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (puedes verlo [en vivo aquí](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
 
-<h2 id="Un_error_de_lógica">Un error de lógica</h2>
+1.  Para comenzar, abre la copia local dentro de tu editor de texto favorito y tu navegador.
+2.  Intenta jugarlo — notarás que cuando presionas el botón "Enviar respuesta", ¡no funciona!
 
-<p>En este punto, el juego debería trabajar bien, sin embargo, después de jugar varias veces, sin duda notarás que el número "aleatorio" que debes adivinar siempre es 1. ¡Definitivamente no es exactamente como queremos que se desarrolle el juego!</p>
+> **Nota:** ¡Posiblemente tengas tu propia versión del ejemplo del juego que no funciona, y quizás la quieras arreglar! Aún así nos gustaría que en el artículo trabajes con nuestra versión, para que puedas aprender las técnicas que estamos enseñando. Después puedes tratar de arreglar tu ejemplo.
 
-<p>Obviamente hay un problema en la lógica del juego en alguna parte — el juego no devuelve un error; simplemente no está jugando bien.</p>
+En este punto, consultemos la consola del desarrollador para ver si podemos ver algún informe de error de sintaxis y luego tratar de solucionarlo. Abajo aprenderás cómo.
 
-<ol>
- <li>Busca la variable <code>randomNumber</code> y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
+## Solucionar errores de sintaxis
 
-  <pre class="brush: js notranslate">let randomNumber = Math.floor(Math.random()) + 1;</pre>
-  Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:</li>
- <li>
-  <pre class="brush: js notranslate">randomNumber = Math.floor(Math.random()) + 1;</pre>
- </li>
- <li>Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga <code>console.log()</code> — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
-  <pre class="brush: js notranslate">console.log(randomNumber);</pre>
- </li>
- <li>Guarda y refresca, luego juega un par de veces — verás que <code>randomNumber</code> es igual a 1 en cada punto en el que se registra en la consola.</li>
-</ol>
+Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
-<h3 id="Desentrañando_la_lógica">Desentrañando la lógica</h3>
+1.  Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
+2.  Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
-<p>Para solucionar esto, consideremos cómo está funcionando esta línea. Primero, invocamos a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code>, que genera un número decimal aleatorio entre 0 y 1, p. ej. 0.5675493843.</p>
+    - Una "x" roja para indicar que se trata de un error.
+    - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
+    - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
+    - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
+    - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
 
-<pre class="brush: js notranslate">Math.random()</pre>
+3.  Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
 
-<p>A continuación, pasamos el resultado de invocar a <code>Math.random()</code> a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, que redondea el número pasado al número entero más cercano. Luego agregamos 1 a ese resultado:</p>
+    ```js
+    guessSubmit.addeventListener('click', checkGuess);
+    ```
 
-<pre class="notranslate">Math.floor(Math.random()) + 1</pre>
+4.  El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
+5.  Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
 
-<p>Redondear un número decimal aleatorio entre 0 y 1 siempre devolverá 0, por lo que agregarle 1 siempre devolverá 1. Necesitamos multiplicar el número aleatorio por 100 antes de redondearlo hacia abajo. Lo siguiente nos daría un número aleatorio entre 0 y 99:</p>
+> **Nota:** Échale un vistazo a nuestra página de referencia [TypeError: "x" no es una función](/es/docs/Web/JavaScript/Reference/Errors/Not_a_function) para obtener más detalles sobre este error.
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100);</pre>
+### Errores sintácticos, segunda ronda
 
-<p>De ahí que queramos sumar 1, para darnos un número aleatorio entre 1 y 100:</p>
+1.  Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
+2.  Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
+3.  Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100) + 1;</pre>
+    > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
-<p>Intenta actualizar ambas líneas de esta manera, luego guarda y refresca — ¡el juego ahora debería trabajar como pretendemos!</p>
+    > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
 
-<h2 id="Otros_errores_comunes">Otros errores comunes</h2>
+4.  Échale un vistazo a la línea 78 y verás el siguiente código:
 
-<p>Hay otros errores comunes que encontrarás en tu código. Esta sección destaca la mayoría de ellos.</p>
+    ```js
+    lowOrHi.textContent = '¡El número es muy grande!';
+    ```
 
-<h3 id="SyntaxError_falta_antes_de_la_declaración">SyntaxError: <code>falta ; antes de la declaración</code></h3>
+5.  Esta línea está intentando establecer la propiedad `textContent` de la constante `lowOrHi` en una cadena de texto, pero no funciona porque `lowOrHi` no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de `lowOrHi` en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
 
-<p>Este error generalmente significa que has omitido un punto y coma al final de una de sus líneas de código, pero a veces puede ser más críptico. Por ejemplo, si cambiamos esta línea dentro de la función <code>checkGuess()</code>:</p>
+    ```js
+    const lowOrHi = document.querySelector('lowOrHi');
+    ```
 
-<pre class="brush: js notranslate">var userGuess = Number(guessField.value);</pre>
+6.  En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es `null` después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
 
-<p>a</p>
+    ```js
+    console.log(lowOrHi);
+    ```
 
-<pre class="brush: js notranslate">var userGuess === Number(guessField.value);</pre>
+    > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-<p>Lanza este error porque cree que estás intentando hacer algo diferente. Debes asegurarte de no confundir el operador de asignación (<code>=</code>), que establece una variable para que sea igual a un valor — con el operador de igualdad estricta (<code>===</code>), que prueba si un valor es igual a otro y devuelve un resultado <code>true</code>/<code>false</code>.</p>
+7.  Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+8.  Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
-<div class="note">
-<p><strong>Nota</strong>: Ve más detalles sobre este error en nuestra página de referencia <a href="/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: falta ; antes de la declaración</a>.</p>
-</div>
+    ```js
+    <p class="lowOrHi"></p>
+    ```
 
-<h3 id="El_programa_siempre_dice_que_has_ganado_independientemente_de_lo_que_hayas_ingresado">El programa siempre dice que has ganado, independientemente de lo que hayas ingresado</h3>
+9.  Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
+10. Ahora guarda y refresca nuevamente, y tu declaración `console.log()` debería devolver el elemento `<p>` que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea `console.log()`, o mantenerla como referencia más adelante — tu elección.
 
-<p>Este podría ser otro síntoma de confusión entre la asignación y los operadores de igualdad estricta. Por ejemplo, si cambiamos esta línea dentro de <code>checkGuess()</code>:</p>
+> **Nota:** Consulta nuestra página de referencia [TypeError: "x" (no) es "y"](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para obtener más detalles sobre este error.
 
-<pre class="brush: js notranslate">if (userGuess === randomNumber) {</pre>
+### Errores sintácticos, tercera ronda
 
-<p>a</p>
+1.  Ahora, si intentas jugar de nuevo, deberías tener más éxito — el juego debería funcionar absolutamente bien, hasta que termines el juego, ya sea adivinando el número correcto o porque agotaste los intentos.
+2.  En ese momento, el juego vuelve a fallar y lanza el mismo error que obtuvimos al principio: "`TypeError: resetButton.addeventListener no es una función`". Sin embargo, esta vez aparece como procedente de la línea 94.
+3.  Mirando la línea número 94, es fácil ver que hemos cometido el mismo error aquí. Nuevamente, solo necesitamos cambiar `addeventListener` a `.addEventListener`. Hazlo ahora.
 
-<pre class="brush: js notranslate">if (userGuess = randomNumber) {</pre>
+## Un error de lógica
 
-<p>la prueba siempre devolvería <code>true</code>, haciendo que el programa informe que se ganó el juego. ¡Ten cuidado!</p>
+En este punto, el juego debería trabajar bien, sin embargo, después de jugar varias veces, sin duda notarás que el número "aleatorio" que debes adivinar siempre es 1. ¡Definitivamente no es exactamente como queremos que se desarrolle el juego!
 
-<h3 id="SyntaxError_falta_después_de_la_lista_de_argumentos">SyntaxError: <code>falta ) después de la lista de argumentos</code></h3>
+Obviamente hay un problema en la lógica del juego en alguna parte — el juego no devuelve un error; simplemente no está jugando bien.
 
-<p>Este es bastante simple — generalmente significa que olvidaste colocar el paréntesis de cierre al final de una llamada a una función/método.</p>
+1.  Busca la variable `randomNumber` y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
 
-<div class="note">
-<p><strong>Nota</strong>: Ve más detalles sobre este error en nuestra página de referencia <a href="/es/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: falta ) después de la lista de argumentos</a>.</p>
-</div>
+    ```js
+    let randomNumber = Math.floor(Math.random()) + 1;
+    ```
 
-<h3 id="SyntaxError_falta_después_de_la_propiedad_id">SyntaxError: <code>falta : después de la propiedad id</code></h3>
+    Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-<p>Este error generalmente se relaciona con un objeto JavaScript formado incorrectamente, pero en este caso logramos obtenerlo cambiando</p>
+2.  ```js
+    randomNumber = Math.floor(Math.random()) + 1;
+    ```
+3.  Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
-<pre class="brush: js notranslate">function checkGuess() {</pre>
+    ```js
+    console.log(randomNumber);
+    ```
 
-<p>a</p>
+4.  Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
-<pre class="brush: js notranslate">function checkGuess( {</pre>
+### Desentrañando la lógica
 
-<p>Esto ha hecho que el navegador piense que estamos tratando de pasar el contenido de la función a la función como un argumento. ¡Cuidado con esos paréntesis!</p>
+Para solucionar esto, consideremos cómo está funcionando esta línea. Primero, invocamos a [`Math.random()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que genera un número decimal aleatorio entre 0 y 1, p. ej. 0.5675493843.
 
-<h3 id="SyntaxError_falta_después_del_cuerpo_de_la_función">SyntaxError: <code>falta } después del cuerpo de la función</code></h3>
+```js
+Math.random()
+```
 
-<p>Esto es fácil — generalmente significa que has omitido una de tus llaves de una función o estructura condicional. Obtuvimos este error al eliminar una de las llaves de cierre cerca de la parte inferior de la función <code>checkGuess()</code>.</p>
+A continuación, pasamos el resultado de invocar a `Math.random()` a [`Math.floor()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que redondea el número pasado al número entero más cercano. Luego agregamos 1 a ese resultado:
 
-<h3 id="SyntaxError_esperaba_expresión_obtuve_string_o_SyntaxError_Cadena_literal_sin_terminar">SyntaxError: <code>esperaba expresión, obtuve '<em>string</em>'</code> o SyntaxError: <code>Cadena literal sin terminar</code></h3>
+```
+Math.floor(Math.random()) + 1
+```
 
-<p>Estos errores generalmente significan que has omitido las comillas de apertura o cierre de un valor de cadena. En el primer error anterior, <em>string</em> se reemplazaría con los caracteres inesperados que encontró el navegador en lugar de una comilla al comienzo de una cadena. El segundo error significa que la cadena no se ha terminado con comillas.</p>
+Redondear un número decimal aleatorio entre 0 y 1 siempre devolverá 0, por lo que agregarle 1 siempre devolverá 1. Necesitamos multiplicar el número aleatorio por 100 antes de redondearlo hacia abajo. Lo siguiente nos daría un número aleatorio entre 0 y 99:
 
-<p>Para todos estos errores, piensa en cómo abordamos los ejemplos que vimos en el tutorial. Cuando surge un error, mira el número de línea que te dan, ve a esa línea y revísala para detectar lo que está mal. Ten en cuenta que el error no necesariamente estará en esa línea, y también que el error podría no ser causado por el mismo problema que mencionamos anteriormente.</p>
+```js
+Math.floor(Math.random()*100);
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Obtén más detalles sobre estos errores en nuestras páginas de referencia <a href="/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: símbolo inesperado</a> y <a href="/es/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: cadena literal sin terminar</a>.</p>
-</div>
+De ahí que queramos sumar 1, para darnos un número aleatorio entre 1 y 100:
 
-<h2 id="Resumen">Resumen</h2>
+```js
+Math.floor(Math.random()*100) + 1;
+```
 
-<p>Ahí lo tienes, los conceptos básicos para descubrir errores en programas sencillos de JavaScript. No siempre será tan sencillo averiguar qué está mal en tu código, pero al menos esto te ahorrará algunas horas de sueño y te permitirá progresar un poco más rápido cuando las cosas no salgan bien, especialmente en las primeras etapas de tu viaje de aprendizaje.</p>
+Intenta actualizar ambas líneas de esta manera, luego guarda y refresca — ¡el juego ahora debería trabajar como pretendemos!
 
-<h2 id="Ve_también">Ve también</h2>
+## Otros errores comunes
 
-<div>
-<ul>
- <li>Hay muchos otros tipos de errores que no se enumeran aquí; estamos compilando una referencia que explica lo que significan en detalle; consulta la <a href="/es/docs/Web/JavaScript/Reference/Errors">referencia de error de JavaScript</a>.</li>
- <li>Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la <a href="https://discourse.mozilla.org/c/mdn/learn">categoría de aprendizaje del foro de discusión de MDN</a>, o en la <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">sala de MDN Web Docs</a> en <a class="external external-icon" href="https://wiki.mozilla.org/Matrix">Matrix</a>. Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.</li>
-</ul>
-</div>
+Hay otros errores comunes que encontrarás en tu código. Esta sección destaca la mayoría de ellos.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</p>
+### SyntaxError: `falta ; antes de la declaración`
 
-<h2 id="En_este_modulo">En este modulo</h2>
+Este error generalmente significa que has omitido un punto y coma al final de una de sus líneas de código, pero a veces puede ser más críptico. Por ejemplo, si cambiamos esta línea dentro de la función `checkGuess()`:
 
-<ul>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript">¿Qué es JavaScript?</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/A_first_splash">Primer contacto con JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/What_went_wrong">¿Qué salió mal? Solución de problemas de JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Variables">Almacenamiento de la información que necesita — Variables</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Math">Matemáticas básicas en JavaScript — números y operadores</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Strings">Manejo de texto — cadenas en JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos de cadena útiles</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Arrays">Arreglos</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Silly_story_generator">Evaluación: Generador de historias absurdas</a></li>
-</ul>
+```js
+var userGuess = Number(guessField.value);
+```
+
+a
+
+```js
+var userGuess === Number(guessField.value);
+```
+
+Lanza este error porque cree que estás intentando hacer algo diferente. Debes asegurarte de no confundir el operador de asignación (`=`), que establece una variable para que sea igual a un valor — con el operador de igualdad estricta (`===`), que prueba si un valor es igual a otro y devuelve un resultado `true`/`false`.
+
+> **Nota:** Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ; antes de la declaración](/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement).
+
+### El programa siempre dice que has ganado, independientemente de lo que hayas ingresado
+
+Este podría ser otro síntoma de confusión entre la asignación y los operadores de igualdad estricta. Por ejemplo, si cambiamos esta línea dentro de `checkGuess()`:
+
+```js
+if (userGuess === randomNumber) {
+```
+
+a
+
+```js
+if (userGuess = randomNumber) {
+```
+
+la prueba siempre devolvería `true`, haciendo que el programa informe que se ganó el juego. ¡Ten cuidado!
+
+### SyntaxError: `falta ) después de la lista de argumentos`
+
+Este es bastante simple — generalmente significa que olvidaste colocar el paréntesis de cierre al final de una llamada a una función/método.
+
+> **Nota:** Ve más detalles sobre este error en nuestra página de referencia [SyntaxError: falta ) después de la lista de argumentos](/es/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list).
+
+### SyntaxError: `falta : después de la propiedad id`
+
+Este error generalmente se relaciona con un objeto JavaScript formado incorrectamente, pero en este caso logramos obtenerlo cambiando
+
+```js
+function checkGuess() {
+```
+
+a
+
+```js
+function checkGuess( {
+```
+
+Esto ha hecho que el navegador piense que estamos tratando de pasar el contenido de la función a la función como un argumento. ¡Cuidado con esos paréntesis!
+
+### SyntaxError: `falta } después del cuerpo de la función`
+
+Esto es fácil — generalmente significa que has omitido una de tus llaves de una función o estructura condicional. Obtuvimos este error al eliminar una de las llaves de cierre cerca de la parte inferior de la función `checkGuess()`.
+
+### SyntaxError: `esperaba expresión, obtuve 'string'` o SyntaxError: `Cadena literal sin terminar`
+
+Estos errores generalmente significan que has omitido las comillas de apertura o cierre de un valor de cadena. En el primer error anterior, _string_ se reemplazaría con los caracteres inesperados que encontró el navegador en lugar de una comilla al comienzo de una cadena. El segundo error significa que la cadena no se ha terminado con comillas.
+
+Para todos estos errores, piensa en cómo abordamos los ejemplos que vimos en el tutorial. Cuando surge un error, mira el número de línea que te dan, ve a esa línea y revísala para detectar lo que está mal. Ten en cuenta que el error no necesariamente estará en esa línea, y también que el error podría no ser causado por el mismo problema que mencionamos anteriormente.
+
+> **Nota:** Obtén más detalles sobre estos errores en nuestras páginas de referencia [SyntaxError: símbolo inesperado](/es/docs/Web/JavaScript/Reference/Errors/Unexpected_token) y [SyntaxError: cadena literal sin terminar](/es/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal).
+
+## Resumen
+
+Ahí lo tienes, los conceptos básicos para descubrir errores en programas sencillos de JavaScript. No siempre será tan sencillo averiguar qué está mal en tu código, pero al menos esto te ahorrará algunas horas de sueño y te permitirá progresar un poco más rápido cuando las cosas no salgan bien, especialmente en las primeras etapas de tu viaje de aprendizaje.
+
+## Ve también
+
+- Hay muchos otros tipos de errores que no se enumeran aquí; estamos compilando una referencia que explica lo que significan en detalle; consulta la [referencia de error de JavaScript](/es/docs/Web/JavaScript/Reference/Errors).
+- Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+
+## En este modulo
+
+- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
+- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
+- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
+- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
+- [Evaluación: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

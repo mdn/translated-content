@@ -3,166 +3,163 @@ title: Una función retorna valores
 slug: Learn/JavaScript/Building_blocks/Return_values
 translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}</div>
+Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
 
-<p class="summary">Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.</p>
+| Prerequisites: | Basic computer literacy, a basic understanding of HTML and CSS, [JavaScript first steps](/es/docs/Learn/JavaScript/First_steps), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To understand function return values, and how to make use of them.                                                                                                                                                           |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Basic computer literacy, a basic understanding of HTML and CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a>.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand function return values, and how to make use of them.</td>
-  </tr>
- </tbody>
-</table>
+## ¿Qué son los valores de retorno?
 
-<h2 id="¿Qué_son_los_valores_de_retorno">¿Qué son los valores de retorno?</h2>
+**Los valores de retorno** son exactamente como suenan: los valores devueltos por la función cuando se completa. Ya has alcanzado los valores de retorno varias veces, aunque es posible que no hayas pensado en ellos explícitamente. Volvamos a un código familiar:
 
-<p><strong>Los valores de retorno </strong>son exactamente como suenan: los valores devueltos por la función cuando se completa. Ya has alcanzado los valores de retorno varias veces, aunque es posible que no hayas pensado en ellos explícitamente. Volvamos a un código familiar:</p>
-
-<pre class="brush: js notranslate">var myText = 'I am a string';
+```js
+var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');
 console.log(newString);
 // la función de cadena replace () toma una cadena,
 // sustituyendo una subcadena con otra y devoviendo
-// ​​una cadena nueva con la sustitución realizada</pre>
+// ​​una cadena nueva con la sustitución realizada
+```
 
-<p>Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace ()</a> en la cadena <code>myText</code>, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable <code>newString</code>.</p>
+Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.
 
-<p>Si observa la página de referencia MDN de la función de reemplazo, verá una sección llamada <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value">Valor de retorno.</a> Es muy útil conocer y comprender qué valores devuelven las funciones, por lo que tratamos de incluir esta información siempre que sea posible.</p>
+Si observa la página de referencia MDN de la función de reemplazo, verá una sección llamada [Valor de retorno.](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value) Es muy útil conocer y comprender qué valores devuelven las funciones, por lo que tratamos de incluir esta información siempre que sea posible.
 
-<p>Algunas funciones no devuelven un valor de retorno como tal (en nuestras páginas de referencia, el valor de retorno aparece como <code>void</code> o <code>undefined</code> en tales casos). Por ejemplo, en la función <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50">displayMessage ()</a> que creamos en el artículo anterior, no se devuelve ningún valor específico como resultado de la función que se invoca. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!</p>
+Algunas funciones no devuelven un valor de retorno como tal (en nuestras páginas de referencia, el valor de retorno aparece como `void` o `undefined` en tales casos). Por ejemplo, en la función [displayMessage ()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) que creamos en el artículo anterior, no se devuelve ningún valor específico como resultado de la función que se invoca. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!
 
-<p>Generalmente, se usa un valor de retorno donde la función es un paso intermedio en un cálculo de algún tipo. Quieres llegar a un resultado final, que involucra algunos valores. Esos valores deben ser calculados por una función, que luego devuelve los resultados para que puedan usarse en la siguiente etapa del cálculo.</p>
+Generalmente, se usa un valor de retorno donde la función es un paso intermedio en un cálculo de algún tipo. Quieres llegar a un resultado final, que involucra algunos valores. Esos valores deben ser calculados por una función, que luego devuelve los resultados para que puedan usarse en la siguiente etapa del cálculo.
 
-<h3 id="Using_return_values_in_your_own_functions">Using return values in your own functions</h3>
+### Using return values in your own functions
 
-<p>To return a value from a custom function, you need to use ... wait for it ... the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a> keyword. We saw this in action recently in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example. Our <code>draw()</code> function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:</p>
+To return a value from a custom function, you need to use ... wait for it ... the [return](/es/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
 
-<pre class="brush: js notranslate">function draw() {
+```js
+function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
-  for (var i = 0; i &lt; 100; i++) {
+  for (var i = 0; i < 100; i++) {
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255,0,0,0.5)';
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
-}</pre>
+}
+```
 
-<p>Inside each loop iteration, three calls are made to the <code>random()</code> function, to generate a random value for the current circle's x coordinate, y coordinate, and radius, respectively. The <code>random()</code> function takes one parameter — a whole number — and it returns a whole random number between 0 and that number. It looks like this:</p>
+Inside each loop iteration, three calls are made to the `random()` function, to generate a random value for the current circle's x coordinate, y coordinate, and radius, respectively. The `random()` function takes one parameter — a whole number — and it returns a whole random number between 0 and that number. It looks like this:
 
-<pre class="brush: js notranslate">function randomNumber(number) {
+```js
+function randomNumber(number) {
   return Math.floor(Math.random()*number);
-}</pre>
+}
+```
 
-<p>This could be written as follows:</p>
+This could be written as follows:
 
-<pre class="brush: js notranslate">function randomNumber(number) {
+```js
+function randomNumber(number) {
   var result = Math.floor(Math.random()*number);
   return result;
-}</pre>
-
-<p>But the first version is quicker to write, and more compact.</p>
-
-<p>We are returning the result of the calculation <code>Math.floor(Math.random()*number)</code> each time the function is called. This return value appears at the point the function was called, and the code continues. So for example, if we ran the following line:</p>
-
-<pre class="brush: js notranslate">ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);</pre>
-
-<p>and the three <code>random()</code> calls returned the values 500, 200, and 35, respectively, the line would actually be run as if it were this:</p>
-
-<pre class="brush: js notranslate">ctx.arc(500, 200, 35, 0, 2 * Math.PI);</pre>
-
-<p>The function calls on the line are run first and their return values substituted for the function calls, before the line itself is then executed.</p>
-
-<h2 id="Active_learning_our_own_return_value_function">Active learning: our own return value function</h2>
-
-<p>Let's have a go at writing our own functions featuring return values.</p>
-
-<ol>
- <li>First of all, make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html">function-library.html</a> file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.</li>
- <li>Let's add some useful functions to this <code>&lt;script&gt;</code> element. Below the existing two lines of JavaScript, add the following function definitions:
-  <pre class="brush: js notranslate">function squared(num) {
-  return num * num;
 }
+```
 
-function cubed(num) {
-  return num * num * num;
-}
+But the first version is quicker to write, and more compact.
 
-function factorial(num) {
-  var x = num;
-  while (x &gt; 1) {
-    num *= x-1;
-    x--;
-  }
-  return num;
-}</pre>
-  The <code>squared()</code> and <code>cubed()</code> functions are fairly obvious — they return the square or cube of the number given as a parameter. The <code>factorial()</code> function returns the <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> of the given number.</li>
- <li>Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
-  <pre class="brush: js notranslate">input.onchange = function() {
-  var num = input.value;
-  if (isNaN(num)) {
-    para.textContent = 'You need to enter a number!';
-  } else {
-    para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                       num + ' cubed is ' + cubed(num) + '. ' +
-                       num + ' factorial is ' + factorial(num) + '.';
-  }
-}</pre>
+We are returning the result of the calculation `Math.floor(Math.random()*number)` each time the function is called. This return value appears at the point the function was called, and the code continues. So for example, if we ran the following line:
 
-  <p>Here we are creating an <code>onchange</code> event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the <code>num</code> variable.</p>
+```js
+ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+```
 
-  <p>Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression <code>isNaN(num)</code> returns true. We use the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN()</a> function to test whether the num value is not a number — if so, it returns <code>true</code>, and if not, <code>false</code>.</p>
+and the three `random()` calls returned the values 500, 200, and 35, respectively, the line would actually be run as if it were this:
 
-  <p>If the test returns <code>false</code>, the <code>num</code> value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the <code>squared()</code>, <code>cubed()</code>, and <code>factorial()</code> functions to get the required values.</p>
- </li>
- <li>Save your code, load it in a browser, and try it out.</li>
-</ol>
+```js
+ctx.arc(500, 200, 35, 0, 2 * Math.PI);
+```
 
-<div class="note">
-<p><strong>Note</strong>: If you have trouble getting the example to work, feel free to check your code against the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html">finished version on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html">see it running live</a> also), or ask us for help.</p>
-</div>
+The function calls on the line are run first and their return values substituted for the function calls, before the line itself is then executed.
 
-<p>At this point, we'd like you to have a go at writing out a couple of functions of your own and adding them to the library. How about the square or cube root of the number, or the circumference of a circle with a radius of length <code>num</code>?</p>
+## Active learning: our own return value function
 
-<p>This exercise has brought up a couple of important points besides being a study on how to use the <code>return</code> statement. In addition, we have:</p>
+Let's have a go at writing our own functions featuring return values.
 
-<ul>
- <li>Looked at another example of writing error handling into our functions. It is generally a good idea to check that any necessary parameters have been provided, and in the right datatype, and if they are optional, that some kind of default value is provided to allow for that. This way, your program will be less likely to throw errors.</li>
- <li>Thought about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often — you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.</li>
-</ul>
+1.  First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
+2.  Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
 
-<h2 id="Conclusion">Conclusion</h2>
+    ```js
+    function squared(num) {
+      return num * num;
+    }
 
-<p>So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.</p>
+    function cubed(num) {
+      return num * num * num;
+    }
 
-<p>If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/Learn#Contact_us">contact us</a> to ask for help.</p>
+    function factorial(num) {
+      var x = num;
+      while (x > 1) {
+        num *= x-1;
+        x--;
+      }
+      return num;
+    }
+    ```
 
-<h2 id="See_also">See also</h2>
+    The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">Functions in-depth</a> — a detailed guide covering more advanced functions-related information.</li>
- <li><a href="https://www.impressivewebs.com/callback-functions-javascript/">Callback functions in JavaScript</a> — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.</li>
-</ul>
+3.  Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}</p>
+    ```js
+    input.onchange = function() {
+      var num = input.value;
+      if (isNaN(num)) {
+        para.textContent = 'You need to enter a number!';
+      } else {
+        para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                           num + ' cubed is ' + cubed(num) + '. ' +
+                           num + ' factorial is ' + factorial(num) + '.';
+      }
+    }
+    ```
 
-<h2 id="In_this_module">In this module</h2>
+    Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
-</ul>
+    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.
+
+    If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
+
+4.  Save your code, load it in a browser, and try it out.
+
+> **Nota:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
+
+At this point, we'd like you to have a go at writing out a couple of functions of your own and adding them to the library. How about the square or cube root of the number, or the circumference of a circle with a radius of length `num`?
+
+This exercise has brought up a couple of important points besides being a study on how to use the `return` statement. In addition, we have:
+
+- Looked at another example of writing error handling into our functions. It is generally a good idea to check that any necessary parameters have been provided, and in the right datatype, and if they are optional, that some kind of default value is provided to allow for that. This way, your program will be less likely to throw errors.
+- Thought about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often — you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.
+
+## Conclusion
+
+So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
+
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+
+## See also
+
+- [Functions in-depth](/es/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
+- [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
+
+{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+
+## In this module
+
+- [Making decisions in your code — conditionals](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)

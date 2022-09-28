@@ -4,45 +4,32 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 translation_of: Learn/JavaScript/Building_blocks/Looping_code
 original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</div>
+Los lenguajes de programación son muy útiles para completar rápidamente tareas repetitivas, desde múltimples cálculos básicos hasta cualquier otra situación en donde tengas un montón de elementos de trabajo similares que completar. Aquí vamos a ver las estructuras de bucles disponibles en JavaScript que pueden manejar tales necesidades.
 
-<p class="summary">Los lenguajes de programación son muy útiles para completar rápidamente tareas repetitivas, desde múltimples cálculos básicos hasta cualquier otra situación en donde tengas un montón de elementos de trabajo similares que completar. Aquí vamos a ver las estructuras de bucles disponibles en JavaScript que pueden manejar tales necesidades.</p>
+| Prerequisitos: | Conocimientos básicos de computación, entendimiento básico de HTML y CSS, [JavaScript first steps](/es/docs/Learn/JavaScript/First_steps). |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objetivo:      | Entender cómo usar bucles en JavaScript.                                                                                                   |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisitos:</th>
-   <td>Conocimientos básicos de computación, entendimiento básico de HTML y CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Entender cómo usar bucles en JavaScript.</td>
-  </tr>
- </tbody>
-</table>
+## Mantente en el Bucle
 
-<h2 id="Mantente_en_el_Bucle">Mantente en el Bucle</h2>
+Bucles, bucles, bucles. Además de ser conocidos como un cereal de desayuno popular, montañas rusas y producción músical, también son un concepto muy importante en programación. Los bucles de programación están relacionados con todo lo referente a hacer una misma cosa una y otra vez — que se denomina como **iteración** en el idioma de programación.
 
-<p>Bucles, bucles, bucles. Además de ser conocidos como un cereal de desayuno popular, montañas rusas y producción músical, también son un concepto muy importante en programación. Los bucles de programación están relacionados con todo lo referente a hacer una misma cosa una y otra vez — que se denomina como <strong>iteración </strong>en el idioma de programación.</p>
+Consideremos el caso de un agricultor que se asegura de tener suficiente comida para alimentar a su familia durante la semana. Podría usar el siguiente bucle para lograr esto:
 
-<p>Consideremos el caso de un agricultor que se asegura de tener suficiente comida para alimentar a su familia durante la semana. Podría usar el siguiente bucle para lograr esto:</p>
+![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
 
-<p><br>
- <img alt="" src="https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
+Un bucle cuenta con una o más de las siguientes características:
 
-<p>Un bucle cuenta con una o más de las siguientes características:</p>
+- Un **contador,** que se inicia con un determinado valor — este será el valor del punto inicial del bucle ("Inicio: No tengo comida",mirar arriba).
+- Una **condicion de salida**, que será el criterio bajo el cual, el bucle se romperá — normalmente un contador que alcanza un determinado valor. Aquí se ilustra como "¿Tengo suficiente comida?", arriba. Digamos que son necesarias 10 porciones de comida para alimentar a su familia.
+- Un **iterador,** que generalmente incrementa el valor del contador en una cantidad pequeña a cada paso del bucle, hasta que alcanza la condición de salida. No hemos ilustrado esto de manera explícita arriba, pero podríamos pensar que el granjero está recolectando 2 porciones de comida cada hora. Después de cada hora, la cantidad de comida recolectada se incrementa en dos, y comprueba si tiene suficiente comida. Si alcanza los 10 puntos (la condición de salida), puede parar la recolecta e irse para casa.
 
-<ul>
- <li> Un <strong>contador,</strong> que se inicia con un determinado valor — este será el valor del punto inicial del bucle ("Inicio: No tengo comida",mirar arriba).</li>
- <li>Una <strong>condicion de salida</strong>, que será el criterio bajo el cual, el bucle se romperá — normalmente un contador que alcanza un determinado valor. Aquí se ilustra como "¿Tengo suficiente comida?", arriba. Digamos que son necesarias 10 porciones de comida para alimentar a su familia.</li>
- <li>Un <strong>iterador, </strong>que generalmente incrementa el valor del contador en una cantidad pequeña a cada paso del bucle, hasta que alcanza la condición de salida. No hemos ilustrado esto de manera explícita arriba, pero podríamos pensar que el granjero está recolectando 2 porciones de comida cada hora. Después de cada hora, la cantidad de comida recolectada se incrementa en dos, y comprueba si tiene suficiente comida. Si alcanza los 10 puntos (la condición de salida), puede parar la recolecta e irse para casa.</li>
-</ul>
+En {{glossary("pseudocódigo")}},esto se vería como sigue:
 
-<p>En {{glossary("pseudocódigo")}},esto se vería como sigue:</p>
-
-<pre class="notranslate">bucle(comida = 0; comidaNecesaria = 10) {
+```
+bucle(comida = 0; comidaNecesaria = 10) {
   if (comida = comidaNecesaria) {
     salida bucle;
     // Tenemos suficiente comida; vamonos para casa
@@ -50,27 +37,26 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
     comida += 2; // Pasar una hora recogiendo 2 más de comida
     // Comenzar el bucle de nuevo
   }
-}</pre>
+}
+```
 
-<p>Así que la cantidad necesaria de comida se establece en 10, y la cantidad incial del granjero en 0. En cada iteración del bucle comprobamos si la cantidad de comida del granjero es mayor o igual a la cantidad que necesita. Si lo es, podemos salir del bucle. Si no, el granjero se pasará una hora más recogiendo dos porciones de comida, y el bucle arrancará de nuevo.</p>
+Así que la cantidad necesaria de comida se establece en 10, y la cantidad incial del granjero en 0. En cada iteración del bucle comprobamos si la cantidad de comida del granjero es mayor o igual a la cantidad que necesita. Si lo es, podemos salir del bucle. Si no, el granjero se pasará una hora más recogiendo dos porciones de comida, y el bucle arrancará de nuevo.
 
-<h3 id="¿Por_qué_molestarse">¿Por qué molestarse?</h3>
+### ¿Por qué molestarse?
 
-<p><span class="tlid-translation translation" lang="es"><span title="">En este punto, probablemente entiendas los conceptos de alto nivel que hay detrás de los bucles,</span></span> pero probablemente estés pensando "OK, fantástico, pero ¿cómo me ayuda esto a escribir un mejor codigo JavaScript?". Como dijimos antes, <strong>los bucles tienen que ver con hacer lo mismo una y otra vez</strong>, lo cual es bueno para <strong>completar rápidamente tareas repetitivas</strong>.</p>
+En este punto, probablemente entiendas los conceptos de alto nivel que hay detrás de los bucles, pero probablemente estés pensando "OK, fantástico, pero ¿cómo me ayuda esto a escribir un mejor codigo JavaScript?". Como dijimos antes, **los bucles tienen que ver con hacer lo mismo una y otra vez**, lo cual es bueno para **completar rápidamente tareas repetitivas**.
 
-<p>Muchas veces, el código será ligeramente diferente en cada iteracción sucesiva del bucle, lo que significa que puedes completar una carga completa de tareas que son similares, pero ligeramente diferentes — si tienes muchos calculos diferentes que hacer, quieres hacer cada uno de ellos, ¡no el mismo una y otra vez!</p>
+Muchas veces, el código será ligeramente diferente en cada iteracción sucesiva del bucle, lo que significa que puedes completar una carga completa de tareas que son similares, pero ligeramente diferentes — si tienes muchos calculos diferentes que hacer, quieres hacer cada uno de ellos, ¡no el mismo una y otra vez!
 
-<p>Vamos a ver un ejemplo para ilustrar perfectamente por qué los bucles son tan útiles. Digamos que queremos dibujar 100 círculos aleatorios en un elemento {{htmlelement("canvas")}} (presiona el botón <em>Update</em> para ejecutar el ejemplo una y otra vez y ver diferentes configuraciones aleatorias):</p>
+Vamos a ver un ejemplo para ilustrar perfectamente por qué los bucles son tan útiles. Digamos que queremos dibujar 100 círculos aleatorios en un elemento {{htmlelement("canvas")}} (presiona el botón _Update_ para ejecutar el ejemplo una y otra vez y ver diferentes configuraciones aleatorias):
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Random canvas circles&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random canvas circles</title>
+    <style>
       html {
         width: 100%;
         height: inherit;
@@ -90,16 +76,16 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
         top: 5px;
         left: 5px;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
-  &lt;button&gt;Update&lt;/button&gt;
+  <button>Update</button>
 
-  &lt;canvas&gt;&lt;/canvas&gt;
+  <canvas></canvas>
 
 
-    &lt;script&gt;
+    <script>
     var btn = document.querySelector('button');
     var canvas = document.querySelector('canvas');
     var ctx = canvas.getContext('2d');
@@ -116,7 +102,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 
     function draw() {
       ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (var i = 0; i &lt; 100; i++) {
+      for (var i = 0; i < 100; i++) {
         ctx.beginPath();
         ctx.fillStyle = 'rgba(255,0,0,0.5)';
         ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
@@ -126,174 +112,167 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 
     btn.addEventListener('click',draw);
 
-    &lt;/script&gt;
+    </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code', '100%', 400, "", "", "hide-codepen-jsfiddle") }}
 
-<p>No tienes que entender todo el código por ahora, pero vamos a echar un vistazo a la parte de código que dibuja los 100 círculos:</p>
+No tienes que entender todo el código por ahora, pero vamos a echar un vistazo a la parte de código que dibuja los 100 círculos:
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 100; i++) {
+```js
+for (var i = 0; i < 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
-}</pre>
+}
+```
 
-<p>Debes quedarte con la idea básica.  — utilizamos un bucle para ejecutar 100 iteracciones de este código, cada una de las cuales dibuja un círculo en una posición aleatoria de la página. La cantidad de código necesario sería el mismo si dibujáramos 100, 1000, o 10,000 círculos. Solo necesitamos cambiar un número.</p>
+Debes quedarte con la idea básica. — utilizamos un bucle para ejecutar 100 iteracciones de este código, cada una de las cuales dibuja un círculo en una posición aleatoria de la página. La cantidad de código necesario sería el mismo si dibujáramos 100, 1000, o 10,000 círculos. Solo necesitamos cambiar un número.
 
-<p>Si no usáramos un bucle aquí, tendríamos que repetir el siguiente código por cada círculo que quisiéramos dibujar:</p>
+Si no usáramos un bucle aquí, tendríamos que repetir el siguiente código por cada círculo que quisiéramos dibujar:
 
-<pre class="brush: js notranslate">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-ctx.fill();</pre>
+ctx.fill();
+```
 
-<p>Esto sería muy aburrido y difícil de mantener de forma rápida. Los bucles son realmente lo mejor.</p>
+Esto sería muy aburrido y difícil de mantener de forma rápida. Los bucles son realmente lo mejor.
 
-<h2 id="El_bucle_estándar_for">El bucle estándar <code>for</code></h2>
+## El bucle estándar `for`
 
-<p>Exploremos algunos constructores de bucles específicos. El primero, que usarás la mayoría de las veces, es el bucle <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/for">for</a> - este tiene la siguiente sintaxis:</p>
+Exploremos algunos constructores de bucles específicos. El primero, que usarás la mayoría de las veces, es el bucle [for](/es/docs/Web/JavaScript/Referencia/Sentencias/for) - este tiene la siguiente sintaxis:
 
-<pre class="notranslate">for (inicializador; condición de salida; expresión final) {
+```
+for (inicializador; condición de salida; expresión final) {
   // código a ejecutar
-}</pre>
+}
+```
 
-<p>Aquí tenemos:</p>
+Aquí tenemos:
 
-<ol>
- <li>La palabra reservada <code>for</code>, seguida por algunos paréntesis.</li>
- <li>Dentro de los paréntesis tenemos tres ítems, separados por punto y coma (;):
-  <ol>
-   <li>Un <strong>inicializador</strong> - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama <strong>contador</strong> o <strong>variable de conteo</strong>.</li>
-   <li>Una <strong>condición de salida</strong> - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.</li>
-   <li>Una <strong>expresión final</strong> - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.</li>
-  </ol>
- </li>
- <li>Algunos corchetes curvos que contienen un bloque de código - este código se ejecutará cada vez que se repita el bucle.</li>
-</ol>
+1.  La palabra reservada `for`, seguida por algunos paréntesis.
+2.  Dentro de los paréntesis tenemos tres ítems, separados por punto y coma (;):
 
-<p>Observa un ejemplo real para poder entender esto más claramente.</p>
+    1.  Un **inicializador** - Este es usualmente una variable con un número asignado, que aumenta el número de veces que el bucle ha sijo ejecutado. También se le llama **contador** o **variable de conteo**.
+    2.  Una **condición de salida** - como se mencionó previamente, ésta define cuando el bucle debería detenerse. Generalmente es una expresión que contiene un operador de comparación, una prueba para verificar ue la condición de término o salida ha sido cumplida.
+    3.  Una **expresión final** - que es siempre evaluada o ejecutada cada vez que el bucle ha completado una iteración. Usualmente sirve para modificar al contador (incrementando su valor o algunas veces disminuyendolo), para aproximarse a la condición de salida.
 
-<pre class="brush: js notranslate">var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+3.  Algunos corchetes curvos que contienen un bloque de código - este código se ejecutará cada vez que se repita el bucle.
+
+Observa un ejemplo real para poder entender esto más claramente.
+
+```js
+var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
 var info = 'My cats are called ';
 var para = document.querySelector('p');
 
-for (var i = 0; i &lt; cats.length; i++) {
+for (var i = 0; i < cats.length; i++) {
   info += cats[i] + ', ';
 }
 
-para.textContent = info;</pre>
+para.textContent = info;
+```
 
-<p>Esto nos da el siguiente resultado:</p>
+Esto nos da el siguiente resultado:
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic for loop example</title>
+    <style>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Basic for loop example&lt;/title&gt;
-    &lt;style&gt;
+    </style>
+  </head>
+  <body>
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-
-  &lt;p&gt;&lt;/p&gt;
+  <p></p>
 
 
-    &lt;script&gt;
+    <script>
     var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
     var info = 'My cats are called ';
     var para = document.querySelector('p');
 
-    for (var i = 0; i &lt; cats.length; i++) {
+    for (var i = 0; i < cats.length; i++) {
       info += cats[i] + ', ';
     }
 
     para.textContent = info;
 
-    &lt;/script&gt;
+    </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-<div class="note">
-<p><strong>Nota</strong>: Puedes encontrar este <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">ejemplo de código en GitHub</a> también (además puedes <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">verlo ejecutar en vivo</a>).</p>
-</div>
+> **Nota:** Puedes encontrar este [ejemplo de código en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) también (además puedes [verlo ejecutar en vivo](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
-<p>Esto muestra un bucle siendo usado para iterar sobre los elementos de un arreglo (matriz), y hacer algo con cada uno de ellos - un patrón muy común en JavaScript. Aquí:</p>
+Esto muestra un bucle siendo usado para iterar sobre los elementos de un arreglo (matriz), y hacer algo con cada uno de ellos - un patrón muy común en JavaScript. Aquí:
 
-<ol>
- <li>El iterador, <code>i</code>, inicia en <code>0</code> (<code>var i = 0</code>).</li>
- <li>Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo <code>cats</code>. Esto es importante  - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras <code>i &lt; cats.length</code> sea verdadero, el bucle seguirá ejecutándose.</li>
- <li>Dentro del bucle, concatenamos el elemento del bucle actual (<code>cats[i]</code> es <code>cats[lo que sea i en ese momento]</code>) junto con una coma y un espacio, al final de la variable <code>info</code>. Así:
-  <ol>
-   <li>Durante la primera ejecución,  <code>i = 0</code>, así <code>cats[0] + ', '</code> se concatenará con la información ("Bill, ").</li>
-   <li>Durante la segunda ejecución, <code>i = 1</code>, así <code>cats[1] + ', '</code> agregará el siguiente nombre ("Jeff, ").</li>
-   <li>Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (<code>i++</code>), entonces el proceso comenzará de nuevo.</li>
-  </ol>
- </li>
- <li>Cuando <code>i</code> sea igual a <code>cats.length</code>, el bucle se detendrá, y el navegador se moverá al siguiente segmento de código bajo el bucle.</li>
-</ol>
+1.  El iterador, `i`, inicia en `0` (`var i = 0`).
+2.  Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo `cats`. Esto es importante - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras `i < cats.length` sea verdadero, el bucle seguirá ejecutándose.
+3.  Dentro del bucle, concatenamos el elemento del bucle actual (`cats[i]` es `cats[lo que sea i en ese momento]`) junto con una coma y un espacio, al final de la variable `info`. Así:
 
-<div class="note">
-<p><strong>Nota</strong>: Hemos programado la condición de salidad como <code>i &lt; cats.length</code>, y no como <code>i &lt;= cats.length</code>, porque los computadores cuentan desde 0, no 1 - inicializamos la variable i en 0, para llegar a <code>i = 4</code> (el índice del último elemento del arreglo). <code>cats.length</code> responde 5, ya que existen 5 elementos en el arreglo, pero no queremos que i = 5, dado que respondería <code>undefined</code> para el último elemento (no existe un elemento en el arreglo con un índice 5). for the last item (there is no array item with an index of 5). Por ello, queremos llegar a 1 menos que <code>cats.length</code> (<code>i &lt;</code>), que no es lo mismo que <code>cats.length</code> (<code>i &lt;=</code>).</p>
-</div>
+    1.  Durante la primera ejecución, `i = 0`, así `cats[0] + ', '` se concatenará con la información ("Bill, ").
+    2.  Durante la segunda ejecución, `i = 1`, así `cats[1] + ', '` agregará el siguiente nombre ("Jeff, ").
+    3.  Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (`i++`), entonces el proceso comenzará de nuevo.
 
-<div class="note">
-<p><strong>Nota</strong>: Un error común con la condición de salida es utilizar el comparador "igual a" (<code>===</code>) en vez de "menor o igual a" (<code>&lt;=</code>). Si queremos que nuestro bucle se ejecute hasta que  <code>i = 5</code>, la condición de salida debería ser <code>i &lt;= cats.length</code>. Si la declaramos <code>i === cats.length</code>, el bucle no debería ejecutarse , porque <code>i</code> no es igual a <code>5</code> en la primera iteración del bucle, por lo que debería detenerse inmediatamente.</p>
-</div>
+4.  Cuando `i` sea igual a `cats.length`, el bucle se detendrá, y el navegador se moverá al siguiente segmento de código bajo el bucle.
 
-<p>Un pequeño problema que se presenta es que la frase de salida final no está muy bien formada:</p>
+> **Nota:** Hemos programado la condición de salidad como `i < cats.length`, y no como `i <= cats.length`, porque los computadores cuentan desde 0, no 1 - inicializamos la variable i en 0, para llegar a `i = 4` (el índice del último elemento del arreglo). `cats.length` responde 5, ya que existen 5 elementos en el arreglo, pero no queremos que i = 5, dado que respondería `undefined` para el último elemento (no existe un elemento en el arreglo con un índice 5). for the last item (there is no array item with an index of 5). Por ello, queremos llegar a 1 menos que `cats.length` (`i <`), que no es lo mismo que `cats.length` (`i <=`).
 
-<blockquote>
-<p>My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</p>
-</blockquote>
+> **Nota:** Un error común con la condición de salida es utilizar el comparador "igual a" (`===`) en vez de "menor o igual a" (`<=`). Si queremos que nuestro bucle se ejecute hasta que `i = 5`, la condición de salida debería ser `i <= cats.length`. Si la declaramos `i === cats.length`, el bucle no debería ejecutarse , porque `i` no es igual a `5` en la primera iteración del bucle, por lo que debería detenerse inmediatamente.
 
-<p>Idealmente querríamos cambiar la concatenacion al final de la última iteracion del bucle, así no tendríamos una coma en el final de la frase. Bueno, no hay problema - podemos insertar un condicional dentro de nuestro bucle para solucionar este caso especial:</p>
+Un pequeño problema que se presenta es que la frase de salida final no está muy bien formada:
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; cats.length; i++) {
+> My cats are called Bill, Jeff, Pete, Biggles, Jasmin,
+
+Idealmente querríamos cambiar la concatenacion al final de la última iteracion del bucle, así no tendríamos una coma en el final de la frase. Bueno, no hay problema - podemos insertar un condicional dentro de nuestro bucle para solucionar este caso especial:
+
+```js
+for (var i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
     info += 'and ' + cats[i] + '.';
   } else {
     info += cats[i] + ', ';
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can find this <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">example code on GitHub</a> too (also <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it running live</a>).</p>
-</div>
+> **Nota:** You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-<div class="warning">
-<p><strong>Importante</strong>: Con <code>for</code> - como con todos los bucles - debes estar seguro de que el inicializador es repetido hasta que eventualemtne alcance la condición de salida. Si no, el bucle seguirá repitiéndose indefinidamente, y puede que el navegador lo fuerce a detenerse o se interrumpa. Esto se denomina <strong>bucle infinito</strong>.</p>
-</div>
+> **Advertencia:** **Importante**: Con `for` - como con todos los bucles - debes estar seguro de que el inicializador es repetido hasta que eventualemtne alcance la condición de salida. Si no, el bucle seguirá repitiéndose indefinidamente, y puede que el navegador lo fuerce a detenerse o se interrumpa. Esto se denomina **bucle infinito**.
 
-<h2 id="Salir_de_un_bucle_con_break">Salir de un bucle con <code>break</code></h2>
+## Salir de un bucle con `break`
 
-<p>Si deseas salir de un bucle antes de que se hayan completado todas las iteraciones, puedes usar la declaración <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/break">break</a>. Ya la vimos en el artículo previo cuando revisamos la declaración <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/switch">switch</a> - cuando un caso en una declaración <code>switch</code> coincide con la expresión de entrada, la declaración <code>break</code> inmediatamente sale de la declaración <code>switch</code> y avanza al código que se encuentra después.</p>
+Si deseas salir de un bucle antes de que se hayan completado todas las iteraciones, puedes usar la declaración [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Ya la vimos en el artículo previo cuando revisamos la declaración [switch](/es/docs/Web/JavaScript/Referencia/Sentencias/switch) - cuando un caso en una declaración `switch` coincide con la expresión de entrada, la declaración `break` inmediatamente sale de la declaración `switch` y avanza al código que se encuentra después.
 
-<p>Ocurre lo mismo con los bucles - una declaración <code>break</code> saldrá inmediatamente del bucle y hará que el navegador siga con el código que sigue después.</p>
+Ocurre lo mismo con los bucles - una declaración `break` saldrá inmediatamente del bucle y hará que el navegador siga con el código que sigue después.
 
-<p>Digamos que queremos buscar a través de un arreglo de contactos y números telefónicos y retornar sólo el número que queríamos encontrar. primero, un simple HTML -  un {{htmlelement("input")}} de texto que nos permita ingresar un nombre para buscar, un elemento {{htmlelement("button")}} para enviar la búsqueda, y un elemento {{htmlelement("p")}} para mostrar el resultado:</p>
+Digamos que queremos buscar a través de un arreglo de contactos y números telefónicos y retornar sólo el número que queríamos encontrar. primero, un simple HTML - un {{htmlelement("input")}} de texto que nos permita ingresar un nombre para buscar, un elemento {{htmlelement("button")}} para enviar la búsqueda, y un elemento {{htmlelement("p")}} para mostrar el resultado:
 
-<pre class="brush: html notranslate">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
-&lt;input id="search" type="text"&gt;
-&lt;button&gt;Search&lt;/button&gt;
+```html
+<label for="search">Search by contact name: </label>
+<input id="search" type="text">
+<button>Search</button>
 
-&lt;p&gt;&lt;/p&gt;</pre>
+<p></p>
+```
 
-<p>Ahora en el JavaScript:</p>
+Ahora en el JavaScript:
 
-<pre class="brush: js notranslate">var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+```js
+var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
 var para = document.querySelector('p');
 var input = document.querySelector('input');
 var btn = document.querySelector('button');
@@ -302,7 +281,7 @@ btn.addEventListener('click', function() {
   var searchName = input.value;
   input.value = '';
   input.focus();
-  for (var i = 0; i &lt; contacts.length; i++) {
+  for (var i = 0; i < contacts.length; i++) {
     var splitContact = contacts[i].split(':');
     if (splitContact[0] === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
@@ -311,30 +290,29 @@ btn.addEventListener('click', function() {
       para.textContent = 'Contact not found.';
     }
   }
-});</pre>
+});
+```
 
-<div class="hidden">
-<h6 id="Hidden_code_3">Hidden code 3</h6>
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple contact search example</title>
+    <style>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Simple contact search example&lt;/title&gt;
-    &lt;style&gt;
+    </style>
+  </head>
+  <body>
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+  <label for="search">Search by contact name: </label>
+  <input id="search" type="text">
+  <button>Search</button>
 
-  &lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
-  &lt;input id="search" type="text"&gt;
-  &lt;button&gt;Search&lt;/button&gt;
-
-  &lt;p&gt;&lt;/p&gt;
+  <p></p>
 
 
-    &lt;script&gt;
+    <script>
     var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
     var para = document.querySelector('p');
     var input = document.querySelector('input');
@@ -344,7 +322,7 @@ btn.addEventListener('click', function() {
       var searchName = input.value;
       input.value = '';
       input.focus();
-      for (var i = 0; i &lt; contacts.length; i++) {
+      for (var i = 0; i < contacts.length; i++) {
         var splitContact = contacts[i].split(':');
         if (splitContact[0] === searchName) {
           para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
@@ -354,73 +332,68 @@ btn.addEventListener('click', function() {
         }
       }
     });
-    &lt;/script&gt;
+    </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<ol>
- <li>First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.</li>
- <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code is run to perform the search and return the results.</li>
- <li>We store the value entered into the text input in a variable called <code>searchName</code>, before then emptying the text input and focusing it again, ready for the next search.</li>
- <li>Now onto the interesting part, the for loop:
-  <ol>
-   <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
-   <li>Inside the loop we first split the current contact (<code>contacts[i]</code>) at the colon character, and store the resulting two values in an array called <code>splitContact</code>.</li>
-   <li>We then use a conditional statement to test whether <code>splitContact[0]</code> (the contact's name) is equal to the inputted <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's number is, and use <code>break</code> to end the loop.</li>
-  </ol>
- </li>
- <li>If the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
-</ol>
+1.  First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
+2.  Next, we attach an event listener to the button (`btn`), so that when it is pressed, some code is run to perform the search and return the results.
+3.  We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
+4.  Now onto the interesting part, the for loop:
 
-<div class="note">
-<p>Note: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">full source code on GitHub</a> too (also <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">see it running live</a>).</p>
-</div>
+    1.  We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
+    2.  Inside the loop we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
+    3.  We then use a conditional statement to test whether `splitContact[0]` (the contact's name) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
-<h2 id="Skipping_iterations_with_continue">Skipping iterations with continue</h2>
+5.  If the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
+> **Nota:** Note: You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
-<p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
+## Skipping iterations with continue
 
-<pre class="brush: js notranslate">var num = input.value;
+The [continue](/es/docs/Web/JavaScript/Reference/Statements/continue) statement works in a similar manner to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
 
-for (var i = 1; i &lt;= num; i++) {
+The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:
+
+```js
+var num = input.value;
+
+for (var i = 1; i <= num; i++) {
   var sqRoot = Math.sqrt(i);
   if (Math.floor(sqRoot) !== sqRoot) {
     continue;
   }
 
   para.textContent += i + ' ';
-}</pre>
+}
+```
 
-<p>Here's the output:</p>
+Here's the output:
 
-<div class="hidden">
-<h6 id="Hidden_code_4">Hidden code 4</h6>
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Integer squares generator</title>
+    <style>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Integer squares generator&lt;/title&gt;
-    &lt;style&gt;
+    </style>
+  </head>
+  <body>
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+  <label for="number">Enter number: </label>
+  <input id="number" type="text">
+  <button>Generate integer squares</button>
 
-  &lt;label for="number"&gt;Enter number: &lt;/label&gt;
-  &lt;input id="number" type="text"&gt;
-  &lt;button&gt;Generate integer squares&lt;/button&gt;
-
-  &lt;p&gt;Output: &lt;/p&gt;
+  <p>Output: </p>
 
 
-    &lt;script&gt;
+    <script>
     var para = document.querySelector('p');
     var input = document.querySelector('input');
     var btn = document.querySelector('button');
@@ -430,7 +403,7 @@ for (var i = 1; i &lt;= num; i++) {
       var num = input.value;
       input.value = '';
       input.focus();
-      for (var i = 1; i &lt;= num; i++) {
+      for (var i = 1; i <= num; i++) {
         var sqRoot = Math.sqrt(i);
         if (Math.floor(sqRoot) !== sqRoot) {
           continue;
@@ -439,47 +412,46 @@ for (var i = 1; i &lt;= num; i++) {
         para.textContent += i + ' ';
       }
     });
-    &lt;/script&gt;
+    </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-<ol>
- <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
- <li>Inside the loop, we find the square root of each number using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a> does to the number it is passed).</li>
- <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the <code>continue</code> statement to skip on to the next loop iteration without recording the number anywhere.</li>
- <li>If the square root IS an integer, we skip past the if block entirely so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
-</ol>
+1.  In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
+2.  Inside the loop, we find the square root of each number using [Math.sqrt(i)](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
+3.  If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
+4.  If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
-<div class="note">
-<p><strong>Note</strong>: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">full source code on GitHub</a> too (also <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">see it running live</a>).</p>
-</div>
+> **Nota:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
-<h2 id="while_and_do_..._while">while and do ... while</h2>
+## while and do ... while
 
-<p><code>for</code> is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.</p>
+`for` is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
 
-<p>First, let's have a look at the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> loop. This loop's syntax looks like so:</p>
+First, let's have a look at the [while](/es/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-<pre class="notranslate">initializer
+```
+initializer
 while (exit-condition) {
   // code to run
 
   final-expression
-}</pre>
+}
+```
 
-<p>This works in a very similar way to the for loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run — rather than these two items being included inside the parentheses. The exit-condition is included inside the parentheses, which are preceded by the <code>while</code> keyword rather than <code>for</code>.</p>
+This works in a very similar way to the for loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run — rather than these two items being included inside the parentheses. The exit-condition is included inside the parentheses, which are preceded by the `while` keyword rather than `for`.
 
-<p>The same three items are still present, and they are still defined in the same order as they are in the for loop — this makes sense, as you still have to have an initializer defined before you can check whether it has reached the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the exit-condition has still not been reached.</p>
+The same three items are still present, and they are still defined in the same order as they are in the for loop — this makes sense, as you still have to have an initializer defined before you can check whether it has reached the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the exit-condition has still not been reached.
 
-<p>Let's have a look again at our cats list example, but rewritten to use a while loop:</p>
+Let's have a look again at our cats list example, but rewritten to use a while loop:
 
-<pre class="brush: js notranslate">var i = 0;
+```js
+var i = 0;
 
-while (i &lt; cats.length) {
+while (i < cats.length) {
   if (i === cats.length - 1) {
     info += 'and ' + cats[i] + '.';
   } else {
@@ -487,28 +459,30 @@ while (i &lt; cats.length) {
   }
 
   i++;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: This still works just the same as expected — have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
-</div>
+> **Nota:** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
+The [do...while](/es/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-<pre class="notranslate">initializer
+```
+initializer
 do {
   // code to run
 
   final-expression
-} while (exit-condition)</pre>
+} while (exit-condition)
+```
 
-<p>In this case, the initializer again comes first, before the loop starts. The <code>do</code> keyword directly precedes the curly braces containing the code to run and the final-expression.</p>
+In this case, the initializer again comes first, before the loop starts. The `do` keyword directly precedes the curly braces containing the code to run and the final-expression.
 
-<p>The differentiator here is that the exit-condition comes after everything else, wrapped in parentheses and preceded by a <code>while</code> keyword. In a <code>do...while</code> loop, the code inside the curly braces is always run once before the check is made to see if it should be executed again (in while and for, the check comes first, so the code might never be executed).</p>
+The differentiator here is that the exit-condition comes after everything else, wrapped in parentheses and preceded by a `while` keyword. In a `do...while` loop, the code inside the curly braces is always run once before the check is made to see if it should be executed again (in while and for, the check comes first, so the code might never be executed).
 
-<p>Let's rewrite our cat listing example again to use a <code>do...while</code> loop:</p>
+Let's rewrite our cat listing example again to use a `do...while` loop:
 
-<pre class="brush: js notranslate">var i = 0;
+```js
+var i = 0;
 
 do {
   if (i === cats.length - 1) {
@@ -518,52 +492,45 @@ do {
   }
 
   i++;
-} while (i &lt; cats.length);</pre>
+} while (i < cats.length);
+```
 
-<div class="note">
-<p><strong>Note</strong>: Again, this works just the same as expected — have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full source code</a>).</p>
+> **Nota:** Again, this works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+
+> **Advertencia:** **Important**: With while and do...while — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
+
+## Active learning: Launch countdown!
+
+In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blast off. Specifically, we want you to:
+
+- Loop from 10 down to 0. We've provided you with an initializer — `var i = 10;`.
+- For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `var output = document.querySelector('.output');`. In comments, we've provided you with three code lines that need to be used somewhere inside the loop:
+
+  - `var para = document.createElement('p');` — creates a new paragraph.
+  - `output.appendChild(para);` — appends the paragraph to the output `<div>`.
+  - `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right hand side, after the equals sign.
+
+- Different iteration numbers require different text to be put in the paragraph for that iteration (you'll need a conditional statement and multiple `para.textContent =` lines):
+
+  - If the number is 10, print "Countdown 10" to the paragraph.
+  - If the number is 0, print "Blast off!" to the paragraph.
+  - For any other number, print just the number to the paragraph.
+
+- Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
+
+If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
+
+###### Active learning
+
+```html
+<h2>Live output</h2>
+<div class="output" style="height: 410px;overflow: auto;">
+
 </div>
 
-<div class="warning">
-<p><strong>Important</strong>: With while and do...while — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
-</div>
-
-<h2 id="Active_learning_Launch_countdown!">Active learning: Launch countdown!</h2>
-
-<p>In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blast off. Specifically, we want you to:</p>
-
-<ul>
- <li>Loop from 10 down to 0. We've provided you with an initializer — <code>var i = 10;</code>.</li>
- <li>For each iteration, create a new paragraph and append it to the output <code>&lt;div&gt;</code>, which we've selected using <code>var output = document.querySelector('.output');</code>. In comments, we've provided you with three code lines that need to be used somewhere inside the loop:
-  <ul>
-   <li><code>var para = document.createElement('p');</code> — creates a new paragraph.</li>
-   <li><code>output.appendChild(para);</code> — appends the paragraph to the output <code>&lt;div&gt;</code>.</li>
-   <li><code>para.textContent =</code> — makes the text inside the paragraph equal to whatever you put on the right hand side, after the equals sign.</li>
-  </ul>
- </li>
- <li>Different iteration numbers require different text to be put in the paragraph for that iteration (you'll need a conditional statement and multiple <code>para.textContent =</code> lines):
-  <ul>
-   <li>If the number is 10, print "Countdown 10" to the paragraph.</li>
-   <li>If the number is 0, print "Blast off!" to the paragraph.</li>
-   <li>For any other number, print just the number to the paragraph.</li>
-  </ul>
- </li>
- <li>Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you <strong>don't</strong> want <code>i++</code> — how do you iterate downwards?</li>
-</ul>
-
-<p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
-
-<div>
-<h6 id="Active_learning">Active learning</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-&lt;div class="output" style="height: 410px;overflow: auto;"&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-&lt;textarea id="code" class="playable-code" style="height: 300px;width: 95%"&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 var output = document.querySelector('.output');
 output.innerHTML = '';
 
@@ -572,21 +539,16 @@ output.innerHTML = '';
 // var para = document.createElement('p');
 // para.textContent = ;
 // output.appendChild(para);
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -604,17 +566,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<p class="brush: js"></p>
-
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -643,7 +599,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i &gt;= 0) {\n var para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -689,53 +645,43 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p class="brush: js"></p>
+{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}
+
+## Active learning: Filling in a guest list
+
+In this exercise, we want you to take a list of names stored in an array, and put them into a guest list. But it's not quite that easy — we don't want to let Phil and Lola in because they are greedy and rude, and always eat all the food! We have two lists, one for guests to admit, and one for guests to refuse.
+
+Specifically, we want you to:
+
+- Write a loop that will iterate from 0 to the length of the `people` array. You'll need to start with an initializer of `var i = 0;`, but what exit condition do you need?
+- During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
+
+  - If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
+  - If it isn't, concatenate the array item to the end of the `admitted` paragraph's `textContent`, followed by a comma and a space.
+
+We've already provided you with:
+
+- `var i = 0;` — Your initializer.
+- `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
+- `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
+
+Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the [Useful string methods](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for help.
+
+If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
+
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="height: 100px;overflow: auto;">
+  <p class="admitted">Admit: </p>
+  <p class="refused">Refuse: </p>
 </div>
 
-<p>{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}</p>
-
-<h2 id="Active_learning_Filling_in_a_guest_list">Active learning: Filling in a guest list</h2>
-
-<p>In this exercise, we want you to take a list of names stored in an array, and put them into a guest list. But it's not quite that easy — we don't want to let Phil and Lola in because they are greedy and rude, and always eat all the food! We have two lists, one for guests to admit, and one for guests to refuse.</p>
-
-<p>Specifically, we want you to:</p>
-
-<ul>
- <li>Write a loop that will iterate from 0 to the length of the <code>people</code> array. You'll need to start with an initializer of  <code>var i = 0;</code>, but what exit condition do you need?</li>
- <li>During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
-  <ul>
-   <li>If it is, concatenate the array item to the end of the <code>refused</code> paragraph's <code>textContent</code>, followed by a comma and a space.</li>
-   <li>If it isn't, concatenate the array item to the end of the <code>admitted</code> paragraph's <code>textContent</code>, followed by a comma and a space.</li>
-  </ul>
- </li>
-</ul>
-
-<p>We've already provided you with:</p>
-
-<ul>
- <li><code>var i = 0;</code> — Your initializer.</li>
- <li><code>refused.textContent +=</code> — the beginnings of a line that will concatenate something on to the end of <code>refused.textContent</code>.</li>
- <li><code>admitted.textContent +=</code> — the beginnings of a line that will concatenate something on to the end of <code>admitted.textContent</code>.</li>
-</ul>
-
-<p>Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for help.</p>
-
-<p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
-
-<div class="hidden">
-<h6 id="Active_learning_2">Active learning 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
-&lt;div class="output" style="height: 100px;overflow: auto;"&gt;
-  &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-&lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
 var admitted = document.querySelector('.admitted');
@@ -748,15 +694,16 @@ refused.textContent = 'Refuse: '
 // refused.textContent += ;
 // admitted.textContent += ;
 
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -774,9 +721,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -805,7 +754,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nvar i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i &lt; people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nvar i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -851,74 +800,73 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
-</div>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_2', '100%', 680, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Active_learning_2', '100%', 680, "", "", "hide-codepen-jsfiddle") }}
 
-<h2 id="Which_loop_type_should_you_use">Which loop type should you use?</h2>
+## Which loop type should you use?
 
-<p>For basic uses, <code>for</code>, <code>while</code>, and <code>do...while</code> loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. Let's have a look at them again.</p>
+For basic uses, `for`, `while`, and `do...while` loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. Let's have a look at them again.
 
-<p>First <code>for</code>:</p>
+First `for`:
 
-<pre class="notranslate">for (initializer; exit-condition; final-expression) {
+```
+for (initializer; exit-condition; final-expression) {
   // code to run
-}</pre>
+}
+```
 
-<p><code>while</code>:</p>
+`while`:
 
-<pre class="notranslate">initializer
+```
+initializer
 while (exit-condition) {
   // code to run
 
   final-expression
-}</pre>
+}
+```
 
-<p>and finally <code>do...while</code>:</p>
+and finally `do...while`:
 
-<pre class="notranslate">initializer
+```
+initializer
 do {
   // code to run
 
   final-expression
-} while (exit-condition)</pre>
+} while (exit-condition)
+```
 
-<p>We would recommend <code>for</code>, at least to begin with, as it is probably the easiest for remembering everything — the initializer, exit-condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.</p>
+We would recommend `for`, at least to begin with, as it is probably the easiest for remembering everything — the initializer, exit-condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.
 
-<div class="note">
-<p><strong>Note</strong>: There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration guide</a>.</p>
-</div>
+> **Nota:** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/es/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!</p>
+This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-<p>If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/Learn#Contact_us">contact us</a> to ask for help.</p>
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration in detail</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for statement reference</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> references</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> references</li>
- <li>
-  <p><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
- </li>
-</ul>
+- [Loops and iteration in detail](/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [for statement reference](/es/docs/Web/JavaScript/Reference/Statements/for)
+- [while](/es/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/es/docs/Web/JavaScript/Reference/Statements/do...while) references
+- [break](/es/docs/Web/JavaScript/Reference/Statements/break) and [continue](/es/docs/Web/JavaScript/Reference/Statements/continue) references
+- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
-</ul>
-&lt;gdiv&gt;&lt;/gdiv&gt;
+- [Making decisions in your code — conditionals](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+
+\<gdiv>\</gdiv>
