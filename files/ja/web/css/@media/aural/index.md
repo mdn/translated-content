@@ -3,6 +3,7 @@ title: aural
 slug: Web/CSS/@media/aural
 original_slug: Web/CSS/aural
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 `aural` は [CSS](/ja/docs/Web/CSS) の[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。

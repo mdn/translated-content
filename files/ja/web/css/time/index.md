@@ -2,6 +2,7 @@
 title: <time>
 slug: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 **`<time>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、時間の値を秒単位またはミリ秒単位で表現します。これは {{cssxref("animation")}} や {{cssxref("transition")}} および関連するプロパティで使用されています。

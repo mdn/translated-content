@@ -2,6 +2,7 @@
 title: '-moz-orient'
 slug: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-moz-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される要素の向きを指定します。

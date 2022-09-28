@@ -2,6 +2,7 @@
 title: content
 slug: Web/CSS/content
 ---
+
 {{CSSRef}}
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。 `content` プロパティを使用して挿入されたオブジェクトは、**無名の[置換要素](/ja/docs/Web/CSS/Replaced_element)** になります。

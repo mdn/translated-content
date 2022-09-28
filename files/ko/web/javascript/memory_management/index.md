@@ -193,7 +193,7 @@ Node.js는 브라우저 환경에서 실행되는 JavaScript에 사용할 수 �
 node --max-old-space-size=6000 index.js
 ```
 
-플래그 및 [](https://nodejs.org/en/docs/guides/debugging-getting-started/)Chrome 디버거를 사용하여 메모리 문제를 디버깅하기 위해 가비지 수집기를 노출할 수도 있습니다:
+플래그 및 [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/) 디버거를 사용하여 메모리 문제를 디버깅하기 위해 가비지 수집기를 노출할 수도 있습니다:
 
 ```bash
 node --expose-gc --inspect index.js

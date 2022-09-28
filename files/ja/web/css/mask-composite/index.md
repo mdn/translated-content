@@ -2,6 +2,7 @@
 title: mask-composite
 slug: Web/CSS/mask-composite
 ---
+
 {{CSSRef}}
 
 **`mask-composite`** は [CSS](/ja/docs/Web/CSS) のプロパティで、現在のマスクレイヤーとその下のマスクレイヤーとの間で使われる合成操作を表します。

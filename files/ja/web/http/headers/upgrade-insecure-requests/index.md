@@ -2,6 +2,7 @@
 title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Upgrade-Insecure-Requests`** リクエストヘッダーは、暗号化および認証されたレスポンスに対するクライアントの設定を表す信号をサーバーに送信し、 [CSP](/ja/docs/Web/HTTP/CSP) の {{CSP("upgrade-insecure-requests")}} ディレクティブが正常に処理できることを示します。

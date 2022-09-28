@@ -2,6 +2,7 @@
 title: offset-position
 slug: Web/CSS/offset-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`offset-position`** は CSS のプロパティで、 {{cssxref("offset-path")}} の[初期位置](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position)を定義します。

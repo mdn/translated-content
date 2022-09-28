@@ -2,6 +2,7 @@
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`Proxy-Authenticate`** レスポンスヘッダーは、{{Glossary("proxy server", "プロキシサーバー")}}の背後にあるリソースへのアクセスに使用される認証メソッドを定義します。プロキシサーバーへのリクエストを認証し、プロキシサーバーがリクエストをさらに送信できるようにします。

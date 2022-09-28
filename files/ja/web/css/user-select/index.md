@@ -2,6 +2,7 @@
 title: user-select
 slug: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 **`user-select`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーがテキストを範囲選択できるかどうかを制御します。これは、テキストボックスを除いて、{{Glossary("Chrome", "クローム")}}として読み込まれたコンテンツには影響を与えません。

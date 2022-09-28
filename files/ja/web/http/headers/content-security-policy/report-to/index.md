@@ -2,6 +2,7 @@
 title: 'CSP: report-to'
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
+
 {{HTTPSidebar}}
 
 `Content-Security-Policy` の **_`Report-To`_** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。

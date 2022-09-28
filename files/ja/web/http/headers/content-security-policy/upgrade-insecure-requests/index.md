@@ -2,6 +2,7 @@
 title: 'CSP: upgrade-insecure-requests'
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でないURL (HTTP経由で提供されるURL) をセキュリティで保護された URL (HTTPSを介して提供されるもの) で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い URL が多数存在するウェブサイトのためのものです。
