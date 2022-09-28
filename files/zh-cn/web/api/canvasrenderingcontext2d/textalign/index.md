@@ -30,9 +30,9 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 - end
   - : 文本对齐界线结束的地方 （左对齐指本地从左向右，右对齐指本地从右向左）。
 
-默认值是 `start。`
+默认值是 `start`。
 
-> `译者注：direction 属性会对此属性产生影响。如果 direction 属性设置为 ltr，则 left 和 start 的效果相同，right 和 end 的效果相同；如果 direction 属性设置为 rtl，则 left 和 end 的效果相同，right 和 start 的效果相同。`
+> 译者注：`direction` 属性会对此属性产生影响。如果 `direction` 属性设置为 `ltr`，则 left 和 `start` 的效果相同，`right` 和 end 的效果相同；如果 direction 属性设置为 `rtl`，则 `left` 和 `end` 的效果相同，`right` 和 `start` 的效果相同。
 
 ## 示例
 

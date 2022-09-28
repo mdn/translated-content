@@ -130,7 +130,7 @@ function styleHyphenFormat(propertyName) {
 }
 ```
 
-运行 ` styleHyphenFormat('borderTop')``， `将返回 'border-top'。
+运行 `styleHyphenFormat('borderTop')`， 将返回 `'border-top'`。
 
 因为我们想在最终的替换中进一步转变匹配结果，所以我们必须使用一个函数。这迫使我们在使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}方法前进行评估。如果我们尝试不用一个函数进行匹配，那么使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 方法将不会有效。
 

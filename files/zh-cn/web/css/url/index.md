@@ -8,7 +8,7 @@ original_slug: Web/CSS/url()
 
 ## 概述
 
-[CSS](/zh-CN/CSS) 数据类型 `<url> 指向一个资源。它没有独有的表达形式，只能通过 url() 函数定义。`
+[CSS](/zh-CN/CSS) 数据类型 `<url>` 指向一个资源。它没有独有的表达形式，只能通过 `url()` 函数定义。
 
 > **备注：** **URI 和 URL?**
 >
