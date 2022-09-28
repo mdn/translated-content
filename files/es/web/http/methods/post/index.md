@@ -7,9 +7,13 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/POST
 ---
-{{HTTPSidebar}}El **método** **HTTP `POST` **envía datos al servidor. El tipo del cuerpo de la solicitud es indicada por la cabecera {{HTTPHeader("Content-Type")}}.La diferencia entre `PUT` y {{HTTPMethod("POST")}} es que `PUT` es idempotente: llamarlo una o varias veces sucesivamente tiene el mismo efecto (no tiene efecto secundario // colateral), mientras que varios `POST` idénticos pueden tener efectos adicionales, como pasar una orden muchas veces.
+{{HTTPSidebar}}
 
-Una solicitud `POST` es tipicamente enviada por un [formulario HTML](/es/docs/Web/Guide/HTML/Forms) y resulta en un cambio en el servidor. En este caso, el tipo de contenido es seleccionado poniendo la cadena de texto adecuada en el atributo* {{htmlattrxref("enctype", "form")}} del elemento {{HTMLElement("form")}} o el atributo {{htmlattrxref("formenctype", "input")}} de los elementos {{HTMLElement("input") }} o \_\_{{HTMLElement("button")}} :*
+El **método HTTP `POST`** envía datos al servidor. El tipo del cuerpo de la solicitud es indicada por la cabecera {{HTTPHeader("Content-Type")}}.
+
+La diferencia entre `PUT` y {{HTTPMethod("POST")}} es que `PUT` es idempotente: llamarlo una o varias veces sucesivamente tiene el mismo efecto (no tiene efecto secundario // colateral), mientras que varios `POST` idénticos pueden tener efectos adicionales, como pasar una orden muchas veces.
+
+Una solicitud `POST` es tipicamente enviada por un [formulario HTML](/es/docs/Web/Guide/HTML/Forms) y resulta en un cambio en el servidor. En este caso, el tipo de contenido es seleccionado poniendo la cadena de texto adecuada en el atributo {{htmlattrxref("enctype", "form")}} del elemento {{HTMLElement("form")}} o el atributo {{htmlattrxref("formenctype", "input")}} de los elementos {{HTMLElement("input") }} o {{HTMLElement("button")}} :
 
 - `application/`_`x-www-form-urlencoded`: Los valores son codificados en tuplas llave-valor separadas por `'&'`, con un `'='` entre la llave y el valor. Caracteres no-Alfanumericos en ambas (llaves, valores) son {{glossary("percent encoded")}}: Esta es la razón por la cual este tipo no es adecuado para usarse con datos binarios (use `multipart/form-data` en su lugar)_
 - `multipart/form-data`_: Cada valor es enviado como un dato de bloque ("input de un formulario"), con un delimitador como separador definido por el usuario ("espacio entre campos"). Éstas llaves son colocadas en el Content-Disposition , la cual es cómo está estructurada cada parte del HEADER en una petición HTTP_

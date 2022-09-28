@@ -68,7 +68,14 @@ Esta sección describe los problemas que comunmente ocurren cuando se crean o se
 - Falta de control de errores
   - : Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen` 'base64'`, se ignoran, pero no se proporciona ningún error.
 - No hay soporte para consulta de cadenas, etc.
-  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis` <url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo: data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=valEsto representa un recurso HTML cuyo contenido es: lots of text...<p><a name="bottom">bottom</a>?arg=val
+  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis` <url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo:
+      ```
+      data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+      ```
+      Esto representa un recurso HTML cuyo contenido es:
+      ```
+      lots of text...<p><a name="bottom">bottom</a>?arg=val
+      ```
 
 ## Especificaciones
 
