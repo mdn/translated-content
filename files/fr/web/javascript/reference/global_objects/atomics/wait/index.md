@@ -69,13 +69,11 @@ Atomics.notify(int32, 0, 1);
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                     |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.wait', 'Atomics.wait')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.wait")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -37,14 +37,11 @@ Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir u
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.@@toPrimitive")}}
+{{Compat}}
 
 ## Voir aussi
 
