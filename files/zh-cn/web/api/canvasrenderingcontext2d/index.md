@@ -124,9 +124,9 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : 文本对齐设置。允许的值： `start` (默认), `end`, `left`, `right` 或 `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : 基线对齐设置。允许的值： `top`, `hanging`, `middle`, `alphabetic` (默认),`ideographic`, `bottom`.
+  - : 基线对齐设置。允许的值： `top`, `hanging`, `middle`, `alphabetic` (默认), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : 文本的方向。 允许的值： `ltr, rtl`, `inherit` (默认).
+  - : 文本的方向。 允许的值： `ltr`, `rtl`, `inherit` (默认).
 
 ## 填充和描边样式
 
