@@ -3,41 +3,31 @@ title: 304 Not Modified
 slug: Web/HTTP/Status/304
 translation_of: Web/HTTP/Status/304
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Код "HTTP <strong>304 Not Modified</strong>" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кешированный ресурс. Это происходит, когда метод  {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.</p>
+Код "HTTP **304 Not Modified**" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кешированный ресурс. Это происходит, когда метод {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.
 
-<p>Если эквивалентный ответ {{HTTPStatus("200")}} <code>OK</code> включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.</p>
+Если эквивалентный ответ {{HTTPStatus("200")}} `OK` включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.
 
-<div class="note">
-<p>Многие  <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor">developer tools' network panels</a> браузеров создают посторонние запросы, приводящие к 304 ответам, так что доступ к локальному кешу виден разработчикам.</p>
-</div>
+> **Примечание:** Многие [developer tools' network panels](/ru/docs/Tools/Network_Monitor) браузеров создают посторонние запросы, приводящие к 304 ответам, так что доступ к локальному кешу виден разработчикам.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">304 Not Modified</pre>
+```
+304 Not Modified
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "304 Not Modified" , "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Спецификации                                             | Название                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-None-Match")}}

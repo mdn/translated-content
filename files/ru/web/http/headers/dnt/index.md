@@ -4,65 +4,63 @@ slug: Web/HTTP/Headers/DNT
 translation_of: Web/HTTP/Headers/DNT
 original_slug: Web/HTTP/Заголовки/DNT
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>DNT</code></strong> (<strong>D</strong>o <strong>N</strong>ot <strong>T</strong>rack - Не отслеживать) заголовок указывает разрешает ли пользователь отслеживать себя. Он позволяет пользователю указать предпочитают они приватность персонифицированному контенту, подготавливаемому с использованием отслеживания.</p>
+The **`DNT`** (**D**o **N**ot **T**rack - Не отслеживать) заголовок указывает разрешает ли пользователь отслеживать себя. Он позволяет пользователю указать предпочитают они приватность персонифицированному контенту, подготавливаемому с использованием отслеживания.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">DNT: 0
+```
+DNT: 0
 DNT: 1
-</pre>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>0</dt>
- <dd>Пользователь разрешает отслеживание на целевом сайте.</dd>
- <dt>1</dt>
- <dd>Пользователь предпочитает не отслеживаться на целевом сайте.</dd>
-</dl>
+- 0
+  - : Пользователь разрешает отслеживание на целевом сайте.
+- 1
+  - : Пользователь предпочитает не отслеживаться на целевом сайте.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Чтение_статуса_Do_Not_Track_из_JavaScript">Чтение статуса Do Not Track из JavaScript</h3>
+### Чтение статуса Do Not Track из JavaScript
 
-<p>DNT предпочтение пользователя может быть считано из JavaScript используя свойство {{domxref("Navigator.doNotTrack")}} :</p>
+DNT предпочтение пользователя может быть считано из JavaScript используя свойство {{domxref("Navigator.doNotTrack")}} :
 
-<pre class="brush: js">navigator.doNotTrack; // "0" or "1"</pre>
+```js
+navigator.doNotTrack; // "0" or "1"
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
-<p>{{Compat}}</p>
+## Совместимость браузеров
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("Navigator.doNotTrack")}}</li>
- <li>{{HTTPHeader("Tk")}} header</li>
- <li><a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track on Wikipedia</a></li>
- <li><a href="https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean">What Does the "Track" in "Do Not Track" Mean? – EFF</a></li>
- <li><a href="http://donottrack.us/">donottrack.us</a></li>
- <li>DNT browser settings help:
-  <ul>
-   <li><a href="https://www.mozilla.org/en-US/firefox/dnt/">Firefox</a></li>
-   <li><a href="https://support.google.com/chrome/answer/2790761">Chrome</a></li>
-  </ul>
- </li>
-</ul>
+## Смотрите также
+
+- {{domxref("Navigator.doNotTrack")}}
+- {{HTTPHeader("Tk")}} header
+- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
+- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
+- [donottrack.us](http://donottrack.us/)
+- DNT browser settings help:
+
+  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Chrome](https://support.google.com/chrome/answer/2790761)

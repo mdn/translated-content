@@ -3,36 +3,28 @@ title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 translation_of: Web/HTTP/Status/504
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP код <code><strong>504</strong></code><strong><code> Gateway Timeout</code></strong> , полученный в ответе, указывает на ошибку, что сервер, действуя как шлюз или прокси, не может получить ответ вовремя.</p>
+HTTP код **`504`\*\***` Gateway Timeout`\*\* , полученный в ответе, указывает на ошибку, что сервер, действуя как шлюз или прокси, не может получить ответ вовремя.
 
-<p>{{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} могут ссылаться на разные вещи в сети, а 504  error обычно не является чем-то, что вы можете исправить, но требует исправления веб-сервером или Прокси, к которым вы пытаетесь получить доступ.</p>
+{{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} могут ссылаться на разные вещи в сети, а 504 error обычно не является чем-то, что вы можете исправить, но требует исправления веб-сервером или Прокси, к которым вы пытаетесь получить доступ.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">504 Gateway Timeout</pre>
+```
+504 Gateway Timeout
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "504 Gateway Timeout" , "6.6.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                     | Название                                                      |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPStatus(502)}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPStatus(502)}}

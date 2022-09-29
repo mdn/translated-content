@@ -3,41 +3,31 @@ title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 translation_of: Web/HTTP/Status/308
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Код ответа на статус перенаправления "HTTP <code><strong>308</strong></code><strong><code> Permanent Redirect"</code></strong> указывает, что запрошенный ресурс был окончательно перемещён в URL-адрес, указанный в {{HTTPHeader("Location")}}. Браузер перенаправляется на эту страницу, а поисковые системы обновляют свои ссылки на ресурс (в SEO-speak говорится, что link-juice отправляется на новый URL-адрес).</p>
+Код ответа на статус перенаправления "HTTP **`308`\*\***` Permanent Redirect"`\*\* указывает, что запрошенный ресурс был окончательно перемещён в URL-адрес, указанный в {{HTTPHeader("Location")}}. Браузер перенаправляется на эту страницу, а поисковые системы обновляют свои ссылки на ресурс (в SEO-speak говорится, что link-juice отправляется на новый URL-адрес).
 
-<p>Метод запроса и тело не будут изменены, тогда как {{HTTPStatus("301")}}  иногда может быть неправильно заменён на {{HTTPHeader("GET")}} метод.</p>
+Метод запроса и тело не будут изменены, тогда как {{HTTPStatus("301")}} иногда может быть неправильно заменён на {{HTTPHeader("GET")}} метод.
 
-<div class="note">
-<p>Некоторые веб-приложения могут использовать <strong>308 Permanent Redirect</strong> нестандартным образом и для других целей. Например, Google Drive использует ответ <strong>308 Resume Incomplete</strong>, чтобы указать клиенту, когда неполная загрузка застопорилась.<a href="https://developers.google.com/drive/v3/web/manage-uploads#resumable">[1]</a></p>
-</div>
+> **Примечание:** Некоторые веб-приложения могут использовать **308 Permanent Redirect** нестандартным образом и для других целей. Например, Google Drive использует ответ **308 Resume Incomplete**, чтобы указать клиенту, когда неполная загрузка застопорилась.[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">308 Permanent Redirect</pre>
+```
+308 Permanent Redirect
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7538", "308 Permanent Redirect" , "3")}}</td>
-   <td>The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)</td>
-  </tr>
- </tbody>
-</table>
+| Спецификации                                                     | Название                                                             |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------- |
+| {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPStatus("301")}} <code>Moved Permanently</code></li>
- <li>{{HTTPStatus("302")}} <code>Found</code>, the temporary redirect</li>
-</ul>
+## Смотрите также
+
+- {{HTTPStatus("301")}} `Moved Permanently`
+- {{HTTPStatus("302")}} `Found`, the temporary redirect

@@ -9,76 +9,66 @@ tags:
 translation_of: Web/HTTP/Headers/Retry-After
 original_slug: Web/HTTP/Заголовки/Retry-After
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Retry-After</code></strong> заголовок HTTP ответа показывает, как долго клиент должен подождать перед последующим запросом. Есть три основных случая, в которых следует использовать этот заголовок:</p>
+**`Retry-After`** заголовок HTTP ответа показывает, как долго клиент должен подождать перед последующим запросом. Есть три основных случая, в которых следует использовать этот заголовок:
 
-<ul>
- <li>Когда отправлен с кодом {{HTTPStatus(503)}} (Service Unavailable), отображая примерное время, через которое сервис будет доступен.</li>
- <li>Когда отправлен с кодом {{HTTPStatus(429)}} (Too Many Requests), отображая, сколько ждать перед следующим запросом.</li>
- <li>Когда отправлен с кодом переадресации (например, {{HTTPStatus(301)}} (Moved Permanently)), отображает минимальное время, которое клиент должен подождать перед переадресацией.</li>
-</ul>
+- Когда отправлен с кодом {{HTTPStatus(503)}} (Service Unavailable), отображая примерное время, через которое сервис будет доступен.
+- Когда отправлен с кодом {{HTTPStatus(429)}} (Too Many Requests), отображая, сколько ждать перед следующим запросом.
+- Когда отправлен с кодом переадресации (например, {{HTTPStatus(301)}} (Moved Permanently)), отображает минимальное время, которое клиент должен подождать перед переадресацией.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Ответный заголовок")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>
+        {{Glossary("Ответный заголовок")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Retry-After: &lt;http-date&gt;
-Retry-After: &lt;delay-seconds&gt;
-</pre>
+```
+Retry-After: <http-date>
+Retry-After: <delay-seconds>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;http-date&gt;</dt>
- <dd>Дата, после которой пытаться ещё раз. За документацией к HTTP дате, обратитесь сюда: {{HTTPHeader("Дата")}}.</dd>
- <dt>&lt;delay-seconds&gt;</dt>
- <dd>Неотрицательное число секунд, показывающее время ожидания перед новым запросом.</dd>
-</dl>
+- \<http-date>
+  - : Дата, после которой пытаться ещё раз. За документацией к HTTP дате, обратитесь сюда: {{HTTPHeader("Дата")}}.
+- \<delay-seconds>
+  - : Неотрицательное число секунд, показывающее время ожидания перед новым запросом.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Работа_с_запланированным_временем_простоя">Работа с запланированным временем простоя</h3>
+### Работа с запланированным временем простоя
 
-<p>Поддержка <code>Retry-After</code> реализована ещё не везде. Впрочем, некоторые боты, к примеру Googlebot, понимает заголовок <code>Retry-After</code>. В данном случае полезно отправлять его с кодом {{HTTPStatus(503)}} (Service Unavailable), чтобы поисковики продолжили индексировать после простоя</p>
+Поддержка `Retry-After` реализована ещё не везде. Впрочем, некоторые боты, к примеру Googlebot, понимает заголовок `Retry-After`. В данном случае полезно отправлять его с кодом {{HTTPStatus(503)}} (Service Unavailable), чтобы поисковики продолжили индексировать после простоя
 
-<pre>Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
 Retry-After: 120
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Retry-After", "7.1.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Title                                                         |
+| ---------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
-<p>{{Compat}}</p>
+## Поддержка браузеров
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html">Google Webmaster blog: How to deal with planned site downtime</a></li>
- <li>{{HTTPStatus(503)}} (Service Unavailable)</li>
- <li>{{HTTPStatus(301)}} (Moved Permanently)</li>
-</ul>
+## Смотрите также
+
+- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
+- {{HTTPStatus(503)}} (Service Unavailable)
+- {{HTTPStatus(301)}} (Moved Permanently)

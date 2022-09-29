@@ -9,33 +9,24 @@ tags:
   - Справка
 translation_of: Web/HTTP/Status/417
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Код ошибки HTTP <strong><code>417 Expectation Failed</code></strong> указывает на то, что ожидание, указанное в  {{HTTPHeader("Expect")}}, не может быть выполнено.</p>
+Код ошибки HTTP **`417 Expectation Failed`** указывает на то, что ожидание, указанное в {{HTTPHeader("Expect")}}, не может быть выполнено.
 
-<p>Дополнительную информацию смотрите в  {{HTTPHeader("Expect")}}.</p>
+Дополнительную информацию смотрите в {{HTTPHeader("Expect")}}.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">417 Expectation Failed</pre>
+```
+417 Expectation Failed
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "417 Expectation Failed" , "6.5.14")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                         | Название                                                      |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}

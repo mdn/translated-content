@@ -4,81 +4,68 @@ slug: Web/HTTP/Headers/Accept-Patch
 translation_of: Web/HTTP/Headers/Accept-Patch
 original_slug: Web/HTTP/Заголовки/Accept-Patch
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP-заголовок запроса <strong><code>Accept-Patch</code></strong> показывает, какой медиа-тип понимает сервер внутри запроса <code>PATCH</code>.</p>
+HTTP-заголовок запроса **`Accept-Patch`** показывает, какой медиа-тип понимает сервер внутри запроса `PATCH`.
 
-<p>Наличие <strong><code>Accept-Patch</code></strong> в ответе к любому методу означает, что сервер принимает <code>PATCH</code>-запросы. Как правило, из этого вытекает следующее:</p>
+Наличие **`Accept-Patch`** в ответе к любому методу означает, что сервер принимает `PATCH`-запросы. Как правило, из этого вытекает следующее:
 
-<p>Сервер, принимающий <code>PATCH</code>-запрос с неподдерживаемым медиа-типом может ответить кодом ошибки {{HTTPStatus("415")}} <code>Unsupported Media Type</code> и заголовком <strong><code>Accept-Patch</code></strong>, в котором перечислены поддерживаемые медиа-типы.</p>
+Сервер, принимающий `PATCH`-запрос с неподдерживаемым медиа-типом может ответить кодом ошибки {{HTTPStatus("415")}} `Unsupported Media Type` и заголовком **`Accept-Patch`**, в котором перечислены поддерживаемые медиа-типы.
 
-<div class="note"><strong>Примечания:</strong>
-
-<ul>
- <li>
-  <p>Хранилище IANA поддерживает <a class="external" href="http://www.iana.org/assignments/http-parameters">полный список официальных кодировок</a>.</p>
- </li>
- <li>Иногда также используются две другие кодировки, <code>bzip</code> и <code>bzip2</code>, но они не входят в стандарт. Они применяют алгоритм, который используются в этих двух UNIX-программах. Стоит учесть, что поддержка первой кодировки прекратилась из-за проблем с лицензированием.</li>
-</ul>
-</div>
+> **Примечание:** **Примечания:**- Хранилище IANA поддерживает [полный список официальных кодировок](http://www.iana.org/assignments/http-parameters).
+>
+> - Иногда также используются две другие кодировки, `bzip` и `bzip2`, но они не входят в стандарт. Они применяют алгоритм, который используются в этих двух UNIX-программах. Стоит учесть, что поддержка первой кодировки прекратилась из-за проблем с лицензированием.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header", "Заголовок ответа")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>да</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>
+        {{Glossary("Response header", "Заголовок ответа")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>да</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+```
+Accept-Patch: application/example, text/example
 Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<p>Нет</p>
+Нет
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+```
+Accept-Patch: application/example, text/example
 
 Accept-Patch: text/example;charset=utf-8
 
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("5789", "Accept-Patch", "3.1")}}</td>
-   <td>HTTP PATCH</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                         | Название   |
+| ---------------------------------------------------- | ---------- |
+| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>Для данного заголовка не важная совместимость браузерами, так как заголовок посылается сервером и спецификация не определяет поведение клиента.</p>
+Для данного заголовка не важная совместимость браузерами, так как заголовок посылается сервером и спецификация не определяет поведение клиента.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTTP-метод {{HTTPMethod("PATCH")}}</li>
- <li>Семантика и контекст {{RFC("7231", "PUT", "4.3.4")}}</li>
-</ul>
+- HTTP-метод {{HTTPMethod("PATCH")}}
+- Семантика и контекст {{RFC("7231", "PUT", "4.3.4")}}

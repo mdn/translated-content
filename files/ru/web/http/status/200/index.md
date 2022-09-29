@@ -3,45 +3,35 @@ title: 200 OK
 slug: Web/HTTP/Status/200
 translation_of: Web/HTTP/Status/200
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Код ответа об успешном статусе "<em>The HTTP</em><strong> 200 OK</strong>" указывает, что запрос выполнен успешно. Ответ 200 может кешироваться по умолчанию.</p>
+Код ответа об успешном статусе "_The HTTP_ **200 OK**" указывает, что запрос выполнен успешно. Ответ 200 может кешироваться по умолчанию.
 
-<p>Значение успеха зависит от метода <em>HTTP-</em>запроса:</p>
+Значение успеха зависит от метода *HTTP-*запроса:
 
-<ul>
- <li>{{HTTPMethod("GET")}}: Ресурс был извлечён и передан в теле сообщения.</li>
- <li>{{HTTPMethod("HEAD")}}: Заголовки объектов находятся в теле сообщения.</li>
- <li>{{HTTPMethod("POST")}}: Ресурс, описывающий результат действия, передаётся в теле сообщения.</li>
- <li>{{HTTPMethod("TRACE")}}:Тело сообщения содержит сообщение запроса, полученное сервером.</li>
-</ul>
+- {{HTTPMethod("GET")}}: Ресурс был извлечён и передан в теле сообщения.
+- {{HTTPMethod("HEAD")}}: Заголовки объектов находятся в теле сообщения.
+- {{HTTPMethod("POST")}}: Ресурс, описывающий результат действия, передаётся в теле сообщения.
+- {{HTTPMethod("TRACE")}}:Тело сообщения содержит сообщение запроса, полученное сервером.
 
-<p>Успешный результат {{HTTPMethod("PUT")}} или {{HTTPMethod("DELETE")}} часто не <strong>200 OK</strong>, {{HTTPStatus ("204")}} <strong>No Content</strong> ( или {{HTTPStatus("201")}} <strong>Created</strong>, когда ресурс загружается в первый раз).</p>
+Успешный результат {{HTTPMethod("PUT")}} или {{HTTPMethod("DELETE")}} часто не **200 OK**, {{HTTPStatus ("204")}} **No Content** ( или {{HTTPStatus("201")}} **Created**, когда ресурс загружается в первый раз).
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">200 OK</pre>
+```
+200 OK
+```
 
-<h2 id="Характеристики">Характеристики </h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "200 OK" , "6.3.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                     | Название                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+## Смотрите также
+
+- [HTTP request methods](/ru/docs/Web/HTTP/Methods)

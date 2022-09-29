@@ -15,33 +15,37 @@ tags:
   - причины
 translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason">Reason</h2>
+## Reason
 
-<pre class="syntaxbox">Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'</pre>
+```
+Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'
+```
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+## Что пошло не так?
 
-<p>Проще говоря, источник делает запрос который не совпадает ни с одним из источников разрешённых заголовком - {{HTTPHeader("Access-Control-Allow-Origin")}}.</p>
+Проще говоря, источник делает запрос который не совпадает ни с одним из источников разрешённых заголовком - {{HTTPHeader("Access-Control-Allow-Origin")}}.
 
-<p>Эта ошибка также может произойти, если ответ содержит более одного заголовка <code>Access-Control-Allow-Origin</code>.</p>
+Эта ошибка также может произойти, если ответ содержит более одного заголовка `Access-Control-Allow-Origin`.
 
-<p>Если сервис, к которому ваш код обращается с помощью CORS запроса находится под вашим контролем, убедитесь что он настроен для включения в себя вашего источника в заголовке <code>Access-Control-Allow-Origin</code> и что в ответах от сервера присутствует только один такой заголовок. Заголовок принимает список источников, поэтому указать новый источник совсем не сложно.</p>
+Если сервис, к которому ваш код обращается с помощью CORS запроса находится под вашим контролем, убедитесь что он настроен для включения в себя вашего источника в заголовке `Access-Control-Allow-Origin` и что в ответах от сервера присутствует только один такой заголовок. Заголовок принимает список источников, поэтому указать новый источник совсем не сложно.
 
-<p>К примеру, в Apache, вы можете добавить следующую строку в конфигурацию веб-сервера (в пределах одной из секций - <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code> или <code>&lt;VirtualHost&gt;</code>). Обычно конфигурация находиться в файле <code>.conf</code> (наиболее частые имена для него - <code>httpd.conf</code> и <code>apache.conf</code>) или в файле <code>.htaccess</code>.</p>
+К примеру, в Apache, вы можете добавить следующую строку в конфигурацию веб-сервера (в пределах одной из секций - `<Directory>`, `<Location>`, `<Files>` или `<VirtualHost>`). Обычно конфигурация находиться в файле `.conf` (наиболее частые имена для него - `httpd.conf` и `apache.conf`) или в файле `.htaccess`.
 
-<pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
+```
+Header set Access-Control-Allow-Origin 'origin-list'
+```
 
-<p>В Nginx, для установки такого заголовка можно воспользоваться следующей командой: </p>
+В Nginx, для установки такого заголовка можно воспользоваться следующей командой:
 
-<pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
+```
+add_header 'Access-Control-Allow-Origin' 'origin-list'
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
- <li>Glossary: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
- <li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
-</ul>
+- [CORS errors](/ru/docs/Web/HTTP/CORS/Errors)
+- Glossary: {{Glossary("CORS")}}
+- [CORS introduction](/ru/docs/Web/HTTP/CORS)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)

@@ -3,37 +3,28 @@ title: 408 Request Timeout
 slug: Web/HTTP/Status/408
 translation_of: Web/HTTP/Status/408
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>408</strong></code><strong><code> Request Timeout</code></strong>  означает, что сервер хотел бы отключить это неиспользуемое соединение. Он отправляется на незанятое соединение некоторыми серверами, <em>даже без какого-либо предыдущего запроса клиентом</em></p>
+HTTP **`408`\*\***` Request Timeout`\*\* означает, что сервер хотел бы отключить это неиспользуемое соединение. Он отправляется на незанятое соединение некоторыми серверами, _даже без какого-либо предыдущего запроса клиентом_
 
-<p>Сервер должен отправить заголовок {{HTTPHeader("Connection")}} со значением «close» в ответ, поскольку <strong>408</strong> подразумевает, что сервер решил закрыть соединение, а не продолжать ждать.</p>
+Сервер должен отправить заголовок {{HTTPHeader("Connection")}} со значением «close» в ответ, поскольку **408** подразумевает, что сервер решил закрыть соединение, а не продолжать ждать.
 
-<p>Этот ответ используется гораздо больше, поскольку некоторые браузеры, такие как Chrome, Firefox 27+ или IE9, используют механизмы предварительного подключения HTTP для ускорения сёрфинга. Также обратите внимание, что некоторые серверы просто закрывают соединение без отправки этого сообщения.</p>
+Этот ответ используется гораздо больше, поскольку некоторые браузеры, такие как Chrome, Firefox 27+ или IE9, используют механизмы предварительного подключения HTTP для ускорения сёрфинга. Также обратите внимание, что некоторые серверы просто закрывают соединение без отправки этого сообщения.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">408 Request Timeout</pre>
+```
+408 Request Timeout
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Титул</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "408 Request Timeout" , "6.5.7")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                     | Титул                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPHeader("Connection")}}</li>
- <li>{{HTTPHeader("X-DNS-Prefetch-Control")}}</li>
-<li><a class="external" href="https://www.exai.com/blog/408-request-timeout-error" rel="noopener">408 Request Timeout </a></li>
-</ul>
+- {{HTTPHeader("Connection")}}
+- {{HTTPHeader("X-DNS-Prefetch-Control")}}
+- [408 Request Timeout](https://www.exai.com/blog/408-request-timeout-error)

@@ -4,76 +4,65 @@ slug: Web/HTTP/Headers/Vary
 translation_of: Web/HTTP/Headers/Vary
 original_slug: Web/HTTP/Заголовки/Vary
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок ответа <strong><code>Vary</code></strong> определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в <a href="/en-US/docs/Web/HTTP/Content_negotiation">алгоритме согласования</a> контента.</p>
+Заголовок ответа **`Vary`** определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/ru/docs/Web/HTTP/Content_negotiation) контента.
 
-<p>Заголовок <code>Vary</code> должен быть установлен для ответа {{HTTPStatus("304")}} <code>Not Modified</code> точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} <code>OK</code>.</p>
+Заголовок `Vary` должен быть установлен для ответа {{HTTPStatus("304")}} `Not Modified` точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} `OK`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Vary: *
-Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```
+Vary: *
+Vary: <header-name>, <header-name>, ...
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>*</dt>
- <dd>Каждый запрос должен рассматриваться как уникальный и не кешируемый. Лучший способ указать это - использовать {{HTTPHeader ("Cache-Control")}}: <code>no-store</code>, который удобнее для чтения и также сигнализирует о том, что объект не должен храниться никогда.</dd>
- <dt>&lt;header-name&gt;</dt>
- <dd>Разделённый запятыми список имён заголовков, которые необходимо учитывать при принятии решения о том, можно ли использовать кешированный ответ.</dd>
-</dl>
+- \*
+  - : Каждый запрос должен рассматриваться как уникальный и не кешируемый. Лучший способ указать это - использовать {{HTTPHeader ("Cache-Control")}}: `no-store`, который удобнее для чтения и также сигнализирует о том, что объект не должен храниться никогда.
+- \<header-name>
+  - : Разделённый запятыми список имён заголовков, которые необходимо учитывать при принятии решения о том, можно ли использовать кешированный ответ.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Dynamic_serving">Dynamic serving</h3>
+### Dynamic serving
 
-<p>When using the <code>Vary: User-Agent</code> header, caching servers should consider the user agent when deciding whether to serve the page from cache. For example, if you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. It can help Google and other search engines to discover the mobile version of a page, and might also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.</p>
+When using the `Vary: User-Agent` header, caching servers should consider the user agent when deciding whether to serve the page from cache. For example, if you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. It can help Google and other search engines to discover the mobile version of a page, and might also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
 
-<pre>Vary: User-Agent</pre>
+```
+Vary: User-Agent
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Vary", "7.1.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Title                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+{{Compat}}
 
-<ul>
- <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/">Vary with care – Vary header problems in IE6-9</a></li>
-</ul>
+## Compatibility notes
 
-<h2 id="See_also">See also</h2>
+- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
-<ul>
- <li><a href="https://www.smashingmagazine.com/2017/11/understanding-vary-header/">Understanding The Vary Header - Smashing Magazine</a></li>
- <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Best Practices for Using the Vary Header – fastly.com</a></li>
- <li><a href="https://developer.mozilla.org/docs/Web/HTTP/Content_negotiation">Content negotiation</a></li>
-</ul>
+## See also
+
+- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
+- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Content negotiation](https://developer.mozilla.org/docs/Web/HTTP/Content_negotiation)

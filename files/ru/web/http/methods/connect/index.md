@@ -3,67 +3,72 @@ title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 translation_of: Web/HTTP/Methods/CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>CONNECT</code> method</strong> запускает двустороннюю связь с запрошенным ресурсом. Метод можно использовать для открытия туннеля.</p>
+**HTTP `CONNECT` method** запускает двустороннюю связь с запрошенным ресурсом. Метод можно использовать для открытия туннеля.
 
-<p>К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением. За тем сервер переходит к подключению от имени клиента. После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.</p>
+К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением. За тем сервер переходит к подключению от имени клиента. После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.
 
-<p><code>CONNECT</code> is a hop-by-hop method.</p>
+`CONNECT` is a hop-by-hop method.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Запрос имеет тело</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Успешный ответ имеет тело</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Безопасный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Идемпотентный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Кешируемый")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a></th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Запрос имеет тело</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Успешный ответ имеет тело</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Безопасный")}}</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Идемпотентный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Кешируемый")}}</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a>
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">CONNECT www.example.com:443 HTTP/1.1
-</pre>
+```
+CONNECT www.example.com:443 HTTP/1.1
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите также {{HTTPHeader("Proxy-Authorization")}}.</p>
+Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите также {{HTTPHeader("Proxy-Authorization")}}.
 
-<pre class="line-numbers  language-html">CONNECT server.example.com:80 HTTP/1.1
+```html
+CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Proxy-Authorization")}}

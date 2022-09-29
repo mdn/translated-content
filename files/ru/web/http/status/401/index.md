@@ -3,49 +3,43 @@ title: 401 Unauthorized
 slug: Web/HTTP/Status/401
 translation_of: Web/HTTP/Status/401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Код ответа на статус ошибки  HTTP <code>401 Unauthorized </code>клиента указывает, что запрос не был применён, поскольку ему не хватает действительных учётных данных для целевого ресурса.</p>
+Код ответа на статус ошибки HTTP `401 Unauthorized `клиента указывает, что запрос не был применён, поскольку ему не хватает действительных учётных данных для целевого ресурса.
 
-<p>Этот статус отправляется с  {{HTTPHeader("WWW-Authenticate")}}, который содержит информацию о правильности авторизации.</p>
+Этот статус отправляется с {{HTTPHeader("WWW-Authenticate")}}, который содержит информацию о правильности авторизации.
 
-<p>Этот статус похож на  {{HTTPStatus("403")}}, но в этом случае возможна аутентификация.</p>
+Этот статус похож на {{HTTPStatus("403")}}, но в этом случае возможна аутентификация.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">401 Unauthorized</pre>
+```
+401 Unauthorized
+```
 
-<h2 id="Пример_ответа">Пример ответа</h2>
+## Пример ответа
 
-<pre>HTTP/1.1 401 Unauthorized
+```
+HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"</pre>
+WWW-Authenticate: Basic realm="Access to staging site"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "401 Unauthorized" , "3.1")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                             | Название                 |
+| -------------------------------------------------------- | ------------------------ |
+| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+## Смотрите также
+
+- [HTTP authentication](/ru/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

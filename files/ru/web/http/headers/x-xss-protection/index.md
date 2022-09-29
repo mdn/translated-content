@@ -10,76 +10,77 @@ tags:
 translation_of: Web/HTTP/Headers/X-XSS-Protection
 original_slug: Web/HTTP/Заголовки/X-XSS-Protection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок ответа HTTP <strong><code>X-XSS-Protection</code></strong> это особенность Internet Explorer, Chrome и Safari, которая останавливает загрузку страниц при обнаружении ({{Glossary("XSS")}}) атаки. Хотя эти меры защиты не требуются в большинстве случаев для современных браузеров, когда сайты внедряют сильную политику безопасности контента {{HTTPHeader("Content-Security-Policy")}}, которая отключает использование встроенного JavaScript (<code>'unsafe-inline'</code>), они могут обеспечить защиту для пользователей, использующих устаревшие версии браузеров, не поддерживающих {{Glossary("CSP")}}.</p>
+Заголовок ответа HTTP **`X-XSS-Protection`** это особенность Internet Explorer, Chrome и Safari, которая останавливает загрузку страниц при обнаружении ({{Glossary("XSS")}}) атаки. Хотя эти меры защиты не требуются в большинстве случаев для современных браузеров, когда сайты внедряют сильную политику безопасности контента {{HTTPHeader("Content-Security-Policy")}}, которая отключает использование встроенного JavaScript (`'unsafe-inline'`), они могут обеспечить защиту для пользователей, использующих устаревшие версии браузеров, не поддерживающих {{Glossary("CSP")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">
-    <p>Запрещённое имя заголовка</p>
-
-    <p>{{Glossary("Forbidden header name")}}</p>
-   </th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <p>Запрещённое имя заголовка</p>
+        <p>{{Glossary("Forbidden header name")}}</p>
+      </th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">X-XSS-Protection: 0
+```
+X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
-</pre>
+X-XSS-Protection: 1; report=<reporting-uri>
+```
 
-<dl>
- <dt>0</dt>
- <dd>Отключает фильтрацию XSS.</dd>
- <dt>1</dt>
- <dd>Включает фильтрацию XSS (по умолчанию в браузерах). Если будет замечена попытка межсайтового скриптинга(XSS), браузер удалит небезопасное содержимое.</dd>
- <dt>1; mode=block</dt>
- <dd>Включает фильтрацию XSS. Вместо того, чтобы очищать содержимое страницы, браузер предотвратит отображение страницы, если заметит атаку.</dd>
- <dt>1; report=&lt;reporting-URI&gt;  (Chromium only)</dt>
- <dd>Включает фильтрацию XSS. При обнаружении атаки межсайтового скриптинга, браузер очистит страницу от небезопасного содержимого и сообщит о нарушении. Для отправки отчёта используется функциональные возможности директивы CSP {{CSP("report-uri")}}.</dd>
-</dl>
+- 0
+  - : Отключает фильтрацию XSS.
+- 1
+  - : Включает фильтрацию XSS (по умолчанию в браузерах). Если будет замечена попытка межсайтового скриптинга(XSS), браузер удалит небезопасное содержимое.
+- 1; mode=block
+  - : Включает фильтрацию XSS. Вместо того, чтобы очищать содержимое страницы, браузер предотвратит отображение страницы, если заметит атаку.
+- 1; report=\<reporting-URI> (Chromium only)
+  - : Включает фильтрацию XSS. При обнаружении атаки межсайтового скриптинга, браузер очистит страницу от небезопасного содержимого и сообщит о нарушении. Для отправки отчёта используется функциональные возможности директивы CSP {{CSP("report-uri")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Блокировка загрузки страницы, при обнаружении отражённой (непостоянной) XSS:</p>
+Блокировка загрузки страницы, при обнаружении отражённой (непостоянной) XSS:
 
-<pre class="brush: bash">X-XSS-Protection: 1; mode=block</pre>
+```bash
+X-XSS-Protection: 1; mode=block
+```
 
-<p>PHP</p>
+PHP
 
-<pre class="brush: php">header("X-XSS-Protection: 1; mode=block");</pre>
+```php
+header("X-XSS-Protection: 1; mode=block");
+```
 
-<p>Apache (.htaccess)</p>
+Apache (.htaccess)
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>Не является частью каких-либо специфика или черновиков.</p>
+Не является частью каких-либо специфика или черновиков.
 
-<h2 id="Поддерживается_браузерами">Поддерживается браузерами</h2>
-<p>{{Compat}}</p>
+## Поддерживается браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/">Controlling the XSS Filter – Microsoft</a></li>
- <li><a href="https://www.virtuesecurity.com/blog/understanding-xss-auditor/">Understanding XSS Auditor – Virtue Security</a></li>
- <li>
-  <p><a href="http://blog.innerht.ml/the-misunderstood-x-xss-protection/">The misunderstood X-XSS-Protection – blog.innerht.ml</a></p>
- </li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Controlling the XSS Filter – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
+- [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
+- [The misunderstood X-XSS-Protection – blog.innerht.ml](http://blog.innerht.ml/the-misunderstood-x-xss-protection/)

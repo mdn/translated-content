@@ -4,67 +4,58 @@ slug: Web/HTTP/Headers/Host
 translation_of: Web/HTTP/Headers/Host
 original_slug: Web/HTTP/Заголовки/Host
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
+Заголовок **Host** содержит имя домена, для которого предназначен запрос и, опционально, номер порта.
 
+Если порт не указан, то используется умолчательный порт протокола/сервиса (например «80» для HTTP, "443" для HTTPS и т.д.).
 
-<p>Заголовок <strong>Host</strong> содержит имя домена, для которого предназначен запрос и, опционально, номер порта.</p>
-
-<p>Если порт не указан, то используется умолчательный порт протокола/сервиса (например «80» для HTTP, "443" для HTTPS и т.д.).</p>
-
-<p>Каждый HTTP/1.1 запрос должен содержать один и только один заголовок <strong>Host</strong>, в ином случае ответ будет с кодом статуса {{HTTPStatus("400")}}  (Bad Request).</p>
+Каждый HTTP/1.1 запрос должен содержать один и только один заголовок **Host**, в ином случае ответ будет с кодом статуса {{HTTPStatus("400")}} (Bad Request).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}} Неизменяемый</th>
-   <td>да</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name")}} Неизменяемый
+      </th>
+      <td>да</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Host: &lt;host&gt;:&lt;port&gt;
-</pre>
+```
+Host: <host>:<port>
+```
 
-<h2 id="Обозначения">Обозначения</h2>
+## Обозначения
 
-<dl>
- <dt>&lt;host&gt;</dt>
- <dd>доменное имя сервера</dd>
- <dt>&lt;port&gt; {{optional_inline}}</dt>
- <dd>номер порта</dd>
-</dl>
+- \<host>
+  - : доменное имя сервера
+- \<port> {{optional_inline}}
+  - : номер порта
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre>Host: developer.mozilla.org</pre>
+```
+Host: developer.mozilla.org
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Стандарт/спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Host", "5.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Стандарт/спецификация                    | Название                                                           |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
-<p>{{Compat}}</p>
+## Совместимость браузеров
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPStatus("400")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPStatus("400")}}

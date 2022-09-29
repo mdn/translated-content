@@ -8,93 +8,95 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/PATCH
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>Метод запроса HTTP <code>PATCH</code></strong> частично изменяет ресурс.</p>
+**Метод запроса HTTP `PATCH`** частично изменяет ресурс.
 
-<p>В какой-то степени <code>PATCH</code> можно назвать аналогом концепта «обновить» (update) из {{Glossary("CRUD")}} (но не стоит путать HTTP и {{Glossary("CRUD")}} — это две разные вещи).</p>
+В какой-то степени `PATCH` можно назвать аналогом концепта «обновить» (update) из {{Glossary("CRUD")}} (но не стоит путать HTTP и {{Glossary("CRUD")}} — это две разные вещи).
 
-<p><code>PATCH</code> может как быть идемпотентным, так и не быть, в отличие от {{HTTPMethod("PUT")}}, который всегда идемпотентен. Операция считается идемпотентной, если её многократное выполнение приводит к тому же результату, что и однократное выполнение. Например, если автоинкрементное поле является важной частью ресурса, то {{HTTPMethod("PUT")}} перезапишет его (т.к. он перезаписывает всё), но <code>PATCH</code> может и не перезаписать.</p>
+`PATCH` может как быть идемпотентным, так и не быть, в отличие от {{HTTPMethod("PUT")}}, который всегда идемпотентен. Операция считается идемпотентной, если её многократное выполнение приводит к тому же результату, что и однократное выполнение. Например, если автоинкрементное поле является важной частью ресурса, то {{HTTPMethod("PUT")}} перезапишет его (т.к. он перезаписывает всё), но `PATCH` может и не перезаписать.
 
-<p><code>PATCH</code> (как и <code>PUT</code>) <em>может</em> иметь побочные эффекты на другие ресурсы.</p>
+`PATCH` (как и `PUT`) _может_ иметь побочные эффекты на другие ресурсы.
 
-<p>Чтобы обозначить, что сервер поддерживает <code>PATCH</code>, можно добавить этот метод в список заголовков ответа {{HTTPHeader("Allow")}} или {{HTTPHeader("Access-Control-Allow-Methods")}} (для CORS).</p>
+Чтобы обозначить, что сервер поддерживает `PATCH`, можно добавить этот метод в список заголовков ответа {{HTTPHeader("Allow")}} или {{HTTPHeader("Access-Control-Allow-Methods")}} (для CORS).
 
-<p>Другой (неявный) индикатор, что <code>PATCH</code> разрешён, является наличие заголовка {{HTTPHeader("Accept-Patch")}}, где описано, в каком формате сервер принимает изменённые документы.</p>
+Другой (неявный) индикатор, что `PATCH` разрешён, является наличие заголовка {{HTTPHeader("Accept-Patch")}}, где описано, в каком формате сервер принимает изменённые документы.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Запрос имеет тело</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Успешный ответ имеет тело</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe", "Безопасный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent", "Идемпотентный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable", "Кешируемый")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Запрос имеет тело</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">Успешный ответ имеет тело</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Safe", "Безопасный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Idempotent", "Идемпотентный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "Кешируемый")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">PATCH /file.txt HTTP/1.1
-</pre>
+```
+PATCH /file.txt HTTP/1.1
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Запрос">Запрос</h3>
+### Запрос
 
-<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
+```html
+PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
 Content-Length: 100
 
-[описание изменений]</pre>
+[описание изменений]
+```
 
-<h3 id="Ответ">Ответ</h3>
+### Ответ
 
-<p>Успешный ответ указывается с помощью кода ответа {{HTTPStatus("204")}}, поскольку ответ в примере не содержит тела сообщения. А если бы содержал, то код был бы {{HTTPStatus("200")}}.</p>
+Успешный ответ указывается с помощью кода ответа {{HTTPStatus("204")}}, поскольку ответ в примере не содержит тела сообщения. А если бы содержал, то код был бы {{HTTPStatus("200")}}.
 
-<pre>HTTP/1.1 204 No Content
+```
+HTTP/1.1 204 No Content
 Content-Location: /file.txt
-ETag: "e0023aa4f"</pre>
+ETag: "e0023aa4f"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "PATCH")}}</td>
-   <td>PATCH Method for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                     | Заголовок             |
+| -------------------------------- | --------------------- |
+| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPStatus("204")}}</li>
- <li>{{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Accept-Patch")}} – указывает изменяемые типы документов принимаемые сервером.</li>
-</ul>
+- {{HTTPStatus("204")}}
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}} – указывает изменяемые типы документов принимаемые сервером.

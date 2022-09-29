@@ -3,40 +3,33 @@ title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
 translation_of: Web/HTTP/Status/429
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>429 Too Many Requests</strong></code> код ответа указывает, что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "rate limiting" ).</p>
+HTTP **`429 Too Many Requests`** код ответа указывает, что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "rate limiting" ).
 
-<p>В этот ответ может быть включён  {{HTTPHeader("Retry-After")}}, указывающий, как долго ждать нового запроса.</p>
+В этот ответ может быть включён {{HTTPHeader("Retry-After")}}, указывающий, как долго ждать нового запроса.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">429 Too Many Requests</pre>
+```
+429 Too Many Requests
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre>HTTP/1.1 429 Too Many Requests
+```
+HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
-Retry-After: 3600</pre>
+Retry-After: 3600
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "429 Too Many Requests" , "4")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                 | Название                     |
+| ------------------------------------------------------------ | ---------------------------- |
+| {{RFC("6585", "429 Too Many Requests" , "4")}} | Additional HTTP Status Codes |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPHeader("Retry-After")}}</li>
-<li><a href="https://www.exai.com/blog/429-error">429 Too Many Requests</a></li>
-</ul>
+- {{HTTPHeader("Retry-After")}}
+- [429 Too Many Requests](https://www.exai.com/blog/429-error)

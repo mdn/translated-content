@@ -9,84 +9,68 @@ tags:
 translation_of: Web/HTTP/Headers/Authorization
 original_slug: Web/HTTP/Заголовки/Authorization
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок HTTP запроса <strong><code>Authorization</code></strong> включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} <code>Unauthorized</code> и заголовком {{HTTPHeader("WWW-Authenticate")}}.</p>
+Заголовок HTTP запроса **`Authorization`** включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} `Unauthorized` и заголовком {{HTTPHeader("WWW-Authenticate")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Authorization: &lt;тип&gt; &lt;данные пользователя&gt;</pre>
+```
+Authorization: <тип> <данные пользователя>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;тип&gt;</dt>
- <dd><a href="/ru/docs/Web/HTTP/Авторизация#Authentication_schemes">Тип авторизации</a>. Общий тип <a href="/ru/docs/Web/HTTP/Авторизация#Basic_authentication_scheme">«Базовая»</a>. Остальные типы:
- <ul>
-  <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA registry of Authentication schemes</a></li>
-  <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Authentification for AWS servers (<code>AWS4-HMAC-SHA256</code>)</a></li>
- </ul>
- </dd>
- <dt>&lt;данные пользователя&gt;</dt>
- <dd>Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
- <ul>
-  <li>Логин и пароль, разделённые двоеточием (<code>aladdin:opensesame</code>).</li>
-  <li>Результирующая строка, закодированная в <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
- </ul>
+- <тип>
 
- <div class="note">
- <p><strong>Примечание</strong>: Кодировка Base64 не означает шифрование или хэширование! Этот метод так же небезопасен, как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). Отдавайте предпочтение использованию HTTPS в сочетании с Базовой Авторизацией.</p>
- </div>
- </dd>
-</dl>
+  - : [Тип авторизации](/ru/docs/Web/HTTP/Авторизация#Authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Авторизация#Basic_authentication_scheme). Остальные типы:
 
-<h2 id="Примеры">Примеры</h2>
+    - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
-<pre>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
-</pre>
+- <данные пользователя>
 
-<p>Смотрите также <a href="/ru/docs/Web/HTTP/Authorization">HTTP авторизацию</a> для примеров конфигураций веб-серверов Apache или nginx с защитой вашего сайта паролем с Базовой HTTP авторизацией.</p>
+  - : Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
 
-<h2 id="Спецификации">Спецификации</h2>
+    - Логин и пароль, разделённые двоеточием (`aladdin:opensesame`).
+    - Результирующая строка, закодированная в [base64](/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7235", "Authorization", "4.2")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7617")}}</td>
-   <td>The 'Basic' HTTP Authentication Scheme</td>
-  </tr>
- </tbody>
-</table>
+    > **Примечание:** Кодировка Base64 не означает шифрование или хэширование! Этот метод так же небезопасен, как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). Отдавайте предпочтение использованию HTTPS в сочетании с Базовой Авторизацией.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Примеры
 
-<ul>
- <li><a href="/ru/docs/Web/HTTP/Authorization">HTTP авторизация</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+```
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+
+Смотрите также [HTTP авторизацию](/ru/docs/Web/HTTP/Authorization) для примеров конфигураций веб-серверов Apache или nginx с защитой вашего сайта паролем с Базовой HTTP авторизацией.
+
+## Спецификации
+
+| Спецификация                                         | Заголовок                              |
+| ---------------------------------------------------- | -------------------------------------- |
+| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
+| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
+
+## Смотрите также
+
+- [HTTP авторизация](/ru/docs/Web/HTTP/Authorization)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

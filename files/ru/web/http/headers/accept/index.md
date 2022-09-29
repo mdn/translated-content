@@ -8,80 +8,79 @@ tags:
 translation_of: Web/HTTP/Headers/Accept
 original_slug: Web/HTTP/Заголовки/Accept
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP заголовок запроса <strong><code>Accept</code></strong> указывает, какие типы контента, выраженные как <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типы</a>, клиент может понять. Используя <a href="/ru/docs/Web/HTTP/Content_negotiation">согласование контента</a>, сервер затем выбирает одно из предложений, использует его и информирует клиента о своём выборе с помощью заголовка ответа {{HTTPHeader ("Content-Type")}}. Браузеры задают адекватные значения для этого заголовка в зависимости от контекста, в котором выполняется запрос: при получении таблицы стилей CSS для запроса задаётся другое значение, чем при получении изображения, видео или скрипта.</p>
+HTTP заголовок запроса **`Accept`** указывает, какие типы контента, выраженные как [MIME типы](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types), клиент может понять. Используя [согласование контента](/ru/docs/Web/HTTP/Content_negotiation), сервер затем выбирает одно из предложений, использует его и информирует клиента о своём выборе с помощью заголовка ответа {{HTTPHeader ("Content-Type")}}. Браузеры задают адекватные значения для этого заголовка в зависимости от контекста, в котором выполняется запрос: при получении таблицы стилей CSS для запроса задаётся другое значение, чем при получении изображения, видео или скрипта.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple header", "CORS-safelisted request-header")}}</th>
-   <td>yes, with the additional restriction that values can't contain a <em>CORS-unsafe request header byte</em>: 0x00-0x1F (except 0x09 (HT)), <code>"():&lt;&gt;?@[\]{}</code>, and 0x7F (DEL).</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+      </th>
+      <td>
+        yes, with the additional restriction that values can't contain a
+        <em>CORS-unsafe request header byte</em>: 0x00-0x1F (except 0x09 (HT)),
+        <code>"():&#x3C;>?@[\]{}</code>, and 0x7F (DEL).
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Accept: &lt;MIME_type&gt;/&lt;MIME_subtype&gt;
-Accept: &lt;MIME_type&gt;/*
+```
+Accept: <MIME_type>/<MIME_subtype>
+Accept: <MIME_type>/*
 Accept: */*
 
 // Несколько типов, дополненных синтаксисом {{glossary("quality values", "значений качества")}}:
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>Один точный <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME-тип</a>, например <code>text/html</code>.</dd>
- <dt><code>&lt;MIME_type&gt;/*</code></dt>
- <dd>MIME тип без какого-либо подтипа. <code>image/*</code> будет соответствовать типам <code>image/png</code>, <code>image/svg</code>, <code>image/gif</code> и любым другим типам изображений.</dd>
- <dt><code>*/*</code></dt>
- <dd>Любой MIME type</dd>
- <dt><code>;q=</code> (q-factor weighting)</dt>
- <dd>Любое используемое значение помещается в порядке приоритета, заданным с использованием относительного <a href="/en-US/docs/Glossary/Quality_values">значения качества</a>, которое называется <em>весом</em>.</dd>
-</dl>
+- `<MIME_type>/<MIME_subtype>`
+  - : Один точный [MIME-тип](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types), например `text/html`.
+- `<MIME_type>/*`
+  - : MIME тип без какого-либо подтипа. `image/*` будет соответствовать типам `image/png`, `image/svg`, `image/gif` и любым другим типам изображений.
+- `*/*`
+  - : Любой MIME type
+- `;q=` (q-factor weighting)
+  - : Любое используемое значение помещается в порядке приоритета, заданным с использованием относительного [значения качества](/ru/docs/Glossary/Quality_values), которое называется _весом_.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>Accept: text/html
+```
+Accept: text/html
 
 Accept: image/*
 
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Характеристика </th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Accept", "5.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context</td>
-  </tr>
- </tbody>
-</table>
+| Характеристика                               | Название                                                      |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>HTTP <a href="/ru/docs/Web/HTTP/Content_negotiation">согласование контента</a></li>
- <li>Заголовок с результатами согласования контента: {{HTTPHeader("Content-Type")}}</li>
- <li>Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
-</ul>
+## Смотрите также
+
+- HTTP [согласование контента](/ru/docs/Web/HTTP/Content_negotiation)
+- Заголовок с результатами согласования контента: {{HTTPHeader("Content-Type")}}
+- Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

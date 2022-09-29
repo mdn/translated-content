@@ -6,52 +6,41 @@ tags:
   - Код состояния HTTP
 translation_of: Web/HTTP/Status/406
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HyperText Transfer Protocol (HTTP) код ошибки клиента <code><strong>406</strong></code><strong><code> Not Acceptable</code></strong> означает, что сервер не может вернуть ответ, соответствующий списку допустимых значений, определённых в заголовках упреждающего <a href="/ru/docs/Web/HTTP/Content_negotiation">согласования контента</a>, и что сервер не желает вернуть представление контента по умолчанию.</p>
+HyperText Transfer Protocol (HTTP) код ошибки клиента **`406`\*\***` Not Acceptable`\*\* означает, что сервер не может вернуть ответ, соответствующий списку допустимых значений, определённых в заголовках упреждающего [согласования контента](/ru/docs/Web/HTTP/Content_negotiation), и что сервер не желает вернуть представление контента по умолчанию.
 
-<p>Заголовки упреждающего согласования контента включают:</p>
+Заголовки упреждающего согласования контента включают:
 
-<ul>
- <li>{{HTTPHeader("Accept")}}</li>
- <li>{{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Accept-Encoding")}}</li>
- <li>{{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
 
-<p>На практике эта ошибка очень редко используется. Вместо ответа с использованием этого кода ошибки, который может быть загадочным для конечного пользователя и трудным для исправления, серверы игнорируют соответствующий заголовок и предоставляют актуальную страницу для пользователя. Предполагается, что даже если пользователь не будет полностью удовлетворён, он предпочтёт это коду ошибки.</p>
+На практике эта ошибка очень редко используется. Вместо ответа с использованием этого кода ошибки, который может быть загадочным для конечного пользователя и трудным для исправления, серверы игнорируют соответствующий заголовок и предоставляют актуальную страницу для пользователя. Предполагается, что даже если пользователь не будет полностью удовлетворён, он предпочтёт это коду ошибки.
 
-<p>Если сервер возвращает такой код ошибки, тело сообщения должно содержать список доступных представлений ресурсов, позволяя вручную выбирать между ними.</p>
+Если сервер возвращает такой код ошибки, тело сообщения должно содержать список доступных представлений ресурсов, позволяя вручную выбирать между ними.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">406 Not Acceptable</pre>
+```
+406 Not Acceptable
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "406 Not Acceptable" , "6.5.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                     | Название                                                      |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPHeader("Accept")}}</li>
- <li>{{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Accept-Encoding")}}</li>
- <li>{{HTTPHeader("Accept-Language")}}</li>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
+- HTTP [content negotiation](/ru/docs/Web/HTTP/Content_negotiation)

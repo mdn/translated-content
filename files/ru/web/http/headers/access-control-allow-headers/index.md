@@ -9,83 +9,66 @@ tags:
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок ответа <strong><code>Access-Control-Allow-Headers</code></strong> используется в ответ на {{glossary("preflight request")}}, чтобы указать, какие заголовки HTTP могут использоваться во время фактического запроса.</p>
+Заголовок ответа **`Access-Control-Allow-Headers`** используется в ответ на {{glossary("preflight request")}}, чтобы указать, какие заголовки HTTP могут использоваться во время фактического запроса.
 
-<p>The {{glossary("simple header", "simple headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (но только с MIME-типом, найденным в этом значении (исключая параметры), либо <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> или <code>text/plain</code>), всегда доступны и не должны быть перечислены в этом заголовке.</p>
+The {{glossary("simple header", "simple headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (но только с MIME-типом, найденным в этом значении (исключая параметры), либо `application/x-www-form-urlencoded`, `multipart/form-data` или `text/plain`), всегда доступны и не должны быть перечислены в этом заголовке.
 
-<p>Этот заголовок обязателен, если запрос содержит заголовок {{HTTPHeader("Access-Control-Request-Headers")}}.</p>
+Этот заголовок обязателен, если запрос содержит заголовок {{HTTPHeader("Access-Control-Request-Headers")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Access-Control-Allow-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```
+Access-Control-Allow-Headers: <header-name>, <header-name>, ...
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>Список поддерживаемых заголовков разделённых запятыми.</dd>
-</dl>
+- \<header-name>
+  - : Список поддерживаемых заголовков разделённых запятыми.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
+```
+Access-Control-Allow-Headers: X-Custom-Header
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                             | Статус                   | Комментарий            |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------- |
+| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Начальное определение. |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Примечания_по_совместимости">Примечания по совместимости</h2>
+{{Compat}}
 
-<ul>
- <li>Подстановочное значение (*), указанное в последней спецификации, ещё не реализовано в браузерах:
-  <ul>
-   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
-   <li>Firefox: {{bug(1309358)}}</li>
-   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
-   <li>WebKit: <a href="https://bugs.webkit.org/show_bug.cgi?id=165508">Issue 165508</a></li>
-  </ul>
- </li>
-</ul>
+## Примечания по совместимости
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+- Подстановочное значение (\*), указанное в последней спецификации, ещё не реализовано в браузерах:
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
-</ul>
+  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
+  - Firefox: {{bug(1309358)}}
+  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+  - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
+
+## Смотрите также
+
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Access-Control-Request-Headers")}}

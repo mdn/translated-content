@@ -4,72 +4,58 @@ slug: Web/HTTP/Headers/Origin
 translation_of: Web/HTTP/Headers/Origin
 original_slug: Web/HTTP/Заголовки/Origin
 ---
-<div>{{HTTPSidebar}}</div>
-
-<div>Заголовок запроса <strong><code>Origin</code></strong> показывает откуда будет производиться загрузка. Он не включает в себя какую-либо информацию о пути, содержит в себе лишь имя сервера. Заголовок отправляется как с {{Glossary("CORS")}}, так и с {{HTTPMethod("POST")}} запросами. Он похож на заголовок {{HTTPHeader("Referer")}}, но, в отличие от этого заголовка, не раскрывает весь путь.</div>
+{{HTTPSidebar}}Заголовок запроса **`Origin`** показывает откуда будет производиться загрузка. Он не включает в себя какую-либо информацию о пути, содержит в себе лишь имя сервера. Заголовок отправляется как с {{Glossary("CORS")}}, так и с {{HTTPMethod("POST")}} запросами. Он похож на заголовок {{HTTPHeader("Referer")}}, но, в отличие от этого заголовка, не раскрывает весь путь.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Origin: ""
-Origin: &lt;протокол&gt; "://" &lt;имя_хоста&gt; [ ":" &lt;порт&gt; ]
-</pre>
+```
+Origin: ""
+Origin: <протокол> "://" <имя_хоста> [ ":" <порт> ]
+```
 
-<p><code>Origin</code> может быть пустой строкой: это полезно, например, если источником данных будет URL.</p>
+`Origin` может быть пустой строкой: это полезно, например, если источником данных будет URL.
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;протокол&gt;</dt>
- <dd>Используемый протокол. Обычно это HTTP протокол, или его защищённая версия HTTPS.</dd>
- <dt>&lt;имя_хоста&gt;</dt>
- <dd>Доменное имя сервера (для виртуального хостинга) или IP.</dd>
- <dt>&lt;порт&gt; {{optional_inline}}</dt>
- <dd>Номер TCP порта, который сервер будет слушать. Если порт не задан, будет использован порт по умолчанию для указанного сервиса (например "80" для HTTP).</dd>
-</dl>
+- <протокол>
+  - : Используемый протокол. Обычно это HTTP протокол, или его защищённая версия HTTPS.
+- <имя_хоста>
+  - : Доменное имя сервера (для виртуального хостинга) или IP.
+- <порт> {{optional_inline}}
+  - : Номер TCP порта, который сервер будет слушать. Если порт не задан, будет использован порт по умолчанию для указанного сервиса (например "80" для HTTP).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>Origin: https://developer.mozilla.org</pre>
+```
+Origin: https://developer.mozilla.org
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6454", "Origin", "7")}}</td>
-   <td>The Web Origin Concept</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#origin-header','Origin header')}}</td>
-   <td>Supplants the <code>Origin</code> header as defined in RFC6454.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Comment                                              |
+| ------------------------------------------------------------------------ | ---------------------------------------------------- |
+| {{RFC("6454", "Origin", "7")}}                                 | The Web Origin Concept                               |
+| {{SpecName('Fetch','#origin-header','Origin header')}} | Supplants the `Origin` header as defined in RFC6454. |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
- <li>{{HTTPHeader("Referer")}}</li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Referer")}}
+- [Same-origin policy](/ru/docs/Web/Security/Same-origin_policy)

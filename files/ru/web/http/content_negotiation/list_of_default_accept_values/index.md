@@ -8,249 +8,77 @@ tags:
   - Согласование контента
 translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>В этой статье описывается, какие значения используются в HTTP-заголовке <code><a href="/en-US/docs/Web/HTTP/Headers/Accept">Accept</a></code> по умолчанию в зависимости от конкретного запроса и версии браузера.</p>
+В этой статье описывается, какие значения используются в HTTP-заголовке [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) по умолчанию в зависимости от конкретного запроса и версии браузера.
 
-<h2 id="Значения_по_умолчанию">Значения по умолчанию</h2>
+## Значения по умолчанию
 
-<p>Здесь приведены значения, которые отправляются, когда нет никакой уточняющей информации. Обратите внимание, что все браузеры добавляют MIME-тип <code>*/*</code>, чтобы были охвачены все возможные варианты. Обычно значения имеют такой вид, когда запросы выполняются через адресную строку или через HTML-элемент {{HTMLElement("a")}}.</p>
+Здесь приведены значения, которые отправляются, когда нет никакой уточняющей информации. Обратите внимание, что все браузеры добавляют MIME-тип `*/*`, чтобы были охвачены все возможные варианты. Обычно значения имеют такой вид, когда запросы выполняются через адресную строку или через HTML-элемент {{HTMLElement("a")}}.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>
-    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code> (начиная с Firefox 66)<br>
-     <br>
-     <code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</code> (в Firefox 65)<br>
-     <br>
-     <code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code> (в более ранних версиях)</p>
-   </td>
-   <td>В Firefox до версии 65 включительно значение можно изменить с помощью параметра <a class="external" href="http://kb.mozillazine.org/Network.http.accept.default"><code>network.http.accept.default</code></a> (см. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l1750">исходный код</a>).</td>
-  </tr>
-  <tr>
-   <td>Safari, Chrome</td>
-   <td>
-    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</code></p>
-   </td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#24">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Safari 5</td>
-   <td>
-    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code></p>
-   </td>
-   <td>Значение улучшено по сравнению с прежними вариантами заголовка <code>Accept</code>: MIME-тип <code>image/png</code> уже не указывается как более приоритетный, чем <code>text/html</code>.</td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 8</td>
-   <td><code>image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
-  <tr>
-   <td>Edge</td>
-   <td><code>text/html, application/xhtml+xml, image/jxr, */*</code></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td><code>text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1</code></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя  | Значение                                                                                                                                                                                                                                                                        | Комментарий                                                                                                                                                                                                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8` (начиная с Firefox 66) `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8` (в Firefox 65) `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8` (в более ранних версиях) | В Firefox до версии 65 включительно значение можно изменить с помощью параметра [`network.http.accept.default`](http://kb.mozillazine.org/Network.http.accept.default) (см. [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l1750)). |
+| Safari, Chrome      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                                                                                                                                                                         | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#24)                                                                                                                                                                  |
+| Safari 5            | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                                                                                                                               | Значение улучшено по сравнению с прежними вариантами заголовка `Accept`: MIME-тип `image/png` уже не указывается как более приоритетный, чем `text/html`.                                                                                                                       |
+| Internet Explorer 8 | `image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*`                                                                                                         | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                                                                                                              |
+| Edge                | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                 |
+| Opera               | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1`                                                                                                                                             |                                                                                                                                                                                                                                                                                 |
 
-<h2 id="Значения_для_изображений">Значения для изображений</h2>
+## Значения для изображений
 
-<p>Если запрашивается изображение, например через HTML-элемент {{HTMLElement("img")}}, агент пользователя часто задаёт уточнённый список подходящих MIME-типов.</p>
+Если запрашивается изображение, например через HTML-элемент {{HTMLElement("img")}}, агент пользователя часто задаёт уточнённый список подходящих MIME-типов.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>
-    <p><code>image/webp,*/*</code> (начиная с Firefox 65)<br>
-     <code>*/*</code> (начиная с Firefox 47)<br>
-     <code>image/png,image/*;q=0.8,*/*;q=0.5</code> (в более ранних версиях)</p>
-   </td>
-   <td>Значение можно изменить с помощью параметра <code>image.http.accept</code>. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l4735">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td><code>*/*</code></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Chrome</td>
-   <td><code>image/webp,image/apng,image/*,*/*;q=0.8</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#99">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer до версии 8 включительно</td>
-   <td><code>*/*</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 9</td>
-   <td><code>image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя                         | Значение                                                                                                                          | Комментарий                                                                                                                                                                                   |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox                                    | `image/webp,*/*` (начиная с Firefox 65) `*/*` (начиная с Firefox 47) `image/png,image/*;q=0.8,*/*;q=0.5` (в более ранних версиях) | Значение можно изменить с помощью параметра `image.http.accept`. [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l4735)                            |
+| Safari                                     | `*/*`                                                                                                                             |                                                                                                                                                                                               |
+| Chrome                                     | `image/webp,image/apng,image/*,*/*;q=0.8`                                                                                         | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#99)                                                                 |
+| Internet Explorer до версии 8 включительно | `*/*`                                                                                                                             | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
+| Internet Explorer 9                        | `image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5`                                                                                | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
 
-<h2 id="Значения_для_видео">Значения для видео</h2>
+## Значения для видео
 
-<p>Если запрашивается видео через HTML-элемент {{HTMLElement("video")}}, в большинстве браузеров используется уточнённое значение.</p>
+Если запрашивается видео через HTML-элемент {{HTMLElement("video")}}, в большинстве браузеров используется уточнённое значение.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox до версии 3.6</td>
-   <td><em>Не поддерживается для элемента {{HTMLElement("video")}}.</em></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Firefox начиная с версии 3.6</td>
-   <td><code>video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5</code></td>
-   <td>См. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">страницу ошибки 489071</a>. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Chrome</td>
-   <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer до версии 8 включительно</td>
-   <td><em>Не поддерживается для элемента {{HTMLElement("video")}}</em>.</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя                         | Значение                                                                           | Комментарий                                                                                                                                                                           |
+| ------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox до версии 3.6                      | _Не поддерживается для элемента {{HTMLElement("video")}}._                 |                                                                                                                                                                                       |
+| Firefox начиная с версии 3.6               | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136) |
+| Chrome                                     | `*/*`                                                                              | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                        |
+| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("video")}}_.                 |                                                                                                                                                                                       |
 
-<h2 id="Значения_для_аудиофайлов">Значения для аудиофайлов</h2>
+## Значения для аудиофайлов
 
-<p>Если запрашивается аудиофайл, например через HTML-элемент {{HTMLElement("audio")}}, в большинстве браузеров используется уточнённое значение.</p>
+Если запрашивается аудиофайл, например через HTML-элемент {{HTMLElement("audio")}}, в большинстве браузеров используется уточнённое значение.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox начиная с версии 3.6</td>
-   <td><code>audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5</code></td>
-   <td>См. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">страницу ошибки 489071</a>. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Safari, Chrome</td>
-   <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer до версии 8 включительно</td>
-   <td><em>Не поддерживается для элемента {{HTMLElement("audio")}}.</em></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 9</td>
-   <td>?</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя                         | Значение                                                                                     | Комментарий                                                                                                                                                                          |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Firefox начиная с версии 3.6               | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81) |
+| Safari, Chrome                             | `*/*`                                                                                        | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                       |
+| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("audio")}}._                           |                                                                                                                                                                                      |
+| Internet Explorer 9                        | ?                                                                                            |                                                                                                                                                                                      |
 
-<h2 id="Значения_для_скриптов">Значения для скриптов</h2>
+## Значения для скриптов
 
-<p>Если запрашивается скрипт, например через HTML-элемент {{HTMLElement("script")}}, в некоторых браузерах используется уточнённое значение.</p>
+Если запрашивается скрипт, например через HTML-элемент {{HTMLElement("script")}}, в некоторых браузерах используется уточнённое значение.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td><code>*/*</code></td>
-   <td>См. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">страницу ошибки 170789</a>.</td>
-  </tr>
-  <tr>
-   <td>Safari, Chrome</td>
-   <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer до версии 8 включительно</td>
-   <td><code>*/*</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 9</td>
-   <td><code>application/javascript, */*;q=0.8</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя                         | Значение                            | Комментарий                                                                                                                                                                                   |
+| ------------------------------------------ | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox                                    | `*/*`                               | См. [страницу ошибки 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789).                                                                                                            |
+| Safari, Chrome                             | `*/*`                               | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                                |
+| Internet Explorer до версии 8 включительно | `*/*`                               | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
+| Internet Explorer 9                        | `application/javascript, */*;q=0.8` | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
 
-<h2 id="Значения_для_таблиц_стилей_CSS">Значения для таблиц стилей CSS</h2>
+## Значения для таблиц стилей CSS
 
-<p>Если запрашивается таблица стилей CSS через HTML-элемент <code>&lt;link rel="stylesheet"&gt;</code>, в большинстве браузеров используется уточнённое значение.</p>
+Если запрашивается таблица стилей CSS через HTML-элемент `<link rel="stylesheet">`, в большинстве браузеров используется уточнённое значение.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Агент пользователя</th>
-   <th>Значение</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>Firefox 4</td>
-   <td><code>text/css,*/*;q=0.1</code></td>
-   <td>См. <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">страницу ошибки 170789</a>. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/layout/style/Loader.cpp#l1548">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer до версии 8 включительно</td>
-   <td><code>*/*</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 9</td>
-   <td><code>text/css</code></td>
-   <td>См. запись <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9</a> в блоге MSDN под названием IEInternals.</td>
-  </tr>
-  <tr>
-   <td>Safari, Chrome</td>
-   <td><code>text/css,*/*;q=0.1</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#98">исходный код</a></td>
-  </tr>
-  <tr>
-   <td>Opera 11.10</td>
-   <td><code>text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1 </code></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Konqueror 4.6</td>
-   <td><code>text/css,*/*;q=0.1</code></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Агент пользователя                         | Значение                                                                                                                            | Комментарий                                                                                                                                                                                   |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox 4                                  | `text/css,*/*;q=0.1`                                                                                                                | См. [страницу ошибки 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/layout/style/Loader.cpp#l1548)              |
+| Internet Explorer до версии 8 включительно | `*/*`                                                                                                                               | См. запись [IE and the Accept Header](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header) в блоге MSDN под названием IEInternals.                            |
+| Internet Explorer 9                        | `text/css`                                                                                                                          | См. запись [Fiddler is better with Internet Explorer 9](https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate) в блоге MSDN под названием IEInternals. |
+| Safari, Chrome                             | `text/css,*/*;q=0.1`                                                                                                                | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#98)                                                                 |
+| Opera 11.10                                | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |                                                                                                                                                                                               |
+| Konqueror 4.6                              | `text/css,*/*;q=0.1`                                                                                                                |                                                                                                                                                                                               |
