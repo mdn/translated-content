@@ -44,7 +44,7 @@ Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} :
 
 Dans ce petit morceau de code on fait une transaction, récupère un magasin d'objet, puis utilise un curseur pour itérer sur les enregistrements du magasin. Ici, on utilise `cursor.advance(2)` pour avancer de 2 cases à chaque fois, ce qui signifie que seule la moitié des résultats sera affichée. `advance()`fonctionne de façon similaire à {{domxref ("IDBCursor.continue")}} mais permet de sauter plusieurs enregistrements à la fois et pas uniquement d'accéder à l'enregistrement suivant.
 
-On notera également que, dans chaque itération de la boucle, on peut récupérer les données de l'enregistrement en cours grâce à l'objet curseur via `curseur.value.foo`. Pour un exemple fonctionnel complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([l'exemple en _live_](http://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+On notera également que, dans chaque itération de la boucle, on peut récupérer les données de l'enregistrement en cours grâce à l'objet curseur via `curseur.value.foo`. Pour un exemple fonctionnel complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([l'exemple en _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function advanceResult() {
