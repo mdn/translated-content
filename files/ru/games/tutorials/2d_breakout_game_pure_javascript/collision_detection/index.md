@@ -4,74 +4,75 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+Это 7 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
-<div class="summary">
-<p>Это 7 шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>.</p>
+У нас уже есть кирпичи, появляющиеся на экране, но игра все ещё не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.
 
-<p>У нас уже есть кирпичи, появляющиеся на экране, но игра все ещё не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.</p>
-</div>
+Конечно, это наше решение, как реализовать это, но может быть сложно рассчитать, касается ли шар прямоугольника или нет, потому что в Canvas нет вспомогательных функций для этого. В этом уроке мы сделаем это самым простым способом. Мы проверим, сталкивается ли центр мяча с любым из данных кирпичей. Это не идеальное решение на все случаи жизни, и есть намного более сложные и эффективные способы обнаружения столкновений, но это научит вас основным понятиям.
 
-<p>Конечно, это наше решение, как реализовать это, но может быть сложно рассчитать, касается ли шар прямоугольника или нет, потому что в Canvas нет вспомогательных функций для этого. В этом уроке мы сделаем это самым простым способом. Мы проверим, сталкивается ли центр мяча с любым из данных кирпичей. Это не идеальное решение на все случаи жизни, и есть намного более сложные и эффективные способы обнаружения столкновений, но это научит вас основным понятиям.</p>
+## Функция обнаружения столкновения
 
-<h2 id="Функция_обнаружения_столкновения">Функция обнаружения столкновения</h2>
+Мы хотим создать функцию обнаружения столкновений, которая будет перебирать все кирпичи и сравнивать позицию каждого кирпича с координатами шара при каждой отрисовке кадра. Для лучшей читаемости кода определим переменную `b`, чтобы хранить объект кирпича в цикле обнаружения столкновения:
 
-<p>Мы хотим создать функцию обнаружения столкновений, которая будет перебирать все кирпичи и сравнивать позицию каждого кирпича с координатами шара при каждой отрисовке кадра. Для лучшей читаемости кода определим переменную <code>b</code>, чтобы хранить объект кирпича в цикле обнаружения столкновения:</p>
-
-<pre class="brush: js">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             // calculations
         }
     }
-}</pre>
+}
+```
 
-<p>Если центр шара находится внутри координат одного из наших кирпичей, мы изменим направление шара. Для того, чтобы центр шара находился внутри кирпича, все четыре из следующих утверждений должны быть верны:</p>
+Если центр шара находится внутри координат одного из наших кирпичей, мы изменим направление шара. Для того, чтобы центр шара находился внутри кирпича, все четыре из следующих утверждений должны быть верны:
 
-<ul>
- <li>Координата X шара больше, чем координата X кирпича.</li>
- <li>Координата X шара меньше, чем  X-координата кирпича плюс его ширина.</li>
- <li>Координата Y шара больше, чем Y-координата кирпича.</li>
- <li>Координата Y шара меньше, чем Y-координата кирпича плюс его высота.</li>
-</ul>
+- Координата X шара больше, чем координата X кирпича.
+- Координата X шара меньше, чем X-координата кирпича плюс его ширина.
+- Координата Y шара больше, чем Y-координата кирпича.
+- Координата Y шара меньше, чем Y-координата кирпича плюс его высота.
 
-<p>Давайте напишем это в коде:</p>
+Давайте напишем это в коде:
 
-<pre class="brush: js">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
-            if(x &gt; b.x &amp;&amp; x &lt; b.x+brickWidth &amp;&amp; y &gt; b.y &amp;&amp; y &lt; b.y+brickHeight) {
+            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                 dy = -dy;
             }
         }
     }
-}</pre>
+}
+```
 
-<p>Добавьте вышеприведённый блок к вашему коду под <code>keyUpHandler() </code>функцией .</p>
+Добавьте вышеприведённый блок к вашему коду под `keyUpHandler() `функцией .
 
-<h2 id="Удаление_кирпичей_после_их_попадания">Удаление кирпичей после их попадания</h2>
+## Удаление кирпичей после их попадания
 
-<p>Вышеприведённый код будет работать, как и задумано, и мяч изменит своё направление. Проблема в том, что кирпичи остаются на своих местах. Мы должны придумать, как избавляться от тех, в которые мы уже попали мячом. Мы можем сделать это, добавив дополнительный параметр кирпичам, определяющий, будет ли кирпич отрисовываться на экране или нет. В той части кода, где мы инициализируем кирпичи, добавим свойство <code>status</code> к каждому кирпичному объекту. Обновите следующую часть кода, как показано ниже:</p>
+Вышеприведённый код будет работать, как и задумано, и мяч изменит своё направление. Проблема в том, что кирпичи остаются на своих местах. Мы должны придумать, как избавляться от тех, в которые мы уже попали мячом. Мы можем сделать это, добавив дополнительный параметр кирпичам, определяющий, будет ли кирпич отрисовываться на экране или нет. В той части кода, где мы инициализируем кирпичи, добавим свойство `status` к каждому кирпичному объекту. Обновите следующую часть кода, как показано ниже:
 
-<pre class="brush: js; highlight:[5]">var bricks = [];
-for(var c=0; c&lt;brickColumnCount; c++) {
+```js
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
-    for(var r=0; r&lt;brickRowCount; r++) {
+    for(var r=0; r<brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
-}</pre>
+}
+```
 
-<p>Теперь мы будем проверять значение свойства <code>status</code> каждого кирпича в функции <code>drawBricks()</code> перед его рисованием - если <code>status</code> равен <code>1</code> , нарисуем его, а если равен <code>0</code> , то значит в него попал мяч и он не должен больше отрисовываться. Отредактируйте <code>drawBricks()</code> следующим образом:</p>
+Теперь мы будем проверять значение свойства `status` каждого кирпича в функции `drawBricks()` перед его рисованием - если `status` равен `1` , нарисуем его, а если равен `0` , то значит в него попал мяч и он не должен больше отрисовываться. Отредактируйте `drawBricks()` следующим образом:
 
-<pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             if(bricks[c][r].status == 1) {
                 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
                 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
@@ -85,45 +86,47 @@ for(var c=0; c&lt;brickColumnCount; c++) {
             }
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Отслеживание_и_обновление_состояния_в_функции_обнаружения_столкновений">Отслеживание и обновление состояния в функции обнаружения столкновений</h2>
+## Отслеживание и обновление состояния в функции обнаружения столкновений
 
-<p>Теперь нам нужно задействовать свойство <code>status</code> кирпича в функции <code>collisionDetection()</code> : если кирпич активен (его статус равен <code>1</code> ), мы проверяем, было ли столкновение; если да, мы устанавливаем статус данного кирпича равным <code>0</code>, чтобы он не был нарисован на экране. Отредактируйте функцию <code>collisionDetection()</code>, как показано ниже:</p>
+Теперь нам нужно задействовать свойство `status` кирпича в функции `collisionDetection()` : если кирпич активен (его статус равен `1` ), мы проверяем, было ли столкновение; если да, мы устанавливаем статус данного кирпича равным `0`, чтобы он не был нарисован на экране. Отредактируйте функцию `collisionDetection()`, как показано ниже:
 
-<pre class="brush: js; highlight:[5,6,7,8,9,10]">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             if(b.status == 1) {
-                if(x &gt; b.x &amp;&amp; x &lt; b.x+brickWidth &amp;&amp; y &gt; b.y &amp;&amp; y &lt; b.y+brickHeight) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                     dy = -dy;
                     b.status = 0;
                 }
             }
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Активация_нашего_обнаружения_столкновений">Активация нашего обнаружения столкновений</h2>
+## Активация нашего обнаружения столкновений
 
-<p>Последнее, что нужно сделать, это добавить вызов функции <code>collisionDetection()</code> в нашу основную функцию <code>draw()</code> . Добавьте следующую строку в функцию <code>draw()</code> , чуть ниже <code>drawPaddle()</code> :</p>
+Последнее, что нужно сделать, это добавить вызов функции `collisionDetection()` в нашу основную функцию `draw()` . Добавьте следующую строку в функцию `draw()` , чуть ниже `drawPaddle()` :
 
-<pre class="brush: js">collisionDetection();
-</pre>
+```js
+collisionDetection();
+```
 
-<h2 id="Сравните_свой_код">Сравните свой код</h2>
+## Сравните свой код
 
-<p>Обнаружение столкновения шара теперь выполняется на каждом кадре и для каждого кирпича. Теперь мы можем ломать кирпичи! : -</p>
+Обнаружение столкновения шара теперь выполняется на каждом кадре и для каждого кирпича. Теперь мы можем ломать кирпичи! : -
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}
 
-<div class="note">
-<p><strong>Упражнение</strong> : измените цвет шара, когда он ударит по кирпичу.</p>
-</div>
+> **Примечание:** **Упражнение** : измените цвет шара, когда он ударит по кирпичу.
 
-<h2 id="Следующие_шаги">Следующие шаги</h2>
+## Следующие шаги
 
-<p>Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win&amp;xid=25657,15700022,15700124,15700149,15700168,15700186,15700190,15700201,15700205&amp;usg=ALkJrhhN9U9TuRM07dQaU3Oyqz2-F5ctig">отслеживать счёт и выигрывать</a> .</p>
+Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=ru&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=ru&u=https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win&xid=25657,15700022,15700124,15700149,15700168,15700186,15700190,15700201,15700205&usg=ALkJrhhN9U9TuRM07dQaU3Oyqz2-F5ctig) .
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

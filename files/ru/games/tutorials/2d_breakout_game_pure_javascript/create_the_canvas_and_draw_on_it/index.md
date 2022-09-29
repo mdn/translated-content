@@ -12,106 +12,107 @@ translation_of: >-
 original_slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
 
-<div>{{IncludeSubnav("/ru/docs/Games")}}</div>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}
 
-<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}</p>
+Это **1й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
-<div class="summary">
-<p>Это <strong>1й шаг</strong> из 10 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код для этого урока по ссылке <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html">Gamedev-Canvas-workshop/lesson1.html</a>.</p>
-</div>
+Прежде чем мы сможем начать писать функциональные возможности игры, нам необходимо создать базовую структуру для рендеринга игры внутри. Это можно сделать с помощью HTML и элемента {{htmlelement ("canvas")}}.
 
-<p>Прежде чем мы сможем начать писать функциональные возможности игры, нам необходимо создать базовую структуру для рендеринга игры внутри. Это можно сделать с помощью HTML и элемента {{htmlelement ("canvas")}}.</p>
+## HTML игры
 
-<h2 id="HTML_игры">HTML игры</h2>
+Структура HTML документа довольно проста, так как игра будет полностью визуализироваться в {{htmlelement("canvas")}} элементе. Используя ваш любимый текстовый редактор, создайте новый HTML документ, сохраните его как `index.html` в любом удобном месте, и скопируйте в него этот код:
 
-<p>Структура HTML документа довольно проста, так как игра будет полностью визуализироваться в {{htmlelement("canvas")}} элементе. Используя ваш любимый текстовый редактор, создайте новый HTML документ, сохраните его как <code>index.html</code> в любом удобном месте, и скопируйте в него этот код:</p>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;title&gt;Gamedev Canvas Workshop&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
     	* { padding: 0; margin: 0; }
     	canvas { background: #eee; display: block; margin: 0 auto; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
 
-&lt;canvas id="myCanvas" width="480" height="320"&gt;&lt;/canvas&gt;
+<canvas id="myCanvas" width="480" height="320"></canvas>
 
-&lt;script&gt;
+<script>
 	// JavaScript-код будем писать здесь
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p>Мы определили <code>charset</code>, {{htmlelement("title")}} и некий базовый CSS в заголовке. Тело документа содержит элементы {{htmlelement("canvas")}} и {{htmlelement("script")}} — мы будем визуализировать игру внутри первого и писать JavaScript-код, который управляет игрой, во втором. Элемент {{htmlelement("canvas")}} имеет <code>id</code> равный <code>myCanvas</code>, который позволяет однозначно отыскать элемент. Так же этот элемент имеет ширину 480 пикселей и высоту 320 пикселей. Весь JavaScript-код мы будем писать между открывающим тегом <code>&lt;script&gt;</code> и закрывающим тегом <code>&lt;/script&gt;</code>.</p>
+Мы определили `charset`, {{htmlelement("title")}} и некий базовый CSS в заголовке. Тело документа содержит элементы {{htmlelement("canvas")}} и {{htmlelement("script")}} — мы будем визуализировать игру внутри первого и писать JavaScript-код, который управляет игрой, во втором. Элемент {{htmlelement("canvas")}} имеет `id` равный `myCanvas`, который позволяет однозначно отыскать элемент. Так же этот элемент имеет ширину 480 пикселей и высоту 320 пикселей. Весь JavaScript-код мы будем писать между открывающим тегом `<script>` и закрывающим тегом `</script>`.
 
-<h2 id="Основы_Canvas">Основы Canvas</h2>
+## Основы Canvas
 
-<p>Чтобы иметь возможность визуализировать игру в {{htmlelement("canvas")}} элементе, сначала мы должны сослаться на этот элемент в коде JavaScript. Добавьте следующий код после открывающего тега <code>&lt;script&gt;</code>.</p>
+Чтобы иметь возможность визуализировать игру в {{htmlelement("canvas")}} элементе, сначала мы должны сослаться на этот элемент в коде JavaScript. Добавьте следующий код после открывающего тега `<script>`.
 
-<pre class="brush: js">var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");</pre>
+```js
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+```
 
-<p>Таким образом, мы храним ссылку на {{htmlelement("canvas")}} элемент в переменной <code>canvas</code>. Далее мы создаём переменную <code>ctx</code> для хранения 2D визуализации контекста — метод, который используется для отрисовки в Canvas.</p>
+Таким образом, мы храним ссылку на {{htmlelement("canvas")}} элемент в переменной `canvas`. Далее мы создаём переменную `ctx` для хранения 2D визуализации контекста — метод, который используется для отрисовки в Canvas.
 
-<p>Давайте рассмотрим пример отрисовки красного квадрата на canvas. Добавьте этот код ниже предыдущего кода на JavaScript и загрузите <code>index.html</code> в браузере, чтобы посмотреть результат.</p>
+Давайте рассмотрим пример отрисовки красного квадрата на canvas. Добавьте этот код ниже предыдущего кода на JavaScript и загрузите `index.html` в браузере, чтобы посмотреть результат.
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>Все инструкции располагаются между методами {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} и {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. Мы определяем прямоугольник, используя  {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: первые два параметра определяют координаты верхнего левого угла прямоугольника на canvas, в то время, как два других параметра определяют ширину и высоту прямоугольника. В нашем случае прямоугольник нарисован на расстоянии 20 пикселей слева и 40 пикселей сверху, 50 пикселей в ширину и 50 пикселей в высоту, что делает его квадратом. Свойство {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} хранит цвет, который будет использован методом {{domxref("CanvasRenderingContext2D.fill()","fill()")}} для отрисовки нашего квадрата.</p>
+Все инструкции располагаются между методами {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} и {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. Мы определяем прямоугольник, используя {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: первые два параметра определяют координаты верхнего левого угла прямоугольника на canvas, в то время, как два других параметра определяют ширину и высоту прямоугольника. В нашем случае прямоугольник нарисован на расстоянии 20 пикселей слева и 40 пикселей сверху, 50 пикселей в ширину и 50 пикселей в высоту, что делает его квадратом. Свойство {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} хранит цвет, который будет использован методом {{domxref("CanvasRenderingContext2D.fill()","fill()")}} для отрисовки нашего квадрата.
 
-<p>Мы не ограничены только прямоугольниками - ниже часть кода для отрисовки зелёного круга. Попробуйте добавить этот код вконец вашего кода JavaScript, сохраните и обновите страницу в браузере:</p>
+Мы не ограничены только прямоугольниками - ниже часть кода для отрисовки зелёного круга. Попробуйте добавить этот код вконец вашего кода JavaScript, сохраните и обновите страницу в браузере:
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>Как видите, мы снова используем методы {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} и {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. Между ними наиболее важная часть кода - метод {{domxref("CanvasRenderingContext2D.arc()","arc()")}}. Он принимает шесть параметров:</p>
+Как видите, мы снова используем методы {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} и {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}. Между ними наиболее важная часть кода - метод {{domxref("CanvasRenderingContext2D.arc()","arc()")}}. Он принимает шесть параметров:
 
-<ul>
- <li><code>x</code> и <code>y</code> координаты центра круга</li>
- <li>радиус</li>
- <li>начальный и конечный угол отрисовки круга (в радианах)</li>
- <li>направление отрисовки: (<code>false</code> - по часовой стрелке, по умолчанию, или <code>true</code> - против часовой стрелки). Последний параметр не обязательный.</li>
-</ul>
+- `x` и `y` координаты центра круга
+- радиус
+- начальный и конечный угол отрисовки круга (в радианах)
+- направление отрисовки: (`false` - по часовой стрелке, по умолчанию, или `true` - против часовой стрелки). Последний параметр не обязательный.
 
-<p>Свойство {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} выглядит не так, как прежде. Это потому что, как и в CSS, цвет может быть задан в шестнадцатеричном формате, названием цвета, функцией <code>rgba()</code> , или же любым другим методом для цвета.</p>
+Свойство {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} выглядит не так, как прежде. Это потому что, как и в CSS, цвет может быть задан в шестнадцатеричном формате, названием цвета, функцией `rgba()` , или же любым другим методом для цвета.
 
-<p>Вместо {{domxref("CanvasRenderingContext2D.fill()","fill()")}} и заполнения фигур цветом, можно использовать {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}}, чтобы окрасить только внешнюю обводку фигуры. Попробуйте добавить этот код к вашему коду JavaScript:</p>
+Вместо {{domxref("CanvasRenderingContext2D.fill()","fill()")}} и заполнения фигур цветом, можно использовать {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}}, чтобы окрасить только внешнюю обводку фигуры. Попробуйте добавить этот код к вашему коду JavaScript:
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>Код выше отрисовывает пустой прямоугольник с синей обводкой. Благодаря функции альфа-канала <code>rgba()</code> , голубой цвет полупрозрачный.</p>
+Код выше отрисовывает пустой прямоугольник с синей обводкой. Благодаря функции альфа-канала `rgba()` , голубой цвет полупрозрачный.
 
-<h2 id="Сравните_Ваш_код">Сравните ваш код</h2>
+## Сравните ваш код
 
-<p>Здесь полный исходный код для первого урока, посмотреть онлайн можно на JSFiddle:</p>
+Здесь полный исходный код для первого урока, посмотреть онлайн можно на JSFiddle:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-<div class="note">
-<p><strong>Упражнение</strong>: попробуйте изменить цвет и размер созданных фигур.</p>
-</div>
+> **Примечание:** **Упражнение**: попробуйте изменить цвет и размер созданных фигур.
 
-<h2 id="Следующие_шаги">Следующие шаги</h2>
+## Следующие шаги
 
-<p>Сейчас мы создали базовый HTML и немного узнали о canvas, давайте на следующем шаге изучим, как <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball">Двигать мяч в нашей игре</a>.</p>
+Сейчас мы создали базовый HTML и немного узнали о canvas, давайте на следующем шаге изучим, как [Двигать мяч в нашей игре](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
