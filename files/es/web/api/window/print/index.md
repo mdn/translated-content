@@ -28,23 +28,23 @@ Abre el _Diálogo de Impresión_ para imprimir el documento actual.
 print()
 ```
 
-### Parameters
+### Parámetros
 
-None.
+Ninguno.
 
-### Return value
+### Valor devuelto
 
-None ({{jsxref("undefined")}}).
+Ninguno ({{jsxref("undefined")}}).
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - [Printing](/en-US/docs/Web/Guide/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event

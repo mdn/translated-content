@@ -43,14 +43,11 @@ El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
 
 [![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
 
-## Notes
+## Notas
 
-A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
-returns the (possibly empty) text the user entered into that textbox.
+Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar) un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.
 
-Please note that result is a string. That means you should sometimes cast the value
-given by the user. For example, if their answer should be a Number, you should cast the
-value to Number.
+Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number.
 
 ```js
 const aNumber = Number(window.prompt("Type a number", ""));
@@ -63,15 +60,15 @@ box (or modal window).
 
 Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
