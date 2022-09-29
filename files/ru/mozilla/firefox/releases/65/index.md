@@ -3,229 +3,234 @@ title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
 translation_of: Mozilla/Firefox/Releases/65
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.</p>
+В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.
 
-<h2 id="Изменения_для_веб-разработчиков">Изменения для веб-разработчиков</h2>
+## Изменения для веб-разработчиков
 
-<h3 id="Инструменты_разработчика">Инструменты разработчика</h3>
+### Инструменты разработчика
 
-<ul>
- <li>Включён по умолчанию <a href="/ru/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">инспектор Flexbox</a>.</li>
- <li><a href="/ru/docs/Tools/Debugger">Отладчик JavaScript</a> получил поддержку точек останова XHR ({{bug(821610)}}).</li>
- <li>Щелчок правой кнопкой по элементу дерева доступности позволяет <a href="/ru/docs/Tools/Accessibility_inspector#Вывод_дерева_доступности_в_JSON-формате">вывести его в JSON-формате</a>.</li>
- <li>Если фон текста является сложным (например, градиент или сложное изображение), инструмент <a href="/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст">цветового контраста</a> в инспекторе доступности покажет диапазон значений цветового контраста.</li>
- <li>Во вкладку «Заголовки» <a href="/ru/docs/Tools/Network_Monitor">сетевого монитора</a> добавлено отображение политики Referrer для выбранного запроса ({{bug(1496742)}}).</li>
- <li>При просмотре трассировки стека (например, в журналах консоли или отладчике JavaScript) вызовы методов фреймворка распознаются и по умолчанию сворачиваются, что облегчает размещение вашего кода.</li>
- <li>Подобно традиционным терминалам теперь можно использовать обратный поиск в истории консоли JavaScript(<kbd>F9</kbd> в Windows/Linux или <kbd>Ctrl</kbd> + <kbd>R</kbd> в macOS, затем ввести искомое, а сочетаниями <kbd>Ctrl</kbd> + <kbd>R</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> переключаться между результатами).</li>
- <li>Сокращение <code>$0</code> в консоли JavaScript (ссылается на инспектируемый в данный момент элемент страницы) обзавелось возможностью автодополнения. Например, вы можете ввести <code>$0.te</code>, чтобы получить предложения автодополнения для свойств наподобие <code>$0.textContent</code>.</li>
- <li>Правки, внесённые через просмотр правил в Инспекторе, теперь отображаются на вкладке «Изменения» ({{bug(1503920)}}).</li>
-</ul>
+- Включён по умолчанию [инспектор Flexbox](/ru/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts).
+- [Отладчик JavaScript](/ru/docs/Tools/Debugger) получил поддержку точек останова XHR ({{bug(821610)}}).
+- Щелчок правой кнопкой по элементу дерева доступности позволяет [вывести его в JSON-формате](/ru/docs/Tools/Accessibility_inspector#Вывод_дерева_доступности_в_JSON-формате).
+- Если фон текста является сложным (например, градиент или сложное изображение), инструмент [цветового контраста](/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст) в инспекторе доступности покажет диапазон значений цветового контраста.
+- Во вкладку «Заголовки» [сетевого монитора](/ru/docs/Tools/Network_Monitor) добавлено отображение политики Referrer для выбранного запроса ({{bug(1496742)}}).
+- При просмотре трассировки стека (например, в журналах консоли или отладчике JavaScript) вызовы методов фреймворка распознаются и по умолчанию сворачиваются, что облегчает размещение вашего кода.
+- Подобно традиционным терминалам теперь можно использовать обратный поиск в истории консоли JavaScript(
 
-<h3 id="HTML">HTML</h3>
+  <kbd>F9</kbd>
 
-<ul>
- <li>События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами <code>disabled</code> ({{bug(329509)}}).</li>
- <li>Как в Chrome и Safari, удаление атрибута <code>src</code> у элемента {{htmlelement("iframe")}} загружает в него <code>about:blank</code> ({{bug(1501418)}}) . До этого удаление <code>src</code> не влияло на содержимое <code>iframe</code>.</li>
- <li>Добавлена поддержка атрибута {{htmlattrxref("referrerpolicy", "script")}} у элементов {{htmlelement("script")}} ({{bug(1460920)}}).</li>
-</ul>
+  &#x20;в Windows/Linux или&#x20;
 
-<h3 id="CSS">CSS</h3>
+  <kbd>Ctrl</kbd>
 
-<ul>
- <li>Убран префикс у значения <code>crisp-edges</code> свойства {{cssxref("image-rendering")}} ({{bug(1496617)}}).</li>
- <li>Значение <code>auto</code> {{cssxref("scrollbar-color")}} теперь разрешается в <code>auto</code>, а не в два цвета ({{bug(1501418)}}).</li>
- <li>Реализована поддержка свойств <code>break-*</code> ({{bug(775618)}}):
-  <ul>
-   <li>{{cssxref("break-before")}} → {{cssxref("page-break-before")}}.</li>
-   <li>{{cssxref("break-after")}} → {{cssxref("page-break-after")}}.</li>
-   <li>{{cssxref("break-inside")}} → {{cssxref("page-break-inside")}}.</li>
-  </ul>
- </li>
- <li>Реализована поддержка значения <code>anywhere</code> у свойства {{cssxref("overflow-wrap")}} ({{bug(1505786)}}).</li>
- <li>Добавлены новые ключевые слова <code>jump-start</code>, <code>jump-end</code>, <code>jump-none</code> и <code>jump-both</code>, используемые внутри <a href="/en-US/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions">временной функции steps()</a> ({{bug(1496619)}}). Функция <code>frames()</code>, ранее использовавшаяся для этого, объявлена устаревшей.</li>
- <li>Для совместимости с прочими браузерами добавлены несколько новых значений {{cssxref("appearance", "-webkit-appearance")}}. В частности:
-  <ul>
-   <li><code>meter</code>, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("meter")}}; существующее значение <code>meterbar</code> теперь является псевдонимом <code>meter</code> ({{bug(1501483)}}).</li>
-   <li><code>progress-bar</code>, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("progress")}}; существующее значение <code>progressbar</code> теперь является псевдонимом <code>progress-bar</code> ({{bug(1501506)}}).</li>
-   <li><code>textarea</code>, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("textarea")}}; существующее значение <code>textfield-multiline</code> теперь является псевдонимом <code>textarea</code> ({{bug(1507905)}})</li>
-  </ul>
- </li>
- <li>Изменено поведение {{cssxref("user-select")}}, чтобы достичь сходства с прочими браузерами ({{bug(1506547)}}). Конкретно:
-  <ul>
-   <li><code>user-select: all</code>, установленное на элемент, больше не перекрывает значения <code>user-select</code> дочерних элементов. Пример:
-    <pre class="brush: html">&lt;div style="-webkit-user-select: all"&gt;All
-  &lt;div style="-webkit-user-select: none"&gt;None&lt;/div&gt;
-&lt;/div&gt;</pre>
-    <code>&lt;div&gt;</code>, на который установлен <code>none</code>, теперь не выбирается. До этого значение <code>none</code> перекрывалось значением <code>all</code> родительского элемента.</li>
-   <li>Теперь можно выбирать элементы не-<code>contenteditable</code>, вложенные в элементы <code>contenteditable</code>.</li>
-   <li><code>user-select</code> теперь ведёт себя согласованно внутри и снаружи теневого DOM.</li>
-   <li>Удалено проприетарное значение <code>-moz-text</code>.</li>
-  </ul>
- </li>
- <li>Реализована поддержка переменных среды CSS (функция {{cssxref("env")}}) ({{bug(1462233)}}).</li>
-</ul>
+  &#x20;\+&#x20;
 
-<h4 id="Удалено">Удалено</h4>
+  <kbd>R</kbd>
 
-<ul>
- <li>Удалена настройка <code>layout.css.shape-outside.enabled</code>; поддержку {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}} и {{cssxref("shape-image-threshold")}} больше нельзя отключить через <code>about:config</code> ({{bug(1504387)}}).</li>
- <li>Удалены некоторые специфичные для Firefox значения {{cssxref("user-select")}}  — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code> и <code>toggle</code>. См. {{bug(1492958)}} и {{bug(1506547)}}.</li>
- <li>Как упоминалось выше, удалена временная функция <code>frames()</code> ({{bug(1496619)}}).</li>
-</ul>
+  &#x20;в macOS, затем ввести искомое, а сочетаниями&#x20;
 
-<h3 id="SVG">SVG</h3>
+  <kbd>Ctrl</kbd>
 
-<p><em>Без изменений.</em></p>
+  &#x20;\+&#x20;
 
-<h3 id="JavaScript">JavaScript</h3>
+  <kbd>R</kbd>
 
-<ul>
- <li>Реализована поддержка {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} ({{bug(1504334)}}).</li>
- <li>Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет <code>2^30 - 2</code> (~1 ГБ) вместо <code>2^28 - 1</code> (~256 МБ) ({{bug(1509542)}}).</li>
- <li>Добавлена поддержка свойства <code><a href="https://github.com/tc39/proposal-global">globalThis</a></code> ({{bug(1317422)}}).</li>
-</ul>
+  /
 
-<h3 id="API">API</h3>
+  <kbd>Ctrl</kbd>
 
-<h4 id="Новые_API">Новые API</h4>
+  &#x20;\+&#x20;
 
-<ul>
- <li>Включена по умолчанию поддержка {{domxref("Streams_API/Using_readable_streams", "Readable Streams", "", "1")}} ({{bug(1505122)}}).</li>
- <li>Включена по умолчанию поддержка {{domxref("Storage_Access_API", "Storage Access API", "", "1")}} ({{bug(1513021)}}).</li>
-</ul>
+  <kbd>S</kbd>
 
-<h4 id="DOM">DOM</h4>
+  &#x20;переключаться между результатами).
 
-<ul>
- <li>{{domxref("Performance.toJSON()")}} доступен {{domxref("Web_Workers_API", "веб-воркерам", "", "1")}} ({{bug(1504958)}}).</li>
- <li>Запросы {{domxref("XMLHttpRequest")}} будут выбрасывать <code>NetworkError</code>, если запрошено содержимое типа <code>Blob</code>, а метод запроса отличен от <code>GET</code> ({{bug(1502599)}}).</li>
- <li>Многие функции {{domxref("Fullscreen API", "", "", "1")}} с префиксом <code>-moz-</code> объявлены устаревшими и выдают предупреждение в консоль JavaScript ({{bug(1504946)}}).</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap", "createImageBitmap()")}} отныне поддерживает изображения SVG ({{domxref("SVGImageElement")}}) в качестве источника ({{bug(1500768)}}).</li>
-</ul>
+- Сокращение `$0` в консоли JavaScript (ссылается на инспектируемый в данный момент элемент страницы) обзавелось возможностью автодополнения. Например, вы можете ввести `$0.te`, чтобы получить предложения автодополнения для свойств наподобие `$0.textContent`.
+- Правки, внесённые через просмотр правил в Инспекторе, теперь отображаются на вкладке «Изменения» ({{bug(1503920)}}).
 
-<h4 id="События_DOM">События DOM</h4>
+### HTML
 
-<ul>
- <li>За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ({{bug(675574)}}).</li>
- <li>События <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> и <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).</li>
-</ul>
+- События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами `disabled` ({{bug(329509)}}).
+- Как в Chrome и Safari, удаление атрибута `src` у элемента {{htmlelement("iframe")}} загружает в него `about:blank` ({{bug(1501418)}}) . До этого удаление `src` не влияло на содержимое `iframe`.
+- Добавлена поддержка атрибута {{htmlattrxref("referrerpolicy", "script")}} у элементов {{htmlelement("script")}} ({{bug(1460920)}}).
 
-<h4 id="Веб-воркеры">Веб-воркеры</h4>
+### CSS
 
-<ul>
- <li>Поскольку событие {{domxref("SharedWorkerGlobalScope.onconnect")}} является экземпляром {{domxref("MessageEvent")}}, его свойство <code>data</code> теперь представляет собой пустую строку, а не <code>null</code> ({{bug(1508824)}}).</li>
-</ul>
+- Убран префикс у значения `crisp-edges` свойства {{cssxref("image-rendering")}} ({{bug(1496617)}}).
+- Значение `auto` {{cssxref("scrollbar-color")}} теперь разрешается в `auto`, а не в два цвета ({{bug(1501418)}}).
+- Реализована поддержка свойств `break-*` ({{bug(775618)}}):
 
-<h4 id="Fetch_и_сервис-воркеры">Fetch и сервис-воркеры</h4>
+  - {{cssxref("break-before")}} → {{cssxref("page-break-before")}}.
+  - {{cssxref("break-after")}} → {{cssxref("page-break-after")}}.
+  - {{cssxref("break-inside")}} → {{cssxref("page-break-inside")}}.
 
-<ul>
- <li>Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает <code>TypeError</code>, если в качестве первого параметра указан невалидный URL ({{bug(1503276)}}).</li>
- <li>Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript">MIME-типом JavaScript</a> ({{bug(1354577)}}).</li>
- <li>Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ({{bug(1264177)}}).</li>
- <li>Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ({{bug(1399446)}}).</li>
- <li>Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ({{bug(1508661)}}).</li>
-</ul>
+- Реализована поддержка значения `anywhere` у свойства {{cssxref("overflow-wrap")}} ({{bug(1505786)}}).
+- Добавлены новые ключевые слова `jump-start`, `jump-end`, `jump-none` и `jump-both`, используемые внутри [временной функции steps()](</ru/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions>) ({{bug(1496619)}}). Функция `frames()`, ранее использовавшаяся для этого, объявлена устаревшей.
+- Для совместимости с прочими браузерами добавлены несколько новых значений {{cssxref("appearance", "-webkit-appearance")}}. В частности:
 
-<h4 id="Media_Web_Audio_и_WebRTC">Media, Web Audio и WebRTC</h4>
+  - `meter`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("meter")}}; существующее значение `meterbar` теперь является псевдонимом `meter` ({{bug(1501483)}}).
+  - `progress-bar`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("progress")}}; существующее значение `progressbar` теперь является псевдонимом `progress-bar` ({{bug(1501506)}}).
+  - `textarea`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("textarea")}}; существующее значение `textfield-multiline` теперь является псевдонимом `textarea` ({{bug(1507905)}})
 
-<ul>
- <li>Словарь {{domxref("WebRTC API", "WebRTC", "", "1")}} {{domxref("RTCIceCandidateStats")}} обновлён в соответствии с последними изменениями спецификации ({{bug(1324788)}}, {{bug(1489040)}}).</li>
- <li>События <code>pause</code> и <code>resume</code> {{domxref("MediaRecorder")}} (и соответствующие свойства обработчика событий — {{domxref("MediaRecorder.onpause")}} и {{domxref("MediaRecorder.onresume")}}) не были реализованы ранее, хотя таблицы совместимости утверждали обратное. Теперь они реализованы ({{bug(1458538)}}, {{bug(1514016)}}).</li>
-</ul>
+- Изменено поведение {{cssxref("user-select")}}, чтобы достичь сходства с прочими браузерами ({{bug(1506547)}}). Конкретно:
 
-<h4 id="Canvas_и_WebGL">Canvas и WebGL</h4>
+  - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
-<ul>
- <li>В контекстах WebGL1 и WebGL2 доступно использование расширений сжатия текстур {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} и {{domxref("EXT_texture_compression_rgtc")}} ({{bug(1507263)}}).</li>
-</ul>
+    ```html
+    <div style="-webkit-user-select: all">All
+      <div style="-webkit-user-select: none">None</div>
+    </div>
+    ```
 
-<h4 id="Удалено_2">Удалено</h4>
+    `<div>`, на который установлен `none`, теперь не выбирается. До этого значение `none` перекрывалось значением `all` родительского элемента.
 
-<ul>
- <li>Отключена <a href="/ru/docs/Web/Guide/Events/Mutation_events">мутация событий</a> в теневых деревьях ({{bug(1489858)}}).</li>
- <li>Удалено нестандартное свойство <code>currentTime</code> {{domxref("MediaStream")}} ({{bug(1502927)}}).</li>
- <li>Удалены настройки <code>dom.webcomponents.shadowdom.enabled</code> и <code>dom.webcomponents.customelements.enabled</code> — больше нельзя отключить поддержку Shadow DOM и Custom Elements через <code>about:config</code> ({{bug(1503019)}}).</li>
- <li>Удалено нестандартное событие DOM <code>text</code>, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ({{bug(1288640)}}).</li>
- <li>Событие {{event("keypress")}} больше не срабатывает для <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">непечатаемых клавиш</a> ({{bug(968056)}}) за исключением клавиши <kbd>Enter</kbd> и комбинаций <kbd>Shift</kbd> + <kbd>Enter</kbd> и <kbd>Ctrl</kbd> + <kbd>Enter</kbd> (сохранены для кроссбраузерной совместимости).</li>
-</ul>
+  - Теперь можно выбирать элементы не-`contenteditable`, вложенные в элементы `contenteditable`.
+  - `user-select` теперь ведёт себя согласованно внутри и снаружи теневого DOM.
+  - Удалено проприетарное значение `-moz-text`.
 
-<h3 id="Безопасность">Безопасность</h3>
+- Реализована поддержка переменных среды CSS (функция {{cssxref("env")}}) ({{bug(1462233)}}).
 
-<ul>
- <li>К допустимым заголовкам запросов отныне применяются дополнительные ограничения CORS ({{bug(1483815)}}, см. также <a href="https://github.com/whatwg/fetch/issues/382">whatwg fetch issue 382: CORS-safelisted request headers should be restricted according to RFC 7231</a> для получения дополнительных сведений).</li>
-</ul>
+#### Удалено
 
-<h3 id="Сеть">Сеть</h3>
+- Удалена настройка `layout.css.shape-outside.enabled`; поддержку {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}} и {{cssxref("shape-image-threshold")}} больше нельзя отключить через `about:config` ({{bug(1504387)}}).
+- Удалены некоторые специфичные для Firefox значения {{cssxref("user-select")}} — `-moz-all`, `-moz-text`, `tri-state`, `element`, `elements` и `toggle`. См. {{bug(1492958)}} и {{bug(1506547)}}.
+- Как упоминалось выше, удалена временная функция `frames()` ({{bug(1496619)}}).
 
-<p><em>Без изменений.</em></p>
+### SVG
 
-<h3 id="Плагины">Плагины</h3>
+_Без изменений._
 
-<p><em>Без изменений.</em></p>
+### JavaScript
 
-<h3 id="WebDriver_(Marionette)">WebDriver (Marionette)</h3>
+- Реализована поддержка {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} ({{bug(1504334)}}).
+- Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет `2^30 - 2` (\~1 ГБ) вместо `2^28 - 1` (\~256 МБ) ({{bug(1509542)}}).
+- Добавлена поддержка свойства [`globalThis`](https://github.com/tc39/proposal-global) ({{bug(1317422)}}).
 
-<h4 id="Изменения_API">Изменения API</h4>
+### API
 
-<ul>
- <li><code>WebDriver:ElementSendKeys</code> при проверке интерактивности обрабатывает <code>&lt;input type=file&gt;</code> менее строго, позволяя скрывать эти элементы без возникновения ошибки <code>not interactable</code>. Если требуется строгая проверка, следует использовать <code>strictFileInteractability</code> ({{bug(1502864)}}).</li>
-</ul>
+#### Новые API
 
-<h4 id="Исправленные_ошибки">Исправленные ошибки</h4>
+- Включена по умолчанию поддержка {{domxref("Streams_API/Using_readable_streams", "Readable Streams", "", "1")}} ({{bug(1505122)}}).
+- Включена по умолчанию поддержка {{domxref("Storage_Access_API", "Storage Access API", "", "1")}} ({{bug(1513021)}}).
 
-<ul>
- <li>Команды для манипуляций окнами <code>WebDriver:FullscreenWindow</code>, <code>WebDriver:MinimizeWindow</code>, <code>WebDriver:MaximizeWindow</code> и <code>WebDriver:SetWindowRect</code> стали более стабильными ({{bug(1492499)}}). При определённых обстоятельствах они больше не вызывают бесконечное зависание, но ожидают в течение 5 секунд, если запрошенное состояние окна не может быть достигнуто ({{bug(1521527)}}).</li>
- <li><code>WebDriver:ElementClick</code> отныне корректно высчитывает центр элемента для щелчка по нему, что позволяет взаимодействовать с элементами, имеющими размер 1x1 пиксель ({{bug(1499360)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="Прочее">Прочее</h4>
+- {{domxref("Performance.toJSON()")}} доступен {{domxref("Web_Workers_API", "веб-воркерам", "", "1")}} ({{bug(1504958)}}).
+- Запросы {{domxref("XMLHttpRequest")}} будут выбрасывать `NetworkError`, если запрошено содержимое типа `Blob`, а метод запроса отличен от `GET` ({{bug(1502599)}}).
+- Многие функции {{domxref("Fullscreen API", "", "", "1")}} с префиксом `-moz-` объявлены устаревшими и выдают предупреждение в консоль JavaScript ({{bug(1504946)}}).
+- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap", "createImageBitmap()")}} отныне поддерживает изображения SVG ({{domxref("SVGImageElement")}}) в качестве источника ({{bug(1500768)}}).
 
-<ul>
- <li>При возникновении ошибки <code>unexpected alert open</code> выводятся более понятные сообщения ({{bug(1502268)}}).</li>
-</ul>
+#### События DOM
 
-<h3 id="Прочее_2">Прочее</h3>
+- За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ({{bug(675574)}}).
+- События [`keyup`](/en-US/docs/Web/Events/keyup) и [`keydown`](/en-US/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).
 
-<ul>
- <li>Добавлена поддержка изображений в формате <a href="/en-US/docs/Glossary/webp">WebP</a> ({{bug(1294490)}}).
+#### Веб-воркеры
 
-  <ul>
-   <li>Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (<code>image/webp</code>) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ({{bug(1507691)}}).</li>
-  </ul>
- </li>
-</ul>
+- Поскольку событие {{domxref("SharedWorkerGlobalScope.onconnect")}} является экземпляром {{domxref("MessageEvent")}}, его свойство `data` теперь представляет собой пустую строку, а не `null` ({{bug(1508824)}}).
 
-<h2 id="Изменения_для_разработчиков_дополнений">Изменения для разработчиков дополнений</h2>
+#### Fetch и сервис-воркеры
 
-<h3 id="Изменения_API_2">Изменения API</h3>
+- Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает `TypeError`, если в качестве первого параметра указан невалидный URL ({{bug(1503276)}}).
+- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ({{bug(1354577)}}).
+- Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ({{bug(1264177)}}).
+- Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ({{bug(1399446)}}).
+- Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ({{bug(1508661)}}).
 
-<h4 id="Вкладки">Вкладки</h4>
+#### Media, Web Audio и WebRTC
 
-<ul>
- <li>{{WebExtAPIRef("tabs", "tabs API", "", "1")}} обзавёлся поддержкой наследников вкладок — вкладке можно назначить ID вкладки-наследника, которая станет активной, когда первая вкладка закроется ({{bug(1500479)}}, см. также <a href="https://qiita.com/piroor/items/ea7e727735631c45a366">эту запись в блоге</a> для получения подробных сведений). В частности:
+- Словарь {{domxref("WebRTC API", "WebRTC", "", "1")}} {{domxref("RTCIceCandidateStats")}} обновлён в соответствии с последними изменениями спецификации ({{bug(1324788)}}, {{bug(1489040)}}).
+- События `pause` и `resume` {{domxref("MediaRecorder")}} (и соответствующие свойства обработчика событий — {{domxref("MediaRecorder.onpause")}} и {{domxref("MediaRecorder.onresume")}}) не были реализованы ранее, хотя таблицы совместимости утверждали обратное. Теперь они реализованы ({{bug(1458538)}}, {{bug(1514016)}}).
 
-  <ul>
-   <li>Тип {{WebExtAPIRef("tabs.Tab")}} получил свойство <code>successorId</code>, используемое для хранения/получения ID вкладки-наследника.</li>
-   <li>Колбэк обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, <code>previousTabId</code>, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.</li>
-   <li>Объект <code>updateProperties</code> функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством <code>successorTabId</code>, которое служит для его обновления.</li>
-   <li><code>successorTabId</code> также возвращается функциями наподобие {{WebExtAPIRef("tabs.get()")}} и {{WebExtAPIRef("tabs.query()")}}.</li>
-   <li>Новая функция <code>tabs.moveInSuccession()</code> позволяет массово манипулировать наследниками вкладок.</li>
-  </ul>
- </li>
-</ul>
+#### Canvas и WebGL
 
-<h3 id="Изменения_манифеста">Изменения манифеста</h3>
+- В контекстах WebGL1 и WebGL2 доступно использование расширений сжатия текстур {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} и {{domxref("EXT_texture_compression_rgtc")}} ({{bug(1507263)}}).
 
-<p><em>Без изменений.</em></p>
+#### Удалено
 
-<h3 id="Прочее_3">Прочее</h3>
+- Отключена [мутация событий](/ru/docs/Web/Guide/Events/Mutation_events) в теневых деревьях ({{bug(1489858)}}).
+- Удалено нестандартное свойство `currentTime` {{domxref("MediaStream")}} ({{bug(1502927)}}).
+- Удалены настройки `dom.webcomponents.shadowdom.enabled` и `dom.webcomponents.customelements.enabled` — больше нельзя отключить поддержку Shadow DOM и Custom Elements через `about:config` ({{bug(1503019)}}).
+- Удалено нестандартное событие DOM `text`, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ({{bug(1288640)}}).
+- Событие {{event("keypress")}} больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ({{bug(968056)}}) за исключением клавиши&#x20;
 
-<ul>
- <li>Версия для Android теперь поддерживает свойства <code>headerURL</code>/<code>theme_frame</code> для <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">тем Webextension</a> ({{bug(1429488)}}).</li>
-</ul>
+  <kbd>Enter</kbd>
 
-<h2 id="Предыдущие_версии">Предыдущие версии</h2>
+  &#x20;и комбинаций&#x20;
 
-<p>{{Firefox_for_developers(65)}}</p>
+  <kbd>Shift</kbd>
+
+  &#x20;\+&#x20;
+
+  <kbd>Enter</kbd>
+
+  &#x20;и&#x20;
+
+  <kbd>Ctrl</kbd>
+
+  &#x20;\+&#x20;
+
+  <kbd>Enter</kbd>
+
+  &#x20;(сохранены для кроссбраузерной совместимости).
+
+### Безопасность
+
+- К допустимым заголовкам запросов отныне применяются дополнительные ограничения CORS ({{bug(1483815)}}, см. также [whatwg fetch issue 382: CORS-safelisted request headers should be restricted according to RFC 7231](https://github.com/whatwg/fetch/issues/382) для получения дополнительных сведений).
+
+### Сеть
+
+_Без изменений._
+
+### Плагины
+
+_Без изменений._
+
+### WebDriver (Marionette)
+
+#### Изменения API
+
+- `WebDriver:ElementSendKeys` при проверке интерактивности обрабатывает `<input type=file>` менее строго, позволяя скрывать эти элементы без возникновения ошибки `not interactable`. Если требуется строгая проверка, следует использовать `strictFileInteractability` ({{bug(1502864)}}).
+
+#### Исправленные ошибки
+
+- Команды для манипуляций окнами `WebDriver:FullscreenWindow`, `WebDriver:MinimizeWindow`, `WebDriver:MaximizeWindow` и `WebDriver:SetWindowRect` стали более стабильными ({{bug(1492499)}}). При определённых обстоятельствах они больше не вызывают бесконечное зависание, но ожидают в течение 5 секунд, если запрошенное состояние окна не может быть достигнуто ({{bug(1521527)}}).
+- `WebDriver:ElementClick` отныне корректно высчитывает центр элемента для щелчка по нему, что позволяет взаимодействовать с элементами, имеющими размер 1x1 пиксель ({{bug(1499360)}}).
+
+#### Прочее
+
+- При возникновении ошибки `unexpected alert open` выводятся более понятные сообщения ({{bug(1502268)}}).
+
+### Прочее
+
+- Добавлена поддержка изображений в формате [WebP](/ru/docs/Glossary/webp) ({{bug(1294490)}}).
+
+  - Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (`image/webp`) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ({{bug(1507691)}}).
+
+## Изменения для разработчиков дополнений
+
+### Изменения API
+
+#### Вкладки
+
+- {{WebExtAPIRef("tabs", "tabs API", "", "1")}} обзавёлся поддержкой наследников вкладок — вкладке можно назначить ID вкладки-наследника, которая станет активной, когда первая вкладка закроется ({{bug(1500479)}}, см. также [эту запись в блоге](https://qiita.com/piroor/items/ea7e727735631c45a366) для получения подробных сведений). В частности:
+
+  - Тип {{WebExtAPIRef("tabs.Tab")}} получил свойство `successorId`, используемое для хранения/получения ID вкладки-наследника.
+  - Колбэк обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, `previousTabId`, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.
+  - Объект `updateProperties` функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством `successorTabId`, которое служит для его обновления.
+  - `successorTabId` также возвращается функциями наподобие {{WebExtAPIRef("tabs.get()")}} и {{WebExtAPIRef("tabs.query()")}}.
+  - Новая функция `tabs.moveInSuccession()` позволяет массово манипулировать наследниками вкладок.
+
+### Изменения манифеста
+
+_Без изменений._
+
+### Прочее
+
+- Версия для Android теперь поддерживает свойства `headerURL`/`theme_frame` для [тем Webextension](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) ({{bug(1429488)}}).
+
+## Предыдущие версии
+
+{{Firefox_for_developers(65)}}

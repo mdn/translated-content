@@ -4,310 +4,218 @@ slug: Mozilla/Firefox/Releases/3.5
 translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Firefox_3.5_для_разработчика
 ---
-<div>{{FirefoxSidebar}}</div><p><a class="external" href="http://www.firefox.com/" title="Веб-браузер Firefox">Firefox 3.5</a> вводит ряд новых возможностей, а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, освещающие основные усовершенствования.</p>
-<h2 id="Новые_возможности_для_разработчиков">Новые возможности для разработчиков</h2>
-<h3 id="Для_разработчиков_веб-сайтов_и_веб-приложений">Для разработчиков веб-сайтов и веб-приложений</h3>
-<h4 id="Поддержка_HTML_5">Поддержка HTML 5</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/Using_audio_and_video_in_Firefox" title="en/Using audio and video in Firefox">Использование аудио и видео</a></dt>
- <dd>
-  В Firefox 3.5 добавлена поддержка элементов HTML 5 <a class="internal" href="/En/HTML/Element/Audio" title="en/HTML/Element/Audio"><code>audio</code></a> и <a class="internal" href="/En/HTML/Element/Video" title="en/HTML/Element/Video"><code>video</code></a>.</dd>
- <dt>
-  <a class="internal" href="/en/Offline_resources_in_Firefox" title="en/Offline resources in Firefox">Offline resources in Firefox</a></dt>
- <dd>
-  Firefox 3.5 now fully supports the HTML 5 offline resource specification.</dd>
- <dt>
-  <a class="internal" href="/En/DragDrop/Drag_and_Drop" title="en/DragDrop/Drag and Drop">Drag and drop</a></dt>
- <dd>
-  The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites.  This also provides a simpler API for use by extensions and Mozilla-based applications.</dd>
-</dl>
-<h4 id="Newly-supported_CSS_features">Newly-supported CSS features</h4>
-<dl>
- <dt>
-  <a class="internal" href="/en/CSS/@font-face" title="en/CSS/@font-face">Downloadable fonts support</a></dt>
- <dd>
-  The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.</dd>
- <dt>
-  <a class="internal" href="/En/CSS/Media_queries" title="en/CSS/Media queries">CSS media queries</a></dt>
- <dd>
-  Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.</dd>
- <dt>
-  {{ cssxref(":before") }} and {{ cssxref(":after") }} updated to CSS 2.1</dt>
- <dd>
-  The <code>:before</code> and <code>:after</code> pseudo-elements have been updated to full CSS 2.1 support, adding support for the <code>position</code>, <code>float</code>, <code>list-style-*</code>, and some <code>display</code> properties.</dd>
- <dt>
-  <code>ch</code> units for length</dt>
- <dd>
-  The<code> ch </code>unit can now be used anywhere that accepts a <a class="internal" href="/en/CSS/length#Units" title="en/CSS/length#Units">unit of length</a>.<code> 1ch </code>is the width of the "0" (zero) character.</dd>
- <dt>
-  {{ cssxref("opacity") }}</dt>
- <dd>
-  The<code> -moz-opacity </code>Mozilla extension to CSS has been removed in favor of the standard<code> opacity </code>property.</dd>
- <dt>
-  {{ cssxref("text-shadow") }}</dt>
- <dd>
-  The<code> text-shadow </code>property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.</dd>
- <dt>
-  {{ cssxref("word-wrap") }}</dt>
- <dd>
-  This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.</dd>
- <dt>
-  <code>white-space</code> property supports the <code>pre-line</code> value</dt>
- <dd>
-  The {{ cssxref("white-space") }} property now accepts the <code>pre-line</code> value.</dd>
- <dt>
-  {{ cssxref("-moz-box-shadow") }}</dt>
- <dt>
-  {{ cssxref("-moz-border-image") }}</dt>
- <dt>
-  {{ cssxref("-moz-column-rule") }}</dt>
- <dt>
-  {{ cssxref("-moz-column-rule-width") }}</dt>
- <dt>
-  {{ cssxref("-moz-column-rule-style") }}</dt>
- <dt>
-  {{ cssxref("-moz-column-rule-color") }}</dt>
- <dd>
-  Firefox 3.5 adds support for these Mozilla extensions to CSS.</dd>
- <dt>
-  The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value</dt>
- <dd>
-  This new color value represents the user's system's default hyperlink color.</dd>
- <dt>
-  The {{ cssxref("-moz-window-shadow") }} property and the {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} pseudo-class</dt>
- <dd>
-  These new CSS features were added to facilitate theming.</dd>
- <dt>
-  New values for {{ cssxref("-moz-appearance") }}</dt>
- <dd>
-  The <code>-moz-win-glass</code> and <code>-moz-mac-unified-toolbar</code> values have been added to <code>-moz-appearance</code>.</dd>
- <dt>
-  <a class="internal" href="/En/CSS/Using_CSS_transforms" title="en/CSS/Using CSS transforms">Using CSS transforms</a></dt>
- <dd>
-  Firefox 3.5 supports CSS transforms.  See {{ cssxref("-moz-transform") }} and {{ cssxref("-moz-transform-origin") }} for details.</dd>
- <dt>
-  {{ cssxref(":nth-child") }}</dt>
- <dt>
-  {{ cssxref(":nth-last-child") }}</dt>
- <dt>
-  {{ cssxref(":nth-of-type") }}</dt>
- <dt>
-  {{ cssxref(":nth-last-of-type") }}</dt>
- <dt>
-  {{ cssxref(":first-of-type") }}</dt>
- <dt>
-  {{ cssxref(":last-of-type") }}</dt>
- <dt>
-  {{ cssxref(":only-of-type") }}</dt>
- <dd>
-  These selectors are all newly-supported in Firefox 3.5.</dd>
-</dl>
-<h4 id="Новые_возможности_DOM">Новые возможности DOM</h4>
-<dl>
- <dt>
-  <a class="internal" href="/en/DOM/Storage#localStorage" title="en/DOM/Storage#localStorage">localStorage</a></dt>
- <dd>
-  Firefox 3.5 adds support for the Web Storage <code>localStorage</code> property, which provides a way for web applications to store data locally on the client's computer.</dd>
- <dt>
-  <a class="internal" href="/En/Using_web_workers" title="en/Using web workers">Using web workers</a></dt>
- <dd>
-  Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.</dd>
- <dt>
-  <a class="internal" href="/En/Using_geolocation" title="en/Using geolocation">Using geolocation</a></dt>
- <dd>
-  Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.</dd>
- <dt>
-  <a class="internal" href="/En/DOM/Locating_DOM_elements_using_selectors" title="en/DOM/Locating DOM elements using selectors">Locating DOM elements using selectors</a></dt>
- <dd>
-  The selectors API allows querying a document to locate the elements that match a given selection rule.</dd>
- <dt>
-  <a class="internal" href="/En/DOM/Mouse_gesture_events" title="en/DOM/Mouse gesture events">Mouse gesture events</a></dt>
- <dd>
-  Firefox 3.5 supports mouse gesture events such as trackpad swipes.</dd>
- <dt>
-  <a class="internal" href="/En/DOM/NodeIterator" title="en/DOM/NodeIterator">The <code>NodeIterator</code> object</a></dt>
- <dd>
-  The <code>NodeIterator</code> object provides support for iterating over the list of the nodes in a DOM subtree.</dd>
- <dt>
-  <a class="internal" href="/en/Gecko-Specific_DOM_Events#MozAfterPaint" title="en/Gecko-Specific DOM Events#MozAfterPaint">The MozAfterPaint event</a></dt>
- <dd>
-  This new DOM event is sent after painting updates in windows.</dd>
- <dt>
-  <a class="internal" href="/en/Gecko-Specific_DOM_Events#MozMousePixelScroll" title="en/Gecko-Specific DOM Events#MozMousePixelScroll">The MozMousePixelScroll event</a></dt>
- <dd>
-  This new DOM event allows detection of pixel-based mouse scroll wheel events instead of line-based scroll events.</dd>
-</dl>
-<h4 id="Новые_возможности_JavaScript">Новые возможности JavaScript</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/New_in_JavaScript_1.8.1" title="en/New in JavaScript 1.8.1">Новое в JavaScript 1.8.1</a></dt>
- <dd>
-  Обзор всех изменений в JavaScript 1.8.1.</dd>
- <dt>
-  <a class="internal" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/GetPrototypeOf" title="Метод Object.getPrototypeOf()"><code>Object.getPrototypeOf()</code></a></dt>
- <dd>
-  Новый метод, возвращающий прототип указанного объекта.</dd>
- <dt>
-  <a class="internal" href="/en/Using_native_JSON" title="Использование JSON">Использование встроенного JSON</a></dt>
- <dd>
-  Firefox 3.5 имеет встроенную поддержку <a class="internal" href="/en/JSON" title="JSON">JSON</a>.</dd>
- <dt>
-  Новые методы обрезки строк в объекте <code>String</code></dt>
- <dd>
-  Объект <a class="internal" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String" title="Объект String"><code>String</code></a> теперь имеет методы <a class="internal" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim" rel="internal" title="Метод String.trim()"><code>trim()</code></a>, <a class="internal" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft" rel="internal" title="Метод String.trimLeft()"><code>trimLeft()</code></a> и <a class="internal" href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight" rel="internal" title="Метод String.trimRight()"><code>trimRight()</code></a>.</dd>
-</dl>
-<h4 id="Networking">Networking</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/HTTP_access_control" title="en/HTTP access control">Cross-site access controls for HTTP</a></dt>
- <dd>
-  In Firefox 3.5, it's now possible for HTTP requests, including those made by <a class="internal" href="/en/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a>, to work across domains if the server supports it.</dd>
- <dt>
-  <a class="internal" href="/En/Using_XMLHttpRequest#Monitoring_progress" title="en/Using XMLHttpRequest#Monitoring progress">Progress events for </a><code><a class="internal" href="/En/Using_XMLHttpRequest#Monitoring_progress" title="en/Using XMLHttpRequest#Monitoring progress">XMLHttpRequest</a></code></dt>
- <dd>
-  Progress events are now offered to enable extensions to monitor the progress of requests.</dd>
- <dt>
-  Improved Synchronous <code>XMLHttpRequest</code> support</dt>
- <dd>
-  <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340345">DOM Timeout</a> and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=333198">Input Events</a> are now suppressed during a synchronous <code>XMLHttpRequest</code>.</dd>
- <dt>
-  <a class="internal" href="/En/Controlling_DNS_prefetching" title="en/Controlling DNS prefetching">Controlling DNS prefetching</a></dt>
- <dd>
-  Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked.  This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.</dd>
-</dl>
-<h4 id="New_Canvas_features">New Canvas features</h4>
-<dl>
- <dt>
-  <a class="internal" href="/en/Drawing_text_using_a_canvas" title="en/Drawing text using a canvas">HTML 5 text API for <code>canvas</code> elements</a></dt>
- <dd>
-  Canvas elements now support the HTML 5 text API.</dd>
- <dt>
-  <a class="internal" href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows" title="en/Canvas tutorial/Applying styles and colors#Shadows">Shadow effects in a <code>canvas</code></a></dt>
- <dd>
-  Canvas shadow effects are now supported.</dd>
- <dt>
-  <a class="internal" href="/En/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object" title="en/HTML/Canvas/Pixel manipulation with canvas#Creating an ImageData object"><code>createImageData()</code></a></dt>
- <dd>
-  The canvas method <code>createImageData()</code> is now supported, allowing code to specifically create an <code>ImageData</code> object instead of requiring it to be done automatically. This can improve performance of other <code>ImageData</code> methods by preventing them from having to create the object.</dd>
- <dt>
-  <code>moz-opaque</code> attribute</dt>
- <dd>
-  Added the <code>moz-opaque</code> DOM attribute, which lets the canvas know whether or not translucency will be a factor.  If the canvas knows there's no translucency, painting performance can be optimized.</dd>
-</dl>
-<h4 id="New_SVG_features">New SVG features</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/Applying_SVG_effects_to_HTML_content" title="en/Applying SVG effects to HTML content">Applying SVG effects to HTML content</a></dt>
- <dd>
-  You can now apply SVG effects to HTML and XHTML content; this article describes how.</dd>
-</dl>
-<h4 id="Miscellaneous_new_features">Miscellaneous new features</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/ICC_color_correction_in_Firefox" title="en/ICC color correction in Firefox">ICC color correction in Firefox</a></dt>
- <dd>
-  Firefox 3.5 now supports ICC color correction for tagged images.</dd>
- <dt>
-  The <code>defer</code> attribute is now supported on <a class="internal" href="/En/HTML/Element/Script" title="en/HTML/Element/script"><code>script</code></a> elements</dt>
- <dd>
-  This attribute indicates to the browser that it <em>may</em> choose to continue to parse and render the page without waiting for the script to finish executing.</dd>
-</dl>
-<h3 id="Другие_улучшения">Другие улучшения</h3>
-<ul>
- <li>The Text node's <code><a class="internal" href="/en/DOM/Text.wholeText" rel="internal">wholeText</a></code> property and <code><a class="internal" href="/en/DOM/Text.replaceWholeText" rel="internal">replaceWholeText()</a></code> method have been implemented.</li>
- <li>The property <code><a class="internal" href="/en/DOM/Element.children" rel="internal">element.children</a></code> has been added. It returns a <em>collection</em> of child elements of the given element.</li>
- <li>The Element Traversal API is now supported by the DOM <a class="internal" href="/en/DOM/element" rel="internal">Element</a> object.</li>
- <li>HTML document nodes may now be cloned using <a class="internal" href="/En/DOM/Node.cloneNode" title="En/DOM/Node.cloneNode"><code>cloneNode()</code></a>.</li>
- <li>The non-standard <code>getBoxObjectFor()</code> DOM method has been removed. You should be using <a class="internal" href="/en/DOM/element.getBoundingClientRect" title="en/DOM/Element.getBoundingClientRect"><code>getBoundingClientRect()</code></a> instead.</li>
- <li>Dispatched DOM events can now be re-dispatched.  This makes Firefox 3.5 pass Acid 3 test 30.</li>
- <li>Improvements have been made to DOM 2 Range handling.</li>
- <li>In non-chrome scope, caught objects in exceptions are now the actual thrown object instead of an <a class="internal" href="/en/XPConnect" title="en/XPConnect">XPConnect</a> wrapper containing the thrown object.</li>
- <li>SVG ID references are now live.</li>
- <li>SVG filters now work for <code>foreignObject</code>.</li>
- <li>The <code>GetSVGDocument()</code> method has been added to <a class="internal" href="/en/HTML/Element/object" title="en/HTML/Element/Object"><code>object</code></a> and <a class="internal" href="/en/HTML/Element/iframe" title="en/HTML/Element/Iframe"><code>iframe</code></a> elements for compatibility.</li>
- <li>Implicit setting of properties in object and array initializers no longer execute setters in JavaScript. See the blog post <a class="internal" href="/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated" title="web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated">Object and array initializers should not invoke setters when evaluated</a> for details.</li>
- <li>The <code>gDownloadLastDir.path</code> variable has been renamed to <code>gDownloadLastDir.file</code> since it refers to an <code>nsIFile</code>, not a path.</li>
- <li>The <code>gDownloadLastDirPath</code> variable has been renamed to <code>gDownloadLastDirFile</code> since it refers to an <code>nsIFile</code>, not a path.</li>
- <li>Starting in Firefox 3.5, you can no longer use <code>data:</code> bindings in chrome packages that get <code>XPCNativeWrapper</code> automation.</li>
-</ul>
-<h3 id="Для_разработчиков_дополнений">Для разработчиков дополнений</h3>
-<p>If you're an extension developer, you should start by reading <a class="internal" href="/En/Updating_extensions_for_Firefox_3.5" title="en/Updating extensions for Firefox 3.5">Updating extensions for Firefox 3.5</a>, which offers a helpful overview of what changes may affect your extension.</p>
-<h4 id="New_components_and_functionality">New components and functionality</h4>
-<dl>
- <dt>
-  <a class="internal" href="/En/Supporting_private_browsing_mode" title="en/Supporting private browsing mode">Supporting private browsing mode</a></dt>
- <dd>
-  Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities.  Extensions may support private browsing following the guidelines offered by this article.</dd>
- <dt>
-  <a class="internal" href="/En/Security_changes_in_Firefox_3.5" title="en/Security changes in Firefox 3.5">Security changes in Firefox 3.5</a></dt>
- <dd>
-  This article covers security-related changes in Firefox 3.5.</dd>
- <dt>
-  <a class="internal" href="/En/Theme_changes_in_Firefox_3.5" title="en/Theme changes in Firefox 3.5">Theme changes in Firefox 3.5</a></dt>
- <dd>
-  This article covers theme-related changes in Firefox 3.5.</dd>
- <dt>
-  <a class="internal" href="/En/Monitoring_WiFi_access_points" title="en/Monitoring WiFi access points">Monitoring WiFi access points</a></dt>
- <dd>
-  Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength.  This can be used in tandem with Geolocation to offer WiFi-based location service.</dd>
-</dl>
-<h4 id="Notable_changes_and_improvements">Notable changes and improvements</h4>
-<ul>
- <li>The XUL <code><a class="internal" href="/en/XUL/textbox" rel="internal">textbox</a></code> widget now offers a <code><a class="internal" href="/en/XUL/Attribute/textbox.type" rel="internal">search</a></code> type, for use as search fields.</li>
- <li>In order to support dragging and dropping tabs between windows, the <a class="internal" href="/en/XUL/browser" title="en/XUL/Browser"><code>browser</code></a> widget now has a <a class="internal" href="/En/XUL/Method/SwapDocShells" title="en/XUL/Method/SwapDocShells"><code>swapDocShells()</code></a> method.</li>
- <li>Added the <a class="internal" href="/En/XUL/Attribute/Panel.level" title="en/XUL/Attribute/panel.level"><code>level</code></a> attribute to the <a class="internal" href="/en/XUL/panel" title="en/XUL/Panel"><code>panel</code></a> element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.</li>
- <li>Элементы XUL теперь поддерживают свойства<code> clientHeight</code>,<code> clientWidth</code>,<code> scrollHeight</code> и<code> scrollWidth</code>.</li>
- <li>Элементы <a class="internal" href="/en/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> теперь имеют атрибут <code>disabled</code>.</li>
- <li>В дополнение к этому, элементы <code>keyset</code> теперь могут быть удалены с помощью метода узла <a class="internal" href="/En/DOM/Node.removeChild" title="en/DOM/Node.removeChild"><code>removeChild()</code></a>.</li>
- <li><code><a href="/en/mozIStorageStatement" rel="internal">mozIStorageStatement</a></code>  had the <code>initialize()</code> method removed; consumers should use the <code><a href="/en/mozIStorageConnection#createStatement()" rel="internal">createStatement()</a></code>  method instead to get a new statement object.</li>
- <li>The <a class="internal" href="/en/Storage" title="en/Storage">Storage</a> API now offers support for asynchronous requests.</li>
- <li>The <a class="internal" href="/en/nsICookie2" title="En/NsICookie2"><code>nsICookie2</code></a> interface now exposes the time at which cookies were created in its new <code>creationTime</code> attribute.</li>
- <li>Added a flag to <code><a class="internal" href="/en/nsIProtocolHandler" rel="internal">nsIProtocolHandler</a></code> (<code>URI_IS_LOCAL_RESOURCE</code>) that is checked during chrome registration to make sure a protocol is allowed to be registered.</li>
- <li>Firefox now looks for plugins in <code>/usr/lib/mozilla/plugins</code> on Linux, as well as the previously supported locations.</li>
- <li>The plugin API has been updated to include support for private browsing mode; you may now use <a class="internal" href="/en/NPN_GetValue" title="en/NPN GetValue"><code>NPN_GetValue()</code></a> to query the state of private browsing mode using the variable <code>NPNVprivateModeBool</code>.</li>
-</ul>
-<h2 id="Новые_возможности_для_конечного_пользователя">Новые возможности для конечного пользователя</h2>
-<h3 id="User_experience">User experience</h3>
-<dl>
- <dt>
-  Location aware browsing</dt>
- <dd>
-  If you choose, you may allow Firefox 3.5 to share information about your current location with web sites.  Firefox 3.5 can use information about the network you're connected to to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.</dd>
- <dt>
-  Open audio and video support</dt>
- <dd>
-  Firefox 3.5 supports embedded video and audio using the open Ogg format, as well as WAV for audio. No plugins, no confusing error messages about needing to install something or other that turns out not to be available on your platform anyway.</dd>
- <dt>
-  Local data storage</dt>
- <dd>
-  Web applications can now use Web Storage's local storage capabilities to store data on your computer.  This is great for anything from site preferences to more complex data.</dd>
-</dl>
-<h3 id="Безопасность_и_приватность">Безопасность и приватность</h3>
-<dl>
- <dt>
-  Private Browsing</dt>
- <dd>
-  Need to use someone else's computer? Switch on Private Browsing mode and nothing will be recorded about your session, including cookies, history, and any other potentially private information.</dd>
- <dt>
-  Better privacy controls</dt>
- <dd>
-  The Privacy preference pane has been completely redesigned to offer users more control over their private information. Users can choose to retain or discard anything including history information, cookies, downloads, and form field information.  In addition, users can specify whether or not to include history and/or bookmarks in the location bar's automated suggestions, so you can keep private web addresses from popping up unexpectedly while typing in the location bar.</dd>
-</dl>
-<h3 id="Производительность">Производительность</h3>
-<dl>
- <dt>
-  Faster JavaScript performance</dt>
- <dd>
-  JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine.  Web applications are much faster than in Firefox 3.</dd>
- <dt>
-  Faster page rendering</dt>
- <dd>
-  Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."</dd>
-</dl>
-<h2 id="Смотрите_также">Смотрите также</h2>
-<ul>
- <li><a class="internal" href="/en/Firefox_3_for_developers" title="en/Firefox 3 for developers">Firefox 3 для разработчика</a></li>
- <li><a class="internal" href="/en/Firefox_2_for_developers" title="en/Firefox 2 for developers">Firefox 2 для разработчика</a></li>
- <li><a class="internal" href="/en/Firefox_1.5_for_developers" title="en/Firefox 1.5 for developers">Firefox 1.5 для разработчика</a></li>
-</ul>
+{{FirefoxSidebar}}
+
+[Firefox 3.5](http://www.firefox.com/ "Веб-браузер Firefox") вводит ряд новых возможностей, а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, освещающие основные усовершенствования.
+
+## Новые возможности для разработчиков
+
+### Для разработчиков веб-сайтов и веб-приложений
+
+#### Поддержка HTML 5
+
+- [Использование аудио и видео](/En/Using_audio_and_video_in_Firefox "en/Using audio and video in Firefox")
+  - : В Firefox 3.5 добавлена поддержка элементов HTML 5 [`audio`](/En/HTML/Element/Audio "en/HTML/Element/Audio") и [`video`](/En/HTML/Element/Video "en/HTML/Element/Video").
+- [Offline resources in Firefox](/en/Offline_resources_in_Firefox "en/Offline resources in Firefox")
+  - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
+- [Drag and drop](/En/DragDrop/Drag_and_Drop "en/DragDrop/Drag and Drop")
+  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites. This also provides a simpler API for use by extensions and Mozilla-based applications.
+
+#### Newly-supported CSS features
+
+- [Downloadable fonts support](/en/CSS/@font-face "en/CSS/@font-face")
+  - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
+- [CSS media queries](/En/CSS/Media_queries "en/CSS/Media queries")
+  - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
+- {{ cssxref(":before") }} and {{ cssxref(":after") }} updated to CSS 2.1
+  - : The `:before` and `:after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
+- `ch` units for length
+  - : The` ch `unit can now be used anywhere that accepts a [unit of length](/en/CSS/length#Units "en/CSS/length#Units").` 1ch `is the width of the "0" (zero) character.
+- {{ cssxref("opacity") }}
+  - : The` -moz-opacity `Mozilla extension to CSS has been removed in favor of the standard` opacity `property.
+- {{ cssxref("text-shadow") }}
+  - : The` text-shadow `property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
+- {{ cssxref("word-wrap") }}
+  - : This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.
+- `white-space` property supports the `pre-line` value
+  - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
+- {{ cssxref("-moz-box-shadow") }}
+
+  {{ cssxref("-moz-border-image") }}
+
+  {{ cssxref("-moz-column-rule") }}
+
+  {{ cssxref("-moz-column-rule-width") }}
+
+  {{ cssxref("-moz-column-rule-style") }}
+
+  {{ cssxref("-moz-column-rule-color") }}
+
+  - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
+
+- The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
+  - : This new color value represents the user's system's default hyperlink color.
+- The {{ cssxref("-moz-window-shadow") }} property and the {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} pseudo-class
+  - : These new CSS features were added to facilitate theming.
+- New values for {{ cssxref("-moz-appearance") }}
+  - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
+- [Using CSS transforms](/En/CSS/Using_CSS_transforms "en/CSS/Using CSS transforms")
+  - : Firefox 3.5 supports CSS transforms. See {{ cssxref("-moz-transform") }} and {{ cssxref("-moz-transform-origin") }} for details.
+- {{ cssxref(":nth-child") }}
+
+  {{ cssxref(":nth-last-child") }}
+
+  {{ cssxref(":nth-of-type") }}
+
+  {{ cssxref(":nth-last-of-type") }}
+
+  {{ cssxref(":first-of-type") }}
+
+  {{ cssxref(":last-of-type") }}
+
+  {{ cssxref(":only-of-type") }}
+
+  - : These selectors are all newly-supported in Firefox 3.5.
+
+#### Новые возможности DOM
+
+- [localStorage](/en/DOM/Storage#localStorage "en/DOM/Storage#localStorage")
+  - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
+- [Using web workers](/En/Using_web_workers "en/Using web workers")
+  - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
+- [Using geolocation](/En/Using_geolocation "en/Using geolocation")
+  - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
+- [Locating DOM elements using selectors](/En/DOM/Locating_DOM_elements_using_selectors "en/DOM/Locating DOM elements using selectors")
+  - : The selectors API allows querying a document to locate the elements that match a given selection rule.
+- [Mouse gesture events](/En/DOM/Mouse_gesture_events "en/DOM/Mouse gesture events")
+  - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
+- [The `NodeIterator` object](/En/DOM/NodeIterator "en/DOM/NodeIterator")
+  - : The `NodeIterator` object provides support for iterating over the list of the nodes in a DOM subtree.
+- [The MozAfterPaint event](/en/Gecko-Specific_DOM_Events#MozAfterPaint "en/Gecko-Specific DOM Events#MozAfterPaint")
+  - : This new DOM event is sent after painting updates in windows.
+- [The MozMousePixelScroll event](/en/Gecko-Specific_DOM_Events#MozMousePixelScroll "en/Gecko-Specific DOM Events#MozMousePixelScroll")
+  - : This new DOM event allows detection of pixel-based mouse scroll wheel events instead of line-based scroll events.
+
+#### Новые возможности JavaScript
+
+- [Новое в JavaScript 1.8.1](/En/New_in_JavaScript_1.8.1 "en/New in JavaScript 1.8.1")
+  - : Обзор всех изменений в JavaScript 1.8.1.
+- [`Object.getPrototypeOf()`](/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/GetPrototypeOf "Метод Object.getPrototypeOf()")
+  - : Новый метод, возвращающий прототип указанного объекта.
+- [Использование встроенного JSON](/en/Using_native_JSON "Использование JSON")
+  - : Firefox 3.5 имеет встроенную поддержку [JSON](/en/JSON "JSON").
+- Новые методы обрезки строк в объекте `String`
+  - : Объект [`String`](/en/Core_JavaScript_1.5_Reference/Global_Objects/String "Объект String") теперь имеет методы [`trim()`](/en/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim "Метод String.trim()"), [`trimLeft()`](/en/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft "Метод String.trimLeft()") и [`trimRight()`](/en/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight "Метод String.trimRight()").
+
+#### Networking
+
+- [Cross-site access controls for HTTP](/En/HTTP_access_control "en/HTTP access control")
+  - : In Firefox 3.5, it's now possible for HTTP requests, including those made by [`XMLHttpRequest`](/en/XMLHttpRequest "en/XMLHttpRequest"), to work across domains if the server supports it.
+- [Progress events for ](/En/Using_XMLHttpRequest#Monitoring_progress "en/Using XMLHttpRequest#Monitoring progress")[`XMLHttpRequest`](/En/Using_XMLHttpRequest#Monitoring_progress "en/Using XMLHttpRequest#Monitoring progress")
+  - : Progress events are now offered to enable extensions to monitor the progress of requests.
+- Improved Synchronous `XMLHttpRequest` support
+  - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.
+- [Controlling DNS prefetching](/En/Controlling_DNS_prefetching "en/Controlling DNS prefetching")
+  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
+
+#### New Canvas features
+
+- [HTML 5 text API for `canvas` elements](/en/Drawing_text_using_a_canvas "en/Drawing text using a canvas")
+  - : Canvas elements now support the HTML 5 text API.
+- [Shadow effects in a `canvas`](/en/Canvas_tutorial/Applying_styles_and_colors#Shadows "en/Canvas tutorial/Applying styles and colors#Shadows")
+  - : Canvas shadow effects are now supported.
+- [`createImageData()`](/En/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object "en/HTML/Canvas/Pixel manipulation with canvas#Creating an ImageData object")
+  - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
+- `moz-opaque` attribute
+  - : Added the `moz-opaque` DOM attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
+
+#### New SVG features
+
+- [Applying SVG effects to HTML content](/En/Applying_SVG_effects_to_HTML_content "en/Applying SVG effects to HTML content")
+  - : You can now apply SVG effects to HTML and XHTML content; this article describes how.
+
+#### Miscellaneous new features
+
+- [ICC color correction in Firefox](/En/ICC_color_correction_in_Firefox "en/ICC color correction in Firefox")
+  - : Firefox 3.5 now supports ICC color correction for tagged images.
+- The `defer` attribute is now supported on [`script`](/En/HTML/Element/Script "en/HTML/Element/script") elements
+  - : This attribute indicates to the browser that it _may_ choose to continue to parse and render the page without waiting for the script to finish executing.
+
+### Другие улучшения
+
+- The Text node's [`wholeText`](/en/DOM/Text.wholeText) property and [`replaceWholeText()`](/en/DOM/Text.replaceWholeText) method have been implemented.
+- The property [`element.children`](/en/DOM/Element.children) has been added. It returns a _collection_ of child elements of the given element.
+- The Element Traversal API is now supported by the DOM [Element](/en/DOM/element) object.
+- HTML document nodes may now be cloned using [`cloneNode()`](/En/DOM/Node.cloneNode "En/DOM/Node.cloneNode").
+- The non-standard `getBoxObjectFor()` DOM method has been removed. You should be using [`getBoundingClientRect()`](/en/DOM/element.getBoundingClientRect "en/DOM/Element.getBoundingClientRect") instead.
+- Dispatched DOM events can now be re-dispatched. This makes Firefox 3.5 pass Acid 3 test 30.
+- Improvements have been made to DOM 2 Range handling.
+- In non-chrome scope, caught objects in exceptions are now the actual thrown object instead of an [XPConnect](/en/XPConnect "en/XPConnect") wrapper containing the thrown object.
+- SVG ID references are now live.
+- SVG filters now work for `foreignObject`.
+- The `GetSVGDocument()` method has been added to [`object`](/en/HTML/Element/object "en/HTML/Element/Object") and [`iframe`](/en/HTML/Element/iframe "en/HTML/Element/Iframe") elements for compatibility.
+- Implicit setting of properties in object and array initializers no longer execute setters in JavaScript. See the blog post [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated "web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated") for details.
+- The `gDownloadLastDir.path` variable has been renamed to `gDownloadLastDir.file` since it refers to an `nsIFile`, not a path.
+- The `gDownloadLastDirPath` variable has been renamed to `gDownloadLastDirFile` since it refers to an `nsIFile`, not a path.
+- Starting in Firefox 3.5, you can no longer use `data:` bindings in chrome packages that get `XPCNativeWrapper` automation.
+
+### Для разработчиков дополнений
+
+If you're an extension developer, you should start by reading [Updating extensions for Firefox 3.5](/En/Updating_extensions_for_Firefox_3.5 "en/Updating extensions for Firefox 3.5"), which offers a helpful overview of what changes may affect your extension.
+
+#### New components and functionality
+
+- [Supporting private browsing mode](/En/Supporting_private_browsing_mode "en/Supporting private browsing mode")
+  - : Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities. Extensions may support private browsing following the guidelines offered by this article.
+- [Security changes in Firefox 3.5](/En/Security_changes_in_Firefox_3.5 "en/Security changes in Firefox 3.5")
+  - : This article covers security-related changes in Firefox 3.5.
+- [Theme changes in Firefox 3.5](/En/Theme_changes_in_Firefox_3.5 "en/Theme changes in Firefox 3.5")
+  - : This article covers theme-related changes in Firefox 3.5.
+- [Monitoring WiFi access points](/En/Monitoring_WiFi_access_points "en/Monitoring WiFi access points")
+  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength. This can be used in tandem with Geolocation to offer WiFi-based location service.
+
+#### Notable changes and improvements
+
+- The XUL [`textbox`](/en/XUL/textbox) widget now offers a [`search`](/en/XUL/Attribute/textbox.type) type, for use as search fields.
+- In order to support dragging and dropping tabs between windows, the [`browser`](/en/XUL/browser "en/XUL/Browser") widget now has a [`swapDocShells()`](/En/XUL/Method/SwapDocShells "en/XUL/Method/SwapDocShells") method.
+- Added the [`level`](/En/XUL/Attribute/Panel.level "en/XUL/Attribute/panel.level") attribute to the [`panel`](/en/XUL/panel "en/XUL/Panel") element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
+- Элементы XUL теперь поддерживают свойства` clientHeight`,` clientWidth`,` scrollHeight` и` scrollWidth`.
+- Элементы [`keyset`](/en/XUL/keyset "en/XUL/Keyset") теперь имеют атрибут `disabled`.
+- В дополнение к этому, элементы `keyset` теперь могут быть удалены с помощью метода узла [`removeChild()`](/En/DOM/Node.removeChild "en/DOM/Node.removeChild").
+- [`mozIStorageStatement`](/en/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
+- The [Storage](/en/Storage "en/Storage") API now offers support for asynchronous requests.
+- The [`nsICookie2`](/en/nsICookie2 "En/NsICookie2") interface now exposes the time at which cookies were created in its new `creationTime` attribute.
+- Added a flag to [`nsIProtocolHandler`](/en/nsIProtocolHandler) (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.
+- Firefox now looks for plugins in `/usr/lib/mozilla/plugins` on Linux, as well as the previously supported locations.
+- The plugin API has been updated to include support for private browsing mode; you may now use [`NPN_GetValue()`](/en/NPN_GetValue "en/NPN GetValue") to query the state of private browsing mode using the variable `NPNVprivateModeBool`.
+
+## Новые возможности для конечного пользователя
+
+### User experience
+
+- Location aware browsing
+  - : If you choose, you may allow Firefox 3.5 to share information about your current location with web sites. Firefox 3.5 can use information about the network you're connected to to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
+- Open audio and video support
+  - : Firefox 3.5 supports embedded video and audio using the open Ogg format, as well as WAV for audio. No plugins, no confusing error messages about needing to install something or other that turns out not to be available on your platform anyway.
+- Local data storage
+  - : Web applications can now use Web Storage's local storage capabilities to store data on your computer. This is great for anything from site preferences to more complex data.
+
+### Безопасность и приватность
+
+- Private Browsing
+  - : Need to use someone else's computer? Switch on Private Browsing mode and nothing will be recorded about your session, including cookies, history, and any other potentially private information.
+- Better privacy controls
+  - : The Privacy preference pane has been completely redesigned to offer users more control over their private information. Users can choose to retain or discard anything including history information, cookies, downloads, and form field information. In addition, users can specify whether or not to include history and/or bookmarks in the location bar's automated suggestions, so you can keep private web addresses from popping up unexpectedly while typing in the location bar.
+
+### Производительность
+
+- Faster JavaScript performance
+  - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine. Web applications are much faster than in Firefox 3.
+- Faster page rendering
+  - : Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."
+
+## Смотрите также
+
+- [Firefox 3 для разработчика](/en/Firefox_3_for_developers "en/Firefox 3 for developers")
+- [Firefox 2 для разработчика](/en/Firefox_2_for_developers "en/Firefox 2 for developers")
+- [Firefox 1.5 для разработчика](/en/Firefox_1.5_for_developers "en/Firefox 1.5 for developers")

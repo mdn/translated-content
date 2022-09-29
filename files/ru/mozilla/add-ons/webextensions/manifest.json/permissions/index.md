@@ -7,184 +7,179 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Тип</th>
-   <td><code>Массив</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Обязателен</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Пример</th>
-   <td>
-    <pre class="brush: json; no-line-numbers">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Тип</th>
+      <td><code>Массив</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Обязателен</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Пример</th>
+      <td>
+        <pre class="brush: json; no-line-numbers">
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Используйте ключ  <code>permissions</code> для получения дополнительных возможностей для вашего расширения. Значением ключа является массив строк, каждая из которых представляет собой запрос на какие-либо полномочия.</p>
+Используйте ключ `permissions` для получения дополнительных возможностей для вашего расширения. Значением ключа является массив строк, каждая из которых представляет собой запрос на какие-либо полномочия.
 
-<p>При объявлении запросов полномочий с помощью этого ключа, браузер проинформирует пользователей, о том какие полномочия необходимы расширению во время его установки, и задаст вопрос, согласны ли они выдать их расширению. Браузер так же даёт пользователям возможность изучить полномочия расширения уже после установки. Так как требование дополнительных полномочий может повлиять на желание пользователя использовать ваше расширение, решение использования конкретной функциональности может стоить тщательного рассмотрения. К примеру, есть смысл избегать запрашивания необязательных полномочий, и предоставлять информацию о том, зачем вашему расширению нужны какие-либо полномочия в описании расширения. Более подробная информация о проблемах, которые вам стоит рассмотреть касательно этой темы, предоставлена в статье <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Запрашивание правильных полномочий</a>.</p>
+При объявлении запросов полномочий с помощью этого ключа, браузер проинформирует пользователей, о том какие полномочия необходимы расширению во время его установки, и задаст вопрос, согласны ли они выдать их расширению. Браузер так же даёт пользователям возможность изучить полномочия расширения уже после установки. Так как требование дополнительных полномочий может повлиять на желание пользователя использовать ваше расширение, решение использования конкретной функциональности может стоить тщательного рассмотрения. К примеру, есть смысл избегать запрашивания необязательных полномочий, и предоставлять информацию о том, зачем вашему расширению нужны какие-либо полномочия в описании расширения. Более подробная информация о проблемах, которые вам стоит рассмотреть касательно этой темы, предоставлена в статье [Запрашивание правильных полномочий](/ru/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
 
-<p>Значение ключа может содержать три вида запросов полномочий:</p>
+Значение ключа может содержать три вида запросов полномочий:
 
-<ul>
- <li>Запрос на полномочия для хоста</li>
- <li>Запрос на API полномочия</li>
- <li>Запрос на activeTab полномочия</li>
-</ul>
+- Запрос на полномочия для хоста
+- Запрос на API полномочия
+- Запрос на activeTab полномочия
 
-<h2 id="Запрос_полномочий_для_хоста">Запрос полномочий для хоста</h2>
+## Запрос полномочий для хоста
 
-<p>Запрос на полномочия для хоста объявляется через <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">шаблоны совпадения</a>, где каждый шаблон определяет группу URL, при посещении которых расширение будет иметь эти дополнительные полномочия. Например, запрос на полномочия для хоста может быть задан подобной строкой <code>"*://developer.mozilla.org/*"</code>.</p>
+Запрос на полномочия для хоста объявляется через [шаблоны совпадения](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), где каждый шаблон определяет группу URL, при посещении которых расширение будет иметь эти дополнительные полномочия. Например, запрос на полномочия для хоста может быть задан подобной строкой `"*://developer.mozilla.org/*"`.
 
-<p>Полномочия для хоста включают:</p>
+Полномочия для хоста включают:
 
-<ul>
- <li>Возможность выполнять <a href="/ru/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> и <a href="/ru/docs/Web/API/Fetch_API">fetch</a> запросы на ресурсы, которые имеют заданный origin, не испытывая cross-origin ограничений (даже для запросов, выполняемых из встраиваемого скрипта)</li>
- <li>Возможность встраивать скрипты программным путём, используя <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript</a>, на веб-страницах загруженных с заданного origin</li>
- <li>Возможность обрабатывать события из <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a> API для заданных хостов</li>
- <li>Доступ к cookies на заданных хостах, используя <a href="/ru/Add-ons/WebExtensions/API/cookies">cookies</a> API, при условии получения дополнительного "cookies" API полномочия.</li>
- <li>Возможность обходить защиту от слежения, при условии полностью указанного хоста, без использования универсального символа <code>*</code>. Не будет работать с <code>&lt;all_urls&gt;</code>.</li>
-</ul>
+- Возможность выполнять [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest) и [fetch](/ru/docs/Web/API/Fetch_API) запросы на ресурсы, которые имеют заданный origin, не испытывая cross-origin ограничений (даже для запросов, выполняемых из встраиваемого скрипта)
+- Возможность встраивать скрипты программным путём, используя [tabs.executeScript](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), на веб-страницах загруженных с заданного origin
+- Возможность обрабатывать события из [webRequest](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) API для заданных хостов
+- Доступ к cookies на заданных хостах, используя [cookies](/ru/Add-ons/WebExtensions/API/cookies) API, при условии получения дополнительного "cookies" API полномочия.
+- Возможность обходить защиту от слежения, при условии полностью указанного хоста, без использования универсального символа `*`. Не будет работать с `<all_urls>`.
 
-<p>В Firefox, начиная с версии 56, расширения автоматически получают полномочия для своего собственного хоста, который имеет вид:</p>
+В Firefox, начиная с версии 56, расширения автоматически получают полномочия для своего собственного хоста, который имеет вид:
 
-<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+```
+moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
 
-<p>где <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> - внутреннее ID расширения. Расширение может получить это URL программным путём, через вызов метода <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">extension.getURL()</a>:</p>
+где `60a20a9b-1ad4-af49-9b6c-c64c98c37920` - внутреннее ID расширения. Расширение может получить это URL программным путём, через вызов метода [extension.getURL()](/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL):
 
-<pre class="brush: js;">browser.extension.getURL("");
+```js
+browser.extension.getURL("");
 // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-</pre>
+```
 
-<h2 id="Запрос_на_API_полномочия">Запрос на API полномочия</h2>
+## Запрос на API полномочия
 
-<p>Запрос на API полномочия объявляется через ключевые слова, каждое из которых представляет собой название <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>, доступ к которому необходим расширению.</p>
+Запрос на API полномочия объявляется через ключевые слова, каждое из которых представляет собой название [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions/API), доступ к которому необходим расширению.
 
-<p>Следующие ключевые слова доступны на данный момент:</p>
+Следующие ключевые слова доступны на данный момент:
 
-<ul>
- <li><code>activeTab</code></li>
- <li><code>alarms</code></li>
- <li><code>background</code></li>
- <li><code>bookmarks</code></li>
- <li><code>browserSettings</code></li>
- <li><code>browsingData</code></li>
- <li><code>clipboardRead</code></li>
- <li><code>clipboardWrite</code></li>
- <li><code>contentSettings</code></li>
- <li><code>contextMenus</code></li>
- <li><code>contextualIdentities</code></li>
- <li><code>cookies</code></li>
- <li><code>debugger</code></li>
- <li><code>dns</code></li>
- <li><code>downloads</code></li>
- <li><code>downloads.open</code></li>
- <li><code>find</code></li>
- <li><code>geolocation</code></li>
- <li><code>history</code></li>
- <li><code>identity</code></li>
- <li><code>idle</code></li>
- <li><code>management</code></li>
- <li><code>menus</code></li>
- <li><code>menus.overrideContext</code></li>
- <li><code>nativeMessaging</code></li>
- <li><code>notifications</code></li>
- <li><code>pageCapture</code></li>
- <li><code>pkcs11</code></li>
- <li><code>privacy</code></li>
- <li><code>proxy</code></li>
- <li><code>search</code></li>
- <li><code>sessions</code></li>
- <li><code>storage</code></li>
- <li><code>tabHide</code></li>
- <li><code>tabs</code></li>
- <li><code>theme</code></li>
- <li><code>topSites</code></li>
- <li><code>unlimitedStorage</code></li>
- <li><code>webNavigation</code></li>
- <li><code>webRequest</code></li>
- <li><code>webRequestBlocking</code></li>
-</ul>
+- `activeTab`
+- `alarms`
+- `background`
+- `bookmarks`
+- `browserSettings`
+- `browsingData`
+- `clipboardRead`
+- `clipboardWrite`
+- `contentSettings`
+- `contextMenus`
+- `contextualIdentities`
+- `cookies`
+- `debugger`
+- `dns`
+- `downloads`
+- `downloads.open`
+- `find`
+- `geolocation`
+- `history`
+- `identity`
+- `idle`
+- `management`
+- `menus`
+- `menus.overrideContext`
+- `nativeMessaging`
+- `notifications`
+- `pageCapture`
+- `pkcs11`
+- `privacy`
+- `proxy`
+- `search`
+- `sessions`
+- `storage`
+- `tabHide`
+- `tabs`
+- `theme`
+- `topSites`
+- `unlimitedStorage`
+- `webNavigation`
+- `webRequest`
+- `webRequestBlocking`
 
-<p>В большинстве случаев полномочие просто делает возможным доступ к определённому API, за исключением следующих ситуаций:</p>
+В большинстве случаев полномочие просто делает возможным доступ к определённому API, за исключением следующих ситуаций:
 
-<ul>
- <li><code>tabs</code> предоставляет доступ к <a href="/ru/Add-ons/WebExtensions/API/tabs">привилегированным частям <code>tabs</code> API</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>. В Firefox, вам так же понадобятся <code>tabs</code> полномочия, если вы собираетесь использовать <code>url</code> ключ в параметре <code>queryInfo</code> для <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> метода. Весь остальной <code>tabs</code> API доступен без запрашивания каких-либо полномочий.</li>
- <li><code>webRequestBlocking</code> позволяет вам использовать "blocking" аргумент, для возможности <a href="/ru/Add-ons/WebExtensions/API/WebRequest">изменять и отменять запросы</a>.</li>
- <li><code>downloads.open</code> позволяет использовать {{WebExtAPIRef("downloads.open()")}} API.</li>
- <li><code>tabHide</code> позволяет использовать {{WebExtAPIRef("tabs.hide()")}} API.</li>
-</ul>
+- `tabs` предоставляет доступ к [привилегированным частям `tabs` API](/ru/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`. В Firefox, вам так же понадобятся `tabs` полномочия, если вы собираетесь использовать `url` ключ в параметре `queryInfo` для [`tabs.query()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) метода. Весь остальной `tabs` API доступен без запрашивания каких-либо полномочий.
+- `webRequestBlocking` позволяет вам использовать "blocking" аргумент, для возможности [изменять и отменять запросы](/ru/Add-ons/WebExtensions/API/WebRequest).
+- `downloads.open` позволяет использовать {{WebExtAPIRef("downloads.open()")}} API.
+- `tabHide` позволяет использовать {{WebExtAPIRef("tabs.hide()")}} API.
 
-<h2 id="Запрос_на_activeTab_полномочия">Запрос на activeTab полномочия</h2>
+## Запрос на activeTab полномочия
 
-<p>Этот вид запроса объявляется через ключевое слово <code>"activeTab"</code>. <code>activeTab</code> полномочия предоставляются расширению на активной в данный момент вкладке, и вступают в эффект только в момент, когда пользователь взаимодействует с расширением.</p>
+Этот вид запроса объявляется через ключевое слово `"activeTab"`. `activeTab` полномочия предоставляются расширению на активной в данный момент вкладке, и вступают в эффект только в момент, когда пользователь взаимодействует с расширением.
 
-<p>"Взаимодействие пользователя" включает:</p>
+"Взаимодействие пользователя" включает:
 
-<ul>
- <li>Пользователь нажимает на кнопку расширения на панели инструментов или адресной строке</li>
- <li>Пользователь взаимодействует с контекстным меню расширения</li>
- <li>Пользователь нажимает комбинацию клавиш, ассоциированную с расширением</li>
-</ul>
+- Пользователь нажимает на кнопку расширения на панели инструментов или адресной строке
+- Пользователь взаимодействует с контекстным меню расширения
+- Пользователь нажимает комбинацию клавиш, ассоциированную с расширением
 
-<p>activeTab полномочия включают:</p>
+activeTab полномочия включают:
 
-<ul>
- <li>Возможность программно встраивать JavaScript или CSS на страницу, используя <code><a href="/ru/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript</a></code> и <code><a href="/ru/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS</a></code></li>
- <li>Получение доступа к привилегированным частям tabs API для активной вкладки: <code>Tab.url</code>, <code>Tab.title</code> и <code>Tab.faviconUrl</code>.</li>
-</ul>
+- Возможность программно встраивать JavaScript или CSS на страницу, используя [`browser.tabs.executeScript`](/ru/Add-ons/WebExtensions/API/tabs/executeScript) и [`browser.tabs.insertCSS`](/ru/Add-ons/WebExtensions/API/tabs/insertCSS)
+- Получение доступа к привилегированным частям tabs API для активной вкладки: `Tab.url`, `Tab.title` и `Tab.faviconUrl`.
 
-<p>Цель этих полномочий – позволить расширению выполнять наиболее распространённые сценарии работы, без необходимости выдавать ему более серьёзные привилегии, так как большинство расширений задумано для выполнения какой-либо работы на активной вкладке после взаимодействия с пользователем. Например, представьте расширение, которое встраивает скрипт на текущую страницу, после того как пользователь нажимает на кнопку расширения на панели инструментов. Если бы <code>activeTab</code> полномочий не существовало, расширению бы пришлось запрашивать <code>&lt;all_urls&gt;</code>. Но они бы давали расширению намного больше привилегий, чем ему было бы необходимо: расширение могло бы встраивать скрипты на любую вкладку и в любой момент, когда пожелает.</p>
+Цель этих полномочий – позволить расширению выполнять наиболее распространённые сценарии работы, без необходимости выдавать ему более серьёзные привилегии, так как большинство расширений задумано для выполнения какой-либо работы на активной вкладке после взаимодействия с пользователем. Например, представьте расширение, которое встраивает скрипт на текущую страницу, после того как пользователь нажимает на кнопку расширения на панели инструментов. Если бы `activeTab` полномочий не существовало, расширению бы пришлось запрашивать `<all_urls>`. Но они бы давали расширению намного больше привилегий, чем ему было бы необходимо: расширение могло бы встраивать скрипты на любую вкладку и в любой момент, когда пожелает.
 
-<p>Заметьте, что вы сможете иметь доступ к привилегированному tab API, только на момент взаимодействия расширения с пользователем, и пока вкладка не изменила своё состояние. То есть расширение перестанет иметь данные привилегии при изменении адреса страницы или каком-либо другом событии с вкладкой.</p>
+Заметьте, что вы сможете иметь доступ к привилегированному tab API, только на момент взаимодействия расширения с пользователем, и пока вкладка не изменила своё состояние. То есть расширение перестанет иметь данные привилегии при изменении адреса страницы или каком-либо другом событии с вкладкой.
 
-<p>Обычно вкладкой, получающей <code>activeTab</code> полномочия, является активная в данный момент вкладка, за исключением одного случая. <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code> API позволяет расширению создавать элементы контекстного меню, которые будут появляться непосредственно при нажатии на вкладку (элемент на панели вкладок, при нажатии на который изменяется активная вкладка). Если пользователь вызывает контекстное меню на этом элементе, тогда <code>activeTab</code> полномочия выдадутся для вкладки, по которой было произведено нажатие, несмотря на то, что она могла бы не является активной ({{bug(1446956)}} начиная с Firefox версии 63).</p>
+Обычно вкладкой, получающей `activeTab` полномочия, является активная в данный момент вкладка, за исключением одного случая. [`menus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus) API позволяет расширению создавать элементы контекстного меню, которые будут появляться непосредственно при нажатии на вкладку (элемент на панели вкладок, при нажатии на который изменяется активная вкладка). Если пользователь вызывает контекстное меню на этом элементе, тогда `activeTab` полномочия выдадутся для вкладки, по которой было произведено нажатие, несмотря на то, что она могла бы не является активной ({{bug(1446956)}} начиная с Firefox версии 63).
 
-<h2 id="Доступ_к_буферу_обмена">Доступ к буферу обмена</h2>
+## Доступ к буферу обмена
 
-<p>Два полномочия предоставляют расширению привилегии для взаимодействия с буфером обмена:</p>
+Два полномочия предоставляют расширению привилегии для взаимодействия с буфером обмена:
 
-<ul>
- <li><code>clipboardWrite</code>: для записи в буфер обмена с помощью {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, <code>document.execCommand("copy")</code> или <code>document.execCommand("cut")</code></li>
- <li><code>clipboardRead</code>: для чтения из буфера обмена с помощью {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} или <code>document.execCommand("paste")</code></li>
-</ul>
+- `clipboardWrite`: для записи в буфер обмена с помощью {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` или `document.execCommand("cut")`
+- `clipboardRead`: для чтения из буфера обмена с помощью {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} или `document.execCommand("paste")`
 
-<p>Смотрите <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">Взаимодействие с буфером обмена</a> для более подробной информации.</p>
+Смотрите [Взаимодействие с буфером обмена](/ru/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) для более подробной информации.
 
-<h2 id="Неограниченное_хранилище">Неограниченное хранилище</h2>
+## Неограниченное хранилище
 
-<p>Полномочие <code>unlimitedStorage</code>:</p>
+Полномочие `unlimitedStorage`:
 
-<ul>
- <li>Позволяет расширению превышать любые ограничения размера хранимой информации для {{WebExtAPIRef("storage.local")}} API</li>
- <li>В Firefox, позволяет расширению создавать <a href="/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">"persistent" базу данных IndexedDB</a>, не запрашивая разрешения у пользователя в момент её создания.</li>
-</ul>
+- Позволяет расширению превышать любые ограничения размера хранимой информации для {{WebExtAPIRef("storage.local")}} API
+- В Firefox, позволяет расширению создавать ["persistent" базу данных IndexedDB](/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics), не запрашивая разрешения у пользователя в момент её создания.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
+```json
+ "permissions": ["*://developer.mozilla.org/*"]
+```
 
-<p>Запрашивает полномочия для хостов, имеющих developer.mozilla.org в их URL.</p>
+Запрашивает полномочия для хостов, имеющих developer.mozilla.org в их URL.
 
-<pre class="brush: json no-line-numbers">  "permissions": ["tabs"]</pre>
+```json
+  "permissions": ["tabs"]
+```
 
-<p>Запрашивает доступ к привилегированным частям <code>tabs</code> API.</p>
+Запрашивает доступ к привилегированным частям `tabs` API.
 
-<pre class="brush: json no-line-numbers">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+```json
+  "permissions": ["*://developer.mozilla.org/*", "tabs"]
+```
 
-<p>Запрашивает несколько типов полномочий из примеров выше.</p>
+Запрашивает несколько типов полномочий из примеров выше.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

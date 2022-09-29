@@ -6,126 +6,108 @@ tags:
   - firefox29
 translation_of: Mozilla/Firefox/Releases/29
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 29 был выпущен 29 апреля 2014 года. Список ключевых изменений, предоставленный в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.</p>
+{{FirefoxSidebar}}
 
-<p>Хотите помочь документировать Firefox 29? Просмотрите <a class="external external-icon" href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=28.0">список недостатков, которые надо устранить</a> и приступайте!</p>
+Firefox 29 был выпущен 29 апреля 2014 года. Список ключевых изменений, предоставленный в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.
 
-<h2 id="Изменения_для_разработчиков">Изменения для разработчиков</h2>
+Хотите помочь документировать Firefox 29? Просмотрите [список недостатков, которые надо устранить](http://beta.elchi3.de/doctracker/#list=fx&version=28.0) и приступайте!
 
-<h3 id="Инструменты_разработчика">Инструменты разработчика</h3>
+## Изменения для разработчиков
 
-<p>Важные изменения:</p>
+### Инструменты разработчика
 
-<ul>
- <li>Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.</li>
- <li>Added the <a href="https://developer.mozilla.org/docs/Web/API/console">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool now shows performance statistics using pie charts ({{bug(846601)}}).</li>
- <li>On the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, preview tooltips of CSS transforms are now available ({{bug(726427)}}).</li>
- <li>DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.</li>
- <li>A CSS source map is now supported by the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> ({{bug(926014)}}).</li>
- <li>Autocompletion of CSS properties and values has been added to the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> ({{bug(717369)}}).</li>
-</ul>
+Важные изменения:
 
-<p><em>Больше деталей и изменений смотрите в <a href="https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/" title="CSS source map support, network performance analysis &amp; more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog">блоге Mozilla Hacks</a>.</em></p>
+- Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.
+- Added the [console API](https://developer.mozilla.org/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
+- The [Network Monitor](/ru/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ({{bug(846601)}}).
+- On the [Inspector](/ru/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
+- DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
+- A CSS source map is now supported by the [Style Editor](/ru/docs/Tools/Style_Editor) ({{bug(926014)}}).
+- Autocompletion of CSS properties and values has been added to the [Style Editor](/ru/docs/Tools/Style_Editor) ({{bug(717369)}}).
 
-<h3 id="CSS">CSS</h3>
+_Больше деталей и изменений смотрите в [блоге Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/ "CSS source map support, network performance analysis & more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog")._
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
- <li>Добавлена поддержка {{cssxref("visibility")}}<code>: collapse</code>  в<br>
-  Flexboxes ({{bug(783470)}}).</li>
- <li>Свойство {{cssxref("box-sizing")}} больше не нуждается в префиксе ({{bug(243412)}}).</li>
- <li>The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference <code>layout.css.will-change.enabled</code> must be switched to <code>true</code> to enable it. ({{bug(940842)}})</li>
- <li>Scientific exponential notation, like <code>3e1</code> or <code>10e+0</code>, is now supported for {{cssxref("&lt;number&gt;")}} values ({{bug(964529)}}).</li>
- <li>Тип изображения {{cssxref("&lt;gradient&gt;")}} теперь поддерживается в {{cssxref("border-image")}} ({{bug(709587)}}).</li>
- <li>The {{cssxref("touch-action")}} property has been implemented. It is not activated by default; the <code>layout.css.touch_action.enabled</code> pref controls it. ({{bug(795567)}})</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- [CSS variables](/ru/docs/Web/CSS/Using_CSS_variables) have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- Добавлена поддержка {{cssxref("visibility")}}`: collapse` в
+  Flexboxes ({{bug(783470)}}).
+- Свойство {{cssxref("box-sizing")}} больше не нуждается в префиксе ({{bug(243412)}}).
+- The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ({{bug(940842)}})
+- Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values ({{bug(964529)}}).
+- Тип изображения {{cssxref("&lt;gradient&gt;")}} теперь поддерживается в {{cssxref("border-image")}} ({{bug(709587)}}).
+- The {{cssxref("touch-action")}} property has been implemented. It is not activated by default; the `layout.css.touch_action.enabled` pref controls it. ({{bug(795567)}})
 
-<ul>
- <li><code>&lt;input type=color&gt;</code> и <code>&lt;input type=number&gt;</code> доступны по умолчанию.</li>
- <li>Support for the non standard <code>&lt;pre cols&gt;</code> has been removed, as well as the layout effect of <code>&lt;pre wrap&gt;</code> . Both effects can, and should, be achieved using CSS. ({{bug("949879")}})</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- `<input type=color>` и `<input type=number>` доступны по умолчанию.
+- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>` . Both effects can, and should, be achieved using CSS. ({{bug("949879")}})
 
-<ul>
- <li>Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ({{bug("918879")}}).</li>
- <li>The <a href="http://www.ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API (ECMA-402)</a> has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
-  <ul>
-   <li>New objects in the new {{jsxref("Intl")}} object namespace:
-    <ul>
-     <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-     <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-     <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
-    </ul>
-   </li>
-   <li>The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the <code>locales</code> and <code>options</code> arguments per ECMA-402:
-    <ul>
-     <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-     <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-     <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-     <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-     <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li>To match the updated ECMAScript6 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat <code>-0</code> and <code>+0</code> as the same when checking for key and value equality.</li>
- <li><code>Promise</code> has been enabled by default ({{bug(918806)}}).</li>
- <li>Completed generators now returns an {{jsxref("IteratorResult")}} object instead of throwing ({{bug(958951)}}).</li>
- <li>A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.</li>
-</ul>
+### JavaScript
 
-<h3 id="ИнтерфейсAPIsDOM">Интерфейс/APIs/DOM</h3>
+- Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ({{bug("918879")}}).
+- The [ECMAScript Internationalization API (ECMA-402)](http://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
 
-<ul>
- <li>A new type of workers, {{domxref("SharedWorker")}}, is now available by default ({{bug(924089)}}).</li>
- <li>The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.</li>
- <li>The {{domxref("Worker.onLine")}} property is now supported, allowing to know the online/offline status in workers ({{bug(925437)}}).</li>
- <li>As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the <code>dom.webcomponents.enabled</code>. Flip it to <code>true</code> if you want to use it. ({{bug(887538)}}).</li>
- <li>The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ({{bug(845057)}}).</li>
- <li>On {{domxref("HTMLCanvasElement.getContext()")}}, the value <code>moz-webgl</code> is no longer supported. Use the standard <code>webgl</code> value ({{bug(913597)}}).</li>
- <li>The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})</li>
- <li>The property {{domxref("NavigatorLocation.origin", "location.origin")}} is now available in workers ({{bug(964148)}}).</li>
- <li>The {{domxref("ValidityState.badInput")}} property has been implemented ({{bug(827161)}}).</li>
- <li>The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning <code>null</code> since Firefox 3.0.14. ({{bug(964964)}})</li>
- <li>The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean <code>deep</code> argument. Until now, if omitted, these methods acted as if the value of <code>deep</code> was <code>true</code>. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was <code>false</code>. ({{bug(937461)}})</li>
- <li>{{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).</li>
- <li>{{domxref("URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
- <li>{{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).</li>
- <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Gamepad API</a> включён по умолчанию ({{bug(878828)}}).</li>
-</ul>
+  - New objects in the new {{jsxref("Intl")}} object namespace:
 
-<h3 id="MathML">MathML</h3>
+    - {{jsxref("Collator", "Intl.Collator")}}
+    - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+    - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
-<p><em>Без изменений.</em></p>
+  - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
 
-<h3 id="SVG">SVG</h3>
+    - {{jsxref("String.prototype.localeCompare()")}}
+    - {{jsxref("Number.prototype.toLocaleString()")}}
+    - {{jsxref("Date.prototype.toLocaleString()")}}
+    - {{jsxref("Date.prototype.toLocaleDateString()")}}
+    - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 
-<p><em>Без изменений.</em></p>
+- To match the updated ECMAScript6 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat `-0` and `+0` as the same when checking for key and value equality.
+- `Promise` has been enabled by default ({{bug(918806)}}).
+- Completed generators now returns an {{jsxref("IteratorResult")}} object instead of throwing ({{bug(958951)}}).
+- A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.
 
-<h2 id="Безопасность">Безопасность</h2>
+### Интерфейс/APIs/DOM
 
-<ul>
- <li>Реализована экспериментальная директива CSP 1.1 <code>hash-source</code>. Чтобы воспользоваться этой функцией, настройка  <code>security.csp.experimentalEnabled</code> должна быть установлена в положение <code>true</code> ({{bug(883975)}}).</li>
-</ul>
+- A new type of workers, {{domxref("SharedWorker")}}, is now available by default ({{bug(924089)}}).
+- The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
+- The {{domxref("Worker.onLine")}} property is now supported, allowing to know the online/offline status in workers ({{bug(925437)}}).
+- As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}}).
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ({{bug(845057)}}).
+- On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ({{bug(913597)}}).
+- The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})
+- The property {{domxref("NavigatorLocation.origin", "location.origin")}} is now available in workers ({{bug(964148)}}).
+- The {{domxref("ValidityState.badInput")}} property has been implemented ({{bug(827161)}}).
+- The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning `null` since Firefox 3.0.14. ({{bug(964964)}})
+- The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean `deep` argument. Until now, if omitted, these methods acted as if the value of `deep` was `true`. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was `false`. ({{bug(937461)}})
+- {{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).
+- {{domxref("URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ({{bug(930450)}})
+- {{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).
+- [Gamepad API](/ru/docs/Web/Guide/API/Gamepad) включён по умолчанию ({{bug(878828)}}).
 
-<h2 id="Изменения_для_разработчиков_дополнений">Изменения для разработчиков дополнений</h2>
+### MathML
 
-<ul>
- <li><a href="/en-US/Firefox/Australis_add-on_compat">Совместимость дополнений с Australis</a> - Это существенное изменение темы Firefox, что влияет на большинство расширений, связанных с пользовательским интерфейсом Firefox.</li>
-</ul>
+_Без изменений._
 
-<p>Об изменениях, не касающихся Austrlis, будет объявлено позднее.</p>
+### SVG
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+_Без изменений._
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/29/Site_Compatibility">Совместимость сайтов с Firefox 29</a></li>
-</ul>
+## Безопасность
 
-<h3 id="Предыдущие_версии">Предыдущие версии</h3>
+- Реализована экспериментальная директива CSP 1.1 `hash-source`. Чтобы воспользоваться этой функцией, настройка `security.csp.experimentalEnabled` должна быть установлена в положение `true` ({{bug(883975)}}).
 
-<p>{{Firefox_for_developers('28')}}</p>
+## Изменения для разработчиков дополнений
+
+- [Совместимость дополнений с Australis](/en-US/Firefox/Australis_add-on_compat) - Это существенное изменение темы Firefox, что влияет на большинство расширений, связанных с пользовательским интерфейсом Firefox.
+
+Об изменениях, не касающихся Austrlis, будет объявлено позднее.
+
+## Смотрите также
+
+- [Совместимость сайтов с Firefox 29](/ru/docs/Mozilla/Firefox/Releases/29/Site_Compatibility)
+
+### Предыдущие версии
+
+{{Firefox_for_developers('28')}}

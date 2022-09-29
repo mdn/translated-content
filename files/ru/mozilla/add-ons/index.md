@@ -8,233 +8,202 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons
 ---
-<p>Дополнения добавляют новые функциональные возможности в <a href="/en-US/docs/Mozilla/Gecko">Gecko</a>-приложения, такие, как Firefox, SeaMonkey и Thunderbird. Есть два основных типа дополнений: <a href="#Extensions">расширения</a>, которые добавляют новые функции в приложение, и <a href="#Themes">темы</a>, изменяющие пользовательский интерфейс приложения.</p>
+Дополнения добавляют новые функциональные возможности в [Gecko](/ru/docs/Mozilla/Gecko)-приложения, такие, как Firefox, SeaMonkey и Thunderbird. Есть два основных типа дополнений: [расширения](#Extensions), которые добавляют новые функции в приложение, и [темы](#Themes), изменяющие пользовательский интерфейс приложения.
 
-<blockquote>
-<p>Для расширений и тем в Mozilla работает хранилище на <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, также известное как AMO. Когда вы <a href="/en-US/Add-ons/Submitting_an_add-on_to_AMO">помещаете дополнения на AMO</a>, они рассматриваются, и после этого становятся доступны для пользователей. Вы не обязаны загружать свои дополнения в AMO, но если вы это сделаете, пользователи могут быть уверены в том, что они были предварительно проверены и будут знать, что ваше дополнение действительно полезно.</p>
-</blockquote>
+> Для расширений и тем в Mozilla работает хранилище на [addons.mozilla.org](https://addons.mozilla.org/), также известное как AMO. Когда вы [помещаете дополнения на AMO](/en-US/Add-ons/Submitting_an_add-on_to_AMO), они рассматриваются, и после этого становятся доступны для пользователей. Вы не обязаны загружать свои дополнения в AMO, но если вы это сделаете, пользователи могут быть уверены в том, что они были предварительно проверены и будут знать, что ваше дополнение действительно полезно.
 
-<p>Дополнение может существенно повлиять на поведение приложения, на которое оно устанавливается. Мы разработали <a href="/en-US/docs/Mozilla/Add-ons/Add-on_guidelines">список советов</a>, которые помогут вам удостовериться, что ваше дополнение будет приятным в использовании. Эти правила применяются для всех видов надстроек, независимо от того, размещены они на <a href="https://addons.mozilla.org/">addons.mozilla.org</a> или нет.</p>
+Дополнение может существенно повлиять на поведение приложения, на которое оно устанавливается. Мы разработали [список советов](/ru/docs/Mozilla/Add-ons/Add-on_guidelines), которые помогут вам удостовериться, что ваше дополнение будет приятным в использовании. Эти правила применяются для всех видов надстроек, независимо от того, размещены они на [addons.mozilla.org](https://addons.mozilla.org/) или нет.
 
-<hr>
-<h2 id="Расширения"><a>Расширения</a></h2>
+---
 
-<p>Расширения добавляют новые функции к приложениям Mozilla, например таким как Firefox и Thunderbird. С их помощью можно изменить стандартное поведение браузера, например реализовать другой способ организации и управления вкладками. Можно даже изменять содержимое отображаемого веб приложения, чтобы улучшить удобство использования или например повысить безопасность определённых сайтов.</p>
+## Расширения
 
-<p>Существует 3 различных способа сборки расширений: restartless-расширения на основе Add-on SDK, restartless-расширения с реализацией этого механизма вручную (manually bootstrapped restartless extensions), и расширения с использованием технологии Overlay.</p>
+Расширения добавляют новые функции к приложениям Mozilla, например таким как Firefox и Thunderbird. С их помощью можно изменить стандартное поведение браузера, например реализовать другой способ организации и управления вкладками. Можно даже изменять содержимое отображаемого веб приложения, чтобы улучшить удобство использования или например повысить безопасность определённых сайтов.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK">Restartless-расширения на основе Add-on SDK</a><br>
-  Разработка restartless расширений с помощью высокоуровневого JavaScript API.</li>
- <li><a href="/en-US/Add-ons/Bootstrapped_extensions">Restartless-расширения с реализацией этого механизма вручную</a><br>
-  Разработка расширений с самостоятельной реализацией механизма restartless.</li>
- <li><a href="/en-US/Add-ons/Overlay_Extensions">Расширения с использованием технологии Overlay Extensions</a><br>
-  Устаревшей способ разработки расширений, при котором требуется перезапуск браузера. Основан на механизме наложения XUL.</li>
-</ul>
+Существует 3 различных способа сборки расширений: restartless-расширения на основе Add-on SDK, restartless-расширения с реализацией этого механизма вручную (manually bootstrapped restartless extensions), и расширения с использованием технологии Overlay.
 
-<div class="note">
-<p><strong>Технология WebExtensions</strong></p>
+- [Restartless-расширения на основе Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK)
+  Разработка restartless расширений с помощью высокоуровневого JavaScript API.
+- [Restartless-расширения с реализацией этого механизма вручную](/en-US/Add-ons/Bootstrapped_extensions)
+  Разработка расширений с самостоятельной реализацией механизма restartless.
+- [Расширения с использованием технологии Overlay Extensions](/en-US/Add-ons/Overlay_Extensions)
+  Устаревшей способ разработки расширений, при котором требуется перезапуск браузера. Основан на механизме наложения XUL.
 
-<p>В данный момент мы разрабатываем систему под названием WebExtensions, которая будет новым способом разработки расширений для браузера Firefox, эта система будет гораздо более совместима с браузерами Chrome и Opera.</p>
+> **Примечание:** **Технология WebExtensions**
+>
+> В данный момент мы разрабатываем систему под названием WebExtensions, которая будет новым способом разработки расширений для браузера Firefox, эта система будет гораздо более совместима с браузерами Chrome и Opera.
+>
+> В будущем она станет наиболее предпочтительной при разработке новых проектов для браузера Firefox.
+>
+> В данный момент она является экспериментальной, но несмотря на это вы можете [ознакомиться с документацией](https://developer.mozilla.org/en-US/Add-ons/WebExtensions), если хотите её опробовать.
 
-<p>В будущем она станет наиболее предпочтительной при разработке новых проектов для браузера Firefox.</p>
-<p>В данный момент она является экспериментальной, но несмотря на это вы можете <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">ознакомиться с документацией</a>, если хотите её опробовать.</p></div>
+Где это возможно, рекомендуется выбирать Add-On SDK, который использует механизм расширения без необходимости перезапуска браузера (restartless extensions), а также упрощает разработку и убирает за собой. Если вам недостаточно возможностей комплекта средств разработки Add-on SDK для реализации ваших идей, механизм restartless вы можете осуществить самостоятельно. Технология Overlay extensions в целом устарела и не рекомендуется при разработке новых расширений.
 
-<p>Где это возможно, рекомендуется выбирать Add-On SDK, который использует механизм расширения без необходимости перезапуска браузера (restartless extensions), а также упрощает разработку и убирает за собой. Если вам недостаточно возможностей комплекта средств разработки Add-on SDK для реализации ваших идей, механизм restartless вы можете осуществить самостоятельно. Технология Overlay extensions в целом устарела и не рекомендуется при разработке новых расширений.</p>
+Для получения дополнительной информации о том, какой способ использовать, прочтите это [сравнение](/en-US/Add-ons/Comparing_Extension_Toolchains).
 
-<p>Для получения дополнительной информации о том, какой способ использовать, прочтите это <a href="/en-US/Add-ons/Comparing_Extension_Toolchains">сравнение</a>.</p>
+### Рекомендуемые практики
 
-<div class="column-container">
-<div class="column-half">
-<h3 id="Рекомендуемые_практики">Рекомендуемые практики</h3>
+Вне зависимости от того, каким способом вы разрабатываете расширение, имеются общие рекомендации, следуя которым вы гарантируете пользователю максимально приятную работу с вашим расширением.
 
-<p>Вне зависимости от того, каким способом вы разрабатываете расширение, имеются общие рекомендации, следуя которым вы гарантируете пользователю максимально приятную работу с вашим расширением.</p>
+- [Производительность](/en-US/Add-ons/Performance_best_practices_in_extensions)
+  - : Убедитесь в том, что ваше расширение обладает хорошей производительностью. Оно должно быть достаточно быстрым, иметь отзывчивый интерфейс и потреблять минимальный объем памяти.
+- [Безопасность](/en-US/Add-ons/Security_best_practices_in_extensions)
+  - : Убедитесь в том, что ваше приложение не подвергает пользователя опасности на вредоносных веб сайтах.
+- [Этикет](/en-US/Add-ons/Extension_etiquette)
+  - : Убедитесь в том, что ваше расширение не конфликтует с другими расширениями.
 
-<dl>
- <dt><a href="/en-US/Add-ons/Performance_best_practices_in_extensions">Производительность</a></dt>
- <dd>Убедитесь в том, что ваше расширение обладает хорошей производительностью. Оно должно быть достаточно быстрым, иметь отзывчивый интерфейс и потреблять минимальный объем памяти.</dd>
- <dt><a href="/en-US/Add-ons/Security_best_practices_in_extensions">Безопасность</a></dt>
- <dd>Убедитесь в том, что ваше приложение не подвергает пользователя опасности на вредоносных веб сайтах.</dd>
- <dt><a href="/en-US/Add-ons/Extension_etiquette">Этикет</a></dt>
- <dd>Убедитесь в том, что ваше расширение не конфликтует с другими расширениями.</dd>
-</dl>
-</div>
+### Специфика разработки для различных приложений
 
-<div class="column-half">
-<h3 id="Специфика_разработки_для_различных_приложений">Специфика разработки для различных приложений</h3>
+Большая часть документации предполагает, что вы разрабатываете для десктопной версии Firefox. Если вы разрабатываете для других основанных на движке Gecko приложений, то существуют некоторые отличия, о которых вам следует знать.
 
-<p>Большая часть документации предполагает, что вы разрабатываете для десктопной версии Firefox. Если вы разрабатываете для других основанных на движке Gecko приложений, то существуют некоторые отличия, о которых вам следует знать.</p>
+- [Thunderbird](/en-US/Add-ons/Thunderbird)
+  - : Разработка расширений для почтового клиента Thunderbird.
+- [Firefox для Андроид](/en-US/Add-ons/Firefox_for_Android)
+  - : Разработка расширений для Firefox под Андроид.
+- [SeaMonkey](/en-US/Add-ons/SeaMonkey_2)
+  - : Разработка расширений для [SeaMonkey](http://www.seamonkey-project.org/).
 
-<dl>
- <dt><a href="/en-US/Add-ons/Thunderbird">Thunderbird</a></dt>
- <dd>Разработка расширений для почтового клиента Thunderbird.</dd>
- <dt><a href="/en-US/Add-ons/Firefox_for_Android">Firefox для Андроид</a></dt>
- <dd>Разработка расширений для Firefox под Андроид.</dd>
- <dt><a href="/en-US/Add-ons/SeaMonkey_2">SeaMonkey</a></dt>
- <dd>Разработка расширений для <a href="http://www.seamonkey-project.org/">SeaMonkey</a>.</dd>
-</dl>
-</div>
-</div>
+---
 
-<hr>
-<h2 id="Темы"><a id="Themes">Темы</a></h2>
+## Темы
 
-<p>Темы это дополнения, которые изменяют внешний вид пользовательского интерфейса.  Существуют два вида тем: легковесные темы и полные темы.</p>
+Темы это дополнения, которые изменяют внешний вид пользовательского интерфейса. Существуют два вида тем: легковесные темы и полные темы.
 
-<div class="column-container">
-<div class="column-half">
-<p><a href="https://addons.mozilla.org/en-US/developers/docs/themes">Легковесные темы</a> значительно легче создать, чем полные, но их возможности ограничены.</p>
-</div>
+[Легковесные темы](https://addons.mozilla.org/en-US/developers/docs/themes) значительно легче создать, чем полные, но их возможности ограничены.
 
-<div class="column-half">
-<p>С помощью <a href="/en-US/docs/Themes">полных тем</a> вы можете гораздо глубже менять UI приложения. Документация к полным темам устарела, но приведена здесь в качестве возможной основы для обновлённой документации.</p>
-</div>
-</div>
+С помощью [полных тем](/ru/docs/Themes) вы можете гораздо глубже менять UI приложения. Документация к полным темам устарела, но приведена здесь в качестве возможной основы для обновлённой документации.
 
-<hr>
-<h2 id="Другие_типы_дополнений">Другие типы дополнений</h2>
+---
 
-<p><a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">Поисковые плагины</a> являются простыми и очень специфическими типами дополнений: они добавляют новые поисковые системы для поиска в строке браузера.</p>
+## Другие типы дополнений
 
-<p><strong><a href="/en-US/docs/Plugins">Плагины</a> </strong>(не путать с расширением и дополнением)<strong> </strong>помогают приложению понять содержание, которое не имеет встроенной поддержки. NPAPI-плагины являются устаревшей технологией и новые сайты не будут её использовать. Как правило, такие плагины не доступны для использования на большинстве современных мобильных систем, и веб-сайты должны избегать их использования</p>
+[Поисковые плагины](/ru/docs/Creating_OpenSearch_plugins_for_Firefox) являются простыми и очень специфическими типами дополнений: они добавляют новые поисковые системы для поиска в строке браузера.
 
-<h2 id="Смотрите_также" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">Смотрите также</h2>
+**[Плагины](/ru/docs/Plugins) **(не путать с расширением и дополнением)\*\* \*\*помогают приложению понять содержание, которое не имеет встроенной поддержки. NPAPI-плагины являются устаревшей технологией и новые сайты не будут её использовать. Как правило, такие плагины не доступны для использования на большинстве современных мобильных систем, и веб-сайты должны избегать их использования
 
-<ol>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions" title="Restartless extensions">Restartless extensions</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions" title="Legacy extensions">Legacy extensions</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK">Дополнения на основе SDK</a></li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Techniques</a>
-  <ol>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Techniques/Promises">Promises</a></li>
-  </ol>
- </li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Рекомендуемая практика</a>
-  <ol>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Performance_best_practices_in_extensions" title="Performance">Производительность</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Security_best_practices_in_extensions" title="Security">Безопасность</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Extension_etiquette" title="Etiquette">Этикет</a></li>
-  </ol>
- </li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Темы</a>
-  <ol>
-   <li><a href="https://developer.mozilla.org/Add-ons/Themes/Background" title="Lightweight themes">Легковесные темы</a></li>
-   <li><a href="https://developer.mozilla.org/Add-ons/Themes/Background/FAQ" title="Lightweight themes FAQ">Легковесные темы FAQ</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Themes" title="Complete themes">Полные темы</a></li>
-  </ol>
- </li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Legacy Plugins </a>
-  <ol>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Plug-in_Basics">Plug-in Basics</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Plug-in_Development_Overview">Plug-in Development Overview</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Initialization_and_Destruction">Initialization and Destruction</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Drawing_and_Event_Handling">Drawing and Event Handling</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Streams">Streams</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/URLs">URLs</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Memory">Memory</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Version%2C_UI%2C_and_Status_Information">Version, UI, and Status Information</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Plug-in_Side_Plug-in_API">Plug-in side Plug-in API</a>
-    <ol>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Destroy">NPP_Destroy</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_GetValue">NPP_GetValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_GetValue">NP_GetValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_HandleEvent">NPP_HandleEvent</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_Initialize">NP_Initialize</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_New">NPP_New</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Print">NPP_Print</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_SetValue">NPP_SetValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_SetWindow">NPP_SetWindow</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_Shutdown">NP_Shutdown</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_StreamAsFile">NPP_StreamAsFile</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_URLNotify">NPP_URLNotify</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></li>
-    </ol>
-   </li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Browser_Side_Plug-in_API">Browser Side Plug-in API</a>
-    <ol>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream" title="Closes and deletes a stream.">NPN_DestroyStream</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ForceRedraw" title="Asks the plugin host to immediately (synchronously) repaint invalid areas.">NPN_ForceRedraw</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetAuthenticationInfo" title="The function is called by plugins to get HTTP authentication information from the browser.">NPN_GetAuthenticationInfo</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetURL" title="Asks the browser to create a stream for the specified URL.">NPN_GetURL</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetURLNotify" title="Requests creation of a new stream with the contents of the specified URL; gets notification of the result.">NPN_GetURLNotify</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetValue" title="Allows the plug-in to query the browser for information.">NPN_GetValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetValueForURL" title="Provides information to a plugin which is associated with a given URL, for example the cookies or preferred proxy.">NPN_GetValueForURL</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvalidateRect" title="Invalidates the specified portion of the plugin's drawing area, adding it to the region that needs to be redrawn when the plugin next repaints its contents.">NPN_InvalidateRect</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvalidateRegion" title="Invalidates the specified drawing region prior to repainting or refreshing a windowless plug-in.">NPN_InvalidateRegion</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemAlloc" title="Allocates memory from the browser's memory space.">NPN_MemAlloc</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemFlush" title="Requests that the browser free a specified amount of memory.">NPN_MemFlush</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemFree" title="Deallocates a block of allocated memory.">NPN_MemFree</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_NewStream" title="Requests the creation of a new data stream produced by the plug-in and consumed by the browser.">NPN_NewStream</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_PluginThreadAsyncCall" title="Thread safe way to request that the browser calls a plug-in function on the browser or plugin thread (the thread on which the plug-in was initiated).">NPN_PluginThreadAsyncCall</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_PostURL" title="Posts data to a URL.">NPN_PostURL</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference//NPN_PostURLNotify" title="Posts data to a URL, and receives notification of the result.">NPN_PostURLNotify</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReloadPlugins" title="Reloads all of the installed plugins.">NPN_ReloadPlugins</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RequestRead" title="Requests a range of bytes from a seekable stream. This initiates a read operation; the actual data is received through subsequent calls to NPP_WriteReady() and NPP_Write().">NPN_RequestRead</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetValue" title="Implemented by browsers. This call is used to inform the browser of variable information controlled by the plugin.">NPN_SetValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetValueForURL" title="Allows a plugin to change the stored information associated with a URL, in particular its cookies. (While the API theoretically allows the preferred proxy for a given URL to be changed, doing so does not have much meaning given how proxies are configured, and is not supported.)">NPN_SetValueForURL</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Status" title="Lets a plug-in display a message on the browser's status line.">NPN_Status</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_UserAgent" title="Returns the browser's user agent field. This can be used to handle variations in different browsers (or versions thereof) when implementing your plug-in.">NPN_UserAgent</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/docs/NPN_Version" title="Lets plugins obtain version information, both of the plug-in API and of the browser itself.">NPN_Version</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Write" title="Pushes data into a stream produced by the plug-in and consumed by the browser.">NPN_Write</a></li>
-    </ol>
-   </li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Scripting_plugins">Scripting plugins</a>
-    <ol>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPString">NPString</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPVariant">NPVariant</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue">NPN_ReleaseVariantValue</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetStringIdentifier">NPN_GetStringIdentifier</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetStringIdentifiers">NPN_GetStringIdentifiers</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetIntIdentifier">NPN_GetIntIdentifier</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_IdentifierIsString">NPN_IdentifierIsString</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_UTF8FromIdentifier">NPN_UTF8FromIdentifier</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_IntFromIdentifier">NPN_IntFromIdentifier</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPObject">NPObject</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_CreateObject">NPN_CreateObject</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RetainObject">NPN_RetainObject</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReleaseObject">NPN_ReleaseObject</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Invoke">NPN_Invoke</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvokeDefault">NPN_InvokeDefault</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Evaluate">NPN_Evaluate</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetProperty">NPN_GetProperty</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetProperty">NPN_SetProperty</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RemoveProperty">NPN_RemoveProperty</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_HasProperty">NPN_HasProperty</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_HasMethod">NPN_HasMethod</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetException">NPN_SetException</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPClass">NPClass</a></li>
-    </ol>
-   </li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Structures">Structures</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/Plugins/Guide/Constants">Constants</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Plugins/External_resources_for_plugin_creation">External Resources</a></li>
-  </ol>
- </li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Publishing add-ons</a>
-  <ol>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/Distribution">Signing and distributing your add-on</a></li>
-   <li><a href="https://addons.mozilla.org/developers/addon/submit/">Submit a new add-on</a></li>
-   <li><a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy">Policies</a>
-    <ol>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Agreement">Developer Agreement</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Reviews">Review Process</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/Add-on_guidelines">Add-on guidelines</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Featured">Featured Add-ons</a></li>
-     <li><a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Contact">Contacting Us</a></li>
-    </ol>
-   </li>
-  </ol>
- </li>
- <li><a href="https://developer.mozilla.org/ru/Add-ons$edit#">Community and Support</a>
-  <ol>
-   <li><a href="https://blog.mozilla.org/addons">Add-ons Blog</a></li>
-   <li><a href="https://forums.mozilla.org/addons">Add-on Forums</a></li>
-   <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
-   <li><a href="https://groups.google.com/forum/#%21forum/mozilla.dev.extensions">Development Newsgroup</a></li>
-   <li><a href="irc://irc.mozilla.org/extdev">IRC Channel</a></li>
-  </ol>
- </li>
-</ol>
+## Смотрите также
+
+1.  [Restartless extensions](https://developer.mozilla.org/en-US/Add-ons/Bootstrapped_extensions "Restartless extensions")
+2.  [Legacy extensions](https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions "Legacy extensions")
+3.  [Дополнения на основе SDK](https://developer.mozilla.org/en-US/Add-ons/SDK)
+4.  [Techniques](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Promises](https://developer.mozilla.org/en-US/Add-ons/Techniques/Promises)
+
+5.  [Рекомендуемая практика](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Производительность](https://developer.mozilla.org/en-US/Add-ons/Performance_best_practices_in_extensions "Performance")
+    2.  [Безопасность](https://developer.mozilla.org/en-US/Add-ons/Security_best_practices_in_extensions "Security")
+    3.  [Этикет](https://developer.mozilla.org/en-US/Add-ons/Extension_etiquette "Etiquette")
+
+6.  [Темы](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Легковесные темы](https://developer.mozilla.org/Add-ons/Themes/Background "Lightweight themes")
+    2.  [Легковесные темы FAQ](https://developer.mozilla.org/Add-ons/Themes/Background/FAQ "Lightweight themes FAQ")
+    3.  [Полные темы](/ru/docs/Themes "Complete themes")
+
+7.  [Legacy Plugins](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Plug-in Basics](/ru/docs/Plugins/Guide/Plug-in_Basics)
+    2.  [Plug-in Development Overview](/ru/docs/Plugins/Guide/Plug-in_Development_Overview)
+    3.  [Initialization and Destruction](/ru/docs/Plugins/Guide/Initialization_and_Destruction)
+    4.  [Drawing and Event Handling](/ru/docs/Plugins/Guide/Drawing_and_Event_Handling)
+    5.  [Streams](/ru/docs/Plugins/Guide/Streams)
+    6.  [URLs](/ru/docs/Plugins/Guide/URLs)
+    7.  [Memory](/ru/docs/Plugins/Guide/Memory)
+    8.  [Version, UI, and Status Information](/ru/docs/Plugins/Guide/Version%2C_UI%2C_and_Status_Information)
+    9.  [Plug-in side Plug-in API](/ru/docs/Plugins/Guide/Plug-in_Side_Plug-in_API)
+
+        1.  [NPP_Destroy](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Destroy)
+        2.  [NPP_DestroyStream](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_DestroyStream)
+        3.  [NPP_GetValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_GetValue)
+        4.  [NP_GetValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_GetValue)
+        5.  [NPP_HandleEvent](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_HandleEvent)
+        6.  [NP_Initialize](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_Initialize)
+        7.  [NPP_New](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_New)
+        8.  [NPP_NewStream](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_NewStream)
+        9.  [NPP_Print](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Print)
+        10. [NPP_SetValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_SetValue)
+        11. [NPP_SetWindow](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_SetWindow)
+        12. [NP_Shutdown](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NP_Shutdown)
+        13. [NPP_StreamAsFile](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_StreamAsFile)
+        14. [NPP_URLNotify](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_URLNotify)
+        15. [NPP_Write](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_Write)
+        16. [NPP_WriteReady](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPP_WriteReady)
+
+    10. [Browser Side Plug-in API](/ru/docs/Plugins/Guide/Browser_Side_Plug-in_API)
+
+        1.  [NPN_DestroyStream](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream "Closes and deletes a stream.")
+        2.  [NPN_ForceRedraw](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ForceRedraw "Asks the plugin host to immediately (synchronously) repaint invalid areas.")
+        3.  [NPN_GetAuthenticationInfo](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetAuthenticationInfo "The function is called by plugins to get HTTP authentication information from the browser.")
+        4.  [NPN_GetURL](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetURL "Asks the browser to create a stream for the specified URL.")
+        5.  [NPN_GetURLNotify](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetURLNotify "Requests creation of a new stream with the contents of the specified URL; gets notification of the result.")
+        6.  [NPN_GetValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetValue "Allows the plug-in to query the browser for information.")
+        7.  [NPN_GetValueForURL](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetValueForURL "Provides information to a plugin which is associated with a given URL, for example the cookies or preferred proxy.")
+        8.  [NPN_InvalidateRect](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvalidateRect "Invalidates the specified portion of the plugin's drawing area, adding it to the region that needs to be redrawn when the plugin next repaints its contents.")
+        9.  [NPN_InvalidateRegion](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvalidateRegion "Invalidates the specified drawing region prior to repainting or refreshing a windowless plug-in.")
+        10. [NPN_MemAlloc](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemAlloc "Allocates memory from the browser's memory space.")
+        11. [NPN_MemFlush](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemFlush "Requests that the browser free a specified amount of memory.")
+        12. [NPN_MemFree](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_MemFree "Deallocates a block of allocated memory.")
+        13. [NPN_NewStream](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_NewStream "Requests the creation of a new data stream produced by the plug-in and consumed by the browser.")
+        14. [NPN_PluginThreadAsyncCall](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_PluginThreadAsyncCall "Thread safe way to request that the browser calls a plug-in function on the browser or plugin thread (the thread on which the plug-in was initiated).")
+        15. [NPN_PostURL](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_PostURL "Posts data to a URL.")
+        16. [NPN_PostURLNotify](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference//NPN_PostURLNotify "Posts data to a URL, and receives notification of the result.")
+        17. [NPN_ReloadPlugins](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReloadPlugins "Reloads all of the installed plugins.")
+        18. [NPN_RequestRead](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RequestRead "Requests a range of bytes from a seekable stream. This initiates a read operation; the actual data is received through subsequent calls to NPP_WriteReady() and NPP_Write().")
+        19. [NPN_SetValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetValue "Implemented by browsers. This call is used to inform the browser of variable information controlled by the plugin.")
+        20. [NPN_SetValueForURL](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetValueForURL "Allows a plugin to change the stored information associated with a URL, in particular its cookies. (While the API theoretically allows the preferred proxy for a given URL to be changed, doing so does not have much meaning given how proxies are configured, and is not supported.)")
+        21. [NPN_Status](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Status "Lets a plug-in display a message on the browser's status line.")
+        22. [NPN_UserAgent](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_UserAgent "Returns the browser's user agent field. This can be used to handle variations in different browsers (or versions thereof) when implementing your plug-in.")
+        23. [NPN_Version](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/docs/NPN_Version "Lets plugins obtain version information, both of the plug-in API and of the browser itself.")
+        24. [NPN_Write](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Write "Pushes data into a stream produced by the plug-in and consumed by the browser.")
+
+    11. [Scripting plugins](/ru/docs/Plugins/Guide/Scripting_plugins)
+
+        1.  [NPString](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPString)
+        2.  [NPVariant](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPVariant)
+        3.  [NPN_ReleaseVariantValue](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue)
+        4.  [NPN_GetStringIdentifier](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetStringIdentifier)
+        5.  [NPN_GetStringIdentifiers](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetStringIdentifiers)
+        6.  [NPN_GetIntIdentifier](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetIntIdentifier)
+        7.  [NPN_IdentifierIsString](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_IdentifierIsString)
+        8.  [NPN_UTF8FromIdentifier](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_UTF8FromIdentifier)
+        9.  [NPN_IntFromIdentifier](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_IntFromIdentifier)
+        10. [NPObject](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPObject)
+        11. [NPN_CreateObject](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_CreateObject)
+        12. [NPN_RetainObject](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RetainObject)
+        13. [NPN_ReleaseObject](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_ReleaseObject)
+        14. [NPN_Invoke](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Invoke)
+        15. [NPN_InvokeDefault](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_InvokeDefault)
+        16. [NPN_Evaluate](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_Evaluate)
+        17. [NPN_GetProperty](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_GetProperty)
+        18. [NPN_SetProperty](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetProperty)
+        19. [NPN_RemoveProperty](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_RemoveProperty)
+        20. [NPN_HasProperty](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_HasProperty)
+        21. [NPN_HasMethod](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_HasMethod)
+        22. [NPN_SetException](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPN_SetException)
+        23. [NPClass](https://developer.mozilla.org/en-US/Add-ons/Plugins/Reference/NPClass)
+
+    12. [Structures](/ru/docs/Plugins/Guide/Structures)
+    13. [Constants](/ru/docs/Plugins/Guide/Constants)
+    14. [External Resources](https://developer.mozilla.org/en-US/Add-ons/Plugins/External_resources_for_plugin_creation)
+
+8.  [Publishing add-ons](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)
+    2.  [Submit a new add-on](https://addons.mozilla.org/developers/addon/submit/)
+    3.  [Policies](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy)
+
+        1.  [Developer Agreement](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Agreement)
+        2.  [Review Process](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Reviews)
+        3.  [Add-on guidelines](https://developer.mozilla.org/en-US/Add-ons/Add-on_guidelines)
+        4.  [Featured Add-ons](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Featured)
+        5.  [Contacting Us](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Contact)
+
+9.  [Community and Support](https://developer.mozilla.org/ru/Add-ons$edit#)
+
+    1.  [Add-ons Blog](https://blog.mozilla.org/addons)
+    2.  [Add-on Forums](https://forums.mozilla.org/addons)
+    3.  [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon)
+    4.  [Development Newsgroup](https://groups.google.com/forum/#%21forum/mozilla.dev.extensions)
+    5.  [IRC Channel](irc://irc.mozilla.org/extdev)

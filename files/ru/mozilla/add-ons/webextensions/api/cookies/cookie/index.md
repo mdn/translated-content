@@ -11,47 +11,47 @@ tags:
   - данные
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Тип <code>Cookie</code> из {{WebExtAPIRef("cookies")}} API представляет собой информацию о HTTP cookie.</p>
+Тип `Cookie` из {{WebExtAPIRef("cookies")}} API представляет собой информацию о HTTP cookie.
 
-<h2 id="Тип">Тип</h2>
+## Тип
 
-<p>Значения этого типа - объекты, которые могут содержать следующие свойства:</p>
+Значения этого типа - объекты, которые могут содержать следующие свойства:
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code> - содержит имя cookie.</dd>
- <dt><code>value</code></dt>
- <dd><code>string</code> - содержит значение cookie.</dd>
- <dt><code>domain</code></dt>
- <dd><code>string</code> - содержит домен, которому принадлежит cookie (например, "www.google.com", "example.com").</dd>
- <dt><code>hostOnly</code></dt>
- <dd><code>boolean</code> - <code>true</code> если cookie является host-only (то есть запрашивающий хост должен в точности совпадать с доменом cookie), в ином случае <code>false</code>.</dd>
- <dt><code>path</code></dt>
- <dd><code>string</code> - содержит path cookie.</dd>
- <dt><code>secure</code></dt>
- <dd><code>boolean</code> - <code>true</code>, если cookie помечен как secure (то есть его область действия ограничена безопасными каналами, обычно HTTPS), в ином случае <code>false</code>.</dd>
- <dt><code>httpOnly</code></dt>
- <dd><code>boolean</code> - <code>true</code> если cookie помечен как HttpOnly (то есть он недоступен для клиентских скриптов), иначе <code>false</code>.</dd>
- <dt><code>session</code></dt>
- <dd><code>boolean</code> - <code>true</code> если cookie является сессионным, <code>false</code> если cookie является постоянным с указанным временем жизни.</dd>
- <dt><code>expirationDate</code>{{optional_inline}}</dt>
- <dd><code>number</code> - содержит срок годности cookie, который представляется количеством секунд с начала UNIX-эры. Отсутствует для сессионных cookie.</dd>
- <dt><code>storeId</code></dt>
- <dd><code>string</code> - представляет собой ID хранилища, в котором хранится данный cookie, как указано в соответствии с {{WebExtAPIRef("cookies.getAllCookieStores()")}}.</dd>
-</dl>
+- `name`
+  - : `string` - содержит имя cookie.
+- `value`
+  - : `string` - содержит значение cookie.
+- `domain`
+  - : `string` - содержит домен, которому принадлежит cookie (например, "www\.google.com", "example.com").
+- `hostOnly`
+  - : `boolean` - `true` если cookie является host-only (то есть запрашивающий хост должен в точности совпадать с доменом cookie), в ином случае `false`.
+- `path`
+  - : `string` - содержит path cookie.
+- `secure`
+  - : `boolean` - `true`, если cookie помечен как secure (то есть его область действия ограничена безопасными каналами, обычно HTTPS), в ином случае `false`.
+- `httpOnly`
+  - : `boolean` - `true` если cookie помечен как HttpOnly (то есть он недоступен для клиентских скриптов), иначе `false`.
+- `session`
+  - : `boolean` - `true` если cookie является сессионным, `false` если cookie является постоянным с указанным временем жизни.
+- `expirationDate`{{optional_inline}}
+  - : `number` - содержит срок годности cookie, который представляется количеством секунд с начала UNIX-эры. Отсутствует для сессионных cookie.
+- `storeId`
+  - : `string` - представляет собой ID хранилища, в котором хранится данный cookie, как указано в соответствии с {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Примеры">Примеры</h2>
+{{Compat}}
 
-<p>В большинстве методов из cookies API объекты типа <code>Cookie</code> используются как входные параметры методов, либо же как возвращаемые значения. К примеру, вызов {{WebExtAPIRef("cookies.getAll()")}} возвращает массив объектов типа <code>Cookie</code>.</p>
+## Примеры
 
-<p>В примере ниже мы запрашиваем все cookie, а затем выводим в лог некоторые из полей полученных <code>Cookie</code> объектов:</p>
+В большинстве методов из cookies API объекты типа `Cookie` используются как входные параметры методов, либо же как возвращаемые значения. К примеру, вызов {{WebExtAPIRef("cookies.getAll()")}} возвращает массив объектов типа `Cookie`.
 
-<pre class="brush: js">function logCookies(cookies) {
+В примере ниже мы запрашиваем все cookie, а затем выводим в лог некоторые из полей полученных `Cookie` объектов:
+
+```js
+function logCookies(cookies) {
   for (cookie of cookies) {
     console.log(`Domain: ${cookie.domain}`);
     console.log(`Name: ${cookie.name}`);
@@ -61,19 +61,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 }
 
 var gettingAll = browser.cookies.getAll({});
-gettingAll.then(logCookies);</pre>
+gettingAll.then(logCookies);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Примечание</strong>
+> **Примечание:** **Примечание**Это API основано на API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
-<p>Это API основано на API Chromium <code><a href="https://developer.chrome.com/extensions/cookies#type-Cookie">chrome.cookies</a></code>. Эта документация основана на <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> из кода Chromium.</p>
-
-<p>Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +96,3 @@ gettingAll.then(logCookies);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

@@ -7,108 +7,129 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Тип</th>
-   <td><code>Строка</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Обязателен</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Пример</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"content_security_policy": "default-src 'self'"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Тип</th>
+      <td><code>Строка</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Обязателен</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Пример</th>
+      <td>
+        <pre class="brush: json no-line-numbers">
+"content_security_policy": "default-src 'self'"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Политика защиты содержимого применяется к расширениям автоматически. Изначальная политика защиты содержимого ограничивает источники, из которых расширение может загружать <a href="/ru/docs/Web/HTML/Element/script">&lt;script&gt;</a> и <a href="/ru/docs/Web/HTML/Element/object">&lt;object&gt;</a> ресурсы, а так же препятствует потенциально опасным практикам, например использованию <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. Смотрите <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#Изначальные_правила_по_защите_содержимого">изначальные правила защиты содержимого</a>, чтобы узнать о конкретных последствиях применения изначальных правил.</p>
+Политика защиты содержимого применяется к расширениям автоматически. Изначальная политика защиты содержимого ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, а так же препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval). Смотрите [изначальные правила защиты содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#Изначальные_правила_по_защите_содержимого), чтобы узнать о конкретных последствиях применения изначальных правил.
 
-<p>Ключ <code>"content_security_policy"</code> в manifest.json используется для ослабления или ужесточения политики защиты содержимого. Значения для этого ключа устанавливаются в точно таком же виде, как и для Content-Security-Policy HTTP заголовка. Смотрите <a href="/ru/docs/Web/HTTP/CSP">Использование политики содержимого</a> для получения общего представления о синтаксисе для написания правил политики.</p>
+Ключ `"content_security_policy"` в manifest.json используется для ослабления или ужесточения политики защиты содержимого. Значения для этого ключа устанавливаются в точно таком же виде, как и для Content-Security-Policy HTTP заголовка. Смотрите [Использование политики содержимого](/ru/docs/Web/HTTP/CSP) для получения общего представления о синтаксисе для написания правил политики.
 
-<p>Примеры использования ключа могут включать в себя:</p>
+Примеры использования ключа могут включать в себя:
 
-<ul>
- <li>Разрешение на загрузку не запакованных в расширение скриптов и объектов, предоставляя их URL в {{CSP("script-src")}} и {{CSP("object-src")}} директивах.</li>
- <li>Разрешение на выполнение встраиваемых скриптов, <a href="/ru/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">предоставляя hash скрипта в <code>"script-src"</code> директиве</a>.</li>
- <li>Разрешение на использование <code>eval()</code> и похожих функций, добавляя <code>'unsafe-eval'</code> в {{CSP("script-src")}} директиву.</li>
- <li>Ограничение допускаемых источников загрузки для других видов контента, например картинок или файлов стилей, используя соответствующие <a href="/ru/docs/Web/HTTP/Headers/Content-Security-Policy">директивы</a>.</li>
-</ul>
+- Разрешение на загрузку не запакованных в расширение скриптов и объектов, предоставляя их URL в {{CSP("script-src")}} и {{CSP("object-src")}} директивах.
+- Разрешение на выполнение встраиваемых скриптов, [предоставляя hash скрипта в `"script-src"` директиве](/ru/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script).
+- Разрешение на использование `eval()` и похожих функций, добавляя `'unsafe-eval'` в {{CSP("script-src")}} директиву.
+- Ограничение допускаемых источников загрузки для других видов контента, например картинок или файлов стилей, используя соответствующие [директивы](/ru/docs/Web/HTTP/Headers/Content-Security-Policy).
 
-<p>При написании правил по защите содержимого, вы имеете некоторые ограничения:</p>
+При написании правил по защите содержимого, вы имеете некоторые ограничения:
 
-<ul>
- <li>Правило должно включать в себя {{CSP("script-src")}} и  {{CSP("object-src")}} директивы, и {{CSP("script-src")}} директива должна включать ключевое слово <code>'self'</code>.</li>
- <li>Удалённые источники должны иметь <code>https:</code> схему.</li>
- <li>Удалённые источники не должны определяться через универсальный символ <code>*</code> со следующим за ним <a href="https://publicsuffix.org/list/">доменным публичным суффиксом</a> (например "*.co.uk" и "*.blogspot.com" являются не разрешёнными значениями, но "*.foo.blogspot.com" разрешёно).</li>
- <li>У всех источников должен быть определён хост.</li>
- <li>Единственные позволенные схемы источников: <code>blob:</code>, <code>filesystem:</code>, <code>moz-extension:</code> и <code>https:</code>.</li>
- <li>Единственные позволенные <a href="/ru/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#Sources">ключевые слова</a>: <code>'none'</code>, <code>'self'</code> и <code>'unsafe-eval'</code>.</li>
-</ul>
+- Правило должно включать в себя {{CSP("script-src")}} и {{CSP("object-src")}} директивы, и {{CSP("script-src")}} директива должна включать ключевое слово `'self'`.
+- Удалённые источники должны иметь `https:` схему.
+- Удалённые источники не должны определяться через универсальный символ `*` со следующим за ним [доменным публичным суффиксом](https://publicsuffix.org/list/) (например "\*.co.uk" и "\*.blogspot.com" являются не разрешёнными значениями, но "\*.foo.blogspot.com" разрешёно).
+- У всех источников должен быть определён хост.
+- Единственные позволенные схемы источников: `blob:`, `filesystem:`, `moz-extension:` и `https:`.
+- Единственные позволенные [ключевые слова](/ru/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#Sources): `'none'`, `'self'` и `'unsafe-eval'`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Работающие_примеры">Работающие примеры</h3>
+### Работающие примеры
 
-<p>Разрешает загрузку скриптов из "https://example.com": <sup>(<em>смотрите примечание</em> <a href="#exampleNote_1">1</a>)</sup></p>
+Разрешает загрузку скриптов из "https\://example.com": (_смотрите примечание_ [1](#exampleNote_1))
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+```
 
-<p>Разрешает загрузку скриптов из любого субдомена "jquery.com":</p>
+Разрешает загрузку скриптов из любого субдомена "jquery.com":
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
+```
 
-<p>Разрешает использование <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_и_товарищи"><code>eval()</code> и его товарищей</a>:</p>
+Разрешает использование [`eval()` и его товарищей](</ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_и_товарищи>):
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
+```json
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+```
 
-<p>Разрешает встроить скрипт: <code>"&lt;script&gt;alert('Hello, world.');&lt;/script&gt;"</code>:</p>
+Разрешает встроить скрипт: `"<script>alert('Hello, world.');</script>"`:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+```
 
-<p>Оставляет изначальные правила, но так же требует, чтобы могли загружаться только изображения, запакованные вместе с расширением:</p>
+Оставляет изначальные правила, но так же требует, чтобы могли загружаться только изображения, запакованные вместе с расширением:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
+```
 
-<p>Разрешает загрузку только тех ресурсов, которые были запакованы вместе с расширением:</p>
+Разрешает загрузку только тех ресурсов, которые были запакованы вместе с расширением:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "default-src 'self'"
-</pre>
+```json
+"content_security_policy": "default-src 'self'"
+```
 
-<h3 id="Недопустимые_примеры">Недопустимые примеры</h3>
+### Недопустимые примеры
 
-<p>Политика, не включающая <code>"object-src"</code> директиву:</p>
+Политика, не включающая `"object-src"` директиву:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.jquery.com;"
+```
 
-<p>Политика, не включающая ключевое слово <code>"self"</code> в <code>"script-src"</code> директиве:</p>
+Политика, не включающая ключевое слово `"self"` в `"script-src"` директиве:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"
+```
 
-<p>Использование отличной от <code>https</code> схемы для загрузки удалённых ресурсов:</p>
+Использование отличной от `https` схемы для загрузки удалённых ресурсов:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"
+```
 
-<p>Использование универсального символа в связке с публичным доменным суффиксом:</p>
+Использование универсального символа в связке с публичным доменным суффиксом:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"
+```
 
-<p>Указание схемы без хоста:</p>
+Указание схемы без хоста:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https:; object-src 'self'"
+```
 
-<p>Использование неподдерживаемого ключевого слова <code>'unsafe-inline'</code>:</p>
+Использование неподдерживаемого ключевого слова `'unsafe-inline'`:
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
+```
 
-<p>1. <em>Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью.</em></p>
+1\. _Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

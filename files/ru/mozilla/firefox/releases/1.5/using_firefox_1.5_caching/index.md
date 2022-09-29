@@ -4,86 +4,78 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 original_slug: Using_Firefox_1.5_caching
 ---
-<div>{{FirefoxSidebar}}</div><p> </p>
+{{FirefoxSidebar}}
 
-<h3 id="Introduction">Введение</h3>
+### Введение
 
-<p><a href="/en/Firefox_1.5_for_developers" title="en/Firefox_1.5_for_developers">Firefox 1.5</a> использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как <strong>bfcache</strong> (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.</p>
+[Firefox 1.5](/en/Firefox_1.5_for_developers "en/Firefox_1.5_for_developers") использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как **bfcache** (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.
 
-<p>Есть случаи, в которых Firefox не кеширует страницы. Вот некоторые обычные программные причины того, что страница не кеширована:</p>
+Есть случаи, в которых Firefox не кеширует страницы. Вот некоторые обычные программные причины того, что страница не кеширована:
 
-<ul>
- <li>страница использует обработчик <code>unload</code> или <code>beforeunload</code>;</li>
- <li>страница устанавливает заголовок «cache-control: no-store».</li>
- <li>доступ к сайту происходит по протоколу HTTPS, а страница устанавливает по меньшей мере один из следующих заголовков:
-  <ul>
-   <li>«Cache-Control: no-cache»</li>
-   <li>«Pragma: no-cache»</li>
-   <li>с заголовком «Expires: 0» or «Expires» со значением даты, лежащим в прошлом относительно значению заголовка «Date» (если только не указан также заголовок «Cache-Control: max-age=»);</li>
-  </ul>
- </li>
- <li>страница не полностью загрузилась, когда пользователь ушёл с неё, или имеет прерванные сетевые запросы по другим причинам (например, <code>XMLHttpRequest</code>));</li>
- <li>страница имеет работающие IndexedDB-транзакции;</li>
- <li>страница верхнего уровня содержит фреймы (например, {{ HTMLElement("iframe") }}), которые не кешируются по одной из перечисленных здесь причин;</li>
- <li>страница находится в фрейме и пользователь загружает новую страницу в этот фрейм (в этом случае, когда пользователь уходит со с этой страницы, последнее загруженное в фреймы содержимое есть то, что закешировано).</li>
-</ul>
+- страница использует обработчик `unload` или `beforeunload`;
+- страница устанавливает заголовок «cache-control: no-store».
+- доступ к сайту происходит по протоколу HTTPS, а страница устанавливает по меньшей мере один из следующих заголовков:
 
-<p>Эта новая функция кеширования меняет поведение загрузки страницы, так что Web-авторы могут захотеть:</p>
+  - «Cache-Control: no-cache»
+  - «Pragma: no-cache»
+  - с заголовком «Expires: 0» or «Expires» со значением даты, лежащим в прошлом относительно значению заголовка «Date» (если только не указан также заголовок «Cache-Control: max-age=»);
 
-<ul>
- <li>узнать, когда на страницу происходит переход (когда она загружается из пользовательского кеша);</li>
- <li>определить поведение страницы, когда пользователь уходит со страницы (позволяя всё же странице быть закешированной).</li>
-</ul>
+- страница не полностью загрузилась, когда пользователь ушёл с неё, или имеет прерванные сетевые запросы по другим причинам (например, `XMLHttpRequest`));
+- страница имеет работающие IndexedDB-транзакции;
+- страница верхнего уровня содержит фреймы (например, {{ HTMLElement("iframe") }}), которые не кешируются по одной из перечисленных здесь причин;
+- страница находится в фрейме и пользователь загружает новую страницу в этот фрейм (в этом случае, когда пользователь уходит со с этой страницы, последнее загруженное в фреймы содержимое есть то, что закешировано).
 
-<p>Это позволяют сделать два новых события браузера.</p>
+Эта новая функция кеширования меняет поведение загрузки страницы, так что Web-авторы могут захотеть:
 
-<h3 id="New_browser_events">Новые события браузера</h3>
+- узнать, когда на страницу происходит переход (когда она загружается из пользовательского кеша);
+- определить поведение страницы, когда пользователь уходит со страницы (позволяя всё же странице быть закешированной).
 
-<p>Если вы используете эти новые события, ваши страницы продолжат правильно отображаться в других браузерах (мы протестировали старые версии Firefox, Internet Explorer, Opera и Safari), а при загрузке в Firefox 1.5 добавится новая функциональность кеширования.</p>
+Это позволяют сделать два новых события браузера.
 
-<p>Примечание: по состоянию на октябрь 2009 года разработческие версии Safari добавили поддержку этих новых событий (см. <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=28758">webkit-баг</a>).</p>
+### Новые события браузера
 
-<p>Стандартное поведение для Web-страниц следующее:</p>
+Если вы используете эти новые события, ваши страницы продолжат правильно отображаться в других браузерах (мы протестировали старые версии Firefox, Internet Explorer, Opera и Safari), а при загрузке в Firefox 1.5 добавится новая функциональность кеширования.
 
-<ol>
- <li>Пользователь переходит на страницу.</li>
- <li>По мере загрузки страницы выполняются инлайновые скрипты.</li>
- <li>Как только страница загрузилась, срабатывает обработчик <code>onload</code>.</li>
-</ol>
+Примечание: по состоянию на октябрь 2009 года разработческие версии Safari добавили поддержку этих новых событий (см. [webkit-баг](https://bugs.webkit.org/show_bug.cgi?id=28758)).
 
-<p>Некоторые страницы включают четвёртый шаг. Если страница использует обработчик <code>unload</code> или <code>beforeunload</code> handler, он срабатывает прежде чем пользователь уходит со страницы. Если присутствует обработчик <code>unload</code>, эта страница не будет кеширована.</p>
+Стандартное поведение для Web-страниц следующее:
 
-<p>Когда пользователь переходит на кешированную страницу, инлайновые скрипты и обработчик <code>onload</code> не запускаются (шаги 2 и 3), так как в большинстве случаев эффекты этих скриптов были сохранены.</p>
+1.  Пользователь переходит на страницу.
+2.  По мере загрузки страницы выполняются инлайновые скрипты.
+3.  Как только страница загрузилась, срабатывает обработчик `onload`.
 
-<p>Если страница содержит скрипты или иное поведение, запускаемое в течение загрузки, которое вы хотите продолжить выполнять каждый раз, когда пользователь заходит на страницу, или если вы хотите знать, когда пользователь заходит на кешированную страницу, используйте новое событие <code>pageshow</code>.</p>
+Некоторые страницы включают четвёртый шаг. Если страница использует обработчик `unload` или `beforeunload` handler, он срабатывает прежде чем пользователь уходит со страницы. Если присутствует обработчик `unload`, эта страница не будет кеширована.
 
-<p>Если у вас есть поведение, запускаемое, когда пользователь уходит со страницы, но вы хотите воспользоваться новой функциональностью кеширования, и поэтому не хотите использовать обработчик unload, используйте новое событие <code>pagehide</code>.</p>
+Когда пользователь переходит на кешированную страницу, инлайновые скрипты и обработчик `onload` не запускаются (шаги 2 и 3), так как в большинстве случаев эффекты этих скриптов были сохранены.
 
-<h4 id="pageshow_event">Событие pageshow</h4>
+Если страница содержит скрипты или иное поведение, запускаемое в течение загрузки, которое вы хотите продолжить выполнять каждый раз, когда пользователь заходит на страницу, или если вы хотите знать, когда пользователь заходит на кешированную страницу, используйте новое событие `pageshow`.
 
-<p>Это событие работает так же, как событие <code>load</code>, но срабатывает каждый раз при загрузке страницы (в то время как событие <code>load</code> в Firefox 1.5 не срабатывает, когда страница загружается из кеша). При первой загрузке страницы событие <code>pageshow</code> срабатывает сразу после события <code>load</code>. Событие <code>pageshow</code> использует булевское свойство <code>persisted</code>, которое выставляется в <code>false</code> при начальной загрузке. Оно выставляется в <code>true</code>, если это не начальная загрузка (то есть когда страница уже кеширована).</p>
+Если у вас есть поведение, запускаемое, когда пользователь уходит со страницы, но вы хотите воспользоваться новой функциональностью кеширования, и поэтому не хотите использовать обработчик unload, используйте новое событие `pagehide`.
 
-<p>Выполняйте любой JavaScript-код, который должен отработать при каждой загрузке страницы, при срабатывании событий <code>pageshow</code>.</p>
+#### Событие pageshow
 
-<p>Вызывая JavaScript-функции в обработчике события <code>pageshow</code>, вы можете обеспечить их вызов при загрузке страницы в браузерах, отличных от Firefox 1.5, вызывая этот обработчик в обработчике события <code>load</code>, как показано в примере ниже.</p>
+Это событие работает так же, как событие `load`, но срабатывает каждый раз при загрузке страницы (в то время как событие `load` в Firefox 1.5 не срабатывает, когда страница загружается из кеша). При первой загрузке страницы событие `pageshow` срабатывает сразу после события `load`. Событие `pageshow` использует булевское свойство `persisted`, которое выставляется в `false` при начальной загрузке. Оно выставляется в `true`, если это не начальная загрузка (то есть когда страница уже кеширована).
 
-<h4 id="pagehide_event">Событие pagehide</h4>
+Выполняйте любой JavaScript-код, который должен отработать при каждой загрузке страницы, при срабатывании событий `pageshow`.
 
-<p>Если вы хотите определить поведение, которое происходит, когда пользователь уходит со страницы, но не хотите использовать событие <code>unload</code> (что воспрепятствовало бы кешированию страницы), вы можете использовать новое событие <code>pagehide</code>. Как и <code>pageshow</code>, событие <code>pagehide</code> использует булевское свойство <code>persisted</code>. Оно выставляется в <code>false</code>, если страница не кеширована в браузере, а в <code>true</code>,— если кеширована. Когда это свойство выставлено в <code>false</code>, обработчик <code>unload</code>, если он есть, вызывается сразу после события <code>pagehide</code>.</p>
+Вызывая JavaScript-функции в обработчике события `pageshow`, вы можете обеспечить их вызов при загрузке страницы в браузерах, отличных от Firefox 1.5, вызывая этот обработчик в обработчике события `load`, как показано в примере ниже.
 
-<p>Firefox 1.5 пытается имитировать события загрузки в том же порядке, в каком они срабатывают при начальной загрузке страницы. Фреймы обрабатываются таким же образом, что и документ верхнего уровня. Если страница содержит фреймы, то при загрузке кешированной страницы:</p>
+#### Событие pagehide
 
-<ul>
- <li>События <code>pageshow</code> из каждого фрейма срабатывают перед событием <code>pageshow</code> в главном документе.</li>
- <li>Когда пользователь уходит с кешированной страницы, событие <code>pagehide</code> из каждого фрейма срабатывает перед событием <code>pagehide</code> в главном документе.</li>
- <li>Для навигации, происходящей внутри отдельного фрейма, события срабатывают только в затронутом фрейме.</li>
-</ul>
+Если вы хотите определить поведение, которое происходит, когда пользователь уходит со страницы, но не хотите использовать событие `unload` (что воспрепятствовало бы кешированию страницы), вы можете использовать новое событие `pagehide`. Как и `pageshow`, событие `pagehide` использует булевское свойство `persisted`. Оно выставляется в `false`, если страница не кеширована в браузере, а в `true`,— если кеширована. Когда это свойство выставлено в `false`, обработчик `unload`, если он есть, вызывается сразу после события `pagehide`.
 
-<h4 id="pagehide_event">Кеширование страницы несмотря на обработчики <code>unload</code> и <code>beforeunload</code></h4>
+Firefox 1.5 пытается имитировать события загрузки в том же порядке, в каком они срабатывают при начальной загрузке страницы. Фреймы обрабатываются таким же образом, что и документ верхнего уровня. Если страница содержит фреймы, то при загрузке кешированной страницы:
 
-<p>Если вы хотите использовать события <code>unload</code> или <code>beforeunload</code>, сохранив кеширование страницы, вы можете просто удалить эти события в обработчике события и восстановить их в обработчике <code>pageshow</code>, если возвращаетесь на эту страницу:</p>
+- События `pageshow` из каждого фрейма срабатывают перед событием `pageshow` в главном документе.
+- Когда пользователь уходит с кешированной страницы, событие `pagehide` из каждого фрейма срабатывает перед событием `pagehide` в главном документе.
+- Для навигации, происходящей внутри отдельного фрейма, события срабатывают только в затронутом фрейме.
 
-<pre>window.addEventListener('pageshow', PageShowHandler, false);
+#### Кеширование страницы несмотря на обработчики `unload` и `beforeunload`
+
+Если вы хотите использовать события `unload` или `beforeunload`, сохранив кеширование страницы, вы можете просто удалить эти события в обработчике события и восстановить их в обработчике `pageshow`, если возвращаетесь на эту страницу:
+
+```
+window.addEventListener('pageshow', PageShowHandler, false);
 window.addEventListener('unload', UnloadHandler, false);
 
 function PageShowHandler() {
@@ -93,43 +85,40 @@ function PageShowHandler() {
 function UnloadHandler() {
 	window.removeEventListener('unload', UnloadHandler, false);
 }
-</pre>
+```
 
-<h3 id="Пример_кода">Пример кода</h3>
+### Пример кода
 
-<p>Приведённый ниже пример реализует страницу, которая использует обработчики <code>load</code> и <code>pageshow</code>. Поведение этой страницы следующее:</p>
+Приведённый ниже пример реализует страницу, которая использует обработчики `load` и `pageshow`. Поведение этой страницы следующее:
 
-<ul>
- <li>В браузерах, отличных от Firefox 1.5, при каждой загрузке страницы происходит следующее: событие <code>load</code> вызывает функцию <code>onLoad</code>, которая вызывает функцию <code>onPageShow</code> (а также дополнительную функцию).</li>
-</ul>
+- В браузерах, отличных от Firefox 1.5, при каждой загрузке страницы происходит следующее: событие `load` вызывает функцию `onLoad`, которая вызывает функцию `onPageShow` (а также дополнительную функцию).
 
-<ul>
- <li>В Firefox 1.5 при первой загрузке страницы событие <code>load</code> работает так же, как и в других браузерах. Кроме того, срабатывает событие <code>pageshow</code>, и, так как <code>persisted</code> установлено в <code>false</code>, не предпринимается никаких дополнительных действий.</li>
-</ul>
+<!---->
 
-<ul>
- <li>В Firefox 1.5 при загрузке страницы из кеша срабатывает только событие <code>pageshow</code>. Так как<code> persisted</code> установлено в <code>true</code>, вызывается только JavaScript-код в функции <code>onPageShow</code>.</li>
-</ul>
+- В Firefox 1.5 при первой загрузке страницы событие `load` работает так же, как и в других браузерах. Кроме того, срабатывает событие `pageshow`, и, так как `persisted` установлено в `false`, не предпринимается никаких дополнительных действий.
 
-<p>В этом примере:</p>
+<!---->
 
-<ul>
- <li>Страница вычисляет и отображает текущие дату и время каждый раз при загрузке. Это вычисление включает секунды и миллисекунды, так что вы легко можете протестировать функциональность.</li>
- <li>Курсор помещается в поле Name при первой загрузке страницы. В Firefox 1.5 при возвращении на страницу курсор остаётся в том поле, где он был, когда пользователь ушёл со страницы. В других браузерах курсор опять помещается в поле Name.</li>
-</ul>
+- В Firefox 1.5 при загрузке страницы из кеша срабатывает только событие `pageshow`. Так как` persisted` установлено в `true`, вызывается только JavaScript-код в функции `onPageShow`.
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;HTML&gt;
-&lt;head&gt;
-&lt;title&gt;Order query : Firefox 1.5 Example&lt;/title&gt;
-&lt;style type="text/css"&gt;
+В этом примере:
+
+- Страница вычисляет и отображает текущие дату и время каждый раз при загрузке. Это вычисление включает секунды и миллисекунды, так что вы легко можете протестировать функциональность.
+- Курсор помещается в поле Name при первой загрузке страницы. В Firefox 1.5 при возвращении на страницу курсор остаётся в том поле, где он был, когда пользователь ушёл со страницы. В других браузерах курсор опять помещается в поле Name.
+
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+<title>Order query : Firefox 1.5 Example</title>
+<style type="text/css">
 body, p {
 	font-family: Verdana, sans-serif;
 	font-size: 12px;
    	}
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
+</style>
+<script type="text/javascript">
 function onLoad() {
 	loadOnlyFirst();
 	onPageShow();
@@ -153,29 +142,30 @@ function onPageShow() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();"&gt;
-&lt;h2&gt;Order query&lt;/h2&gt;
+</script>
+</head>
+<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+<h2>Order query</h2>
 
-&lt;form name="zipForm" action="http://www.example.com/formresult.html" method="get"&gt;
-&lt;label for="timefield"&gt;Date and time:&lt;/label&gt;
-&lt;input type="text" id="timefield"&gt;&lt;br&gt;
-&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" id="name"&gt;&lt;br&gt;
-&lt;label for="address"&gt;Email address:&lt;/label&gt;
-&lt;input type="text" id="address"&gt;&lt;br&gt;
-&lt;label for="order"&gt;Order number:&lt;/label&gt;
-&lt;input type="text" id="order"&gt;&lt;br&gt;
-&lt;input type="submit" name="submit" value="Submit Query"&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
+<label for="timefield">Date and time:</label>
+<input type="text" id="timefield"><br>
+<label for="name">Name:</label>
+<input type="text" id="name"><br>
+<label for="address">Email address:</label>
+<input type="text" id="address"><br>
+<label for="order">Order number:</label>
+<input type="text" id="order"><br>
+<input type="submit" name="submit" value="Submit Query">
+</form>
+</body>
+</html>
+```
 
-<p>Напротив, если приведённая выше страница не обрабатывает событие <code>pageshow</code> и выполняет все вычисления в обработчике события <code>load</code> (если код написан так, как показано в примере ниже), как положение курсора, так и дата/время в Firefox 1.5 будут кешированы, когда пользователь уйдёт со страницы. Когда пользователь вернётся на страницу, отобразятся кешированные дата/время.</p>
+Напротив, если приведённая выше страница не обрабатывает событие `pageshow` и выполняет все вычисления в обработчике события `load` (если код написан так, как показано в примере ниже), как положение курсора, так и дата/время в Firefox 1.5 будут кешированы, когда пользователь уйдёт со страницы. Когда пользователь вернётся на страницу, отобразятся кешированные дата/время.
 
-<pre>&lt;script&gt;
+```
+<script>
 function onLoad() {
 	loadOnlyFirst();
 
@@ -196,16 +186,16 @@ function onLoad() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="onLoad();"&gt;
-</pre>
+<body onload="onLoad();">
+```
 
-<h3 id="Developing_Firefox_extensions">Developing Firefox extensions</h3>
+### Developing Firefox extensions
 
-<p>Firefox 1.5 <a href="/en/Building_an_Extension" title="en/Building_an_Extension">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
+Firefox 1.5 [extensions](/en/Building_an_Extension "en/Building_an_Extension") need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn’t be cached.
 
-<p>For instance, the Google Toolbar for Firefox should listen for the <code>load</code> event for the autolink function and to the <code>pageshow</code> event for the PageRank function in order to be compatible with both 1.5 and earlier versions.</p>
+For instance, the Google Toolbar for Firefox should listen for the `load` event for the autolink function and to the `pageshow` event for the PageRank function in order to be compatible with both 1.5 and earlier versions.
 
-<p>{{ languages( { "it": "it/Usare_il_caching_di_Firefox_1.5", "de": "de/Benutzen_des_Zwischenspeichers_in_Firefox_1.5_(caching)", "fr": "fr/Utilisation_du_cache_de_Firefox_1.5", "ja": "ja/Using_Firefox_1.5_caching" } ) }}</p>
+{{ languages( { "it": "it/Usare\_il\_caching\_di\_Firefox\_1.5", "de": "de/Benutzen\_des\_Zwischenspeichers\_in\_Firefox\_1.5\_(caching)", "fr": "fr/Utilisation\_du\_cache\_de\_Firefox\_1.5", "ja": "ja/Using\_Firefox\_1.5\_caching" } ) }}

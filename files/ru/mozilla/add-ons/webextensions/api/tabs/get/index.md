@@ -3,47 +3,41 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Получает сведения об указанной вкладке.</p>
+Получает сведения об указанной вкладке.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">browser.tabs.get(
+```js
+browser.tabs.get(
   tabId,              // integer
   function(tab) {...} // function
 )
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>.</dd>
- <dt><code>callback</code></dt>
- <dd><p><code>function</code>. Функция принимает следующие аргументы:</p>
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`.
+- `callback`
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+  - : `function`. Функция принимает следующие аргументы:
 
-<p>{{Compat}}</p>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Совместимость с браузерами
 
-<p>{{WebExtExamples}}</p>
+{{Compat}}
 
-<div class="note"><strong>Благодарность</strong>
+## Примеры
 
-<p>Этот API основан на Chromium <a href="https://developer.chrome.com/extensions/tabs#method-get"><code>chrome.tabs</code></a> API. Это документация получена из <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> в коде Chromium.</p>
-</div>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> **Примечание:** **Благодарность**Этот API основан на Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. Это документация получена из [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) в коде Chromium.
+
+<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +65,3 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>

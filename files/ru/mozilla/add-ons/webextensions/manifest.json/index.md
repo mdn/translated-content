@@ -10,49 +10,46 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<div class="blockIndicator note">
-<p>В этой статье описан файл manifest.json для веб-расширений. Если вы ищете информацию о manifest.json для Прогрессивных веб-приложений (PWAs), смотрите статью <a href="/ru/docs/Web/Манифест">Манифест веб-приложения</a>.</p>
-</div>
+> **Примечание:** В этой статье описан файл manifest.json для веб-расширений. Если вы ищете информацию о manifest.json для Прогрессивных веб-приложений (PWAs), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Манифест).
 
-<p>Файл <code>manifest.json</code> это единственный файл, который обязательно должен быть в каждом расширении, использующем API Веб-расширения (WebExtension APIs).</p>
+Файл `manifest.json` это единственный файл, который обязательно должен быть в каждом расширении, использующем API Веб-расширения (WebExtension APIs).
 
-<p>Используя manifest.json, вы определяете базовые метаданные о расширении, такие как имя и версия. Также можно определить некоторые аспекты функциональности (такие, как фоновые скрипты, контент скрипты и действия браузера).</p>
+Используя manifest.json, вы определяете базовые метаданные о расширении, такие как имя и версия. Также можно определить некоторые аспекты функциональности (такие, как фоновые скрипты, контент скрипты и действия браузера).
 
-<p>Это файл в формате <a href="ru/docs/Glossary/JSON">JSON</a>, но в нём можно использовать комментарии, каждая строка которых должна начинаться с "<code>//</code>".</p>
+Это файл в формате [JSON](ru/docs/Glossary/JSON), но в нём можно использовать комментарии, каждая строка которых должна начинаться с "`//`".
 
-<h2 id="Список_полей_manifest.json">Список полей manifest.json</h2>
+## Список полей manifest.json
 
-<p>Поддерживаемые <code>manifest.json</code> поля перечислены ниже:</p>
+Поддерживаемые `manifest.json` поля перечислены ниже:
 
-<div class="twocolumns">{{ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}</div>
+{{ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
 
-<h3 class="index" id="Примечания_о_полях_manifest.json">Примечания о полях manifest.json</h3>
+### Примечания о полях manifest.json
 
-<ul>
- <li>Поля <code>"manifest_version"</code>, <code>"version"</code> и <code>"name"</code> являются обязательными.</li>
- <li>Поле <code>"default_locale"</code> обязательно, если есть папка <code>"_locales"</code>, иначе его нужно опустить.</li>
- <li>Поле <code>"browser_specific_settings"</code> не поддерживается Google Chrome.</li>
-</ul>
+- Поля `"manifest_version"`, `"version"` и `"name"` являются обязательными.
+- Поле `"default_locale"` обязательно, если есть папка `"_locales"`, иначе его нужно опустить.
+- Поле `"browser_specific_settings"` не поддерживается Google Chrome.
 
-<h3 id="Доступ_к_полям_manifest.json_во_время_выполнения">Доступ к полям manifest.json во время выполнения</h3>
+### Доступ к полям manifest.json во время выполнения
 
-<p>C помощью функции JavaScript {{WebExtAPIRef("runtime.getManifest()")}} можно получить доступ к файлу манифеста расширения:</p>
+C помощью функции JavaScript {{WebExtAPIRef("runtime.getManifest()")}} можно получить доступ к файлу манифеста расширения:
 
-<pre class="brush: js; no-line-numbers">browser.runtime.getManifest().version;</pre>
+```js
+browser.runtime.getManifest().version;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В следующем блоке показан основной синтаксис некоторых часто используемых полей манифеста.</p>
+В следующем блоке показан основной синтаксис некоторых часто используемых полей манифеста.
 
-<div class="blockIndicator note">
-<p><strong>Примечание:</strong> Этот пример не рассчитан для того, чтобы его скопировали и вставили в файл реального проекта. Выбор нужных полей зависит от особенностей создаваемого расширения.</p>
-</div>
+> **Примечание:** Этот пример не рассчитан для того, чтобы его скопировали и вставили в файл реального проекта. Выбор нужных полей зависит от особенностей создаваемого расширения.
 
-<p>Если нужны примеры готовых расширений, смотрите <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Examples">Примеры расширений</a>.</p>
+Если нужны примеры готовых расширений, смотрите [Примеры расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
-<pre class="brush: json;">{
+```json
+{
   "browser_specific_settings": {
     "gecko": {
       "id": "addon@example.com",
@@ -124,14 +121,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   },
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
+}
+```
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>Для полного обзора всех полей манифеста и их содержимого, смотрите <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">полную таблицу совместимости <code>manifest.json</code></a> с браузерами.</p>
+Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) с браузерами.
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p>{{WebExtAPIRef("permissions")}} JavaScript API</p>
+{{WebExtAPIRef("permissions")}} JavaScript API

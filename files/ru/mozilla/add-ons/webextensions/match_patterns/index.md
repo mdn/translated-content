@@ -3,424 +3,93 @@ title: Шаблоны совпадения в расширении
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
-<div>{{AddonSidebar}}</div>
-
-<p>Шаблоны совпадения - являются способом обозначения необходимых групп URL. Они используются в нескольких местах в WebExtensions API, главным образом для объявления какие веб-страницы должны загружать <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">встраиваемые скрипты</a> и по каким URL необходимо ожидать событий из  <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code> API.</p>
-
-<p>API, которое использует шаблоны совпадения, обычно принимает их списками, и выполняет соответствующие действия, если URL имеет совпадение с одним из шаблонов. Например, взгляните на <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> ключ в manifest.json.</p>
-
-<h2 id="Структура_шаблона_совпадения">Структура шаблона совпадения</h2>
-
-<div class="note">
-<p><strong>Заметьте:</strong> Некоторые браузеры не поддерживают определённые схемы.<br>
- Смотрите <a href="#Browser_compatibility">Browser compatibility table</a> для дополнительной информации.</p>
-</div>
+{{AddonSidebar}}
 
-<p>Все шаблоны совпадения объявляются в виде строк. За исключением специального <code><a href="/ru/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E">&lt;all_urls&gt;</a></code> шаблона, шаблоны совпадения состоят из трёх компонентов: <em>схема</em>, <em>хост</em> и <em>путь</em>. Схема и хост разделяются с помощью <code>://</code>.</p>
+Шаблоны совпадения - являются способом обозначения необходимых групп URL. Они используются в нескольких местах в WebExtensions API, главным образом для объявления какие веб-страницы должны загружать [встраиваемые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) и по каким URL необходимо ожидать событий из [`webRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) API.
 
-<pre>&lt;схема&gt;://&lt;хост&gt;&lt;путь&gt;</pre>
+API, которое использует шаблоны совпадения, обычно принимает их списками, и выполняет соответствующие действия, если URL имеет совпадение с одним из шаблонов. Например, взгляните на [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) ключ в manifest.json.
 
-<h3 id="Схема">Схема</h3>
+## Структура шаблона совпадения
 
-<p>Компонент<em> схема</em> может принимать один из двух видов:</p>
+> **Примечание:** **Заметьте:** Некоторые браузеры не поддерживают определённые схемы.
+> Смотрите [Browser compatibility table](#Browser_compatibility) для дополнительной информации.
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="width: 50%;">Вид</th>
-   <th scope="col">Совпадение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>*</code></td>
-   <td>Только "http" and "https", так же <a href="/ru/docs/Web/API/WebSockets_API">"ws" и "wss"</a> в некоторых браузерах.</td>
-  </tr>
-  <tr>
-   <td>Одно из <code>http</code>, <code>https</code>, <code>ws</code>, <code>wss</code>, <code>ftp</code>, <code>ftps</code>, <code>data</code> или <code>file</code>.</td>
-   <td>Только данная схема.</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Хост">Хост</h3>
-
-<p>Компонент<em> хост</em> может принимать один из трёх видов:</p>
-
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="width: 50%;">Form</th>
-   <th scope="col">Matches</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>*</code></td>
-   <td>Любой хост.</td>
-  </tr>
-  <tr>
-   <td><code>*.</code> за которыми следует частичное имя хоста.</td>
-   <td>Данный хост и любые его субдомены.</td>
-  </tr>
-  <tr>
-   <td>Полное название хоста без <code>*</code>.</td>
-   <td>Только данный хост.</td>
-  </tr>
- </tbody>
-</table>
+Все шаблоны совпадения объявляются в виде строк. За исключением специального [`<all_urls>`](/ru/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) шаблона, шаблоны совпадения состоят из трёх компонентов: _схема_, _хост_ и _путь_. Схема и хост разделяются с помощью `://`.
 
-<p><em>Хост</em> не должен включать в себя значение порта.</p>
+```
+<схема>://<хост><путь>
+```
 
-<p><em>Хост</em> не обязателен, если <em>схема </em>задана, как "file".</p>
+### Схема
 
-<p>Заметьте, что <code>*</code> звёздочка (символ универсального значения) может быть написана только в начале строки.</p>
+Компонент _схема_ может принимать один из двух видов:
 
-<h3 id="Путь">Путь</h3>
+| Вид                                                                     | Совпадение                                                                                               |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `*`                                                                     | Только "http" and "https", так же ["ws" и "wss"](/ru/docs/Web/API/WebSockets_API) в некоторых браузерах. |
+| Одно из `http`, `https`, `ws`, `wss`, `ftp`, `ftps`, `data` или `file`. | Только данная схема.                                                                                     |
 
-<p>Компонент<em> путь</em> должен начинаться с <code>/</code> символа.</p>
+### Хост
 
-<p>Вслед за ним он может иметь любую комбинацию символов и <code>*</code> звёздочек, которые позволено использовать для обозначения URL и строки параметров (начинается после <code>?</code>). В отличии от <em>хоста</em>, <em>путь</em> может содержать <code>*</code> звёздочку в середине или в конце строки, и <code>*</code> звёздочка может появляться в строке более одного раза.</p>
+Компонент _хост_ может принимать один из трёх видов:
 
-<p>Значение <em>пути</em> сравнивается со строкой, которая представляет из себя URL и <a href="https://en.wikipedia.org/wiki/Query_string">строку параметров</a>. Если строка параметров присутствует в URL, тогда она отделяется от основного URL знаком <code>?</code>. Если вы хотите иметь соответствие с URL на любом домене, где URL путь кончается на <code>foo.bar</code>, не зависимо от присутствия строки параметров, тогда вам нужно иметь массив шаблонов совпадений, например <code>['*://*/*foo.bar', '*://*/*foo.bar?*']</code>. В этой ситуации необходимо использовать <code>?*</code>, а не <code>bar*</code>, для того чтобы обозначить, что <code>*</code> будет применяться к строке параметров, а не к основной части URL пути.</p>
+| Form                                          | Matches                            |
+| --------------------------------------------- | ---------------------------------- |
+| `*`                                           | Любой хост.                        |
+| `*.` за которыми следует частичное имя хоста. | Данный хост и любые его субдомены. |
+| Полное название хоста без `*`.                | Только данный хост.                |
 
-<p>Ни <a href="https://en.wikipedia.org/wiki/Fragment_identifier">идентификатор якоря</a>, ни предшествующая ему <code>#</code>, не считаются частями<em> пути</em>.</p>
-
-<h3 id="&lt;all_urls>">&lt;all_urls&gt;</h3>
+_Хост_ не должен включать в себя значение порта.
 
-<p>Специальное значение <code>&lt;all_urls&gt;</code> совпадает со всеми URL, если они используются со следующими схемами: "http", "https", "ws", "wss", "ftp", "data", and "file".</p>
-
-<h2 id="Примеры">Примеры</h2>
-
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="width: 33%;">Шаблон</th>
-   <th scope="col" style="width: 33%;">Пример совпадения</th>
-   <th scope="col" style="width: 33%;">Пример несовпадения</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p><code>&lt;all_urls&gt;</code></p>
+_Хост_ не обязателен, если _схема_ задана, как "file".
 
-    <p>Совпадение со всеми URL.</p>
-   </td>
-   <td>
-    <p><code>http://example.org/</code></p>
+Заметьте, что `*` звёздочка (символ универсального значения) может быть написана только в начале строки.
 
-    <p><code>https://a.org/some/path/</code></p>
+### Путь
 
-    <p><code>ws://sockets.somewhere.org/</code></p>
+Компонент _путь_ должен начинаться с `/` символа.
 
-    <p><code>wss://ws.example.com/stuff/</code></p>
+Вслед за ним он может иметь любую комбинацию символов и `*` звёздочек, которые позволено использовать для обозначения URL и строки параметров (начинается после `?`). В отличии от _хоста_, _путь_ может содержать `*` звёздочку в середине или в конце строки, и `*` звёздочка может появляться в строке более одного раза.
 
-    <p><code>ftp://files.somewhere.org/</code></p>
-
-    <p><code>ftps://files.somewhere.org/</code></p>
-   </td>
-   <td>
-    <p><code>resource://a/b/c/</code><br>
-     (неподдерживаемая схема)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>*://*/*</code></p>
-
-    <p>Совпадение со всеми HTTP, HTTPS и WebSocket URL.</p>
-   </td>
-   <td>
-    <p><code>http://example.org/</code></p>
-
-    <p><code>https://a.org/some/path/</code></p>
-
-    <p><code>ws://sockets.somewhere.org/</code></p>
-
-    <p><code>wss://ws.example.com/stuff/</code></p>
-   </td>
-   <td>
-    <p><code>ftp://ftp.example.org/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>ftps://ftp.example.org/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>file:///a/</code><br>
-     (несовпадающая схема)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>*://*.mozilla.org/*</code></p>
-
-    <p>Совпадение со всеми HTTP, HTTPS и WebSocket URL, которые находятся на "mozilla.org" или одном из её субдоменов.</p>
-   </td>
-   <td>
-    <p><code>http://mozilla.org/</code></p>
-
-    <p><code>https://mozilla.org/</code></p>
-
-    <p><code>http://a.mozilla.org/</code></p>
-
-    <p><code>http://a.b.mozilla.org/</code></p>
-
-    <p><code>https://b.mozilla.org/path/</code></p>
-
-    <p><code>ws://ws.mozilla.org/</code></p>
-
-    <p><code>wss://secure.mozilla.org/something</code></p>
-   </td>
-   <td>
-    <p><code>ftp://mozilla.org/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>http://mozilla.com/</code><br>
-     (несовпадающий хост)</p>
-
-    <p><code>http://firefox.org/</code><br>
-     (несовпадающий хост)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>*://mozilla.org/</code></p>
-
-    <p>Совпадение со всеми HTTP, HTTPS и WebSocket URL, которые находятся исключительно на "mozilla.org/".</p>
-   </td>
-   <td>
-    <p><code>http://mozilla.org/</code></p>
-
-    <p><code>https://mozilla.org/</code></p>
-
-    <p><code>ws://mozilla.org/</code></p>
-
-    <p><code>wss://mozilla.org/</code></p>
-   </td>
-   <td>
-    <p><code>ftp://mozilla.org/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>http://a.mozilla.org/</code><br>
-     (несовпадающий хост)</p>
-
-    <p><code>http://mozilla.org/a</code><br>
-     (несовпадающий путь)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>ftp://mozilla.org/</code></p>
-
-    <p>Совпадение только с "ftp://mozilla.org/".</p>
-   </td>
-   <td><code>ftp://mozilla.org</code></td>
-   <td>
-    <p><code>http://mozilla.org/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>ftp://sub.mozilla.org/</code><br>
-     (несовпадающий хост)</p>
-
-    <p><code>ftp://mozilla.org/path</code><br>
-     (несовпадающий путь)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>https://*/path</code></p>
-
-    <p>Совпадение со всеми HTTPS URL на любом хосте, чей путь точно соответствует "path".</p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/path</code></p>
-
-    <p><code>https://a.mozilla.org/path</code></p>
-
-    <p><code>https://something.com/path</code></p>
-   </td>
-   <td>
-    <p><code>http://mozilla.org/path</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>https://mozilla.org/path/</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/a</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/path?foo=1</code><br>
-     (несовпадающий путь из-за строки параметров)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>https://*/path/</code></p>
-
-    <p>Совпадение со всеми HTTPS URL на любом хосте, чей путь точно соответствует "path/" и не имеет строки параметров.</p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/path/</code></p>
-
-    <p><code>https://a.mozilla.org/path/</code></p>
-
-    <p><code>https://something.com/path</code>/</p>
-   </td>
-   <td>
-    <p><code>http://mozilla.org/path/</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>https://mozilla.org/path</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/a</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/path/</code><code>?foo=1</code><br>
-     (несовпадающий путь из-за строки параметров)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>https://mozilla.org/*</code></p>
-
-    <p>Совпадение со всеми HTTPS URL только на домене "mozilla.org", с любым URL путём и строкой параметров.</p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/</code></p>
-
-    <p><code>https://mozilla.org/path</code></p>
-
-    <p><code>https://mozilla.org/another</code></p>
-
-    <p><code>https://mozilla.org/path/to/doc</code></p>
-
-    <p><code>https://mozilla.org/path/to/doc?foo=1</code></p>
-   </td>
-   <td>
-    <p><code>http://mozilla.org/path</code><br>
-     (несовпадающая схема)</p>
-
-    <p><code>https://mozilla.com/path</code><br>
-     (несовпадающий хост)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>https://mozilla.org/a/b/c/</code></p>
-
-    <p>Совпадение только с данным URL, или данным URL, имеющим идентификатор якоря.</p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/a/b/c/</code></p>
-
-    <p><code>https://mozilla.org/a/b/c/#section1</code></p>
-   </td>
-   <td>Всё остальное.</td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>https://mozilla.org/*/b/*/</code></p>
-
-    <p>Совпадение только с HTTPS URL, которые находятся на "mozilla.org", чей путь имеет сегмент "b" где-то в середине. Совпадёт с URL со строкой параметров, если эта строка параметров заканчивается на <code>/</code>.</p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/a/b/c/</code></p>
-
-    <p><code>https://mozilla.org/d/b/f/</code></p>
-
-    <p><code>https://mozilla.org/a/b/c/d/</code></p>
-
-    <p><code>https://mozilla.org/a/b/c/d/#section1</code></p>
-
-    <p><code>https://mozilla.org/a/b/c/d/?foo=/</code></p>
-
-    <p><code>https://mozilla.org/a?foo=21314&amp;bar=/b/&amp;extra=c/</code></p>
-   </td>
-   <td>
-    <p><code>https://mozilla.org/b/*/</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/a/b/</code><br>
-     (несовпадающий путь)</p>
-
-    <p><code>https://mozilla.org/a/b/c/d/?foo=bar</code><br>
-     (несовпадающий путь из-за строки параметров)</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>file:///blah/*</code></p>
-
-    <p>Совпадает с любым FILE URL, чей путь начинается с "blah".</p>
-   </td>
-   <td>
-    <p><code>file:///blah/</code></p>
-
-    <p><code>file:///blah/bleh</code></p>
-   </td>
-   <td><code>file:///bleh/</code><br>
-    (несовпадающий путь)</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Недопустимые_шаблоны_совпадения">Недопустимые шаблоны совпадения</h3>
-
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Недопустимый шаблон</th>
-   <th scope="col">Причина</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>resource://path/</code></td>
-   <td>Неподдерживаемая схема.</td>
-  </tr>
-  <tr>
-   <td><code>https://mozilla.org</code></td>
-   <td>Отсутствие пути.</td>
-  </tr>
-  <tr>
-   <td><code>https://mozilla.*.org/</code></td>
-   <td>"*" в хосте должна присутствовать только в начале.</td>
-  </tr>
-  <tr>
-   <td><code>https://*zilla.org/</code></td>
-   <td>"*" в хосте должен быть единственным символом или сопровождаться  ".".</td>
-  </tr>
-  <tr>
-   <td><code>http*://mozilla.org/</code></td>
-   <td>"*" в схеме должен быть единственным символом.</td>
-  </tr>
-  <tr>
-   <td><code>https://mozilla.org:80/</code></td>
-   <td>Хост не должен включать в себя номер порта.</td>
-  </tr>
-  <tr>
-   <td><code>*://*</code></td>
-   <td>Пустой путь: должно быть переписано, как "<code>*://*/*</code>".</td>
-  </tr>
-  <tr>
-   <td><code>file://*</code></td>
-   <td>Пустой путь: должно быть переписано, как "<code>file:///*</code>".</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<h3 id="scheme">scheme</h3>
-
-
-
-<p>{{Compat}}</p>
+Значение _пути_ сравнивается со строкой, которая представляет из себя URL и [строку параметров](https://en.wikipedia.org/wiki/Query_string). Если строка параметров присутствует в URL, тогда она отделяется от основного URL знаком `?`. Если вы хотите иметь соответствие с URL на любом домене, где URL путь кончается на `foo.bar`, не зависимо от присутствия строки параметров, тогда вам нужно иметь массив шаблонов совпадений, например `['*://*/*foo.bar', '*://*/*foo.bar?*']`. В этой ситуации необходимо использовать `?*`, а не `bar*`, для того чтобы обозначить, что `*` будет применяться к строке параметров, а не к основной части URL пути.
+
+Ни [идентификатор якоря](https://en.wikipedia.org/wiki/Fragment_identifier), ни предшествующая ему `#`, не считаются частями _пути_.
+
+### \<all_urls>
+
+Специальное значение `<all_urls>` совпадает со всеми URL, если они используются со следующими схемами: "http", "https", "ws", "wss", "ftp", "data", and "file".
+
+## Примеры
+
+| Шаблон                                                                                                                                                                                                                              | Пример совпадения                                                                                                                                                                                                     | Пример несовпадения                                                                                                                                                                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<all_urls>`Совпадение со всеми URL.                                                                                                                                                                                                | ` http://example.org/``https://a.org/some/path/``ws://sockets.somewhere.org/``wss://ws.example.com/stuff/``ftp://files.somewhere.org/``ftps://files.somewhere.org/ `                                                  | `resource://a/b/c/` (неподдерживаемая схема)                                                                                                                                                                                                                             |
+| `*://*/*`Совпадение со всеми HTTP, HTTPS и WebSocket URL.                                                                                                                                                                           | ` http://example.org/``https://a.org/some/path/``ws://sockets.somewhere.org/``wss://ws.example.com/stuff/ `                                                                                                           | `ftp://ftp.example.org/` (несовпадающая схема)`ftps://ftp.example.org/` (несовпадающая схема)`file:///a/` (несовпадающая схема)                                                                                                                                          |
+| `*://*.mozilla.org/*`Совпадение со всеми HTTP, HTTPS и WebSocket URL, которые находятся на "mozilla.org" или одном из её субдоменов.                                                                                                | ` http://mozilla.org/``https://mozilla.org/``http://a.mozilla.org/``http://a.b.mozilla.org/``https://b.mozilla.org/path/``ws://ws.mozilla.org/``wss://secure.mozilla.org/something `                                  | `ftp://mozilla.org/` (несовпадающая схема)`http://mozilla.com/` (несовпадающий хост)`http://firefox.org/` (несовпадающий хост)                                                                                                                                           |
+| `*://mozilla.org/`Совпадение со всеми HTTP, HTTPS и WebSocket URL, которые находятся исключительно на "mozilla.org/".                                                                                                               | ` http://mozilla.org/``https://mozilla.org/``ws://mozilla.org/``wss://mozilla.org/ `                                                                                                                                  | `ftp://mozilla.org/` (несовпадающая схема)`http://a.mozilla.org/` (несовпадающий хост)`http://mozilla.org/a` (несовпадающий путь)                                                                                                                                        |
+| `ftp://mozilla.org/`Совпадение только с "ftp\://mozilla.org/".                                                                                                                                                                      | `ftp://mozilla.org`                                                                                                                                                                                                   | `http://mozilla.org/` (несовпадающая схема)`ftp://sub.mozilla.org/` (несовпадающий хост)`ftp://mozilla.org/path` (несовпадающий путь)                                                                                                                                    |
+| `https://*/path`Совпадение со всеми HTTPS URL на любом хосте, чей путь точно соответствует "path".                                                                                                                                  | ` https://mozilla.org/path``https://a.mozilla.org/path``https://something.com/path `                                                                                                                                  | `http://mozilla.org/path` (несовпадающая схема)`https://mozilla.org/path/` (несовпадающий путь)`https://mozilla.org/a` (несовпадающий путь)`https://mozilla.org/` (несовпадающий путь)`https://mozilla.org/path?foo=1` (несовпадающий путь из-за строки параметров)      |
+| `https://*/path/`Совпадение со всеми HTTPS URL на любом хосте, чей путь точно соответствует "path/" и не имеет строки параметров.                                                                                                   | ` https://mozilla.org/path/``https://a.mozilla.org/path/``https://something.com/path `/                                                                                                                               | `http://mozilla.org/path/` (несовпадающая схема)`https://mozilla.org/path` (несовпадающий путь)`https://mozilla.org/a` (несовпадающий путь)`https://mozilla.org/` (несовпадающий путь)` https://mozilla.org/path/``?foo=1 ` (несовпадающий путь из-за строки параметров) |
+| `https://mozilla.org/*`Совпадение со всеми HTTPS URL только на домене "mozilla.org", с любым URL путём и строкой параметров.                                                                                                        | ` https://mozilla.org/``https://mozilla.org/path``https://mozilla.org/another``https://mozilla.org/path/to/doc``https://mozilla.org/path/to/doc?foo=1 `                                                               | `http://mozilla.org/path` (несовпадающая схема)`https://mozilla.com/path` (несовпадающий хост)                                                                                                                                                                           |
+| `https://mozilla.org/a/b/c/`Совпадение только с данным URL, или данным URL, имеющим идентификатор якоря.                                                                                                                            | ` https://mozilla.org/a/b/c/``https://mozilla.org/a/b/c/#section1 `                                                                                                                                                   | Всё остальное.                                                                                                                                                                                                                                                           |
+| `https://mozilla.org/*/b/*/`Совпадение только с HTTPS URL, которые находятся на "mozilla.org", чей путь имеет сегмент "b" где-то в середине. Совпадёт с URL со строкой параметров, если эта строка параметров заканчивается на `/`. | ` https://mozilla.org/a/b/c/``https://mozilla.org/d/b/f/``https://mozilla.org/a/b/c/d/``https://mozilla.org/a/b/c/d/#section1``https://mozilla.org/a/b/c/d/?foo=/``https://mozilla.org/a?foo=21314&bar=/b/&extra=c/ ` | `https://mozilla.org/b/*/` (несовпадающий путь)`https://mozilla.org/a/b/` (несовпадающий путь)`https://mozilla.org/a/b/c/d/?foo=bar` (несовпадающий путь из-за строки параметров)                                                                                        |
+| `file:///blah/*`Совпадает с любым FILE URL, чей путь начинается с "blah".                                                                                                                                                           | ` file:///blah/``file:///blah/bleh `                                                                                                                                                                                  | `file:///bleh/` (несовпадающий путь)                                                                                                                                                                                                                                     |
+
+### Недопустимые шаблоны совпадения
+
+| Недопустимый шаблон       | Причина                                                                |
+| ------------------------- | ---------------------------------------------------------------------- |
+| `resource://path/`        | Неподдерживаемая схема.                                                |
+| `https://mozilla.org`     | Отсутствие пути.                                                       |
+| `https://mozilla.*.org/`  | "\*" в хосте должна присутствовать только в начале.                    |
+| `https://*zilla.org/`     | "\*" в хосте должен быть единственным символом или сопровождаться ".". |
+| `http*://mozilla.org/`    | "\*" в схеме должен быть единственным символом.                        |
+| `https://mozilla.org:80/` | Хост не должен включать в себя номер порта.                            |
+| `*://*`                   | Пустой путь: должно быть переписано, как "`*://*/*`".                  |
+| `file://*`                | Пустой путь: должно быть переписано, как "`file:///*`".                |
+
+## Browser compatibility
+
+### scheme
+
+{{Compat}}
