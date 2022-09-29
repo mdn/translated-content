@@ -9,174 +9,175 @@ tags:
   - Шейдер
 translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p class="summary">Шейдеры используют GLSL (OpenGL Shading Language), специальный язык программирования шейдеров от OpenGL, который во многом напоминает С (Си). GLSL выполняется напрямую графическим процессором. Существует два типа шейдеров: вершинные шейдеры и фрагментные (пиксельные) шейдеры. Вершинные шейдеры изменяют положение фигуры в системе 3D координат. Фрагментные шейдеры рассчитывают цвет и другие атрибуты отображения.</p>
+Шейдеры используют GLSL (OpenGL Shading Language), специальный язык программирования шейдеров от OpenGL, который во многом напоминает С (Си). GLSL выполняется напрямую графическим процессором. Существует два типа шейдеров: вершинные шейдеры и фрагментные (пиксельные) шейдеры. Вершинные шейдеры изменяют положение фигуры в системе 3D координат. Фрагментные шейдеры рассчитывают цвет и другие атрибуты отображения.
 
-<p>GLSL не так прост в изучении, как JavaScript. GLSL является строго типизированным и в нем часто используются операции с векторами и матрицами. It can get very complicated — very quickly. В этой статье мы создадим небольшой пример кода, который отображает куб. Чтобы ускорить разработку, мы будем использовать Three.js API.</p>
+GLSL не так прост в изучении, как JavaScript. GLSL является строго типизированным и в нем часто используются операции с векторами и матрицами. It can get very complicated — very quickly. В этой статье мы создадим небольшой пример кода, который отображает куб. Чтобы ускорить разработку, мы будем использовать Three.js API.
 
-<p>Как вы помните из статьи о <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">теоретических основах</a>, вертекс или вершина это точка в системе 3D координат. Также вершины могут иметь дополнительные свойства. Система 3D координат определяет пространство, а вертексы позволяют определять формы в этом пространстве.</p>
+Как вы помните из статьи о [теоретических основах](/ru/docs/Games/Techniques/3D_on_the_web/Basic_theory), вертекс или вершина это точка в системе 3D координат. Также вершины могут иметь дополнительные свойства. Система 3D координат определяет пространство, а вертексы позволяют определять формы в этом пространстве.
 
-<h2 id="shader_types">Типы шейдеров</h2>
+## Типы шейдеров
 
-<p>Шейдер, по сути, это функция, которая требуется для отображения чего-либо на экране. Шейдер запускается в <a href="https://en.wikipedia.org/wiki/GPU">GPU</a> (graphics processing unit), который оптимизирован для выполнения подобных операций. Using a GPU to deal with shaders offloads some of the number crunching from the CPU. This allows the CPU to focus its processing power on other tasks, like executing code.</p>
+Шейдер, по сути, это функция, которая требуется для отображения чего-либо на экране. Шейдер запускается в [GPU](https://en.wikipedia.org/wiki/GPU) (graphics processing unit), который оптимизирован для выполнения подобных операций. Using a GPU to deal with shaders offloads some of the number crunching from the CPU. This allows the CPU to focus its processing power on other tasks, like executing code.
 
-<h3 id="vertex_shader">Вершинный шейдер</h3>
+### Вершинный шейдер
 
-<p>Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the <code>gl_Position</code> variable — this is a special, global, and built-in GLSL variable. <code>gl_Position</code> is used to store the position of the current vertex.</p>
+Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the `gl_Position` variable — this is a special, global, and built-in GLSL variable. `gl_Position` is used to store the position of the current vertex.
 
-<p>The <code>void main()</code> function is a standard way of defining the <code>gl_Position</code> variable. Everything inside  <code>void main()</code> will be executed by the vertex shader.  A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.</p>
+The `void main()` function is a standard way of defining the `gl_Position` variable. Everything inside `void main()` will be executed by the vertex shader. A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.
 
-<h3 id="fragment_shader">Фрагментный шейдер</h3>
+### Фрагментный шейдер
 
-<p>Fragment (or texture) shaders define RGBA (red, blue, green, alpha) colors for each pixel being processed — a single fragment shader is called once per pixel. The purpose of the fragment shader is to set up the <code>gl_FragColor</code> variable. <code>gl_FragColor</code> is a built-in GLSL variable like <code>gl_Position</code>.</p>
+Fragment (or texture) shaders define RGBA (red, blue, green, alpha) colors for each pixel being processed — a single fragment shader is called once per pixel. The purpose of the fragment shader is to set up the `gl_FragColor` variable. `gl_FragColor` is a built-in GLSL variable like `gl_Position`.
 
-<p>The calculations result in a variable containing the information about the RGBA color.</p>
+The calculations result in a variable containing the information about the RGBA color.
 
-<h2 id="demo">Демо</h2>
+## Демо
 
-<p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
+Let's build a simple demo to explain those shaders in action. Be sure to read [Three.js tutorial](/ru/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) first to grasp the concept of the scene, its objects, and materials.
 
-<div class="note">
-<p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
-</div>
+> **Примечание:** Remember that you don't have to use Three.js or any other library to write your shaders — pure [WebGL](/ru/docs/Web/API/WebGL_API) (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.
 
-<h3 id="Environment_setup">Настройка окружения</h3>
+### Настройка окружения
 
-<p>Чтобы приступить к работе с шейдерами WebGL вам потребуется:</p>
+Чтобы приступить к работе с шейдерами WebGL вам потребуется:
 
-<ul>
- <li>Убедиться, что вы используете современный браузер, который хорошо поддерживает <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a>, например Firefox или Chrome.</li>
- <li>Создать папку, в которой будете хранить результаты ваших экспериментов.</li>
- <li>Сохранить копию <a href="https://threejs.org/build/three.min.js">последней минимизированной версии библиотеки Three.js</a> в созданную папку.</li>
-</ul>
+- Убедиться, что вы используете современный браузер, который хорошо поддерживает [WebGL](/ru/docs/Web/API/WebGL_API), например Firefox или Chrome.
+- Создать папку, в которой будете хранить результаты ваших экспериментов.
+- Сохранить копию [последней минимизированной версии библиотеки Three.js](https://threejs.org/build/three.min.js) в созданную папку.
 
-<h3 id="HTML_structure">Структура HTML кода</h3>
+### Структура HTML кода
 
-<p>Мы будем использовать следующую структуру HTML кода.</p>
+Мы будем использовать следующую структуру HTML кода.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;meta charset="utf-8"&gt;
-	&lt;title&gt;MDN Games: Shaders demo&lt;/title&gt;
-	&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MDN Games: Shaders demo</title>
+	<style>
 		body { margin: 0; padding: 0; font-size: 0; }
 		canvas { width: 100%; height: 100%; }
-	&lt;/style&gt;
-	&lt;script src="three.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+	</style>
+	<script src="three.min.js"></script>
+</head>
+<body>
+  <script id="vertexShader" type="x-shader/x-vertex">
 	// vertex shader's code goes here
-  &lt;/script&gt;
-  &lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+  </script>
+  <script id="fragmentShader" type="x-shader/x-fragment">
 	// fragment shader's code goes here
-  &lt;/script&gt;
-  &lt;script&gt;
+  </script>
+  <script>
 	// scene setup goes here
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</body>
+</html>
+```
 
-<p>It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the <code>width</code> and <code>height</code> of the {{htmlelement("canvas")}} element that Three.js will insert on the page to be the full size of the viewport. The {{htmlelement("script")}} element in the {{htmlelement("head")}} includes the Three.js library in the page; we will write our code into three script tags in the {{htmlelement("body")}} tag:</p>
+It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to be the full size of the viewport. The {{htmlelement("script")}} element in the {{htmlelement("head")}} includes the Three.js library in the page; we will write our code into three script tags in the {{htmlelement("body")}} tag:
 
-<ol>
- <li>The first one will contain the vertex shader.</li>
- <li>The second one will contain the fragment shader.</li>
- <li>The third one will contain the actual JavaScript code generating the scene.</li>
-</ol>
+1.  The first one will contain the vertex shader.
+2.  The second one will contain the fragment shader.
+3.  The third one will contain the actual JavaScript code generating the scene.
 
-<p>Before reading on, copy this code to a new text file and save it in your working directory as <code>index.html</code>. We'll create a scene featuring a simple cube in this file to explain how the shaders work.</p>
+Before reading on, copy this code to a new text file and save it in your working directory as `index.html`. We'll create a scene featuring a simple cube in this file to explain how the shaders work.
 
-<h3 id="Исходный_код_куба">Исходный код куба</h3>
+### Исходный код куба
 
-<p>Instead of creating everything from scratch we can reuse the <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> source code of the cube. Most of the components like the renderer, camera, and lights will stay the same, but instead of the basic material we will set the cube's color and position using shaders.</p>
+Instead of creating everything from scratch we can reuse the [Building up a basic demo with Three.js](/ru/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) source code of the cube. Most of the components like the renderer, camera, and lights will stay the same, but instead of the basic material we will set the cube's color and position using shaders.
 
-<p>Go to the <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">cube.html file on GitHub</a>, copy all the JavaScript code from inside the second {{htmlelement("script")}} element, and paste it into the third <code>&lt;script&gt;</code> element of the current example. Save and load <code>index.html</code> in your browser — you should see a blue cube.</p>
+Go to the [cube.html file on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html), copy all the JavaScript code from inside the second {{htmlelement("script")}} element, and paste it into the third `<script>` element of the current example. Save and load `index.html` in your browser — you should see a blue cube.
 
-<h3 id="Код_вершинного_шейдера">Код вершинного шейдера</h3>
+### Код вершинного шейдера
 
-<p>Давайте напишем простой вершинный шейдер — добавим код ниже в тело первого тега <code>&lt;script&gt;</code> :</p>
+Давайте напишем простой вершинный шейдер — добавим код ниже в тело первого тега `<script>` :
 
-<pre class="brush: glsl">void main() {
+```glsl
+void main() {
 	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
-</pre>
+```
 
-<p>The resulting <code>gl_Position</code> is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.</p>
+The resulting `gl_Position` is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.
 
-<div class="note">
-<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
-</div>
+> **Примечание:** You can learn more about _model_, _view_, and _projection transformations_ from the [vertex processing paragraph](/ru/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing), and you can also check out the links at the end of this article to learn more about it.
 
-<p>Both <code>projectionMatrix</code> and <code>modelViewMatrix</code> are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the <code>x</code> axis and 5 units along the <code>z</code> axis, translated via a shader. We can ignore the fourth parameter and leave it with the default <code>1.0</code> value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.</p>
+Both `projectionMatrix` and `modelViewMatrix` are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the `x` axis and 5 units along the `z` axis, translated via a shader. We can ignore the fourth parameter and leave it with the default `1.0` value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.
 
-<h3 id="Код_шейдера_текстуры">Код шейдера текстуры</h3>
+### Код шейдера текстуры
 
-<p>Now we'll add the texture shader to the code — add the code below to the body's second <code>&lt;script&gt;</code> tag:</p>
+Now we'll add the texture shader to the code — add the code below to the body's second `<script>` tag:
 
-<pre class="brush: glsl">void main() {
+```glsl
+void main() {
 	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
-</pre>
+```
 
-<p>This will set an RGBA color to recreate the current light blue one — the first three float values (ranging from <code>0.0</code> to <code>1.0</code>) represent the red, green, and blue channels while the fourth one is the alpha transparency (ranging from <code>0.0</code> — fully transparent — to 1.0 — fully opaque).</p>
+This will set an RGBA color to recreate the current light blue one — the first three float values (ranging from `0.0` to `1.0`) represent the red, green, and blue channels while the fourth one is the alpha transparency (ranging from `0.0` — fully transparent — to 1.0 — fully opaque).
 
-<h3 id="Применение_шейдеров">Применение шейдеров</h3>
+### Применение шейдеров
 
-<p>To actually apply the newly created shaders to the cube, comment out the <code>basicMaterial</code> definition first:</p>
+To actually apply the newly created shaders to the cube, comment out the `basicMaterial` definition first:
 
-<pre class="brush: js">// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
-</pre>
+```js
+// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+```
 
-<p>Далее, создаём <a href="http://threejs.org/docs/#Reference/Materials/ShaderMaterial"><code>shaderMaterial</code></a>:</p>
+Далее, создаём [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
-<pre class="brush: js">var shaderMaterial = new THREE.ShaderMaterial( {
+```js
+var shaderMaterial = new THREE.ShaderMaterial( {
 	vertexShader: document.getElementById( 'vertexShader' ).textContent,
 	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
-</pre>
+```
 
-<p>This shader material takes the code from the scripts and applies it to the object the material is assigned to.</p>
+This shader material takes the code from the scripts and applies it to the object the material is assigned to.
 
-<p>Then, in the line that defines the cube we need to replace the <code>basicMaterial</code>:</p>
+Then, in the line that defines the cube we need to replace the `basicMaterial`:
 
-<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
-</pre>
+```js
+var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+```
 
-<p>...with the newly created <code>shaderMaterial</code>:</p>
+...with the newly created `shaderMaterial`:
 
-<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
-</pre>
+```js
+var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+```
 
-<p>Three.js compiles and runs the shaders attached to the mesh to which this material is given. In our case the cube will have both vertex and texture shaders applied. That's it — you've just created the simplest possible shader, congratulations! Here's what the cube should look like:</p>
+Three.js compiles and runs the shaders attached to the mesh to which this material is given. In our case the cube will have both vertex and texture shaders applied. That's it — you've just created the simplest possible shader, congratulations! Here's what the cube should look like:
 
-<p><img alt="Three.js blue cube demo" src="http://end3r.github.io/MDN-Games-3D/Shaders/img/cube.png" style="display: block; margin: 0px auto;"></p>
+![Three.js blue cube demo](http://end3r.github.io/MDN-Games-3D/Shaders/img/cube.png)
 
-<p>It looks exactly the same as the Three.js cube demo but the slightly different position and the same blue color are both achieved using the shader.</p>
+It looks exactly the same as the Three.js cube demo but the slightly different position and the same blue color are both achieved using the shader.
 
-<h2 id="Финальный_вариант">Финальный вариант</h2>
+## Финальный вариант
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"&gt;&lt;/script&gt;
-&lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
+```html
+<script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"></script>
+<script id="vertexShader" type="x-shader/x-vertex">
     void main() {
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
     }
-&lt;/script&gt;
-&lt;script id="fragmentShader" type="x-shader/x-fragment"&gt;
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
     void main() {
         gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
     }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">    var WIDTH = window.innerWidth;
+```js
+    var WIDTH = window.innerWidth;
     var HEIGHT = window.innerHeight;
 
     var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -205,25 +206,25 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
         requestAnimationFrame(render);
         renderer.render(scene, camera);
     }
-    render();</pre>
+    render();
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body { margin: 0; padding: 0; font-size: 0; }
+```css
+body { margin: 0; padding: 0; font-size: 0; }
 canvas { width: 100%; height: 100%; }
-</pre>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{ EmbedLiveSample('Финальный_вариант', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}</p>
+{{ EmbedLiveSample('Финальный_вариант', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}
 
-<h2 id="Заключение">Заключение</h2>
+## Заключение
 
-<p>This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on <a href="http://shadertoy.com/">ShaderToy</a> for inspiration and to learn from their sources.</p>
+This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](http://shadertoy.com/) for inspiration and to learn from their sources.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://learningwebgl.com/blog/?page_id=1217">Изучение WebGL</a> — for general WebGL knowledge</li>
- <li><a href="http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html">WebGL шейдеры и GLSL основы</a> — for GLSL specific information</li>
-</ul>
+- [Изучение WebGL](http://learningwebgl.com/blog/?page_id=1217) — for general WebGL knowledge
+- [WebGL шейдеры и GLSL основы](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information

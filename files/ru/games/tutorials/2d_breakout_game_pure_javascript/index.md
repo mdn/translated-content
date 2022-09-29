@@ -11,49 +11,41 @@ tags:
   - Руководство
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём")}}
 
-<p>{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём")}}</p>
+В этом пошаговом руководстве мы создадим простую игру **MDN Breakout,** написанную на чистом JavaScript и отрендеренную на HTML5 {{htmlelement("canvas")}}.
 
-<p class="summary">В этом пошаговом руководстве мы создадим простую игру <strong>MDN Breakout,</strong> написанную на чистом JavaScript и отрендеренную на HTML5 {{htmlelement("canvas")}}.</p>
+К каждому шагу прилагаются редактируемые live-примеры, с которыми можно поиграть, чтобы увидеть, как должна выглядеть игра на промежуточных этапах. Вы изучите основы использования элемента {{htmlelement("canvas")}} для реализации таких фундаментальных игровых механик, как рендеринг и перемещение изображений, обнаружение столкновений, механизмы управления, а также состояния выигрыша и проигрыша.
 
-<p>К каждому шагу прилагаются редактируемые live-примеры, с которыми можно поиграть, чтобы увидеть, как должна выглядеть игра на промежуточных этапах. Вы изучите основы использования элемента {{htmlelement("canvas")}} для реализации таких фундаментальных игровых механик, как рендеринг и перемещение изображений, обнаружение столкновений, механизмы управления, а также состояния выигрыша и проигрыша.</p>
+Для извлечения максимальной пользы из этой серии статей необходимо иметь средние (или хотя бы базовые) знания языка [JavaScript](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics). После прохождения этого урока вы сможете создавать собственные простые браузерные игры.
 
-<p>Для извлечения максимальной пользы из этой серии статей необходимо иметь средние (или хотя бы базовые) знания языка <a href="/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</a>. После прохождения этого урока вы сможете создавать собственные простые браузерные игры.</p>
+![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png)
 
-<p><img alt="Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives." src="https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+## Детали к урокам
 
-<h2 id="Детали_к_урокам">Детали к урокам</h2>
+Все уроки и версии игры [MDN Breakout ](http://breakout.enclavegames.com/lesson10.html)доступны в [GitHub](https://github.com/end3r/Canvas-gamedev-workshop):
 
-<p>Все уроки и версии игры <a href="http://breakout.enclavegames.com/lesson10.html">MDN Breakout </a>доступны в <a href="https://github.com/end3r/Canvas-gamedev-workshop">GitHub</a>:</p>
+1.  [Создание Canvas и рисование на нем](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+2.  [Движение мяча](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+3.  [Реакция при столкновении со стеной](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
+4.  [Управление](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
+5.  [Конец игры](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
+6.  [Построение поля кирпичей](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+7.  [Реакция при столкновении](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)
+8.  [Счёт и выигрыш](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
+9.  [Контроль мышью](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls)
+10. [Заключение](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up)
 
-<ol>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it">Создание Canvas и рисование на нем</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball">Движение мяча</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls">Реакция при столкновении со стеной</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls">Управление</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over">Конец игры</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field">Построение поля кирпичей</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection">Реакция при столкновении</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Счёт и выигрыш</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls">Контроль мышью</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up">Заключение</a></li>
-</ol>
+Лучший способ получить надёжные знания в области разработки браузерных игр — это начать с чистого JavaScript. Затем можно выбрать любой фреймворк для использования в своих проектах. Фреймворки — это инструменты, созданные на языке JavaScript; поэтому, даже если вы планируете работать с ними, нелишним будет сначала изучить сам язык, чтобы понимать, что именно происходит внутри. Фреймворки ускоряют разработку и помогают справиться со скучными частями игры, но если что-то работает не так, как ожидалось, всегда можно попытаться отладить код или написать собственное решение на чистом JavaScript.
 
-<p>Лучший способ получить надёжные знания в области разработки браузерных игр — это начать с чистого JavaScript. Затем можно выбрать любой фреймворк для использования в своих проектах. Фреймворки — это инструменты, созданные на языке JavaScript; поэтому, даже если вы планируете работать с ними, нелишним будет сначала изучить сам язык, чтобы понимать, что именно происходит внутри. Фреймворки ускоряют разработку и помогают справиться со скучными частями игры, но если что-то работает не так, как ожидалось, всегда можно попытаться отладить код или написать собственное решение на чистом JavaScript.</p>
+> **Примечание:** **Примечание.** Если вам интересно узнать о разработке двухмерных игр с помощью игровой библиотеки, ознакомьтесь с альтернативной серией статей [2D игра Breakout с использованием Phaser](/ru/docs/Games/Workflows/2D_breakout_game_Phaser).
 
-<div class="note">
-<p><strong>Примечание.</strong> Если вам интересно узнать о разработке двухмерных игр с помощью игровой библиотеки, ознакомьтесь с альтернативной серией статей <a href="/en-US/docs/Games/Workflows/2D_breakout_game_Phaser">2D игра Breakout с использованием Phaser</a>.</p>
-</div>
+> **Примечание:** **Примечание.** Эту серию статей можно использовать как материал для практических занятий по разработке игр. Также можно воспользоваться набором инструментов [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit), основанном на этом уроке, если нужно сделать доклад о разработке игр в целом.
 
-<div class="note">
-<p><span style="font-size: 14px;"><strong>Примечание.</strong></span> Эту серию статей можно использовать как материал для практических занятий по разработке игр. Также можно воспользоваться набором инструментов <a href="https://github.com/end3r/Gamedev-Canvas-Content-Kit">Gamedev Canvas Content Kit</a>, основанном на этом уроке, если нужно сделать доклад о разработке игр в целом.</p>
-</div>
+## Следующий шаг
 
-<h2 id="Следующий_шаг">Следующий шаг</h2>
+Ладно, давайте начнём! Перейдите к первой главе — [Создание Canvas и рисование на нем](/ru/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it).
 
-<p>Ладно, давайте начнём! Перейдите к первой главе — <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it">Создание Canvas и рисование на нем</a>.</p>
-
-<p>{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}} </p>
+{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
