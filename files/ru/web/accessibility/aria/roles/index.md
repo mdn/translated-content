@@ -11,6 +11,6 @@ tags:
   - TopicStub
 translation_of: Web/Accessibility/ARIA/Roles
 ---
-<p class="summary">This page lists reference pages covering all the WAI-ARIA roles discussed on MDN. For a full list of roles, see <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, States, and Properties</a></p>
+This page lists reference pages covering all the WAI-ARIA roles discussed on MDN. For a full list of roles, see [Using ARIA: Roles, States, and Properties](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
