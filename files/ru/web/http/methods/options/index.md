@@ -7,56 +7,68 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/OPTIONS
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP-метод</strong><strong> <code>OPTIONS</code> </strong>используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или * (звёздочку) чтобы указать весь сервер целиком.</p>
+**HTTP-метод\*\*** `OPTIONS` \*\*используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или \* (звёздочку) чтобы указать весь сервер целиком.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Запрос имеет тело</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Успешный ответ имеет тело</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe", "Безопасный")}}</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent", "Идемпотентный")}}</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable", "Кешируемый")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Запрос имеет тело</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Успешный ответ имеет тело</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Safe", "Безопасный")}}
+      </th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Idempotent", "Идемпотентный")}}
+      </th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "Кешируемый")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">OPTIONS /index.html HTTP/1.1
+```
+OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
-</pre>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Определение_разрешённых_сервером_методов_запроса">Определение разрешённых сервером методов запроса</h3>
+### Определение разрешённых сервером методов запроса
 
-<p>Для того, чтобы узнать какие методы запросов поддерживаются сервером, можно воспользоваться curl направить OPTIONS запрос:</p>
+Для того, чтобы узнать какие методы запросов поддерживаются сервером, можно воспользоваться curl направить OPTIONS запрос:
 
-<pre>curl -X OPTIONS http://example.org -i</pre>
+```
+curl -X OPTIONS http://example.org -i
+```
 
-<p>Ответ на запрос содержит {{HTTPHeader("Allow")}} заголовок с поддерживаемыми методами:</p>
+Ответ на запрос содержит {{HTTPHeader("Allow")}} заголовок с поддерживаемыми методами:
 
-<pre>HTTP/1.1 200 OK
+```
+HTTP/1.1 200 OK
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT
@@ -64,13 +76,14 @@ Expires: Thu, 20 Oct 2016 11:45:00 GMT
 Server: EOS (lax004/2813)
 x-ec-custom-error: 1
 Content-Length: 0
-</pre>
+```
 
-<h3 id="Предзапросы_по_технологии_CORS">Предзапросы по технологии CORS</h3>
+### Предзапросы по технологии CORS
 
-<p>По технологии <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, с помощью метода <code>OPTIONS</code> направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос  <code>OPTIONS</code> будет отправляться на сервер вместе с <code>POST</code> запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков <code>X-PINGOTHER</code> и <code>Content-Type</code>.  В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.</p>
+По технологии [CORS](/ru/docs/Web/HTTP/Access_control_CORS), с помощью метода `OPTIONS` направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос `OPTIONS` будет отправляться на сервер вместе с `POST` запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков `X-PINGOTHER` и `Content-Type`. В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.
 
-<pre>OPTIONS /resources/post-here/ HTTP/1.1
+```
+OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
@@ -79,11 +92,13 @@ Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 Origin: http://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
-<p>Ответ сервера содержит параметр {{HTTPHeader("Access-Control-Allow-Methods")}} и сообщает, что  <code>POST</code>, <code>GET</code>, и <code>OPTIONS</code> методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{HTTPHeader("Allow")}} , но используется строго в контексте CORS.</p>
+Ответ сервера содержит параметр {{HTTPHeader("Access-Control-Allow-Methods")}} и сообщает, что `POST`, `GET`, и `OPTIONS` методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{HTTPHeader("Allow")}} , но используется строго в контексте CORS.
 
-<pre>HTTP/1.1 200 OK
+```
+HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 Access-Control-Allow-Origin: http://foo.example
@@ -95,29 +110,20 @@ Content-Encoding: gzip
 Content-Length: 0
 Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
-Content-Type: text/plain</pre>
+Content-Type: text/plain
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "OPTIONS", "4.3.7")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                     | Заголовок                                                     |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "OPTIONS", "4.3.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Allow")}} заголовок</li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a></li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Allow")}} заголовок
+- [CORS](/ru/docs/Web/HTTP/Access_control_CORS)

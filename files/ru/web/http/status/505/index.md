@@ -3,31 +3,22 @@ title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
 translation_of: Web/HTTP/Status/505
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>505</strong></code><strong><code> HTTP Version Not Supported</code></strong> код состояния ответа указывает, что версия HTTP, используемая в запросе, не поддерживается сервером.</p>
+HTTP **`505`\*\***` HTTP Version Not Supported`\*\* код состояния ответа указывает, что версия HTTP, используемая в запросе, не поддерживается сервером.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">505 HTTP Version Not Supported</pre>
+```
+505 HTTP Version Not Supported
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                     | Название                                                      |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTTPHeader("Upgrade")}}</li>
-</ul>
+- {{HTTPHeader("Upgrade")}}

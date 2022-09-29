@@ -3,49 +3,41 @@ title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
 translation_of: Web/HTTP/Status/407
 ---
-<div>
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>407 Proxy Authentication Required </code></strong>код ответа на ошибку клиента указывает, что запрос не был применён, поскольку он не имеет достоверных учётных данных для {{Glossary("proxy server")}}, который находится между браузером и сервером, который может получить доступ к запрашиваемому ресурсу..</p>
+HTTP **`407 Proxy Authentication Required `**код ответа на ошибку клиента указывает, что запрос не был применён, поскольку он не имеет достоверных учётных данных для {{Glossary("proxy server")}}, который находится между браузером и сервером, который может получить доступ к запрашиваемому ресурсу..
 
-<p>Этот статус отправляется с {{HTTPHeader("Proxy-Authenticate")}}, который содержит информацию о том, как правильно разрешить авторизацию.</p>
-</div>
+Этот статус отправляется с {{HTTPHeader("Proxy-Authenticate")}}, который содержит информацию о том, как правильно разрешить авторизацию.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">407 Proxy Authentication Required </pre>
+```
+407 Proxy Authentication Required
+```
 
-<h2 id="Пример_ответа">Пример ответа</h2>
+## Пример ответа
 
-<pre>HTTP/1.1 407 Proxy Authentication Required
+```
+HTTP/1.1 407 Proxy Authentication Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"</pre>
+Proxy-Authenticate: Basic realm="Access to internal site"
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "407 Proxy Authentication Required" , "3.2")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                     | Название                 |
+| -------------------------------------------------------------------------------- | ------------------------ |
+| {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}</li>
-</ul>
+## Смотрите также
+
+- [HTTP authentication](/ru/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}

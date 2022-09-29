@@ -3,56 +3,50 @@ title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
 translation_of: Web/HTTP/Status/451
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p> HTTP-код ответа <code><strong>451</strong></code><strong><code> Unavailable For Legal Reasons</code></strong>  указывает, что пользователь запросил ресурс, который недоступен по юридическим причинам, например веб-страница, заблокированная из-за судебных исков.</p>
+HTTP-код ответа **`451`\*\***` Unavailable For Legal Reasons`\*\* указывает, что пользователь запросил ресурс, который недоступен по юридическим причинам, например веб-страница, заблокированная из-за судебных исков.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">451 Unavailable For Legal Reasons</pre>
+```
+451 Unavailable For Legal Reasons
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этот пример ответа берётся из IETF RFC (см. ниже) и содержит ссылку на {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.</p>
+Этот пример ответа берётся из IETF RFC (см. ниже) и содержит ссылку на {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.
 
-<p>Обратите внимание, что {{HTTPHeader("Link")}}также может содержать отношение a <code>rel="blocked-by"</code>, идентифицирующее объект, ответственный за недоступный ресурс, например имя человека или организации, которые предъявили законный запрос В результате чего удаление содержимого.</p>
+Обратите внимание, что {{HTTPHeader("Link")}}также может содержать отношение a `rel="blocked-by"`, идентифицирующее объект, ответственный за недоступный ресурс, например имя человека или организации, которые предъявили законный запрос В результате чего удаление содержимого.
 
-<pre>HTTP/1.1 451 Unavailable For Legal Reasons
-Link: &lt;https://spqr.example.org/legislatione&gt;; rel="blocked-by"
+```
+HTTP/1.1 451 Unavailable For Legal Reasons
+Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
 Content-Type: text/html
 
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;Unavailable For Legal Reasons&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Unavailable For Legal Reasons&lt;/h1&gt;
-&lt;p&gt;This request may not be serviced in the Roman Province
+<html>
+<head><title>Unavailable For Legal Reasons</title></head>
+<body>
+<h1>Unavailable For Legal Reasons</h1>
+<p>This request may not be serviced in the Roman Province
 of Judea due to the Lex Julia Majestatis, which disallows
 access to resources hosted on servers deemed to be
-operated by the People's Front of Judea.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+operated by the People's Front of Judea.</p>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7725", "451 Unavailable For Legal Reasons")}}</td>
-   <td>An HTTP Status Code to Report Legal Obstacles</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                         | Название                                      |
+| -------------------------------------------------------------------- | --------------------------------------------- |
+| {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}</li>
- <li>{{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)</li>
-</ul>
+## Смотрите также
+
+- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
+- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)

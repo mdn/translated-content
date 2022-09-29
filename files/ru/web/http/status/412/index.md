@@ -3,37 +3,29 @@ title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
 translation_of: Web/HTTP/Status/412
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <code><strong>412</strong></code><strong><code> Precondition Failed</code></strong> клиентский код ответа на ошибку указывает, что доступ к целевому ресурсу был отклонён. Это происходит с условными запросами на методы, отличные от  {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}}, когда условие определено {{HTTPHeader("If-Unmodified-Since")}} или {HTTPHeader("If-None-Match")}} не выполняется. В этом случае запрос, обычно загрузка или изменение ресурса, не может быть выполнен, и этот ответ об ошибке отправляется обратно.</p>
+The HTTP **`412`\*\***` Precondition Failed`\*\* клиентский код ответа на ошибку указывает, что доступ к целевому ресурсу был отклонён. Это происходит с условными запросами на методы, отличные от {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}}, когда условие определено {{HTTPHeader("If-Unmodified-Since")}} или {HTTPHeader("If-None-Match")}} не выполняется. В этом случае запрос, обычно загрузка или изменение ресурса, не может быть выполнен, и этот ответ об ошибке отправляется обратно.
 
-<h2 id="Статус">Статус</h2>
+## Статус
 
-<pre class="syntaxbox">412 Precondition Failed</pre>
+```
+412 Precondition Failed
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "412 Precondition Failed" , "4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                         | Название                                                     |
+| -------------------------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузером
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPStatus("304")}}</li>
- <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
- <li>{{HTTPStatus("428")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPStatus("304")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("428")}}

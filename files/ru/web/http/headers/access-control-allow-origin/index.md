@@ -4,89 +4,81 @@ slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок ответа <code><strong>Access-Control-Allow-Origin</strong></code> показывает, может ли ответ сервера быть доступен коду, отправляющему запрос с данного источника {{glossary("origin")}}.</p>
+Заголовок ответа **`Access-Control-Allow-Origin`** показывает, может ли ответ сервера быть доступен коду, отправляющему запрос с данного источника {{glossary("origin")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origin&gt;
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origin>
 Access-Control-Allow-Origin: null
-</pre>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt><code>*</code></dt>
- <dd>Для запросов <em>без учётных данных</em>. Значение "<code>*</code>" может быть использован как шаблон; значение указывает браузеру разрешить запросы из любых источников. Попытка использовать шаблон с учётными данными приведёт к <a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">ошибке</a>.</dd>
- <dt><code>&lt;origin&gt;</code></dt>
- <dd>Указывает источник. Может быть указан только один источник.</dd>
- <dt><code>null</code></dt>
- <dd>Определяет в качестве источника "null".
- <div class="note"><strong>Замечание:</strong> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">Не используйте</a> <code>null</code>: "Может показаться, что вернуть <code>Access-Control-Allow-Origin: "null"</code> безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как <code>data:</code> или <code>file:</code>), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу с заголовком <code>Access-Control-Allow-Origin: "null"</code>, и любой источник может создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."</div>
- </dd>
-</dl>
+- `*`
+  - : Для запросов _без учётных данных_. Значение "`*`" может быть использован как шаблон; значение указывает браузеру разрешить запросы из любых источников. Попытка использовать шаблон с учётными данными приведёт к [ошибке](/ru/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+- `<origin>`
+  - : Указывает источник. Может быть указан только один источник.
+- `null`
 
-<h2 id="Примеры">Примеры</h2>
+  - : Определяет в качестве источника "null".
 
-<p>Ответ, который указывает браузеру разрешить доступ к ресурсу из любого источника:</p>
+    > **Примечание:** **Замечание:** [Не используйте](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null) `null`: "Может показаться, что вернуть `Access-Control-Allow-Origin: "null"` безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как `data:` или `file:`), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу с заголовком `Access-Control-Allow-Origin: "null"`, и любой источник может создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."
 
-<pre>Access-Control-Allow-Origin: *</pre>
+## Примеры
 
-<p>Ответ, который указывает браузеру разрешить доступ к ресурсу только из источника <code>https://developer.mozilla.org</code>:</p>
+Ответ, который указывает браузеру разрешить доступ к ресурсу из любого источника:
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+```
+Access-Control-Allow-Origin: *
+```
 
-<p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешённым набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, сравнить его с разрешённым списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
+Ответ, который указывает браузеру разрешить доступ к ресурсу только из источника `https://developer.mozilla.org`:
 
-<h3 id="CORS_и_кеширование">CORS и кеширование</h3>
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
-<p>Если сервер послал ответ со значением <code>Access-Control-Allow-Origin</code>, которое содержит явное указание источника (а не шаблонное значение "<code>*</code>"), тогда ответ также должен включать в себя заголовок {{HTTPHeader("Vary")}} со значением <code>Origin</code> — чтобы указать браузеру, что ответы с сервера могут отличаться в зависимости от заголовка запроса <code>Origin</code>.</p>
+Чтобы ограничить `Access-Control-Allow-Origin` разрешённым набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, сравнить его с разрешённым списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение `Access-Control-Allow-Origin`, равное значению {{HTTPHeader("Origin")}}.
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
+### CORS и кеширование
 
-<h2 id="Спецификации">Спецификации</h2>
+Если сервер послал ответ со значением `Access-Control-Allow-Origin`, которое содержит явное указание источника (а не шаблонное значение "`*`"), тогда ответ также должен включать в себя заголовок {{HTTPHeader("Vary")}} со значением `Origin` — чтобы указать браузеру, что ответы с сервера могут отличаться в зависимости от заголовка запроса `Origin`.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Спецификации
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+| Спецификации                                                                                                         | Статус                   | Комментарий            |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------- |
+| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Начальное определение. |
 
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li>{{httpheader("Cross-Origin-Resource-Policy")}}</li>
-</ul>
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}
+- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
+- {{httpheader("Cross-Origin-Resource-Policy")}}

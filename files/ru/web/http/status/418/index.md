@@ -10,36 +10,26 @@ tags:
   - шутка
 translation_of: Web/HTTP/Status/418
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<div> </div>
+HTTP код ошибки **`418 I'm a teapot`** сообщает о том, что сервер не может приготовить кофе, потому что он чайник. Эта ошибка ссылается на Hyper Text Coffee Pot Control Protocol (гипертекстовый протокол кофейников) который был первоапрельской шуткой в 1998 году.
 
-<p>HTTP код ошибки <strong><code>418 I'm a teapot</code></strong> сообщает о том, что сервер не может приготовить кофе, потому что он чайник. Эта ошибка ссылается на Hyper Text Coffee Pot Control Protocol (гипертекстовый протокол кофейников) который был первоапрельской шуткой в 1998 году.</p>
+## Статус
 
-<h2 id="Статус">Статус</h2>
+```
+418 I'm a teapot
+```
 
-<pre class="syntaxbox">418 I'm a teapot</pre>
+## Спецификации
 
-<h2 id="Спецификации">Спецификации</h2>
+| Specification                                                | Title                                                                      |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("2324", "418 I'm a teapot" , "2.3.2")}}</td>
-   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## Поддержка браузерами
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}</li>
-</ul>
+- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}

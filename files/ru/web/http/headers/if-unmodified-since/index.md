@@ -9,93 +9,81 @@ tags:
 translation_of: Web/HTTP/Headers/If-Unmodified-Since
 original_slug: Web/HTTP/Заголовки/If-Unmodified-Since
 ---
-<div>
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP-заголовок запроса <code><strong>If-Unmodified-Since</strong></code> делает запрос условным: сервер отправит обратно запрошенный ресурс или примет его в случае {{HTTPMethod("POST")}} или другого {{Glossary("safe", "небезопасного")}} метода, только если он не был последним изменён после указанной даты. Если запрос был изменён после указанной даты, то ответ будет {{HTTPStatus("412")}} (Precondition Failed) ошибка.</p>
+HTTP-заголовок запроса **`If-Unmodified-Since`** делает запрос условным: сервер отправит обратно запрошенный ресурс или примет его в случае {{HTTPMethod("POST")}} или другого {{Glossary("safe", "небезопасного")}} метода, только если он не был последним изменён после указанной даты. Если запрос был изменён после указанной даты, то ответ будет {{HTTPStatus("412")}} (Precondition Failed) ошибка.
 
-<p>Существует два распространённых варианта использования:</p>
+Существует два распространённых варианта использования:
 
-<ul>
- <li>В сочетании с другими {{Glossary("safe", "небезопасными")}} методами, такими как {{HTTPMethod("POST")}}, он может использоваться для реализации <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic concurrency control</a>, например, сделанного некоторыми вики-версиями: выпуски отклоняются, если сохранённый документ был изменён с момента восстановления оригинала.</li>
-</ul>
-</div>
+- В сочетании с другими {{Glossary("safe", "небезопасными")}} методами, такими как {{HTTPMethod("POST")}}, он может использоваться для реализации [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), например, сделанного некоторыми вики-версиями: выпуски отклоняются, если сохранённый документ был изменён с момента восстановления оригинала.
 
-<ul>
- <li>В сочетании с запросом диапазона с {{HTTPHeader("If-Range")}} его можно использовать для обеспечения того, чтобы новый фрагмент запрашивался из немодифицированного документа.</li>
-</ul>
+<!---->
+
+- В сочетании с запросом диапазона с {{HTTPHeader("If-Range")}} его можно использовать для обеспечения того, чтобы новый фрагмент запрашивался из немодифицированного документа.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Request header", "Заголовок запроса")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>
+        {{Glossary("Request header", "Заголовок запроса")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">If-Unmodified-Since: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+```
+If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;day-name&gt;</dt>
- <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
- <dt>&lt;day&gt;</dt>
- <dd>2 digit day number, e.g. "04" or "23".</dd>
- <dt>&lt;month&gt;</dt>
- <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).</dd>
- <dt>&lt;year&gt;</dt>
- <dd>4 digit year number, e.g. "1990" or "2016".</dd>
- <dt>&lt;hour&gt;</dt>
- <dd>2 digit hour number, e.g. "09" or "23".</dd>
- <dt>&lt;minute&gt;</dt>
- <dd>2 digit minute number, e.g. "04" or "59".</dd>
- <dt>&lt;second&gt;</dt>
- <dd>2 digit second number, e.g. "04" or "59".</dd>
- <dt><code>GMT</code></dt>
- <dd>
- <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.</p>
- </dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
+If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "If-Unmodified-Since", "3.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                 | Заголовок                                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| {{RFC("7232", "If-Unmodified-Since", "3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPStatus("412")}}<code> Precondition Failed</code></li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPHeader("If-Range")}}
+- {{HTTPStatus("412")}}` Precondition Failed`

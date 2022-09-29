@@ -8,91 +8,93 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/DELETE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>Метод запроса HTTP DELETE</strong> удаляет указанный ресурс.</p>
+**Метод запроса HTTP DELETE** удаляет указанный ресурс.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Запрос имеет тело</th>
-   <td>Может</td>
-  </tr>
-  <tr>
-   <th scope="row">Успешный ответ имеет тело</th>
-   <td>Может</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe","Безопасный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent","Идемпотентный")}}</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable","Кешируемый")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допускается в <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Запрос имеет тело</th>
+      <td>Может</td>
+    </tr>
+    <tr>
+      <th scope="row">Успешный ответ имеет тело</th>
+      <td>Может</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Safe","Безопасный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Idempotent","Идемпотентный")}}
+      </th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable","Кешируемый")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Допускается в
+        <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms"
+          >HTML-формах</a
+        >
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">DELETE /file.html HTTP/1.1
-</pre>
+```
+DELETE /file.html HTTP/1.1
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="Запрос">Запрос</h3>
+### Запрос
 
-<pre>DELETE /file.html HTTP/1.1</pre>
+```
+DELETE /file.html HTTP/1.1
+```
 
-<h3 id="Ответ">Ответ</h3>
+### Ответ
 
-<p>Если метод <code>DELETE</code> успешно выполняется, то возможны следующие коды состояния ответа:</p>
+Если метод `DELETE` успешно выполняется, то возможны следующие коды состояния ответа:
 
-<ul>
- <li> {{HTTPStatus("202")}} (<code>Accepted</code>) код состояния, если удаление будет успешным, но ещё не выполнено.</li>
- <li> {{HTTPStatus("204")}} (<code>No Content</code>) код ответа, если удаление было выполнено, но тело ответа отсутствует.</li>
- <li> {{HTTPStatus("200")}} (<code>OK</code>) код ответа, если удаление было выполнено, и ответ содержит код и объект описывающий состояние.</li>
-</ul>
+- {{HTTPStatus("202")}} (`Accepted`) код состояния, если удаление будет успешным, но ещё не выполнено.
+- {{HTTPStatus("204")}} (`No Content`) код ответа, если удаление было выполнено, но тело ответа отсутствует.
+- {{HTTPStatus("200")}} (`OK`) код ответа, если удаление было выполнено, и ответ содержит код и объект описывающий состояние.
 
-<pre>HTTP/1.1 200 OK
+```
+HTTP/1.1 200 OK
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;File deleted.&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+<html>
+  <body>
+    <h1>File deleted.</h1>
+  </body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "DELETE", "4.3.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                 | Заголовок                                                     |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "DELETE", "4.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}</li>
-</ul>
+## Смотрите также
+
+- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}

@@ -9,59 +9,61 @@ tags:
 translation_of: Web/HTTP/Headers/Expires
 original_slug: Web/HTTP/Заголовки/Expires
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок <code><strong>Expires</strong></code><strong> </strong>содержит дату/время, по истечении которой ответ сервера считается устаревшим.</p>
+Заголовок **`Expires`\*\*** \*\*содержит дату/время, по истечении которой ответ сервера считается устаревшим.
 
-<p>Прошедшая или невалидная дата, например 0, обозначает, что ресурс уже устарел.</p>
+Прошедшая или невалидная дата, например 0, обозначает, что ресурс уже устарел.
 
-<p>Если в ответе с сервера установлен заголовок {{HTTPHeader("Cache-Control")}} с директивами "max-age" или "s-maxage" , заголовок <code>Expires</code> игнорируется. </p>
+Если в ответе с сервера установлен заголовок {{HTTPHeader("Cache-Control")}} с директивами "max-age" или "s-maxage" , заголовок `Expires` игнорируется.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS безопасный заголовок ")}}</th>
-   <td>да</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple response header", "CORS безопасный заголовок ")}}
+      </th>
+      <td>да</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Expires: &lt;http-date&gt;
-</pre>
+```
+Expires: <http-date>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt>&lt;http-date&gt;</dt>
- <dd>
- <p>HTTP-дата и время.</p>
- </dd>
-</dl>
+- \<http-date>
+  - : HTTP-дата и время.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>Expires: Wed, 21 Oct 2015 07:28:00 GMT</pre>
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
-<p>{{Compat}}</p>
+## Совместимость браузера
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Age")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Age")}}

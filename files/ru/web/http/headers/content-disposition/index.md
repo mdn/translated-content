@@ -8,79 +8,82 @@ tags:
 translation_of: Web/HTTP/Headers/Content-Disposition
 original_slug: Web/HTTP/Заголовки/Content-Disposition
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}В обычном HTTP-ответе заголовок **`Content-Disposition`** является индикатором того, что ожидаемый контент ответа будет отображаться в браузере, как веб-страница или часть веб-страницы, или же как вложение, которое затем может быть скачано и сохранено локально.
 
-<div>В обычном HTTP-ответе заголовок <code><strong>Content-Disposition</strong></code> является индикатором того, что ожидаемый контент ответа будет отображаться в браузере, как веб-страница или часть веб-страницы, или же как вложение, которое затем может быть скачано и сохранено локально.</div>
+В случае, если тело HTTP-запроса типа `multipart/form-data`, то общий заголовок **`Content-Disposition`** используется для каждой из составных частей multipart тела для указания дополнительных сведений по полю, к которому применён заголовок. Каждая часть отделена с помощью _границы (boundary)_, определённой в заголовке {{HTTPHeader("Content-Type")}}. `Content-Disposition,` используемый непосредственно для всего тела HTTP-запроса, ни на что не влияет.
 
-<div> </div>
-
-<p>В случае, если тело HTTP-запроса типа <code>multipart/form-data</code>, то общий заголовок <strong><code>Content-Disposition</code></strong> используется для каждой из составных частей multipart тела для указания дополнительных сведений по полю, к которому применён заголовок. Каждая часть отделена с помощью <em>границы (boundary)</em>, определённой в заголовке {{HTTPHeader("Content-Type")}}. <code>Content-Disposition,</code> используемый непосредственно для всего тела HTTP-запроса, ни на что не влияет.</p>
-
-<p>Заголовок <code>Content-Disposition</code> определён для более широкого контекста MIME-сообщений для e-mail, поэтому для HTTP-форм и {{HTTPMethod("POST")}}-запросов используются только несколько допустимых параметров. В контексте HTTP можно использовать только значение <code>form-data</code>, а также опциональные директивы <code>name</code> и <code>filename</code>.</p>
+Заголовок `Content-Disposition` определён для более широкого контекста MIME-сообщений для e-mail, поэтому для HTTP-форм и {{HTTPMethod("POST")}}-запросов используются только несколько допустимых параметров. В контексте HTTP можно использовать только значение `form-data`, а также опциональные директивы `name` и `filename`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Response header", "Заголовок ответа")}} (для тела ответа простого типа)<br>
-    {{Glossary("General header", "Основной заголовок")}} (для каждой части составного тела)</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
-   <td>нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>
+        {{Glossary("Response header", "Заголовок ответа")}}
+        (для тела ответа простого типа)<br />{{Glossary("General header", "Основной заголовок")}}
+        (для каждой части составного тела)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+      </th>
+      <td>нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Как_заголовок_ответа_с_обычным_телом">Как заголовок ответа с обычным телом</h3>
+### Как заголовок ответа с обычным телом
 
-<p>Первым параметром в контексте HTTP должен быть или <code>inline</code> (это значение по умолчанию, указывающее, что контент должен быть отображён внутри веб-страницы или как веб-страница) или <code>attachment</code> (указывает на скачиваемый контент; большинство браузеров отображают диалог "Сохранить как" с заранее заполненным именем файла из параметра <code>filename</code>, если он задан).</p>
+Первым параметром в контексте HTTP должен быть или `inline` (это значение по умолчанию, указывающее, что контент должен быть отображён внутри веб-страницы или как веб-страница) или `attachment` (указывает на скачиваемый контент; большинство браузеров отображают диалог "Сохранить как" с заранее заполненным именем файла из параметра `filename`, если он задан).
 
-<pre class="syntaxbox">Content-Disposition: inline
+```
+Content-Disposition: inline
 Content-Disposition: attachment
-Content-Disposition: attachment; filename="filename.jpg"</pre>
+Content-Disposition: attachment; filename="filename.jpg"
+```
 
-<h3 id="Как_заголовок_в_составном_теле">Как заголовок в составном теле</h3>
+### Как заголовок в составном теле
 
-<p>Первым параметром в контексте HTTP всегда является <code>form-data</code>; дополнительные параметры регистронезависимые и могут иметь аргументы, значения которых следуют после знака <code>'='</code> и берутся в кавычки. Несколько параметров разделяются через точку с запятой (<code>';'</code>).</p>
+Первым параметром в контексте HTTP всегда является `form-data`; дополнительные параметры регистронезависимые и могут иметь аргументы, значения которых следуют после знака `'='` и берутся в кавычки. Несколько параметров разделяются через точку с запятой (`';'`).
 
-<pre class="syntaxbox">Content-Disposition: form-data
+```
+Content-Disposition: form-data
 Content-Disposition: form-data; name="fieldName"
-Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
+Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
+```
 
-<h3 id="Директивы">Директивы</h3>
+### Директивы
 
-<dl>
- <dt><code>name</code></dt>
- <dd>За параметром следует строка с именем HTML-поля на форме, к которому относится данная часть составного тела. При работе с несколькими файлами в том же самом поле (например, атрибуты {{htmlattrxref("multiple", "input")}} элемента <code>{{HTMLElement("input","&lt;input type=file&gt;")}}</code>), могут быть несколько частей с одинаковым именем.<br>
- Если <code>name</code> имеет значение <code>'_charset_'</code>, указывающее, что данная часть не является HTML-полем, то она содержит кодировку по умолчанию для всех частей, в которых явно кодировка не указана.</dd>
- <dt><code>filename</code></dt>
- <dd>За параметром указана строка с оригинальным именем передаваемого файла. Это имя опционально и не может слепо использоваться приложением: информация о пути должна быть очищена и должно быть сделано преобразование к файловой системе сервера. Этот параметр предоставляет в основном справочную информацию. Когда используется в комбинации с <code>Content-Disposition: attachment</code>, это значение будет использовано как имя файла по умолчанию для диалога "Сохранить как".</dd>
- <dt>filename*</dt>
- <dd>
- <p>Оба параметра "filename" и "filename*" отличаются только тем, что "filename*"  использует кодирование, определённое в <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a>. Когда присутствуют оба параметра "filename" и "filename*" в одном поле заголовке, то преимущество имеет "filename*" над "filename", но только в случае когда оба значения корректны.</p>
- </dd>
-</dl>
+- `name`
+  - : За параметром следует строка с именем HTML-поля на форме, к которому относится данная часть составного тела. При работе с несколькими файлами в том же самом поле (например, атрибуты {{htmlattrxref("multiple", "input")}} элемента `{{HTMLElement("input","&lt;input type=file&gt;")}}`), могут быть несколько частей с одинаковым именем.
+    Если `name` имеет значение `'_charset_'`, указывающее, что данная часть не является HTML-полем, то она содержит кодировку по умолчанию для всех частей, в которых явно кодировка не указана.
+- `filename`
+  - : За параметром указана строка с оригинальным именем передаваемого файла. Это имя опционально и не может слепо использоваться приложением: информация о пути должна быть очищена и должно быть сделано преобразование к файловой системе сервера. Этот параметр предоставляет в основном справочную информацию. Когда используется в комбинации с `Content-Disposition: attachment`, это значение будет использовано как имя файла по умолчанию для диалога "Сохранить как".
+- filename\*
+  - : Оба параметра "filename" и "filename\*" отличаются только тем, что "filename\*" использует кодирование, определённое в [RFC 5987](https://tools.ietf.org/html/rfc5987). Когда присутствуют оба параметра "filename" и "filename\*" в одном поле заголовке, то преимущество имеет "filename\*" над "filename", но только в случае когда оба значения корректны.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Ответ, вызывающий диалог "Сохранить как":</p>
+Ответ, вызывающий диалог "Сохранить как":
 
-<pre>200 OK
+```
+200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 22
 
-&lt;HTML&gt;Save me!&lt;/HTML&gt;
-</pre>
+<HTML>Save me!</HTML>
+```
 
-<p>Простой HTML-файл будет сохранён как обычное сохранение с диалогом "Сохранить как" вместо отображения контента файла в браузере. Большинство браузеров предложат его сохранить под именем <code>cool.html</code> (это поведение по умолчанию).</p>
+Простой HTML-файл будет сохранён как обычное сохранение с диалогом "Сохранить как" вместо отображения контента файла в браузере. Большинство браузеров предложат его сохранить под именем `cool.html` (это поведение по умолчанию).
 
-<p>Пример HTML-формы, переданной через POST с использованием формата <code>multipart/form-data</code>, который использует заголовок <code>Content-Disposition</code>:</p>
+Пример HTML-формы, переданной через POST с использованием формата `multipart/form-data`, который использует заголовок `Content-Disposition`:
 
-<pre>POST /test.html HTTP/1.1
+```
+POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 
@@ -92,44 +95,27 @@ value1
 Content-Disposition: form-data; name="field2"; filename="example.txt"
 
 value2
---boundary--</pre>
+--boundary--
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Название</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7578")}}</td>
-   <td>Returning Values from Forms: multipart/form-data</td>
-  </tr>
-  <tr>
-   <td>{{RFC("6266")}}</td>
-   <td>Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)</td>
-  </tr>
-  <tr>
-   <td>{{RFC("2183")}}</td>
-   <td>Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация         | Название                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
+| {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
+| {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Замечания_по_совместимости">Замечания по совместимости</h2>
+{{Compat}}
 
-<ul>
- <li>Firefox 5 обрабатывает <code>Content-Disposition заголовка</code> HTTP-ответа response более эффективно, если присутствуют оба параметра <code>filename</code> и <code>filename*</code>; он просматривает сначала все предоставленные имена <code>filename*</code>, даже есть вначале идут <code>filename</code>. Ранее использовалось первое найденное имя. See {{bug(588781)}}.</li>
-</ul>
+## Замечания по совместимости
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+- Firefox 5 обрабатывает `Content-Disposition заголовка` HTTP-ответа response более эффективно, если присутствуют оба параметра `filename` и `filename*`; он просматривает сначала все предоставленные имена `filename*`, даже есть вначале идут `filename`. Ранее использовалось первое найденное имя. See {{bug(588781)}}.
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML-формы</a></li>
- <li>{{HTTPHeader("Content-Type")}} определяет границу для частей составного тела.</li>
- <li>Интерфейс {{domxref("FormData")}} используется для обработки данных форм для использования в API {{domxref("XMLHttpRequest")}}.</li>
-</ul>
+## Смотрите также
+
+- [HTML-формы](/ru/docs/Web/Guide/HTML/Forms)
+- {{HTTPHeader("Content-Type")}} определяет границу для частей составного тела.
+- Интерфейс {{domxref("FormData")}} используется для обработки данных форм для использования в API {{domxref("XMLHttpRequest")}}.

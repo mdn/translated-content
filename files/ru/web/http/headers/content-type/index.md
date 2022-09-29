@@ -4,64 +4,67 @@ slug: Web/HTTP/Headers/Content-Type
 translation_of: Web/HTTP/Headers/Content-Type
 original_slug: Web/HTTP/Заголовки/Content-Type
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок-сущность <strong><code>Content-Type</code></strong> используется для того, чтобы определить {{Glossary("MIME type","MIME тип")}} ресурса.</p>
+Заголовок-сущность **`Content-Type`** используется для того, чтобы определить {{Glossary("MIME type","MIME тип")}} ресурса.
 
-<p>В ответах сервера заголовок <code>Content-Type</code> сообщает клиенту, какой будет тип передаваемого контента. В некоторых случаях браузеры пытаются сами определить MIME тип передаваемого контента, но их реакция может быть неадекватной. Чтобы предотвратить такие ситуации, вы можете установить в заголовке {{HTTPHeader("X-Content-Type-Options")}} значение <code>nosniff</code>.</p>
+В ответах сервера заголовок `Content-Type` сообщает клиенту, какой будет тип передаваемого контента. В некоторых случаях браузеры пытаются сами определить MIME тип передаваемого контента, но их реакция может быть неадекватной. Чтобы предотвратить такие ситуации, вы можете установить в заголовке {{HTTPHeader("X-Content-Type-Options")}} значение `nosniff`.
 
-<p>В запросах (таких, как {{HTTPMethod("POST")}} или {{HTTPMethod("PUT")}}), клиент сообщает серверу тип отправляемых данных.</p>
+В запросах (таких, как {{HTTPMethod("POST")}} или {{HTTPMethod("PUT")}}), клиент сообщает серверу тип отправляемых данных.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
-   <td>да</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Entity header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+      </th>
+      <td>да</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Content-Type: text/html; charset=utf-8
+```
+Content-Type: text/html; charset=utf-8
 Content-Type: multipart/form-data; boundary=something
-</pre>
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt><code>media-type</code></dt>
- <dd><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME тип</a> ресурса или данных.</dd>
- <dt>charset</dt>
- <dd>Используемая кодировка.</dd>
- <dt>boundary</dt>
- <dd>Директива <code>boundary</code> обязательна для составных сущностей. Она содержит от 1 до 70 символов (не должна заканчиваться пробелом), которые без искажений пройдут через шлюзы email и служит для корректной инкапсуляции всех частей составной сущности.</dd>
-</dl>
+- `media-type`
+  - : [MIME тип](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types) ресурса или данных.
+- charset
+  - : Используемая кодировка.
+- boundary
+  - : Директива `boundary` обязательна для составных сущностей. Она содержит от 1 до 70 символов (не должна заканчиваться пробелом), которые без искажений пройдут через шлюзы email и служит для корректной инкапсуляции всех частей составной сущности.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Content-Type_в_HTML_формах"><code>Content-Type</code> в HTML формах</h3>
+### `Content-Type` в HTML формах
 
-<p>В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, <code>Content-Type</code> запроса определяется в атрибуте <code>enctype</code> тега {{HTMLElement("form")}}.</p>
+В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, `Content-Type` запроса определяется в атрибуте `enctype` тега {{HTMLElement("form")}}.
 
-<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
-  &lt;input type="text" name="description" value="some text"&gt;
-  &lt;input type="file" name="myFile"&gt;
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="/" method="post" enctype="multipart/form-data">
+  <input type="text" name="description" value="some text">
+  <input type="file" name="myFile">
+  <button type="submit">Submit</button>
+</form>
+```
 
-<p>Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):</p>
+Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):
 
-<pre>POST /foo HTTP/1.1
+```
+POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 
@@ -75,35 +78,22 @@ Content-Type: text/plain
 
 (content of the uploaded file foo.txt)
 -----------------------------974767299852498929531610575--
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Заголовок</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "Content-Type in multipart", "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Content-Type", "3.1.1.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                         | Заголовок                                                     |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
- <li>{{HTTPStatus("206")}} Partial Content</li>
- <li>{{HTTPHeader("X-Content-Type-Options")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Content-Disposition")}}
+- {{HTTPStatus("206")}} Partial Content
+- {{HTTPHeader("X-Content-Type-Options")}}

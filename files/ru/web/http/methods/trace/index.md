@@ -7,55 +7,63 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/TRACE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP Метод <code>TRACE</code></strong> выполняет проверку обратной связи по пути к целевому ресурсу, предоставляя полезный механизм отладки.</p>
+**HTTP Метод `TRACE`** выполняет проверку обратной связи по пути к целевому ресурсу, предоставляя полезный механизм отладки.
 
-<p>Конечный получатель запроса должен отразить полученное сообщение, исключая некоторые поля описанные ниже, назад клиенту как тело сообщения с ответом 200 (<code>OK</code>) с заголовком {{httpheader("Content-Type")}} <code>message/http</code>. Конечный получатель это либо исходный сервер, либо первый сервер получивший значение {{httpheader("Max-Forwards")}} в запросе.</p>
+Конечный получатель запроса должен отразить полученное сообщение, исключая некоторые поля описанные ниже, назад клиенту как тело сообщения с ответом 200 (`OK`) с заголовком {{httpheader("Content-Type")}} `message/http`. Конечный получатель это либо исходный сервер, либо первый сервер получивший значение {{httpheader("Max-Forwards")}} в запросе.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Запрос имеет тело</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Успешный ответ имеет тело</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe", "Безопасный")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent", "Идемпотентный")}}</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable", "Кешируемый")}}</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
-   <td>Нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Запрос имеет тело</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Успешный ответ имеет тело</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Safe", "Безопасный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Idempotent", "Идемпотентный")}}
+      </th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "Кешируемый")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+      </th>
+      <td>Нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">TRACE /index.html
-</pre>
+```
+TRACE /index.html
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ru/docs/Web/HTTP/Methods">HTTP methods</a></li>
-</ul>
+## Смотрите также
+
+- [HTTP methods](/ru/docs/Web/HTTP/Methods)

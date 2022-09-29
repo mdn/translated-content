@@ -4,60 +4,57 @@ slug: Web/HTTP/Headers/Accept-Charset
 translation_of: Web/HTTP/Headers/Accept-Charset
 original_slug: Web/HTTP/Заголовки/Accept-Charset
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Заголовок <strong><code>Accept-Charset</code></strong> запроса HTTP сообщает какую кодировку клиент может понять. Используя <a href="/en-US/docs/Web/HTTP/Content_negotiation">согласование контента</a>, сервер выбирает один из предложенных вариантов, использует его и информирует клиент о своём выборе в {{HTTPHeader("Content-Type")}} ответном заголовке. Браузер обычно не устанавливает этот заголовок, т.к. значение по умолчанию для каждого контентного типа обычно корректный  и передача его позволит с большей лёгкостью получить цифровой отпечаток.</p>
+Заголовок **`Accept-Charset`** запроса HTTP сообщает какую кодировку клиент может понять. Используя [согласование контента](/ru/docs/Web/HTTP/Content_negotiation), сервер выбирает один из предложенных вариантов, использует его и информирует клиент о своём выборе в {{HTTPHeader("Content-Type")}} ответном заголовке. Браузер обычно не устанавливает этот заголовок, т.к. значение по умолчанию для каждого контентного типа обычно корректный и передача его позволит с большей лёгкостью получить цифровой отпечаток.
 
-<p>Если сервер не может обслужить никакую из предоставленных кодировок, теоретически он может вернуть {{HTTPStatus("406")}} (Not Acceptable) код ошибки. Но, для более лучшего пользовательского опыта, это редко делается и более частый способ в этом случае, это просто игнорирование заголовка <code>Accept-Charset</code>.</p>
+Если сервер не может обслужить никакую из предоставленных кодировок, теоретически он может вернуть {{HTTPStatus("406")}} (Not Acceptable) код ошибки. Но, для более лучшего пользовательского опыта, это редко делается и более частый способ в этом случае, это просто игнорирование заголовка `Accept-Charset`.
 
-<div class="note">
-<p>В более ранних версиях HTTP/1.1, кодировка  по умолчанию (<code>ISO-8859-1</code>) была определена. Теперь это не так и каждый контентый тип может иметь своё собственное дефолтное значение.</p>
-</div>
+> **Примечание:** В более ранних версиях HTTP/1.1, кодировка по умолчанию (`ISO-8859-1`) была определена. Теперь это не так и каждый контентый тип может иметь своё собственное дефолтное значение.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Тип заголовка</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>Да</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>Да</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">Accept-Charset: &lt;кодировка&gt;
+```
+Accept-Charset: <кодировка>
 
 // Множественные типы, придающие вес с {{glossary("quality values", "quality value")}} синтаксисом:
-Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
+Accept-Charset: utf-8, iso-8859-1;q=0.5
+```
 
-<h2 id="Директивы">Директивы</h2>
+## Директивы
 
-<dl>
- <dt><code>&lt;charset&gt;</code></dt>
- <dd>Кодировка типа <code>utf-8</code> или <code>iso-8859-15.</code></dd>
- <dt><code>*</code></dt>
- <dd>Любая кодировка не указанная нигде в заголовке; <code>'*'</code> используется как групповой символ.</dd>
- <dt><code>;q=</code> (q-factor weighting)</dt>
- <dd>Любое значение помещается в порядке предпочтения, выраженного с использованием относительного значения качества, называемого <em>весом</em>.</dd>
-</dl>
+- `<charset>`
+  - : Кодировка типа `utf-8` или `iso-8859-15.`
+- `*`
+  - : Любая кодировка не указанная нигде в заголовке; `'*'` используется как групповой символ.
+- `;q=` (q-factor weighting)
+  - : Любое значение помещается в порядке предпочтения, выраженного с использованием относительного значения качества, называемого _весом_.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>Accept-Charset: iso-8859-1
+```
+Accept-Charset: iso-8859-1
 
 Accept-Charset: utf-8, iso-8859-1;q=0.5
 
 Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
-</pre>
+```
 
-<p>Смотрите также</p>
+Смотрите также
 
-<ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
- <li>Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}</li>
- <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}</li>
-</ul>
+- HTTP [content negotiation](/ru/docs/Web/HTTP/Content_negotiation)
+- Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
+- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
