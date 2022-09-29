@@ -7,74 +7,51 @@ tags:
   - short-name
 translation_of: Web/Manifest/short_name
 ---
-<div>{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Тип</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Обязателен</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Пример</th>
-   <td>
-    <pre class="brush: json">
-"short_name": "Awesome app"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Тип</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Обязателен</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Пример</th>
+      <td><pre class="brush: json">"short_name": "Awesome app"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Элемент <code>short_<dfn>name</dfn></code> -- это строка, которая определяет название веб-приложения показываемое пользователю, если для отображения <code><a href="./name">name</a></code> не достаточно места (например, в качестве надписи под иконкой приложения на экране телефона). <code>short_name</code> может отображаться слева-направо или справе-налево, в зависимости от значений элементов манифеста <code><a href="./dir">dir</a></code> and <code><a href="./lang">lang</a></code>.</p>
+Элемент `short_name` -- это строка, которая определяет название веб-приложения показываемое пользователю, если для отображения [`name`](./name) не достаточно места (например, в качестве надписи под иконкой приложения на экране телефона). `short_name` может отображаться слева-направо или справе-налево, в зависимости от значений элементов манифеста [`dir`](./dir) and [`lang`](./lang).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Обычно <code>short_name</code> отображается слева-направо:</p>
+Обычно `short_name` отображается слева-направо:
 
-<pre class="brush: json">"name": "Awesome application",
-"short_name": "Awesome app"</pre>
+```json
+"name": "Awesome application",
+"short_name": "Awesome app"
+```
 
-<p><code>short_name</code> на арабском отображается справа-налево:</p>
+`short_name` на арабском отображается справа-налево:
 
-<pre class="brush: json" dir="rtl"><code>"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"nam</code>e": "تطبيق رائع",
+"name": "تطبيق رائع",
 "short_name": "رائع"
-</pre>
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#short_name-member', 'short_name')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment             | Feedback                                                                         |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#short_name-member', 'short_name')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

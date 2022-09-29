@@ -8,28 +8,27 @@ tags:
   - Web
 translation_of: Web/Manifest
 ---
-<div>{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}</div>
+{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+**Манифесты веб-приложений** являются частью набора веб-технологий, называемых [прогрессивными веб-приложениями](/ru/docs/Web/Apps/Progressive) (PWA, progressive web apps), представляющими собой веб-сайты, которые можно установить на домашний экран устройства без магазина приложений. В отличие от обычных веб-приложений с простыми ссылками на домашний экран или закладками, PWA можно загружать заранее и работать в автономном режиме, а также использовать обычные {{domxref('','Web API')}}.
 
-<p><strong>Манифесты веб-приложений</strong> являются частью набора веб-технологий, называемых <a href="/ru/docs/Web/Apps/Progressive">прогрессивными веб-приложениями</a> (PWA, progressive web apps), представляющими собой веб-сайты, которые можно установить на домашний экран устройства без магазина приложений. В отличие от обычных веб-приложений с простыми ссылками на домашний экран или закладками, PWA можно загружать заранее и работать в автономном режиме, а также использовать обычные {{domxref('','Web API')}}.</p>
+Манифест веб-приложения предоставляет информацию о приложении в текстовом файле {{glossary ("JSON")}}, который необходим того, чтобы веб-приложение было загружено и отображалось пользователю аналогично нативному приложению (например, для установки на домашний экран устройства, предоставляющий пользователям более быстрый доступ и больше возможностей).
 
-<p>Манифест веб-приложения предоставляет информацию о приложении в текстовом файле {{glossary ("JSON")}}, который необходим того, чтобы веб-приложение было загружено и отображалось пользователю аналогично нативному приложению (например, для установки на домашний экран устройства, предоставляющий пользователям более быстрый доступ и больше возможностей).</p>
+## Содержимое манифеста
 
-<h2 id="Deploying_a_manifest_with_the_link_tag">Содержимое манифеста</h2>
+Манифест может содержать следующие элементы:
 
-<p>Манифест может содержать следующие элементы:</p>
+{{ListSubpages("/ru/docs/Web/Manifest")}}
 
-<p>{{ListSubpages("/ru/docs/Web/Manifest")}}</p>
+## Пример манифеста
 
-<h2 id="Deploying_a_manifest_with_the_link_tag">Пример манифеста</h2>
-
-<pre class="brush: json">{
+```json
+{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
   "display": "standalone",
-<span class="pl-s"><span class="pl-pds">  "</span>background_color<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>#fff<span class="pl-pds">"</span></span>,
+  "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
   "icons": [{
     "src": "images/touch/homescreen48.png",
@@ -62,32 +61,29 @@ translation_of: Web/Manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
-}</pre>
+}
+```
 
-<h2 id="Deploying_a_manifest_with_the_link_tag">Внедрение манифеста</h2>
+## Внедрение манифеста
 
-<p>Манифест веб-приложения внедряется в вашу HTML-страницу, с помощью тега ссылки в заголовке вашего документа:</p>
+Манифест веб-приложения внедряется в вашу HTML-страницу, с помощью тега ссылки в заголовке вашего документа:
 
-<div class="highlight">
-<pre><code class="language-html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/manifest.webmanifest"</span><span class="nt">&gt;</span></code></pre>
-</div>
+```html
+<link rel="manifest" href="/manifest.webmanifest">
+```
 
-<div class="note">
-<p><strong>Note</strong>: Расширение <code>.webmanifest</code> указывается в разделе спецификации <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (ответ файла манифеста должен возвращать <code>Content-Type: application/manifest+json</code>). Браузеры обычно поддерживают манифесты с другими соответствующими расширениями, такими как <code>.json</code> (<code>Content-Type: application/json</code>).</p>
-</div>
+> **Примечание:** Расширение `.webmanifest` указывается в разделе спецификации [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (ответ файла манифеста должен возвращать `Content-Type: application/manifest+json`). Браузеры обычно поддерживают манифесты с другими соответствующими расширениями, такими как `.json` (`Content-Type: application/json`).
 
-<div class="note">
-<p><strong>Note</strong>: Если для получения манифеста требуются учётные данные - атрибут <code><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code> должен иметь значение <code>"use-credentials"</code>, даже если файл манифеста находится в том же источнике, что и текущая страница.</p>
-</div>
+> **Примечание:** Если для получения манифеста требуются учётные данные - атрибут [`crossorigin`](/en-US/docs/Web/HTML/CORS_settings_attributes) должен иметь значение `"use-credentials"`, даже если файл манифеста находится в том же источнике, что и текущая страница.
 
-<h2 id="Заставки">Заставки</h2>
+## Заставки
 
-<p>В Chrome 47 и более поздних версиях заставки отображаются при загрузке веб-приложения с домашнего экрана. Эти заставки автоматически генерируются с использованием свойств, указанных в манифесте приложения, например: <code>name</code>, <code>background_color</code> и иконки в массиве <code>icons,</code> которые ближе к 128dpi для устройства.</p>
+В Chrome 47 и более поздних версиях заставки отображаются при загрузке веб-приложения с домашнего экрана. Эти заставки автоматически генерируются с использованием свойств, указанных в манифесте приложения, например: `name`, `background_color` и иконки в массиве `icons,` которые ближе к 128dpi для устройства.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}

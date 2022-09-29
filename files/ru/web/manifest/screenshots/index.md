@@ -7,39 +7,41 @@ tags:
   - Web
 translation_of: Web/Manifest/screenshots
 ---
-<div>{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json no-line-numbers">
 "screenshots": [
   {
     "src": "screenshot.webp",
     "sizes": "1280x720",
     "type": "image/webp"
   }
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><code>screenshots</code> определяет массив снимков экрана, предназначенных для демонстрации приложения. Эти изображения предназначены для использования в прогрессивных веб-приложениях магазинов.</p>
+`screenshots` определяет массив снимков экрана, предназначенных для демонстрации приложения. Эти изображения предназначены для использования в прогрессивных веб-приложениях магазинов.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: json">"screenshots" : [
+```json
+"screenshots" : [
   {
     "src": "screenshot1.webp",
     "sizes": "1280x720",
@@ -50,37 +52,15 @@ translation_of: Web/Manifest/screenshots
     "sizes": "1280x720",
     "type": "image/webp"
   }
-]</pre>
+]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#screenshots-member', 'screenshots')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment             | Feedback                                                                         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#screenshots-member', 'screenshots')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
