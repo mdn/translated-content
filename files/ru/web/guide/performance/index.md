@@ -7,15 +7,13 @@ tags:
 translation_of: Web/Guide/Performance
 original_slug: Web/Guide/Производительность
 ---
-<p>Создаваемые вами современные веб-приложения и сайты должны иметь хорошую производительность - работать быстро и эффективно, как на персональных компьютерах (десктоп), так и на менее мощных мобильных устройствах. Существуют различные инструменты для тестирования сайтов на производительность. Самые известные из них:</p>
+Создаваемые вами современные веб-приложения и сайты должны иметь хорошую производительность - работать быстро и эффективно, как на персональных компьютерах (десктоп), так и на менее мощных мобильных устройствах. Существуют различные инструменты для тестирования сайтов на производительность. Самые известные из них:
 
-<ul>
- <li><a href="https://developers.google.com/speed/pagespeed/insights/" rel="resources">Google PageSpeed Insights</a></li>
- <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a></li>
- <li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
- <li>Browser developer tools</li>
-</ul>
+- [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+- [WebPageTest](https://www.webpagetest.org/)
+- Browser developer tools
 
-<p>Производительность в web - первостепенная задача для тех, кто заботится о комфорте конечного пользователя.</p>
+Производительность в web - первостепенная задача для тех, кто заботится о комфорте конечного пользователя.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

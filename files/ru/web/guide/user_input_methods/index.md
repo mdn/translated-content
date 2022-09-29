@@ -10,110 +10,103 @@ tags:
   - указатель
 translation_of: Web/Guide/User_input_methods
 ---
-<div class="summary">
-<p><span class="seoSummary">Это руководство содержит рекомендации по обработке пользовательского ввода
- и внедрению управляющих элементов в веб-приложения. Также здесь вы найдёте соответствующие FAQs, живые примеры, ссылки на более подробные разборы близлежащих технологий.
- Связанные интерфейсы API и события: <a href="/ru/docs/Web/API/Touch_events">события касаний</a>, <a href="/ru/docs/Web/API/Pointer_Lock_API">интерфейс отслеживания указателя мыши</a>,
- <a href="/ru/docs/Web/API/CSS_Object_Model/ориентация_экрана">интерфейс ориентации экрана</a>,
- <a href="/ru/docs/DOM/Using_fullscreen_mode">интерфейс режима "на весь экран"</a>, <a href="/ru/docs/Web/Guide/HTML/Drag_and_drop">перетаскивание и сброс</a> и т. д.</span></p>
-</div>
+Это руководство содержит рекомендации по обработке пользовательского ввода
+и внедрению управляющих элементов в веб-приложения. Также здесь вы найдёте соответствующие FAQs, живые примеры, ссылки на более подробные разборы близлежащих технологий.
+Связанные интерфейсы API и события: [события касаний](/ru/docs/Web/API/Touch_events), [интерфейс отслеживания указателя мыши](/ru/docs/Web/API/Pointer_Lock_API),
+[интерфейс ориентации экрана](/ru/docs/Web/API/CSS_Object_Model/ориентация_экрана),
+[интерфейс режима "на весь экран"](/ru/docs/DOM/Using_fullscreen_mode), [перетаскивание и сброс](/ru/docs/Web/Guide/HTML/Drag_and_drop) и т. д.
 
-<h2 id="Рабочая_область">Рабочая область</h2>
+## Рабочая область
 
-<p>The following diagram illustrates the typical workflow for implementing user input mechanisms:</p>
+The following diagram illustrates the typical workflow for implementing user input mechanisms:
 
-<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8085/user-input-and-controls.png" style="height: 86px; width: 303px;"></p>
+![](https://mdn.mozillademos.org/files/8085/user-input-and-controls.png)
 
-<p>First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.</p>
+First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.
 
-<h2 id="Recommendations">Recommendations</h2>
+## Recommendations
 
-<p>Available input mechanisms depend on the capabilities of the device running the application:</p>
+Available input mechanisms depend on the capabilities of the device running the application:
 
-<ul>
- <li>Some devices provide touchscreen displays: the Web Platform offers <a href="/en-US/docs/Web/Guide/Events/Touch_events">touch events</a> to interpret finger activity on touch-based user interfaces.</li>
- <li>For devices providing a mouse/touchpad as a pointing method, the <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> helps you in implementing a first person 3D game or other applications requiring full control of the pointing device. And the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> helps you in displaying your app in fullscreen mode.</li>
- <li>Using features such as <a href="/en-US/docs/Web/Guide/HTML/Content_Editable">contentEditable</a> elements you can implement fast rich-text editors and with <a href="/en-US/docs/Web/Guide/HTML/Drag_and_drop">Drag&amp;Drop</a> let users moving elements inside your app. When screen orientation matters for your application, through the <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a> you can read the screen orientation state and perform other actions.</li>
- <li>You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate web sites and apps, and locking them out of your functionality is a bad idea.</li>
-</ul>
+- Some devices provide touchscreen displays: the Web Platform offers [touch events](/ru/docs/Web/Guide/Events/Touch_events) to interpret finger activity on touch-based user interfaces.
+- For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/ru/docs/Web/API/Pointer_Lock_API) helps you in implementing a first person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/ru/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
+- Using features such as [contentEditable](/ru/docs/Web/Guide/HTML/Content_Editable) elements you can implement fast rich-text editors and with [Drag\&Drop](/ru/docs/Web/Guide/HTML/Drag_and_drop) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
+- You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate web sites and apps, and locking them out of your functionality is a bad idea.
 
-<p>The following is a set of recommendations and best practices for using such tools in Open Web Apps.</p>
+The following is a set of recommendations and best practices for using such tools in Open Web Apps.
 
-<h3 id="Decide_what_input_mechanism_you’re_using">Decide what input mechanism you’re using</h3>
+### Decide what input mechanism you’re using
 
-<h4 id="Keyboard">Keyboard</h4>
+#### Keyboard
 
-<p>Keyboard input can be controlled by your app. For example if you want to add controls when any key gets pressed, you need to add an event listener on the window object:</p>
+Keyboard input can be controlled by your app. For example if you want to add controls when any key gets pressed, you need to add an event listener on the window object:
 
-<pre class="brush: js">window.addEventListener("keydown", handleKeyDown, true);
-window.addEventListener("keyup", handleKeyUp, true);</pre>
+```js
+window.addEventListener("keydown", handleKeyDown, true);
+window.addEventListener("keyup", handleKeyUp, true);
+```
 
-<p>where <code>handleKeyDown</code> and <code>handleKeyUp</code> are the functions implementing the controls about the <code>keydown</code> and <code>keyup</code> events.</p>
+where `handleKeyDown` and `handleKeyUp` are the functions implementing the controls about the `keydown` and `keyup` events.
 
-<div class="note">
-<p><strong>Note</strong>: Have a look at the <a href="/en-US/docs/Web/Reference/Events">Events reference</a> and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.</p>
-</div>
+> **Примечание:** Have a look at the [Events reference](/ru/docs/Web/Reference/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
-<h4 id="Mouse">Mouse</h4>
+#### Mouse
 
-<p>The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include <a href="/en-US/docs/Web/Reference/Events/click"><code>click</code></a>, <a href="/en-US/docs/Web/Reference/Events/dblclick"><code>dblclick</code></a>, <a href="/en-US/docs/Web/Reference/Events/mouseup"><code>mouseup</code></a>, and <a href="/en-US/docs/Web/Reference/Events/mousedown"><code>mousedown</code></a>. The list of all events using the Mouse Event Interface is provided in the <a href="/en-US/docs/Web/Reference/Events">Events reference</a>.</p>
+The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/ru/docs/Web/Reference/Events/click), [`dblclick`](/ru/docs/Web/Reference/Events/dblclick), [`mouseup`](/ru/docs/Web/Reference/Events/mouseup), and [`mousedown`](/ru/docs/Web/Reference/Events/mousedown). The list of all events using the Mouse Event Interface is provided in the [Events reference](/ru/docs/Web/Reference/Events).
 
-<p>When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag &amp; Drop (see below).</p>
+When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below).
 
-<h4 id="Finger_touch">Finger touch</h4>
+#### Finger touch
 
-<p>When developing web applications meant to be installed on touchscreen devices, it’s a good practice to take into consideration the different capabilities in terms of screen resolution and user input. <a href="/en-US/docs/Web/Guide/Events/Touch_events">Touch events</a> can help you implement interactive elements and common interaction gestures on touchscreen devices.</p>
+When developing web applications meant to be installed on touchscreen devices, it’s a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/ru/docs/Web/Guide/Events/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
 
-<p>If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:</p>
+If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
-<pre class="brush: js">element.addEventListener("touchstart", handleStart, false);
+```js
+element.addEventListener("touchstart", handleStart, false);
 element.addEventListener("touchcancel", handleCancel, false);
 element.addEventListener("touchend", handleEnd, false);
-element.addEventListener("touchmove", handleMove, false);</pre>
+element.addEventListener("touchmove", handleMove, false);
+```
 
-<p>where <code>element</code> is the DOM element you want to register the touch events on.</p>
+where `element` is the DOM element you want to register the touch events on.
 
-<div class="note">
-<p><strong>Note</strong>: For further information about what you can do with touch events, please read our <a href="/en-US/docs/Web/Guide/Events/Touch_events">touch events guide</a>.</p>
-</div>
+> **Примечание:** For further information about what you can do with touch events, please read our [touch events guide](/ru/docs/Web/Guide/Events/Touch_events).
 
-<h4 id="Pointer_Events">Pointer Events</h4>
+#### Pointer Events
 
-<p>When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. <a href="http://www.w3.org/TR/pointerevents/">Pointer Events</a> help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: <code>pointerdown</code>, <code>pointermove</code>, <code>pointerup</code>, <code>pointerover</code>, <code>pointerout</code>, etc.</p>
+When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. [Pointer Events](http://www.w3.org/TR/pointerevents/) help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
 
-<div class="note">
-<p><strong>Note</strong>: Pointer Events are not widely supported yet, but a <a href="https://github.com/mozilla/pointer.js">pointer.js polyfill</a> is available on Mozilla Github.</p>
-</div>
+> **Примечание:** Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla Github.
 
-<h3 id="Implement_controls">Implement controls</h3>
+### Implement controls
 
-<h4 id="Pointer_lock">Pointer lock</h4>
+#### Pointer lock
 
-<p>In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the {{domxref("Pointer_Lock_API")}} gives you full control of the pointing device.</p>
+In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the {{domxref("Pointer_Lock_API")}} gives you full control of the pointing device.
 
-<p>This is the code to request pointer lock on an <code>element</code>:</p>
+This is the code to request pointer lock on an `element`:
 
-<pre class="brush: js">element.requestPointerLock();</pre>
+```js
+element.requestPointerLock();
+```
 
-<div class="note">
-<p><strong>Note</strong>: For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.</p>
-</div>
+> **Примечание:** For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.
 
-<h4 id="Screen_Orientation">Screen Orientation</h4>
+#### Screen Orientation
 
-<p>When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a>.</p>
+When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-<p>Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the <a href="/en-US/docs/Web/Guide/CSS/Media_queries#orientation"><code>orientation</code></a> media feature. When <code>screen.orientation</code> changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.</p>
+Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/ru/docs/Web/Guide/CSS/Media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
 
-<div class="note">
-<p><strong>Note</strong>: More information about the Screen Orientation API can be found in <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>.</p>
-</div>
+> **Примечание:** More information about the Screen Orientation API can be found in [Managing screen orientation](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-<h4 id="Fullscreen">Fullscreen</h4>
+#### Fullscreen
 
-<p>You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element. Bear in mind that many browsers still implement this with a vendor prefix, so you will probably need to fork your code something like this:</p>
+You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element. Bear in mind that many browsers still implement this with a vendor prefix, so you will probably need to fork your code something like this:
 
-<pre class="brush: js">var elem = document.getElementById("myvideo");
+```js
+var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
@@ -122,77 +115,68 @@ if (elem.requestFullscreen) {
   elem.mozRequestFullScreen();
 } else if (elem.webkitRequestFullscreen) {
   elem.webkitRequestFullscreen();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: To find more out about adding fullscreen functionality your application, read our documentation about <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">using fullscreen mode</a>.</p>
-</div>
+> **Примечание:** To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode).
 
-<h4 id="Drag_Drop">Drag &amp; Drop</h4>
+#### Drag & Drop
 
-<p><a href="/en-US/docs/Web/Guide/HTML/Drag_and_drop">Drag &amp; Drop</a> allows your application’s users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.</p>
+[Drag & Drop](/ru/docs/Web/Guide/HTML/Drag_and_drop) allows your application’s users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
 
-<p>Here is an example that allows a section of content to be dragged.</p>
+Here is an example that allows a section of content to be dragged.
 
-<pre class="brush: html">&lt;div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')"&gt;
-    This text &lt;strong&gt;may&lt;/strong&gt; be dragged.
- &lt;/div&gt;</pre>
+```html
+<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+    This text <strong>may</strong> be dragged.
+ </div>
+```
 
-<p>in which we:</p>
+in which we:
 
-<ul>
- <li>Set the <a href="/en-US/docs/Web/HTML/Global_attributes#draggable"><code>draggable</code></a> attribute to true on the element that you wish to make draggable</li>
- <li>Add a listener for the <a href="/en-US/docs/Web/Events/dragstart"><code>dragstart</code></a> event and set the drag data within this listener</li>
-</ul>
+- Set the [`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
+- Add a listener for the [`dragstart`](/ru/docs/Web/Events/dragstart) event and set the drag data within this listener
 
-<div class="note">
-<p><strong>Note</strong>: You can find more information in the <a href="/en-US/docs/Web/Guide/HTML/Drag_and_drop">MDN Drag &amp; Drop documentation</a>.</p>
-</div>
+> **Примечание:** You can find more information in the [MDN Drag & Drop documentation](/ru/docs/Web/Guide/HTML/Drag_and_drop).
 
-<h4 id="contentEditable">contentEditable</h4>
+#### contentEditable
 
-<p>In open web apps any DOM element can be made directly editable using the <a href="/en-US/docs/Web/HTML/Global_attributes#contenteditable"><code>contenteditable</code></a> attribute.</p>
+In open web apps any DOM element can be made directly editable using the [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
-<pre class="brush: html">&lt;div contenteditable="true"&gt;
+```html
+<div contenteditable="true">
     This text can be edited by the user.
-&lt;/div&gt;</pre>
-
-<div class="note">
-<p><strong>Note</strong>: Compatibility information, examples and other resources can be found in the <a href="/en-US/docs/Web/Guide/HTML/Content_Editable">Content Editable guide</a>.</p>
 </div>
+```
 
-<h2 id="Examples">Examples</h2>
+> **Примечание:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/Guide/HTML/Content_Editable).
 
-<dl>
- <dt><strong><a href="/en/DOM/Touch_events#Example">Tracking multiple touch points at a time</a></strong></dt>
- <dd>This example tracks multiple touch points at a time, allowing the user to draw in a <code>{{htmlelement("canvas")}}</code> with more than one finger at a time. It will only work on a browser that supports touch events.</dd>
- <dt><strong><a href="/en-US/docs/Web/API/Pointer_Lock_API#example">Simple pointer lock demo</a></strong></dt>
- <dd>We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a <code>{{htmlelement("canvas")}}</code> element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.</dd>
- <dt><strong><a href="http://html5demos.com/contenteditable">contentEditable demo</a></strong></dt>
- <dd>This is a working example showing how contenteditable can be used to create an editable document section, the state of which is then saved using <a href="/en-US/docs/Web/Guide/API/DOM/Storage">LocalStorage</a>.</dd>
-</dl>
+## Examples
 
-<h2 id="Руководства">Руководства</h2>
+- **[Tracking multiple touch points at a time](/en/DOM/Touch_events#Example)**
+  - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
+- **[Simple pointer lock demo](/ru/docs/Web/API/Pointer_Lock_API#example)**
+  - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
+- **[contentEditable demo](http://html5demos.com/contenteditable)**
+  - : This is a working example showing how contenteditable can be used to create an editable document section, the state of which is then saved using [LocalStorage](/ru/docs/Web/Guide/API/DOM/Storage).
 
-<ul>
- <li><a href="/ru/docs/Web/API/Touch_events">События касаний (тач-события) - руководство</a></li>
- <li><a href="/ru/docs/Web/API/CSS_Object_Model/ориентация_экрана">Разбираемся с ориентацией экрана</a></li>
- <li><a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Использование полноэкранного режима</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items">Перетаскивание и сброс нескольких объектов</a></li>
- <li><a href="/ru/docs/Web/Guide/HTML/Drag_and_drop/Drag_operations">Руководство по перетаскиванием</a></li>
-</ul>
+## Руководства
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+- [События касаний (тач-события) - руководство](/ru/docs/Web/API/Touch_events)
+- [Разбираемся с ориентацией экрана](/ru/docs/Web/API/CSS_Object_Model/ориентация_экрана)
+- [Использование полноэкранного режима](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode)
+- [Перетаскивание и сброс нескольких объектов](/ru/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Руководство по перетаскиванием](/ru/docs/Web/Guide/HTML/Drag_and_drop/Drag_operations)
 
-<ul>
- <li>{{domxref("MouseEvent")}}</li>
- <li>{{domxref("KeyboardEvent")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Touch_events">Touch events</a></li>
- <li>{{domxref("Pointer_Lock_API")}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a></li>
- <li><a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Drag_and_drop">Drag &amp; Drop</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Content_Editable">Content Editable</a></li>
- <li><a href="/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV">Keyboard events in Firefox OS TV</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation">Implementing TV remote control navigation</a></li>
-</ul>
+## Смотрите также
+
+- {{domxref("MouseEvent")}}
+- {{domxref("KeyboardEvent")}}
+- [Touch events](/ru/docs/Web/Guide/Events/Touch_events)
+- {{domxref("Pointer_Lock_API")}}
+- [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [Fullscreen API](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode)
+- [Drag & Drop](/ru/docs/Web/Guide/HTML/Drag_and_drop)
+- [Content Editable](/ru/docs/Web/Guide/HTML/Content_Editable)
+- [Keyboard events in Firefox OS TV](/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
+- [Implementing TV remote control navigation](/ru/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

@@ -10,17 +10,15 @@ tags:
   - Web
 translation_of: Web/Guide/API
 ---
-<p>Здесь вы найдёте ссылки на каждое руководство и объяснение каждого API, составляющего архитектуру веб-разработки.</p>
+Здесь вы найдёте ссылки на каждое руководство и объяснение каждого API, составляющего архитектуру веб-разработки.
 
-<h2 id="Web_APIs_from_A_to_Z">Web APIs from A to Z</h2>
+## Web APIs from A to Z
 
-<p>{{ListGroups}}</p>
+{{ListGroups}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API">Web API interface reference</a> (an index of all of the interfaces comprising all of these APIs)</li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a> (DOM)</li>
- <li><a href="/en-US/docs/Web/Events">Web API event reference</a></li>
- <li><a href="/en-US/docs/Learn">Learning web development</a></li>
-</ul>
+- [Web API interface reference](/ru/docs/Web/API) (an index of all of the interfaces comprising all of these APIs)
+- [Document Object Model](/ru/docs/Web/API/Document_Object_Model) (DOM)
+- [Web API event reference](/ru/docs/Web/Events)
+- [Learning web development](/ru/docs/Learn)
