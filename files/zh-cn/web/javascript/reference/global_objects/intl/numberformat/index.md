@@ -18,7 +18,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 - `locales`
 
-  - : 可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见[Intl page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation). 下面的这些 Unicode 扩展键也是被允许的：
+  - : 可选。缩写语言代码（BCP 47 language tag，例如：cmn-Hans-CN）的字符串或者这些字符串组成的数组。关于参数 locales 的一般形式和解释请参见[Intl page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation). 下面的这些 Unicode 扩展键也是被允许的：
 
     译者注：下面扩展的使用方式是 language\[-scripts]\[-region]-u-nu-\*,例如:zh-u-nu-hanidec(表示中文十进制数字)
 
@@ -37,15 +37,15 @@ Intl.NumberFormat.call(this[, locales[, options]])
     - `localeMatcher`
       - : 使用的 local 的匹配算法。可能的值有 `"lookup` 和 `"best fit"`; 默认值是 `"best fit"`. 有关此选项更多的信息，请参见 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.
     - `style`
-      - : 要使用的格式样式，默认为 “decimal”。
+      - : 要使用的格式样式，默认为“decimal”。
     - `numberingSystem` {{Experimental_inline}}
       - : 编号系统。可能的值包括："`arab`"，"`arabext`"，" `bali`"，"`beng`"，"`deva`"，"`fullwide`"，" `gujr`"，"`guru`"，"`hanidec`"，"`khmr`"，" `knda`"，"`laoo`", "`latn`"，"`limb`"，"`mlym`"，" `mong`"，"`mymr`"，"`orya`"，"`tamldec`"，" `telu`"，"`thai`"，"`tibt`"。
     - `unit`{{Experimental_inline}}
       - : `unit` 格式中使用的单位，可能的值为在 [UTS #35, Part 2, Section 6](http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements) 定义的核心单元标识符。已从[完整列表](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)中选择了一个[单位子集](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)以用于 ECMAScript。可以将成对的简单单位与 `“ -per-”` 连接以组成一个复合单位。没有默认值；如果 `style` 为 `“unit”`，必须提供`unit` 属性。
     - `unitDisplay`{{Experimental_inline}}
-      - : `unit` 格式化中使用的单位格式化样式，默认值为“ short”。`“long”` (e.g., `16 litres`)、`“short“` (e.g., `16 l`)、`”narrow“` (e.g., `16l`)
+      - : `unit` 格式化中使用的单位格式化样式，默认值为“short”。`“long”` (e.g., `16 litres`)、`“short“` (e.g., `16 l`)、`”narrow“` (e.g., `16l`)
     - `currency`
-      - : 在货币格式化中使用的货币符号. 可能的值是*ISO*的货币代码 (the ISO 4217 currency codes,) 例如 `"USD"` 表示美元，`"EUR"` 表示欧元，或者 `"CNY"是人民币` — 更多请参考 [Current currency & funds code list](http://www.currency-iso.org/en/home/tables/table-a1.html)。没有默认值，如果 `style` 是 `“currency”`，必须提 `currency` 属性。
+      - : 在货币格式化中使用的货币符号。可能的值是*ISO*的货币代码 (the ISO 4217 currency codes,) 例如 `"USD"` 表示美元，`"EUR"` 表示欧元，或者 `"CNY"是人民币` — 更多请参考 [Current currency & funds code list](http://www.currency-iso.org/en/home/tables/table-a1.html)。没有默认值，如果 `style` 是 `“currency”`，必须提 `currency` 属性。
     - `currencyDisplay`
       - : 如何在货币格式化中显示货币。可能的值有 `"symbol"` 表示使用本地化的货币符号，例如 €, `"code"` 表示使用国际标准组织货币代码，`"name"` 表示使用本地化的货币名称，如 `"dollar"`; 默认值是 `"symbol"`.
     - `useGrouping`
@@ -134,7 +134,7 @@ console.log(new Intl.NumberFormat('en-IN').format(number));
 
 // 通过编号系统中的 nu 扩展键请求，例如：中文十进制数字
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
-// → 一二三,四五六.七八九
+// → 一二三，四五六。七八九
 
 //当请求的语言不被支持，例如巴里，包含一个回滚语言印尼，这时候就会使用印尼语
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
@@ -177,7 +177,7 @@ console.log(new Intl.NumberFormat('de', { notation: "engineering" }).format(9876
 // → 987,654E6
 
 console.log(new Intl.NumberFormat('zh-CN', { notation: "compact" }).format(987654321));
-// → 9.9亿
+// → 9.9 亿
 
 console.log(new Intl.NumberFormat('fr', { notation: "compact" , compactDisplay: "long" }).format(987654321));
 // → 988 millions

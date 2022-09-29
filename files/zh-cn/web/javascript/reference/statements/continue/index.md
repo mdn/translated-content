@@ -20,7 +20,7 @@ continue [ label ];
 
 ## 描述
 
-与 {{jsxref("Statements/break", "break")}} 语句的区别在于， continue 并不会终止循环的迭代，而是：
+与 {{jsxref("Statements/break", "break")}} 语句的区别在于，continue 并不会终止循环的迭代，而是：
 
 - 在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；
 - 在 {{jsxref("Statements/for", "for")}} 循环中，控制流跳转到更新语句。
@@ -47,7 +47,7 @@ while (i < 5) {
 
 ### 使用带 label 的 continue
 
-在下面的例子中，被标记为 `checkiandj` 的语句包含一个被标记为 `checkj` 的语句。当遇到`continue` 语句时，程序回到 `checkj` 语句的开始继续执行。每次遇到 `continue` 时，再次执行 `checkj` ，直到条件判断返回 false 。之后完成 `checkiandj` 语句剩下的部分。
+在下面的例子中，被标记为 `checkiandj` 的语句包含一个被标记为 `checkj` 的语句。当遇到`continue` 语句时，程序回到 `checkj` 语句的开始继续执行。每次遇到 `continue` 时，再次执行 `checkj` ，直到条件判断返回 false。之后完成 `checkiandj` 语句剩下的部分。
 
 但如果 `continue` 的标号被改为 `checkiandj` ，那程序将会从 `checkiandj` 语句的开始继续运行。
 

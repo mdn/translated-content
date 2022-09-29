@@ -61,7 +61,7 @@ function f(foo, values) {
 
 ### Example: Using `with`
 
-下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos和`[`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
+下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos 和`[`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
 
 ```js
 var a, x, y;

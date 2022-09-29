@@ -62,4 +62,4 @@ for octal literals use the \"0o\" prefix instead
 ## 相关内容
 
 - [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [警告： 08/09 不是符合 ECMA-262 规范的八进制常量](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [警告：08/09 不是符合 ECMA-262 规范的八进制常量](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal)
