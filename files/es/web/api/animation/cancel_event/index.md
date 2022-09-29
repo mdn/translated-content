@@ -13,7 +13,7 @@ original_slug: Web/API/Animation/oncancel
 ---
 {{ APIRef("Web Animations") }}
 
-La propiedad **`oncancel`** de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) es el manejador de eventos para el evento {{event("cancel")}} .
+La propiedad `oncancel` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) es el manejador de eventos para el evento {{event("cancel")}} .
 
 El evento `cancel` puede ser activado manualmente con {{domxref("Animation.cancel()")}} cuando la animación entra en estado de reproducción `"idle"(inactivo)` desde otro estado, como cuando una animación se elimina de un elemento antes de que termine de reproducirse.
 
@@ -45,7 +45,7 @@ animation.oncancel = animation.effect.target.remove();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.cancel_event")}}
+{{Compat}}
 
 ## Ver también
 

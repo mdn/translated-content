@@ -14,7 +14,7 @@ translation_of: Web/API/Animation
 ---
 {{ APIRef("Web Animations") }}
 
-La interfaz **`Animation`** de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) representa un reproductor de animación y proporciona controles de reproducción y una línea de tiempo para un nodo o una fuente de animación.
+La interfaz `Animation` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) representa un reproductor de animación y proporciona controles de reproducción y una línea de tiempo para un nodo o una fuente de animación.
 
 ## Constructor
 
@@ -111,13 +111,11 @@ Considera ofrecer un mecanismo para pausar o deshabilitar las animaciones, así 
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName("Web Animations", "#the-animation-interface", "Animation")}} | {{Spec2("Web Animations")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation")}}
+{{Compat}}
 
 ## Ver también
 

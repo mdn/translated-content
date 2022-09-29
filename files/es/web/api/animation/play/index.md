@@ -15,7 +15,7 @@ translation_of: Web/API/Animation/play
 ---
 {{ APIRef("Web Animations") }}
 
-El método **`play()`** de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.
+El método `play()` de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.
 
 ## Sintaxis
 
@@ -25,7 +25,7 @@ animation.play();
 
 ### Parámetros
 
-None.
+Ningun.
 
 ### Valor devuelto
 
@@ -72,7 +72,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.play")}}
+{{Compat}}
 
 ## Ver también
 

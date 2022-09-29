@@ -12,7 +12,7 @@ translation_of: Web/API/Animation/ready
 ---
 {{ APIRef("Web Animations") }}
 
-La propiedad de solo-lectura **`Animation.ready`** de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en [play state(estado de reproducción)](/es/docs/Web/API/Animation/playState) `"pending"(pendiente)` así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.
+La propiedad de solo-lectura `Animation.ready` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en [play state(estado de reproducción)](/es/docs/Web/API/Animation/playState) `"pending"(pendiente)` así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.
 
 > **Nota:** Dado que la misma {{jsxref("Promise")}} es usada para las solicitudes pendientes de `play` y`pause` , se recomienda a los autores que comprueben el estado de la animación cuando se resuelva la promesa.
 
@@ -52,7 +52,7 @@ animation.play();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.ready")}}
+{{Compat}}
 
 ## Ver también
 

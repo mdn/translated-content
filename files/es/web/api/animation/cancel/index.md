@@ -14,7 +14,7 @@ translation_of: Web/API/Animation/cancel
 ---
 {{ APIRef("Web Animations") }}
 
-El método **`cancel()`** de la Web Animations API de la interfaz {{domxref("Animation")}} borra todos los {{domxref("KeyframeEffect")}} causados por esta animación y aborta su reproducción.
+El método `cancel()` de la Web Animations API de la interfaz {{domxref("Animation")}} borra todos los {{domxref("KeyframeEffect")}} causados por esta animación y aborta su reproducción.
 
 > **Nota:** Cuando se cancela una animación, su {{domxref("Animation.startTime", "startTime")}} y su {{domxref("Animation.currentTime", "currentTime")}} se establecen en `null`.
 
@@ -26,11 +26,11 @@ Animation.cancel();
 
 ### Parámetros
 
-None.
+Ningun.
 
 ### Valor devuelto
 
-None.
+Ningun.
 
 ### Excepciones
 
@@ -42,7 +42,7 @@ Este método no arroja excepciones directamente; sin embargo, si la animación {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.cancel")}}
+{{Compat}}
 
 ## Ver también
 

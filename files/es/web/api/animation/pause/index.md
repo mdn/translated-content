@@ -14,7 +14,7 @@ translation_of: Web/API/Animation/pause
 ---
 {{ APIRef("Web Animations") }}
 
-El método **`pause()`** de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.
+El método `pause()` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.
 
 ## Sintaxis
 
@@ -24,11 +24,11 @@ animation.pause();
 
 ### Parámetros
 
-None.
+Ningun.
 
 ### Valor devuelto
 
-None.
+Ningun.
 
 ### Excepciones
 
@@ -74,13 +74,11 @@ bottle.addEventListener("mouseup", stopPlayingAlice, false);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Web Animations', '#dom-animation-pause', 'play()')}} | {{Spec2("Web Animations")}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Animation.pause")}}
+{{Compat}}
 
 ## Ver también
 

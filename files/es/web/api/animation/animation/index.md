@@ -8,7 +8,7 @@ original_slug: Web/API/Animation/Animación
 ---
 {{ APIRef("Web Animations API") }}
 
-El constructor **`Animation()`** de [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve una instancia del objeto `Animation`.
+El constructor `Animation()` de [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve una instancia del objeto `Animation`.
 
 ## Sintaxis
 
@@ -19,7 +19,7 @@ var animation = new Animation([effect][, timeline]);
 ### Parámetros
 
 - `effect` {{optional_inline}}
-  - : El efecto objetivo, es un objeto de la interfaz {{domxref("AnimationEffectReadOnly")}} ,para asignarlo a la animación. Aunque en el futuro podrían ser asignados otros efectos como `SequenceEffect` o `GroupEffect`, el único efecto disponible actualmente es {{domxref("KeyframeEffect")}}. Este puede ser `null` (valor por defecto) para indicar que no debe aplicarse ningún efecto.
+  - : El efecto objetivo, es un objeto de la interfaz {{domxref("AnimationEffectReadOnly")}}, para asignarlo a la animación. Aunque en el futuro podrían ser asignados otros efectos como `SequenceEffect` o `GroupEffect`, el único efecto disponible actualmente es {{domxref("KeyframeEffect")}}. Este puede ser `null` (valor por defecto) para indicar que no debe aplicarse ningún efecto.
 - `timeline` {{optional_inline}}
   - : Especifica el `timeline` con el que asociar la animación, como un objeto de tipo basado en la interfaz {{domxref("AnimationTimeline")}} . Actualmente el único tipo de línea de tiempo disponible es {{domxref("DocumentTimeline")}}, pero en el futuro habrá lineas de tiempo asociadas , por ejemplo, con gestos o desplazamiento. El valor por defecto es {{domxref("Document.timeline")}}, pero puede ser establecido en `null`.
 
@@ -37,7 +37,7 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.Animation")}}
+{{Compat}}
 
 ## Ver también
 

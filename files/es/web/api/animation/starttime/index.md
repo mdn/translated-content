@@ -13,7 +13,7 @@ translation_of: Web/API/Animation/startTime
 ---
 {{ APIRef("Web Animations") }}
 
-La propiedad **`Animation.startTime`** de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.
+La propiedad `Animation.startTime` de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.
 
 El **start time** **(tiempo de inicio)** es el valor de tiempo de su {{domxref("timeline", "DocumentTimeline")}}cuando su objetivo {{domxref("KeyframeEffect")}} está programado para comenzar la reproducción. El **start time** **(tiempo de inicio)** de una animación inicialmente no está resuelto (lo que significa que es `null` porque no tiene valor).
 
@@ -65,7 +65,7 @@ function animateNewCatWithWAAPI() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.startTime")}}
+{{Compat}}
 
 ## Ver también
 

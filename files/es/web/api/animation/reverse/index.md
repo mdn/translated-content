@@ -15,7 +15,7 @@ translation_of: Web/API/Animation/reverse
 ---
 {{APIRef("Web Animations")}}
 
-El método **`Animation.reverse()`** de la interfaz {{ domxref("Animation") }} Interface invierte la dirección de reproducción, lo que significa que la animación termina al principio. Si se llama en una animación sin reproducir, toda la animación se reproduce al revés. Si se llama en una animación pausada, continúa a la inversa.
+El método `Animation.reverse()` de la interfaz {{ domxref("Animation") }} Interface invierte la dirección de reproducción, lo que significa que la animación termina al principio. Si se llama en una animación sin reproducir, toda la animación se reproduce al revés. Si se llama en una animación pausada, continúa a la inversa.
 
 ## Sintaxis
 
@@ -25,7 +25,7 @@ animation.reverse();
 
 ### Parámetros
 
-None.
+Ningun.
 
 ### Valor devuelto
 
@@ -64,7 +64,7 @@ var shrinkAlice = function() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Animation.reverse")}}
+{{Compat}}
 
 ## Ver también
 
