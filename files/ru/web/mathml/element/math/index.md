@@ -3,163 +3,136 @@ title: <math>
 slug: Web/MathML/Element/math
 translation_of: Web/MathML/Element/math
 ---
-<p>{{MathMLRef()}}</p>
+{{MathMLRef()}}
 
-<p>Элементом верхнего уровня в MathML является тэг <code>&lt;math&gt;</code>. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.</p>
+Элементом верхнего уровня в MathML является тэг `<math>`. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>В дополнение к следующим атрибутам, тэг <code>&lt;math&gt;</code> воспринимает любые атрибуты из <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> .</p>
+В дополнение к следующим атрибутам, тэг `<math>` воспринимает любые атрибуты из [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle "<Mstyle>") .
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>При условии использования вместе с <a href="https://developer.mozilla.org/en-US/docs/CSS">таблицами стилей</a> .</dd>
- <dt id="attr-dir">dir</dt>
- <dd>Указывает направление формулы: <code>ltr</code> - слева направо или <code>rtl</code> - справа налево.</dd>
- <dt id="attr-href">ref</dt>
- <dd>Используется для установки гиперссылки на указанный URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>Цвет фона. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>Цвет текста. Вы можете использовать <code>#rgb</code>, <code>#rrggbb</code> и <a href="https://developer.mozilla.org/en-US/docs/CSS/color_value#Color_Keywords">названия цветов HTML</a>.</dd>
- <dt id="attr-display">display</dt>
- <dd>Этот атрибут определяет способ вывода. Возможные значения:
- <ul>
-  <li><code>block</code> - означает, что этот элемент будет отображаться за пределами текущего диапазона текста, как блока, который может быть расположен в любом месте без изменения смысла текста;</li>
-  <li><code>inline</code> -означает, что этот элемент будет отображаться внутри текущего диапазона текста, и не могут быть перемещены из неё без изменения значения этого текста.</li>
- </ul>
+- class, id, style
+  - : При условии использования вместе с [таблицами стилей](/ru/docs/CSS) .
+- dir
+  - : Указывает направление формулы: `ltr` - слева направо или `rtl` - справа налево.
+- ref
+  - : Используется для установки гиперссылки на указанный URI.
+- mathbackground
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+- mathcolor
+  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+- display
 
- <p>Значение по умолчанию <code>inline</code>.</p>
- </dd>
- <dt id="attr-mode">mode {{ deprecated_inline() }}</dt>
- <dd>Устаревшие значение  <a href="https://developer.mozilla.org/en-US/docs/MathML/Element/math#attr-display">display attribute</a>.<br>
- Возможные значения: <code>display</code> (который имеет тот же эффект, как <code>display="block"</code> ) и <code>inline</code> .</dd>
- <dt id="attr-overflow">overflow</dt>
- <dd>Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.<br>
- Возможные значения: <code>linebreak</code> (по умолчанию), <code>scroll</code> , <code>elide</code> , <code>truncate</code> , <code>scale</code> .</dd>
-</dl>
+  - : Этот атрибут определяет способ вывода. Возможные значения:
 
-<h2 id="Примеры">Примеры</h2>
+    - `block` - означает, что этот элемент будет отображаться за пределами текущего диапазона текста, как блока, который может быть расположен в любом месте без изменения смысла текста;
+    - `inline` -означает, что этот элемент будет отображаться внутри текущего диапазона текста, и не могут быть перемещены из неё без изменения значения этого текста.
 
-<p><img alt="Теорема Пифагора" src="https://developer.mozilla.org/files/3157/math.jpg"></p>
+    Значение по умолчанию `inline`.
 
-<h3 id="Обозначения_HTML5">Обозначения HTML5</h3>
+- mode {{ deprecated_inline() }}
+  - : Устаревшие значение [display attribute](/ru/docs/MathML/Element/math#attr-display).
+    Возможные значения: `display` (который имеет тот же эффект, как `display="block"` ) и `inline` .
+- overflow
+  - : Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.
+    Возможные значения: `linebreak` (по умолчанию), `scroll` , `elide` , `truncate` , `scale` .
 
-<pre class="brush: html  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;MathML in HTML5&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+## Примеры
 
-  &lt;math&gt;
-    &lt;mrow&gt;
-      &lt;mrow&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;a&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-        &lt;mo&gt;+&lt;/mo&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;b&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-      &lt;/mrow&gt;
-      &lt;mo&gt;=&lt;/mo&gt;
-      &lt;msup&gt;
-        &lt;mi&gt;c&lt;/mi&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msup&gt;
-    &lt;/mrow&gt;
-  &lt;/math&gt;
+![Теорема Пифагора](https://developer.mozilla.org/files/3157/math.jpg)
 
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+### Обозначения HTML5
 
-<p> </p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
 
-<h3 id="Обозначения_XHTML">Обозначения XHTML</h3>
+  <math>
+    <mrow>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mo>=</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </math>
 
-<p> </p>
+  </body>
+</html>
+```
 
-<pre class="brush: xml  language-xml"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
- &lt;title&gt;MathML in XHTML&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+### Обозначения XHTML
 
-  &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-    &lt;mrow&gt;
-      &lt;mrow&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;a&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-        &lt;mo&gt;+&lt;/mo&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;b&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-      &lt;/mrow&gt;
-      &lt;mo&gt;=&lt;/mo&gt;
-      &lt;msup&gt;
-        &lt;mi&gt;c&lt;/mi&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msup&gt;
-    &lt;/mrow&gt;
-  &lt;/math&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>MathML in XHTML</title>
+</head>
+<body>
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mo>=</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </math>
 
-<p> </p>
+</body>
+</html>
+```
 
-<p><strong>Примечания:</strong> XHTML документы с MathML должны быть поданы как <code>application/xhtml+xml</code>. Вы можете легко добиться этого, добавив <code>.xhtml</code> расширение для локальных файлов. Для серверов Apache вы можете <a class="external external-icon" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">настроить <code>.htaccess</code> файл</a> для этого расширения на правильный тип MIME. Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.</p>
+**Примечания:** XHTML документы с MathML должны быть поданы как `application/xhtml+xml`. Вы можете легко добиться этого, добавив `.xhtml` расширение для локальных файлов. Для серверов Apache вы можете [настроить `.htaccess` файл](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) для этого расширения на правильный тип MIME. Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.
 
-<p> </p>
+## Совместимость браузеров
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+{{Compat}}
 
-<p> </p>
+### Особенности ядра Gecko
 
-<p>{{Compat}}</p>
+В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle "<Mstyle>") элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
-<h3 id="Особенности_ядра_Gecko">Особенности ядра Gecko</h3>
+Альтернативные текстовые описания (`alttext`) или ссылки на альтернативное изображение, (атрибуты `altimg` , `altimg-width` , `altimg-height` и `altimg-valign`) в настоящее время не реализованы в Gecko.
 
-<p>В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mstyle" title="&lt;Mstyle>"><code>&lt;mstyle&gt;</code></a> элемента).  Тем не менее, <code>displaystyle</code> атрибут не отрабатывается. Его поддержка <a class="external link-https external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi%3Fid%3D669719">была добавлена</a> ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).</p>
+## Спецификации
 
-<p>Альтернативные текстовые описания (<code>alttext</code>) или ссылки на альтернативное изображение, (атрибуты <code>altimg</code> , <code>altimg-width</code> , <code>altimg-height</code> и <code>altimg-valign</code>) в настоящее время не реализованы в Gecko.</p>
+| Спецификация                                                                                                                             | Статус       | Комментарий            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------- |
+| [MathML 3.0](http://www.w3.org/TR/MathML3/chapter2.html "Определение «верхнего уровня математической элемент» в том, что спецификации.") | Рекомендация | Текущая спецификация   |
+| [MathML 2.0](http://www.w3.org/TR/MathML2/chapter7.html "Определение «верхнего уровня математической элемент» в том, что спецификации.") | Рекомендация | Начальная спецификация |
 
-<h2 id="Specifications">Спецификации</h2>
+## Смотрите также
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a class="external external-icon" href="http://www.w3.org/TR/MathML3/chapter2.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 3.0</a></td>
-   <td>Рекомендация</td>
-   <td>Текущая спецификация</td>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="http://www.w3.org/TR/MathML2/chapter7.html" lang="en" title="Определение «верхнего уровня математической элемент» в том, что спецификации.">MathML 2.0</a></td>
-   <td>Рекомендация</td>
-   <td>Начальная спецификация</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>HTML-элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" title="HTML &lt;HTML> Элемент (или HTML корневой элемент) представляет собой корень из HTML или документа XHTML. Все остальные элементы должны быть потомками этого элемента."><code>&lt;html&gt;</code></a></li>
- <li>SVG элемент верхнего уровня: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="Элемент SVG могут быть использованы для гнезда автономный SVG фрагмент внутри текущего документа (в том числе в HTML документе) до тех пор, SVG не является корневым элементом. Это автономный фрагмент имеет свой собственный просмотра и свою собственную систему координат."><code>&lt;svg&gt;</code></a></li>
- <li>Тест-браузер MathML: Для <a class="external link-https external-icon" href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> и <a class="external link-https external-icon" href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></li>
-</ul>
+- HTML-элемент верхнего уровня: [`<html>`](/ru/docs/Web/HTML/Element/html "HTML <HTML> Элемент (или HTML корневой элемент) представляет собой корень из HTML или документа XHTML. Все остальные элементы должны быть потомками этого элемента.")
+- SVG элемент верхнего уровня: [`<svg>`](/ru/docs/Web/SVG/Element/svg "Элемент SVG могут быть использованы для гнезда автономный SVG фрагмент внутри текущего документа (в том числе в HTML документе) до тех пор, SVG не является корневым элементом. Это автономный фрагмент имеет свой собственный просмотра и свою собственную систему координат.")
+- Тест-браузер MathML: Для [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) и [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)

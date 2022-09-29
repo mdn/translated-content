@@ -11,52 +11,44 @@ tags:
   - XML
 translation_of: Web/MathML
 ---
-<p><strong>Mathematical Markup Language (MathML)</strong> разновидность языка разметки <a href="/ru/docs/XML" title="/ru/docs/XML">XML</a>, предназначенная для построения математических выражений с сохранением их структуры и содержания. Здесь вы найдёте ссылки к документации, примеры и инструменты, которые помогут вам работать с этой мощной технологией. Для быстрого обзора - смотрите <a href="http://fred-wang.github.io/MozSummitMathML/index.html">слайды для выставки инноваций на саммите Mozilla 2013</a>.</p>
+**Mathematical Markup Language (MathML)** разновидность языка разметки [XML](/ru/docs/XML), предназначенная для построения математических выражений с сохранением их структуры и содержания. Здесь вы найдёте ссылки к документации, примеры и инструменты, которые помогут вам работать с этой мощной технологией. Для быстрого обзора - смотрите [слайды для выставки инноваций на саммите Mozilla 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
 
-<h2>Справочные данные по MathML</h2>
+## Справочные данные по MathML
 
-<dl>
- <dt><a href="/ru/docs/Web/MathML/Element" title="/ru/docs/Web/MathML/Element">Справка по элементам MathML</a></dt>
- <dd>Детальная информация о каждом элементе MathML, а также информация по совместимости для настольных и мобильных браузеров.</dd>
- <dt><a href="/ru/docs/Web/MathML/Attribute" title="/ru/docs/Web/MathML/Attribute">Справка по атрибутам MathML</a></dt>
- <dd>Информация по атрибутам MathML, которые могут изменять внешний вид или поведение элементов.</dd>
- <dt><a href="/ru/docs/Web/MathML/Examples" title="/ru/docs/Web/MathML/Examples">Примеры MathML</a></dt>
- <dd>Примеры и образцы работы технологии MathML, которые помогут вам понять её принципы.</dd>
- <dt><a href="/ru/docs/Web/MathML/Authoring" title="/ru/docs/Web/MathML/Authoring">Средство разработки MathML</a></dt>
- <dd>Предложения и советы по написанию на MathML, включая рекомендации по редакторам MathML, а также информация о том как интегрировать результат в Web контент.</dd>
-</dl>
+- [Справка по элементам MathML](/ru/docs/Web/MathML/Element)
+  - : Детальная информация о каждом элементе MathML, а также информация по совместимости для настольных и мобильных браузеров.
+- [Справка по атрибутам MathML](/ru/docs/Web/MathML/Attribute)
+  - : Информация по атрибутам MathML, которые могут изменять внешний вид или поведение элементов.
+- [Примеры MathML](/ru/docs/Web/MathML/Examples)
+  - : Примеры и образцы работы технологии MathML, которые помогут вам понять её принципы.
+- [Средство разработки MathML](/ru/docs/Web/MathML/Authoring)
+  - : Предложения и советы по написанию на MathML, включая рекомендации по редакторам MathML, а также информация о том как интегрировать результат в Web контент.
 
-<h2>Получение помощи из сообщества</h2>
+## Получение помощи из сообщества
 
-<ul>
- <li>Смотреть форумы Mozilla...<br>
-  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}</li>
- <li><a href="irc://irc.mozilla.org/%23mathml">IRC канал</a></li>
- <li><a href="https://wiki.mozilla.org/MathML:Home_Page">Wiki от авторов Mozilla</a></li>
- <li><a href="http://www.w3.org/Math/">Домашняя страница W3C Math</a></li>
- <li><a href="http://lists.w3.org/Archives/Public/www-math/">Почтовый архив www-math w3.org</a></li>
-</ul>
+- Смотреть форумы Mozilla...
+  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
+- [IRC канал](irc://irc.mozilla.org/%23mathml)
+- [Wiki от авторов Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
+- [Домашняя страница W3C Math](http://www.w3.org/Math/)
+- [Почтовый архив www-math w3.org](http://lists.w3.org/Archives/Public/www-math/)
 
-<h2>Инструменты</h2>
+## Инструменты
 
-<ul>
- <li><a href="http://validator.w3.org">W3C Validator (проверка online)</a></li>
- <li><a href="https://addons.mozilla.org/de/firefox/addon/8969/">Дополнение FireMath к Firefox</a></li>
- <li><a href="https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/">Коллекция дополнений к Mathzilla Firefox </a></li>
- <li><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> - Javascript конвертер LaTeX в MathML (<a href="http://fred-wang.github.io/TeXZilla/">живая демонстрация</a>, <a href="http://r-gaia-cs.github.io/TeXZilla-webapp/">web-приложение Firefox OS</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/texzilla/">дополнение к Firefox</a>, <a href="https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla">использование в Web странице, программа на JS, и.т.п.</a>)</li>
- <li><a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML</a> - Конвертация документов LaTeX в HTML+MathML Web-страницы</li>
- <li><a href="http://webdemo.visionobjects.com/home.html#equation">Web Equation</a> - Вставка рукописных формул в MathML или LaTeX</li>
- <li><a href="http://www.mathjax.org/">MathJax</a> - Кросс-платформенное средство отображения математического контента на JavaScript. Для ускорения MathJax c использованием нативного MathML, испытайте <a href="https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/">это дополнение для Mozilla</a>, это <a href="http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz">расширение для Safari </a>или этот <a href="https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/">скрипт для GreaseMonkey</a>.</li>
-</ul>
+- [W3C Validator (проверка online)](http://validator.w3.org)
+- [Дополнение FireMath к Firefox](https://addons.mozilla.org/de/firefox/addon/8969/)
+- [Коллекция дополнений к Mathzilla Firefox](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
+- [TeXZilla](https://github.com/fred-wang/TeXZilla) - Javascript конвертер LaTeX в MathML ([живая демонстрация](http://fred-wang.github.io/TeXZilla/), [web-приложение Firefox OS](http://r-gaia-cs.github.io/TeXZilla-webapp/), [дополнение к Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [использование в Web странице, программа на JS, и.т.п.](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
+- [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - Конвертация документов LaTeX в HTML+MathML Web-страницы
+- [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - Вставка рукописных формул в MathML или LaTeX
+- [MathJax](http://www.mathjax.org/) - Кросс-платформенное средство отображения математического контента на JavaScript. Для ускорения MathJax c использованием нативного MathML, испытайте [это дополнение для Mozilla](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/), это [расширение для Safari ](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)или этот [скрипт для GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
 
-<h2>Похожие темы</h2>
+## Похожие темы
 
-<ul>
- <li><a href="/ru/docs/Web/CSS" title="/ru/docs/Web/CSS">CSS</a></li>
- <li><a href="/ru/docs/Web/HTML" title="/ru/docs/Web/HTML">HTML</a></li>
- <li><a href="/ru/docs/Web/SVG" title="/ru/docs/Web/SVG">SVG</a></li>
-</ul>
+- [CSS](/ru/docs/Web/CSS)
+- [HTML](/ru/docs/Web/HTML)
+- [SVG](/ru/docs/Web/SVG)
 
-<h2>Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat("mathml.elements.math", 0)}}</p>
+{{Compat("mathml.elements.math", 0)}}

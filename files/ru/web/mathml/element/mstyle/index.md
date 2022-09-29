@@ -3,125 +3,95 @@ title: <mstyle>
 slug: Web/MathML/Element/mstyle
 tags:
   - MathML
-  - 'MathML:Element'
+  - MathML:Element
 translation_of: Web/MathML/Element/mstyle
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">Элемент <code>&lt;mstyle&gt;</code> разметки MathML используется для изменения стиля его дочерних элементов. Он принимает все атрибуты всех элементов представления MathML, за некоторыми исключениями и c дополнительными атрибутами, перечисленными ниже.</p>
+Элемент `<mstyle>` разметки MathML используется для изменения стиля его дочерних элементов. Он принимает все атрибуты всех элементов представления MathML, за некоторыми исключениями и c дополнительными атрибутами, перечисленными ниже.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt id="attr-dir"><code>dir</code></dt>
- <dd>Общая направленность формулы. Возможные значения: либо <code>ltr</code> (слева направо), либо <code>rtl</code> (справа налево).</dd>
- <dt id="attr-decimalpoint"><code>decimalpoint</code></dt>
- <dd>Этот атрибут определяет символ для точки выравнивания внутри {{ MathMLElement("mstack") }} и {{ MathMLElement("mtable") }} столбцов, если значение <code>decimalpoint</code> используется для определения выравнивания.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>Логическое значение, определяющее, используется ли большое вертикальное пространство для отображаемых уравнений; если установлено значение <code>false</code>, то используется более компактный макет. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда <code>displaystyle</code> установлено на <code>true</code>. Смотрите также <code>largeop</code> и <code>movablelimits</code> на {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-infixlinebreakstyle"><code>infixlinebreakstyle</code></dt>
- <dd>Задаёт <code>linebreakstyle</code> по умолчанию для использования в инфиксных операторах. Допустимы значения <code>before</code>, <code>after</code> и <code>duplicate</code>.</dd>
- <dt id="attr-scriptlevel"><code>scriptlevel</code></dt>
- <dd>В основном контроллирует размер шрифта. Чем больше значение <code>scriptlevel</code>, тем меньше размер шрифта. Этот атрибут поддерживает неотрицательные целые числа, а также знаки "+" или "-", которые увеличивают или уменьшают текущее значение соответственно. Кроме того, атрибут <code>scriptlevel</code> никогда не может уменьшить размер шрифта ниже значения <code>scriptminsize</code> во избежание нечитабельных мелких шрифтов и зависит от множителя, определённого в <code>scriptsizemultiplier</code>.</dd>
- <dt id="attr-scriptminsize"><code>scriptminsize</code></dt>
- <dd>Определяет минимальный размер шрифта, допустимый для изменений атрибутом <code>scriptlevel</code>. Значение по умолчанию: 8pt.</dd>
- <dt id="attr-scriptsizemultiplier"><code>scriptsizemultiplier</code></dt>
- <dd>Определяет множитель, используемый для настройки размера шрифта в <code>scriptlevel</code>. Значение по умолчанию: 0.71.</dd>
-</dl>
+- `dir`
+  - : Общая направленность формулы. Возможные значения: либо `ltr` (слева направо), либо `rtl` (справа налево).
+- `decimalpoint`
+  - : Этот атрибут определяет символ для точки выравнивания внутри {{ MathMLElement("mstack") }} и {{ MathMLElement("mtable") }} столбцов, если значение `decimalpoint` используется для определения выравнивания.
+- `displaystyle`
+  - : Логическое значение, определяющее, используется ли большое вертикальное пространство для отображаемых уравнений; если установлено значение `false`, то используется более компактный макет. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда `displaystyle` установлено на `true`. Смотрите также `largeop` и `movablelimits` на {{ MathMLElement("mo") }}.
+- `infixlinebreakstyle`
+  - : Задаёт `linebreakstyle` по умолчанию для использования в инфиксных операторах. Допустимы значения `before`, `after` и `duplicate`.
+- `scriptlevel`
+  - : В основном контроллирует размер шрифта. Чем больше значение `scriptlevel`, тем меньше размер шрифта. Этот атрибут поддерживает неотрицательные целые числа, а также знаки "+" или "-", которые увеличивают или уменьшают текущее значение соответственно. Кроме того, атрибут `scriptlevel` никогда не может уменьшить размер шрифта ниже значения `scriptminsize` во избежание нечитабельных мелких шрифтов и зависит от множителя, определённого в `scriptsizemultiplier`.
+- `scriptminsize`
+  - : Определяет минимальный размер шрифта, допустимый для изменений атрибутом `scriptlevel`. Значение по умолчанию: 8pt.
+- `scriptsizemultiplier`
+  - : Определяет множитель, используемый для настройки размера шрифта в `scriptlevel`. Значение по умолчанию: 0.71.
 
-<p>Элемент <code>&lt;mstyle&gt;</code> принимает <a href="/en-US/docs/MathML/Attributes">все атрибуты</a> всех элементов представления, за исключением:</p>
+Элемент `<mstyle>` принимает [все атрибуты](/ru/docs/MathML/Attributes) всех элементов представления, за исключением:
 
-<ul>
- <li><code>height</code>, <code>depth</code> или <code>width</code> не применимы к {{ MathMLELement("mglyph") }}, {{ MathMLELement("mpadded") }} или {{ MathMLELement("mtable") }}.</li>
- <li><code>rowalign</code>, <code>columnalign</code> или <code>groupalign</code> не применимы {{ MathMLELement("mtr") }}, {{ MathMLELement("mlabeledtr") }}, {{ MathMLELement("mtd") }} или {{ MathMLELement("maligngroup") }}.</li>
- <li><code>lspace</code> или <code>voffset</code> не применимы к {{ MathMLELement("mpadded") }}.</li>
- <li><code>fontfamily</code> не применим к {{ MathMLELement("mglyph") }}.</li>
- <li><code>align</code> не применим к {{ MathMLELement("mtable") }} или {{ MathMLELement("mstack") }}.</li>
- <li><code>index</code> не может быть установлен на <code>&lt;mstyle&gt;</code>.</li>
- <li><code>src</code> и <code>alt</code> на {{ MathMLElement("mglyph" ) }} не могут быть установлены на <code>&lt;mstyle&gt;</code>.</li>
- <li><code>actiontype</code> на {{ MathMLElement("maction") }} не может быть установлен на <code>&lt;mstyle&gt;</code>.</li>
-</ul>
+- `height`, `depth` или `width` не применимы к {{ MathMLELement("mglyph") }}, {{ MathMLELement("mpadded") }} или {{ MathMLELement("mtable") }}.
+- `rowalign`, `columnalign` или `groupalign` не применимы {{ MathMLELement("mtr") }}, {{ MathMLELement("mlabeledtr") }}, {{ MathMLELement("mtd") }} или {{ MathMLELement("maligngroup") }}.
+- `lspace` или `voffset` не применимы к {{ MathMLELement("mpadded") }}.
+- `fontfamily` не применим к {{ MathMLELement("mglyph") }}.
+- `align` не применим к {{ MathMLELement("mtable") }} или {{ MathMLELement("mstack") }}.
+- `index` не может быть установлен на `<mstyle>`.
+- `src` и `alt` на {{ MathMLElement("mglyph" ) }} не могут быть установлены на `<mstyle>`.
+- `actiontype` на {{ MathMLElement("maction") }} не может быть установлен на `<mstyle>`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Использование <code>displaystyle</code> и <code>mathcolor</code> для изменения стиля макета всей суммы.</p>
+Использование `displaystyle` и `mathcolor` для изменения стиля макета всей суммы.
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;mstyle displaystyle="true" mathcolor="teal"&gt;
-    &lt;mrow&gt;
+  <mstyle displaystyle="true" mathcolor="teal">
+    <mrow>
 
-      &lt;munderover&gt;
-        &lt;mo stretchy="true" form="prefix"&gt;&amp;sum;&lt;/mo&gt;
-        &lt;mrow&gt;
-          &lt;mi&gt;i&lt;/mi&gt;
-          &lt;mo form="infix"&gt;=&lt;/mo&gt;
-          &lt;mn&gt;1&lt;/mn&gt;
-        &lt;/mrow&gt;
-        &lt;mi&gt;n&lt;/mi&gt;
-      &lt;/munderover&gt;
+      <munderover>
+        <mo stretchy="true" form="prefix">&sum;</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo form="infix">=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>n</mi>
+      </munderover>
 
-      &lt;mstyle displaystyle="true"&gt;
-        &lt;mfrac&gt;
-          &lt;mn&gt;1&lt;/mn&gt;
-          &lt;mi&gt;n&lt;/mi&gt;
-        &lt;/mfrac&gt;
-      &lt;/mstyle&gt;
+      <mstyle displaystyle="true">
+        <mfrac>
+          <mn>1</mn>
+          <mi>n</mi>
+        </mfrac>
+      </mstyle>
 
-    &lt;/mrow&gt;
-  &lt;/mstyle&gt;
+    </mrow>
+  </mstyle>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристика</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("MathMLCore", "#style-change-mstyle", "mstyle")}}</td>
-   <td>{{Spec2("MathMLCore")}}</td>
-   <td>Проект спецификации</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML3', 'chapter3.html#presm.mstyle', 'mstyle') }}</td>
-   <td>{{ Spec2('MathML3') }}</td>
-   <td>Текущая спецификация</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML2', 'chapter3.html#presm.mstyle', 'mstyle') }}</td>
-   <td>{{ Spec2('MathML2') }}</td>
-   <td>Начальная спецификация</td>
-  </tr>
- </tbody>
-</table>
+| Характеристика                                                                           | Статус                           | Комментарий            |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
+| {{SpecName("MathMLCore", "#style-change-mstyle", "mstyle")}}         | {{Spec2("MathMLCore")}} | Проект спецификации    |
+| {{ SpecName('MathML3', 'chapter3.html#presm.mstyle', 'mstyle') }} | {{ Spec2('MathML3') }}     | Текущая спецификация   |
+| {{ SpecName('MathML2', 'chapter3.html#presm.mstyle', 'mstyle') }} | {{ Spec2('MathML2') }}     | Начальная спецификация |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Особенности ядра Gecko
 
-<p>{{Compat}}</p>
+- До Gecko 6.0 {{ geckoRelease("6.0") }} реализация `<mstyle>` не была завершена и [была исправлена](https://bugzilla.mozilla.org/show_bug.cgi?id=569125). В частности, установка этих атрибутов в `mstyle` не влияла на его дочерние элементы:
 
-<h2 id="Особенности_ядра_Gecko">Особенности ядра Gecko</h2>
+  - Атрибут `bevelled` на элементы {{ MathMLElement("mfrac") }}.
+  - Атрибут `notation` на элементы {{ MathMLElement("menclose") }}.
+  - Атрибуты `open`, `close` и `separators` на элементы {{ MathMLElement("mfenced") }}.
+  - Атрибуты `accent` и `accentunder` на элементы {{ MathMLElement("mover") }}, {{ MathMLElement("munder") }} и {{ MathMLElement("munderover") }}.
+  - Атрибут `selection` на элементы {{ MathMLElement("maction") }}.
+  - Атрибут `mathvariant` на элементы {{ MathMLElement("mi") }}.
 
-<ul>
- <li>До Gecko 6.0 {{ geckoRelease("6.0") }} реализация <code>&lt;mstyle&gt;</code> не была завершена и <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=569125">была исправлена</a>. В частности, установка этих атрибутов в <code>mstyle</code> не влияла на его дочерние элементы:
-
-  <ul>
-   <li>Атрибут <code>bevelled</code> на элементы {{ MathMLElement("mfrac") }}.</li>
-   <li>Атрибут <code>notation</code> на элементы {{ MathMLElement("menclose") }}.</li>
-   <li>Атрибуты <code>open</code>, <code>close</code> и <code>separators</code> на элементы {{ MathMLElement("mfenced") }}.</li>
-   <li>Атрибуты <code>accent</code> и <code>accentunder</code> на элементы {{ MathMLElement("mover") }}, {{ MathMLElement("munder") }} и {{ MathMLElement("munderover") }}.</li>
-   <li>Атрибут <code>selection</code> на элементы {{ MathMLElement("maction") }}.</li>
-   <li>Атрибут <code>mathvariant</code> на элементы {{ MathMLElement("mi") }}.</li>
-  </ul>
- </li>
- <li>Начиная с Gecko 29.0 {{geckoRelease("29.0")}}, атрибуты, принятые в элементе <code>&lt;mstyle&gt;</code> ограничены фактически используемыми на практике: <code>id, class, style, href, mathcolor, mathbackground, scriptlevel, displaystyle, scriptsizemultiplier, scriptminsize, dir, mathsize, mathvariant, fontfamily, fontweight, fontstyle, fontsize, color, background</code>.</li>
-</ul>
+- Начиная с Gecko 29.0 {{geckoRelease("29.0")}}, атрибуты, принятые в элементе `<mstyle>` ограничены фактически используемыми на практике: `id, class, style, href, mathcolor, mathbackground, scriptlevel, displaystyle, scriptsizemultiplier, scriptminsize, dir, mathsize, mathvariant, fontfamily, fontweight, fontstyle, fontsize, color, background`.

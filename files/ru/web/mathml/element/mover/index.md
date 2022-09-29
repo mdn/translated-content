@@ -4,72 +4,67 @@ slug: Web/MathML/Element/mover
 tags:
   - MathML
   - MathML Reference
-  - 'MathML:Element'
-  - 'MathML:Script and Limit Schemata'
+  - MathML:Element
+  - MathML:Script and Limit Schemata
   - Справка по MathML
   - Элемент MathML
 translation_of: Web/MathML/Element/mover
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">Элемент <code>&lt;mover&gt;</code> языка разметки MathML используется для добавления акцента или ограничения на выражение. Используйте синтаксис: <code>&lt;mover&gt;</code><code>базовый надстрочный символ&lt;/mover&gt;</code></p>
+Элемент `<mover>` языка разметки MathML используется для добавления акцента или ограничения на выражение. Используйте синтаксис: ` <mover>``базовый надстрочный символ</mover> `
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<dl>
- <dt id="attr-accent">accent</dt>
- <dd>Если установлено <code>true</code>, то over-script - это <em>акцент</em>, приближенный к базовому выражению.<br>
- Если установлено <code>false</code> (по умолчанию) over-script это <em>ограничение</em> по базовому выражению.</dd>
- <dt id="attr-align">align {{deprecated_inline}}</dt>
- <dd>Выравнивание над сценарием. Возможные значения: <code>left</code>, <code>center</code>, и <code>right</code>.<br>
- Этот атрибут устарел и будет удалён в будущем. Вместо этого используйте CSS <code><a href="https://developer.mozilla.org/ru/docs/Web/CSS/text-align">text-align</a></code>.</dd>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Предусмотрено для использования с <a href="/ru/docs/Web/CSS">таблицами стилей</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>Логическое значение, определяющее, используется ли больше вертикального пространства для отображаемых уравнений или, если установлено значение <code>false</code>, используется более компактный макет для отображения формул. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда <code>displaystyle</code> установлено в <code>true</code>. Смотрите также <code>largeop</code> и <code>movablelimits</code> для {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href">href</dt>
- <dd>Используется для установки гиперссылки на указанный URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>Цвет фона. Возможно использование <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имён цветов HTML</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>Цвет текста. Возможно использование <code>#rgb</code>, <code>#rrggbb</code> и <a href="/ru/docs/Web/CSS/color_value">имён цветов HTML</a>.</dd>
-</dl>
+- accent
+  - : Если установлено `true`, то over-script - это _акцент_, приближенный к базовому выражению.
+    Если установлено `false` (по умолчанию) over-script это _ограничение_ по базовому выражению.
+- align {{deprecated_inline}}
+  - : Выравнивание над сценарием. Возможные значения: `left`, `center`, и `right`.
+    Этот атрибут устарел и будет удалён в будущем. Вместо этого используйте CSS [`text-align`](https://developer.mozilla.org/ru/docs/Web/CSS/text-align).
+- class, id, style
+  - : Предусмотрено для использования с [таблицами стилей](/ru/docs/Web/CSS).
+- `displaystyle`
+  - : Логическое значение, определяющее, используется ли больше вертикального пространства для отображаемых уравнений или, если установлено значение `false`, используется более компактный макет для отображения формул. Основной эффект заключается в том, что отображаются более крупные версии операторов, когда `displaystyle` установлено в `true`. Смотрите также `largeop` и `movablelimits` для {{ MathMLElement("mo") }}.
+- href
+  - : Используется для установки гиперссылки на указанный URI.
+- mathbackground
+  - : Цвет фона. Возможно использование `#rgb`, `#rrggbb` и [имён цветов HTML](/ru/docs/Web/CSS/color_value).
+- mathcolor
+  - : Цвет текста. Возможно использование `#rgb`, `#rrggbb` и [имён цветов HTML](/ru/docs/Web/CSS/color_value).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Образец: <img alt="x+y+z" src="/files/3196/mover.png" style="margin-left: 10px; vertical-align: middle;"></p>
+Образец: ![x+y+z](/files/3196/mover.png)
 
-<p>Отображение в вашем браузере: <math> <mover accent="true"> <mrow> <mi> x </mi> <mo> + </mo> <mi> y </mi> <mo> + </mo> <mi> z </mi> </mrow> <mo> ⏞ </mo> </mover> </math></p>
+Отображение в вашем браузере: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-&lt;mover accent="true"&gt;
-  &lt;mrow&gt;
-    &lt;mi&gt; x &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; z &lt;/mi&gt;
-  &lt;/mrow&gt;
-  &lt;mo&gt; &amp;#x23DE; &lt;!-- Верхняя фигурная скобка --&gt; &lt;/mo&gt;
-&lt;/mover&gt;
+<mover accent="true">
+  <mrow>
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+    <mo> + </mo>
+    <mi> z </mi>
+  </mrow>
+  <mo> &#x23DE; <!-- Верхняя фигурная скобка --> </mo>
+</mover>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{ MathMLElement("munder") }} (Underscript)</li>
- <li>{{ MathMLElement("munderover") }} (Underscript-overscript pair)</li>
-</ul>
+- {{ MathMLElement("munder") }} (Underscript)
+- {{ MathMLElement("munderover") }} (Underscript-overscript pair)
