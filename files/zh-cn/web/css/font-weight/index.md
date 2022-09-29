@@ -164,7 +164,7 @@ window.addEventListener('load', function () {
 ### 值
 
 - `normal`
-  - : 正常粗细。与`400等值`。
+  - : 正常粗细。与 `400` 等值。
 - `bold`
   - : 加粗。与 `700` 等值。
 - `lighter`
