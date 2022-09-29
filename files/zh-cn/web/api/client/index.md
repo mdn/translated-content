@@ -17,7 +17,7 @@ slug: Web/API/Client
 - {{domxref("Client.id")}} {{readonlyInline}}
   - : 客户端的唯一通用标识符，字符串形式。
 - {{domxref("Client.type")}} {{readonlyInline}}
-  - : 客户端的类型，字符串形式。可能是"`window"`, "`worker"`, 或 "`sharedworker"。`
+  - : 客户端的类型，字符串形式。可能是 `"window"`, `"worker"`, 或 `"sharedworker"`。
 - {{domxref("Client.url")}} {{readonlyInline}}
   - : 客户端的 URL，字符串形式。
 

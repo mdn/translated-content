@@ -211,7 +211,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 幸运的是，WAI-ARIA 提供了一种有效的机制来发起提示 —— [`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live)。将此应用于元素会让屏幕阅读器读出更新的内容。读取内容的紧急程度取决于属性值：
 
-- `off:` 默认值，更新不会提醒。
+- `off`: 默认值，更新不会提醒。
 - `polite`: 只有用户空闲的情况下提醒。
 - `assertive`: 尽快提醒。
 - `rude`: 会以打断用户操作的方式直接提醒。

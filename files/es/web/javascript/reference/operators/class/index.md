@@ -17,9 +17,11 @@ La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES
 
 ## Sintaxis
 
-    var MyClass = class [className] [extends] {
-      // class body
-    };
+```
+var MyClass = class [className] [extends] {
+  // class body
+};
+```
 
 ## Descripción
 

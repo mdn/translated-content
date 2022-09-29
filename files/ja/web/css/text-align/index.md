@@ -2,6 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 **`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表セルボックスの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} のように、ただし水平方向に動作します。

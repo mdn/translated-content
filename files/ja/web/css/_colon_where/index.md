@@ -2,6 +2,7 @@
 title: ':where()'
 slug: Web/CSS/:where
 ---
+
 {{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。

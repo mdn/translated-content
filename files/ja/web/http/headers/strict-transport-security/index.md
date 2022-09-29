@@ -2,6 +2,7 @@
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Strict-Transport-Security`** レスポンスヘッダー (しばしば {{Glossary("HSTS")}} と略されます) は、ウェブサイトがブラウザーに HTTP の代わりに HTTPS を用いて通信を行うよう指示するためのものです。

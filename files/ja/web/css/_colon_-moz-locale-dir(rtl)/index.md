@@ -2,6 +2,7 @@
 title: ':-moz-locale-dir(rtl)'
 slug: Web/CSS/:-moz-locale-dir(rtl)
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`:-moz-locale-dir(rtl)`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の `intl.uidirection.locale` （_`locale`_ は現在のロケール）が "rtl" に設定されていることで特定されます。

@@ -3,6 +3,7 @@ title: image()
 slug: Web/CSS/image/image
 original_slug: Web/CSS/image/image()
 ---
+
 {{CSSRef}}
 
 **`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url()")}} 関数と同様の様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。

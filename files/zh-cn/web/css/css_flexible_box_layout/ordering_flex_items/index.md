@@ -28,7 +28,7 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 ![The items are displayed in a column in reverse order starting at the bottom line.](align11.png)
 
-请记住，起始行与写入模式有关。 上面两个示例说明了 `row` 和 `row-reverse` 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 `row` 的起始行将在右边， `row-reverse` 起始行会在左边。
+请记住，起始行与写入模式有关。上面两个示例说明了 `row` 和 `row-reverse` 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 `row` 的起始行将在右边， `row-reverse` 起始行会在左边。
 
 ![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
 

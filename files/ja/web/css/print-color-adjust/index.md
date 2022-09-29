@@ -3,6 +3,7 @@ title: '-webkit-print-color-adjust'
 slug: Web/CSS/print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-print-color-adjust`** プロパティは標準外の CSS 拡張で、 WebKit ブラウザー上で印刷時に背景色や背景画像の表示を強制することができます。

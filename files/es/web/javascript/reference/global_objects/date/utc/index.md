@@ -17,7 +17,9 @@ Accepts the same parameters as the longest form of the constructor, and returns 
 
 ## Sintaxis
 
-    Date.UTC(año,mes[, dia[, hora[, minutos[, segundos, milisegundos]]]])
+```
+Date.UTC(año,mes[, dia[, hora[, minutos[, segundos, milisegundos]]]])
+```
 
 ### Parámetros
 

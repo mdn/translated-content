@@ -18,7 +18,9 @@ El método **`getSeconds()`** devuelve los segundos en la fecha especificada de 
 
 ## Sintaxis
 
-    dateObj.getSeconds()
+```
+dateObj.getSeconds()
+```
 
 ### Valor devuelto
 

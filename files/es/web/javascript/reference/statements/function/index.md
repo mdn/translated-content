@@ -17,7 +17,9 @@ Puede también definir funciones usando el constructor {{jsxref("Function")}} y 
 
 ## Sintaxis
 
-    function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
+```
+function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
+```
 
 - `nombre`
   - : El nombre de la función.

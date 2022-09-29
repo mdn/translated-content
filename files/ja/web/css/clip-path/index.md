@@ -2,6 +2,7 @@
 title: clip-path
 slug: Web/CSS/clip-path
 ---
+
 {{CSSRef}}
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。

@@ -17,7 +17,9 @@ Devuelve el número de milisegundos transcurridos desde las 00:00:00 UTC del 1 d
 
 ## Sintaxis
 
-    var fechaEnMiliseg = Date.now();
+```
+var fechaEnMiliseg = Date.now();
+```
 
 ## Descripción
 

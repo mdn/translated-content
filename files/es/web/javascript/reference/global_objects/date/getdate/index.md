@@ -10,7 +10,9 @@ El método **`getDate()`** devuelve el día del mes para la fecha especificada d
 
 ## Sintaxis
 
-    dateObj.getDate()
+```
+dateObj.getDate()
+```
 
 ### Parámetros
 

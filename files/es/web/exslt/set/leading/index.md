@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/leading
 
 ### Sintaxis
 
-    set:leading(conjuntoNodos1,conjuntoNodos2)
+```
+set:leading(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Arguments
 
@@ -24,9 +26,9 @@ translation_of: Web/EXSLT/set/leading
 
 ### Devuelve
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1 `cuyos valores preceden al primer nodo del `conjuntoNodos2 `.
+Un conjunto de nodos que contiene los nodos del `conjuntoNodos1` cuyos valores preceden al primer nodo del `conjuntoNodos2`.
 
-{{NoteStart}}Si el primer nodo del `conjuntoNodos2 `no está contenido en `conjuntoNodos1 `, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2 `está vacío, entonces el resultado es `conjuntoNodos1 `.{{NoteEnd}}
+> **Nota:** Si el primer nodo del `conjuntoNodos2` no está contenido en `conjuntoNodos1`, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es `conjuntoNodos1`.
 
 ### Definido en
 

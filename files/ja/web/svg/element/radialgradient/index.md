@@ -4,6 +4,7 @@ slug: Web/SVG/Element/radialGradient
 l10n:
   sourceCommit: ba32817d1601205e4b45b7b8b80284cc794da1d2
 ---
+
 {{SVGRef}}
 
 **`<radialGradient>`** 要素は、グラフィック要素の塗りつぶしや線の描画に適用できる放射状のグラデーションを定義することができます。

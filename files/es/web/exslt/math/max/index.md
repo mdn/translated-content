@@ -14,7 +14,9 @@ To compute the maximum value of the node-set, the node set is sorted into descen
 
 ## Sintaxis
 
-    math:max(conjuntoNodos)
+```
+math:max(conjuntoNodos)
+```
 
 ### Argumentos
 

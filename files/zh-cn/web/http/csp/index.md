@@ -144,7 +144,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 
 ## 违例报告样本
 
-我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自`cdn.example.com 的样式表。`
+我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
 
 ```plain
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports

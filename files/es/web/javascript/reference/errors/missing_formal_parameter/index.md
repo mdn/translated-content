@@ -7,7 +7,9 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 
 ## Mensaje
 
-    SyntaxError: missing formal parameter (Firefox)
+```
+SyntaxError: missing formal parameter (Firefox)
+```
 
 ## Tipo de error
 

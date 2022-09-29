@@ -1048,5 +1048,5 @@ p {
 
 ## 같이 보기
 
-- [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3 "CSS3 Dock Menu using CSS transitions") using CSS transitions
+- [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
 - The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ko/docs/Mozilla_event_reference/transitionend) event.

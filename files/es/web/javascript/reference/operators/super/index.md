@@ -17,11 +17,13 @@ Las expresiones `super.prop` y `super[expr]` son válidas en cualquier [definici
 
 ## Sintaxis
 
-    // llama al método constructor del objeto padre.
-    super([arguments]);
+```
+// llama al método constructor del objeto padre.
+super([arguments]);
 
-    // llama cualquier otro método del objeto padre.
-    super.functionOnParent([arguments]);
+// llama cualquier otro método del objeto padre.
+super.functionOnParent([arguments]);
+```
 
 ## Descripción
 

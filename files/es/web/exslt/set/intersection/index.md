@@ -13,7 +13,9 @@ translation_of: Web/EXSLT/set/intersection
 
 ### Sintaxis
 
-    set:intersection(conjuntoNodos1,conjuntoNodos2)
+```
+set:intersection(conjuntoNodos1,conjuntoNodos2)
+```
 
 ### Argumentos
 

@@ -12,7 +12,9 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 
 ## Mensaje
 
-    TypeError: "x" is not a function
+```
+TypeError: "x" is not a function
+```
 
 ## Tipo de error
 

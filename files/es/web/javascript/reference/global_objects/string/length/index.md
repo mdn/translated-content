@@ -17,7 +17,9 @@ La propiedad **`length`** de un objeto {{jsxref("String")}} representa la longit
 
 ## Sintaxis
 
-    str.length
+```
+str.length
+```
 
 ## Descripción
 

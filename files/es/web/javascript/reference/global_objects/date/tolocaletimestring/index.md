@@ -20,7 +20,9 @@ El método **`toLocaleTimeString()`** devuelve una cadena con una representació
 
 ## Sintaxis
 
-    dateObj.toLocaleTimeString([locales[, options]])
+```
+dateObj.toLocaleTimeString([locales[, options]])
+```
 
 ### Parámetros
 

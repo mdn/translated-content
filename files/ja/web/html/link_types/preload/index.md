@@ -2,6 +2,7 @@
 title: 'リンク種別: preload'
 slug: Web/HTML/Link_types/preload
 ---
+
 {{HTMLSidebar}}
 
 `preload` の値を {{htmlelement("link")}} 要素の {{htmlattrxref("rel", "link")}} 属性に設定すると、 HTML の {{htmlelement("head")}} の中で読み込みリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み込みを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。

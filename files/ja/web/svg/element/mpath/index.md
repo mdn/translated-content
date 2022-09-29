@@ -2,6 +2,7 @@
 title: <mpath>
 slug: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 ## 概要
