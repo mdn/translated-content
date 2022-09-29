@@ -9,147 +9,109 @@ tags:
   - extensiones
 translation_of: Mozilla/Add-ons/WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la <a class="external-icon external" href="https://developer.chrome.com/extensions">API de extensión</a> soportada por Google Chrome, Opera y el <a href="https://browserext.github.io/browserext/">borrador del grupo de la comunidad del W3C</a>.</p>
+Las extensiones pueden extender y modificar la capacidad de un navegador. Las extensiones para Firefox son construidas utilizando las APIs de WebExtension, un sistema para el desarrollo de extensiones multi-navegador. En gran medida, el sistema es compatible con la [API de extensión](https://developer.chrome.com/extensions) soportada por Google Chrome, Opera y el [borrador del grupo de la comunidad del W3C](https://browserext.github.io/browserext/).
 
-<p>Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/">Microsoft Edge</a> con sólo <a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Porting_from_Google_Chrome">unos pocos cambios</a>. La API también es totalmente compatible con <a href="https://developer.mozilla.org/es/Firefox/Multiprocess_Firefox">multiprocesos de Firefox</a>.</p>
+Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) con sólo [unos pocos cambios](https://developer.mozilla.org/es/Add-ons/WebExtensions/Porting_from_Google_Chrome). La API también es totalmente compatible con [multiprocesos de Firefox](https://developer.mozilla.org/es/Firefox/Multiprocess_Firefox).
 
-<p>Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de un complemento heredado al uso de las APIs de WebExtension, puede ponerse en contacto con nosotros a través de la <a href="https://mail.mozilla.org/listinfo/dev-addons">lista de correo dev-addons</a> o en el canal <a href="irc://irc.mozilla.org/webextensions">#webextensions</a> de <a href="https://wiki.mozilla.org/IRC">IRC</a>.</p>
+Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de un complemento heredado al uso de las APIs de WebExtension, puede ponerse en contacto con nosotros a través de la [lista de correo dev-addons](https://mail.mozilla.org/listinfo/dev-addons) o en el canal [#webextensions](irc://irc.mozilla.org/webextensions) de [IRC](https://wiki.mozilla.org/IRC).
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 id="Primeros_pasos">Primeros pasos</h2>
+## Primeros pasos
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Que_son_las_WebExtensions">¿Qué son las extensiones?</a></li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Tu_primera_WebExtension">Tu primera extensión</a></li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Tutorial">Tu segunda extensión</a></li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension">Anatomía de una extensión</a></li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Examples">Ejemplos de extensiones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">¿Qué sigue?</a></li>
-</ul>
+- [¿Qué son las extensiones?](https://developer.mozilla.org/es/Add-ons/WebExtensions/Que_son_las_WebExtensions)
+- [Tu primera extensión](https://developer.mozilla.org/es/Add-ons/WebExtensions/Tu_primera_WebExtension)
+- [Tu segunda extensión](https://developer.mozilla.org/es/Add-ons/WebExtensions/Tutorial)
+- [Anatomía de una extensión](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension)
+- [Ejemplos de extensiones](https://developer.mozilla.org/es/Add-ons/WebExtensions/Examples)
+- [¿Qué sigue?](/es/docs/Mozilla/Add-ons/WebExtensions/What_next_)
 
-<p> </p>
+## Conceptos
 
-<h2 id="Conceptos">Conceptos</h2>
+- [Descripción general de la API JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/API)
+- [Scripts de contenido](/es/Add-ons/WebExtensions/Content_scripts)
+- [Patrones de coincidencia](/es/Add-ons/WebExtensions/Match_patterns)
+- [Trabajando con archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
+- [Internacionalización](/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [Las mejores prácticas de seguridad](/es/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices)
+- [Política de seguridad de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Mensajería nativa](/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
+- [Utilización de las APIs de devtools](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [Buenas prácticas para la experiencia de usuario](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/User_experience_best_practices)
+- [Manifestaciones nativas](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests)
+- [Acciones de los usuarios](/es/docs/Mozilla/Add-ons/WebExtensions/User_actions)
 
-<ul>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API">Descripción general de la API JavaScript</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Content_scripts">Scripts de contenido</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Match_patterns">Patrones de coincidencia</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Trabajando con archivos</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internacionalización</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Las mejores prácticas de seguridad</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de seguridad de contenido</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Mensajería nativa</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Extending_the_developer_tools">Utilización de las APIs de devtools</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/User_experience_best_practices">Buenas prácticas para la experiencia de usuario</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests">Manifestaciones nativas</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">Acciones de los usuarios</a></li>
-</ul>
+## Interfaz de usuario
 
-<p> </p>
+- [Introducción](https://developer.mozilla.org/es/Add-ons/WebExtensions/user_interface)
+- [Botón en la barra de herramientas del navegador](https://developer.mozilla.org/es/Add-ons/WebExtensions/user_interface/Accion_navegador)
+- [Botón en barra de herramientas del navegador con una ventana emergente](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Popups)
+- [Botón en la barra de direcciones](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Page_actions)
+- [Botón en barra de direcciones con una ventana emergente](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Popups)
+- [Elementos en el menú contextual](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Context_menu_items)
+- [Barras laterales](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Sidebars)
+- [Página de opciones](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages)
+- [Páginas de extensiones](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Extension_pages)
+- [Notificaciones](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Notifications)
+- [Sugerencias en la barra de direcciones](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Omnibox)
+- [Paneles de herramientas para desarrolladores](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/devtools_panels)
+- [Estilos del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
 
-<h2 id="Interfaz_de_usuario">Interfaz de usuario</h2>
+## Cómo
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/user_interface">Introducción</a></li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/user_interface/Accion_navegador">Botón en la barra de herramientas del navegador</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Popups">Botón en barra de herramientas del navegador con una ventana emergente</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Page_actions">Botón en la barra de direcciones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Popups">Botón en barra de direcciones con una ventana emergente</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Context_menu_items">Elementos en el menú contextual</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Sidebars">Barras laterales</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Options_pages">Página de opciones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Extension_pages">Páginas de extensiones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Notifications">Notificaciones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Omnibox">Sugerencias en la barra de direcciones</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/devtools_panels">Paneles de herramientas para desarrolladores</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Estilos del navegador</a></li>
-</ul>
+- [Interceptar solicitudes HTTP](/es/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
+- [Modificar una página web](/es/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
+- [Agregar un botón a la barra de herramientas](/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [Implementar una página de configuración](/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [Interactuar con el portapapapeles](/es/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
+- [Trabajar con el API de las pestañas](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Working_with_the_Tabs_API)
+- [Trabajar con el API de los marcadores](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
+- [Trabajar con el API de las cookies](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_the_Cookies_API)
+- [Trabjar con identidades contextuales](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_contextual_identities)
+- [Insertar contenido externo](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
 
-<h2 id="Cómo">Cómo</h2>
+## Portado
 
-<ul>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Interceptar solicitudes HTTP</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modificar una página web</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Agregar un botón a la barra de herramientas</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implementar una página de configuración</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">Interactuar con el portapapapeles</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Working_with_the_Tabs_API">Trabajar con el API de las pestañas</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Trabajar con el API de los marcadores</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_the_Cookies_API">Trabajar con el API de las cookies</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Work_with_contextual_identities">Trabjar con identidades contextuales</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insertar contenido externo</a></li>
-</ul>
+- [Portar una extensión de Google Chrome](/es/Add-ons/WebExtensions/Porting_from_Google_Chrome)
+- [Portar un complemento heredado de Firefox](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
+- [Desarrollo para Firefox para Android](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
+- [WebExtensions integradas](/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
+- [Comparación con el complemento SDK](/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
+- [Comparación con las extensiones XUL/XPCOM](/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions)
+- [Incompatibilidades con Chrome](/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+- [Diferencias entre el escritorio y Android](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
+- [Diferencias entre implementaciones de API](/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
 
-<h2 id="Portado">Portado</h2>
+## Flujo de trabajo de Firefox
 
-<ul>
- <li><a href="/es/Add-ons/WebExtensions/Porting_from_Google_Chrome">Portar una extensión de Google Chrome</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Portar un complemento heredado de Firefox</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Desarrollo para Firefox para Android</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">WebExtensions integradas</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparación con el complemento SDK</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparación con las extensiones XUL/XPCOM</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Incompatibilidades con Chrome</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Diferencias entre el escritorio y Android</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations">Diferencias entre implementaciones de API</a></li>
-</ul>
+- [Experiencia de usuario](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/User_experience_best_practices)
+- [Instalación](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [Depuración](/es/Add-ons/WebExtensions/Debugging)
+- [Prueba de funciones persistentes y de reinicio](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Testing_persistent_and_restart_features)
+- [Primeros pasos con web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
+- [Referencia del comando web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
+- [Extensiones y el ID del complemento](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
+- [Opciones alternativas de distribución](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Alternative_distribution_options)
+- [Solicite los permisos correctos](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [Compartir objetos con guiones de página](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [Retirando su extensión](https://developer.mozilla.org/en-US/Add-ons/Distribution/Retiring_your_extension)
+- [Consejos y trucos](/es/docs/Mozilla/Add-ons/WebExtensions/Tips)
+- [Herramientas de desarrollo para las extensiones del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
 
-<h2 id="Flujo_de_trabajo_de_Firefox">Flujo de trabajo de Firefox</h2>
+## Reference
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/User_experience_best_practices">Experiencia de usuario</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Instalación</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Debugging">Depuración</a></li>
- <li>
-  <div id="gt-res-content">
-  <div>
-  <div id="tts_button"><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Prueba de funciones persistentes y de reinicio</a></div>
-  </div>
-  </div>
- </li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Primeros pasos con web-ext</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">Referencia del comando web-ext</a></li>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensiones y el ID del complemento</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Alternative_distribution_options">Opciones alternativas de distribución</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Solicite los permisos correctos</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Compartir objetos con guiones de página</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/Distribution/Retiring_your_extension">Retirando su extensión</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Tips">Consejos y trucos</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools">Herramientas de desarrollo para las extensiones del navegador</a></li>
-</ul>
-</div>
+### JavaScript APIs
 
-<div class="section">
-<h2 id="Reference">Reference</h2>
+- [Descripción general de la API JavaScript](/es/docs/Mozilla/Add-ons/WebExtensions/API)
+- [Tablas de compatibilidad del navegador para las API de JavaScript](/es/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 
-<h3 id="JavaScript_APIs">JavaScript APIs</h3>
+#### APIs de JavaScript
 
-<ul>
- <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API">Descripción general de la API JavaScript</a></li>
- <li><a href="/es/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Tablas de compatibilidad del navegador para las API de JavaScript</a></li>
-</ul>
+{{ListSubpages("/en-US/Add-ons/WebExtensions/API")}}
 
-<h4 id="APIs_de_JavaScript">APIs de JavaScript</h4>
+### Manifest keys
 
-<div class="twocolumns">{{ListSubpages("/en-US/Add-ons/WebExtensions/API")}}</div>
+- [Resumen del manifest.json](https://developer.mozilla.org/es/Add-ons/WebExtensions/manifest.json)
+- [Compatibilidad del navegador para el manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
-<h3 id="Manifest_keys">Manifest keys</h3>
-
-<ul>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/manifest.json">Resumen del manifest.json</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">Compatibilidad del navegador para el manifest.json</a></li>
-</ul>
-
-<div class="twocolumns">{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}</div>
-</div>
-</div>
-
-<div>
-<div>
-<div> </div>
-</div>
-</div>
+{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}

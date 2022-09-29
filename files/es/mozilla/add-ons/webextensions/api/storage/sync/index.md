@@ -5,48 +5,41 @@ tags:
   - Complementos Extensiones
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.</p>
+Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.
 
-<p>Para Firefox, un usuario debe tener complementos seleccionados en las opciones de "about:preferences".</p>
+Para Firefox, un usuario debe tener complementos seleccionados en las opciones de "about:preferences".
 
-<p>Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> manifest.json.</p>
+Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json.
 
-<p>El principal caso de uso de esta API es almacenar las preferencias sobre su extensión y permitir que el usuario las sincronice con diferentes perfiles. Puede almacenar hasta 100 KB de datos utilizando esta API. Si intenta almacenar más que esto, la llamada fallará con un mensaje de error. La API se proporciona sin ninguna garantía sobre el tiempo de actividad o el rendimiento.</p>
+El principal caso de uso de esta API es almacenar las preferencias sobre su extensión y permitir que el usuario las sincronice con diferentes perfiles. Puede almacenar hasta 100 KB de datos utilizando esta API. Si intenta almacenar más que esto, la llamada fallará con un mensaje de error. La API se proporciona sin ninguna garantía sobre el tiempo de actividad o el rendimiento.
 
-<p>Metodos</p>
+Metodos
 
-<p>El objeto de sincronización implementa los métodos definidos en el {{WebExtAPIRef("storage.StorageArea")}} ponga:</p>
+El objeto de sincronización implementa los métodos definidos en el {{WebExtAPIRef("storage.StorageArea")}} ponga:
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>Recupera uno o más elementos del área de almacenamiento.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>Obtiene la cantidad de espacio de almacenamiento (en bytes) utilizado por uno o más elementos que se almacenan en el área de almacenamiento.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>Almacena uno o más artículos en el área de almacenamiento. Si el artículo ya existe, su valor será actualizado.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>Elimina uno o más elementos del área de almacenamiento.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>Elimina todos los elementos del área de almacenamiento.</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : Recupera uno o más elementos del área de almacenamiento.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : Obtiene la cantidad de espacio de almacenamiento (en bytes) utilizado por uno o más elementos que se almacenan en el área de almacenamiento.
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : Almacena uno o más artículos en el área de almacenamiento. Si el artículo ya existe, su valor será actualizado.
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : Elimina uno o más elementos del área de almacenamiento.
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : Elimina todos los elementos del área de almacenamiento.
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("webextensions.api.storage.sync")}}</p>
+{{Compat("webextensions.api.storage.sync")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><strong>Agradecimientos</strong>
+> **Nota:** **Agradecimientos**Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
-<p>Esta API está basada en la API de Chromium's <a href="https://developer.chrome.com/extensions/storage#property-sync"><code>chrome.storage</code></a> API. Esta documentación se deriva de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> en el código de Chromium.</p>
-
-<p>Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.</p>
-</div>
-
-<div>
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+```
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,5 +66,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+```

@@ -6,116 +6,114 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Una extensión se compone de una colección de archivos, empaquetados para su distribución e instalación. En este artículo vamos a repasar rápidamente los archivos que deben estar presentes en una extensión.</p>
+Una extensión se compone de una colección de archivos, empaquetados para su distribución e instalación. En este artículo vamos a repasar rápidamente los archivos que deben estar presentes en una extensión.
 
-<p>Toda extensión debe contener un archivo llamado <a href="/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#manifest.json">"manifest.json"</a>. Este puede tener enlaces a otros tipos de archivos:</p>
+Toda extensión debe contener un archivo llamado ["manifest.json"](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#manifest.json). Este puede tener enlaces a otros tipos de archivos:
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano">Páginas en segundo plano</a>: Implementan la lógica de larga ejecución.</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido">Scripts de contenido</a>: Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2">Archivos de acción del navegador</a>: Implementan los botones de la barra de herramientas.</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas">Archivos de acción de la página: </a>Implementan botones en la barra de direcciones.</li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas">Páginas de opciones</a>: Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.</li>
- <li>
-  <div id="gt-res-content">
-  <div><span id="result_box" lang="es"><span><a href="/es/Add-ons/WebExtensions/user_interface/Sidebars">archivos de la barra lateral</a>: Agregue una barra lateral al navegador.</span></span></div>
-  </div>
- </li>
- <li><a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles">Recursos Web accesibles</a>: Hace posible que el contenido empaquetado acceda a páginas web y scripts.</li>
-</ul>
+- [Páginas en segundo plano](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
+- [Scripts de contenido](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
+- [Archivos de acción del navegador](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
+- [Archivos de acción de la página: ](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas)Implementan botones en la barra de direcciones.
+- [Páginas de opciones](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
+- [archivos de la barra lateral](/es/Add-ons/WebExtensions/user_interface/Sidebars): Agregue una barra lateral al navegador.
+- [Recursos Web accesibles](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
 
-<h2 id="manifest.json">manifest.json</h2>
+## manifest.json
 
-<p>Este es el único archivo que debe estar presente en toda WebExtension. Este contiene los metadatos básicos acerca de la extensión, como su nombre, versión, y los permisos que esta requiere. También provee los enlaces a otros archivos de la extensión.</p>
+Este es el único archivo que debe estar presente en toda WebExtension. Este contiene los metadatos básicos acerca de la extensión, como su nombre, versión, y los permisos que esta requiere. También provee los enlaces a otros archivos de la extensión.
 
-<p>Mira la página de referencia <a href="/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> para ver todos los detalles.</p>
+Mira la página de referencia [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json) para ver todos los detalles.
 
-<h2 id="Scripts_en_segundo_plano">Scripts en segundo plano</h2>
+## Scripts en segundo plano
 
-<p>Las extensiones a menudo necesitan mantener estados de larga duración, o ejecutar operaciones a largo plazo, independientemente del tiempo de vida de una página web en particular o las ventanas del navegador. Para eso son los scripts en segundo plano.</p>
+Las extensiones a menudo necesitan mantener estados de larga duración, o ejecutar operaciones a largo plazo, independientemente del tiempo de vida de una página web en particular o las ventanas del navegador. Para eso son los scripts en segundo plano.
 
-<p>Los scripts en segundo plano son cargados cuando la extensión es cargada y se mantienen cargados hasta que la extensión es deshabilitada o desinstalada. Tu puedes usar cualquier <a href="/es/Add-ons/WebExtensions/API">API de WebExtensions</a> en el script, siempre y cuando hayas solicitado el <a href="/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permiso</a> necesario.</p>
+Los scripts en segundo plano son cargados cuando la extensión es cargada y se mantienen cargados hasta que la extensión es deshabilitada o desinstalada. Tu puedes usar cualquier [API de WebExtensions](/es/Add-ons/WebExtensions/API) en el script, siempre y cuando hayas solicitado el [permiso](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) necesario.
 
-<h3 id="Especificando_los_scripts_en_segundo_plano">Especificando los scripts en segundo plano</h3>
+### Especificando los scripts en segundo plano
 
-<p>Puedes incluir un script en segundo plano usando la propiedad <code>background</code> en "manifest.json":</p>
+Puedes incluir un script en segundo plano usando la propiedad `background` en "manifest.json":
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "scripts": ["background-script.js"]
-}</pre>
+}
+```
 
-<p>Puedes especificar múltiples scripts en segundo plano: Si lo haces, ellos se ejecutarán en el mismo contexto, justo como son cargados múltiples scripts en una página web.</p>
+Puedes especificar múltiples scripts en segundo plano: Si lo haces, ellos se ejecutarán en el mismo contexto, justo como son cargados múltiples scripts en una página web.
 
-<h3 id="Entorno_del_script_en_segundo_plano">Entorno del script en segundo plano</h3>
+### Entorno del script en segundo plano
 
-<h4 id="APIs_del_DOM">APIs del DOM</h4>
+#### APIs del DOM
 
-<p>Los scripts en segundo plano se ejecuta en el contexto de páginas especiales llamadas páginas en segundo plano. Esto le da un variable global <code><a href="/es/docs/Web/API/Window">window</a></code>, junto con todas las APIs estándar del DOM que proporciona.</p>
+Los scripts en segundo plano se ejecuta en el contexto de páginas especiales llamadas páginas en segundo plano. Esto le da un variable global [`window`](/es/docs/Web/API/Window), junto con todas las APIs estándar del DOM que proporciona.
 
-<p>No necesitas proveer tu propia página en segundo plano. Si incluyes un script en segundo plano, una página en segundo plano vacía se creará para ti.</p>
+No necesitas proveer tu propia página en segundo plano. Si incluyes un script en segundo plano, una página en segundo plano vacía se creará para ti.
 
-<p>Sin embargo, puedes escoger y proveer tu página en segundo plano como un archivo HTML separado:</p>
+Sin embargo, puedes escoger y proveer tu página en segundo plano como un archivo HTML separado:
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "page": "background-page.html"
-}</pre>
+}
+```
 
-<h4 id="APIs_de_WebExtension">APIs de WebExtension</h4>
+#### APIs de WebExtension
 
-<p>Los scripts en segundo plano pueden usar cualquier <a href="/es/Add-ons/WebExtensions/API">API de WebExtension</a> en el script, siempre que tu extensión tenga los <a href="/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permisos</a> necesarios.</p>
+Los scripts en segundo plano pueden usar cualquier [API de WebExtension](/es/Add-ons/WebExtensions/API) en el script, siempre que tu extensión tenga los [permisos](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) necesarios.
 
-<h4 id="Acceso_de_origen_cruzado">Acceso de origen cruzado</h4>
+#### Acceso de origen cruzado
 
-<p>Los scripts en segundo plano pueden hacer peticiones XHR a cualquier host para los cuales tienen <a href="/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permisos del host</a>.</p>
+Los scripts en segundo plano pueden hacer peticiones XHR a cualquier host para los cuales tienen [permisos del host](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h4 id="Acciones_del_navegador">Acciones del navegador</h4>
+#### Acciones del navegador
 
-<p>Si tu extensión define una acción del navegador, y esa acción del navegador no tiene ventanas emergentes, entonces puedes escuchar los eventos "clic" del botón en el navegador empleando el objeto <code><a href="/es/Add-ons/WebExtensions/API/browserAction#onClicked">onClicked</a></code> de las acciones del navegador:</p>
+Si tu extensión define una acción del navegador, y esa acción del navegador no tiene ventanas emergentes, entonces puedes escuchar los eventos "clic" del botón en el navegador empleando el objeto [`onClicked`](/es/Add-ons/WebExtensions/API/browserAction#onClicked) de las acciones del navegador:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
+```js
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<h4 id="Contenido_web">Contenido web</h4>
+#### Contenido web
 
-<p>Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin embargo, pueden cargar <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenido</a> en páginas web, y <a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">comunicarse con esos scripts empleando la API de paso de mensajes</a>.</p>
+Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin embargo, pueden cargar [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) en páginas web, y [comunicarse con esos scripts empleando la API de paso de mensajes](/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
 
-<h4 id="Políticas_de_seguridad_para_el_contenido">Políticas de seguridad para el contenido</h4>
+#### Políticas de seguridad para el contenido
 
-<p>Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, a través de la  Política de Seguridad del Contenido. Vea la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de Seguridad del Contenido </a>para más detalles sobre esto.</p>
+Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido ](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
 
-<h2 id="Scripts_de_contenido">Scripts de contenido</h2>
+## Scripts de contenido
 
-<p>Usa los scripts de contenido para acceder y manipular páginas web. Los scripts de contenido son cargados dentro de las páginas web y ejecutados en el contexto particular de esa página.</p>
+Usa los scripts de contenido para acceder y manipular páginas web. Los scripts de contenido son cargados dentro de las páginas web y ejecutados en el contexto particular de esa página.
 
-<p>Los scripts de contenido son scripts provistos por la extensión los cuales se ejecutan en el contexto de la página web; estos difieren de los scripts que son cargados por la página misma, incluye aquellos que son proporcionados en los elementos {{HTMLElement("script")}} dentro de la página.</p>
+Los scripts de contenido son scripts provistos por la extensión los cuales se ejecutan en el contexto de la página web; estos difieren de los scripts que son cargados por la página misma, incluye aquellos que son proporcionados en los elementos {{HTMLElement("script")}} dentro de la página.
 
-<p>Los scripts de contenido pueden ver y manipular el DOM de las páginas, igual que los scripts cargados normalmente por la página.</p>
+Los scripts de contenido pueden ver y manipular el DOM de las páginas, igual que los scripts cargados normalmente por la página.
 
-<p>A diferencia de los scripts normales, ellos pueden:</p>
+A diferencia de los scripts normales, ellos pueden:
 
-<ul>
- <li>Realizar peticiones XHR de dominio cruzado</li>
- <li>Usar un pequeño subconjunto de las <a href="/es/docs/Mozilla/Add-ons/WebExtensions/API">APIs de WebExtension</a></li>
- <li>Intercambiar mensajes con sus scripts en segundo plano, y por esta vía, tener acceso indirecto a todas las APIs de WebExtension.</li>
-</ul>
+- Realizar peticiones XHR de dominio cruzado
+- Usar un pequeño subconjunto de las [APIs de WebExtension](/es/docs/Mozilla/Add-ons/WebExtensions/API)
+- Intercambiar mensajes con sus scripts en segundo plano, y por esta vía, tener acceso indirecto a todas las APIs de WebExtension.
 
-<p>Los scripts de contenido no pueden acceder directamente a los scripts normales de una página web, pero pueden intercambiar mensajes con ellos usando la API estándar <code><a href="/es/docs/Web/API/Window/postMessage">window.postMessage()</a></code>.</p>
+Los scripts de contenido no pueden acceder directamente a los scripts normales de una página web, pero pueden intercambiar mensajes con ellos usando la API estándar [`window.postMessage()`](/es/docs/Web/API/Window/postMessage).
 
-<p>Generalmente, cuando hablamos acerca de scripts de contenido, nos referimos a JavaScript, pero tu puedes inyectar CSS dentro de las páginas web empleando el mismo mecanismo.</p>
+Generalmente, cuando hablamos acerca de scripts de contenido, nos referimos a JavaScript, pero tu puedes inyectar CSS dentro de las páginas web empleando el mismo mecanismo.
 
-<p>Mira el artículo <a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenido</a> para aprender más.</p>
+Mira el artículo [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) para aprender más.
 
-<h2 id="Recursos_web_accesibles">Recursos web accesibles</h2>
+## Recursos web accesibles
 
-<p>Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.</p>
+Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.
 
-<p>Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</a></code> que referencia a las imágenes mediante el atributo <code>src</code>.</p>
+Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
 
-<p>Para aprender más, vea la documentación para la el parámetro <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resource</a> del manifest.json.</p>
+Para aprender más, vea la documentación para la el parámetro [web_accessible_resource](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) del manifest.json.

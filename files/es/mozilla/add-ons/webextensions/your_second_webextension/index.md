@@ -6,59 +6,57 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Si ya ha visto el artículo <a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Tu_primera_WebExtension">tu primer extensión</a>, ya posee una idea de como escribir una extensión. En este artículo se escribirá una extensión ligeramente más compleja para demostrar un par de cosas más de las APIs.</p>
+Si ya ha visto el artículo [tu primer extensión](https://developer.mozilla.org/es/Add-ons/WebExtensions/Tu_primera_WebExtension), ya posee una idea de como escribir una extensión. En este artículo se escribirá una extensión ligeramente más compleja para demostrar un par de cosas más de las APIs.
 
-<p>La extensión añade un nuevo botón a la barra de herramientas de Firefox. Cuando el usuario da clic sobre el botón, mostraremos una ventana emergente que permite escoger un animal. Una vez que un animal sea escogido, reemplazaremos todas las imágenes en la página actual con la imagen del animal seleccionado.</p>
+La extensión añade un nuevo botón a la barra de herramientas de Firefox. Cuando el usuario da clic sobre el botón, mostraremos una ventana emergente que permite escoger un animal. Una vez que un animal sea escogido, reemplazaremos todas las imágenes en la página actual con la imagen del animal seleccionado.
 
-<p>Para implementar esto, haremos lo siguiente:</p>
+Para implementar esto, haremos lo siguiente:
 
-<ul>
- <li><strong>Definir una <a href="/es/Add-ons/WebExtensions/user_interface/Browser_action">acción del navegador</a>, que será el botón añadido a la barra de herramientas de Firefox</strong>.<br>
+- **Definir una [acción del navegador](/es/Add-ons/WebExtensions/user_interface/Browser_action), que será el botón añadido a la barra de herramientas de Firefox**.
   Para el botón vamos a proporcionar:
-  <ul>
-   <li>un icono, llamado "beasts-32.png"</li>
-   <li>una ventana emergente para abrir cuando el botón sea presionado. La  ventana emergente incluye HTML, CSS y JavaScript.</li>
-  </ul>
- </li>
- <li><strong>Define un ícono para la extensión,</strong> llamado "beasts-48.png". Este será mostrado en el Administrador de Complementos.</li>
- <li><strong>Escribe un script de contenido, "beastify.js" que será inyectado dentro de las páginas web.</strong><br>
-  Este es el código que modificará las páginas web.</li>
- <li><strong>Empaqueta algunas imágenes de animales, para reemplazar las imágnes de la página web</strong>.<br>
-  Nosotros haremos las imágenes "recursos web accesibles" para que la página web pueda referenciarlos.</li>
-</ul>
 
-<p>Tu puedes notar que la estructura general de la extensión luce como esto:</p>
+  - un icono, llamado "beasts-32.png"
+  - una ventana emergente para abrir cuando el botón sea presionado. La ventana emergente incluye HTML, CSS y JavaScript.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13671/Untitled-1.png" style="display: block; height: 1200px; margin-left: auto; margin-right: auto; width: 860px;"></p>
+- **Define un ícono para la extensión,** llamado "beasts-48.png". Este será mostrado en el Administrador de Complementos.
+- **Escribe un script de contenido, "beastify.js" que será inyectado dentro de las páginas web.**
+  Este es el código que modificará las páginas web.
+- **Empaqueta algunas imágenes de animales, para reemplazar las imágnes de la página web**.
+  Nosotros haremos las imágenes "recursos web accesibles" para que la página web pueda referenciarlos.
 
-<p>Esta es una extensión simple, pero muestra muchos de los principales conceptos de la API WebExtensions:</p>
+Tu puedes notar que la estructura general de la extensión luce como esto:
 
-<ul>
- <li>Adicionando un botón a la barra de herramientas</li>
- <li>Definiendo un panel emergente usando HTML, CSS y JavaScript</li>
- <li>Inyectando scripts de contenido dentro de las páginas web</li>
- <li>Comunicándonos entre los scripts de contenido y el resto de la extensión</li>
- <li>Empaquetando recursos con tu extensión que pueden ser usados por las páginas web</li>
-</ul>
+![](https://mdn.mozillademos.org/files/13671/Untitled-1.png)
 
-<p>Tu puedes encontrar el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">código fuente completo de la extensión en GitHub</a>.</p>
+Esta es una extensión simple, pero muestra muchos de los principales conceptos de la API WebExtensions:
 
-<p>Para escribir una extensión, necesitará de Firefox 45 o más reciente.</p>
+- Adicionando un botón a la barra de herramientas
+- Definiendo un panel emergente usando HTML, CSS y JavaScript
+- Inyectando scripts de contenido dentro de las páginas web
+- Comunicándonos entre los scripts de contenido y el resto de la extensión
+- Empaquetando recursos con tu extensión que pueden ser usados por las páginas web
 
-<h2 id="Escribiendo_la_extensión">Escribiendo la extensión</h2>
+Tu puedes encontrar el [código fuente completo de la extensión en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
 
-<p>Crea una carpeta nueva y navega hacia ella:</p>
+Para escribir una extensión, necesitará de Firefox 45 o más reciente.
 
-<pre class="brush: bash">mkdir beastify
-cd beastify</pre>
+## Escribiendo la extensión
 
-<h3 id="manifest.json">manifest.json</h3>
+Crea una carpeta nueva y navega hacia ella:
 
-<p>Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:</p>
+```bash
+mkdir beastify
+cd beastify
+```
 
-<pre class="brush: json">{
+### manifest.json
+
+Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
+
+```json
+{
 
   "manifest_version": 2,
   "name": "Beastify",
@@ -87,333 +85,329 @@ cd beastify</pre>
   ]
 
 }
-</pre>
+```
 
-<ul>
- <li>Las tres primeras llaves: <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code> , <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code> , y <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code> , son obligatorias y contienen los metadatos básicos para la extensión.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> y <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> son opcionales, pero recomendadas: proporcionan información útil acerca de la extensión.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lista los permisos que la extensión necesita. Aquí solo se pide el permiso de <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a>.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> especifica el botón de la barra de herramientas.  Nosotros proveemos tres piezas de información aquí:
-  <ul>
-   <li><code>default_icon</code> es obligatorio y enlaza al icono para el botón</li>
-   <li><code>default_title</code> es opcional y será mostrado como descripción</li>
-   <li><code>default_popup</code> es usado su tu quieres una ventana emergente que será mostrada cuando el usuario de clic en el botón. Lo hacemos y hemos incluido esta llave que apunta a un archivo HTML de la extensión.</li>
-  </ul>
- </li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> lista los archivos que queremos hacer accesibles a las páginas web. Como la extensión reemplaza imágenes en una página con imágenes que hemos empaquetado, necesitamos hacer estas imágenes accesibles a la página.</li>
-</ul>
+- Las tres primeras llaves: [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) , [`name`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) , y [`version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) , son obligatorias y contienen los metadatos básicos para la extensión.
+- [`description`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) y [`homepage_url`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) son opcionales, pero recomendadas: proporcionan información útil acerca de la extensión.
+- [`icons`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.
+- [`permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lista los permisos que la extensión necesita. Aquí solo se pide el permiso de [`activeTab` permission](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+- [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) especifica el botón de la barra de herramientas. Nosotros proveemos tres piezas de información aquí:
 
-<p>Nota que todas las rutas dadas son relativas a manifest.json.</p>
+  - `default_icon` es obligatorio y enlaza al icono para el botón
+  - `default_title` es opcional y será mostrado como descripción
+  - `default_popup` es usado su tu quieres una ventana emergente que será mostrada cuando el usuario de clic en el botón. Lo hacemos y hemos incluido esta llave que apunta a un archivo HTML de la extensión.
 
-<h3 id="El_ícono">El ícono</h3>
+- [`web_accessible_resources`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lista los archivos que queremos hacer accesibles a las páginas web. Como la extensión reemplaza imágenes en una página con imágenes que hemos empaquetado, necesitamos hacer estas imágenes accesibles a la página.
 
-<p>La extensión debería tener un íncono. Éste, será mostrado junto a la lista de complementos en el Administrador de Complementos (Pude abrirlo introduciendo en la URL "about:addons"). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".</p>
+Nota que todas las rutas dadas son relativas a manifest.json.
 
-<p>Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png".  Puede utilizar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">uno de nuestro ejemplo</a>, el cual ha sido tomado del  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">conjuto de íconos Aha-Soft’s Free Retina</a>, que es utilizado bajo el término de su propia <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">licencia</a>.</p>
+### El ícono
 
-<p>Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones y, si usted hace esto, deberá especificarlo como la propiedad <code>96</code> del objeto <code>icons</code> en el manifest.json:</p>
+La extensión debería tener un íncono. Éste, será mostrado junto a la lista de complementos en el Administrador de Complementos (Pude abrirlo introduciendo en la URL "about:addons"). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/beasts-48.png"</span><span class="punctuation token">,</span>
-  <span class="key token">"96":</span> <span class="string token">"icons/beasts-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjuto de íconos Aha-Soft’s Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
-<h3 id="El_botón_de_la_barra_de_herramientas">El botón de la barra de herramientas</h3>
+Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones y, si usted hace esto, deberá especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
 
-<p>El botón de la barra de herramientas necesita un ícono, y nuestro manifest.json promete eso y nos gustaría tener un ícono para la barra de herramientas en "icons/beasts-32.png".</p>
+```json
+"icons": {
+  "48": "icons/beasts-48.png",
+  "96": "icons/beasts-96.png"
+}
+```
 
-<p>Guarde un ícono llamado "beasts-32.png" en el directorio "icons". Tu podrías usar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">uno de nuestros ejemplos</a>, los cuales son tomados desde el sitio <a href="http://www.iconbeast.com/free">IconBeast Lite icon set</a> y empleados bajo sus términos de <a href="http://www.iconbeast.com/faq/">licencia</a>.</p>
+### El botón de la barra de herramientas
 
-<p>Si tu no provees una ventana emergente, entonces el evento clic es disparado hacia tu extensión cuando el usuario de clic sobre el botón. Si provees una ventana emergente entonces el evento clic no se disparará, pero en cambio, se muestra la ventana emergente. Nosotros queremos una ventana emergente, así que vamos a crearla.</p>
+El botón de la barra de herramientas necesita un ícono, y nuestro manifest.json promete eso y nos gustaría tener un ícono para la barra de herramientas en "icons/beasts-32.png".
 
-<h3 id="La_ventana_emergente">La ventana emergente</h3>
+Guarde un ícono llamado "beasts-32.png" en el directorio "icons". Tu podrías usar [uno de nuestros ejemplos](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), los cuales son tomados desde el sitio [IconBeast Lite icon set](http://www.iconbeast.com/free) y empleados bajo sus términos de [licencia](http://www.iconbeast.com/faq/).
 
-<p>La función de la ventana emergente es habilitada si el usuario escoge una de los tres animales.</p>
+Si tu no provees una ventana emergente, entonces el evento clic es disparado hacia tu extensión cuando el usuario de clic sobre el botón. Si provees una ventana emergente entonces el evento clic no se disparará, pero en cambio, se muestra la ventana emergente. Nosotros queremos una ventana emergente, así que vamos a crearla.
 
-<p>Crea una nueva carpeta llamada "popup" bajo la carpeta raíz de la extensión . Esta será donde pondremos el código para la ventana emergente. La carpeta "popup" contendrá estos tres archivos:</p>
+### La ventana emergente
 
-<ul>
- <li><strong><code>choose_beast.html</code></strong> define el contenido del panel</li>
- <li><strong><code>choose_beast.css</code></strong> los estilos CSS para el contenido</li>
- <li><strong><code>choose_beast.js</code></strong> maneja las opciones del usuario ejecutando un script de contenido en la pestaña activa</li>
-</ul>
+La función de la ventana emergente es habilitada si el usuario escoge una de los tres animales.
 
-<h4 id="choose_beast.html">choose_beast.html</h4>
+Crea una nueva carpeta llamada "popup" bajo la carpeta raíz de la extensión . Esta será donde pondremos el código para la ventana emergente. La carpeta "popup" contendrá estos tres archivos:
 
-<p>El archivo HTML luce así:</p>
+- **`choose_beast.html`** define el contenido del panel
+- **`choose_beast.css`** los estilos CSS para el contenido
+- **`choose_beast.js`** maneja las opciones del usuario ejecutando un script de contenido en la pestaña activa
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
+#### choose_beast.html
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>utf-8<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>link</span> <span class="attr-name token">rel</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>stylesheet<span class="punctuation token">"</span></span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>choose_beast.css<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+El archivo HTML luce así:
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>popup-content<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button beast<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Frog<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button beast<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Turtle<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button beast<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Snake<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button reset<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Reset<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>error-content<span class="punctuation token">"</span></span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>hidden<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Can't beastify this web page.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Try a different page.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>choose_beast.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
+```html
+<!DOCTYPE html>
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_beast.css"/>
+  </head>
 
-<p>Tenemos un elemento <code>&lt;div&gt;</code> con un ID <code>"popup-content"</code> que contiene un elemento para cada elección de animal. Además, tenemos otro <code>&lt;div&gt;</code> con un ID <code>"error-content"</code> y una clase <code>"hidden"</code>, que usaremos en el case de que surja algún problema al inicializar la ventana emergente.</p>
+<body>
+  <div id="popup-content">
+    <div class="button beast">Frog</div>
+    <div class="button beast">Turtle</div>
+    <div class="button beast">Snake</div>
+    <div class="button reset">Reset</div>
+  </div>
+  <div id="error-content" class="hidden">
+    <p>Can't beastify this web page.</p><p>Try a different page.</p>
+  </div>
+  <script src="choose_beast.js"></script>
+</body>
 
-<p>Note que referenciamos los archivos CSS y JS en el HTML como lo haríamos si se tratase de una página web.</p>
+</html>
+```
 
-<h4 id="choose_beast.css">choose_beast.css</h4>
+Tenemos un elemento `<div>` con un ID `"popup-content"` que contiene un elemento para cada elección de animal. Además, tenemos otro `<div>` con un ID `"error-content"` y una clase `"hidden"`, que usaremos en el case de que surja algún problema al inicializar la ventana emergente.
 
-<p>El CSS ajusta el tamaño de la ventana emergente, se asegura que las tres posibles opciones llenen el espacio y les da un poco de estilo básico. Además oculta los elementos con <code>class="hidden"</code>: esto significa que nuestro <code>"error-content"</code> <code>&lt;div&gt;</code> estará oculto por defecto.</p>
+Note que referenciamos los archivos CSS y JS en el HTML como lo haríamos si se tratase de una página web.
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token">html, body</span> <span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">px</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+#### choose_beast.css
 
-<span class="selector token"><span class="class token">.hidden</span></span> <span class="punctuation token">{</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+El CSS ajusta el tamaño de la ventana emergente, se asegura que las tres posibles opciones llenen el espacio y les da un poco de estilo básico. Además oculta los elementos con `class="hidden"`: esto significa que nuestro `"error-content"` `<div>` estará oculto por defecto.
 
-<span class="selector token"><span class="class token">.button</span></span> <span class="punctuation token">{</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">3</span><span class="token unit">%</span> auto<span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">4</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">text-align</span><span class="punctuation token">:</span> center<span class="punctuation token">;</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">1.5</span><span class="token unit">em</span><span class="punctuation token">;</span>
-  <span class="property token">cursor</span><span class="punctuation token">:</span> pointer<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+html, body {
+  width: 100px;
+}
 
-<span class="selector token"><span class="class token">.beast</span><span class="pseudo-class token">:hover</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#CFF2F2</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.hidden {
+  display: none;
+}
 
-<span class="selector token"><span class="class token">.beast</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#E5F2F2</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.button {
+  margin: 3% auto;
+  padding: 4px;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 
-<span class="selector token"><span class="class token">.reset</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#FBFBC9</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.beast:hover {
+  background-color: #CFF2F2;
+}
 
-<span class="selector token"><span class="class token">.reset</span><span class="pseudo-class token">:hover</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#EAEA9D</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+.beast {
+  background-color: #E5F2F2;
+}
 
-<h4 id="choose_beast.js">choose_beast.js</h4>
+.reset {
+  background-color: #FBFBC9;
+}
 
-<p>Aquí está el JavaScript para la ventana emergente:</p>
+.reset:hover {
+  background-color: #EAEA9D;
+}
+```
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="comment token">/**
+#### choose_beast.js
+
+Aquí está el JavaScript para la ventana emergente:
+
+```js
+/**
  * CSS para ocultar toda la página
  * Excepto los elementos que pertenecen a la clase "beastify-image".
- */</span>
-<span class="keyword token">const</span> hidePage <span class="operator token">=</span> <span class="template-string token"><span class="string token">`body &gt; :not(.beastify-image) {
+ */
+const hidePage = `body > :not(.beastify-image) {
                     display: none;
-                  }`</span></span><span class="punctuation token">;</span>
+                  }`;
 
-<span class="comment token">/**
+/**
  * Esucha los clicks en los botones y envía el mensaje apropiado
  * al script de contenido de la página.
- */</span>
-<span class="keyword token">function</span> <span class="function token">listenForClicks</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> <span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
+ */
+function listenForClicks() {
+  document.addEventListener("click", (e) => {
 
-    <span class="comment token">/**
+    /**
      * Recibe el nombre de una bestia y obtiene la URL de la imagen correspondiente.
-     */</span>
-    <span class="keyword token">function</span> <span class="function token">beastNameToURL</span><span class="punctuation token">(</span><span class="parameter token">beastName</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">switch</span> <span class="punctuation token">(</span>beastName<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">case</span> <span class="string token">"Frog"</span><span class="punctuation token">:</span>
-          <span class="keyword token">return</span> browser<span class="punctuation token">.</span>extension<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">"beasts/frog.jpg"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="keyword token">case</span> <span class="string token">"Snake"</span><span class="punctuation token">:</span>
-          <span class="keyword token">return</span> browser<span class="punctuation token">.</span>extension<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">"beasts/snake.jpg"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-        <span class="keyword token">case</span> <span class="string token">"Turtle"</span><span class="punctuation token">:</span>
-          <span class="keyword token">return</span> browser<span class="punctuation token">.</span>extension<span class="punctuation token">.</span><span class="function token">getURL</span><span class="punctuation token">(</span><span class="string token">"beasts/turtle.jpg"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-    <span class="punctuation token">}</span>
+     */
+    function beastNameToURL(beastName) {
+      switch (beastName) {
+        case "Frog":
+          return browser.extension.getURL("beasts/frog.jpg");
+        case "Snake":
+          return browser.extension.getURL("beasts/snake.jpg");
+        case "Turtle":
+          return browser.extension.getURL("beasts/turtle.jpg");
+      }
+    }
 
-    <span class="comment token">/**
+    /**
      * Inserta dentro de la pestaña activa el CSS que oculta la página
      * luego toma la URL de la imagen y
      * envía un mensaje "beastify" al script de contenido de la pestaña activa.
-     */</span>
-    <span class="keyword token">function</span> <span class="function token">beastify</span><span class="punctuation token">(</span><span class="parameter token">tabs</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">insertCSS</span><span class="punctuation token">(</span><span class="punctuation token">{</span>code<span class="punctuation token">:</span> hidePage<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-        <span class="keyword token">let</span> url <span class="operator token">=</span> <span class="function token">beastNameToURL</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>textContent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-        browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">sendMessage</span><span class="punctuation token">(</span>tabs<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>id<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-          command<span class="punctuation token">:</span> <span class="string token">"beastify"</span><span class="punctuation token">,</span>
-          beastURL<span class="punctuation token">:</span> url
-        <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+     */
+    function beastify(tabs) {
+      browser.tabs.insertCSS({code: hidePage}).then(() => {
+        let url = beastNameToURL(e.target.textContent);
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "beastify",
+          beastURL: url
+        });
+      });
+    }
 
-    <span class="comment token">/**
+    /**
      * Remueve el CSS que oculta la página y
      * envía un mensaje de "reset" al script de contenido de la pestaña activa.
-     */</span>
-    <span class="keyword token">function</span> <span class="function token">reset</span><span class="punctuation token">(</span><span class="parameter token">tabs</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">removeCSS</span><span class="punctuation token">(</span><span class="punctuation token">{</span>code<span class="punctuation token">:</span> hidePage<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-        browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">sendMessage</span><span class="punctuation token">(</span>tabs<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>id<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-          command<span class="punctuation token">:</span> <span class="string token">"reset"</span><span class="punctuation token">,</span>
-        <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+     */
+    function reset(tabs) {
+      browser.tabs.removeCSS({code: hidePage}).then(() => {
+        browser.tabs.sendMessage(tabs[0].id, {
+          command: "reset",
+        });
+      });
+    }
 
-    <span class="comment token">/**
+    /**
      * Imprime el error en consola.
-     */</span>
-    <span class="keyword token">function</span> <span class="function token">reportError</span><span class="punctuation token">(</span><span class="parameter token">error</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Could not beastify: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>error<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+     */
+    function reportError(error) {
+      console.error(`Could not beastify: ${error}`);
+    }
 
-    <span class="comment token">/**
+    /**
      * Toma la pestaña activa y
      * llama a "beastify()" o "reset()" según corresponda.
-     */</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">contains</span><span class="punctuation token">(</span><span class="string token">"beast"</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>active<span class="punctuation token">:</span> <span class="boolean token">true</span><span class="punctuation token">,</span> currentWindow<span class="punctuation token">:</span> <span class="boolean token">true</span><span class="punctuation token">}</span><span class="punctuation token">)</span>
-        <span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>beastify<span class="punctuation token">)</span>
-        <span class="punctuation token">.</span><span class="function token">catch</span><span class="punctuation token">(</span>reportError<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">contains</span><span class="punctuation token">(</span><span class="string token">"reset"</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>active<span class="punctuation token">:</span> <span class="boolean token">true</span><span class="punctuation token">,</span> currentWindow<span class="punctuation token">:</span> <span class="boolean token">true</span><span class="punctuation token">}</span><span class="punctuation token">)</span>
-        <span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>reset<span class="punctuation token">)</span>
-        <span class="punctuation token">.</span><span class="function token">catch</span><span class="punctuation token">(</span>reportError<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+     */
+    if (e.target.classList.contains("beast")) {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(beastify)
+        .catch(reportError);
+    }
+    else if (e.target.classList.contains("reset")) {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(reset)
+        .catch(reportError);
+    }
+  });
+}
 
-<span class="comment token">/**
+/**
  * Si hubo algún error al ejecutar el script,
  * Despliega un popup con el mensaje de error y oculta la UI normal.
- */</span>
-<span class="keyword token">function</span> <span class="function token">reportExecuteScriptError</span><span class="punctuation token">(</span><span class="parameter token">error</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#popup-content"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span><span class="string token">"hidden"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"#error-content"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">remove</span><span class="punctuation token">(</span><span class="string token">"hidden"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Failed to execute beastify content script: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>error<span class="punctuation token">.</span>message<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+ */
+function reportExecuteScriptError(error) {
+  document.querySelector("#popup-content").classList.add("hidden");
+  document.querySelector("#error-content").classList.remove("hidden");
+  console.error(`Failed to execute beastify content script: ${error.message}`);
+}
 
-<span class="comment token">/**
+/**
  * Cuando se carga la ventana emergente, inyecta el script de contenido en la pestaña activa,
  * y agrega un manejador de eventos.
  * Si no es posible inyectar el script, se ocupa de manejar el error.
- */</span>
-browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">executeScript</span><span class="punctuation token">(</span><span class="punctuation token">{</span>file<span class="punctuation token">:</span> <span class="string token">"/content_scripts/beastify.js"</span><span class="punctuation token">}</span><span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>listenForClicks<span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="function token">catch</span><span class="punctuation token">(</span>reportExecuteScriptError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+ */
+browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
+.then(listenForClicks)
+.catch(reportExecuteScriptError);
+```
 
-<p>Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code>. Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.</p>
+Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
 
-<div class="blockIndicator note">
-<p>Un motivo común por el cual el llamado a <code>browser.tabs.executeScript()</code> puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas, por ejemplo, en páginas de navegador privilegiadas como about:debugging, o páginas del dominio <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, no es posible hacerlo.</p>
-</div>
+> **Nota:** Un motivo común por el cual el llamado a `browser.tabs.executeScript()` puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas, por ejemplo, en páginas de navegador privilegiadas como about:debugging, o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/), no es posible hacerlo.
 
-<p>Si la ejecución falla, <code>reportExecuteScriptError()</code> ocultará el <code>&lt;div&gt;</code> <code>"popup-content"</code>, mostrará el <code>&lt;div&gt;</code> <code>"error-content"</code>, y reportará el error en la consola.</p>
+Si la ejecución falla, `reportExecuteScriptError()` ocultará el `<div>` `"popup-content"`, mostrará el `<div>` `"error-content"`, y reportará el error en la consola.
 
-<p>Si la ejecución del script de contenido es exitosa, se llamará a <code>listenForClicks()</code>, que atiende los eventos que se generan al cliquear en la ventana emergente.</p>
+Si la ejecución del script de contenido es exitosa, se llamará a `listenForClicks()`, que atiende los eventos que se generan al cliquear en la ventana emergente.
 
-<ul>
- <li>Si el clic se produjo en el botón con <code>class="beast"</code>, se llama a <code>beastify()</code>.</li>
- <li>Si el clic se produjo en el botón con <code>class="reset"</code>, se llama a  <code>reset()</code>.</li>
-</ul>
+- Si el clic se produjo en el botón con `class="beast"`, se llama a `beastify()`.
+- Si el clic se produjo en el botón con `class="reset"`, se llama a `reset()`.
 
-<p>La función <code>beastify()</code> hace tres cosas:</p>
+La función `beastify()` hace tres cosas:
 
-<ul>
- <li>map the button clicked to a URL pointing to an image of a particular beast</li>
- <li>Oculta todo el contenido de la página al insertar CSS con la API <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code></li>
- <li>Envía un mensaje "beastify" al script de contenido usando la API <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code>, solicitándole "bestificar" la página, y enviándole la URL de la imagen.</li>
-</ul>
+- map the button clicked to a URL pointing to an image of a particular beast
+- Oculta todo el contenido de la página al insertar CSS con la API [`browser.tabs.insertCSS()`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/insertCSS)
+- Envía un mensaje "beastify" al script de contenido usando la API [`browser.tabs.sendMessage()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), solicitándole "bestificar" la página, y enviándole la URL de la imagen.
 
-<p>La función <code>reset()</code> deshace lo hecho por <code>beastify()</code>:</p>
+La función `reset()` deshace lo hecho por `beastify()`:
 
-<ul>
- <li>Remueve el CSS que agregó, usando la API <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code></li>
- <li>Envía un mensaje de "reset" al script de contenido, solicitándole que resetee la página</li>
-</ul>
+- Remueve el CSS que agregó, usando la API [`browser.tabs.removeCSS()`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/removeCSS)
+- Envía un mensaje de "reset" al script de contenido, solicitándole que resetee la página
 
-<h3 id="El_script_de_contenido">El script de contenido</h3>
+### El script de contenido
 
-<p>Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y crea un nuevo archivo en ella llamado "beastify.js", con el contenido siguiente:</p>
+Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y crea un nuevo archivo en ella llamado "beastify.js", con el contenido siguiente:
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">/**
+```js
+(function() {
+  /**
    * Revisa e inicializa una variable de guardia.
    * Si este script de contenido es insertado más de una vez
    * en la misma página, dejará de ejecutarse.
-   */</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>window<span class="punctuation token">.</span>hasRun<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  window<span class="punctuation token">.</span>hasRun <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span>
+   */
+  if (window.hasRun) {
+    return;
+  }
+  window.hasRun = true;
 
-<span class="comment token">/**
+/**
 * Recibe la URL de la imagen, remueve las que se hayan agregado antes,
 * crea un nodo IMG que apunt hacia la imagen
 * e inserta ese nodo en el documento.
-*/</span>
-  <span class="keyword token">function</span> <span class="function token">insertBeast</span><span class="punctuation token">(</span><span class="parameter token">beastURL</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="function token">removeExistingBeasts</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> beastImage <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"img"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    beastImage<span class="punctuation token">.</span><span class="function token">setAttribute</span><span class="punctuation token">(</span><span class="string token">"src"</span><span class="punctuation token">,</span> beastURL<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    beastImage<span class="punctuation token">.</span>style<span class="punctuation token">.</span>height <span class="operator token">=</span> <span class="string token">"100vh"</span><span class="punctuation token">;</span>
-    beastImage<span class="punctuation token">.</span>className <span class="operator token">=</span> <span class="string token">"beastify-image"</span><span class="punctuation token">;</span>
-    document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>beastImage<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+*/
+  function insertBeast(beastURL) {
+    removeExistingBeasts();
+    let beastImage = document.createElement("img");
+    beastImage.setAttribute("src", beastURL);
+    beastImage.style.height = "100vh";
+    beastImage.className = "beastify-image";
+    document.body.appendChild(beastImage);
+  }
 
-  <span class="comment token">/**
+  /**
    * Remueve todas las bestias de la página.
-   */</span>
-  <span class="keyword token">function</span> <span class="function token">removeExistingBeasts</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">let</span> existingBeasts <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">".beastify-image"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">let</span> beast <span class="keyword token">of</span> existingBeasts<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      beast<span class="punctuation token">.</span><span class="function token">remove</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
+   */
+  function removeExistingBeasts() {
+    let existingBeasts = document.querySelectorAll(".beastify-image");
+    for (let beast of existingBeasts) {
+      beast.remove();
+    }
+  }
 
-  <span class="comment token">/**
+  /**
    * Atiende mensajes del script de segundo plano.
    * Llama a "beastify()" o "reset()".
-  */</span>
-  browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span>onMessage<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="parameter token">message</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>message<span class="punctuation token">.</span>command <span class="operator token">===</span> <span class="string token">"beastify"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">insertBeast</span><span class="punctuation token">(</span>message<span class="punctuation token">.</span>beastURL<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>message<span class="punctuation token">.</span>command <span class="operator token">===</span> <span class="string token">"reset"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">removeExistingBeasts</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  */
+  browser.runtime.onMessage.addListener((message) => {
+    if (message.command === "beastify") {
+      insertBeast(message.beastURL);
+    } else if (message.command === "reset") {
+      removeExistingBeasts();
+    }
+  });
 
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+})();
+```
 
-<p>Lo primero que hace el script de contenido es revisar la variable global <code>window.hasRun</code>: si está inicializada termina su ejecución, sino, la inicializa y continúa. La razón por la que hacemos esto es porque cada vez que el usuario abre la ventana emergente, se vuelve a ejecutar el script de contenido en la pestaña activa, por lo que podríamos tener múltiples instancias del script ejecutandose en una sola pestaña. Si esto sucede, necesitamos asegurarnos de que sea sólo la primera instancia la que vaya a realizar cambios.</p>
+Lo primero que hace el script de contenido es revisar la variable global `window.hasRun`: si está inicializada termina su ejecución, sino, la inicializa y continúa. La razón por la que hacemos esto es porque cada vez que el usuario abre la ventana emergente, se vuelve a ejecutar el script de contenido en la pestaña activa, por lo que podríamos tener múltiples instancias del script ejecutandose en una sola pestaña. Si esto sucede, necesitamos asegurarnos de que sea sólo la primera instancia la que vaya a realizar cambios.
 
-<p>Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code>), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".</p>
+Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API [`browser.runtime.onMessage`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage)), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".
 
-<ul>
- <li>si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y  añadimos un elemento <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> cuyo atributo <code>src</code> contiene la URL de la imagen.</li>
- <li>si el mensaje es "reset", simplemente removemos cualquier imagen que haya sido agregada antes.</li>
-</ul>
+- si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y añadimos un elemento [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) cuyo atributo `src` contiene la URL de la imagen.
+- si el mensaje es "reset", simplemente removemos cualquier imagen que haya sido agregada antes.
 
-<h3 id="Las_bestias">Las bestias</h3>
+### Las bestias
 
-<p>Finalmente, necesitamos incluir las imágenes de los animales.</p>
+Finalmente, necesitamos incluir las imágenes de los animales.
 
-<p>Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Tu puedes obtener estas imágenes desde el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">repositorio en GitHub</a>, o desde aquí:</p>
+Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Tu puedes obtener estas imágenes desde el [repositorio en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), o desde aquí:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
+![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
 
-<h2 id="Probándolo">Probándolo</h2>
+## Probándolo
 
-<p>Primero, comprueba nuevamente que tienes todos los archivos necesarios en el lugar adecuado:</p>
+Primero, comprueba nuevamente que tienes todos los archivos necesarios en el lugar adecuado:
 
-<pre class="line-numbers  language-html"><code class="language-html">beastify/
+```html
+beastify/
 
     beasts/
         frog.jpg
@@ -432,29 +426,24 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
         choose_beast.html
         choose_beast.js
 
-    manifest.json</code></pre>
+    manifest.json
+```
 
-<p>Comenzando con Firefox 45, pueden instalar temporalmente una extensión desde el disco.</p>
+Comenzando con Firefox 45, pueden instalar temporalmente una extensión desde el disco.
 
-<p>Abre "about:debugging" en Firefox, de clic en "Cargar complemento temporalmente", y seleccione el archivo manifest.json. Entonces, debería de ver el ícono de la extensión aparecer en la barra de herramientas de Firefox:</p>
+Abre "about:debugging" en Firefox, de clic en "Cargar complemento temporalmente", y seleccione el archivo manifest.json. Entonces, debería de ver el ícono de la extensión aparecer en la barra de herramientas de Firefox:
 
-<p>{{EmbedYouTube("sAM78GU4P34")}}</p>
+{{EmbedYouTube("sAM78GU4P34")}}
 
-<p>Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y vea cómo cambia la página web:</p>
+Abra una página web, luego haga clic sobre el ícono, seleccione una bestia, y vea cómo cambia la página web:
 
-<p>{{EmbedYouTube("YMQXyAQSiE8")}}</p>
+{{EmbedYouTube("YMQXyAQSiE8")}}
 
-<h2 id="Desarrollo_desde_la_línea_de_comandos">Desarrollo desde la línea de comandos</h2>
+## Desarrollo desde la línea de comandos
 
-<div id="gt-res-content">
-<div>
-<div id="tts_button"> </div>
+Puede automatizar el paso de instalación temporal mediante la herramienta [web-ext](https://developer.mozilla.org/es/Add-ons/WebExtensions/Getting_started_with_web-ext). Pruebe esto:
 
-<p><span id="result_box" lang="es"><span>Puede automatizar el paso de instalación temporal mediante la herramienta <a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>.</span> <span>Pruebe esto</span></span>:</p>
-</div>
-</div>
-
-<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">cd beastify
-web-ext run</code></pre>
-
-<p> </p>
+```bash
+cd beastify
+web-ext run
+```

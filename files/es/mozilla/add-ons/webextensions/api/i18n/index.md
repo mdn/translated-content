@@ -12,58 +12,43 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Funciones para internacionalizar su extensión. Es posible utilizar estas API para obtener cadenas de texto traducidas a partir de archivos de configuración regional incluidos en la extensión, conocer el idioma actual del navegador y recuperar el valor de su <a href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header">cabecera Accept-Language</a>.</p>
+Funciones para internacionalizar su extensión. Es posible utilizar estas API para obtener cadenas de texto traducidas a partir de archivos de configuración regional incluidos en la extensión, conocer el idioma actual del navegador y recuperar el valor de su [cabecera Accept-Language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
 
-<p id="See_also">Para obtener más información sobre el uso de i18n en su extensión, consulte:</p>
+Para obtener más información sobre el uso de i18n en su extensión, consulte:
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internacionalización</a>: una guía para utilizar el sistema de l18n de WebExtensions.</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Referencia de mensajes específicos de la configuración regional</a>: las extensiones proporcionan cadenas específicas de la configuración regional en archivos denominados <code>messages.json</code>. Esta página describe el formato de <code>messages.json</code>.</li>
-</ul>
+- [Internacionalización](/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization): una guía para utilizar el sistema de l18n de WebExtensions.
+- [Referencia de mensajes específicos de la configuración regional](/es/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): las extensiones proporcionan cadenas específicas de la configuración regional en archivos denominados `messages.json`. Esta página describe el formato de `messages.json`.
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("i18n.LanguageCode")}}</dt>
- <dd>Una <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10">etiqueta de idioma</a> como «<code>en-US</code>» o «<code>fr</code>».</dd>
-</dl>
+- {{WebExtAPIRef("i18n.LanguageCode")}}
+  - : Una [etiqueta de idioma](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) como «`en-US`» o «`fr`».
 
-<h2 id="Funciones">Funciones</h2>
+## Funciones
 
-<dl>
- <dt>{{WebExtAPIRef("i18n.getAcceptLanguages()")}}</dt>
- <dd>Recupera los valores de <a href="/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header">accept-language</a> del navegador. Esto es distinto de la configuración regional utilizada por el navegador. Para obtener la configuración regional, utilice {{WebExtAPIRef('i18n.getUILanguage')}}.</dd>
- <dt>{{WebExtAPIRef("i18n.getMessage()")}}</dt>
- <dd>Obtiene la cadena de texto traducida correspondiente al mensaje especificado.</dd>
- <dt>{{WebExtAPIRef("i18n.getUILanguage()")}}</dt>
- <dd>Obtiene el idioma de la IU del navegador. Esto es distinto de {{WebExtAPIRef('i18n.getAcceptLanguages')}}, que devuelve los idiomas preferidos del usuario.</dd>
- <dt>{{WebExtAPIRef("i18n.detectLanguage()")}}</dt>
- <dd>Detecta el idioma del texto proporcionado a través de <a href="https://github.com/CLD2Owners/cld2">Compact Language Detector</a>.</dd>
-</dl>
+- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
+  - : Recupera los valores de [accept-language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) del navegador. Esto es distinto de la configuración regional utilizada por el navegador. Para obtener la configuración regional, utilice {{WebExtAPIRef('i18n.getUILanguage')}}.
+- {{WebExtAPIRef("i18n.getMessage()")}}
+  - : Obtiene la cadena de texto traducida correspondiente al mensaje especificado.
+- {{WebExtAPIRef("i18n.getUILanguage()")}}
+  - : Obtiene el idioma de la IU del navegador. Esto es distinto de {{WebExtAPIRef('i18n.getAcceptLanguages')}}, que devuelve los idiomas preferidos del usuario.
+- {{WebExtAPIRef("i18n.detectLanguage()")}}
+  - : Detecta el idioma del texto proporcionado a través de [Compact Language Detector](https://github.com/CLD2Owners/cld2).
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<p>{{Compat("webextensions.api.i18n")}}</p>
+{{Compat("webextensions.api.i18n")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<dl>
-</dl>
+> **Nota:** **Reconocimientos**Esta API se basa en la API [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) de Chromium. Esta documentación deriva del archivo [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) en el código fuente de Chromium.Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.
 
-<div class="note"><strong>Reconocimientos</strong>
-
-<p>Esta API se basa en la API <a href="https://developer.chrome.com/extensions/i18n"><code>chrome.i18n</code></a> de Chromium. Esta documentación deriva del archivo <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> en el código fuente de Chromium.</p>
-
-<p>Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.</p>
-</div>
-
-<div>
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+```
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +75,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+```
