@@ -17,7 +17,9 @@ El método **`toString()`** devuelve una cadena de caracteres representando el a
 
 ## Sintaxis
 
-    arr.toString()
+```
+arr.toString()
+```
 
 ### Valor devuelto
 

@@ -184,6 +184,6 @@ console.log(bar.foo2()); // 2
 
 ## Veja também
 
-- [`get`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
 - [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

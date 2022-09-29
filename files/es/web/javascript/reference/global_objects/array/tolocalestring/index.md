@@ -12,7 +12,9 @@ El método **`toLocaleString()`** devuelve una cadena de texto representando los
 
 ## Sintaxis
 
-    arr.toLocaleString([locales[, options]]);
+```
+arr.toLocaleString([locales[, options]]);
+```
 
 ### Parámetros
 

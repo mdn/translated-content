@@ -29,7 +29,7 @@ Puedes definir las propiedades de la acción de navegador utilizando la llave [`
 
 El único campo obligatorio es `default_icon`.
 
-Existen dos formas de especificar una acción de navegador: con o sin una [ventana emergente](/en-US/Add-ons/WebExtensions/Popups). Si no especificas una ventana emergente, se le entregará un evento a la extensión cada vez que el usuario haga click en el botón. El evento es escuchable usando [`browserAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+Existen dos formas de especificar una acción de navegador: con o sin una [ventana emergente](/en-US/Add-ons/WebExtensions/Popups). Si no especificas una ventana emergente, se le entregará un evento a la extensión cada vez que el usuario haga click en el botón. El evento es escuchable usando [`browserAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);

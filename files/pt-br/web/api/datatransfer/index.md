@@ -13,10 +13,10 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 
 | Propriedades                                                                                                                                                 | Tipo                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
 | [`files`](#files.28.29) {{ gecko_minversion_inline("1.9.2") }}                                                | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
 | [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
 | [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                                                                           |
 | [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean) |

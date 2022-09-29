@@ -25,7 +25,9 @@ El método **`find()`** devuelve el **valor** del **primer elemento** del array 
 
 ## Sintaxis
 
-    arr.find(callback(element[, index[, array]])[, thisArg])
+```
+arr.find(callback(element[, index[, array]])[, thisArg])
+```
 
 ### Parámetros
 

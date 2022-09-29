@@ -21,7 +21,7 @@ Devuelve una cadena que representa al objeto.
 
 ## Descripción
 
-Todos los objetos tienen un método `toString` que se llama automáticamente cuando el objeto se representa como un valor de texto o cuando un objeto se referencia de tal manera que se espera una cadena. Por defecto, el método `toString` es heredado por todos los objetos que descienden de `Object`. Si este método no se sobreescribe en el objeto personalizado, `toString` devuelve `{{ mediawiki.external('object<em>type</em> ') }}`, donde `type `es el tipo de objeto. El siguiente código ilustra esto:
+Todos los objetos tienen un método `toString` que se llama automáticamente cuando el objeto se representa como un valor de texto o cuando un objeto se referencia de tal manera que se espera una cadena. Por defecto, el método `toString` es heredado por todos los objetos que descienden de `Object`. Si este método no se sobreescribe en el objeto personalizado, `toString` devuelve `{{ mediawiki.external('object<em>type</em> ') }}`, donde `type` es el tipo de objeto. El siguiente código ilustra esto:
 
 ```js
 var objeto = new Object();
@@ -64,7 +64,9 @@ Perro.prototype.toString = function perroToString() {
 
 Con el código precedente en su lugar, cualquier vez que se use `elDog` en un contexto de una cadena, JavaScript automáticamente llamará a la función `perroToString`, la cuál devuelve la siguiente cadena:
 
-    Perro Gabby es femenino chocolate Laboratorio
+```
+Perro Gabby es femenino chocolate Laboratorio
+```
 
 ## Vea También
 

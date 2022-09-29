@@ -15,7 +15,9 @@ La propiedad de acceso **`Array[@@species]`** devuelve el constructor de `Array`
 
 ## Sintaxis
 
-    Array[Symbol.species]
+```
+Array[Symbol.species]
+```
 
 ### Valor de retorno
 

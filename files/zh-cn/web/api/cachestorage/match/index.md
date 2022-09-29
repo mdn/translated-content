@@ -29,7 +29,7 @@ caches.match(request, options).then(function(response) {
 
     - `ignoreSearch`: {{domxref("Boolean")}}值， 指定匹配过程是否应该忽略 url 中查询参数。举个例子，如果该参数设置为`true`, 那么 `?value=bar` 作为 `http://foo.com/?value=bar` 中的查询参数将会在匹配过程中被忽略。该参数默认 `false`。
     - `ignoreMethod`: {{domxref("Boolean")}} 值，当被设置为 `true` 时，将会阻止在匹配操作中对 {{domxref("Request")}}请求的 `http` 方式的验证 (通常只允许 `GET` 和 `HEAD` 两种请求方式)。该参数默认为 `false`.
-    - `ignoreVary`: {{domxref("Boolean")}} 值，当该字段被设置为 `true,` 告知在匹配操作中忽略对`VARY`头信息的匹配。换句话说，当请求 URL 匹配上，你将获取匹配的 {{domxref("Response")}} 对象，无论请求的 `VARY` 头存在或者没有。该参数默认为 `false`.
+    - `ignoreVary`: {{domxref("Boolean")}} 值，当该字段被设置为 `true`, 告知在匹配操作中忽略对`VARY`头信息的匹配。换句话说，当请求 URL 匹配上，你将获取匹配的 {{domxref("Response")}} 对象，无论请求的 `VARY` 头存在或者没有。该参数默认为 `false`.
     - `cacheName`: {{domxref("DOMString")}} 值， 表示所要搜索的缓存名称。
 
 ### 返回值

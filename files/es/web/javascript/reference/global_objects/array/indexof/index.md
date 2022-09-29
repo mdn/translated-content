@@ -19,7 +19,9 @@ El método **indexOf()** retorna el primer índice en el que se puede encontrar 
 
 ## Sintaxis
 
-    array.indexOf(searchElement[, fromIndex])
+```
+array.indexOf(searchElement[, fromIndex])
+```
 
 ### Parámetros
 
@@ -34,7 +36,7 @@ El primer índice del elemento en la matriz; -1 si no se encuentra.
 
 ## Descripción
 
-`indexOf()` compara `searchElement` con los elementos del array usando [igualdad estricta](/es/docs/Web/JavaScript/Referencia/Operadores/Comparison_Operators#Using_the_Equality_Operators "JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators") (el mismo método que cuando se usa ===, o el operador igualdad-triple).
+`indexOf()` compara `searchElement` con los elementos del array usando [igualdad estricta](/es/docs/Web/JavaScript/Referencia/Operadores/Comparison_Operators#Using_the_Equality_Operators) (el mismo método que cuando se usa ===, o el operador igualdad-triple).
 
 ## Ejemplos
 

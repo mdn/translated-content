@@ -15,7 +15,9 @@ El método **`Object.getOwnPropertyDescriptor()`** regresa como descripción de 
 
 ## Síntaxis
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+```
+Object.getOwnPropertyDescriptor(obj, prop)
+```
 
 ### Parametros
 

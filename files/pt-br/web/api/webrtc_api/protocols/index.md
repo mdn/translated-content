@@ -58,7 +58,7 @@ A documentação do SDP está bem fora do escopo desta documentação; no entant
 
 ### Estrutura
 
-O SDP consiste em uma ou mais linhas de texto UTF-8, cada uma começando com um tipo de um caractere, seguido por um sinal de igual ("="), seguido por um texto estruturado contendo um valor ou descrição, cujo formato depende do tipo. As linhas de texto que começam com uma determinada letra são geralmente chamadas de "letter-lines" (_"linhas de letras\_\_"_). Por exemplo, as linhas que fornecem descrições de mídia têm o tipo "m", portanto, essas linhas são chamadas de "linhas m".
+O SDP consiste em uma ou mais linhas de texto UTF-8, cada uma começando com um tipo de um caractere, seguido por um sinal de igual ("="), seguido por um texto estruturado contendo um valor ou descrição, cujo formato depende do tipo. As linhas de texto que começam com uma determinada letra são geralmente chamadas de "letter-lines" (_"linhas de letras"_). Por exemplo, as linhas que fornecem descrições de mídia têm o tipo "m", portanto, essas linhas são chamadas de "linhas m".
 
 ### Para mais informações
 

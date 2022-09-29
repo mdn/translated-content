@@ -8,7 +8,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/exp
 
 ## Sintaxis
 
-    Math.exp(x)
+```
+Math.exp(x)
+```
 
 ### Parámetros
 

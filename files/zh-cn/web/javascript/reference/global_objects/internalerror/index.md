@@ -24,7 +24,7 @@ new InternalError([message[, fileName[, lineNumber]]])
 
 ## 描述
 
-当 JavaScript 引擎出现内部错误时将会抛出`InternalError。`
+当 JavaScript 引擎出现内部错误时将会抛出 `InternalError`。
 
 示例场景通常为某些成分过大，例如：
 

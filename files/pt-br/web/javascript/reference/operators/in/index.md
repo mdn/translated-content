@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 ---
 {{jsSidebar("Operators")}}
 
-O **operador** **`in` **retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
+O **operador** **`in`** retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
 
 ## Sintaxe
 

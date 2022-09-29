@@ -24,7 +24,7 @@ Se parece muito com o elemento `<img>`com a diferença de não possuir os atribu
 
 > **Nota:** Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
 
-O atributo `id` não é específico do elemento `<canvas>` mas um dos atributos padrão do HTML que pode ser aplicado em (quase) todos os elementos HTML (como o _`class` \_por exemplo). É sempre uma boa ideia inserir um `id` pois fica muito mais fácil de capturar o elemento no seu \_script._
+O atributo `id` não é específico do elemento `<canvas>` mas um dos atributos padrão do HTML que pode ser aplicado em (quase) todos os elementos HTML (como o _`class`_ por exemplo). É sempre uma boa ideia inserir um `id` pois fica muito mais fácil de capturar o elemento no seu _script._
 
 O elemento `<canvas>` pode ser estilizado como qualquer imagem (margem, borda, fundo, etc). Contudo, essas regras não afetarão o desenho no canvas. Nós veremos como isso é feito a seguir nesse tutorial. Quando nenhuma regra de estilo for aplicada, o canvas iniciará totalmente transparente.
 
