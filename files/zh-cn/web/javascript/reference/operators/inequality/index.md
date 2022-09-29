@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Inequality
 
 {{jsSidebar("Operators")}}
 
-不相等运算符（`!=`）检查其两个操作数是否不相等，并返回布尔结果。与[严格不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符不同，它会比较不同类型的操作数，并尝试强制类型转换。
+不相等运算符（`!=`）检查其两个操作数是否不相等，并返回布尔结果。与[严格不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符不同，它会转换并比较不同类型的操作数。
 
 {{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
 
@@ -17,7 +17,7 @@ x != y
 
 ## 描述
 
-不等式运算符检查其操作数是否不相等。这是[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的取反，因此以下两行将始终给出相同的结果：
+不等式运算符检查其操作数是否不相等。这是[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的否定，因此以下两行将始终给出相同的结果：
 
 ```js
 x != y;
@@ -51,7 +51,7 @@ x != y;
 "hello" != "hello"; // false
 ```
 
-### 与类型转换比较
+### 有类型转换的比较
 
 ```js
 "1" != 1; // false
@@ -59,8 +59,8 @@ x != y;
 0 != false; // false
 0 != null; // true
 0 != undefined; // true
-0 != !!null; // false, 看看逻辑非运算符
-0 != !!undefined; // false, 看看逻辑非运算符
+0 != !!null; // false，看看逻辑非运算符
+0 != !!undefined; // false，看看逻辑非运算符
 null != undefined; // false
 
 const number1 = new Number(3);
