@@ -4,59 +4,58 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>HTML формы могут декларативно отправлять <a href="/en-US/docs/HTTP">HTTP</a>-запросы. Но формы также могут подготовить HTTP-запросы для отправки с помощью JavaScript, например при помощи <code>XMLHttpRequest</code>. В этой статье исследуются подобные подходы.</p>
+HTML формы могут декларативно отправлять [HTTP](/ru/docs/HTTP)-запросы. Но формы также могут подготовить HTTP-запросы для отправки с помощью JavaScript, например при помощи `XMLHttpRequest`. В этой статье исследуются подобные подходы.
 
-<h2 id="Формы_не_всегда_формы">Формы не всегда формы</h2>
+## Формы не всегда формы
 
-<p>В современных веб-приложениях, одностраничных приложениях и приложениях на основе фреймворков, обычно <a href="/en-US/docs/HTML/Forms">HTML-формы</a> используются для отправки данных без загрузки нового документа при получении данных ответа. В начале поговорим о том почему это требует другого подхода.</p>
+В современных веб-приложениях, одностраничных приложениях и приложениях на основе фреймворков, обычно [HTML-формы](/ru/docs/HTML/Forms) используются для отправки данных без загрузки нового документа при получении данных ответа. В начале поговорим о том почему это требует другого подхода.
 
-<h3 id="Получение_контроля_над_глобальным_интерфейсом">Получение контроля над глобальным интерфейсом</h3>
+### Получение контроля над глобальным интерфейсом
 
-<p>Отправка стандартной HTML формы, как описывалось в предыдущей статье, загружает URL-адрес, по которому были отправлены данные, это означает, что окно браузера перемещается с полной загрузкой страницы. Если избегать полную перезагрузку страницы, можно обеспечить более плавную работу, за счёт предотвращения задержек в сети и возможных визуальных проблем (например, мерцания).</p>
+Отправка стандартной HTML формы, как описывалось в предыдущей статье, загружает URL-адрес, по которому были отправлены данные, это означает, что окно браузера перемещается с полной загрузкой страницы. Если избегать полную перезагрузку страницы, можно обеспечить более плавную работу, за счёт предотвращения задержек в сети и возможных визуальных проблем (например, мерцания).
 
-<p>Многие современные пользовательские интерфейсы используют HTML формы только для сбора пользовательского ввода, а не для для отправки данных. Когда пользователь пытается отправить свои данные, приложение берёт контроль и асинхронно передаёт данные в фоновом режиме, обновляя только ту часть всего интерфейса пользователя, которой требуется обновление.</p>
+Многие современные пользовательские интерфейсы используют HTML формы только для сбора пользовательского ввода, а не для для отправки данных. Когда пользователь пытается отправить свои данные, приложение берёт контроль и асинхронно передаёт данные в фоновом режиме, обновляя только ту часть всего интерфейса пользователя, которой требуется обновление.
 
-<p>Асинхронная отправка произвольных данных обычно называется <a href="/en-US/docs/AJAX">AJAX</a>, что означает <strong>"Asynchronous JavaScript And XML" </strong>(Асинхронный JavaScript и XML).</p>
+Асинхронная отправка произвольных данных обычно называется [AJAX](/ru/docs/AJAX), что означает **"Asynchronous JavaScript And XML"** (Асинхронный JavaScript и XML).
 
-<h3 id="Чем_он_отличается">Чем он отличается?</h3>
+### Чем он отличается?
 
-<p>Объект {{domxref("XMLHttpRequest")}} (XHR) DOM может создавать HTTP-запросы, отправлять их, и получать их результат. Исторически, {{domxref("XMLHttpRequest")}} был разработан для получения и отправки <a href="/en-US/docs/XML">XML</a> в качестве формата обмена, который со временем был заменён на <a href="/en-US/docs/JSON">JSON</a>. Но ни XML, ни JSON не вписываются в кодировку запроса данных формы. Данные формы (<code>application/x-www-form-urlencoded</code>) состоят из списка пар ключ/значение в кодировке URL. Для передачи бинарных данных, HTTP-запрос преобразуется в <code>multipart/form-data</code>.</p>
+Объект {{domxref("XMLHttpRequest")}} (XHR) DOM может создавать HTTP-запросы, отправлять их, и получать их результат. Исторически, {{domxref("XMLHttpRequest")}} был разработан для получения и отправки [XML](/ru/docs/XML) в качестве формата обмена, который со временем был заменён на [JSON](/ru/docs/JSON). Но ни XML, ни JSON не вписываются в кодировку запроса данных формы. Данные формы (`application/x-www-form-urlencoded`) состоят из списка пар ключ/значение в кодировке URL. Для передачи бинарных данных, HTTP-запрос преобразуется в `multipart/form-data`.
 
-<div class="blockIndicator note">
-<p><strong>Замечание</strong>: Сейчас <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> часто используется вместо XHR — это современная, обновлённая версия XHR, которая работает в похожем стиле, но имеет несколько преимуществ. Большая часть XHR-кода, которую вы увидите в этой статье можно заменить на Fetch.</p>
-</div>
+> **Примечание:** **Замечание**: Сейчас [Fetch API](/ru/docs/Web/API/Fetch_API) часто используется вместо XHR — это современная, обновлённая версия XHR, которая работает в похожем стиле, но имеет несколько преимуществ. Большая часть XHR-кода, которую вы увидите в этой статье можно заменить на Fetch.
 
-<p>Если вы управляете фронтендом (кодом, который выполняется в браузере) и бэкендом (кодом, который выполняется на стороне сервера), вы можете отправлять JSON/XML и обрабатывать их как хотите.</p>
+Если вы управляете фронтендом (кодом, который выполняется в браузере) и бэкендом (кодом, который выполняется на стороне сервера), вы можете отправлять JSON/XML и обрабатывать их как хотите.
 
-<p>Но если вы хотите использовать сторонний сервис, то вам необходимо отправлять данные в формате, который требуется сервису.</p>
+Но если вы хотите использовать сторонний сервис, то вам необходимо отправлять данные в формате, который требуется сервису.
 
-<p>Так как нам следует отправлять подобные данные? Ниже описаны различные необходимые вам техники.</p>
+Так как нам следует отправлять подобные данные? Ниже описаны различные необходимые вам техники.
 
-<h2 id="Отправка_данных_формы">Отправка данных формы</h2>
+## Отправка данных формы
 
-<p>Есть три способа отправки данных формы:</p>
+Есть три способа отправки данных формы:
 
-<ul>
- <li>Создание <code>XMLHttpRequest</code> вручную.</li>
- <li>Использование самостоятельного <code>FormData</code> объекта.</li>
- <li>Использование <code>FormData</code> связанного с <code>&lt;form&gt;</code> элементом.</li>
-</ul>
+- Создание `XMLHttpRequest` вручную.
+- Использование самостоятельного `FormData` объекта.
+- Использование `FormData` связанного с `<form>` элементом.
 
-<p>Давайте рассмотрим их подробнее:</p>
+Давайте рассмотрим их подробнее:
 
-<h3 id="Создание_XMLHttpRequest_вручную">Создание  XMLHttpRequest вручную</h3>
+### Создание XMLHttpRequest вручную
 
-<p>{{domxref("XMLHttpRequest")}} это самый безопасный и надёжный способ создавать HTTP-запросы. Для отправки данных формы с помощью {{domxref("XMLHttpRequest")}}, подготовьте данные с помощью URL-кодирования, и соблюдайте специфику запросов данных формы.</p>
+{{domxref("XMLHttpRequest")}} это самый безопасный и надёжный способ создавать HTTP-запросы. Для отправки данных формы с помощью {{domxref("XMLHttpRequest")}}, подготовьте данные с помощью URL-кодирования, и соблюдайте специфику запросов данных формы.
 
-<p>Посмотрите на пример:</p>
+Посмотрите на пример:
 
-<pre class="brush: html">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
+```html
+<button>Click Me!</button>
+```
 
-<p>И на JavaScript:</p>
+И на JavaScript:
 
-<pre class="brush: js">const btn = document.querySelector('button');
+```js
+const btn = document.querySelector('button');
 
 function sendData( data ) {
   console.log( 'Sending data' );
@@ -74,7 +73,7 @@ function sendData( data ) {
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
   // the '+' character; matches the behaviour of browser form submissions.
-  urlEncodedData = urlEncodedDataPairs.join( '&amp;' ).replace( /%20/g, '+' );
+  urlEncodedData = urlEncodedDataPairs.join( '&' ).replace( /%20/g, '+' );
 
   // Define what happens on successful data submission
   XHR.addEventListener( 'load', function(event) {
@@ -99,31 +98,32 @@ function sendData( data ) {
 btn.addEventListener( 'click', function() {
   sendData( {test:'ok'} );
 } )
-</pre>
+```
 
-<p>Это результат:</p>
+Это результат:
 
-<p>{{EmbedLiveSample("Создание_XMLHttpRequest_вручную", "100%", 50)}}</p>
+{{EmbedLiveSample("Создание_XMLHttpRequest_вручную", "100%", 50)}}
 
-<div class="note">
-<p><strong>Note:</strong> This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need <a href="/en-US/docs/HTTP/Access_control_CORS">CORS and HTTP access control</a>.</p>
-</div>
+> **Примечание:** This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/HTTP/Access_control_CORS).
 
-<h3 id="Using_XMLHttpRequest_and_the_FormData_object">Using XMLHttpRequest and the FormData object</h3>
+### Using XMLHttpRequest and the FormData object
 
-<p>Building an HTTP request by hand can be overwhelming. Fortunately, the <a href="http://www.w3.org/TR/XMLHttpRequest/" rel="external">XMLHttpRequest specification</a> provides a newer, simpler way to handle form data requests with the {{domxref("XMLHttpRequest/FormData","FormData")}} object.</p>
+Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpRequest specification](http://www.w3.org/TR/XMLHttpRequest/) provides a newer, simpler way to handle form data requests with the {{domxref("XMLHttpRequest/FormData","FormData")}} object.
 
-<p>The {{domxref("XMLHttpRequest/FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent. Note that {{domxref("XMLHttpRequest/FormData","FormData")}} objects are "write only", which means you can change them, but not retrieve their contents.</p>
+The {{domxref("XMLHttpRequest/FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent. Note that {{domxref("XMLHttpRequest/FormData","FormData")}} objects are "write only", which means you can change them, but not retrieve their contents.
 
-<p>Using this object is detailed in <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a>, but here are two examples:</p>
+Using this object is detailed in [Using FormData Objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects), but here are two examples:
 
-<h4 id="Using_a_standalone_FormData_object">Using a standalone FormData object</h4>
+#### Using a standalone FormData object
 
-<pre class="brush: html">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
+```html
+<button>Click Me!</button>
+```
 
-<p>You should be familiar with that HTML sample. Now for the JavaScript:</p>
+You should be familiar with that HTML sample. Now for the JavaScript:
 
-<pre class="brush: js">const btn = document.querySelector('button');
+```js
+const btn = document.querySelector('button');
 
 function sendData( data ) {
   const XHR = new XMLHttpRequest(),
@@ -153,27 +153,31 @@ function sendData( data ) {
 
 btn.addEventListener( 'click', function()
   { sendData( {test:'ok'} );
-} )</pre>
+} )
+```
 
-<p>Here's the live result:</p>
+Here's the live result:
 
-<p>{{EmbedLiveSample("Using_a_standalone_FormData_object", "100%", 50)}}</p>
+{{EmbedLiveSample("Using_a_standalone_FormData_object", "100%", 50)}}
 
-<h4 id="Using_FormData_bound_to_a_form_element">Using FormData bound to a form element</h4>
+#### Using FormData bound to a form element
 
-<p>You can also bind a <code>FormData</code> object to an {{HTMLElement("form")}} element. This creates a <code>FormData</code> object that represents the data contained in the form.</p>
+You can also bind a `FormData` object to an {{HTMLElement("form")}} element. This creates a `FormData` object that represents the data contained in the form.
 
-<p>The HTML is typical:</p>
+The HTML is typical:
 
-<pre class="brush: html">&lt;form id="myForm"&gt;
-  &lt;label for="myName"&gt;Send me your name:&lt;/label&gt;
-  &lt;input id="myName" name="name" value="John"&gt;
-  &lt;input type="submit" value="Send Me!"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="myForm">
+  <label for="myName">Send me your name:</label>
+  <input id="myName" name="name" value="John">
+  <input type="submit" value="Send Me!">
+</form>
+```
 
-<p>But JavaScript takes over the form:</p>
+But JavaScript takes over the form:
 
-<pre class="brush: js">window.addEventListener( "load", function () {
+```js
+window.addEventListener( "load", function () {
   function sendData() {
     const XHR = new XMLHttpRequest();
 
@@ -206,39 +210,43 @@ btn.addEventListener( 'click', function()
 
     sendData();
   } );
-} );</pre>
+} );
+```
 
-<p>Here's the live result:</p>
+Here's the live result:
 
-<p>{{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}</p>
+{{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}
 
-<p>You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the example in {{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}.</p>
+You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the example in {{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}.
 
-<h2 id="Dealing_with_binary_data">Dealing with binary data</h2>
+## Dealing with binary data
 
-<p>If you use a {{domxref("XMLHttpRequest/FormData","FormData")}} object with a form that includes <code>&lt;input type="file"&gt;</code> widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.</p>
+If you use a {{domxref("XMLHttpRequest/FormData","FormData")}} object with a form that includes `<input type="file">` widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.
 
-<p>There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and <a href="/en-US/docs/WebRTC/navigator.getUserMedia">WebRTC</a>. Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the <code>FileReader</code> API, see <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a>.</p>
+There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/ru/docs/WebRTC/navigator.getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/ru/docs/Using_files_from_web_applications).
 
-<p>The least complicated way of sending binary data is by using {{domxref("XMLHttpRequest/FormData","FormData")}}'s <code>append()</code> method, demonstrated above. If you have to do it by hand, it's trickier.</p>
+The least complicated way of sending binary data is by using {{domxref("XMLHttpRequest/FormData","FormData")}}'s `append()` method, demonstrated above. If you have to do it by hand, it's trickier.
 
-<p>In the following example, we use the {{domxref("FileReader")}} API to access binary data and then build the multi-part form data request by hand:</p>
+In the following example, we use the {{domxref("FileReader")}} API to access binary data and then build the multi-part form data request by hand:
 
-<pre class="brush: html">&lt;form id="theForm"&gt;
-  &lt;p&gt;
-    &lt;label for="theText"&gt;text data:&lt;/label&gt;
-    &lt;input id="theText" name="myText" value="Some text data" type="text"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="theFile"&gt;file data:&lt;/label&gt;
-    &lt;input id="theFile" name="myFile" type="file"&gt;
-  &lt;/p&gt;
-  &lt;button&gt;Send Me!&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="theForm">
+  <p>
+    <label for="theText">text data:</label>
+    <input id="theText" name="myText" value="Some text data" type="text">
+  </p>
+  <p>
+    <label for="theFile">file data:</label>
+    <input id="theFile" name="myFile" type="file">
+  </p>
+  <button>Send Me!</button>
+</form>
+```
 
-<p>As you see, the HTML is a standard <code>&lt;form&gt;</code>. There's nothing magical going on. The "magic" is in the JavaScript:</p>
+As you see, the HTML is a standard `<form>`. There's nothing magical going on. The "magic" is in the JavaScript:
 
-<pre class="brush: js">// Because we want to access DOM nodes,
+```js
+// Because we want to access DOM nodes,
 // we initialize our script at page load.
 window.addEventListener( 'load', function () {
 
@@ -276,7 +284,7 @@ window.addEventListener( 'load', function () {
   function sendData() {
     // If there is a selected file, wait it is read
     // If there is not, delay the execution of the function
-    if( !file.binary &amp;&amp; file.dom.files.length &gt; 0 ) {
+    if( !file.binary && file.dom.files.length > 0 ) {
       setTimeout( sendData, 10 );
       return;
     }
@@ -355,38 +363,35 @@ window.addEventListener( 'load', function () {
     event.preventDefault();
     sendData();
   } );
-} );</pre>
+} );
+```
 
-<p>Here's the live result:</p>
+Here's the live result:
 
-<p>{{EmbedLiveSample("Dealing_with_binary_data", "100%", 150)}}</p>
+{{EmbedLiveSample("Dealing_with_binary_data", "100%", 150)}}
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Depending on the browser and the type of data you are dealing with, sending form data through JavaScript can be easy or difficult. The {{domxref("XMLHttpRequest/FormData","FormData")}} object is generally the answer, and you can use a <a href="https://github.com/jimmywarting/FormData">polyfill</a> for it on legacy browsers.</p>
+Depending on the browser and the type of data you are dealing with, sending form data through JavaScript can be easy or difficult. The {{domxref("XMLHttpRequest/FormData","FormData")}} object is generally the answer, and you can use a [polyfill](https://github.com/jimmywarting/FormData) for it on legacy browsers.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h3 id="Learning_path">Learning path</h3>
+### Learning path
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML5_input_types">HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Additional_form_controls">Additional form controls</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
-</ul>
+- [Your first HTML form](/ru/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- [How to structure an HTML form](/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [The native form widgets](/ru/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [HTML5 input types](/ru/docs/Learn/HTML/Forms/HTML5_input_types)
+- [Additional form controls](/ru/docs/Learn/HTML/Forms/Additional_form_controls)
+- [UI pseudo-classes](/ru/docs/Learn/HTML/Forms/UI_pseudo-classes)
+- [Styling HTML forms](/ru/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Form data validation](/ru/docs/Learn/HTML/Forms/Form_validation)
+- [Sending form data](/ru/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
 
-<h3 id="Advanced_Topics">Advanced Topics</h3>
+### Advanced Topics
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
-</ul>
+- [Sending forms through JavaScript](/ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
+- [How to build custom form widgets](/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
+- [HTML forms in legacy browsers](/ru/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
+- [Advanced styling for HTML forms](/ru/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [Property compatibility table for form widgets](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -7,66 +7,72 @@ tags:
 translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Web/Guide/HTML/Using_data_attributes
 ---
-<p><a href="/ru/docs/Web/Guide/HTML/HTML5">HTML5</a> спроектирован с возможностью расширения данных ассоциированных с каким-либо элементом, но в то же время не обязательно имеющих определённое значение. <a href="/ru/docs/Web/HTML/Global_attributes#data-*"><code>data-*</code> атрибуты</a> позволяют хранить дополнительную информацию в стандартных элементах HTML, без хаков вроде нестандартных атрибутов, лишних DOM-свойств или {{domxref("Node.setUserData()")}}.</p>
+[HTML5](/ru/docs/Web/Guide/HTML/HTML5) спроектирован с возможностью расширения данных ассоциированных с каким-либо элементом, но в то же время не обязательно имеющих определённое значение. [`data-*` атрибуты](/ru/docs/Web/HTML/Global_attributes#data-*) позволяют хранить дополнительную информацию в стандартных элементах HTML, без хаков вроде нестандартных атрибутов, лишних DOM-свойств или {{domxref("Node.setUserData()")}}.
 
-<h2 id="Синтаксис_HTML">Синтаксис HTML</h2>
+## Синтаксис HTML
 
-<p>Синтаксис прост — любой атрибут, чьё имя начинается с <code>data-</code>, является <code>data-*</code> атрибутом. Предположим у нас имеется статья и мы хотим сохранить дополнительную информацию без визуального представления. Для этого можно использовать <code>data</code>-атрибуты:</p>
+Синтаксис прост — любой атрибут, чьё имя начинается с `data-`, является `data-*` атрибутом. Предположим у нас имеется статья и мы хотим сохранить дополнительную информацию без визуального представления. Для этого можно использовать `data`-атрибуты:
 
-<pre class="brush: html">&lt;article
+```html
+<article
   id="electriccars"
   data-columns="3"
   data-index-number="12314"
-  data-parent="cars"&gt;
+  data-parent="cars">
 ...
-&lt;/article&gt;</pre>
+</article>
+```
 
-<h2 id="Доступ_в_JavaScript">Доступ в JavaScript</h2>
+## Доступ в JavaScript
 
-<p>Чтение <code>data-</code>атрибутов в <a href="/ru/docs/Web/JavaScript">JavaScript</a> осуществляется также просто. Для этого можно использовать метод {{domxref("Element.getAttribute", "getAttribute()")}} с параметром, равным полному имени атрибута. Но есть и более простой способ, используя объект {{domxref("HTMLElement.dataset", "dataset")}}.</p>
+Чтение `data-`атрибутов в [JavaScript](/ru/docs/Web/JavaScript) осуществляется также просто. Для этого можно использовать метод {{domxref("Element.getAttribute", "getAttribute()")}} с параметром, равным полному имени атрибута. Но есть и более простой способ, используя объект {{domxref("HTMLElement.dataset", "dataset")}}.
 
-<p>Чтобы получить <code>data</code>-атрибут можно взять свойство объекта <code>dataset</code> с именем, равным части имени атрибута после <code>data-</code> (обратите внимание, что дефисы в имени преобразуются в camelCase).</p>
+Чтобы получить `data`-атрибут можно взять свойство объекта `dataset` с именем, равным части имени атрибута после `data-` (обратите внимание, что дефисы в имени преобразуются в camelCase).
 
-<pre><code>var article = document.getElementById('electriccars');
+```
+var article = document.getElementById('electriccars');
 
 article.dataset.columns // "3"
 article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"</code></pre>
+article.dataset.parent // "cars"
+```
 
-<p>Каждое свойство является строкой и может быть прочитано и записано. В приведённом выше примере выполнение кода <code>article.dataset.columns = 5</code> приведёт к тому, что новое значение атрибута станет равным <code>"5"</code>.</p>
+Каждое свойство является строкой и может быть прочитано и записано. В приведённом выше примере выполнение кода `article.dataset.columns = 5` приведёт к тому, что новое значение атрибута станет равным `"5"`.
 
-<h2 id="Доступ_в_CSS">Доступ в CSS</h2>
+## Доступ в CSS
 
-<p>Заметим, что <code>data</code>-атрибуты являются обычными HTML-атрибутами, к которым можно получить доступ в <a href="/ru/docs/Web/CSS">CSS</a>. Например, чтобы показать родительские данные о статье можно использовать <a href="/ru/docs/Web/CSS/content">генерируемый контент</a> и CSS функцию {{cssxref("attr")}}:</p>
+Заметим, что `data`-атрибуты являются обычными HTML-атрибутами, к которым можно получить доступ в [CSS](/ru/docs/Web/CSS). Например, чтобы показать родительские данные о статье можно использовать [генерируемый контент](/ru/docs/Web/CSS/content) и CSS функцию {{cssxref("attr")}}:
 
-<pre class="brush: css">article::before {
+```css
+article::before {
   content: attr(data-parent);
-}</pre>
+}
+```
 
-<p>Также можно использовать <a href="/ru/docs/Web/CSS/Attribute_selectors">селекторы атрибутов </a>в CSS для изменения стилей в соответствии с данным:</p>
+Также можно использовать [селекторы атрибутов ](/ru/docs/Web/CSS/Attribute_selectors)в CSS для изменения стилей в соответствии с данным:
 
-<pre class="brush: css">article[data-columns='3']{
+```css
+article[data-columns='3']{
   width: 400px;
 }
 article[data-columns='4']{
   width: 600px;
-}</pre>
+}
+```
 
-<p>Увидеть как это работает можно <a href="https://jsbin.com/ujiday/2/edit">в примере на JSBin</a>.</p>
+Увидеть как это работает можно [в примере на JSBin](https://jsbin.com/ujiday/2/edit).
 
-<p><code>Data</code>-атрибуты также могут использоваться для хранения информации, которая постоянно изменяется, например, счёт в игре. Используя CSS селекторы и возможности JavaScript можно создавать некоторые изящные эффекты, без необходимости писать свои функции отображения. Посмотрите <a href="https://www.youtube.com/watch?v=On_WyUB1gOk">скринкаст</a> чтобы увидеть больше примеров использующих сгенерированный контент и переходы на CSS. <a href="https://jsbin.com/atawaz/3/edit">Пример кода из скринкаста можно также посмотреть на JSBin</a>.</p>
+`Data`-атрибуты также могут использоваться для хранения информации, которая постоянно изменяется, например, счёт в игре. Используя CSS селекторы и возможности JavaScript можно создавать некоторые изящные эффекты, без необходимости писать свои функции отображения. Посмотрите [скринкаст](https://www.youtube.com/watch?v=On_WyUB1gOk) чтобы увидеть больше примеров использующих сгенерированный контент и переходы на CSS. [Пример кода из скринкаста можно также посмотреть на JSBin](https://jsbin.com/atawaz/3/edit).
 
-<h2 id="Проблемы">Проблемы</h2>
+## Проблемы
 
-<p>Не храните данные, которые должны быть видимы и доступны в <code>data</code>-атрибутах. Дело в том, что вспомогательная техника (assistive technology) может не получить к ним доступ. В дополнение, поисковые роботы не индексируют данные, содержащиеся в <code>data</code>-атрибутах.</p>
+Не храните данные, которые должны быть видимы и доступны в `data`-атрибутах. Дело в том, что вспомогательная техника (assistive technology) может не получить к ним доступ. В дополнение, поисковые роботы не индексируют данные, содержащиеся в `data`-атрибутах.
 
-<p>Печально, что всё простое и полезное в этой жизни не достаётся бесплатно. Internet Explorer 11+ поддерживает этот стандарт, но все более ранние версии <a href="https://caniuse.com/#feat=dataset">не поддерживают <code>dataset</code></a>. Для поддержки IE 10 и более ранних версий получение доступа к <code>data</code>-атрибутам необходимо осуществлять через {{domxref("Element.getAttribute", "getAttribute()")}}. Также, <a href="https://jsperf.com/data-dataset">производительность чтения <code>data-</code>атрибутов</a> по сравнению с хранением этих данных в хранилище данных JS значительно хуже. Использование <code>dataset</code> ещё медленнее, чем чтение данных с <code>getAttribute()</code>.</p>
+Печально, что всё простое и полезное в этой жизни не достаётся бесплатно. Internet Explorer 11+ поддерживает этот стандарт, но все более ранние версии [не поддерживают `dataset`](https://caniuse.com/#feat=dataset). Для поддержки IE 10 и более ранних версий получение доступа к `data`-атрибутам необходимо осуществлять через {{domxref("Element.getAttribute", "getAttribute()")}}. Также, [производительность чтения `data-`атрибутов](https://jsperf.com/data-dataset) по сравнению с хранением этих данных в хранилище данных JS значительно хуже. Использование `dataset` ещё медленнее, чем чтение данных с `getAttribute()`.
 
-<p>Тем не менее, для пользовательских метаданных, связанных с элементами, <code>data-</code>атрибуты являются отличным решением.</p>
+Тем не менее, для пользовательских метаданных, связанных с элементами, `data-`атрибуты являются отличным решением.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>This article is adapted from <a href="https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/">Using data attributes in JavaScript and CSS on hacks.mozilla.org</a>.</li>
- <li><a href="https://www.sitepoint.com/use-html5-data-attributes/">How to use HTML5 data attributes</a> (Sitepoint)</li>
-</ul>
+- This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
+- [How to use HTML5 data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

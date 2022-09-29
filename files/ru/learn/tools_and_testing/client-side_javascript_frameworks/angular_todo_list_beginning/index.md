@@ -1,8 +1,7 @@
 ---
 title: Начинаем приложение списка дел с использованием Angular
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+slug: >-
+  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 tags:
   - Новички
   - Фреймворки
@@ -12,75 +11,70 @@ tags:
   - Angular
   - Компоненты
   - Структура
+translation_of: >-
+  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+original_slug: >-
+  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел.
 
-<p>Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел. </p>
+| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).          |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных. |
 
-<table>
- <tbody>
-  <tr>
-    <th scope="row">Необходимые условия:</th>
-    <td>Понимание основ <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки</a>.
-    </td>
-  </tr>
-   <th scope="row">Цель:</th>
-   <td>Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных. </td>
-  </tr>
- </tbody>
-</table>
+## Структура приложения списка дел
 
-<h2 id="the_to_do_application_structure">Структура приложения списка дел</h2>
+Как и в приложении без фреймворка, в Angular-приложении есть `index.html`.
+Тэг `<body>` в `index.html`, содержит специальный Angular-элемент — `<app-root>` — для вставки вашего основного компонента, который включает в себя другие компоненты, которые вы создаете.
+Обычно, вам не нужно работать с `index.html`, вместо этого сфокусируйтесь на работе со специальными элементами вашего приложения — компонентами.
 
-<p>Как и в приложении без фреймворка, в Angular-приложении есть <code>index.html</code>.
-Тэг <code>&lt;body&gt;</code> в <code>index.html</code>, содержит специальный Angular-элемент — <code>&lt;app-root&gt;</code> — для вставки вашего основного компонента, который включает в себя другие компоненты, которые вы создаете.
-Обычно, вам не нужно работать с <code>index.html</code>, вместо этого сфокусируйтесь на работе со специальными элементами вашего приложения — компонентами.</p>
+### Организация приложения с помощью компонентов
 
-<h3 id="organize_your_application_with_components">Организация приложения с помощью компонентов</h3>
+Компоненты — это основной структурный элемент Angular-приложений. Приложение со списком дел состоит из двух компонентов — компонента-основы для вашего приложения и компонента для обработки элементов списка дел.
 
-<p>Компоненты — это основной структурный элемент Angular-приложений. Приложение со списком дел состоит из двух компонентов — компонента-основы для вашего приложения и компонента для обработки элементов списка дел. </p>
+Каждый компонент состоит из класса TypeScript, HTML и CSS. TypeScript транспилируется в JavaScript — это означает, что ваше приложение в конечном итоге преобразуется в JavaScript, но вы можете использовать расширенные функции Typescript и оптимизированный синтаксис.
 
-<p>Каждый компонент состоит из класса TypeScript, HTML и CSS. TypeScript транспилируется в JavaScript — это означает, что ваше приложение в конечном итоге преобразуется в JavaScript, но вы можете использовать расширенные функции Typescript и оптимизированный синтаксис.</p>
+### Динамическое изменение UI с помощью \*ngIf и \*ngFor
 
-<h3 id="dynamically_change_the_ui_with_ngif_and_ngfor">Динамическое изменение UI с помощью *ngIf и *ngFor</h3>
+В этом руководстве также рассматриваются две важные директивы Angular для динамического изменения структуры DOM. Директива похожа на команду, которую вы можете использовать в своем HTML, чтобы повлиять на изменения в вашем приложении.
 
-<p>В этом руководстве также рассматриваются две важные директивы Angular для динамического изменения структуры DOM. Директива похожа на команду, которую вы можете использовать в своем HTML, чтобы повлиять на изменения в вашем приложении.</p>
+Первая директива, рассматриваемая в этом руководстве — это Angular-итератор, `*ngFor`.
+`*ngFor` дает возможность динамически создавать DOM-элементы на основе элементов массива.
 
-<p>Первая директива, рассматриваемая в этом руководстве — это Angular-итератор, <code>*ngFor</code>.
-<code>*ngFor</code> дает возможность динамически создавать DOM-элементы на основе элементов массива.</p>
-
-<p>Вторая директива, которую вы изучите в этом руководстве — это <code>*ngIf</code>.
-Вы можете использовать <code>*ngIf</code> для добавления или удаления элементов из DOM в зависимости от условия.
+Вторая директива, которую вы изучите в этом руководстве — это `*ngIf`.
+Вы можете использовать `*ngIf` для добавления или удаления элементов из DOM в зависимости от условия.
 Например, если пользователи хотят отредактировать элемент в списке дел, вы можете предоставить им средства для редактирования этого элемента.
-Если они не хотят редактировать элемент, вы можете удалить элементы для редактирования. </p>
+Если они не хотят редактировать элемент, вы можете удалить элементы для редактирования.
 
-<h3 id="share_data_between_components">Обмен данными между компонентами</h3>
+### Обмен данными между компонентами
 
-<p>В этом приложении вы работаете с обменом данными между компонентами. Чтобы добавить новый элемент в список дел, главный компонент должен отправить новый элемент второму компоненту. Этот второй компонент управляет элементами и заботится о редактировании, отметке выполненных и удалении элементов.</p>
+В этом приложении вы работаете с обменом данными между компонентами. Чтобы добавить новый элемент в список дел, главный компонент должен отправить новый элемент второму компоненту. Этот второй компонент управляет элементами и заботится о редактировании, отметке выполненных и удалении элементов.
 
-<p>Обмен данными между Angular-компонентами происходит с помощью специальных декораторов, называемых <code>@Input()</code> и <code>@Output()</code>.
-Эти декораторы указывают, что определенные свойства могут получать или отправлять данные. Использование <code>@Output()</code> означает, что вы вызываете событие в одном компоненте, чтобы оповестить другой компонент об изменении данных.</p>
+Обмен данными между Angular-компонентами происходит с помощью специальных декораторов, называемых `@Input()` и `@Output()`.
+Эти декораторы указывают, что определенные свойства могут получать или отправлять данные. Использование `@Output()` означает, что вы вызываете событие в одном компоненте, чтобы оповестить другой компонент об изменении данных.
 
-<h2 id="define_item-">Определение элемента</h2>
+## Определение элемента
 
-<p>В директории <code>app</code>, создайте новый файл и назовите его <code>item.ts</code>, затем поместите туда следующее:</p>
+В директории `app`, создайте новый файл и назовите его `item.ts`, затем поместите туда следующее:
 
-<pre class="brush: js">export interface Item {
+```js
+export interface Item {
   description: string;
   done: boolean;
-}</pre>
+}
+```
 
-<p><code>Item</code> как <code>interface</code> описывает <code>item</code> как объект, чтобы приложение могло понимать, что такое <code>item</code> и как с ним взаимодействовать.
-Для нашего списка дел,<code>item</code> это объект у которого есть описание (description) и он может быть выполнен (done).</p>
+`Item` как `interface` описывает `item` как объект, чтобы приложение могло понимать, что такое `item` и как с ним взаимодействовать.
+Для нашего списка дел,`item` это объект у которого есть описание (description) и он может быть выполнен (done).
 
-<h2 id="add_logic_to_appcomponent-">Добавление логики в AppComponent</h2>
+## Добавление логики в AppComponent
 
-<p>Теперь, когда выше приложение знает, что такое <code>item</code>, вы можете добавить несколько элементов в <code>app.component.ts</code>.
-В <code>app.component.ts</code> замените содержимое на:</p>
+Теперь, когда выше приложение знает, что такое `item`, вы можете добавить несколько элементов в `app.component.ts`.
+В `app.component.ts` замените содержимое на:
 
-<pre class="brush: js">
+```js
 import { Component } from '@angular/core';
 
 @Component({
@@ -108,52 +102,53 @@ export class AppComponent {
     return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
   }
 
-}</pre>
+}
+```
 
-<p>Первая строка — это импорт JavaScript, который импортирует Angular .
-<code>@Component()</code> декоратор описывает метаданные <code>AppComponent</code>.
-Свойства метаданных по умолчанию следующие:</p>
+Первая строка — это импорт JavaScript, который импортирует Angular .
+`@Component()` декоратор описывает метаданные `AppComponent`.
+Свойства метаданных по умолчанию следующие:
 
-<ul>
-  <li><code>selector</code>: Сообщает имя селектора CSS, который используется в шаблоне для создания экземпляра этого компонента. Тут это <code>&#39;app-root&#39;</code>.
-В <code>index.html</code> внутри тэга <code>body</code>, Angular CLI добавляет <code>&lt;app-root&gt;&lt;/app-root&gt;</code> когда генерирует приложение.
-Вы можете использовать селекторы компонентов точно так же, добавляя их к другим HTML-шаблонам компонентов.</li>
-  <li><code>templateUrl</code>: Задает HTML-файл, который нужно связать с этим компонентом. .
-Тут это &#39;./app.component.html&#39;,</li>
-  <li><code>styleUrls</code>: Предоставляет расположение и имя файла для стилей, которые применяются конкретно к этому компоненту. Тут это <code>&#39;./app.component.css&#39;</code>.</li>
-</ul>
+- `selector`: Сообщает имя селектора CSS, который используется в шаблоне для создания экземпляра этого компонента. Тут это `'app-root'`.
+  В `index.html` внутри тэга `body`, Angular CLI добавляет `<app-root></app-root>` когда генерирует приложение.
+  Вы можете использовать селекторы компонентов точно так же, добавляя их к другим HTML-шаблонам компонентов.
+- `templateUrl`: Задает HTML-файл, который нужно связать с этим компонентом. .
+  Тут это './app.component.html',
+- `styleUrls`: Предоставляет расположение и имя файла для стилей, которые применяются конкретно к этому компоненту. Тут это `'./app.component.css'`.
 
-<p>Свойство <code>filter</code> имеет тип <code>union</code>, это значит, что <code>filter</code> может принимать значения: <code>all</code>, <code>active</code> или <code>done</code>.
-С типом <code>union</code>, если вы опечатаетесь в значении, которое присваиваете свойству <code>filter</code>, TypeScript сообщит об этом, чтобы вы могли вовремя отловить ошибку.
-В этом руководстве показано, как добавить фильтрацию на более позднем этапе, но вы также можете использовать фильтр, чтобы отобразить список всех элементов по умолчанию.</p>
+Свойство `filter` имеет тип `union`, это значит, что `filter` может принимать значения: `all`, `active` или `done`.
+С типом `union`, если вы опечатаетесь в значении, которое присваиваете свойству `filter`, TypeScript сообщит об этом, чтобы вы могли вовремя отловить ошибку.
+В этом руководстве показано, как добавить фильтрацию на более позднем этапе, но вы также можете использовать фильтр, чтобы отобразить список всех элементов по умолчанию.
 
-<p>Массив <code>allItems</code> содержит текущие дела, в том числе и выполненные (<code>done</code>).
-Первый элемент, <code>eat</code>, имеет значение свойства <code>done: true</code>.</p>
+Массив `allItems` содержит текущие дела, в том числе и выполненные (`done`).
+Первый элемент, `eat`, имеет значение свойства `done: true`.
 
-<p>Геттер, <code>get items()</code>, извлекает все элементы из массива <code>allItems</code> если <code>filter</code> имеет значение <code>all</code>.
-Иначе, <code>get items()</code> возвращает завершенные (<code>done: true</code>) или незавершенные (<code>done: false</code>) элементы в зависимости от того, как пользователь фильтрует представление.
-Геттер так же устанавливает <code>items</code> как имя массива, которое вы будете использовать в следующем блоке.</p>
+Геттер, `get items()`, извлекает все элементы из массива `allItems` если `filter` имеет значение `all`.
+Иначе, `get items()` возвращает завершенные (`done: true`) или незавершенные (`done: false`) элементы в зависимости от того, как пользователь фильтрует представление.
+Геттер так же устанавливает `items` как имя массива, которое вы будете использовать в следующем блоке.
 
-<h2 id="add_html_to_the_appcomponent_template">Добавление HTML-шаблона для AppComponent</h2>
+## Добавление HTML-шаблона для AppComponent
 
-<p>Чтобы увидеть список элементов в браузере, замените содержимое <code>app.component.html</code> на следующий HTML:</p>
+Чтобы увидеть список элементов в браузере, замените содержимое `app.component.html` на следующий HTML:
 
-<pre class="brush: html">&lt;div class="main"&gt;
-  &lt;h1&gt;My To Do List&lt;/h1&gt;
-  &lt;h2&gt;What would you like to do today?&lt;/h2&gt;
+```html
+<div class="main">
+  <h1>My To Do List</h1>
+  <h2>What would you like to do today?</h2>
 
-  &lt;ul&gt;
-    &lt;li *ngFor="let item of items"&gt;\{{item.description}}&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+  <ul>
+    <li *ngFor="let item of items">\{{item.description}}</li>
+  </ul>
+</div>
+```
 
-<p>Тэг <code>&lt;li&gt;</code> содержит <code>*ngFor</code> — встроенную директива Angular, которая перебирает элементы в массиве <code>items</code>.
-Для каждого элемента, <code>*ngFor</code> создает новый тэг <code>&lt;li&gt;</code>.
-Двойные фигурные скобки, которые содержат <code>item.description</code> сообщают Angular, что нужно заполнить каждый тэг <code>&lt;li&gt;</code> текстом из item&#39;s description.</p>
+Тэг `<li>` содержит `*ngFor` — встроенную директива Angular, которая перебирает элементы в массиве `items`.
+Для каждого элемента, `*ngFor` создает новый тэг `<li>`.
+Двойные фигурные скобки, которые содержат `item.description` сообщают Angular, что нужно заполнить каждый тэг `<li>` текстом из item's description.
 
-<p>В браузере вы должны увидеть список элементов:</p>
+В браузере вы должны увидеть список элементов:
 
-<pre>
+```
 My To Do List
 What would you like to do today?
 
@@ -161,110 +156,105 @@ What would you like to do today?
 * sleep
 * play
 * laugh
-</pre>
+```
 
-<h2 id="add_items_to_the_list">Добавление элементов в список</h2>
+## Добавление элементов в список
 
-<p>С список дел нужно добавлять элементы.</p>
+С список дел нужно добавлять элементы.
 
-<p>Добавьте в <code>app.component.ts</code>, следующий метод класса:</p>
+Добавьте в `app.component.ts`, следующий метод класса:
 
-<pre class="brush: js">addItem(description: string) {
+```js
+addItem(description: string) {
   this.allItems.unshift({
     description,
     done: false
   });
-}</pre>
+}
+```
 
-<p>Метод <code>addItem()</code> принимает элемент, который предоставляет пользователь, и добавляет его в массив, когда пользователь нажимает кнопку  <strong>Add</strong>.<code>addItem()</code> использует метод массива <code>unshift()</code> чтобы добавить новый элемент в начало массива и, соответственно, начало списка.
-Вы можете использовать метод <code>push()</code>, который добавит новый элемент в конец массива и, соответственно, конец списка.</p>
+Метод `addItem()` принимает элемент, который предоставляет пользователь, и добавляет его в массив, когда пользователь нажимает кнопку **Add**.`addItem()` использует метод массива `unshift()` чтобы добавить новый элемент в начало массива и, соответственно, начало списка.
+Вы можете использовать метод `push()`, который добавит новый элемент в конец массива и, соответственно, конец списка.
 
-<p>Для того, чтобы использовать метод <code>addItem()</code>, отредактируйте HTML в шаблоне <code>AppComponent</code>.</p>
+Для того, чтобы использовать метод `addItem()`, отредактируйте HTML в шаблоне `AppComponent`.
 
-<p>В <code>app.component.html</code>, замените <code>&lt;h2&gt;</code> на следующее:</p>
+В `app.component.html`, замените `<h2>` на следующее:
 
-<pre class="brush: js">&lt;label for="addItemInput"&gt;What would you like to do today?&lt;/label&gt;
+```js
+<label for="addItemInput">What would you like to do today?</label>
 
-&lt;input
+<input
   #newItem
   placeholder="add an item"
   (keyup.enter)="addItem(newItem.value); newItem.value = ''"
   class="lg-text-input"
   id="addItemInput"
-/&gt;
+/>
 
-&lt;button class="btn-primary" (click)="addItem(newItem.value)"&gt;Add&lt;/button&gt;</pre>
+<button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+```
 
-<p>Когда пользователь вводит новый элемент в <code>&lt;input&gt;</code> и нажимает <strong>Enter</strong>, метод <code>addItem()</code> добавляет значение в массив <code>items</code>.
-Нажатие <strong>Enter</strong> так же сбрасывает значение в <code>&lt;input&gt;</code> на пустую строку.
-В качестве альтернативы пользователь может щелкнуть на кнопке <strong>Add</strong>, которая так же вызовет метод <code>addItem()</code>.</p>
+Когда пользователь вводит новый элемент в `<input>` и нажимает **Enter**, метод `addItem()` добавляет значение в массив `items`.
+Нажатие **Enter** так же сбрасывает значение в `<input>` на пустую строку.
+В качестве альтернативы пользователь может щелкнуть на кнопке **Add**, которая так же вызовет метод `addItem()`.
 
+## Резюме
 
-<h2 id="summary">Резюме</h2>
+Сейчас у вас должен быть список дел, отображаемый в вашем браузере. Это большой прогресс! Конечно, нам предстоит еще многое сделать. В следующей статье мы рассмотрим добавление стилей в наше приложение.
 
-<p>Сейчас у вас должен быть список дел, отображаемый в вашем браузере. Это большой прогресс! Конечно, нам предстоит еще многое сделать. В следующей статье мы рассмотрим добавление стилей в наше приложение.</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+## В это модуле
 
-<h2 id="In_this_module">В это модуле</h2>
+- [Введение в клиентские фреймворки](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Введение в клиентские фреймворки</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Основные функции фреймворков</a></li>
- <li>React
-  <ul>
-   <li><a href="/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Начало работы с React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Начало создания приложения списка дел с React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Компоненты React приложения</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">Интерактивность React: события и состояние</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">Интерактивность React: редактирование, фильтрация, условная отрисовка</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Доступность в React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">Ресурсы по React</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Начало работы с Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Структура Ember приложения и компоненты</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Интерактивность Ember: события, классы и состояние</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Интерактивность Ember: функциональность подвала, условная отрисовка</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Маршрутизация в Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ресурсы по Ember и устранение неполадок</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Начало работы с Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Создание вашего первого компонента Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Отрисовка списка Vue компонентов</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Добавление новой формы во Vue: события, методы, и модели</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Стилизация Vue компонентов с CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Использование вычисляемых свойств во Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Условная отрисовка во Vue: Редактирование существующих дел</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Управление фокусом во Vue с помощью refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Ресурсы по Vue</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Начало работы со Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Начинаем приложение списка дел c использованием Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Динамическое поведение в Svelte: работа с переменными и пропсами</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Компоненты Svelte приложения</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Продвинутый Svelte: реактивность, жизненный цикл, доступность</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Работа хранилищами в Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Поддержка TypeScript в Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Развертывание и следующие шаги</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Начало работы с Angular</a></li>
-    <li><a href="/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Начинаем приложение списка дел с использованием Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Стилизация Angular приложения</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Создание компонента элемента (item component)</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Фильтрация списка дел</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Сборка Angular приложений и другие ресурсы</a></li>
-   </ul>
- </li>
-</ul>
+  - [Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Компоненты React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [Интерактивность React: редактирование, фильтрация, условная отрисовка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Доступность в React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [Ресурсы по React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Структура Ember приложения и компоненты](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Интерактивность Ember: события, классы и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Интерактивность Ember: функциональность подвала, условная отрисовка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Маршрутизация в Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ресурсы по Ember и устранение неполадок](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Начало работы с Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Создание вашего первого компонента Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Отрисовка списка Vue компонентов](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Добавление новой формы во Vue: события, методы, и модели](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Стилизация Vue компонентов с CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Использование вычисляемых свойств во Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Условная отрисовка во Vue: Редактирование существующих дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Управление фокусом во Vue с помощью refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Ресурсы по Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Начало работы со Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Начинаем приложение списка дел c использованием Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Динамическое поведение в Svelte: работа с переменными и пропсами](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Компоненты Svelte приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Работа хранилищами в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [Поддержка TypeScript в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Развертывание и следующие шаги](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Начало работы с Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Стилизация Angular приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Создание компонента элемента (item component)](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Фильтрация списка дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

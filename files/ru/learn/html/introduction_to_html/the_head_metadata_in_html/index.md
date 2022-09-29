@@ -17,285 +17,272 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}</div>
+Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:
 
-<p>Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:</p>
+- {{htmlelement("title", "заголовок (title)")}} страницы
+- ссылки на файлы {{glossary("CSS")}} (если вы хотите применить к вашему HTML стили CSS)
+- ссылки на иконки
+- другие метаданные (данные о HTML: автор и важные ключевые слова, описывающие документ.)
 
-<ul>
- <li>{{htmlelement("title", "заголовок (title)")}} страницы</li>
- <li>ссылки на файлы {{glossary("CSS")}} (если вы хотите применить к вашему HTML стили CSS)</li>
- <li>ссылки на иконки</li>
- <li>другие метаданные (данные о HTML: автор и важные ключевые слова, описывающие документ.)</li>
-</ul>
+В этой статье мы рассмотрим всё вышеперечисленное и многое другое, чтобы дать вам хорошую основу для работы с разметкой.
 
-<p>В этой статье мы рассмотрим всё вышеперечисленное и многое другое, чтобы дать вам хорошую основу для работы с разметкой.</p>
+| Предварительные требования: | Базовое знакомство с HTML , описанное в [Начало работы с HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started).              |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:                     | Узнать о заголовке HTML, его значении, важнейших элементах, которые содержатся в нём, и о том, как он может повлиять на HTML-документ. |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Предварительные требования:</th>
-   <td>Базовое знакомство с HTML , описанное в <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Начало работы с HTML</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Задача:</th>
-   <td>Узнать о заголовке HTML, его значении, важнейших элементах, которые содержатся в нём, и о том, как он может повлиять на HTML-документ.</td>
-  </tr>
- </tbody>
-</table>
+## Что такое \<head>?
 
-<h2 id="Что_такое_&lt;head>">Что такое &lt;head&gt;?</h2>
+Давайте снова посмотрим на [HTML-документ из прошлой статьи](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B#%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_HTML_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0):
 
-<p>Давайте снова посмотрим на <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B#%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_HTML_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0">HTML-документ из прошлой статьи</a>:</p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Моя тестовая страница</title>
+  </head>
+  <body>
+    <p>Это — моя страница</p>
+  </body>
+</html>
+```
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Моя тестовая страница&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Это — моя страница&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+Содержимое {{htmlelement("head")}}, в отличие от содержимого элемента {{htmlelement("body")}}, не отображается на странице. Задача \<head> — хранить {{glossary("Metadata", "метаданные")}} документа. В приведённом выше примере \<head> совсем небольшой:
 
-<p>Содержимое {{htmlelement("head")}}, в отличие от содержимого элемента {{htmlelement("body")}}, не отображается на странице. Задача &lt;head&gt; — хранить {{glossary("Metadata", "метаданные")}} документа. В приведённом выше примере &lt;head&gt; совсем небольшой:</p>
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Моя тестовая страница</title>
+</head>
+```
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Моя тестовая страница&lt;/title&gt;
-&lt;/head&gt;</pre>
+Однако на больших страницах блок \<head> может быть довольно объёмным. Попробуйте зайти на какие-нибудь из ваших любимых сайтов и посмотреть содержимое \<head> с помощью [инструментов разработчика](/ru/docs/Learn/Discover_browser_developer_tools). Наша цель сейчас — не в том, чтобы показать вам, как использовать всё, что только можно добавить в head, а дать представление и научить вас, как использовать основные элементы. Давайте начнём.
 
-<p>Однако на больших страницах блок &lt;head&gt; может быть довольно объёмным. Попробуйте зайти на какие-нибудь из ваших любимых сайтов и посмотреть содержимое &lt;head&gt; с помощью <a href="/ru/docs/Learn/Discover_browser_developer_tools">инструментов разработчика</a>. Наша цель сейчас — не в том, чтобы показать вам, как использовать всё, что только можно добавить в head, а дать представление и научить вас, как использовать основные элементы. Давайте начнём.</p>
+## Название страницы (title)
 
-<h2 id="Название_страницы_title">Название страницы (title)</h2>
+Мы уже видели, как работает элемент {{htmlelement("title")}}: его используют для добавления заголовка (названия страницы) в документ. Элемент {{htmlelement("h1")}} тоже иногда называют заголовком страницы. Но это разные вещи!
 
-<p>Мы уже видели, как работает элемент {{htmlelement("title")}}: его используют для добавления заголовка (названия страницы) в документ. Элемент {{htmlelement("h1")}} тоже иногда называют заголовком страницы. Но это разные вещи!</p>
+- Элемент {{htmlelement("h1")}} виден на странице, открытой в браузере, — его используют **один раз на странице**, чтобы выделить название содержимого. Это может быть название истории, заголовок новости или что-то в этом роде.
+- Элемент {{htmlelement("title")}} — метаданные, название всего HTML-документа, а не заголовок внутри его содержимого.
 
-<ul>
- <li>Элемент {{htmlelement("h1")}} виден на странице, открытой в браузере, — его используют <strong>один раз на странице</strong>, чтобы выделить название содержимого. Это может быть название истории, заголовок новости или что-то в этом роде.</li>
- <li>Элемент {{htmlelement("title")}} — метаданные, название всего HTML-документа, а не заголовок внутри его содержимого. </li>
-</ul>
+### Активное изучение: разбор простого примера
 
-<h3 id="Активное_изучение_разбор_простого_примера">Активное изучение: разбор простого примера</h3>
+1.  Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
 
-<ol>
- <li>Чтобы приступить к активному изучению,  скачайте страницу <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a> из нашего GitHub-репозитория. Это можно сделать двумя способами:
+    1.  Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
+    2.  Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 
-  <ol>
-   <li>Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.</li>
-   <li>Нажмите на странице кнопку "Raw", нажмите <em>Файл &gt; Сохранить Как...</em> в меню браузера и выберите папку для сохранения.</li>
-  </ol>
- </li>
- <li>Откройте файл в браузере. Вы увидите что-то вроде этого:
-  <p><img alt="A simple web page with the title set to &lt;title> element, and the &lt;h1> set to &lt;h1> element." src="https://mdn.mozillademos.org/files/12323/title-example.png" style="display: block; margin: 0 auto;">Теперь должно стать совершенно ясно, в чём разница между <code>&lt;h1&gt;</code> и <code>&lt;title&gt;</code>!</p>
- </li>
- <li>Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!</li>
-</ol>
+2.  Откройте файл в браузере. Вы увидите что-то вроде этого:
 
-<p>Содержимое элемента <code>&lt;title&gt;</code> используется и в других местах. Например, при добавлении страницы в избранное (<em>Bookmarks &gt; Bookmark This Page</em> в Firefox), текст из <code>&lt;title&gt;</code> предлагается в качестве названия закладки.</p>
+    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
 
-<p><img alt="A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the &lt;title> element " src="https://mdn.mozillademos.org/files/12337/bookmark-example.png" style="display: block; margin: 0 auto;"></p>
+3.  Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!
 
-<p>Текст из <code>&lt;title&gt;</code> также появляется в результатах поиска, как мы скоро увидим.</p>
+Содержимое элемента `<title>` используется и в других местах. Например, при добавлении страницы в избранное (_Bookmarks > Bookmark This Page_ в Firefox), текст из `<title>` предлагается в качестве названия закладки.
 
-<h2 id="Метаданные_Элемент_&lt;meta>">Метаданные: Элемент &lt;meta&gt;</h2>
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
 
-<p>Метаданные — данные, которые описывают данные. У HTML есть «официальное» место для метаданных документа — элемент {{htmlelement("meta")}}. Конечно, другие вещи, о которых мы говорим в этой статье, тоже можно назвать метаданными. Существует множество разновидностей <code>&lt;meta&gt;</code>. Не станем пытаться охватить их все сразу — так недолго и запутаться, а рассмотрим несколько самых популярных, чтобы разобраться, что к чему.</p>
+Текст из `<title>` также появляется в результатах поиска, как мы скоро увидим.
 
-<h3 id="Указываем_кодировку_текста_документа">Указываем кодировку текста документа</h3>
+## Метаданные: Элемент \<meta>
 
-<p>В заголовке примера выше есть следующая строка:</p>
+Метаданные — данные, которые описывают данные. У HTML есть «официальное» место для метаданных документа — элемент {{htmlelement("meta")}}. Конечно, другие вещи, о которых мы говорим в этой статье, тоже можно назвать метаданными. Существует множество разновидностей `<meta>`. Не станем пытаться охватить их все сразу — так недолго и запутаться, а рассмотрим несколько самых популярных, чтобы разобраться, что к чему.
 
-<pre class="brush: html">&lt;meta charset="utf-8"&gt;</pre>
+### Указываем кодировку текста документа
 
-<p>В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . <code>utf-8</code> — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-страницах, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:</p>
+В заголовке примера выше есть следующая строка:
 
-<p><img alt="a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine," src="https://mdn.mozillademos.org/files/12343/correct-encoding.png" style="display: block; margin: 0 auto;">Если использовать, скажем, кодировку <code>ISO-8859-1</code> (набор символов для латиницы), текст страницы испортится:</p>
+```html
+<meta charset="utf-8">
+```
 
-<p><img alt="a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly" src="https://mdn.mozillademos.org/files/12341/bad-encoding.png" style="display: block; height: 365px; margin: 0px auto; width: 604px;"></p>
+В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . `utf-8` — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-страницах, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:
 
-<div class="note">
-<p><strong>Примечание</strong>: Некоторые браузеры (например, Chrome) автоматически исправляют неправильную кодировку, поэтому, в зависимости от используемого вами браузера, вы можете не увидеть эту проблему. Несмотря на это вам всё равно необходимо указывать кодировку UTF-8 для вашей страницы, чтобы избежать возможных проблем в других браузерах.</p>
-</div>
+![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](https://mdn.mozillademos.org/files/12343/correct-encoding.png)Если использовать, скажем, кодировку `ISO-8859-1` (набор символов для латиницы), текст страницы испортится:
 
-<h3 id="Активное_изучение_экспериментируем_с_символьными_кодировками">Активное изучение: экспериментируем с символьными кодировками</h3>
+![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
 
-<p>Чтобы проверить это, вернитесь к HTML из примера <code>&lt;title&gt;</code> (странице <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a>), поменяйте meta charset на <code>ISO-8859-1</code> и попробуйте написать что-нибудь на японском или русском. Вот текст из нашего примера (кстати, там написано <em>«рис горячий»</em>):</p>
+> **Примечание:** Некоторые браузеры (например, Chrome) автоматически исправляют неправильную кодировку, поэтому, в зависимости от используемого вами браузера, вы можете не увидеть эту проблему. Несмотря на это вам всё равно необходимо указывать кодировку UTF-8 для вашей страницы, чтобы избежать возможных проблем в других браузерах.
 
-<pre class="brush: html">&lt;p&gt;Пример на японском: ご飯が熱い。&lt;/p&gt;</pre>
+### Активное изучение: экспериментируем с символьными кодировками
 
-<h3 id="Указываем_автора_и_описание">Указываем автора и описание</h3>
+Чтобы проверить это, вернитесь к HTML из примера `<title>` (странице [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), поменяйте meta charset на `ISO-8859-1` и попробуйте написать что-нибудь на японском или русском. Вот текст из нашего примера (кстати, там написано _«рис горячий»_):
 
-<p>У элементов <code>&lt;meta&gt;</code> часто есть атрибуты <code>name</code> и <code>content</code>:</p>
+```html
+<p>Пример на японском: ご飯が熱い。</p>
+```
 
-<ul>
- <li><code>name</code> — тип элемента, то есть какие именно метаданные он содержит.</li>
- <li><code>content</code> — сами метаданные.</li>
-</ul>
+### Указываем автора и описание
 
-<p>Два полезных элемента метаданных — указание автора страницы и краткое описание её содержимого. Рассмотрим эти элементы на примере:</p>
+У элементов `<meta>` часто есть атрибуты `name` и `content`:
 
-<pre class="brush: html">&lt;meta name="author" content="Крис Миллс"&gt;
-&lt;meta name="description" content="Задача MDN — в том, чтобы обучить
-новичков всему тому, что нужно им для разработки веб-сайтов и приложений."&gt;</pre>
+- `name` — тип элемента, то есть какие именно метаданные он содержит.
+- `content` — сами метаданные.
 
-<p>По указанному имени автора (author) можно найти человека, который написал страницу, и связаться с ним. Некоторые системы управления содержимым (CMS) автоматически обрабатывают эту информацию и делают её доступной для таких целей.</p>
+Два полезных элемента метаданных — указание автора страницы и краткое описание её содержимого. Рассмотрим эти элементы на примере:
 
-<p>Краткое описание (description) содержимого страницы учитывается поисковыми системами при совпадении ключевых слов. Такое называют <a href="/en-US/docs/Glossary/SEO">поисковой оптимизацией</a>, или {{glossary("SEO")}}.</p>
+```html
+<meta name="author" content="Крис Миллс">
+<meta name="description" content="Задача MDN — в том, чтобы обучить
+новичков всему тому, что нужно им для разработки веб-сайтов и приложений.">
+```
 
-<h3 id="Активное_изучение_как_поисковые_системы_используют_описание">Активное изучение: как поисковые системы используют описание</h3>
+По указанному имени автора (author) можно найти человека, который написал страницу, и связаться с ним. Некоторые системы управления содержимым (CMS) автоматически обрабатывают эту информацию и делают её доступной для таких целей.
 
-<p>Описание из <code>&lt;meta name="description"&gt;</code> используется на страницах поисковой выдачи. Проведём небольшое исследование такого сценария.</p>
+Краткое описание (description) содержимого страницы учитывается поисковыми системами при совпадении ключевых слов. Такое называют [поисковой оптимизацией](/ru/docs/Glossary/SEO), или {{glossary("SEO")}}.
 
-<ol>
- <li>Перейдите на<a href="https://developer.mozilla.org/en-US/"> главную страницу Mozilla Developer Network</a>.</li>
- <li>Откройте исходный код страницы (кликните правой кнопкой мыши и выберите <em>Просмотреть код</em> в контекстном меню.)</li>
- <li>Найдите тег meta с описанием. Он выглядит так:
-  <pre class="brush: html">&lt;meta name="description" content="Веб-документация на MDN
-предоставляет собой информацию об открытых веб-технологиях,
-включая HTML, CSS и различные API для веб-сайтов и
-прогрессивных веб-приложений. Также на сайте содержатся материалы
-для разработчиков о таких продуктах Mozilla, как Инструменты разработчика Firefox."&gt;</pre>
- </li>
- <li>Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из <code>&lt;meta&gt;</code> и <code>&lt;title&gt;</code> используется в результатах поиска, — мы не зря указали их!</li>
-</ol>
+### Активное изучение: как поисковые системы используют описание
 
-<p><img alt="Результат поиска в Google" src="https://mdn.mozillademos.org/files/17061/Updated_search_result__ru.jpg" style="border-style: solid; border-width: 1px; height: 542px; width: 819px;"></p>
+Описание из `<meta name="description">` используется на страницах поисковой выдачи. Проведём небольшое исследование такого сценария.
 
-<div class="note">
-<p><strong>Примечание</strong>: Google также показывает важные страницы MDN под ссылкой на главную страницу. Такие ссылки называются sitelinks, и их можно настроить через <a href="http://www.google.com/webmasters/tools/">Google Search Console</a>, чтобы пользователи могли сразу перейти к ним со страницы поиска.</p>
-</div>
+1.  Перейдите на[ главную страницу Mozilla Developer Network](https://developer.mozilla.org/en-US/).
+2.  Откройте исходный код страницы (кликните правой кнопкой мыши и выберите _Просмотреть код_ в контекстном меню.)
+3.  Найдите тег meta с описанием. Он выглядит так:
 
-<div class="note">
-<p><strong>Примечание</strong>: Многие типы <code>&lt;meta&gt;</code> больше не используются. Так, поисковые системы больше не используют данные из элемента <code>&lt;meta type="keywords" content="ваши, ключевые, слова, введите, здесь"&gt;</code>, в котором указывали ключевые слова, по которым можно найти страницу: спамеры засовывали туда все слова, какие могли придумать, чтобы их сайты почаще появлялись в поиске.</p>
-</div>
+    ```html
+    <meta name="description" content="Веб-документация на MDN
+    предоставляет собой информацию об открытых веб-технологиях,
+    включая HTML, CSS и различные API для веб-сайтов и
+    прогрессивных веб-приложений. Также на сайте содержатся материалы
+    для разработчиков о таких продуктах Mozilla, как Инструменты разработчика Firefox.">
+    ```
 
-<h3 id="Другие_виды_метаданных">Другие виды метаданных</h3>
+4.  Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из `<meta>` и `<title>` используется в результатах поиска, — мы не зря указали их!
 
-<p>В сети вы найдёте также другие типы метаданных. Многие из них — это собственные форматы, созданные для предоставления определённым сайтам (например, социальных сетей) специальной информации, которую они могут использовать.</p>
+![Результат поиска в Google](https://mdn.mozillademos.org/files/17061/Updated_search_result__ru.jpg)
 
-<p>Например, <a href="https://ruogp.me/">Протокол Open Graph</a> создан Facebook чтобы предоставить сайтам дополнительные возможности использования метаданных. В исходном коде MDN Web Docs вы можете найти строки:</p>
+> **Примечание:** Google также показывает важные страницы MDN под ссылкой на главную страницу. Такие ссылки называются sitelinks, и их можно настроить через [Google Search Console](http://www.google.com/webmasters/tools/), чтобы пользователи могли сразу перейти к ним со страницы поиска.
 
-<pre class="brush: html">&lt;meta property="og:image" content="/static/img/opengraph-logo.72382e605ce3.png"&gt;
-&lt;meta property="og:description" content="Веб-документация на MDN предоставляет
+> **Примечание:** Многие типы `<meta>` больше не используются. Так, поисковые системы больше не используют данные из элемента `<meta type="keywords" content="ваши, ключевые, слова, введите, здесь">`, в котором указывали ключевые слова, по которым можно найти страницу: спамеры засовывали туда все слова, какие могли придумать, чтобы их сайты почаще появлялись в поиске.
+
+### Другие виды метаданных
+
+В сети вы найдёте также другие типы метаданных. Многие из них — это собственные форматы, созданные для предоставления определённым сайтам (например, социальных сетей) специальной информации, которую они могут использовать.
+
+Например, [Протокол Open Graph](https://ruogp.me/) создан Facebook чтобы предоставить сайтам дополнительные возможности использования метаданных. В исходном коде MDN Web Docs вы можете найти строки:
+
+```html
+<meta property="og:image" content="/static/img/opengraph-logo.72382e605ce3.png">
+<meta property="og:description" content="Веб-документация на MDN предоставляет
 собой информацию об открытых веб-технологиях, включая HTML, CSS и различные API для веб-сайтов
 и прогрессивных веб-приложений. Также на сайте содержатся материалы для разработчиков о таких
-продуктах Mozilla, как Инструменты разработчика Firefox."&gt;
-&lt;meta property="og:title" content="MDN Web Docs"&gt;</pre>
+продуктах Mozilla, как Инструменты разработчика Firefox.">
+<meta property="og:title" content="MDN Web Docs">
+```
 
-<p>Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия <em><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F">(User eXperience, UX</a>)</em>.</p>
+Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))\_.
 
-<p><img alt="Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description." src="https://mdn.mozillademos.org/files/12349/facebook-output.png" style="display: block; margin: 0 auto;">У Twitter также есть собственный формат метаданных, с помощью которого  создаётся аналогичный эффект, при отображении URL сайта на twitter.com:</p>
+![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
 
-<pre class="brush: html">&lt;meta name="twitter:title" content="MDN Web Docs"&gt;</pre>
+```html
+<meta name="twitter:title" content="MDN Web Docs">
+```
 
-<h2 id="Добавление_иконок">Добавление иконок</h2>
+## Добавление иконок
 
-<p>Чтобы добавить своему сайту узнаваемости, можно указать в метаданных разные иконки.</p>
+Чтобы добавить своему сайту узнаваемости, можно указать в метаданных разные иконки.
 
-<p><a href="https://ru.wikipedia.org/wiki/Favicon">Favicon</a>, один из старожилов интернета, стал первой из таких иконок. Браузеры показывают её в заголовке вкладки и в списке избранных страниц.<img alt="The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it." src="https://mdn.mozillademos.org/files/12351/bookmark-favicon.png" style="display: block; margin: 0 auto;"></p>
+[Favicon](https://ru.wikipedia.org/wiki/Favicon), один из старожилов интернета, стал первой из таких иконок. Браузеры показывают её в заголовке вкладки и в списке избранных страниц.![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
 
-<p>Чтобы добавить на страницу favicon:</p>
+Чтобы добавить на страницу favicon:
 
-<ol>
- <li>Сохраните изображение в формате <code>.ico</code> (многие браузеры поддерживают и в более привычных форматах, таких как <code>.gif</code> или <code>.png</code>) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат <code>.ico</code></li>
- <li>Добавьте ссылку на иконку в <code>&lt;head&gt;</code> документа:
-  <pre class="brush: html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
- </li>
-</ol>
+1.  Сохраните изображение в формате `.ico` (многие браузеры поддерживают и в более привычных форматах, таких как `.gif` или `.png`) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат `.ico`
+2.  Добавьте ссылку на иконку в `<head>` документа:
 
-<p>Для разных устройств можно указывать разные иконки. Например, на главной странице MDN:</p>
+    ```html
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    ```
 
-<pre class="brush: html">&lt;!-- Для iPad 3 с Retina-экраном высокого разрешения: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png"&gt;
-&lt;!-- Для iPhone с Retina-экраном высокого разрешения: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png"&gt;
-&lt;!-- Для iPad первого и второго поколения: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png"&gt;
-&lt;!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png"&gt;
-&lt;!-- Для других случаев - обычный favicon --&gt;
-&lt;link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png"&gt;</pre>
+Для разных устройств можно указывать разные иконки. Например, на главной странице MDN:
 
-<p>В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении. </p>
+```html
+<!-- Для iPad 3 с Retina-экраном высокого разрешения: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
+<!-- Для iPhone с Retina-экраном высокого разрешения: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
+<!-- Для iPad первого и второго поколения: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
+<!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
+<link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
+<!-- Для других случаев - обычный favicon -->
+<link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+```
 
-<p>Не беспокойтесь о реализации всех этих типов значков — это довольно продвинутая функция, и мы не станем возвращаться к ней в курсе. Основная цель — показать вам, что это такое, если вы столкнётесь с ними при просмотре исходного кода других веб-сайтов.</p>
+В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
 
-<h2 id="Подключение_CSS_и_JavaScript">Подключение CSS и JavaScript</h2>
+Не беспокойтесь о реализации всех этих типов значков — это довольно продвинутая функция, и мы не станем возвращаться к ней в курсе. Основная цель — показать вам, что это такое, если вы столкнётесь с ними при просмотре исходного кода других веб-сайтов.
 
-<p>Современные сайты используют {{glossary("CSS")}}, чтобы выглядеть привлекательнее, и добавляют интерактивные функции через {{glossary("JavaScript")}}: видеоплееры, карты, игры. Обычно связанные стили добавляют на страницу через элемент {{htmlelement("link")}}, а скрипты — через элемент {{htmlelement("script")}} .</p>
+## Подключение CSS и JavaScript
 
-<ul>
- <li>
-  <p>Элемент {{htmlelement("link")}} помещают в заголовок документа. У него есть два атрибута: <code>rel="stylesheet"</code> показывает, что мы указываем <em>стиль</em> документа, а в <code>href</code> указан путь к файлу:</p>
+Современные сайты используют {{glossary("CSS")}}, чтобы выглядеть привлекательнее, и добавляют интерактивные функции через {{glossary("JavaScript")}}: видеоплееры, карты, игры. Обычно связанные стили добавляют на страницу через элемент {{htmlelement("link")}}, а скрипты — через элемент {{htmlelement("script")}} .
 
-  <pre class="brush: html">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
- </li>
- <li>
-  <p>Элемент {{htmlelement("script")}} не обязательно находится в заголовке — на самом деле лучше поместить его в самом конце страницы, прямо перед закрывающем тегом <code>&lt;/body&gt;</code>. Так браузер сначала отобразит саму страницу, а уже затем загрузит и запустит скрипт — иначе скрипт может обратиться к ещё не созданному элементу страницы и сломаться.</p>
+- Элемент {{htmlelement("link")}} помещают в заголовок документа. У него есть два атрибута: `rel="stylesheet"` показывает, что мы указываем _стиль_ документа, а в `href` указан путь к файлу:
 
-  <pre class="brush: html">&lt;script src="my-js-file.js"&gt;&lt;/script&gt;</pre>
+  ```html
+  <link rel="stylesheet" href="my-css-file.css">
+  ```
 
-  <p><strong>Примечание</strong>: Элемент <code>&lt;script&gt;</code> кажется пустым, но это не всегда так, и указывать закрывающий тег обязательно. Вместо того чтобы ссылаться на внешний скрипт, код можно писать прямо внутри этого элемента — так можно не тратить время на загрузку отдельного скрипта, но зато не выйдет сослаться на один js-файл с нескольких страниц.</p>
- </li>
-</ul>
+- Элемент {{htmlelement("script")}} не обязательно находится в заголовке — на самом деле лучше поместить его в самом конце страницы, прямо перед закрывающем тегом `</body>`. Так браузер сначала отобразит саму страницу, а уже затем загрузит и запустит скрипт — иначе скрипт может обратиться к ещё не созданному элементу страницы и сломаться.
 
-<h3 id="Активное_изучение_добавляем_на_страницу_CSS_и_JavaScript">Активное изучение: добавляем на страницу CSS и JavaScript</h3>
+  ```html
+  <script src="my-js-file.js"></script>
+  ```
 
-<ol>
- <li>Для этого упражнения скачайте файлы <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js">script.js</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css">style.css</a> и положите их в одну папку на своём компьютере. Проверьте, что они сохранились с правильными именами и расширениями.</li>
- <li>Откройте HTML в браузере и текстовом редакторе.</li>
- <li>Следуя изученному материалу, добавьте на страницу скрипт и стиль с помощью элементов {{htmlelement("link")}} и {{htmlelement("script")}}.</li>
-</ol>
+  **Примечание**: Элемент `<script>` кажется пустым, но это не всегда так, и указывать закрывающий тег обязательно. Вместо того чтобы ссылаться на внешний скрипт, код можно писать прямо внутри этого элемента — так можно не тратить время на загрузку отдельного скрипта, но зато не выйдет сослаться на один js-файл с нескольких страниц.
 
-<p>Если всё получилось, когда вы сохраните HTML и обновите страницу в браузере, вы увидите кое-что новенькое:</p>
+### Активное изучение: добавляем на страницу CSS и JavaScript
 
-<p><img alt="Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page." src="https://mdn.mozillademos.org/files/12359/js-and-css.png" style="display: block; margin: 0 auto;"></p>
+1.  Для этого упражнения скачайте файлы [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) и [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) и положите их в одну папку на своём компьютере. Проверьте, что они сохранились с правильными именами и расширениями.
+2.  Откройте HTML в браузере и текстовом редакторе.
+3.  Следуя изученному материалу, добавьте на страницу скрипт и стиль с помощью элементов {{htmlelement("link")}} и {{htmlelement("script")}}.
 
-<ul>
- <li>JavaScript добавил на страницу пустой список. При нажатии на красную область появляется окно, в которое можно ввести текст нового пункта списка. При нажатии на кнопку OK пункт добавляется на страницу. Текст существующих пунктов списка можно редактировать, нажимая на них.</li>
- <li>CSS покрасил фон зелёным и увеличил размер шрифта, а также стилизовал элементы, добавленные JavaScript. Красный прямоугольник и рамка вокруг списка — тоже его рук дело.</li>
-</ul>
+Если всё получилось, когда вы сохраните HTML и обновите страницу в браузере, вы увидите кое-что новенькое:
 
-<div class="note">
-<p><strong>Примечание</strong>: Если вам никак не удаётся подключить CSS или JS, посмотрите на наш готовый пример — страницу <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html">css-and-js.html</a>.</p>
-</div>
+![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](https://mdn.mozillademos.org/files/12359/js-and-css.png)
 
-<h2 id="Основной_язык_HTML_страницы">Основной язык HTML страницы</h2>
+- JavaScript добавил на страницу пустой список. При нажатии на красную область появляется окно, в которое можно ввести текст нового пункта списка. При нажатии на кнопку OK пункт добавляется на страницу. Текст существующих пунктов списка можно редактировать, нажимая на них.
+- CSS покрасил фон зелёным и увеличил размер шрифта, а также стилизовал элементы, добавленные JavaScript. Красный прямоугольник и рамка вокруг списка — тоже его рук дело.
 
-<p>Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив <a href="/en-US/docs/Web/HTML/Global_attributes/lang">атрибут lang</a> в открывающий HTML-тег (как в примере <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>: и как показано ниже):</p>
+> **Примечание:** Если вам никак не удаётся подключить CSS или JS, посмотрите на наш готовый пример — страницу [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
 
-<pre class="syntaxbox">&lt;html lang="en-US"&gt;</pre>
+## Основной язык HTML страницы
 
-<pre class="syntaxbox">&lt;html lang="ru"&gt;
-</pre>
+Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
 
-<p>Это полезно во многих случаях. Ваш HTML-документ будет более эффективно индексироваться поисковыми системами, если его язык установлен (что позволяет ему правильно отображаться в языковых результатах), и он полезен людям с нарушением зрения, которые используют программы, читающие страницы вслух (например, слово "шесть" пишется одинаково как на французском, так и на английском языках, но произносится по-разному.).</p>
+```
+<html lang="en-US">
+```
 
-<p>Можно также указать язык для части документа. Например, мы могли бы установить язык для части страницы на японском:</p>
+```
+<html lang="ru">
+```
 
-<pre class="brush: html">&lt;p&gt;Пример на японском: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
+Это полезно во многих случаях. Ваш HTML-документ будет более эффективно индексироваться поисковыми системами, если его язык установлен (что позволяет ему правильно отображаться в языковых результатах), и он полезен людям с нарушением зрения, которые используют программы, читающие страницы вслух (например, слово "шесть" пишется одинаково как на французском, так и на английском языках, но произносится по-разному.).
 
-<p>Коды языков определены в стандарте <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>. Подробнее о работе с языками можно узнать в <a href="https://www.w3.org/International/articles/language-tags/">Языковые тэги в HTML и XML</a>.</p>
+Можно также указать язык для части документа. Например, мы могли бы установить язык для части страницы на японском:
 
-<h2 id="Заключение">Заключение</h2>
+```html
+<p>Пример на японском: <span lang="ja">ご飯が熱い。</span>.</p>
+```
 
-<p>На этом заканчивается наш беглый обзор по HTML-блоку head  —  с его помощью вы можете делать гораздо больше, но исчерпывающий обзор будет скучным и запутанным на этом этапе, мы же сейчас хотели дать вам представление о самых распространённых вещах, которые вы можете там найти! В следующей статье мы рассмотрим основы разметки текста в HTML.</p>
+Коды языков определены в стандарте [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1). Подробнее о работе с языками можно узнать в [Языковые тэги в HTML и XML](https://www.w3.org/International/articles/language-tags/).
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}</p>
+## Заключение
 
-<h2 id="В_этом_модуле">В этом модуле</h2>
+На этом заканчивается наш беглый обзор по HTML-блоку head — с его помощью вы можете делать гораздо больше, но исчерпывающий обзор будет скучным и запутанным на этом этапе, мы же сейчас хотели дать вам представление о самых распространённых вещах, которые вы можете там найти! В следующей статье мы рассмотрим основы разметки текста в HTML.
 
-<ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Начало работы с HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML">Что такое заголовок? Метаданные в HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA">Создание гиперссылок</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting">Углублённое форматирование текста</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0">Структура документа и веб-сайта</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML">Отладка HTML</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter">Разметка письма</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content">Структурируем страницу</a></li>
-</ul>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+
+## В этом модуле
+
+- [Начало работы с HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)
+- [Что такое заголовок? Метаданные в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML)
+- [Основы редактирования текста в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals)
+- [Создание гиперссылок](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA)
+- [Углублённое форматирование текста](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting)
+- [Структура документа и веб-сайта](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
+- [Отладка HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML)
+- [Разметка письма](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter)
+- [Структурируем страницу](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content)

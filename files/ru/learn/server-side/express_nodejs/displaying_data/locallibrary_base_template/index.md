@@ -3,11 +3,12 @@ title: Базовый шаблон LocalLibrary
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
-<p>Теперь, чтобы мы понимали как расширить шаблон с помощью Pug, давайте создадим базовый шаблон для проекта. У него будет боковая панель (sidebar)) со ссылками на страницы, которые мы надеемся создать на протяжении учебника (например, для отображения и создания книг, жанров, автор и т. д.) и основная область контента, которую мы переопределим на каждой из отдельных страниц.</p>
+Теперь, чтобы мы понимали как расширить шаблон с помощью Pug, давайте создадим базовый шаблон для проекта. У него будет боковая панель (sidebar)) со ссылками на страницы, которые мы надеемся создать на протяжении учебника (например, для отображения и создания книг, жанров, автор и т. д.) и основная область контента, которую мы переопределим на каждой из отдельных страниц.
 
-<p>Откройте файл <strong>/views/layout.pug </strong>и замените его содержимое следующим.</p>
+Откройте файл **/views/layout.pug** и замените его содержимое следующим.
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
+```html
+doctype html
 html(lang='en')
   head
     title= title
@@ -45,25 +46,26 @@ html(lang='en')
                 a(href='/catalog/bookinstance/create') Create new book instance (copy)
 
         div(class='col-sm-10')
-          block content</code></pre>
+          block content
+```
 
-<p>Шаблон использует (и включает) JavaScript и CSS из  <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> , что позволяет улучшить макет и представление HTML-страницы. Применение Bootstrap или другого клиентского фреймворка - быстрый способ создать привлекательную, хорошо масштабируемую страницу. Кроме того, это позволяет получить представление страницы, не вдаваясь в детали - мы можем уделить все внимание коду на стороне сервера!</p>
+Шаблон использует (и включает) JavaScript и CSS из [Bootstrap](http://getbootstrap.com/) , что позволяет улучшить макет и представление HTML-страницы. Применение Bootstrap или другого клиентского фреймворка - быстрый способ создать привлекательную, хорошо масштабируемую страницу. Кроме того, это позволяет получить представление страницы, не вдаваясь в детали - мы можем уделить все внимание коду на стороне сервера!
 
-<p>Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">Template primer</a>) выше. Обратите внимание на использование <code>block content</code> в качестве места для  размещения контента отдельных страниц.</p>
+Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов ([Template primer](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer)) выше. Обратите внимание на использование `block content` в качестве места для размещения контента отдельных страниц.
 
-<p>Базовый шаблон также ссылается на локальный файл стилей (<strong>style.css</strong>), что обеспечивает дополнительное управление внешним видом. Откройте <strong>/public/stylesheets/style.css</strong> и замените его содержимое таким текстом:</p>
+Базовый шаблон также ссылается на локальный файл стилей (**style.css**), что обеспечивает дополнительное управление внешним видом. Откройте **/public/stylesheets/style.css** и замените его содержимое таким текстом:
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">.sidebar-nav {
+```css
+.sidebar-nav {
     margin-top: 20px;
     padding: 0;
     list-style: none;
-}</code></pre>
+}
+```
 
-<p>При запуске нашего сайта мы должны увидеть боковую панель! В следующих разделах мы будем использовать вышеуказанный макет для определения отдельных страниц.</p>
+При запуске нашего сайта мы должны увидеть боковую панель! В следующих разделах мы будем использовать вышеуказанный макет для определения отдельных страниц.
 
-<h2 id="Следующие_шаги">Следующие шаги</h2>
+## Следующие шаги
 
-<ul>
- <li>Вернуться к <a href="https://developer.mozilla.org/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Учебник Express часть 5: Отображение данных библиотеки</a>.</li>
- <li>Перейти к следующему подразделу <a href="https://developer.mozilla.org/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Домашняя страница</a>.</li>
-</ul>
+- Вернуться к [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Перейти к следующему подразделу [Домашняя страница](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).

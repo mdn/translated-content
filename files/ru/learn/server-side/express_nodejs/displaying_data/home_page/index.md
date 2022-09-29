@@ -3,52 +3,59 @@ title: Home page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
-<p>Первой создаваемой страницей будет домашняя  страница веб-сайта, доступная из корня сайта (<code>'/'</code>) или из каталога (<code>catalog/</code>). На странице будет виден статический текст, описывающий сайт, и динамически вычисляемые "количества" записей разных типов имеющихся в БД.</p>
+Первой создаваемой страницей будет домашняя страница веб-сайта, доступная из корня сайта (`'/'`) или из каталога (`catalog/`). На странице будет виден статический текст, описывающий сайт, и динамически вычисляемые "количества" записей разных типов имеющихся в БД.
 
-<p>Маршрут для домашней страницы уже создан. Для завершения страницы обновить функции контроллера, чтобы он извлекал количество записей из БД, и создавал представление (шаблон), который можно использовать для презентации страницы.</p>
+Маршрут для домашней страницы уже создан. Для завершения страницы обновить функции контроллера, чтобы он извлекал количество записей из БД, и создавал представление (шаблон), который можно использовать для презентации страницы.
 
-<h2 id="Маршрут">Маршрут</h2>
+## Маршрут
 
-<p>Маршруты индексной страницы созданы ранее в предыдущем разделе (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial).</a> Напомним, все функции маршрутов определены в файле <strong>/routes/catalog.js</strong>:</p>
+Маршруты индексной страницы созданы ранее в предыдущем разделе ([previous tutorial).](/ru/docs/Learn/Server-side/Express_Nodejs/routes) Напомним, все функции маршрутов определены в файле **/routes/catalog.js**:
 
-<pre class="brush: js ">// GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
+```js
+// GET catalog home page.
+router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+```
 
-<p>Параметр колбэк-функции определён в <strong>/controllers/bookController.js</strong>:</p>
+Параметр колбэк-функции определён в **/controllers/bookController.js**:
 
-<pre class="brush: js">exports.index = function(req, res, next) {
+```js
+exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
-}</pre>
+}
+```
 
-<p>Именно эту функцию контроллера мы расширим, чтобы получать информацию из моделей и затем отображать её, используя шаблоны (представления).</p>
+Именно эту функцию контроллера мы расширим, чтобы получать информацию из моделей и затем отображать её, используя шаблоны (представления).
 
-<h2 id="Контроллер">Контроллер</h2>
+## Контроллер
 
-<p>Функция контроллера индекса должна получать информацию о том, сколько книг (<code>Book)</code>, экземпляров книг (<code>BookInstance)</code>, сколько из них доступно, сколько авторов (<code>Author)</code>, жанров (<code>Genre)</code> имеется в БД, должна поместить эту информацию в шаблон, чтобы создать  HTML-страницу, после чего вернуть её в  HTTP-ответе.</p>
+Функция контроллера индекса должна получать информацию о том, сколько книг (`Book)`, экземпляров книг (`BookInstance)`, сколько из них доступно, сколько авторов (`Author)`, жанров (`Genre)` имеется в БД, должна поместить эту информацию в шаблон, чтобы создать HTML-страницу, после чего вернуть её в HTTP-ответе.
 
-<div class="note">
-<p><strong>Примечание:</strong> Количество экземпляров в каждой модели вычисляется при помощи метода <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> . Он вызывается для модели с возможным набором условий, необходимых для проверки соответствия первому аргументу и колбэк-функции второго аргумента (обсуждалось ранее в "Использование базы данных с Mongoose" <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>), причём можно вернуть также запрос <code>Query,</code> а затем выполнить его позже при помощи callback. Эта  колбэк-функция будет выполняться, когда БД вернёт количество записей.  Значение ошибки (or <code>null</code>) будет первым параметром, а количество записей (или null, если была ошибка) -  вторым параметром.</p>
+> **Примечание:** Количество экземпляров в каждой модели вычисляется при помощи метода [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) . Он вызывается для модели с возможным набором условий, необходимых для проверки соответствия первому аргументу и колбэк-функции второго аргумента (обсуждалось ранее в "Использование базы данных с Mongoose" [Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)), причём можно вернуть также запрос `Query,` а затем выполнить его позже при помощи callback. Эта колбэк-функция будет выполняться, когда БД вернёт количество записей. Значение ошибки (or `null`) будет первым параметром, а количество записей (или null, если была ошибка) - вторым параметром.
+>
+> ```js
+> SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
+>  // ... do something if there is an err
+>  // ... do something with the count if there was no error
+>  });
+> ```
 
-<pre class="brush: js ">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
- // ... do something if there is an err
- // ... do something with the count if there was no error
- });</pre>
-</div>
+Откройте файл **/controllers/bookController.js**. Почти в самом начале вы должны увидеть экспортируемую функцию `index()` .
 
-<p>Откройте файл <strong>/controllers/bookController.js</strong>. Почти в самом начале вы должны увидеть экспортируемую функцию <code>index()</code> .</p>
-
-<pre class="brush: python ">var Book = require('../models/book')
+```python
+var Book = require('../models/book')
 
 exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
-}</pre>
+}
+```
 
-<p>Замените весь код, показанный выше, на следующий фрагмент кода. Первое, что он делает - импортирует (<code>require()</code>)  все модели (выделено жирным).  Это требуется, поскольку они нужны для подсчёта числа записей. Затем импортируется модуль <em>async</em> .</p>
+Замените весь код, показанный выше, на следующий фрагмент кода. Первое, что он делает - импортирует (`require()`) все модели (выделено жирным). Это требуется, поскольку они нужны для подсчёта числа записей. Затем импортируется модуль _async_ .
 
-<pre class="brush: js "><strong>var Book = require('../models/book');
+```js
+var Book = require('../models/book');
 var Author = require('../models/author');
 var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');</strong>
+var BookInstance = require('../models/bookinstance');
 
 var async = require('async');
 
@@ -56,39 +63,39 @@ exports.index = function(req, res) {
 
     async.parallel({
         book_count: function(callback) {
-            Book.count<s>Documents</s>({}, callback); // Pass an empty object as match condition to find all documents of this collection
-// count<s>Documents</s> не работает, работает только просто count
+            Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+// countDocuments не работает, работает только просто count
         },
         book_instance_count: function(callback) {
-            BookInstance.count<s>Documents</s>({}, callback);
+            BookInstance.countDocuments({}, callback);
         },
         book_instance_available_count: function(callback) {
-            BookInstance.count<s>Documents</s>({status:'Available'}, callback);
+            BookInstance.countDocuments({status:'Available'}, callback);
         },
         author_count: function(callback) {
-            Author.count<s>Documents</s>({}, callback);
+            Author.countDocuments({}, callback);
         },
         genre_count: function(callback) {
-            Genre.count<s>Documents</s>({}, callback);
+            Genre.countDocuments({}, callback);
         }
     }, function(err, results) {
         res.render('index', { title: 'Local Library Home', error: err, data: results });
     });
-};</pre>
+};
+```
 
-<p>Метод <code>async.parallel()</code> передаёт объект с функциями для получения количества элементов каждой модели. Все эти функции стартуют одновременно. Когда все они завершатся,  будет вызвана финальная колбэк-функция, в итоговом параметре которой содержится нужный нам результат (или ошибка).</p>
+Метод `async.parallel()` передаёт объект с функциями для получения количества элементов каждой модели. Все эти функции стартуют одновременно. Когда все они завершатся, будет вызвана финальная колбэк-функция, в итоговом параметре которой содержится нужный нам результат (или ошибка).
 
-<p>При успешном завершении колбэк-функции она вызывает <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>, у которой в качестве параметров - представление (шаблон)  '<strong>index</strong>' и объект, содержащий данные, которые следует поместить в шаблон (среди них - количества элементов в моделях). Данные представлены как пары ключ-значение, и могут быть получены в шаблоне по ключу.</p>
+При успешном завершении колбэк-функции она вызывает [`res.render()`](http://expressjs.com/en/4x/api.html#res.render), у которой в качестве параметров - представление (шаблон) '**index**' и объект, содержащий данные, которые следует поместить в шаблон (среди них - количества элементов в моделях). Данные представлены как пары ключ-значение, и могут быть получены в шаблоне по ключу.
 
-<div class="note">
-<p><strong>Примечание:</strong>  В данном случае колбэк-функция, которую вызывает <code>async.parallel()</code> , несколько необычная - страница отображается всегда, независимо от того, была ошибка или нет (обычно используют отдельный путь выполнения для обработки выводимых ошибок).</p>
-</div>
+> **Примечание:** В данном случае колбэк-функция, которую вызывает `async.parallel()` , несколько необычная - страница отображается всегда, независимо от того, была ошибка или нет (обычно используют отдельный путь выполнения для обработки выводимых ошибок).
 
-<h2 id="Представление">Представление</h2>
+## Представление
 
-<p>Откройте файл  <strong>/views/index.pug</strong> и замените его содержимое текстом, приведённым ниже</p>
+Откройте файл **/views/index.pug** и замените его содержимое текстом, приведённым ниже
 
-<pre class="brush: js ">extends layout
+```js
+extends layout
 
 block content
   h1= title
@@ -106,29 +113,24 @@ block content
       li #[strong Copies:] !{data.book_instance_count}
       li #[strong Copies available:] !{data.book_instance_available_count}
       li #[strong Authors:] !{data.author_count}
-      li #[strong Genres:] !{data.genre_count}</pre>
+      li #[strong Genres:] !{data.genre_count}
+```
 
-<p>Представление несложное. Мы расширили базовый шаблон  <strong>layout.pug</strong>, переопределив блок (<code>block)</code> с именем '<strong>content</strong>'. Первый заголовок <code>h1</code> будет экранированным текстом - значением переменной <code>title</code> ,variable that  которая передаётся в функцию <code>render()</code> —заметьте, что применение '<code>h1=</code>'  говорит, что следующий текст рассматривается как выражение JavaScript. Затем расположен параграф, знакомящий с  LocalLibrary.</p>
+Представление несложное. Мы расширили базовый шаблон **layout.pug**, переопределив блок (`block)` с именем '**content**'. Первый заголовок `h1` будет экранированным текстом - значением переменной `title` ,variable that которая передаётся в функцию `render()` —заметьте, что применение '`h1=`' говорит, что следующий текст рассматривается как выражение JavaScript. Затем расположен параграф, знакомящий с LocalLibrary.
 
-<p>Под заголовком <em>Dynamic content</em>  мы проверяем, определена ли переданная из функции <code>render()</code> переменная error. Если да, отмечаем ошибку. Если нет, выводим ( как список) количества копий каждой модели, которые хранятся в переменной <code>data</code>.</p>
+Под заголовком _Dynamic content_ мы проверяем, определена ли переданная из функции `render()` переменная error. Если да, отмечаем ошибку. Если нет, выводим ( как список) количества копий каждой модели, которые хранятся в переменной `data`.
 
-<div class="note">
-<p><strong>Примечание:</strong>  Мы не экранируем количества элементов (т.е. используется синтаксис <code>!{}</code> ) потому что эти значения вычисляются. Если бы информация предоставлялась конечным пользователем, следовало бы экранировать переменную перед выводом.</p>
-</div>
+> **Примечание:** Мы не экранируем количества элементов (т.е. используется синтаксис `!{}` ) потому что эти значения вычисляются. Если бы информация предоставлялась конечным пользователем, следовало бы экранировать переменную перед выводом.
 
-<h2 id="Как_это_выглядит">Как это выглядит?</h2>
+## Как это выглядит?
 
-<p>Сейчас у нас есть все для того, чтобы показать страницу index. Запустите приложение и откройте браузер с адресом <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Если все задано правильно, ваш сайт должен иметь примерно такой вид, как на приведённом снимке экрана.</p>
+Сейчас у нас есть все для того, чтобы показать страницу index. Запустите приложение и откройте браузер с адресом <http://localhost:3000/>. Если все задано правильно, ваш сайт должен иметь примерно такой вид, как на приведённом снимке экрана.
 
-<p><img alt="Home page - Express Local Library site" src="https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png" style="display: block; height: 440px; margin: 0px auto; width: 1000px;"></p>
+![Home page - Express Local Library site](https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png)
 
-<div class="note">
-<p><strong>Примечание:</strong>  Элементы бокового меню использовать ещё нельзя, так как адреса, представления и шаблоны для этих страниц ещё не определены. Если вы попытаетесь их использовать, будет выведено сообщение об ошибке, например,  вида "NOT IMPLEMENTED: Book list" (НЕ РЕАЛИЗОВАНО: список книг), в зависимости от выбранного элемента меню.  Эти строковые литералы (которые будут замещены действительными данными) были заданы в различных файлах контроллеров в каталоге "controllers".</p>
-</div>
+> **Примечание:** Элементы бокового меню использовать ещё нельзя, так как адреса, представления и шаблоны для этих страниц ещё не определены. Если вы попытаетесь их использовать, будет выведено сообщение об ошибке, например, вида "NOT IMPLEMENTED: Book list" (НЕ РЕАЛИЗОВАНО: список книг), в зависимости от выбранного элемента меню. Эти строковые литералы (которые будут замещены действительными данными) были заданы в различных файлах контроллеров в каталоге "controllers".
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">Book list page</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Book list page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page).

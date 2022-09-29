@@ -3,15 +3,16 @@ title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
-<p>В этой статье показано, как определить страницу для удаления объектов <code>Author</code>.</p>
+В этой статье показано, как определить страницу для удаления объектов `Author`.
 
-<p>Как описано в разделе  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a>,  наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим <code>Author</code> быть удалённым, если на него ссылается  <code>Book</code>). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удалён. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удалён объект <code>Author</code>.</p>
+Как описано в разделе [form design](/ru/docs/Learn/Server-side/Express_Nodejs/forms#form_design), наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим `Author` быть удалённым, если на него ссылается `Book`). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удалён. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удалён объект `Author`.
 
-<h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>Откройте <strong>/controllers/authorController.js</strong>. Найдите экспортируемый метод контроллера  <code>author_delete_get()</code> и замените его на следующий код.</p>
+Откройте **/controllers/authorController.js**. Найдите экспортируемый метод контроллера `author_delete_get()` и замените его на следующий код.
 
-<pre><code class="language-js">// Отображать форму для удаления автора GET
+```js
+// Отображать форму для удаления автора GET
 exports.author_delete_get = function(req, res, next) {
 
     async.parallel({
@@ -26,29 +27,31 @@ exports.author_delete_get = function(req, res, next) {
         if (results.author==null) { // No results.
             res.redirect('/catalog/authors');
         }
-        // </code>Удачно, значит рендерим.<code class="language-js">
+        // Удачно, значит рендерим.
         res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
     });
 
-};</code></pre>
+};
+```
 
-<p>Контроллер получает id экземпляра <code>Author</code> для удаления из параметра URL  (<code>req.params.id</code>). Он использует метод  <code>async.parallel()</code> , чтобы получить запись автора и параллельно вс связанные книги. Когда оба параметра авершины, он рендерит страницу  <code><strong>author_delete</strong></code><strong>.pug</strong>, передаёт значения для <code>title</code>, <code>author</code>, и <code>author_books</code>.</p>
+Контроллер получает id экземпляра `Author` для удаления из параметра URL (`req.params.id`). Он использует метод `async.parallel()` , чтобы получить запись автора и параллельно вс связанные книги. Когда оба параметра авершины, он рендерит страницу **`author_delete`\*\***.pug\*\*, передаёт значения для `title`, `author`, и `author_books`.
 
-<div class="note">
-<p><strong>Примечание:</strong> Если <code>findById()</code><strong> </strong>не возвращает результатов, то автор отсутствует в базе данных. В этом случае удалять нечего, поэтому сразу выводим список всех авторов.</p>
+> **Примечание:** Если `findById()`\*\* \*\*не возвращает результатов, то автор отсутствует в базе данных. В этом случае удалять нечего, поэтому сразу выводим список всех авторов.
+>
+> ```js
+> }, function(err, results) {
+>     if (err) { return next(err); }
+>     if (results.author==null) { // No results.
+>         res.redirect('/catalog/authors')
+>     }
+> ```
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">}, function(err, results) {
-    if (err) { return next(err); }
-    if (results.author==null) { // No results.
-        res.redirect('/catalog/authors')
-    }</code></pre>
-</div>
+## Controller—post route
 
-<h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
+Найдите экспортируемый метод контроллера `author_delete_post()` и замените его на следующий код.
 
-<p>Найдите экспортируемый метод контроллера <code>author_delete_post()</code> и замените его на следующий код.</p>
-
-<pre><code class="language-js">// Обработчик удаления автора POST.
+```js
+// Обработчик удаления автора POST.
 exports.author_delete_post = function(req, res, next) {
 
     async.parallel({
@@ -61,33 +64,33 @@ exports.author_delete_post = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         // Success
-        if (results.authors_books.length &gt; 0) {
-            // </code>Автор книги. Визуализация выполняется так же, как и для GET route.<code class="language-js">
+        if (results.authors_books.length > 0) {
+            // Автор книги. Визуализация выполняется так же, как и для GET route.
             res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
             return;
         }
         else {
-            </code>//У автора нет никаких книг. Удалить объект и перенаправить в список авторов.<code class="language-js">
+            //У автора нет никаких книг. Удалить объект и перенаправить в список авторов.
             Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
                 if (err) { return next(err); }
-                // </code>Успех-перейти к списку авторов<code class="language-js">
+                // Успех-перейти к списку авторов
                 res.redirect('/catalog/authors')
             })
         }
     });
-};</code></pre>
+};
+```
 
-<p>Сначала мы проверяем, что был предоставлен id (он отправляется через параметры тела формы, а не через версию в URL). Затем мы получаем автора и связанные с ним книги так же, как и для маршрута <code>GET</code>. Если книг нет, то удаляем объект автора и перенаправляем в список всех авторов. Если есть ещё книги, то мы просто перерисовываем форму, передавая автора и список книг, которые нужно удалить.</p>
+Сначала мы проверяем, что был предоставлен id (он отправляется через параметры тела формы, а не через версию в URL). Затем мы получаем автора и связанные с ним книги так же, как и для маршрута `GET`. Если книг нет, то удаляем объект автора и перенаправляем в список всех авторов. Если есть ещё книги, то мы просто перерисовываем форму, передавая автора и список книг, которые нужно удалить.
 
-<div class="note">
-<p><strong>Примечание:</strong> Мы можем проверить, возвращает ли вызов <code>findbyid ()</code> какой-либо результат, и если нет, немедленно отобразить список всех авторов.Для краткости мы оставили код как есть выше (он всё равно вернёт список авторов, если id не будет найден, но это произойдёт после <code>findByIdAndRemove()</code>).</p>
-</div>
+> **Примечание:** Мы можем проверить, возвращает ли вызов `findbyid ()` какой-либо результат, и если нет, немедленно отобразить список всех авторов.Для краткости мы оставили код как есть выше (он всё равно вернёт список авторов, если id не будет найден, но это произойдёт после `findByIdAndRemove()`).
 
-<h2 class="highlight-spanned" id="View">View</h2>
+## View
 
-<p>Создайте <strong>/views/author_delete.pug</strong> и скопируйте текст ниже.</p>
+Создайте **/views/author_delete.pug** и скопируйте текст ниже.
 
-<pre class="line-numbers  language-html"><code class="language-html">extends layout
+```html
+extends layout
 
 block content
   h1 #{title}: #{author.name}
@@ -114,52 +117,47 @@ block content
       div.form-group
         input#authorid.form-control(type='hidden',name='authorid', required='true', value=author._id )
 
-      button.btn.btn-primary(type='submit') Delete</code></pre>
+      button.btn.btn-primary(type='submit') Delete
+```
 
-<p>Представление расширяет шаблон макета, переопределяя блок с именем <code>content</code>. Вверху отображаются сведения об авторе. Затем он включает условный оператор, основанный на количестве <code><strong>author_books</strong></code> (пункты <code>if</code> и <code>else</code> ).</p>
+Представление расширяет шаблон макета, переопределяя блок с именем `content`. Вверху отображаются сведения об авторе. Затем он включает условный оператор, основанный на количестве **`author_books`** (пункты `if` и `else` ).
 
-<ul>
- <li>Если есть книги, связанные с автором, то на странице перечислены книги и говорится, что они должны быть удалены, прежде чем этот <code>Author</code> может быть удалён.</li>
- <li>Если книг нет, на странице отображается запрос на подтверждение. Если нажать кнопку <strong>Delete</strong>, то id автора будет отправлен на сервер в <code>POST</code>-запросе, и запись этого автора будет удалена.</li>
-</ul>
+- Если есть книги, связанные с автором, то на странице перечислены книги и говорится, что они должны быть удалены, прежде чем этот `Author` может быть удалён.
+- Если книг нет, на странице отображается запрос на подтверждение. Если нажать кнопку **Delete**, то id автора будет отправлен на сервер в `POST`-запросе, и запись этого автора будет удалена.
 
-<h2 class="highlight-spanned" id="Добавление_элемента_управления_delete">Добавление элемента управления delete</h2>
+## Добавление элемента управления delete
 
-<p>Затем мы добавим элемент управления <code>Delete</code> в представление сведений об авторе (страница сведений-хорошее место для удаления записи).</p>
+Затем мы добавим элемент управления `Delete` в представление сведений об авторе (страница сведений-хорошее место для удаления записи).
 
-<div class="note">
-<p><strong>Note:</strong> В полном объёме контроль будет доступен только авторизованным пользователям. Однако на данный момент у нас нет системы авторизации!</p>
-</div>
+> **Примечание:** В полном объёме контроль будет доступен только авторизованным пользователям. Однако на данный момент у нас нет системы авторизации!
 
-<p>Откройте <strong>author_detail.pug</strong> и добавьте следующие строки внизу.</p>
+Откройте **author_detail.pug** и добавьте следующие строки внизу.
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">hr
+```html
+hr
 p
-  a(href=author.url+'/delete') Delete author</code></pre>
+  a(href=author.url+'/delete') Delete author
+```
 
-<p>Теперь элемент управления должен отображаться в виде ссылки, как показано ниже на странице сведений об авторе.</p>
+Теперь элемент управления должен отображаться в виде ссылки, как показано ниже на странице сведений об авторе.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png" style="border-style: solid; border-width: 1px; display: block; height: 202px; margin: 0px auto; width: 500px;"></p>
+![](https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png)
 
-<h2 class="highlight-spanned" id="Как_это_выглядит">Как это выглядит?</h2>
+## Как это выглядит?
 
-<p>Запустите приложение и откройте в вашем браузере  <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Затем раздел <em>All authors </em>, а затем укажите конкретного пользователя. Наконец, выберите ссылку <em>Delete author</em>.</p>
+Запустите приложение и откройте в вашем браузере <http://localhost:3000/>. Затем раздел _All authors_ , а затем укажите конкретного пользователя. Наконец, выберите ссылку _Delete author_.
 
-<p>Если у автора нет книг, вам будет представлена такая страница. После нажатия клавиши delete сервер удалит автора и перенаправит в список авторов</p>
+Если у автора нет книг, вам будет представлена такая страница. После нажатия клавиши delete сервер удалит автора и перенаправит в список авторов
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14494/LocalLibary_Express_Author_Delete_NoBooks.png" style="border-style: solid; border-width: 1px; display: block; height: 342px; margin: 0px auto; width: 600px;"></p>
+![](https://mdn.mozillademos.org/files/14494/LocalLibary_Express_Author_Delete_NoBooks.png)
 
-<p>Если у автора есть книги, то вам будет представлен следующий вид. Затем вы можете удалить книги из их подробных страниц (как только этот код будет реализован!).</p>
+Если у автора есть книги, то вам будет представлен следующий вид. Затем вы можете удалить книги из их подробных страниц (как только этот код будет реализован!).
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png" style="border-style: solid; border-width: 1px; display: block; height: 327px; margin: 0px auto; width: 500px;"></p>
+![](https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png)
 
-<div class="note">
-<p><strong>Note:</strong> Другие страницы для удаления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задачи.</p>
-</div>
+> **Примечание:** Другие страницы для удаления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задачи.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
- <li>Proceed to the final subarticle of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Update Book form</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the final subarticle of part 6: [Update Book form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).

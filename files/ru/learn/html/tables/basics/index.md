@@ -3,528 +3,378 @@ title: HTML таблицы основы
 slug: Learn/HTML/Tables/Basics
 translation_of: Learn/HTML/Tables/Basics
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-<div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
+Этот раздел познакомит вас с таблицами HTML, представив самые базовые понятия - строки и ячейки, заголовки, слияние строк и столбцов, а также объединение всех ячеек в столбце в целях стилизации.
 
-<p class="summary">Этот раздел познакомит вас с таблицами HTML, представив самые базовые понятия - строки и ячейки, заголовки, слияние строк и столбцов, а также объединение всех ячеек в столбце в целях стилизации.</p>
+| Начальные условия: | Знание основ HTML (читайте [Введение в HTML - Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)). |
+| ------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Цель:              | Общее знакомство с таблицами HTML.                                                                              |
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row">Начальные условия:</th>
-   <td>Знание основ HTML (читайте <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML - Introduction to HTML</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Цель:</th>
-   <td>Общее знакомство с таблицами HTML.</td>
-  </tr>
- </tbody>
-</table>
+## Что такое таблица ?
 
-<h2 id="Что_такое_таблица">Что такое таблица ?</h2>
+Таблица - это структурированный набор данных, состоящий из строк и столбцов (**табличных данных**). Таблицы позволяют быстро и легко посмотреть значения, показывающие некоторую взаимосвязь между различными типами данных, например - человек и его возраст, или расписание в плавательном бассейне.
 
-<p>Таблица - это структурированный набор данных, состоящий из строк и столбцов (<strong>табличных данных</strong>). Таблицы позволяют быстро и легко посмотреть значения, показывающие некоторую взаимосвязь между различными типами данных, например - человек и его возраст, или расписание в плавательном бассейне.</p>
+![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png" style="display: block; margin: 0px auto;"></p>
+![A swimming timetable showing a sample data table](swimming-timetable.png)
 
-<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png" style="display: block; margin: 0px auto;"></p>
+Люди постоянно используют таблицы, причём уже давно, как показывает документ по переписи в США, относящийся к 1800 году:
 
-<p>Люди постоянно используют таблицы, причём уже давно, как показывает документ по переписи в США, относящийся к 1800 году:</p>
+![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](1800-census.jpg)
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg" style="display: block; margin: 0px auto;"></p>
+Так что не удивительно, что создатели HTML включили в него средства для структурирования и представления табличных данных в сети.
 
-<p>Так что не удивительно, что создатели HTML включили в него средства для структурирования и представления табличных данных в сети.</p>
+### Как работает таблица?
 
-<h3 id="Как_работает_таблица">Как работает таблица?</h3>
-
-<p>Смысл таблицы в том, что она жёсткая. Информацию легко интерпретировать, визуально сопоставляя заголовки строк и столбцов. Например, посмотрите на приведённую ниже таблицу и найдите единственное личное местоимение, используемое в третьем лице , с полом ♀, выступающее в качестве объекта в предложении. Ответ можно найти, сопоставив соответствующие заголовки столбцов и строк.</p>
+Смысл таблицы в том, что она жёсткая. Информацию легко интерпретировать, визуально сопоставляя заголовки строк и столбцов. Например, посмотрите на приведённую ниже таблицу и найдите единственное личное местоимение, используемое в третьем лице , с полом ♀, выступающее в качестве объекта в предложении. Ответ можно найти, сопоставив соответствующие заголовки столбцов и строк.
 
 <table>
- <caption>Personal pronouns</caption>
- <tbody>
-  <tr>
-   <th colspan="3"></th>
-   <th scope="col">Субъект</th>
-   <th scope="col">Объект</th>
-  </tr>
-  <tr>
-   <th rowspan="5" scope="rowgroup">Единствен. числ.</th>
-   <th colspan="2" scope="row">1 Лицо</th>
-   <td>Я</td>
-   <td>меня</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">2 Лицо</th>
-   <td>ты</td>
-   <td>тебя</td>
-  </tr>
-  <tr>
-   <th rowspan="3" scope="rowgroup">3 Лицо</th>
-   <th scope="row">♂</th>
-   <td>он</td>
-   <td>его</td>
-  </tr>
-  <tr>
-   <th scope="row">♀</th>
-   <td>она</td>
-   <td>её</td>
-  </tr>
-  <tr>
-   <th scope="row">o</th>
-   <td>оно</td>
-   <td>его</td>
-  </tr>
-  <tr>
-   <th rowspan="3" scope="rowgroup">Множ.числ.</th>
-   <th colspan="2" scope="row">1 Лицо</th>
-   <td>мы</td>
-   <td>нас</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">2 Лицо</th>
-   <td>вы</td>
-   <td>вас</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">2 Лицо</th>
-   <td>они</td>
-   <td>их</td>
-  </tr>
- </tbody>
+  <caption>
+    Personal pronouns
+  </caption>
+  <tbody>
+    <tr>
+      <th colspan="3"></th>
+      <th scope="col">Субъект</th>
+      <th scope="col">Объект</th>
+    </tr>
+    <tr>
+      <th rowspan="5" scope="rowgroup">Единствен. числ.</th>
+      <th colspan="2" scope="row">1 Лицо</th>
+      <td>Я</td>
+      <td>меня</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">2 Лицо</th>
+      <td>ты</td>
+      <td>тебя</td>
+    </tr>
+    <tr>
+      <th rowspan="3" scope="rowgroup">3 Лицо</th>
+      <th scope="row">♂</th>
+      <td>он</td>
+      <td>его</td>
+    </tr>
+    <tr>
+      <th scope="row">♀</th>
+      <td>она</td>
+      <td>её</td>
+    </tr>
+    <tr>
+      <th scope="row">o</th>
+      <td>оно</td>
+      <td>его</td>
+    </tr>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Множ.числ.</th>
+      <th colspan="2" scope="row">1 Лицо</th>
+      <td>мы</td>
+      <td>нас</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">2 Лицо</th>
+      <td>вы</td>
+      <td>вас</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">2 Лицо</th>
+      <td>они</td>
+      <td>их</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Если правильно представить таблицу HTML, интерпретировать её данные смогут даже люди, имеющие проблемы со зрением.</p>
+Если правильно представить таблицу HTML, интерпретировать её данные смогут даже люди, имеющие проблемы со зрением.
 
-<h3 id="Оформление_таблиц">Оформление таблиц</h3>
+### Оформление таблиц
 
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/personal-pronouns.html">Исходный код HTML (HTML source code)</a> вышеприведённой таблице есть в GitHub; посмотрите его и <a href="https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns.html">живой пример (look at the live example)</a>! Вы заметите, что таблица там выглядит иначе — это потому, что на сайте MDN к этим данным была применена таблица стилей, а приведённый в GitHub пример информации о стиле не имеет.</p>
+[Исходный код HTML (HTML source code)](https://github.com/mdn/learning-area/blob/master/html/tables/basic/personal-pronouns.html) вышеприведённой таблице есть в GitHub; посмотрите его и [живой пример (look at the live example)](https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns.html)! Вы заметите, что таблица там выглядит иначе — это потому, что на сайте MDN к этим данным была применена таблица стилей, а приведённый в GitHub пример информации о стиле не имеет.
 
-<p>Не питайте ложных иллюзий - чтобы эффективно представлять таблицы в веб, необходимо придать им хорошую структуру в HTML и применить к ним таблицы стилей (<a href="/en-US/docs/Learn/CSS">CSS</a>). В данном разделе мы сфокусируемся на HTML, чтобы узнать о том, что касается CSS, вам надо обратиться к статье <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a>.</p>
+Не питайте ложных иллюзий - чтобы эффективно представлять таблицы в веб, необходимо придать им хорошую структуру в HTML и применить к ним таблицы стилей ([CSS](/ru/docs/Learn/CSS)). В данном разделе мы сфокусируемся на HTML, чтобы узнать о том, что касается CSS, вам надо обратиться к статье [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables).
 
-<p>В этом разделе мы не фокусируемся на CSS, но всё же дали простейшую таблицу стилей CSS, чтобы сделать таблицы более читабельными. Эту таблицу стилей можно найти <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">здесь</a>, можно также использовать <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">шаблон HTML</a>, применяющий эту стаблицу стилей — вместе они дадут вам хорошую основу для экспериментов с таблицами HTML.</p>
+В этом разделе мы не фокусируемся на CSS, но всё же дали простейшую таблицу стилей CSS, чтобы сделать таблицы более читабельными. Эту таблицу стилей можно найти [здесь](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), можно также использовать [шаблон HTML](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html), применяющий эту стаблицу стилей — вместе они дадут вам хорошую основу для экспериментов с таблицами HTML.
 
-<div class="note">
-<p><strong>Примечание</strong>: Посмотрите также <a href="https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html">таблицу personal_pronouns с применённым к ней стилем</a>, чтобы получить представление о том, как она выглядит.</p>
-</div>
+> **Примечание:** Посмотрите также [таблицу personal_pronouns с применённым к ней стилем](https://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html), чтобы получить представление о том, как она выглядит.
 
-<h3 id="Когда_не_надо_использовать_таблицы_HTML">Когда не надо использовать таблицы HTML?</h3>
+### Когда не надо использовать таблицы HTML?
 
-<p>HTML-таблицы следует использовать для табличных данных — это то, для чего они предназначены. К сожалению, многие используют таблицы HTML для оформления веб-страниц, например, одна строка для заголовка, одна для содержимого, одна для сносок, и тому подобное. Подробнее об этом можно узнать в разделе <a href="/ru/docs/Learn/Accessibility/HTML#%d0%92%d1%91%d1%80%d1%81%d1%82%d0%ba%d0%b0">Вёрстка</a> на <a href="/ru/docs/Learn/Accessibility">Начальном обучающем модуле доступности</a>. Это происходило из-за плохой поддержки CSS в разных браузерах; в наше время такое встречается гораздо реже, но иногда всё же попадается.</p>
+HTML-таблицы следует использовать для табличных данных — это то, для чего они предназначены. К сожалению, многие используют таблицы HTML для оформления веб-страниц, например, одна строка для заголовка, одна для содержимого, одна для сносок, и тому подобное. Подробнее об этом можно узнать в разделе [Вёрстка](/ru/docs/Learn/Accessibility/HTML#%d0%92%d1%91%d1%80%d1%81%d1%82%d0%ba%d0%b0) на [Начальном обучающем модуле доступности](/ru/docs/Learn/Accessibility). Это происходило из-за плохой поддержки CSS в разных браузерах; в наше время такое встречается гораздо реже, но иногда всё же попадается.
 
-<p>Короче говоря, использование таблиц в целях оформления вместо <a href="/en-US/docs/Learn/CSS/CSS_layout">методов CSS</a> является плохой идеей по следующим причинам :</p>
+Короче говоря, использование таблиц в целях оформления вместо [методов CSS](/ru/docs/Learn/CSS/CSS_layout) является плохой идеей по следующим причинам :
 
-<ol>
- <li><strong>Таблицы, используемые для оформления, уменьшают доступность страниц для людей, имеющих проблемы со зрением</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Скринридеры (Screenreaders</a>), используемые ими, интерпретируют HTML-теги и читают содержимое пользователю. Поскольку таблицы не являются средством для представления структуры таблицы, и разметка получается сложнее, чем при использовании методов CSS, скринридеры вводят пользователей в заблуждение.</li>
- <li><strong>Таблицы создают путаницу тегов</strong>: Как уже упоминалось, оформление страниц с помощью таблиц даёт более сложную структуру разметки, чем специально предназначенные для этого методы. Соответственно, такой код труднее писать, поддерживать и отлаживать.</li>
- <li><strong>Таблицы не реагируют автоматически на тип устройства</strong>: У надлежащих контейнеров (например, {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, или {{htmlelement("div")}}) ширина по умолчанию равна 100% от их родительского элемента. У таблиц же размер по умолчанию подстраивается под их содержимое, так что чтобы они одинаково хорошо работали на разных типах устройств необходимо принимать дополнительные меры.</li>
-</ol>
+1.  **Таблицы, используемые для оформления, уменьшают доступность страниц для людей, имеющих проблемы со зрением**: [Скринридеры (Screenreaders](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders)), используемые ими, интерпретируют HTML-теги и читают содержимое пользователю. Поскольку таблицы не являются средством для представления структуры таблицы, и разметка получается сложнее, чем при использовании методов CSS, скринридеры вводят пользователей в заблуждение.
+2.  **Таблицы создают путаницу тегов**: Как уже упоминалось, оформление страниц с помощью таблиц даёт более сложную структуру разметки, чем специально предназначенные для этого методы. Соответственно, такой код труднее писать, поддерживать и отлаживать.
+3.  **Таблицы не реагируют автоматически на тип устройства**: У надлежащих контейнеров (например, {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, или {{htmlelement("div")}}) ширина по умолчанию равна 100% от их родительского элемента. У таблиц же размер по умолчанию подстраивается под их содержимое, так что чтобы они одинаково хорошо работали на разных типах устройств необходимо принимать дополнительные меры.
 
-<h2 id="Упражнение_Ваша_первая_таблица">Упражнение: ваша первая таблица</h2>
+## Упражнение: ваша первая таблица
 
-<p>Итак, мы уже достаточно говорили о теории, теперь возьмём конкретный пример и построим таблицу.</p>
+Итак, мы уже достаточно говорили о теории, теперь возьмём конкретный пример и построим таблицу.
 
-<ol>
- <li>Прежде всего, создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> в новой папке на вашем компьютере.</li>
- <li>Содержимое любой таблицы заключается между двумя тегами : <strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Добавьте их в тело HTML.</li>
- <li>Самым маленьким контейнером в таблице является ячейка, она создаётся элементом <strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> ('td' - сокращение от 'table data'). Введите внутри тегов table следующее:
-  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
- </li>
- <li>Чтобы получить строку из четырёх ячеек, необходимо скопировать эти теги три раза. Обновите содержимое таблицы так, чтобы она выглядела следующим образом:
-  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
-&lt;td&gt;I'm your second cell.&lt;/td&gt;
-&lt;td&gt;I'm your third cell.&lt;/td&gt;
-&lt;td&gt;I'm your fourth cell.&lt;/td&gt;</pre>
- </li>
-</ol>
+1.  Прежде всего, создайте локальную копию [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) в новой папке на вашем компьютере.
+2.  Содержимое любой таблицы заключается между двумя тегами : **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Добавьте их в тело HTML.
+3.  Самым маленьким контейнером в таблице является ячейка, она создаётся элементом **[`<td>`](/en-US/docs/Web/HTML/Element/td)** ('td' - сокращение от 'table data'). Введите внутри тегов table следующее:
 
-<p>Как видите, ячейки не располагаются одна под другой, на самом деле они автоматически выравниваются по отношению к другим ячейкам той же строки. Каждый элемент <code>&lt;td&gt; </code>создаёт отдельную ячейку, а все вместе они создают первую строку. Каждая добавленная ячейка удлиняет эту строку.</p>
+    ```html
+    <td>Hi, I'm your first cell.</td>
+    ```
 
-<p>Чтобы эта строка перестала расти, а новые ячейки перешли на вторую строку, необходимо использовать элемент <strong><code><a href="/en-US/docs/Web/HTML/Element/tr">&lt;tr&gt;</a></code></strong> ('tr' - сокращение от 'table row'). Попробуем, как это получится.</p>
+4.  Чтобы получить строку из четырёх ячеек, необходимо скопировать эти теги три раза. Обновите содержимое таблицы так, чтобы она выглядела следующим образом:
 
-<ol>
- <li>Поместите четыре уже созданных ячейки между тегами <code>&lt;tr&gt;</code> как здесь показано:
+    ```html
+    <td>Hi, I'm your first cell.</td>
+    <td>I'm your second cell.</td>
+    <td>I'm your third cell.</td>
+    <td>I'm your fourth cell.</td>
+    ```
 
-  <pre class="brush: html">&lt;tr&gt;
-  &lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
-  &lt;td&gt;I'm your second cell.&lt;/td&gt;
-  &lt;td&gt;I'm your third cell.&lt;/td&gt;
-  &lt;td&gt;I'm your fourth cell.&lt;/td&gt;
-&lt;/tr&gt;</pre>
- </li>
- <li>Теперь, когда одна строка уже есть, добавим ещё — каждую строку надо вложить в дополнительный элемент <code>&lt;tr&gt;</code>, а каждая ячейка должна быть внутри <code>элемента &lt;td&gt;</code>.</li>
-</ol>
+Как видите, ячейки не располагаются одна под другой, на самом деле они автоматически выравниваются по отношению к другим ячейкам той же строки. Каждый элемент `<td> `создаёт отдельную ячейку, а все вместе они создают первую строку. Каждая добавленная ячейка удлиняет эту строку.
 
-<p>В результате получится таблица, которая будет выглядеть примерно так:</p>
+Чтобы эта строка перестала расти, а новые ячейки перешли на вторую строку, необходимо использовать элемент **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** ('tr' - сокращение от 'table row'). Попробуем, как это получится.
 
+1.  Поместите четыре уже созданных ячейки между тегами `<tr>` как здесь показано:
+
+    ```html
+    <tr>
+      <td>Hi, I'm your first cell.</td>
+      <td>I'm your second cell.</td>
+      <td>I'm your third cell.</td>
+      <td>I'm your fourth cell.</td>
+    </tr>
+    ```
+
+2.  Теперь, когда одна строка уже есть, добавим ещё — каждую строку надо вложить в дополнительный элемент `<tr>`, а каждая ячейка должна быть внутри `элемента <td>`.
+
+В результате получится таблица, которая будет выглядеть примерно так:
+
+| Hi, I'm your first cell. | I'm your second cell. | I'm your third cell. | I'm your fourth cell. |
+| ------------------------ | --------------------- | -------------------- | --------------------- |
+| Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
+
+> **Примечание:** Этот пример можно также найти на GitHub под названием [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+
+## Добавление заголовков с помощью элементов \<th>
+
+Теперь обратимся к табличным заголовкам — особым ячейкам, которые идут вначале строки или столбца и определяют тип данных, которые содержит данная строка или столбец (как "Person" и "Age" в первом примере данной статьи). Чтобы показать, для чего они нужны, возьмём следующий пример. Сначала исходный код:
+
+```html
 <table>
- <tbody>
   <tr>
-   <td>Hi, I'm your first cell.</td>
-   <td>I'm your second cell.</td>
-   <td>I'm your third cell.</td>
-   <td>I'm your fourth cell.</td>
+    <td>&nbsp;</td>
+    <td>Knocky</td>
+    <td>Flor</td>
+    <td>Ella</td>
+    <td>Juan</td>
   </tr>
   <tr>
-   <td>Second row, first cell.</td>
-   <td>Cell 2.</td>
-   <td>Cell 3.</td>
-   <td>Cell 4.</td>
+    <td>Breed</td>
+    <td>Jack Russell</td>
+    <td>Poodle</td>
+    <td>Streetdog</td>
+    <td>Cocker Spaniel</td>
   </tr>
- </tbody>
+  <tr>
+    <td>Age</td>
+    <td>16</td>
+    <td>9</td>
+    <td>10</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Owner</td>
+    <td>Mother-in-law</td>
+    <td>Me</td>
+    <td>Me</td>
+    <td>Sister-in-law</td>
+  </tr>
+  <tr>
+    <td>Eating Habits</td>
+    <td>Eats everyone's leftovers</td>
+    <td>Nibbles at food</td>
+    <td>Hearty eater</td>
+    <td>Will eat till he explodes</td>
+  </tr>
 </table>
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот пример можно также найти на GitHub под названием <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
-</div>
+Теперь как выглядит таблица:
 
-<h2 id="Добавление_заголовков_с_помощью_элементов_&lt;th>">Добавление заголовков с помощью элементов &lt;th&gt;</h2>
+|               | Knocky                    | Flor            | Ella         | Juan                      |
+| ------------- | ------------------------- | --------------- | ------------ | ------------------------- |
+| Breed         | Jack Russell              | Poodle          | Streetdog    | Cocker Spaniel            |
+| Age           | 16                        | 9               | 10           | 5                         |
+| Owner         | Mother-in-law             | Me              | Me           | Sister-in-law             |
+| Eating Habits | Eats everyone's leftovers | Nibbles at food | Hearty eater | Will eat till he explodes |
 
-<p>Теперь обратимся к табличным заголовкам — особым ячейкам, которые идут вначале строки или столбца и определяют тип данных, которые содержит данная строка или столбец (как "Person" и "Age" в первом примере данной статьи). Чтобы показать, для чего они нужны, возьмём следующий пример. Сначала исходный код:</p>
+Проблема в том, что, хотя вы и можете представить, о чем идёт речь, ссылаться на эти данные не так легко, как хотелось бы. Лучше, чтобы строка и столбец с заголовками как-то выделялись.
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;td&gt;Knocky&lt;/td&gt;
-    &lt;td&gt;Flor&lt;/td&gt;
-    &lt;td&gt;Ella&lt;/td&gt;
-    &lt;td&gt;Juan&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Breed&lt;/td&gt;
-    &lt;td&gt;Jack Russell&lt;/td&gt;
-    &lt;td&gt;Poodle&lt;/td&gt;
-    &lt;td&gt;Streetdog&lt;/td&gt;
-    &lt;td&gt;Cocker Spaniel&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Age&lt;/td&gt;
-    &lt;td&gt;16&lt;/td&gt;
-    &lt;td&gt;9&lt;/td&gt;
-    &lt;td&gt;10&lt;/td&gt;
-    &lt;td&gt;5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Owner&lt;/td&gt;
-    &lt;td&gt;Mother-in-law&lt;/td&gt;
-    &lt;td&gt;Me&lt;/td&gt;
-    &lt;td&gt;Me&lt;/td&gt;
-    &lt;td&gt;Sister-in-law&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Eating Habits&lt;/td&gt;
-    &lt;td&gt;Eats everyone's leftovers&lt;/td&gt;
-    &lt;td&gt;Nibbles at food&lt;/td&gt;
-    &lt;td&gt;Hearty eater&lt;/td&gt;
-    &lt;td&gt;Will eat till he explodes&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+### Упражнение: заголовки
 
-<p>Теперь как выглядит таблица:</p>
+Попробуем улучшить эту таблицу.
 
+1.  Сначала создайте локальную копию [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) в новой папке на вашем компьютере. HTML содержит пример Dogs, который вы уже видели выше.
+2.  Чтобы опознавать заголовки таблицы в качестве заголовков, визуально и семантически, можно использовать элемент **[`<th>`](/en-US/docs/Web/HTML/Element/th)** ('th' сокращение от 'table header'). Он работает в точности как `<td>`, за исключением того, что обозначает заголовок, а не обычную ячейку. Замените в своём HTML все элементы `<td>`, содержащие заголовки, на элементы `<th>`.
+3.  Сохраните HTML и загрузите его в браузер, и вы увидите, что заголовки теперь выглядят как заголовки.
+
+> **Примечание:** Законченный пример можно найти на [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) в GitHub ([посмотрите живой пример](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+
+### Для чего нужны заголовки?
+
+Мы уже частично ответили на этот вопрос — когда заголовки выделяются, легче искать данные и таблица выглядит лучше.
+
+> **Примечание:** По умолчанию к заголовкам таблицы применяется определённый стиль — они выделены жирным шрифтом и выровнены по центру, даже если вы не задавали для них стиль специально.
+
+Заголовки дают дополнительное преимущество — вместе с атрибутом `scope` (который мы будем изучать в следующей статье) они помогают улучшить связь каждого заголовка со всеми данными строки или столбца одновременно, что довольно полезно
+
+## Слияние нескольких строк или столбцов
+
+Иногда нам нужно, чтобы ячейки распространялись на несколько строк или столбцов. Возьмём простой пример, в котором приведены имена животных. Иногда бывает нужно вывести имена людей рядом с именами животных. А иногда это не требуется, и тогда мы хотим, чтобы имя животного занимало всю ширину.
+
+Исходная разметка выглядит так:
+
+```html
 <table>
- <tbody>
   <tr>
-   <td></td>
-   <td>Knocky</td>
-   <td>Flor</td>
-   <td>Ella</td>
-   <td>Juan</td>
+    <th>Animals</th>
   </tr>
   <tr>
-   <td>Breed</td>
-   <td>Jack Russell</td>
-   <td>Poodle</td>
-   <td>Streetdog</td>
-   <td>Cocker Spaniel</td>
+    <th>Hippopotamus</th>
   </tr>
   <tr>
-   <td>Age</td>
-   <td>16</td>
-   <td>9</td>
-   <td>10</td>
-   <td>5</td>
+    <th>Horse</th>
+    <td>Mare</td>
   </tr>
   <tr>
-   <td>Owner</td>
-   <td>Mother-in-law</td>
-   <td>Me</td>
-   <td>Me</td>
-   <td>Sister-in-law</td>
+    <td>Stallion</td>
   </tr>
   <tr>
-   <td>Eating Habits</td>
-   <td>Eats everyone's leftovers</td>
-   <td>Nibbles at food</td>
-   <td>Hearty eater</td>
-   <td>Will eat till he explodes</td>
+    <th>Crocodile</th>
   </tr>
- </tbody>
+  <tr>
+    <th>Chicken</th>
+    <td>Cock</td>
+  </tr>
+  <tr>
+    <td>Rooster</td>
+  </tr>
 </table>
+```
 
-<p>Проблема в том, что, хотя вы и можете представить, о чем идёт речь, ссылаться на эти данные не так легко, как хотелось бы. Лучше, чтобы строка и столбец с заголовками как-то выделялись.</p>
+Но результат не такой, как хотелось бы:
 
-<h3 id="Упражнение_заголовки">Упражнение: заголовки</h3>
+| Animals      |      |
+| ------------ | ---- |
+| Hippopotamus |      |
+| Horse        | Mare |
+| Stallion     |      |
+| Crocodile    |      |
+| Chicken      | Cock |
+| Rooster      |      |
 
-<p>Попробуем улучшить эту таблицу.</p>
+Нужно, чтобы "Animals", "Hippopotamus" и "Crocodile" распространялись на два столбца, а "Horse" и "Chicken" - на две строки. К счастью, табличные заголовки и ячейки имеют атрибуты `colspan` `и rowspan`, которые позволяют это сделать. Оба принимают безразмерное числовое значение, которое равно количеству строк или столбцов, на которые должны распространяться ячейки. Например, `colspan="2"` распространяет ячейку на два столбца.
 
-<ol>
- <li>Сначала создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html">dogs-table.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> в новой папке на вашем компьютере. HTML содержит пример Dogs, который вы уже видели выше.</li>
- <li>Чтобы опознавать заголовки таблицы в качестве заголовков, визуально и семантически, можно использовать элемент <strong><code><a href="/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></code></strong> ('th' сокращение от 'table header'). Он работает в точности как <code>&lt;td&gt;</code>, за исключением того, что обозначает заголовок, а не обычную ячейку. Замените в своём HTML все элементы <code>&lt;td&gt;</code>, содержащие заголовки, на элементы <code>&lt;th&gt;</code>.</li>
- <li>Сохраните HTML и загрузите его в браузер, и вы увидите, что заголовки теперь выглядят как заголовки.</li>
-</ol>
+Воспользуемся `colspan` и `rowspan` чтобы улучшить таблицу.
 
-<div class="note">
-<p><strong>Примечание</strong>: Законченный пример можно найти на <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a> в GitHub (<a href="https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">посмотрите живой пример</a>).</p>
-</div>
+1.  Сначала создайте локальную копию [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) в новой папке на вашем компьютере. Код HTML содержит пример с животными, который вы уже видели выше.
+2.  Затем используйте атрибут `colspan` чтобы распространить "Animals", "Hippopotamus" и "Crocodile" на два столбца.
+3.  Наконец, используйте атрибут `rowspan` чтобы распространить "Horse" и "Chicken" на две строки.
+4.  Сохраните код и откройте его в браузере, чтобы увидеть улучшения.
 
-<h3 id="Для_чего_нужны_заголовки">Для чего нужны заголовки?</h3>
+> **Примечание:** Законченный пример можно посмотреть в [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) на GitHub ([живой пример](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
-<p>Мы уже частично ответили на этот вопрос — когда заголовки выделяются, легче искать данные и таблица выглядит лучше.</p>
+## Стилизация столбцов
 
-<div class="note">
-<p><strong>Примечание</strong>: По умолчанию к заголовкам таблицы применяется определённый стиль — они выделены жирным шрифтом и выровнены по центру, даже если вы не задавали для них стиль специально.</p>
-</div>
+И последняя возможность, о которой рассказывается в данной статье. HTML позволяет указать, какой стиль нужно применять к целому столбцу данных сразу — для этого применяют элементы **[`<col>`](/en-US/docs/Web/HTML/Element/col)** и **[`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup)**. Их ввели, поскольку задавать стиль для каждой ячейки в отдельности или использовать сложный селектор вроде {{cssxref(":nth-child()")}} было бы слишком утомительно.
 
-<p>Заголовки дают дополнительное преимущество — вместе с атрибутом <code>scope</code> (который мы будем изучать в следующей статье) они помогают улучшить связь каждого заголовка со всеми данными строки или столбца одновременно, что довольно полезно</p>
+Возьмём простой пример:
 
-<h2 id="Слияние_нескольких_строк_или_столбцов">Слияние нескольких строк или столбцов</h2>
-
-<p>Иногда нам нужно, чтобы ячейки распространялись на несколько строк или столбцов. Возьмём простой пример, в котором приведены имена животных. Иногда бывает нужно вывести имена людей рядом с именами животных. А иногда это не требуется, и тогда мы хотим, чтобы имя животного занимало всю ширину.</p>
-
-<p>Исходная разметка выглядит так:</p>
-
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Animals&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Hippopotamus&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Horse&lt;/th&gt;
-    &lt;td&gt;Mare&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Stallion&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Crocodile&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Chicken&lt;/th&gt;
-    &lt;td&gt;Cock&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Rooster&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-
-<p>Но результат не такой, как хотелось бы:</p>
-
+```html
 <table>
- <tbody>
   <tr>
-   <th>Animals</th>
+    <th>Data 1</th>
+    <th style="background-color: yellow">Data 2</th>
   </tr>
   <tr>
-   <th>Hippopotamus</th>
+    <td>Calcutta</td>
+    <td style="background-color: yellow">Orange</td>
   </tr>
   <tr>
-   <th>Horse</th>
-   <td>Mare</td>
+    <td>Robots</td>
+    <td style="background-color: yellow">Jazz</td>
   </tr>
-  <tr>
-   <td>Stallion</td>
-  </tr>
-  <tr>
-   <th>Crocodile</th>
-  </tr>
-  <tr>
-   <th>Chicken</th>
-   <td>Cock</td>
-  </tr>
-  <tr>
-   <td>Rooster</td>
-  </tr>
- </tbody>
 </table>
+```
 
-<p>Нужно, чтобы  "Animals", "Hippopotamus" и "Crocodile" распространялись на два столбца, а "Horse" и "Chicken" - на две строки. К счастью, табличные заголовки и ячейки имеют атрибуты <code>colspan</code> <code>и rowspan</code>, которые позволяют это сделать. Оба принимают безразмерное числовое значение, которое равно количеству строк или столбцов, на которые должны распространяться ячейки. Например, <code>colspan="2"</code> распространяет ячейку на два столбца.</p>
+Что даёт нам:
 
-<p>Воспользуемся <code>colspan</code> и <code>rowspan</code> чтобы улучшить таблицу.</p>
+| Data 1   | Data 2 |
+| -------- | ------ |
+| Calcutta | Orange |
+| Robots   | Jazz   |
 
-<ol>
- <li>Сначала создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html">animals-table.html</a> и <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> в новой папке на вашем компьютере. Код HTML содержит пример с животными, который вы уже видели выше.</li>
- <li>Затем используйте атрибут <code>colspan</code> чтобы распространить "Animals", "Hippopotamus" и "Crocodile" на два столбца.</li>
- <li>Наконец, используйте атрибут <code>rowspan</code> чтобы распространить  "Horse" и "Chicken" на две строки.</li>
- <li>Сохраните код и откройте его в браузере, чтобы увидеть улучшения.</li>
-</ol>
+Он не идеален, поскольку нам пришлось повторить информацию о стиле для всех трёх ячеек в столбце (в реальном проекте, возможно, придётся вводить `class` на всех трёх и вводит правило в таблице стилей). Вместо этого, мы можем задать информацию один раз, в элементе `<col>`. `Элемент <col>` задаётся в контейнере `<colgroup>` сразу же за открывающим тегом `<table>`. Эффект, который мы видели выше, можно задать так:
 
-<div class="note">
-<p><strong>Примечание</strong>: Законченный пример можно посмотреть в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> на GitHub (<a href="https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">живой пример</a>).</p>
-</div>
-
-<table id="tabular" style="background-color: white;">
-</table>
-
-<h2 id="Стилизация_столбцов">Стилизация столбцов</h2>
-
-<p>И последняя возможность, о которой рассказывается в данной статье. HTML позволяет указать, какой стиль нужно применять к целому столбцу данных сразу — для этого применяют элементы  <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> и <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong>. Их ввели, поскольку задавать стиль для каждой ячейки в отдельности или использовать сложный селектор вроде {{cssxref(":nth-child()")}} было бы слишком утомительно.</p>
-
-<p>Возьмём простой пример:</p>
-
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Data 1&lt;/th&gt;
-    &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Calcutta&lt;/td&gt;
-    &lt;td style="background-color: yellow"&gt;Orange&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Robots&lt;/td&gt;
-    &lt;td style="background-color: yellow"&gt;Jazz&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-
-<p>Что даёт нам:</p>
-
+```html
 <table>
- <tbody>
+  <colgroup>
+    <col>
+    <col style="background-color: yellow">
+  </colgroup>
   <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
+    <th>Data 1</th>
+    <th>Data 2</th>
   </tr>
   <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
+    <td>Calcutta</td>
+    <td>Orange</td>
   </tr>
   <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
+    <td>Robots</td>
+    <td>Jazz</td>
   </tr>
- </tbody>
 </table>
+```
 
-<p>Он не идеален, поскольку нам пришлось повторить информацию о стиле для всех трёх ячеек в столбце (в реальном проекте, возможно, придётся вводить <code>class</code> на всех трёх и вводит правило в таблице стилей). Вместо этого, мы можем задать информацию один раз, в элементе <code>&lt;col&gt;</code>. <code>Элемент &lt;col&gt;</code> задаётся в контейнере <code>&lt;colgroup&gt;</code> сразу же за открывающим тегом <code>&lt;table&gt;</code>. Эффект, который мы видели выше, можно задать так:</p>
+Мы определяем два "стилизующих столбца". Мы не применяем стиль к первому столбцу, но пустой элемент `<col>` ввести необходимо — иначе к первому столбцу не будет применён стиль.
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col style="background-color: yellow"&gt;
-  &lt;/colgroup&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Data 1&lt;/th&gt;
-    &lt;th&gt;Data 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Calcutta&lt;/td&gt;
-    &lt;td&gt;Orange&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Robots&lt;/td&gt;
-    &lt;td&gt;Jazz&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+Если бы мы хотели применить информацию о стиле к обоим столбцам, мы могли бы просто ввести один элемент `<col>` с атрибутом span, таким образом:
 
-<p>Мы определяем два "стилизующих столбца". Мы не применяем стиль к первому столбцу, но пустой элемент <code>&lt;col&gt;</code> ввести необходимо — иначе к первому столбцу не будет применён стиль.</p>
+```html
+<colgroup>
+  <col style="background-color: yellow" span="2">
+</colgroup>
+```
 
-<p>Если бы мы хотели применить информацию о стиле к обоим столбцам, мы могли бы просто ввести один элемент <code>&lt;col&gt;</code> с атрибутом span, таким образом:</p>
+Подобно `colspan` и `rowspan`, `span` принимает безразмерное числовое значение, указывающее, к какому количеству столбцов нужно применить данный стиль.
 
-<pre class="brush: html">&lt;colgroup&gt;
-  &lt;col style="background-color: yellow" span="2"&gt;
-&lt;/colgroup&gt;</pre>
+### Упражнение: colgroup и col
 
-<p>Подобно <code>colspan</code> и <code>rowspan</code>, <code>span</code> принимает безразмерное числовое значение, указывающее, к какому количеству столбцов нужно применить данный стиль.</p>
+Теперь попробуйте сами.
 
-<h3 id="Упражнение_colgroup_и_col">Упражнение: colgroup и col</h3>
+Ниже приведена таблица уроков по языкам. В пятницу (Friday) новый класс целый день изучает голландский (Dutch), кроме того, во вторник (Tuesday) и четверг (Thursdays) есть занятия по немецкому (German). Учительница хочет выделить столбцы, соответствующие дням, когда она преподаёт.
 
-<p>Теперь попробуйте сами.</p>
+|            | Mon     | Tues    | Wed | Thurs   | Fri   | Sat | Sun |
+| ---------- | ------- | ------- | --- | ------- | ----- | --- | --- |
+| 1st period | English |         |     | German  | Dutch |     |     |
+| 2nd period | English | English |     | German  | Dutch |     |     |
+| 3rd period |         | German  |     | German  | Dutch |     |     |
+| 4th period |         | English |     | English | Dutch |     |     |
 
-<p>Ниже приведена таблица уроков по языкам. В пятницу (Friday) новый класс целый день изучает голландский (Dutch),  кроме того, во вторник (Tuesday) и четверг (Thursdays) есть занятия по немецкому (German). Учительница хочет выделить столбцы, соответствующие дням, когда она преподаёт.</p>
+Заново создайте таблицу, проделав указанные ниже действия.
 
-<table>
- <colgroup>
-  <col>
-  <col style="background-color: #97DB9A;">
-  <col style="width: 42px;">
-  <col style="background-color: #97DB9A;">
-  <col style="background-color: #DCC48E; border: 4px solid #C1437A;">
-  <col style="width: 42px;">
- </colgroup>
- <tbody>
-  <tr>
-   <td></td>
-   <th>Mon</th>
-   <th>Tues</th>
-   <th>Wed</th>
-   <th>Thurs</th>
-   <th>Fri</th>
-   <th>Sat</th>
-   <th>Sun</th>
-  </tr>
-  <tr>
-   <th>1st period</th>
-   <td>English</td>
-   <td></td>
-   <td></td>
-   <td>German</td>
-   <td>Dutch</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th>2nd period</th>
-   <td>English</td>
-   <td>English</td>
-   <td></td>
-   <td>German</td>
-   <td>Dutch</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th>3rd period</th>
-   <td></td>
-   <td>German</td>
-   <td></td>
-   <td>German</td>
-   <td>Dutch</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <th>4th period</th>
-   <td></td>
-   <td>English</td>
-   <td></td>
-   <td>English</td>
-   <td>Dutch</td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+1.  Сначала создайте локальную копию файла [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) в новой папке на вашем компьютере. Код HTML содержит таблицу, которую вы уже видели выше, но без информации о стиле.
+2.  Добавьте элемент `<colgroup>` вверху таблицы, сразу же под тегом `<table>`, куда вы сможете вставлять элементы `<col>`.
+3.  Первые два столбца надо оставить без стиля..
+4.  Добавьте цвет фона для третьего столбца. Значением атрибута `style` будет `background-color:#97DB9A;`
+5.  Задайте ширину для четвёртого столбца. `Значением атрибута style` будет `width: 42px;`
+6.  Добавьте цвет фона для пятого столбца. Значением атрибута `style` будет `background-color: #97DB9A;`
+7.  Добавьте другой цвет фона и границу для шестого столбца, чтобы показать, что это особый день и она ведёт новый класс. Значениями атрибута `style` будут: `background-color:#DCC48E; border:4px solid #C1437A;`
+8.  Последние два дня выходные; значением атрибута style `будет width: 42px;`
 
-<p>Заново создайте таблицу, проделав указанные ниже действия.</p>
+Посмотрите, что у вас получилось. Если застрянете, или захотите себя проверить, можете посмотреть нашу версию в [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([посмотрите живой пример](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
-<ol>
- <li>Сначала создайте локальную копию файла <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html">timetable.html</a> в новой папке на вашем компьютере. Код HTML содержит таблицу, которую вы уже видели выше, но без информации о стиле.</li>
- <li>Добавьте элемент <code>&lt;colgroup&gt;</code> вверху таблицы, сразу же под тегом <code>&lt;table&gt;</code>, куда вы сможете вставлять элементы <code>&lt;col&gt;</code>.</li>
- <li>Первые два столбца надо оставить без стиля..</li>
- <li>Добавьте цвет фона для третьего столбца. Значением атрибута <code>style</code> будет  <code>background-color:#97DB9A;</code></li>
- <li>Задайте ширину для четвёртого столбца. <code>Значением атрибута style</code> будет <code>width: 42px;</code></li>
- <li>Добавьте цвет фона для пятого столбца. Значением атрибута <code>style</code> будет <code>background-color: #97DB9A;</code></li>
- <li>Добавьте другой цвет фона и границу для шестого столбца, чтобы показать, что это особый день и она ведёт новый класс. Значениями атрибута <code>style</code> будут: <code>background-color:#DCC48E; border:4px solid #C1437A;</code></li>
- <li>Последние два дня выходные; значением атрибута style <code>будет width: 42px;</code></li>
-</ol>
+## Итог
 
-<p>Посмотрите, что у вас получилось. Если застрянете, или захотите себя проверить, можете посмотреть нашу версию в <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html">посмотрите живой пример</a>).</p>
+Здесь приведены практически все базовые сведения о таблицах HTML. В следующей статье вы получите более продвинутые сведения на эту тему.
 
-<h2 id="Итог">Итог</h2>
-
-<p>Здесь приведены практически все базовые сведения о таблицах HTML. В следующей статье вы получите более продвинутые сведения на эту тему.</p>
-
-<div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
+{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
