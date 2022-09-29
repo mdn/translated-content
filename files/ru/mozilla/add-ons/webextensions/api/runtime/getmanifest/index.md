@@ -46,9 +46,12 @@ console.log(manifest.name);
 
 {{WebExtExamples}}
 
-> **Примечание:** **Справка**Этот API основан на API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getManifest). Настоящая документация унаследована от [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) в коде Chromium.Данные о совместимости Microsoft Edge предоставлены Корпорацией Microsoft и включены сюда под лицензией Creative Commons Attribution 3.0 United States License.
+> **Примечание:** Это API основано на API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime). Эта документация основана на [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) из кода Chromium.
+>
+> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,4 +78,4 @@ console.log(manifest.name);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

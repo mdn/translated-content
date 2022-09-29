@@ -24,12 +24,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
     <tr>
       <th scope="row">Пример</th>
       <td>
-        <pre class="brush: json">
-"icons": {
+        <pre class="brush: json">"icons": {
   "48": "icon.png",
   "96": "icon@2x.png"
-}</pre
-        >
+}</pre>
       </td>
     </tr>
   </tbody>
