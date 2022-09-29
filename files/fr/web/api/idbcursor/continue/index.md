@@ -70,7 +70,7 @@ Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de t
 
 ## Exemple
 
-Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([voir l'exemple live](http://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([voir l'exemple live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function afficheDonnee() {
