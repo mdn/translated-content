@@ -10,11 +10,12 @@ tags:
 translation_of: Glossary/CSS_Selector
 original_slug: Глоссарий/CSS_Selector
 ---
-<p><strong>CSS-селектор</strong> это часть CSS-правила, которая позволяет вам указать, к какому элементу (элементам) применить стиль. Например:</p>
+**CSS-селектор** это часть CSS-правила, которая позволяет вам указать, к какому элементу (элементам) применить стиль. Например:
 
-<pre><code>***HTML***
-&lt;div&gt; I am inside of a div element. &lt;/div&gt;
-&lt;p&gt; I am inside of a paragraph element. &lt;/p&gt;
+```
+***HTML***
+<div> I am inside of a div element. </div>
+<p> I am inside of a paragraph element. </p>
 
 
 ***CSS***
@@ -24,51 +25,42 @@ div {
 
 p {
  color: red;
-}</code>
-</pre>
+}
+```
 
-<p>В первом CSS-правиле я выбираю элемент div и задаю его стиль (цвет текста <span class="st">—</span> зелёный). Во втором CSS-правиле выбираю элемент p и задаю красный цвет текста. Вот как выглядит результат:</p>
+В первом CSS-правиле я выбираю элемент div и задаю его стиль (цвет текста — зелёный). Во втором CSS-правиле выбираю элемент p и задаю красный цвет текста. Вот как выглядит результат:
 
-<p><img alt="CSS selector coding results" src="https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg" style="border: 1px solid black; height: 101px; width: 343px;"></p>
+![CSS selector coding results](https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg)
 
+## Смотрите также
 
+### Основные статьи
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+1.  Базовые селекторы
 
-<h3 id="Основные_статьи">Основные статьи</h3>
+    1.  [Селекторы по типу](/ru/docs/Web/CSS/Type_selectors) `elementname`
+    2.  [Селекторы по классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
+    3.  [Селекторы по ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
+    4.  [Универсальные селекторы](/ru/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+    5.  [Атрибутивные селекторы](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+    6.  [Селекторы состояния элементов](/ru/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-<ol>
- <li>Базовые селекторы
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/Type_selectors">Селекторы по типу</a> <code>elementname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Class_selectors">Селекторы по классу</a> <code>.classname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/ID_selectors">Селекторы по ID</a> <code>#idname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Universal_selectors">Универсальные селекторы</a> <code>* ns|* *|*</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Атрибутивные селекторы</a> <code>[attr=value]</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Селекторы состояния элементов</a> <code>a:active, a:visited</code></li>
-  </ol>
- </li>
- <li>Группирующие селекторы
-  <ol>
-   <li><a dir="ltr" href="/ru/docs/Web/CSS/Selector_list" lang="ru-RU">Список селекторов</a> <code>A, B</code></li>
-  </ol>
- </li>
- <li>Комбинаторы
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Adjacent sibling selectors</a> <code>A + B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/General_sibling_selectors">General sibling selectors</a> <code>A ~ B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Child_selectors">Child selectors</a> <code>A &gt; B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Descendant_selectors">Descendant selectors</a> <code>A B</code></li>
-  </ol>
- </li>
- <li>Псевдо
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Псевдоклассы</a> <code>:</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-elements">Псевдоэлементы</a> <code>::</code></li>
-  </ol>
- </li>
-</ol>
+2.  Группирующие селекторы
 
-<h3 id="Техническая_справка">Техническая справка</h3>
+    1.  [Список селекторов](/ru/docs/Web/CSS/Selector_list) `A, B`
 
-<p>{{SpecName("CSS3 Selectors")}}</p>
+3.  Комбинаторы
+
+    1.  [Adjacent sibling selectors](/ru/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+    2.  [General sibling selectors](/ru/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+    3.  [Child selectors](/ru/docs/Web/CSS/Child_selectors) `A > B`
+    4.  [Descendant selectors](/ru/docs/Web/CSS/Descendant_selectors) `A B`
+
+4.  Псевдо
+
+    1.  [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) `:`
+    2.  [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) `::`
+
+### Техническая справка
+
+{{SpecName("CSS3 Selectors")}}

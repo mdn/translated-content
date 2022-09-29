@@ -13,23 +13,19 @@ tags:
 translation_of: Glossary/WebRTC
 original_slug: Глоссарий/WebRTC
 ---
-<p><span class="seoSummary"><strong>WebRTC</strong> (<em>Web Real-Time Communication</em>) — это {{Glossary("API")}}, который может использоваться в видео- и аудио-чатах, а также для обмена файлов через одноранговую сеть (P2P).</span></p>
+**WebRTC** (_Web Real-Time Communication_) — это {{Glossary("API")}}, который может использоваться в видео- и аудио-чатах, а также для обмена файлов через одноранговую сеть (P2P).
 
-<p>WebRTC в основном состоит из следующих частей:</p>
+WebRTC в основном состоит из следующих частей:
 
-<dl>
- <dt>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}</dt>
- <dd>Получает доступ к камере и/или микрофону пользователя для передачи данных в RTC-подключение.</dd>
- <dt>{{domxref("RTCPeerConnection")}}</dt>
- <dd>Интерфейс для настройки видеочата или голосовых вызовов.</dd>
- <dt>{{domxref("RTCDataChannel")}}</dt>
- <dd>Метод, позволяющий установить одноранговый ({{Glossary("P2P", "peer-to-peer")}}) канал связи между браузерами.</dd>
-</dl>
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+  - : Получает доступ к камере и/или микрофону пользователя для передачи данных в RTC-подключение.
+- {{domxref("RTCPeerConnection")}}
+  - : Интерфейс для настройки видеочата или голосовых вызовов.
+- {{domxref("RTCDataChannel")}}
+  - : Метод, позволяющий установить одноранговый ({{Glossary("P2P", "peer-to-peer")}}) канал связи между браузерами.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebRTC")}} на Wikipedia</li>
- <li><a href="/ru/docs/Web/API/WebRTC_API">WebRTC API на MDN</a></li>
- <li><a href="https://caniuse.com/rtcpeerconnection">Поддержка WebRTC браузерами</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WebRTC")}} на Wikipedia
+- [WebRTC API на MDN](/ru/docs/Web/API/WebRTC_API)
+- [Поддержка WebRTC браузерами](https://caniuse.com/rtcpeerconnection)

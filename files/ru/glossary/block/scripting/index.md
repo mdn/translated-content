@@ -8,14 +8,10 @@ tags:
 translation_of: Glossary/Block/Scripting
 original_slug: Glossary/Block/Скриптинг
 ---
-<p>В {{glossary("JavaScript")}} блок это набор связанных {{glossary("statement", "инструкций")}} заключённых в скобки <code>{}</code>. Например, можно поместить блок инструкций после блока {{jsxref("Statements/if...else","if (condition)")}}, чтобы интерпретатор выполнял код в блоке, если условие имеет значение true, или пропускал целый блок, если значение условия false.</p>
+В {{glossary("JavaScript")}} блок это набор связанных {{glossary("statement", "инструкций")}} заключённых в скобки `{}`. Например, можно поместить блок инструкций после блока {{jsxref("Statements/if...else","if (condition)")}}, чтобы интерпретатор выполнял код в блоке, если условие имеет значение true, или пропускал целый блок, если значение условия false.
 
-<h2 id="Узнай_больше">Узнай больше</h2>
+## Узнай больше
 
-<h3 id="Почитай_вот_это">Почитай вот это</h3>
+### Почитай вот это
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block">Блок инструкций в JavaScript</a></li>
-</ul>
-
-<p> </p>
+- [Блок инструкций в JavaScript](/ru/docs/Web/JavaScript/Reference/Statements/block)

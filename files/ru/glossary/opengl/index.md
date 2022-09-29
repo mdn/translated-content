@@ -4,14 +4,10 @@ slug: Glossary/OpenGL
 translation_of: Glossary/OpenGL
 original_slug: Глоссарий/OpenGL
 ---
-<p><span class="seoSummary"><strong>OpenGL</strong> (<strong>Open Graphics Library</strong>) -<span style="font-size: 13.3333px;">  </span>Это кроссплатформеный программный интерфейс, использующийся разными языками для обработки векторной (2D, 3D) графики.Обычно используется для взаимодействия с графическим процессором (GPU), чтобы добиться аппаратно-ускоренного рендеринга.</span></p>
+**OpenGL** (**Open Graphics Library**) - Это кроссплатформеный программный интерфейс, использующийся разными языками для обработки векторной (2D, 3D) графики.Обычно используется для взаимодействия с графическим процессором (GPU), чтобы добиться аппаратно-ускоренного рендеринга.
 
-<p dir="ltr" id="tw-target-text"></p>
+## Learn more
 
-<h2 id="Learn_more">Learn more</h2>
+### General knowledge
 
-<h3 id="General_knowledge">General knowledge</h3>
-
-<ul>
- <li>{{Interwiki("wikipedia", "OpenGL")}} на Википедии</li>
-</ul>
+- {{Interwiki("wikipedia", "OpenGL")}} на Википедии

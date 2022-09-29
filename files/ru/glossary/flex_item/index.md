@@ -8,28 +8,22 @@ tags:
 translation_of: Glossary/Flex_Item
 original_slug: Глоссарий/Flex_Item
 ---
-<p>Непосредственные дочерние элементы {{glossary("флекс-контейнера")}} (элемент для которого установлено <code>display: flex</code> или <code>display: inline-flex</code>) становятся <strong>флекс-элементами</strong>.</p>
+Непосредственные дочерние элементы {{glossary("флекс-контейнера")}} (элемент для которого установлено `display: flex` или `display: inline-flex`) становятся **флекс-элементами**.
 
-<p>Непрерывные фрагменты текста внутри флекс-контейнера также становятся флекс-элементами.</p>
+Непрерывные фрагменты текста внутри флекс-контейнера также становятся флекс-элементами.
 
-<h2 id="Изучать_далее">Изучать далее</h2>
+## Изучать далее
 
-<h3 id="Ссылки_на_свойства">Ссылки на свойства</h3>
+### Ссылки на свойства
 
-<div class="index">
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
-</div>
+- {{cssxref("align-self")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("order")}}
 
-<h3 id="Читать_далее">Читать далее</h3>
+### Читать далее
 
-<ul>
- <li>Руководство по флексбоксу: <a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Основные понятия флексбокса</a>.</li>
- <li>Руководство по флексбоксу: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>Руководство по флексбоксу: <a href="/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси">Управление соотношением элементов вдоль главной оси</a></li>
-</ul>
+- Руководство по флексбоксу: [Основные понятия флексбокса](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
+- Руководство по флексбоксу: _[Ordering flex items](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- Руководство по флексбоксу: [Управление соотношением элементов вдоль главной оси](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси)

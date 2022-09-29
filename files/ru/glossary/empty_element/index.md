@@ -9,28 +9,26 @@ tags:
 translation_of: Glossary/Empty_element
 original_slug: Глоссарий/Empty_element
 ---
-<p><span class="seoSummary"><strong>Пустой элемент</strong> — {{Glossary("element", "элемент")}} HTML, SVG или MathML, который <strong>не может</strong> иметь дочерних узлов (т.е. вложенных элементов или текста внутри себя).</span></p>
+**Пустой элемент** — {{Glossary("element", "элемент")}} HTML, SVG или MathML, который **не может** иметь дочерних узлов (т.е. вложенных элементов или текста внутри себя).
 
-<p>Спецификации <a href="https://html.spec.whatwg.org/multipage/">HTML</a>, <a href="https://www.w3.org/TR/SVG2/">SVG</a> и <a href="https://www.w3.org/TR/MathML3/">MathML</a> спецификации очень строго определяют, какой элемент что может содержать. Многие комбинации семантически не имеют смысла, например элемент {{HTMLElement("audio")}} внутри элемента {{HTMLElement("hr")}}.</p>
+Спецификации [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/) и [MathML](https://www.w3.org/TR/MathML3/) спецификации очень строго определяют, какой элемент что может содержать. Многие комбинации семантически не имеют смысла, например элемент {{HTMLElement("audio")}} внутри элемента {{HTMLElement("hr")}}.
 
-<p>В HTML использование закрывающего тега для пустого элемента обычно ошибочно. Например, <code>&lt;input type="text"&gt;&lt;/input&gt;</code> является недопустимым HTML.</p>
+В HTML использование закрывающего тега для пустого элемента обычно ошибочно. Например, `<input type="text"></input>` является недопустимым HTML.
 
-<p>Пустые элементы в HTML:</p>
+Пустые элементы в HTML:
 
-<ul>
- <li>{{HTMLElement("area")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{HTMLElement("br")}}</li>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("embed")}}</li>
- <li>{{HTMLElement("hr")}}</li>
- <li>{{HTMLElement("img")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("keygen")}}(Удалён в HTML 5.2 Draft)</li>
- <li>{{HTMLElement("link")}}</li>
- <li>{{HTMLElement("meta")}}</li>
- <li>{{HTMLElement("param")}}</li>
- <li>{{HTMLElement("source")}}</li>
- <li>{{HTMLElement("track")}}</li>
- <li>{{HTMLElement("wbr")}}</li>
-</ul>
+- {{HTMLElement("area")}}
+- {{HTMLElement("base")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("hr")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("keygen")}}(Удалён в HTML 5.2 Draft)
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("param")}}
+- {{HTMLElement("source")}}
+- {{HTMLElement("track")}}
+- {{HTMLElement("wbr")}}

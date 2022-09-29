@@ -10,29 +10,21 @@ tags:
 translation_of: Glossary/Canvas
 original_slug: Глоссарий/Canvas
 ---
-<article class="text-content" id="wikiArticle">
-<p>{{Glossary("HTML")}} <em>{{HTMLElement("canvas")}}</em> (англ. <strong>canvas</strong> — «холст», рус. <strong>канва́с</strong>) элемент предоставляет пустую графическую зону, на которой специальные {{Glossary("JavaScript")}} {{Glossary("API")}} могут рисовать (такие как Canvas 2D или {{Glossary("WebGL")}}).</p>
+{{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ (англ. **canvas** — «холст», рус. **канва́с**) элемент предоставляет пустую графическую зону, на которой специальные {{Glossary("JavaScript")}} {{Glossary("API")}} могут рисовать (такие как Canvas 2D или {{Glossary("WebGL")}}).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li>{{Interwiki("wikipedia", "Canvas (HTML)", "Canvas")}} на Википедии</li>
-</ul>
+- {{Interwiki("wikipedia", "Canvas (HTML)", "Canvas")}} на Википедии
 
-<h3 id="Обучающие_ресурсы">Обучающие ресурсы</h3>
+### Обучающие ресурсы
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial">Руководство по Canvas в MDN</a></li>
-</ul>
+- [Руководство по Canvas в MDN](/ru/docs/Web/Guide/HTML/Canvas_tutorial)
 
-<h3 id="Техническая_информация">Техническая информация</h3>
+### Техническая информация
 
-<ul>
- <li>HTML-элемент {{HTMLElement("canvas")}} в MDN</li>
- <li><a href="/en-US/docs/HTML/Canvas">Canvas общая документация в MDN</a></li>
- <li>{{domxref("CanvasRenderingContext2D")}}: Canvas 2D API для рисования</li>
- <li><a href="http://www.w3.org/TR/2dcontext/" rel="external">Canvas 2D API спецификация</a></li>
-</ul>
-</article>
+- HTML-элемент {{HTMLElement("canvas")}} в MDN
+- [Canvas общая документация в MDN](/ru/docs/HTML/Canvas)
+- {{domxref("CanvasRenderingContext2D")}}: Canvas 2D API для рисования
+- [Canvas 2D API спецификация](http://www.w3.org/TR/2dcontext/)

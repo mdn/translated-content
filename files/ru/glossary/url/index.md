@@ -10,22 +10,18 @@ tags:
 translation_of: Glossary/URL
 original_slug: Глоссарий/URL
 ---
-<p><em>Единый указатель ресурса (Uniform Resource Locator, </em><strong>URL</strong>) — строка, однозначно определяющая, где в интернете находится ресурс.</p>
+_Единый указатель ресурса (Uniform Resource Locator,_ **URL**) — строка, однозначно определяющая, где в интернете находится ресурс.
 
-<p>В контексте {{Glossary("HTTP")}}, URL называют "адрес" (web address)" или "ссылку" (link). В браузере URL отображается в адресной строке , например,  <code>https://developer.mozilla.org</code>.</p>
+В контексте {{Glossary("HTTP")}}, URL называют "адрес" (web address)" или "ссылку" (link). В браузере URL отображается в адресной строке , например, `https://developer.mozilla.org`.
 
-<p>Кроме того, URL используют при передаче файлов через {{Glossary("FTP")}} , в электронной почте через ({{Glossary("SMTP")}}) и других местах.</p>
+Кроме того, URL используют при передаче файлов через {{Glossary("FTP")}} , в электронной почте через ({{Glossary("SMTP")}}) и других местах.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Основная_информация">Основная информация</h3>
+### Основная информация
 
-<ul>
- <li>{{Interwiki("wikipedia", "URL")}} в Википедии</li>
-</ul>
+- {{Interwiki("wikipedia", "URL")}} в Википедии
 
-<h3 id="Узнайте_об_этом">Узнайте об этом</h3>
+### Узнайте об этом
 
-<ul>
- <li><a href="/ru/docs/Learn/Understanding_URLs">Понимание структуры URL</a> на сайте MDN</li>
-</ul>
+- [Понимание структуры URL](/ru/docs/Learn/Understanding_URLs) на сайте MDN

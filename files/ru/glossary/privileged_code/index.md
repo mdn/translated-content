@@ -6,6 +6,6 @@ tags:
 translation_of: Glossary/privileged_code
 original_slug: Глоссарий/privileged_code
 ---
-<p><strong>Привилегированный код (Privileged code</strong>) - Javascript-код расширения, например, скриптов <code>content scripts</code>.</p>
+**Привилегированный код (Privileged code**) - Javascript-код расширения, например, скриптов `content scripts`.
 
-<p><strong>Непривилегированный код</strong> - обычный Javascript на веб-странице</p>
+**Непривилегированный код** - обычный Javascript на веб-странице

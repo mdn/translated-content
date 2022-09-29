@@ -15,13 +15,11 @@ tags:
 translation_of: Glossary/WHATWG
 original_slug: Глоссарий/WHATWG
 ---
-<p>WHATWG (<em>Рабочая группа по вебу, гипертексту, приложениям и технологиям</em>) (<em>англ. Web Hypertext Application Technology Working Group</em>) сообщество, которое <a href="https://spec.whatwg.org/">поддерживает и разрабатывает веб стандарты</a>, включая {{Glossary("DOM")}}, Fetch и {{Glossary("HTML")}}. Сотрудники Apple, Mozilla и Opera основали WHATWG в 2004.</p>
+WHATWG (_Рабочая группа по вебу, гипертексту, приложениям и технологиям_) (_англ. Web Hypertext Application Technology Working Group_) сообщество, которое [поддерживает и разрабатывает веб стандарты](https://spec.whatwg.org/), включая {{Glossary("DOM")}}, Fetch и {{Glossary("HTML")}}. Сотрудники Apple, Mozilla и Opera основали WHATWG в 2004.
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Общие_знания" style="line-height: 24px;">Общие знания</h3>
+### Общие знания
 
-<ul>
- <li>{{Interwiki("wikipedia", "WHATWG")}} на Wikipedia</li>
- <li><a href="https://whatwg.org/">Сайт WHATWG</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WHATWG")}} на Wikipedia
+- [Сайт WHATWG](https://whatwg.org/)

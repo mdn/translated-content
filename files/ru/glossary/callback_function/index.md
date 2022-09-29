@@ -7,11 +7,12 @@ tags:
 translation_of: Glossary/Callback_function
 original_slug: Глоссарий/функция_обратного_вызова
 ---
-<p>Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.</p>
+Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.
 
-<p>Вот краткий пример:</p>
+Вот краткий пример:
 
-<pre class="brush: js">function greeting(name) {
+```js
+function greeting(name) {
   alert('Hello ' + name);
 }
 
@@ -20,13 +21,15 @@ function processUserInput(callback) {
   callback(name);
 }
 
-processUserInput(greeting);</pre>
+processUserInput(greeting);
+```
 
-<p>Выше приведён пример {{glossary("synchronous","синхронного")}} колбэка, поскольку функция <code>processUserInput</code> выполняется синхронно.</p>
+Выше приведён пример {{glossary("synchronous","синхронного")}} колбэка, поскольку функция `processUserInput` выполняется синхронно.
 
-<p>Колбэки часто используются для продолжения выполнения кода после завершения {{glossary("asynchronous","асинхронной")}} операции - они называются асинхронными колбэками.</p>
+Колбэки часто используются для продолжения выполнения кода после завершения {{glossary("asynchronous","асинхронной")}} операции - они называются асинхронными колбэками.
 
-<pre class="brush: js">async function pageLoader(callback) {
+```js
+async function pageLoader(callback) {
   const data = await fetch('/ru/docs/Glossary/Callback_function')
   callback(data)
 }
@@ -38,11 +41,12 @@ function onPageLoadingFinished(pageData) {
 }
 
 pageLoader(onPageLoadingFinished)
-</pre>
+```
 
-<p>Вот ещё один пример асинхронного обратного вызова: <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">maps-example.html</a> (<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">живой пример</a>). Он использует Google Maps API и Geolocation API для отображения карты текущего местоположения вашего устройства.</p>
+Вот ещё один пример асинхронного обратного вызова: [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([живой пример](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)). Он использует Google Maps API и Geolocation API для отображения карты текущего местоположения вашего устройства.
 
-<pre class="brush: js">// maps-example.html
+```js
+// maps-example.html
 // Вызов асинхронной функции getCurrentPosition
 // с передачей callback функции принимающей координаты
 // в качестве параметра
@@ -56,16 +60,14 @@ navigator.geolocation.getCurrentPosition(function(position) {
   }
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 });
-</pre>
+```
 
-<p>Поскольку получение координат устройства из его GPS является асинхронным (мы точно не знаем, когда данные будут возвращены), метод <code>Geolocation.getCurrentPosition()</code> принимает анонимную колбэк-функцию в качестве параметра, которая получает найденные данные координат. Эта функция выполняется только по возвращению данных координат.</p>
+Поскольку получение координат устройства из его GPS является асинхронным (мы точно не знаем, когда данные будут возвращены), метод `Geolocation.getCurrentPosition()` принимает анонимную колбэк-функцию в качестве параметра, которая получает найденные данные координат. Эта функция выполняется только по возвращению данных координат.
 
-<h2 id="Больше_информации"><strong>Больше информации</strong></h2>
+## Больше информации
 
-<h3 id="Основное"><strong>Основное</strong></h3>
+### Основное
 
-<ul>
- <li>{{Interwiki("wikipedia", "Callback (программирование)", "Callback")}} на Википедии</li>
- <li><a href="https://learn.javascript.ru/custom-events">Колбэки и события на компонентах</a></li>
- <li><a href="http://callbackhell.ru/">Ад обратных вызовов</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Callback (программирование)", "Callback")}} на Википедии
+- [Колбэки и события на компонентах](https://learn.javascript.ru/custom-events)
+- [Ад обратных вызовов](http://callbackhell.ru/)

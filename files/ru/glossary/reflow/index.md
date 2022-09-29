@@ -4,10 +4,8 @@ slug: Glossary/Reflow
 translation_of: Glossary/Reflow
 original_slug: Глоссарий/Reflow
 ---
-<p><strong>Пересчёт</strong> (<em>Reflow</em>) происходит, когда {{glossary("браузер")}} <span class="tlid-translation translation" lang="ru"><span title="">должен снова обработать и отрисовать часть или всю веб-страницу, например, после изменения размера какого-нибудь блока или изменения его позиции на интерактивном сайте.</span></span></p>
+**Пересчёт** (_Reflow_) происходит, когда {{glossary("браузер")}} должен снова обработать и отрисовать часть или всю веб-страницу, например, после изменения размера какого-нибудь блока или изменения его позиции на интерактивном сайте.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><a href="https://developers.google.com/speed/articles/reflow">Google article "Minimizing browser reflow"</a></li>
-</ul>
+- [Google article "Minimizing browser reflow"](https://developers.google.com/speed/articles/reflow)

@@ -11,19 +11,15 @@ tags:
 translation_of: Glossary/Doctype
 original_slug: Глоссарий/Doctype
 ---
-<p>В {{Glossary("HTML")}} объявление типа документа тегом "<code>&lt;!DOCTYPE html&gt;</code>" - обязательная преамбула, расположенная в верхней части документа. Единственное предназначение тега - не допустить переключение {{Glossary("browser","браузера")}} в так называемый режим совместимости (<a href="/en-US/docs/Quirks_Mode_and_Standards_Mode">“quirks mode”</a>) во время рендеринга документа; то есть, тег "<code>&lt;!DOCTYPE html&gt;</code>" гарантирует, что браузер с максимальными усилиями будет следовать соответствующей спецификации, а не использовать другой тип рендеринга, несовместимый с некоторыми спецификациями.</p>
+В {{Glossary("HTML")}} объявление типа документа тегом "`<!DOCTYPE html>`" - обязательная преамбула, расположенная в верхней части документа. Единственное предназначение тега - не допустить переключение {{Glossary("browser","браузера")}} в так называемый режим совместимости ([“quirks mode”](/ru/docs/Quirks_Mode_and_Standards_Mode)) во время рендеринга документа; то есть, тег "`<!DOCTYPE html>`" гарантирует, что браузер с максимальными усилиями будет следовать соответствующей спецификации, а не использовать другой тип рендеринга, несовместимый с некоторыми спецификациями.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Основная_информация">Основная информация</h3>
+### Основная информация
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">Definition of the DOCTYPE in the HTML specification</a></li>
- <li><a href="/en-US/docs/Quirks_Mode_and_Standards_Mode">Quirks Mode and Standards Mode</a></li>
-</ul>
+- [Definition of the DOCTYPE in the HTML specification](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)
+- [Quirks Mode and Standards Mode](/ru/docs/Quirks_Mode_and_Standards_Mode)
 
-<h3 id="Техническая_документация">Техническая документация</h3>
+### Техническая документация
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document/doctype">Document.doctype</a>, a JavaScript method that returns the doctype</li>
-</ul>
+- [Document.doctype](/ru/docs/Web/API/Document/doctype), a JavaScript method that returns the doctype

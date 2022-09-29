@@ -10,13 +10,11 @@ tags:
 translation_of: Glossary/IETF
 original_slug: Глоссарий/IETF
 ---
-<p><span class="seoSummary">Инженерный совет Интернета (<strong>IETF</strong>) </span>это всемирная организация, которая разрабатывает<span class="seoSummary"> <a href="/ru/docs/Glossary/Specification">спецификации</a> </span>регулирующие механизмы, лежащие в основе<span class="seoSummary"> {{glossary("Internet", "интернета")}}, </span>особенно <span class="seoSummary">{{glossary("TCP")}}/{{glossary("IPv6","IP")}} или</span>пакет <span class="seoSummary">{{glossary("Protocol","протоколов")}}</span> <span class="seoSummary"> интернета.</span> IETF это открытое сообщество, управляется добровольцами и спонсируется <a href="https://www.internetsociety.org/">интернет-сообществом</a>.</p>
+Инженерный совет Интернета (**IETF**) это всемирная организация, которая разрабатывает [спецификации](/ru/docs/Glossary/Specification) регулирующие механизмы, лежащие в основе {{glossary("Internet", "интернета")}}, особенно {{glossary("TCP")}}/{{glossary("IPv6","IP")}} илипакет {{glossary("Protocol","протоколов")}} интернета. IETF это открытое сообщество, управляется добровольцами и спонсируется [интернет-сообществом](https://www.internetsociety.org/).
 
-<h2 id="Узнать_больше">Узнать больше</h2>
+## Узнать больше
 
-<h3 id="Основные_сведения">Основные сведения</h3>
+### Основные сведения
 
-<ul>
- <li><a href="https://www.ietf.org/">Официальный сайт</a></li>
- <li>{{interwiki("wikipedia", "Инженерный_совет_Интернета", "Статья на Wikipedia")}}</li>
-</ul>
+- [Официальный сайт](https://www.ietf.org/)
+- {{interwiki("wikipedia", "Инженерный_совет_Интернета", "Статья на Wikipedia")}}

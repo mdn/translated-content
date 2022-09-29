@@ -9,13 +9,11 @@ tags:
 translation_of: Glossary/ARPA
 original_slug: Глоссарий/ARPA
 ---
-<p><strong>.arpa</strong> (Address and Routing Parameter Area) является {{glossary("TLD","доменом верхнего уровня")}}, который используется в интернет-инфраструктуре, особенно в обратном DNS запросе (т.е., определить {{glossary("domain name", "имя домена")}} для заданного {{glossary("IP address", "IP адреса")}}).</p>
+**.arpa** (Address and Routing Parameter Area) является {{glossary("TLD","доменом верхнего уровня")}}, который используется в интернет-инфраструктуре, особенно в обратном DNS запросе (т.е., определить {{glossary("domain name", "имя домена")}} для заданного {{glossary("IP address", "IP адреса")}}).
 
-<h2 id="Подробнее">Подробнее</h2>
+## Подробнее
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li><a href="http://www.iana.org/domains/arpa">Официальный веб-сайт</a></li>
- <li>{{Interwiki("wikipedia", ".arpa")}} на Википедии</li>
-</ul>
+- [Официальный веб-сайт](http://www.iana.org/domains/arpa)
+- {{Interwiki("wikipedia", ".arpa")}} на Википедии

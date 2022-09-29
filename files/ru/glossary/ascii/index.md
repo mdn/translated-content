@@ -7,10 +7,10 @@ tags:
 translation_of: Glossary/ASCII
 original_slug: Глоссарий/ASCII
 ---
-<p><strong>ASCII</strong> (<em><strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange</em>) это один из самых известных методов кодирования, используемый компьютерами для превращения букв, чисел, знаков препинания и кодов управления в цифровую форму. С 2007, {{Glossary("UTF-8")}} заменил его в Web.</p>
+**ASCII** (_**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange_) это один из самых известных методов кодирования, используемый компьютерами для превращения букв, чисел, знаков препинания и кодов управления в цифровую форму. С 2007, {{Glossary("UTF-8")}} заменил его в Web.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<h3 id="Основные_знания">Основные знания</h3>
+### Основные знания
 
-<p>{{Interwiki("wikipedia", "ASCII")}} на Википедии</p>
+{{Interwiki("wikipedia", "ASCII")}} на Википедии

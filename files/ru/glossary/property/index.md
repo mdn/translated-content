@@ -8,6 +8,6 @@ tags:
 translation_of: Glossary/property
 original_slug: Глоссарий/property
 ---
-<p>Термин <strong>свойство </strong>может иметь разное значение, в зависимости от контекста. Он может указывать на:</p>
+Термин **свойство** может иметь разное значение, в зависимости от контекста. Он может указывать на:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

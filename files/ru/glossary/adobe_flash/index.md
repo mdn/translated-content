@@ -10,23 +10,16 @@ tags:
 translation_of: Glossary/Adobe_Flash
 original_slug: Глоссарий/Adobe-Flash
 ---
-<p id="Summary">Flash — устаревшая технология, разработанная Adobe, для создания веб-приложений с богатой функциональностью, просмотра мультимедиа контента и потокового медиа. Для использования Flash необходимо установить соответствующий плагин в ваш {{Glossary("Browser","браузер")}}.</p>
+Flash — устаревшая технология, разработанная Adobe, для создания веб-приложений с богатой функциональностью, просмотра мультимедиа контента и потокового медиа. Для использования Flash необходимо установить соответствующий плагин в ваш {{Glossary("Browser","браузер")}}.
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="https://www.adobe.com/products/flashruntimes.html">Официальный сайт</a></li>
-    <li><a href="https://mozilla.github.io/shumway/">Shumway, свободная реализация от Mozilla</a></li>
-    <li><a href="http://gnashdev.org/">Gnash, свободная реализация от GNU</a></li>
-    <li><a href="https://ruffle.rs">Ruffle, свободная реализация</a></li>
-    <li><a href="/ru/docs/Glossary">Глоссарий</a>
-      <ol>
-      <li>{{Glossary("Browser", "браузер")}}</li>
-      </ol>
-    </li>
-    <li>Статья на Wikipedia
-      <ol>
-      <li>{{Interwiki("wikipedia", "Adobe Flash")}}</li>
-      </ol>
-    </li>
-  </ol>
-</section>
+1.  [Официальный сайт](https://www.adobe.com/products/flashruntimes.html)
+2.  [Shumway, свободная реализация от Mozilla](https://mozilla.github.io/shumway/)
+3.  [Gnash, свободная реализация от GNU](http://gnashdev.org/)
+4.  [Ruffle, свободная реализация](https://ruffle.rs)
+5.  [Глоссарий](/ru/docs/Glossary)
+
+    1.  {{Glossary("Browser", "браузер")}}
+
+6.  Статья на Wikipedia
+
+    1.  {{Interwiki("wikipedia", "Adobe Flash")}}

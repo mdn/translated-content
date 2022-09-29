@@ -10,21 +10,17 @@ tags:
 translation_of: Glossary/Apple_Safari
 original_slug: Глоссарий/Apple_Safari
 ---
-<p><a href="http://www.apple.com/safari/">Safari</a> (Сафари) - это {{Glossary("Browser","веб-браузер")}} разработанный компанией Apple, входит в состав операционных систем macOS и iOS. <a href="http://www.apple.com/safari/">Safari</a> работает на движке <a href="http://www.webkit.org/">WebKit</a>.</p>
+[Safari](http://www.apple.com/safari/) (Сафари) - это {{Glossary("Browser","веб-браузер")}} разработанный компанией Apple, входит в состав операционных систем macOS и iOS. [Safari](http://www.apple.com/safari/) работает на движке [WebKit](http://www.webkit.org/).
 
-<h2 id="Узнайте_больше">Узнайте больше</h2>
+## Узнайте больше
 
-<h3 id="Общая_информация">Общая информация</h3>
+### Общая информация
 
-<ul>
- <li>{{Interwiki("wikipedia", "Safari")}} на Википедии</li>
- <li><a href="http://www.apple.com/safari/" rel="external">Safari на сайте apple.com</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Safari")}} на Википедии
+- [Safari на сайте apple.com](http://www.apple.com/safari/)
 
-<h3 id="Техническая_информация">Техническая информация</h3>
+### Техническая информация
 
-<ul>
- <li><a href="http://www.webkit.org/">Проект WebKit</a></li>
- <li><a href="http://nightly.webkit.org/" rel="external">WebKit ночная сборка</a></li>
- <li><a href="https://bugs.webkit.org/" rel="external">Сообщить об ошибке в Safari</a></li>
-</ul>
+- [Проект WebKit](http://www.webkit.org/)
+- [WebKit ночная сборка](http://nightly.webkit.org/)
+- [Сообщить об ошибке в Safari](https://bugs.webkit.org/)

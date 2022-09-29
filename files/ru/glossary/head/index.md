@@ -4,11 +4,9 @@ slug: Glossary/Head
 translation_of: Glossary/Head
 original_slug: Глоссарий/Заголовок
 ---
-<p><strong>Head</strong> (<strong>Заголовок</strong>) это часть {{glossary("HTML")}} документа, которая содержит {{glossary("metadata","метаданные")}} о документе, такие как автор, описание, ссылки на {{glossary("CSS")}} или {{glossary("JavaScript")}} файлы, которые должны быть применены в HTML.</p>
+**Head** (**Заголовок**) это часть {{glossary("HTML")}} документа, которая содержит {{glossary("metadata","метаданные")}} о документе, такие как автор, описание, ссылки на {{glossary("CSS")}} или {{glossary("JavaScript")}} файлы, которые должны быть применены в HTML.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Документация элемента {{htmlelement("head")}} на MDN</li>
- <li><a href="/ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Тег &lt;head&gt;</a> в учебнике по HTML от MDN</li>
-</ul>
+- Документация элемента {{htmlelement("head")}} на MDN
+- [Тег \<head>](/ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) в учебнике по HTML от MDN

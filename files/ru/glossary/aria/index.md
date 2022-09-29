@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/ARIA
 original_slug: Глоссарий/ARIA
 ---
-<p><span class="seoSummary"><strong>ARIA</strong> (<em>Accessible Rich {{glossary("Internet")}} Applications</em>) является {{Glossary("W3C")}} спецификацией для добавления семантики и других метаданных в {{Glossary("HTML")}} при использовании вспомогательных технологий.</span></p>
+**ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) является {{Glossary("W3C")}} спецификацией для добавления семантики и других метаданных в {{Glossary("HTML")}} при использовании вспомогательных технологий.
 
-<p>Например, вы можете добавить атрибут <code>role="alert"</code> в {{glossary("tag","тег")}} {{HTMLElement("p")}}, чтобы оповестить пользователя о том, что информация является важной и зависимой от времени (иначе вы могли бы передать это через цвет текста).</p>
+Например, вы можете добавить атрибут `role="alert"` в {{glossary("tag","тег")}} {{HTMLElement("p")}}, чтобы оповестить пользователя о том, что информация является важной и зависимой от времени (иначе вы могли бы передать это через цвет текста).
 
-<h2 id="Материалы_для_изучения">Материалы для изучения</h2>
+## Материалы для изучения
 
-<ul>
- <li><a href="/ru/docs/Web/Accessibility/ARIA">ARIA</a></li>
-</ul>
+- [ARIA](/ru/docs/Web/Accessibility/ARIA)

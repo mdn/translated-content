@@ -7,28 +7,22 @@ tags:
 translation_of: Glossary/Accessibility
 original_slug: Глоссарий/Доступность
 ---
-<p><em>Веб-доступность</em> (<strong>A11Y</strong>) — регламентирует лучшие практики обеспечения работоспособности и доступности сайта вне зависимости от физических и технических ограничений. Доступность описывается и обсуждается {{Glossary("W3C")}} в рамках {{Glossary("WAI","Инициативы по обеспечению доступности")}} (WAI).</p>
+_Веб-доступность_ (**A11Y**) — регламентирует лучшие практики обеспечения работоспособности и доступности сайта вне зависимости от физических и технических ограничений. Доступность описывается и обсуждается {{Glossary("W3C")}} в рамках {{Glossary("WAI","Инициативы по обеспечению доступности")}} (WAI).
 
-<h2 id="Дополнительные ресурсы">Дополнительные ресурсы</h2>
+## Дополнительные ресурсы
 
-<h3 id="Общие_сведения">Общие сведения</h3>
+### Общие сведения
 
-<ul>
- <li><a href="/ru/docs/Web/Accessibility">Доступность на MDN</a></li>
- <li>{{Interwiki("wikipedia", "Доступность")}} на Wikipedia</li>
-</ul>
+- [Доступность на MDN](/ru/docs/Web/Accessibility)
+- {{Interwiki("wikipedia", "Доступность")}} на Wikipedia
 
-<h3 id="изучение_доступности">Изучение доступности</h3>
+### Изучение доступности
 
-<ul>
- <li><a href="/ru/docs/Learn/Accessibility">Изучение доступности на MDN</a></li>
- <li><a href="http://webaim.org/" rel="external">Web Accessibility In Mind</a></li>
-</ul>
+- [Изучение доступности на MDN](/ru/docs/Learn/Accessibility)
+- [Web Accessibility In Mind](http://webaim.org/)
 
-<h3 id="технические_материалы">Технические материалы</h3>
+### Технические материалы
 
-<ul>
- <li><a href="/ru/docs/Web/Accessibility/ARIA">ARIA документация на MDN</a></li>
- <li><a href="http://www.w3.org/WAI/" rel="external">Инициатива по обеспечению доступности W3C</a></li>
- <li><a href="http://www.w3.org/TR/wai-aria/" rel="external">WAI-ARIA рекомендации</a></li>
-</ul>
+- [ARIA документация на MDN](/ru/docs/Web/Accessibility/ARIA)
+- [Инициатива по обеспечению доступности W3C](http://www.w3.org/WAI/)
+- [WAI-ARIA рекомендации](http://www.w3.org/TR/wai-aria/)

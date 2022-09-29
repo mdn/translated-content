@@ -9,32 +9,26 @@ tags:
 translation_of: Glossary/Simple_header
 original_slug: Глоссарий/Простой_заголовок
 ---
-<p><dfn>Простой заголовок (или заголовок запроса с поддержкой безопасности CORS</dfn>) - это один из следующих <a href="/ru/docs/Web/HTTP/Заголовки">HTTP заголовков</a>:</p>
+_Простой заголовок (или заголовок запроса с поддержкой безопасности CORS_) - это один из следующих [HTTP заголовков](/ru/docs/Web/HTTP/Заголовки):
 
-<ul>
- <li>{{HTTPHeader("Accept")}},</li>
- <li>{{HTTPHeader("Accept-Language")}},</li>
- <li>{{HTTPHeader("Content-Language")}},</li>
- <li>{{HTTPHeader("Content-Type")}} с MIME-типом, найденным в этом значении (исключая параметры), либо <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> или <code>text/plain</code>.</li>
-</ul>
+- {{HTTPHeader("Accept")}},
+- {{HTTPHeader("Accept-Language")}},
+- {{HTTPHeader("Content-Language")}},
+- {{HTTPHeader("Content-Type")}} с MIME-типом, найденным в этом значении (исключая параметры), либо `application/x-www-form-urlencoded`, `multipart/form-data` или `text/plain`.
 
-<p>Или один из этих клиентских заголовков:</p>
+Или один из этих клиентских заголовков:
 
-<ul>
- <li>{{HTTPHeader("DPR")}}</li>
- <li>{{HTTPHeader("Downlink")}}</li>
- <li>{{HTTPHeader("Save-Data")}}</li>
- <li>{{HTTPHeader("Viewport-Width")}}</li>
- <li>{{HTTPHeader("Width")}}</li>
-</ul>
+- {{HTTPHeader("DPR")}}
+- {{HTTPHeader("Downlink")}}
+- {{HTTPHeader("Save-Data")}}
+- {{HTTPHeader("Viewport-Width")}}
+- {{HTTPHeader("Width")}}
 
-<p>Если они содержат только простые заголовки, запросы считаются простыми и не нужно отправлять {{glossary("preflight request")}} в контексте {{glossary("CORS")}}.</p>
+Если они содержат только простые заголовки, запросы считаются простыми и не нужно отправлять {{glossary("preflight request")}} в контексте {{glossary("CORS")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/HTTP/Заголовки">HTTP заголовки</a></li>
- <li>{{Glossary("Simple response header")}}</li>
- <li>{{Glossary("Forbidden header name")}}</li>
- <li>{{Glossary("Request header")}}</li>
-</ul>
+- [HTTP заголовки](/ru/docs/Web/HTTP/Заголовки)
+- {{Glossary("Simple response header")}}
+- {{Glossary("Forbidden header name")}}
+- {{Glossary("Request header")}}

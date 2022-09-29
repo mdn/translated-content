@@ -10,14 +10,12 @@ tags:
 translation_of: Glossary/IP_Address
 original_slug: Глоссарий/IP_Address
 ---
-<p>IP адрес - это число, назначенное каждому устройству, подключённому к сети, которая использует Интернет-протокол. </p>
+IP адрес - это число, назначенное каждому устройству, подключённому к сети, которая использует Интернет-протокол.
 
-<p>Термин "IP адрес" обычно означает 32-разрядные IPv4 адреса, но до тех пор, пока IPv6 не получит более широкое применение.</p>
+Термин "IP адрес" обычно означает 32-разрядные IPv4 адреса, но до тех пор, пока IPv6 не получит более широкое применение.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<h3 id="General_knowledge">General knowledge</h3>
+### General knowledge
 
-<ul>
- <li>{{interwiki("wikipedia", "IP address", "IP address")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "IP address", "IP address")}} on Wikipedia
