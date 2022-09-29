@@ -29,7 +29,7 @@ Math.min(value0, value1, /* … ,*/ valueN)
 
 ## 描述
 
-因为 `min()` 是 `Math` 的静态方法，所以你总是将其作为 `Math.min()` 使用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
+因为 `min()` 是 `Math` 的静态方法，所以你应始终使用 `Math.min()`，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
 [`Math.min.length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 是 2，这从某种程度上表明了它旨在处理至少两个参数。
 
