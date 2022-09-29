@@ -312,10 +312,10 @@ Cuando ejecutamos pruebas de verdadero/falso (por ejemplo, dentro de condicional
 
 | Operador | Descripción                                   | Ejemplo                                                                                                                    |
 | -------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `===`    | Igualdad estricta (¿es exactamente lo mismo?) | \`\`\` 5 === 2 + 4 // false 'Chris' === 'Bob' // false 5 === 2 + 3 // true 2 === '2' // false; número versus cadena \`\`\` |
-| `!==`    | No igual (¿no es lo mismo?)                   | \`\`\` 5 !== 2 + 4 // true 'Chris' !== 'Bob' // true 5 !== 2 + 3 // false 2 !== '2' // true; número versus cadena \`\`\`   |
-| `<`      | Menor que                                     | \`\`\` 6 < 10 // true 20 < 10 // false \`\`\`                                                                              |
-| `>`      | Mayor que                                     | \`\`\` 6 > 10 // false 20 > 10 // true \`\`\`                                                                              |
+| `===`    | Igualdad estricta (¿es exactamente lo mismo?) | <pre lang="js">5 === 2 + 4 // false<br>'Chris' === 'Bob' // false<br>5 === 2 + 3 // true<br>2 === '2' // false; número versus cadena </pre> |
+| `!==`    | No igual (¿no es lo mismo?)                   | <pre lang="js">5 !== 2 + 4 // true<br>'Chris' !== 'Bob' // true<br>5 !== 2 + 3 // false<br>2 !== '2' // true; número versus cadena </pre>   |
+| `<`      | Menor que                                     | <pre lang="js">6 < 10 // true<br>20 < 10 // false </pre>                                                                              |
+| `>`      | Mayor que                                     | <pre lang="js">6 > 10 // false<br>20 > 10 // true </pre>                                                                              |
 
 ### Condicionales
 

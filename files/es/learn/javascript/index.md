@@ -16,7 +16,11 @@ translation_of: Learn/JavaScript
 
 {{Glossary("JavaScript")}} es un lenguaje de programación que te permite implementar cosas complejas en páginas web. Cada vez que una página web hace algo más que sentarse ahí y mostrar información estática para que la veas — mostrando actualizaciones de contenido oportunas, mapas interactivos, gráficos animados 2D/3D, desplazando máquinas reproductoras de video, o más, puedes apostar que probablemente JavaScript esté involucrado .
 
-> **Observación:** ### ¿Quieres convertirte en un desarrollador web front-end?Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.[Empezar](/docs/Learn/Front-end_web_developer)
+> **Observación:**
+> #### ¿Quieres convertirte en un desarrollador web front-end?
+> Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+>
+> [Empezar](/docs/Learn/Front-end_web_developer)
 
 ## Prerrequisitos
 

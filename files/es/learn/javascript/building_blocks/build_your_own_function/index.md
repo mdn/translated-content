@@ -139,10 +139,8 @@ Ahora tienes la definición de tu función escrita en tu elemento \<script> bien
 
     Esta línea invoca la función, haciéndola correr inmediatamente. Cuando guarde el código y lo vuelva a cargar en el navegador, verá que el pequeño cuadro de mensaje aparece inmediatamente, solo una vez. Después de todo, solo lo llamamos una vez.
 
-2. Ahora abra las herramientas de desarrollo de su navegador en la página de ejemplo, vaya a la consola de JavaScript y escriba la línea nuevamente allí, ¡verá que aparece nuevamente! Así que esto es divertido: ahora tenemos una función reutilizable que podemos llamar en cualquier momento que queramos.
-
-    Pero probablemente queremos que aparezca en respuesta a las acciones del usuario y del sistema. En una aplicación real, tal cuadro de mensaje probablemente se llamará en respuesta a la disponibilidad de nuevos datos, a un error, al usuario que intenta eliminar su perfil ("¿está seguro de esto?"), O al usuario que agrega un nuevo contacto y la operación completando con éxito ... etc.
-
+2. Ahora abra las herramientas de desarrollo de su navegador en la página de ejemplo, vaya a la consola de JavaScript y escriba la línea nuevamente allí, ¡verá que aparece nuevamente! Así que esto es divertido: ahora tenemos una función reutilizable que podemos llamar en cualquier momento que queramos.\
+    Pero probablemente queremos que aparezca en respuesta a las acciones del usuario y del sistema. En una aplicación real, tal cuadro de mensaje probablemente se llamará en respuesta a la disponibilidad de nuevos datos, a un error, al usuario que intenta eliminar su perfil ("¿está seguro de esto?"), O al usuario que agrega un nuevo contacto y la operación completando con éxito ... etc.\
     En esta demostración, obtendremos el cuadro de mensaje que aparecerá cuando el usuario haga clic en el botón.
 
 3. Elimina la línea anterior que agregaste.

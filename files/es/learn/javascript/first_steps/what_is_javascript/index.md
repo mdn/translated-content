@@ -278,6 +278,8 @@ Esta demostración tiene exactamente la misma funcionalidad que en las dos secci
 
 El uso de una construcción de JavaScript pura te permite seleccionar todos los botones usando una instrucción. El código que usamos anteriormente para cumplir este propósito se ve así:
 
+#### Ejemplo
+
 ```js
 const buttons = document.querySelectorAll('button');
 

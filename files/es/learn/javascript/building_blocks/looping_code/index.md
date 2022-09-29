@@ -293,51 +293,6 @@ btn.addEventListener('click', function() {
 });
 ```
 
-```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Simple contact search example</title>
-    <style>
-
-    </style>
-  </head>
-  <body>
-
-  <label for="search">Search by contact name: </label>
-  <input id="search" type="text">
-  <button>Search</button>
-
-  <p></p>
-
-
-    <script>
-    var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
-
-    btn.addEventListener('click', function() {
-      var searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 0; i < contacts.length; i++) {
-        var splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else {
-          para.textContent = 'Contact not found.';
-        }
-      }
-    });
-    </script>
-
-  </body>
-</html>
-```
-
 {{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
 1. First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
@@ -522,7 +477,7 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 
 ###### Active learning
 
-```html
+```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 410px;overflow: auto;">
 
@@ -547,7 +502,7 @@ output.innerHTML = '';
 </div>
 ```
 
-```css
+```css hidden
 html {
   font-family: sans-serif;
 }
@@ -569,7 +524,7 @@ body {
 }
 ```
 
-```js
+```js hidden
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');

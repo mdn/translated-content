@@ -269,7 +269,7 @@ button.onclick = function() {
 
 {{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
 
-Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name (`nombre).
+Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name` (nombre).
 
 ### Números versus cadenas
 

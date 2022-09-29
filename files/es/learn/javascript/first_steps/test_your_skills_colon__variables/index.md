@@ -13,11 +13,11 @@ translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 El objetivo de esta prueba de habilidad es evaluar si has entendido nuestro artículo [Almacenando la información que necesitas — Variables](/es/docs/Learn/JavaScript/First_steps/Variables).
 
-**Nota**: Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> **Nota**: Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+>
+> Si te atascas, pídenos ayuda; consulta la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
 
-Si te atascas, pídenos ayuda; consulta la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
-
-**Nota**: En los siguientes ejemplos, si hay un error en tu código, se mostrará en el panel de resultados de la página, para ayudarte a intentar averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
+> **Nota**: En los siguientes ejemplos, si hay un error en tu código, se mostrará en el panel de resultados de la página, para ayudarte a intentar averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
 
 ## Variables 1
 
@@ -31,7 +31,7 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html', '100%', 400)}}
 
-[Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 2
 
@@ -41,7 +41,7 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html', '100%', 400)}}
 
-[Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 3
 
@@ -51,7 +51,7 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html', '100%', 400)}}
 
-[Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 
