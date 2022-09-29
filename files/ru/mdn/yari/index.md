@@ -7,20 +7,16 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
 
-<div>{{IncludeSubnav("/ru/docs/MDN")}}</div>
+Kuma - код на Django, который обслуживает Mozilla Developer Network.
 
-<p>Kuma - код на Django, который обслуживает Mozilla Developer Network.</p>
+{{SubpagesWithSummaries}}
 
-<p>{{SubpagesWithSummaries}}</p>
+## Начинаем работу с Kuma
 
-<h2 id="Начинаем_работу_с_Kuma">Начинаем работу с Kuma</h2>
+Чтобы поучаствовать в Kuma:
 
-<p>Чтобы поучаствовать в Kuma:</p>
-
-<ul>
- <li>Посетите <a href="https://github.com/mozilla/kuma">проект Kuma на Github</a>.</li>
- <li>Посмотрите <a href="https://github.com/mozilla/kuma/blob/master/CONTRIBUTING.md">Руководство помощника.</a></li>
- <li>Если нужно, погрузитесь в <a href="http://kuma.readthedocs.org/en/latest/">полную документацию по Kuma</a>.</li>
-</ul>
+- Посетите [проект Kuma на Github](https://github.com/mozilla/kuma).
+- Посмотрите [Руководство помощника.](https://github.com/mozilla/kuma/blob/master/CONTRIBUTING.md)
+- Если нужно, погрузитесь в [полную документацию по Kuma](http://kuma.readthedocs.org/en/latest/).

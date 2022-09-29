@@ -6,10 +6,8 @@ tags:
   - MDN Meta
 translation_of: MDN/Tools
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
 
-<div>{{IncludeSubnav("/ru/docs/MDN")}}</div>
+Чтобы успевать за изменениями на сайте, MDN предлагает ряд функций, облегчающих отслеживание прогресса и управление контентом.
 
-<p>Чтобы успевать за изменениями на сайте, MDN предлагает ряд функций, облегчающих отслеживание прогресса и управление контентом.</p>
-
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
