@@ -15,7 +15,7 @@ Toda extensión debe contener un archivo llamado ["manifest.json"](/es/Add-ons/W
 - [Páginas en segundo plano](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
 - [Scripts de contenido](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
 - [Archivos de acción del navegador](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
-- [Archivos de acción de la página: ](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas)Implementan botones en la barra de direcciones.
+- [Archivos de acción de la página:](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas)Implementan botones en la barra de direcciones.
 - [Páginas de opciones](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
 - [archivos de la barra lateral](/es/Add-ons/WebExtensions/user_interface/Sidebars): Agregue una barra lateral al navegador.
 - [Recursos Web accesibles](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
@@ -88,7 +88,7 @@ Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin em
 
 #### Políticas de seguridad para el contenido
 
-Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido ](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
+Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
 
 ## Scripts de contenido
 

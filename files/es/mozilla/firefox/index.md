@@ -21,7 +21,7 @@ Aprende a crear complementos para [FireAAAfox](https://www.mozilla.org/es-ES/fir
 
 - Documentación del proyecto
 
-  Obtén información detallada sobre [el funcionamiento interno de Firefox ](/es/docs/Mozilla)y su sistema de creación, para que puedas entender bien el código.
+  Obtén información detallada sobre [el funcionamiento interno de Firefox](/es/docs/Mozilla)y su sistema de creación, para que puedas entender bien el código.
 
 - Guía del Desarrollador
 
@@ -41,7 +41,7 @@ Cada noche, creamos Firefox a partir del más reciente código disponible en [mo
 
 Esta es una versión de Firefox hecha a la medida de desarrolladores. Cada seis semanas, cogemos las características de Firefox Nightly que son lo suficientemente estables y creamos una nueva versión de Firefox Developer Edition. Además, añadimos algunas características adicionales que solo están disponibles en este canal.
 
-[Descubre más sobre](/es/docs/Firefox/Developer_Edition)[ Firefox Developer Edition](/es/docs/Firefox/Developer_Edition).
+[Descubre más sobre](/es/docs/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Firefox/Developer_Edition).
 
 [Descarga Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
