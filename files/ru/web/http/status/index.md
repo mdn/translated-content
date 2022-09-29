@@ -556,5 +556,3 @@ translation_of: Web/HTTP/Status
     </tr>
   </tbody>
 </table>
-
-{{ languages( { "zh-cn": "zh-cn/HTTP/HTTP\_response\_codes", "ja": "ja/HTTP/HTTP\_response\_codes"} ) }}
