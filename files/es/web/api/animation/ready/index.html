@@ -20,14 +20,14 @@ translation_of: Web/API/Animation/ready
 
 <h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
 
-<pre class="syntaxbox">var <em>readyPromise</em> = <em>Animation</em>.ready;
+<pre class="js">var <em>readyPromise</em> = <em>Animation</em>.ready;
 </pre>
 
 <h3 id="Valor">Valor</h3>
 
 <p>Un {{jsxref("Promise")}} que se resuelve cuando la animación esta lista para reproducirse. Por lo general, se usará una construcción similar a esta usando una promise lista:</p>
 
-<pre class="brush: js">animation.ready.then(function() {
+<pre class="js">animation.ready.then(function() {
   // Hace lo que sea necesario cuando
   // la animación está lista para reproducirse
 });</pre>
@@ -36,7 +36,7 @@ translation_of: Web/API/Animation/ready
 
 <p>En el siguiente ejemplo, el estado de la animación será <code>running(reproduciendo)</code> cuando la<strong> Promise actual</strong> se resuelva ya que la animación no deja el estado de reproducción <code>pending</code> entre las llamadas <code>pause</code> and <code>play</code> ,por lo tanto, la <strong>Promise actual</strong> no cambia.</p>
 
-<pre class="brush: js">animation.pause();
+<pre class="js">animation.pause();
 animation.ready.then(function() {
   // Displays 'running'
   alert(animation.playState);

@@ -24,7 +24,7 @@ original_slug: Web/API/Animation/onfinish
 
 <h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
 
-<pre class="syntaxbox">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
+<pre class="js">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
 
 <em>Animation</em>.onfinish = <em>finishHandler</em>;</pre>
 
@@ -36,7 +36,7 @@ original_slug: Web/API/Animation/onfinish
 
 <p><code>Animation.onfinish</code> es utilizado en varias ocasiones en el juego de Alice in Web Animations API Land <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>.  Aquí hay una instancia en la que agregamos eventos de puntero a un elemento después de que su animación de opacidad se haya desvanecido:</p>
 
-<pre class="brush: js">// <span id="result_box" lang="es"><span>Agrega una animación a los créditos finales del juego.</span></span>
+<pre class="js">// <span id="result_box" lang="es"><span>Agrega una animación a los créditos finales del juego.</span></span>
 var endingUI = document.getElementById("ending-ui");
 var bringUI = endingUI.animate(keysFade, timingFade);
 

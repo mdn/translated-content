@@ -18,7 +18,7 @@ translation_of: Web/API/Animation/pause
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">animation.pause();
+<pre class="js">animation.pause();
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -42,7 +42,7 @@ translation_of: Web/API/Animation/pause
 
 <p><code>Animation.pause()</code> es utilizado en varias ocasiones en el juego Alice in Web Animations API Land <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>, porque las animaciones creadas con el método {{domxref("Element.animate()")}} se inician de inmediato y deben ser detenidas manualmente para evitar esto:</p>
 
-<pre class="brush: js">// animación de la magdalena que lentamente se está comiendo
+<pre class="js">// animación de la magdalena que lentamente se está comiendo
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -59,7 +59,7 @@ nommingCake.pause();
 
 <p>Adicionalmente, al restablecer:</p>
 
-<pre class="brush: js">// Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
+<pre class="js">// Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
 var stopPlayingAlice = function() {
   aliceChange.pause();
   nommingCake.pause();

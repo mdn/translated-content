@@ -20,7 +20,7 @@ translation_of: Web/API/Animation/playState
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">var<em> currentPlayState</em> = <em>Animation</em>.playState;
+<pre class="js">var<em> currentPlayState</em> = <em>Animation</em>.playState;
 
 <em>Animation</em>.playState = <em>newState</em>;
 </pre>
@@ -44,7 +44,7 @@ translation_of: Web/API/Animation/playState
 
 <p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , los jugadores pueden tener un final con (Alicia llorando en un mar de lágrimas) <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>. En el juego, por razones de rendimiento, las lágrimas solo se deben animar cuando son visibles. <span id="result_box" lang="es"><span>Por lo tanto, deben detenerse tan pronto como estén animadas, de esta manera:</span></span></p>
 
-<pre class="brush: js">// <span class="short_text" id="result_box" lang="es"><span>Configurando las animaciones de lágrimas</span></span>
+<pre class="js">// <span class="short_text" id="result_box" lang="es"><span>Configurando las animaciones de lágrimas</span></span>
 
 tears.forEach(function(el) {
   el.animate(

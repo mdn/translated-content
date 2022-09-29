@@ -20,7 +20,7 @@ original_slug: Web/API/Animation/terminado
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">var <em>animationsPromise</em> = <em>Animation.</em>finished;
+<pre class="js">var <em>animationsPromise</em> = <em>Animation.</em>finished;
 </pre>
 
 <h3 id="Valor">Valor</h3>
@@ -31,7 +31,7 @@ original_slug: Web/API/Animation/terminado
 
 <p>El siguiente código espera a que todas las animaciones que se ejecutan en el elemento <code>elem</code> hayan terminado, después elimina el elemento del arbol del DOM:</p>
 
-<pre class="brush: js">Promise.all(
+<pre class="js">Promise.all(
   elem.getAnimations().map(
     function(animation) {
       return animation.finished

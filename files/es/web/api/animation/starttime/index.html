@@ -19,7 +19,7 @@ translation_of: Web/API/Animation/startTime
 
 <h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
 
-<pre class="syntaxbox">var <em>animationStartedWhen</em> = <em>Animation</em>.startTime;
+<pre class="js">var <em>animationStartedWhen</em> = <em>Animation</em>.startTime;
 
 <em>Animation</em>.startTime = <em>newStartTime</em>;</pre>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/Animation/startTime
 
 <p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010">Running on Web Animations API example</a>, podemos sincronizar todos los nuevos gatos animados dándoles el mismo tiempo de inicio <code>startTime</code> que el gato original:</p>
 
-<pre class="brush: js">var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+<pre class="js">var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
 
 /* Una función que crea nuevos gatos. */
 function addCat(){

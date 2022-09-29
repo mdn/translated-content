@@ -19,7 +19,7 @@ translation_of: Web/API/Animation/play
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">animation.play();
+<pre class="js">animation.play();
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -34,7 +34,7 @@ translation_of: Web/API/Animation/play
 
 <p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar el pastel hace que la animación de crecimiento de Alicia (<code>aliceChange</code>) sea reproducida hacia adelante, causando que Alicia se haga más grande, ademas de desencadenar la animación del pastel. Dos  <code>Animation.play()</code> y un <code>EventListener</code>:</p>
 
-<pre class="brush: js">// El pastel tiene su propia animación:
+<pre class="js">// El pastel tiene su propia animación:
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },

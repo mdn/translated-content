@@ -20,7 +20,7 @@ translation_of: Web/API/Animation/finish
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox"><em>Animation</em>.finish(); </pre>
+<pre class="js"><em>Animation</em>.finish(); </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/Animation/finish
 
 <p>El siguiente ejemplo muestra cómo usar el método <code>finish()</code> y captura un error <code>InvalidState</code>.</p>
 
-<pre class="brush: js">interfaceElement.addEventListener("mousedown", function() {
+<pre class="js">interfaceElement.addEventListener("mousedown", function() {
   try {
     player.finish();
   } catch(e if e instanceof InvalidState) {
@@ -57,7 +57,7 @@ translation_of: Web/API/Animation/finish
 
 <p>El siguiente ejemplo finaliza todas las animaciones en un solo elemento, independientemente de su dirección de reproducción.</p>
 
-<pre class="brush: js">elem.getAnimations().forEach(
+<pre class="js">elem.getAnimations().forEach(
   function(animation){
     return animation.finish();
   }

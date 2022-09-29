@@ -14,7 +14,7 @@ original_slug: Web/API/Animation/tiempoActual
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">var <em>currentTime</em> = <em>Animation</em>.currentTime;
+<pre class="js">var <em>currentTime</em> = <em>Animation</em>.currentTime;
 <em>Animation</em>.currentTime =<em> newTime;</em></pre>
 
 <h3 id="Valor">Valor</h3>
@@ -25,11 +25,11 @@ original_slug: Web/API/Animation/tiempoActual
 
 <p>En el juego <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Drink Me/Eat Me </a>, la altura de Alicia está animada, por lo que puede cambiar de pequeña a grande y de grande a pequeña. Al inicio del juego, su altura de fija estableciendo el <code>currentTime</code> (tiempoActual) a la mitad de la duración total del<a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>KeyframeEffect</code></a>:</p>
 
-<pre class="brush: js">aliceChange<strong>.</strong>currentTime = aliceChange.effect.timing.duration / 2;</pre>
+<pre class="js">aliceChange<strong>.</strong>currentTime = aliceChange.effect.timing.duration / 2;</pre>
 
 <p>Un modo más genérico para encontrar la marca del 50% en una animación sería :</p>
 
-<pre class="brush: js">animation.currentTime =
+<pre class="js">animation.currentTime =
   animation.effect.getComputedTiming().delay +
   animation.effect.getComputedTiming().activeDuration / 2;</pre>
 

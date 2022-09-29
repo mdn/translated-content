@@ -19,7 +19,7 @@ translation_of: Web/API/Animation/playbackRate
 
 <h2 id="Sintaxis" style="line-height: 30px; font-size: 2.14285714285714rem;">Sintaxis</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>currentPlaybackRate</em> = <em>Animation</em>.playbackRate;
+<pre class="js" style="font-size: 14px;">var <em>currentPlaybackRate</em> = <em>Animation</em>.playbackRate;
 
 <em>Animation</em>.playbackRate = <em>newRate</em>;
 </pre>
@@ -36,7 +36,7 @@ translation_of: Web/API/Animation/playbackRate
 
 <p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia  (<code>aliceChange</code>) se invierta para reducirse:</p>
 
-<pre class="brush: js">var shrinkAlice = function() {
+<pre class="js">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -48,7 +48,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 
 <p>Por el contrario, hacer click en el pastel hace que "crezca" reproduciendo <code>aliceChange</code> hacia adelante otra vez:</p>
 
-<pre class="brush: js">var growAlice = function() {
+<pre class="js">var growAlice = function() {
   aliceChange.playbackRate = 1;
   aliceChange.play();
 }
@@ -60,7 +60,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 <p>En otro ejemplo,  <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race Game</a>, Alicia y La Reina Roja están ralentizandose constantemente:</p>
 
-<pre class="brush: js">setInterval( function() {
+<pre class="js">setInterval( function() {
 
   // <span id="result_box" lang="es"><span>Asegúrate de que la velocidad de reproducción nunca descienda por debajo de .4</span></span>
 
@@ -73,7 +73,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 <p><span id="result_box" lang="es"><span>Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su</span></span> <code>playbackRate</code>(velocidad de reproducción):</p>
 
-<pre class="brush: js">var goFaster = function() {
+<pre class="js">var goFaster = function() {
   redQueen_alice.playbackRate *= 1.1;
 }
 
