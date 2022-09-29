@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
 
 ### Работающие примеры
 
-Разрешает загрузку скриптов из "https\://example.com": (_смотрите примечание_ [1](#exampleNote_1))
+Разрешает загрузку скриптов из "https://example.com": (_смотрите примечание_ [1](#exampleNote_1))
 
 ```json
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
@@ -128,7 +128,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
 "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
 ```
 
-1\. _Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью._
+_Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью._
 
 ## Browser compatibility
 

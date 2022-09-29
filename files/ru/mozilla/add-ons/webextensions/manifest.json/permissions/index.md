@@ -26,8 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>
