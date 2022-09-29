@@ -23,7 +23,7 @@ ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在
 - [`with`](/zh-CN/docs/JavaScript/Reference/Statements/with)语句
 - 使用[delete](/zh-CN/docs/JavaScript/Reference/Operators/delete)删除一个变量名 (而不是属性名)`:delete myVariable`
 - 使用`eval`或`arguments`作为变量名或函数名
-- 使用未来保留字 (也许会在 ECMAScript 6 中使用):`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`,和`yield`作为变量名或函数名
+- 使用未来保留字 (也许会在 ECMAScript 6 中使用): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, 和 `yield` 作为变量名或函数名
 - 在语句块中使用函数声明：`if(a<b){ function f(){} }`
 - 其他错误
 
