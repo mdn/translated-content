@@ -254,5 +254,3 @@ alert(root_node.firstChild.data);
 Этот код берёт объект `XMLDocument`, возвращаемый `responseXML` и использует методы DOM для доступа к данным, содержащимся в документе XML.
 
 Чтобы узнать больше о методах DOM, посмотрите [реализация DOM в Mozilla](http://www.mozilla.org/docs/dom/).
-
-{{ languages( { "ca": "ca/AJAX/Primers\_passos", "de": "de/AJAX/Getting\_Started", "en": "en/AJAX/Getting\_Started", "es": "es/AJAX/Primeros\_Pasos", "fr": "fr/AJAX/Premiers\_pas", "it": "it/AJAX/Iniziare", "ja": "ja/AJAX/Getting\_Started", "ko": "ko/AJAX/Getting\_Started", "pl": "pl/AJAX/Na\_pocz\u0105tek", "pt": "pt/AJAX/Como\_come\u00e7ar", "zh-cn": "cn/AJAX/\u5f00\u59cb" } ) }}
