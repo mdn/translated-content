@@ -7,7 +7,7 @@ slug: Web/CSS/animation-timing-function
 
 ## 概述
 
-[CSS](/zh-CN/docs/CSS) `animation-timing-function 属性定义 CSS 动画在每一动画周期中执行的节奏。`可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。
+[CSS](/zh-CN/docs/CSS) `animation-timing-function` 属性定义 CSS 动画在每一动画周期中执行的节奏。可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。
 
 对于关键帧动画来说，timing function 作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。
 
